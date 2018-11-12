@@ -1778,7 +1778,9 @@
                             display: B.X.Flex,
                             flexDirection: B.Aa.Column,
                             flexWrap: B.Ba.NoWrap,
-                            border: !0,
+                            borderTop: !0,
+                            borderRight: !0,
+                            borderLeft: !0,
                             background: B.r.Base,
                             position: B.jb.Absolute,
                             attachBottom: !0,
@@ -1809,7 +1811,7 @@
                         return E.createElement(B.Eb, {
                             className: "whispers-threads-box__open-close",
                             position: B.jb.Relative,
-                            background: B.r.Alt2,
+                            background: B.r.Alt,
                             display: B.X.Flex,
                             alignItems: B.f.Center,
                             justifyContent: B.Wa.Center
@@ -3274,7 +3276,7 @@
                     }
                 }), Object(ne.a)([{
                     topic: function(e) {
-                        return Object(w.K)(e.currentUserID)
+                        return Object(w.L)(e.currentUserID)
                     },
                     mapMessageTypesToProps: (Ye = {}, Ye[D.PubsubMessageType.WhisperReceived] = "whisperReceived", Ye[D.PubsubMessageType.WhisperSent] = "whisperSent", Ye),
                     skipMessage: function(e, t) {
@@ -3603,7 +3605,7 @@
                             types: [D.PubsubMessageType.WhisperDeleted, D.PubsubMessageType.WhisperEdited, D.PubsubMessageType.WhisperSent, D.PubsubMessageType.WhisperAllThreadsUpdate, D.PubsubMessageType.WhisperReceived, D.PubsubMessageType.WhisperThreadUpdate],
                             variables: a.__assign({}, e.data.variables),
                             skip: !e.data.currentUser || void 0 === e.data.currentUser.id,
-                            topic: Object(w.K)(e.data.currentUser && e.data.currentUser.id || ""),
+                            topic: Object(w.L)(e.data.currentUser && e.data.currentUser.id || ""),
                             mutator: function(t, n) {
                                 if (!n.currentUser || !n.currentUser.whisperThreads) return n;
                                 if (Ke(t) || $e(t)) {
@@ -12985,7 +12987,7 @@
                             return Object(b.d)(m.a, {
                                 component: "CheckoutModal",
                                 loader: function() {
-                                    return Promise.all([n.e(0), n.e(210)]).then(n.bind(null, "KJv/"))
+                                    return Promise.all([n.e(0), n.e(212)]).then(n.bind(null, "KJv/"))
                                 },
                                 componentProps: t
                             })

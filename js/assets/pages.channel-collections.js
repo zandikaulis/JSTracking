@@ -2503,7 +2503,7 @@
                 e.SubButton = "subscribe-button__dropdown", e.BalloonLayerButton = "subscribe-button__balloon-layer-btn", e.DefaultButton = "subscribe-button__default-btn", e.SubscribeBalloon = "subscribe-button__subscribe-balloon"
             }(N || (N = {}));
             var O = s.a.wrap(function() {
-                    return Promise.all([n.e(0), n.e(199)]).then(n.bind(null, "f+qK"))
+                    return Promise.all([n.e(0), n.e(200)]).then(n.bind(null, "f+qK"))
                 }, "SubscribeBalloon"),
                 D = function(e) {
                     function t() {
@@ -2705,7 +2705,7 @@
                     }
                 }), Object(k.a)([{
                     topic: function(e) {
-                        return Object(w.G)(e.data.currentUser && e.data.currentUser.id || "")
+                        return Object(w.H)(e.data.currentUser && e.data.currentUser.id || "")
                     },
                     mapMessageTypesToProps: {
                         "*": "subscriptionInfo"
@@ -2755,7 +2755,7 @@
                         return Object(d.d)(s.a, {
                             component: "CheckoutModal",
                             loader: function() {
-                                return Promise.all([n.e(0), n.e(210)]).then(n.bind(null, "KJv/"))
+                                return Promise.all([n.e(0), n.e(212)]).then(n.bind(null, "KJv/"))
                             },
                             componentProps: t
                         })
@@ -6032,8 +6032,8 @@
             ! function(e) {
                 e.SocialButtonsDefault = "channel-header__social-buttons-default", e.SocialButtonsVariantB = "channel-header__social-buttons-variant-b"
             }(V || (V = {}));
-            var W, M = "channel-header__edit-profile-overlay",
-                X = "channel-header__verified-badge",
+            var W, X = "channel-header__edit-profile-overlay",
+                M = "channel-header__verified-badge",
                 G = "channel-header__live-indicator",
                 H = "yes",
                 z = "browser-notifications-upsell-seen";
@@ -6048,7 +6048,7 @@
                             direction: E.ac.Right
                         }, o.createElement(E.Xa, {
                             className: "channel-header__verified",
-                            "data-target": X,
+                            "data-target": M,
                             display: E.X.Flex,
                             alignItems: E.f.Center,
                             margin: {
@@ -6073,7 +6073,7 @@
                             })
                         }, n.renderAvatarEditButton = function() {
                             return n.props.data && n.props.data.user && n.props.data.user.id && n.props.data.user.login && n.isChannelEditor() ? o.createElement(E.Eb, {
-                                className: M,
+                                className: X,
                                 background: E.r.Overlay,
                                 position: E.jb.Absolute,
                                 attachTop: !0,
@@ -6105,9 +6105,9 @@
                                 }
                             })
                         }, n.onUpdateDebounce = function() {
-                            if (!n.resizeAnimationFrame && n.channelHeader) {
+                            if (n.resizeAnimationFrame && (clearTimeout(n.resizeAnimationFrame), n.resizeAnimationFrame = null), n.channelHeader) {
                                 var e = n.channelHeader.querySelector('[data-target="channel-header-left"]');
-                                n.updateWidth(n.getWidth(e).width), n.resizeAnimationFrame = requestAnimationFrame(n.handleWindowResize)
+                                n.updateWidth(n.getWidth(e).width), n.resizeAnimationFrame = setTimeout(n.handleWindowResize, 0)
                             }
                         }, n.handleWindowResize = function() {
                             n.resizeAnimationFrame = null, n.getChannelHeaderSize()
@@ -6164,7 +6164,7 @@
                         this.clearResetOfflineTimer(), this.resizeAnimationFrame && cancelAnimationFrame(this.resizeAnimationFrame), window.removeEventListener("resize", this.onUpdateDebounce)
                     }, t.prototype.updateWidth = function(e) {
                         var t = e !== this.width || this.width !== this.prevWidth;
-                        void 0 !== this.width && (this.prevWidth = this.width), this.width !== e && (this.width = e), t && (this.resizeAnimationFrame && (cancelAnimationFrame(this.resizeAnimationFrame), this.resizeAnimationFrame = null), this.onUpdateDebounce())
+                        void 0 !== this.width && (this.prevWidth = this.width), this.width !== e && (this.width = e), t && (this.resizeAnimationFrame && (clearTimeout(this.resizeAnimationFrame), this.resizeAnimationFrame = null), this.onUpdateDebounce())
                     }, t.prototype.render = function() {
                         var e, t, n = 0,
                             i = 0,
@@ -6392,29 +6392,35 @@
                                 n = this.channelHeader.querySelectorAll('[data-target="channel-header-item"]'),
                                 i = this.channelHeader.querySelectorAll('[data-target="channel-header-dropdown-item"]');
                             if (n.length) {
-                                var r = this.getWidth(this.channelHeader).width,
-                                    o = this.getWidth(e).width + this.getWidth(t).width + 20 - r;
-                                if (o > 0)
-                                    for (var a = n.length - 1; a >= 0; a--) {
-                                        if (!(l = n[a]).classList.contains("channel-header__item--hide")) {
-                                            var s = this.getWidth(l);
-                                            if (l.classList.add("channel-header__item--hide"), i[a].classList.remove("channel-header__item--hide"), (o -= s.width) <= 0) break
-                                        }
-                                    } else
-                                        for (a = 0; a < n.length; a++) {
-                                            var l;
-                                            if ((l = n[a]).classList.contains("channel-header__item--hide")) {
-                                                if (l.classList.remove("channel-header__item--hide"), (s = this.getWidth(l)).width >= Math.abs(o)) {
-                                                    l.classList.add("channel-header__item--hide");
-                                                    break
-                                                }
-                                                l.classList.remove("channel-header__item--hide"), i[a].classList.add("channel-header__item--hide"), o += s.width
+                                for (var r = 0; r < n.length; r++) {
+                                    var o = n[r];
+                                    o.classList.contains("channel-header__item--hide") && (o.classList.remove("channel-header__item--hide"), i[r].classList.add("channel-header__item--hide"))
+                                }
+                                var a = this.getWidth(this.channelHeader).width,
+                                    s = this.getWidth(e).width + this.getWidth(t).width + 20 - a,
+                                    l = [];
+                                if (s > 0) {
+                                    var c = function(e) {
+                                            var t = n[e];
+                                            if (!t.classList.contains("channel-header__item--hide")) {
+                                                var r = d.getWidth(t);
+                                                if (l.push(function() {
+                                                        t.classList.add("channel-header__item--hide"), i[e].classList.remove("channel-header__item--hide")
+                                                    }), (s -= r.width) <= 0) return "break"
                                             }
-                                        }
-                                var c = this.channelHeader.querySelector('[data-target="channel-header-button"]');
-                                if (c) {
-                                    var d = !this.channelHeader.querySelectorAll('[data-target="channel-header-item"].channel-header__item--hide').length;
-                                    c.classList.toggle("channel-header__item--hide", d)
+                                        },
+                                        d = this;
+                                    for (r = n.length - 1; r >= 0; r--) {
+                                        if ("break" === c(r)) break
+                                    }
+                                }
+                                l.forEach(function(e) {
+                                    return e()
+                                });
+                                var u = this.channelHeader.querySelector('[data-target="channel-header-button"]');
+                                if (u) {
+                                    var p = !this.channelHeader.querySelectorAll('[data-target="channel-header-item"].channel-header__item--hide').length;
+                                    u.classList.toggle("channel-header__item--hide", p)
                                 }
                             }
                         }
@@ -6536,7 +6542,7 @@
                     }
                 }), Object(p.a)([{
                     topic: function(e) {
-                        return e.channelLogin ? Object(h.I)(e.channelLogin) : ""
+                        return e.channelLogin ? Object(h.J)(e.channelLogin) : ""
                     },
                     skip: function(e) {
                         return !e.channelLogin || !e.firstPageLoaded

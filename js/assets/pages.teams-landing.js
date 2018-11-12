@@ -549,7 +549,7 @@
                 e.SubButton = "subscribe-button__dropdown", e.BalloonLayerButton = "subscribe-button__balloon-layer-btn", e.DefaultButton = "subscribe-button__default-btn", e.SubscribeBalloon = "subscribe-button__subscribe-balloon"
             }(F || (F = {}));
             var B = s.a.wrap(function() {
-                    return Promise.all([t.e(0), t.e(199)]).then(t.bind(null, "f+qK"))
+                    return Promise.all([t.e(0), t.e(200)]).then(t.bind(null, "f+qK"))
                 }, "SubscribeBalloon"),
                 D = function(e) {
                     function n() {
@@ -751,7 +751,7 @@
                     }
                 }), Object(f.a)([{
                     topic: function(e) {
-                        return Object(N.G)(e.data.currentUser && e.data.currentUser.id || "")
+                        return Object(N.H)(e.data.currentUser && e.data.currentUser.id || "")
                     },
                     mapMessageTypesToProps: {
                         "*": "subscriptionInfo"
@@ -801,7 +801,7 @@
                         return Object(c.d)(s.a, {
                             component: "CheckoutModal",
                             loader: function() {
-                                return Promise.all([t.e(0), t.e(210)]).then(t.bind(null, "KJv/"))
+                                return Promise.all([t.e(0), t.e(212)]).then(t.bind(null, "KJv/"))
                             },
                             componentProps: n
                         })

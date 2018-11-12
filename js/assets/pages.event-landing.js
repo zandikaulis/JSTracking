@@ -5615,7 +5615,7 @@
                 e.SubButton = "subscribe-button__dropdown", e.BalloonLayerButton = "subscribe-button__balloon-layer-btn", e.DefaultButton = "subscribe-button__default-btn", e.SubscribeBalloon = "subscribe-button__subscribe-balloon"
             }(T || (T = {}));
             var R = s.a.wrap(function() {
-                    return Promise.all([n.e(0), n.e(199)]).then(n.bind(null, "f+qK"))
+                    return Promise.all([n.e(0), n.e(200)]).then(n.bind(null, "f+qK"))
                 }, "SubscribeBalloon"),
                 x = function(e) {
                     function t() {
@@ -5817,7 +5817,7 @@
                     }
                 }), Object(k.a)([{
                     topic: function(e) {
-                        return Object(C.G)(e.data.currentUser && e.data.currentUser.id || "")
+                        return Object(C.H)(e.data.currentUser && e.data.currentUser.id || "")
                     },
                     mapMessageTypesToProps: {
                         "*": "subscriptionInfo"
@@ -5867,7 +5867,7 @@
                         return Object(d.d)(s.a, {
                             component: "CheckoutModal",
                             loader: function() {
-                                return Promise.all([n.e(0), n.e(210)]).then(n.bind(null, "KJv/"))
+                                return Promise.all([n.e(0), n.e(212)]).then(n.bind(null, "KJv/"))
                             },
                             componentProps: t
                         })
@@ -10008,9 +10008,9 @@
                                 }
                             })
                         }, n.onUpdateDebounce = function() {
-                            if (!n.resizeAnimationFrame && n.channelHeader) {
+                            if (n.resizeAnimationFrame && (clearTimeout(n.resizeAnimationFrame), n.resizeAnimationFrame = null), n.channelHeader) {
                                 var e = n.channelHeader.querySelector('[data-target="channel-header-left"]');
-                                n.updateWidth(n.getWidth(e).width), n.resizeAnimationFrame = requestAnimationFrame(n.handleWindowResize)
+                                n.updateWidth(n.getWidth(e).width), n.resizeAnimationFrame = setTimeout(n.handleWindowResize, 0)
                             }
                         }, n.handleWindowResize = function() {
                             n.resizeAnimationFrame = null, n.getChannelHeaderSize()
@@ -10067,7 +10067,7 @@
                         this.clearResetOfflineTimer(), this.resizeAnimationFrame && cancelAnimationFrame(this.resizeAnimationFrame), window.removeEventListener("resize", this.onUpdateDebounce)
                     }, t.prototype.updateWidth = function(e) {
                         var t = e !== this.width || this.width !== this.prevWidth;
-                        void 0 !== this.width && (this.prevWidth = this.width), this.width !== e && (this.width = e), t && (this.resizeAnimationFrame && (cancelAnimationFrame(this.resizeAnimationFrame), this.resizeAnimationFrame = null), this.onUpdateDebounce())
+                        void 0 !== this.width && (this.prevWidth = this.width), this.width !== e && (this.width = e), t && (this.resizeAnimationFrame && (clearTimeout(this.resizeAnimationFrame), this.resizeAnimationFrame = null), this.onUpdateDebounce())
                     }, t.prototype.render = function() {
                         var e, t, n = 0,
                             i = 0,
@@ -10295,29 +10295,35 @@
                                 n = this.channelHeader.querySelectorAll('[data-target="channel-header-item"]'),
                                 i = this.channelHeader.querySelectorAll('[data-target="channel-header-dropdown-item"]');
                             if (n.length) {
-                                var a = this.getWidth(this.channelHeader).width,
-                                    r = this.getWidth(e).width + this.getWidth(t).width + 20 - a;
-                                if (r > 0)
-                                    for (var o = n.length - 1; o >= 0; o--) {
-                                        if (!(l = n[o]).classList.contains("channel-header__item--hide")) {
-                                            var s = this.getWidth(l);
-                                            if (l.classList.add("channel-header__item--hide"), i[o].classList.remove("channel-header__item--hide"), (r -= s.width) <= 0) break
-                                        }
-                                    } else
-                                        for (o = 0; o < n.length; o++) {
-                                            var l;
-                                            if ((l = n[o]).classList.contains("channel-header__item--hide")) {
-                                                if (l.classList.remove("channel-header__item--hide"), (s = this.getWidth(l)).width >= Math.abs(r)) {
-                                                    l.classList.add("channel-header__item--hide");
-                                                    break
-                                                }
-                                                l.classList.remove("channel-header__item--hide"), i[o].classList.add("channel-header__item--hide"), r += s.width
+                                for (var a = 0; a < n.length; a++) {
+                                    var r = n[a];
+                                    r.classList.contains("channel-header__item--hide") && (r.classList.remove("channel-header__item--hide"), i[a].classList.add("channel-header__item--hide"))
+                                }
+                                var o = this.getWidth(this.channelHeader).width,
+                                    s = this.getWidth(e).width + this.getWidth(t).width + 20 - o,
+                                    l = [];
+                                if (s > 0) {
+                                    var c = function(e) {
+                                            var t = n[e];
+                                            if (!t.classList.contains("channel-header__item--hide")) {
+                                                var a = d.getWidth(t);
+                                                if (l.push(function() {
+                                                        t.classList.add("channel-header__item--hide"), i[e].classList.remove("channel-header__item--hide")
+                                                    }), (s -= a.width) <= 0) return "break"
                                             }
-                                        }
-                                var c = this.channelHeader.querySelector('[data-target="channel-header-button"]');
-                                if (c) {
-                                    var d = !this.channelHeader.querySelectorAll('[data-target="channel-header-item"].channel-header__item--hide').length;
-                                    c.classList.toggle("channel-header__item--hide", d)
+                                        },
+                                        d = this;
+                                    for (a = n.length - 1; a >= 0; a--) {
+                                        if ("break" === c(a)) break
+                                    }
+                                }
+                                l.forEach(function(e) {
+                                    return e()
+                                });
+                                var u = this.channelHeader.querySelector('[data-target="channel-header-button"]');
+                                if (u) {
+                                    var p = !this.channelHeader.querySelectorAll('[data-target="channel-header-item"].channel-header__item--hide').length;
+                                    u.classList.toggle("channel-header__item--hide", p)
                                 }
                             }
                         }
@@ -10439,7 +10445,7 @@
                     }
                 }), Object(p.a)([{
                     topic: function(e) {
-                        return e.channelLogin ? Object(h.I)(e.channelLogin) : ""
+                        return e.channelLogin ? Object(h.J)(e.channelLogin) : ""
                     },
                     skip: function(e) {
                         return !e.channelLogin || !e.firstPageLoaded

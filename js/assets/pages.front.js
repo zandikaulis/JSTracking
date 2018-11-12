@@ -736,7 +736,7 @@
                             }, o.createElement(_.Eb, {
                                 className: "featured-content-carousel__item-placeholder",
                                 borderRadius: _.x.Large,
-                                background: _.r.AccentAlt2,
+                                background: _.r.Alt2,
                                 elevation: 3
                             }))
                         })
@@ -1992,7 +1992,10 @@
                             hideCarousel: !0
                         }) : o.createElement(_.Eb, {
                             className: "front-page-carousel",
-                            padding: 3
+                            padding: {
+                                x: 3,
+                                top: 2
+                            }
                         }, this.renderAd(), o.createElement(L, null))
                     }, t.prototype.renderAd = function() {
                         return o.createElement(g.a, {

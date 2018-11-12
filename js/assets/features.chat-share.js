@@ -1,5 +1,5 @@
 (window.webpackJsonp = window.webpackJsonp || []).push([
-    [192], {
+    [193], {
         "1VMv": function(e, t) {
             var n = {
                 kind: "Document",
@@ -701,7 +701,7 @@
                         }
                     }), Object(l.a)([{
                         topic: function(e) {
-                            return Object(m.E)(e.currentUserID)
+                            return Object(m.F)(e.currentUserID)
                         },
                         mapMessageTypesToProps: (a = {}, a[d.PubsubMessageType.ChatNotification] = "userCommerceUpdateEvent", a)
                     }])], t)
@@ -896,7 +896,7 @@
                     }
                 }), Object(l.a)([{
                     topic: function(e) {
-                        return Object(m.G)(e.currentUserId ? e.currentUserId : "")
+                        return Object(m.H)(e.currentUserId ? e.currentUserId : "")
                     },
                     mapMessageTypesToProps: {
                         "*": "subscriptionInfo"

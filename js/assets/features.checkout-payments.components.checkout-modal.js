@@ -1,5 +1,5 @@
 (window.webpackJsonp = window.webpackJsonp || []).push([
-    [210], {
+    [212], {
         "/Z6v": function(e, t, r) {
             e.exports = r.p + "assets/amazon_pay_dark_2x-c98151cef856bab0e62c.png"
         },
@@ -88,8 +88,8 @@
                 _ = r.n(w),
                 T = r("GA+j"),
                 R = r.n(T),
-                M = r("FBRg"),
-                A = r.n(M),
+                A = r("FBRg"),
+                M = r.n(A),
                 x = r("2xEe"),
                 F = r.n(x),
                 D = r("q8H6"),
@@ -198,7 +198,7 @@
                                             "2x": G.a
                                         } : {
                                             "1x": R.a,
-                                            "2x": A.a
+                                            "2x": M.a
                                         },
                                         alt: Object(o.d)("Paypal", "PaymentMethodImage")
                                     };
@@ -1701,7 +1701,7 @@
                 d = r("UUve"),
                 l = r("NvVO"),
                 p = r("2xye"),
-                m = r("SNyx"),
+                m = r("WXY0"),
                 h = r("GnwI"),
                 y = r("Nk81"),
                 f = r("Ue10"),
@@ -2085,3032 +2085,6 @@
         },
         QxOQ: function(e, t, r) {},
         "R9u/": function(e, t, r) {},
-        SNyx: function(e, t, r) {
-            "use strict";
-            var n, a = r("/MKj"),
-                i = r("fvjX"),
-                o = r("1/iK"),
-                s = r("y5D0"),
-                c = r("kRBY"),
-                u = r("mrSG"),
-                d = r("NAv5"),
-                l = r("q1tI"),
-                p = r("/7QA"),
-                m = r("ZDlU"),
-                h = r("yR8l"),
-                y = r("HGFl"),
-                f = r("DMoW"),
-                b = r("b6Yk"),
-                g = r("tIid");
-            ! function(e) {
-                e[e.PERSONAL_SUB = 0] = "PERSONAL_SUB", e[e.GIFT_SUB = 1] = "GIFT_SUB", e[e.MYSTERY_GIFT = 2] = "MYSTERY_GIFT"
-            }(n || (n = {}));
-            var v, E, C = r("Ue10"),
-                k = function(e) {
-                    function t() {
-                        return null !== e && e.apply(this, arguments) || this
-                    }
-                    return u.__extends(t, e), t.prototype.render = function() {
-                        return this.props.product ? (e = this.props.purchaseFlow === n.GIFT_SUB || this.props.purchaseFlow === n.MYSTERY_GIFT ? this.isEsportPurchase ? this.giftEsportMessageText : this.giftSubMessageText : this.isEsportPurchase ? this.personalEsportMessageText : "turbo" === this.props.product.product.name ? this.turboMessageText : this.personalSubMessageText, l.createElement(C.Xa, null, e)) : l.createElement(C.ib, null);
-                        var e
-                    }, Object.defineProperty(t.prototype, "turboMessageText", {
-                        get: function() {
-                            var e = Object(p.d)("Buying a Twitch Turbo subscription is fast, easy, and secure. Don't hesitate to contact <x:link>Purchase Support</x:link> if you need help.", {
-                                "x:link": function(e) {
-                                    return l.createElement(C.U, {
-                                        targetBlank: !0,
-                                        to: "https://help.twitch.tv/"
-                                    }, e)
-                                }
-                            }, "CheckoutDescription");
-                            return l.createElement(C.W, null, e)
-                        },
-                        enumerable: !0,
-                        configurable: !0
-                    }), Object.defineProperty(t.prototype, "isEsportPurchase", {
-                        get: function() {
-                            var e = this.props.product && this.props.product.product.owner;
-                            return e && e.id && Object(g.a)(e.id, this.props.sessionUser)
-                        },
-                        enumerable: !0,
-                        configurable: !0
-                    }), Object.defineProperty(t.prototype, "personalEsportMessageText", {
-                        get: function() {
-                            var e = Object(p.d)("Buying a Pass is fast, easy, and secure. Don't hesitate to contact <x:link>Purchase Support</x:link> if you need help.", {
-                                "x:link": function(e) {
-                                    return l.createElement(C.U, {
-                                        targetBlank: !0,
-                                        to: "https://help.twitch.tv/"
-                                    }, e)
-                                }
-                            }, "CheckoutDescription");
-                            return l.createElement(C.W, null, e)
-                        },
-                        enumerable: !0,
-                        configurable: !0
-                    }), Object.defineProperty(t.prototype, "giftEsportMessageText", {
-                        get: function() {
-                            var e = Object(p.d)("Buying a Pass gift is fast, easy, and secure. Don't hesitate to contact <x:link>Purchase Support</x:link> if you need help.", {
-                                "x:link": function(e) {
-                                    return l.createElement(C.U, {
-                                        targetBlank: !0,
-                                        to: "https://help.twitch.tv/"
-                                    }, e)
-                                }
-                            }, "CheckoutDescription");
-                            return l.createElement(C.W, null, e)
-                        },
-                        enumerable: !0,
-                        configurable: !0
-                    }), Object.defineProperty(t.prototype, "personalSubMessageText", {
-                        get: function() {
-                            if (this.props.product) {
-                                var e = Object(p.d)("Buying a Channel Subscription is fast, easy, and secure. Don't hesitate to contact <x:link>Purchase Support</x:link> if you need help.", {
-                                        "x:link": function(e) {
-                                            return l.createElement(C.U, {
-                                                targetBlank: !0,
-                                                to: "https://help.twitch.tv/"
-                                            }, e)
-                                        }
-                                    }, "CheckoutDescription"),
-                                    t = Object(p.d)('You may cancel at any time by selecting "Do Not Renew" on your <x:link>subscriptions page</x:link>.', {
-                                        "x:link": function(e) {
-                                            return l.createElement(C.U, {
-                                                targetBlank: !0,
-                                                to: "/subscriptions"
-                                            }, e)
-                                        }
-                                    }, "CheckoutDescription");
-                                return l.createElement(l.Fragment, null, l.createElement(C.W, null, e), this.props.product.product.interval.unit === f.T.MONTH && l.createElement(C.W, null, t))
-                            }
-                        },
-                        enumerable: !0,
-                        configurable: !0
-                    }), Object.defineProperty(t.prototype, "giftSubMessageText", {
-                        get: function() {
-                            var e = Object(p.d)("Buying a Gift Subscription is fast, easy, and secure. Don't hesitate to contact <x:link>Purchase Support</x:link> if you need help.", {
-                                "x:link": function(e) {
-                                    return l.createElement(C.U, {
-                                        targetBlank: !0,
-                                        to: "https://help.twitch.tv/"
-                                    }, e)
-                                }
-                            }, "CheckoutDescription");
-                            return l.createElement(C.W, null, e)
-                        },
-                        enumerable: !0,
-                        configurable: !0
-                    }), t
-                }(l.PureComponent),
-                P = (r("JH5r"), function(e) {
-                    function t() {
-                        return null !== e && e.apply(this, arguments) || this
-                    }
-                    return u.__extends(t, e), t.prototype.render = function() {
-                        return l.createElement(C.Eb, {
-                            className: "checkout-error-brick",
-                            background: C.r.Base,
-                            borderTop: !0,
-                            borderRight: !0,
-                            borderBottom: !0,
-                            borderRadius: C.x.Small,
-                            display: C.X.Flex,
-                            flexDirection: C.Aa.Column,
-                            justifyContent: C.Wa.Center,
-                            padding: {
-                                x: 1,
-                                y: 2
-                            }
-                        }, this.props.children)
-                    }, t
-                }(l.Component));
-            r("acxT");
-            ! function(e) {
-                e[e.DefaultMessage = 0] = "DefaultMessage", e[e.PriceChangeNotice = 1] = "PriceChangeNotice", e[e.InvalidResidence = 2] = "InvalidResidence", e[e.InvalidPaymentMethod = 3] = "InvalidPaymentMethod"
-            }(v || (v = {})),
-            function(e) {
-                e[e.Info = 0] = "Info", e[e.Error = 1] = "Error"
-            }(E || (E = {}));
-            var O = function(e) {
-                    function t() {
-                        return null !== e && e.apply(this, arguments) || this
-                    }
-                    return u.__extends(t, e), t.prototype.render = function() {
-                        return this.props.level === E.Error ? l.createElement(P, null, l.createElement(C.W, {
-                            bold: !0
-                        }, this.title), l.createElement(C.Xa, {
-                            margin: {
-                                top: 1
-                            }
-                        }, l.createElement(C.W, null, this.message))) : this.props.level === E.Info ? l.createElement(C.Eb, {
-                            className: "checkout-error--info",
-                            display: C.X.Flex,
-                            padding: {
-                                x: 2,
-                                y: 1
-                            },
-                            margin: {
-                                bottom: 2
-                            }
-                        }, l.createElement(C.sb, {
-                            asset: C.tb.NotificationInfo
-                        }), l.createElement(C.Xa, {
-                            margin: {
-                                left: 2
-                            }
-                        }, l.createElement(C.W, null, this.message))) : void 0
-                    }, Object.defineProperty(t.prototype, "title", {
-                        get: function() {
-                            return this.props.errorCode === v.DefaultMessage ? Object(p.d)("Payment not processed", "CheckoutError") : this.props.errorCode === v.InvalidResidence ? Object(p.d)("Invalid country of residence", "CheckoutError") : this.props.errorCode === v.InvalidPaymentMethod ? Object(p.d)("This payment method is not available for your purchase at this time", "CheckoutError") : null
-                        },
-                        enumerable: !0,
-                        configurable: !0
-                    }), Object.defineProperty(t.prototype, "message", {
-                        get: function() {
-                            return this.props.errorCode === v.DefaultMessage ? Object(p.d)("Something went wrong, and your payment could not be processed at this time. Please try again later.", "CheckoutError") : this.props.errorCode === v.PriceChangeNotice ? Object(p.d)("We made a change to the price to reflect your country of purchase. Please review the updated price and confirm your payment again.", "CheckoutError") : this.props.errorCode === v.InvalidResidence ? Object(p.d)("Make sure your country of residence and postal code are both valid.", "CheckoutError") : this.props.errorCode === v.InvalidPaymentMethod ? Object(p.d)("Please continue checkout using another payment method.", "CheckoutError") : null
-                        },
-                        enumerable: !0,
-                        configurable: !0
-                    }), t
-                }(l.Component),
-                S = r("6oOb"),
-                I = function(e) {
-                    function t() {
-                        return null !== e && e.apply(this, arguments) || this
-                    }
-                    return u.__extends(t, e), t.prototype.render = function() {
-                        return this.props.progress === S.a.CONFIRMATION ? l.createElement(C.W, {
-                            type: C.Vb.H2,
-                            bold: !0
-                        }, Object(p.d)("Purchase Successful", "CheckoutHeader")) : l.createElement(C.W, {
-                            type: C.Vb.H2,
-                            bold: !0
-                        }, this.headerText)
-                    }, Object.defineProperty(t.prototype, "headerText", {
-                        get: function() {
-                            return this.props.purchaseFlow === n.GIFT_SUB || this.props.purchaseFlow === n.MYSTERY_GIFT ? this.isEsportPurchase ? Object(p.d)("Gift All-Access Pass", "CheckoutHeader") : Object(p.d)("Gift A Subscription", "CheckoutHeader") : this.props.purchaseFlow === n.PERSONAL_SUB ? this.isEsportPurchase ? Object(p.d)("Get Your All-Access Pass", "CheckoutHeader") : Object(p.d)("Subscription Payment Information", "CheckoutHeader") : Object(p.d)("Checkout", "CheckoutHeader")
-                        },
-                        enumerable: !0,
-                        configurable: !0
-                    }), Object.defineProperty(t.prototype, "isEsportPurchase", {
-                        get: function() {
-                            var e = this.props.product && this.props.product.product.owner;
-                            return e && e.id && Object(g.a)(e.id, this.props.sessionUser)
-                        },
-                        enumerable: !0,
-                        configurable: !0
-                    }), t
-                }(l.Component);
-            var N, j = Object(a.connect)(function(e) {
-                    return {
-                        sessionUser: Object(c.e)(e)
-                    }
-                })(I),
-                w = (r("u/1r"), function(e) {
-                    return l.createElement(C.Xa, {
-                        fullWidth: !0,
-                        padding: 3,
-                        overflow: C.cb.Auto
-                    }, l.createElement(C.Xa, {
-                        display: C.X.Flex,
-                        justifyContent: C.Wa.Center,
-                        flexWrap: C.Ba.Wrap
-                    }, l.createElement(C.Xa, {
-                        display: C.X.Hide,
-                        alignItems: C.f.Start,
-                        breakpointLarge: {
-                            display: C.X.Flex
-                        }
-                    }, e.productDescription), l.createElement(C.Xa, {
-                        className: "checkout-layout__content",
-                        breakpointLarge: {
-                            margin: {
-                                left: 4
-                            }
-                        }
-                    }, e.header, l.createElement(C.Xa, {
-                        display: C.X.Flex,
-                        breakpointLarge: {
-                            display: C.X.Hide
-                        }
-                    }, e.productDescription), l.createElement(C.Xa, {
-                        margin: {
-                            y: 1
-                        }
-                    }, e.children))))
-                }),
-                _ = function() {
-                    var e = Object(p.d)('By clicking "Complete Purchase", you hereby agree to Twitch\'s <x:tos>Terms of Sale</x:tos> and <x:privacy>Privacy Policy</x:privacy>. Your payment method will be saved for future purchases, and, if applicable, recurring subscription payments.', {
-                        "x:tos": function(e) {
-                            return l.createElement(C.U, {
-                                targetBlank: !0,
-                                to: "https://twitch.tv/p/legal/terms-of-sale/"
-                            }, e)
-                        },
-                        "x:privacy": function(e) {
-                            return l.createElement(C.U, {
-                                targetBlank: !0,
-                                to: "https://twitch.tv/p/legal/privacy-policy/"
-                            }, e)
-                        }
-                    }, "CheckoutDisclaimer");
-                    return l.createElement(C.Xa, {
-                        padding: {
-                            y: 2
-                        }
-                    }, l.createElement(C.W, null, e))
-                };
-
-            function T(e) {
-                switch (e) {
-                    case N.GIFTABLE_RECIPIENT:
-                    case N.NEW_PURCHASE:
-                    case N.TIER_UPGRADE:
-                    case N.PRIME_UPGRADE:
-                    case N.UNKNOWN:
-                        return !0;
-                    case N.NO_ITEM:
-                    case N.NON_GIFTABLE_RECIPIENT:
-                    case N.NO_MASS_GIFTING:
-                    case N.TIER_DOWNGRADE:
-                    case N.MOBILE_UPGRADE:
-                    case N.API_INELIGIBLE:
-                    default:
-                        return !1
-                }
-            }! function(e) {
-                e[e.GIFTABLE_RECIPIENT = 0] = "GIFTABLE_RECIPIENT", e[e.NEW_PURCHASE = 1] = "NEW_PURCHASE", e[e.TIER_UPGRADE = 2] = "TIER_UPGRADE", e[e.PRIME_UPGRADE = 3] = "PRIME_UPGRADE", e[e.UNKNOWN = 4] = "UNKNOWN", e[e.NO_ITEM = 5] = "NO_ITEM", e[e.NON_GIFTABLE_RECIPIENT = 6] = "NON_GIFTABLE_RECIPIENT", e[e.NO_MASS_GIFTING = 7] = "NO_MASS_GIFTING", e[e.TIER_DOWNGRADE = 8] = "TIER_DOWNGRADE", e[e.MOBILE_UPGRADE = 9] = "MOBILE_UPGRADE", e[e.API_INELIGIBLE = 10] = "API_INELIGIBLE"
-            }(N || (N = {}));
-            var R, M = function(e) {
-                    function t() {
-                        return null !== e && e.apply(this, arguments) || this
-                    }
-                    return u.__extends(t, e), t.prototype.render = function() {
-                        var e;
-                        switch (this.props.productEligibility) {
-                            case N.NON_GIFTABLE_RECIPIENT:
-                                e = this.isEsportPurchase ? Object(p.d)("Sorry, an All-Access Pass to this channel is not available for <x:bold>{recipientName}</x:bold>.", {
-                                    "x:bold": function(e) {
-                                        return l.createElement(C.W, {
-                                            type: C.Vb.Span,
-                                            bold: !0
-                                        }, e)
-                                    },
-                                    recipientName: this.props.product.recipient && this.props.product.recipient.displayName || ""
-                                }, "IneligiblePurchaseNotice") : Object(p.d)("Sorry, a Gift Subscription to this channel is not available for <x:bold>{recipientName}</x:bold>.", {
-                                    "x:bold": function(e) {
-                                        return l.createElement(C.W, {
-                                            type: C.Vb.Span,
-                                            bold: !0
-                                        }, e)
-                                    },
-                                    recipientName: this.props.product.recipient && this.props.product.recipient.displayName || ""
-                                }, "IneligiblePurchaseNotice");
-                                break;
-                            case N.NO_MASS_GIFTING:
-                                e = Object(p.d)("Community gifts are not eligible for this product.", "IneligiblePurchaseNotice");
-                                break;
-                            case N.TIER_DOWNGRADE:
-                                var t = this.props.product.product && this.props.product.product.owner && this.props.product.product.owner.login;
-                                e = Object(p.d)("You are currently subscribed to a higher-tier subscription that offers more benefits. <x:subsLink>Click here to compare subscription benefits</x:subsLink>. If you would still like to purchase this, please <x:subsMgmtLink>cancel your existing subscription</x:subsMgmtLink> or wait for your existing subscription to end.", {
-                                    "x:subsLink": function(e) {
-                                        return l.createElement(C.U, {
-                                            type: C.V.Inherit,
-                                            to: "/subs/" + (t || ""),
-                                            underline: !0
-                                        }, e)
-                                    },
-                                    "x:subsMgmtLink": function(e) {
-                                        return l.createElement(C.U, {
-                                            type: C.V.Inherit,
-                                            to: "/subscriptions",
-                                            underline: !0
-                                        }, e)
-                                    }
-                                }, "IneligiblePurchaseNotice");
-                                break;
-                            case N.MOBILE_UPGRADE:
-                                var r = this.props.product.product && this.props.product.product.owner && this.props.product.product.owner.displayName;
-                                return l.createElement(m.a, null, l.createElement(C.W, {
-                                    bold: !0
-                                }, Object(p.d)("You purchased a subscription to {productDisplayName} on your mobile device.", {
-                                    productDisplayName: r || ""
-                                }, "IneligiblePurchaseNotice")), l.createElement(C.Xa, {
-                                    margin: {
-                                        top: 1
-                                    }
-                                }, l.createElement(C.W, null, Object(p.d)("Upgrading your mobile subscription is currently not supported.", "IneligiblePurchaseNotice"))));
-                            default:
-                                e = Object(p.d)("You are not eligible for this purchase.", "IneligiblePurchaseNotice")
-                        }
-                        return l.createElement(C.Eb, {
-                            background: C.r.Base,
-                            borderMarked: !0,
-                            padding: 1,
-                            margin: {
-                                y: 1
-                            }
-                        }, l.createElement(C.W, {
-                            color: C.O.Error
-                        }, e))
-                    }, Object.defineProperty(t.prototype, "isEsportPurchase", {
-                        get: function() {
-                            var e = this.props.product.product.owner;
-                            return e && e.id && Object(g.a)(e.id, this.props.sessionUser)
-                        },
-                        enumerable: !0,
-                        configurable: !0
-                    }), t
-                }(l.PureComponent),
-                A = function(e) {
-                    return l.createElement(C.Eb, {
-                        background: C.r.Base,
-                        borderMarked: !0,
-                        padding: 1,
-                        margin: {
-                            y: 1
-                        }
-                    }, l.createElement(C.Xa, {
-                        margin: {
-                            bottom: .5
-                        }
-                    }, l.createElement(C.W, null, Object(p.d)("You are currently subscribed for free with Twitch Prime. If you choose to upgrade to the {newPrice} subscription, you will be immediately billed for {newPrice} and your new subscription will auto-renew every month.", {
-                        newPrice: e.newPrice
-                    }, "UpgradePrimeWarning"))), l.createElement(C.Xa, {
-                        margin: {
-                            bottom: .5
-                        }
-                    }, l.createElement(C.W, null, Object(p.d)("You'll be able to subscribe to another channel for free with Twitch Prime 30 days after you last used your free subscription.", "UpgradePrimeWarning"))), l.createElement(C.W, null, Object(p.d)("If you upgrade your subscription, your sub anniversary, sub streaks, and badge tenure will be maintained.", "UpgradePrimeWarning")))
-                },
-                x = function(e) {
-                    return l.createElement(C.Eb, {
-                        background: C.r.Base,
-                        borderMarked: !0,
-                        padding: 1,
-                        margin: {
-                            y: 1
-                        }
-                    }, l.createElement(C.Xa, {
-                        margin: {
-                            bottom: .5
-                        }
-                    }, l.createElement(C.W, null, Object(p.d)("You are currently subscribed to the {originalPrice} subscription plan. If you choose to upgrade to the {newPrice} subscription plan, you will be immediately billed for {newPrice} and your currently active subscription plan for {originalPrice} will not renew any further.", {
-                        originalPrice: e.originalPrice,
-                        newPrice: e.newPrice
-                    }, "UpgradeTierWarning"))), l.createElement(C.Xa, {
-                        margin: {
-                            bottom: .5
-                        }
-                    }, l.createElement(C.W, null, Object(p.d)("Please note that pro-rated refunds cannot be offered for the remaining time on your {originalPrice} subscription plan", {
-                        originalPrice: e.originalPrice
-                    }, "UpgradeTierWarning"))), l.createElement(C.W, null, Object(p.d)("If you upgrade your subscription, your sub anniversary, sub streaks, and badge tenure will be maintained.", "UpgradeTierWarning")))
-                },
-                F = (r("mIie"), function(e) {
-                    function t() {
-                        var t = null !== e && e.apply(this, arguments) || this;
-                        return t.enablePaidUpgradeFlag = p.b.get("earth_wind_fire", !1), t.chargeTimeMessage = Object(p.d)("You will be charged on {date}", {
-                            date: Object(p.c)(new Date(Date.now()), "medium")
-                        }, "PurchasePreview"), t
-                    }
-                    return u.__extends(t, e), t.prototype.render = function() {
-                        if (!this.props.product) return null;
-                        var e = l.createElement(l.Fragment, null),
-                            t = l.createElement(l.Fragment, null);
-                        if (this.props.purchaseFlow === n.GIFT_SUB) t = this.renderGiftSubPurchase();
-                        else if (this.props.purchaseFlow === n.MYSTERY_GIFT) t = this.renderMysteryGiftSubPurchase();
-                        else if (this.props.purchaseFlow === n.PERSONAL_SUB)
-                            if (this.props.eligiblePromotions && this.props.eligiblePromotions.isOneMonthFreeEligible && (e = this.renderOneFreeMonth()), this.props.productEligibility === N.TIER_UPGRADE) t = this.renderTierUpgrade();
-                            else if (this.props.productEligibility === N.PRIME_UPGRADE) {
-                            var r = this.formattedPrice;
-                            r && (t = l.createElement(A, {
-                                newPrice: r
-                            }))
-                        } else this.props.productEligibility === N.NEW_PURCHASE && this.hasActiveGiftSubscription && (this.props.eligiblePromotions && this.props.eligiblePromotions.paidUpgradePromotion && (e = this.renderSubtemberDiscount()), t = this.renderGiftSubUpgrade());
-                        return l.createElement(l.Fragment, null, e, (!this.hasActiveGiftSubscription || this.props.purchaseFlow !== n.PERSONAL_SUB) && l.createElement(C.Xa, {
-                            margin: {
-                                top: 1
-                            }
-                        }, l.createElement(C.W, null, this.chargeTimeMessage)), t)
-                    }, t.prototype.renderTierUpgrade = function() {
-                        var e = this.props.existingPurchases && this.props.existingPurchases.compatiblePurchases && this.props.existingPurchases.compatiblePurchases[0];
-                        if (!e) return null;
-                        var t = e.price,
-                            r = e.currency,
-                            n = e.divisor,
-                            a = Object(p.f)(t / n, {
-                                style: "currency",
-                                currency: r
-                            }),
-                            i = this.formattedPrice;
-                        return a && i ? l.createElement(x, {
-                            originalPrice: a,
-                            newPrice: i
-                        }) : null
-                    }, t.prototype.renderGiftSubUpgrade = function() {
-                        var e = this.props.benefit.endsAt;
-                        if (!e) return null;
-                        var t = Object(y.c)(e);
-                        return l.createElement(C.Eb, {
-                            background: C.r.Base,
-                            borderMarked: !0,
-                            padding: 1,
-                            margin: {
-                                y: 1
-                            }
-                        }, l.createElement(C.W, null, Object(p.d)("You will be charged when your Gift Subscription ends on <x:strong>{giftSubEndDateFormatted, date, short}</x:strong>.", {
-                            giftSubEndDateFormatted: t,
-                            "x:strong": function(e) {
-                                return l.createElement(C.W, {
-                                    type: C.Vb.Span,
-                                    bold: !0
-                                }, e)
-                            }
-                        }, "PurchasePreview")))
-                    }, t.prototype.renderGiftSubPurchase = function() {
-                        var e, t = this.props.product && this.props.product.recipient && this.props.product.recipient.displayName;
-                        return this.formattedPrice ? (e = this.isEsportPurchase ? Object(p.d)("You are buying a {price} Overwatch League All-Access Pass for {recipientName}.", {
-                            price: this.formattedPrice,
-                            recipientName: l.createElement(C.W, {
-                                type: C.Vb.Span,
-                                bold: !0
-                            }, t || "")
-                        }, "PurchasePreview") : Object(p.d)("You are buying a Single Month {price} Gift Subscription for {recipientName}.", {
-                            price: this.formattedPrice,
-                            recipientName: l.createElement(C.W, {
-                                type: C.Vb.Span,
-                                bold: !0
-                            }, t || "")
-                        }, "PurchasePreview"), l.createElement(C.Eb, {
-                            background: C.r.Base,
-                            borderMarked: !0,
-                            padding: 1,
-                            margin: {
-                                y: 1
-                            }
-                        }, l.createElement(C.W, null, e))) : null
-                    }, t.prototype.renderMysteryGiftSubPurchase = function() {
-                        if (!this.props.product) return null;
-                        var e, t = this.props.product.product && this.props.product.product.tier,
-                            r = t && parseInt(t, 10) / 1e3,
-                            n = this.props.product.quantity;
-                        if (!n || !this.formattedPrice) return null;
-                        var a = Object(p.d)("Gift recipients will be chosen at random, starting with viewers of the streamer's channel who do not currently subscribe. <x:gift-info>Learn how Twitch picks recipients.</x:gift-info>", {
-                            "x:gift-info": function(e) {
-                                return l.createElement(C.U, {
-                                    targetBlank: !0,
-                                    to: "https://help.twitch.tv/customer/portal/articles/2903710-gift-subscriptions#CommunityGifting"
-                                }, e)
-                            }
-                        }, "PurchasePreview");
-                        e = this.isEsportPurchase ? Object(p.d)("{quantity, plural, one {{quantity} x Overwatch League All-Access Pass Gift} other {{quantity} x Overwatch League All-Access Pass Gifts}}", {
-                            quantity: n
-                        }, "PurchasePreview") : Object(p.d)("{quantity, plural, one {{quantity} x Single Month Tier {numericalTier} Gift Subscription} other {{quantity} x Single Month Tier {numericalTier} Gift Subscriptions}}", {
-                            quantity: n,
-                            numericalTier: r
-                        }, "PurchasePreview");
-                        var i = this.props.product.product.priceInfo.total * n,
-                            o = Object(p.d)("{price} each", {
-                                price: this.formattedPrice
-                            }, "PurchasePreview"),
-                            s = Object(p.d)("Total {totalPrice}", {
-                                totalPrice: Object(p.f)(i / Math.pow(10, this.props.product.product.priceInfo.exponent), {
-                                    style: "currency",
-                                    currency: this.props.product.product.priceInfo.currency
-                                })
-                            }, "PurchasePreview");
-                        return l.createElement(l.Fragment, null, l.createElement(C.Eb, {
-                            background: C.r.Base,
-                            borderMarked: !0,
-                            padding: 1,
-                            margin: {
-                                y: 1
-                            }
-                        }, l.createElement(C.Xa, null, l.createElement(C.W, {
-                            type: C.Vb.H5
-                        }, e)), l.createElement(C.Xa, {
-                            margin: {
-                                y: 1
-                            }
-                        }, l.createElement(C.W, {
-                            type: C.Vb.H5
-                        }, o)), l.createElement(C.W, {
-                            type: C.Vb.H5,
-                            bold: !0
-                        }, s)), l.createElement(C.W, null, a))
-                    }, t.prototype.renderOneFreeMonth = function() {
-                        var e = new Date,
-                            t = this.props.benefit;
-                        t && null !== t.endsAt && (e = Object(y.c)(t.endsAt));
-                        var r = new Date(e);
-                        return r.setMonth(e.getMonth() + 1), l.createElement(C.Eb, {
-                            background: C.r.Base,
-                            borderMarked: !0,
-                            padding: 1,
-                            margin: {
-                                y: 1
-                            }
-                        }, l.createElement(C.W, null, Object(p.d)("Your next month is on us. You will be charged when your free month ends on <x:strong>{futureChargeDate, date, short}</x:strong>.", {
-                            futureChargeDate: r,
-                            "x:strong": function(e) {
-                                return l.createElement(C.W, {
-                                    type: C.Vb.Span,
-                                    bold: !0
-                                }, e)
-                            }
-                        }, "PurchasePreview")))
-                    }, t.prototype.renderSubtemberDiscount = function() {
-                        return this.enablePaidUpgradeFlag && this.props.eligiblePromotions && this.props.eligiblePromotions.paidUpgradePromotion ? l.createElement(C.Eb, {
-                            background: C.r.Base,
-                            className: "purchase-preview__promotion-banner",
-                            padding: 1,
-                            margin: {
-                                y: 1
-                            },
-                            display: C.X.Flex,
-                            flexDirection: C.Aa.Column
-                        }, l.createElement(C.W, {
-                            bold: !0
-                        }, Object(p.d)("*Subtember Limited-Time Promotion Applied", "PurchasePreview")), l.createElement(C.W, null, Object(p.d)("Your first month will cost {discountedPrice} and {oldPrice} for each recurring month.", {
-                            discountedPrice: this.props.eligiblePromotions.paidUpgradePromotion.newPrice,
-                            oldPrice: this.props.eligiblePromotions.paidUpgradePromotion.oldPrice
-                        }, "PurchasePreview"))) : null
-                    }, Object.defineProperty(t.prototype, "formattedPrice", {
-                        get: function() {
-                            return this.props.product && this.props.product.product.priceInfo ? Object(p.f)(this.props.product.product.priceInfo.total / Math.pow(10, this.props.product.product.priceInfo.exponent), {
-                                style: "currency",
-                                currency: this.props.product.product.priceInfo.currency
-                            }) : null
-                        },
-                        enumerable: !0,
-                        configurable: !0
-                    }), Object.defineProperty(t.prototype, "hasActiveGiftSubscription", {
-                        get: function() {
-                            return !!(this.props.benefit && this.props.benefit.gift && this.props.benefit.gift.isGift)
-                        },
-                        enumerable: !0,
-                        configurable: !0
-                    }), Object.defineProperty(t.prototype, "isEsportPurchase", {
-                        get: function() {
-                            return this.props.product && this.props.product.product.owner && this.props.product.product.owner.id && Object(g.a)(this.props.product.product.owner.id, this.props.sessionUser)
-                        },
-                        enumerable: !0,
-                        configurable: !0
-                    }), t
-                }(l.Component)),
-                D = r("9C/b"),
-                G = (r("NwMv"), function(e) {
-                    function t() {
-                        var t = null !== e && e.apply(this, arguments) || this;
-                        return t.goBackToChannel = function() {
-                            (window.opener || window.top !== window.self) && (parent.window.close(), window.close()), t.props.history.push("/" + t.props.productOwnerLogin)
-                        }, t
-                    }
-                    return u.__extends(t, e), t.prototype.render = function() {
-                        return l.createElement(C.Xa, {
-                            className: "gift-sub-receipt__container",
-                            padding: {
-                                y: 2
-                            }
-                        }, l.createElement(C.Xa, {
-                            padding: {
-                                bottom: 2
-                            }
-                        }, this.getGiftSubReceiptInfo()), l.createElement(C.Eb, {
-                            borderTop: !0,
-                            borderBottom: !0,
-                            padding: {
-                                y: 3
-                            }
-                        }, l.createElement(C.Xa, {
-                            className: "gift-sub-receipt__label",
-                            display: C.X.InlineBlock
-                        }, l.createElement(C.W, {
-                            bold: !0
-                        }, Object(p.d)("Gift Status", "GiftSubReceipt"))), l.createElement(C.Xa, {
-                            display: C.X.InlineBlock
-                        }, l.createElement(C.W, null, Object(p.d)("Active", "GiftSubReceipt")))), this.props.invoicePrice && l.createElement(C.Eb, {
-                            borderBottom: !0,
-                            padding: {
-                                y: 3
-                            }
-                        }, l.createElement(C.Xa, {
-                            className: "gift-sub-receipt__label",
-                            display: C.X.InlineBlock
-                        }, l.createElement(C.W, {
-                            bold: !0
-                        }, Object(p.d)("Your Invoice Total", "GiftSubReceipt"))), l.createElement(C.Xa, {
-                            display: C.X.InlineBlock
-                        }, l.createElement(C.W, null, Object(p.f)(this.props.invoicePrice / 100, {
-                            style: "currency",
-                            currency: this.props.invoiceCurrency
-                        })))), l.createElement(C.Xa, {
-                            margin: {
-                                y: 3
-                            }
-                        }, l.createElement(C.z, {
-                            onClick: this.goBackToChannel
-                        }, Object(p.d)("Go back to {displayName}", {
-                            displayName: this.props.productOwnerDisplayName
-                        }, "GiftSubReceipt"))))
-                    }, t.prototype.getGiftSubReceiptInfo = function() {
-                        if (this.props.invoicePrice) return this.props.isEsportChannel ? l.createElement(C.W, {
-                            "data-test-selector": "esport-gift-sub-receipt-info-selector"
-                        }, Object(p.d)("You have purchased a {price} Overwatch League All-Access Pass for <x:strong>{recipientDisplayName}</x:strong>", {
-                            price: Object(p.f)(this.props.invoicePrice / 100, {
-                                style: "currency",
-                                currency: this.props.invoiceCurrency
-                            }),
-                            recipientDisplayName: this.props.recipientDisplayName || "",
-                            "x:strong": function(e) {
-                                return l.createElement(C.W, {
-                                    type: C.Vb.Span,
-                                    bold: !0
-                                }, e)
-                            }
-                        }, "GiftSubReceipt")) : l.createElement(C.W, {
-                            "data-test-selector": "gift-sub-receipt-info-selector"
-                        }, Object(p.d)("You have purchased a {price} Gift Subscription for <x:strong>{recipientDisplayName}</x:strong>", {
-                            price: Object(p.f)(this.props.invoicePrice / 100, {
-                                style: "currency",
-                                currency: this.props.invoiceCurrency
-                            }),
-                            recipientDisplayName: this.props.recipientDisplayName || "",
-                            "x:strong": function(e) {
-                                return l.createElement(C.W, {
-                                    type: C.Vb.Span,
-                                    bold: !0
-                                }, e)
-                            }
-                        }, "GiftSubReceipt"))
-                    }, t
-                }(l.PureComponent)),
-                U = Object(D.a)(G),
-                B = (r("XE3n"), function(e) {
-                    function t() {
-                        var t = null !== e && e.apply(this, arguments) || this;
-                        return t.goBackToChannel = function() {
-                            (window.opener || window.top !== window.self) && (parent.window.close(), window.close()), t.props.history.push("/" + t.props.productOwnerLogin)
-                        }, t
-                    }
-                    return u.__extends(t, e), t.prototype.render = function() {
-                        return l.createElement(C.Xa, {
-                            className: "gift-sub-receipt__container",
-                            padding: {
-                                y: 2
-                            }
-                        }, l.createElement(C.Eb, {
-                            padding: {
-                                bottom: 2
-                            }
-                        }, this.getMysteryGiftSubReceiptInfo()), l.createElement(C.Eb, {
-                            borderTop: !0,
-                            borderBottom: !0,
-                            padding: {
-                                y: 3
-                            }
-                        }, l.createElement(C.Xa, {
-                            className: "gift-sub-receipt__label",
-                            display: C.X.InlineBlock
-                        }, l.createElement(C.W, {
-                            bold: !0
-                        }, Object(p.d)("Gift Status", "MysteryGiftSubReceipt"))), l.createElement(C.Xa, {
-                            display: C.X.InlineBlock
-                        }, l.createElement(C.W, null, Object(p.d)("Active", "MysteryGiftSubReceipt")))), this.props.invoicePrice && l.createElement(C.Eb, {
-                            borderBottom: !0,
-                            padding: {
-                                y: 3
-                            }
-                        }, l.createElement(C.Xa, {
-                            className: "gift-sub-receipt__label",
-                            display: C.X.InlineBlock
-                        }, l.createElement(C.W, {
-                            bold: !0
-                        }, Object(p.d)("Your Invoice Total", "MysteryGiftSubReceipt"))), l.createElement(C.Xa, {
-                            display: C.X.InlineBlock
-                        }, l.createElement(C.W, null, Object(p.f)(this.props.invoicePrice / 100, {
-                            style: "currency",
-                            currency: this.props.invoiceCurrency
-                        })))), l.createElement(C.Xa, {
-                            margin: {
-                                y: 3
-                            }
-                        }, l.createElement(C.z, {
-                            onClick: this.goBackToChannel
-                        }, Object(p.d)("Go back to {displayName}", {
-                            displayName: this.props.productOwnerDisplayName
-                        }, "MysteryGiftSubReceipt"))))
-                    }, t.prototype.getMysteryGiftSubReceiptInfo = function() {
-                        if (this.props.invoicePrice && this.props.tier) {
-                            var e = parseInt(this.props.tier, 10) / 1e3,
-                                t = Object(p.d)("{quantity, plural, one {Your gift is now being given in the channel.} other {Your gifts are now being given in the channel.}}", {
-                                    quantity: this.props.mysteryGiftCount
-                                }, "MysteryGiftSubReceipt");
-                            return this.props.isEsportChannel ? l.createElement(l.Fragment, null, l.createElement(C.W, null, Object(p.d)("{quantity, plural, one {You have purchased {quantity} x Overwatch League All-Access Pass Gift.} other {You have purchased {quantity} x Overwatch League All-Access Pass Gifts.}}", {
-                                quantity: this.props.mysteryGiftCount
-                            }, "MysteryGiftSubReceipt")), l.createElement(C.W, null, t)) : l.createElement(l.Fragment, null, l.createElement(C.W, null, Object(p.d)("{quantity, plural, one {You have purchased {quantity} x Single Month Tier {tier} Gift Subscription.} other {You have purchased {quantity} x Single Month Tier {tier} Gift Subscriptions.}}", {
-                                quantity: this.props.mysteryGiftCount,
-                                tier: e
-                            }, "MysteryGiftSubReceipt")), l.createElement(C.W, null, t))
-                        }
-                    }, t
-                }(l.PureComponent)),
-                L = Object(D.a)(B),
-                W = (r("ZHRK"), function(e) {
-                    function t() {
-                        var t = null !== e && e.apply(this, arguments) || this;
-                        return t.goBackToChannel = function() {
-                            (window.opener || window.top !== window.self) && (parent.window.close(), window.close()), "turbo" === t.props.productOwnerLogin ? t.props.history.push("/settings/turbo") : t.props.history.push("/" + t.props.productOwnerLogin)
-                        }, t
-                    }
-                    return u.__extends(t, e), t.prototype.render = function() {
-                        var e;
-                        return e = this.props.giftSubEndsAt ? Object(p.d)("Your paid subscription will begin on <x:strong>{endsAt}</x:strong> after your Gift Subscription ends", {
-                            "x:strong": function(e) {
-                                return l.createElement(C.W, {
-                                    type: C.Vb.Span,
-                                    bold: !0
-                                }, e)
-                            },
-                            endsAt: Object(p.c)(new Date(this.props.giftSubEndsAt), "long")
-                        }, "PersonalSubReceipt") : Object(p.d)("Active", "PersonalSubReceipt"), l.createElement(C.Xa, {
-                            className: "personal-sub-receipt"
-                        }, l.createElement(C.Eb, {
-                            borderBottom: !0,
-                            padding: {
-                                y: 3
-                            }
-                        }, l.createElement(C.Xa, {
-                            className: "personal-sub-receipt__label",
-                            display: C.X.InlineBlock
-                        }, l.createElement(C.W, {
-                            bold: !0
-                        }, Object(p.d)("Subscription for", "PersonalSubReceipt"))), l.createElement(C.Xa, {
-                            display: C.X.InlineBlock
-                        }, l.createElement(C.W, null, this.props.purchaserDisplayName))), l.createElement(C.Eb, {
-                            borderBottom: !0,
-                            padding: {
-                                y: 3
-                            }
-                        }, l.createElement(C.Xa, {
-                            className: "personal-sub-receipt__label",
-                            display: C.X.InlineBlock
-                        }, l.createElement(C.W, {
-                            bold: !0
-                        }, Object(p.d)("Status", "PersonalSubReceipt"))), l.createElement(C.Xa, {
-                            display: C.X.InlineBlock
-                        }, l.createElement(C.W, null, e))), l.createElement(C.Xa, {
-                            margin: {
-                                y: 3
-                            }
-                        }, l.createElement(C.z, {
-                            onClick: this.goBackToChannel
-                        }, Object(p.d)("Go back to {displayName}", {
-                            displayName: this.props.productOwnerDisplayName
-                        }, "PersonalSubReceipt"))))
-                    }, t
-                }(l.Component)),
-                X = Object(D.a)(W),
-                z = function(e) {
-                    function t() {
-                        return null !== e && e.apply(this, arguments) || this
-                    }
-                    return u.__extends(t, e), t.prototype.render = function() {
-                        if (!this.props.product || !this.props.purchaseInvoice.price) return null;
-                        var e = this.props.product.product && this.props.product.product.owner && this.props.product.product.owner.id || "",
-                            t = Object(g.a)(e, this.props.sessionUser),
-                            r = this.props.product.product,
-                            a = r && r.owner,
-                            i = this.props.benefit;
-                        return this.props.purchaseFlow === n.MYSTERY_GIFT ? l.createElement(L, {
-                            productOwnerDisplayName: a && a.displayName || "",
-                            productOwnerLogin: a && a.login || "",
-                            invoicePrice: this.props.purchaseInvoice.price,
-                            invoiceCurrency: this.props.purchaseInvoice.currency || "USD",
-                            tier: this.props.purchaseInvoice.tier || "",
-                            mysteryGiftCount: this.props.product.quantity || 1,
-                            isEsportChannel: t
-                        }) : this.props.purchaseFlow === n.GIFT_SUB ? this.props.product.recipient ? l.createElement(U, {
-                            recipientDisplayName: this.props.product.recipient.displayName,
-                            productOwnerDisplayName: a && a.displayName || "",
-                            productOwnerLogin: a && a.login || "",
-                            invoicePrice: this.props.purchaseInvoice && this.props.purchaseInvoice.price || void 0,
-                            invoiceCurrency: this.props.purchaseInvoice && this.props.purchaseInvoice.currency || "USD",
-                            isEsportChannel: t
-                        }) : null : "turbo" === this.props.product.product.name ? this.props.benefit ? l.createElement(X, {
-                            purchaserDisplayName: this.props.currentUser && this.props.currentUser.displayName || "",
-                            productOwnerDisplayName: "turbo",
-                            productOwnerLogin: "turbo",
-                            giftSubEndsAt: i && i.gift && (i.gift.isGift || null) && i.endsAt,
-                            invoicePrice: this.props.purchaseInvoice.price,
-                            invoiceCurrency: this.props.purchaseInvoice.currency || "USD",
-                            invoiceDivisor: this.props.purchaseInvoice.divisor || 100
-                        }) : null : l.createElement(X, {
-                            purchaserDisplayName: this.props.currentUser && this.props.currentUser.displayName || "",
-                            productOwnerDisplayName: a && a.displayName || "",
-                            productOwnerLogin: a && a.login || "",
-                            giftSubEndsAt: i && i.gift && (i.gift.isGift || null) && i.endsAt || "",
-                            invoicePrice: this.props.purchaseInvoice.price,
-                            invoiceCurrency: this.props.purchaseInvoice.currency || "USD",
-                            invoiceDivisor: this.props.purchaseInvoice.divisor || 100
-                        })
-                    }, t
-                }(l.PureComponent),
-                V = r("V+q8"),
-                H = r("oJmH"),
-                Z = r("sV2v"),
-                Y = r("Jgup"),
-                K = function(e) {
-                    function t() {
-                        var t = null !== e && e.apply(this, arguments) || this;
-                        return t.unsupportedCountries = new Set(["A1", "A2", "AP", "AQ", "CU", "EU", "IR", "KP", "MM", "O1", "SD", "SS", "SY", "TL"]), t.displayCountries = Y.a.filter(function(e) {
-                            return !t.unsupportedCountries.has(e)
-                        }), t.onCountryChange = function(e) {
-                            t.props.onChange({
-                                countryCode: e.currentTarget.value,
-                                zipCode: ""
-                            })
-                        }, t.onZipChange = function(e) {
-                            t.props.onChange({
-                                countryCode: t.props.countryCode,
-                                zipCode: e.currentTarget.value
-                            })
-                        }, t
-                    }
-                    return u.__extends(t, e), t.prototype.render = function() {
-                        return l.createElement(C.Xa, {
-                            display: C.X.Flex,
-                            flexWrap: C.Ba.Wrap
-                        }, l.createElement(C.Xa, null, l.createElement(C.Ea, {
-                            id: "country-of-residence",
-                            label: Object(p.d)("Country of Residence", "CountryOfResidenceSelector"),
-                            labelOptional: Object(p.d)("Price may vary", "CountryOfResidenceSelector")
-                        }, l.createElement(C.zb, {
-                            onChange: this.onCountryChange,
-                            value: this.props.countryCode
-                        }, this.displayCountries.map(function(e) {
-                            return l.createElement("option", {
-                                key: e,
-                                value: e
-                            }, Object(Y.b)(e))
-                        })))), this.zipCodeRequired && l.createElement(C.Xa, {
-                            margin: {
-                                left: 1
-                            }
-                        }, l.createElement(C.Ea, {
-                            id: "zip-code",
-                            label: Object(p.d)("Postal Code", "CountryOfResidenceSelector")
-                        }, l.createElement(C.Ra, {
-                            type: C.Ta.Text,
-                            placeholder: Object(p.d)("12345", "CountryOfResidenceSelector"),
-                            value: this.props.zipCode || "",
-                            error: this.props.zipCodeError,
-                            onChange: this.onZipChange
-                        }))))
-                    }, Object.defineProperty(t.prototype, "zipCodeRequired", {
-                        get: function() {
-                            return ["US", "CA"].includes(this.props.countryCode)
-                        },
-                        enumerable: !0,
-                        configurable: !0
-                    }), t
-                }(l.PureComponent),
-                q = (r("lqDW"), function() {
-                    return l.createElement(C.Eb, {
-                        className: "payment-method--notice--unavailable",
-                        display: C.X.Flex,
-                        padding: {
-                            x: 2,
-                            y: 1
-                        },
-                        margin: {
-                            bottom: 2
-                        }
-                    }, l.createElement(C.sb, {
-                        asset: C.tb.NotificationInfo
-                    }), l.createElement(C.Xa, {
-                        margin: {
-                            left: 2
-                        }
-                    }, l.createElement(C.W, null, Object(p.d)('Please change your payment method and continue to checkout using the "{buttonLabel}” options.', {
-                        buttonLabel: "More Methods"
-                    }, "PaymentMethodNotice"))))
-                });
-            ! function(e) {
-                e[e.ACTIVE = 0] = "ACTIVE", e[e.DISABLED = 1] = "DISABLED", e[e.HIDDEN = 2] = "HIDDEN"
-            }(R || (R = {}));
-            var Q = r("KriR"),
-                J = r("GnwI"),
-                $ = (r("TEvY"), function() {
-                    function e(e) {}
-                    e.prototype.bind = function(e) {}
-                }(), function(e) {
-                    function t() {
-                        var t = null !== e && e.apply(this, arguments) || this;
-                        return t.state = {
-                            amazonScriptLoaded: null,
-                            walletLoaded: null,
-                            billingAgreementId: null,
-                            awaitingResponse: !1,
-                            userCountryOfResidence: t.props.userCountryOfResidence,
-                            userZipCode: t.props.userZipCode,
-                            paymentMethodEnabled: t.props.eligibilityStatus === R.ACTIVE,
-                            zipCodeError: !1
-                        }, t.handleSubmit = function() {
-                            return u.__awaiter(t, void 0, void 0, function() {
-                                var e = this;
-                                return u.__generator(this, function(t) {
-                                    switch (t.label) {
-                                        case 0:
-                                            return this.hasValidResidence() ? (this.setState({
-                                                awaitingResponse: !0,
-                                                zipCodeError: !1
-                                            }), [4, this.props.onSuccess({
-                                                payment_flow: Q.b.RecurlyPayWithAmazon,
-                                                payment_provider: "recurly",
-                                                payment_info: {
-                                                    token: this.state.billingAgreementId,
-                                                    gateway: "amazon"
-                                                },
-                                                residence: {
-                                                    country_code: this.state.userCountryOfResidence,
-                                                    zip_code: this.state.userZipCode
-                                                },
-                                                errorCallback: function() {
-                                                    return e.setState({
-                                                        awaitingResponse: !1
-                                                    })
-                                                }
-                                            })]) : (this.setState({
-                                                zipCodeError: !0
-                                            }), [2]);
-                                        case 1:
-                                            return t.sent(), [2]
-                                    }
-                                })
-                            })
-                        }, t.handleCORChange = function(e) {
-                            t.setState({
-                                userCountryOfResidence: e.countryCode,
-                                userZipCode: e.zipCode,
-                                paymentMethodEnabled: !0
-                            })
-                        }, t.hasValidResidence = function() {
-                            return !t.props.showEuSubs || (!["US", "CA"].includes(t.state.userCountryOfResidence) || !!t.state.userZipCode)
-                        }, t
-                    }
-                    return u.__extends(t, e), t.prototype.componentDidMount = function() {
-                        var e = this;
-                        window.onAmazonLoginReady = function() {
-                            window.amazon.Login.setClientId(e.props.clientID)
-                        }, window.onAmazonPaymentsReady = function() {
-                            e.props.latencyTracking.reportInteractive(), e.setState({
-                                amazonScriptLoaded: !0
-                            }), window.OffAmazonPayments.Button("recurly-amazon-pay__button", e.props.sellerID, {
-                                type: "PwA",
-                                color: "DarkGray",
-                                useAmazonAddressBook: !1,
-                                agreementType: "BillingAgreement",
-                                authorization: function() {
-                                    window.amazon.Login.authorize({
-                                        scope: "profile payments:widget payments:autopay_consent payments:billing_address",
-                                        popup: !0
-                                    }, function(e) {
-                                        if (e.error) return "err"
-                                    })
-                                },
-                                onSignIn: function(t) {
-                                    e.setState({
-                                        walletLoaded: !0,
-                                        billingAgreementId: t.getAmazonBillingAgreementId()
-                                    }), e.initWidget()
-                                }
-                            })
-                        };
-                        var t = document.querySelector("#pwa-script");
-                        t && document.body.removeChild(t);
-                        var r = document.createElement("script");
-                        r.type = "text/javascript", r.id = "pwa-script", r.src = "https://static-na.payments-amazon.com/OffAmazonPayments/us" + (this.props.isProduction ? "" : "/sandbox") + "/js/Widgets.js?sellerId=" + this.props.sellerID, r.async = !0, document.body.appendChild(r)
-                    }, t.prototype.componentDidUpdate = function(e) {
-                        e.eligibilityStatus !== this.props.eligibilityStatus && this.setState({
-                            paymentMethodEnabled: this.props.eligibilityStatus === R.ACTIVE
-                        }), e.userCountryOfResidence !== this.props.userCountryOfResidence && this.setState({
-                            userCountryOfResidence: this.props.userCountryOfResidence
-                        })
-                    }, t.prototype.initWidget = function() {
-                        var e = {
-                            agreementType: "BillingAgreement",
-                            amazonBillingAgreementId: this.state.billingAgreementId,
-                            sellerId: this.props.sellerID,
-                            design: {
-                                designMode: "responsive"
-                            },
-                            onPaymentSelect: function() {
-                                return !0
-                            },
-                            onError: function() {
-                                return !1
-                            }
-                        };
-                        new window.OffAmazonPayments.Widgets.Wallet(e).bind("recurly-amazon-pay__wallet")
-                    }, t.prototype.render = function() {
-                        return this.state.amazonScriptLoaded ? l.createElement(l.Fragment, null, this.props.showEuSubs && l.createElement(C.Xa, {
-                            margin: {
-                                y: 1
-                            }
-                        }, l.createElement(K, {
-                            countryCode: this.state.userCountryOfResidence,
-                            zipCode: this.state.userZipCode,
-                            zipCodeError: this.state.zipCodeError,
-                            onChange: this.handleCORChange
-                        })), l.createElement(C.Eb, {
-                            background: C.r.Base,
-                            border: !0,
-                            className: "recurly-amazon-pay"
-                        }, !this.state.paymentMethodEnabled && l.createElement(C.Xa, {
-                            display: C.X.Flex,
-                            justifyContent: C.Wa.Center,
-                            margin: 5
-                        }, l.createElement(q, null)), this.state.paymentMethodEnabled && l.createElement(l.Fragment, null, l.createElement(C.Xa, {
-                            display: this.state.walletLoaded ? C.X.Hide : C.X.Flex,
-                            justifyContent: C.Wa.Center,
-                            margin: 5
-                        }, l.createElement("div", {
-                            id: "recurly-amazon-pay__button"
-                        })), l.createElement(C.Xa, {
-                            display: this.state.walletLoaded ? C.X.Flex : C.X.Hide,
-                            flexDirection: C.Aa.Column,
-                            alignItems: C.f.Center,
-                            margin: {
-                                top: 2
-                            }
-                        }, l.createElement("div", {
-                            id: "recurly-amazon-pay__wallet",
-                            className: "recurly-amazon-pay__wallet"
-                        }), l.createElement(C.Xa, {
-                            padding: {
-                                top: 1
-                            },
-                            display: C.X.Flex,
-                            justifyContent: C.Wa.Center
-                        }, l.createElement(C.z, {
-                            onClick: this.handleSubmit,
-                            state: this.state.awaitingResponse ? C.E.Loading : C.E.Default,
-                            disabled: this.state.awaitingResponse
-                        }, this.props.submitButtonCopy)))))) : l.createElement(C.Za, null)
-                    }, t = u.__decorate([Object(J.b)("RecurlyAmazonPay")], t)
-                }(l.Component)),
-                ee = r("/0dD"),
-                te = r("XDQu"),
-                re = r("6fcp"),
-                ne = (r("Aoab"), {
-                    light: "#000",
-                    dark: "#fff"
-                }),
-                ae = {
-                    light: "#a49fad",
-                    dark: "#898395"
-                },
-                ie = function() {
-                    return {
-                        cvv: !1,
-                        first_name: !1,
-                        last_name: !1,
-                        month: !1,
-                        number: !1,
-                        year: !1,
-                        zip: !1
-                    }
-                },
-                oe = function(e) {
-                    function t() {
-                        var t = null !== e && e.apply(this, arguments) || this;
-                        return t.state = {
-                            firstName: "",
-                            lastName: "",
-                            recurlyReady: !1,
-                            awaitingResponse: !1,
-                            errorMessage: "",
-                            errorState: ie(),
-                            userCountryOfResidence: t.props.userCountryOfResidence,
-                            userZipCode: t.props.userZipCode,
-                            paymentMethodEnabled: t.props.eligibilityStatus === R.ACTIVE
-                        }, t.handleSubmit = function(e) {
-                            return u.__awaiter(t, void 0, void 0, function() {
-                                var t = this;
-                                return u.__generator(this, function(r) {
-                                    return e.preventDefault(), this.setState(function(e) {
-                                        return {
-                                            awaitingResponse: !0,
-                                            errorState: u.__assign({}, e.errorState)
-                                        }
-                                    }), window.recurly.token(this.form, function(e, r) {
-                                        return u.__awaiter(t, void 0, void 0, function() {
-                                            var t;
-                                            return u.__generator(this, function(n) {
-                                                switch (n.label) {
-                                                    case 0:
-                                                        return t = this.validateResidence(), e || t.length ? (this.handleValidationError(e, t), this.setState({
-                                                            awaitingResponse: !1
-                                                        }), [3, 3]) : [3, 1];
-                                                    case 1:
-                                                        return [4, this.handleValidationSuccess(r)];
-                                                    case 2:
-                                                        n.sent(), n.label = 3;
-                                                    case 3:
-                                                        return [2]
-                                                }
-                                            })
-                                        })
-                                    }), [2]
-                                })
-                            })
-                        }, t.validateResidence = function() {
-                            if (!t.props.showEuSubs) return [];
-                            var e = [];
-                            return ["US", "CA"].includes(t.state.userCountryOfResidence) && !t.state.userZipCode && e.push("zip"), e
-                        }, t.handleValidationSuccess = function(e) {
-                            return u.__awaiter(t, void 0, void 0, function() {
-                                var t = this;
-                                return u.__generator(this, function(r) {
-                                    switch (r.label) {
-                                        case 0:
-                                            return [4, this.props.onSuccess({
-                                                payment_flow: Q.b.RecurlyCreditCard,
-                                                payment_provider: "recurly",
-                                                payment_info: {
-                                                    token: e.id,
-                                                    gateway: "cc",
-                                                    card_bin_country: e.billing_info && e.billing_info.cc_bin_country
-                                                },
-                                                residence: {
-                                                    country_code: this.state.userCountryOfResidence,
-                                                    zip_code: this.state.userZipCode
-                                                },
-                                                errorCallback: function() {
-                                                    return t.setState({
-                                                        awaitingResponse: !1
-                                                    })
-                                                }
-                                            })];
-                                        case 1:
-                                            return r.sent(), [2]
-                                    }
-                                })
-                            })
-                        }, t.handleValidationError = function(e, r) {
-                            var n = ie(),
-                                a = "";
-                            r.length && r.forEach(function(e) {
-                                n[e] = !0
-                            }), e && (a = Object(p.d)("The transaction was declined due to invalid data. Please make sure you have entered the correct information.", "RecurlyCreditCard"), e.code !== re.a.Validation && e.code !== re.a.InvalidParameter || (e.fields && e.fields.forEach(function(e) {
-                                n[e] = !0
-                            }), a = Object(p.d)("We are sorry but your credit card payment could not be processed. Please correct the fields below.", "RecurlyCreditCard"))), t.setState({
-                                errorMessage: a,
-                                errorState: n
-                            })
-                        }, t.handleFirstName = function(e) {
-                            t.setState({
-                                firstName: e.currentTarget.value
-                            })
-                        }, t.handleLastName = function(e) {
-                            t.setState({
-                                lastName: e.currentTarget.value
-                            })
-                        }, t.handleCORChange = function(e) {
-                            t.setState({
-                                userCountryOfResidence: e.countryCode,
-                                userZipCode: e.zipCode,
-                                paymentMethodEnabled: !0
-                            })
-                        }, t
-                    }
-                    return u.__extends(t, e), t.prototype.componentWillMount = function() {
-                        var e = this;
-                        this.recurlyPollId = setInterval(function() {
-                            window.recurly && (e.props.latencyTracking.reportInteractive(), clearInterval(e.recurlyPollId), e.setupConfigs(), e.pollForHostedField())
-                        }, 500)
-                    }, t.prototype.componentWillUnmount = function() {
-                        clearInterval(this.recurlyPollId), clearInterval(this.hostedFieldPollId)
-                    }, t.prototype.componentDidUpdate = function(e) {
-                        window.recurly && this.props.darkModeEnabled !== e.darkModeEnabled && this.setupConfigs(), e.eligibilityStatus !== this.props.eligibilityStatus && this.setState({
-                            paymentMethodEnabled: this.props.eligibilityStatus === R.ACTIVE
-                        }), e.userCountryOfResidence !== this.props.userCountryOfResidence && this.setState({
-                            userCountryOfResidence: this.props.userCountryOfResidence
-                        })
-                    }, t.prototype.render = function() {
-                        var e = this;
-                        return l.createElement(C.Xa, {
-                            className: "recurly-credit-card",
-                            fullWidth: !0
-                        }, l.createElement(C.Xa, {
-                            display: this.state.recurlyReady ? C.X.Hide : C.X.Block
-                        }, l.createElement(C.Za, {
-                            fillContent: !0
-                        })), l.createElement(C.Xa, {
-                            display: this.state.recurlyReady ? C.X.Block : C.X.Hide
-                        }, l.createElement("form", {
-                            className: "recurly-form",
-                            ref: function(t) {
-                                return e.form = t
-                            }
-                        }, l.createElement(C.Xa, {
-                            margin: {
-                                bottom: 1
-                            }
-                        }, l.createElement(C.Ea, {
-                            id: "recurly-name",
-                            label: Object(p.d)("Name", "RecurlyCreditCard")
-                        }, l.createElement("div", {
-                            id: "recurly-name"
-                        }, l.createElement(C.Ja, {
-                            gutterSize: C.Ka.Medium
-                        }, l.createElement(C.P, {
-                            cols: 6
-                        }, l.createElement(C.Ra, {
-                            id: "recurly-first-name",
-                            type: C.Ta.Text,
-                            placeholder: Object(p.d)("First Name", "RecurlyCreditCard"),
-                            value: this.state.firstName,
-                            onChange: this.handleFirstName,
-                            error: this.state.errorState.first_name
-                        }), l.createElement("input", {
-                            type: "hidden",
-                            "data-recurly": "first_name",
-                            value: this.state.firstName
-                        })), l.createElement(C.P, {
-                            cols: 6
-                        }, l.createElement(C.Ra, {
-                            id: "recurly-last-name",
-                            type: C.Ta.Text,
-                            placeholder: Object(p.d)("Last Name", "RecurlyCreditCard"),
-                            value: this.state.lastName,
-                            onChange: this.handleLastName,
-                            error: this.state.errorState.last_name
-                        }), l.createElement("input", {
-                            type: "hidden",
-                            "data-recurly": "last_name",
-                            value: this.state.lastName
-                        })))))), l.createElement(C.Xa, {
-                            margin: {
-                                bottom: 1
-                            }
-                        }, l.createElement(C.Ea, {
-                            id: "recurly-credit-card",
-                            label: Object(p.d)("Credit Card", "RecurlyCreditCard")
-                        }, l.createElement("div", {
-                            id: "recurly-credit-card"
-                        }, l.createElement(C.Ja, {
-                            gutterSize: C.Ka.Medium
-                        }, l.createElement(C.P, {
-                            cols: 8
-                        }, l.createElement("div", {
-                            id: "recurly-number",
-                            "data-recurly": "number",
-                            className: this.state.errorState.number ? "recurly-error" : ""
-                        })), l.createElement(C.P, {
-                            cols: 4
-                        }, l.createElement("div", {
-                            id: "recurly-cvv",
-                            "data-recurly": "cvv",
-                            className: this.state.errorState.cvv ? "recurly-error" : ""
-                        })))))), l.createElement(C.Xa, {
-                            margin: {
-                                bottom: 1
-                            }
-                        }, l.createElement(C.Ea, {
-                            id: "recurly-credit-card",
-                            label: Object(p.d)("Expiration Date", "RecurlyCreditCard")
-                        }, l.createElement("div", {
-                            id: "recurly-credit-card"
-                        }, l.createElement(C.Ja, {
-                            gutterSize: C.Ka.Medium
-                        }, l.createElement(C.P, {
-                            cols: 6
-                        }, l.createElement("div", {
-                            id: "recurly-month",
-                            "data-recurly": "month",
-                            className: this.state.errorState.month ? "recurly-error" : ""
-                        })), l.createElement(C.P, {
-                            cols: 6
-                        }, l.createElement("div", {
-                            id: "recurly-year",
-                            "data-recurly": "year",
-                            className: this.state.errorState.year ? "recurly-error" : ""
-                        })))))), this.props.showEuSubs && l.createElement(C.Xa, {
-                            margin: {
-                                bottom: 1
-                            }
-                        }, l.createElement(K, {
-                            countryCode: this.state.userCountryOfResidence,
-                            zipCode: this.state.userZipCode,
-                            zipCodeError: this.state.errorState.zip,
-                            onChange: this.handleCORChange
-                        })), l.createElement("input", {
-                            type: "hidden",
-                            name: "recurly-country",
-                            "data-recurly": "country",
-                            value: "US"
-                        }), l.createElement("input", {
-                            type: "hidden",
-                            name: "recurly-token",
-                            "data-recurly": "token"
-                        }), this.props.eligibilityStatus === R.DISABLED && l.createElement(q, null), l.createElement(C.Xa, {
-                            margin: {
-                                top: 2
-                            },
-                            display: C.X.Flex,
-                            justifyContent: C.Wa.Center,
-                            breakpointLarge: {
-                                justifyContent: C.Wa.Start
-                            }
-                        }, l.createElement(C.z, {
-                            onClick: this.handleSubmit,
-                            state: this.state.awaitingResponse ? C.E.Loading : C.E.Default,
-                            disabled: this.state.awaitingResponse || !this.state.paymentMethodEnabled
-                        }, this.props.submitButtonCopy)))))
-                    }, t.prototype.pollForHostedField = function() {
-                        var e = this;
-                        this.hostedFieldPollId = setInterval(function() {
-                            document.querySelector(".recurly-hosted-field > iframe") && (e.setState({
-                                recurlyReady: !0
-                            }), clearInterval(e.hostedFieldPollId))
-                        }, 500)
-                    }, t.prototype.setupConfigs = function() {
-                        var e = this.props.darkModeEnabled ? ae.dark : ae.light,
-                            t = this.props.darkModeEnabled ? ne.dark : ne.light;
-                        window.recurly.configure({
-                            publicKey: this.props.publicKey,
-                            fraud: {
-                                kount: {
-                                    dataCollector: !0
-                                }
-                            },
-                            required: ["cvv"],
-                            fields: {
-                                all: {
-                                    style: {
-                                        height: "auto",
-                                        fontSize: "12px",
-                                        fontColor: t,
-                                        placeholder: {
-                                            color: e
-                                        }
-                                    }
-                                },
-                                number: {
-                                    selector: "#recurly-number",
-                                    style: {
-                                        fontColor: t,
-                                        placeholder: {
-                                            content: Object(p.d)("Card Number", "RecurlyCreditCard"),
-                                            color: e
-                                        }
-                                    }
-                                },
-                                month: {
-                                    selector: "#recurly-month",
-                                    inputType: "select",
-                                    style: {
-                                        fontColor: t,
-                                        placeholder: {
-                                            content: Object(p.d)("Select Month", "RecurlyCreditCard"),
-                                            color: e
-                                        }
-                                    }
-                                },
-                                year: {
-                                    selector: "#recurly-year",
-                                    inputType: "select",
-                                    style: {
-                                        fontColor: t,
-                                        placeholder: {
-                                            content: Object(p.d)("Select Year", "RecurlyCreditCard"),
-                                            color: e
-                                        }
-                                    }
-                                },
-                                cvv: {
-                                    selector: "#recurly-cvv",
-                                    style: {
-                                        fontColor: t,
-                                        placeholder: {
-                                            content: Object(p.d)("CVV", "RecurlyCreditCard"),
-                                            color: e
-                                        }
-                                    }
-                                }
-                            }
-                        })
-                    }, t = u.__decorate([Object(J.b)("RecurlyCreditCard")], t)
-                }(l.Component);
-            var se, ce = Object(a.connect)(function(e) {
-                    return {
-                        darkModeEnabled: Object(te.a)(e) === ee.a.Dark
-                    }
-                })(oe),
-                ue = (r("a7Xb"), function(e) {
-                    function t() {
-                        var t = null !== e && e.apply(this, arguments) || this;
-                        return t.state = {
-                            paypalConfigured: !1,
-                            awaitingResponse: !1,
-                            hasError: !1,
-                            zipCodeError: !1,
-                            userCountryOfResidence: t.props.userCountryOfResidence,
-                            userZipCode: t.props.userZipCode,
-                            paymentMethodEnabled: t.props.eligibilityStatus === R.ACTIVE
-                        }, t.handleValidationSuccess = function(e) {
-                            return u.__awaiter(t, void 0, void 0, function() {
-                                var t = this;
-                                return u.__generator(this, function(r) {
-                                    switch (r.label) {
-                                        case 0:
-                                            return [4, this.props.onSuccess({
-                                                payment_flow: Q.b.RecurlyPaypal,
-                                                payment_provider: "recurly",
-                                                payment_info: {
-                                                    token: e.id,
-                                                    gateway: "paypal"
-                                                },
-                                                residence: {
-                                                    country_code: this.state.userCountryOfResidence,
-                                                    zip_code: this.state.userZipCode
-                                                },
-                                                errorCallback: function() {
-                                                    return t.setState({
-                                                        awaitingResponse: !1
-                                                    })
-                                                }
-                                            })];
-                                        case 1:
-                                            return r.sent(), [2]
-                                    }
-                                })
-                            })
-                        }, t.handleValidationError = function() {
-                            t.setState({
-                                hasError: !0
-                            })
-                        }, t.handleClick = function() {
-                            t.hasValidResidence() ? (t.setState({
-                                awaitingResponse: !0,
-                                hasError: !1,
-                                zipCodeError: !1
-                            }), t.paypalInstance.start()) : t.setState({
-                                awaitingResponse: !1,
-                                hasError: !0,
-                                zipCodeError: !0
-                            })
-                        }, t.handleCORChange = function(e) {
-                            t.setState({
-                                userCountryOfResidence: e.countryCode,
-                                userZipCode: e.zipCode,
-                                paymentMethodEnabled: !0
-                            })
-                        }, t.hasValidResidence = function() {
-                            return !t.props.showEuSubs || (!["US", "CA"].includes(t.state.userCountryOfResidence) || !!t.state.userZipCode)
-                        }, t
-                    }
-                    return u.__extends(t, e), t.prototype.componentDidMount = function() {
-                        var e = this;
-                        this.pollForRecurly = setInterval(function() {
-                            window.recurly && (e.props.latencyTracking.reportInteractive(), clearInterval(e.pollForRecurly), e.setupConfigs(), e.setState({
-                                paypalConfigured: !0
-                            }))
-                        }, 500)
-                    }, t.prototype.componentDidUpdate = function(e) {
-                        e.eligibilityStatus !== this.props.eligibilityStatus && this.setState({
-                            paymentMethodEnabled: this.props.eligibilityStatus === R.ACTIVE
-                        }), e.userCountryOfResidence !== this.props.userCountryOfResidence && this.setState({
-                            userCountryOfResidence: this.props.userCountryOfResidence
-                        })
-                    }, t.prototype.componentWillUnmount = function() {
-                        clearInterval(this.pollForRecurly)
-                    }, t.prototype.render = function() {
-                        return this.state.paypalConfigured ? l.createElement(C.Xa, null, this.props.showEuSubs && l.createElement(C.Xa, {
-                            margin: {
-                                y: 1
-                            }
-                        }, l.createElement(K, {
-                            countryCode: this.state.userCountryOfResidence,
-                            zipCode: this.state.userZipCode,
-                            zipCodeError: this.state.zipCodeError,
-                            onChange: this.handleCORChange
-                        })), !this.state.paymentMethodEnabled && l.createElement(q, null), l.createElement(C.Eb, {
-                            className: "recurly-paypal",
-                            background: C.r.Base,
-                            border: !0,
-                            display: C.X.Flex,
-                            justifyContent: C.Wa.Center
-                        }, l.createElement(C.Xa, {
-                            margin: {
-                                top: 5
-                            }
-                        }, l.createElement(C.z, {
-                            "data-a-target": "recurly-paypal__button",
-                            onClick: this.handleClick,
-                            state: this.state.awaitingResponse ? C.E.Loading : C.E.Default,
-                            disabled: this.state.awaitingResponse || !this.state.paymentMethodEnabled
-                        }, Object(p.d)("Checkout With PayPal", "RecurlyPaypal"))))) : l.createElement(C.Xa, {
-                            margin: {
-                                y: 2
-                            }
-                        }, l.createElement(C.Za, null))
-                    }, t.prototype.setupConfigs = function() {
-                        var e = this;
-                        window.recurly.configure(this.props.publicKey);
-                        var t = window.recurly.PayPal({
-                            braintree: {
-                                clientAuthorization: this.props.braintreeClientAuthorization
-                            }
-                        });
-                        t.on("token", function(t) {
-                            e.handleValidationSuccess(t)
-                        }), t.on("error", function() {
-                            e.handleValidationError(), e.setState({
-                                awaitingResponse: !1
-                            })
-                        }), t.on("cancel", function() {
-                            e.setState({
-                                awaitingResponse: !1
-                            })
-                        }), this.paypalInstance = t
-                    }, t = u.__decorate([Object(J.b)("RecurlyPaypal")], t)
-                }(l.Component)),
-                de = function(e) {
-                    function t() {
-                        var t = null !== e && e.apply(this, arguments) || this;
-                        return t.state = {
-                            xsollaLoaded: !1,
-                            userCountryOfResidence: t.props.userCountryOfResidence,
-                            userZipCode: t.props.userZipCode
-                        }, t.onIframeLoad = function() {
-                            t.props.latencyTracking.reportInteractive(), t.setState({
-                                xsollaLoaded: !0
-                            })
-                        }, t.handleXsollaEvent = function(e) {
-                            if ((!e.origin || e.origin.includes("xsolla")) && e.data) try {
-                                var r = JSON.parse(e.data);
-                                if (r.command && "status" === r.command)
-                                    if (r.data && r.data.paymentInfo) switch (r.data.paymentInfo.status) {
-                                        case "done":
-                                            t.props.trackPaymentFormInteraction({
-                                                paymentFlow: Q.b.Xsolla,
-                                                action: Q.a.CompletePurchaseClick,
-                                                actionDetail: Q.f.Pending
-                                            }), t.props.trackPaymentFormInteraction({
-                                                paymentFlow: Q.b.Xsolla,
-                                                action: Q.a.CompletePurchaseClick,
-                                                actionDetail: Q.f.Success
-                                            });
-                                            break;
-                                        case "troubled":
-                                            t.props.trackPaymentFormInteraction({
-                                                paymentFlow: Q.b.Xsolla,
-                                                action: Q.a.CompletePurchaseClick,
-                                                actionDetail: Q.f.Pending
-                                            }), t.props.trackPaymentFormInteraction({
-                                                paymentFlow: Q.b.Xsolla,
-                                                action: Q.a.CompletePurchaseClick,
-                                                actionDetail: Q.f.Failed
-                                            })
-                                    }
-                            } catch (e) {}
-                        }, t.handleCORChange = function(e) {
-                            t.setState({
-                                userCountryOfResidence: e.countryCode,
-                                userZipCode: e.zipCode,
-                                xsollaLoaded: !1
-                            }), t.props.handleCountryChange(e.countryCode)
-                        }, t
-                    }
-                    return u.__extends(t, e), t.prototype.componentDidMount = function() {
-                        var e = this.iframe;
-                        e && (e.addEventListener("load", this.onIframeLoad), window.addEventListener("message", this.handleXsollaEvent))
-                    }, t.prototype.componentDidUpdate = function(e) {
-                        e.userCountryOfResidence !== this.props.userCountryOfResidence && this.setState({
-                            userCountryOfResidence: this.props.userCountryOfResidence
-                        })
-                    }, t.prototype.componentWillUnmount = function() {
-                        window.removeEventListener("message", this.handleXsollaEvent)
-                    }, t.prototype.render = function() {
-                        var e = this;
-                        return l.createElement(l.Fragment, null, this.props.showEuSubs && l.createElement(C.Xa, {
-                            margin: {
-                                y: 1
-                            }
-                        }, l.createElement(K, {
-                            countryCode: this.state.userCountryOfResidence,
-                            zipCode: this.state.userZipCode,
-                            zipCodeError: !1,
-                            onChange: this.handleCORChange
-                        })), l.createElement(C.Xa, {
-                            fullWidth: !0
-                        }, !this.state.xsollaLoaded && l.createElement(C.Za, {
-                            fillContent: !0
-                        }), l.createElement(C.Xa, {
-                            fullWidth: !0,
-                            display: this.state.xsollaLoaded ? C.X.Inline : C.X.Hide
-                        }, l.createElement("iframe", {
-                            ref: function(t) {
-                                return e.iframe = t
-                            },
-                            id: "xsolla",
-                            src: this.props.iframeURL,
-                            width: "100%",
-                            height: "650px"
-                        }))))
-                    }, t = u.__decorate([Object(J.b)("XsollaMoreMethods")], t)
-                }(l.Component),
-                le = r("f00E"),
-                pe = r("WlZp");
-            r("vGoz");
-            ! function(e) {
-                e.ZUORA_PARENT_LAYOUT = "zuora-payment-method__zuora-parent-layout", e.UPDATE_PAYMENT_BUTTON = "zuora-payment-method__update-payment-button"
-            }(se || (se = {}));
-            var me = function(e) {
-                function t() {
-                    var t = null !== e && e.apply(this, arguments) || this;
-                    return t.state = {
-                        zuoraConfigured: !1,
-                        awaitingResponse: !1,
-                        errorMessage: "",
-                        nullValueErrors: [],
-                        sessionId: Object(le.b)()
-                    }, t.handleSubmit = function(e) {
-                        e.preventDefault(), t.setState({
-                            awaitingResponse: !0,
-                            errorMessage: "",
-                            nullValueErrors: []
-                        }), window.Z.submit()
-                    }, t.renderErrorMessage = function() {
-                        if (t.state.nullValueErrors.length) {
-                            var e = t.state.nullValueErrors.map(function(e, t) {
-                                return l.createElement(C.Xa, {
-                                    key: t,
-                                    margin: {
-                                        left: 2
-                                    }
-                                }, l.createElement(C.W, {
-                                    color: C.O.Error
-                                }, "• ", e))
-                            });
-                            return l.createElement("div", null, l.createElement(C.Xa, {
-                                margin: {
-                                    top: 1,
-                                    left: 1,
-                                    bottom: .5
-                                }
-                            }, l.createElement(C.W, {
-                                color: C.O.Error
-                            }, Object(p.d)("We are sorry but your credit card payment could not be processed. Please correct the fields below.", "ZuoraCreditCard"))), e)
-                        }
-                        if (t.state.errorMessage) return l.createElement(C.Xa, {
-                            margin: {
-                                top: 1,
-                                left: 1
-                            }
-                        }, l.createElement(C.W, {
-                            color: C.O.Error
-                        }, t.state.errorMessage))
-                    }, t.successCallback = function(e) {
-                        return u.__awaiter(t, void 0, void 0, function() {
-                            var t = this;
-                            return u.__generator(this, function(r) {
-                                switch (r.label) {
-                                    case 0:
-                                        if (!e.success) return [2];
-                                        r.label = 1;
-                                    case 1:
-                                        return r.trys.push([1, 3, , 4]), [4, this.props.onSuccess({
-                                            payment_flow: Q.b.ZuoraCreditCard,
-                                            payment_provider: "zuora",
-                                            payment_info: {
-                                                token: e.refId,
-                                                gateway: "cc"
-                                            },
-                                            errorCallback: function() {
-                                                return t.setState({
-                                                    awaitingResponse: !1
-                                                })
-                                            }
-                                        })];
-                                    case 2:
-                                        return r.sent(), [3, 4];
-                                    case 3:
-                                        return r.sent(), this.setState({
-                                            awaitingResponse: !1
-                                        }), [3, 4];
-                                    case 4:
-                                        return [2]
-                                }
-                            })
-                        })
-                    }, t.errorCallback = function(e, r, n) {
-                        if (t.setState({
-                                awaitingResponse: !1
-                            }), "unknown" === r) return t.parseGatewayErrorMessage(n);
-                        window.Z.sendErrorMessageToHpm(e, n)
-                    }, t.parseGatewayErrorMessage = function(e) {
-                        return e.includes("NullValue") ? t.parseNullValueErrorMessage(e) : e.includes("Invalid CC Number") ? t.setState({
-                            errorMessage: Object(p.d)("You entered an invalid card number. Please update your card and try again.", "ZuoraCreditCard")
-                        }) : t.setState({
-                            errorMessage: Object(p.d)("We couldn't process your payment. Please try again.", "ZuoraCreditCard")
-                        })
-                    }, t.parseNullValueErrorMessage = function(e) {
-                        var r = e.replace("[HostedPageFieldValidationError]&nbsp; ", "").replace(/\s/g, "").split(":NullValue,"),
-                            n = {
-                                creditCardHolderName: Object(p.d)("Name on Card", "ZuoraCreditCard"),
-                                creditCardAddress1: Object(p.d)("Billing Address", "ZuoraCreditCard"),
-                                creditCardCity: Object(p.d)("City", "ZuoraCreditCard"),
-                                creditCardPostalCode: Object(p.d)("Zip Code", "ZuoraCreditCard")
-                            },
-                            a = r.map(function(e) {
-                                var t = n[e];
-                                return t || ""
-                            }).filter(function(e) {
-                                return "" !== e
-                            });
-                        t.setState({
-                            nullValueErrors: a
-                        })
-                    }, t
-                }
-                return u.__extends(t, e), t.prototype.componentDidMount = function() {
-                    var e = this;
-                    if (document.querySelector("#zuora-script")) this.initZuoraIFrame();
-                    else {
-                        var t = document.createElement("script");
-                        t.src = "https://static.zuora.com/Resources/libs/hosted/1.3.0/zuora-min.js", t.async = !0, t.id = "zuora-script", document.body.appendChild(t), t.onload = function() {
-                            e.props.latencyTracking.reportInteractive(), e.initZuoraIFrame()
-                        }
-                    }
-                }, t.prototype.render = function() {
-                    return l.createElement("div", null, !this.state.zuoraConfigured && l.createElement(C.Xa, {
-                        padding: {
-                            y: 5
-                        }
-                    }, l.createElement(C.Za, {
-                        fillContent: !0
-                    })), l.createElement(C.Xa, {
-                        display: this.state.zuoraConfigured ? C.X.Block : C.X.Hide,
-                        "data-test-selector": se.ZUORA_PARENT_LAYOUT
-                    }, this.renderErrorMessage(), l.createElement("div", {
-                        id: "zuora_payment",
-                        className: this.state.awaitingResponse ? "zuora-disabled" : ""
-                    }), l.createElement(C.Xa, {
-                        margin: {
-                            top: 2
-                        },
-                        display: C.X.Flex,
-                        justifyContent: C.Wa.Center,
-                        breakpointLarge: {
-                            justifyContent: C.Wa.Start
-                        }
-                    }, l.createElement(C.z, {
-                        onClick: this.handleSubmit,
-                        state: this.state.awaitingResponse ? C.E.Loading : C.E.Default,
-                        disabled: this.state.awaitingResponse,
-                        "data-test-selector": se.UPDATE_PAYMENT_BUTTON
-                    }, this.props.submitButtonCopy)), l.createElement(pe.a, {
-                        isProduction: this.props.isProductionConfig,
-                        sessionId: this.state.sessionId
-                    })))
-                }, t.prototype.initZuoraIFrame = function() {
-                    var e = this,
-                        t = {
-                            id: this.props.hostedPageID,
-                            url: this.props.hostedPageURL,
-                            style: "inline",
-                            submitEnabled: "true",
-                            field_accountId: this.props.externalAccountID,
-                            tenantId: this.props.tenantID,
-                            token: this.props.token,
-                            key: this.props.publicKey,
-                            signature: this.props.signature,
-                            locale: this.formattedLocale
-                        };
-                    window.Z.renderWithErrorHandler(t, {
-                        creditCardCountry: "USA"
-                    }, this.successCallback, this.errorCallback);
-                    var r = document.getElementById("z_hppm_iframe");
-                    r && r.addEventListener("load", function() {
-                        e.setState({
-                            zuoraConfigured: !0
-                        })
-                    })
-                }, Object.defineProperty(t.prototype, "formattedLocale", {
-                    get: function() {
-                        var e = this.props.languageCode || "en";
-                        if (e.includes("-")) {
-                            var t = e.split("-");
-                            e = t[0] + "_" + t[1].toUpperCase()
-                        }
-                        return e
-                    },
-                    enumerable: !0,
-                    configurable: !0
-                }), t = u.__decorate([Object(J.b)("ZuoraCreditCard")], t)
-            }(l.Component);
-            var he, ye = Object(a.connect)(function(e) {
-                return {
-                    languageCode: Object(c.b)(e)
-                }
-            })(me);
-            ! function(e) {
-                e.RecurlyAmazonPay = "recurly_amazon_pay", e.RecurlyCreditCard = "recurly_credit_card", e.RecurlyPaypal = "recurly_paypal", e.RecurlySavedPayment = "recurly_saved_payment", e.Xsolla = "xsolla", e.ZuoraCreditCard = "zuora_credit_card"
-            }(he || (he = {}));
-            var fe = function(e) {
-                    function t() {
-                        var t = null !== e && e.apply(this, arguments) || this;
-                        return t.submitButtonCopy = Object(p.d)("Complete Purchase", "PaymentMethods"), t
-                    }
-                    return u.__extends(t, e), t.prototype.render = function() {
-                        switch (this.props.type) {
-                            case he.RecurlyAmazonPay:
-                                return l.createElement($, u.__assign({
-                                    submitButtonCopy: this.submitButtonCopy,
-                                    onSuccess: this.props.handleCompletePurchase
-                                }, this.props.configs.recurly.payWithAmazonConfigs, {
-                                    userCountryOfResidence: this.props.userCountryOfResidence,
-                                    userZipCode: this.props.userZipCode,
-                                    eligibilityStatus: this.props.eligibilityStatus,
-                                    trackPaymentFormInteraction: this.props.trackPaymentFormInteraction,
-                                    showEuSubs: this.props.showEuSubs
-                                }));
-                            case he.RecurlyCreditCard:
-                                return l.createElement(ce, {
-                                    publicKey: this.props.configs.recurly.publicKey,
-                                    submitButtonCopy: this.submitButtonCopy,
-                                    onSuccess: this.props.handleCompletePurchase,
-                                    userCountryOfResidence: this.props.userCountryOfResidence,
-                                    userZipCode: this.props.userZipCode,
-                                    eligibilityStatus: this.props.eligibilityStatus,
-                                    trackPaymentFormInteraction: this.props.trackPaymentFormInteraction,
-                                    showEuSubs: this.props.showEuSubs
-                                });
-                            case he.RecurlyPaypal:
-                                return l.createElement(ue, {
-                                    publicKey: this.props.configs.recurly.publicKey,
-                                    braintreeClientAuthorization: this.props.configs.recurly.braintreeClientAuthorization,
-                                    submitButtonCopy: this.submitButtonCopy,
-                                    onSuccess: this.props.handleCompletePurchase,
-                                    userCountryOfResidence: this.props.userCountryOfResidence,
-                                    userZipCode: this.props.userZipCode,
-                                    eligibilityStatus: this.props.eligibilityStatus,
-                                    trackPaymentFormInteraction: this.props.trackPaymentFormInteraction,
-                                    showEuSubs: this.props.showEuSubs
-                                });
-                            case he.ZuoraCreditCard:
-                                return l.createElement(ye, u.__assign({
-                                    submitButtonCopy: this.submitButtonCopy,
-                                    onSuccess: this.props.handleCompletePurchase,
-                                    isProductionConfig: this.props.configs.recurly.payWithAmazonConfigs.isProduction
-                                }, this.props.configs.zuora));
-                            default:
-                                return l.createElement(de, u.__assign({
-                                    userCountryOfResidence: this.props.userCountryOfResidence,
-                                    userZipCode: this.props.userZipCode,
-                                    handleCountryChange: this.props.handleCountryChange,
-                                    trackPaymentFormInteraction: this.props.trackPaymentFormInteraction,
-                                    showEuSubs: this.props.showEuSubs
-                                }, this.props.configs.xsolla))
-                        }
-                    }, t
-                }(l.PureComponent),
-                be = r("D8NC"),
-                ge = r.n(be),
-                ve = r("yrda"),
-                Ee = r.n(ve),
-                Ce = r("csmi"),
-                ke = r.n(Ce),
-                Pe = r("2ORI"),
-                Oe = r.n(Pe),
-                Se = r("AVF4"),
-                Ie = r.n(Se),
-                Ne = r("BIez"),
-                je = r.n(Ne),
-                we = r("EF6p"),
-                _e = r.n(we),
-                Te = r("xgE2"),
-                Re = r.n(Te),
-                Me = r("MU3X"),
-                Ae = r.n(Me),
-                xe = r("E3rh"),
-                Fe = r.n(xe),
-                De = r("ZiR0"),
-                Ge = r.n(De),
-                Ue = r("KRuc"),
-                Be = r.n(Ue),
-                Le = r("IRK4"),
-                We = r.n(Le),
-                Xe = r("bvmA"),
-                ze = r.n(Xe),
-                Ve = r("1OTy"),
-                He = {
-                    CreditCard: function() {
-                        return Object(p.d)("Credit Card", "TicketDescription")
-                    },
-                    Paypal: function() {
-                        return Object(p.d)("Paypal", "TicketDescription")
-                    },
-                    AmazonPay: function() {
-                        return Object(p.d)("Amazon Pay", "TicketDescription")
-                    },
-                    MoreMethods: function() {
-                        return Object(p.d)("More Methods", "TicketDescription")
-                    }
-                },
-                Ze = function(e) {
-                    function t() {
-                        var t = null !== e && e.apply(this, arguments) || this;
-                        return t.paymentProviders = [{
-                            paymentMethodType: he.RecurlyCreditCard,
-                            paymentFlow: Q.b.RecurlyCreditCard,
-                            button: {
-                                label: He.CreditCard(),
-                                src: Ie.a,
-                                alt: He.CreditCard(),
-                                srcSet: {
-                                    "1x": Ie.a,
-                                    "2x": je.a
-                                },
-                                darkSrcSet: {
-                                    "1x": Ie.a,
-                                    "2x": je.a
-                                }
-                            }
-                        }, {
-                            paymentMethodType: he.ZuoraCreditCard,
-                            paymentFlow: Q.b.ZuoraCreditCard,
-                            button: {
-                                label: He.CreditCard(),
-                                src: Ie.a,
-                                alt: He.CreditCard(),
-                                srcSet: {
-                                    "1x": Ie.a,
-                                    "2x": je.a
-                                },
-                                darkSrcSet: {
-                                    "1x": Ie.a,
-                                    "2x": je.a
-                                }
-                            }
-                        }, {
-                            paymentMethodType: he.RecurlyPaypal,
-                            paymentFlow: Q.b.RecurlyPaypal,
-                            button: {
-                                label: He.Paypal(),
-                                src: Ge.a,
-                                alt: He.Paypal(),
-                                srcSet: {
-                                    "1x": Ge.a,
-                                    "2x": Be.a
-                                },
-                                darkSrcSet: {
-                                    "1x": We.a,
-                                    "2x": ze.a
-                                }
-                            }
-                        }, {
-                            paymentMethodType: he.RecurlyAmazonPay,
-                            paymentFlow: Q.b.RecurlyPayWithAmazon,
-                            button: {
-                                label: He.AmazonPay(),
-                                src: ge.a,
-                                alt: He.AmazonPay(),
-                                srcSet: {
-                                    "1x": ge.a,
-                                    "2x": Ee.a
-                                },
-                                darkSrcSet: {
-                                    "1x": ke.a,
-                                    "2x": Oe.a
-                                }
-                            }
-                        }, {
-                            paymentMethodType: he.Xsolla,
-                            paymentFlow: Q.b.Xsolla,
-                            button: {
-                                label: He.MoreMethods(),
-                                src: _e.a,
-                                alt: He.MoreMethods(),
-                                srcSet: {
-                                    "1x": _e.a,
-                                    "2x": Re.a
-                                },
-                                darkSrcSet: {
-                                    "1x": Ae.a,
-                                    "2x": Fe.a
-                                }
-                            }
-                        }], t.handleClick = function(e, r) {
-                            return function() {
-                                t.props.trackPaymentFormInteraction({
-                                    paymentFlow: r,
-                                    action: Q.a.RadioButtonClick,
-                                    actionDetail: r
-                                }), t.props.handleClick(e)
-                            }
-                        }, t
-                    }
-                    return u.__extends(t, e), t.prototype.render = function() {
-                        if (this.props.eligiblePaymentMethods.length <= 1) return null;
-                        var e = this,
-                            t = this.paymentProviders.map(function(t) {
-                                var r = e.props.eligiblePaymentMethods.find(function(e) {
-                                    return e.type === t.paymentMethodType
-                                });
-                                return r && r.status !== R.HIDDEN ? l.createElement(C.P, {
-                                    key: t.paymentMethodType,
-                                    cols: {
-                                        default: 6,
-                                        sm: 3
-                                    }
-                                }, l.createElement(Ve.a, {
-                                    label: t.button.label,
-                                    type: C.Ma.Radio,
-                                    src: t.button.src,
-                                    alt: t.button.alt,
-                                    srcSet: t.button.srcSet,
-                                    darkSrcSet: t.button.darkSrcSet,
-                                    value: t.paymentMethodType,
-                                    onChange: e.handleClick(t.paymentMethodType, t.paymentFlow),
-                                    checked: e.props.selectedProvider === t.paymentMethodType
-                                })) : null
-                            });
-                        return l.createElement(C.Xa, null, l.createElement(C.Ja, {
-                            gutterSize: C.Ka.Small
-                        }, t))
-                    }, t
-                }(l.PureComponent),
-                Ye = function(e) {
-                    function t() {
-                        var t = null !== e && e.apply(this, arguments) || this;
-                        return t.state = {
-                            selectedProvider: he.RecurlyCreditCard
-                        }, t.renderPaymentMethods = function() {
-                            var e = t.props,
-                                r = e.configs,
-                                n = e.handleCompletePurchase,
-                                a = e.handleCountryChange,
-                                i = e.trackPaymentFormInteraction,
-                                o = t.props.eligiblePaymentMethods,
-                                s = t;
-                            return Object.values(he).map(function(e) {
-                                var t = o.find(function(t) {
-                                    return t.type === e
-                                });
-                                return t && t.status !== R.HIDDEN ? l.createElement(C.Xa, {
-                                    key: t.type,
-                                    display: s.state.selectedProvider === e ? C.X.Inline : C.X.Hide
-                                }, l.createElement(fe, {
-                                    type: t.type,
-                                    configs: r,
-                                    eligibilityStatus: t.status,
-                                    userCountryOfResidence: s.props.userCountryOfResidence,
-                                    userZipCode: s.props.userZipCode,
-                                    handleCompletePurchase: n,
-                                    handleCountryChange: a,
-                                    trackPaymentFormInteraction: i,
-                                    showEuSubs: s.props.showEuSubs
-                                })) : null
-                            })
-                        }, t.handlePaymentMethodSelectorToggleChange = function(e) {
-                            t.setState({
-                                selectedProvider: e
-                            })
-                        }, t
-                    }
-                    return u.__extends(t, e), t.prototype.componentWillMount = function() {
-                        for (var e = [he.RecurlyCreditCard, he.ZuoraCreditCard, he.RecurlyPaypal, he.RecurlyAmazonPay, he.Xsolla], t = this.props.eligiblePaymentMethods.filter(function(e) {
-                                return e.status !== R.HIDDEN
-                            }).map(function(e) {
-                                return e.type
-                            }), r = 0, n = e; r < n.length; r++) {
-                            var a = n[r];
-                            if (t.includes(a)) {
-                                this.setState({
-                                    selectedProvider: a
-                                });
-                                break
-                            }
-                        }
-                    }, t.prototype.render = function() {
-                        return l.createElement(l.Fragment, null, l.createElement(Ze, {
-                            eligiblePaymentMethods: this.props.eligiblePaymentMethods,
-                            selectedProvider: this.state.selectedProvider,
-                            handleClick: this.handlePaymentMethodSelectorToggleChange,
-                            trackPaymentFormInteraction: this.props.trackPaymentFormInteraction
-                        }), l.createElement(Z.a, null), l.createElement(C.Xa, {
-                            margin: {
-                                top: 1
-                            }
-                        }, this.renderPaymentMethods()))
-                    }, t
-                }(l.Component),
-                Ke = r("85n/"),
-                qe = function(e) {
-                    function t() {
-                        var t = null !== e && e.apply(this, arguments) || this;
-                        return t.state = {
-                            awaitingResponse: !1,
-                            userCountryOfResidence: t.props.userCountryOfResidence,
-                            userZipCode: t.props.userZipCode,
-                            zipCodeError: !1,
-                            paymentMethodEnabled: t.props.eligibility.status === R.ACTIVE
-                        }, t.isPaymentMethodExpired = function(e) {
-                            var r = t.zeroIndexedMonth(e),
-                                n = e.expirationYear;
-                            if (void 0 === r || !n) return !1;
-                            var a = Object(d.startOfMonth)(new Date),
-                                i = new Date(n, r, 1);
-                            return !!Object(d.isBefore)(i, a)
-                        }, t.zeroIndexedMonth = function(e) {
-                            if (e.expirationMonth) return e.expirationMonth - 1
-                        }, t.handleSubmit = function() {
-                            return u.__awaiter(t, void 0, void 0, function() {
-                                var e, t, r = this;
-                                return u.__generator(this, function(n) {
-                                    switch (n.label) {
-                                        case 0:
-                                            if (!this.hasValidResidence()) return this.setState({
-                                                zipCodeError: !0
-                                            }), [2];
-                                            switch (this.setState({
-                                                awaitingResponse: !0,
-                                                zipCodeError: !1
-                                            }), this.props.savedPaymentMethod.paymentType.toUpperCase()) {
-                                                case f.F.AMAZON:
-                                                    e = Q.b.RecurlyPayWithAmazon, t = "amazon";
-                                                    break;
-                                                case f.F.PAYPAL:
-                                                    e = Q.b.RecurlyPaypal, t = "paypal";
-                                                    break;
-                                                default:
-                                                    e = Q.b.RecurlyCreditCard, t = "cc"
-                                            }
-                                            return [4, this.props.handleCompletePurchase({
-                                                payment_flow: e,
-                                                payment_provider: "recurly",
-                                                payment_info: {
-                                                    token: "",
-                                                    gateway: t,
-                                                    card_bin_country: null
-                                                },
-                                                residence: {
-                                                    country_code: this.state.userCountryOfResidence,
-                                                    zip_code: this.state.userZipCode
-                                                },
-                                                savedPayment: !0,
-                                                errorCallback: function() {
-                                                    return r.setState({
-                                                        awaitingResponse: !1
-                                                    })
-                                                }
-                                            })];
-                                        case 1:
-                                            return n.sent(), [2]
-                                    }
-                                })
-                            })
-                        }, t.handleCORChange = function(e) {
-                            t.setState({
-                                userCountryOfResidence: e.countryCode,
-                                userZipCode: e.zipCode,
-                                paymentMethodEnabled: !0
-                            })
-                        }, t.hasValidResidence = function() {
-                            return !t.props.showEuSubs || (!["US", "CA"].includes(t.state.userCountryOfResidence) || !!t.state.userZipCode)
-                        }, t
-                    }
-                    return u.__extends(t, e), t.prototype.componentDidUpdate = function(e) {
-                        e.eligibility !== this.props.eligibility && this.setState({
-                            paymentMethodEnabled: this.props.eligibility.status === R.ACTIVE
-                        }), e.userCountryOfResidence !== this.props.userCountryOfResidence && this.setState({
-                            userCountryOfResidence: this.props.userCountryOfResidence
-                        })
-                    }, t.prototype.render = function() {
-                        var e = this.props.savedPaymentMethod,
-                            t = this.isPaymentMethodExpired(e);
-                        return l.createElement(l.Fragment, null, l.createElement(C.Eb, {
-                            background: C.r.Base,
-                            border: !0,
-                            borderRadius: C.x.Small,
-                            padding: 2
-                        }, l.createElement(Ke.a, {
-                            paymentType: e.paymentType,
-                            cardType: e.cardType,
-                            provider: e.provider,
-                            lastFour: e.lastFour,
-                            expirationYear: e.expirationYear,
-                            billingEmail: e.billingEmail,
-                            expirationMonth: e.expirationMonth
-                        })), this.props.showEuSubs && l.createElement(C.Xa, {
-                            margin: {
-                                y: 1
-                            }
-                        }, l.createElement(K, {
-                            countryCode: this.state.userCountryOfResidence,
-                            zipCode: this.state.userZipCode,
-                            zipCodeError: this.state.zipCodeError,
-                            onChange: this.handleCORChange
-                        })), !this.state.paymentMethodEnabled && l.createElement(q, null), l.createElement(C.Xa, {
-                            margin: {
-                                y: 2
-                            }
-                        }, l.createElement(C.z, {
-                            onClick: this.handleSubmit,
-                            state: this.state.awaitingResponse ? C.E.Loading : C.E.Default,
-                            disabled: this.state.awaitingResponse || t || !this.state.paymentMethodEnabled
-                        }, Object(p.d)("Complete Purchase", "SavedMethods"))))
-                    }, t
-                }(l.Component),
-                Qe = function() {
-                    function e(e) {
-                        var t = this;
-                        this.recurlyCountries = p.b.get("payments_recurly_countries", ["US"]), this.payPalEuSubsEnabled = p.b.get("paypal_eu_subs", !1), this.getDeterminedTaxCountry = function() {
-                            if (t.userBestGuessCountry) return t.userBestGuessCountry;
-                            var e = t.savedPaymentMethodBillingCountry;
-                            return t.ipCountryCode && e && t.userCountryOfResidence ? t.ipCountryCode === e ? t.ipCountryCode : t.userCountryOfResidence : t.userCountryOfResidence ? t.userCountryOfResidence : t.ipCountryCode
-                        }, this.productName = e.productName, this.userCountryOfResidence = e.userCountryOfResidence, this.ipCountryCode = e.ipCountryCode || "", this.userBestGuessCountry = e.userBestGuessCountry, this.savedPaymentMethodBillingCountry = e.savedPaymentMethodBillingCountry, this.savedPaymentMethodPaymentType = e.savedPaymentMethodPaymentType, this.showEuSubs = e.showEuSubs, this.disablePayPal = e.disablePayPal, this.disableAmazonPay = e.disableAmazonPay
-                    }
-                    return e.prototype.getAvailableMethods = function() {
-                        if (!this.showEuSubs) return "owlallaccess2018" === this.productName ? [he.ZuoraCreditCard, he.Xsolla] : "US" !== this.ipCountryCode ? [he.Xsolla] : [he.RecurlyCreditCard, he.RecurlyPaypal, he.RecurlyAmazonPay, he.RecurlySavedPayment, he.Xsolla];
-                        var e = [];
-                        return this.recurlyCountries.includes(this.getDeterminedTaxCountry()) && "owlallaccess2018" !== this.productName && (this.recurlyCreditCardEligible && e.push(he.RecurlyCreditCard), this.recurlyPaypalEligible && e.push(he.RecurlyPaypal), this.recurlyAmazonPayEligible && e.push(he.RecurlyAmazonPay), this.recurlySavedPaymentEligible && e.push(he.RecurlySavedPayment)), this.xsollaEligible && e.push(he.Xsolla), this.zuoraCreditCardEligible && e.push(he.ZuoraCreditCard), e
-                    }, Object.defineProperty(e.prototype, "recurlySavedPaymentEligible", {
-                        get: function() {
-                            if (this.savedPaymentMethodPaymentType) switch (this.savedPaymentMethodPaymentType.toUpperCase()) {
-                                case f.F.AMAZON:
-                                    return this.recurlyAmazonPayEligible;
-                                case f.F.CREDIT_CARD:
-                                    return this.recurlyCreditCardEligible;
-                                case f.F.PAYPAL:
-                                    return this.recurlyPaypalEligible;
-                                default:
-                                    return !1
-                            }
-                            return !1
-                        },
-                        enumerable: !0,
-                        configurable: !0
-                    }), Object.defineProperty(e.prototype, "recurlyAmazonPayEligible", {
-                        get: function() {
-                            return !this.disableAmazonPay && "US" === this.getDeterminedTaxCountry()
-                        },
-                        enumerable: !0,
-                        configurable: !0
-                    }), Object.defineProperty(e.prototype, "recurlyCreditCardEligible", {
-                        get: function() {
-                            return !0
-                        },
-                        enumerable: !0,
-                        configurable: !0
-                    }), Object.defineProperty(e.prototype, "recurlyPaypalEligible", {
-                        get: function() {
-                            return !this.disablePayPal && ("US" === this.getDeterminedTaxCountry() || this.payPalEuSubsEnabled)
-                        },
-                        enumerable: !0,
-                        configurable: !0
-                    }), Object.defineProperty(e.prototype, "xsollaEligible", {
-                        get: function() {
-                            return !0
-                        },
-                        enumerable: !0,
-                        configurable: !0
-                    }), Object.defineProperty(e.prototype, "zuoraCreditCardEligible", {
-                        get: function() {
-                            return "owlallaccess2018" === this.productName
-                        },
-                        enumerable: !0,
-                        configurable: !0
-                    }), e
-                }(),
-                Je = r("iWNC");
-            var $e = function(e) {
-                var t = Date.now() - e;
-                return function() {
-                    var r = Date.now();
-                    return t + e <= r ? (t = r, "cache-and-network") : "cache-first"
-                }
-            }(3e3);
-            var et, tt = function(e) {
-                    function t() {
-                        var t = null !== e && e.apply(this, arguments) || this;
-                        return t.state = {
-                            useSavedPaymentMethod: !0,
-                            eligiblePaymentMethods: []
-                        }, t.tracker = new Q.d({
-                            allowDuplicateEvents: !1
-                        }), t.toggleChangePaymentMethods = function() {
-                            t.setState(function(e) {
-                                return {
-                                    useSavedPaymentMethod: !e.useSavedPaymentMethod
-                                }
-                            })
-                        }, t
-                    }
-                    return u.__extends(t, e), t.prototype.componentDidMount = function() {
-                        (this.dataReady(this.props) || this.props.data.error) && (this.props.latencyTracking.reportInteractive(), null !== this.tracker.get("savedPaymentAvailable") && null !== this.tracker.get("savedPaymentDisplayed") && this.tracker.reportEvent());
-                        var e = this.savedPaymentMethod;
-                        this.eligibilityComputer = new Qe({
-                            productName: this.props.productName,
-                            userCountryOfResidence: this.props.countryOfResidence,
-                            ipCountryCode: this.props.ipCountryCode,
-                            userBestGuessCountry: this.props.userBestGuessCountry,
-                            savedPaymentMethodBillingCountry: e ? e.billingCountry : null,
-                            savedPaymentMethodPaymentType: e ? e.paymentType : null,
-                            showEuSubs: this.props.showEuSubs,
-                            disablePayPal: this.disablePayPal,
-                            disableAmazonPay: this.disableAmazonPay
-                        });
-                        var t = this.eligibilityComputer.getAvailableMethods();
-                        if (this.props.showEuSubs) {
-                            var r = Object.values(he).map(function(e) {
-                                return {
-                                    type: e,
-                                    status: t.includes(e) ? R.ACTIVE : R.HIDDEN
-                                }
-                            });
-                            this.setState({
-                                eligiblePaymentMethods: r
-                            })
-                        } else {
-                            r = t.map(function(e) {
-                                return {
-                                    type: e,
-                                    status: R.ACTIVE
-                                }
-                            });
-                            this.setState({
-                                eligiblePaymentMethods: r
-                            })
-                        }
-                    }, t.prototype.componentDidUpdate = function(e, t) {
-                        (this.dataReady(this.props) || this.props.data.error) && (this.props.latencyTracking.reportInteractive(), null !== this.tracker.get("savedPaymentAvailable") && null !== this.tracker.get("savedPaymentDisplayed") && this.tracker.reportEvent());
-                        var r = this.savedPaymentMethod;
-                        if (e.userBestGuessCountry !== this.props.userBestGuessCountry || e.data && this.props.data && e.data.currentUser !== this.props.data.currentUser || !this.dataReady(e) && this.dataReady(this.props)) {
-                            this.eligibilityComputer = new Qe({
-                                productName: this.props.productName,
-                                userCountryOfResidence: this.props.countryOfResidence,
-                                ipCountryCode: this.props.ipCountryCode,
-                                userBestGuessCountry: this.props.userBestGuessCountry,
-                                savedPaymentMethodBillingCountry: r ? r.billingCountry : null,
-                                savedPaymentMethodPaymentType: r ? r.paymentType : null,
-                                showEuSubs: this.props.showEuSubs,
-                                disablePayPal: this.disablePayPal,
-                                disableAmazonPay: this.disableAmazonPay
-                            });
-                            var n = this.eligibilityComputer.getAvailableMethods();
-                            if (this.props.showEuSubs) {
-                                var a = Object.values(he).map(function(e) {
-                                    var r = t.eligiblePaymentMethods.find(function(t) {
-                                            return t.type === e
-                                        }),
-                                        a = r && r.status === R.HIDDEN ? R.HIDDEN : R.DISABLED;
-                                    return {
-                                        type: e,
-                                        status: n.includes(e) ? R.ACTIVE : a
-                                    }
-                                });
-                                this.setState({
-                                    eligiblePaymentMethods: a
-                                })
-                            } else {
-                                a = n.map(function(e) {
-                                    return {
-                                        type: e,
-                                        status: R.ACTIVE
-                                    }
-                                });
-                                this.setState({
-                                    eligiblePaymentMethods: a
-                                })
-                            }
-                        }
-                    }, t.prototype.render = function() {
-                        if (this.props.data.error);
-                        else if (!this.dataReady(this.props)) return l.createElement(C.Xa, {
-                            margin: {
-                                y: 1
-                            }
-                        }, l.createElement(C.ib, {
-                            lineCount: 6
-                        }));
-                        var e = this.savedPaymentMethodEligibility,
-                            t = this.state.eligiblePaymentMethods.filter(function(e) {
-                                return e.status !== R.HIDDEN
-                            });
-                        return l.createElement(l.Fragment, null, this.renderWalletHeader(), this.state.useSavedPaymentMethod && this.showSavedPaymentsFeature && this.savedPaymentMethod && this.props.ipCountryCode && e && l.createElement(qe, {
-                            handleCompletePurchase: this.props.handleCompletePurchase,
-                            savedPaymentMethod: this.savedPaymentMethod,
-                            handleCountryChange: this.props.handleCountryChange,
-                            eligibility: e,
-                            userCountryOfResidence: this.props.countryOfResidence || this.props.ipCountryCode,
-                            userZipCode: this.props.userZipCode,
-                            showEuSubs: this.props.showEuSubs
-                        }), this.props.configs && t.length > 0 && !(this.state.useSavedPaymentMethod && this.showSavedPaymentsFeature) && this.props.ipCountryCode && l.createElement(C.Xa, {
-                            "data-a-target": "PAYMENT_METHOD_SELECTOR"
-                        }, l.createElement(Ye, {
-                            handleCompletePurchase: this.props.handleCompletePurchase,
-                            handleCountryChange: this.props.handleCountryChange,
-                            trackPaymentFormInteraction: this.props.trackPaymentFormInteraction,
-                            eligiblePaymentMethods: t,
-                            userCountryOfResidence: this.props.countryOfResidence || this.props.ipCountryCode,
-                            userZipCode: this.props.userZipCode,
-                            configs: this.props.configs,
-                            showEuSubs: this.props.showEuSubs
-                        })))
-                    }, t.prototype.renderWalletHeader = function() {
-                        return l.createElement(C.Xa, {
-                            display: C.X.Flex,
-                            justifyContent: C.Wa.Between,
-                            margin: {
-                                y: 2
-                            }
-                        }, this.renderWalletTitle(), l.createElement(C.Xa, {
-                            padding: {
-                                left: 1
-                            },
-                            display: C.X.Flex,
-                            alignItems: C.f.End
-                        }, this.renderPaymentMethodToggle()))
-                    }, t.prototype.renderWalletTitle = function() {
-                        return this.state.useSavedPaymentMethod && this.showSavedPaymentsFeature ? l.createElement(C.W, {
-                            type: C.Vb.H4,
-                            bold: !0
-                        }, Object(p.d)("Saved Payment Method", "Wallet")) : l.createElement(C.W, {
-                            type: C.Vb.H4,
-                            bold: !0
-                        }, Object(p.d)("Choose Your Payment Method", "Wallet"))
-                    }, t.prototype.renderPaymentMethodToggle = function() {
-                        if (this.showSavedPaymentsFeature) return this.state.useSavedPaymentMethod ? l.createElement(C.U, {
-                            onClick: this.toggleChangePaymentMethods,
-                            "data-a-target": "js-test-change-payment-method"
-                        }, Object(p.d)("Change Payment Method", "Wallet")) : l.createElement(C.Xa, {
-                            display: C.X.Flex
-                        }, l.createElement(C.sb, {
-                            asset: C.tb.AngleLeft,
-                            width: 10,
-                            height: 10,
-                            type: C.ub.Brand
-                        }), l.createElement(C.Xa, {
-                            margin: {
-                                left: 1
-                            }
-                        }, l.createElement(C.U, {
-                            onClick: this.toggleChangePaymentMethods,
-                            "data-a-target": "js-test-use-existing-payment-method"
-                        }, Object(p.d)("Use Existing Payment Method", "Wallet"))))
-                    }, Object.defineProperty(t.prototype, "isLargePurchase", {
-                        get: function() {
-                            if (!this.props.product) return !1;
-                            var e = this.props.product.product.priceInfo,
-                                t = this.props.product.quantity;
-                            return e.total * t > 5e4
-                        },
-                        enumerable: !0,
-                        configurable: !0
-                    }), Object.defineProperty(t.prototype, "showSavedPaymentsFeature", {
-                        get: function() {
-                            if (this.props.data && this.props.data.error) return !1;
-                            if (!this.savedPaymentMethodEligibility || this.savedPaymentMethodEligibility.status === R.HIDDEN) return !1;
-                            if ("owlallaccess2018" === this.props.productName) return !1;
-                            if (this.savedPaymentMethod) {
-                                if (this.isLargePurchase) {
-                                    if (this.savedPaymentMethod.isRestricted) {
-                                        var e = !!(this.props.data && this.props.data.currentUser && this.props.data.currentUser.settings && this.props.data.currentUser.settings.hasTwoFactorEnabled);
-                                        return this.tracker.set({
-                                            savedPaymentAvailable: !0,
-                                            savedPaymentDisplayed: e
-                                        }), e
-                                    }
-                                    return this.tracker.set({
-                                        savedPaymentAvailable: !0,
-                                        savedPaymentDisplayed: !0
-                                    }), !0
-                                }
-                                return !0
-                            }
-                            return !1
-                        },
-                        enumerable: !0,
-                        configurable: !0
-                    }), Object.defineProperty(t.prototype, "savedPaymentMethodEligibility", {
-                        get: function() {
-                            return this.state.eligiblePaymentMethods.find(function(e) {
-                                return e.type === he.RecurlySavedPayment
-                            })
-                        },
-                        enumerable: !0,
-                        configurable: !0
-                    }), Object.defineProperty(t.prototype, "savedPaymentMethod", {
-                        get: function() {
-                            var e = (this.props.data && this.props.data.currentUser && this.props.data.currentUser.paymentMethods || []).filter(function(e) {
-                                return e.provider.toUpperCase() === f.G.RECURLY
-                            })[0];
-                            return e ? e.paymentType.toUpperCase() === f.F.PAYPAL && this.disablePayPal ? null : e.paymentType.toUpperCase() === f.F.AMAZON && this.disableAmazonPay ? null : e : null
-                        },
-                        enumerable: !0,
-                        configurable: !0
-                    }), Object.defineProperty(t.prototype, "disablePayPal", {
-                        get: function() {
-                            return !this.props.configs || !this.props.configs.recurly.braintreeClientAuthorization
-                        },
-                        enumerable: !0,
-                        configurable: !0
-                    }), Object.defineProperty(t.prototype, "disableAmazonPay", {
-                        get: function() {
-                            return !this.props.configs || !this.props.configs.recurly.payWithAmazonConfigs.clientID
-                        },
-                        enumerable: !0,
-                        configurable: !0
-                    }), t.prototype.dataReady = function(e) {
-                        return !!(e.configs && e.product && e.ipCountryCode && e.data.currentUser)
-                    }, t
-                }(l.Component),
-                rt = Object(H.compose)(Object(J.b)("Wallet"), Object(h.a)(Je, {
-                    options: function() {
-                        return {
-                            fetchPolicy: $e()
-                        }
-                    }
-                }))(tt),
-                nt = r("T3lN");
-            ! function(e) {
-                e.ELIGIBLE_PURCHASE = "ELIGIBLE_PURCHASE", e.INELIGIBLE_PURCHASE = "INELIGIBLE_PURCHASE"
-            }(et || (et = {}));
-            var at = function(e) {
-                    function t() {
-                        var t = null !== e && e.apply(this, arguments) || this;
-                        return t.state = {
-                            progress: S.a.NOT_STARTED,
-                            showErrors: !1,
-                            userBestGuessCountry: null
-                        }, t.enablePaidUpgradeFlag = p.b.get("earth_wind_fire", !1), t.paidUpgradePromotionStartDate = p.b.get("earth_wind_fire_start", "2018-09-10T00:00:00Z"), t.paidUpgradePromotionEndDate = p.b.get("earth_wind_fire_end", "2018-11-02T59:59:59Z"), t.recurlyTaxEnabled = p.b.get("recurly_tax_enabled", "false"), t.trackPaymentFormInteraction = function(e) {
-                            if (t.props.data.subscriptionProduct) {
-                                var r = t.props.isGift ? Q.e.Gifting : Q.e.Personal;
-                                t.props.mysteryGiftCount && (r = Q.e.MysteryGifting);
-                                var n = {
-                                    channelLogin: t.props.data.subscriptionProduct.owner && t.props.data.subscriptionProduct.owner.login,
-                                    channelId: t.props.data.subscriptionProduct.owner && t.props.data.subscriptionProduct.owner.id,
-                                    paymentType: r,
-                                    productId: t.props.productName,
-                                    quantity: t.props.mysteryGiftCount || 1,
-                                    ticketPrice: t.props.data.subscriptionProduct.priceInfo.total,
-                                    currency: t.props.data.subscriptionProduct.priceInfo.currency,
-                                    paymentFlow: e.paymentFlow,
-                                    action: e.action,
-                                    actionDetail: e.actionDetail || "",
-                                    savedPayment: e.savedPayment || !1,
-                                    trackingContext: t.props.trackingContext
-                                };
-                                Object(Q.g)(n)
-                            }
-                        }, t.handleCountryChange = function(e) {
-                            t.setState({
-                                userBestGuessCountry: e
-                            });
-                            var r = u.__assign({}, t.props.data.variables, {
-                                taxCountry: e
-                            });
-                            t.props.data.refetch(r)
-                        }, t.completePurchase = function(e) {
-                            return u.__awaiter(t, void 0, void 0, function() {
-                                var t, r, n, a;
-                                return u.__generator(this, function(i) {
-                                    switch (i.label) {
-                                        case 0:
-                                            t = this.props.data.subscriptionProduct, r = {
-                                                payment_provider: e.payment_provider,
-                                                payment_info: u.__assign({}, e.payment_info),
-                                                is_gift: this.props.isGift,
-                                                mystery_gift_count: this.props.mysteryGiftCount,
-                                                is_anonymous: this.props.isAnonymous,
-                                                recipient_id: this.props.recipientID,
-                                                ip_country_code: this.props.data.requestInfo.countryCode,
-                                                price_info: {
-                                                    id: t && t.priceInfo && t.priceInfo.id,
-                                                    currency: t && t.priceInfo && t.priceInfo.currency
-                                                },
-                                                residence: e.residence,
-                                                device_id: p.p.session.deviceID,
-                                                tab_session_id: p.p.session.tabID
-                                            }, this.setState({
-                                                showErrors: !1
-                                            }), n = "/kraken/checkout/users/" + (this.props.data.currentUser && this.props.data.currentUser.id) + "/products/" + this.props.productName + "/purchase/complete", i.label = 1;
-                                        case 1:
-                                            return i.trys.push([1, 3, , 4]), [4, b.a.post(n, {
-                                                body: r
-                                            }, {
-                                                version: 5
-                                            })];
-                                        case 2:
-                                            return (a = i.sent()).error || a.body && a.body.error ? (this.trackPaymentFormInteraction({
-                                                paymentFlow: e.payment_flow,
-                                                action: Q.a.CompletePurchaseClick,
-                                                actionDetail: Q.f.Failed,
-                                                savedPayment: e.savedPayment
-                                            }), a.body && "UNSUPPORTED_COUNTRY" === a.body.error && a.body.error_details && a.body.error_details.country ? (this.trackPaymentFormInteraction({
-                                                paymentFlow: e.payment_flow,
-                                                action: Q.a.UnsupportedCountryAlert,
-                                                actionDetail: a.body.error_details.country,
-                                                savedPayment: e.savedPayment
-                                            }), this.handleCountryChange(a.body.error_details.country)) : a.body && "INVALID_RESIDENCE" === a.body.error ? this.setState({
-                                                showErrors: !0,
-                                                errors: {
-                                                    code: v.InvalidResidence,
-                                                    level: E.Error
-                                                }
-                                            }) : a.body && "PRICE_INFO_INVALID" === a.body.error && a.body.error_details && a.body.error_details.country ? (this.trackPaymentFormInteraction({
-                                                paymentFlow: e.payment_flow,
-                                                action: Q.a.PriceChangeAlert,
-                                                actionDetail: a.body.error_details.country,
-                                                savedPayment: e.savedPayment
-                                            }), this.setState({
-                                                showErrors: !0,
-                                                errors: {
-                                                    code: v.PriceChangeNotice,
-                                                    level: E.Info
-                                                }
-                                            }), this.handleCountryChange(a.body.error_details.country)) : a.body && "INVALID_PAYMENT_METHOD" === a.body.error ? this.setState({
-                                                showErrors: !0,
-                                                errors: {
-                                                    code: v.InvalidPaymentMethod,
-                                                    level: E.Error
-                                                }
-                                            }) : this.setState({
-                                                showErrors: !0,
-                                                errors: {
-                                                    code: v.DefaultMessage,
-                                                    level: E.Error
-                                                }
-                                            }), e.errorCallback && e.errorCallback(), [2]) : (this.trackPaymentFormInteraction({
-                                                paymentFlow: e.payment_flow,
-                                                action: Q.a.CompletePurchaseClick,
-                                                actionDetail: Q.f.Success,
-                                                savedPayment: e.savedPayment
-                                            }), this.props.data.refetch(), this.setState({
-                                                purchaseResponse: a.body,
-                                                progress: S.a.CONFIRMATION
-                                            }), [3, 4]);
-                                        case 3:
-                                            return i.sent(), this.setState({
-                                                showErrors: !0,
-                                                errors: {
-                                                    code: v.DefaultMessage,
-                                                    level: E.Error
-                                                }
-                                            }), e.errorCallback && e.errorCallback(), this.trackPaymentFormInteraction({
-                                                paymentFlow: e.payment_flow,
-                                                action: Q.a.CompletePurchaseClick,
-                                                actionDetail: Q.f.Failed,
-                                                savedPayment: e.savedPayment
-                                            }), [3, 4];
-                                        case 4:
-                                            return [2]
-                                    }
-                                })
-                            })
-                        }, t
-                    }
-                    return u.__extends(t, e), t.prototype.componentDidMount = function() {
-                        this.props.data.loading && !this.props.data.error || (this.props.latencyTracking.reportInteractive(), this.state.progress < S.a.CONFIRMATION && this.productAlreadyOwned && !this.props.isGift && this.setState({
-                            progress: S.a.CONFIRMATION
-                        }))
-                    }, t.prototype.componentDidUpdate = function(e, t) {
-                        (e.data.loading && !this.props.data.loading || this.props.data.error) && (this.props.latencyTracking.reportInteractive(), this.state.progress < S.a.CONFIRMATION && this.productAlreadyOwned && !this.props.isGift && this.setState({
-                            progress: S.a.CONFIRMATION
-                        })), this.state.progress !== t.progress && this.props.onCheckoutProgress && this.props.onCheckoutProgress(this.state.progress)
-                    }, t.prototype.render = function() {
-                        if (this.props.data.error) return l.createElement(m.a, null);
-                        if (this.productEligibility === N.MOBILE_UPGRADE) {
-                            var e = this.shoppingCartItem,
-                                t = e && e.product && e.product.owner && e.product.owner.displayName;
-                            return l.createElement(m.a, null, l.createElement(C.W, {
-                                bold: !0
-                            }, Object(p.d)("You purchased a subscription to {productDisplayName} on your mobile device.", {
-                                productDisplayName: t || this.props.productName
-                            }, "CheckoutPayments")), l.createElement(C.Xa, {
-                                margin: {
-                                    top: 1
-                                }
-                            }, l.createElement(C.W, null, Object(p.d)("Upgrading your mobile subscription is currently not supported.", "CheckoutPayments"))))
-                        }
-                        if (this.state.progress === S.a.CONFIRMATION) {
-                            var r = l.createElement(j, {
-                                product: this.shoppingCartItem,
-                                purchaseFlow: this.purchaseFlow,
-                                progress: this.state.progress
-                            });
-                            return l.createElement(w, {
-                                productDescription: this.renderTicketDescription(),
-                                header: r
-                            }, this.purchaseInvoice && l.createElement(z, {
-                                currentUser: this.props.data.currentUser,
-                                purchaseFlow: this.purchaseFlow,
-                                product: this.shoppingCartItem,
-                                purchaseInvoice: this.purchaseInvoice && this.purchaseInvoice,
-                                sessionUser: this.props.sessionUser,
-                                benefit: this.props.data.subscriptionProduct && this.props.data.subscriptionProduct.self && this.props.data.subscriptionProduct.self.benefit
-                            }))
-                        }
-                        var n = l.createElement(j, {
-                                product: this.shoppingCartItem,
-                                purchaseFlow: this.purchaseFlow,
-                                progress: this.state.progress
-                            }),
-                            a = this.shoppingCartItem && this.shoppingCartItem.product.owner && this.shoppingCartItem.product.owner.displayName,
-                            i = "/" + (a || "");
-                        return l.createElement(w, {
-                            productDescription: this.renderTicketDescription(),
-                            header: n
-                        }, !this.dataReady && l.createElement(C.Xa, {
-                            display: C.X.Flex,
-                            justifyContent: C.Wa.Center,
-                            alignItems: C.f.Center
-                        }, l.createElement(C.ib, {
-                            lineCount: 20
-                        })), l.createElement(C.Xa, {
-                            display: this.dataReady ? C.X.Block : C.X.Hide
-                        }, l.createElement(C.Xa, {
-                            display: T(this.productEligibility) ? C.X.Hide : C.X.Block,
-                            "data-test-selector": et.INELIGIBLE_PURCHASE
-                        }, l.createElement(M, {
-                            product: this.shoppingCartItem,
-                            existingPurchases: this.existingPurchases,
-                            productEligibility: this.productEligibility,
-                            sessionUser: this.props.sessionUser
-                        }), l.createElement(C.Xa, {
-                            margin: {
-                                top: 2
-                            }
-                        }, l.createElement(C.z, {
-                            linkTo: i
-                        }, Object(p.d)("Go back to {channel}", {
-                            channel: a || "Twitch"
-                        }, "CheckoutPayments")))), l.createElement(C.Xa, {
-                            display: T(this.productEligibility) ? C.X.Block : C.X.Hide,
-                            "data-test-selector": et.ELIGIBLE_PURCHASE
-                        }, l.createElement(k, {
-                            purchaseFlow: this.purchaseFlow,
-                            product: this.shoppingCartItem
-                        }), l.createElement(C.Xa, {
-                            margin: {
-                                y: 1
-                            }
-                        }, l.createElement(F, {
-                            purchaseFlow: this.purchaseFlow,
-                            product: this.shoppingCartItem,
-                            existingPurchases: this.existingPurchases,
-                            productEligibility: this.productEligibility,
-                            benefit: this.props.data.subscriptionProduct && this.props.data.subscriptionProduct.self && this.props.data.subscriptionProduct.self.benefit,
-                            eligiblePromotions: this.eligiblePromotions,
-                            sessionUser: this.props.sessionUser
-                        })), this.state.showErrors && this.state.errors && l.createElement(C.Xa, {
-                            margin: {
-                                y: 2
-                            }
-                        }, l.createElement(O, {
-                            errorCode: this.state.errors.code,
-                            level: this.state.errors.level
-                        })), l.createElement(rt, {
-                            handleCompletePurchase: this.completePurchase,
-                            handleCountryChange: this.handleCountryChange,
-                            productName: this.props.productName,
-                            trackPaymentFormInteraction: this.trackPaymentFormInteraction,
-                            configs: this.props.data.subscriptionProduct && this.props.data.subscriptionProduct.self && this.props.data.subscriptionProduct.self.checkoutConfigs && this.shoppingCartItem && this.props.data.subscriptionProduct.self.checkoutConfigs.paymentProviderConfigs,
-                            ipCountryCode: this.props.data.requestInfo && this.props.data.requestInfo.countryCode,
-                            countryOfResidence: this.props.data.currentUser && this.props.data.currentUser.residence && this.props.data.currentUser.residence.countryCode,
-                            userBestGuessCountry: this.state.userBestGuessCountry,
-                            userZipCode: this.props.data.currentUser && this.props.data.currentUser.residence && this.props.data.currentUser.residence.postalCode,
-                            product: this.shoppingCartItem,
-                            showEuSubs: this.showEuSubs
-                        }), l.createElement(_, null))))
-                    }, t.prototype.renderTicketDescription = function() {
-                        return this.productEligibility === N.MOBILE_UPGRADE || this.DEPRECRATE_hasActiveMobileSub ? null : l.createElement(V.a, {
-                            productName: this.props.productName,
-                            isGift: this.props.isGift && this.canGift,
-                            showPaidUpgrade: this.enablePaidUpgrade,
-                            priceCountry: this.state.userBestGuessCountry,
-                            invoicePrice: null,
-                            showEuSubs: this.showEuSubs
-                        })
-                    }, Object.defineProperty(t.prototype, "purchaseFlow", {
-                        get: function() {
-                            return this.props.isGift ? this.props.mysteryGiftCount && this.props.mysteryGiftCount > 0 ? n.MYSTERY_GIFT : n.GIFT_SUB : n.PERSONAL_SUB
-                        },
-                        enumerable: !0,
-                        configurable: !0
-                    }), Object.defineProperty(t.prototype, "canPurchase", {
-                        get: function() {
-                            return !!(this.props.data.subscriptionProduct && this.props.data.subscriptionProduct.self && this.props.data.subscriptionProduct.self.checkoutConfigs && this.props.data.subscriptionProduct.self.checkoutConfigs.canPurchase)
-                        },
-                        enumerable: !0,
-                        configurable: !0
-                    }), Object.defineProperty(t.prototype, "productEligibility", {
-                        get: function() {
-                            var e = this;
-                            if (!this.canPurchase) return N.API_INELIGIBLE;
-                            if (!this.shoppingCartItem) return N.NO_ITEM;
-                            if (this.purchaseFlow === n.GIFT_SUB) return this.canGift ? N.GIFTABLE_RECIPIENT : N.NON_GIFTABLE_RECIPIENT;
-                            if (this.purchaseFlow === n.MYSTERY_GIFT) return this.canGift ? N.GIFTABLE_RECIPIENT : N.NO_MASS_GIFTING;
-                            var t = this.existingPurchases && this.existingPurchases.compatiblePurchases;
-                            if (t) {
-                                var r = t.find(function(e) {
-                                        return e.paymentProvider.toUpperCase() === f.G.PRIME
-                                    }),
-                                    a = t.find(function(t) {
-                                        return t.productType.toUpperCase() === f.V.CHANSUB && !!t.productTier && parseInt(e.shoppingCartItem.product.tier, 10) < parseInt(t.productTier, 10)
-                                    }),
-                                    i = t.find(function(t) {
-                                        return t.productType.toUpperCase() === f.V.CHANSUB && !!t.productTier && parseInt(e.shoppingCartItem.product.tier, 10) > parseInt(t.productTier, 10)
-                                    }),
-                                    o = t.find(function(e) {
-                                        return e.paymentProvider.toUpperCase() === f.G.GOOGLE_IAB
-                                    });
-                                if (r) return N.PRIME_UPGRADE;
-                                if (a) return N.TIER_DOWNGRADE;
-                                if (i) return o ? N.MOBILE_UPGRADE : N.TIER_UPGRADE
-                            }
-                            return !this.existingPurchases || this.existingPurchases && !this.existingPurchases.details && !this.existingPurchases.compatiblePurchases || this.existingPurchases.details && this.existingPurchases.details.state === f.W.INACTIVE ? N.NEW_PURCHASE : N.UNKNOWN
-                        },
-                        enumerable: !0,
-                        configurable: !0
-                    }), Object.defineProperty(t.prototype, "shoppingCartItem", {
-                        get: function() {
-                            var e = this.props.data.subscriptionProduct;
-                            return e ? {
-                                product: {
-                                    id: e.id,
-                                    name: e.name,
-                                    priceInfo: e.priceInfo,
-                                    interval: e.interval,
-                                    tier: e.tier,
-                                    owner: e.owner
-                                },
-                                recipient: this.props.recipientID ? {
-                                    id: this.props.recipientID,
-                                    displayName: this.props.recipientDisplayName
-                                } : null,
-                                quantity: this.props.mysteryGiftCount || 1
-                            } : null
-                        },
-                        enumerable: !0,
-                        configurable: !0
-                    }), Object.defineProperty(t.prototype, "purchaseInvoice", {
-                        get: function() {
-                            if (this.state.purchaseResponse && this.state.purchaseResponse.invoice_total) return {
-                                price: this.state.purchaseResponse.invoice_total.price,
-                                currency: this.state.purchaseResponse.invoice_total.currency,
-                                divisor: 100,
-                                tier: this.state.purchaseResponse.product_tier
-                            };
-                            var e = this.existingPurchases && this.existingPurchases.details;
-                            return e && {
-                                price: e.price,
-                                currency: e.currency,
-                                divisor: e.divisor,
-                                tier: e.productTier
-                            }
-                        },
-                        enumerable: !0,
-                        configurable: !0
-                    }), Object.defineProperty(t.prototype, "existingPurchases", {
-                        get: function() {
-                            return this.props.data.subscriptionProduct && this.props.data.subscriptionProduct.self && this.props.data.subscriptionProduct.self.purchase
-                        },
-                        enumerable: !0,
-                        configurable: !0
-                    }), Object.defineProperty(t.prototype, "productAlreadyOwned", {
-                        get: function() {
-                            return !(!this.existingPurchases || !this.existingPurchases.details)
-                        },
-                        enumerable: !0,
-                        configurable: !0
-                    }), Object.defineProperty(t.prototype, "DEPRECRATE_hasActiveMobileSub", {
-                        get: function() {
-                            var e = this.existingPurchases;
-                            return !(!e || !e.details || e.details.paymentProvider.toUpperCase() !== f.G.GOOGLE_IAB)
-                        },
-                        enumerable: !0,
-                        configurable: !0
-                    }), Object.defineProperty(t.prototype, "enablePaidUpgrade", {
-                        get: function() {
-                            if (!this.enablePaidUpgradeFlag) return !1;
-                            if (!this.props.data.subscriptionProduct || !this.props.data.subscriptionProduct.self) return !1;
-                            var e = this.props.data.subscriptionProduct.self.benefit && this.props.data.subscriptionProduct.self.benefit.paidUpgrade && this.props.data.subscriptionProduct.self.benefit.paidUpgrade.startsAt,
-                                t = !!(this.props.data.subscriptionProduct.self.benefit && this.props.data.subscriptionProduct.self.benefit.gift && this.props.data.subscriptionProduct.self.benefit.gift.isGift);
-                            return !!(e && Object(d.isWithinRange)(Object(y.c)(e), Object(y.c)(this.paidUpgradePromotionStartDate), Object(y.c)(this.paidUpgradePromotionEndDate)) || this.productEligibility === N.NEW_PURCHASE && t && this.eligiblePromotions.paidUpgradePromotion)
-                        },
-                        enumerable: !0,
-                        configurable: !0
-                    }), Object.defineProperty(t.prototype, "canGift", {
-                        get: function() {
-                            return !!(this.props.data.subscriptionProduct && this.props.data.subscriptionProduct.self && this.props.data.subscriptionProduct.self.checkoutConfigs && this.props.data.subscriptionProduct.self.checkoutConfigs.canGift)
-                        },
-                        enumerable: !0,
-                        configurable: !0
-                    }), Object.defineProperty(t.prototype, "eligiblePromotions", {
-                        get: function() {
-                            var e = !1;
-                            return this.props.data.subscriptionProduct && this.props.data.subscriptionProduct.self && this.props.data.subscriptionProduct.self.checkoutConfigs && (e = this.props.data.subscriptionProduct.self.checkoutConfigs.isOneMonthFreeEligible), {
-                                isOneMonthFreeEligible: e,
-                                promotion: this.props.data.subscriptionProduct && this.props.data.subscriptionProduct.self && this.props.data.subscriptionProduct.self.promotion,
-                                paidUpgradePromotion: this.props.data.subscriptionProduct && this.props.data.subscriptionProduct.self && this.props.data.subscriptionProduct.self.paidUpgradePromotion
-                            }
-                        },
-                        enumerable: !0,
-                        configurable: !0
-                    }), Object.defineProperty(t.prototype, "dataReady", {
-                        get: function() {
-                            return !(this.props.data.loading && !this.props.data.error && !this.props.data.subscriptionProduct)
-                        },
-                        enumerable: !0,
-                        configurable: !0
-                    }), Object.defineProperty(t.prototype, "showEuSubs", {
-                        get: function() {
-                            return "true" === this.recurlyTaxEnabled || "staff" === this.recurlyTaxEnabled && !!(this.props.sessionUser && this.props.sessionUser.roles && this.props.sessionUser.roles.isStaff)
-                        },
-                        enumerable: !0,
-                        configurable: !0
-                    }), t
-                }(l.Component),
-                it = Object(i.compose)(Object(h.a)(nt, {
-                    options: function(e) {
-                        return {
-                            fetchPolicy: "network-only",
-                            variables: {
-                                productName: e.productName,
-                                isAnonymous: e.isAnonymous,
-                                isGift: e.isGift,
-                                recipientID: e.recipientID,
-                                includePromotion: function(e) {
-                                    return !["turbo", "owlallaccess2018"].includes(e.productName)
-                                }(e),
-                                mysteryGiftCount: e.mysteryGiftCount,
-                                taxCountry: ""
-                            }
-                        }
-                    }
-                }), Object(J.b)("CheckoutPayments"))(at);
-            var ot = Object(a.connect)(function(e) {
-                return {
-                    isLoggedIn: Object(c.f)(e),
-                    sessionUser: Object(c.e)(e)
-                }
-            }, function(e) {
-                return Object(i.bindActionCreators)({
-                    promptLogin: function() {
-                        return Object(s.e)(o.a.DashboardPage)
-                    }
-                }, e)
-            })(it);
-            r.d(t, "a", function() {
-                return ot
-            })
-        },
         SPyc: function(e, t, r) {
             e.exports = r.p + "assets/discover-d67f6b00db816208999c.svg"
         },
@@ -6509,7 +3483,7 @@
                 w = r("GnwI"),
                 _ = r("9fjZ"),
                 T = u.a.wrap(function() {
-                    return r.e(209).then(r.bind(null, "skV9"))
+                    return r.e(211).then(r.bind(null, "skV9"))
                 }, "CampaignsTicketDescription"),
                 R = function(e) {
                     function t() {
@@ -6655,7 +3629,7 @@
                         configurable: !0
                     }), t
                 }(o.Component),
-                M = Object(s.compose)(Object(w.b)("TicketDescription"), Object(d.a)(_, {
+                A = Object(s.compose)(Object(w.b)("TicketDescription"), Object(d.a)(_, {
                     options: function(e) {
                         return {
                             variables: {
@@ -6665,18 +3639,3116 @@
                         }
                     }
                 }))(R);
-            var A = Object(n.connect)(function(e) {
+            var M = Object(n.connect)(function(e) {
                 return {
                     sessionUser: Object(a.e)(e)
                 }
-            })(M);
+            })(A);
             r.d(t, "a", function() {
-                return A
+                return M
             })
         },
         VrOd: function(e, t, r) {},
         WJ6U: function(e, t, r) {
             e.exports = r.p + "assets/android_1x-38340be28156bb72233a.svg"
+        },
+        WXY0: function(e, t, r) {
+            "use strict";
+            var n, a = r("/MKj"),
+                i = r("fvjX"),
+                o = r("1/iK"),
+                s = r("y5D0"),
+                c = r("kRBY"),
+                u = r("mrSG"),
+                d = r("NAv5"),
+                l = r("q1tI"),
+                p = r("/7QA"),
+                m = r("ZDlU"),
+                h = r("yR8l"),
+                y = r("x7UT"),
+                f = r("0Log"),
+                b = r("HGFl"),
+                g = r("/aPz"),
+                v = r("D7An"),
+                E = r("DMoW"),
+                C = r("b6Yk"),
+                k = r("tIid");
+            ! function(e) {
+                e[e.PERSONAL_SUB = 0] = "PERSONAL_SUB", e[e.GIFT_SUB = 1] = "GIFT_SUB", e[e.MYSTERY_GIFT = 2] = "MYSTERY_GIFT"
+            }(n || (n = {}));
+            var P, O, S = r("Ue10"),
+                I = function(e) {
+                    function t() {
+                        return null !== e && e.apply(this, arguments) || this
+                    }
+                    return u.__extends(t, e), t.prototype.render = function() {
+                        return this.props.product ? (e = this.props.purchaseFlow === n.GIFT_SUB || this.props.purchaseFlow === n.MYSTERY_GIFT ? this.isEsportPurchase ? this.giftEsportMessageText : this.giftSubMessageText : this.isEsportPurchase ? this.personalEsportMessageText : "turbo" === this.props.product.product.name ? this.turboMessageText : this.personalSubMessageText, l.createElement(S.Xa, null, e)) : l.createElement(S.ib, null);
+                        var e
+                    }, Object.defineProperty(t.prototype, "turboMessageText", {
+                        get: function() {
+                            var e = Object(p.d)("Buying a Twitch Turbo subscription is fast, easy, and secure. Don't hesitate to contact <x:link>Purchase Support</x:link> if you need help.", {
+                                "x:link": function(e) {
+                                    return l.createElement(S.U, {
+                                        targetBlank: !0,
+                                        to: "https://help.twitch.tv/"
+                                    }, e)
+                                }
+                            }, "CheckoutDescription");
+                            return l.createElement(S.W, null, e)
+                        },
+                        enumerable: !0,
+                        configurable: !0
+                    }), Object.defineProperty(t.prototype, "isEsportPurchase", {
+                        get: function() {
+                            var e = this.props.product && this.props.product.product.owner;
+                            return e && e.id && Object(k.a)(e.id, this.props.sessionUser)
+                        },
+                        enumerable: !0,
+                        configurable: !0
+                    }), Object.defineProperty(t.prototype, "personalEsportMessageText", {
+                        get: function() {
+                            var e = Object(p.d)("Buying a Pass is fast, easy, and secure. Don't hesitate to contact <x:link>Purchase Support</x:link> if you need help.", {
+                                "x:link": function(e) {
+                                    return l.createElement(S.U, {
+                                        targetBlank: !0,
+                                        to: "https://help.twitch.tv/"
+                                    }, e)
+                                }
+                            }, "CheckoutDescription");
+                            return l.createElement(S.W, null, e)
+                        },
+                        enumerable: !0,
+                        configurable: !0
+                    }), Object.defineProperty(t.prototype, "giftEsportMessageText", {
+                        get: function() {
+                            var e = Object(p.d)("Buying a Pass gift is fast, easy, and secure. Don't hesitate to contact <x:link>Purchase Support</x:link> if you need help.", {
+                                "x:link": function(e) {
+                                    return l.createElement(S.U, {
+                                        targetBlank: !0,
+                                        to: "https://help.twitch.tv/"
+                                    }, e)
+                                }
+                            }, "CheckoutDescription");
+                            return l.createElement(S.W, null, e)
+                        },
+                        enumerable: !0,
+                        configurable: !0
+                    }), Object.defineProperty(t.prototype, "personalSubMessageText", {
+                        get: function() {
+                            if (this.props.product) {
+                                var e = Object(p.d)("Buying a Channel Subscription is fast, easy, and secure. Don't hesitate to contact <x:link>Purchase Support</x:link> if you need help.", {
+                                        "x:link": function(e) {
+                                            return l.createElement(S.U, {
+                                                targetBlank: !0,
+                                                to: "https://help.twitch.tv/"
+                                            }, e)
+                                        }
+                                    }, "CheckoutDescription"),
+                                    t = Object(p.d)('You may cancel at any time by selecting "Do Not Renew" on your <x:link>subscriptions page</x:link>.', {
+                                        "x:link": function(e) {
+                                            return l.createElement(S.U, {
+                                                targetBlank: !0,
+                                                to: "/subscriptions"
+                                            }, e)
+                                        }
+                                    }, "CheckoutDescription");
+                                return l.createElement(l.Fragment, null, l.createElement(S.W, null, e), this.props.product.product.interval.unit === E.T.MONTH && l.createElement(S.W, null, t))
+                            }
+                        },
+                        enumerable: !0,
+                        configurable: !0
+                    }), Object.defineProperty(t.prototype, "giftSubMessageText", {
+                        get: function() {
+                            var e = Object(p.d)("Buying a Gift Subscription is fast, easy, and secure. Don't hesitate to contact <x:link>Purchase Support</x:link> if you need help.", {
+                                "x:link": function(e) {
+                                    return l.createElement(S.U, {
+                                        targetBlank: !0,
+                                        to: "https://help.twitch.tv/"
+                                    }, e)
+                                }
+                            }, "CheckoutDescription");
+                            return l.createElement(S.W, null, e)
+                        },
+                        enumerable: !0,
+                        configurable: !0
+                    }), t
+                }(l.PureComponent),
+                N = (r("JH5r"), function(e) {
+                    function t() {
+                        return null !== e && e.apply(this, arguments) || this
+                    }
+                    return u.__extends(t, e), t.prototype.render = function() {
+                        return l.createElement(S.Eb, {
+                            className: "checkout-error-brick",
+                            background: S.r.Base,
+                            borderTop: !0,
+                            borderRight: !0,
+                            borderBottom: !0,
+                            borderRadius: S.x.Small,
+                            display: S.X.Flex,
+                            flexDirection: S.Aa.Column,
+                            justifyContent: S.Wa.Center,
+                            padding: {
+                                x: 1,
+                                y: 2
+                            }
+                        }, this.props.children)
+                    }, t
+                }(l.Component));
+            r("acxT");
+            ! function(e) {
+                e[e.DefaultMessage = 0] = "DefaultMessage", e[e.PriceChangeNotice = 1] = "PriceChangeNotice", e[e.InvalidResidence = 2] = "InvalidResidence", e[e.InvalidPaymentMethod = 3] = "InvalidPaymentMethod"
+            }(P || (P = {})),
+            function(e) {
+                e[e.Info = 0] = "Info", e[e.Error = 1] = "Error"
+            }(O || (O = {}));
+            var j = function(e) {
+                    function t() {
+                        return null !== e && e.apply(this, arguments) || this
+                    }
+                    return u.__extends(t, e), t.prototype.render = function() {
+                        return this.props.level === O.Error ? l.createElement(N, null, l.createElement(S.W, {
+                            bold: !0
+                        }, this.title), l.createElement(S.Xa, {
+                            margin: {
+                                top: 1
+                            }
+                        }, l.createElement(S.W, null, this.message))) : this.props.level === O.Info ? l.createElement(S.Eb, {
+                            className: "checkout-error--info",
+                            display: S.X.Flex,
+                            padding: {
+                                x: 2,
+                                y: 1
+                            },
+                            margin: {
+                                bottom: 2
+                            }
+                        }, l.createElement(S.sb, {
+                            asset: S.tb.NotificationInfo
+                        }), l.createElement(S.Xa, {
+                            margin: {
+                                left: 2
+                            }
+                        }, l.createElement(S.W, null, this.message))) : void 0
+                    }, Object.defineProperty(t.prototype, "title", {
+                        get: function() {
+                            return this.props.errorCode === P.DefaultMessage ? Object(p.d)("Payment not processed", "CheckoutError") : this.props.errorCode === P.InvalidResidence ? Object(p.d)("Invalid country of residence", "CheckoutError") : this.props.errorCode === P.InvalidPaymentMethod ? Object(p.d)("This payment method is not available for your purchase at this time", "CheckoutError") : null
+                        },
+                        enumerable: !0,
+                        configurable: !0
+                    }), Object.defineProperty(t.prototype, "message", {
+                        get: function() {
+                            return this.props.errorCode === P.DefaultMessage ? Object(p.d)("Something went wrong, and your payment could not be processed at this time. Please try again later.", "CheckoutError") : this.props.errorCode === P.PriceChangeNotice ? Object(p.d)("We made a change to the price to reflect your country of purchase. Please review the updated price and confirm your payment again.", "CheckoutError") : this.props.errorCode === P.InvalidResidence ? Object(p.d)("Make sure your country of residence and postal code are both valid.", "CheckoutError") : this.props.errorCode === P.InvalidPaymentMethod ? Object(p.d)("Please continue checkout using another payment method.", "CheckoutError") : null
+                        },
+                        enumerable: !0,
+                        configurable: !0
+                    }), t
+                }(l.Component),
+                w = r("6oOb"),
+                _ = function(e) {
+                    function t() {
+                        return null !== e && e.apply(this, arguments) || this
+                    }
+                    return u.__extends(t, e), t.prototype.render = function() {
+                        return this.props.progress === w.a.CONFIRMATION ? l.createElement(S.W, {
+                            type: S.Vb.H2,
+                            bold: !0
+                        }, Object(p.d)("Purchase Successful", "CheckoutHeader")) : l.createElement(S.W, {
+                            type: S.Vb.H2,
+                            bold: !0
+                        }, this.headerText)
+                    }, Object.defineProperty(t.prototype, "headerText", {
+                        get: function() {
+                            return this.props.purchaseFlow === n.GIFT_SUB || this.props.purchaseFlow === n.MYSTERY_GIFT ? this.isEsportPurchase ? Object(p.d)("Gift All-Access Pass", "CheckoutHeader") : Object(p.d)("Gift A Subscription", "CheckoutHeader") : this.props.purchaseFlow === n.PERSONAL_SUB ? this.isEsportPurchase ? Object(p.d)("Get Your All-Access Pass", "CheckoutHeader") : Object(p.d)("Subscription Payment Information", "CheckoutHeader") : Object(p.d)("Checkout", "CheckoutHeader")
+                        },
+                        enumerable: !0,
+                        configurable: !0
+                    }), Object.defineProperty(t.prototype, "isEsportPurchase", {
+                        get: function() {
+                            var e = this.props.product && this.props.product.product.owner;
+                            return e && e.id && Object(k.a)(e.id, this.props.sessionUser)
+                        },
+                        enumerable: !0,
+                        configurable: !0
+                    }), t
+                }(l.Component);
+            var T, R = Object(a.connect)(function(e) {
+                    return {
+                        sessionUser: Object(c.e)(e)
+                    }
+                })(_),
+                A = (r("u/1r"), function(e) {
+                    return l.createElement(S.Xa, {
+                        fullWidth: !0,
+                        padding: 3,
+                        overflow: S.cb.Auto
+                    }, l.createElement(S.Xa, {
+                        display: S.X.Flex,
+                        justifyContent: S.Wa.Center,
+                        flexWrap: S.Ba.Wrap
+                    }, l.createElement(S.Xa, {
+                        display: S.X.Hide,
+                        alignItems: S.f.Start,
+                        breakpointLarge: {
+                            display: S.X.Flex
+                        }
+                    }, e.productDescription), l.createElement(S.Xa, {
+                        className: "checkout-layout__content",
+                        breakpointLarge: {
+                            margin: {
+                                left: 4
+                            }
+                        }
+                    }, e.header, l.createElement(S.Xa, {
+                        display: S.X.Flex,
+                        breakpointLarge: {
+                            display: S.X.Hide
+                        }
+                    }, e.productDescription), l.createElement(S.Xa, {
+                        margin: {
+                            y: 1
+                        }
+                    }, e.children))))
+                }),
+                M = function() {
+                    var e = Object(p.d)('By clicking "Complete Purchase", you hereby agree to Twitch\'s <x:tos>Terms of Sale</x:tos> and <x:privacy>Privacy Policy</x:privacy>. Your payment method will be saved for future purchases, and, if applicable, recurring subscription payments.', {
+                        "x:tos": function(e) {
+                            return l.createElement(S.U, {
+                                targetBlank: !0,
+                                to: "https://twitch.tv/p/legal/terms-of-sale/"
+                            }, e)
+                        },
+                        "x:privacy": function(e) {
+                            return l.createElement(S.U, {
+                                targetBlank: !0,
+                                to: "https://twitch.tv/p/legal/privacy-policy/"
+                            }, e)
+                        }
+                    }, "CheckoutDisclaimer");
+                    return l.createElement(S.Xa, {
+                        padding: {
+                            y: 2
+                        }
+                    }, l.createElement(S.W, null, e))
+                };
+
+            function x(e) {
+                switch (e) {
+                    case T.GIFTABLE_RECIPIENT:
+                    case T.NEW_PURCHASE:
+                    case T.TIER_UPGRADE:
+                    case T.PRIME_UPGRADE:
+                    case T.UNKNOWN:
+                        return !0;
+                    case T.NO_ITEM:
+                    case T.NON_GIFTABLE_RECIPIENT:
+                    case T.NO_MASS_GIFTING:
+                    case T.TIER_DOWNGRADE:
+                    case T.MOBILE_UPGRADE:
+                    case T.API_INELIGIBLE:
+                    default:
+                        return !1
+                }
+            }! function(e) {
+                e[e.GIFTABLE_RECIPIENT = 0] = "GIFTABLE_RECIPIENT", e[e.NEW_PURCHASE = 1] = "NEW_PURCHASE", e[e.TIER_UPGRADE = 2] = "TIER_UPGRADE", e[e.PRIME_UPGRADE = 3] = "PRIME_UPGRADE", e[e.UNKNOWN = 4] = "UNKNOWN", e[e.NO_ITEM = 5] = "NO_ITEM", e[e.NON_GIFTABLE_RECIPIENT = 6] = "NON_GIFTABLE_RECIPIENT", e[e.NO_MASS_GIFTING = 7] = "NO_MASS_GIFTING", e[e.TIER_DOWNGRADE = 8] = "TIER_DOWNGRADE", e[e.MOBILE_UPGRADE = 9] = "MOBILE_UPGRADE", e[e.API_INELIGIBLE = 10] = "API_INELIGIBLE"
+            }(T || (T = {}));
+            var F, D = function(e) {
+                    function t() {
+                        return null !== e && e.apply(this, arguments) || this
+                    }
+                    return u.__extends(t, e), t.prototype.render = function() {
+                        var e;
+                        switch (this.props.productEligibility) {
+                            case T.NON_GIFTABLE_RECIPIENT:
+                                e = this.isEsportPurchase ? Object(p.d)("Sorry, an All-Access Pass to this channel is not available for <x:bold>{recipientName}</x:bold>.", {
+                                    "x:bold": function(e) {
+                                        return l.createElement(S.W, {
+                                            type: S.Vb.Span,
+                                            bold: !0
+                                        }, e)
+                                    },
+                                    recipientName: this.props.product.recipient && this.props.product.recipient.displayName || ""
+                                }, "IneligiblePurchaseNotice") : Object(p.d)("Sorry, a Gift Subscription to this channel is not available for <x:bold>{recipientName}</x:bold>.", {
+                                    "x:bold": function(e) {
+                                        return l.createElement(S.W, {
+                                            type: S.Vb.Span,
+                                            bold: !0
+                                        }, e)
+                                    },
+                                    recipientName: this.props.product.recipient && this.props.product.recipient.displayName || ""
+                                }, "IneligiblePurchaseNotice");
+                                break;
+                            case T.NO_MASS_GIFTING:
+                                e = Object(p.d)("Community gifts are not eligible for this product.", "IneligiblePurchaseNotice");
+                                break;
+                            case T.TIER_DOWNGRADE:
+                                var t = this.props.product.product && this.props.product.product.owner && this.props.product.product.owner.login;
+                                e = Object(p.d)("You are currently subscribed to a higher-tier subscription that offers more benefits. <x:subsLink>Click here to compare subscription benefits</x:subsLink>. If you would still like to purchase this, please <x:subsMgmtLink>cancel your existing subscription</x:subsMgmtLink> or wait for your existing subscription to end.", {
+                                    "x:subsLink": function(e) {
+                                        return l.createElement(S.U, {
+                                            type: S.V.Inherit,
+                                            to: "/subs/" + (t || ""),
+                                            underline: !0
+                                        }, e)
+                                    },
+                                    "x:subsMgmtLink": function(e) {
+                                        return l.createElement(S.U, {
+                                            type: S.V.Inherit,
+                                            to: "/subscriptions",
+                                            underline: !0
+                                        }, e)
+                                    }
+                                }, "IneligiblePurchaseNotice");
+                                break;
+                            case T.MOBILE_UPGRADE:
+                                var r = this.props.product.product && this.props.product.product.owner && this.props.product.product.owner.displayName;
+                                return l.createElement(m.a, null, l.createElement(S.W, {
+                                    bold: !0
+                                }, Object(p.d)("You purchased a subscription to {productDisplayName} on your mobile device.", {
+                                    productDisplayName: r || ""
+                                }, "IneligiblePurchaseNotice")), l.createElement(S.Xa, {
+                                    margin: {
+                                        top: 1
+                                    }
+                                }, l.createElement(S.W, null, Object(p.d)("Upgrading your mobile subscription is currently not supported.", "IneligiblePurchaseNotice"))));
+                            default:
+                                e = Object(p.d)("You are not eligible for this purchase.", "IneligiblePurchaseNotice")
+                        }
+                        return l.createElement(S.Eb, {
+                            background: S.r.Base,
+                            borderMarked: !0,
+                            padding: 1,
+                            margin: {
+                                y: 1
+                            }
+                        }, l.createElement(S.W, {
+                            color: S.O.Error
+                        }, e))
+                    }, Object.defineProperty(t.prototype, "isEsportPurchase", {
+                        get: function() {
+                            var e = this.props.product.product.owner;
+                            return e && e.id && Object(k.a)(e.id, this.props.sessionUser)
+                        },
+                        enumerable: !0,
+                        configurable: !0
+                    }), t
+                }(l.PureComponent),
+                G = function(e) {
+                    return l.createElement(S.Eb, {
+                        background: S.r.Base,
+                        borderMarked: !0,
+                        padding: 1,
+                        margin: {
+                            y: 1
+                        }
+                    }, l.createElement(S.Xa, {
+                        margin: {
+                            bottom: .5
+                        }
+                    }, l.createElement(S.W, null, Object(p.d)("You are currently subscribed for free with Twitch Prime. If you choose to upgrade to the {newPrice} subscription, you will be immediately billed for {newPrice} and your new subscription will auto-renew every month.", {
+                        newPrice: e.newPrice
+                    }, "UpgradePrimeWarning"))), l.createElement(S.Xa, {
+                        margin: {
+                            bottom: .5
+                        }
+                    }, l.createElement(S.W, null, Object(p.d)("You'll be able to subscribe to another channel for free with Twitch Prime 30 days after you last used your free subscription.", "UpgradePrimeWarning"))), l.createElement(S.W, null, Object(p.d)("If you upgrade your subscription, your sub anniversary, sub streaks, and badge tenure will be maintained.", "UpgradePrimeWarning")))
+                },
+                U = function(e) {
+                    return l.createElement(S.Eb, {
+                        background: S.r.Base,
+                        borderMarked: !0,
+                        padding: 1,
+                        margin: {
+                            y: 1
+                        }
+                    }, l.createElement(S.Xa, {
+                        margin: {
+                            bottom: .5
+                        }
+                    }, l.createElement(S.W, null, Object(p.d)("You are currently subscribed to the {originalPrice} subscription plan. If you choose to upgrade to the {newPrice} subscription plan, you will be immediately billed for {newPrice} and your currently active subscription plan for {originalPrice} will not renew any further.", {
+                        originalPrice: e.originalPrice,
+                        newPrice: e.newPrice
+                    }, "UpgradeTierWarning"))), l.createElement(S.Xa, {
+                        margin: {
+                            bottom: .5
+                        }
+                    }, l.createElement(S.W, null, Object(p.d)("Please note that pro-rated refunds cannot be offered for the remaining time on your {originalPrice} subscription plan", {
+                        originalPrice: e.originalPrice
+                    }, "UpgradeTierWarning"))), l.createElement(S.W, null, Object(p.d)("If you upgrade your subscription, your sub anniversary, sub streaks, and badge tenure will be maintained.", "UpgradeTierWarning")))
+                },
+                B = (r("mIie"), function(e) {
+                    function t() {
+                        var t = null !== e && e.apply(this, arguments) || this;
+                        return t.enablePaidUpgradeFlag = p.b.get("earth_wind_fire", !1), t.chargeTimeMessage = Object(p.d)("You will be charged on {date}", {
+                            date: Object(p.c)(new Date(Date.now()), "medium")
+                        }, "PurchasePreview"), t
+                    }
+                    return u.__extends(t, e), t.prototype.render = function() {
+                        if (!this.props.product) return null;
+                        var e = l.createElement(l.Fragment, null),
+                            t = l.createElement(l.Fragment, null);
+                        if (this.props.purchaseFlow === n.GIFT_SUB) t = this.renderGiftSubPurchase();
+                        else if (this.props.purchaseFlow === n.MYSTERY_GIFT) t = this.renderMysteryGiftSubPurchase();
+                        else if (this.props.purchaseFlow === n.PERSONAL_SUB)
+                            if (this.props.eligiblePromotions && this.props.eligiblePromotions.isOneMonthFreeEligible && (e = this.renderOneFreeMonth()), this.props.productEligibility === T.TIER_UPGRADE) t = this.renderTierUpgrade();
+                            else if (this.props.productEligibility === T.PRIME_UPGRADE) {
+                            var r = this.formattedPrice;
+                            r && (t = l.createElement(G, {
+                                newPrice: r
+                            }))
+                        } else this.props.productEligibility === T.NEW_PURCHASE && this.hasActiveGiftSubscription && (this.props.eligiblePromotions && this.props.eligiblePromotions.paidUpgradePromotion && (e = this.renderSubtemberDiscount()), t = this.renderGiftSubUpgrade());
+                        return l.createElement(l.Fragment, null, e, (!this.hasActiveGiftSubscription || this.props.purchaseFlow !== n.PERSONAL_SUB) && l.createElement(S.Xa, {
+                            margin: {
+                                top: 1
+                            }
+                        }, l.createElement(S.W, null, this.chargeTimeMessage)), t)
+                    }, t.prototype.renderTierUpgrade = function() {
+                        var e = this.props.existingPurchases && this.props.existingPurchases.compatiblePurchases && this.props.existingPurchases.compatiblePurchases[0];
+                        if (!e) return null;
+                        var t = e.price,
+                            r = e.currency,
+                            n = e.divisor,
+                            a = Object(p.f)(t / n, {
+                                style: "currency",
+                                currency: r
+                            }),
+                            i = this.formattedPrice;
+                        return a && i ? l.createElement(U, {
+                            originalPrice: a,
+                            newPrice: i
+                        }) : null
+                    }, t.prototype.renderGiftSubUpgrade = function() {
+                        var e = this.props.benefit.endsAt;
+                        if (!e) return null;
+                        var t = Object(b.c)(e);
+                        return l.createElement(S.Eb, {
+                            background: S.r.Base,
+                            borderMarked: !0,
+                            padding: 1,
+                            margin: {
+                                y: 1
+                            }
+                        }, l.createElement(S.W, null, Object(p.d)("You will be charged when your Gift Subscription ends on <x:strong>{giftSubEndDateFormatted, date, short}</x:strong>.", {
+                            giftSubEndDateFormatted: t,
+                            "x:strong": function(e) {
+                                return l.createElement(S.W, {
+                                    type: S.Vb.Span,
+                                    bold: !0
+                                }, e)
+                            }
+                        }, "PurchasePreview")))
+                    }, t.prototype.renderGiftSubPurchase = function() {
+                        var e, t = this.props.product && this.props.product.recipient && this.props.product.recipient.displayName,
+                            r = this.props.isAnonymous;
+                        return this.formattedPrice ? (e = this.isEsportPurchase ? r ? Object(p.d)("You are buying a {price} Anonymous Overwatch League All-Access Pass for {recipientName}.", {
+                            price: this.formattedPrice,
+                            recipientName: l.createElement(S.W, {
+                                type: S.Vb.Span,
+                                bold: !0
+                            }, t || "")
+                        }, "PurchasePreview") : Object(p.d)("You are buying a {price} Overwatch League All-Access Pass for {recipientName}.", {
+                            price: this.formattedPrice,
+                            recipientName: l.createElement(S.W, {
+                                type: S.Vb.Span,
+                                bold: !0
+                            }, t || "")
+                        }, "PurchasePreview") : r ? Object(p.d)("You are buying a Single Month {price} Anonymous Gift Subscription for {recipientName}.", {
+                            price: this.formattedPrice,
+                            recipientName: l.createElement(S.W, {
+                                type: S.Vb.Span,
+                                bold: !0
+                            }, t || "")
+                        }, "PurchasePreview") : Object(p.d)("You are buying a Single Month {price} Gift Subscription for {recipientName}.", {
+                            price: this.formattedPrice,
+                            recipientName: l.createElement(S.W, {
+                                type: S.Vb.Span,
+                                bold: !0
+                            }, t || "")
+                        }, "PurchasePreview"), l.createElement(S.Eb, {
+                            background: S.r.Base,
+                            borderMarked: !0,
+                            padding: 1,
+                            margin: {
+                                y: 1
+                            }
+                        }, l.createElement(S.W, null, e))) : null
+                    }, t.prototype.renderMysteryGiftSubPurchase = function() {
+                        if (!this.props.product) return null;
+                        var e, t = this.props.isAnonymous,
+                            r = this.props.product.product && this.props.product.product.tier,
+                            n = r && parseInt(r, 10) / 1e3,
+                            a = this.props.product.quantity;
+                        if (!a || !this.formattedPrice) return null;
+                        var i = Object(p.d)("Gift recipients will be chosen at random, starting with viewers of the streamer's channel who do not currently subscribe. <x:gift-info>Learn how Twitch picks recipients.</x:gift-info>", {
+                            "x:gift-info": function(e) {
+                                return l.createElement(S.U, {
+                                    targetBlank: !0,
+                                    to: "https://help.twitch.tv/customer/portal/articles/2903710-gift-subscriptions#CommunityGifting"
+                                }, e)
+                            }
+                        }, "PurchasePreview");
+                        e = this.isEsportPurchase ? t ? Object(p.d)("{quantity, plural, one {{quantity} x Anonymous Overwatch League All-Access Pass Gift} other {{quantity} x Anonymous Overwatch League All-Access Pass Gifts}}", {
+                            quantity: a
+                        }, "PurchasePreview") : Object(p.d)("{quantity, plural, one {{quantity} x Overwatch League All-Access Pass Gift} other {{quantity} x Overwatch League All-Access Pass Gifts}}", {
+                            quantity: a
+                        }, "PurchasePreview") : t ? Object(p.d)("{quantity, plural, one {{quantity} x Single Month Tier {numericalTier} Anonymous Gift Subscription} other {{quantity} x Single Month Tier {numericalTier} Anonymous Gift Subscriptions}}", {
+                            quantity: a,
+                            numericalTier: n
+                        }, "PurchasePreview") : Object(p.d)("{quantity, plural, one {{quantity} x Single Month Tier {numericalTier} Gift Subscription} other {{quantity} x Single Month Tier {numericalTier} Gift Subscriptions}}", {
+                            quantity: a,
+                            numericalTier: n
+                        }, "PurchasePreview");
+                        var o = this.props.product.product.priceInfo.total * a,
+                            s = Object(p.d)("{price} each", {
+                                price: this.formattedPrice
+                            }, "PurchasePreview"),
+                            c = Object(p.d)("Total {totalPrice}", {
+                                totalPrice: Object(p.f)(o / Math.pow(10, this.props.product.product.priceInfo.exponent), {
+                                    style: "currency",
+                                    currency: this.props.product.product.priceInfo.currency
+                                })
+                            }, "PurchasePreview");
+                        return l.createElement(l.Fragment, null, l.createElement(S.Eb, {
+                            background: S.r.Base,
+                            borderMarked: !0,
+                            padding: 1,
+                            margin: {
+                                y: 1
+                            }
+                        }, l.createElement(S.Xa, null, l.createElement(S.W, {
+                            type: S.Vb.H5
+                        }, e)), l.createElement(S.Xa, {
+                            margin: {
+                                y: 1
+                            }
+                        }, l.createElement(S.W, {
+                            type: S.Vb.H5
+                        }, s)), l.createElement(S.W, {
+                            type: S.Vb.H5,
+                            bold: !0
+                        }, c)), l.createElement(S.W, null, i))
+                    }, t.prototype.renderOneFreeMonth = function() {
+                        var e = new Date,
+                            t = this.props.benefit;
+                        t && null !== t.endsAt && (e = Object(b.c)(t.endsAt));
+                        var r = new Date(e);
+                        return r.setMonth(e.getMonth() + 1), l.createElement(S.Eb, {
+                            background: S.r.Base,
+                            borderMarked: !0,
+                            padding: 1,
+                            margin: {
+                                y: 1
+                            }
+                        }, l.createElement(S.W, null, Object(p.d)("Your next month is on us. You will be charged when your free month ends on <x:strong>{futureChargeDate, date, short}</x:strong>.", {
+                            futureChargeDate: r,
+                            "x:strong": function(e) {
+                                return l.createElement(S.W, {
+                                    type: S.Vb.Span,
+                                    bold: !0
+                                }, e)
+                            }
+                        }, "PurchasePreview")))
+                    }, t.prototype.renderSubtemberDiscount = function() {
+                        return this.enablePaidUpgradeFlag && this.props.eligiblePromotions && this.props.eligiblePromotions.paidUpgradePromotion ? l.createElement(S.Eb, {
+                            background: S.r.Base,
+                            className: "purchase-preview__promotion-banner",
+                            padding: 1,
+                            margin: {
+                                y: 1
+                            },
+                            display: S.X.Flex,
+                            flexDirection: S.Aa.Column
+                        }, l.createElement(S.W, {
+                            bold: !0
+                        }, Object(p.d)("*Subtember Limited-Time Promotion Applied", "PurchasePreview")), l.createElement(S.W, null, Object(p.d)("Your first month will cost {discountedPrice} and {oldPrice} for each recurring month.", {
+                            discountedPrice: this.props.eligiblePromotions.paidUpgradePromotion.newPrice,
+                            oldPrice: this.props.eligiblePromotions.paidUpgradePromotion.oldPrice
+                        }, "PurchasePreview"))) : null
+                    }, Object.defineProperty(t.prototype, "formattedPrice", {
+                        get: function() {
+                            return this.props.product && this.props.product.product.priceInfo ? Object(p.f)(this.props.product.product.priceInfo.total / Math.pow(10, this.props.product.product.priceInfo.exponent), {
+                                style: "currency",
+                                currency: this.props.product.product.priceInfo.currency
+                            }) : null
+                        },
+                        enumerable: !0,
+                        configurable: !0
+                    }), Object.defineProperty(t.prototype, "hasActiveGiftSubscription", {
+                        get: function() {
+                            return !!(this.props.benefit && this.props.benefit.gift && this.props.benefit.gift.isGift)
+                        },
+                        enumerable: !0,
+                        configurable: !0
+                    }), Object.defineProperty(t.prototype, "isEsportPurchase", {
+                        get: function() {
+                            return this.props.product && this.props.product.product.owner && this.props.product.product.owner.id && Object(k.a)(this.props.product.product.owner.id, this.props.sessionUser)
+                        },
+                        enumerable: !0,
+                        configurable: !0
+                    }), t
+                }(l.Component)),
+                L = r("9C/b"),
+                W = (r("NwMv"), function(e) {
+                    function t() {
+                        var t = null !== e && e.apply(this, arguments) || this;
+                        return t.goBackToChannel = function() {
+                            (window.opener || window.top !== window.self) && (parent.window.close(), window.close()), t.props.history.push("/" + t.props.productOwnerLogin)
+                        }, t
+                    }
+                    return u.__extends(t, e), t.prototype.render = function() {
+                        return l.createElement(S.Xa, {
+                            className: "gift-sub-receipt__container",
+                            padding: {
+                                y: 2
+                            }
+                        }, l.createElement(S.Xa, {
+                            padding: {
+                                bottom: 2
+                            }
+                        }, this.getGiftSubReceiptInfo()), l.createElement(S.Eb, {
+                            borderTop: !0,
+                            borderBottom: !0,
+                            padding: {
+                                y: 3
+                            }
+                        }, l.createElement(S.Xa, {
+                            className: "gift-sub-receipt__label",
+                            display: S.X.InlineBlock
+                        }, l.createElement(S.W, {
+                            bold: !0
+                        }, Object(p.d)("Gift Status", "GiftSubReceipt"))), l.createElement(S.Xa, {
+                            display: S.X.InlineBlock
+                        }, l.createElement(S.W, null, Object(p.d)("Active", "GiftSubReceipt")))), this.props.invoicePrice && l.createElement(S.Eb, {
+                            borderBottom: !0,
+                            padding: {
+                                y: 3
+                            }
+                        }, l.createElement(S.Xa, {
+                            className: "gift-sub-receipt__label",
+                            display: S.X.InlineBlock
+                        }, l.createElement(S.W, {
+                            bold: !0
+                        }, Object(p.d)("Your Invoice Total", "GiftSubReceipt"))), l.createElement(S.Xa, {
+                            display: S.X.InlineBlock
+                        }, l.createElement(S.W, null, Object(p.f)(this.props.invoicePrice / 100, {
+                            style: "currency",
+                            currency: this.props.invoiceCurrency
+                        })))), l.createElement(S.Xa, {
+                            margin: {
+                                y: 3
+                            }
+                        }, l.createElement(S.z, {
+                            onClick: this.goBackToChannel
+                        }, Object(p.d)("Go back to {displayName}", {
+                            displayName: this.props.productOwnerDisplayName
+                        }, "GiftSubReceipt"))))
+                    }, t.prototype.getGiftSubReceiptInfo = function() {
+                        if (this.props.invoicePrice) return this.props.isEsportChannel ? l.createElement(S.W, {
+                            "data-test-selector": "esport-gift-sub-receipt-info-selector"
+                        }, Object(p.d)("You have purchased a {price} Overwatch League All-Access Pass for <x:strong>{recipientDisplayName}</x:strong>", {
+                            price: Object(p.f)(this.props.invoicePrice / 100, {
+                                style: "currency",
+                                currency: this.props.invoiceCurrency
+                            }),
+                            recipientDisplayName: this.props.recipientDisplayName || "",
+                            "x:strong": function(e) {
+                                return l.createElement(S.W, {
+                                    type: S.Vb.Span,
+                                    bold: !0
+                                }, e)
+                            }
+                        }, "GiftSubReceipt")) : l.createElement(S.W, {
+                            "data-test-selector": "gift-sub-receipt-info-selector"
+                        }, Object(p.d)("You have purchased a {price} Gift Subscription for <x:strong>{recipientDisplayName}</x:strong>", {
+                            price: Object(p.f)(this.props.invoicePrice / 100, {
+                                style: "currency",
+                                currency: this.props.invoiceCurrency
+                            }),
+                            recipientDisplayName: this.props.recipientDisplayName || "",
+                            "x:strong": function(e) {
+                                return l.createElement(S.W, {
+                                    type: S.Vb.Span,
+                                    bold: !0
+                                }, e)
+                            }
+                        }, "GiftSubReceipt"))
+                    }, t
+                }(l.PureComponent)),
+                X = Object(L.a)(W),
+                z = (r("XE3n"), function(e) {
+                    function t() {
+                        var t = null !== e && e.apply(this, arguments) || this;
+                        return t.goBackToChannel = function() {
+                            (window.opener || window.top !== window.self) && (parent.window.close(), window.close()), t.props.history.push("/" + t.props.productOwnerLogin)
+                        }, t
+                    }
+                    return u.__extends(t, e), t.prototype.render = function() {
+                        return l.createElement(S.Xa, {
+                            className: "gift-sub-receipt__container",
+                            padding: {
+                                y: 2
+                            }
+                        }, l.createElement(S.Eb, {
+                            padding: {
+                                bottom: 2
+                            }
+                        }, this.getMysteryGiftSubReceiptInfo()), l.createElement(S.Eb, {
+                            borderTop: !0,
+                            borderBottom: !0,
+                            padding: {
+                                y: 3
+                            }
+                        }, l.createElement(S.Xa, {
+                            className: "gift-sub-receipt__label",
+                            display: S.X.InlineBlock
+                        }, l.createElement(S.W, {
+                            bold: !0
+                        }, Object(p.d)("Gift Status", "MysteryGiftSubReceipt"))), l.createElement(S.Xa, {
+                            display: S.X.InlineBlock
+                        }, l.createElement(S.W, null, Object(p.d)("Active", "MysteryGiftSubReceipt")))), this.props.invoicePrice && l.createElement(S.Eb, {
+                            borderBottom: !0,
+                            padding: {
+                                y: 3
+                            }
+                        }, l.createElement(S.Xa, {
+                            className: "gift-sub-receipt__label",
+                            display: S.X.InlineBlock
+                        }, l.createElement(S.W, {
+                            bold: !0
+                        }, Object(p.d)("Your Invoice Total", "MysteryGiftSubReceipt"))), l.createElement(S.Xa, {
+                            display: S.X.InlineBlock
+                        }, l.createElement(S.W, null, Object(p.f)(this.props.invoicePrice / 100, {
+                            style: "currency",
+                            currency: this.props.invoiceCurrency
+                        })))), l.createElement(S.Xa, {
+                            margin: {
+                                y: 3
+                            }
+                        }, l.createElement(S.z, {
+                            onClick: this.goBackToChannel
+                        }, Object(p.d)("Go back to {displayName}", {
+                            displayName: this.props.productOwnerDisplayName
+                        }, "MysteryGiftSubReceipt"))))
+                    }, t.prototype.getMysteryGiftSubReceiptInfo = function() {
+                        if (this.props.invoicePrice && this.props.tier) {
+                            var e = parseInt(this.props.tier, 10) / 1e3,
+                                t = Object(p.d)("{quantity, plural, one {Your gift is now being given in the channel.} other {Your gifts are now being given in the channel.}}", {
+                                    quantity: this.props.mysteryGiftCount
+                                }, "MysteryGiftSubReceipt");
+                            return this.props.isEsportChannel ? l.createElement(l.Fragment, null, l.createElement(S.W, null, Object(p.d)("{quantity, plural, one {You have purchased {quantity} x Overwatch League All-Access Pass Gift.} other {You have purchased {quantity} x Overwatch League All-Access Pass Gifts.}}", {
+                                quantity: this.props.mysteryGiftCount
+                            }, "MysteryGiftSubReceipt")), l.createElement(S.W, null, t)) : l.createElement(l.Fragment, null, l.createElement(S.W, null, Object(p.d)("{quantity, plural, one {You have purchased {quantity} x Single Month Tier {tier} Gift Subscription.} other {You have purchased {quantity} x Single Month Tier {tier} Gift Subscriptions.}}", {
+                                quantity: this.props.mysteryGiftCount,
+                                tier: e
+                            }, "MysteryGiftSubReceipt")), l.createElement(S.W, null, t))
+                        }
+                    }, t
+                }(l.PureComponent)),
+                V = Object(L.a)(z),
+                H = (r("ZHRK"), function(e) {
+                    function t() {
+                        var t = null !== e && e.apply(this, arguments) || this;
+                        return t.goBackToChannel = function() {
+                            (window.opener || window.top !== window.self) && (parent.window.close(), window.close()), "turbo" === t.props.productOwnerLogin ? t.props.history.push("/settings/turbo") : t.props.history.push("/" + t.props.productOwnerLogin)
+                        }, t
+                    }
+                    return u.__extends(t, e), t.prototype.render = function() {
+                        var e;
+                        return e = this.props.giftSubEndsAt ? Object(p.d)("Your paid subscription will begin on <x:strong>{endsAt}</x:strong> after your Gift Subscription ends", {
+                            "x:strong": function(e) {
+                                return l.createElement(S.W, {
+                                    type: S.Vb.Span,
+                                    bold: !0
+                                }, e)
+                            },
+                            endsAt: Object(p.c)(new Date(this.props.giftSubEndsAt), "long")
+                        }, "PersonalSubReceipt") : Object(p.d)("Active", "PersonalSubReceipt"), l.createElement(S.Xa, {
+                            className: "personal-sub-receipt"
+                        }, l.createElement(S.Eb, {
+                            borderBottom: !0,
+                            padding: {
+                                y: 3
+                            }
+                        }, l.createElement(S.Xa, {
+                            className: "personal-sub-receipt__label",
+                            display: S.X.InlineBlock
+                        }, l.createElement(S.W, {
+                            bold: !0
+                        }, Object(p.d)("Subscription for", "PersonalSubReceipt"))), l.createElement(S.Xa, {
+                            display: S.X.InlineBlock
+                        }, l.createElement(S.W, null, this.props.purchaserDisplayName))), l.createElement(S.Eb, {
+                            borderBottom: !0,
+                            padding: {
+                                y: 3
+                            }
+                        }, l.createElement(S.Xa, {
+                            className: "personal-sub-receipt__label",
+                            display: S.X.InlineBlock
+                        }, l.createElement(S.W, {
+                            bold: !0
+                        }, Object(p.d)("Status", "PersonalSubReceipt"))), l.createElement(S.Xa, {
+                            display: S.X.InlineBlock
+                        }, l.createElement(S.W, null, e))), l.createElement(S.Xa, {
+                            margin: {
+                                y: 3
+                            }
+                        }, l.createElement(S.z, {
+                            onClick: this.goBackToChannel
+                        }, Object(p.d)("Go back to {displayName}", {
+                            displayName: this.props.productOwnerDisplayName
+                        }, "PersonalSubReceipt"))))
+                    }, t
+                }(l.Component)),
+                Z = Object(L.a)(H),
+                Y = function(e) {
+                    function t() {
+                        return null !== e && e.apply(this, arguments) || this
+                    }
+                    return u.__extends(t, e), t.prototype.render = function() {
+                        if (!this.props.product || !this.props.purchaseInvoice.price) return null;
+                        var e = this.props.product.product && this.props.product.product.owner && this.props.product.product.owner.id || "",
+                            t = Object(k.a)(e, this.props.sessionUser),
+                            r = this.props.product.product,
+                            a = r && r.owner,
+                            i = this.props.benefit;
+                        return this.props.purchaseFlow === n.MYSTERY_GIFT ? l.createElement(V, {
+                            productOwnerDisplayName: a && a.displayName || "",
+                            productOwnerLogin: a && a.login || "",
+                            invoicePrice: this.props.purchaseInvoice.price,
+                            invoiceCurrency: this.props.purchaseInvoice.currency || "USD",
+                            tier: this.props.purchaseInvoice.tier || "",
+                            mysteryGiftCount: this.props.product.quantity || 1,
+                            isEsportChannel: t
+                        }) : this.props.purchaseFlow === n.GIFT_SUB ? this.props.product.recipient ? l.createElement(X, {
+                            recipientDisplayName: this.props.product.recipient.displayName,
+                            productOwnerDisplayName: a && a.displayName || "",
+                            productOwnerLogin: a && a.login || "",
+                            invoicePrice: this.props.purchaseInvoice && this.props.purchaseInvoice.price || void 0,
+                            invoiceCurrency: this.props.purchaseInvoice && this.props.purchaseInvoice.currency || "USD",
+                            isEsportChannel: t
+                        }) : null : "turbo" === this.props.product.product.name ? this.props.benefit ? l.createElement(Z, {
+                            purchaserDisplayName: this.props.currentUser && this.props.currentUser.displayName || "",
+                            productOwnerDisplayName: "turbo",
+                            productOwnerLogin: "turbo",
+                            giftSubEndsAt: i && i.gift && (i.gift.isGift || null) && i.endsAt,
+                            invoicePrice: this.props.purchaseInvoice.price,
+                            invoiceCurrency: this.props.purchaseInvoice.currency || "USD",
+                            invoiceDivisor: this.props.purchaseInvoice.divisor || 100
+                        }) : null : l.createElement(Z, {
+                            purchaserDisplayName: this.props.currentUser && this.props.currentUser.displayName || "",
+                            productOwnerDisplayName: a && a.displayName || "",
+                            productOwnerLogin: a && a.login || "",
+                            giftSubEndsAt: i && i.gift && (i.gift.isGift || null) && i.endsAt || "",
+                            invoicePrice: this.props.purchaseInvoice.price,
+                            invoiceCurrency: this.props.purchaseInvoice.currency || "USD",
+                            invoiceDivisor: this.props.purchaseInvoice.divisor || 100
+                        })
+                    }, t
+                }(l.PureComponent),
+                K = r("V+q8"),
+                q = r("oJmH"),
+                Q = r("sV2v"),
+                J = r("Jgup"),
+                $ = function(e) {
+                    function t() {
+                        var t = null !== e && e.apply(this, arguments) || this;
+                        return t.unsupportedCountries = new Set(["A1", "A2", "AP", "AQ", "CU", "EU", "IR", "KP", "MM", "O1", "SD", "SS", "SY", "TL"]), t.displayCountries = J.a.filter(function(e) {
+                            return !t.unsupportedCountries.has(e)
+                        }), t.onCountryChange = function(e) {
+                            t.props.onChange({
+                                countryCode: e.currentTarget.value,
+                                zipCode: ""
+                            })
+                        }, t.onZipChange = function(e) {
+                            t.props.onChange({
+                                countryCode: t.props.countryCode,
+                                zipCode: e.currentTarget.value
+                            })
+                        }, t
+                    }
+                    return u.__extends(t, e), t.prototype.render = function() {
+                        return l.createElement(S.Xa, {
+                            display: S.X.Flex,
+                            flexWrap: S.Ba.Wrap
+                        }, l.createElement(S.Xa, null, l.createElement(S.Ea, {
+                            id: "country-of-residence",
+                            label: Object(p.d)("Country of Residence", "CountryOfResidenceSelector"),
+                            labelOptional: Object(p.d)("Price may vary", "CountryOfResidenceSelector")
+                        }, l.createElement(S.zb, {
+                            onChange: this.onCountryChange,
+                            value: this.props.countryCode
+                        }, this.displayCountries.map(function(e) {
+                            return l.createElement("option", {
+                                key: e,
+                                value: e
+                            }, Object(J.b)(e))
+                        })))), this.zipCodeRequired && l.createElement(S.Xa, {
+                            margin: {
+                                left: 1
+                            }
+                        }, l.createElement(S.Ea, {
+                            id: "zip-code",
+                            label: Object(p.d)("Postal Code", "CountryOfResidenceSelector")
+                        }, l.createElement(S.Ra, {
+                            type: S.Ta.Text,
+                            placeholder: Object(p.d)("12345", "CountryOfResidenceSelector"),
+                            value: this.props.zipCode || "",
+                            error: this.props.zipCodeError,
+                            onChange: this.onZipChange
+                        }))))
+                    }, Object.defineProperty(t.prototype, "zipCodeRequired", {
+                        get: function() {
+                            return ["US", "CA"].includes(this.props.countryCode)
+                        },
+                        enumerable: !0,
+                        configurable: !0
+                    }), t
+                }(l.PureComponent),
+                ee = (r("lqDW"), function() {
+                    return l.createElement(S.Eb, {
+                        className: "payment-method--notice--unavailable",
+                        display: S.X.Flex,
+                        padding: {
+                            x: 2,
+                            y: 1
+                        },
+                        margin: {
+                            bottom: 2
+                        }
+                    }, l.createElement(S.sb, {
+                        asset: S.tb.NotificationInfo
+                    }), l.createElement(S.Xa, {
+                        margin: {
+                            left: 2
+                        }
+                    }, l.createElement(S.W, null, Object(p.d)('Please change your payment method and continue to checkout using the "{buttonLabel}” options.', {
+                        buttonLabel: "More Methods"
+                    }, "PaymentMethodNotice"))))
+                });
+            ! function(e) {
+                e[e.ACTIVE = 0] = "ACTIVE", e[e.DISABLED = 1] = "DISABLED", e[e.HIDDEN = 2] = "HIDDEN"
+            }(F || (F = {}));
+            var te = r("KriR"),
+                re = r("GnwI"),
+                ne = (r("TEvY"), function() {
+                    function e(e) {}
+                    e.prototype.bind = function(e) {}
+                }(), function(e) {
+                    function t() {
+                        var t = null !== e && e.apply(this, arguments) || this;
+                        return t.state = {
+                            amazonScriptLoaded: null,
+                            walletLoaded: null,
+                            billingAgreementId: null,
+                            awaitingResponse: !1,
+                            userCountryOfResidence: t.props.userCountryOfResidence,
+                            userZipCode: t.props.userZipCode,
+                            paymentMethodEnabled: t.props.eligibilityStatus === F.ACTIVE,
+                            zipCodeError: !1
+                        }, t.handleSubmit = function() {
+                            return u.__awaiter(t, void 0, void 0, function() {
+                                var e = this;
+                                return u.__generator(this, function(t) {
+                                    switch (t.label) {
+                                        case 0:
+                                            return this.hasValidResidence() ? (this.setState({
+                                                awaitingResponse: !0,
+                                                zipCodeError: !1
+                                            }), [4, this.props.onSuccess({
+                                                payment_flow: te.b.RecurlyPayWithAmazon,
+                                                payment_provider: "recurly",
+                                                payment_info: {
+                                                    token: this.state.billingAgreementId,
+                                                    gateway: "amazon"
+                                                },
+                                                residence: {
+                                                    country_code: this.state.userCountryOfResidence,
+                                                    zip_code: this.state.userZipCode
+                                                },
+                                                errorCallback: function() {
+                                                    return e.setState({
+                                                        awaitingResponse: !1
+                                                    })
+                                                }
+                                            })]) : (this.setState({
+                                                zipCodeError: !0
+                                            }), [2]);
+                                        case 1:
+                                            return t.sent(), [2]
+                                    }
+                                })
+                            })
+                        }, t.handleCORChange = function(e) {
+                            t.setState({
+                                userCountryOfResidence: e.countryCode,
+                                userZipCode: e.zipCode,
+                                paymentMethodEnabled: !0
+                            })
+                        }, t.hasValidResidence = function() {
+                            return !t.props.showEuSubs || (!["US", "CA"].includes(t.state.userCountryOfResidence) || !!t.state.userZipCode)
+                        }, t
+                    }
+                    return u.__extends(t, e), t.prototype.componentDidMount = function() {
+                        var e = this;
+                        window.onAmazonLoginReady = function() {
+                            window.amazon.Login.setClientId(e.props.clientID)
+                        }, window.onAmazonPaymentsReady = function() {
+                            e.props.latencyTracking.reportInteractive(), e.setState({
+                                amazonScriptLoaded: !0
+                            }), window.OffAmazonPayments.Button("recurly-amazon-pay__button", e.props.sellerID, {
+                                type: "PwA",
+                                color: "DarkGray",
+                                useAmazonAddressBook: !1,
+                                agreementType: "BillingAgreement",
+                                authorization: function() {
+                                    window.amazon.Login.authorize({
+                                        scope: "profile payments:widget payments:autopay_consent payments:billing_address",
+                                        popup: !0
+                                    }, function(e) {
+                                        if (e.error) return "err"
+                                    })
+                                },
+                                onSignIn: function(t) {
+                                    e.setState({
+                                        walletLoaded: !0,
+                                        billingAgreementId: t.getAmazonBillingAgreementId()
+                                    }), e.initWidget()
+                                }
+                            })
+                        };
+                        var t = document.querySelector("#pwa-script");
+                        t && document.body.removeChild(t);
+                        var r = document.createElement("script");
+                        r.type = "text/javascript", r.id = "pwa-script", r.src = "https://static-na.payments-amazon.com/OffAmazonPayments/us" + (this.props.isProduction ? "" : "/sandbox") + "/js/Widgets.js?sellerId=" + this.props.sellerID, r.async = !0, document.body.appendChild(r)
+                    }, t.prototype.componentDidUpdate = function(e) {
+                        e.eligibilityStatus !== this.props.eligibilityStatus && this.setState({
+                            paymentMethodEnabled: this.props.eligibilityStatus === F.ACTIVE
+                        }), e.userCountryOfResidence !== this.props.userCountryOfResidence && this.setState({
+                            userCountryOfResidence: this.props.userCountryOfResidence
+                        })
+                    }, t.prototype.initWidget = function() {
+                        var e = {
+                            agreementType: "BillingAgreement",
+                            amazonBillingAgreementId: this.state.billingAgreementId,
+                            sellerId: this.props.sellerID,
+                            design: {
+                                designMode: "responsive"
+                            },
+                            onPaymentSelect: function() {
+                                return !0
+                            },
+                            onError: function() {
+                                return !1
+                            }
+                        };
+                        new window.OffAmazonPayments.Widgets.Wallet(e).bind("recurly-amazon-pay__wallet")
+                    }, t.prototype.render = function() {
+                        return this.state.amazonScriptLoaded ? l.createElement(l.Fragment, null, this.props.showEuSubs && l.createElement(S.Xa, {
+                            margin: {
+                                y: 1
+                            }
+                        }, l.createElement($, {
+                            countryCode: this.state.userCountryOfResidence,
+                            zipCode: this.state.userZipCode,
+                            zipCodeError: this.state.zipCodeError,
+                            onChange: this.handleCORChange
+                        })), l.createElement(S.Eb, {
+                            background: S.r.Base,
+                            border: !0,
+                            className: "recurly-amazon-pay"
+                        }, !this.state.paymentMethodEnabled && l.createElement(S.Xa, {
+                            display: S.X.Flex,
+                            justifyContent: S.Wa.Center,
+                            margin: 5
+                        }, l.createElement(ee, null)), this.state.paymentMethodEnabled && l.createElement(l.Fragment, null, l.createElement(S.Xa, {
+                            display: this.state.walletLoaded ? S.X.Hide : S.X.Flex,
+                            justifyContent: S.Wa.Center,
+                            margin: 5
+                        }, l.createElement("div", {
+                            id: "recurly-amazon-pay__button"
+                        })), l.createElement(S.Xa, {
+                            display: this.state.walletLoaded ? S.X.Flex : S.X.Hide,
+                            flexDirection: S.Aa.Column,
+                            alignItems: S.f.Center,
+                            margin: {
+                                top: 2
+                            }
+                        }, l.createElement("div", {
+                            id: "recurly-amazon-pay__wallet",
+                            className: "recurly-amazon-pay__wallet"
+                        }), l.createElement(S.Xa, {
+                            padding: {
+                                top: 1
+                            },
+                            display: S.X.Flex,
+                            justifyContent: S.Wa.Center
+                        }, l.createElement(S.z, {
+                            onClick: this.handleSubmit,
+                            state: this.state.awaitingResponse ? S.E.Loading : S.E.Default,
+                            disabled: this.state.awaitingResponse
+                        }, this.props.submitButtonCopy)))))) : l.createElement(S.Za, null)
+                    }, t = u.__decorate([Object(re.b)("RecurlyAmazonPay")], t)
+                }(l.Component)),
+                ae = r("/0dD"),
+                ie = r("XDQu"),
+                oe = r("6fcp"),
+                se = (r("Aoab"), {
+                    light: "#000",
+                    dark: "#fff"
+                }),
+                ce = {
+                    light: "#a49fad",
+                    dark: "#898395"
+                },
+                ue = function() {
+                    return {
+                        cvv: !1,
+                        first_name: !1,
+                        last_name: !1,
+                        month: !1,
+                        number: !1,
+                        year: !1,
+                        zip: !1
+                    }
+                },
+                de = function(e) {
+                    function t() {
+                        var t = null !== e && e.apply(this, arguments) || this;
+                        return t.state = {
+                            firstName: "",
+                            lastName: "",
+                            recurlyReady: !1,
+                            awaitingResponse: !1,
+                            errorMessage: "",
+                            errorState: ue(),
+                            userCountryOfResidence: t.props.userCountryOfResidence,
+                            userZipCode: t.props.userZipCode,
+                            paymentMethodEnabled: t.props.eligibilityStatus === F.ACTIVE
+                        }, t.handleSubmit = function(e) {
+                            return u.__awaiter(t, void 0, void 0, function() {
+                                var t = this;
+                                return u.__generator(this, function(r) {
+                                    return e.preventDefault(), this.setState(function(e) {
+                                        return {
+                                            awaitingResponse: !0,
+                                            errorState: u.__assign({}, e.errorState)
+                                        }
+                                    }), window.recurly.token(this.form, function(e, r) {
+                                        return u.__awaiter(t, void 0, void 0, function() {
+                                            var t;
+                                            return u.__generator(this, function(n) {
+                                                switch (n.label) {
+                                                    case 0:
+                                                        return t = this.validateResidence(), e || t.length ? (this.handleValidationError(e, t), this.setState({
+                                                            awaitingResponse: !1
+                                                        }), [3, 3]) : [3, 1];
+                                                    case 1:
+                                                        return [4, this.handleValidationSuccess(r)];
+                                                    case 2:
+                                                        n.sent(), n.label = 3;
+                                                    case 3:
+                                                        return [2]
+                                                }
+                                            })
+                                        })
+                                    }), [2]
+                                })
+                            })
+                        }, t.validateResidence = function() {
+                            if (!t.props.showEuSubs) return [];
+                            var e = [];
+                            return ["US", "CA"].includes(t.state.userCountryOfResidence) && !t.state.userZipCode && e.push("zip"), e
+                        }, t.handleValidationSuccess = function(e) {
+                            return u.__awaiter(t, void 0, void 0, function() {
+                                var t = this;
+                                return u.__generator(this, function(r) {
+                                    switch (r.label) {
+                                        case 0:
+                                            return [4, this.props.onSuccess({
+                                                payment_flow: te.b.RecurlyCreditCard,
+                                                payment_provider: "recurly",
+                                                payment_info: {
+                                                    token: e.id,
+                                                    gateway: "cc",
+                                                    card_bin_country: e.billing_info && e.billing_info.cc_bin_country
+                                                },
+                                                residence: {
+                                                    country_code: this.state.userCountryOfResidence,
+                                                    zip_code: this.state.userZipCode
+                                                },
+                                                errorCallback: function() {
+                                                    return t.setState({
+                                                        awaitingResponse: !1
+                                                    })
+                                                }
+                                            })];
+                                        case 1:
+                                            return r.sent(), [2]
+                                    }
+                                })
+                            })
+                        }, t.handleValidationError = function(e, r) {
+                            var n = ue(),
+                                a = "";
+                            r.length && r.forEach(function(e) {
+                                n[e] = !0
+                            }), e && (a = Object(p.d)("The transaction was declined due to invalid data. Please make sure you have entered the correct information.", "RecurlyCreditCard"), e.code !== oe.a.Validation && e.code !== oe.a.InvalidParameter || (e.fields && e.fields.forEach(function(e) {
+                                n[e] = !0
+                            }), a = Object(p.d)("We are sorry but your credit card payment could not be processed. Please correct the fields below.", "RecurlyCreditCard"))), t.setState({
+                                errorMessage: a,
+                                errorState: n
+                            })
+                        }, t.handleFirstName = function(e) {
+                            t.setState({
+                                firstName: e.currentTarget.value
+                            })
+                        }, t.handleLastName = function(e) {
+                            t.setState({
+                                lastName: e.currentTarget.value
+                            })
+                        }, t.handleCORChange = function(e) {
+                            t.setState({
+                                userCountryOfResidence: e.countryCode,
+                                userZipCode: e.zipCode,
+                                paymentMethodEnabled: !0
+                            })
+                        }, t
+                    }
+                    return u.__extends(t, e), t.prototype.componentWillMount = function() {
+                        var e = this;
+                        this.recurlyPollId = setInterval(function() {
+                            window.recurly && (e.props.latencyTracking.reportInteractive(), clearInterval(e.recurlyPollId), e.setupConfigs(), e.pollForHostedField())
+                        }, 500)
+                    }, t.prototype.componentWillUnmount = function() {
+                        clearInterval(this.recurlyPollId), clearInterval(this.hostedFieldPollId)
+                    }, t.prototype.componentDidUpdate = function(e) {
+                        window.recurly && this.props.darkModeEnabled !== e.darkModeEnabled && this.setupConfigs(), e.eligibilityStatus !== this.props.eligibilityStatus && this.setState({
+                            paymentMethodEnabled: this.props.eligibilityStatus === F.ACTIVE
+                        }), e.userCountryOfResidence !== this.props.userCountryOfResidence && this.setState({
+                            userCountryOfResidence: this.props.userCountryOfResidence
+                        })
+                    }, t.prototype.render = function() {
+                        var e = this;
+                        return l.createElement(S.Xa, {
+                            className: "recurly-credit-card",
+                            fullWidth: !0
+                        }, l.createElement(S.Xa, {
+                            display: this.state.recurlyReady ? S.X.Hide : S.X.Block
+                        }, l.createElement(S.Za, {
+                            fillContent: !0
+                        })), l.createElement(S.Xa, {
+                            display: this.state.recurlyReady ? S.X.Block : S.X.Hide
+                        }, l.createElement("form", {
+                            className: "recurly-form",
+                            ref: function(t) {
+                                return e.form = t
+                            }
+                        }, l.createElement(S.Xa, {
+                            margin: {
+                                bottom: 1
+                            }
+                        }, l.createElement(S.Ea, {
+                            id: "recurly-name",
+                            label: Object(p.d)("Name", "RecurlyCreditCard")
+                        }, l.createElement("div", {
+                            id: "recurly-name"
+                        }, l.createElement(S.Ja, {
+                            gutterSize: S.Ka.Medium
+                        }, l.createElement(S.P, {
+                            cols: 6
+                        }, l.createElement(S.Ra, {
+                            id: "recurly-first-name",
+                            type: S.Ta.Text,
+                            placeholder: Object(p.d)("First Name", "RecurlyCreditCard"),
+                            value: this.state.firstName,
+                            onChange: this.handleFirstName,
+                            error: this.state.errorState.first_name
+                        }), l.createElement("input", {
+                            type: "hidden",
+                            "data-recurly": "first_name",
+                            value: this.state.firstName
+                        })), l.createElement(S.P, {
+                            cols: 6
+                        }, l.createElement(S.Ra, {
+                            id: "recurly-last-name",
+                            type: S.Ta.Text,
+                            placeholder: Object(p.d)("Last Name", "RecurlyCreditCard"),
+                            value: this.state.lastName,
+                            onChange: this.handleLastName,
+                            error: this.state.errorState.last_name
+                        }), l.createElement("input", {
+                            type: "hidden",
+                            "data-recurly": "last_name",
+                            value: this.state.lastName
+                        })))))), l.createElement(S.Xa, {
+                            margin: {
+                                bottom: 1
+                            }
+                        }, l.createElement(S.Ea, {
+                            id: "recurly-credit-card",
+                            label: Object(p.d)("Credit Card", "RecurlyCreditCard")
+                        }, l.createElement("div", {
+                            id: "recurly-credit-card"
+                        }, l.createElement(S.Ja, {
+                            gutterSize: S.Ka.Medium
+                        }, l.createElement(S.P, {
+                            cols: 8
+                        }, l.createElement("div", {
+                            id: "recurly-number",
+                            "data-recurly": "number",
+                            className: this.state.errorState.number ? "recurly-error" : ""
+                        })), l.createElement(S.P, {
+                            cols: 4
+                        }, l.createElement("div", {
+                            id: "recurly-cvv",
+                            "data-recurly": "cvv",
+                            className: this.state.errorState.cvv ? "recurly-error" : ""
+                        })))))), l.createElement(S.Xa, {
+                            margin: {
+                                bottom: 1
+                            }
+                        }, l.createElement(S.Ea, {
+                            id: "recurly-credit-card",
+                            label: Object(p.d)("Expiration Date", "RecurlyCreditCard")
+                        }, l.createElement("div", {
+                            id: "recurly-credit-card"
+                        }, l.createElement(S.Ja, {
+                            gutterSize: S.Ka.Medium
+                        }, l.createElement(S.P, {
+                            cols: 6
+                        }, l.createElement("div", {
+                            id: "recurly-month",
+                            "data-recurly": "month",
+                            className: this.state.errorState.month ? "recurly-error" : ""
+                        })), l.createElement(S.P, {
+                            cols: 6
+                        }, l.createElement("div", {
+                            id: "recurly-year",
+                            "data-recurly": "year",
+                            className: this.state.errorState.year ? "recurly-error" : ""
+                        })))))), this.props.showEuSubs && l.createElement(S.Xa, {
+                            margin: {
+                                bottom: 1
+                            }
+                        }, l.createElement($, {
+                            countryCode: this.state.userCountryOfResidence,
+                            zipCode: this.state.userZipCode,
+                            zipCodeError: this.state.errorState.zip,
+                            onChange: this.handleCORChange
+                        })), l.createElement("input", {
+                            type: "hidden",
+                            name: "recurly-country",
+                            "data-recurly": "country",
+                            value: "US"
+                        }), l.createElement("input", {
+                            type: "hidden",
+                            name: "recurly-token",
+                            "data-recurly": "token"
+                        }), this.props.eligibilityStatus === F.DISABLED && l.createElement(ee, null), l.createElement(S.Xa, {
+                            margin: {
+                                top: 2
+                            },
+                            display: S.X.Flex,
+                            justifyContent: S.Wa.Center,
+                            breakpointLarge: {
+                                justifyContent: S.Wa.Start
+                            }
+                        }, l.createElement(S.z, {
+                            onClick: this.handleSubmit,
+                            state: this.state.awaitingResponse ? S.E.Loading : S.E.Default,
+                            disabled: this.state.awaitingResponse || !this.state.paymentMethodEnabled
+                        }, this.props.submitButtonCopy)))))
+                    }, t.prototype.pollForHostedField = function() {
+                        var e = this;
+                        this.hostedFieldPollId = setInterval(function() {
+                            document.querySelector(".recurly-hosted-field > iframe") && (e.setState({
+                                recurlyReady: !0
+                            }), clearInterval(e.hostedFieldPollId))
+                        }, 500)
+                    }, t.prototype.setupConfigs = function() {
+                        var e = this.props.darkModeEnabled ? ce.dark : ce.light,
+                            t = this.props.darkModeEnabled ? se.dark : se.light;
+                        window.recurly.configure({
+                            publicKey: this.props.publicKey,
+                            fraud: {
+                                kount: {
+                                    dataCollector: !0
+                                }
+                            },
+                            required: ["cvv"],
+                            fields: {
+                                all: {
+                                    style: {
+                                        height: "auto",
+                                        fontSize: "12px",
+                                        fontColor: t,
+                                        placeholder: {
+                                            color: e
+                                        }
+                                    }
+                                },
+                                number: {
+                                    selector: "#recurly-number",
+                                    style: {
+                                        fontColor: t,
+                                        placeholder: {
+                                            content: Object(p.d)("Card Number", "RecurlyCreditCard"),
+                                            color: e
+                                        }
+                                    }
+                                },
+                                month: {
+                                    selector: "#recurly-month",
+                                    inputType: "select",
+                                    style: {
+                                        fontColor: t,
+                                        placeholder: {
+                                            content: Object(p.d)("Select Month", "RecurlyCreditCard"),
+                                            color: e
+                                        }
+                                    }
+                                },
+                                year: {
+                                    selector: "#recurly-year",
+                                    inputType: "select",
+                                    style: {
+                                        fontColor: t,
+                                        placeholder: {
+                                            content: Object(p.d)("Select Year", "RecurlyCreditCard"),
+                                            color: e
+                                        }
+                                    }
+                                },
+                                cvv: {
+                                    selector: "#recurly-cvv",
+                                    style: {
+                                        fontColor: t,
+                                        placeholder: {
+                                            content: Object(p.d)("CVV", "RecurlyCreditCard"),
+                                            color: e
+                                        }
+                                    }
+                                }
+                            }
+                        })
+                    }, t = u.__decorate([Object(re.b)("RecurlyCreditCard")], t)
+                }(l.Component);
+            var le, pe = Object(a.connect)(function(e) {
+                    return {
+                        darkModeEnabled: Object(ie.a)(e) === ae.a.Dark
+                    }
+                })(de),
+                me = (r("a7Xb"), function(e) {
+                    function t() {
+                        var t = null !== e && e.apply(this, arguments) || this;
+                        return t.state = {
+                            paypalConfigured: !1,
+                            awaitingResponse: !1,
+                            hasError: !1,
+                            zipCodeError: !1,
+                            userCountryOfResidence: t.props.userCountryOfResidence,
+                            userZipCode: t.props.userZipCode,
+                            paymentMethodEnabled: t.props.eligibilityStatus === F.ACTIVE
+                        }, t.handleValidationSuccess = function(e) {
+                            return u.__awaiter(t, void 0, void 0, function() {
+                                var t = this;
+                                return u.__generator(this, function(r) {
+                                    switch (r.label) {
+                                        case 0:
+                                            return [4, this.props.onSuccess({
+                                                payment_flow: te.b.RecurlyPaypal,
+                                                payment_provider: "recurly",
+                                                payment_info: {
+                                                    token: e.id,
+                                                    gateway: "paypal"
+                                                },
+                                                residence: {
+                                                    country_code: this.state.userCountryOfResidence,
+                                                    zip_code: this.state.userZipCode
+                                                },
+                                                errorCallback: function() {
+                                                    return t.setState({
+                                                        awaitingResponse: !1
+                                                    })
+                                                }
+                                            })];
+                                        case 1:
+                                            return r.sent(), [2]
+                                    }
+                                })
+                            })
+                        }, t.handleValidationError = function() {
+                            t.setState({
+                                hasError: !0
+                            })
+                        }, t.handleClick = function() {
+                            t.hasValidResidence() ? (t.setState({
+                                awaitingResponse: !0,
+                                hasError: !1,
+                                zipCodeError: !1
+                            }), t.paypalInstance.start()) : t.setState({
+                                awaitingResponse: !1,
+                                hasError: !0,
+                                zipCodeError: !0
+                            })
+                        }, t.handleCORChange = function(e) {
+                            t.setState({
+                                userCountryOfResidence: e.countryCode,
+                                userZipCode: e.zipCode,
+                                paymentMethodEnabled: !0
+                            })
+                        }, t.hasValidResidence = function() {
+                            return !t.props.showEuSubs || (!["US", "CA"].includes(t.state.userCountryOfResidence) || !!t.state.userZipCode)
+                        }, t
+                    }
+                    return u.__extends(t, e), t.prototype.componentDidMount = function() {
+                        var e = this;
+                        this.pollForRecurly = setInterval(function() {
+                            window.recurly && (e.props.latencyTracking.reportInteractive(), clearInterval(e.pollForRecurly), e.setupConfigs(), e.setState({
+                                paypalConfigured: !0
+                            }))
+                        }, 500)
+                    }, t.prototype.componentDidUpdate = function(e) {
+                        e.eligibilityStatus !== this.props.eligibilityStatus && this.setState({
+                            paymentMethodEnabled: this.props.eligibilityStatus === F.ACTIVE
+                        }), e.userCountryOfResidence !== this.props.userCountryOfResidence && this.setState({
+                            userCountryOfResidence: this.props.userCountryOfResidence
+                        })
+                    }, t.prototype.componentWillUnmount = function() {
+                        clearInterval(this.pollForRecurly)
+                    }, t.prototype.render = function() {
+                        return this.state.paypalConfigured ? l.createElement(S.Xa, null, this.props.showEuSubs && l.createElement(S.Xa, {
+                            margin: {
+                                y: 1
+                            }
+                        }, l.createElement($, {
+                            countryCode: this.state.userCountryOfResidence,
+                            zipCode: this.state.userZipCode,
+                            zipCodeError: this.state.zipCodeError,
+                            onChange: this.handleCORChange
+                        })), !this.state.paymentMethodEnabled && l.createElement(ee, null), l.createElement(S.Eb, {
+                            className: "recurly-paypal",
+                            background: S.r.Base,
+                            border: !0,
+                            display: S.X.Flex,
+                            justifyContent: S.Wa.Center
+                        }, l.createElement(S.Xa, {
+                            margin: {
+                                top: 5
+                            }
+                        }, l.createElement(S.z, {
+                            "data-a-target": "recurly-paypal__button",
+                            onClick: this.handleClick,
+                            state: this.state.awaitingResponse ? S.E.Loading : S.E.Default,
+                            disabled: this.state.awaitingResponse || !this.state.paymentMethodEnabled
+                        }, Object(p.d)("Checkout With PayPal", "RecurlyPaypal"))))) : l.createElement(S.Xa, {
+                            margin: {
+                                y: 2
+                            }
+                        }, l.createElement(S.Za, null))
+                    }, t.prototype.setupConfigs = function() {
+                        var e = this;
+                        window.recurly.configure(this.props.publicKey);
+                        var t = window.recurly.PayPal({
+                            braintree: {
+                                clientAuthorization: this.props.braintreeClientAuthorization
+                            }
+                        });
+                        t.on("token", function(t) {
+                            e.handleValidationSuccess(t)
+                        }), t.on("error", function() {
+                            e.handleValidationError(), e.setState({
+                                awaitingResponse: !1
+                            })
+                        }), t.on("cancel", function() {
+                            e.setState({
+                                awaitingResponse: !1
+                            })
+                        }), this.paypalInstance = t
+                    }, t = u.__decorate([Object(re.b)("RecurlyPaypal")], t)
+                }(l.Component)),
+                he = function(e) {
+                    function t() {
+                        var t = null !== e && e.apply(this, arguments) || this;
+                        return t.state = {
+                            xsollaLoaded: !1,
+                            userCountryOfResidence: t.props.userCountryOfResidence,
+                            userZipCode: t.props.userZipCode
+                        }, t.onIframeLoad = function() {
+                            t.props.latencyTracking.reportInteractive(), t.setState({
+                                xsollaLoaded: !0
+                            })
+                        }, t.handleXsollaEvent = function(e) {
+                            if ((!e.origin || e.origin.includes("xsolla")) && e.data) try {
+                                var r = JSON.parse(e.data);
+                                if (r.command && "status" === r.command)
+                                    if (r.data && r.data.paymentInfo) switch (r.data.paymentInfo.status) {
+                                        case "done":
+                                            t.props.trackPaymentFormInteraction({
+                                                paymentFlow: te.b.Xsolla,
+                                                action: te.a.CompletePurchaseClick,
+                                                actionDetail: te.f.Pending
+                                            }), t.props.trackPaymentFormInteraction({
+                                                paymentFlow: te.b.Xsolla,
+                                                action: te.a.CompletePurchaseClick,
+                                                actionDetail: te.f.Success
+                                            });
+                                            break;
+                                        case "troubled":
+                                            t.props.trackPaymentFormInteraction({
+                                                paymentFlow: te.b.Xsolla,
+                                                action: te.a.CompletePurchaseClick,
+                                                actionDetail: te.f.Pending
+                                            }), t.props.trackPaymentFormInteraction({
+                                                paymentFlow: te.b.Xsolla,
+                                                action: te.a.CompletePurchaseClick,
+                                                actionDetail: te.f.Failed
+                                            })
+                                    }
+                            } catch (e) {}
+                        }, t.handleCORChange = function(e) {
+                            t.setState({
+                                userCountryOfResidence: e.countryCode,
+                                userZipCode: e.zipCode,
+                                xsollaLoaded: !1
+                            }), t.props.handleCountryChange(e.countryCode)
+                        }, t
+                    }
+                    return u.__extends(t, e), t.prototype.componentDidMount = function() {
+                        var e = this.iframe;
+                        e && (e.addEventListener("load", this.onIframeLoad), window.addEventListener("message", this.handleXsollaEvent))
+                    }, t.prototype.componentDidUpdate = function(e) {
+                        e.userCountryOfResidence !== this.props.userCountryOfResidence && this.setState({
+                            userCountryOfResidence: this.props.userCountryOfResidence
+                        })
+                    }, t.prototype.componentWillUnmount = function() {
+                        window.removeEventListener("message", this.handleXsollaEvent)
+                    }, t.prototype.render = function() {
+                        var e = this;
+                        return l.createElement(l.Fragment, null, this.props.showEuSubs && l.createElement(S.Xa, {
+                            margin: {
+                                y: 1
+                            }
+                        }, l.createElement($, {
+                            countryCode: this.state.userCountryOfResidence,
+                            zipCode: this.state.userZipCode,
+                            zipCodeError: !1,
+                            onChange: this.handleCORChange
+                        })), l.createElement(S.Xa, {
+                            fullWidth: !0
+                        }, !this.state.xsollaLoaded && l.createElement(S.Za, {
+                            fillContent: !0
+                        }), l.createElement(S.Xa, {
+                            fullWidth: !0,
+                            display: this.state.xsollaLoaded ? S.X.Inline : S.X.Hide
+                        }, l.createElement("iframe", {
+                            ref: function(t) {
+                                return e.iframe = t
+                            },
+                            id: "xsolla",
+                            src: this.props.iframeURL,
+                            width: "100%",
+                            height: "650px"
+                        }))))
+                    }, t = u.__decorate([Object(re.b)("XsollaMoreMethods")], t)
+                }(l.Component),
+                ye = r("f00E"),
+                fe = r("WlZp");
+            r("vGoz");
+            ! function(e) {
+                e.ZUORA_PARENT_LAYOUT = "zuora-payment-method__zuora-parent-layout", e.UPDATE_PAYMENT_BUTTON = "zuora-payment-method__update-payment-button"
+            }(le || (le = {}));
+            var be = function(e) {
+                function t() {
+                    var t = null !== e && e.apply(this, arguments) || this;
+                    return t.state = {
+                        zuoraConfigured: !1,
+                        awaitingResponse: !1,
+                        errorMessage: "",
+                        nullValueErrors: [],
+                        sessionId: Object(ye.b)()
+                    }, t.handleSubmit = function(e) {
+                        e.preventDefault(), t.setState({
+                            awaitingResponse: !0,
+                            errorMessage: "",
+                            nullValueErrors: []
+                        }), window.Z.submit()
+                    }, t.renderErrorMessage = function() {
+                        if (t.state.nullValueErrors.length) {
+                            var e = t.state.nullValueErrors.map(function(e, t) {
+                                return l.createElement(S.Xa, {
+                                    key: t,
+                                    margin: {
+                                        left: 2
+                                    }
+                                }, l.createElement(S.W, {
+                                    color: S.O.Error
+                                }, "• ", e))
+                            });
+                            return l.createElement("div", null, l.createElement(S.Xa, {
+                                margin: {
+                                    top: 1,
+                                    left: 1,
+                                    bottom: .5
+                                }
+                            }, l.createElement(S.W, {
+                                color: S.O.Error
+                            }, Object(p.d)("We are sorry but your credit card payment could not be processed. Please correct the fields below.", "ZuoraCreditCard"))), e)
+                        }
+                        if (t.state.errorMessage) return l.createElement(S.Xa, {
+                            margin: {
+                                top: 1,
+                                left: 1
+                            }
+                        }, l.createElement(S.W, {
+                            color: S.O.Error
+                        }, t.state.errorMessage))
+                    }, t.successCallback = function(e) {
+                        return u.__awaiter(t, void 0, void 0, function() {
+                            var t = this;
+                            return u.__generator(this, function(r) {
+                                switch (r.label) {
+                                    case 0:
+                                        if (!e.success) return [2];
+                                        r.label = 1;
+                                    case 1:
+                                        return r.trys.push([1, 3, , 4]), [4, this.props.onSuccess({
+                                            payment_flow: te.b.ZuoraCreditCard,
+                                            payment_provider: "zuora",
+                                            payment_info: {
+                                                token: e.refId,
+                                                gateway: "cc"
+                                            },
+                                            errorCallback: function() {
+                                                return t.setState({
+                                                    awaitingResponse: !1
+                                                })
+                                            }
+                                        })];
+                                    case 2:
+                                        return r.sent(), [3, 4];
+                                    case 3:
+                                        return r.sent(), this.setState({
+                                            awaitingResponse: !1
+                                        }), [3, 4];
+                                    case 4:
+                                        return [2]
+                                }
+                            })
+                        })
+                    }, t.errorCallback = function(e, r, n) {
+                        if (t.setState({
+                                awaitingResponse: !1
+                            }), "unknown" === r) return t.parseGatewayErrorMessage(n);
+                        window.Z.sendErrorMessageToHpm(e, n)
+                    }, t.parseGatewayErrorMessage = function(e) {
+                        return e.includes("NullValue") ? t.parseNullValueErrorMessage(e) : e.includes("Invalid CC Number") ? t.setState({
+                            errorMessage: Object(p.d)("You entered an invalid card number. Please update your card and try again.", "ZuoraCreditCard")
+                        }) : t.setState({
+                            errorMessage: Object(p.d)("We couldn't process your payment. Please try again.", "ZuoraCreditCard")
+                        })
+                    }, t.parseNullValueErrorMessage = function(e) {
+                        var r = e.replace("[HostedPageFieldValidationError]&nbsp; ", "").replace(/\s/g, "").split(":NullValue,"),
+                            n = {
+                                creditCardHolderName: Object(p.d)("Name on Card", "ZuoraCreditCard"),
+                                creditCardAddress1: Object(p.d)("Billing Address", "ZuoraCreditCard"),
+                                creditCardCity: Object(p.d)("City", "ZuoraCreditCard"),
+                                creditCardPostalCode: Object(p.d)("Zip Code", "ZuoraCreditCard")
+                            },
+                            a = r.map(function(e) {
+                                var t = n[e];
+                                return t || ""
+                            }).filter(function(e) {
+                                return "" !== e
+                            });
+                        t.setState({
+                            nullValueErrors: a
+                        })
+                    }, t
+                }
+                return u.__extends(t, e), t.prototype.componentDidMount = function() {
+                    var e = this;
+                    if (document.querySelector("#zuora-script")) this.initZuoraIFrame();
+                    else {
+                        var t = document.createElement("script");
+                        t.src = "https://static.zuora.com/Resources/libs/hosted/1.3.0/zuora-min.js", t.async = !0, t.id = "zuora-script", document.body.appendChild(t), t.onload = function() {
+                            e.props.latencyTracking.reportInteractive(), e.initZuoraIFrame()
+                        }
+                    }
+                }, t.prototype.render = function() {
+                    return l.createElement("div", null, !this.state.zuoraConfigured && l.createElement(S.Xa, {
+                        padding: {
+                            y: 5
+                        }
+                    }, l.createElement(S.Za, {
+                        fillContent: !0
+                    })), l.createElement(S.Xa, {
+                        display: this.state.zuoraConfigured ? S.X.Block : S.X.Hide,
+                        "data-test-selector": le.ZUORA_PARENT_LAYOUT
+                    }, this.renderErrorMessage(), l.createElement("div", {
+                        id: "zuora_payment",
+                        className: this.state.awaitingResponse ? "zuora-disabled" : ""
+                    }), l.createElement(S.Xa, {
+                        margin: {
+                            top: 2
+                        },
+                        display: S.X.Flex,
+                        justifyContent: S.Wa.Center,
+                        breakpointLarge: {
+                            justifyContent: S.Wa.Start
+                        }
+                    }, l.createElement(S.z, {
+                        onClick: this.handleSubmit,
+                        state: this.state.awaitingResponse ? S.E.Loading : S.E.Default,
+                        disabled: this.state.awaitingResponse,
+                        "data-test-selector": le.UPDATE_PAYMENT_BUTTON
+                    }, this.props.submitButtonCopy)), l.createElement(fe.a, {
+                        isProduction: this.props.isProductionConfig,
+                        sessionId: this.state.sessionId
+                    })))
+                }, t.prototype.initZuoraIFrame = function() {
+                    var e = this,
+                        t = {
+                            id: this.props.hostedPageID,
+                            url: this.props.hostedPageURL,
+                            style: "inline",
+                            submitEnabled: "true",
+                            field_accountId: this.props.externalAccountID,
+                            tenantId: this.props.tenantID,
+                            token: this.props.token,
+                            key: this.props.publicKey,
+                            signature: this.props.signature,
+                            locale: this.formattedLocale
+                        };
+                    window.Z.renderWithErrorHandler(t, {
+                        creditCardCountry: "USA"
+                    }, this.successCallback, this.errorCallback);
+                    var r = document.getElementById("z_hppm_iframe");
+                    r && r.addEventListener("load", function() {
+                        e.setState({
+                            zuoraConfigured: !0
+                        })
+                    })
+                }, Object.defineProperty(t.prototype, "formattedLocale", {
+                    get: function() {
+                        var e = this.props.languageCode || "en";
+                        if (e.includes("-")) {
+                            var t = e.split("-");
+                            e = t[0] + "_" + t[1].toUpperCase()
+                        }
+                        return e
+                    },
+                    enumerable: !0,
+                    configurable: !0
+                }), t = u.__decorate([Object(re.b)("ZuoraCreditCard")], t)
+            }(l.Component);
+            var ge, ve = Object(a.connect)(function(e) {
+                return {
+                    languageCode: Object(c.b)(e)
+                }
+            })(be);
+            ! function(e) {
+                e.RecurlyAmazonPay = "recurly_amazon_pay", e.RecurlyCreditCard = "recurly_credit_card", e.RecurlyPaypal = "recurly_paypal", e.RecurlySavedPayment = "recurly_saved_payment", e.Xsolla = "xsolla", e.ZuoraCreditCard = "zuora_credit_card"
+            }(ge || (ge = {}));
+            var Ee = function(e) {
+                    function t() {
+                        var t = null !== e && e.apply(this, arguments) || this;
+                        return t.submitButtonCopy = Object(p.d)("Complete Purchase", "PaymentMethods"), t
+                    }
+                    return u.__extends(t, e), t.prototype.render = function() {
+                        switch (this.props.type) {
+                            case ge.RecurlyAmazonPay:
+                                return l.createElement(ne, u.__assign({
+                                    submitButtonCopy: this.submitButtonCopy,
+                                    onSuccess: this.props.handleCompletePurchase
+                                }, this.props.configs.recurly.payWithAmazonConfigs, {
+                                    userCountryOfResidence: this.props.userCountryOfResidence,
+                                    userZipCode: this.props.userZipCode,
+                                    eligibilityStatus: this.props.eligibilityStatus,
+                                    trackPaymentFormInteraction: this.props.trackPaymentFormInteraction,
+                                    showEuSubs: this.props.showEuSubs
+                                }));
+                            case ge.RecurlyCreditCard:
+                                return l.createElement(pe, {
+                                    publicKey: this.props.configs.recurly.publicKey,
+                                    submitButtonCopy: this.submitButtonCopy,
+                                    onSuccess: this.props.handleCompletePurchase,
+                                    userCountryOfResidence: this.props.userCountryOfResidence,
+                                    userZipCode: this.props.userZipCode,
+                                    eligibilityStatus: this.props.eligibilityStatus,
+                                    trackPaymentFormInteraction: this.props.trackPaymentFormInteraction,
+                                    showEuSubs: this.props.showEuSubs
+                                });
+                            case ge.RecurlyPaypal:
+                                return l.createElement(me, {
+                                    publicKey: this.props.configs.recurly.publicKey,
+                                    braintreeClientAuthorization: this.props.configs.recurly.braintreeClientAuthorization,
+                                    submitButtonCopy: this.submitButtonCopy,
+                                    onSuccess: this.props.handleCompletePurchase,
+                                    userCountryOfResidence: this.props.userCountryOfResidence,
+                                    userZipCode: this.props.userZipCode,
+                                    eligibilityStatus: this.props.eligibilityStatus,
+                                    trackPaymentFormInteraction: this.props.trackPaymentFormInteraction,
+                                    showEuSubs: this.props.showEuSubs
+                                });
+                            case ge.ZuoraCreditCard:
+                                return l.createElement(ve, u.__assign({
+                                    submitButtonCopy: this.submitButtonCopy,
+                                    onSuccess: this.props.handleCompletePurchase,
+                                    isProductionConfig: this.props.configs.recurly.payWithAmazonConfigs.isProduction
+                                }, this.props.configs.zuora));
+                            default:
+                                return l.createElement(he, u.__assign({
+                                    userCountryOfResidence: this.props.userCountryOfResidence,
+                                    userZipCode: this.props.userZipCode,
+                                    handleCountryChange: this.props.handleCountryChange,
+                                    trackPaymentFormInteraction: this.props.trackPaymentFormInteraction,
+                                    showEuSubs: this.props.showEuSubs
+                                }, this.props.configs.xsolla))
+                        }
+                    }, t
+                }(l.PureComponent),
+                Ce = r("D8NC"),
+                ke = r.n(Ce),
+                Pe = r("yrda"),
+                Oe = r.n(Pe),
+                Se = r("csmi"),
+                Ie = r.n(Se),
+                Ne = r("2ORI"),
+                je = r.n(Ne),
+                we = r("AVF4"),
+                _e = r.n(we),
+                Te = r("BIez"),
+                Re = r.n(Te),
+                Ae = r("EF6p"),
+                Me = r.n(Ae),
+                xe = r("xgE2"),
+                Fe = r.n(xe),
+                De = r("MU3X"),
+                Ge = r.n(De),
+                Ue = r("E3rh"),
+                Be = r.n(Ue),
+                Le = r("ZiR0"),
+                We = r.n(Le),
+                Xe = r("KRuc"),
+                ze = r.n(Xe),
+                Ve = r("IRK4"),
+                He = r.n(Ve),
+                Ze = r("bvmA"),
+                Ye = r.n(Ze),
+                Ke = r("1OTy"),
+                qe = {
+                    CreditCard: function() {
+                        return Object(p.d)("Credit Card", "TicketDescription")
+                    },
+                    Paypal: function() {
+                        return Object(p.d)("Paypal", "TicketDescription")
+                    },
+                    AmazonPay: function() {
+                        return Object(p.d)("Amazon Pay", "TicketDescription")
+                    },
+                    MoreMethods: function() {
+                        return Object(p.d)("More Methods", "TicketDescription")
+                    }
+                },
+                Qe = function(e) {
+                    function t() {
+                        var t = null !== e && e.apply(this, arguments) || this;
+                        return t.paymentProviders = [{
+                            paymentMethodType: ge.RecurlyCreditCard,
+                            paymentFlow: te.b.RecurlyCreditCard,
+                            button: {
+                                label: qe.CreditCard(),
+                                src: _e.a,
+                                alt: qe.CreditCard(),
+                                srcSet: {
+                                    "1x": _e.a,
+                                    "2x": Re.a
+                                },
+                                darkSrcSet: {
+                                    "1x": _e.a,
+                                    "2x": Re.a
+                                }
+                            }
+                        }, {
+                            paymentMethodType: ge.ZuoraCreditCard,
+                            paymentFlow: te.b.ZuoraCreditCard,
+                            button: {
+                                label: qe.CreditCard(),
+                                src: _e.a,
+                                alt: qe.CreditCard(),
+                                srcSet: {
+                                    "1x": _e.a,
+                                    "2x": Re.a
+                                },
+                                darkSrcSet: {
+                                    "1x": _e.a,
+                                    "2x": Re.a
+                                }
+                            }
+                        }, {
+                            paymentMethodType: ge.RecurlyPaypal,
+                            paymentFlow: te.b.RecurlyPaypal,
+                            button: {
+                                label: qe.Paypal(),
+                                src: We.a,
+                                alt: qe.Paypal(),
+                                srcSet: {
+                                    "1x": We.a,
+                                    "2x": ze.a
+                                },
+                                darkSrcSet: {
+                                    "1x": He.a,
+                                    "2x": Ye.a
+                                }
+                            }
+                        }, {
+                            paymentMethodType: ge.RecurlyAmazonPay,
+                            paymentFlow: te.b.RecurlyPayWithAmazon,
+                            button: {
+                                label: qe.AmazonPay(),
+                                src: ke.a,
+                                alt: qe.AmazonPay(),
+                                srcSet: {
+                                    "1x": ke.a,
+                                    "2x": Oe.a
+                                },
+                                darkSrcSet: {
+                                    "1x": Ie.a,
+                                    "2x": je.a
+                                }
+                            }
+                        }, {
+                            paymentMethodType: ge.Xsolla,
+                            paymentFlow: te.b.Xsolla,
+                            button: {
+                                label: qe.MoreMethods(),
+                                src: Me.a,
+                                alt: qe.MoreMethods(),
+                                srcSet: {
+                                    "1x": Me.a,
+                                    "2x": Fe.a
+                                },
+                                darkSrcSet: {
+                                    "1x": Ge.a,
+                                    "2x": Be.a
+                                }
+                            }
+                        }], t.handleClick = function(e, r) {
+                            return function() {
+                                t.props.trackPaymentFormInteraction({
+                                    paymentFlow: r,
+                                    action: te.a.RadioButtonClick,
+                                    actionDetail: r
+                                }), t.props.handleClick(e)
+                            }
+                        }, t
+                    }
+                    return u.__extends(t, e), t.prototype.render = function() {
+                        if (this.props.eligiblePaymentMethods.length <= 1) return null;
+                        var e = this,
+                            t = this.paymentProviders.map(function(t) {
+                                var r = e.props.eligiblePaymentMethods.find(function(e) {
+                                    return e.type === t.paymentMethodType
+                                });
+                                return r && r.status !== F.HIDDEN ? l.createElement(S.P, {
+                                    key: t.paymentMethodType,
+                                    cols: {
+                                        default: 6,
+                                        sm: 3
+                                    }
+                                }, l.createElement(Ke.a, {
+                                    label: t.button.label,
+                                    type: S.Ma.Radio,
+                                    src: t.button.src,
+                                    alt: t.button.alt,
+                                    srcSet: t.button.srcSet,
+                                    darkSrcSet: t.button.darkSrcSet,
+                                    value: t.paymentMethodType,
+                                    onChange: e.handleClick(t.paymentMethodType, t.paymentFlow),
+                                    checked: e.props.selectedProvider === t.paymentMethodType
+                                })) : null
+                            });
+                        return l.createElement(S.Xa, null, l.createElement(S.Ja, {
+                            gutterSize: S.Ka.Small
+                        }, t))
+                    }, t
+                }(l.PureComponent),
+                Je = function(e) {
+                    function t() {
+                        var t = null !== e && e.apply(this, arguments) || this;
+                        return t.state = {
+                            selectedProvider: ge.RecurlyCreditCard
+                        }, t.renderPaymentMethods = function() {
+                            var e = t.props,
+                                r = e.configs,
+                                n = e.handleCompletePurchase,
+                                a = e.handleCountryChange,
+                                i = e.trackPaymentFormInteraction,
+                                o = t.props.eligiblePaymentMethods,
+                                s = t;
+                            return Object.values(ge).map(function(e) {
+                                var t = o.find(function(t) {
+                                    return t.type === e
+                                });
+                                return t && t.status !== F.HIDDEN ? l.createElement(S.Xa, {
+                                    key: t.type,
+                                    display: s.state.selectedProvider === e ? S.X.Inline : S.X.Hide
+                                }, l.createElement(Ee, {
+                                    type: t.type,
+                                    configs: r,
+                                    eligibilityStatus: t.status,
+                                    userCountryOfResidence: s.props.userCountryOfResidence,
+                                    userZipCode: s.props.userZipCode,
+                                    handleCompletePurchase: n,
+                                    handleCountryChange: a,
+                                    trackPaymentFormInteraction: i,
+                                    showEuSubs: s.props.showEuSubs
+                                })) : null
+                            })
+                        }, t.handlePaymentMethodSelectorToggleChange = function(e) {
+                            t.setState({
+                                selectedProvider: e
+                            })
+                        }, t
+                    }
+                    return u.__extends(t, e), t.prototype.componentWillMount = function() {
+                        for (var e = [ge.RecurlyCreditCard, ge.ZuoraCreditCard, ge.RecurlyPaypal, ge.RecurlyAmazonPay, ge.Xsolla], t = this.props.eligiblePaymentMethods.filter(function(e) {
+                                return e.status !== F.HIDDEN
+                            }).map(function(e) {
+                                return e.type
+                            }), r = 0, n = e; r < n.length; r++) {
+                            var a = n[r];
+                            if (t.includes(a)) {
+                                this.setState({
+                                    selectedProvider: a
+                                });
+                                break
+                            }
+                        }
+                    }, t.prototype.render = function() {
+                        return l.createElement(l.Fragment, null, l.createElement(Qe, {
+                            eligiblePaymentMethods: this.props.eligiblePaymentMethods,
+                            selectedProvider: this.state.selectedProvider,
+                            handleClick: this.handlePaymentMethodSelectorToggleChange,
+                            trackPaymentFormInteraction: this.props.trackPaymentFormInteraction
+                        }), l.createElement(Q.a, null), l.createElement(S.Xa, {
+                            margin: {
+                                top: 1
+                            }
+                        }, this.renderPaymentMethods()))
+                    }, t
+                }(l.Component),
+                $e = r("85n/"),
+                et = function(e) {
+                    function t() {
+                        var t = null !== e && e.apply(this, arguments) || this;
+                        return t.state = {
+                            awaitingResponse: !1,
+                            userCountryOfResidence: t.props.userCountryOfResidence,
+                            userZipCode: t.props.userZipCode,
+                            zipCodeError: !1,
+                            paymentMethodEnabled: t.props.eligibility.status === F.ACTIVE
+                        }, t.isPaymentMethodExpired = function(e) {
+                            var r = t.zeroIndexedMonth(e),
+                                n = e.expirationYear;
+                            if (void 0 === r || !n) return !1;
+                            var a = Object(d.startOfMonth)(new Date),
+                                i = new Date(n, r, 1);
+                            return !!Object(d.isBefore)(i, a)
+                        }, t.zeroIndexedMonth = function(e) {
+                            if (e.expirationMonth) return e.expirationMonth - 1
+                        }, t.handleSubmit = function() {
+                            return u.__awaiter(t, void 0, void 0, function() {
+                                var e, t, r = this;
+                                return u.__generator(this, function(n) {
+                                    switch (n.label) {
+                                        case 0:
+                                            if (!this.hasValidResidence()) return this.setState({
+                                                zipCodeError: !0
+                                            }), [2];
+                                            switch (this.setState({
+                                                awaitingResponse: !0,
+                                                zipCodeError: !1
+                                            }), this.props.savedPaymentMethod.paymentType.toUpperCase()) {
+                                                case E.F.AMAZON:
+                                                    e = te.b.RecurlyPayWithAmazon, t = "amazon";
+                                                    break;
+                                                case E.F.PAYPAL:
+                                                    e = te.b.RecurlyPaypal, t = "paypal";
+                                                    break;
+                                                default:
+                                                    e = te.b.RecurlyCreditCard, t = "cc"
+                                            }
+                                            return [4, this.props.handleCompletePurchase({
+                                                payment_flow: e,
+                                                payment_provider: "recurly",
+                                                payment_info: {
+                                                    token: "",
+                                                    gateway: t,
+                                                    card_bin_country: null
+                                                },
+                                                residence: {
+                                                    country_code: this.state.userCountryOfResidence,
+                                                    zip_code: this.state.userZipCode
+                                                },
+                                                savedPayment: !0,
+                                                errorCallback: function() {
+                                                    return r.setState({
+                                                        awaitingResponse: !1
+                                                    })
+                                                }
+                                            })];
+                                        case 1:
+                                            return n.sent(), [2]
+                                    }
+                                })
+                            })
+                        }, t.handleCORChange = function(e) {
+                            t.setState({
+                                userCountryOfResidence: e.countryCode,
+                                userZipCode: e.zipCode,
+                                paymentMethodEnabled: !0
+                            })
+                        }, t.hasValidResidence = function() {
+                            return !t.props.showEuSubs || (!["US", "CA"].includes(t.state.userCountryOfResidence) || !!t.state.userZipCode)
+                        }, t
+                    }
+                    return u.__extends(t, e), t.prototype.componentDidUpdate = function(e) {
+                        e.eligibility !== this.props.eligibility && this.setState({
+                            paymentMethodEnabled: this.props.eligibility.status === F.ACTIVE
+                        }), e.userCountryOfResidence !== this.props.userCountryOfResidence && this.setState({
+                            userCountryOfResidence: this.props.userCountryOfResidence
+                        })
+                    }, t.prototype.render = function() {
+                        var e = this.props.savedPaymentMethod,
+                            t = this.isPaymentMethodExpired(e);
+                        return l.createElement(l.Fragment, null, l.createElement(S.Eb, {
+                            background: S.r.Base,
+                            border: !0,
+                            borderRadius: S.x.Small,
+                            padding: 2
+                        }, l.createElement($e.a, {
+                            paymentType: e.paymentType,
+                            cardType: e.cardType,
+                            provider: e.provider,
+                            lastFour: e.lastFour,
+                            expirationYear: e.expirationYear,
+                            billingEmail: e.billingEmail,
+                            expirationMonth: e.expirationMonth
+                        })), this.props.showEuSubs && l.createElement(S.Xa, {
+                            margin: {
+                                y: 1
+                            }
+                        }, l.createElement($, {
+                            countryCode: this.state.userCountryOfResidence,
+                            zipCode: this.state.userZipCode,
+                            zipCodeError: this.state.zipCodeError,
+                            onChange: this.handleCORChange
+                        })), !this.state.paymentMethodEnabled && l.createElement(ee, null), l.createElement(S.Xa, {
+                            margin: {
+                                y: 2
+                            }
+                        }, l.createElement(S.z, {
+                            onClick: this.handleSubmit,
+                            state: this.state.awaitingResponse ? S.E.Loading : S.E.Default,
+                            disabled: this.state.awaitingResponse || t || !this.state.paymentMethodEnabled
+                        }, Object(p.d)("Complete Purchase", "SavedMethods"))))
+                    }, t
+                }(l.Component),
+                tt = function() {
+                    function e(e) {
+                        var t = this;
+                        this.recurlyCountries = p.b.get("payments_recurly_countries", ["US"]), this.payPalEuSubsEnabled = p.b.get("paypal_eu_subs", !1), this.getDeterminedTaxCountry = function() {
+                            if (t.userBestGuessCountry) return t.userBestGuessCountry;
+                            var e = t.savedPaymentMethodBillingCountry;
+                            return t.ipCountryCode && e && t.userCountryOfResidence ? t.ipCountryCode === e ? t.ipCountryCode : t.userCountryOfResidence : t.userCountryOfResidence ? t.userCountryOfResidence : t.ipCountryCode
+                        }, this.productName = e.productName, this.userCountryOfResidence = e.userCountryOfResidence, this.ipCountryCode = e.ipCountryCode || "", this.userBestGuessCountry = e.userBestGuessCountry, this.savedPaymentMethodBillingCountry = e.savedPaymentMethodBillingCountry, this.savedPaymentMethodPaymentType = e.savedPaymentMethodPaymentType, this.showEuSubs = e.showEuSubs, this.disablePayPal = e.disablePayPal, this.disableAmazonPay = e.disableAmazonPay
+                    }
+                    return e.prototype.getAvailableMethods = function() {
+                        if (!this.showEuSubs) return "owlallaccess2018" === this.productName ? [ge.ZuoraCreditCard, ge.Xsolla] : "US" !== this.ipCountryCode ? [ge.Xsolla] : [ge.RecurlyCreditCard, ge.RecurlyPaypal, ge.RecurlyAmazonPay, ge.RecurlySavedPayment, ge.Xsolla];
+                        var e = [];
+                        return this.recurlyCountries.includes(this.getDeterminedTaxCountry()) && "owlallaccess2018" !== this.productName && (this.recurlyCreditCardEligible && e.push(ge.RecurlyCreditCard), this.recurlyPaypalEligible && e.push(ge.RecurlyPaypal), this.recurlyAmazonPayEligible && e.push(ge.RecurlyAmazonPay), this.recurlySavedPaymentEligible && e.push(ge.RecurlySavedPayment)), this.xsollaEligible && e.push(ge.Xsolla), this.zuoraCreditCardEligible && e.push(ge.ZuoraCreditCard), e
+                    }, Object.defineProperty(e.prototype, "recurlySavedPaymentEligible", {
+                        get: function() {
+                            if (this.savedPaymentMethodPaymentType) switch (this.savedPaymentMethodPaymentType.toUpperCase()) {
+                                case E.F.AMAZON:
+                                    return this.recurlyAmazonPayEligible;
+                                case E.F.CREDIT_CARD:
+                                    return this.recurlyCreditCardEligible;
+                                case E.F.PAYPAL:
+                                    return this.recurlyPaypalEligible;
+                                default:
+                                    return !1
+                            }
+                            return !1
+                        },
+                        enumerable: !0,
+                        configurable: !0
+                    }), Object.defineProperty(e.prototype, "recurlyAmazonPayEligible", {
+                        get: function() {
+                            return !this.disableAmazonPay && "US" === this.getDeterminedTaxCountry()
+                        },
+                        enumerable: !0,
+                        configurable: !0
+                    }), Object.defineProperty(e.prototype, "recurlyCreditCardEligible", {
+                        get: function() {
+                            return !0
+                        },
+                        enumerable: !0,
+                        configurable: !0
+                    }), Object.defineProperty(e.prototype, "recurlyPaypalEligible", {
+                        get: function() {
+                            return !this.disablePayPal && ("US" === this.getDeterminedTaxCountry() || this.payPalEuSubsEnabled)
+                        },
+                        enumerable: !0,
+                        configurable: !0
+                    }), Object.defineProperty(e.prototype, "xsollaEligible", {
+                        get: function() {
+                            return !0
+                        },
+                        enumerable: !0,
+                        configurable: !0
+                    }), Object.defineProperty(e.prototype, "zuoraCreditCardEligible", {
+                        get: function() {
+                            return "owlallaccess2018" === this.productName
+                        },
+                        enumerable: !0,
+                        configurable: !0
+                    }), e
+                }(),
+                rt = r("iWNC");
+            var nt = function(e) {
+                var t = Date.now() - e;
+                return function() {
+                    var r = Date.now();
+                    return t + e <= r ? (t = r, "cache-and-network") : "cache-first"
+                }
+            }(3e3);
+            var at, it, ot = function(e) {
+                    function t() {
+                        var t = null !== e && e.apply(this, arguments) || this;
+                        return t.state = {
+                            useSavedPaymentMethod: !0,
+                            eligiblePaymentMethods: []
+                        }, t.tracker = new te.d({
+                            allowDuplicateEvents: !1
+                        }), t.toggleChangePaymentMethods = function() {
+                            t.setState(function(e) {
+                                return {
+                                    useSavedPaymentMethod: !e.useSavedPaymentMethod
+                                }
+                            })
+                        }, t
+                    }
+                    return u.__extends(t, e), t.prototype.componentDidMount = function() {
+                        (this.dataReady(this.props) || this.props.data.error) && (this.props.latencyTracking.reportInteractive(), null !== this.tracker.get("savedPaymentAvailable") && null !== this.tracker.get("savedPaymentDisplayed") && this.tracker.reportEvent());
+                        var e = this.savedPaymentMethod;
+                        this.eligibilityComputer = new tt({
+                            productName: this.props.productName,
+                            userCountryOfResidence: this.props.countryOfResidence,
+                            ipCountryCode: this.props.ipCountryCode,
+                            userBestGuessCountry: this.props.userBestGuessCountry,
+                            savedPaymentMethodBillingCountry: e ? e.billingCountry : null,
+                            savedPaymentMethodPaymentType: e ? e.paymentType : null,
+                            showEuSubs: this.props.showEuSubs,
+                            disablePayPal: this.disablePayPal,
+                            disableAmazonPay: this.disableAmazonPay
+                        });
+                        var t = this.eligibilityComputer.getAvailableMethods();
+                        if (this.props.showEuSubs) {
+                            var r = Object.values(ge).map(function(e) {
+                                return {
+                                    type: e,
+                                    status: t.includes(e) ? F.ACTIVE : F.HIDDEN
+                                }
+                            });
+                            this.setState({
+                                eligiblePaymentMethods: r
+                            })
+                        } else {
+                            r = t.map(function(e) {
+                                return {
+                                    type: e,
+                                    status: F.ACTIVE
+                                }
+                            });
+                            this.setState({
+                                eligiblePaymentMethods: r
+                            })
+                        }
+                    }, t.prototype.componentDidUpdate = function(e, t) {
+                        (this.dataReady(this.props) || this.props.data.error) && (this.props.latencyTracking.reportInteractive(), null !== this.tracker.get("savedPaymentAvailable") && null !== this.tracker.get("savedPaymentDisplayed") && this.tracker.reportEvent());
+                        var r = this.savedPaymentMethod;
+                        if (e.userBestGuessCountry !== this.props.userBestGuessCountry || e.data && this.props.data && e.data.currentUser !== this.props.data.currentUser || !this.dataReady(e) && this.dataReady(this.props)) {
+                            this.eligibilityComputer = new tt({
+                                productName: this.props.productName,
+                                userCountryOfResidence: this.props.countryOfResidence,
+                                ipCountryCode: this.props.ipCountryCode,
+                                userBestGuessCountry: this.props.userBestGuessCountry,
+                                savedPaymentMethodBillingCountry: r ? r.billingCountry : null,
+                                savedPaymentMethodPaymentType: r ? r.paymentType : null,
+                                showEuSubs: this.props.showEuSubs,
+                                disablePayPal: this.disablePayPal,
+                                disableAmazonPay: this.disableAmazonPay
+                            });
+                            var n = this.eligibilityComputer.getAvailableMethods();
+                            if (this.props.showEuSubs) {
+                                var a = Object.values(ge).map(function(e) {
+                                    var r = t.eligiblePaymentMethods.find(function(t) {
+                                            return t.type === e
+                                        }),
+                                        a = r && r.status === F.HIDDEN ? F.HIDDEN : F.DISABLED;
+                                    return {
+                                        type: e,
+                                        status: n.includes(e) ? F.ACTIVE : a
+                                    }
+                                });
+                                this.setState({
+                                    eligiblePaymentMethods: a
+                                })
+                            } else {
+                                a = n.map(function(e) {
+                                    return {
+                                        type: e,
+                                        status: F.ACTIVE
+                                    }
+                                });
+                                this.setState({
+                                    eligiblePaymentMethods: a
+                                })
+                            }
+                        }
+                    }, t.prototype.render = function() {
+                        if (this.props.data.error);
+                        else if (!this.dataReady(this.props)) return l.createElement(S.Xa, {
+                            margin: {
+                                y: 1
+                            }
+                        }, l.createElement(S.ib, {
+                            lineCount: 6
+                        }));
+                        var e = this.savedPaymentMethodEligibility,
+                            t = this.state.eligiblePaymentMethods.filter(function(e) {
+                                return e.status !== F.HIDDEN
+                            });
+                        return l.createElement(l.Fragment, null, this.renderWalletHeader(), this.state.useSavedPaymentMethod && this.showSavedPaymentsFeature && this.savedPaymentMethod && this.props.ipCountryCode && e && l.createElement(et, {
+                            handleCompletePurchase: this.props.handleCompletePurchase,
+                            savedPaymentMethod: this.savedPaymentMethod,
+                            handleCountryChange: this.props.handleCountryChange,
+                            eligibility: e,
+                            userCountryOfResidence: this.props.countryOfResidence || this.props.ipCountryCode,
+                            userZipCode: this.props.userZipCode,
+                            showEuSubs: this.props.showEuSubs
+                        }), this.props.configs && t.length > 0 && !(this.state.useSavedPaymentMethod && this.showSavedPaymentsFeature) && this.props.ipCountryCode && l.createElement(S.Xa, {
+                            "data-a-target": "PAYMENT_METHOD_SELECTOR"
+                        }, l.createElement(Je, {
+                            handleCompletePurchase: this.props.handleCompletePurchase,
+                            handleCountryChange: this.props.handleCountryChange,
+                            trackPaymentFormInteraction: this.props.trackPaymentFormInteraction,
+                            eligiblePaymentMethods: t,
+                            userCountryOfResidence: this.props.countryOfResidence || this.props.ipCountryCode,
+                            userZipCode: this.props.userZipCode,
+                            configs: this.props.configs,
+                            showEuSubs: this.props.showEuSubs
+                        })))
+                    }, t.prototype.renderWalletHeader = function() {
+                        return l.createElement(S.Xa, {
+                            display: S.X.Flex,
+                            justifyContent: S.Wa.Between,
+                            margin: {
+                                y: 2
+                            }
+                        }, this.renderWalletTitle(), l.createElement(S.Xa, {
+                            padding: {
+                                left: 1
+                            },
+                            display: S.X.Flex,
+                            alignItems: S.f.End
+                        }, this.renderPaymentMethodToggle()))
+                    }, t.prototype.renderWalletTitle = function() {
+                        return this.state.useSavedPaymentMethod && this.showSavedPaymentsFeature ? l.createElement(S.W, {
+                            type: S.Vb.H4,
+                            bold: !0
+                        }, Object(p.d)("Saved Payment Method", "Wallet")) : l.createElement(S.W, {
+                            type: S.Vb.H4,
+                            bold: !0
+                        }, Object(p.d)("Choose Your Payment Method", "Wallet"))
+                    }, t.prototype.renderPaymentMethodToggle = function() {
+                        if (this.showSavedPaymentsFeature) return this.state.useSavedPaymentMethod ? l.createElement(S.U, {
+                            onClick: this.toggleChangePaymentMethods,
+                            "data-a-target": "js-test-change-payment-method"
+                        }, Object(p.d)("Change Payment Method", "Wallet")) : l.createElement(S.Xa, {
+                            display: S.X.Flex
+                        }, l.createElement(S.sb, {
+                            asset: S.tb.AngleLeft,
+                            width: 10,
+                            height: 10,
+                            type: S.ub.Brand
+                        }), l.createElement(S.Xa, {
+                            margin: {
+                                left: 1
+                            }
+                        }, l.createElement(S.U, {
+                            onClick: this.toggleChangePaymentMethods,
+                            "data-a-target": "js-test-use-existing-payment-method"
+                        }, Object(p.d)("Use Existing Payment Method", "Wallet"))))
+                    }, Object.defineProperty(t.prototype, "isLargePurchase", {
+                        get: function() {
+                            if (!this.props.product) return !1;
+                            var e = this.props.product.product.priceInfo,
+                                t = this.props.product.quantity;
+                            return e.total * t > 5e4
+                        },
+                        enumerable: !0,
+                        configurable: !0
+                    }), Object.defineProperty(t.prototype, "showSavedPaymentsFeature", {
+                        get: function() {
+                            if (this.props.data && this.props.data.error) return !1;
+                            if (!this.savedPaymentMethodEligibility || this.savedPaymentMethodEligibility.status === F.HIDDEN) return !1;
+                            if ("owlallaccess2018" === this.props.productName) return !1;
+                            if (this.savedPaymentMethod) {
+                                if (this.isLargePurchase) {
+                                    if (this.savedPaymentMethod.isRestricted) {
+                                        var e = !!(this.props.data && this.props.data.currentUser && this.props.data.currentUser.settings && this.props.data.currentUser.settings.hasTwoFactorEnabled);
+                                        return this.tracker.set({
+                                            savedPaymentAvailable: !0,
+                                            savedPaymentDisplayed: e
+                                        }), e
+                                    }
+                                    return this.tracker.set({
+                                        savedPaymentAvailable: !0,
+                                        savedPaymentDisplayed: !0
+                                    }), !0
+                                }
+                                return !0
+                            }
+                            return !1
+                        },
+                        enumerable: !0,
+                        configurable: !0
+                    }), Object.defineProperty(t.prototype, "savedPaymentMethodEligibility", {
+                        get: function() {
+                            return this.state.eligiblePaymentMethods.find(function(e) {
+                                return e.type === ge.RecurlySavedPayment
+                            })
+                        },
+                        enumerable: !0,
+                        configurable: !0
+                    }), Object.defineProperty(t.prototype, "savedPaymentMethod", {
+                        get: function() {
+                            var e = (this.props.data && this.props.data.currentUser && this.props.data.currentUser.paymentMethods || []).filter(function(e) {
+                                return e.provider.toUpperCase() === E.G.RECURLY
+                            })[0];
+                            return e ? e.paymentType.toUpperCase() === E.F.PAYPAL && this.disablePayPal ? null : e.paymentType.toUpperCase() === E.F.AMAZON && this.disableAmazonPay ? null : e : null
+                        },
+                        enumerable: !0,
+                        configurable: !0
+                    }), Object.defineProperty(t.prototype, "disablePayPal", {
+                        get: function() {
+                            return !this.props.configs || !this.props.configs.recurly.braintreeClientAuthorization
+                        },
+                        enumerable: !0,
+                        configurable: !0
+                    }), Object.defineProperty(t.prototype, "disableAmazonPay", {
+                        get: function() {
+                            return !this.props.configs || !this.props.configs.recurly.payWithAmazonConfigs.clientID
+                        },
+                        enumerable: !0,
+                        configurable: !0
+                    }), t.prototype.dataReady = function(e) {
+                        return !!(e.configs && e.product && e.ipCountryCode && e.data.currentUser)
+                    }, t
+                }(l.Component),
+                st = Object(q.compose)(Object(re.b)("Wallet"), Object(h.a)(rt, {
+                    options: function() {
+                        return {
+                            fetchPolicy: nt()
+                        }
+                    }
+                }))(ot),
+                ct = r("T3lN");
+            ! function(e) {
+                e.ELIGIBLE_PURCHASE = "ELIGIBLE_PURCHASE", e.INELIGIBLE_PURCHASE = "INELIGIBLE_PURCHASE"
+            }(it || (it = {}));
+            var ut = function(e) {
+                    function t() {
+                        var t = null !== e && e.apply(this, arguments) || this;
+                        return t.state = {
+                            progress: w.a.NOT_STARTED,
+                            showErrors: !1,
+                            userBestGuessCountry: null
+                        }, t.enablePaidUpgradeFlag = p.b.get("earth_wind_fire", !1), t.paidUpgradePromotionStartDate = p.b.get("earth_wind_fire_start", "2018-09-10T00:00:00Z"), t.paidUpgradePromotionEndDate = p.b.get("earth_wind_fire_end", "2018-11-02T59:59:59Z"), t.recurlyTaxEnabled = p.b.get("recurly_tax_enabled", "false"), t.pubsubTimeout = 3e4, t.inAsyncCheckoutExperiment = "async_checkout" === p.p.experiments.getAssignment(v.b.AsyncCheckout), t.trackPaymentFormInteraction = function(e) {
+                            if (t.props.data.subscriptionProduct) {
+                                var r = t.props.isGift ? te.e.Gifting : te.e.Personal;
+                                t.props.mysteryGiftCount && (r = te.e.MysteryGifting);
+                                var n = {
+                                    channelLogin: t.props.data.subscriptionProduct.owner && t.props.data.subscriptionProduct.owner.login,
+                                    channelId: t.props.data.subscriptionProduct.owner && t.props.data.subscriptionProduct.owner.id,
+                                    paymentType: r,
+                                    productId: t.props.productName,
+                                    quantity: t.props.mysteryGiftCount || 1,
+                                    ticketPrice: t.props.data.subscriptionProduct.priceInfo.total,
+                                    currency: t.props.data.subscriptionProduct.priceInfo.currency,
+                                    paymentFlow: e.paymentFlow,
+                                    action: e.action,
+                                    actionDetail: e.actionDetail || "",
+                                    savedPayment: e.savedPayment || !1,
+                                    trackingContext: t.props.trackingContext
+                                };
+                                Object(te.g)(n)
+                            }
+                        }, t.handleCountryChange = function(e) {
+                            t.setState({
+                                userBestGuessCountry: e
+                            });
+                            var r = u.__assign({}, t.props.data.variables, {
+                                taxCountry: e
+                            });
+                            t.props.data.refetch(r)
+                        }, t.completePurchase = function(e) {
+                            return u.__awaiter(t, void 0, void 0, function() {
+                                var t, r, n, a, i, o = this;
+                                return u.__generator(this, function(s) {
+                                    switch (s.label) {
+                                        case 0:
+                                            t = this.props.data.subscriptionProduct, r = this.isAsync, n = {
+                                                payment_provider: e.payment_provider,
+                                                payment_info: u.__assign({}, e.payment_info),
+                                                is_gift: this.props.isGift,
+                                                mystery_gift_count: this.props.mysteryGiftCount,
+                                                is_anon: this.props.isAnonymous,
+                                                recipient_id: this.props.recipientID,
+                                                ip_country_code: this.props.data.requestInfo.countryCode,
+                                                price_info: {
+                                                    id: t && t.priceInfo && t.priceInfo.id,
+                                                    currency: t && t.priceInfo && t.priceInfo.currency
+                                                },
+                                                residence: e.residence,
+                                                async: r,
+                                                device_id: p.p.session.deviceID,
+                                                tab_session_id: p.p.session.tabID
+                                            }, this.setState({
+                                                showErrors: !1
+                                            }), a = "/kraken/checkout/users/" + (this.props.data.currentUser && this.props.data.currentUser.id) + "/products/" + this.props.productName + "/purchase/complete", s.label = 1;
+                                        case 1:
+                                            return s.trys.push([1, 3, , 4]), [4, C.a.post(a, {
+                                                body: n
+                                            }, {
+                                                version: 5
+                                            })];
+                                        case 2:
+                                            return i = s.sent(), r && i.body && !i.body.error && (this.timeout = setTimeout(function() {
+                                                o.state.progress !== w.a.CONFIRMATION && (o.setState({
+                                                    showErrors: !0,
+                                                    errors: {
+                                                        code: P.DefaultMessage,
+                                                        level: O.Error
+                                                    }
+                                                }), e.errorCallback && e.errorCallback())
+                                            }, this.pubsubTimeout)), i.error || i.body && i.body.error ? (this.trackPaymentFormInteraction({
+                                                paymentFlow: e.payment_flow,
+                                                action: te.a.CompletePurchaseClick,
+                                                actionDetail: te.f.Failed,
+                                                savedPayment: e.savedPayment
+                                            }), i.body && "UNSUPPORTED_COUNTRY" === i.body.error && i.body.error_details && i.body.error_details.country ? (this.trackPaymentFormInteraction({
+                                                paymentFlow: e.payment_flow,
+                                                action: te.a.UnsupportedCountryAlert,
+                                                actionDetail: i.body.error_details.country,
+                                                savedPayment: e.savedPayment
+                                            }), this.handleCountryChange(i.body.error_details.country)) : i.body && "INVALID_RESIDENCE" === i.body.error ? this.setState({
+                                                showErrors: !0,
+                                                errors: {
+                                                    code: P.InvalidResidence,
+                                                    level: O.Error
+                                                }
+                                            }) : i.body && "PRICE_INFO_INVALID" === i.body.error && i.body.error_details && i.body.error_details.country ? (this.trackPaymentFormInteraction({
+                                                paymentFlow: e.payment_flow,
+                                                action: te.a.PriceChangeAlert,
+                                                actionDetail: i.body.error_details.country,
+                                                savedPayment: e.savedPayment
+                                            }), this.setState({
+                                                showErrors: !0,
+                                                errors: {
+                                                    code: P.PriceChangeNotice,
+                                                    level: O.Info
+                                                }
+                                            }), this.handleCountryChange(i.body.error_details.country)) : i.body && "INVALID_PAYMENT_METHOD" === i.body.error ? this.setState({
+                                                showErrors: !0,
+                                                errors: {
+                                                    code: P.InvalidPaymentMethod,
+                                                    level: O.Error
+                                                }
+                                            }) : this.setState({
+                                                showErrors: !0,
+                                                errors: {
+                                                    code: P.DefaultMessage,
+                                                    level: O.Error
+                                                }
+                                            }), e.errorCallback && e.errorCallback(), [2]) : (this.trackPaymentFormInteraction({
+                                                paymentFlow: e.payment_flow,
+                                                action: te.a.CompletePurchaseClick,
+                                                actionDetail: te.f.Success,
+                                                savedPayment: e.savedPayment
+                                            }), this.props.data.refetch(), r ? this.setState({
+                                                purchaseResponse: i.body
+                                            }) : this.setState({
+                                                purchaseResponse: i.body,
+                                                progress: w.a.CONFIRMATION
+                                            }), [3, 4]);
+                                        case 3:
+                                            return s.sent(), this.setState({
+                                                showErrors: !0,
+                                                errors: {
+                                                    code: P.DefaultMessage,
+                                                    level: O.Error
+                                                }
+                                            }), e.errorCallback && e.errorCallback(), this.trackPaymentFormInteraction({
+                                                paymentFlow: e.payment_flow,
+                                                action: te.a.CompletePurchaseClick,
+                                                actionDetail: te.f.Failed,
+                                                savedPayment: e.savedPayment
+                                            }), [3, 4];
+                                        case 4:
+                                            return [2]
+                                    }
+                                })
+                            })
+                        }, t
+                    }
+                    return u.__extends(t, e), t.prototype.componentDidMount = function() {
+                        this.props.data.loading && !this.props.data.error || (this.props.latencyTracking.reportInteractive(), this.state.progress < w.a.CONFIRMATION && this.productAlreadyOwned && !this.props.isGift && this.setState({
+                            progress: w.a.CONFIRMATION
+                        }))
+                    }, t.prototype.componentDidUpdate = function(e, t) {
+                        (e.data.loading && !this.props.data.loading || this.props.data.error) && (this.props.latencyTracking.reportInteractive(), this.state.progress < w.a.CONFIRMATION && this.productAlreadyOwned && !this.props.isGift && this.setState({
+                            progress: w.a.CONFIRMATION
+                        })), this.state.progress !== t.progress && this.props.onCheckoutProgress && this.props.onCheckoutProgress(this.state.progress)
+                    }, t.prototype.componentWillReceiveProps = function(e) {
+                        var t = e.pubsub.messages.fulfillment && e.pubsub.messages.fulfillment.fulfillment;
+                        if (t) switch (clearTimeout(this.timeout), t.status) {
+                            case f.PurchaseFulfillmentStatus.Success:
+                                this.setState({
+                                    progress: w.a.CONFIRMATION
+                                });
+                                break;
+                            case f.PurchaseFulfillmentStatus.Failure:
+                            default:
+                                this.setState({
+                                    showErrors: !0,
+                                    errors: {
+                                        code: P.DefaultMessage,
+                                        level: O.Error
+                                    }
+                                })
+                        }
+                    }, t.prototype.componentWillUnmount = function() {
+                        clearTimeout(this.timeout)
+                    }, t.prototype.render = function() {
+                        if (this.props.data.error) return l.createElement(m.a, null);
+                        if (this.productEligibility === T.MOBILE_UPGRADE) {
+                            var e = this.shoppingCartItem,
+                                t = e && e.product && e.product.owner && e.product.owner.displayName;
+                            return l.createElement(m.a, null, l.createElement(S.W, {
+                                bold: !0
+                            }, Object(p.d)("You purchased a subscription to {productDisplayName} on your mobile device.", {
+                                productDisplayName: t || this.props.productName
+                            }, "CheckoutPayments")), l.createElement(S.Xa, {
+                                margin: {
+                                    top: 1
+                                }
+                            }, l.createElement(S.W, null, Object(p.d)("Upgrading your mobile subscription is currently not supported.", "CheckoutPayments"))))
+                        }
+                        if (this.state.progress === w.a.CONFIRMATION) {
+                            var r = l.createElement(R, {
+                                product: this.shoppingCartItem,
+                                purchaseFlow: this.purchaseFlow,
+                                progress: this.state.progress
+                            });
+                            return l.createElement(A, {
+                                productDescription: this.renderTicketDescription(),
+                                header: r
+                            }, this.purchaseInvoice && l.createElement(Y, {
+                                currentUser: this.props.data.currentUser,
+                                purchaseFlow: this.purchaseFlow,
+                                product: this.shoppingCartItem,
+                                purchaseInvoice: this.purchaseInvoice && this.purchaseInvoice,
+                                sessionUser: this.props.sessionUser,
+                                benefit: this.props.data.subscriptionProduct && this.props.data.subscriptionProduct.self && this.props.data.subscriptionProduct.self.benefit
+                            }))
+                        }
+                        var n = l.createElement(R, {
+                                product: this.shoppingCartItem,
+                                purchaseFlow: this.purchaseFlow,
+                                progress: this.state.progress
+                            }),
+                            a = this.shoppingCartItem && this.shoppingCartItem.product.owner && this.shoppingCartItem.product.owner.displayName,
+                            i = "/" + (a || "");
+                        return l.createElement(A, {
+                            productDescription: this.renderTicketDescription(),
+                            header: n
+                        }, !this.dataReady && l.createElement(S.Xa, {
+                            display: S.X.Flex,
+                            justifyContent: S.Wa.Center,
+                            alignItems: S.f.Center
+                        }, l.createElement(S.ib, {
+                            lineCount: 20
+                        })), l.createElement(S.Xa, {
+                            display: this.dataReady ? S.X.Block : S.X.Hide
+                        }, l.createElement(S.Xa, {
+                            display: x(this.productEligibility) ? S.X.Hide : S.X.Block,
+                            "data-test-selector": it.INELIGIBLE_PURCHASE
+                        }, l.createElement(D, {
+                            product: this.shoppingCartItem,
+                            existingPurchases: this.existingPurchases,
+                            productEligibility: this.productEligibility,
+                            sessionUser: this.props.sessionUser
+                        }), l.createElement(S.Xa, {
+                            margin: {
+                                top: 2
+                            }
+                        }, l.createElement(S.z, {
+                            linkTo: i
+                        }, Object(p.d)("Go back to {channel}", {
+                            channel: a || "Twitch"
+                        }, "CheckoutPayments")))), l.createElement(S.Xa, {
+                            display: x(this.productEligibility) ? S.X.Block : S.X.Hide,
+                            "data-test-selector": it.ELIGIBLE_PURCHASE
+                        }, l.createElement(I, {
+                            purchaseFlow: this.purchaseFlow,
+                            product: this.shoppingCartItem
+                        }), l.createElement(S.Xa, {
+                            margin: {
+                                y: 1
+                            }
+                        }, l.createElement(B, {
+                            isAnonymous: this.props.isAnonymous,
+                            purchaseFlow: this.purchaseFlow,
+                            product: this.shoppingCartItem,
+                            existingPurchases: this.existingPurchases,
+                            productEligibility: this.productEligibility,
+                            benefit: this.props.data.subscriptionProduct && this.props.data.subscriptionProduct.self && this.props.data.subscriptionProduct.self.benefit,
+                            eligiblePromotions: this.eligiblePromotions,
+                            sessionUser: this.props.sessionUser
+                        })), this.state.showErrors && this.state.errors && l.createElement(S.Xa, {
+                            margin: {
+                                y: 2
+                            }
+                        }, l.createElement(j, {
+                            errorCode: this.state.errors.code,
+                            level: this.state.errors.level
+                        })), l.createElement(st, {
+                            handleCompletePurchase: this.completePurchase,
+                            handleCountryChange: this.handleCountryChange,
+                            productName: this.props.productName,
+                            trackPaymentFormInteraction: this.trackPaymentFormInteraction,
+                            configs: this.props.data.subscriptionProduct && this.props.data.subscriptionProduct.self && this.props.data.subscriptionProduct.self.checkoutConfigs && this.shoppingCartItem && this.props.data.subscriptionProduct.self.checkoutConfigs.paymentProviderConfigs,
+                            ipCountryCode: this.props.data.requestInfo && this.props.data.requestInfo.countryCode,
+                            countryOfResidence: this.props.data.currentUser && this.props.data.currentUser.residence && this.props.data.currentUser.residence.countryCode,
+                            userBestGuessCountry: this.state.userBestGuessCountry,
+                            userZipCode: this.props.data.currentUser && this.props.data.currentUser.residence && this.props.data.currentUser.residence.postalCode,
+                            product: this.shoppingCartItem,
+                            showEuSubs: this.showEuSubs
+                        }), l.createElement(M, null))))
+                    }, t.prototype.renderTicketDescription = function() {
+                        return this.productEligibility === T.MOBILE_UPGRADE || this.DEPRECRATE_hasActiveMobileSub ? null : l.createElement(K.a, {
+                            productName: this.props.productName,
+                            isGift: this.props.isGift && this.canGift,
+                            showPaidUpgrade: this.enablePaidUpgrade,
+                            priceCountry: this.state.userBestGuessCountry,
+                            invoicePrice: null,
+                            showEuSubs: this.showEuSubs
+                        })
+                    }, Object.defineProperty(t.prototype, "isStandardGifting", {
+                        get: function() {
+                            return this.props.isGift && null !== this.props.recipientID
+                        },
+                        enumerable: !0,
+                        configurable: !0
+                    }), Object.defineProperty(t.prototype, "isAsync", {
+                        get: function() {
+                            return this.isStandardGifting && (this.inAsyncCheckoutExperiment || this.props.isAnonymous)
+                        },
+                        enumerable: !0,
+                        configurable: !0
+                    }), Object.defineProperty(t.prototype, "purchaseFlow", {
+                        get: function() {
+                            return this.props.isGift ? this.props.mysteryGiftCount && this.props.mysteryGiftCount > 0 ? n.MYSTERY_GIFT : n.GIFT_SUB : n.PERSONAL_SUB
+                        },
+                        enumerable: !0,
+                        configurable: !0
+                    }), Object.defineProperty(t.prototype, "canPurchase", {
+                        get: function() {
+                            return !!(this.props.data.subscriptionProduct && this.props.data.subscriptionProduct.self && this.props.data.subscriptionProduct.self.checkoutConfigs && this.props.data.subscriptionProduct.self.checkoutConfigs.canPurchase)
+                        },
+                        enumerable: !0,
+                        configurable: !0
+                    }), Object.defineProperty(t.prototype, "productEligibility", {
+                        get: function() {
+                            var e = this;
+                            if (!this.canPurchase) return T.API_INELIGIBLE;
+                            if (!this.shoppingCartItem) return T.NO_ITEM;
+                            if (this.purchaseFlow === n.GIFT_SUB) return this.canGift ? T.GIFTABLE_RECIPIENT : T.NON_GIFTABLE_RECIPIENT;
+                            if (this.purchaseFlow === n.MYSTERY_GIFT) return this.canGift ? T.GIFTABLE_RECIPIENT : T.NO_MASS_GIFTING;
+                            var t = this.existingPurchases && this.existingPurchases.compatiblePurchases;
+                            if (t) {
+                                var r = t.find(function(e) {
+                                        return e.paymentProvider.toUpperCase() === E.G.PRIME
+                                    }),
+                                    a = t.find(function(t) {
+                                        return t.productType.toUpperCase() === E.V.CHANSUB && !!t.productTier && parseInt(e.shoppingCartItem.product.tier, 10) < parseInt(t.productTier, 10)
+                                    }),
+                                    i = t.find(function(t) {
+                                        return t.productType.toUpperCase() === E.V.CHANSUB && !!t.productTier && parseInt(e.shoppingCartItem.product.tier, 10) > parseInt(t.productTier, 10)
+                                    }),
+                                    o = t.find(function(e) {
+                                        return e.paymentProvider.toUpperCase() === E.G.GOOGLE_IAB
+                                    });
+                                if (r) return T.PRIME_UPGRADE;
+                                if (a) return T.TIER_DOWNGRADE;
+                                if (i) return o ? T.MOBILE_UPGRADE : T.TIER_UPGRADE
+                            }
+                            return !this.existingPurchases || this.existingPurchases && !this.existingPurchases.details && !this.existingPurchases.compatiblePurchases || this.existingPurchases.details && this.existingPurchases.details.state === E.W.INACTIVE ? T.NEW_PURCHASE : T.UNKNOWN
+                        },
+                        enumerable: !0,
+                        configurable: !0
+                    }), Object.defineProperty(t.prototype, "shoppingCartItem", {
+                        get: function() {
+                            var e = this.props.data.subscriptionProduct;
+                            return e ? {
+                                product: {
+                                    id: e.id,
+                                    name: e.name,
+                                    priceInfo: e.priceInfo,
+                                    interval: e.interval,
+                                    tier: e.tier,
+                                    owner: e.owner
+                                },
+                                recipient: this.props.recipientID ? {
+                                    id: this.props.recipientID,
+                                    displayName: this.props.recipientDisplayName
+                                } : null,
+                                quantity: this.props.mysteryGiftCount || 1
+                            } : null
+                        },
+                        enumerable: !0,
+                        configurable: !0
+                    }), Object.defineProperty(t.prototype, "purchaseInvoice", {
+                        get: function() {
+                            if (this.state.purchaseResponse && this.state.purchaseResponse.invoice_total) return {
+                                price: this.state.purchaseResponse.invoice_total.price,
+                                currency: this.state.purchaseResponse.invoice_total.currency,
+                                divisor: 100,
+                                tier: this.state.purchaseResponse.product_tier
+                            };
+                            var e = this.existingPurchases && this.existingPurchases.details;
+                            return e && {
+                                price: e.price,
+                                currency: e.currency,
+                                divisor: e.divisor,
+                                tier: e.productTier
+                            }
+                        },
+                        enumerable: !0,
+                        configurable: !0
+                    }), Object.defineProperty(t.prototype, "existingPurchases", {
+                        get: function() {
+                            return this.props.data.subscriptionProduct && this.props.data.subscriptionProduct.self && this.props.data.subscriptionProduct.self.purchase
+                        },
+                        enumerable: !0,
+                        configurable: !0
+                    }), Object.defineProperty(t.prototype, "productAlreadyOwned", {
+                        get: function() {
+                            return !(!this.existingPurchases || !this.existingPurchases.details)
+                        },
+                        enumerable: !0,
+                        configurable: !0
+                    }), Object.defineProperty(t.prototype, "DEPRECRATE_hasActiveMobileSub", {
+                        get: function() {
+                            var e = this.existingPurchases;
+                            return !(!e || !e.details || e.details.paymentProvider.toUpperCase() !== E.G.GOOGLE_IAB)
+                        },
+                        enumerable: !0,
+                        configurable: !0
+                    }), Object.defineProperty(t.prototype, "enablePaidUpgrade", {
+                        get: function() {
+                            if (!this.enablePaidUpgradeFlag) return !1;
+                            if (!this.props.data.subscriptionProduct || !this.props.data.subscriptionProduct.self) return !1;
+                            var e = this.props.data.subscriptionProduct.self.benefit && this.props.data.subscriptionProduct.self.benefit.paidUpgrade && this.props.data.subscriptionProduct.self.benefit.paidUpgrade.startsAt,
+                                t = !!(this.props.data.subscriptionProduct.self.benefit && this.props.data.subscriptionProduct.self.benefit.gift && this.props.data.subscriptionProduct.self.benefit.gift.isGift);
+                            return !!(e && Object(d.isWithinRange)(Object(b.c)(e), Object(b.c)(this.paidUpgradePromotionStartDate), Object(b.c)(this.paidUpgradePromotionEndDate)) || this.productEligibility === T.NEW_PURCHASE && t && this.eligiblePromotions.paidUpgradePromotion)
+                        },
+                        enumerable: !0,
+                        configurable: !0
+                    }), Object.defineProperty(t.prototype, "canGift", {
+                        get: function() {
+                            return !!(this.props.data.subscriptionProduct && this.props.data.subscriptionProduct.self && this.props.data.subscriptionProduct.self.checkoutConfigs && this.props.data.subscriptionProduct.self.checkoutConfigs.canGift)
+                        },
+                        enumerable: !0,
+                        configurable: !0
+                    }), Object.defineProperty(t.prototype, "eligiblePromotions", {
+                        get: function() {
+                            var e = !1;
+                            return this.props.data.subscriptionProduct && this.props.data.subscriptionProduct.self && this.props.data.subscriptionProduct.self.checkoutConfigs && (e = this.props.data.subscriptionProduct.self.checkoutConfigs.isOneMonthFreeEligible), {
+                                isOneMonthFreeEligible: e,
+                                promotion: this.props.data.subscriptionProduct && this.props.data.subscriptionProduct.self && this.props.data.subscriptionProduct.self.promotion,
+                                paidUpgradePromotion: this.props.data.subscriptionProduct && this.props.data.subscriptionProduct.self && this.props.data.subscriptionProduct.self.paidUpgradePromotion
+                            }
+                        },
+                        enumerable: !0,
+                        configurable: !0
+                    }), Object.defineProperty(t.prototype, "dataReady", {
+                        get: function() {
+                            return !(this.props.data.loading && !this.props.data.error && !this.props.data.subscriptionProduct)
+                        },
+                        enumerable: !0,
+                        configurable: !0
+                    }), Object.defineProperty(t.prototype, "showEuSubs", {
+                        get: function() {
+                            return "true" === this.recurlyTaxEnabled || "staff" === this.recurlyTaxEnabled && !!(this.props.sessionUser && this.props.sessionUser.roles && this.props.sessionUser.roles.isStaff)
+                        },
+                        enumerable: !0,
+                        configurable: !0
+                    }), t
+                }(l.Component),
+                dt = Object(i.compose)(Object(h.a)(ct, {
+                    options: function(e) {
+                        return {
+                            fetchPolicy: "network-only",
+                            variables: {
+                                productName: e.productName,
+                                isAnonymous: e.isAnonymous,
+                                isGift: e.isGift,
+                                recipientID: e.recipientID,
+                                includePromotion: function(e) {
+                                    return !["turbo", "owlallaccess2018"].includes(e.productName)
+                                }(e),
+                                mysteryGiftCount: e.mysteryGiftCount,
+                                taxCountry: ""
+                            }
+                        }
+                    }
+                }), Object(y.a)([{
+                    topic: function(e) {
+                        return Object(g.u)("" + (e.data.currentUser && e.data.currentUser.id))
+                    },
+                    mapMessageTypesToProps: (at = {}, at[f.PubsubMessageType.PurchaseFulfillmentEvents] = "fulfillment", at)
+                }]), Object(re.b)("CheckoutPayments"))(ut);
+            r.d(t, "a", function() {
+                return lt
+            });
+            var lt = Object(a.connect)(function(e) {
+                return {
+                    isLoggedIn: Object(c.f)(e),
+                    sessionUser: Object(c.e)(e)
+                }
+            }, function(e) {
+                return Object(i.bindActionCreators)({
+                    promptLogin: function() {
+                        return Object(s.e)(o.a.DashboardPage)
+                    }
+                }, e)
+            })(dt)
         },
         WlZp: function(e, t, r) {
             "use strict";
