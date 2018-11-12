@@ -163,6 +163,18 @@ window.__twilightSettings = {
     "vodcast_deprecation_announcement_enabled": true,
     "withgraphql_guarded_loading_enabled": true,
     "experiments": {
+        "00cf4222-ae71-42ba-8f7a-7f0ffb589d24": {
+            "name": "TWILIGHT_DASHBOARD_COLLABORATION_2",
+            "v": 5109,
+            "t": 2,
+            "groups": [{
+                "weight": 0,
+                "value": "yes"
+            }, {
+                "weight": 100,
+                "value": "control"
+            }]
+        },
         "011d1499-61b3-49b2-92b2-b2ffd353ef00": {
             "name": "twilight_sub_gifting",
             "v": 2462,
