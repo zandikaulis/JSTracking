@@ -47,6 +47,7 @@ window.__twilightSettings = {
     "deprecated_messages_download_enabled": false,
     "detector_urls": [],
     "dev_extension_sandbox_launch": "on",
+    "dev_extensions_migrate": "off",
     "dev_insights_feature_launch": "on",
     "drops_itemnames_enabled": true,
     "earth_wind_fire_end": "2018-11-02T59:59:59Z",
