@@ -1004,6 +1004,18 @@ window.__twilightSettings = {
                 "value": "variation"
             }]
         },
+        "6a7c6d6c-09fa-444e-9192-badfaddde36b": {
+            "name": "emote_card_sub_button",
+            "v": 5117,
+            "t": 2,
+            "groups": [{
+                "weight": 100,
+                "value": "control"
+            }, {
+                "weight": 0,
+                "value": "sub_button"
+            }]
+        },
         "6c1591ea-6186-4310-bb23-c350eb713d52": {
             "name": "TWILIGHT_DASHBOARD_COLLAB",
             "v": 5108,
