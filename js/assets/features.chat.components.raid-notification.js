@@ -1,5 +1,5 @@
 (window.webpackJsonp = window.webpackJsonp || []).push([
-    [194], {
+    [195], {
         "6TSi": function(e, t) {},
         "6XEL": function(e, t, n) {
             "use strict";
@@ -693,7 +693,7 @@
                         }))
                     }, t.prototype.subscribe = function(e) {
                         this.unsubscribe = a.p.pubsub.subscribe({
-                            topic: Object(o.u)(e),
+                            topic: Object(o.v)(e),
                             onMessage: this.handlePubsubMessage
                         })
                     }, t

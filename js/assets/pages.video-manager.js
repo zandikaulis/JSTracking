@@ -7812,7 +7812,7 @@
                     }
                 }), Object(ln.a)([{
                     topic: function(e) {
-                        return e.data.user ? Object(cn.J)(e.data.user.id) : ""
+                        return e.data.user ? Object(cn.K)(e.data.user.id) : ""
                     },
                     mapMessageTypesToProps: (Yr = {}, Yr[dn.PubsubMessageType.VideoThumbnailProcessingComplete] = "videoThumbnailProcessed", Yr[dn.PubsubMessageType.VideoThumbnailProcessingError] = "videoThumbnailError", Yr)
                 }]))(ao);
@@ -11039,61 +11039,6 @@
             e.exports = n
         },
         LUgQ: function(e, t, n) {},
-        LWYa: function(e, t, n) {
-            "use strict";
-            var a = n("q1tI"),
-                i = n.n(a),
-                r = n("iiw+"),
-                o = n.n(r),
-                s = n("m90/"),
-                l = n.n(s);
-            var d = function(e) {
-                function t() {
-                    return function(e, t) {
-                            if (!(e instanceof t)) throw new TypeError("Cannot call a class as a function")
-                        }(this, t),
-                        function(e, t) {
-                            if (!e) throw new ReferenceError("this hasn't been initialised - super() hasn't been called");
-                            return !t || "object" != typeof t && "function" != typeof t ? e : t
-                        }(this, e.apply(this, arguments))
-                }
-                return function(e, t) {
-                    if ("function" != typeof t && null !== t) throw new TypeError("Super expression must either be null or a function, not " + typeof t);
-                    e.prototype = Object.create(t && t.prototype, {
-                        constructor: {
-                            value: e,
-                            enumerable: !1,
-                            writable: !0,
-                            configurable: !0
-                        }
-                    }), t && (Object.setPrototypeOf ? Object.setPrototypeOf(e, t) : e.__proto__ = t)
-                }(t, e), t.prototype.enable = function(e) {
-                    this.unblock && this.unblock(), this.unblock = this.context.router.history.block(e)
-                }, t.prototype.disable = function() {
-                    this.unblock && (this.unblock(), this.unblock = null)
-                }, t.prototype.componentWillMount = function() {
-                    l()(this.context.router, "You should not use <Prompt> outside a <Router>"), this.props.when && this.enable(this.props.message)
-                }, t.prototype.componentWillReceiveProps = function(e) {
-                    e.when ? this.props.when && this.props.message === e.message || this.enable(e.message) : this.disable()
-                }, t.prototype.componentWillUnmount = function() {
-                    this.disable()
-                }, t.prototype.render = function() {
-                    return null
-                }, t
-            }(i.a.Component);
-            d.propTypes = {
-                when: o.a.bool,
-                message: o.a.oneOfType([o.a.func, o.a.string]).isRequired
-            }, d.defaultProps = {
-                when: !0
-            }, d.contextTypes = {
-                router: o.a.shape({
-                    history: o.a.shape({
-                        block: o.a.func.isRequired
-                    }).isRequired
-                }).isRequired
-            }, t.a = d
-        },
         Lxz1: function(e, t, n) {
             "use strict";
             n.d(t, "f", function() {

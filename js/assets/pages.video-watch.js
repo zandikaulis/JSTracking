@@ -1679,29 +1679,27 @@
                 f = n("H1ft"),
                 g = n("yR8l"),
                 v = n("V+GM"),
-                b = n("/0dD"),
-                k = n("5zf8"),
-                y = n("yI+y"),
-                C = n("76Lv"),
-                S = n("UWbL"),
-                E = n("+GjP"),
-                _ = n("vRsq"),
-                w = n("NvVO"),
-                O = n("2xye"),
-                T = n("llur"),
-                D = n("zxEZ"),
-                N = n("GnwI"),
-                I = n("8ssJ"),
-                x = n("+Jjl"),
-                R = n("eFQ3"),
-                j = n("SWMh"),
-                M = n("f3GI"),
-                F = n("WOQ1"),
-                L = n("VtCy"),
-                V = n("0OKo"),
-                U = n("dIEm"),
-                A = n("Ue10"),
-                P = function(e) {
+                b = n("5zf8"),
+                k = n("yI+y"),
+                y = n("UWbL"),
+                C = n("+GjP"),
+                S = n("vRsq"),
+                E = n("NvVO"),
+                _ = n("2xye"),
+                w = n("llur"),
+                O = n("zxEZ"),
+                T = n("GnwI"),
+                D = n("8ssJ"),
+                N = n("+Jjl"),
+                I = n("eFQ3"),
+                x = n("SWMh"),
+                R = n("f3GI"),
+                j = n("WOQ1"),
+                M = n("VtCy"),
+                F = n("0OKo"),
+                L = n("dIEm"),
+                V = n("Ue10"),
+                U = function(e) {
                     function t() {
                         return null !== e && e.apply(this, arguments) || this
                     }
@@ -1710,18 +1708,18 @@
                         var e = this.props,
                             t = e.currentGameName,
                             n = e.currentVideoID;
-                        return u.createElement(A.Xa, {
+                        return u.createElement(V.Xa, {
                             padding: {
                                 y: 2
                             }
-                        }, u.createElement(U.e, {
+                        }, u.createElement(L.e, {
                             currentlyWatchingVideoID: n,
                             multipleVideoGameMarkersType: this.props.multipleVideoGameMarkersType,
                             tracking: {
                                 medium: this.props.tracking.medium,
                                 location: this.props.tracking.location
                             }
-                        }), u.createElement(U.b, {
+                        }), u.createElement(L.b, {
                             currentlyWatchingVideoID: n,
                             gameName: t,
                             noGameSpecified: "" === t,
@@ -1730,7 +1728,7 @@
                                 medium: this.props.tracking.medium,
                                 location: this.props.tracking.location
                             }
-                        }), this.recentVideosFromCreatorCarousel(), u.createElement(U.f, {
+                        }), this.recentVideosFromCreatorCarousel(), u.createElement(L.f, {
                             currentlyWatchingVideoID: n,
                             multipleVideoGameMarkersType: this.props.multipleVideoGameMarkersType,
                             tracking: {
@@ -1739,7 +1737,7 @@
                             }
                         }))
                     }, t.prototype.recentVideosFromCreatorCarousel = function() {
-                        return this.props.creator ? u.createElement(U.d, {
+                        return this.props.creator ? u.createElement(L.d, {
                             currentlyWatchingVideoID: this.props.currentVideoID,
                             creatorDisplayName: this.props.creator.displayName,
                             creatorID: this.props.creator.id,
@@ -1751,53 +1749,53 @@
                         }) : null
                     }, t
                 }(u.Component),
-                B = Object(p.compose)(Object(V.a)("BelowFoldRecommendations"))(P);
-            var W, X = Object(i.connect)(function(e) {
+                A = Object(p.compose)(Object(F.a)("BelowFoldRecommendations"))(U);
+            var P, B = Object(i.connect)(function(e) {
                     return {
                         firstPageLoaded: e.session.firstPageLoaded
                     }
-                })(B),
-                G = n("CCjQ"),
-                z = n("5Ijs"),
-                H = n("vrNp"),
-                q = n("6x+I"),
-                Q = n("QzU5"),
-                K = n("4rCz"),
-                Y = n("EyXs"),
-                $ = n("a9YZ"),
-                Z = "qa-description-container",
-                J = "qa-typeset",
-                ee = function(e) {
+                })(A),
+                W = n("CCjQ"),
+                X = n("5Ijs"),
+                G = n("vrNp"),
+                z = n("6x+I"),
+                H = n("QzU5"),
+                q = n("4rCz"),
+                Q = n("EyXs"),
+                K = n("a9YZ"),
+                Y = "qa-description-container",
+                $ = "qa-typeset",
+                Z = function(e) {
                     function t() {
                         var t = null !== e && e.apply(this, arguments) || this;
                         return t.state = {
                             isExpanded: !1
                         }, t.renderDescription = function() {
                             if (t.props.description) {
-                                var e, n = Object($.d)(t.props.description);
+                                var e, n = Object(K.d)(t.props.description);
                                 if (t.state.isExpanded) e = n.map(function(e, t) {
                                     return 0 === e.length ? u.createElement("br", {
                                         key: "desc-line" + t
-                                    }) : u.createElement(q, l.__assign({
+                                    }) : u.createElement(z, l.__assign({
                                         key: "desc-line" + t,
                                         source: e
-                                    }, Y.a))
+                                    }, Q.a))
                                 });
                                 else {
                                     var i = n[0].split("\n")[0];
-                                    e = u.createElement(q, l.__assign({
+                                    e = u.createElement(z, l.__assign({
                                         source: i,
                                         renderers: {
-                                            Paragraph: $.c,
-                                            Heading: $.a,
-                                            Item: $.b
+                                            Paragraph: K.c,
+                                            Heading: K.a,
+                                            Item: K.b
                                         }
-                                    }, Y.a))
+                                    }, Q.a))
                                 }
-                                return u.createElement(A.Xa, {
-                                    "data-test-selector": Z
-                                }, u.createElement(A.ec, {
-                                    "data-test-selector": J
+                                return u.createElement(V.Xa, {
+                                    "data-test-selector": Y
+                                }, u.createElement(V.ec, {
+                                    "data-test-selector": $
                                 }, e), t.state.isExpanded ? t.renderBroadcastType(t.props.broadcastType) : null)
                             }
                         }, t.toggleExpand = function() {
@@ -1809,208 +1807,208 @@
                         }, t
                     }
                     return l.__extends(t, e), t.prototype.render = function() {
-                        return this.props.description ? u.createElement(A.Eb, {
-                            background: A.r.Base,
+                        return this.props.description ? u.createElement(V.Eb, {
+                            background: V.r.Base,
                             "data-test-selector": "qa-more-info-box"
-                        }, u.createElement(A.Xa, {
+                        }, u.createElement(V.Xa, {
                             padding: {
                                 x: 1,
                                 top: 1
                             }
-                        }, this.renderDescription()), u.createElement(A.Eb, {
-                            alignContent: A.e.Center,
+                        }, this.renderDescription()), u.createElement(V.Eb, {
+                            alignContent: V.e.Center,
                             borderTop: !0,
-                            display: A.X.Flex,
-                            justifyContent: A.Wa.Center,
+                            display: V.X.Flex,
+                            justifyContent: V.Wa.Center,
                             padding: {
                                 y: .5
                             }
-                        }, u.createElement(A.z, {
+                        }, u.createElement(V.z, {
                             "data-test-selector": "qa-toggle-expand-button",
-                            type: A.F.Text,
+                            type: V.F.Text,
                             onClick: this.toggleExpand
-                        }, this.state.isExpanded ? Object(K.d)("Show Less", "MoreInfoBox") : Object(K.d)("Show More", "MoreInfoBox")))) : null
+                        }, this.state.isExpanded ? Object(q.d)("Show Less", "MoreInfoBox") : Object(q.d)("Show More", "MoreInfoBox")))) : null
                     }, t.prototype.renderBroadcastType = function(e) {
-                        if (!e) return u.createElement(A.ib, {
+                        if (!e) return u.createElement(V.ib, {
                             lineCount: 1,
                             width: 80
                         });
                         var t;
                         switch (e) {
-                            case Q.a.Archive:
-                                t = Object(K.d)("Past Broadcast", "MoreInfoBox");
+                            case H.a.Archive:
+                                t = Object(q.d)("Past Broadcast", "MoreInfoBox");
                                 break;
-                            case Q.a.Upload:
-                                t = Object(K.d)("Upload", "MoreInfoBox");
+                            case H.a.Upload:
+                                t = Object(q.d)("Upload", "MoreInfoBox");
                                 break;
-                            case Q.a.PastPremiere:
-                                t = Object(K.d)("Past Premiere", "MoreInfoBox");
+                            case H.a.PastPremiere:
+                                t = Object(q.d)("Past Premiere", "MoreInfoBox");
                                 break;
-                            case Q.a.Highlight:
-                                t = Object(K.d)("Highlight", "MoreInfoBox");
+                            case H.a.Highlight:
+                                t = Object(q.d)("Highlight", "MoreInfoBox");
                                 break;
                             default:
-                                t = Object(K.d)("Unknown", "MoreInfoBox")
+                                t = Object(q.d)("Unknown", "MoreInfoBox")
                         }
-                        return u.createElement(A.W, {
+                        return u.createElement(V.W, {
                             "data-test-selector": "qa-broadcast-type-text"
-                        }, Object(K.d)("Video Category: {broadcastType}", {
+                        }, Object(q.d)("Video Category: {broadcastType}", {
                             broadcastType: t
                         }, "MoreInfoBox"))
-                    }, t = l.__decorate([Object(N.b)("MoreInfoBox", {
+                    }, t = l.__decorate([Object(T.b)("MoreInfoBox", {
                         autoReportInteractive: !0
                     })], t)
                 }(u.Component),
-                te = n("h92S"),
-                ne = n("oVvm");
+                J = n("h92S"),
+                ee = n("oVvm");
             n("PMgN");
             ! function(e) {
                 e[e.TotalViews = 0] = "TotalViews", e[e.VideoDescription = 1] = "VideoDescription"
-            }(W || (W = {}));
-            var ie = function(e) {
+            }(P || (P = {}));
+            var te = function(e) {
                     function t() {
                         return null !== e && e.apply(this, arguments) || this
                     }
                     return l.__extends(t, e), t.prototype.render = function() {
                         var e = null;
-                        return this.props.video && this.props.video.description && (e = u.createElement(A.Eb, {
+                        return this.props.video && this.props.video.description && (e = u.createElement(V.Eb, {
                             borderTop: !0,
-                            "data-test-selector": W.VideoDescription
-                        }, u.createElement(ee, {
+                            "data-test-selector": P.VideoDescription
+                        }, u.createElement(Z, {
                             description: this.props.video.description,
                             broadcastType: this.props.video.broadcastType
-                        }))), u.createElement(A.Eb, {
-                            background: A.r.Base,
+                        }))), u.createElement(V.Eb, {
+                            background: V.r.Base,
                             border: !0
-                        }, u.createElement(A.Eb, {
-                            alignItems: A.f.Center,
+                        }, u.createElement(V.Eb, {
+                            alignItems: V.f.Center,
                             breakpointMedium: {
-                                flexDirection: A.Aa.Row
+                                flexDirection: V.Aa.Row
                             },
-                            display: A.X.Flex,
-                            flexWrap: A.Ba.NoWrap,
-                            flexDirection: A.Aa.Column,
-                            justifyContent: A.Wa.Start
-                        }, u.createElement(A.Eb, {
+                            display: V.X.Flex,
+                            flexWrap: V.Ba.NoWrap,
+                            flexDirection: V.Aa.Column,
+                            justifyContent: V.Wa.Start
+                        }, u.createElement(V.Eb, {
                             flexGrow: 1,
                             fullWidth: !0,
                             fullHeight: !0,
-                            overflow: A.cb.Hidden,
+                            overflow: V.cb.Hidden,
                             padding: 1
-                        }, u.createElement(te.a, {
+                        }, u.createElement(J.a, {
                             video: this.props.video
-                        })), u.createElement(A.Xa, null, u.createElement(H.a, {
+                        })), u.createElement(V.Xa, null, u.createElement(G.a, {
                             login: this.props.video && this.props.video.owner && this.props.video.owner.login
-                        }), u.createElement(A.Eb, {
-                            alignItems: A.f.Center,
+                        }), u.createElement(V.Eb, {
+                            alignItems: V.f.Center,
                             className: "video-info-bar__action-container",
-                            display: A.X.Flex,
-                            flexDirection: A.Aa.Row,
+                            display: V.X.Flex,
+                            flexDirection: V.Aa.Row,
                             flexShrink: 0,
                             fullHeight: !0,
                             padding: 1
-                        }, this.props.video && u.createElement(A.Eb, {
-                            alignItems: A.f.Center,
-                            "data-test-selector": W.TotalViews,
-                            display: A.X.Flex,
-                            color: A.O.Alt2,
+                        }, this.props.video && u.createElement(V.Eb, {
+                            alignItems: V.f.Center,
+                            "data-test-selector": P.TotalViews,
+                            display: V.X.Flex,
+                            color: V.O.Alt2,
                             flexGrow: 1,
-                            fontSize: A.Ca.Size5
-                        }, u.createElement(A.Db, {
+                            fontSize: V.Ca.Size5
+                        }, u.createElement(V.Db, {
                             value: Object(m.f)(this.props.video.viewCount),
                             label: Object(m.d)("Total Views", "VideoInfoBar"),
-                            icon: A.tb.GlyphViews
-                        })), u.createElement(A.Xa, {
-                            display: A.X.Flex,
+                            icon: V.tb.GlyphViews
+                        })), u.createElement(V.Xa, {
+                            display: V.X.Flex,
                             flexGrow: 0
-                        }, u.createElement(A.Xa, {
+                        }, u.createElement(V.Xa, {
                             padding: {
                                 x: 1
                             }
-                        }, u.createElement(z.a, {
-                            balloonDirection: A.v.TopRight,
-                            buttonType: A.F.Hollow,
+                        }, u.createElement(X.a, {
+                            balloonDirection: V.v.TopRight,
+                            buttonType: V.F.Hollow,
                             content: {
                                 collectionID: this.props.collectionID,
                                 videoID: this.props.video ? this.props.video.id : void 0
                             },
                             currentVideoTime: this.props.lastVideoOffset,
                             tracking: {
-                                location: O.PageviewLocation.VideoWatchPage
+                                location: _.PageviewLocation.VideoWatchPage
                             }
-                        })), u.createElement(ne.a, {
+                        })), u.createElement(ee.a, {
                             currentUser: this.props.currentUser,
                             video: this.props.video,
                             lastVideoOffset: this.props.lastVideoOffset
                         }))))), e)
                     }, t
                 }(u.Component),
-                re = Object(N.b)("VideoInfoBar", {
+                ne = Object(T.b)("VideoInfoBar", {
                     autoReportInteractive: !0
-                })(ie),
-                oe = n("kRBY");
-            var ae = Object(i.connect)(function(e) {
+                })(te),
+                ie = n("kRBY");
+            var re = Object(i.connect)(function(e) {
                     return {
-                        isLoggedIn: Object(oe.f)(e)
+                        isLoggedIn: Object(ie.f)(e)
                     }
                 })(function(e) {
                     var t, n = Object(f.b)();
-                    return t = e.isLoggedIn ? u.createElement(U.e, {
+                    return t = e.isLoggedIn ? u.createElement(L.e, {
                         multipleVideoGameMarkersType: n,
                         tracking: {
-                            medium: O.PageviewMedium.VideoNotFoundPage,
-                            location: O.PageviewLocation.VideoWatchPage
+                            medium: _.PageviewMedium.VideoNotFoundPage,
+                            location: _.PageviewLocation.VideoWatchPage
                         }
-                    }) : u.createElement(U.c, {
+                    }) : u.createElement(L.c, {
                         multipleVideoGameMarkersType: n,
                         tracking: {
-                            medium: O.PageviewMedium.VideoNotFoundPage,
-                            location: O.PageviewLocation.VideoWatchPage
+                            medium: _.PageviewMedium.VideoNotFoundPage,
+                            location: _.PageviewLocation.VideoWatchPage
                         }
-                    }), u.createElement(A.Eb, {
-                        alignItems: A.f.Center,
-                        color: A.O.Alt2,
-                        display: A.X.Flex,
-                        flexDirection: A.Aa.Column,
+                    }), u.createElement(V.Eb, {
+                        alignItems: V.f.Center,
+                        color: V.O.Alt2,
+                        display: V.X.Flex,
+                        flexDirection: V.Aa.Column,
                         fullHeight: !0,
                         fullWidth: !0,
-                        justifyContent: A.Wa.Center
-                    }, u.createElement(A.Xa, {
-                        alignItems: A.f.Center,
-                        display: A.X.Flex,
-                        flexWrap: A.Ba.NoWrap,
+                        justifyContent: V.Wa.Center
+                    }, u.createElement(V.Xa, {
+                        alignItems: V.f.Center,
+                        display: V.X.Flex,
+                        flexWrap: V.Ba.NoWrap,
                         padding: {
                             bottom: 3
                         }
-                    }, u.createElement(A.Eb, {
+                    }, u.createElement(V.Eb, {
                         margin: {
                             right: 2
                         },
                         flexShrink: 0,
-                        color: A.O.Alt2
-                    }, u.createElement(A.sb, {
-                        asset: A.tb.DeadGlitch,
+                        color: V.O.Alt2
+                    }, u.createElement(V.sb, {
+                        asset: V.tb.DeadGlitch,
                         width: 92,
                         height: 96
-                    })), u.createElement(A.Xa, {
-                        display: A.X.Flex,
-                        flexDirection: A.Aa.Column
-                    }, u.createElement(A.W, {
-                        fontSize: A.Ca.Size4,
+                    })), u.createElement(V.Xa, {
+                        display: V.X.Flex,
+                        flexDirection: V.Aa.Column
+                    }, u.createElement(V.W, {
+                        fontSize: V.Ca.Size4,
                         "data-test-selector": "video-error-message"
-                    }, Object(m.d)("Sorry. Unless you’ve got a time machine, that content is unavailable.", "VideoNotFoundPage")), u.createElement(A.W, {
-                        fontSize: A.Ca.Size4,
+                    }, Object(m.d)("Sorry. Unless you’ve got a time machine, that content is unavailable.", "VideoNotFoundPage")), u.createElement(V.W, {
+                        fontSize: V.Ca.Size4,
                         "data-test-selector": "video-error-cta"
-                    }, Object(m.d)("In the meantime, take a look at these other videos instead.", "VideoNotFoundPage")))), u.createElement(A.Xa, {
+                    }, Object(m.d)("In the meantime, take a look at these other videos instead.", "VideoNotFoundPage")))), u.createElement(V.Xa, {
                         fullWidth: !0,
                         padding: {
                             x: 5
                         }
                     }, t))
                 }),
-                se = (n("rv2W"), n("x3L2")),
-                le = -1,
-                ce = function(e) {
+                oe = (n("rv2W"), n("x3L2")),
+                ae = -1,
+                se = function(e) {
                     function t(t) {
                         var n = e.call(this, t) || this;
                         return n.logger = m.k.withCategory("VideoWatchPage"), n.onPlayerSeekRequest = function(e) {
@@ -2021,13 +2019,13 @@
                             n.props.onLogin()
                         }, n.getVideoOffsetFromQuery = function(e) {
                             void 0 === e && (e = n.props);
-                            var t = Object(E.a)(e.location.search, "t");
-                            return t ? Object(S.a)(t) : le
+                            var t = Object(C.a)(e.location.search, "t");
+                            return t ? Object(y.a)(t) : ae
                         }, n.onPlayerNavigationEvent = function(e) {
                             var t = n.getVideo(),
                                 i = t ? t.id : void 0,
-                                r = Object(_.m)(n.props) || void 0;
-                            Object(R.c)(e, n.props.history, {
+                                r = Object(S.m)(n.props) || void 0;
+                            Object(I.c)(e, n.props.history, {
                                 currentVideoID: i,
                                 currentCollectionID: r
                             })
@@ -2038,7 +2036,7 @@
                             }, function() {
                                 n.props.onVideoTimeChange(t)
                             }) : n.state.requestedVideoOffset === t && n.setState({
-                                requestedVideoOffset: le
+                                requestedVideoOffset: ae
                             })
                         }, n.maybeFetchVideoMarkers = function(e) {
                             return l.__awaiter(n, void 0, void 0, function() {
@@ -2046,11 +2044,11 @@
                                 return l.__generator(this, function(i) {
                                     switch (i.label) {
                                         case 0:
-                                            return e.lengthSeconds ? [4, Object(j.a)(e.id, e.lengthSeconds, e.game)] : [2];
+                                            return e.lengthSeconds ? [4, Object(x.a)(e.id, e.lengthSeconds, e.game)] : [2];
                                         case 1:
                                             return t = i.sent(), n = t.map(function(e) {
                                                 return l.__assign({}, e, {
-                                                    subLabel: Object(k.b)(e.duration),
+                                                    subLabel: Object(b.b)(e.duration),
                                                     videoId: e.videoID
                                                 })
                                             }), this.setState({
@@ -2066,7 +2064,7 @@
                             return e || t ? !e && t ? "/collections/" + t : "/videos/" + e + (t ? "?collection=" + t : "") : (n.logger.error(new Error, "Tried to generate a mini player URL based on the current route, but critical options were missing."), "/")
                         }, n.state = {
                             requestedVideoOffset: n.getVideoOffsetFromQuery(),
-                            lastVideoOffset: le,
+                            lastVideoOffset: ae,
                             miniPlayerRouteLink: n.getMiniPlayerURL(t.match.params.videoID, t.match.params.collectionID),
                             videoGameChanges: []
                         }, n
@@ -2089,79 +2087,78 @@
                         }
                         e.data.loading && !this.props.data.loading && Object(f.b)() !== f.a.None && this.props.data.video && (e.data.video && e.data.video.id) !== this.props.data.video.id && this.maybeFetchVideoMarkers(this.props.data.video), this.reportInteractive()
                     }, t.prototype.render = function() {
-                        var e, t = this.getVideo(),
-                            n = Object(_.m)(this.props),
-                            i = !this.props.data.loading && n && this.props.data.collection && 0 === this.props.data.collection.items.totalCount,
-                            r = this.getOwner();
-                        if (this.props.data.error || t && t.id && !t.owner) return u.createElement(h.a, {
+                        var e = this.getVideo(),
+                            t = Object(S.m)(this.props),
+                            n = !this.props.data.loading && t && this.props.data.collection && 0 === this.props.data.collection.items.totalCount,
+                            i = this.getOwner();
+                        if (this.props.data.error || e && e.id && !e.owner) return u.createElement(h.a, {
                             message: Object(m.d)("Whoops, we can't load that video right now.", "VideoWatchPage")
                         });
-                        if (!this.props.data.loading && (!t || t && "" === t.id) && !n) return u.createElement(ae, null);
-                        var o = c("video-watch-page__right-column", ((e = {})[Object(C.b)(b.a.Dark)] = this.props.theatreModeEnabled, e)),
-                            a = {};
-                        this.state.requestedVideoOffset !== le && (a.nextVideoOffset = this.state.requestedVideoOffset), n && (a.collectionID = n), this.props.match.params.videoID && (a.vodID = this.props.match.params.videoID);
-                        var d = null;
-                        t && t.scope === L.VideoScope.Private && r && (d = u.createElement(G.a, {
-                            ownerLogin: r.login
+                        if (!this.props.data.loading && (!e || e && "" === e.id) && !t) return u.createElement(re, null);
+                        var r = c("video-watch-page__right-column"),
+                            o = {};
+                        this.state.requestedVideoOffset !== ae && (o.nextVideoOffset = this.state.requestedVideoOffset), t && (o.collectionID = t), this.props.match.params.videoID && (o.vodID = this.props.match.params.videoID);
+                        var a = null;
+                        e && e.scope === M.VideoScope.Private && i && (a = u.createElement(W.a, {
+                            ownerLogin: i.login
                         }));
-                        var p = this.props.match.params.videoID || t && t.id || null;
-                        return u.createElement(A.Xa, {
+                        var d = this.props.match.params.videoID || e && e.id || null;
+                        return u.createElement(V.Xa, {
                             fullHeight: !0
-                        }, u.createElement(M.a, {
-                            currentPage: D.b.Videos,
+                        }, u.createElement(R.a, {
+                            currentPage: O.b.Videos,
                             "data-test-selector": "qa-video-watch-page",
-                            ownerLogin: r ? r.login : "",
+                            ownerLogin: i ? i.login : "",
                             theatreMode: this.props.theatreModeEnabled
-                        }, d, u.createElement(F.a, null, u.createElement(I.a, {
+                        }, a, u.createElement(j.a, null, u.createElement(D.a, {
                             playerProps: l.__assign({
                                 onNavigationRequest: this.onPlayerNavigationEvent,
                                 onSeek: this.onVideoTimeChange,
                                 onVideoTimeChange: this.onVideoTimeChange,
                                 attachToWindow: !0,
-                                fullscreenRef: Object(y.c)(this.state.theatreFullscreenGroup),
-                                onFullscreenChange: y.b,
+                                fullscreenRef: Object(k.c)(this.state.theatreFullscreenGroup),
+                                onFullscreenChange: k.b,
                                 videoMarkers: this.state.videoGameChanges
-                            }, a),
+                            }, o),
                             miniPlayerTitle: this.getMiniPlayerTitle(),
                             miniPlayerContentRoute: this.state.miniPlayerRouteLink
-                        })), !i && u.createElement(re, {
-                            collectionID: n || void 0,
+                        })), !n && u.createElement(ne, {
+                            collectionID: t || void 0,
                             currentUser: this.props.data.currentUser || null,
-                            video: t || null,
+                            video: e || null,
                             lastVideoOffset: this.state.lastVideoOffset
-                        }), u.createElement(X, {
-                            creator: r ? {
-                                id: r.id,
-                                displayName: r.displayName
+                        }), u.createElement(B, {
+                            creator: i ? {
+                                id: i.id,
+                                displayName: i.displayName
                             } : void 0,
-                            currentGameName: t && t.game ? t.game.name : "",
-                            currentVideoID: p || void 0,
+                            currentGameName: e && e.game ? e.game.name : "",
+                            currentVideoID: d || void 0,
                             multipleVideoGameMarkersType: Object(f.b)(),
                             tracking: {
-                                medium: O.PageviewMedium.VideoWatchPage,
-                                location: O.PageviewLocation.VideoWatchPage
+                                medium: _.PageviewMedium.VideoWatchPage,
+                                location: _.PageviewLocation.VideoWatchPage
                             },
                             onPlayerSeekRequest: this.onPlayerSeekRequest
-                        })), !i && u.createElement(x.b, null, u.createElement(A.Eb, {
-                            className: o,
-                            background: A.r.Alt2,
+                        })), !n && u.createElement(N.b, null, u.createElement(V.Eb, {
+                            className: r,
                             "data-test-selector": "video-chat-wrapper",
-                            display: A.X.Flex,
+                            display: V.X.Flex,
                             flexGrow: 0,
                             flexShrink: 0,
-                            flexWrap: A.Ba.NoWrap,
-                            overflow: A.cb.Hidden,
+                            flexWrap: V.Ba.NoWrap,
+                            overflow: V.cb.Hidden,
                             fullHeight: !0
                         }, u.createElement(s.l, l.__assign({
                             onPlayerSeekRequest: this.onPlayerSeekRequest,
                             onShowLogin: this.onShowLoginHandler,
-                            videoID: p
+                            videoID: d
                         }, this.mapQueryParamsToVideoChatProps())))))
                     }, t.prototype.mapQueryParamsToVideoChatProps = function() {
                         var e = {},
                             t = d.parse(this.props.location.search),
                             n = this.getVideoOffsetFromQuery();
-                        return n !== le && (e.highlightTimestamp = n), t.comment && (e.highlightedMessageID = t.comment), e
+                        return n !== ae && (e.highlightTimestamp = n), t.comment && (e.highlightedMessageID = t.comment), e
                     }, t.prototype.reportInteractive = function() {
                         this.props.data && !this.props.data.loading && this.props.latencyTracking.reportInteractive()
                     }, t.prototype.getVideo = function() {
@@ -2176,7 +2173,7 @@
                             return l.__generator(this, function(t) {
                                 switch (t.label) {
                                     case 0:
-                                        return [4, Object(y.a)()];
+                                        return [4, Object(k.a)()];
                                     case 1:
                                         return e = t.sent(), this.setState({
                                             theatreFullscreenGroup: e
@@ -2186,20 +2183,20 @@
                         })
                     }, t
                 }(u.Component),
-                de = Object(p.compose)(Object(g.a)(se, {
+                le = Object(p.compose)(Object(g.a)(oe, {
                     options: function(e) {
                         return {
                             variables: {
                                 videoID: e.match.params.videoID,
-                                collectionID: Object(_.m)(e) || void 0,
-                                useCollectionID: !!Object(_.m)(e) && !e.match.params.videoID
+                                collectionID: Object(S.m)(e) || void 0,
+                                useCollectionID: !!Object(S.m)(e) && !e.match.params.videoID
                             }
                         }
                     }
-                }), Object(N.b)("VideoWatchPage", {
-                    destination: w.a.VideoWatchPage
+                }), Object(T.b)("VideoWatchPage", {
+                    destination: E.a.VideoWatchPage
                 }), Object(v.a)({
-                    location: O.PageviewLocation.VideoWatchPage,
+                    location: _.PageviewLocation.VideoWatchPage,
                     properties: function(e) {
                         var t = null,
                             n = null,
@@ -2208,14 +2205,14 @@
                             o = null,
                             a = null;
                         if (e.match.params.videoID) t = e.match.params.videoID, e.data.video && e.data.video.owner && (n = e.data.video.broadcastType, i = e.data.video.game ? e.data.video.game.name : null, r = e.data.video.language, o = e.data.video.owner.login, a = Number(e.data.video.owner.id));
-                        else if (Object(_.m)(e) && e.data.collection && e.data.collection.items.edges.length > 0) {
+                        else if (Object(S.m)(e) && e.data.collection && e.data.collection.items.edges.length > 0) {
                             var s = e.data.collection.items.edges[0].node;
                             t = s.id, n = s.broadcastType, i = s.game ? s.game.name : null, r = s.language, o = s.owner ? s.owner.login : null, a = s.owner ? Number(s.owner.id) : null
                         }
                         return {
                             channel: o,
                             channel_id: a,
-                            vod_type: n ? Object(T.b)(n) : null,
+                            vod_type: n ? Object(w.b)(n) : null,
                             vod_id: t,
                             game: i,
                             language: r
@@ -2224,8 +2221,8 @@
                     skip: function(e) {
                         return e.data.loading
                     }
-                }))(ce);
-            var ue = Object(i.connect)(function(e) {
+                }))(se);
+            var ce = Object(i.connect)(function(e) {
                 return {
                     theatreModeEnabled: e.ui.theatreModeEnabled
                 }
@@ -2236,9 +2233,9 @@
                     },
                     onVideoTimeChange: s.q
                 }, e)
-            })(de);
+            })(le);
             n.d(t, "VideoWatchPage", function() {
-                return ue
+                return ce
             })
         },
         "4OCo": function(e, t, n) {
@@ -4657,8 +4654,8 @@
                 c = n("/0dD"),
                 d = n("76Lv"),
                 u = 4.5,
-                p = [239, 238, 241],
-                m = [14, 12, 19],
+                p = [250, 249, 250],
+                m = [15, 14, 17],
                 h = .1,
                 f = 50,
                 g = "7A7A7A",
@@ -7138,7 +7135,7 @@
                 e.SubButton = "subscribe-button__dropdown", e.BalloonLayerButton = "subscribe-button__balloon-layer-btn", e.DefaultButton = "subscribe-button__default-btn", e.SubscribeBalloon = "subscribe-button__subscribe-balloon"
             }(T || (T = {}));
             var x = s.a.wrap(function() {
-                    return Promise.all([n.e(0), n.e(199)]).then(n.bind(null, "f+qK"))
+                    return Promise.all([n.e(0), n.e(200)]).then(n.bind(null, "f+qK"))
                 }, "SubscribeBalloon"),
                 R = function(e) {
                     function t() {
@@ -7340,7 +7337,7 @@
                     }
                 }), Object(k.a)([{
                     topic: function(e) {
-                        return Object(E.G)(e.data.currentUser && e.data.currentUser.id || "")
+                        return Object(E.H)(e.data.currentUser && e.data.currentUser.id || "")
                     },
                     mapMessageTypesToProps: {
                         "*": "subscriptionInfo"
@@ -7390,7 +7387,7 @@
                         return Object(d.d)(s.a, {
                             component: "CheckoutModal",
                             loader: function() {
-                                return Promise.all([n.e(0), n.e(210)]).then(n.bind(null, "KJv/"))
+                                return Promise.all([n.e(0), n.e(212)]).then(n.bind(null, "KJv/"))
                             },
                             componentProps: t
                         })
@@ -16816,9 +16813,9 @@
                                 }
                             })
                         }, n.onUpdateDebounce = function() {
-                            if (!n.resizeAnimationFrame && n.channelHeader) {
+                            if (n.resizeAnimationFrame && (clearTimeout(n.resizeAnimationFrame), n.resizeAnimationFrame = null), n.channelHeader) {
                                 var e = n.channelHeader.querySelector('[data-target="channel-header-left"]');
-                                n.updateWidth(n.getWidth(e).width), n.resizeAnimationFrame = requestAnimationFrame(n.handleWindowResize)
+                                n.updateWidth(n.getWidth(e).width), n.resizeAnimationFrame = setTimeout(n.handleWindowResize, 0)
                             }
                         }, n.handleWindowResize = function() {
                             n.resizeAnimationFrame = null, n.getChannelHeaderSize()
@@ -16875,7 +16872,7 @@
                         this.clearResetOfflineTimer(), this.resizeAnimationFrame && cancelAnimationFrame(this.resizeAnimationFrame), window.removeEventListener("resize", this.onUpdateDebounce)
                     }, t.prototype.updateWidth = function(e) {
                         var t = e !== this.width || this.width !== this.prevWidth;
-                        void 0 !== this.width && (this.prevWidth = this.width), this.width !== e && (this.width = e), t && (this.resizeAnimationFrame && (cancelAnimationFrame(this.resizeAnimationFrame), this.resizeAnimationFrame = null), this.onUpdateDebounce())
+                        void 0 !== this.width && (this.prevWidth = this.width), this.width !== e && (this.width = e), t && (this.resizeAnimationFrame && (clearTimeout(this.resizeAnimationFrame), this.resizeAnimationFrame = null), this.onUpdateDebounce())
                     }, t.prototype.render = function() {
                         var e, t, n = 0,
                             i = 0,
@@ -17103,29 +17100,35 @@
                                 n = this.channelHeader.querySelectorAll('[data-target="channel-header-item"]'),
                                 i = this.channelHeader.querySelectorAll('[data-target="channel-header-dropdown-item"]');
                             if (n.length) {
-                                var r = this.getWidth(this.channelHeader).width,
-                                    o = this.getWidth(e).width + this.getWidth(t).width + 20 - r;
-                                if (o > 0)
-                                    for (var a = n.length - 1; a >= 0; a--) {
-                                        if (!(l = n[a]).classList.contains("channel-header__item--hide")) {
-                                            var s = this.getWidth(l);
-                                            if (l.classList.add("channel-header__item--hide"), i[a].classList.remove("channel-header__item--hide"), (o -= s.width) <= 0) break
-                                        }
-                                    } else
-                                        for (a = 0; a < n.length; a++) {
-                                            var l;
-                                            if ((l = n[a]).classList.contains("channel-header__item--hide")) {
-                                                if (l.classList.remove("channel-header__item--hide"), (s = this.getWidth(l)).width >= Math.abs(o)) {
-                                                    l.classList.add("channel-header__item--hide");
-                                                    break
-                                                }
-                                                l.classList.remove("channel-header__item--hide"), i[a].classList.add("channel-header__item--hide"), o += s.width
+                                for (var r = 0; r < n.length; r++) {
+                                    var o = n[r];
+                                    o.classList.contains("channel-header__item--hide") && (o.classList.remove("channel-header__item--hide"), i[r].classList.add("channel-header__item--hide"))
+                                }
+                                var a = this.getWidth(this.channelHeader).width,
+                                    s = this.getWidth(e).width + this.getWidth(t).width + 20 - a,
+                                    l = [];
+                                if (s > 0) {
+                                    var c = function(e) {
+                                            var t = n[e];
+                                            if (!t.classList.contains("channel-header__item--hide")) {
+                                                var r = d.getWidth(t);
+                                                if (l.push(function() {
+                                                        t.classList.add("channel-header__item--hide"), i[e].classList.remove("channel-header__item--hide")
+                                                    }), (s -= r.width) <= 0) return "break"
                                             }
-                                        }
-                                var c = this.channelHeader.querySelector('[data-target="channel-header-button"]');
-                                if (c) {
-                                    var d = !this.channelHeader.querySelectorAll('[data-target="channel-header-item"].channel-header__item--hide').length;
-                                    c.classList.toggle("channel-header__item--hide", d)
+                                        },
+                                        d = this;
+                                    for (r = n.length - 1; r >= 0; r--) {
+                                        if ("break" === c(r)) break
+                                    }
+                                }
+                                l.forEach(function(e) {
+                                    return e()
+                                });
+                                var u = this.channelHeader.querySelector('[data-target="channel-header-button"]');
+                                if (u) {
+                                    var p = !this.channelHeader.querySelectorAll('[data-target="channel-header-item"].channel-header__item--hide').length;
+                                    u.classList.toggle("channel-header__item--hide", p)
                                 }
                             }
                         }
@@ -17247,7 +17250,7 @@
                     }
                 }), Object(p.a)([{
                     topic: function(e) {
-                        return e.channelLogin ? Object(h.I)(e.channelLogin) : ""
+                        return e.channelLogin ? Object(h.J)(e.channelLogin) : ""
                     },
                     skip: function(e) {
                         return !e.channelLogin || !e.firstPageLoaded
@@ -18566,7 +18569,7 @@
                             return Object(k.d)(m.a, {
                                 component: "CheckoutModal",
                                 loader: function() {
-                                    return Promise.all([n.e(0), n.e(210)]).then(n.bind(null, "KJv/"))
+                                    return Promise.all([n.e(0), n.e(212)]).then(n.bind(null, "KJv/"))
                                 },
                                 componentProps: t
                             })
@@ -21380,7 +21383,6 @@
                         return o.createElement(p.Eb, {
                             className: r("video-chat", "qa-vod-chat"),
                             display: p.X.Flex,
-                            background: p.r.Alt2,
                             borderLeft: !0,
                             color: p.O.Alt,
                             flexDirection: p.Aa.Column,
@@ -21389,8 +21391,9 @@
                             fullHeight: !0,
                             fullWidth: !0,
                             position: p.jb.Relative
-                        }, o.createElement(p.Xa, {
+                        }, o.createElement(p.Eb, {
                             alignItems: p.f.Center,
+                            background: p.r.Alt,
                             className: "video-chat__header",
                             display: p.X.Flex,
                             flexShrink: 0,
@@ -21792,7 +21795,7 @@
                 C = n("F6GT"),
                 S = n("x0gr"),
                 E = l.a.wrap(function() {
-                    return n.e(198).then(n.bind(null, "8MX0"))
+                    return n.e(199).then(n.bind(null, "8MX0"))
                 }, "ChatSettingsComponent"),
                 _ = function(e) {
                     function t() {

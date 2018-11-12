@@ -6202,7 +6202,7 @@
                 o = /^((?:[A-Za-z0-9]+)(?:[A-Za-z]))([\d]+)$/;
 
             function s(e, t, n) {
-                void 0 === n && (n = !1);
+                void 0 === n && (n = !0);
                 var i = [],
                     a = e.split(/\s+/);
                 return a.forEach(function(e, o) {
@@ -6224,7 +6224,7 @@
             }
 
             function l(e, t, n) {
-                void 0 === n && (n = !1);
+                void 0 === n && (n = !0);
                 var a = e.match(o);
                 if (!a) return null;
                 var s = a[1].toLowerCase(),
@@ -10115,11 +10115,12 @@
                     }, n.onLeftMouseMove = function(e) {
                         var t = e.clientX,
                             i = void 0 === n.props.minLength ? 0 : n.props.minLength,
-                            r = void 0 === n.props.maxLength ? n.props.maxOffset - n.props.minOffset : n.props.maxLength;
-                        n.setState(function(e, a) {
+                            r = void 0 === n.props.maxLength ? n.props.maxOffset - n.props.minOffset : n.props.maxLength,
+                            a = void 0 === n.props.sliderMin ? 0 : n.props.sliderMin;
+                        n.setState(function(e, o) {
                             return {
                                 startOffset: n.calculateOffset(t, {
-                                    startBoundary: Math.max(a.minOffset, e.endOffset - r),
+                                    startBoundary: Math.max(o.minOffset, e.endOffset - r, a),
                                     endBoundary: Math.min(e.endOffset, e.endOffset - i),
                                     currentValue: e.startOffset
                                 }),
@@ -10161,13 +10162,14 @@
                     }, n.onRightMouseMove = function(e) {
                         var t = e.clientX,
                             i = void 0 === n.props.minLength ? 0 : n.props.minLength,
-                            r = void 0 === n.props.maxLength ? n.props.maxOffset - n.props.minOffset : n.props.maxLength;
-                        n.setState(function(e, a) {
+                            r = void 0 === n.props.maxLength ? n.props.maxOffset - n.props.minOffset : n.props.maxLength,
+                            a = void 0 === n.props.sliderMax ? n.props.maxOffset : n.props.sliderMax;
+                        n.setState(function(e, o) {
                             return {
                                 startOffset: e.startOffset,
                                 endOffset: n.calculateOffset(t, {
-                                    startBoundary: Math.max(a.minOffset, e.startOffset + i),
-                                    endBoundary: Math.min(a.maxOffset, e.startOffset + r),
+                                    startBoundary: Math.max(o.minOffset, e.startOffset + i),
+                                    endBoundary: Math.min(o.maxOffset, e.startOffset + r, a),
                                     currentValue: e.endOffset
                                 })
                             }

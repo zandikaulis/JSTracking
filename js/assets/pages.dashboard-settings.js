@@ -1,5 +1,5 @@
 (window.webpackJsonp = window.webpackJsonp || []).push([
-    [165, 144], {
+    [166, 144], {
         "+XQV": function(e, t, n) {
             "use strict";
             var r = n("tJV7");
@@ -1477,7 +1477,7 @@
                 }(o.Component),
                 S = Object(s.a)([{
                     topic: function(e) {
-                        return Object(c.H)(e.channelID)
+                        return Object(c.I)(e.channelID)
                     },
                     mapMessageTypesToProps: (a = {}, a[l.PubsubMessageType.ChannelStreamUp] = "streamUp", a[l.PubsubMessageType.ChannelStreamDown] = "streamDown", a)
                 }])(y);

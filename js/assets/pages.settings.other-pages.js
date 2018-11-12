@@ -40,7 +40,6 @@
                             className: "advanced-notification-settings-toggle",
                             display: C.X.Flex,
                             justifyContent: C.Wa.Between,
-                            background: C.r.Base,
                             padding: {
                                 x: 5,
                                 y: 1
@@ -177,11 +176,10 @@
                                 followCount: t.follows.totalCount
                             }, "AdvancedNotificationSettings"),
                             a = o.createElement(C.Eb, {
-                                background: C.r.Alt2,
                                 borderBottom: !0
                             }, o.createElement(C.Ua, {
                                 onClick: this.toggleCollapse,
-                                type: C.Va.Alpha,
+                                type: C.Va.Alt,
                                 "data-test-selector": E.Header
                             }, o.createElement(C.Xa, {
                                 display: C.X.Flex,
@@ -194,7 +192,7 @@
                                 flexGrow: 0
                             }, o.createElement(C.W, {
                                 fontSize: C.Ca.Size5,
-                                color: C.O.Alt2,
+                                color: C.O.Alt,
                                 bold: !0
                             }, Object(c.d)("Advanced", "AdvancedNotificationSettings"))), o.createElement(C.Xa, {
                                 padding: {
@@ -204,7 +202,7 @@
                             }, o.createElement(C.W, {
                                 "data-test-selector": E.Description,
                                 fontSize: C.Ca.Size5,
-                                color: C.O.Alt2
+                                color: C.O.Alt
                             }, r)), o.createElement(C.Xa, {
                                 className: this.state.collapsed ? "advanced-notification-settings--collapse" : "advanced-notification-settings--expand",
                                 flexGrow: 0,
@@ -213,7 +211,7 @@
                                 justifyContent: C.Wa.Center
                             }, o.createElement(C.sb, {
                                 asset: C.tb.AngleRight,
-                                type: C.ub.Alt2
+                                type: C.ub.Alt
                             }))))),
                             s = !(n || i || !t.follows.pageInfo || !t.follows.pageInfo.hasNextPage);
                         return t.follows.totalCount > 0 ? this.state.collapsed ? o.createElement(C.Eb, null, a) : o.createElement(C.Eb, null, a, o.createElement(C.Eb, {
@@ -330,8 +328,8 @@
             ! function(e) {
                 e.Container = "browser-push-notifications-settings__container", e.Toggle = "browser-push-notifications-settings__toggle"
             }(O || (O = {}));
-            var j, I = c.p.logger.withCategory("browser-push-notifications-settings"),
-                P = function(e) {
+            var j, P = c.p.logger.withCategory("browser-push-notifications-settings"),
+                I = function(e) {
                     function t() {
                         var t = null !== e && e.apply(this, arguments) || this;
                         return t.state = {
@@ -356,7 +354,7 @@
                                         case 3:
                                             return t.sent(), [3, 5];
                                         case 4:
-                                            return e = t.sent(), I.error(e, "user unsubscribe failed"), [3, 5];
+                                            return e = t.sent(), P.error(e, "user unsubscribe failed"), [3, 5];
                                         case 5:
                                             return [3, 8];
                                         case 6:
@@ -389,7 +387,7 @@
                                     case 2:
                                         return t.sent(), [3, 4];
                                     case 3:
-                                        return e = t.sent(), I.error(e, "unexpected error initializing push manager"), this.setState({
+                                        return e = t.sent(), P.error(e, "unexpected error initializing push manager"), this.setState({
                                             hide: !0
                                         }), [2];
                                     case 4:
@@ -469,7 +467,7 @@
                         })
                     }, t
                 }(o.Component),
-                L = Object(U.compose)(Object(f.b)("BrowserPushNotificationsSettings"))(P);
+                L = Object(U.compose)(Object(f.b)("BrowserPushNotificationsSettings"))(I);
             n("BpmJ");
             ! function(e) {
                 e.Toggle = "platform-notification-settings-toggle__toggle"
@@ -487,7 +485,6 @@
                             display: C.X.Flex,
                             flexWrap: C.Ba.NoWrap,
                             alignItems: C.f.Start,
-                            background: C.r.Alt,
                             margin: {
                                 top: 1,
                                 bottom: .5
@@ -767,12 +764,11 @@
                             message: Object(c.d)("You must be logged in to update your settings.", "PlatformNotificationSettings")
                         }));
                         var e = o.createElement(C.Eb, {
-                            background: C.r.Alt2,
                             borderBottom: !0,
                             "data-test-selector": W.Header
                         }, o.createElement(C.Ua, {
                             onClick: this.toggleCollapse,
-                            type: C.Va.Alpha
+                            type: C.Va.Alt
                         }, o.createElement(C.Xa, {
                             display: C.X.Flex,
                             padding: {
@@ -785,7 +781,7 @@
                         }, o.createElement(C.W, {
                             "data-test-selector": W.DisplayName,
                             fontSize: C.Ca.Size5,
-                            color: C.O.Alt2,
+                            color: C.O.Alt,
                             bold: !0
                         }, this.props.displayName)), o.createElement(C.Xa, {
                             padding: {
@@ -794,7 +790,7 @@
                             flexGrow: 1
                         }, o.createElement(C.W, {
                             fontSize: C.Ca.Size5,
-                            color: C.O.Alt2
+                            color: C.O.Alt
                         }, this.getSettingTurnedOnMessage())), o.createElement(C.Xa, {
                             className: this.state.collapsed ? "platform-notification-settings--collapse" : "platform-notification-settings--expand",
                             flexGrow: 0,
@@ -803,7 +799,7 @@
                             justifyContent: C.Wa.Center
                         }, o.createElement(C.sb, {
                             asset: C.tb.AngleRight,
-                            type: C.ub.Alt2
+                            type: C.ub.Alt
                         })))));
                         return this.state.collapsed ? o.createElement(C.Eb, null, e) : o.createElement(C.Eb, null, e, o.createElement(C.Eb, {
                             padding: 2,
@@ -815,7 +811,7 @@
                         }, o.createElement(C.W, {
                             "data-test-selector": W.Description,
                             fontSize: C.Ca.Size5,
-                            color: C.O.Alt2
+                            color: C.O.Alt
                         }, this.props.description)), o.createElement(C.Eb, {
                             display: C.X.Flex,
                             margin: {
@@ -3980,8 +3976,8 @@
                         disabled: e.saving
                     })
                 },
-                I = n("5fhh"),
-                P = n("QiP8"),
+                P = n("5fhh"),
+                I = n("QiP8"),
                 L = function(e) {
                     function t() {
                         var t = null !== e && e.apply(this, arguments) || this;
@@ -4021,7 +4017,7 @@
                                                         })
                                                     })
                                                 } : t
-                                            }, Object(C.e)(P, {}, t), this.logger.debug("Updated user settings", {
+                                            }, Object(C.e)(I, {}, t), this.logger.debug("Updated user settings", {
                                                 IsDirectoryHidden: e
                                             }), this.setState({
                                                 saving: !1,
@@ -4067,11 +4063,11 @@
                         })
                     }, t
                 }(r.Component),
-                R = Object(u.compose)(Object(k.b)("HideDirectoryToggle"), Object(y.a)(P, {
+                R = Object(u.compose)(Object(k.b)("HideDirectoryToggle"), Object(y.a)(I, {
                     options: {
                         fetchPolicy: "network-only"
                     }
-                }), Object(y.a)(I, {
+                }), Object(y.a)(P, {
                     name: "updateUserDirectoryHidden"
                 }))(L),
                 A = n("kRBY"),
@@ -4866,8 +4862,8 @@
                         fetchPolicy: "network-only"
                     }
                 }), T())(x),
-                I = n("Ww25"),
-                P = function(e) {
+                P = n("Ww25"),
+                I = function(e) {
                     function t() {
                         var t = null !== e && e.apply(this, arguments) || this;
                         return t.onChange = function(e) {
@@ -4920,7 +4916,7 @@
                                 disabled: t,
                                 "data-test-selector": "chat-delay-radio:" + n.delay
                             }))
-                        })), r.createElement(I.a, {
+                        })), r.createElement(P.a, {
                             text: Object(s.d)("Adds a short delay before non-mods see messages. Any message that is timed out or banned during the delay is removed from chat completely.", "ChatDelayRadioButtons")
                         }))
                     }, t
@@ -4995,7 +4991,7 @@
                         var e = this.props.data.currentUser,
                             t = e && e.chatSettings,
                             n = !!this.props.data.error || !this.props.data.loading && !t;
-                        return r.createElement(P, {
+                        return r.createElement(I, {
                             chatDelayMs: this.state.chatDelayMs,
                             saving: this.state.saving,
                             loading: this.props.data.loading,
@@ -5037,7 +5033,7 @@
                             onChange: this.props.onChange,
                             placeholder: this.renderPlaceholderString(),
                             rows: 5
-                        }), r.createElement(I.a, {
+                        }), r.createElement(P.a, {
                             text: Object(s.d)("Require first-time viewers to agree to your rules before chatting. One rule per line.", "ChatRulesTextArea")
                         }), e)
                     }, t.prototype.renderPlaceholderString = function() {
@@ -7438,7 +7434,7 @@
                                 }
                             }(e.node, e.cursor) : null
                         }).filter(function(e) {
-                            return null !== e
+                            return e && e.itemID
                         }) : []
                     }, t.prototype.setupInitalDataOnce = function() {
                         var e, t = this.props.data.currentUser;
@@ -7454,6 +7450,8 @@
                 D = Object(m.compose)(Object(u.b)("FeedbackItemList"), Object(g.a)(_, {
                     options: function(e) {
                         return {
+                            errorPolicy: "all",
+                            fetchPolicy: "network-only",
                             variables: {
                                 type: e.type,
                                 limit: O
@@ -7464,6 +7462,7 @@
                         return i.__assign({}, e, {
                             loadMore: function(t) {
                                 return e.data.fetchMore({
+                                    errorPolicy: "all",
                                     query: _,
                                     variables: i.__assign({}, e.data.variables, {
                                         after: t
@@ -7535,8 +7534,8 @@
                 v = (n("4+c1"), n("ytS6"), n("G7cy")),
                 k = n("DtRd"),
                 b = n("R4sh"),
-                S = [255, 255, 255],
-                y = [32, 28, 43],
+                S = [250, 249, 250],
+                y = [15, 14, 17],
                 C = 3,
                 E = /^#[A-Fa-f0-9]{3,6}$/;
             var w, N, _ = "#b22222";
@@ -10418,12 +10417,12 @@
                 }))(D),
                 x = n("cr+I"),
                 j = n("edgk"),
-                I = n("b6Yk");
+                P = n("b6Yk");
             n("AOMz");
             ! function(e) {
                 e.NorthAmerica = "us", e.Europe = "eu", e.Korea = "kr", e.Taiwan = "tw", e.China = "cn", e.SouthEastAsia = "sea"
             }(w || (w = {}));
-            var P = function(e) {
+            var I = function(e) {
                     function t() {
                         var t = null !== e && e.apply(this, arguments) || this;
                         return t.state = {
@@ -10538,7 +10537,7 @@
                                             working: !0
                                         }), n.label = 1;
                                     case 1:
-                                        return n.trys.push([1, 3, 4, 5]), e = "/v5/blizzard/" + this.userID, [4, I.a.deleteOrThrow(e)];
+                                        return n.trys.push([1, 3, 4, 5]), e = "/v5/blizzard/" + this.userID, [4, P.a.deleteOrThrow(e)];
                                     case 2:
                                         return n.sent(), this.props.data.refetch(), [3, 5];
                                     case 3:
@@ -10592,7 +10591,7 @@
                     }), t
                 }(a.Component),
                 L = n("Bx/Q"),
-                R = Object(h.a)(L)(P),
+                R = Object(h.a)(L)(I),
                 A = n("kRBY"),
                 B = (n("ZYQZ"), function(e) {
                     function t() {
@@ -10657,7 +10656,7 @@
                                                 working: !0
                                             }), t.label = 1;
                                         case 1:
-                                            return t.trys.push([1, 3, , 4]), [4, I.a.putOrThrow("/v5/extensions/" + e + "/auth/link_user", {
+                                            return t.trys.push([1, 3, , 4]), [4, P.a.putOrThrow("/v5/extensions/" + e + "/auth/link_user", {
                                                 body: {
                                                     show_user: !1
                                                 }
@@ -10710,7 +10709,7 @@
                                     case 0:
                                         e = {}, t = !1, r.label = 1;
                                     case 1:
-                                        return r.trys.push([1, 3, , 4]), [4, I.a.get("/v5/extensions/linked")];
+                                        return r.trys.push([1, 3, , 4]), [4, P.a.get("/v5/extensions/linked")];
                                     case 2:
                                         if ((n = r.sent()) && n.body && n.body.extensions.length > 0)
                                             for (i = 0, a = n.body.extensions; i < a.length; i++) o = a[i], e[o.id] = {
@@ -10832,7 +10831,7 @@
                                             working: !0
                                         }), e.label = 1;
                                     case 1:
-                                        return e.trys.push([1, 3, 4, 5]), [4, I.a.deleteOrThrow("/v5/facebook/" + this.props.data.currentUser.id)];
+                                        return e.trys.push([1, 3, 4, 5]), [4, P.a.deleteOrThrow("/v5/facebook/" + this.props.data.currentUser.id)];
                                     case 2:
                                         return e.sent(), this.removeConnectionInCache(), [3, 5];
                                     case 3:
@@ -10879,7 +10878,7 @@
                                             user_id: this.props.userID
                                         }), t = "/api/lol/summonername?" + e, i.label = 1;
                                     case 1:
-                                        return i.trys.push([1, 3, 4, 5]), [4, I.a.get(t)];
+                                        return i.trys.push([1, 3, 4, 5]), [4, P.a.get(t)];
                                     case 2:
                                         return (n = i.sent()).error || n.requestError ? this.setState({
                                             connected: !1
@@ -10914,7 +10913,7 @@
                                             client_id: s.a.authSettings.clientID
                                         }), t = "/api/lol/delete?" + e, r.label = 1;
                                     case 1:
-                                        return r.trys.push([1, 3, 4, 5]), [4, I.a.get(t)];
+                                        return r.trys.push([1, 3, 4, 5]), [4, P.a.get(t)];
                                     case 2:
                                         return (n = r.sent()).error || n.requestError ? (this.logger.warn("Failed to disconnect League of Legends account", {
                                             error: n.error,
@@ -10954,7 +10953,7 @@
                                             region: this.state.region
                                         }), t = "/api/lol/verify?" + e, r.label = 1;
                                     case 1:
-                                        return r.trys.push([1, 3, 4, 5]), [4, I.a.get(t)];
+                                        return r.trys.push([1, 3, 4, 5]), [4, P.a.get(t)];
                                     case 2:
                                         return n = r.sent(), n.error || n.requestError || !n.body || 0 === n.body.summoner_id || "" === n.body.summoner_name || "" === n.body.twitch_id ? (this.logger.warn("Failed to connect League of Legends account.", {
                                             error: n.error,
@@ -11254,7 +11253,7 @@
                                                 working: !0
                                             }), n.label = 1;
                                         case 1:
-                                            return n.trys.push([1, 3, 4, 5]), [4, Promise.all([I.a.post("/api/platform/psn/disconnect"), I.a.post("/api/platform/psn_dev/disconnect"), I.a.post("/api/platform/psn_cert/disconnect")])];
+                                            return n.trys.push([1, 3, 4, 5]), [4, Promise.all([P.a.post("/api/platform/psn/disconnect"), P.a.post("/api/platform/psn_dev/disconnect"), P.a.post("/api/platform/psn_cert/disconnect")])];
                                         case 2:
                                             return e = n.sent(), e.every(function(e) {
                                                 return !(!e.error && !e.requestError)
@@ -11314,7 +11313,7 @@
                                                 working: !0
                                             }), r.label = 1;
                                         case 1:
-                                            return r.trys.push([1, 3, 4, 5]), e = "/api/roku/disconnect", [4, I.a.post(e)];
+                                            return r.trys.push([1, 3, 4, 5]), e = "/api/roku/disconnect", [4, P.a.post(e)];
                                         case 2:
                                             return t = r.sent(), n = t.error, i = t.requestError, n || i ? (this.logger.warn("Failed to disconnect from Roku", {
                                                 error: n,
@@ -11399,7 +11398,7 @@
                                             working: !0
                                         }), n.label = 1;
                                     case 1:
-                                        return n.trys.push([1, 3, 4, 5]), e = "/v5/steam/" + this.userID, [4, I.a.deleteOrThrow(e)];
+                                        return n.trys.push([1, 3, 4, 5]), e = "/v5/steam/" + this.userID, [4, P.a.deleteOrThrow(e)];
                                     case 2:
                                         return n.sent(), this.removeConnectionInCache(), [3, 5];
                                     case 3:
@@ -11472,19 +11471,17 @@
                     }
                     return r.__extends(t, e), t.prototype.render = function() {
                         var e = Object(s.d)("Twitter", "TwitterConnection"),
-                            t = Object(s.d)("Tweet your Channel Feed posts to your followers.", "TwitterConnection"),
-                            n = Object(s.d)("By connecting your account with your Twitter account, you acknowledge and agree that information you choose to share will be uploaded to Twitter and may be viewed by Twitter and other Twitter users. Also, your Twitter account information may be used by Twitch. Twitch will not publicly display your Twitter account information. If you no longer want to share this information, please disconnect your Twitter account.", "TwitterConnection"),
-                            r = this.props.data.loading;
+                            t = Object(s.d)("By connecting your account with your Twitter account, you acknowledge and agree that information you choose to share will be uploaded to Twitter and may be viewed by Twitter and other Twitter users. Also, your Twitter account information may be used by Twitch. Twitch will not publicly display your Twitter account information. If you no longer want to share this information, please disconnect your Twitter account.", "TwitterConnection"),
+                            n = this.props.data.loading;
                         return a.createElement(O, {
                             image: a.createElement(k, {
                                 type: i.Twitter
                             }),
                             title: e,
-                            subtitle: t,
-                            footer: n,
+                            footer: t,
                             error: this.state.error,
                             connected: this.connected,
-                            working: this.state.working || r,
+                            working: this.state.working || n,
                             onClick: this.handleClick
                         })
                     }, t.prototype.connect = function() {
@@ -11518,7 +11515,7 @@
                                             working: !0
                                         }), n.label = 1;
                                     case 1:
-                                        return n.trys.push([1, 3, 4, 5]), e = "/v5/twitter/" + this.userID, [4, I.a.deleteOrThrow(e)];
+                                        return n.trys.push([1, 3, 4, 5]), e = "/v5/twitter/" + this.userID, [4, P.a.deleteOrThrow(e)];
                                     case 2:
                                         return n.sent(), this.removeConnectionInCache(), [3, 5];
                                     case 3:
@@ -11572,7 +11569,7 @@
                                         case 1:
                                             return r.trys.push([1, 3, , 4]), e = x.stringify({
                                                 app: "xb360"
-                                            }), t = "/api/xbox/disconnect?" + e, [4, I.a.post(t)];
+                                            }), t = "/api/xbox/disconnect?" + e, [4, P.a.post(t)];
                                         case 2:
                                             return n = r.sent(), i = n.error, a = n.requestError, i || a ? (this.logger.warn("Failed to disconnect from Xbox 360", {
                                                 error: i,
@@ -11630,7 +11627,7 @@
                                         case 1:
                                             return r.trys.push([1, 3, 4, 5]), e = x.stringify({
                                                 app: "xb1"
-                                            }), t = "/api/xbox/disconnect?" + e, [4, I.a.post(t)];
+                                            }), t = "/api/xbox/disconnect?" + e, [4, P.a.post(t)];
                                         case 2:
                                             return n = r.sent(), i = n.error, a = n.requestError, i || a ? (this.logger.warn("Failed to disconnect from Xbox One", {
                                                 error: i,
@@ -11740,7 +11737,7 @@
                                             working: !0
                                         }), t.label = 1;
                                     case 1:
-                                        return t.trys.push([1, 3, 4, 5]), [4, I.a.deleteOrThrow("/v5/youtube/" + this.userID)];
+                                        return t.trys.push([1, 3, 4, 5]), [4, P.a.deleteOrThrow("/v5/youtube/" + this.userID)];
                                     case 2:
                                         return t.sent(), this.removeConnectionInCache(), [3, 5];
                                     case 3:

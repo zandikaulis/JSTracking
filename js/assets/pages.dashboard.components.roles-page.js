@@ -1535,11 +1535,11 @@
             function w(e) {
                 return M(T)(e)
             }
-            var F, L = 1,
+            var L, F = 1,
                 R = function(e) {
                     function t(t) {
                         var n = e.call(this, t) || this;
-                        return n.queryCount = L, n.modifyUserInCache = function(e, t) {
+                        return n.queryCount = F, n.modifyUserInCache = function(e, t) {
                             var i = e.id;
                             i && n.setState(function(t) {
                                 var n, r = t.totalVIPs,
@@ -1639,7 +1639,7 @@
                         e.channelID !== this.props.channelID && this.setState({
                             userCache: {}
                         }, function() {
-                            t.queryCount = L
+                            t.queryCount = F
                         }), e.data.loading && this.updateUserCache()
                     }, t.prototype.render = function() {
                         return this.props.data.error ? o.createElement(l.a, {
@@ -1705,12 +1705,12 @@
                         }
                     }
                 }))(R),
-                V = (F = Object(h.a)("ChannelVIPContext", {
+                V = (L = Object(h.a)("ChannelVIPContext", {
                     maxVIPUserLimit: 0,
                     isAtMaxVIPUserLimit: !1,
                     isVIPUnlocked: !1
                 })).InnerProvider,
-                x = F.withContext,
+                x = L.withContext,
                 B = function(e) {
                     return e
                 };
@@ -2064,19 +2064,24 @@
                     return a.__extends(t, e), t.prototype.render = function() {
                         return o.createElement(b.ab, {
                             elevation: 3,
-                            onCloseButtonClick: this.handleModalDismiss,
-                            primaryButtonProps: {
-                                children: Object(S.d)("Retry", "RolesPageMessageModal"),
-                                disabled: this.state.isRetryButtonDisabled,
-                                onClick: this.handleRetryClick
+                            headerProps: {
+                                title: Object(S.d)("Something went wrong", "RolesPageMessageModal"),
+                                onCloseButtonClick: this.handleModalDismiss,
+                                closeButtonAriaLabel: Object(S.d)("Close", "RolesPageMessageModal")
                             },
-                            secondaryButtonProps: {
-                                children: Object(S.d)("Cancel", "RolesPageMessageModal"),
-                                onClick: this.handleModalDismiss,
-                                type: b.F.Hollow
+                            footerProps: {
+                                primaryButtonProps: {
+                                    children: Object(S.d)("Retry", "RolesPageMessageModal"),
+                                    disabled: this.state.isRetryButtonDisabled,
+                                    onClick: this.handleRetryClick
+                                },
+                                secondaryButtonProps: {
+                                    children: Object(S.d)("Cancel", "RolesPageMessageModal"),
+                                    onClick: this.handleModalDismiss,
+                                    type: b.F.Hollow
+                                }
                             },
-                            size: b.bb.Small,
-                            title: Object(S.d)("Something went wrong", "RolesPageMessageModal")
+                            size: b.bb.Small
                         }, o.createElement(b.Xa, {
                             padding: 1
                         }, o.createElement(b.W, null, Object(S.d)("There was an error modifying roles for {user}.", {
@@ -2357,11 +2362,11 @@
                 return Object(S.d)("Editor", "FilterUsersComponent")
             }
 
-            function Fe() {
+            function Le() {
                 return Object(S.d)("Moderator", "FilterUsersComponent")
             }
 
-            function Le() {
+            function Fe() {
                 return Object(S.d)("VIP", "FilterUsersComponent")
             }
             var Re, Pe = 28.5,
@@ -2407,7 +2412,7 @@
                         }, o.createElement(Te, {
                             checked: n,
                             disabled: i,
-                            label: Fe(),
+                            label: Le(),
                             onCheckBoxChange: r,
                             margin: {
                                 x: 1,
@@ -2418,7 +2423,7 @@
                         }), this.props.isVIPUnlocked && o.createElement(Te, {
                             checked: i,
                             disabled: n || this.props.isAtMaxVIPUserLimit && !i,
-                            label: Le(),
+                            label: Fe(),
                             onCheckBoxChange: r,
                             margin: {
                                 x: 1,
@@ -2483,8 +2488,8 @@
                             i = e.user,
                             r = this.state.isBalloonOpen,
                             a = we(),
-                            s = Fe(),
-                            l = Le(),
+                            s = Le(),
+                            l = Fe(),
                             d = i.isEditor,
                             c = i.isMod,
                             u = i.isVIP;
@@ -3269,9 +3274,9 @@
                             case C.EDITOR:
                                     return we();
                             case C.MODERATOR:
-                                    return Fe();
+                                    return Le();
                             case C.VIP:
-                                    return Le()
+                                    return Fe()
                         }
                     }, t
                 }(o.Component)),

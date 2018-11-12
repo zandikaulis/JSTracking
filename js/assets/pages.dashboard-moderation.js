@@ -1,5 +1,5 @@
 (window.webpackJsonp = window.webpackJsonp || []).push([
-    [174], {
+    [175], {
         "2bi+": function(e, t, n) {
             "use strict";
             n("DLhE");
@@ -1071,8 +1071,8 @@
                 l = n("/0dD"),
                 d = n("76Lv"),
                 u = 4.5,
-                m = [239, 238, 241],
-                p = [14, 12, 19],
+                m = [250, 249, 250],
+                p = [15, 14, 17],
                 f = .1,
                 h = 50,
                 g = "7A7A7A",
@@ -6227,7 +6227,6 @@
                         return i.createElement(m.Eb, {
                             className: o("video-chat", "qa-vod-chat"),
                             display: m.X.Flex,
-                            background: m.r.Alt2,
                             borderLeft: !0,
                             color: m.O.Alt,
                             flexDirection: m.Aa.Column,
@@ -6236,8 +6235,9 @@
                             fullHeight: !0,
                             fullWidth: !0,
                             position: m.jb.Relative
-                        }, i.createElement(m.Xa, {
+                        }, i.createElement(m.Eb, {
                             alignItems: m.f.Center,
+                            background: m.r.Alt,
                             className: "video-chat__header",
                             display: m.X.Flex,
                             flexShrink: 0,
@@ -6347,7 +6347,7 @@
                 y = n("F6GT"),
                 S = n("x0gr"),
                 _ = c.a.wrap(function() {
-                    return n.e(198).then(n.bind(null, "8MX0"))
+                    return n.e(199).then(n.bind(null, "8MX0"))
                 }, "ChatSettingsComponent"),
                 E = function(e) {
                     function t() {

@@ -2936,7 +2936,7 @@
                     }
                 }), Object(d.a)(function(e) {
                     return {
-                        topic: e.user ? Object(c.D)(e.user.id) : "",
+                        topic: e.user ? Object(c.E)(e.user.id) : "",
                         query: O,
                         variables: {
                             channelID: e.channelID
