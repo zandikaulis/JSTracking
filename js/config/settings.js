@@ -1200,6 +1200,18 @@ window.__twilightSettings = {
                 "value": "variant"
             }]
         },
+        "90c60e63-f179-4892-8c23-4585e3105750": {
+            "name": "emote_card",
+            "v": 5116,
+            "t": 2,
+            "groups": [{
+                "weight": 100,
+                "value": "control"
+            }, {
+                "weight": 0,
+                "value": "treatment"
+            }]
+        },
         "92431fe1-66e1-4f09-9533-83c8f6c82fbd": {
             "name": "twilight_bits_button_balance",
             "v": 4200,
