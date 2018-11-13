@@ -701,21 +701,21 @@
                         }
                     }), Object(l.a)([{
                         topic: function(e) {
-                            return Object(m.F)(e.currentUserID)
+                            return Object(m.G)(e.currentUserID)
                         },
                         mapMessageTypesToProps: (a = {}, a[d.PubsubMessageType.ChatNotification] = "userCommerceUpdateEvent", a)
                     }])], t)
                 }(r.Component),
-                T = Object(u.a)(S, {
+                I = Object(u.a)(S, {
                     name: "dismissPurchaseToken"
                 })(Object(u.a)(y, {
                     name: "sharePurchaseTokenInChat"
                 })(E));
-            var I = Object(o.connect)(function(e) {
+            var T = Object(o.connect)(function(e) {
                     return {
                         currentUserID: e.session.user && "" + e.session.user.id || ""
                     }
-                })(T),
+                })(I),
                 R = n("kRBY"),
                 w = n("oJmH"),
                 L = (n("tRzL"), function(e) {
@@ -896,7 +896,7 @@
                     }
                 }), Object(l.a)([{
                     topic: function(e) {
-                        return Object(m.H)(e.currentUserId ? e.currentUserId : "")
+                        return Object(m.I)(e.currentUserId ? e.currentUserId : "")
                     },
                     mapMessageTypesToProps: {
                         "*": "subscriptionInfo"
@@ -963,7 +963,7 @@
                         dismissSpace: this.dismissResubSpace
                     })), r.createElement(k.Xa, {
                         className: n
-                    }, r.createElement(I, {
+                    }, r.createElement(T, {
                         channelDisplayName: this.props.channelDisplayName,
                         channelLogin: this.props.channelLogin,
                         bitsConfig: this.props.bitsConfig,

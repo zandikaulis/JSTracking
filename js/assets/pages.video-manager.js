@@ -3040,34 +3040,35 @@
                 kn = Object(gn.b)("MiniVideoStats", {
                     autoReportInteractive: !0
                 })(Sn),
-                wn = "preciseCutsAnnouncementDismissed",
-                On = function(e) {
+                wn = n("a1OF"),
+                On = "preciseCutsAnnouncementDismissed",
+                Mn = function(e) {
                     function t(t) {
                         var n = e.call(this, t) || this;
                         return n.handleDismiss = function() {
-                            d.m.set(wn, !0), n.setState({
+                            d.m.set(On, !0), n.setState({
                                 isDismissed: !0
                             })
                         }, n.state = {
-                            isDismissed: d.m.get(wn, !1)
+                            isDismissed: d.m.get(On, !1)
                         }, n
                     }
                     return l.__extends(t, e), t.prototype.render = function() {
                         return this.state.isDismissed ? tn.createElement(fn.d, null) : tn.createElement(fn.a, {
                             buttonLink: "/manager/highlighter",
                             buttonText: Object(d.d)("Try it out", "VideoManagerAnnouncement"),
-                            emote: "88",
                             headerText: Object(d.d)("We've upgraded the Highlighter", "VideoManagerAnnouncement"),
                             headerLink: "/manager/highlighter",
+                            onDismiss: this.handleDismiss,
+                            src: Object(wn.d)("88", 3),
                             subtitleText: Object(d.d)("The Highlighter is now more precise with start and end points.", "VideoManagerAnnouncement"),
-                            trackingType: "video_manager_announcement",
-                            onDismiss: this.handleDismiss
+                            trackingType: "video_manager_announcement"
                         })
                     }, t
                 }(tn.Component),
-                Mn = n("/ZC1"),
-                In = "video-upload-error-text",
-                Vn = function(e) {
+                In = n("/ZC1"),
+                Vn = "video-upload-error-text",
+                xn = function(e) {
                     function t() {
                         var t = null !== e && e.apply(this, arguments) || this;
                         return t.getErrorMessage = function(e) {
@@ -3078,7 +3079,7 @@
                                 flexWrap: fe.Ba.NoWrap
                             }, tn.createElement(fe.W, {
                                 fontSize: fe.Ca.Size5,
-                                "data-test-selector": In
+                                "data-test-selector": Vn
                             }, e))
                         }, t
                     }
@@ -3093,7 +3094,7 @@
                         }, e)) : null
                     }, t
                 }(tn.Component),
-                xn = (n("2obe"), function(e) {
+                An = (n("2obe"), function(e) {
                     function t() {
                         return null !== e && e.apply(this, arguments) || this
                     }
@@ -3102,7 +3103,7 @@
                             className: "upload-box",
                             position: fe.jb.Relative,
                             fullWidth: !0
-                        }, tn.createElement(Mn.a, {
+                        }, tn.createElement(In.a, {
                             allowedFileTypes: _.e,
                             onFilesSubmitted: this.props.onFilesSubmitted,
                             error: this.props.errors.length > 0,
@@ -3139,7 +3140,7 @@
                         }, Object(d.d)("Drag and drop or select files to upload", "UploadFilesBox")), tn.createElement(fe.W, {
                             fontSize: fe.Ca.Size6,
                             color: fe.O.Alt2
-                        }, Object(d.d)("The Twitch uploader supports MP4, MOV, AVI and FLV files. Encoding must be H.264. Max file size is 20 GB.", "UploadFilesBox"))) : tn.createElement(Vn, {
+                        }, Object(d.d)("The Twitch uploader supports MP4, MOV, AVI and FLV files. Encoding must be H.264. Max file size is 20 GB.", "UploadFilesBox"))) : tn.createElement(xn, {
                             errors: this.props.errors
                         })
                     }, t.prototype.renderUploadIcon = function() {
@@ -3164,10 +3165,10 @@
                         }))
                     }, t
                 }(tn.Component)),
-                An = n("rj3Y"),
-                jn = n("wUQP"),
-                Nn = n("17x9"),
-                Fn = function(e) {
+                jn = n("rj3Y"),
+                Nn = n("wUQP"),
+                Fn = n("17x9"),
+                Pn = function(e) {
                     function t() {
                         var t = null !== e && e.apply(this, arguments) || this;
                         return t.handleClick = function() {
@@ -3192,10 +3193,10 @@
                             }
                         }, this.props.text)))
                     }, t.contextTypes = {
-                        closeMenu: Nn.func
+                        closeMenu: Fn.func
                     }, t
                 }(tn.Component),
-                Pn = function(e) {
+                Rn = function(e) {
                     function t() {
                         var t = null !== e && e.apply(this, arguments) || this;
                         return t.handleClick = function() {
@@ -3240,16 +3241,16 @@
                             flexGrow: 1
                         }, tn.createElement("span", null, this.props.text)), n))
                     }, t.contextTypes = {
-                        menuChangeCallback: Nn.func
+                        menuChangeCallback: Fn.func
                     }, t
                 }(tn.Component),
-                Rn = n("y6o+"),
-                Un = "add-to-vodcast-queue",
-                Ln = "add-to-collection",
-                Xn = function(e) {
+                Un = n("y6o+"),
+                Ln = "add-to-vodcast-queue",
+                Xn = "add-to-collection",
+                Wn = function(e) {
                     function t() {
                         var t = null !== e && e.apply(this, arguments) || this;
-                        return t.premieresSunset = Object(jn.b)(Rn.a), t.message = function() {
+                        return t.premieresSunset = Object(Nn.b)(Un.a), t.message = function() {
                             return t.props.inVodcastQueue ? Object(d.d)("In Rerun Queue", "VideoManagerMenuPageAddTo") : Object(d.d)("Rerun Queue", "VideoManagerMenuPageAddTo")
                         }, t.onAddVideoToVodcastQueue = function() {
                             t.props.onAddVideoToVodcastQueue(t.props.video)
@@ -3260,7 +3261,7 @@
                             t = e.isAffiliate || e.isPartner || e.isStaff,
                             n = null,
                             a = null;
-                        return this.props.hasMenuNavigationHeader || (n = tn.createElement(Pn, {
+                        return this.props.hasMenuNavigationHeader || (n = tn.createElement(Rn, {
                             icon: fe.tb.Plus,
                             text: Object(d.d)("Add to", "VideoManagerMenuPageAddTo"),
                             navTarget: h.KEY_ROOT,
@@ -3274,25 +3275,25 @@
                             flexGrow: 0
                         })), tn.createElement("div", {
                             "data-test-selector-menu": h.KEY_ADD_TO
-                        }, n, a, tn.createElement(Pn, {
-                            "data-test-selector": Ln,
+                        }, n, a, tn.createElement(Rn, {
+                            "data-test-selector": Xn,
                             text: Object(d.d)("Collections", "VideoManagerMenuPageAddTo"),
                             navTarget: h.KEY_COLLECTIONS,
                             navArrowSide: h.DropdownMenuNavDirection.Right
-                        }), (!this.premieresSunset || t) && tn.createElement(Fn, {
-                            "data-test-selector": Un,
+                        }), (!this.premieresSunset || t) && tn.createElement(Pn, {
+                            "data-test-selector": Ln,
                             disabled: this.props.inVodcastQueue || this.props.vodcastQueueUnavailable,
                             text: this.message(),
                             onClick: this.onAddVideoToVodcastQueue
                         }))
                     }, t
                 }(tn.Component),
-                Wn = (n("zHWM"), n("MxAq")),
-                Bn = n("SiBg"),
-                Gn = n("8Ad5"),
-                zn = "CollectionTitle",
-                Hn = "CollectionCreateButton",
-                Qn = function(e) {
+                Bn = (n("zHWM"), n("MxAq")),
+                Gn = n("SiBg"),
+                zn = n("8Ad5"),
+                Hn = "CollectionTitle",
+                Qn = "CollectionCreateButton",
+                Kn = function(e) {
                     function t() {
                         var t = null !== e && e.apply(this, arguments) || this;
                         return t.state = {}, t.onTitleChange = function(e) {
@@ -3323,7 +3324,7 @@
                                 })
                             })
                         }, t.onKeyDown = function(e) {
-                            e.keyCode === Gn.a.Enter && t.hasTitle() && t.onSubmit()
+                            e.keyCode === zn.a.Enter && t.hasTitle() && t.onSubmit()
                         }, t.hasTitle = function() {
                             return Boolean(t.state.title && t.state.title.length > 0)
                         }, t.saveInputRef = function(e) {
@@ -3342,7 +3343,7 @@
                                 right: .5
                             }
                         }, tn.createElement(fe.Ra, {
-                            "data-test-selector": zn,
+                            "data-test-selector": Hn,
                             autoComplete: "off",
                             name: "collection-name",
                             placeholder: Object(d.d)("Create a collection", "VideoManagerMenuPageCollections"),
@@ -3355,17 +3356,17 @@
                             flexShrink: 0
                         }, tn.createElement(fe.z, {
                             onClick: this.onSubmit,
-                            "data-test-selector": Hn,
+                            "data-test-selector": Qn,
                             disabled: !this.hasTitle()
                         }, Object(d.d)("Create", "VideoManagerMenuPageCollections")))) : tn.createElement(fe.Xa, null)
                     }, t = l.__decorate([Object(gn.b)("CollectionCreator")], t)
                 }(tn.Component);
-            var Kn = Object(a.connect)(null, function(e) {
+            var qn = Object(a.connect)(null, function(e) {
                     return Object(i.bindActionCreators)({
-                        createCollectionWithVideo: Bn.d
+                        createCollectionWithVideo: Gn.d
                     }, e)
-                })(Qn),
-                qn = function(e) {
+                })(Kn),
+                Yn = function(e) {
                     function t() {
                         var t = null !== e && e.apply(this, arguments) || this;
                         return t.state = {
@@ -3375,7 +3376,7 @@
                     return l.__extends(t, e), t.prototype.render = function() {
                         return tn.createElement("div", {
                             "data-test-selector-menu": h.KEY_COLLECTIONS
-                        }, tn.createElement(Pn, {
+                        }, tn.createElement(Rn, {
                             text: Object(d.d)("Collections", "VideoManagerMenuPageCollections"),
                             navTarget: h.KEY_ADD_TO,
                             navArrowSide: h.DropdownMenuNavDirection.Left
@@ -3388,36 +3389,36 @@
                             flexWrap: fe.Ba.NoWrap
                         }), tn.createElement(fe.Xa, {
                             padding: .5
-                        }, tn.createElement(Kn, {
+                        }, tn.createElement(qn, {
                             channelID: this.props.channelID,
                             videoID: this.props.video.id,
                             trackingPlace: this.props.trackingPlace
-                        })), tn.createElement(Wn.b, {
+                        })), tn.createElement(Bn.b, {
                             channelID: this.props.channelID,
                             videoID: this.props.video.id,
                             trackingPlace: this.props.trackingPlace
                         }))
                     }, t
                 }(tn.Component);
-            var Yn, Zn, Jn = Object(a.connect)(function(e) {
+            var Zn, Jn, $n = Object(a.connect)(function(e) {
                     return {
                         videoID: e.collections.videoID
                     }
-                })(qn),
-                $n = n("rnKL"),
-                ea = n("4rCz"),
-                ta = n("G6Bw");
+                })(Yn),
+                ea = n("rnKL"),
+                ta = n("4rCz"),
+                na = n("G6Bw");
 
-            function na(e) {
-                return ea.q.apollo.client.query({
-                    query: ta,
+            function aa(e) {
+                return ta.q.apollo.client.query({
+                    query: na,
                     variables: {
                         videoID: e
                     }
                 })
             }
 
-            function aa(e, t) {
+            function ia(e, t) {
                 return l.__awaiter(this, void 0, void 0, function() {
                     var n, a, i, r, o, s;
                     return l.__generator(this, function(l) {
@@ -3425,13 +3426,13 @@
                             case 0:
                                 n = d.o.getLastPageview(), a = n && n.location || hn.PageviewLocation.None, i = null, r = null, l.label = 1;
                             case 1:
-                                return l.trys.push([1, 3, , 4]), [4, na(e)];
+                                return l.trys.push([1, 3, , 4]), [4, aa(e)];
                             case 2:
                                 return (o = l.sent().data).video && o.video.owner && (i = o.video.owner.login, r = o.video.owner.id), [3, 4];
                             case 3:
-                                return s = l.sent(), d.k.error(s, na.name), [3, 4];
+                                return s = l.sent(), d.k.error(s, aa.name), [3, 4];
                             case 4:
-                                return d.o.track($n.a.VODDownloadClick, {
+                                return d.o.track(ea.a.VODDownloadClick, {
                                     vod_id: e,
                                     vod_type: t,
                                     location: a,
@@ -3443,14 +3444,14 @@
                 })
             }! function(e) {
                 e.CloseInteraction = "past_broadcast_storage_upsell_close"
-            }(Yn || (Yn = {})),
+            }(Zn || (Zn = {})),
             function(e) {
                 e.Cancel = "cancel", e.Remove = "remove"
-            }(Zn || (Zn = {}));
-            var ia = "preparing",
-                ra = "download",
-                oa = "download-button",
-                sa = function(e) {
+            }(Jn || (Jn = {}));
+            var ra = "preparing",
+                oa = "download",
+                sa = "download-button",
+                la = function(e) {
                     function t() {
                         var t = null !== e && e.apply(this, arguments) || this;
                         return t.onDownload = function() {
@@ -3459,7 +3460,7 @@
                                 return l.__generator(this, function(t) {
                                     switch (t.label) {
                                         case 0:
-                                            aa(this.props.video.id, this.props.video.broadcastType), t.label = 1;
+                                            ia(this.props.video.id, this.props.video.broadcastType), t.label = 1;
                                         case 1:
                                             return t.trys.push([1, 3, , 4]), [4, this.props.onDownloadVideo(this.props.video)];
                                         case 2:
@@ -3478,7 +3479,7 @@
                         return tn.createElement(fe.Ua, {
                             onClick: this.onDownload,
                             disabled: e,
-                            "data-test-selector": oa
+                            "data-test-selector": sa
                         }, tn.createElement(fe.Pa, {
                             padding: 1,
                             flexGrow: 1,
@@ -3487,7 +3488,7 @@
                         }, e ? this.renderPreparingState() : this.renderDownloadState()))
                     }, t.prototype.renderDownloadState = function() {
                         return tn.createElement(fe.Eb, {
-                            "data-test-selector": ra
+                            "data-test-selector": oa
                         }, tn.createElement(fe.Xa, {
                             padding: {
                                 right: 1
@@ -3497,7 +3498,7 @@
                         })), tn.createElement("span", null, Object(d.d)("Download", "VideoManagerMenuRoot")))
                     }, t.prototype.renderPreparingState = function() {
                         return tn.createElement(fe.Xa, {
-                            "data-test-selector": ia
+                            "data-test-selector": ra
                         }, tn.createElement(fe.Xa, {
                             padding: {
                                 right: 1
@@ -3506,10 +3507,10 @@
                             size: fe.Cb.Small
                         })), tn.createElement("span", null, Object(d.d)("Preparing...", "VideoManagerMenuRoot")))
                     }, t.contextTypes = {
-                        closeMenu: Nn.func
+                        closeMenu: Fn.func
                     }, t
                 }(tn.Component),
-                la = function(e) {
+                da = function(e) {
                     function t() {
                         var t = null !== e && e.apply(this, arguments) || this;
                         return t.handleClick = function() {
@@ -3535,23 +3536,23 @@
                             }
                         }, this.props.text)))
                     }, t.contextTypes = {
-                        closeMenu: Nn.func
+                        closeMenu: Fn.func
                     }, t
                 }(tn.Component),
-                da = n("16Gl"),
-                ca = "delete-video",
-                ua = "add-selector",
-                pa = "highlight-selector",
-                ma = "watch-video",
-                ha = "export",
-                ga = "appeal-muted-tracks",
-                fa = function() {
+                ca = n("16Gl"),
+                ua = "delete-video",
+                pa = "add-selector",
+                ma = "highlight-selector",
+                ha = "watch-video",
+                ga = "export",
+                fa = "appeal-muted-tracks",
+                va = function() {
                     return Object(d.d)("Highlight", "VideoManagerMenuRoot")
                 },
-                va = function() {
+                ba = function() {
                     return Object(d.d)("Watch", "VideoManagerMenuRoot")
                 },
-                ba = function(e) {
+                Ea = function(e) {
                     function t() {
                         var t = null !== e && e.apply(this, arguments) || this;
                         return t.onDelete = function() {
@@ -3566,56 +3567,56 @@
                             n = Ue(this.props.video);
                         return tn.createElement("div", {
                             "data-test-selector-menu": h.KEY_ROOT
-                        }, e.menu.canEdit && tn.createElement(la, {
+                        }, e.menu.canEdit && tn.createElement(da, {
                             icon: fe.tb.Edit,
                             text: Object(d.d)("Edit", "VideoManagerMenuRoot"),
-                            link: Object(da.b)(this.props.channelName, this.props.video.id)
-                        }), ke(e) && tn.createElement(Pn, {
-                            "data-test-selector": ua,
+                            link: Object(ca.b)(this.props.channelName, this.props.video.id)
+                        }), ke(e) && tn.createElement(Rn, {
+                            "data-test-selector": pa,
                             icon: fe.tb.Plus,
                             text: Object(d.d)("Add to", "VideoManagerMenuRoot"),
                             navTarget: h.KEY_ADD_TO,
                             navArrowSide: h.DropdownMenuNavDirection.Right
-                        }), this.props.isOwner && this.props.video.mutedSegments && this.props.video.mutedSegments.length > 0 && tn.createElement(la, {
+                        }), this.props.isOwner && this.props.video.mutedSegments && this.props.video.mutedSegments.length > 0 && tn.createElement(da, {
                             icon: fe.tb.Muted,
                             text: Object(d.d)("Appeal Muted Audio", "VideoManagerMenuRoot"),
-                            link: Object(da.a)(this.props.channelName, this.props.video.id),
-                            "data-test-selector": ga
-                        }), e.menu.canDownload && tn.createElement(sa, {
+                            link: Object(ca.a)(this.props.channelName, this.props.video.id),
+                            "data-test-selector": fa
+                        }), e.menu.canDownload && tn.createElement(la, {
                             onDownloadVideo: this.props.onDownloadVideo,
                             video: this.props.video,
                             videoDownloads: this.props.videoDownloads
-                        }), e.menu.canHighlight && tn.createElement(la, {
-                            "data-test-selector": pa,
-                            icon: fe.tb.Clip,
-                            text: fa(),
-                            link: Object(da.c)(this.props.channelName, this.props.video.id),
-                            targetBlank: !0
-                        }), n && tn.createElement(la, {
-                            icon: fe.tb.Play,
-                            text: va(),
-                            link: this.props.video.url,
+                        }), e.menu.canHighlight && tn.createElement(da, {
                             "data-test-selector": ma,
+                            icon: fe.tb.Clip,
+                            text: va(),
+                            link: Object(ca.c)(this.props.channelName, this.props.video.id),
                             targetBlank: !0
-                        }), t && tn.createElement(Fn, {
+                        }), n && tn.createElement(da, {
+                            icon: fe.tb.Play,
+                            text: ba(),
+                            link: this.props.video.url,
                             "data-test-selector": ha,
+                            targetBlank: !0
+                        }), t && tn.createElement(Pn, {
+                            "data-test-selector": ga,
                             onClick: this.onExport,
                             icon: fe.tb.Upload,
                             text: Object(d.d)("Export", "VideoManagerMenuRoot")
                         }), tn.createElement("div", {
                             className: "mg-05 border-t border-l font-size-6 flex-grow-0 flex flex-nowrap"
-                        }), tn.createElement(Fn, {
+                        }), tn.createElement(Pn, {
                             icon: fe.tb.Trash,
                             text: Object(d.d)("Delete", "VideoManagerMenuRoot"),
                             onClick: this.onDelete,
                             "data-a-target": "delete-video-option",
-                            "data-test-selector": ca
+                            "data-test-selector": ua
                         }))
                     }, t
                 }(tn.Component),
-                Ea = n("TSYQ"),
-                ya = n("u5aL"),
-                Ca = (n("5mUL"), function(e) {
+                ya = n("TSYQ"),
+                Ca = n("u5aL"),
+                _a = (n("5mUL"), function(e) {
                     function t(t) {
                         var n = e.call(this, t) || this;
                         return n.handleMenuChange = function(e, t) {
@@ -3656,7 +3657,7 @@
                                 return e.props.contentKey === t.state.currentKey
                             }),
                             a = n && n.props.contentKey === h.KEY_COLLECTIONS,
-                            i = Ea("video-card-dropdown__dropdown-wrapper", {
+                            i = ya("video-card-dropdown__dropdown-wrapper", {
                                 "video-card-dropdown__hidden": !this.state.isDropdownMenuOpen,
                                 "video-card-dropdown__dropdown-wrapper-right": this.props.isRightAligned,
                                 "video-card-dropdown__dropdown-wide": a,
@@ -3690,7 +3691,7 @@
                             refDelegate: this.refHandler
                         }, tn.createElement(fe.Pa, {
                             fullHeight: !0
-                        }, tn.createElement(ya.a, {
+                        }, tn.createElement(Ca.a, {
                             className: "video-manager-card--menu",
                             onClickOut: this.onClickOut
                         }, e, tn.createElement("div", {
@@ -3707,12 +3708,12 @@
                             closeMenu: this.onClickOut
                         }
                     }, t.childContextTypes = {
-                        menuChangeCallback: Nn.func,
-                        closeMenu: Nn.func
+                        menuChangeCallback: Fn.func,
+                        closeMenu: Fn.func
                     }, t
                 }(tn.Component)),
-                _a = n("cZKs"),
-                Ta = (n("0Kx4"), function(e) {
+                Ta = n("cZKs"),
+                Da = (n("0Kx4"), function(e) {
                     function t() {
                         var t = null !== e && e.apply(this, arguments) || this;
                         return t.onConfirm = function() {
@@ -3745,12 +3746,12 @@
                             onClick: this.onConfirm,
                             "data-a-target": "confirm",
                             "data-test-selector": "confirm-button"
-                        }, Object(d.d)("Yes, cancel Premiere", "CancelPremiereModal"))), tn.createElement(_a.a, {
+                        }, Object(d.d)("Yes, cancel Premiere", "CancelPremiereModal"))), tn.createElement(Ta.a, {
                             closeOnBackdropClick: !0
                         }))
                     }, t
                 }(tn.Component)),
-                Da = (n("N1GE"), function(e) {
+                Sa = (n("N1GE"), function(e) {
                     function t() {
                         return null !== e && e.apply(this, arguments) || this
                     }
@@ -3792,17 +3793,17 @@
                             linkTo: this.props.onConfirm,
                             onClick: this.props.closeModal,
                             "data-test-selector": "confirm-button"
-                        }, Object(d.d)("Publish without Premiere", "ConfirmPublishModal"))), tn.createElement(_a.a, {
+                        }, Object(d.d)("Publish without Premiere", "ConfirmPublishModal"))), tn.createElement(Ta.a, {
                             closeOnBackdropClick: !0
                         }))
                     }, t
                 }(tn.Component)),
-                Sa = (n("jyE2"), function(e) {
+                ka = (n("jyE2"), function(e) {
                     function t() {
                         var t = null !== e && e.apply(this, arguments) || this;
                         return t.state = {
                             actionDropdownOpen: !1
-                        }, t.premieresSunset = Object(jn.b)(Rn.a), t.onScheduleDropdownClick = function() {
+                        }, t.premieresSunset = Object(Nn.b)(Un.a), t.onScheduleDropdownClick = function() {
                             t.setState(function(e) {
                                 return {
                                     actionDropdownOpen: !e.actionDropdownOpen
@@ -3816,7 +3817,7 @@
                             if (e.callToActionButton && e.callToActionButton.dropdownActions && e.callToActionButton.dropdownActions.length > 0) return tn.createElement("span", {
                                 className: "premiere-dropdown",
                                 "data-a-target": "premiere-dropdown"
-                            }, tn.createElement(ya.a, {
+                            }, tn.createElement(Ca.a, {
                                 className: "premiere-dropdown__clickout",
                                 onClickOut: t.hideScheduleDropdown
                             }, tn.createElement(fe.z, {
@@ -3863,12 +3864,12 @@
                                 "data-test-selector": "primary-action"
                             }, Object(d.d)("Publish Now", "VideoCardPremiereButton")))
                         }, t.onCancelPremiere = function() {
-                            t.props.showModal(Ta, {
+                            t.props.showModal(Da, {
                                 closeModal: t.props.closeModal,
                                 onConfirm: t.props.onDeletePremiere
                             }), t.hideScheduleDropdown()
                         }, t.onImmediatePublish = function() {
-                            t.props.showModal(Da, {
+                            t.props.showModal(Sa, {
                                 dismissModalPermanently: t.props.dismissImmediatePublishModal,
                                 closeModal: t.props.closeModal,
                                 onConfirm: t.props.publishURL
@@ -3903,7 +3904,7 @@
                         }
                     }, t
                 }(tn.Component)),
-                ka = (n("DG6M"), function(e) {
+                wa = (n("DG6M"), function(e) {
                     function t() {
                         var t = null !== e && e.apply(this, arguments) || this;
                         return t.handleClick = function(e) {
@@ -3947,9 +3948,9 @@
                         }, Object(En.a)(this.props)), a) : a
                     }, t
                 }(tn.Component)),
-                wa = "status-bar-published",
-                Oa = "stat-view-count",
-                Ma = function(e) {
+                Oa = "status-bar-published",
+                Ma = "stat-view-count",
+                Ia = function(e) {
                     function t() {
                         return null !== e && e.apply(this, arguments) || this
                     }
@@ -3961,7 +3962,7 @@
                         }
                         return this.props.video.viewableAt ? tn.createElement("div", {
                             className: "video-card__status-display-bar",
-                            "data-test-selector": wa
+                            "data-test-selector": Oa
                         }, Object(d.d)("Scheduled: {scheduledDate}", {
                             scheduledDate: e
                         }, "VideoManager")) : this.props.showViewCount ? tn.createElement(fe.Eb, {
@@ -3969,30 +3970,30 @@
                             fullWidth: !0,
                             color: fe.O.Link,
                             className: "video-card__status-display-bar"
-                        }, tn.createElement(ka, {
+                        }, tn.createElement(wa, {
                             stat: this.props.video.viewCount,
                             icon: fe.tb.GlyphViews,
                             label: "Views",
                             video: this.props.video,
                             hoverDisplay: !0,
-                            "data-test-selector": Oa
+                            "data-test-selector": Ma
                         })) : null
                     }, t
                 }(tn.Component),
-                Ia = n("hyVY"),
-                Va = "video-card-sub-pill-selector",
-                xa = "video-card-broadcast-type-stat-selector",
-                Aa = "video-card-duration-stat-selector",
-                ja = "video-card-publish-date-selector",
-                Na = "video-card-scheduled-date-selector",
-                Fa = function(e) {
+                Va = n("hyVY"),
+                xa = "video-card-sub-pill-selector",
+                Aa = "video-card-broadcast-type-stat-selector",
+                ja = "video-card-duration-stat-selector",
+                Na = "video-card-publish-date-selector",
+                Fa = "video-card-scheduled-date-selector",
+                Pa = function(e) {
                     function t() {
                         return null !== e && e.apply(this, arguments) || this
                     }
                     return l.__extends(t, e), t.prototype.render = function() {
                         var e = null;
                         return this.props.subOnlyChannel && (e = tn.createElement(fe.gb, {
-                            "data-test-selector": Va,
+                            "data-test-selector": xa,
                             label: Object(d.d)("Sub-only", "VideoManager")
                         })), tn.createElement(fe.Eb, {
                             color: fe.O.Alt2,
@@ -4031,7 +4032,7 @@
                             margin: {
                                 right: 1
                             },
-                            "data-test-selector": Na
+                            "data-test-selector": Fa
                         }, tn.createElement(fe.Xa, {
                             margin: {
                                 right: 1
@@ -4060,7 +4061,7 @@
                             margin: {
                                 right: 1
                             },
-                            "data-test-selector": ja
+                            "data-test-selector": Na
                         }, e.toLocaleDateString())
                     }, t.prototype.renderViewCount = function() {
                         return tn.createElement(fe.Xa, {
@@ -4077,7 +4078,7 @@
                             icon: fe.tb.GlyphViews
                         }))
                     }, t.prototype.durationElement = function(e) {
-                        var t = this.props.video.lengthSeconds ? Object(Ia.b)(this.props.video.lengthSeconds) : "--:--";
+                        var t = this.props.video.lengthSeconds ? Object(Va.b)(this.props.video.lengthSeconds) : "--:--";
                         return e ? tn.createElement(fe.Xa, {
                             display: fe.X.Flex,
                             alignItems: fe.f.Center,
@@ -4105,7 +4106,7 @@
                             label: Object(d.d)("Duration", "VideoManager"),
                             value: e,
                             icon: fe.tb.GlyphLength,
-                            "data-test-selector": Aa
+                            "data-test-selector": ja
                         })
                     }, t.prototype.broadcastTypeElement = function() {
                         return tn.createElement(fe.Xa, {
@@ -4125,23 +4126,23 @@
                             label: Object(d.d)("Type", "VideoManager.VideoLabel"),
                             value: Object(T.a)(this.props.video.broadcastType),
                             icon: fe.tb.NavVideos,
-                            "data-test-selector": xa
+                            "data-test-selector": Aa
                         }))
                     }, t
                 }(tn.Component),
-                Pa = 1024,
-                Ra = Pa * Pa,
-                Ua = Ra * Pa;
+                Ra = 1024,
+                Ua = Ra * Ra,
+                La = Ua * Ra;
 
-            function La(e) {
+            function Xa(e) {
                 return Number(e.toFixed(1))
             }
             n("PEIf");
-            var Xa, Wa = "video_card_thumbnail_uploading_selector",
-                Ba = "video_card_thumbnail_selector",
-                Ga = "video_card_thumbnail_overlay_selector",
-                za = "video_card_thumbnail_overlay_icon_selector",
-                Ha = function(e) {
+            var Wa, Ba = "video_card_thumbnail_uploading_selector",
+                Ga = "video_card_thumbnail_selector",
+                za = "video_card_thumbnail_overlay_selector",
+                Ha = "video_card_thumbnail_overlay_icon_selector",
+                Qa = function(e) {
                     function t() {
                         return null !== e && e.apply(this, arguments) || this
                     }
@@ -4157,7 +4158,7 @@
                             }
                         }, tn.createElement(fe.sb, {
                             asset: t.overlayIcon,
-                            "data-test-selector": za
+                            "data-test-selector": Ha
                         })));
                         var r = Pe(this.props.video),
                             o = e.subrow;
@@ -4192,7 +4193,7 @@
                                 textAlign: fe.Rb.Center,
                                 "data-a-target": "video-card-thumbnail",
                                 className: "video-card-thumbnail__video-state-overlay",
-                                "data-test-selector": Ga
+                                "data-test-selector": za
                             }, n, tn.createElement(fe.W, null, t), a)
                         }
                         return i
@@ -4202,7 +4203,7 @@
                             className: "video-card-thumbnail__wrapper"
                         }, tn.createElement("figure", {
                             className: "video-card-thumbnail",
-                            "data-test-selector": Ba
+                            "data-test-selector": Ga
                         }, tn.createElement(fe.o, {
                             ratio: fe.p.Aspect16x9,
                             align: fe.d.Center
@@ -4214,19 +4215,19 @@
                         if (this.props.videoUpload) return tn.createElement(fe.W, {
                             color: fe.O.OverlayAlt,
                             "data-a-target": "video-card-thumbnail-uploading",
-                            "data-test-selector": Wa
+                            "data-test-selector": Ba
                         }, function(e, t, n) {
-                            return t >= Ua ? Object(d.d)("{progress, number} GB / {total, number} GB ({percentage, number}%)", {
-                                progress: La(e / Ua),
-                                total: La(t / Ua),
+                            return t >= La ? Object(d.d)("{progress, number} GB / {total, number} GB ({percentage, number}%)", {
+                                progress: Xa(e / La),
+                                total: Xa(t / La),
                                 percentage: n
-                            }, "VideoManager.Uploader") : t >= Ra ? Object(d.d)("{progress, number} MB / {total, number} MB ({percentage, number}%)", {
-                                progress: La(e / Ra),
-                                total: La(t / Ra),
+                            }, "VideoManager.Uploader") : t >= Ua ? Object(d.d)("{progress, number} MB / {total, number} MB ({percentage, number}%)", {
+                                progress: Xa(e / Ua),
+                                total: Xa(t / Ua),
                                 percentage: n
-                            }, "VideoManager.Uploader") : t >= Pa ? Object(d.d)("{progress, number} KB / {total, number} KB ({percentage, number}%)", {
-                                progress: La(e / Pa),
-                                total: La(t / Pa),
+                            }, "VideoManager.Uploader") : t >= Ra ? Object(d.d)("{progress, number} KB / {total, number} KB ({percentage, number}%)", {
+                                progress: Xa(e / Ra),
+                                total: Xa(t / Ra),
                                 percentage: n
                             }, "VideoManager.Uploader") : Object(d.d)("{progress, number} B / {total, number} B ({percentage, number}%)", {
                                 progress: e,
@@ -4236,8 +4237,8 @@
                         }(this.props.videoUpload.totalBytesSent, this.props.videoUpload.fileSizeBytes, this.props.videoUpload.progressPercentage))
                     }, t
                 }(tn.Component),
-                Qa = (n("HEef"), "test-selector-error"),
-                Ka = function(e) {
+                Ka = (n("HEef"), "test-selector-error"),
+                qa = function(e) {
                     function t() {
                         var t = null !== e && e.apply(this, arguments) || this;
                         return t.state = {
@@ -4247,14 +4248,14 @@
                             return e.menu.canHighlight ? n = tn.createElement(fe.z, {
                                 type: fe.F.Hollow,
                                 icon: fe.tb.Highlighter,
-                                linkTo: Object(da.c)(t.props.channelName, t.props.video.id),
+                                linkTo: Object(ca.c)(t.props.channelName, t.props.video.id),
                                 targetBlank: !0
-                            }, fa()) : Ue(t.props.video) && (n = tn.createElement(fe.z, {
+                            }, va()) : Ue(t.props.video) && (n = tn.createElement(fe.z, {
                                 type: fe.F.Hollow,
                                 icon: fe.tb.MiniPlayerPlay,
                                 linkTo: t.props.video.url,
                                 targetBlank: !0
-                            }, va())), null === n ? null : tn.createElement(fe.Xa, {
+                            }, ba())), null === n ? null : tn.createElement(fe.Xa, {
                                 display: fe.X.Flex,
                                 alignItems: fe.f.Center,
                                 margin: {
@@ -4270,17 +4271,17 @@
                     return l.__extends(t, e), t.prototype.render = function() {
                         var e = null,
                             t = Fe(this.props.video, this.props.videoUpload);
-                        return e = t.callToActionButton ? tn.createElement(Sa, {
+                        return e = t.callToActionButton ? tn.createElement(ka, {
                             displayProps: t,
                             onDeleteVideo: this.onDeleteVideo,
-                            scheduleURL: Object(da.d)(this.props.channelName, this.props.video.id),
+                            scheduleURL: Object(ca.d)(this.props.channelName, this.props.video.id),
                             showModal: this.props.showModal,
                             closeModal: this.props.closeModal,
                             onDeletePremiere: this.onDeletePremiere,
                             dismissImmediatePublishModal: this.props.dismissImmediatePublishModal,
                             publishURL: "/" + this.props.user.login + "/manager/publish/" + this.props.video.id,
                             user: this.props.user
-                        }) : tn.createElement(Ma, {
+                        }) : tn.createElement(Ia, {
                             video: this.props.video,
                             channelName: this.props.channelName,
                             showViewCount: !this.props.showContextualActions
@@ -4326,7 +4327,7 @@
                         }))
                     }, t.prototype.renderVideoMetadata = function(e) {
                         var t;
-                        return e.interactableMetaData && (this.props.video && e.callToActionButton && e.callToActionButton.action === y.EditPremiereEvent ? t = Object(da.d)(this.props.channelName, this.props.video.id) : e.menu.canEdit && (t = Object(da.b)(this.props.channelName, this.props.video.id))), t ? tn.createElement(fe.Ua, {
+                        return e.interactableMetaData && (this.props.video && e.callToActionButton && e.callToActionButton.action === y.EditPremiereEvent ? t = Object(ca.d)(this.props.channelName, this.props.video.id) : e.menu.canEdit && (t = Object(ca.b)(this.props.channelName, this.props.video.id))), t ? tn.createElement(fe.Ua, {
                             linkTo: t,
                             type: fe.Va.Alpha
                         }, this.renderVideoMetadataCard()) : tn.createElement(fe.Xa, {
@@ -4353,13 +4354,13 @@
                                 return null
                             }(this.props.video, this.props.videoUpload),
                             t = e ? tn.createElement(fe.Xa, null, tn.createElement(fe.W, {
-                                "data-test-selector": Qa,
+                                "data-test-selector": Ka,
                                 bold: !0
                             }, e)) : null;
                         return tn.createElement(fe.G, {
                             row: !0,
                             "data-video-id": this.props.video.id
-                        }, tn.createElement(Ha, {
+                        }, tn.createElement(Qa, {
                             video: this.props.video,
                             videoUpload: this.props.videoUpload
                         }), tn.createElement(fe.H, null, tn.createElement(fe.Xa, {
@@ -4369,7 +4370,7 @@
                         }, tn.createElement(fe.W, {
                             type: fe.Vb.H5,
                             color: fe.O.Alt
-                        }, t, this.props.video.title), tn.createElement(Fa, {
+                        }, t, this.props.video.title), tn.createElement(Pa, {
                             video: this.props.video,
                             subOnlyChannel: this.props.subOnlyChannel,
                             showViewCount: this.props.showContextualActions,
@@ -4380,11 +4381,11 @@
                             flexGrow: 0,
                             flexShrink: 0,
                             position: fe.jb.Relative
-                        }, tn.createElement(Ca, {
+                        }, tn.createElement(_a, {
                             isRightAligned: !0,
                             icon: fe.tb.More,
                             buttonText: Object(d.d)("More Actions", "VideoManagerCard")
-                        }, tn.createElement(ba, {
+                        }, tn.createElement(Ea, {
                             video: this.props.video,
                             channelName: this.props.channelName,
                             contentKey: h.KEY_ROOT,
@@ -4394,7 +4395,7 @@
                             videoUpload: this.props.videoUpload,
                             videoDownloads: this.props.videoDownloads,
                             isOwner: this.props.isOwner
-                        }), tn.createElement(Xn, {
+                        }), tn.createElement(Wn, {
                             inVodcastQueue: this.props.inVodcastQueue,
                             onAddVideoToVodcastQueue: this.props.onAddVideoToVodcastQueue,
                             video: this.props.video,
@@ -4402,37 +4403,37 @@
                             contentKey: h.KEY_ADD_TO,
                             vodcastQueueUnavailable: this.props.vodcastQueueUnavailable,
                             user: this.props.user
-                        }), tn.createElement(Jn, {
+                        }), tn.createElement($n, {
                             video: this.props.video,
                             channelName: this.props.channelName,
                             contentKey: h.KEY_COLLECTIONS,
                             channelID: this.props.user.id,
-                            trackingPlace: An.a.VideoProducerRow
+                            trackingPlace: jn.a.VideoProducerRow
                         }))) : null
                     }, t
                 }(tn.Component),
-                qa = n("tMx0"),
-                Ya = n("6XEL");
+                Ya = n("tMx0"),
+                Za = n("6XEL");
             ! function(e) {
                 e.Control = "control", e.Variant1 = "variant1"
-            }(Xa || (Xa = {}));
-            var Za = "closedUpsellExperiment",
-                Ja = function(e) {
+            }(Wa || (Wa = {}));
+            var Ja = "closedUpsellExperiment",
+                $a = function(e) {
                     function t() {
                         var t = null !== e && e.apply(this, arguments) || this;
                         return t.state = {
                             qualifiesForArchiveEnableExperiment: !1
                         }, t.inUpsellExperiment = d.p.experiments.getAssignment(pn.b.VODEditingYoureWelcome, {
                             channel: t.props.channelLogin
-                        }) === Xa.Variant1, t.closeUpsell = function() {
+                        }) === Wa.Variant1, t.closeUpsell = function() {
                             t.props.user && t.props.currentUser && function(e, t, n) {
-                                d.o.track($n.a.VideoManagerInteraction, {
+                                d.o.track(ea.a.VideoManagerInteraction, {
                                     channel_id: e,
                                     user_id: t,
                                     interaction: "click",
                                     interaction_content: n
                                 })
-                            }(t.props.user.id, t.props.currentUser.id, Yn.CloseInteraction), d.m.set(Za, !0), t.setState({
+                            }(t.props.user.id, t.props.currentUser.id, Zn.CloseInteraction), d.m.set(Ja, !0), t.setState({
                                 qualifiesForArchiveEnableExperiment: !1
                             })
                         }, t
@@ -4474,13 +4475,13 @@
                             return l.__generator(this, function(a) {
                                 switch (a.label) {
                                     case 0:
-                                        return e.user ? d.m.get(Za, !1) || !this.inUpsellExperiment ? [3, 2] : (t = e.user.roles.isPartner || e.user.roles.isAffiliate || e.user.roles.isStaff, [4, this.isArchivesEnabled(e)]) : [3, 2];
+                                        return e.user ? d.m.get(Ja, !1) || !this.inUpsellExperiment ? [3, 2] : (t = e.user.roles.isPartner || e.user.roles.isAffiliate || e.user.roles.isStaff, [4, this.isArchivesEnabled(e)]) : [3, 2];
                                     case 1:
                                         n = a.sent(), this.setState({
                                                 qualifiesForArchiveEnableExperiment: !n && t
                                             }),
                                             function(e) {
-                                                d.o.track($n.a.VideoManagerSectionLoad, {
+                                                d.o.track(ea.a.VideoManagerSectionLoad, {
                                                     section_name: "past_broadcast_storage_upsell",
                                                     channel_id: e
                                                 })
@@ -4504,7 +4505,7 @@
                                                 return l.__generator(this, function(a) {
                                                     switch (a.label) {
                                                         case 0:
-                                                            return t = "/v5/channels/" + e + "/channel_properties", [4, Object(Ya.c)({
+                                                            return t = "/v5/channels/" + e + "/channel_properties", [4, Object(Za.c)({
                                                                 path: t
                                                             })];
                                                         case 1:
@@ -4532,14 +4533,14 @@
                         })
                     }, t
                 }(tn.Component),
-                $a = n("9rZX"),
-                ei = n("4p7I"),
-                ti = n("jKe7"),
-                ni = n("76Lv"),
-                ai = n("4VQm"),
-                ii = "appealing-track",
-                ri = "new-track",
-                oi = function(e) {
+                ei = n("9rZX"),
+                ti = n("4p7I"),
+                ni = n("jKe7"),
+                ai = n("76Lv"),
+                ii = n("4VQm"),
+                ri = "appealing-track",
+                oi = "new-track",
+                si = function(e) {
                     function t() {
                         var t = null !== e && e.apply(this, arguments) || this;
                         return t.appeals = [], t.getAppealReasons = function() {
@@ -4566,10 +4567,10 @@
                         var e = null,
                             t = null;
                         return this.props.track.track_appeal ? (e = tn.createElement(fe.W, {
-                            "data-test-selector": ii
+                            "data-test-selector": ri
                         }, this.props.track.track_appeal.reason), t = tn.createElement(fe.W, null)) : (e = tn.createElement(fe.zb, {
                             onChange: this.onChange,
-                            "data-test-selector": ri
+                            "data-test-selector": oi
                         }, this.getAppealReasons()), t = tn.createElement(fe.sb, {
                             asset: fe.tb.Check,
                             type: 0 !== this.state.selectedIndex ? fe.ub.Success : fe.ub.Placeholder,
@@ -4609,9 +4610,9 @@
                         }, e)))
                     }, t
                 }(tn.PureComponent),
-                si = "appeal",
-                li = "track-row",
-                di = function(e) {
+                li = "appeal",
+                di = "track-row",
+                ci = function(e) {
                     function t() {
                         var t = null !== e && e.apply(this, arguments) || this;
                         return t.onAppealRowUpdate = function(e, n) {
@@ -4643,11 +4644,11 @@
                     }, t.prototype.renderTracks = function(e) {
                         var t = this,
                             n = e.map(function(e) {
-                                return tn.createElement(oi, {
+                                return tn.createElement(si, {
                                     key: e.id,
                                     track: e,
                                     onUpdateAppealReason: t.onAppealRowUpdate,
-                                    "data-test-selector": li
+                                    "data-test-selector": di
                                 })
                             });
                         return tn.createElement(fe.Xa, null, n)
@@ -4750,7 +4751,7 @@
                             }
                         }, tn.createElement(fe.W, {
                             color: fe.O.Alt
-                        }, Object(d.d)("Appeal Reason", "VideoManagerAppealMutedAudioListMutedTracks"))))), tn.createElement(fe.Eb, null, tn.createElement(ai.b, null, tn.createElement(fe.Xa, null, this.renderTracks(e)))), tn.createElement(fe.Eb, {
+                        }, Object(d.d)("Appeal Reason", "VideoManagerAppealMutedAudioListMutedTracks"))))), tn.createElement(fe.Eb, null, tn.createElement(ii.b, null, tn.createElement(fe.Xa, null, this.renderTracks(e)))), tn.createElement(fe.Eb, {
                             display: fe.X.Flex,
                             padding: {
                                 top: 2,
@@ -4759,15 +4760,15 @@
                             borderTop: !0,
                             justifyContent: fe.Wa.Center
                         }, tn.createElement(fe.z, {
-                            "data-test-selector": si,
+                            "data-test-selector": li,
                             onClick: this.onClick
                         }, Object(d.d)("Appeal Selected", "VideoManagerAppealMutedAudio"))))
                     }, t
                 }(tn.PureComponent),
-                ci = "BACK_TEST_SELECTOR",
-                ui = "SUBMIT_TEST_SELECTOR",
-                pi = "TRACK_TEST_SELECTOR",
-                mi = function(e) {
+                ui = "BACK_TEST_SELECTOR",
+                pi = "SUBMIT_TEST_SELECTOR",
+                mi = "TRACK_TEST_SELECTOR",
+                hi = function(e) {
                     function t() {
                         var t = null !== e && e.apply(this, arguments) || this;
                         return t.onSubmit = function() {
@@ -4840,7 +4841,7 @@
                             return tn.createElement(fe.Eb, {
                                 key: e.id,
                                 padding: 1,
-                                "data-test-selector": pi
+                                "data-test-selector": mi
                             }, tn.createElement(fe.Ja, {
                                 gutterSize: fe.Ka.Medium
                             }, tn.createElement(fe.P, {
@@ -4972,24 +4973,24 @@
                         }, tn.createElement(fe.z, {
                             type: fe.F.Text,
                             onClick: this.props.onBack,
-                            "data-test-selector": ci
+                            "data-test-selector": ui
                         }, Object(d.d)("Back", "VideoManagerAppealMutedAudio"))), tn.createElement(fe.Eb, {
                             margin: {
                                 left: 1
                             }
                         }, tn.createElement(fe.z, {
                             onClick: this.onSubmit,
-                            "data-test-selector": ui
+                            "data-test-selector": pi
                         }, Object(d.d)("Submit", "VideoManagerAppealMutedAudio")))), this.renderError())
                     }, t
                 }(tn.PureComponent),
-                hi = (n("HXKT"), "CANCEL_TEST_SELECTOR"),
-                gi = "MODAL_ANIMATION_TEST_SELECTOR",
-                fi = "LIST_MUTED_AUDIO_TRACKS_TEST_SELECTOR",
-                vi = "SUBMIT_APPEAL_TEST_SELECTOR",
-                bi = "no-track",
-                Ei = 15e3,
-                yi = function(e) {
+                gi = (n("HXKT"), "CANCEL_TEST_SELECTOR"),
+                fi = "MODAL_ANIMATION_TEST_SELECTOR",
+                vi = "LIST_MUTED_AUDIO_TRACKS_TEST_SELECTOR",
+                bi = "SUBMIT_APPEAL_TEST_SELECTOR",
+                Ei = "no-track",
+                yi = 15e3,
+                Ci = function(e) {
                     function t() {
                         var t = null !== e && e.apply(this, arguments) || this;
                         return t.state = {
@@ -5001,7 +5002,7 @@
                             },
                             tracksForAppeal: []
                         }, t.timeoutID = null, t.fetchAudioTracks = function() {
-                            t.props.fetchMutedTracks(t.props.videoID), t.timeoutID = setTimeout(t.fetchAudioTracks, Ei)
+                            t.props.fetchMutedTracks(t.props.videoID), t.timeoutID = setTimeout(t.fetchAudioTracks, yi)
                         }, t.onAppealSelected = function(e) {
                             t.setState({
                                 tracksForAppeal: e
@@ -5027,17 +5028,17 @@
                         this.timeoutID && clearTimeout(this.timeoutID), this.props.clearMutedTracks()
                     }, t.prototype.renderFields = function() {
                         var e = null;
-                        return this.props.apiData.mutedTracks.data && 0 !== this.props.apiData.mutedTracks.data.length ? (e = this.state.tracksForAppeal && 0 !== this.state.tracksForAppeal.length ? tn.createElement(mi, l.__assign({}, this.props, {
+                        return this.props.apiData.mutedTracks.data && 0 !== this.props.apiData.mutedTracks.data.length ? (e = this.state.tracksForAppeal && 0 !== this.state.tracksForAppeal.length ? tn.createElement(hi, l.__assign({}, this.props, {
                             error: this.props.apiData.submitAppeal.error,
                             tracksForAppeal: this.state.tracksForAppeal,
                             onBack: this.onBack,
                             onExit: this.onClose,
-                            "data-test-selector": vi
-                        })) : tn.createElement(di, {
+                            "data-test-selector": bi
+                        })) : tn.createElement(ci, {
                             videoID: this.props.videoID,
                             mutedTracks: this.props.apiData.mutedTracks,
                             onAppealSelected: this.onAppealSelected,
-                            "data-test-selector": fi
+                            "data-test-selector": vi
                         }), tn.createElement(fe.i, {
                             type: fe.n.FadeIn,
                             delay: fe.j.Medium,
@@ -5048,7 +5049,7 @@
                         }) : tn.createElement(fe.Eb, {
                             padding: 2,
                             borderTop: !0,
-                            "data-test-selector": bi
+                            "data-test-selector": Ei
                         }, tn.createElement(fe.Xa, null, tn.createElement(fe.W, {
                             fontSize: fe.Ca.Size4
                         }, Object(d.d)("Error: Unable to find muted audio details", "VideoManagerAppealMutedAudio"))), tn.createElement(fe.z, {
@@ -5059,7 +5060,7 @@
                             className: "appeal-muted-audio-modal",
                             position: fe.jb.Fixed
                         }, tn.createElement(fe.i, l.__assign({}, this.state.animationProps, {
-                            "data-test-selector": gi
+                            "data-test-selector": fi
                         }), tn.createElement(fe.Eb, {
                             className: "appeal-muted-audio-modal__content",
                             background: fe.r.Base,
@@ -5068,7 +5069,7 @@
                             fullWidth: !0,
                             fullHeight: !0,
                             padding: 1
-                        }, tn.createElement(ya.a, {
+                        }, tn.createElement(Ca.a, {
                             onClickOut: this.onClose
                         }, tn.createElement(fe.Eb, {
                             display: fe.X.Flex
@@ -5083,16 +5084,16 @@
                         }, tn.createElement(fe.z, {
                             type: fe.F.Text,
                             onClick: this.onClose,
-                            "data-test-selector": hi
+                            "data-test-selector": gi
                         }, tn.createElement(fe.sb, {
                             asset: fe.tb.Close,
                             type: fe.ub.Alt2
-                        })))), tn.createElement(an.b, null, tn.createElement(fe.Xa, null, this.renderFields())))))), tn.createElement(_a.a, {
+                        })))), tn.createElement(an.b, null, tn.createElement(fe.Xa, null, this.renderFields())))))), tn.createElement(Ta.a, {
                             closeOnBackdropClick: !0
                         }))
                     }, t
                 }(tn.PureComponent);
-            var Ci = Object(a.connect)(function(e) {
+            var _i = Object(a.connect)(function(e) {
                 return {
                     isLoggedIn: Object(o.f)(e),
                     apiData: {
@@ -5106,9 +5107,9 @@
                     submitAppeal: Ct,
                     clearMutedTracks: _t
                 }, e)
-            })(yi);
+            })(Ci);
 
-            function _i(e, t, n, a) {
+            function Ti(e, t, n, a) {
                 var i = this;
                 return void 0 === n && (n = void 0), void 0 === a && (a = void 0), Ye(function(r) {
                     return l.__awaiter(i, void 0, void 0, function() {
@@ -5181,29 +5182,29 @@
                     })
                 })
             }
-            var Ti, Di = n("oJmH"),
-                Si = n("LWYa"),
-                ki = n("rixl"),
-                wi = n("7M30"),
-                Oi = n("geRD"),
-                Mi = n("DMoW"),
-                Ii = function(e, t, n) {
+            var Di, Si = n("oJmH"),
+                ki = n("LWYa"),
+                wi = n("rixl"),
+                Oi = n("7M30"),
+                Mi = n("geRD"),
+                Ii = n("DMoW"),
+                Vi = function(e, t, n) {
                     var a = n.map(function(e) {
                         return e.id
                     });
-                    return t && e.id && e.owner && e.owner.id ? t(l.__assign({}, Object(Oi.a)({
+                    return t && e.id && e.owner && e.owner.id ? t(l.__assign({}, Object(Mi.a)({
                         removedTagIDs: a,
-                        contentType: Mi.q.VOD,
+                        contentType: Ii.q.VOD,
                         contentID: e.id,
                         authorID: e.owner.id
                     }))) : Promise.resolve()
                 },
-                Vi = n("5Ijs"),
-                xi = n("trBB");
+                xi = n("5Ijs"),
+                Ai = n("trBB");
             ! function(e) {
                 e.EveryoneOption = "everyone", e.SubOnlyOption = "sub-only"
-            }(Ti || (Ti = {}));
-            var Ai = function(e) {
+            }(Di || (Di = {}));
+            var ji = function(e) {
                     function t() {
                         var t = null !== e && e.apply(this, arguments) || this;
                         return t.onChange = function(e) {
@@ -5221,21 +5222,21 @@
                             key: "everyone",
                             value: h.RestrictionType.Everyone,
                             selected: this.props.defaultValue.restrictionType === h.RestrictionType.Everyone,
-                            "data-test-selector": Ti.EveryoneOption
+                            "data-test-selector": Di.EveryoneOption
                         }, Object(d.d)("Everyone", "RestrictionSelect")), tn.createElement("option", {
                             key: h.RestrictionType.SubOnly,
                             value: h.RestrictionType.SubOnly,
                             selected: this.props.defaultValue.restrictionType === h.RestrictionType.SubOnly,
-                            "data-test-selector": Ti.SubOnlyOption
+                            "data-test-selector": Di.SubOnlyOption
                         }, Object(d.d)("$29.99 All-Access Pass purchaser only", "RestrictionSelect"))))
                     }, t
                 }(tn.Component),
-                ji = n("KJdW"),
-                Ni = n.n(ji),
-                Fi = n("KGBd"),
-                Pi = (n("tUWl"), 1280),
-                Ri = 720,
-                Ui = function(e) {
+                Ni = n("KJdW"),
+                Fi = n.n(Ni),
+                Pi = n("KGBd"),
+                Ri = (n("tUWl"), 1280),
+                Ui = 720,
+                Li = function(e) {
                     function t(t) {
                         var n = e.call(this, t) || this;
                         return n.logger = d.p.logger.withCategory("video-manager"), n.imageHeight = 0, n.imageWidth = 0, n.onUpdateCurrentCrop = function(e, t) {
@@ -5267,7 +5268,7 @@
                             }, n.onUpdateCropping)
                         }, n.onUpdateCropping = function(e) {
                             (e ? n.props.onFinishCropping : n.props.onUpdateCropping)({
-                                previewSrc: Object(Fi.a)(n.state.previewSrc, n.getScaledValue(n.state.percentCrop.x, n.imageWidth), n.getScaledValue(n.state.percentCrop.y, n.imageHeight), n.getScaledValue(n.state.percentCrop.width, n.imageWidth), n.getScaledValue(n.state.percentCrop.height, n.imageHeight), Pi, Ri),
+                                previewSrc: Object(Pi.a)(n.state.previewSrc, n.getScaledValue(n.state.percentCrop.x, n.imageWidth), n.getScaledValue(n.state.percentCrop.y, n.imageHeight), n.getScaledValue(n.state.percentCrop.width, n.imageWidth), n.getScaledValue(n.state.percentCrop.height, n.imageHeight), Ri, Ui),
                                 uploadParams: {
                                     file: n.props.file,
                                     cropX: n.getScaledValue(n.state.percentCrop.x, n.imageWidth),
@@ -5311,7 +5312,7 @@
                         });
                         return this.state.previewSrc ? tn.createElement("div", null, tn.createElement("figure", {
                             className: "thumbnail-selector-cropper__thumbnail-cropper"
-                        }, tn.createElement(Ni.a, {
+                        }, tn.createElement(Fi.a, {
                             src: this.state.previewSrc,
                             crop: e,
                             onComplete: this.onUpdateCurrentCrop,
@@ -5327,8 +5328,8 @@
                         }, Object(d.d)("Finish Cropping", "VideoManagerThumbnailSelectorCropper")))) : null
                     }, t
                 }(tn.Component),
-                Li = (n("/Fcb"), "thumbnail-selector-cropper__thumbnail-select-image"),
-                Xi = function(e) {
+                Xi = (n("/Fcb"), "thumbnail-selector-cropper__thumbnail-select-image"),
+                Wi = function(e) {
                     function t() {
                         var t = null !== e && e.apply(this, arguments) || this;
                         return t.handleOnClick = function() {
@@ -5355,10 +5356,10 @@
                                 size: fe.B.Small
                             })))
                         }
-                        var a = ((e = {})[Li] = !0, e["thumbnail-selector-cropper__thumbnail-select-image--selected"] = this.props.isSelected, e["thumbnail-selector-cropper__custom-thumbnail"] = this.props.isCustomThumbnail, e),
+                        var a = ((e = {})[Xi] = !0, e["thumbnail-selector-cropper__thumbnail-select-image--selected"] = this.props.isSelected, e["thumbnail-selector-cropper__custom-thumbnail"] = this.props.isCustomThumbnail, e),
                             i = "";
                         return i = this.props.isSelected ? Object(d.d)("Currently selected video thumbnail", "VideoManagerThumbnailSelectorCropper") : Object(d.d)("Video thumbnail option", "VideoManagerThumbnailSelectorCropper"), tn.createElement("div", {
-                            className: Ea(a),
+                            className: ya(a),
                             onClick: this.handleOnClick
                         }, tn.createElement("figure", null, tn.createElement(fe.o, {
                             ratio: fe.p.Aspect16x9
@@ -5368,7 +5369,7 @@
                         }))), t)
                     }, t
                 }(tn.Component),
-                Wi = (n("pQ0o"), function(e) {
+                Bi = (n("pQ0o"), function(e) {
                     function t() {
                         return null !== e && e.apply(this, arguments) || this
                     }
@@ -5402,20 +5403,20 @@
                         }))))
                     }, t
                 }(tn.Component)),
-                Bi = 4;
+                Gi = 4;
 
-            function Gi(e, t) {
+            function zi(e, t) {
                 return e.find(function(e) {
                     return e.url === t
                 }) ? t : e[0] ? e[0].url : ""
             }
 
-            function zi(e, t, n, a) {
+            function Hi(e, t, n, a) {
                 for (var i = [ge.f, ge.e].map(function(t) {
                         return e.filter(function(e) {
                             return e.type === t
                         })
-                    }), r = i[0], o = i[1]; r.length > Bi - 1;) r.pop();
+                    }), r = i[0], o = i[1]; r.length > Gi - 1;) r.pop();
                 var s = r.slice();
                 if (a) s.push({
                     url: a,
@@ -5430,15 +5431,15 @@
                 return s
             }
             n("ZcVA");
-            var Hi, Qi = {
+            var Qi, Ki = {
                     thumbnailErrorSelector: "thumbnail-error-selector",
                     thumbnailSrcImage: "thumbnail-src-image"
                 },
-                Ki = function(e) {
+                qi = function(e) {
                     function t(t) {
                         var n = e.call(this, t) || this;
                         return n.renderWhenCropping = function(e) {
-                            return tn.createElement(Ui, {
+                            return tn.createElement(Li, {
                                 file: e,
                                 onUpdateCropping: n.onUpdateCropping,
                                 onFinishCropping: n.onFinishCropping,
@@ -5463,9 +5464,9 @@
                                 thumbnailTypeError: !0
                             }))
                         }, n.renderWhenSelecting = function() {
-                            var e = zi(n.props.video.thumbnails, n.props.thumbnailURLToDelete, n.props.video.preview, n.state.newCustomThumbnailPreviewSrc),
+                            var e = Hi(n.props.video.thumbnails, n.props.thumbnailURLToDelete, n.props.video.preview, n.state.newCustomThumbnailPreviewSrc),
                                 t = e.map(function(e, t) {
-                                    return tn.createElement(Xi, {
+                                    return tn.createElement(Wi, {
                                         key: "thumbnail-row-" + t,
                                         title: n.props.video.title,
                                         thumbnailSrc: e.url,
@@ -5477,7 +5478,7 @@
                                 });
                             void 0 === e.find(function(e) {
                                 return e.type === h.THUMBNAIL_TYPE_CUSTOM
-                            }) && t.push(tn.createElement(Wi, {
+                            }) && t.push(tn.createElement(Bi, {
                                 key: "thumbnail-row-b",
                                 onSelectedFile: n.onFileSelected
                             }));
@@ -5506,13 +5507,13 @@
                                     width: 24,
                                     height: 24
                                 })), tn.createElement(fe.W, {
-                                    "data-test-selector": Qi.thumbnailErrorSelector
+                                    "data-test-selector": Ki.thumbnailErrorSelector
                                 }, n.state.thumbnailTypeError ? r : n.props.error))
                             }
                             var o = Fe(n.props.video),
                                 s = n.props.video.preview;
                             return n.props.video.thumbnails && n.props.video.thumbnails[0] && (s = n.props.video.thumbnails[0].url), tn.createElement("div", {
-                                className: Ea(a)
+                                className: ya(a)
                             }, i, tn.createElement("figure", {
                                 className: "thumbnail-selector-cropper__thumbnail"
                             }, tn.createElement(fe.Eb, {
@@ -5521,7 +5522,7 @@
                             }, tn.createElement(fe.o, {
                                 ratio: fe.p.Aspect16x9
                             }, tn.createElement("img", {
-                                "data-test-selector": Qi.thumbnailSrcImage,
+                                "data-test-selector": Ki.thumbnailSrcImage,
                                 key: n.props.video.id,
                                 src: n.state.newCustomThumbnailPreviewSrc || He(s, Qe.width, Qe.height),
                                 alt: Object(d.d)("Video thumbnail", "VideoManagerThumbnailSelectorCropper")
@@ -5557,12 +5558,12 @@
                                 size: fe.Cb.Large
                             })))
                         }, n.onDeleteCustomThumbnail = function(e) {
-                            var t = zi(n.props.video.thumbnails, e, n.props.video.preview, void 0);
+                            var t = Hi(n.props.video.thumbnails, e, n.props.video.preview, void 0);
                             e === n.state.newCustomThumbnailPreviewSrc ? n.setState({
                                 newCustomThumbnailPreviewSrc: ""
                             }, function() {
-                                n.props.onNewCustomThumbnailChange(void 0), n.props.onSelectedThumbnailChange(Gi(t, n.props.video.preview))
-                            }) : (n.props.onThumbnailDelete(e), n.props.onSelectedThumbnailChange(Gi(t, n.props.video.preview)))
+                                n.props.onNewCustomThumbnailChange(void 0), n.props.onSelectedThumbnailChange(zi(t, n.props.video.preview))
+                            }) : (n.props.onThumbnailDelete(e), n.props.onSelectedThumbnailChange(zi(t, n.props.video.preview)))
                         }, n.state = {
                             selectedFile: null,
                             newCustomThumbnailPreviewSrc: void 0,
@@ -5573,12 +5574,12 @@
                         return this.state.selectedFile ? this.renderWhenCropping(this.state.selectedFile) : this.renderWhenSelecting()
                     }, t
                 }(tn.Component),
-                qi = n("Jxh/"),
-                Yi = function(e) {
+                Yi = n("Jxh/"),
+                Zi = function(e) {
                     function t(t) {
                         var n = e.call(this, t) || this;
                         return n.onCopyToClipboard = function() {
-                            Object(qi.a)(n.props.url), n.setState({
+                            Object(Yi.a)(n.props.url), n.setState({
                                 isCopied: !0
                             })
                         }, n.state = {
@@ -5608,8 +5609,8 @@
                         }, e))))
                     }, t
                 }(tn.PureComponent);
-            (Hi || (Hi = {})).VideoFieldEditor = "VideoFieldEditor";
-            var Zi = function(e) {
+            (Qi || (Qi = {})).VideoFieldEditor = "VideoFieldEditor";
+            var Ji = function(e) {
                     function t() {
                         var t = null !== e && e.apply(this, arguments) || this;
                         return t.getVideoEdits = function(e) {
@@ -5636,7 +5637,7 @@
                         }, t
                     }
                     return l.__extends(t, e), t.prototype.render = function() {
-                        var e = tn.createElement(Yi, {
+                        var e = tn.createElement(Zi, {
                             url: this.props.video.url
                         });
                         return this.props.video.broadcastType && this.props.video.broadcastType.toLowerCase() === c.a.PremiereUpload.toLowerCase() && (e = null), tn.createElement(fe.Ja, {
@@ -5650,7 +5651,7 @@
                             margin: {
                                 bottom: 2
                             }
-                        }, tn.createElement(Ki, {
+                        }, tn.createElement(qi, {
                             video: this.props.video,
                             thumbnailURLToDelete: this.props.thumbnailURLToDelete,
                             onNewCustomThumbnailChange: this.props.onNewCustomThumbnailChange,
@@ -5679,8 +5680,8 @@
                                 tags: e.tags,
                                 title: e.title
                             },
-                            n = tn.createElement(xi.VideoFieldEditor, {
-                                "data-test-selector": Hi.VideoFieldEditor,
+                            n = tn.createElement(Ai.VideoFieldEditor, {
+                                "data-test-selector": Qi.VideoFieldEditor,
                                 disabled: this.props.saving,
                                 onChange: this.onVideoFieldChangeHandler,
                                 titleError: this.props.titleError ? this.props.titleError : void 0,
@@ -5692,14 +5693,14 @@
                             margin: {
                                 top: 2
                             }
-                        }, tn.createElement(Ai, {
+                        }, tn.createElement(ji, {
                             disabled: this.props.saving,
                             defaultValue: this.props.video.restriction,
                             onChange: this.onRestrictionChangeHandler
                         }))), tn.createElement(fe.Xa, null, n, a)
                     }, t
                 }(tn.Component),
-                Ji = function() {
+                $i = function() {
                     return tn.createElement(fe.Xa, null, tn.createElement(fe.Ja, {
                         gutterSize: fe.Ka.Large
                     }, tn.createElement(fe.P, {
@@ -5754,16 +5755,16 @@
                         lineCount: 6
                     }))))
                 },
-                $i = (n("LUgQ"), 900),
-                er = "save",
-                tr = "cancel",
-                nr = "over-capacity-notice",
-                ar = function(e) {
+                er = (n("LUgQ"), 900),
+                tr = "save",
+                nr = "cancel",
+                ar = "over-capacity-notice",
+                ir = function(e) {
                     function t(t) {
                         var n = e.call(this, t) || this;
                         return n.renderSplitOption = function() {
-                            if (n.props.video.lengthSeconds > $i) {
-                                var e = $i / 60;
+                            if (n.props.video.lengthSeconds > er) {
+                                var e = er / 60;
                                 return tn.createElement(fe.Xa, {
                                     margin: {
                                         y: 1
@@ -5837,13 +5838,13 @@
                                                             case 0:
                                                                 a = d.o.getLastPageview(), i = a && a.location || hn.PageviewLocation.None, r = null, o = null, l.label = 1;
                                                             case 1:
-                                                                return l.trys.push([1, 3, , 4]), [4, na(e)];
+                                                                return l.trys.push([1, 3, , 4]), [4, aa(e)];
                                                             case 2:
                                                                 return (s = l.sent().data).video && s.video.owner && (r = s.video.owner.login, o = s.video.owner.id), [3, 4];
                                                             case 3:
-                                                                return c = l.sent(), d.k.error(c, na.name), [3, 4];
+                                                                return c = l.sent(), d.k.error(c, aa.name), [3, 4];
                                                             case 4:
-                                                                return d.o.track($n.a.VODExportClick, {
+                                                                return d.o.track(ea.a.VODExportClick, {
                                                                     vod_id: e,
                                                                     vod_type: t,
                                                                     export_destination: n,
@@ -5887,7 +5888,7 @@
                             justifyContent: fe.Wa.Center,
                             background: fe.r.Base,
                             padding: 4,
-                            "data-test-selector": nr
+                            "data-test-selector": ar
                         }, tn.createElement(fe.W, null, Object(d.d)("Our YouTube exporter is over capacity right now. We'll be back soon. Follow <x:link>@TwitchSupport</x:link> on Twitter for updates and assistance.", {
                             "x:link": function(e) {
                                 return tn.createElement("a", {
@@ -5998,7 +5999,7 @@
                         }, tn.createElement(fe.z, {
                             type: fe.F.Text,
                             onClick: this.onCancel,
-                            "data-test-selector": tr
+                            "data-test-selector": nr
                         }, e)), tn.createElement(fe.Xa, {
                             flexGrow: 0,
                             flexShrink: 0,
@@ -6007,8 +6008,8 @@
                             }
                         }, tn.createElement(fe.z, {
                             onClick: this.onConfirm,
-                            "data-test-selector": er
-                        }, Object(d.d)("Start Export", "VideoManagerYoutubeExport")))), tn.createElement(_a.a, {
+                            "data-test-selector": tr
+                        }, Object(d.d)("Start Export", "VideoManagerYoutubeExport")))), tn.createElement(Ta.a, {
                             closeOnBackdropClick: !0
                         }))
                     }, t.prototype.onSettingsChange = function(e) {
@@ -6017,21 +6018,21 @@
                         })
                     }, t
                 }(tn.PureComponent),
-                ir = (n("Bwwq"), "CANCEL_TEST_SELECTOR"),
-                rr = "SAVE_TEST_SELECTOR",
-                or = "MODAL_ANIMATION_TEST_SELECTOR",
-                sr = "SAVE_ERROR_SELECTOR",
-                lr = "watch-selector",
-                dr = "highlight-selector",
-                cr = "download-selector",
-                ur = "add-to-selector",
-                pr = "export-selector",
-                mr = "download",
-                hr = "preparing",
-                gr = "bottom-row",
-                fr = "next-video",
-                vr = "previousVideo",
-                br = function(e) {
+                rr = (n("Bwwq"), "CANCEL_TEST_SELECTOR"),
+                or = "SAVE_TEST_SELECTOR",
+                sr = "MODAL_ANIMATION_TEST_SELECTOR",
+                lr = "SAVE_ERROR_SELECTOR",
+                dr = "watch-selector",
+                cr = "highlight-selector",
+                ur = "download-selector",
+                pr = "add-to-selector",
+                mr = "export-selector",
+                hr = "download",
+                gr = "preparing",
+                fr = "bottom-row",
+                vr = "next-video",
+                br = "previousVideo",
+                Er = function(e) {
                     function t() {
                         var t = null !== e && e.apply(this, arguments) || this;
                         return t.state = {
@@ -6069,7 +6070,7 @@
                                             case 2:
                                                 e.sent(), e.label = 3;
                                             case 3:
-                                                return this.props.data.video && this.state.videoFragmentEdits.contentTagsToRemove.length > 0 ? [4, Ii(this.props.data.video, this.props.updateContentTags, this.state.videoFragmentEdits.contentTagsToRemove)] : [3, 5];
+                                                return this.props.data.video && this.state.videoFragmentEdits.contentTagsToRemove.length > 0 ? [4, Vi(this.props.data.video, this.props.updateContentTags, this.state.videoFragmentEdits.contentTagsToRemove)] : [3, 5];
                                             case 4:
                                                 e.sent(), e.label = 5;
                                             case 5:
@@ -6093,7 +6094,7 @@
                                 return l.__generator(this, function(e) {
                                     switch (e.label) {
                                         case 0:
-                                            return this.props.apiData.video ? (aa(this.props.apiData.video.id, this.props.apiData.video.broadcastType), [4, this.props.onDownload(this.props.apiData.video.id, this.props.notificationService)]) : [2];
+                                            return this.props.apiData.video ? (ia(this.props.apiData.video.id, this.props.apiData.video.broadcastType), [4, this.props.onDownload(this.props.apiData.video.id, this.props.notificationService)]) : [2];
                                         case 1:
                                             return e.sent(), [2]
                                     }
@@ -6167,7 +6168,7 @@
                                 })
                             })
                         }, t.showExportModal = function() {
-                            t.props.showModal(ar, {
+                            t.props.showModal(ir, {
                                 video: t.props.apiData.video,
                                 exportVideo: t.props.exportVideo,
                                 closeModal: t.props.closeModal
@@ -6237,7 +6238,7 @@
                                 }(this.props.apiData.video, this.state.videoEdits);
                             this.props.data && this.props.data.video && this.props.data.video.contentTags && this.props.data.video.owner && this.props.data.video.owner.id && (r.contentTags = this.props.data.video.contentTags, r.owner = {
                                 id: this.props.data.video.owner.id
-                            }), e = tn.createElement(Zi, {
+                            }), e = tn.createElement(Ji, {
                                 video: r,
                                 onChange: this.onChange,
                                 saving: this.props.saving,
@@ -6250,7 +6251,7 @@
                                 showRestrictions: i,
                                 videoFragment: this.props.data.video
                             })
-                        } else e = tn.createElement(Ji, null);
+                        } else e = tn.createElement($i, null);
                         return tn.createElement(fe.i, {
                             type: fe.n.FadeIn,
                             delay: fe.j.Medium,
@@ -6270,7 +6271,7 @@
                             display: fe.X.Flex,
                             alignItems: fe.f.Center
                         }, tn.createElement(fe.W, {
-                            "data-test-selector": sr,
+                            "data-test-selector": lr,
                             color: fe.O.Error
                         }, a.message)));
                         var i = null;
@@ -6330,8 +6331,8 @@
                             zIndex: fe.ic.Below,
                             position: fe.jb.Fixed
                         }, tn.createElement(fe.i, l.__assign({}, this.state.animationProps, {
-                            "data-test-selector": or
-                        }), tn.createElement(ya.a, {
+                            "data-test-selector": sr
+                        }), tn.createElement(Ca.a, {
                             onClickOut: this.onCancel
                         }, tn.createElement(fe.Eb, {
                             className: "edit-video-properties-modal__content",
@@ -6378,7 +6379,7 @@
                                 bottom: 2
                             }
                         }, this.renderFields())))), tn.createElement(fe.Eb, {
-                            "data-test-selector": gr,
+                            "data-test-selector": fr,
                             background: fe.r.Alt2,
                             display: fe.X.Flex,
                             justifyContent: fe.Wa.Between,
@@ -6391,7 +6392,7 @@
                                 x: 3
                             }
                         }, tn.createElement(fe.A, {
-                            "data-test-selector": vr,
+                            "data-test-selector": br,
                             ariaLabel: Object(d.d)("Previous", "VideoManagerEdit"),
                             icon: fe.tb.GlyphArrLeft,
                             type: fe.C.Hollow,
@@ -6406,7 +6407,7 @@
                             position: Object(d.f)(this.getPositionInQueue() + 1),
                             total: Object(d.f)(this.state.vodQueue.length)
                         }, "VideoManagerEdit")), tn.createElement(fe.A, {
-                            "data-test-selector": fr,
+                            "data-test-selector": vr,
                             ariaLabel: Object(d.d)("Next", "VideoManagerEdit"),
                             icon: fe.tb.GlyphArrRight,
                             type: fe.C.Hollow,
@@ -6425,13 +6426,13 @@
                         }, tn.createElement(fe.z, {
                             type: fe.F.Text,
                             onClick: this.onCancel,
-                            "data-test-selector": ir
+                            "data-test-selector": rr
                         }, this.renderCancelMessage())), tn.createElement(fe.z, {
                             onClick: this.onSaveVideo,
                             disabled: e || t,
                             state: e ? fe.E.Loading : fe.E.Default,
-                            "data-test-selector": rr
-                        }, r)))))), tn.createElement(Si.a, {
+                            "data-test-selector": or
+                        }, r)))))), tn.createElement(ki.a, {
                             when: this.state.isDirty,
                             message: this.renderNavigationWarningMessage()
                         }))
@@ -6443,7 +6444,7 @@
                         });
                         if (null === e) return null;
                         var t = Fe(e),
-                            n = this.state.vodQueue.length > 1 ? An.a.PostCreateModal : An.a.EditModal;
+                            n = this.state.vodQueue.length > 1 ? jn.a.PostCreateModal : jn.a.EditModal;
                         return tn.createElement(fe.Eb, {
                             display: fe.X.Flex,
                             color: fe.O.Link
@@ -6452,9 +6453,9 @@
                                 right: .5
                             }
                         }, tn.createElement(fe.z, {
-                            "data-test-selector": dr,
+                            "data-test-selector": cr,
                             icon: fe.tb.Highlighter,
-                            linkTo: Object(da.c)(this.props.channelName, e.id),
+                            linkTo: Object(ca.c)(this.props.channelName, e.id),
                             type: fe.F.Text,
                             disabled: this.props.saving,
                             targetBlank: !0
@@ -6463,7 +6464,7 @@
                                 right: .5
                             }
                         }, tn.createElement(fe.z, {
-                            "data-test-selector": pr,
+                            "data-test-selector": mr,
                             onClick: this.onExport,
                             icon: fe.tb.Upload,
                             type: fe.F.Text,
@@ -6472,13 +6473,13 @@
                             padding: {
                                 right: .5
                             }
-                        }, tn.createElement(Ca, {
-                            "data-test-selector": ur,
+                        }, tn.createElement(_a, {
+                            "data-test-selector": pr,
                             icon: fe.tb.Plus,
                             isRightAligned: !1,
                             buttonText: Object(d.d)("Add to", "VideoManagerEditCard"),
                             showTextLabel: !0
-                        }, tn.createElement(Xn, {
+                        }, tn.createElement(Wn, {
                             vodcastQueueUnavailable: this.props.vodcastQueueUnavailable || !t.menu.canAddToVodcast,
                             onAddVideoToVodcastQueue: this.onAddVideoToVodcastQueue,
                             video: e,
@@ -6487,7 +6488,7 @@
                             hasMenuNavigationHeader: !0,
                             inVodcastQueue: this.props.isInVodcastQueue(this.props.videoID),
                             user: this.props.user
-                        }), tn.createElement(Jn, {
+                        }), tn.createElement($n, {
                             video: e,
                             channelName: this.props.channelName,
                             contentKey: h.KEY_COLLECTIONS,
@@ -6497,7 +6498,7 @@
                             padding: {
                                 right: .5
                             }
-                        }, tn.createElement(Vi.a, {
+                        }, tn.createElement(xi.a, {
                             balloonDirection: fe.v.Bottom,
                             buttonType: fe.F.Text,
                             content: {
@@ -6511,7 +6512,7 @@
                                 right: .5
                             }
                         }, tn.createElement(fe.z, {
-                            "data-test-selector": lr,
+                            "data-test-selector": dr,
                             linkTo: e.url,
                             icon: fe.tb.Play,
                             type: fe.F.Text,
@@ -6526,7 +6527,7 @@
                             display: fe.X.Flex,
                             alignItems: fe.f.Center,
                             color: fe.O.Alt2,
-                            "data-test-selector": hr
+                            "data-test-selector": gr
                         }, tn.createElement(fe.Xa, {
                             display: fe.X.InlineFlex,
                             padding: {
@@ -6538,9 +6539,9 @@
                             padding: {
                                 right: .5
                             },
-                            "data-test-selector": mr
+                            "data-test-selector": hr
                         }, tn.createElement(fe.z, {
-                            "data-test-selector": cr,
+                            "data-test-selector": ur,
                             onClick: this.onDownload,
                             icon: fe.tb.Download,
                             type: fe.F.Text,
@@ -6561,7 +6562,7 @@
                         return confirm(this.renderNavigationWarningMessage())
                     }, t
                 }(tn.Component),
-                Er = Object(Di.compose)(Object(on.a)(wi, {
+                yr = Object(Si.compose)(Object(on.a)(Oi, {
                     options: function(e) {
                         return {
                             variables: {
@@ -6569,10 +6570,10 @@
                             }
                         }
                     }
-                }), Object(on.a)(ki, {
+                }), Object(on.a)(wi, {
                     name: "updateContentTags"
-                }), Object(gn.b)("EditVideoPropertiesModalPresentation"))(br);
-            var yr = Object(a.connect)(function(e) {
+                }), Object(gn.b)("EditVideoPropertiesModalPresentation"))(Er);
+            var Cr = Object(a.connect)(function(e) {
                     return {
                         isLoggedIn: Object(o.f)(e),
                         saving: e.videoManager.editingVideo.saving,
@@ -6593,7 +6594,7 @@
                         clearEditingVideo: mt,
                         changeChannel: gt,
                         fetchVideoData: qt,
-                        saveVideoAndThumbnails: _i,
+                        saveVideoAndThumbnails: Ti,
                         addVideoToVodcastQueue: kt,
                         clearEditModalErrors: ht,
                         downloadVideo: Mt,
@@ -6603,10 +6604,10 @@
                         exportVideo: Nt,
                         authenticateYoutube: jt
                     }, e)
-                })(Er),
-                Cr = n("CbMu");
+                })(yr),
+                _r = n("CbMu");
 
-            function _r() {
+            function Tr() {
                 return {
                     type: Wt
                 }
@@ -6644,20 +6645,20 @@
                         return e
                 }
             });
-            var Tr, Dr = n("NAv5"),
-                Sr = n("+58i"),
-                kr = n("xeRp"),
-                wr = n("gT8k"),
-                Or = n("9rlX"),
-                Mr = n("Rzn4"),
-                Ir = n("dKHc"),
-                Vr = n("Wwq8"),
-                xr = n("JNgr");
+            var Dr, Sr = n("NAv5"),
+                kr = n("+58i"),
+                wr = n("xeRp"),
+                Or = n("gT8k"),
+                Mr = n("9rlX"),
+                Ir = n("Rzn4"),
+                Vr = n("dKHc"),
+                xr = n("Wwq8"),
+                Ar = n("JNgr");
             n("uzac");
             ! function(e) {
                 e.EditDescriptionField = "EDIT_DESCRIPTION_FIELD", e.CancelTestSelector = "CANCEL_TEST_SELECTOR", e.SaveTestSelector = "SAVE_TEST_SELECTOR", e.ModalAnimationTestSelector = "MODAL_ANIMATION_TEST_SELECTOR", e.StartDateFields = "START_DATE_FIELDS", e.EndDateFields = "END_DATE_FIELDS", e.SubmitErrorSelector = "SUBMIT_ERROR_SELECTOR"
-            }(Tr || (Tr = {}));
-            var Ar = function(e) {
+            }(Dr || (Dr = {}));
+            var jr = function(e) {
                     function t(n) {
                         var a = e.call(this, n) || this;
                         return a.state = {
@@ -6671,9 +6672,9 @@
                             isDirty: !1,
                             startNow: !1,
                             isEventUrlCopied: !1,
-                            validator: new Ir.b(t.instantiateEventEdits())
+                            validator: new Vr.b(t.instantiateEventEdits())
                         }, a.copyEventUrlToClipboard = function() {
-                            Object(qi.a)(a.eventUrlInput.value), a.setState({
+                            Object(Yi.a)(a.eventUrlInput.value), a.setState({
                                 isEventUrlCopied: !0
                             })
                         }, a.highlightEventUrlText = function(e) {
@@ -6715,7 +6716,7 @@
                             var t = new Date;
                             a.setState(function(n) {
                                 var a = n.startNow;
-                                return e.startTime && e.startTime !== n.eventEdits.startTime && (a = Object(Dr.isValid)(e.startTime) && Object(Dr.isWithinRange)(e.startTime, Object(Dr.subMinutes)(t, 1), Object(Dr.addMinutes)(t, 1))), {
+                                return e.startTime && e.startTime !== n.eventEdits.startTime && (a = Object(Sr.isValid)(e.startTime) && Object(Sr.isWithinRange)(e.startTime, Object(Sr.subMinutes)(t, 1), Object(Sr.addMinutes)(t, 1))), {
                                     isDirty: !0,
                                     startNow: a,
                                     eventEdits: l.__assign({}, n.eventEdits, e)
@@ -6729,15 +6730,15 @@
                                 return l.__generator(this, function(n) {
                                     switch (n.label) {
                                         case 0:
-                                            return (e = new Ir.b(this.state.eventEdits)).addValidatorForField(Dr.isValid, Ir.a.StartTime), this.setState({
+                                            return (e = new Vr.b(this.state.eventEdits)).addValidatorForField(Sr.isValid, Vr.a.StartTime), this.setState({
                                                 validator: e
                                             }), e.editsAreValid() ? (t = this.state.eventEdits, this.state.startNow && (t = l.__assign({}, t, {
-                                                startTime: Object(Dr.addMinutes)(new Date, 1)
-                                            })), this.props.clearErrors(), this.props.event || !this.props.onCreate ? [3, 2] : [4, this.props.onCreate(Object(Cr.b)(t, this.props.user.id, this.props.event), this.props.video.id)]) : [2];
+                                                startTime: Object(Sr.addMinutes)(new Date, 1)
+                                            })), this.props.clearErrors(), this.props.event || !this.props.onCreate ? [3, 2] : [4, this.props.onCreate(Object(_r.b)(t, this.props.user.id, this.props.event), this.props.video.id)]) : [2];
                                         case 1:
                                             return n.sent(), [3, 4];
                                         case 2:
-                                            return this.props.onUpdate && t ? [4, this.props.onUpdate(Object(Cr.b)(t, this.props.user.id, this.props.event), this.props.video.id)] : [3, 4];
+                                            return this.props.onUpdate && t ? [4, this.props.onUpdate(Object(_r.b)(t, this.props.user.id, this.props.event), this.props.video.id)] : [3, 4];
                                         case 3:
                                             n.sent(), n.label = 4;
                                         case 4:
@@ -6756,10 +6757,10 @@
                             })
                         }, a.urlTemplateToUrlString = function(e) {
                             if (e) {
-                                var t = e.replace("{width}", kr.c).replace("{height}", kr.b);
+                                var t = e.replace("{width}", wr.c).replace("{height}", wr.b);
                                 return new URL(t)
                             }
-                        }, n.event ? a.state.eventEdits = Object(Cr.a)(n.event) : n.initialValues && n.initialValues.game && (a.state.eventEdits.gameID = n.initialValues.game.objectID, a.state.eventEdits.gameName = n.initialValues.game.name), a
+                        }, n.event ? a.state.eventEdits = Object(_r.a)(n.event) : n.initialValues && n.initialValues.game && (a.state.eventEdits.gameID = n.initialValues.game.objectID, a.state.eventEdits.gameName = n.initialValues.game.name), a
                     }
                     return l.__extends(t, e), t.prototype.componentDidMount = function() {
                         this.props.latencyTracking.reportInteractive()
@@ -6768,10 +6769,10 @@
                             t = this.props.errors.find(function(e) {
                                 return e.origin === Rt.Submit
                             });
-                        return t && (e = jr(t.message)), tn.createElement(fe.Xa, {
+                        return t && (e = Nr(t.message)), tn.createElement(fe.Xa, {
                             className: "event-modal"
                         }, tn.createElement(fe.i, l.__assign({}, this.state.animationProps, {
-                            "data-test-selector": Tr.ModalAnimationTestSelector
+                            "data-test-selector": Dr.ModalAnimationTestSelector
                         }), tn.createElement(fe.Eb, {
                             className: "event-modal__content",
                             background: fe.r.Base
@@ -6779,7 +6780,7 @@
                             fullWidth: !0,
                             fullHeight: !0,
                             padding: 4
-                        }, tn.createElement(ya.a, {
+                        }, tn.createElement(Ca.a, {
                             onClickOut: this.onCancel
                         }, tn.createElement(fe.Eb, {
                             display: fe.X.Flex,
@@ -6804,10 +6805,10 @@
                         }, tn.createElement(fe.z, {
                             type: fe.F.Text,
                             onClick: this.onCancel,
-                            "data-test-selector": Tr.CancelTestSelector
+                            "data-test-selector": Dr.CancelTestSelector
                         }, Object(d.d)("Cancel", "EventModal")), " ", tn.createElement(fe.z, {
                             onClick: this.onConfirm,
-                            "data-test-selector": Tr.SaveTestSelector,
+                            "data-test-selector": Dr.SaveTestSelector,
                             "data-a-target": "save-button"
                         }, Object(d.d)("Save", "EventModal")))), tn.createElement(an.b, null, this.renderFormFields()))))))
                     }, t.prototype.renderEventUrl = function() {
@@ -6851,7 +6852,7 @@
                                 md: 6,
                                 lg: 5
                             }
-                        }, tn.createElement(kr.a, {
+                        }, tn.createElement(wr.a, {
                             user: this.props.user,
                             onFinishUploading: this.onFinishUploading,
                             initialImageData: this.urlTemplateToUrlString(this.props.event && this.props.event.imageUrl)
@@ -6869,7 +6870,7 @@
                             id: "event-title",
                             label: Object(d.d)("Event Title", "EventModal"),
                             error: Boolean(this.state.validator.errorsForMissingFields.title),
-                            errorMessage: this.state.validator.errorMessageFor(Ir.a.Title)
+                            errorMessage: this.state.validator.errorMessageFor(Vr.a.Title)
                         }, tn.createElement(fe.Ra, {
                             "data-a-target": "event-title",
                             onChange: this.onTitleChange,
@@ -6886,38 +6887,38 @@
                         }, tn.createElement(fe.Ea, {
                             label: Object(d.d)("Event Description", "EventModal"),
                             error: Boolean(this.state.validator.errorsForMissingFields.description),
-                            errorMessage: this.state.validator.errorMessageFor(Ir.a.Description)
+                            errorMessage: this.state.validator.errorMessageFor(Vr.a.Description)
                         }, tn.createElement(fe.Sb, {
                             placeholder: Object(d.d)("Tell viewers why they should watch your event", "EventModal"),
                             onChange: this.onDescriptionChange,
                             value: this.state.eventEdits.description || "",
                             disabled: !1,
-                            "data-test-selector": Tr.EditDescriptionField,
+                            "data-test-selector": Dr.EditDescriptionField,
                             "data-a-target": "event-description"
-                        }))), tn.createElement(Sr.a, {
-                            "data-test-selector": Tr.StartDateFields,
+                        }))), tn.createElement(kr.a, {
+                            "data-test-selector": Dr.StartDateFields,
                             defaultDate: this.state.eventEdits.startTime,
                             video: this.props.video,
                             onChange: this.onChangeStartDate,
                             dateLabel: Object(d.d)("Start Date", "EventModal"),
                             timeLabel: Object(d.d)("Start Time ({localeName})", {
-                                localeName: Object(Mr.b)()
+                                localeName: Object(Ir.b)()
                             }, "EventModal"),
                             dateErrorMessage: Object(d.d)("The start date is invalid", "EventModalDateTimePicker"),
                             timeErrorMessage: Object(d.d)("The start time is invalid", "EventMOdalDateTimePicker")
                         }), e, tn.createElement(fe.Ea, {
                             label: "",
                             error: Boolean(this.state.validator.errorsForMissingFields.language),
-                            errorMessage: this.state.validator.errorMessageFor(Ir.a.Language)
+                            errorMessage: this.state.validator.errorMessageFor(Vr.a.Language)
                         }, tn.createElement(fe.Xa, {
                             display: fe.X.Flex,
                             margin: {
                                 bottom: 2
                             }
-                        }, tn.createElement(Or.a, {
+                        }, tn.createElement(Mr.a, {
                             onChange: this.onLanguageChange,
                             disabled: !1,
-                            defaultLanguage: this.state.eventEdits.language || Object(xr.a)()
+                            defaultLanguage: this.state.eventEdits.language || Object(Ar.a)()
                         }))), tn.createElement(fe.Xa, {
                             margin: {
                                 bottom: 2
@@ -6926,8 +6927,8 @@
                             id: "event-game",
                             label: Object(d.d)("Event Category/Game", "EventModal"),
                             error: Boolean(this.state.validator.errorsForMissingFields.gameID || this.state.validator.errorsForMissingFields.gameName),
-                            errorMessage: this.state.validator.errorMessageFor(Ir.a.GameID) || this.state.validator.errorMessageFor(Ir.a.GameName)
-                        }, tn.createElement(wr.a, {
+                            errorMessage: this.state.validator.errorMessageFor(Vr.a.GameID) || this.state.validator.errorMessageFor(Vr.a.GameName)
+                        }, tn.createElement(Or.a, {
                             currentGameTitle: this.state.eventEdits.gameName || "",
                             onChange: this.onGameChange
                         }))))))
@@ -6938,26 +6939,26 @@
                             description: "",
                             gameID: "",
                             gameName: "",
-                            language: Object(xr.a)(),
-                            startTime: Object(Dr.setMinutes)(Object(Dr.addHours)(new Date, 3), 0),
-                            timeZoneID: Object(Vr.a)(),
+                            language: Object(Ar.a)(),
+                            startTime: Object(Sr.setMinutes)(Object(Sr.addHours)(new Date, 3), 0),
+                            timeZoneID: Object(xr.a)(),
                             title: ""
                         }
                     }, t
                 }(tn.Component),
-                jr = function(e) {
+                Nr = function(e) {
                     return tn.createElement(fe.Xa, {
                         flexGrow: 0,
                         flexShrink: 1,
                         display: fe.X.Flex,
                         alignItems: fe.f.Center,
-                        "data-test-selector": Tr.SubmitErrorSelector
+                        "data-test-selector": Dr.SubmitErrorSelector
                     }, tn.createElement(fe.W, {
                         color: fe.O.Error
                     }, e))
                 },
-                Nr = Object(gn.b)("PremiereModal")(Ar);
-            var Fr, Pr = Object(a.connect)(function(e) {
+                Fr = Object(gn.b)("PremiereModal")(jr);
+            var Pr, Rr = Object(a.connect)(function(e) {
                     return {
                         isLoggedIn: Object(o.f)(e),
                         saving: e.eventModal.saving,
@@ -6967,17 +6968,17 @@
                 }, function(e) {
                     return Object(i.bindActionCreators)({
                         closeModal: r.c,
-                        clearErrors: _r
+                        clearErrors: Tr
                     }, e)
-                })(Nr),
-                Rr = (n("AmIn"), "PremiereCard"),
-                Ur = Object(gn.b)("PremiereCard", {
+                })(Fr),
+                Ur = (n("AmIn"), "PremiereCard"),
+                Lr = Object(gn.b)("PremiereCard", {
                     autoReportInteractive: !0
                 })(function(e) {
                     var t = e.video.thumbnails[0];
                     return tn.createElement(fe.Eb, {
                         className: "premiere-card",
-                        "data-test-selector": Rr,
+                        "data-test-selector": Ur,
                         background: fe.r.Alt,
                         elevation: 1
                     }, tn.createElement(fe.G, {
@@ -6989,7 +6990,7 @@
                         },
                         background: fe.r.Alt2
                     }, tn.createElement(fe.I, {
-                        src: Lr(t),
+                        src: Xr(t),
                         alt: "",
                         size: fe.J.Size16
                     })), tn.createElement(fe.H, {
@@ -7008,14 +7009,14 @@
                         color: fe.O.Alt
                     }, tn.createElement(fe.Db, {
                         label: Object(d.d)("Duration", "SchedulePremiere"),
-                        value: Object(Ia.b)(e.video.lengthSeconds),
+                        value: Object(Va.b)(e.video.lengthSeconds),
                         icon: fe.tb.GlyphLength
                     })))))
                 }),
-                Lr = function(e) {
+                Xr = function(e) {
                     return e ? e.url.replace("{width}", "160").replace("{height}", "90") : ""
                 },
-                Xr = function(e) {
+                Wr = function(e) {
                     function t(t) {
                         var n = e.call(this, t) || this;
                         return n.onCreateEvent = function(e, t) {
@@ -7068,7 +7069,7 @@
                             name: e.game.name
                         });
                         var a = this.renderPremiereCard(this.state.video);
-                        return tn.createElement(Pr, {
+                        return tn.createElement(Rr, {
                             user: this.props.user,
                             channelName: this.props.channelName,
                             onCancel: this.props.closeModal,
@@ -7089,22 +7090,22 @@
                             }
                         }, tn.createElement(fe.Ea, {
                             label: Object(d.d)("Selected Upload", "VideoManagerPage")
-                        }, tn.createElement(Ur, {
+                        }, tn.createElement(Lr, {
                             video: e
                         })))
                     }, t
                 }(tn.Component),
-                Wr = function(e) {
+                Br = function(e) {
                     function t() {
                         var t = null !== e && e.apply(this, arguments) || this;
                         return t.renderScheduleModal = function(e) {
-                            return t.props.user && e.match.params.videoID ? tn.createElement($a, {
+                            return t.props.user && e.match.params.videoID ? tn.createElement(ei, {
                                 isOpen: !0,
                                 contentLabel: "Modal",
                                 className: "modal__content",
-                                overlayClassName: "modal__backdrop js-modal-backdrop " + Object(ni.b)(t.props.theme),
+                                overlayClassName: "modal__backdrop js-modal-backdrop " + Object(ai.b)(t.props.theme),
                                 shouldCloseOnOverlayClick: !1
-                            }, tn.createElement(Xr, {
+                            }, tn.createElement(Wr, {
                                 videoID: e.match.params.videoID,
                                 user: t.props.user,
                                 channelName: t.props.channelName,
@@ -7115,13 +7116,13 @@
                                 updateEvent: t.props.updateEvent
                             })) : null
                         }, t.renderAppealModal = function(e) {
-                            return t.props.user && t.props.currentUser && e.match.params.videoID ? tn.createElement($a, {
+                            return t.props.user && t.props.currentUser && e.match.params.videoID ? tn.createElement(ei, {
                                 isOpen: !0,
                                 contentLabel: "Modal",
                                 className: "modal__content",
-                                overlayClassName: "modal__backdrop js-modal-backdrop " + Object(ni.b)(t.props.theme),
+                                overlayClassName: "modal__backdrop js-modal-backdrop " + Object(ai.b)(t.props.theme),
                                 shouldCloseOnOverlayClick: !1
-                            }, tn.createElement(Ci, {
+                            }, tn.createElement(_i, {
                                 videoID: e.match.params.videoID,
                                 user: t.props.user,
                                 currentUser: t.props.currentUser,
@@ -7132,13 +7133,13 @@
                         }, t.renderEditModal = function(e) {
                             if (!(t.props.user && t.props.currentUser && e.match.params.videoID)) return null;
                             var n = e.match.path.indexOf("publish") > -1;
-                            return tn.createElement($a, {
+                            return tn.createElement(ei, {
                                 isOpen: !0,
                                 contentLabel: "Modal",
                                 className: "modal__content",
-                                overlayClassName: "modal__backdrop js-modal-backdrop " + Object(ni.b)(t.props.theme),
+                                overlayClassName: "modal__backdrop js-modal-backdrop " + Object(ai.b)(t.props.theme),
                                 shouldCloseOnOverlayClick: !1
-                            }, tn.createElement(yr, l.__assign({}, e, {
+                            }, tn.createElement(Cr, l.__assign({}, e, {
                                 videoID: e.match.params.videoID,
                                 user: t.props.user,
                                 currentUser: t.props.currentUser,
@@ -7152,47 +7153,47 @@
                         }, t
                     }
                     return l.__extends(t, e), t.prototype.render = function() {
-                        return tn.createElement(ti.a, null, tn.createElement(ei.a, {
+                        return tn.createElement(ni.a, null, tn.createElement(ti.a, {
                             path: "/:channelName/manager/schedule/:videoID",
                             render: this.renderScheduleModal
-                        }), tn.createElement(ei.a, {
+                        }), tn.createElement(ti.a, {
                             path: "/:channelName/manager/appeal/:videoID",
                             render: this.renderAppealModal
-                        }), tn.createElement(ei.a, {
+                        }), tn.createElement(ti.a, {
                             path: "/:channelName/manager/publish/:videoID",
                             render: this.renderEditModal
-                        }), tn.createElement(ei.a, {
+                        }), tn.createElement(ti.a, {
                             path: "/:channelName/manager/edit/:videoID",
                             render: this.renderEditModal
                         }))
                     }, t
                 }(tn.Component),
-                Br = "vodcastDeprecationDismissed",
-                Gr = "https://help.twitch.tv/customer/portal/articles/2909343-how-to-premiere-your-video-on-twitch",
-                zr = new Date(Date.UTC(2018, 8, 14, 20)),
-                Hr = function(e) {
+                Gr = "vodcastDeprecationDismissed",
+                zr = "https://help.twitch.tv/customer/portal/articles/2909343-how-to-premiere-your-video-on-twitch",
+                Hr = new Date(Date.UTC(2018, 8, 14, 20)),
+                Qr = function(e) {
                     function t(t) {
                         var n = e.call(this, t) || this;
                         return n.handleDismiss = function() {
-                            d.m.set(Br, !0), n.setState({
+                            d.m.set(Gr, !0), n.setState({
                                 isDismissed: !0
                             })
                         }, n.state = {
-                            isDismissed: d.m.get(Br, !1)
+                            isDismissed: d.m.get(Gr, !1)
                         }, n
                     }
                     return l.__extends(t, e), t.prototype.render = function() {
                         if (this.state.isDismissed) return tn.createElement(fn.d, null);
-                        var e = Object(d.c)(zr, {
+                        var e = Object(d.c)(Hr, {
                             month: "long",
                             day: "numeric",
                             weekday: "long"
                         });
                         return tn.createElement(fn.a, {
-                            buttonLink: Gr,
+                            buttonLink: zr,
                             buttonText: Object(d.d)("Learn More", "VodcastDeprecationAnnouncement"),
                             headerText: Object(d.d)("Reruns and Premieres Update", "VodcastDeprecationAnnouncement"),
-                            headerLink: Gr,
+                            headerLink: zr,
                             subtitleText: Object(d.d)("As of {formattedDate}, Reruns and Premieres will only be available once you become an Affiliate.", {
                                 formattedDate: e
                             }, "VodcastDeprecationAnnouncement"),
@@ -7201,9 +7202,9 @@
                         })
                     }, t
                 }(tn.Component),
-                Qr = n("HkCh"),
-                Kr = (n("TUyz"), "ON_CONFIRM"),
-                qr = function(e) {
+                Kr = n("HkCh"),
+                qr = (n("TUyz"), "ON_CONFIRM"),
+                Yr = function(e) {
                     function t() {
                         var t = null !== e && e.apply(this, arguments) || this;
                         return t.onConfirm = function() {
@@ -7228,21 +7229,21 @@
                         }, tn.createElement(fe.Xa, null, tn.createElement(fe.z, {
                             type: fe.F.Default,
                             onClick: this.onConfirm,
-                            "data-test-selector": Kr
+                            "data-test-selector": qr
                         }, Object(d.d)("OK", "VideoManagerConfirmation"))))))
                     }, t
                 }(tn.PureComponent);
             ! function(e) {
                 e[e.Modal = 0] = "Modal", e[e.Alert = 1] = "Alert"
-            }(Fr || (Fr = {}));
-            var Yr, Zr, Jr = function() {
+            }(Pr || (Pr = {}));
+            var Zr, Jr, $r = function() {
                 function e(e, t) {
                     var n = this;
                     this.maybeShowModal = function() {
                         if (n.messages && 0 !== n.messages.length && !n.isOpen) {
                             n.isOpen = !0;
                             var e = n.messages.pop();
-                            e && n.showModal(qr, {
+                            e && n.showModal(Yr, {
                                 body: e.body,
                                 closeModal: function() {
                                     n.closeModalAndScheduleNextTick(e)
@@ -7251,26 +7252,26 @@
                         }
                     }, this.closeModalAndScheduleNextTick = function(e) {
                         n.closeModal(), n.isOpen = !1, e.onClose && e.onClose(), n.maybeShowModal()
-                    }, this.mode = Fr.Modal, this.messages = [], this.showModal = e, this.closeModal = t, this.isOpen = !1
+                    }, this.mode = Pr.Modal, this.messages = [], this.showModal = e, this.closeModal = t, this.isOpen = !1
                 }
                 return e.prototype.push = function(e, t) {
-                    this.mode !== Fr.Alert ? (this.messages.push({
+                    this.mode !== Pr.Alert ? (this.messages.push({
                         body: e,
                         onClose: t
                     }), this.maybeShowModal()) : alert(e)
                 }, e.prototype.setAlertMode = function() {
-                    this.mode = Fr.Alert
+                    this.mode = Pr.Alert
                 }, e.prototype.setModalMode = function() {
-                    this.mode = Fr.Modal
+                    this.mode = Pr.Modal
                 }, e
             }();
             n("GckV");
             ! function(e) {
                 e.Control = "control", e.Variant1 = "variant1", e.Variant2 = "variant2", e.Variant3 = "variant3"
-            }(Zr || (Zr = {}));
-            var $r = "no-videos",
-                eo = "load-more-processing",
-                to = function(e) {
+            }(Jr || (Jr = {}));
+            var eo = "no-videos",
+                to = "load-more-processing",
+                no = function(e) {
                     return {
                         title: Object(d.d)("Delete Video", "DeleteVideoConfirmationModal"),
                         body: Object(d.d)("Are you sure you want to delete {title}?", {
@@ -7280,14 +7281,14 @@
                         cancelText: Object(d.d)("No", "DeleteVideoConfirmationModal")
                     }
                 },
-                no = new Date(9999, 0, 1),
-                ao = function(e) {
+                ao = new Date(9999, 0, 1),
+                io = function(e) {
                     function t() {
                         var t = null !== e && e.apply(this, arguments) || this;
                         return t.editingImUpsetVariant = d.p.experiments.getAssignment(pn.b.EditingImUpset), t.showContextualActions = function(e) {
-                            return e === Zr.Variant2 || e === Zr.Variant3
+                            return e === Jr.Variant2 || e === Jr.Variant3
                         }(t.editingImUpsetVariant), t.showRightSide = function(e) {
-                            return e === Zr.Control || e === Zr.Variant3
+                            return e === Jr.Control || e === Jr.Variant3
                         }(t.editingImUpsetVariant), t.renderFilterOption = function(e) {
                             var n = t.props.activeFilter === e.key;
                             return tn.createElement(fe.Xa, {
@@ -7319,14 +7320,14 @@
                                 activeFilter: e
                             }), n)
                         }, t.onDeleteVideo = function(e, n) {
-                            t.props.showModal(bn.a, l.__assign({}, to(e.title), {
+                            t.props.showModal(bn.a, l.__assign({}, no(e.title), {
                                 onConfirm: function() {
                                     if (n ? t.props.removeVideoUpload(e.id) : t.props.deleteVideo(e.id, t.notificationService), t.props.data.user && t.props.data.user.id) {
-                                        var a = Te(e) ? Zn.Remove : Zn.Cancel;
+                                        var a = Te(e) ? Jn.Remove : Jn.Cancel;
                                         ! function(e, t, n, a) {
                                             l.__awaiter(this, void 0, void 0, function() {
                                                 return l.__generator(this, function(i) {
-                                                    return d.o.track($n.a.VODProcessingInteraction, {
+                                                    return d.o.track(ea.a.VODProcessingInteraction, {
                                                         vod_id: e,
                                                         vod_type: t,
                                                         channel_id: n,
@@ -7367,7 +7368,7 @@
                                 })
                             })
                         }, t.showExportModal = function(e) {
-                            t.props.showModal(ar, {
+                            t.props.showModal(ir, {
                                 video: e,
                                 exportVideo: t.props.exportVideo,
                                 closeModal: t.props.closeModal
@@ -7394,7 +7395,7 @@
                         return l.__awaiter(this, void 0, void 0, function() {
                             var t, n;
                             return l.__generator(this, function(a) {
-                                return e.showModal && e.closeModal && !this.notificationService && (e.overrideNotificationService ? this.notificationService = e.overrideNotificationService : this.notificationService = new Jr(this.props.showModal, this.props.closeModal)), Boolean(!this.props.data.user && e.data.user) && (this.props.fetchProcessingVideosData(this.propsToPageContext(e), 0, this.notificationService), this.fetchData(this.propsToPageContext(e), this.propsToPageContext(this.props)), this.setPageTitle(e)), e.pubsub && e.pubsub.messages.videoThumbnailProcessed && this.props.data.user && (t = this.props.pubsub && this.props.pubsub.messages.videoThumbnailProcessed, n = e.pubsub.messages.videoThumbnailProcessed, (!t || t.upload_id !== n.upload_id) && this.props.fetchVideo(this.props.data.user.id, n.video_id)), e.pubsub && e.pubsub.messages.videoThumbnailError && (t = this.props.pubsub && this.props.pubsub.messages.videoThumbnailError, n = e.pubsub.messages.videoThumbnailError, (!t || t.upload_id !== n.upload_id) && this.props.errorProcessingThumbnail(n.video_id)), [2]
+                                return e.showModal && e.closeModal && !this.notificationService && (e.overrideNotificationService ? this.notificationService = e.overrideNotificationService : this.notificationService = new $r(this.props.showModal, this.props.closeModal)), Boolean(!this.props.data.user && e.data.user) && (this.props.fetchProcessingVideosData(this.propsToPageContext(e), 0, this.notificationService), this.fetchData(this.propsToPageContext(e), this.propsToPageContext(this.props)), this.setPageTitle(e)), e.pubsub && e.pubsub.messages.videoThumbnailProcessed && this.props.data.user && (t = this.props.pubsub && this.props.pubsub.messages.videoThumbnailProcessed, n = e.pubsub.messages.videoThumbnailProcessed, (!t || t.upload_id !== n.upload_id) && this.props.fetchVideo(this.props.data.user.id, n.video_id)), e.pubsub && e.pubsub.messages.videoThumbnailError && (t = this.props.pubsub && this.props.pubsub.messages.videoThumbnailError, n = e.pubsub.messages.videoThumbnailError, (!t || t.upload_id !== n.upload_id) && this.props.errorProcessingThumbnail(n.video_id)), [2]
                             })
                         })
                     }, t.prototype.componentWillUnmount = function() {
@@ -7414,7 +7415,7 @@
                         });
                         var e = d.b.get("vodcast_deprecation_announcement_enabled", !1),
                             t = null;
-                        return t = !this.isAffiliatePlus() && e ? tn.createElement(Hr, null) : tn.createElement(On, null), tn.createElement(an.b, null, tn.createElement(fe.Xa, {
+                        return t = !this.isAffiliatePlus() && e ? tn.createElement(Qr, null) : tn.createElement(Mn, null), tn.createElement(an.b, null, tn.createElement(fe.Xa, {
                             padding: 3,
                             className: "video-manager",
                             fullWidth: !0
@@ -7428,7 +7429,7 @@
                             padding: {
                                 bottom: 1
                             }
-                        }, tn.createElement(Ja, {
+                        }, tn.createElement($a, {
                             isLoading: this.props.data.loading,
                             channelLogin: this.props.match.params.channelName,
                             user: this.props.data.user,
@@ -7444,7 +7445,7 @@
                         }, this.showRightSide && Object(d.d)("Upload queue", "VideoManagerPage"))), tn.createElement(fe.Xa, {
                             position: fe.jb.Relative,
                             fullWidth: !0
-                        }, tn.createElement(xn, {
+                        }, tn.createElement(An, {
                             errors: this.props.uploadValidationErrors,
                             onFilesSubmitted: this.handleUploadFilesSubmitted
                         })), tn.createElement(fe.Xa, {
@@ -7629,7 +7630,7 @@
                             enabled: !!this.props.apiData.videos.data && this.props.apiData.videos.moreDataAvailable,
                             key: this.props.activeFilter || "",
                             loadMore: this.loadMore
-                        }), tn.createElement(Wr, {
+                        }), tn.createElement(Br, {
                             user: this.props.data.user,
                             currentUser: this.props.data.currentUser,
                             channelName: this.props.match.params.channelName,
@@ -7644,7 +7645,7 @@
                         }), tn.createElement(fn.b, {
                             limit: 3
                         }, tn.createElement(vn.b, {
-                            expiresAt: no
+                            expiresAt: ao
                         }, t))))
                     }, t.prototype.renderSuccessfullyProcessedVideos = function() {
                         var e = this;
@@ -7654,20 +7655,20 @@
                         var t = this.props.apiData.videos.data.map(function(t) {
                             return e.getVideoRow(t)
                         });
-                        return this.props.apiData.videos.loading && t.push(tn.createElement(qa.a, {
+                        return this.props.apiData.videos.loading && t.push(tn.createElement(Ya.a, {
                             key: "VideoCardPlaceholder" + this.props.apiData.videos.data.length
                         })), t
                     }, t.prototype.renderLoadingState = function() {
-                        return tn.createElement(fe.Xa, null, tn.createElement(qa.a, {
+                        return tn.createElement(fe.Xa, null, tn.createElement(Ya.a, {
                             key: "VideoCardPlaceholderLoading1"
-                        }), tn.createElement(qa.a, {
+                        }), tn.createElement(Ya.a, {
                             key: "VideoCardPlaceholderLoading2"
-                        }), tn.createElement(qa.a, {
+                        }), tn.createElement(Ya.a, {
                             key: "VideoCardPlaceholderLoading3"
                         }))
                     }, t.prototype.renderEmptyState = function() {
                         return tn.createElement(fe.Xa, {
-                            "data-test-selector": $r
+                            "data-test-selector": eo
                         }, Object(d.d)("You have no videos which match these filters.", "VideoManagerPage"))
                     }, t.prototype.renderErrorState = function() {
                         return tn.createElement(fe.Xa, {
@@ -7735,7 +7736,7 @@
                                     fullWidth: !0,
                                     justifyContent: fe.Wa.Center
                                 }, tn.createElement(fe.z, {
-                                    "data-test-selector": eo,
+                                    "data-test-selector": to,
                                     state: n,
                                     type: fe.F.Hollow,
                                     onClick: this.loadMoreProcessing
@@ -7748,7 +7749,7 @@
                     }, t.prototype.getVideoRow = function(e, t) {
                         if (!this.props.data.user || !this.props.data.currentUser) return null;
                         var n = this.props.data.user.id === this.props.data.currentUser.id;
-                        return tn.createElement(Ka, {
+                        return tn.createElement(qa, {
                             video: e,
                             videoDownloads: this.props.videoDownloads,
                             videoUpload: t,
@@ -7789,7 +7790,7 @@
                         }
                     }, t
                 }(tn.Component),
-                io = Object(i.compose)(Object(on.a)(Qr, {
+                ro = Object(i.compose)(Object(on.a)(Kr, {
                     options: function(e) {
                         return {
                             variables: {
@@ -7812,11 +7813,11 @@
                     }
                 }), Object(ln.a)([{
                     topic: function(e) {
-                        return e.data.user ? Object(cn.K)(e.data.user.id) : ""
+                        return e.data.user ? Object(cn.L)(e.data.user.id) : ""
                     },
-                    mapMessageTypesToProps: (Yr = {}, Yr[dn.PubsubMessageType.VideoThumbnailProcessingComplete] = "videoThumbnailProcessed", Yr[dn.PubsubMessageType.VideoThumbnailProcessingError] = "videoThumbnailError", Yr)
-                }]))(ao);
-            var ro = Object(a.connect)(function(e) {
+                    mapMessageTypesToProps: (Zr = {}, Zr[dn.PubsubMessageType.VideoThumbnailProcessingComplete] = "videoThumbnailProcessed", Zr[dn.PubsubMessageType.VideoThumbnailProcessingError] = "videoThumbnailError", Zr)
+                }]))(io);
+            var oo = Object(a.connect)(function(e) {
                 return {
                     activeFilter: e.videoManager.activeFilter,
                     apiData: {
@@ -7862,9 +7863,9 @@
                     submitVideoUploadFiles: xt,
                     updateEvent: Ht
                 }, e)
-            })(io);
+            })(ro);
             n.d(t, "VideoManagerPage", function() {
-                return ro
+                return oo
             })
         },
         "/Fcb": function(e, t, n) {},
@@ -13909,83 +13910,83 @@
                 i = n("mrSG"),
                 r = n("q1tI"),
                 o = n("/7QA"),
-                s = n("a1OF"),
-                l = n("Ue10"),
-                d = (n("v082"), {
+                s = n("Ue10"),
+                l = (n("v082"), {
                     "data-test-selector": "dismiss-button"
                 }),
-                c = {
+                d = {
                     "data-test-selector": "header"
                 },
-                u = function(e) {
+                c = function(e) {
                     function t() {
                         return null !== e && e.apply(this, arguments) || this
                     }
                     return i.__extends(t, e), t.prototype.componentDidMount = function() {
                         this.props.onMount && this.props.onMount()
                     }, t.prototype.render = function() {
-                        return r.createElement(l.Eb, {
+                        var e = this.props.src;
+                        return r.createElement(s.Eb, {
                             elevation: 3,
                             fullWidth: !0
-                        }, r.createElement(l.Eb, {
-                            background: l.r.Alt2,
-                            borderRadius: l.x.Medium,
-                            justifyContent: l.Wa.Between,
+                        }, r.createElement(s.Eb, {
+                            background: s.r.Alt2,
+                            borderRadius: s.x.Medium,
+                            justifyContent: s.Wa.Between,
                             className: "dashboard-announcement-banner-layout",
-                            display: l.X.Flex,
+                            display: s.X.Flex,
                             margin: {
                                 bottom: 1
                             },
                             padding: 1
-                        }, r.createElement(l.Xa, {
-                            display: l.X.Flex
-                        }, this.props.emote && r.createElement(l.Xa, {
-                            alignSelf: l.g.Center,
+                        }, r.createElement(s.Xa, {
+                            display: s.X.Flex
+                        }, e && r.createElement(s.Xa, {
+                            alignSelf: s.g.Center,
                             flexShrink: 0,
                             margin: {
                                 right: 1
                             }
                         }, r.createElement("img", {
-                            src: Object(s.d)(this.props.emote, 3),
+                            src: e,
                             width: "20"
-                        })), r.createElement(l.Xa, null, r.createElement(l.Pa, {
+                        })), r.createElement(s.Xa, null, r.createElement(s.Pa, {
                             margin: {
                                 bottom: 0
                             }
-                        }, r.createElement(l.W, i.__assign({
+                        }, r.createElement(s.W, i.__assign({
                             bold: !0,
-                            fontSize: l.Ca.Size6
-                        }, c), this.props.headerLink ? r.createElement(l.U, {
+                            fontSize: s.Ca.Size6
+                        }, d), this.props.headerLink ? r.createElement(s.U, {
                             linkTo: this.props.headerLink
-                        }, this.props.headerText) : this.props.headerText)), r.createElement(l.W, {
-                            color: l.O.Alt2,
-                            fontSize: l.Ca.Size6,
-                            type: l.Vb.Span
-                        }, this.props.subtitleText, "  "), r.createElement(l.U, {
+                        }, this.props.headerText) : this.props.headerText)), r.createElement(s.W, {
+                            color: s.O.Alt2,
+                            fontSize: s.Ca.Size6,
+                            type: s.Vb.Span
+                        }, this.props.subtitleText, "  "), r.createElement(s.U, {
                             to: this.props.buttonLink,
                             onClick: this.props.onButtonClick,
                             underline: !0
-                        }, this.props.buttonText))), r.createElement(l.Xa, {
-                            alignSelf: l.g.Center,
+                        }, this.props.buttonText))), r.createElement(s.Xa, {
+                            alignSelf: s.g.Center,
                             margin: {
                                 left: 1
                             }
-                        }, r.createElement(l.A, i.__assign({
+                        }, r.createElement(s.A, i.__assign({
                             ariaLabel: Object(o.d)("Close", "AnnouncementBanner-temp"),
-                            icon: l.tb.Close,
+                            icon: s.tb.Close,
                             onClick: this.props.onDismiss
-                        }, d)))))
+                        }, l)))))
                     }, t
                 }(r.Component),
-                p = n("V0eP"),
-                m = n("jbSU"),
-                h = n("17x9"),
-                g = function(e) {
+                u = n("V0eP"),
+                p = n("jbSU"),
+                m = n("17x9"),
+                h = function(e) {
                     function t() {
                         var t = null !== e && e.apply(this, arguments) || this;
                         return t.state = {
                             didError: !1
-                        }, t.id = String(++f), t
+                        }, t.id = String(++g), t
                     }
                     return i.__extends(t, e), t.prototype.getChildContext = function() {
                         return {
@@ -13996,13 +13997,13 @@
                             didError: !0
                         })
                     }, t.prototype.render = function() {
-                        return this.state.didError || this.props.expiresAt <= new Date ? r.createElement(m.a, null) : this.props.children
+                        return this.state.didError || this.props.expiresAt <= new Date ? r.createElement(p.a, null) : this.props.children
                     }, t.childContextTypes = {
-                        announcementID: h.string
+                        announcementID: m.string
                     }, t
                 }(r.Component),
-                f = 0;
-            var v = function(e) {
+                g = 0;
+            var f = function(e) {
                 function t() {
                     return null !== e && e.apply(this, arguments) || this
                 }
@@ -14015,15 +14016,15 @@
             n.d(t, !1, function() {
                 return a.a
             }), n.d(t, "a", function() {
-                return u
+                return c
             }), n.d(t, !1, function() {}), n.d(t, !1, function() {
-                return p.a
+                return u.a
             }), n.d(t, !1, function() {
-                return m.a
+                return p.a
             }), n.d(t, "b", function() {
-                return g
+                return h
             }), n.d(t, "c", function() {
-                return v
+                return f
             })
         },
         lr7A: function(e, t, n) {
@@ -14093,17 +14094,18 @@
                             }
                         }, this.renderTagSearch()), this.renderErrorMessage(), this.renderSelectedTags()))
                     }, t.prototype.renderSelectedTags = function() {
-                        var e = this;
-                        if (0 === this.props.selectedTags.length && !this.props.readOnly) return null;
-                        if (0 === this.props.selectedTags.length) return r.createElement(u.Xa, {
+                        var e = this,
+                            t = this.props.data && this.props.data.game && this.props.data.game.tags;
+                        if (0 === this.props.selectedTags.length && !this.props.readOnly && (!t || t && !t.length)) return null;
+                        if (0 === this.props.selectedTags.length && (!t || t && !t.length)) return r.createElement(u.Xa, {
                             "data-test-selector": a.NoTagsSelected
                         }, r.createElement(u.Ra, {
                             type: u.Ta.Text,
                             placeholder: Object(o.d)("No tags were selected", "TagSelectorSearch"),
                             disabled: !0
                         }));
-                        var t = [],
-                            n = this.props.selectedTags.map(function(t, n) {
+                        var n = [],
+                            i = this.props.selectedTags.map(function(t, n) {
                                 return r.createElement(u.Xa, {
                                     display: u.X.InlineBlock,
                                     margin: {
@@ -14120,7 +14122,7 @@
                                     "data-idx": n
                                 }))
                             });
-                        return this.props.data && this.props.data.game && this.props.data.game.tags && (t = this.props.data.game.tags.map(function(e, t) {
+                        return t && (n = t.map(function(e, t) {
                             return r.createElement(u.Xa, {
                                 display: u.X.InlineBlock,
                                 margin: {
@@ -14145,7 +14147,7 @@
                                 top: .5
                             },
                             className: "selected-tags"
-                        }, n.concat(t))
+                        }, i.concat(n))
                     }, t.prototype.renderHelpButton = function() {
                         return this.props.showHelpButton ? r.createElement(u.Xa, null, Object(o.d)("<x:link>Learn More</x:link>", {
                             "x:link": function(e) {

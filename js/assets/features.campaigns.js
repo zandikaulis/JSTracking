@@ -192,7 +192,7 @@
                     autoReportInteractive: !0
                 }), Object(d.a)(function(e) {
                     return {
-                        topic: e.user && e.data && e.data.user && e.data.user.campaignProperties ? Object(m.E)(e.user.id) : "",
+                        topic: e.user && e.data && e.data.user && e.data.user.campaignProperties ? Object(m.F)(e.user.id) : "",
                         query: v,
                         variables: {
                             channelID: e.channelID
@@ -212,7 +212,7 @@
                     }
                 }), Object(d.a)(function(e) {
                     return {
-                        topic: e.user && e.data && e.data.user && e.data.user.campaignProperties && e.data.user.campaignProperties.domains ? Object(m.m)(e.data.user.campaignProperties.domains[0]) : "",
+                        topic: e.user && e.data && e.data.user && e.data.user.campaignProperties && e.data.user.campaignProperties.domains ? Object(m.n)(e.data.user.campaignProperties.domains[0]) : "",
                         query: v,
                         variables: {
                             channelID: e.channelID
@@ -2228,7 +2228,7 @@
                     }
                 }), Object(P.a)([{
                     topic: function(e) {
-                        return Object(x.H)(e.currentSubscriptionData && e.currentSubscriptionData.currentUser && e.currentSubscriptionData.currentUser.id || "")
+                        return Object(x.I)(e.currentSubscriptionData && e.currentSubscriptionData.currentUser && e.currentSubscriptionData.currentUser.id || "")
                     },
                     mapMessageTypesToProps: {
                         "*": "entitlementMessage"
@@ -2834,7 +2834,7 @@
                                         return s.sent(), [2, this.handleErrorMessage(pe.Unexpected)];
                                     case 4:
                                         return this.unsubscribe = p.l.subscribe({
-                                            topic: Object(x.C)(i),
+                                            topic: Object(x.D)(i),
                                             success: function() {
                                                 (function(e, t) {
                                                     return fetch(e, {
@@ -3715,42 +3715,6 @@
             }
         },
         H5OX: function(e, t, n) {},
-        HGFl: function(e, t, n) {
-            "use strict";
-            n.d(t, "a", function() {
-                return r
-            }), n.d(t, "b", function() {
-                return a
-            }), n.d(t, "c", function() {
-                return o
-            }), n.d(t, "d", function() {
-                return s
-            });
-            var i = n("NAv5"),
-                r = {
-                    RFC3399: "YYYY-MM-DDTHH:mm:ssZ",
-                    timeString: "h:mma"
-                };
-
-            function a(e, t) {
-                return Object(i.format)(e, t)
-            }
-
-            function o(e) {
-                return Object(i.parse)(e)
-            }
-
-            function s(e, t) {
-                var n = e.split(":");
-                if (2 !== n.length) throw new Error("invalid time string: " + e);
-                var i = parseInt(n[0], 10),
-                    r = parseInt(n[1].substring(0, 2), 10),
-                    a = n[1].substring(n[1].length - 2);
-                if (12 === i && "am" === a && (i = 0), "pm" === a && i < 12 && (i += 12), isNaN(i) || i < 0 || i > 23 || isNaN(r) || r < 0 || r > 59) throw new Error("invalid time string: " + e);
-                var o = t || new Date;
-                return o.setHours(i, r), o
-            }
-        },
         HvcU: function(e, t, n) {
             e.exports = n.p + "assets/generic_credit_card_2x-9e855c7d5c5359ac9208.png"
         },
@@ -7633,7 +7597,7 @@
                 Q = Object(h.compose)(Object(Y.a)(function(e) {
                     return function(e, t, n) {
                         return {
-                            topic: n ? Object(P.D)(n) : "",
+                            topic: n ? Object(P.E)(n) : "",
                             type: k.PubsubMessageType.UserBitsBalanceUpdate,
                             mutator: function(e, t) {
                                 return t && e.message_type === S.b.Balance ? (t.currentUser && e.data && (t.currentUser.bitsBalance = e.data.balance), t) : t
@@ -12207,12 +12171,12 @@
                                                 action: te.a.CompletePurchaseClick,
                                                 actionDetail: te.f.Success,
                                                 savedPayment: e.savedPayment
-                                            }), this.props.data.refetch(), n ? this.setState({
+                                            }), n ? this.setState({
                                                 purchaseResponse: a.body
-                                            }) : this.setState({
+                                            }) : (this.props.data.refetch(), this.setState({
                                                 purchaseResponse: a.body,
                                                 progress: N.a.CONFIRMATION
-                                            }), [3, 4]);
+                                            })), [3, 4]);
                                         case 3:
                                             return s.sent(), this.setState({
                                                 showErrors: !0,
@@ -12242,22 +12206,25 @@
                             progress: N.a.CONFIRMATION
                         })), this.state.progress !== t.progress && this.props.onCheckoutProgress && this.props.onCheckoutProgress(this.state.progress)
                     }, t.prototype.componentWillReceiveProps = function(e) {
-                        var t = e.pubsub.messages.fulfillment && e.pubsub.messages.fulfillment.fulfillment;
-                        if (t) switch (clearTimeout(this.timeout), t.status) {
-                            case g.PurchaseFulfillmentStatus.Success:
-                                this.setState({
-                                    progress: N.a.CONFIRMATION
-                                });
-                                break;
-                            case g.PurchaseFulfillmentStatus.Failure:
-                            default:
-                                this.setState({
-                                    showErrors: !0,
-                                    errors: {
-                                        code: P.DefaultMessage,
-                                        level: S.Error
-                                    }
-                                })
+                        var t = e.pubsub.messages.fulfillment;
+                        if (this.isRelated(t)) {
+                            var n = t && t.fulfillment;
+                            if (n) switch (clearTimeout(this.timeout), n.status) {
+                                case g.PurchaseFulfillmentStatus.Success:
+                                    this.setState({
+                                        progress: N.a.CONFIRMATION
+                                    });
+                                    break;
+                                case g.PurchaseFulfillmentStatus.Failure:
+                                default:
+                                    this.setState({
+                                        showErrors: !0,
+                                        errors: {
+                                            code: P.DefaultMessage,
+                                            level: S.Error
+                                        }
+                                    })
+                            }
                         }
                     }, t.prototype.componentWillUnmount = function() {
                         clearTimeout(this.timeout)
@@ -12388,7 +12355,9 @@
                         },
                         enumerable: !0,
                         configurable: !0
-                    }), Object.defineProperty(t.prototype, "purchaseFlow", {
+                    }), t.prototype.isRelated = function(e) {
+                        return !(!this.state.purchaseResponse || !e) && e.fulfillment.product_details.origin_id === this.state.purchaseResponse.origin_id
+                    }, Object.defineProperty(t.prototype, "purchaseFlow", {
                         get: function() {
                             return this.props.isGift ? this.props.mysteryGiftCount && this.props.mysteryGiftCount > 0 ? i.MYSTERY_GIFT : i.GIFT_SUB : i.PERSONAL_SUB
                         },
@@ -12547,7 +12516,7 @@
                     }
                 }), Object(f.a)([{
                     topic: function(e) {
-                        return Object(b.u)("" + (e.data.currentUser && e.data.currentUser.id))
+                        return Object(b.v)("" + (e.data.currentUser && e.data.currentUser.id))
                     },
                     mapMessageTypesToProps: (rt = {}, rt[g.PubsubMessageType.PurchaseFulfillmentEvents] = "fulfillment", rt)
                 }]), Object(ne.b)("CheckoutPayments"))(lt);

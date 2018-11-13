@@ -6,8 +6,8 @@
         "1OTy": function(e, t, r) {
             "use strict";
             var n = r("mrSG"),
-                a = r("q1tI"),
-                i = r("/MKj"),
+                i = r("q1tI"),
+                a = r("/MKj"),
                 o = r("fvjX"),
                 s = r("/0dD"),
                 c = r("XDQu"),
@@ -17,7 +17,7 @@
                         return null !== e && e.apply(this, arguments) || this
                     }
                     return n.__extends(t, e), t.prototype.render = function() {
-                        return a.createElement(u.La, {
+                        return i.createElement(u.La, {
                             label: this.props.label,
                             type: this.props.type,
                             src: this.props.src,
@@ -34,8 +34,8 @@
                         enumerable: !0,
                         configurable: !0
                     }), t
-                }(a.Component);
-            var l = Object(o.compose)(Object(i.connect)(function(e) {
+                }(i.Component);
+            var l = Object(o.compose)(Object(a.connect)(function(e) {
                 return {
                     darkModeEnabled: Object(c.a)(e) === s.a.Dark
                 }
@@ -59,8 +59,8 @@
         "5gJ6": function(e, t, r) {
             "use strict";
             var n = r("mrSG"),
-                a = r("q1tI"),
-                i = r("/MKj"),
+                i = r("q1tI"),
+                a = r("/MKj"),
                 o = r("/7QA"),
                 s = r("2DIU"),
                 c = r.n(s),
@@ -107,7 +107,7 @@
                         return null !== e && e.apply(this, arguments) || this
                     }
                     return n.__extends(t, e), t.prototype.render = function() {
-                        if ("prime" === this.props.paymentProvider) return a.createElement(H.sb, {
+                        if ("prime" === this.props.paymentProvider) return i.createElement(H.sb, {
                             asset: H.tb.LogoTwitchPrime,
                             width: 66,
                             height: 30,
@@ -117,9 +117,9 @@
                             t = e.src,
                             r = e.alt,
                             n = e.srcSet;
-                        return a.createElement(H.Xa, {
+                        return i.createElement(H.Xa, {
                             className: "payment-method-image"
-                        }, a.createElement(H.S, {
+                        }, i.createElement(H.S, {
                             src: t,
                             alt: r,
                             srcSet: n
@@ -216,8 +216,8 @@
                         enumerable: !0,
                         configurable: !0
                     }), t
-                }(a.Component));
-            var Y = Object(i.connect)(function(e) {
+                }(i.Component));
+            var Y = Object(a.connect)(function(e) {
                 return {
                     darkModeEnabled: Object(V.a)(e) === X.a.Dark
                 }
@@ -251,12 +251,12 @@
         "7SjK": function(e, t, r) {
             "use strict";
             var n = r("mrSG"),
-                a = r("q1tI"),
-                i = r("TSYQ"),
+                i = r("q1tI"),
+                a = r("TSYQ"),
                 o = r("/7QA"),
                 s = r("GnwI"),
                 c = r("Ue10"),
-                u = (r("GOKC"), a.createElement(c.Eb, {
+                u = (r("GOKC"), i.createElement(c.Eb, {
                     alignItems: c.f.Center,
                     background: c.r.Overlay,
                     borderRadius: c.x.Small,
@@ -267,20 +267,20 @@
                     justifyContent: c.Wa.Center,
                     position: c.jb.Absolute,
                     zIndex: c.ic.Above
-                }, a.createElement(c.sb, {
+                }, i.createElement(c.sb, {
                     asset: c.tb.Lock,
                     height: 10,
                     width: 10
                 }))),
                 d = function(e) {
-                    var t = i("emote-button__link", {
+                    var t = a("emote-button__link", {
                             "emote-button__link--locked": !e.onClick
                         }),
                         r = e.emote,
                         n = r.displayName,
                         d = r.srcSet;
                     if (!d) return null;
-                    var l = a.createElement("img", {
+                    var l = i.createElement("img", {
                         className: "emote-picker__image",
                         srcSet: d,
                         alt: n
@@ -292,30 +292,30 @@
                                 g = f[0];
                             m[b] = g
                         }
-                        l = a.createElement(s.a, {
+                        l = i.createElement(s.a, {
                             className: "emote-picker__emote-image",
                             src: p,
                             srcSet: m,
                             alt: n || ""
                         })
                     }
-                    return a.createElement("div", {
+                    return i.createElement("div", {
                         className: "emote-button"
-                    }, a.createElement(c.Yb, {
+                    }, i.createElement(c.Yb, {
                         label: n || Object(o.d)("Emote", "EmoteButton"),
                         direction: c.ac.Bottom
-                    }, a.createElement(c.Pa, {
+                    }, i.createElement(c.Pa, {
                         display: c.X.Flex,
                         alignItems: c.f.Center,
                         justifyContent: c.Wa.Center
-                    }, a.createElement("button", {
+                    }, i.createElement("button", {
                         "data-test-selector": "emote-button-clickable",
                         className: t,
                         "aria-label": n,
                         name: n,
                         onClick: e.onClick ? e.onClick.bind(null, e.emote) : void 0,
                         "data-a-target": n
-                    }, a.createElement("figure", null, e.locked ? u : null, l)))))
+                    }, i.createElement("figure", null, e.locked ? u : null, l)))))
                 },
                 l = (r("VrOd"), function(e) {
                     function t() {
@@ -327,12 +327,12 @@
                     return n.__extends(t, e), t.prototype.render = function() {
                         var e = this,
                             t = this.props.emotes.map(function(t, r) {
-                                return a.createElement(c.Xa, {
+                                return i.createElement(c.Xa, {
                                     key: "emote-button-padder-" + t.id + "--" + t.setID,
                                     padding: {
                                         left: e.props.spaced ? .5 : 0
                                     }
-                                }, a.createElement(d, {
+                                }, i.createElement(d, {
                                     key: "emote-button-" + t.id + "--" + t.setID,
                                     emote: t,
                                     isCriticalImage: 0 === r,
@@ -340,13 +340,13 @@
                                     onClick: e.props.locked ? void 0 : e.handleClickEmote
                                 }))
                             });
-                        return a.createElement(c.Xa, {
+                        return i.createElement(c.Xa, {
                             display: c.X.Flex,
                             flexWrap: c.Ba.Wrap,
                             justifyContent: c.Wa.Center
                         }, t)
                     }, t
-                }(a.Component));
+                }(i.Component));
             r.d(t, "a", function() {
                 return l
             })
@@ -863,12 +863,12 @@
                     column: 1
                 }
             };
-            var a = {};
+            var i = {};
             n.definitions = n.definitions.concat(function(e) {
                 return e.filter(function(e) {
                     if ("FragmentDefinition" !== e.kind) return !0;
                     var t = e.name.value;
-                    return !a[t] && (a[t] = !0, !0)
+                    return !i[t] && (i[t] = !0, !0)
                 })
             }(r("IKE4").definitions)), e.exports = n
         },
@@ -882,8 +882,8 @@
         C8FX: function(e, t, r) {
             "use strict";
             var n = r("mrSG"),
-                a = r("q1tI"),
-                i = r("/7QA"),
+                i = r("q1tI"),
+                a = r("/7QA"),
                 o = r("Ue10");
             r("uUdG");
             var s = function(e) {
@@ -891,62 +891,62 @@
                     return null !== e && e.apply(this, arguments) || this
                 }
                 return n.__extends(t, e), t.prototype.render = function() {
-                    return this.props.price ? a.createElement(o.Xa, {
+                    return this.props.price ? i.createElement(o.Xa, {
                         display: o.X.Flex,
                         flexDirection: o.Aa.Column
-                    }, this.props.productDiscountPrice && a.createElement(o.W, {
+                    }, this.props.productDiscountPrice && i.createElement(o.W, {
                         bold: !0,
                         className: "ticket-price__promotion",
                         fontSize: o.Ca.Size4
-                    }, Object(i.d)("{discountedPrice} / First Month*", {
+                    }, Object(a.d)("{discountedPrice} / First Month*", {
                         discountedPrice: this.props.productDiscountPrice
-                    }, "TicketPrice")), a.createElement(o.Xa, {
+                    }, "TicketPrice")), i.createElement(o.Xa, {
                         display: o.X.Flex,
                         justifyContent: o.Wa.Center,
                         flexWrap: o.Ba.Wrap
-                    }, a.createElement(o.W, {
+                    }, i.createElement(o.W, {
                         type: o.Vb.Span,
                         fontSize: o.Ca.Size4,
                         decoration: this.props.productDiscountPrice ? o.Tb.Strikethrough : void 0,
                         "data-a-target": "js-test-ticket-price-text"
-                    }, Object(i.d)("{price} / {interval}", {
-                        price: a.createElement(o.W, {
+                    }, Object(a.d)("{price} / {interval}", {
+                        price: i.createElement(o.W, {
                             type: o.Vb.Span,
                             bold: !0
                         }, this.props.price),
                         interval: function(e) {
                             switch (e) {
                                 case "WEEK":
-                                    return Object(i.d)("Week", "TicketPrice");
+                                    return Object(a.d)("Week", "TicketPrice");
                                 case "MONTH":
-                                    return Object(i.d)("Month", "TicketPrice");
+                                    return Object(a.d)("Month", "TicketPrice");
                                 case "YEAR":
-                                    return Object(i.d)("Year", "TicketPrice");
+                                    return Object(a.d)("Year", "TicketPrice");
                                 case "ONE_TIME":
-                                    return Object(i.d)("One-Time Purchase", "TicketPrice");
+                                    return Object(a.d)("One-Time Purchase", "TicketPrice");
                                 default:
                                     return ""
                             }
                         }(this.props.interval)
-                    }, "TicketDescription")), this.formattedTaxInclusivity && a.createElement(o.Pa, {
+                    }, "TicketDescription")), this.formattedTaxInclusivity && i.createElement(o.Pa, {
                         margin: {
                             left: .5
                         }
-                    }, a.createElement(o.W, {
+                    }, i.createElement(o.W, {
                         fontSize: o.Ca.Size4,
                         type: o.Vb.Span,
                         decoration: this.props.productDiscountPrice ? o.Tb.Strikethrough : void 0
-                    }, Object(i.d)("(Includes VAT)", "TicketDescription"))))) : a.createElement(o.Za, {
+                    }, Object(a.d)("(Includes VAT)", "TicketDescription"))))) : i.createElement(o.Za, {
                         fillContent: !0
                     })
                 }, Object.defineProperty(t.prototype, "formattedTaxInclusivity", {
                     get: function() {
-                        return this.props.showEuSubs && this.props.productPriceTaxInclusive ? Object(i.d)("(Includes VAT)", "TicketPrice") : ""
+                        return this.props.showEuSubs && this.props.productPriceTaxInclusive ? Object(a.d)("(Includes VAT)", "TicketPrice") : ""
                     },
                     enumerable: !0,
                     configurable: !0
                 }), t
-            }(a.PureComponent);
+            }(i.PureComponent);
             r.d(t, "a", function() {
                 return s
             })
@@ -972,21 +972,21 @@
         HGFl: function(e, t, r) {
             "use strict";
             r.d(t, "a", function() {
-                return a
-            }), r.d(t, "b", function() {
                 return i
+            }), r.d(t, "b", function() {
+                return a
             }), r.d(t, "c", function() {
                 return o
             }), r.d(t, "d", function() {
                 return s
             });
             var n = r("NAv5"),
-                a = {
+                i = {
                     RFC3399: "YYYY-MM-DDTHH:mm:ssZ",
                     timeString: "h:mma"
                 };
 
-            function i(e, t) {
+            function a(e, t) {
                 return Object(n.format)(e, t)
             }
 
@@ -998,11 +998,11 @@
                 var r = e.split(":");
                 if (2 !== r.length) throw new Error("invalid time string: " + e);
                 var n = parseInt(r[0], 10),
-                    a = parseInt(r[1].substring(0, 2), 10),
-                    i = r[1].substring(r[1].length - 2);
-                if (12 === n && "am" === i && (n = 0), "pm" === i && n < 12 && (n += 12), isNaN(n) || n < 0 || n > 23 || isNaN(a) || a < 0 || a > 59) throw new Error("invalid time string: " + e);
+                    i = parseInt(r[1].substring(0, 2), 10),
+                    a = r[1].substring(r[1].length - 2);
+                if (12 === n && "am" === a && (n = 0), "pm" === a && n < 12 && (n += 12), isNaN(n) || n < 0 || n > 23 || isNaN(i) || i < 0 || i > 59) throw new Error("invalid time string: " + e);
                 var o = t || new Date;
-                return o.setHours(n, a), o
+                return o.setHours(n, i), o
             }
         },
         HvcU: function(e, t, r) {
@@ -1166,13 +1166,13 @@
         Jgup: function(e, t, r) {
             "use strict";
             r.d(t, "b", function() {
-                return a
-            }), r.d(t, "a", function() {
                 return i
+            }), r.d(t, "a", function() {
+                return a
             });
             var n = r("/7QA");
 
-            function a(e) {
+            function i(e) {
                 switch (e.toUpperCase()) {
                     case "A1":
                         return Object(n.d)("Anonymous Proxy", "format-country");
@@ -1686,14 +1686,14 @@
                         return e
                 }
             }
-            var i = ["US", "CA", "AF", "AX", "AL", "DZ", "AS", "AD", "AO", "AI", "A1", "AQ", "AG", "AR", "AM", "AW", "AP", "AU", "AT", "AZ", "BS", "BH", "BD", "BB", "BY", "BE", "BZ", "BJ", "BM", "BT", "BO", "BQ", "BA", "BW", "BV", "BR", "IO", "VG", "BN", "BG", "BF", "BI", "KH", "CM", "CV", "KY", "CF", "TD", "CL", "CN", "CX", "CC", "CO", "KM", "CG", "CD", "CK", "CR", "HR", "CU", "CW", "CY", "CZ", "DK", "DJ", "DM", "DO", "TL", "EC", "EG", "SV", "GQ", "ER", "EE", "ET", "EU", "FK", "FO", "FJ", "FI", "FR", "GF", "PF", "TF", "GA", "GM", "GE", "DE", "GH", "GI", "GR", "GL", "GD", "GP", "GU", "GT", "GG", "GN", "GW", "GY", "HT", "HM", "HN", "HK", "HU", "IS", "IN", "ID", "IR", "IQ", "IE", "IM", "IL", "IT", "CI", "JM", "JP", "JE", "JO", "KZ", "KE", "KI", "KW", "KG", "LA", "LV", "LB", "LS", "LR", "LY", "LI", "LT", "LU", "MO", "MK", "MG", "MW", "MY", "MV", "ML", "MT", "MH", "MQ", "MR", "MU", "YT", "MX", "FM", "MD", "MC", "MN", "ME", "MS", "MA", "MZ", "MM", "NA", "NR", "NP", "NL", "NC", "NZ", "NI", "NE", "NG", "NU", "NF", "KP", "MP", "NO", "OM", "O1", "PK", "PW", "PS", "PA", "PG", "PY", "PE", "PH", "PN", "PL", "PT", "PR", "QA", "RE", "RO", "RU", "RW", "BL", "SH", "KN", "LC", "MF", "PM", "VC", "WS", "SM", "ST", "A2", "SA", "SN", "RS", "SC", "SL", "SG", "SX", "SK", "SI", "SB", "SO", "ZA", "GS", "KR", "SS", "ES", "LK", "SD", "SR", "SJ", "SZ", "SE", "CH", "SY", "TW", "TJ", "TZ", "TH", "TG", "TK", "TO", "TT", "TN", "TR", "TM", "TC", "TV", "VI", "UG", "UA", "AE", "GB", "UM", "UY", "UZ", "VU", "VA", "VE", "VN", "WF", "EH", "YE", "ZM", "ZW"]
+            var a = ["US", "CA", "AF", "AX", "AL", "DZ", "AS", "AD", "AO", "AI", "A1", "AQ", "AG", "AR", "AM", "AW", "AP", "AU", "AT", "AZ", "BS", "BH", "BD", "BB", "BY", "BE", "BZ", "BJ", "BM", "BT", "BO", "BQ", "BA", "BW", "BV", "BR", "IO", "VG", "BN", "BG", "BF", "BI", "KH", "CM", "CV", "KY", "CF", "TD", "CL", "CN", "CX", "CC", "CO", "KM", "CG", "CD", "CK", "CR", "HR", "CU", "CW", "CY", "CZ", "DK", "DJ", "DM", "DO", "TL", "EC", "EG", "SV", "GQ", "ER", "EE", "ET", "EU", "FK", "FO", "FJ", "FI", "FR", "GF", "PF", "TF", "GA", "GM", "GE", "DE", "GH", "GI", "GR", "GL", "GD", "GP", "GU", "GT", "GG", "GN", "GW", "GY", "HT", "HM", "HN", "HK", "HU", "IS", "IN", "ID", "IR", "IQ", "IE", "IM", "IL", "IT", "CI", "JM", "JP", "JE", "JO", "KZ", "KE", "KI", "KW", "KG", "LA", "LV", "LB", "LS", "LR", "LY", "LI", "LT", "LU", "MO", "MK", "MG", "MW", "MY", "MV", "ML", "MT", "MH", "MQ", "MR", "MU", "YT", "MX", "FM", "MD", "MC", "MN", "ME", "MS", "MA", "MZ", "MM", "NA", "NR", "NP", "NL", "NC", "NZ", "NI", "NE", "NG", "NU", "NF", "KP", "MP", "NO", "OM", "O1", "PK", "PW", "PS", "PA", "PG", "PY", "PE", "PH", "PN", "PL", "PT", "PR", "QA", "RE", "RO", "RU", "RW", "BL", "SH", "KN", "LC", "MF", "PM", "VC", "WS", "SM", "ST", "A2", "SA", "SN", "RS", "SC", "SL", "SG", "SX", "SK", "SI", "SB", "SO", "ZA", "GS", "KR", "SS", "ES", "LK", "SD", "SR", "SJ", "SZ", "SE", "CH", "SY", "TW", "TJ", "TZ", "TH", "TG", "TK", "TO", "TT", "TN", "TR", "TM", "TC", "TV", "VI", "UG", "UA", "AE", "GB", "UM", "UY", "UZ", "VU", "VA", "VE", "VN", "WF", "EH", "YE", "ZM", "ZW"]
         },
         "KJv/": function(e, t, r) {
             "use strict";
             r.r(t);
             var n = r("mrSG"),
-                a = r("q1tI"),
-                i = r("oJmH"),
+                i = r("q1tI"),
+                a = r("oJmH"),
                 o = r("/7QA"),
                 s = r("cZKs"),
                 c = r("8/mp"),
@@ -1735,9 +1735,9 @@
                         if (this.props.data && this.props.data.loading) e = null;
                         else {
                             var t = this.props.data && this.props.data.recipient || null;
-                            e = a.createElement(c.b, {
+                            e = i.createElement(c.b, {
                                 suppressScrollX: !0
-                            }, a.createElement(m.a, {
+                            }, i.createElement(m.a, {
                                 productName: this.props.productName,
                                 isGift: !(!t || !t.id) || !!this.props.mysteryGiftCount,
                                 recipientID: t && t.id,
@@ -1748,10 +1748,10 @@
                                 onCheckoutProgress: this.props.onCheckoutProgress
                             }))
                         }
-                        return a.createElement(f.Eb, {
+                        return i.createElement(f.Eb, {
                             background: f.r.Alt,
                             className: "checkout-modal__container"
-                        }, e, a.createElement(s.a, {
+                        }, e, i.createElement(s.a, {
                             ignoreEscKey: !0,
                             closeOnPageNavigation: !0,
                             onClose: this.handleOnClose
@@ -1759,8 +1759,8 @@
                     }, t.prototype.reportInteractive = function() {
                         g(this.props) ? this.props.latencyTracking.reportInteractive() : !this.props.data || this.props.data.loading && !this.props.data.error || this.props.latencyTracking.reportInteractive()
                     }, t
-                }(a.Component),
-                E = Object(i.compose)(Object(h.b)("CheckoutModal"), Object(u.a)(b, {
+                }(i.Component),
+                E = Object(a.compose)(Object(h.b)("CheckoutModal"), Object(u.a)(b, {
                     options: function(e) {
                         return {
                             variables: {
@@ -1910,8 +1910,8 @@
                 return y
             });
             var n = r("mrSG"),
-                a = r("lZdE"),
-                i = r("cpJf"),
+                i = r("lZdE"),
+                a = r("cpJf"),
                 o = {
                     "B-?\\)": "B)",
                     "\\:-?[z|Z|\\|]": ":|",
@@ -1944,16 +1944,16 @@
                 for (var t = [], r = function(e) {
                         if (!e || !e.id || !e.token) return "continue";
                         var r = o[e.token] || e.token,
-                            a = s.reduce(function(t, r) {
+                            i = s.reduce(function(t, r) {
                                 var n = t;
                                 return n && (n = n.concat(", ")), n.concat("https://static-cdn.jtvnw.net/emoticons/v1/" + e.id + "/" + r + " " + r + "x")
                             }, "");
                         t.push(n.__assign({
                             displayName: r,
-                            srcSet: a
+                            srcSet: i
                         }, e))
-                    }, a = 0, i = e; a < i.length; a++) {
-                    r(i[a])
+                    }, i = 0, a = e; i < a.length; i++) {
+                    r(a[i])
                 }
                 return t
             }
@@ -1979,40 +1979,40 @@
 
             function p(e) {
                 for (var t = [], r = 0, n = e; r < n.length; r++) {
-                    var a = n[r];
-                    if (a && a.id && a.emotes) {
-                        for (var i = {
-                                id: a.id,
+                    var i = n[r];
+                    if (i && i.id && i.emotes) {
+                        for (var a = {
+                                id: i.id,
                                 emotes: []
-                            }, o = 0, s = a.emotes; o < s.length; o++) {
+                            }, o = 0, s = i.emotes; o < s.length; o++) {
                             var c = s[o];
-                            c && c.id && c.token && i.emotes.push(c)
+                            c && c.id && c.token && a.emotes.push(c)
                         }
-                        t.push(i)
+                        t.push(a)
                     }
                 }
                 return t
             }
 
             function m(e) {
-                for (var t = [], r = [], n = 0, a = e; n < a.length; n++) {
-                    var i = a[n];
-                    if (i && i.id && i.emotes) {
+                for (var t = [], r = [], n = 0, i = e; n < i.length; n++) {
+                    var a = i[n];
+                    if (a && a.id && a.emotes) {
                         var o = {
-                            id: i.id,
-                            emotes: d(l(i.emotes), i.id)
+                            id: a.id,
+                            emotes: d(l(a.emotes), a.id)
                         };
-                        i.owner && (o.owner = i.owner), c.has(parseInt(i.id, 10)) ? t.push(o) : r.push(o)
+                        a.owner && (o.owner = a.owner), c.has(parseInt(a.id, 10)) ? t.push(o) : r.push(o)
                     }
                 }
                 return r.concat(t)
             }
             var h = function(e, t, r) {
-                    var n = r || i.d,
+                    var n = r || a.d,
                         o = [],
                         s = [],
                         c = [],
-                        u = new RegExp("^" + Object(a.a)(t), "i");
+                        u = new RegExp("^" + Object(i.a)(t), "i");
                     return e.forEach(function(e) {
                         n[e.token] ? c.push(e) : e.token.match(u) ? o.push(e) : s.push(e)
                     }), o.sort(function(e, t) {
@@ -2036,8 +2036,8 @@
         QV0B: function(e, t, r) {
             "use strict";
             var n = r("mrSG"),
-                a = r("q1tI"),
-                i = r("Ue10"),
+                i = r("q1tI"),
+                a = r("Ue10"),
                 o = function(e) {
                     function t() {
                         var t = null !== e && e.apply(this, arguments) || this;
@@ -2052,33 +2052,33 @@
                         }, t
                     }
                     return n.__extends(t, e), t.prototype.render = function() {
-                        return this.props.collapsable ? a.createElement(a.Fragment, null, a.createElement(i.Xa, {
-                            display: this.state.collapsed ? i.X.Hide : i.X.Block,
+                        return this.props.collapsable ? i.createElement(i.Fragment, null, i.createElement(a.Xa, {
+                            display: this.state.collapsed ? a.X.Hide : a.X.Block,
                             breakpointLarge: {
-                                display: i.X.Block
+                                display: a.X.Block
                             }
-                        }, a.createElement(i.H, null, this.props.children)), a.createElement(i.Xa, {
-                            display: i.X.Block,
+                        }, i.createElement(a.H, null, this.props.children)), i.createElement(a.Xa, {
+                            display: a.X.Block,
                             breakpointLarge: {
-                                display: i.X.Hide
+                                display: a.X.Hide
                             }
-                        }, a.createElement(i.Ua, {
+                        }, i.createElement(a.Ua, {
                             onClick: this.toggleCollapsed,
                             hover: !1,
-                            type: i.Va.Alpha
-                        }, a.createElement(i.Xa, {
+                            type: a.Va.Alpha
+                        }, i.createElement(a.Xa, {
                             fullWidth: !0,
-                            textAlign: i.Rb.Center,
-                            alignItems: i.f.Center,
+                            textAlign: a.Rb.Center,
+                            alignItems: a.f.Center,
                             padding: {
                                 y: 1
                             }
-                        }, a.createElement(i.W, {
-                            type: i.Vb.Span,
-                            color: i.O.Link
-                        }, this.state.collapsed ? this.props.showButtonLabel : this.props.hideButtonLabel))))) : a.createElement(i.H, null, this.props.children)
+                        }, i.createElement(a.W, {
+                            type: a.Vb.Span,
+                            color: a.O.Link
+                        }, this.state.collapsed ? this.props.showButtonLabel : this.props.hideButtonLabel))))) : i.createElement(a.H, null, this.props.children)
                     }, t
-                }(a.Component);
+                }(i.Component);
             r.d(t, "a", function() {
                 return o
             })
@@ -3163,8 +3163,8 @@
                 return u
             });
             var n = r("mrSG"),
-                a = r("NAv5"),
-                i = r("q1tI"),
+                i = r("NAv5"),
+                a = r("q1tI"),
                 o = r("/7QA"),
                 s = r("Ue10"),
                 c = r("5gJ6"),
@@ -3173,34 +3173,34 @@
                         return null !== e && e.apply(this, arguments) || this
                     }
                     return n.__extends(t, e), t.prototype.render = function() {
-                        return i.createElement(s.Eb, {
+                        return a.createElement(s.Eb, {
                             className: this.isExpired ? "payment-method-display--expired" : "",
                             display: s.X.Flex,
                             justifyContent: this.props.justifyContent || s.Wa.Between,
                             flexWrap: s.Ba.Wrap,
                             fullWidth: !0
-                        }, i.createElement(s.Xa, {
+                        }, a.createElement(s.Xa, {
                             alignItems: s.f.Center,
                             display: s.X.Flex,
                             margin: {
                                 right: 1
                             }
-                        }, i.createElement(c.a, {
+                        }, a.createElement(c.a, {
                             paymentInstrumentType: this.props.paymentType,
                             cardType: this.props.cardType || void 0,
                             paymentProvider: this.props.provider
-                        }), this.renderLastFour()), i.createElement(s.Xa, {
+                        }), this.renderLastFour()), a.createElement(s.Xa, {
                             display: s.X.Flex,
                             justifyContent: s.Wa.Center,
                             flexDirection: s.Aa.Column
                         }, this.renderBillingEmail(), this.renderExpirationDate()))
                     }, t.prototype.renderLastFour = function() {
-                        return this.props.lastFour ? i.createElement(s.Xa, {
+                        return this.props.lastFour ? a.createElement(s.Xa, {
                             display: s.X.Flex,
                             margin: {
                                 x: 2
                             }
-                        }, i.createElement(s.W, {
+                        }, a.createElement(s.W, {
                             bold: !0
                         }, Object(o.d)("Ending in {lastFour}", {
                             lastFour: this.props.lastFour
@@ -3221,21 +3221,21 @@
                                 month: "2-digit",
                                 year: "numeric"
                             })
-                        }, "PaymentMethodDisplay"), i.createElement(s.Xa, {
+                        }, "PaymentMethodDisplay"), a.createElement(s.Xa, {
                             alignItems: s.f.Center,
                             display: s.X.Flex,
                             justifyContent: s.Wa.End
-                        }, i.createElement(s.W, {
+                        }, a.createElement(s.W, {
                             ellipsis: !0,
                             color: s.O.Alt2,
                             bold: this.isExpired
                         }, n))
                     }, t.prototype.renderBillingEmail = function() {
-                        return this.props.billingEmail ? i.createElement(s.Xa, {
+                        return this.props.billingEmail ? a.createElement(s.Xa, {
                             alignItems: s.f.Center,
                             display: s.X.Flex,
                             justifyContent: s.Wa.End
-                        }, i.createElement(s.W, {
+                        }, a.createElement(s.W, {
                             ellipsis: !0,
                             color: s.O.Alt2
                         }, this.props.billingEmail)) : null
@@ -3244,9 +3244,9 @@
                             var e = this.zeroIndexedMonth,
                                 t = this.props.expirationYear;
                             if (void 0 === e || !t) return !1;
-                            var r = Object(a.startOfMonth)(new Date),
+                            var r = Object(i.startOfMonth)(new Date),
                                 n = new Date(t, e, 1);
-                            return !!Object(a.isBefore)(n, r)
+                            return !!Object(i.isBefore)(n, r)
                         },
                         enumerable: !0,
                         configurable: !0
@@ -3257,7 +3257,7 @@
                         enumerable: !0,
                         configurable: !0
                     }), t
-                }(i.PureComponent))
+                }(a.PureComponent))
         },
         TSpM: function(e, t, r) {
             e.exports = r.p + "assets/amazon_pay_2x-2eccd73373faaefa6764.png"
@@ -3265,8 +3265,8 @@
         "V+q8": function(e, t, r) {
             "use strict";
             var n = r("/MKj"),
-                a = r("kRBY"),
-                i = r("mrSG"),
+                i = r("kRBY"),
+                a = r("mrSG"),
                 o = r("q1tI"),
                 s = r("oJmH"),
                 c = r("/7QA"),
@@ -3494,7 +3494,7 @@
                             3000: Object(c.d)("Tier 3 Channel Subscription", "TicketDescription")
                         }, t
                     }
-                    return i.__extends(t, e), t.prototype.componentDidMount = function() {
+                    return a.__extends(t, e), t.prototype.componentDidMount = function() {
                         this.props.data.loading || this.props.data.error || this.props.latencyTracking.reportInteractive()
                     }, t.prototype.componentDidUpdate = function() {
                         this.props.data.loading || this.props.data.error || this.props.latencyTracking.reportInteractive()
@@ -3641,7 +3641,7 @@
                 }))(R);
             var M = Object(n.connect)(function(e) {
                 return {
-                    sessionUser: Object(a.e)(e)
+                    sessionUser: Object(i.e)(e)
                 }
             })(A);
             r.d(t, "a", function() {
@@ -3654,8 +3654,8 @@
         },
         WXY0: function(e, t, r) {
             "use strict";
-            var n, a = r("/MKj"),
-                i = r("fvjX"),
+            var n, i = r("/MKj"),
+                a = r("fvjX"),
                 o = r("1/iK"),
                 s = r("y5D0"),
                 c = r("kRBY"),
@@ -3872,7 +3872,7 @@
                         configurable: !0
                     }), t
                 }(l.Component);
-            var T, R = Object(a.connect)(function(e) {
+            var T, R = Object(i.connect)(function(e) {
                     return {
                         sessionUser: Object(c.e)(e)
                     }
@@ -4108,14 +4108,14 @@
                         var t = e.price,
                             r = e.currency,
                             n = e.divisor,
-                            a = Object(p.f)(t / n, {
+                            i = Object(p.f)(t / n, {
                                 style: "currency",
                                 currency: r
                             }),
-                            i = this.formattedPrice;
-                        return a && i ? l.createElement(U, {
-                            originalPrice: a,
-                            newPrice: i
+                            a = this.formattedPrice;
+                        return i && a ? l.createElement(U, {
+                            originalPrice: i,
+                            newPrice: a
                         }) : null
                     }, t.prototype.renderGiftSubUpgrade = function() {
                         var e = this.props.benefit.endsAt;
@@ -4177,9 +4177,9 @@
                         var e, t = this.props.isAnonymous,
                             r = this.props.product.product && this.props.product.product.tier,
                             n = r && parseInt(r, 10) / 1e3,
-                            a = this.props.product.quantity;
-                        if (!a || !this.formattedPrice) return null;
-                        var i = Object(p.d)("Gift recipients will be chosen at random, starting with viewers of the streamer's channel who do not currently subscribe. <x:gift-info>Learn how Twitch picks recipients.</x:gift-info>", {
+                            i = this.props.product.quantity;
+                        if (!i || !this.formattedPrice) return null;
+                        var a = Object(p.d)("Gift recipients will be chosen at random, starting with viewers of the streamer's channel who do not currently subscribe. <x:gift-info>Learn how Twitch picks recipients.</x:gift-info>", {
                             "x:gift-info": function(e) {
                                 return l.createElement(S.U, {
                                     targetBlank: !0,
@@ -4188,17 +4188,17 @@
                             }
                         }, "PurchasePreview");
                         e = this.isEsportPurchase ? t ? Object(p.d)("{quantity, plural, one {{quantity} x Anonymous Overwatch League All-Access Pass Gift} other {{quantity} x Anonymous Overwatch League All-Access Pass Gifts}}", {
-                            quantity: a
+                            quantity: i
                         }, "PurchasePreview") : Object(p.d)("{quantity, plural, one {{quantity} x Overwatch League All-Access Pass Gift} other {{quantity} x Overwatch League All-Access Pass Gifts}}", {
-                            quantity: a
+                            quantity: i
                         }, "PurchasePreview") : t ? Object(p.d)("{quantity, plural, one {{quantity} x Single Month Tier {numericalTier} Anonymous Gift Subscription} other {{quantity} x Single Month Tier {numericalTier} Anonymous Gift Subscriptions}}", {
-                            quantity: a,
+                            quantity: i,
                             numericalTier: n
                         }, "PurchasePreview") : Object(p.d)("{quantity, plural, one {{quantity} x Single Month Tier {numericalTier} Gift Subscription} other {{quantity} x Single Month Tier {numericalTier} Gift Subscriptions}}", {
-                            quantity: a,
+                            quantity: i,
                             numericalTier: n
                         }, "PurchasePreview");
-                        var o = this.props.product.product.priceInfo.total * a,
+                        var o = this.props.product.product.priceInfo.total * i,
                             s = Object(p.d)("{price} each", {
                                 price: this.formattedPrice
                             }, "PurchasePreview"),
@@ -4226,7 +4226,7 @@
                         }, s)), l.createElement(S.W, {
                             type: S.Vb.H5,
                             bold: !0
-                        }, c)), l.createElement(S.W, null, i))
+                        }, c)), l.createElement(S.W, null, a))
                     }, t.prototype.renderOneFreeMonth = function() {
                         var e = new Date,
                             t = this.props.benefit;
@@ -4509,11 +4509,11 @@
                         var e = this.props.product.product && this.props.product.product.owner && this.props.product.product.owner.id || "",
                             t = Object(k.a)(e, this.props.sessionUser),
                             r = this.props.product.product,
-                            a = r && r.owner,
-                            i = this.props.benefit;
+                            i = r && r.owner,
+                            a = this.props.benefit;
                         return this.props.purchaseFlow === n.MYSTERY_GIFT ? l.createElement(V, {
-                            productOwnerDisplayName: a && a.displayName || "",
-                            productOwnerLogin: a && a.login || "",
+                            productOwnerDisplayName: i && i.displayName || "",
+                            productOwnerLogin: i && i.login || "",
                             invoicePrice: this.props.purchaseInvoice.price,
                             invoiceCurrency: this.props.purchaseInvoice.currency || "USD",
                             tier: this.props.purchaseInvoice.tier || "",
@@ -4521,8 +4521,8 @@
                             isEsportChannel: t
                         }) : this.props.purchaseFlow === n.GIFT_SUB ? this.props.product.recipient ? l.createElement(X, {
                             recipientDisplayName: this.props.product.recipient.displayName,
-                            productOwnerDisplayName: a && a.displayName || "",
-                            productOwnerLogin: a && a.login || "",
+                            productOwnerDisplayName: i && i.displayName || "",
+                            productOwnerLogin: i && i.login || "",
                             invoicePrice: this.props.purchaseInvoice && this.props.purchaseInvoice.price || void 0,
                             invoiceCurrency: this.props.purchaseInvoice && this.props.purchaseInvoice.currency || "USD",
                             isEsportChannel: t
@@ -4530,15 +4530,15 @@
                             purchaserDisplayName: this.props.currentUser && this.props.currentUser.displayName || "",
                             productOwnerDisplayName: "turbo",
                             productOwnerLogin: "turbo",
-                            giftSubEndsAt: i && i.gift && (i.gift.isGift || null) && i.endsAt,
+                            giftSubEndsAt: a && a.gift && (a.gift.isGift || null) && a.endsAt,
                             invoicePrice: this.props.purchaseInvoice.price,
                             invoiceCurrency: this.props.purchaseInvoice.currency || "USD",
                             invoiceDivisor: this.props.purchaseInvoice.divisor || 100
                         }) : null : l.createElement(Z, {
                             purchaserDisplayName: this.props.currentUser && this.props.currentUser.displayName || "",
-                            productOwnerDisplayName: a && a.displayName || "",
-                            productOwnerLogin: a && a.login || "",
-                            giftSubEndsAt: i && i.gift && (i.gift.isGift || null) && i.endsAt || "",
+                            productOwnerDisplayName: i && i.displayName || "",
+                            productOwnerLogin: i && i.login || "",
+                            giftSubEndsAt: a && a.gift && (a.gift.isGift || null) && a.endsAt || "",
                             invoicePrice: this.props.purchaseInvoice.price,
                             invoiceCurrency: this.props.purchaseInvoice.currency || "USD",
                             invoiceDivisor: this.props.purchaseInvoice.divisor || 100
@@ -4789,8 +4789,8 @@
                         }, this.props.submitButtonCopy)))))) : l.createElement(S.Za, null)
                     }, t = u.__decorate([Object(re.b)("RecurlyAmazonPay")], t)
                 }(l.Component)),
-                ae = r("/0dD"),
-                ie = r("XDQu"),
+                ie = r("/0dD"),
+                ae = r("XDQu"),
                 oe = r("6fcp"),
                 se = (r("Aoab"), {
                     light: "#000",
@@ -4889,13 +4889,13 @@
                             })
                         }, t.handleValidationError = function(e, r) {
                             var n = ue(),
-                                a = "";
+                                i = "";
                             r.length && r.forEach(function(e) {
                                 n[e] = !0
-                            }), e && (a = Object(p.d)("The transaction was declined due to invalid data. Please make sure you have entered the correct information.", "RecurlyCreditCard"), e.code !== oe.a.Validation && e.code !== oe.a.InvalidParameter || (e.fields && e.fields.forEach(function(e) {
+                            }), e && (i = Object(p.d)("The transaction was declined due to invalid data. Please make sure you have entered the correct information.", "RecurlyCreditCard"), e.code !== oe.a.Validation && e.code !== oe.a.InvalidParameter || (e.fields && e.fields.forEach(function(e) {
                                 n[e] = !0
-                            }), a = Object(p.d)("We are sorry but your credit card payment could not be processed. Please correct the fields below.", "RecurlyCreditCard"))), t.setState({
-                                errorMessage: a,
+                            }), i = Object(p.d)("We are sorry but your credit card payment could not be processed. Please correct the fields below.", "RecurlyCreditCard"))), t.setState({
+                                errorMessage: i,
                                 errorState: n
                             })
                         }, t.handleFirstName = function(e) {
@@ -5133,9 +5133,9 @@
                         })
                     }, t = u.__decorate([Object(re.b)("RecurlyCreditCard")], t)
                 }(l.Component);
-            var le, pe = Object(a.connect)(function(e) {
+            var le, pe = Object(i.connect)(function(e) {
                     return {
-                        darkModeEnabled: Object(ie.a)(e) === ae.a.Dark
+                        darkModeEnabled: Object(ae.a)(e) === ie.a.Dark
                     }
                 })(de),
                 me = (r("a7Xb"), function(e) {
@@ -5455,14 +5455,14 @@
                                 creditCardCity: Object(p.d)("City", "ZuoraCreditCard"),
                                 creditCardPostalCode: Object(p.d)("Zip Code", "ZuoraCreditCard")
                             },
-                            a = r.map(function(e) {
+                            i = r.map(function(e) {
                                 var t = n[e];
                                 return t || ""
                             }).filter(function(e) {
                                 return "" !== e
                             });
                         t.setState({
-                            nullValueErrors: a
+                            nullValueErrors: i
                         })
                     }, t
                 }
@@ -5542,7 +5542,7 @@
                     configurable: !0
                 }), t = u.__decorate([Object(re.b)("ZuoraCreditCard")], t)
             }(l.Component);
-            var ge, ve = Object(a.connect)(function(e) {
+            var ge, ve = Object(i.connect)(function(e) {
                 return {
                     languageCode: Object(c.b)(e)
                 }
@@ -5783,8 +5783,8 @@
                             var e = t.props,
                                 r = e.configs,
                                 n = e.handleCompletePurchase,
-                                a = e.handleCountryChange,
-                                i = e.trackPaymentFormInteraction,
+                                i = e.handleCountryChange,
+                                a = e.trackPaymentFormInteraction,
                                 o = t.props.eligiblePaymentMethods,
                                 s = t;
                             return Object.values(ge).map(function(e) {
@@ -5801,8 +5801,8 @@
                                     userCountryOfResidence: s.props.userCountryOfResidence,
                                     userZipCode: s.props.userZipCode,
                                     handleCompletePurchase: n,
-                                    handleCountryChange: a,
-                                    trackPaymentFormInteraction: i,
+                                    handleCountryChange: i,
+                                    trackPaymentFormInteraction: a,
                                     showEuSubs: s.props.showEuSubs
                                 })) : null
                             })
@@ -5818,10 +5818,10 @@
                             }).map(function(e) {
                                 return e.type
                             }), r = 0, n = e; r < n.length; r++) {
-                            var a = n[r];
-                            if (t.includes(a)) {
+                            var i = n[r];
+                            if (t.includes(i)) {
                                 this.setState({
-                                    selectedProvider: a
+                                    selectedProvider: i
                                 });
                                 break
                             }
@@ -5853,9 +5853,9 @@
                             var r = t.zeroIndexedMonth(e),
                                 n = e.expirationYear;
                             if (void 0 === r || !n) return !1;
-                            var a = Object(d.startOfMonth)(new Date),
-                                i = new Date(n, r, 1);
-                            return !!Object(d.isBefore)(i, a)
+                            var i = Object(d.startOfMonth)(new Date),
+                                a = new Date(n, r, 1);
+                            return !!Object(d.isBefore)(a, i)
                         }, t.zeroIndexedMonth = function(e) {
                             if (e.expirationMonth) return e.expirationMonth - 1
                         }, t.handleSubmit = function() {
@@ -6025,7 +6025,7 @@
                     return t + e <= r ? (t = r, "cache-and-network") : "cache-first"
                 }
             }(3e3);
-            var at, it, ot = function(e) {
+            var it, at, ot = function(e) {
                     function t() {
                         var t = null !== e && e.apply(this, arguments) || this;
                         return t.state = {
@@ -6094,28 +6094,28 @@
                             });
                             var n = this.eligibilityComputer.getAvailableMethods();
                             if (this.props.showEuSubs) {
-                                var a = Object.values(ge).map(function(e) {
+                                var i = Object.values(ge).map(function(e) {
                                     var r = t.eligiblePaymentMethods.find(function(t) {
                                             return t.type === e
                                         }),
-                                        a = r && r.status === F.HIDDEN ? F.HIDDEN : F.DISABLED;
+                                        i = r && r.status === F.HIDDEN ? F.HIDDEN : F.DISABLED;
                                     return {
                                         type: e,
-                                        status: n.includes(e) ? F.ACTIVE : a
+                                        status: n.includes(e) ? F.ACTIVE : i
                                     }
                                 });
                                 this.setState({
-                                    eligiblePaymentMethods: a
+                                    eligiblePaymentMethods: i
                                 })
                             } else {
-                                a = n.map(function(e) {
+                                i = n.map(function(e) {
                                     return {
                                         type: e,
                                         status: F.ACTIVE
                                     }
                                 });
                                 this.setState({
-                                    eligiblePaymentMethods: a
+                                    eligiblePaymentMethods: i
                                 })
                             }
                         }
@@ -6270,7 +6270,7 @@
                 ct = r("T3lN");
             ! function(e) {
                 e.ELIGIBLE_PURCHASE = "ELIGIBLE_PURCHASE", e.INELIGIBLE_PURCHASE = "INELIGIBLE_PURCHASE"
-            }(it || (it = {}));
+            }(at || (at = {}));
             var ut = function(e) {
                     function t() {
                         var t = null !== e && e.apply(this, arguments) || this;
@@ -6308,7 +6308,7 @@
                             t.props.data.refetch(r)
                         }, t.completePurchase = function(e) {
                             return u.__awaiter(t, void 0, void 0, function() {
-                                var t, r, n, a, i, o = this;
+                                var t, r, n, i, a, o = this;
                                 return u.__generator(this, function(s) {
                                     switch (s.label) {
                                         case 0:
@@ -6330,15 +6330,15 @@
                                                 tab_session_id: p.p.session.tabID
                                             }, this.setState({
                                                 showErrors: !1
-                                            }), a = "/kraken/checkout/users/" + (this.props.data.currentUser && this.props.data.currentUser.id) + "/products/" + this.props.productName + "/purchase/complete", s.label = 1;
+                                            }), i = "/kraken/checkout/users/" + (this.props.data.currentUser && this.props.data.currentUser.id) + "/products/" + this.props.productName + "/purchase/complete", s.label = 1;
                                         case 1:
-                                            return s.trys.push([1, 3, , 4]), [4, C.a.post(a, {
+                                            return s.trys.push([1, 3, , 4]), [4, C.a.post(i, {
                                                 body: n
                                             }, {
                                                 version: 5
                                             })];
                                         case 2:
-                                            return i = s.sent(), r && i.body && !i.body.error && (this.timeout = setTimeout(function() {
+                                            return a = s.sent(), r && a.body && !a.body.error && (this.timeout = setTimeout(function() {
                                                 o.state.progress !== w.a.CONFIRMATION && (o.setState({
                                                     showErrors: !0,
                                                     errors: {
@@ -6346,26 +6346,26 @@
                                                         level: O.Error
                                                     }
                                                 }), e.errorCallback && e.errorCallback())
-                                            }, this.pubsubTimeout)), i.error || i.body && i.body.error ? (this.trackPaymentFormInteraction({
+                                            }, this.pubsubTimeout)), a.error || a.body && a.body.error ? (this.trackPaymentFormInteraction({
                                                 paymentFlow: e.payment_flow,
                                                 action: te.a.CompletePurchaseClick,
                                                 actionDetail: te.f.Failed,
                                                 savedPayment: e.savedPayment
-                                            }), i.body && "UNSUPPORTED_COUNTRY" === i.body.error && i.body.error_details && i.body.error_details.country ? (this.trackPaymentFormInteraction({
+                                            }), a.body && "UNSUPPORTED_COUNTRY" === a.body.error && a.body.error_details && a.body.error_details.country ? (this.trackPaymentFormInteraction({
                                                 paymentFlow: e.payment_flow,
                                                 action: te.a.UnsupportedCountryAlert,
-                                                actionDetail: i.body.error_details.country,
+                                                actionDetail: a.body.error_details.country,
                                                 savedPayment: e.savedPayment
-                                            }), this.handleCountryChange(i.body.error_details.country)) : i.body && "INVALID_RESIDENCE" === i.body.error ? this.setState({
+                                            }), this.handleCountryChange(a.body.error_details.country)) : a.body && "INVALID_RESIDENCE" === a.body.error ? this.setState({
                                                 showErrors: !0,
                                                 errors: {
                                                     code: P.InvalidResidence,
                                                     level: O.Error
                                                 }
-                                            }) : i.body && "PRICE_INFO_INVALID" === i.body.error && i.body.error_details && i.body.error_details.country ? (this.trackPaymentFormInteraction({
+                                            }) : a.body && "PRICE_INFO_INVALID" === a.body.error && a.body.error_details && a.body.error_details.country ? (this.trackPaymentFormInteraction({
                                                 paymentFlow: e.payment_flow,
                                                 action: te.a.PriceChangeAlert,
-                                                actionDetail: i.body.error_details.country,
+                                                actionDetail: a.body.error_details.country,
                                                 savedPayment: e.savedPayment
                                             }), this.setState({
                                                 showErrors: !0,
@@ -6373,7 +6373,7 @@
                                                     code: P.PriceChangeNotice,
                                                     level: O.Info
                                                 }
-                                            }), this.handleCountryChange(i.body.error_details.country)) : i.body && "INVALID_PAYMENT_METHOD" === i.body.error ? this.setState({
+                                            }), this.handleCountryChange(a.body.error_details.country)) : a.body && "INVALID_PAYMENT_METHOD" === a.body.error ? this.setState({
                                                 showErrors: !0,
                                                 errors: {
                                                     code: P.InvalidPaymentMethod,
@@ -6390,12 +6390,12 @@
                                                 action: te.a.CompletePurchaseClick,
                                                 actionDetail: te.f.Success,
                                                 savedPayment: e.savedPayment
-                                            }), this.props.data.refetch(), r ? this.setState({
-                                                purchaseResponse: i.body
-                                            }) : this.setState({
-                                                purchaseResponse: i.body,
+                                            }), r ? this.setState({
+                                                purchaseResponse: a.body
+                                            }) : (this.props.data.refetch(), this.setState({
+                                                purchaseResponse: a.body,
                                                 progress: w.a.CONFIRMATION
-                                            }), [3, 4]);
+                                            })), [3, 4]);
                                         case 3:
                                             return s.sent(), this.setState({
                                                 showErrors: !0,
@@ -6425,22 +6425,25 @@
                             progress: w.a.CONFIRMATION
                         })), this.state.progress !== t.progress && this.props.onCheckoutProgress && this.props.onCheckoutProgress(this.state.progress)
                     }, t.prototype.componentWillReceiveProps = function(e) {
-                        var t = e.pubsub.messages.fulfillment && e.pubsub.messages.fulfillment.fulfillment;
-                        if (t) switch (clearTimeout(this.timeout), t.status) {
-                            case f.PurchaseFulfillmentStatus.Success:
-                                this.setState({
-                                    progress: w.a.CONFIRMATION
-                                });
-                                break;
-                            case f.PurchaseFulfillmentStatus.Failure:
-                            default:
-                                this.setState({
-                                    showErrors: !0,
-                                    errors: {
-                                        code: P.DefaultMessage,
-                                        level: O.Error
-                                    }
-                                })
+                        var t = e.pubsub.messages.fulfillment;
+                        if (this.isRelated(t)) {
+                            var r = t && t.fulfillment;
+                            if (r) switch (clearTimeout(this.timeout), r.status) {
+                                case f.PurchaseFulfillmentStatus.Success:
+                                    this.setState({
+                                        progress: w.a.CONFIRMATION
+                                    });
+                                    break;
+                                case f.PurchaseFulfillmentStatus.Failure:
+                                default:
+                                    this.setState({
+                                        showErrors: !0,
+                                        errors: {
+                                            code: P.DefaultMessage,
+                                            level: O.Error
+                                        }
+                                    })
+                            }
                         }
                     }, t.prototype.componentWillUnmount = function() {
                         clearTimeout(this.timeout)
@@ -6482,8 +6485,8 @@
                                 purchaseFlow: this.purchaseFlow,
                                 progress: this.state.progress
                             }),
-                            a = this.shoppingCartItem && this.shoppingCartItem.product.owner && this.shoppingCartItem.product.owner.displayName,
-                            i = "/" + (a || "");
+                            i = this.shoppingCartItem && this.shoppingCartItem.product.owner && this.shoppingCartItem.product.owner.displayName,
+                            a = "/" + (i || "");
                         return l.createElement(A, {
                             productDescription: this.renderTicketDescription(),
                             header: n
@@ -6497,7 +6500,7 @@
                             display: this.dataReady ? S.X.Block : S.X.Hide
                         }, l.createElement(S.Xa, {
                             display: x(this.productEligibility) ? S.X.Hide : S.X.Block,
-                            "data-test-selector": it.INELIGIBLE_PURCHASE
+                            "data-test-selector": at.INELIGIBLE_PURCHASE
                         }, l.createElement(D, {
                             product: this.shoppingCartItem,
                             existingPurchases: this.existingPurchases,
@@ -6508,12 +6511,12 @@
                                 top: 2
                             }
                         }, l.createElement(S.z, {
-                            linkTo: i
+                            linkTo: a
                         }, Object(p.d)("Go back to {channel}", {
-                            channel: a || "Twitch"
+                            channel: i || "Twitch"
                         }, "CheckoutPayments")))), l.createElement(S.Xa, {
                             display: x(this.productEligibility) ? S.X.Block : S.X.Hide,
-                            "data-test-selector": it.ELIGIBLE_PURCHASE
+                            "data-test-selector": at.ELIGIBLE_PURCHASE
                         }, l.createElement(I, {
                             purchaseFlow: this.purchaseFlow,
                             product: this.shoppingCartItem
@@ -6571,7 +6574,9 @@
                         },
                         enumerable: !0,
                         configurable: !0
-                    }), Object.defineProperty(t.prototype, "purchaseFlow", {
+                    }), t.prototype.isRelated = function(e) {
+                        return !(!this.state.purchaseResponse || !e) && e.fulfillment.product_details.origin_id === this.state.purchaseResponse.origin_id
+                    }, Object.defineProperty(t.prototype, "purchaseFlow", {
                         get: function() {
                             return this.props.isGift ? this.props.mysteryGiftCount && this.props.mysteryGiftCount > 0 ? n.MYSTERY_GIFT : n.GIFT_SUB : n.PERSONAL_SUB
                         },
@@ -6595,18 +6600,18 @@
                                 var r = t.find(function(e) {
                                         return e.paymentProvider.toUpperCase() === E.G.PRIME
                                     }),
-                                    a = t.find(function(t) {
+                                    i = t.find(function(t) {
                                         return t.productType.toUpperCase() === E.V.CHANSUB && !!t.productTier && parseInt(e.shoppingCartItem.product.tier, 10) < parseInt(t.productTier, 10)
                                     }),
-                                    i = t.find(function(t) {
+                                    a = t.find(function(t) {
                                         return t.productType.toUpperCase() === E.V.CHANSUB && !!t.productTier && parseInt(e.shoppingCartItem.product.tier, 10) > parseInt(t.productTier, 10)
                                     }),
                                     o = t.find(function(e) {
                                         return e.paymentProvider.toUpperCase() === E.G.GOOGLE_IAB
                                     });
                                 if (r) return T.PRIME_UPGRADE;
-                                if (a) return T.TIER_DOWNGRADE;
-                                if (i) return o ? T.MOBILE_UPGRADE : T.TIER_UPGRADE
+                                if (i) return T.TIER_DOWNGRADE;
+                                if (a) return o ? T.MOBILE_UPGRADE : T.TIER_UPGRADE
                             }
                             return !this.existingPurchases || this.existingPurchases && !this.existingPurchases.details && !this.existingPurchases.compatiblePurchases || this.existingPurchases.details && this.existingPurchases.details.state === E.W.INACTIVE ? T.NEW_PURCHASE : T.UNKNOWN
                         },
@@ -6711,7 +6716,7 @@
                         configurable: !0
                     }), t
                 }(l.Component),
-                dt = Object(i.compose)(Object(h.a)(ct, {
+                dt = Object(a.compose)(Object(h.a)(ct, {
                     options: function(e) {
                         return {
                             fetchPolicy: "network-only",
@@ -6730,20 +6735,20 @@
                     }
                 }), Object(y.a)([{
                     topic: function(e) {
-                        return Object(g.u)("" + (e.data.currentUser && e.data.currentUser.id))
+                        return Object(g.v)("" + (e.data.currentUser && e.data.currentUser.id))
                     },
-                    mapMessageTypesToProps: (at = {}, at[f.PubsubMessageType.PurchaseFulfillmentEvents] = "fulfillment", at)
+                    mapMessageTypesToProps: (it = {}, it[f.PubsubMessageType.PurchaseFulfillmentEvents] = "fulfillment", it)
                 }]), Object(re.b)("CheckoutPayments"))(ut);
             r.d(t, "a", function() {
                 return lt
             });
-            var lt = Object(a.connect)(function(e) {
+            var lt = Object(i.connect)(function(e) {
                 return {
                     isLoggedIn: Object(c.f)(e),
                     sessionUser: Object(c.e)(e)
                 }
             }, function(e) {
-                return Object(i.bindActionCreators)({
+                return Object(a.bindActionCreators)({
                     promptLogin: function() {
                         return Object(s.e)(o.a.DashboardPage)
                     }
@@ -6753,8 +6758,8 @@
         WlZp: function(e, t, r) {
             "use strict";
             var n = r("mrSG"),
-                a = r("q1tI"),
-                i = function(e) {
+                i = r("q1tI"),
+                a = function(e) {
                     function t() {
                         return null !== e && e.apply(this, arguments) || this
                     }
@@ -6771,20 +6776,20 @@
                         enumerable: !0,
                         configurable: !0
                     }), t.prototype.render = function() {
-                        return a.createElement("iframe", {
+                        return i.createElement("iframe", {
                             width: "1",
                             height: "1",
                             scrolling: "no",
                             src: this.kaptchaIframeSrc
-                        }, a.createElement("img", {
+                        }, i.createElement("img", {
                             width: "137",
                             height: "33",
                             src: this.kaptchaImgSrc
                         }))
                     }, t
-                }(a.Component);
+                }(i.Component);
             r.d(t, "a", function() {
-                return i
+                return a
             })
         },
         XE3n: function(e, t, r) {},
@@ -6793,17 +6798,17 @@
             r.d(t, "c", function() {
                 return n
             }), r.d(t, "d", function() {
-                return a
-            }), r.d(t, "e", function() {
                 return i
+            }), r.d(t, "e", function() {
+                return a
             }), r.d(t, "b", function() {
                 return o
             }), r.d(t, "a", function() {
                 return s
             });
             var n = "subscribe_to_channel",
-                a = "turbo",
-                i = "visit_url",
+                i = "turbo",
+                a = "visit_url",
                 o = "none",
                 s = "broadcaster"
         },
@@ -6817,39 +6822,39 @@
         b5C3: function(e, t, r) {
             "use strict";
             r.d(t, "a", function() {
-                return i
+                return a
             });
             var n = r("q1tI"),
-                a = r("vHGB"),
-                i = function(e) {
+                i = r("vHGB"),
+                a = function(e) {
                     var t = e.badgesToRender,
                         r = e.badgeSets;
                     if (!t) return null;
-                    var i = [];
+                    var a = [];
                     ! function(e) {
                         return Array.isArray(e)
                     }(t) ? function(e) {
                         return !Array.isArray(e)
-                    }(t) && (i = Object.keys(t).map(function(e) {
-                        var i = t[e],
-                            o = r.getBadge(e, i);
-                        return null === o ? null : n.createElement(a.a, {
+                    }(t) && (a = Object.keys(t).map(function(e) {
+                        var a = t[e],
+                            o = r.getBadge(e, a);
+                        return null === o ? null : n.createElement(i.a, {
                             key: o.setID + "/" + o.version,
                             badge: o
                         })
-                    })) : i = t.map(function(e) {
+                    })) : a = t.map(function(e) {
                         var t = r.getBadge(e.setID, e.version);
-                        return null === t ? null : n.createElement(a.a, {
+                        return null === t ? null : n.createElement(i.a, {
                             key: t.setID + "/" + t.version,
                             badge: t
                         })
                     });
-                    var o = i.filter(function(e) {
+                    var o = a.filter(function(e) {
                         return null !== e
                     });
                     return n.createElement("span", null, o)
                 };
-            i.displayName = "BadgeList"
+            a.displayName = "BadgeList"
         },
         b6Yk: function(e, t, r) {
             "use strict";
@@ -6857,122 +6862,122 @@
                 return o
             });
             var n = r("mrSG"),
-                a = r("/7QA"),
-                i = r("kRBY"),
+                i = r("/7QA"),
+                a = r("kRBY"),
                 o = function() {
                     function e() {}
                     return e.get = function(e, t, r) {
                         return void 0 === t && (t = {}), void 0 === r && (r = {}), n.__awaiter(this, void 0, Promise, function() {
-                            return n.__generator(this, function(a) {
-                                switch (a.label) {
+                            return n.__generator(this, function(i) {
+                                switch (i.label) {
                                     case 0:
                                         return [4, this.request(e, n.__assign({}, t, {
                                             method: "GET"
                                         }), r)];
                                     case 1:
-                                        return [2, a.sent()]
+                                        return [2, i.sent()]
                                 }
                             })
                         })
                     }, e.getOrThrow = function(e, t, r) {
                         return void 0 === t && (t = {}), void 0 === r && (r = {}), n.__awaiter(this, void 0, Promise, function() {
-                            return n.__generator(this, function(a) {
-                                switch (a.label) {
+                            return n.__generator(this, function(i) {
+                                switch (i.label) {
                                     case 0:
                                         return [4, this.requestOrThrow(e, n.__assign({}, t, {
                                             method: "GET"
                                         }), r)];
                                     case 1:
-                                        return [2, a.sent()]
+                                        return [2, i.sent()]
                                 }
                             })
                         })
                     }, e.put = function(e, t, r) {
                         return void 0 === t && (t = {}), void 0 === r && (r = {}), n.__awaiter(this, void 0, Promise, function() {
-                            return n.__generator(this, function(a) {
-                                switch (a.label) {
+                            return n.__generator(this, function(i) {
+                                switch (i.label) {
                                     case 0:
                                         return [4, this.request(e, n.__assign({}, t, {
                                             method: "PUT"
                                         }), r)];
                                     case 1:
-                                        return [2, a.sent()]
+                                        return [2, i.sent()]
                                 }
                             })
                         })
                     }, e.putOrThrow = function(e, t, r) {
                         return void 0 === t && (t = {}), void 0 === r && (r = {}), n.__awaiter(this, void 0, Promise, function() {
-                            return n.__generator(this, function(a) {
-                                switch (a.label) {
+                            return n.__generator(this, function(i) {
+                                switch (i.label) {
                                     case 0:
                                         return [4, this.requestOrThrow(e, n.__assign({}, t, {
                                             method: "PUT"
                                         }), r)];
                                     case 1:
-                                        return [2, a.sent()]
+                                        return [2, i.sent()]
                                 }
                             })
                         })
                     }, e.post = function(e, t, r) {
                         return void 0 === t && (t = {}), void 0 === r && (r = {}), n.__awaiter(this, void 0, Promise, function() {
-                            return n.__generator(this, function(a) {
-                                switch (a.label) {
+                            return n.__generator(this, function(i) {
+                                switch (i.label) {
                                     case 0:
                                         return [4, this.request(e, n.__assign({}, t, {
                                             method: "POST"
                                         }), r)];
                                     case 1:
-                                        return [2, a.sent()]
+                                        return [2, i.sent()]
                                 }
                             })
                         })
                     }, e.postOrThrow = function(e, t, r) {
                         return void 0 === t && (t = {}), void 0 === r && (r = {}), n.__awaiter(this, void 0, Promise, function() {
-                            return n.__generator(this, function(a) {
-                                switch (a.label) {
+                            return n.__generator(this, function(i) {
+                                switch (i.label) {
                                     case 0:
                                         return [4, this.requestOrThrow(e, n.__assign({}, t, {
                                             method: "POST"
                                         }), r)];
                                     case 1:
-                                        return [2, a.sent()]
+                                        return [2, i.sent()]
                                 }
                             })
                         })
                     }, e.delete = function(e, t, r) {
                         return void 0 === t && (t = {}), void 0 === r && (r = {}), n.__awaiter(this, void 0, Promise, function() {
-                            return n.__generator(this, function(a) {
-                                switch (a.label) {
+                            return n.__generator(this, function(i) {
+                                switch (i.label) {
                                     case 0:
                                         return [4, this.request(e, n.__assign({}, t, {
                                             method: "DELETE"
                                         }), r)];
                                     case 1:
-                                        return [2, a.sent()]
+                                        return [2, i.sent()]
                                 }
                             })
                         })
                     }, e.deleteOrThrow = function(e, t, r) {
                         return void 0 === t && (t = {}), void 0 === r && (r = {}), n.__awaiter(this, void 0, Promise, function() {
-                            return n.__generator(this, function(a) {
-                                switch (a.label) {
+                            return n.__generator(this, function(i) {
+                                switch (i.label) {
                                     case 0:
                                         return [4, this.requestOrThrow(e, n.__assign({}, t, {
                                             method: "DELETE"
                                         }), r)];
                                     case 1:
-                                        return [2, a.sent()]
+                                        return [2, i.sent()]
                                 }
                             })
                         })
                     }, e.request = function(e, t, r) {
                         return void 0 === t && (t = {}), void 0 === r && (r = {}), n.__awaiter(this, void 0, Promise, function() {
-                            var a, i, o, s;
+                            var i, a, o, s;
                             return n.__generator(this, function(c) {
                                 switch (c.label) {
                                     case 0:
-                                        return t = this.constructOptions(t, r), a = t.headers ? t.headers["Content-Type"] : void 0, i = this.serialize(t.body, a), o = n.__assign({}, t, {
-                                            body: i
+                                        return t = this.constructOptions(t, r), i = t.headers ? t.headers["Content-Type"] : void 0, a = this.serialize(t.body, i), o = n.__assign({}, t, {
+                                            body: a
                                         }), [4, this._fetch(e, o)];
                                     case 1:
                                         return s = c.sent(), [4, this.constructLegacyAPIResponse(s)];
@@ -6983,29 +6988,29 @@
                         })
                     }, e.requestOrThrow = function(e, t, r) {
                         return void 0 === t && (t = {}), void 0 === r && (r = {}), n.__awaiter(this, void 0, Promise, function() {
-                            var a;
-                            return n.__generator(this, function(i) {
-                                switch (i.label) {
+                            var i;
+                            return n.__generator(this, function(a) {
+                                switch (a.label) {
                                     case 0:
-                                        return i.trys.push([0, 2, , 3]), [4, this.request(e, t, r)];
+                                        return a.trys.push([0, 2, , 3]), [4, this.request(e, t, r)];
                                     case 1:
-                                        if ((a = i.sent()).requestError) throw a.requestError;
-                                        if (a.error) throw new Error("Error while sending legacy-api request: " + a.error.status + " - " + a.error.message);
-                                        return [2, n.__assign({}, a, {
-                                            body: a.body
+                                        if ((i = a.sent()).requestError) throw i.requestError;
+                                        if (i.error) throw new Error("Error while sending legacy-api request: " + i.error.status + " - " + i.error.message);
+                                        return [2, n.__assign({}, i, {
+                                            body: i.body
                                         })];
                                     case 2:
-                                        throw i.sent();
+                                        throw a.sent();
                                     case 3:
                                         return [2]
                                 }
                             })
                         })
                     }, e.getAPIURL = function(e) {
-                        return new URL(e, a.p.config.apiBaseURL)
+                        return new URL(e, i.p.config.apiBaseURL)
                     }, e.constructLegacyAPIResponse = function(e) {
                         return n.__awaiter(this, void 0, Promise, function() {
-                            var t, r, a, i;
+                            var t, r, i, a;
                             return n.__generator(this, function(n) {
                                 switch (n.label) {
                                     case 0:
@@ -7017,7 +7022,7 @@
                                     case 2:
                                         return r = n.sent(), e.ok ? t.body = r : t.error = r, [3, 4];
                                     case 3:
-                                        return a = n.sent(), e.headers && e.headers.get && (i = e.headers.get("Content-Type")) && -1 !== i.indexOf("application/json") && (t.requestError = a), [3, 4];
+                                        return i = n.sent(), e.headers && e.headers.get && (a = e.headers.get("Content-Type")) && -1 !== a.indexOf("application/json") && (t.requestError = i), [3, 4];
                                     case 4:
                                         return [2, t]
                                 }
@@ -7043,19 +7048,19 @@
                             contentType: t
                         }), null) : null
                     }, e.getDefaultHeaders = function(e, t) {
-                        var r = a.p.store.getState(),
+                        var r = i.p.store.getState(),
                             n = {
                                 Accept: "application/vnd.twitchtv.v" + (t.version || 5) + "+json; charset=UTF-8",
                                 "Accept-Language": "en-us",
-                                "Client-ID": a.p.config.legacyClientID,
+                                "Client-ID": i.p.config.legacyClientID,
                                 "X-Requested-With": "XMLHttpRequest"
                             };
                         e.body && FormData.prototype.isPrototypeOf(e.body) || (n["Content-Type"] = "application/json; charset=UTF-8");
-                        var o = Object(i.e)(r);
+                        var o = Object(a.e)(r);
                         return o && (n.Authorization = "OAuth " + o.authToken, o.legacyCSRFToken && (n["Twitch-Api-Token"] = o.legacyCSRFToken)), t.excludeHeaders && t.excludeHeaders.forEach(function(e) {
                             n[e] && delete n[e]
                         }), n
-                    }, e.logger = a.p.logger.withCategory("legacy-api"), e
+                    }, e.logger = i.p.logger.withCategory("legacy-api"), e
                 }()
         },
         bOWA: function(e, t, r) {
@@ -7074,16 +7079,16 @@
             r.d(t, "a", function() {
                     return n
                 }), r.d(t, "d", function() {
-                    return i
+                    return a
                 }), r.d(t, "c", function() {
                     return o
                 }), r.d(t, "b", function() {
-                    return a
+                    return i
                 }),
                 function(e) {
                     e.Chat = "stream_chat", e.Feeds = "feeds", e.Room = "chatroom", e.Whisper = "whisper", e.VodChat = "vod-chat"
                 }(n || (n = {}));
-            var a, i = {
+            var i, a = {
                     TriHard: {
                         count: 196568036
                     },
@@ -7166,7 +7171,7 @@
                 o = ["354", "49106", "4339", "48", "25", "55338", "70433", "1902", "68856", "81103", "76171", "27509"];
             ! function(e) {
                 e.Web = "WEB", e.IOS = "IOS", e.Android = "ANDROID"
-            }(a || (a = {}))
+            }(i || (i = {}))
         },
         csmi: function(e, t, r) {
             e.exports = r.p + "assets/amazon_pay_dark_1x-5810bf2a8f8185a1a905.png"
@@ -7352,21 +7357,21 @@
         mb7O: function(e, t, r) {
             "use strict";
             var n = r("q1tI"),
-                a = r("Ue10"),
-                i = (r("bfgy"), function(e) {
-                    return n.createElement(a.Xa, {
+                i = r("Ue10"),
+                a = (r("bfgy"), function(e) {
+                    return n.createElement(i.Xa, {
                         className: "ticket-wrapper__container",
                         "data-a-target": "js-test-ticket-container",
                         margin: {
                             bottom: 2
                         }
-                    }, n.createElement(a.G, {
+                    }, n.createElement(i.G, {
                         elevation: 1
                     }, e.children))
                 }),
-                o = i;
+                o = a;
             r.d(t, !1, function() {
-                return i
+                return a
             }), r.d(t, "a", function() {
                 return o
             })
@@ -7380,8 +7385,8 @@
         sV2v: function(e, t, r) {
             "use strict";
             var n = r("mrSG"),
-                a = r("q1tI"),
-                i = r("fvjX"),
+                i = r("q1tI"),
+                a = r("fvjX"),
                 o = r("GnwI"),
                 s = function(e) {
                     function t() {
@@ -7395,8 +7400,8 @@
                     }, t.prototype.render = function() {
                         return null
                     }, t
-                }(a.Component),
-                c = Object(i.compose)(Object(o.b)("RecurlyScript", {
+                }(i.Component),
+                c = Object(a.compose)(Object(o.b)("RecurlyScript", {
                     autoReportInteractive: !0
                 }))(s);
             r.d(t, !1, function() {
@@ -7413,41 +7418,41 @@
                 return s
             });
             var n = r("/7QA"),
-                a = "esport_insider_pass_whitelist",
-                i = "esports_room_cheering_whitelist";
+                i = "esport_insider_pass_whitelist",
+                a = "esports_room_cheering_whitelist";
 
             function o(e, t, r) {
-                return void 0 === r && (r = !1), c(a, e, t, r)
+                return void 0 === r && (r = !1), c(i, e, t, r)
             }
 
             function s(e, t) {
-                return c(i, e, t)
+                return c(a, e, t)
             }
 
-            function c(e, t, r, a) {
-                void 0 === a && (a = !1);
-                var i = n.b.get(e, []),
-                    o = r && r.roles && r.roles.isStaff || a;
-                return i.includes(t) || i.includes(t + "-staff") && o
+            function c(e, t, r, i) {
+                void 0 === i && (i = !1);
+                var a = n.b.get(e, []),
+                    o = r && r.roles && r.roles.isStaff || i;
+                return a.includes(t) || a.includes(t + "-staff") && o
             }
         },
         "u/1r": function(e, t, r) {},
         uIkQ: function(e, t, r) {
             "use strict";
             var n = r("b5C3"),
-                a = r("fQWD"),
-                i = r("ZEQw"),
+                i = r("fQWD"),
+                a = r("ZEQw"),
                 o = (r("yzyL"), r("mrSG")),
                 s = function() {
                     function e(e, t, r) {
-                        this.globalsBySet = new Map, this.channelsBySet = new Map, this.indexBadges(e, this.globalsBySet, r), Array.isArray(t) && this.indexBadges(t, this.channelsBySet, r)
+                        this.count = 0, this.globalsBySet = new Map, this.channelsBySet = new Map, this.count = e.length + (t ? t.length : 0), this.indexBadges(e, this.globalsBySet, r), Array.isArray(t) && this.indexBadges(t, this.channelsBySet, r)
                     }
                     return e.prototype.getBadge = function(e, t) {
                         var r = this.channelsBySet.get(e);
                         return r && r.has(t) ? r.get(t) || null : void 0 !== (r = this.globalsBySet.get(e)) && r.get(t) || null
                     }, e.prototype.indexBadges = function(e, t, r) {
                         e.forEach(function(e) {
-                            r && e.clickAction === i.c && (e = o.__assign({}, e, {
+                            r && e.clickAction === a.c && (e = o.__assign({}, e, {
                                 channelName: r
                             }));
                             var n = t.get(e.setID);
@@ -7459,7 +7464,7 @@
             r.d(t, "b", function() {
                 return n.a
             }), r.d(t, "a", function() {
-                return a.a
+                return i.a
             }), r.d(t, !1, function() {}), r.d(t, !1, function() {}), r.d(t, "c", function() {
                 return s
             })
@@ -7475,8 +7480,8 @@
         vHGB: function(e, t, r) {
             "use strict";
             var n = r("mrSG"),
-                a = r("q1tI"),
-                i = r("ZEQw"),
+                i = r("q1tI"),
+                a = r("ZEQw"),
                 o = r("Ue10"),
                 s = (r("E78O"), r("/7QA")),
                 c = r("2xye"),
@@ -7511,24 +7516,24 @@
                         t = e.title,
                         r = e.image1x,
                         n = e.image2x,
-                        i = e.image4x,
-                        c = a.createElement("img", {
+                        a = e.image4x,
+                        c = i.createElement("img", {
                             alt: t,
                             "aria-label": Object(s.d)("{badgeTitle} badge", {
                                 badgeTitle: t
                             }, "Badge"),
                             className: "chat-badge",
                             src: r,
-                            srcSet: r + " 1x, " + n + " 2x, " + i + " 4x",
+                            srcSet: r + " 1x, " + n + " 2x, " + a + " 4x",
                             onMouseOver: this.onMouseOver,
                             onMouseOut: this.onMouseOut
                         });
-                    return this.targetURL = this.getTargetURL(), "" !== this.targetURL && (c = a.createElement("a", {
+                    return this.targetURL = this.getTargetURL(), "" !== this.targetURL && (c = i.createElement("a", {
                         href: this.targetURL,
                         onClick: this.onBadgeClickHandler,
                         target: "_blank",
                         "data-a-target": "chat-badge"
-                    }, c)), this.state.isHovering ? a.createElement(o.Yb, {
+                    }, c)), this.state.isHovering ? i.createElement(o.Yb, {
                         align: o.Zb.Left,
                         "data-a-target": "chat-badge",
                         display: o.X.Inline,
@@ -7539,11 +7544,11 @@
                 }, t.prototype.getTargetURL = function() {
                     var e = this.props.badge;
                     switch (e.clickAction) {
-                        case i.e:
+                        case a.e:
                             return e.clickURL;
-                        case i.c:
+                        case a.c:
                             return e.channelName ? this.getSubscriberLink() : "";
-                        case i.d:
+                        case a.d:
                             return "https://www.twitch.tv/products/turbo?ref=chat_badge";
                         default:
                             return ""
@@ -7551,7 +7556,7 @@
                 }, t.prototype.getSubscriberLink = function() {
                     return "https://www.twitch.tv/" + this.props.badge.channelName + "/subscribe?ref=in_chat_subscriber_link"
                 }, t
-            }(a.Component)
+            }(i.Component)
         },
         xgE2: function(e, t, r) {
             e.exports = r.p + "assets/more_methods_2x-3b1c8bbdaabcd0fb7c8a.png"

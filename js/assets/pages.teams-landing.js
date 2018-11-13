@@ -751,7 +751,7 @@
                     }
                 }), Object(f.a)([{
                     topic: function(e) {
-                        return Object(N.H)(e.data.currentUser && e.data.currentUser.id || "")
+                        return Object(N.I)(e.data.currentUser && e.data.currentUser.id || "")
                     },
                     mapMessageTypesToProps: {
                         "*": "subscriptionInfo"
@@ -3708,7 +3708,7 @@
                     }, a.createElement(r.U, i.__assign({
                         to: e.linkTo
                     }, Object(r.jc)(e), {
-                        targetBlank: !0
+                        targetBlank: e.targetBlank
                     }), e.title))))
                 };
             t.d(n, "a", function() {

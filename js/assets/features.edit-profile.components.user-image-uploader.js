@@ -117,7 +117,7 @@
                                                     }), [2];
                                                 case 4:
                                                     return this.unsubscribe = c.l.subscribe({
-                                                        topic: Object(g.n)(this.props.userID),
+                                                        topic: Object(g.o)(this.props.userID),
                                                         success: function() {
                                                             try {
                                                                 Object(h.c)(a, o.currentImage)

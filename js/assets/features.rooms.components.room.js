@@ -1423,7 +1423,7 @@
                         }))
                     }, n.prototype.subscribe = function(e) {
                         this.unsubscribe = a.p.pubsub.subscribe({
-                            topic: Object(r.v)(e),
+                            topic: Object(r.w)(e),
                             onMessage: this.handlePubsubMessage
                         })
                     }, n
@@ -4433,7 +4433,6 @@
                                 },
                                 on: function() {
                                     return s.createElement(V.a, {
-                                        badgeData: e.props.badgeSets,
                                         bitsConfig: e.props.bitsConfig,
                                         blockLinks: !0,
                                         channelID: e.props.channelID,
@@ -5809,26 +5808,6 @@
                 }
             };
             e.exports = t
-        },
-        nIRf: function(e, n, t) {
-            "use strict";
-            t.d(n, "a", function() {
-                return i
-            });
-            var i = function() {
-                return function(e) {
-                    var n = this;
-                    this.timerId = null, this.start = function() {
-                        n.timerId && n.stop(), n.timerId = setInterval(n.onInterval, n.intervalMillis)
-                    }, this.stop = function() {
-                        n.timerId && (clearInterval(n.timerId), n.timerId = null)
-                    }, this.restart = function(e) {
-                        void 0 === e && (e = 0), n.stop(), n.timerId = setTimeout(function() {
-                            n.onInterval(), n.start()
-                        }, e)
-                    }, this.onInterval = e.onInterval, this.intervalMillis = e.intervalMillis
-                }
-            }()
         },
         oMhb: function(e, n) {
             var t = {

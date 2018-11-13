@@ -6576,7 +6576,7 @@
                 a = (n("yzyL"), n("mrSG")),
                 s = function() {
                     function e(e, t, n) {
-                        this.globalsBySet = new Map, this.channelsBySet = new Map, this.indexBadges(e, this.globalsBySet, n), Array.isArray(t) && this.indexBadges(t, this.channelsBySet, n)
+                        this.count = 0, this.globalsBySet = new Map, this.channelsBySet = new Map, this.count = e.length + (t ? t.length : 0), this.indexBadges(e, this.globalsBySet, n), Array.isArray(t) && this.indexBadges(t, this.channelsBySet, n)
                     }
                     return e.prototype.getBadge = function(e, t) {
                         var n = this.channelsBySet.get(e);

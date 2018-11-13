@@ -3356,7 +3356,6 @@
                     }
                     return l.__extends(t, e), t.prototype.render = function() {
                         return this.props.isLoggedIn ? d.createElement(P.Eb, {
-                            background: P.r.Alt,
                             fullWidth: !0,
                             alignContent: P.e.Center
                         }, d.createElement(P.Xa, {

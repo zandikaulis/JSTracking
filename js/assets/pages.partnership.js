@@ -3276,7 +3276,7 @@
                     }
                 }), Object(ne.a)([{
                     topic: function(e) {
-                        return Object(w.L)(e.currentUserID)
+                        return Object(w.M)(e.currentUserID)
                     },
                     mapMessageTypesToProps: (Ye = {}, Ye[D.PubsubMessageType.WhisperReceived] = "whisperReceived", Ye[D.PubsubMessageType.WhisperSent] = "whisperSent", Ye),
                     skipMessage: function(e, t) {
@@ -3605,7 +3605,7 @@
                             types: [D.PubsubMessageType.WhisperDeleted, D.PubsubMessageType.WhisperEdited, D.PubsubMessageType.WhisperSent, D.PubsubMessageType.WhisperAllThreadsUpdate, D.PubsubMessageType.WhisperReceived, D.PubsubMessageType.WhisperThreadUpdate],
                             variables: a.__assign({}, e.data.variables),
                             skip: !e.data.currentUser || void 0 === e.data.currentUser.id,
-                            topic: Object(w.L)(e.data.currentUser && e.data.currentUser.id || ""),
+                            topic: Object(w.M)(e.data.currentUser && e.data.currentUser.id || ""),
                             mutator: function(t, n) {
                                 if (!n.currentUser || !n.currentUser.whisperThreads) return n;
                                 if (Ke(t) || $e(t)) {
@@ -12660,6 +12660,7 @@
                         }, this.getFrequentlyUsedEmoteGrid(), this.getCurrentChannelEmoteGrid(), this.getOtherSubEmoteGrids(), this.getResidualEmoteGrids()))), this.renderTabNav())
                     }, t.prototype.getFrequentlyUsedEmoteGrid = function() {
                         return 0 === this.props.frequentlyUsedEmotes.length ? null : a.createElement(l.Xa, {
+                            className: "emote-picker__content-block",
                             refDelegate: this.saveFrequentlyUsedEmotesRef
                         }, a.createElement(H, {
                             context: A.FrequentlyUsed,
@@ -12704,8 +12705,7 @@
                             label: Object(s.d)("Unlocked", "EmotePickerCard"),
                             onClickEmote: this.onClickEmote
                         }))), this.props.globalEmotes.length > 0 && e.push(a.createElement(l.Xa, {
-                            key: "emote-grid--global-emotes",
-                            className: "emote-picker__content-block"
+                            key: "emote-grid--global-emotes"
                         }, a.createElement(H, {
                             context: A.Global,
                             emotes: this.props.globalEmotes,

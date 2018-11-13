@@ -8,8 +8,8 @@
             n.d(t, "a", function() {
                 return o
             });
-            var r = n("mrSG"),
-                i = n("q1tI"),
+            var i = n("mrSG"),
+                r = n("q1tI"),
                 a = n("Ue10"),
                 o = (n("sL9O"), function(e) {
                     function t() {
@@ -32,18 +32,18 @@
                             }), t.finalizeSelections(e.dataTransfer.files)
                         }, t
                     }
-                    return r.__extends(t, e), t.prototype.render = function() {
-                        return i.createElement(a.Z, {
+                    return i.__extends(t, e), t.prototype.render = function() {
+                        return r.createElement(a.Z, {
                             dragOver: this.state.isDraggingOver,
                             error: this.props.error
-                        }, i.createElement(a.Pa, {
+                        }, r.createElement(a.Pa, {
                             position: a.jb.Absolute,
                             attachTop: !0,
                             attachLeft: !0,
                             fullWidth: !0,
                             fullHeight: !0,
                             zIndex: a.ic.Above
-                        }, i.createElement("input", {
+                        }, r.createElement("input", {
                             "data-a-target": "file-picker-input",
                             "data-test-selector": "file-picker-input",
                             className: "drag-and-drop-file-picker__input",
@@ -58,19 +58,19 @@
                     }, t.prototype.finalizeSelections = function(e) {
                         e && this.props.onFilesSubmitted(Array.from(e))
                     }, t
-                }(i.Component))
+                }(r.Component))
         },
         "0HeA": function(e, t, n) {
             "use strict";
             n.d(t, "a", function() {
                 return c
             });
-            var r, i, a = n("/7QA"),
+            var i, r, a = n("/7QA"),
                 o = n("DMoW");
             ! function(e) {
                 e.Default = "default", e.Extension = "extension"
-            }(i || (i = {}));
-            var s = ((r = {})[o.D.DEFAULT] = i.Default, r[o.D.EXTENSION] = i.Extension, r);
+            }(r || (r = {}));
+            var s = ((i = {})[o.D.DEFAULT] = r.Default, i[o.D.EXTENSION] = r.Extension, i);
 
             function c(e, t) {
                 a.o.track(e, {
@@ -83,8 +83,8 @@
         },
         "1IJ0": function(e, t, n) {
             "use strict";
-            var r = n("mrSG"),
-                i = n("q1tI"),
+            var i = n("mrSG"),
+                r = n("q1tI"),
                 a = n("9C/b"),
                 o = n("/7QA"),
                 s = n("2xye"),
@@ -96,38 +96,38 @@
                         return t.internalTrackingMediums = [s.PageviewMedium.ExtensionCategory, s.PageviewMedium.ExtensionConfiguration, s.PageviewMedium.ExtensionDiscovery, s.PageviewMedium.ExtensionInstalledModal, s.PageviewMedium.ExtensionManagement, s.PageviewMedium.ExtensionManagerCarousel, s.PageviewMedium.ExtensionPage, s.PageviewMedium.ExtensionSearch], t.goBack = function() {
                             var e = t.props,
                                 n = e.channelLogin,
-                                r = e.location,
-                                i = e.history;
-                            !n || r.state && t.internalTrackingMediums.includes(r.state.medium) ? i.goBack() : i.push(Object(c.c)(n))
+                                i = e.location,
+                                r = e.history;
+                            !n || i.state && t.internalTrackingMediums.includes(i.state.medium) ? r.goBack() : r.push(Object(c.c)(n))
                         }, t
                     }
-                    return r.__extends(t, e), t.prototype.render = function() {
+                    return i.__extends(t, e), t.prototype.render = function() {
                         var e = this.props,
                             t = e.title,
                             n = e.showBackLink;
-                        return i.createElement(l.Eb, {
+                        return r.createElement(l.Eb, {
                             background: l.r.Alt2,
                             display: l.X.Flex,
                             alignItems: l.f.Stretch
-                        }, n && i.createElement(l.Eb, {
+                        }, n && r.createElement(l.Eb, {
                             border: !0,
                             display: l.X.Flex,
                             flexGrow: 0
-                        }, i.createElement(l.A, {
+                        }, r.createElement(l.A, {
                             ariaLabel: Object(o.d)("Navigate to previous page", "ExtensionPageHeader"),
                             size: l.B.Large,
                             icon: l.tb.AngleLeft,
                             onClick: this.goBack
-                        })), i.createElement(l.Eb, {
+                        })), r.createElement(l.Eb, {
                             border: !0,
                             display: l.X.Flex,
                             flexGrow: 1,
                             padding: 2
-                        }, i.createElement(l.W, {
+                        }, r.createElement(l.W, {
                             type: l.Vb.H4
                         }, t)))
                     }, t
-                }(i.Component),
+                }(r.Component),
                 d = Object(a.a)(u);
             n.d(t, !1, function() {
                 return u
@@ -137,8 +137,8 @@
         },
         "1OTy": function(e, t, n) {
             "use strict";
-            var r = n("mrSG"),
-                i = n("q1tI"),
+            var i = n("mrSG"),
+                r = n("q1tI"),
                 a = n("/MKj"),
                 o = n("fvjX"),
                 s = n("/0dD"),
@@ -148,8 +148,8 @@
                     function t() {
                         return null !== e && e.apply(this, arguments) || this
                     }
-                    return r.__extends(t, e), t.prototype.render = function() {
-                        return i.createElement(l.La, {
+                    return i.__extends(t, e), t.prototype.render = function() {
+                        return r.createElement(l.La, {
                             label: this.props.label,
                             type: this.props.type,
                             src: this.props.src,
@@ -166,7 +166,7 @@
                         enumerable: !0,
                         configurable: !0
                     }), t
-                }(i.Component);
+                }(r.Component);
             var d = Object(o.compose)(Object(a.connect)(function(e) {
                 return {
                     darkModeEnabled: Object(c.a)(e) === s.a.Dark
@@ -182,29 +182,29 @@
         "1pP+": function(e, t, n) {},
         "1uty": function(e, t, n) {
             "use strict";
-            var r = "_erd";
+            var i = "_erd";
 
-            function i(e) {
-                return e[r]
+            function r(e) {
+                return e[i]
             }
             e.exports = {
                 initState: function(e) {
-                    return e[r] = {}, i(e)
+                    return e[i] = {}, r(e)
                 },
-                getState: i,
+                getState: r,
                 cleanState: function(e) {
-                    delete e[r]
+                    delete e[i]
                 }
             }
         },
         "22qk": function(e, t, n) {
             "use strict";
 
-            function r(e, t) {
+            function i(e, t) {
                 return "/ext/" + d(e, t)
             }
 
-            function i(e, t, n) {
+            function r(e, t, n) {
                 return {
                     pathname: "" + o(e),
                     search: "?configure=true&extensionID=" + d(t, n)
@@ -242,9 +242,9 @@
                 return t ? e + "-" + t : e
             }
             n.d(t, "d", function() {
-                return r
-            }), n.d(t, "b", function() {
                 return i
+            }), n.d(t, "b", function() {
+                return r
             }), n.d(t, "c", function() {
                 return a
             }), n.d(t, "e", function() {
@@ -285,7 +285,7 @@
             }), n.d(t, "f", function() {
                 return h
             });
-            var r, i = n("/7QA"),
+            var i, r = n("/7QA"),
                 a = n("2xye");
 
             function o(e) {
@@ -294,7 +294,7 @@
                     extension_id: e.extensionClientID,
                     extension_version: e.extensionVersion
                 };
-                i.o.track(a.SpadeEventType.ExtensionInstall, t)
+                r.o.track(a.SpadeEventType.ExtensionInstall, t)
             }
 
             function s(e) {
@@ -302,7 +302,7 @@
                     extension_id: e.extensionClientID,
                     extension_version: e.extensionVersion
                 };
-                i.o.track(a.SpadeEventType.ExtensionConfigureView, t)
+                r.o.track(a.SpadeEventType.ExtensionConfigureView, t)
             }
 
             function c(e, t) {
@@ -320,15 +320,15 @@
             }
 
             function l(e) {
-                i.o.track(a.SpadeEventType.ExtensionStreamerComponentSettings, c(r.Open, e))
+                r.o.track(a.SpadeEventType.ExtensionStreamerComponentSettings, c(i.Open, e))
             }
 
             function u(e) {
-                i.o.track(a.SpadeEventType.ExtensionStreamerComponentSettings, c(r.Close, e))
+                r.o.track(a.SpadeEventType.ExtensionStreamerComponentSettings, c(i.Close, e))
             }
 
             function d(e) {
-                i.o.track(a.SpadeEventType.ExtensionStreamerComponentSettings, c(r.Save, e))
+                r.o.track(a.SpadeEventType.ExtensionStreamerComponentSettings, c(i.Save, e))
             }
 
             function p(e) {
@@ -343,19 +343,19 @@
             }
 
             function m(e) {
-                i.o.track(a.SpadeEventType.ExtensionPopoutClicked, p(e))
+                r.o.track(a.SpadeEventType.ExtensionPopoutClicked, p(e))
             }
 
             function h(e) {
-                i.o.track(a.SpadeEventType.ExtensionPopinClicked, p(e))
+                r.o.track(a.SpadeEventType.ExtensionPopinClicked, p(e))
             }! function(e) {
                 e.Open = "open", e.Close = "close", e.Save = "save"
-            }(r || (r = {}))
+            }(i || (i = {}))
         },
         "5gJ6": function(e, t, n) {
             "use strict";
-            var r = n("mrSG"),
-                i = n("q1tI"),
+            var i = n("mrSG"),
+                r = n("q1tI"),
                 a = n("/MKj"),
                 o = n("/7QA"),
                 s = n("2DIU"),
@@ -402,8 +402,8 @@
                     function t() {
                         return null !== e && e.apply(this, arguments) || this
                     }
-                    return r.__extends(t, e), t.prototype.render = function() {
-                        if ("prime" === this.props.paymentProvider) return i.createElement(V.sb, {
+                    return i.__extends(t, e), t.prototype.render = function() {
+                        if ("prime" === this.props.paymentProvider) return r.createElement(V.sb, {
                             asset: V.tb.LogoTwitchPrime,
                             width: 66,
                             height: 30,
@@ -412,13 +412,13 @@
                         var e = this.imageSource,
                             t = e.src,
                             n = e.alt,
-                            r = e.srcSet;
-                        return i.createElement(V.Xa, {
+                            i = e.srcSet;
+                        return r.createElement(V.Xa, {
                             className: "payment-method-image"
-                        }, i.createElement(V.S, {
+                        }, r.createElement(V.S, {
                             src: t,
                             alt: n,
-                            srcSet: r
+                            srcSet: i
                         }))
                     }, Object.defineProperty(t.prototype, "imageSource", {
                         get: function() {
@@ -512,7 +512,7 @@
                         enumerable: !0,
                         configurable: !0
                     }), t
-                }(i.Component));
+                }(r.Component));
             var Y = Object(a.connect)(function(e) {
                 return {
                     darkModeEnabled: Object(H.a)(e) === z.a.Dark
@@ -526,28 +526,28 @@
         },
         "6fcp": function(e, t, n) {
             "use strict";
-            var r;
+            var i;
             n.d(t, "a", function() {
-                    return r
+                    return i
                 }),
                 function(e) {
                     e.NotConfigured = "not-configured", e.MissingPublicKey = "missing-public-key", e.InvalidPublicKey = "invalid-public-key", e.AlreadyConfigured = "already-configured", e.MissingHostedFieldTarget = "missing-hosted-field-target", e.Validation = "validation", e.InvalidParameter = "invalid-parameter", e.APIError = "api-error", e.PayPalNotConfigured = "paypal-not-configured", e.PayPalCanceled = "paypal-canceled", e.PayPalError = "paypal-error", e.InvalidRoutingNumber = "invalid-routing-number", e.NotFound = "not-found", e.MissingPlan = "missing-plan", e.InvalidAddon = "invalid-addon", e.InvalidCurrency = "invalid-currency", e.GiftCardCurrencyMisMatch = "gift-card-currency-mismatch"
-                }(r || (r = {}))
+                }(i || (i = {}))
         },
         "6oOb": function(e, t, n) {
             "use strict";
-            var r;
+            var i;
             n.d(t, "a", function() {
-                    return r
+                    return i
                 }),
                 function(e) {
                     e[e.NOT_STARTED = 0] = "NOT_STARTED", e[e.CONFIRMATION = 1] = "CONFIRMATION"
-                }(r || (r = {}))
+                }(i || (i = {}))
         },
         "7sSR": function(e, t, n) {
             "use strict";
-            var r = n("t3DW").forEach,
-                i = n("W+U1"),
+            var i = n("t3DW").forEach,
+                r = n("W+U1"),
                 a = n("Sa1T"),
                 o = n("LO96"),
                 s = n("UFhH"),
@@ -565,7 +565,7 @@
             function f(e) {
                 if (Array.isArray(e)) return e;
                 var t = [];
-                return r(e, function(e) {
+                return i(e, function(e) {
                     t.push(e)
                 }), t
             }
@@ -575,8 +575,8 @@
             }
 
             function g(e, t, n) {
-                var r = e[t];
-                return void 0 !== r && null !== r || void 0 === n ? r : n
+                var i = e[t];
+                return void 0 !== i && null !== i || void 0 === n ? i : n
             }
             e.exports = function(e) {
                 var t;
@@ -602,7 +602,7 @@
                     C = {};
                 C.callOnAdd = !!g(e, "callOnAdd", !0), C.debug = !!g(e, "debug", !1);
                 var k, P = a(t),
-                    S = i({
+                    S = r({
                         stateHandler: d
                     }),
                     x = g(e, "strategy", "object"),
@@ -619,10 +619,10 @@
                 }
                 var I = {};
                 return {
-                    listenTo: function(e, n, i) {
+                    listenTo: function(e, n, r) {
                         function a(e) {
                             var t = P.get(e);
-                            r(t, function(t) {
+                            i(t, function(t) {
                                 t(e)
                             })
                         }
@@ -630,8 +630,8 @@
                         function o(e, t, n) {
                             P.add(t, n), e && n(t)
                         }
-                        if (i || (i = n, n = e, e = {}), !n) throw new Error("At least one element required.");
-                        if (!i) throw new Error("Listener required.");
+                        if (r || (r = n, n = e, e = {}), !n) throw new Error("At least one element required.");
+                        if (!r) throw new Error("Listener required.");
                         if (y(n)) n = [n];
                         else {
                             if (!h(n)) return v.error("Invalid arguments. Must be a DOM element or a collection of DOM elements.");
@@ -641,29 +641,29 @@
                             c = g(e, "callOnAdd", C.callOnAdd),
                             l = g(e, "onReady", function() {}),
                             u = g(e, "debug", C.debug);
-                        r(n, function(e) {
+                        i(n, function(e) {
                             d.getState(e) || (d.initState(e), t.set(e));
                             var p = t.get(e);
-                            if (u && v.log("Attaching listener to element", p, e), !S.isDetectable(e)) return u && v.log(p, "Not detectable."), S.isBusy(e) ? (u && v.log(p, "System busy making it detectable"), o(c, e, i), I[p] = I[p] || [], void I[p].push(function() {
+                            if (u && v.log("Attaching listener to element", p, e), !S.isDetectable(e)) return u && v.log(p, "Not detectable."), S.isBusy(e) ? (u && v.log(p, "System busy making it detectable"), o(c, e, r), I[p] = I[p] || [], void I[p].push(function() {
                                 ++s === n.length && l()
                             })) : (u && v.log(p, "Making detectable..."), S.markBusy(e, !0), k.makeDetectable({
                                 debug: u
                             }, e, function(e) {
                                 if (u && v.log(p, "onElementDetectable"), d.getState(e)) {
-                                    S.markAsDetectable(e), S.markBusy(e, !1), k.addListener(e, a), o(c, e, i);
+                                    S.markAsDetectable(e), S.markBusy(e, !1), k.addListener(e, a), o(c, e, r);
                                     var t = d.getState(e);
                                     if (t && t.startSize) {
                                         var m = e.offsetWidth,
                                             h = e.offsetHeight;
                                         t.startSize.width === m && t.startSize.height === h || a(e)
                                     }
-                                    I[p] && r(I[p], function(e) {
+                                    I[p] && i(I[p], function(e) {
                                         e()
                                     })
                                 } else u && v.log(p, "Element uninstalled before being detectable.");
                                 delete I[p], ++s === n.length && l()
                             }));
-                            u && v.log(p, "Already detecable, adding listener."), o(c, e, i), s++
+                            u && v.log(p, "Already detecable, adding listener."), o(c, e, r), s++
                         }), s === n.length && l()
                     },
                     removeListener: P.removeListener,
@@ -675,7 +675,7 @@
                             if (!h(e)) return v.error("Invalid arguments. Must be a DOM element or a collection of DOM elements.");
                             e = f(e)
                         }
-                        r(e, function(e) {
+                        i(e, function(e) {
                             P.removeAllListeners(e), k.uninstall(e), d.cleanState(e)
                         })
                     }
@@ -684,9 +684,9 @@
         },
         "85n/": function(e, t, n) {
             "use strict";
-            var r = n("TQGo");
+            var i = n("TQGo");
             n.d(t, "a", function() {
-                return r.a
+                return i.a
             })
         },
         "88jh": function(e, t, n) {},
@@ -695,18 +695,18 @@
             Object.defineProperty(t, "__esModule", {
                 value: !0
             });
-            var r = function() {
+            var i = function() {
                     function e(e, t) {
                         for (var n = 0; n < t.length; n++) {
-                            var r = t[n];
-                            r.enumerable = r.enumerable || !1, r.configurable = !0, "value" in r && (r.writable = !0), Object.defineProperty(e, r.key, r)
+                            var i = t[n];
+                            i.enumerable = i.enumerable || !1, i.configurable = !0, "value" in i && (i.writable = !0), Object.defineProperty(e, i.key, i)
                         }
                     }
-                    return function(t, n, r) {
-                        return n && e(t.prototype, n), r && e(t, r), t
+                    return function(t, n, i) {
+                        return n && e(t.prototype, n), i && e(t, i), t
                     }
                 }(),
-                i = o(n("J2m7")),
+                r = o(n("J2m7")),
                 a = o(n("xweI"));
 
             function o(e) {
@@ -720,7 +720,7 @@
                         if (!(e instanceof t)) throw new TypeError("Cannot call a class as a function")
                     }(this, e), this.refs = {}
                 }
-                return r(e, [{
+                return i(e, [{
                     key: "add",
                     value: function(e, t) {
                         this.refs[e] || (this.refs[e] = []), this.refs[e].push(t)
@@ -739,7 +739,7 @@
                     key: "getActive",
                     value: function() {
                         var e = this;
-                        return (0, i.default)(this.refs[this.active.collection], function(t) {
+                        return (0, r.default)(this.refs[this.active.collection], function(t) {
                             return t.node.sortableInfo.index == e.active.index
                         })
                     }
@@ -762,7 +762,7 @@
         },
         "8sUD": function(e, t, n) {},
         "9fjZ": function(e, t, n) {
-            var r = {
+            var i = {
                 kind: "Document",
                 definitions: [{
                     kind: "OperationDefinition",
@@ -1257,7 +1257,7 @@
                     end: 667
                 }
             };
-            r.loc.source = {
+            i.loc.source = {
                 body: '#import "twilight/features/badges/models/badge-fragment.gql"\nquery TicketDescription($productName: String! $taxCountry: String) {\nproduct: subscriptionProduct(productName: $productName) {\nid\ndisplayName\npriceInfo(taxCountry: $taxCountry) {\ncurrency\nexponent\nid\nisTaxInclusive\nprice\ntax\ntotal\n}\ninterval {\nunit\n}\nhasAdFree\nhasFastChat\nhasSubonlyVideoArchive\ntier\nowner {\nid\ndisplayName\nbannerImageURL\nprofileImageURL(width: 300)\nbroadcastBadges {\n...badge\n}\nsubscriptionProducts {\nid\ntier\nemotes {\nid\ntoken\n}\n}\n}\ngiftPromotion {\nnewPrice\n}\nself {\npromotion {\nnewPrice\n}\npaidUpgradePromotion {\nnewPrice\n}\nbenefit {\nid\ngift {\nisGift\n}\n}\n}\n}\nrequestInfo {\ncountryCode\n}\n}',
                 name: "GraphQL request",
                 locationOffset: {
@@ -1265,22 +1265,22 @@
                     column: 1
                 }
             };
-            var i = {};
-            r.definitions = r.definitions.concat(function(e) {
+            var r = {};
+            i.definitions = i.definitions.concat(function(e) {
                 return e.filter(function(e) {
                     if ("FragmentDefinition" !== e.kind) return !0;
                     var t = e.name.value;
-                    return !i[t] && (i[t] = !0, !0)
+                    return !r[t] && (r[t] = !0, !0)
                 })
-            }(n("IKE4").definitions)), e.exports = r
+            }(n("IKE4").definitions)), e.exports = i
         },
         AVF4: function(e, t, n) {
             e.exports = n.p + "assets/credit_cards_1x-0c57bd2e9d4cd4bb8474.png"
         },
         AfzZ: function(e, t, n) {
             "use strict";
-            var r = n("mrSG"),
-                i = n("q1tI"),
+            var i = n("mrSG"),
+                r = n("q1tI"),
                 a = n("/MKj"),
                 o = n("cZKs"),
                 s = n("kRBY"),
@@ -1306,17 +1306,17 @@
                             })
                         }, t
                     }
-                    return r.__extends(t, e), t.prototype.componentDidMount = function() {
+                    return i.__extends(t, e), t.prototype.componentDidMount = function() {
                         var e = this.props,
                             t = e.extensionID,
                             n = e.extensionsForChannel,
-                            r = t.split("-"),
-                            i = r[0],
-                            a = r[1];
+                            i = t.split("-"),
+                            r = i[0],
+                            a = i[1];
                         n && !n.loading && n.installedExtensions && this.setState({
                             installation: this.findExtensionFromInstallations(n.installedExtensions)
                         }), Object(b.d)({
-                            extensionClientID: i,
+                            extensionClientID: r,
                             extensionVersion: a
                         })
                     }, t.prototype.componentWillReceiveProps = function(e) {
@@ -1327,7 +1327,7 @@
                         var e = this.props,
                             t = e.channelID,
                             n = e.channelLogin,
-                            r = e.languageCode,
+                            i = e.languageCode,
                             a = e.locale,
                             o = this.isLoading(),
                             s = t || "",
@@ -1338,51 +1338,51 @@
                             if (!this.state.installation) return this.renderRedirect(u);
                             var y = this.state.installation,
                                 g = y.extension;
-                            d = i.createElement(c.Xa, {
+                            d = r.createElement(c.Xa, {
                                 fullWidth: !0
-                            }, i.createElement(c.Xa, {
+                            }, r.createElement(c.Xa, {
                                 padding: {
                                     bottom: 1
                                 }
-                            }, i.createElement(c.G, {
+                            }, r.createElement(c.G, {
                                 row: !0,
                                 border: !1
-                            }, i.createElement(c.I, {
+                            }, r.createElement(c.I, {
                                 alt: g.name,
                                 src: this.state.hasCardImageError ? p.a.defaultAvatarURL : g.iconUrl,
                                 aspect: c.p.Aspect1x1,
                                 size: c.J.Size6,
                                 onError: this.onCardImageError
-                            }), i.createElement(c.H, null, i.createElement(c.Xa, {
+                            }), r.createElement(c.H, null, r.createElement(c.Xa, {
                                 padding: 1
-                            }, i.createElement(c.W, {
+                            }, r.createElement(c.W, {
                                 type: c.Vb.H4
-                            }, g.name), i.createElement(c.W, {
+                            }, g.name), r.createElement(c.W, {
                                 type: c.Vb.Span,
                                 color: c.O.Alt2
                             }, Object(p.d)("Created by {extensionAuthor}", {
                                 extensionAuthor: g.authorName
-                            }, "ExtensionConfigurePresentation")))))), i.createElement(c.Xa, null, i.createElement(h.a, {
+                            }, "ExtensionConfigurePresentation")))))), r.createElement(c.Xa, null, r.createElement(h.a, {
                                 channelID: s,
                                 channelLogin: n,
                                 className: "",
                                 extensionMode: l.ExtensionMode.Config,
                                 installation: y,
-                                languageCode: r,
+                                languageCode: i,
                                 locale: a,
                                 login: n,
                                 loginID: s,
                                 isPopout: !1
                             })))
                         }
-                        var b = i.createElement(f.a, {
+                        var b = r.createElement(f.a, {
                             channelLogin: n,
                             showBackLink: !1,
                             title: Object(p.d)("Configure", "ExtensionConfigurePresentation")
                         });
-                        return i.createElement(m.b, null, i.createElement(c.Xa, {
+                        return r.createElement(m.b, null, r.createElement(c.Xa, {
                             padding: 2
-                        }, b, i.createElement(c.Eb, {
+                        }, b, r.createElement(c.Eb, {
                             borderRight: !0,
                             borderLeft: !0,
                             borderBottom: !0,
@@ -1395,33 +1395,33 @@
                             return t.props.extensionID === n.clientId + "-" + n.version
                         })
                     }, t.prototype.renderPlaceholders = function() {
-                        return i.createElement(c.Xa, {
+                        return r.createElement(c.Xa, {
                             fullWidth: !0
-                        }, i.createElement(c.Xa, {
+                        }, r.createElement(c.Xa, {
                             display: c.X.Flex,
                             alignItems: c.f.Center,
                             padding: {
                                 y: 1
                             }
-                        }, i.createElement(c.Xa, null, i.createElement(c.ib, {
+                        }, r.createElement(c.Xa, null, r.createElement(c.ib, {
                             width: 60,
                             height: 60
-                        })), i.createElement(c.Xa, {
+                        })), r.createElement(c.Xa, {
                             padding: {
                                 left: 1
                             }
-                        }, i.createElement(c.ib, {
+                        }, r.createElement(c.ib, {
                             lineCount: 2,
                             width: 200
                         }))))
                     }, t.prototype.isLoading = function() {
                         return !this.props.extensionsForChannel || !this.props.extensionsForChannel.installedExtensions
                     }, t.prototype.renderRedirect = function(e) {
-                        return i.createElement(d.a, {
+                        return r.createElement(d.a, {
                             to: Object(g.e)(e)
                         })
                     }, t
-                }(i.Component),
+                }(r.Component),
                 E = Object(u.compose)(Object(y.a)({
                     name: "extensionsForChannel",
                     options: function(e) {
@@ -1439,29 +1439,29 @@
                     function t() {
                         return null !== e && e.apply(this, arguments) || this
                     }
-                    return r.__extends(t, e), t.prototype.render = function() {
+                    return i.__extends(t, e), t.prototype.render = function() {
                         var e = this.props,
                             t = e.channelID,
                             n = e.channelLogin,
-                            r = e.extensionID,
+                            i = e.extensionID,
                             a = e.languageCode,
                             s = e.locale,
                             l = e.onClose;
-                        return i.createElement(c.Eb, {
+                        return r.createElement(c.Eb, {
                             background: c.r.Base,
                             className: "extension-configure-modal"
-                        }, i.createElement(E, {
+                        }, r.createElement(E, {
                             channelLogin: n,
                             channelID: t,
-                            extensionID: r,
+                            extensionID: i,
                             languageCode: a,
                             locale: s
-                        }), i.createElement(o.a, {
+                        }), r.createElement(o.a, {
                             closeOnBackdropClick: !0,
                             onClose: l
                         }))
                     }, t
-                }(i.Component));
+                }(r.Component));
             var k = Object(a.connect)(function(e) {
                 var t = Object(s.e)(e);
                 return {
@@ -1482,22 +1482,22 @@
             Object.defineProperty(t, "__esModule", {
                 value: !0
             });
-            var r = Object.assign || function(e) {
+            var i = Object.assign || function(e) {
                     for (var t = 1; t < arguments.length; t++) {
                         var n = arguments[t];
-                        for (var r in n) Object.prototype.hasOwnProperty.call(n, r) && (e[r] = n[r])
+                        for (var i in n) Object.prototype.hasOwnProperty.call(n, i) && (e[i] = n[i])
                     }
                     return e
                 },
-                i = function() {
+                r = function() {
                     function e(e, t) {
                         for (var n = 0; n < t.length; n++) {
-                            var r = t[n];
-                            r.enumerable = r.enumerable || !1, r.configurable = !0, "value" in r && (r.writable = !0), Object.defineProperty(e, r.key, r)
+                            var i = t[n];
+                            i.enumerable = i.enumerable || !1, i.configurable = !0, "value" in i && (i.writable = !0), Object.defineProperty(e, i.key, i)
                         }
                     }
-                    return function(t, n, r) {
-                        return n && e(t.prototype, n), r && e(t, r), t
+                    return function(t, n, i) {
+                        return n && e(t.prototype, n), i && e(t, i), t
                     }
                 }();
             t.default = function(e) {
@@ -1524,7 +1524,7 @@
                                 configurable: !0
                             }
                         }), t && (Object.setPrototypeOf ? Object.setPrototypeOf(e, t) : e.__proto__ = t)
-                    }(n, t), i(n, [{
+                    }(n, t), r(n, [{
                         key: "componentDidMount",
                         value: function() {
                             var e = (0, s.findDOMNode)(this);
@@ -1539,7 +1539,7 @@
                         key: "render",
                         value: function() {
                             var t = u.withRef ? "wrappedInstance" : null;
-                            return o.default.createElement(e, r({
+                            return o.default.createElement(e, i({
                                 ref: t
                             }, this.props))
                         }
@@ -1623,8 +1623,8 @@
         },
         C8FX: function(e, t, n) {
             "use strict";
-            var r = n("mrSG"),
-                i = n("q1tI"),
+            var i = n("mrSG"),
+                r = n("q1tI"),
                 a = n("/7QA"),
                 o = n("Ue10");
             n("uUdG");
@@ -1632,27 +1632,27 @@
                 function t() {
                     return null !== e && e.apply(this, arguments) || this
                 }
-                return r.__extends(t, e), t.prototype.render = function() {
-                    return this.props.price ? i.createElement(o.Xa, {
+                return i.__extends(t, e), t.prototype.render = function() {
+                    return this.props.price ? r.createElement(o.Xa, {
                         display: o.X.Flex,
                         flexDirection: o.Aa.Column
-                    }, this.props.productDiscountPrice && i.createElement(o.W, {
+                    }, this.props.productDiscountPrice && r.createElement(o.W, {
                         bold: !0,
                         className: "ticket-price__promotion",
                         fontSize: o.Ca.Size4
                     }, Object(a.d)("{discountedPrice} / First Month*", {
                         discountedPrice: this.props.productDiscountPrice
-                    }, "TicketPrice")), i.createElement(o.Xa, {
+                    }, "TicketPrice")), r.createElement(o.Xa, {
                         display: o.X.Flex,
                         justifyContent: o.Wa.Center,
                         flexWrap: o.Ba.Wrap
-                    }, i.createElement(o.W, {
+                    }, r.createElement(o.W, {
                         type: o.Vb.Span,
                         fontSize: o.Ca.Size4,
                         decoration: this.props.productDiscountPrice ? o.Tb.Strikethrough : void 0,
                         "data-a-target": "js-test-ticket-price-text"
                     }, Object(a.d)("{price} / {interval}", {
-                        price: i.createElement(o.W, {
+                        price: r.createElement(o.W, {
                             type: o.Vb.Span,
                             bold: !0
                         }, this.props.price),
@@ -1670,15 +1670,15 @@
                                     return ""
                             }
                         }(this.props.interval)
-                    }, "TicketDescription")), this.formattedTaxInclusivity && i.createElement(o.Pa, {
+                    }, "TicketDescription")), this.formattedTaxInclusivity && r.createElement(o.Pa, {
                         margin: {
                             left: .5
                         }
-                    }, i.createElement(o.W, {
+                    }, r.createElement(o.W, {
                         fontSize: o.Ca.Size4,
                         type: o.Vb.Span,
                         decoration: this.props.productDiscountPrice ? o.Tb.Strikethrough : void 0
-                    }, Object(a.d)("(Includes VAT)", "TicketDescription"))))) : i.createElement(o.Za, {
+                    }, Object(a.d)("(Includes VAT)", "TicketDescription"))))) : r.createElement(o.Za, {
                         fillContent: !0
                     })
                 }, Object.defineProperty(t.prototype, "formattedTaxInclusivity", {
@@ -1688,14 +1688,14 @@
                     enumerable: !0,
                     configurable: !0
                 }), t
-            }(i.PureComponent);
+            }(r.PureComponent);
             n.d(t, "a", function() {
                 return s
             })
         },
         CUlp: function(e, t, n) {
-            var r, i;
-            "undefined" != typeof window && window, void 0 === (i = "function" == typeof(r = function() {
+            var i, r;
+            "undefined" != typeof window && window, void 0 === (r = "function" == typeof(i = function() {
                 "use strict";
 
                 function e() {}
@@ -1703,8 +1703,8 @@
                 return t.on = function(e, t) {
                     if (e && t) {
                         var n = this._events = this._events || {},
-                            r = n[e] = n[e] || [];
-                        return -1 == r.indexOf(t) && r.push(t), this
+                            i = n[e] = n[e] || [];
+                        return -1 == i.indexOf(t) && i.push(t), this
                     }
                 }, t.once = function(e, t) {
                     if (e && t) {
@@ -1715,23 +1715,23 @@
                 }, t.off = function(e, t) {
                     var n = this._events && this._events[e];
                     if (n && n.length) {
-                        var r = n.indexOf(t);
-                        return -1 != r && n.splice(r, 1), this
+                        var i = n.indexOf(t);
+                        return -1 != i && n.splice(i, 1), this
                     }
                 }, t.emitEvent = function(e, t) {
                     var n = this._events && this._events[e];
                     if (n && n.length) {
                         n = n.slice(0), t = t || [];
-                        for (var r = this._onceEvents && this._onceEvents[e], i = 0; i < n.length; i++) {
-                            var a = n[i];
-                            r && r[a] && (this.off(e, a), delete r[a]), a.apply(this, t)
+                        for (var i = this._onceEvents && this._onceEvents[e], r = 0; r < n.length; r++) {
+                            var a = n[r];
+                            i && i[a] && (this.off(e, a), delete i[a]), a.apply(this, t)
                         }
                         return this
                     }
                 }, t.allOff = function() {
                     delete this._events, delete this._onceEvents
                 }, e
-            }) ? r.call(t, n, t, e) : r) || (e.exports = i)
+            }) ? i.call(t, n, t, e) : i) || (e.exports = r)
         },
         D8NC: function(e, t, n) {
             e.exports = n.p + "assets/amazon_pay_1x-94c97f413ee6005ab1a1.png"
@@ -1745,15 +1745,15 @@
         "EZh/": function(e, t, n) {
             "use strict";
             n.d(t, "a", function() {
-                return r
+                return i
             });
-            var r = 3
+            var i = 3
         },
         EgbR: function(e, t, n) {},
         EuHz: function(e, t, n) {
             "use strict";
             n.r(t);
-            var r, i = n("/MKj"),
+            var i, r = n("/MKj"),
                 a = n("mrSG"),
                 o = n("1hWM"),
                 s = n("q1tI"),
@@ -1769,7 +1769,7 @@
                 g = n("aCAx"),
                 b = n("KJv/"),
                 v = n("1rIY"),
-                E = (r = Object(v.a)("ExtensionActionContext", {
+                E = (i = Object(v.a)("ExtensionActionContext", {
                     currentChannelID: null,
                     currentActionRequest: null,
                     currentActionRequestUI: null,
@@ -1777,7 +1777,7 @@
                         return null
                     }
                 })).InnerProvider,
-                C = r.withContext,
+                C = i.withContext,
                 k = n("MU5F"),
                 P = n("x7UT"),
                 S = n("UUve"),
@@ -1821,11 +1821,11 @@
                             else if (this.state.subscriptionState !== _.NotStarted || n.loading) {
                             if (t.subscriptionState === this.state.subscriptionState) {
                                 if (this.state.subscriptionState === _.Confirming) {
-                                    var r = this.didUserReceiveSubscription(e),
-                                        i = !!this.props.pubsub.messages.entitlementMessage;
-                                    r ? (clearTimeout(this.waitForPubsubTimeout), this.waitForPubsubTimeout = void 0, this.setState({
+                                    var i = this.didUserReceiveSubscription(e),
+                                        r = !!this.props.pubsub.messages.entitlementMessage;
+                                    i ? (clearTimeout(this.waitForPubsubTimeout), this.waitForPubsubTimeout = void 0, this.setState({
                                         subscriptionState: _.Subscribed
-                                    })) : i && this.waitForPubsubTimeout ? (clearTimeout(this.waitForPubsubTimeout), this.waitForPubsubTimeout = void 0, n.refetch()) : this.waitForPubsubTimeout || this.setState({
+                                    })) : r && this.waitForPubsubTimeout ? (clearTimeout(this.waitForPubsubTimeout), this.waitForPubsubTimeout = void 0, n.refetch()) : this.waitForPubsubTimeout || this.setState({
                                         subscriptionState: _.Cancelled
                                     })
                                 }
@@ -1853,22 +1853,22 @@
                         var t = this.props.currentSubscriptionData,
                             n = e.currentSubscriptionData;
                         if (!t || !n) return !1;
-                        var r = t.user,
-                            i = n.user;
-                        if (!(r && r.self && i && i.self)) return !1;
-                        var a = null === i.self.subscriptionBenefit && null !== r.self.subscriptionBenefit,
-                            o = !(!r.self.subscriptionBenefit || !i.self.subscriptionBenefit || r.self.subscriptionBenefit.tier === i.self.subscriptionBenefit.tier);
+                        var i = t.user,
+                            r = n.user;
+                        if (!(i && i.self && r && r.self)) return !1;
+                        var a = null === r.self.subscriptionBenefit && null !== i.self.subscriptionBenefit,
+                            o = !(!i.self.subscriptionBenefit || !r.self.subscriptionBenefit || i.self.subscriptionBenefit.tier === r.self.subscriptionBenefit.tier);
                         return a || o
                     }, t.prototype.handleActionRequest = function() {
                         var e = this.props,
                             t = e.currentActionRequest,
                             n = e.currentSubscriptionData;
                         if (t && n) {
-                            var r = null;
+                            var i = null;
                             switch (t.options.tier) {
                                 case k.ActionRequestSubTier.Upsell:
-                                    var i = n.user;
-                                    if (i && i.subscriptionProducts && i.self) {
+                                    var r = n.user;
+                                    if (r && r.subscriptionProducts && r.self) {
                                         var a = function(e, t) {
                                             if (!t) return null;
                                             var n = t.filter(function(e) {
@@ -1876,17 +1876,17 @@
                                                 }).sort(function(e, t) {
                                                     return e.tier < t.tier ? -1 : e.tier > t.tier ? 1 : -0
                                                 }),
-                                                r = n.findIndex(function(t) {
+                                                i = n.findIndex(function(t) {
                                                     return t.tier === e
                                                 });
-                                            return null === e ? n[0] : r === n.length - 1 ? null : n[r + 1]
-                                        }(i.self.subscriptionBenefit && i.self.subscriptionBenefit.tier, i.subscriptionProducts);
-                                        a && (r = a.name)
+                                            return null === e ? n[0] : i === n.length - 1 ? null : n[i + 1]
+                                        }(r.self.subscriptionBenefit && r.self.subscriptionBenefit.tier, r.subscriptionProducts);
+                                        a && (i = a.name)
                                     }
                             }
-                            r ? (this.setState({
+                            i ? (this.setState({
                                 subscriptionState: _.InProgress
-                            }), this.openCheckout(r)) : this.setState({
+                            }), this.openCheckout(i)) : this.setState({
                                 subscriptionState: _.ProductNotAvailable
                             })
                         }
@@ -1897,11 +1897,11 @@
                     }, t.prototype.openCheckout = function(e) {
                         var t = this.props,
                             n = t.currentActionRequest,
-                            r = t.currentSubscriptionData,
-                            i = t.showSubscriptionCheckoutModal;
-                        if (n && r) {
-                            var a = r.currentUser,
-                                o = r.user;
+                            i = t.currentSubscriptionData,
+                            r = t.showSubscriptionCheckoutModal;
+                        if (n && i) {
+                            var a = i.currentUser,
+                                o = i.user;
                             p.o.track(O.SpadeEventType.ExtensionSubscribeToChannelActionInit, {
                                 action: n.options.tier,
                                 channel_id: o && o.id || "",
@@ -1910,7 +1910,7 @@
                                 product_name: e,
                                 user_id: a && a.id || "",
                                 user: a && a.login || ""
-                            }), Object(S.e)(), p.n.set(S.c, e), i({
+                            }), Object(S.e)(), p.n.set(S.c, e), r({
                                 productName: e,
                                 onCheckoutProgress: this.onCheckoutProgress,
                                 onClose: this.onCheckoutModalClosed,
@@ -1936,7 +1936,7 @@
                     }
                 }), Object(P.a)([{
                     topic: function(e) {
-                        return Object(x.H)(e.currentSubscriptionData && e.currentSubscriptionData.currentUser && e.currentSubscriptionData.currentUser.id || "")
+                        return Object(x.I)(e.currentSubscriptionData && e.currentSubscriptionData.currentUser && e.currentSubscriptionData.currentUser.id || "")
                     },
                     mapMessageTypesToProps: {
                         "*": "entitlementMessage"
@@ -1951,7 +1951,7 @@
                         currentChannelID: e.currentChannelID,
                         sendActionResult: e.sendActionResult
                     }
-                }), Object(i.connect)(null, function(e) {
+                }), Object(r.connect)(null, function(e) {
                     return Object(y.bindActionCreators)({
                         showSubscriptionCheckoutModal: function(e) {
                             var t = a.__rest(e, []);
@@ -1968,10 +1968,10 @@
                             isGlobalRender: !1
                         }, t.handleModalRequest = function(e) {
                             var n = null,
-                                r = !1;
+                                i = !1;
                             switch (e.action) {
                                 case o.FunctionAction.SubscribeToChannel:
-                                    n = s.createElement(j, null), r = !0;
+                                    n = s.createElement(j, null), i = !0;
                                     break;
                                 default:
                                     return
@@ -1979,7 +1979,7 @@
                             t.setState({
                                 currentActionRequest: e,
                                 currentActionRequestUI: n,
-                                isGlobalRender: r
+                                isGlobalRender: i
                             })
                         }, t.sendActionResult = function(e) {
                             var n = t.state.currentActionRequest;
@@ -2058,8 +2058,8 @@
                         return t.onDescriptionClick = function(e) {
                             var n = e.target;
                             if ("A" === n.nodeName) {
-                                var r = n;
-                                t.trackClick(r.href)
+                                var i = n;
+                                t.trackClick(i.href)
                             }
                         }, t.onImageClick = function() {
                             t.props.panel.linkURL && t.trackClick(t.props.panel.linkURL)
@@ -2100,8 +2100,8 @@
                             "data-test-selector": U.Description
                         }, s.createElement(G.ec, null, s.createElement(B, a.__assign({
                             source: function(e) {
-                                return e.replace(/(^|\n)(#+)([^\s#]+)/g, function(e, t, n, r) {
-                                    return "" + t + n + " " + r
+                                return e.replace(/(^|\n)(#+)([^\s#]+)/g, function(e, t, n, i) {
+                                    return "" + t + n + " " + i
                                 })
                             }(this.props.panel.description)
                         }, W))))), s.createElement(G.Xa, a.__assign({
@@ -2257,9 +2257,9 @@
                 ee = n.n($),
                 te = n("/ZC1"),
                 ne = n("cZKs"),
-                re = n("KGBd");
+                ie = n("KGBd");
             n("xVpv");
-            var ie = ["image/*"],
+            var re = ["image/*"],
                 ae = {
                     x: 0,
                     y: 0,
@@ -2284,33 +2284,33 @@
                             pixelCrop: oe
                         }, t.onFilesSubmitted = function(e) {
                             var n = e[0],
-                                r = new FileReader;
-                            r.onloadend = function() {
-                                var e = r.result,
-                                    i = new Image;
-                                i.onload = function() {
-                                    var r = function(e, t, n) {
-                                            var r = e.height,
-                                                i = e.width,
-                                                a = r > t,
-                                                o = i > n;
+                                i = new FileReader;
+                            i.onloadend = function() {
+                                var e = i.result,
+                                    r = new Image;
+                                r.onload = function() {
+                                    var i = function(e, t, n) {
+                                            var i = e.height,
+                                                r = e.width,
+                                                a = i > t,
+                                                o = r > n;
                                             return {
                                                 percentCrop: {
                                                     x: 0,
                                                     y: 0,
-                                                    height: (a ? t : r) / r * 100,
-                                                    width: (o ? n : i) / i * 100
+                                                    height: (a ? t : i) / i * 100,
+                                                    width: (o ? n : r) / r * 100
                                                 },
                                                 pixelCrop: {
                                                     x: 0,
                                                     y: 0,
-                                                    height: a ? t : r,
-                                                    width: o ? n : i
+                                                    height: a ? t : i,
+                                                    width: o ? n : r
                                                 }
                                             }
-                                        }(i, oe.height, oe.width),
-                                        a = r.percentCrop,
-                                        o = r.pixelCrop;
+                                        }(r, oe.height, oe.width),
+                                        a = i.percentCrop,
+                                        o = i.pixelCrop;
                                     t.setState({
                                         base64Image: e,
                                         crop: a,
@@ -2318,24 +2318,24 @@
                                         isCropping: !0,
                                         pixelCrop: o
                                     })
-                                }, i.onerror = function() {
+                                }, r.onerror = function() {
                                     t.setState({
                                         error: "Failed to read file"
                                     })
-                                }, i.src = e
-                            }, r.onerror = function() {
+                                }, r.src = e
+                            }, i.onerror = function() {
                                 t.setState({
                                     error: "Failed to read file"
                                 })
-                            }, r.readAsDataURL(n)
+                            }, i.readAsDataURL(n)
                         }, t.onImageSelectionComplete = function() {
                             var e = t.state,
                                 n = e.file,
-                                r = e.pixelCrop;
+                                i = e.pixelCrop;
                             n && (t.props.onImageSelectionComplete({
                                 file: n,
-                                pixelCrop: r,
-                                previewSrc: Object(re.a)(t.state.base64Image, t.state.pixelCrop.x, t.state.pixelCrop.y, t.state.pixelCrop.width, t.state.pixelCrop.height, t.state.pixelCrop.width, t.state.pixelCrop.height)
+                                pixelCrop: i,
+                                previewSrc: Object(ie.a)(t.state.base64Image, t.state.pixelCrop.x, t.state.pixelCrop.y, t.state.pixelCrop.width, t.state.pixelCrop.height, t.state.pixelCrop.width, t.state.pixelCrop.height)
                             }), t.props.onClose())
                         }, t.updateCrop = function(e, n) {
                             t.setState({
@@ -2380,7 +2380,7 @@
                         return s.createElement(G.o, {
                             ratio: G.p.Aspect1x1
                         }, s.createElement(te.a, {
-                            allowedFileTypes: ie,
+                            allowedFileTypes: re,
                             multiFile: !1,
                             onFilesSubmitted: this.onFilesSubmitted
                         }, s.createElement(G.Xa, {
@@ -2398,7 +2398,7 @@
                         }, Object(p.d)("Choose a file or drag it here.", "DefaultPanelImagePickerComponent")))))
                     }, t
                 }(s.Component);
-            var ce = Object(i.connect)(null, function(e) {
+            var ce = Object(r.connect)(null, function(e) {
                     return Object(y.bindActionCreators)({
                         onClose: g.c
                     }, e)
@@ -2435,17 +2435,17 @@
                             imagePreviewSRC: e.previewSrc
                         })
                     }, t.handleInputChange = function(e) {
-                        var n, r = e.currentTarget;
+                        var n, i = e.currentTarget;
                         t.setState(((n = {
                             canSave: !0,
                             errorMessage: ""
-                        })[r.name] = r.value, n))
+                        })[i.name] = i.value, n))
                     }, t.handleDescriptionChange = function(e) {
-                        var n, r = e.currentTarget;
+                        var n, i = e.currentTarget;
                         t.setState(((n = {
                             canSave: !0,
                             errorMessage: ""
-                        })[r.name] = r.value, n))
+                        })[i.name] = i.value, n))
                     }, t.handleSaveComplete = function() {
                         t.setState({
                             canSave: !1,
@@ -2505,7 +2505,7 @@
                         })
                     }, t.saveWithPanelImage = function() {
                         return a.__awaiter(t, void 0, void 0, function() {
-                            var e, t, n, r, i, o = this;
+                            var e, t, n, i, r, o = this;
                             return a.__generator(this, function(s) {
                                 switch (s.label) {
                                     case 0:
@@ -2514,11 +2514,11 @@
                                     case 1:
                                         return s.trys.push([1, 3, , 4]), [4, function(e, t) {
                                             return a.__awaiter(this, void 0, Promise, function() {
-                                                var n, r;
-                                                return a.__generator(this, function(i) {
-                                                    switch (i.label) {
+                                                var n, i;
+                                                return a.__generator(this, function(r) {
+                                                    switch (r.label) {
                                                         case 0:
-                                                            return i.trys.push([0, 2, , 3]), [4, ue.a.post("/v5/users/" + e + "/upload_panel_image", {
+                                                            return r.trys.push([0, 2, , 3]), [4, ue.a.post("/v5/users/" + e + "/upload_panel_image", {
                                                                 body: {
                                                                     height: t.height,
                                                                     width: t.width,
@@ -2527,9 +2527,9 @@
                                                                 }
                                                             })];
                                                         case 1:
-                                                            return 200 === (n = i.sent()).status && n.body ? [2, n.body] : [2, Promise.reject("Failed to fetch URL")];
+                                                            return 200 === (n = r.sent()).status && n.body ? [2, n.body] : [2, Promise.reject("Failed to fetch URL")];
                                                         case 2:
-                                                            return r = i.sent(), [2, Promise.reject(r)];
+                                                            return i = r.sent(), [2, Promise.reject(i)];
                                                         case 3:
                                                             return [2]
                                                     }
@@ -2537,12 +2537,12 @@
                                             })
                                         }(this.props.channelID, e)];
                                     case 2:
-                                        return i = s.sent(), r = i.upload_id, n = i.url, [3, 4];
+                                        return r = s.sent(), i = r.upload_id, n = r.url, [3, 4];
                                     case 3:
                                         return s.sent(), [2, this.handleErrorMessage(pe.Unexpected)];
                                     case 4:
                                         return this.unsubscribe = p.l.subscribe({
-                                            topic: Object(x.C)(r),
+                                            topic: Object(x.D)(i),
                                             success: function() {
                                                 (function(e, t) {
                                                     return fetch(e, {
@@ -2563,7 +2563,7 @@
                                                     return a.__generator(this, function(t) {
                                                         switch (t.label) {
                                                             case 0:
-                                                                if (e.upload_id !== r) return [3, 8];
+                                                                if (e.upload_id !== i) return [3, 8];
                                                                 switch (clearTimeout(this.timeoutFunc), e.status) {
                                                                     case le.a.POSTPROCESS_COMPLETE:
                                                                         return [3, 1];
@@ -2574,7 +2574,7 @@
                                                             case 1:
                                                                 return t.trys.push([1, 3, , 4]), [4, this.props.updatePanel({
                                                                     id: this.props.panel.id,
-                                                                    imageURL: "https://static-cdn.jtvnw.net/jtv_user_pictures/panel-" + this.props.channelID + "-image-" + r,
+                                                                    imageURL: "https://static-cdn.jtvnw.net/jtv_user_pictures/panel-" + this.props.channelID + "-image-" + i,
                                                                     description: this.state.description,
                                                                     linkURL: this.state.linkURL,
                                                                     title: this.state.title
@@ -2704,7 +2704,7 @@
                     }, this.state.errorMessage)))
                 }, t
             }(s.Component);
-            var fe, ye = Object(i.connect)(function(e) {
+            var fe, ye = Object(r.connect)(function(e) {
                     return {
                         authToken: Object(J.a)(e)
                     }
@@ -2790,11 +2790,11 @@
                         return t.onClickConfigure = function() {
                             var e = t.props,
                                 n = e.channelLogin,
-                                r = e.showExtensionConfigureModal,
-                                i = e.extensionInstallation;
-                            if (i) {
-                                var a = i.extension;
-                                r({
+                                i = e.showExtensionConfigureModal,
+                                r = e.extensionInstallation;
+                            if (r) {
+                                var a = r.extension;
+                                i({
                                     channelLogin: n,
                                     extensionID: a.id + "-" + a.version
                                 })
@@ -2804,13 +2804,13 @@
                     return a.__extends(t, e), t.prototype.render = function() {
                         var e, t = this.props,
                             n = t.channelLogin,
-                            r = t.extensionInstallation,
-                            i = t.extensionPanelCount,
+                            i = t.extensionInstallation,
+                            r = t.extensionPanelCount,
                             a = t.panel,
                             o = t.removePanel,
                             c = Object(p.d)("Remove", "ExtensionPanelEdit");
-                        if (r && void 0 !== i) {
-                            var l = r.extension,
+                        if (i && void 0 !== r) {
+                            var l = i.extension,
                                 u = l.iconUrls,
                                 d = l.name;
                             e = s.createElement(s.Fragment, null, s.createElement(G.Xa, {
@@ -2833,7 +2833,7 @@
                             }, s.createElement(G.W, {
                                 type: G.Vb.Strong
                             }, d))), s.createElement(G.W, null, Object(p.d)("Panel Extension {panelExtensionNumber} of {totalPanelExtensionsAvailable}", {
-                                panelExtensionNumber: i,
+                                panelExtensionNumber: r,
                                 totalPanelExtensionsAvailable: Z.a
                             }, "ExtensionPanelEdit"))), s.createElement(Ce, {
                                 channelLogin: n
@@ -2890,7 +2890,7 @@
                         })), e)
                     }, t
                 }(s.PureComponent));
-            var Pe, Se = Object(i.connect)(null, function(e) {
+            var Pe, Se = Object(r.connect)(null, function(e) {
                     return Object(y.bindActionCreators)({
                         showExtensionConfigureModal: function(e) {
                             var t = a.__rest(e, []);
@@ -2965,10 +2965,10 @@
                     }, t.prototype.renderRemovingOverlay = function() {
                         var e, t = this.props,
                             n = t.extensionInstallation,
-                            r = t.isSorting;
+                            i = t.isSorting;
                         return e = n ? Object(p.d)("Removing this panel will deactivate this extension. Are you sure you want to remove this panel?", "EditPanel") : Object(p.d)("Are you sure you want to remove this panel?", "EditPanel"), s.createElement(G.Eb, {
                             border: !0,
-                            className: "edit-panel edit-panel--overlay " + (r ? "edit-panel--sorting" : ""),
+                            className: "edit-panel edit-panel--overlay " + (i ? "edit-panel--sorting" : ""),
                             position: G.jb.Absolute,
                             zIndex: G.ic.Default
                         }, s.createElement(G.o, {
@@ -3020,29 +3020,29 @@
                 }),
                 Ie = Object(d.SortableContainer)(function(e) {
                     var t = 0,
-                        n = e.items.map(function(n, r) {
-                            var i, a = !1;
-                            return "ExtensionPanel" === n.__typename && (i = e.extensionSlots[n.slotID], a = !0, t++), s.createElement(Oe, {
+                        n = e.items.map(function(n, i) {
+                            var r, a = !1;
+                            return "ExtensionPanel" === n.__typename && (r = e.extensionSlots[n.slotID], a = !0, t++), s.createElement(Oe, {
                                 key: n.id,
                                 channelID: e.channelID,
                                 channelLogin: e.channelLogin,
-                                extensionInstallation: i,
+                                extensionInstallation: r,
                                 extensionPanelCount: a ? t : void 0,
                                 updatePanel: e.updatePanel,
                                 deletePanel: e.deletePanel,
                                 isSorting: e.isSorting,
-                                index: r,
+                                index: i,
                                 panel: n
                             })
                         }),
-                        r = t < Z.a,
-                        i = s.createElement(G.Xa, {
+                        i = t < Z.a,
+                        r = s.createElement(G.Xa, {
                             margin: {
                                 x: .5
                             }
                         }, s.createElement(Q, {
                             key: "create-panel",
-                            canCreateExtensionPanel: r,
+                            canCreateExtensionPanel: i,
                             createPanel: e.createPanel,
                             channelID: e.channelID
                         }));
@@ -3051,7 +3051,7 @@
                         flexDirection: G.Aa.Row,
                         flexWrap: G.Ba.Wrap,
                         justifyContent: G.Wa.Center
-                    }, n, i)
+                    }, n, r)
                 }),
                 we = n("Oz8M"),
                 _e = n("saS/"),
@@ -3085,17 +3085,17 @@
                             t.setState({
                                 isEditMode: !t.state.isEditMode
                             })
-                        }, t.onExtensionPoppedOut = function(e, n, r) {
-                            var i;
+                        }, t.onExtensionPoppedOut = function(e, n, i) {
+                            var r;
                             t.setState({
-                                popout: a.__assign({}, t.state.popout, (i = {}, i[Object(A.c)(e, n)] = r, i))
+                                popout: a.__assign({}, t.state.popout, (r = {}, r[Object(A.c)(e, n)] = i, r))
                             })
                         }, t.onExtensionPopoutRestored = function(e, n) {
-                            var r = Object(A.c)(e, n),
-                                i = t.state.popout[r];
-                            i && i.window && i.window.close();
+                            var i = Object(A.c)(e, n),
+                                r = t.state.popout[i];
+                            r && r.window && r.window.close();
                             var a = Object.keys(t.state.popout).filter(function(e) {
-                                return e !== r
+                                return e !== i
                             }).reduce(function(e, n) {
                                 return e[n] = t.state.popout[n], e
                             }, {});
@@ -3112,18 +3112,18 @@
                             });
                             var n = t.props.channelPanelsData.user;
                             if (n) {
-                                var r = Object(d.arrayMove)(n.panels, e.oldIndex, e.newIndex),
-                                    i = r.map(function(e) {
+                                var i = Object(d.arrayMove)(n.panels, e.oldIndex, e.newIndex),
+                                    r = i.map(function(e) {
                                         return e && e.id
                                     }).filter(function(e) {
                                         return e
                                     });
                                 t.props.orderPanels(Object(h.a)({
-                                    ids: i
+                                    ids: r
                                 })), Object(h.e)(De, {
                                     login: t.props.channelName
                                 }, function(e) {
-                                    return e.user && (e.user.panels = r), e
+                                    return e.user && (e.user.panels = i), e
                                 })
                             }
                         }, t.createPanel = function(e) {
@@ -3170,8 +3170,8 @@
                         }, t.canEditPanels = function() {
                             var e = t.props.channelPanelsData,
                                 n = e.currentUser,
-                                r = e.user;
-                            return !!(n && n.id && r && n.id === r.id) || !!(n && n.roles && n.roles.isSiteAdmin)
+                                i = e.user;
+                            return !!(n && n.id && i && n.id === i.id) || !!(n && n.roles && n.roles.isSiteAdmin)
                         }, t
                     }
                     return a.__extends(t, e), t.prototype.componentDidUpdate = function() {
@@ -3184,10 +3184,10 @@
                         var e = this.props.channelPanelsData,
                             t = e.error,
                             n = e.loading,
-                            r = e.user,
-                            i = null;
+                            i = e.user,
+                            r = null;
                         if (n) return s.createElement(L.a, null);
-                        i = this.state.isEditMode ? s.createElement(G.Xa, null, this.renderEditPanels()) : t || !r || r && !r.panels.length ? s.createElement(G.Eb, {
+                        r = this.state.isEditMode ? s.createElement(G.Xa, null, this.renderEditPanels()) : t || !i || i && !i.panels.length ? s.createElement(G.Eb, {
                             color: G.O.Alt2,
                             padding: {
                                 y: 5
@@ -3222,7 +3222,7 @@
                         }, s.createElement(G.Xa, {
                             className: "channel-panels",
                             "data-test-selector": Pe.Container
-                        }, this.canEditPanels() && a, i))
+                        }, this.canEditPanels() && a, r))
                     }, t.prototype.renderEditPanels = function() {
                         var e = this.props.channelPanelsData.user;
                         if (!e) return null;
@@ -3247,13 +3247,13 @@
                         var e = this,
                             t = this.props.channelPanelsData,
                             n = t.currentUser,
-                            r = t.user;
-                        if (!r) return null;
-                        var i = this.getExtensionSlots();
-                        return r.panels.map(function(t, r) {
+                            i = t.user;
+                        if (!i) return null;
+                        var r = this.getExtensionSlots();
+                        return i.panels.map(function(t, i) {
                             if (!t) return null;
                             if ("ExtensionPanel" === t.__typename && t.slotID) {
-                                var a = i[t.slotID];
+                                var a = r[t.slotID];
                                 if (a && !e.state.destroyedExtensions.includes(a.id)) {
                                     var c = void 0 !== e.state.popout[Object(A.d)(a)];
                                     return s.createElement("div", {
@@ -3275,7 +3275,7 @@
                                 }
                             } else if ("DefaultPanel" === t.__typename) return s.createElement(q, {
                                 channelID: e.props.channelID,
-                                "data-a-target": "panel-" + r,
+                                "data-a-target": "panel-" + i,
                                 key: t.id,
                                 panel: t
                             })
@@ -3316,7 +3316,7 @@
                         }
                     }
                 }))(je);
-            var Ae = Object(i.connect)(function(e) {
+            var Ae = Object(r.connect)(function(e) {
                 return {
                     rightColumnExpanded: e.ui.rightColumnExpanded,
                     sideNavExpanded: e.ui.sideNavExpanded
@@ -3334,19 +3334,19 @@
         },
         GNKm: function(e, t, n) {
             "use strict";
-            var r = n("GOnX");
+            var i = n("GOnX");
             e.exports = function(e) {
                 var t = (e = e || {}).reporter,
                     n = e.batchProcessor,
-                    i = e.stateHandler.getState;
+                    r = e.stateHandler.getState;
                 if (!t) throw new Error("Missing required dependency: reporter.");
 
                 function a(e) {
-                    return i(e).object
+                    return r(e).object
                 }
                 return {
                     makeDetectable: function(e, a, o) {
-                        o || (o = a, a = e, e = null), (e = e || {}).debug, r.isIE(8) ? o(a) : function(e, a) {
+                        o || (o = a, a = e, e = null), (e = e || {}).debug, i.isIE(8) ? o(a) : function(e, a) {
                             var o = "display: block; position: absolute; top: 0; left: 0; width: 100%; height: 100%; border: none; padding: 0; margin: 0; opacity: 0; z-index: -1000; pointer-events: none;",
                                 s = !1,
                                 c = window.getComputedStyle(e),
@@ -3357,11 +3357,11 @@
                                 function n() {
                                     if ("static" === c.position) {
                                         e.style.position = "relative";
-                                        var n = function(e, t, n, r) {
-                                            var i = n[r];
-                                            "auto" !== i && "0" !== function(e) {
+                                        var n = function(e, t, n, i) {
+                                            var r = n[i];
+                                            "auto" !== r && "0" !== function(e) {
                                                 return e.replace(/[^-\d\.]/g, "")
-                                            }(i) && (e.warn("An element that is positioned static has style." + r + "=" + i + " which is ignored due to the static positioning. The element will need to be positioned relative, so the style." + r + " will be set to 0. Element: ", t), t.style[r] = 0)
+                                            }(r) && (e.warn("An element that is positioned static has style." + i + "=" + r + " which is ignored due to the static positioning. The element will need to be positioned relative, so the style." + i + " will be set to 0. Element: ", t), t.style[i] = 0)
                                         };
                                         n(t, e, c, "top"), n(t, e, c, "right"), n(t, e, c, "bottom"), n(t, e, c, "left")
                                     }
@@ -3377,9 +3377,9 @@
                                         }(this, function(t) {
                                             a(e)
                                         })
-                                }, r.isIE() || (l.data = "about:blank"), e.appendChild(l), i(e).object = l, r.isIE() && (l.data = "about:blank")
+                                }, i.isIE() || (l.data = "about:blank"), e.appendChild(l), r(e).object = l, i.isIE() && (l.data = "about:blank")
                             }
-                            i(e).startSize = {
+                            r(e).startSize = {
                                 width: l,
                                 height: u
                             }, n ? n.add(d) : d()
@@ -3391,20 +3391,20 @@
                         function n() {
                             t(e)
                         }
-                        r.isIE(8) ? (i(e).object = {
+                        i.isIE(8) ? (r(e).object = {
                             proxy: n
                         }, e.attachEvent("onresize", n)) : a(e).contentDocument.defaultView.addEventListener("resize", n)
                     },
                     uninstall: function(e) {
-                        r.isIE(8) ? e.detachEvent("onresize", i(e).object.proxy) : e.removeChild(a(e)), delete i(e).object
+                        i.isIE(8) ? e.detachEvent("onresize", r(e).object.proxy) : e.removeChild(a(e)), delete r(e).object
                     }
                 }
             }
         },
         GOnX: function(e, t, n) {
             "use strict";
-            var r = e.exports = {};
-            r.isIE = function(e) {
+            var i = e.exports = {};
+            i.isIE = function(e) {
                 return !! function() {
                     var e = navigator.userAgent.toLowerCase();
                     return -1 !== e.indexOf("msie") || -1 !== e.indexOf("trident") || -1 !== e.indexOf(" edge/")
@@ -3417,52 +3417,16 @@
                     } while (n[0]);
                     return e > 4 ? e : void 0
                 }())
-            }, r.isLegacyOpera = function() {
+            }, i.isLegacyOpera = function() {
                 return !!window.opera
             }
         },
         H5OX: function(e, t, n) {},
-        HGFl: function(e, t, n) {
-            "use strict";
-            n.d(t, "a", function() {
-                return i
-            }), n.d(t, "b", function() {
-                return a
-            }), n.d(t, "c", function() {
-                return o
-            }), n.d(t, "d", function() {
-                return s
-            });
-            var r = n("NAv5"),
-                i = {
-                    RFC3399: "YYYY-MM-DDTHH:mm:ssZ",
-                    timeString: "h:mma"
-                };
-
-            function a(e, t) {
-                return Object(r.format)(e, t)
-            }
-
-            function o(e) {
-                return Object(r.parse)(e)
-            }
-
-            function s(e, t) {
-                var n = e.split(":");
-                if (2 !== n.length) throw new Error("invalid time string: " + e);
-                var r = parseInt(n[0], 10),
-                    i = parseInt(n[1].substring(0, 2), 10),
-                    a = n[1].substring(n[1].length - 2);
-                if (12 === r && "am" === a && (r = 0), "pm" === a && r < 12 && (r += 12), isNaN(r) || r < 0 || r > 23 || isNaN(i) || i < 0 || i > 59) throw new Error("invalid time string: " + e);
-                var o = t || new Date;
-                return o.setHours(r, i), o
-            }
-        },
         HvcU: function(e, t, n) {
             e.exports = n.p + "assets/generic_credit_card_2x-9e855c7d5c5359ac9208.png"
         },
         Hy43: function(e, t, n) {
-            var r, i;
+            var i, r;
             /*!
              * Outlayer v2.1.1
              * the brains and guts of a layout library
@@ -3475,8 +3439,8 @@
              */
             ! function(a, o) {
                 "use strict";
-                r = [n("CUlp"), n("QK1G"), n("YVj6"), n("KK1e")], void 0 === (i = function(e, t, n, r) {
-                    return function(e, t, n, r, i) {
+                i = [n("CUlp"), n("QK1G"), n("YVj6"), n("KK1e")], void 0 === (r = function(e, t, n, i) {
+                    return function(e, t, n, i, r) {
                         var a = e.console,
                             o = e.jQuery,
                             s = function() {},
@@ -3484,16 +3448,16 @@
                             l = {};
 
                         function u(e, t) {
-                            var n = r.getQueryElement(e);
+                            var n = i.getQueryElement(e);
                             if (n) {
-                                this.element = n, o && (this.$element = o(this.element)), this.options = r.extend({}, this.constructor.defaults), this.option(t);
-                                var i = ++c;
-                                this.element.outlayerGUID = i, l[i] = this, this._create();
+                                this.element = n, o && (this.$element = o(this.element)), this.options = i.extend({}, this.constructor.defaults), this.option(t);
+                                var r = ++c;
+                                this.element.outlayerGUID = r, l[r] = this, this._create();
                                 var s = this._getOption("initLayout");
                                 s && this.layout()
                             } else a && a.error("Bad element for " + this.constructor.namespace + ": " + (n || e))
                         }
-                        u.namespace = "outlayer", u.Item = i, u.defaults = {
+                        u.namespace = "outlayer", u.Item = r, u.defaults = {
                             containerStyle: {
                                 position: "relative"
                             },
@@ -3520,8 +3484,8 @@
                             }
                             return t.prototype = Object.create(e.prototype), t.prototype.constructor = t, t
                         }
-                        r.extend(d, t.prototype), d.option = function(e) {
-                            r.extend(this.options, e)
+                        i.extend(d, t.prototype), d.option = function(e) {
+                            i.extend(this.options, e)
                         }, d._getOption = function(e) {
                             var t = this.constructor.compatOptions[e];
                             return t && void 0 !== this.options[t] ? this.options[t] : this.options[e]
@@ -3534,20 +3498,20 @@
                             resize: "isResizeBound",
                             resizeContainer: "isResizingContainer"
                         }, d._create = function() {
-                            this.reloadItems(), this.stamps = [], this.stamp(this.options.stamp), r.extend(this.element.style, this.options.containerStyle);
+                            this.reloadItems(), this.stamps = [], this.stamp(this.options.stamp), i.extend(this.element.style, this.options.containerStyle);
                             var e = this._getOption("resize");
                             e && this.bindResize()
                         }, d.reloadItems = function() {
                             this.items = this._itemize(this.element.children)
                         }, d._itemize = function(e) {
-                            for (var t = this._filterFindItemElements(e), n = this.constructor.Item, r = [], i = 0; i < t.length; i++) {
-                                var a = t[i],
+                            for (var t = this._filterFindItemElements(e), n = this.constructor.Item, i = [], r = 0; r < t.length; r++) {
+                                var a = t[r],
                                     o = new n(a, this);
-                                r.push(o)
+                                i.push(o)
                             }
-                            return r
+                            return i
                         }, d._filterFindItemElements = function(e) {
-                            return r.filterFindElements(e, this.options.itemSelector)
+                            return i.filterFindElements(e, this.options.itemSelector)
                         }, d.getItemElements = function() {
                             return this.items.map(function(e) {
                                 return e.element
@@ -3562,8 +3526,8 @@
                         }, d.getSize = function() {
                             this.size = n(this.element)
                         }, d._getMeasurement = function(e, t) {
-                            var r, i = this.options[e];
-                            i ? ("string" == typeof i ? r = this.element.querySelector(i) : i instanceof HTMLElement && (r = i), this[e] = r ? n(r)[t] : i) : this[e] = 0
+                            var i, r = this.options[e];
+                            r ? ("string" == typeof r ? i = this.element.querySelector(r) : r instanceof HTMLElement && (i = r), this[e] = i ? n(i)[t] : r) : this[e] = 0
                         }, d.layoutItems = function(e, t) {
                             e = this._getItemsForLayout(e), this._layoutItems(e, t), this._postLayout()
                         }, d._getItemsForLayout = function(e) {
@@ -3574,8 +3538,8 @@
                             if (this._emitCompleteOnItems("layout", e), e && e.length) {
                                 var n = [];
                                 e.forEach(function(e) {
-                                    var r = this._getItemLayoutPosition(e);
-                                    r.item = e, r.isInstant = t || e.isLayoutInstant, n.push(r)
+                                    var i = this._getItemLayoutPosition(e);
+                                    i.item = e, i.isInstant = t || e.isLayoutInstant, n.push(i)
                                 }, this), this._processLayoutQueue(n)
                             }
                         }, d._getItemLayoutPosition = function() {
@@ -3593,15 +3557,15 @@
                                 if ("number" == typeof e) return e;
                                 var t = e.match(/(^\d*\.?\d*)(\w*)/),
                                     n = t && t[1],
-                                    r = t && t[2];
+                                    i = t && t[2];
                                 if (!n.length) return 0;
                                 n = parseFloat(n);
-                                var i = m[r] || 1;
-                                return n * i
+                                var r = m[i] || 1;
+                                return n * r
                             }(e), this.stagger;
                             this.stagger = 0
-                        }, d._positionItem = function(e, t, n, r, i) {
-                            r ? e.goTo(t, n) : (e.stagger(i * this.stagger), e.moveTo(t, n))
+                        }, d._positionItem = function(e, t, n, i, r) {
+                            i ? e.goTo(t, n) : (e.stagger(r * this.stagger), e.moveTo(t, n))
                         }, d._postLayout = function() {
                             this.resizeContainer()
                         }, d.resizeContainer = function() {
@@ -3618,26 +3582,26 @@
                         }, d._emitCompleteOnItems = function(e, t) {
                             var n = this;
 
-                            function r() {
+                            function i() {
                                 n.dispatchEvent(e + "Complete", null, [t])
                             }
-                            var i = t.length;
-                            if (t && i) {
+                            var r = t.length;
+                            if (t && r) {
                                 var a = 0;
                                 t.forEach(function(t) {
                                     t.once(e, o)
                                 })
-                            } else r();
+                            } else i();
 
                             function o() {
-                                ++a == i && r()
+                                ++a == r && i()
                             }
                         }, d.dispatchEvent = function(e, t, n) {
-                            var r = t ? [t].concat(n) : n;
-                            if (this.emitEvent(e, r), o)
+                            var i = t ? [t].concat(n) : n;
+                            if (this.emitEvent(e, i), o)
                                 if (this.$element = this.$element || o(this.element), t) {
-                                    var i = o.Event(t);
-                                    i.type = e, this.$element.trigger(i, n)
+                                    var r = o.Event(t);
+                                    r.type = e, this.$element.trigger(r, n)
                                 } else this.$element.trigger(e, n)
                         }, d.ignore = function(e) {
                             var t = this.getItem(e);
@@ -3649,10 +3613,10 @@
                             (e = this._find(e)) && (this.stamps = this.stamps.concat(e), e.forEach(this.ignore, this))
                         }, d.unstamp = function(e) {
                             (e = this._find(e)) && e.forEach(function(e) {
-                                r.removeFrom(this.stamps, e), this.unignore(e)
+                                i.removeFrom(this.stamps, e), this.unignore(e)
                             }, this)
                         }, d._find = function(e) {
-                            if (e) return "string" == typeof e && (e = this.element.querySelectorAll(e)), e = r.makeArray(e)
+                            if (e) return "string" == typeof e && (e = this.element.querySelectorAll(e)), e = i.makeArray(e)
                         }, d._manageStamps = function() {
                             this.stamps && this.stamps.length && (this._getBoundingRect(), this.stamps.forEach(this._manageStamp, this))
                         }, d._getBoundingRect = function() {
@@ -3666,22 +3630,22 @@
                             }
                         }, d._manageStamp = s, d._getElementOffset = function(e) {
                             var t = e.getBoundingClientRect(),
-                                r = this._boundingRect,
-                                i = n(e),
+                                i = this._boundingRect,
+                                r = n(e),
                                 a = {
-                                    left: t.left - r.left - i.marginLeft,
-                                    top: t.top - r.top - i.marginTop,
-                                    right: r.right - t.right - i.marginRight,
-                                    bottom: r.bottom - t.bottom - i.marginBottom
+                                    left: t.left - i.left - r.marginLeft,
+                                    top: t.top - i.top - r.marginTop,
+                                    right: i.right - t.right - r.marginRight,
+                                    bottom: i.bottom - t.bottom - r.marginBottom
                                 };
                             return a
-                        }, d.handleEvent = r.handleEvent, d.bindResize = function() {
+                        }, d.handleEvent = i.handleEvent, d.bindResize = function() {
                             e.addEventListener("resize", this), this.isResizeBound = !0
                         }, d.unbindResize = function() {
                             e.removeEventListener("resize", this), this.isResizeBound = !1
                         }, d.onresize = function() {
                             this.resize()
-                        }, r.debounceMethod(u, "onresize", 100), d.resize = function() {
+                        }, i.debounceMethod(u, "onresize", 100), d.resize = function() {
                             this.isResizeBound && this.needsResizeLayout() && this.layout()
                         }, d.needsResizeLayout = function() {
                             var e = n(this.element),
@@ -3726,14 +3690,14 @@
                             }
                         }, d.getItems = function(e) {
                             var t = [];
-                            return (e = r.makeArray(e)).forEach(function(e) {
+                            return (e = i.makeArray(e)).forEach(function(e) {
                                 var n = this.getItem(e);
                                 n && t.push(n)
                             }, this), t
                         }, d.remove = function(e) {
                             var t = this.getItems(e);
                             this._emitCompleteOnItems("remove", t), t && t.length && t.forEach(function(e) {
-                                e.remove(), r.removeFrom(this.items, e)
+                                e.remove(), i.removeFrom(this.items, e)
                             }, this)
                         }, d.destroy = function() {
                             var e = this.element.style;
@@ -3743,19 +3707,19 @@
                             var t = this.element.outlayerGUID;
                             delete l[t], delete this.element.outlayerGUID, o && o.removeData(this.element, this.constructor.namespace)
                         }, u.data = function(e) {
-                            var t = (e = r.getQueryElement(e)) && e.outlayerGUID;
+                            var t = (e = i.getQueryElement(e)) && e.outlayerGUID;
                             return t && l[t]
                         }, u.create = function(e, t) {
                             var n = p(u);
-                            return n.defaults = r.extend({}, u.defaults), r.extend(n.defaults, t), n.compatOptions = r.extend({}, u.compatOptions), n.namespace = e, n.data = u.data, n.Item = p(i), r.htmlInit(n, e), o && o.bridget && o.bridget(e, n), n
+                            return n.defaults = i.extend({}, u.defaults), i.extend(n.defaults, t), n.compatOptions = i.extend({}, u.compatOptions), n.namespace = e, n.data = u.data, n.Item = p(r), i.htmlInit(n, e), o && o.bridget && o.bridget(e, n), n
                         };
                         var m = {
                             ms: 1,
                             s: 1e3
                         };
-                        return u.Item = i, u
-                    }(a, e, t, n, r)
-                }.apply(t, r)) || (e.exports = i)
+                        return u.Item = r, u
+                    }(a, e, t, n, i)
+                }.apply(t, i)) || (e.exports = r)
             }(window)
         },
         IRK4: function(e, t, n) {
@@ -3768,522 +3732,522 @@
         Jgup: function(e, t, n) {
             "use strict";
             n.d(t, "b", function() {
-                return i
+                return r
             }), n.d(t, "a", function() {
                 return a
             });
-            var r = n("/7QA");
+            var i = n("/7QA");
 
-            function i(e) {
+            function r(e) {
                 switch (e.toUpperCase()) {
                     case "A1":
-                        return Object(r.d)("Anonymous Proxy", "format-country");
+                        return Object(i.d)("Anonymous Proxy", "format-country");
                     case "A2":
-                        return Object(r.d)("Satellite Provider", "format-country");
+                        return Object(i.d)("Satellite Provider", "format-country");
                     case "AD":
-                        return Object(r.d)("Andorra", "format-country");
+                        return Object(i.d)("Andorra", "format-country");
                     case "AE":
-                        return Object(r.d)("United Arab Emirates", "format-country");
+                        return Object(i.d)("United Arab Emirates", "format-country");
                     case "AF":
-                        return Object(r.d)("Afghanistan", "format-country");
+                        return Object(i.d)("Afghanistan", "format-country");
                     case "AG":
-                        return Object(r.d)("Antigua and Barbuda", "format-country");
+                        return Object(i.d)("Antigua and Barbuda", "format-country");
                     case "AI":
-                        return Object(r.d)("Anguilla", "format-country");
+                        return Object(i.d)("Anguilla", "format-country");
                     case "AL":
-                        return Object(r.d)("Albania", "format-country");
+                        return Object(i.d)("Albania", "format-country");
                     case "AM":
-                        return Object(r.d)("Armenia", "format-country");
+                        return Object(i.d)("Armenia", "format-country");
                     case "AO":
-                        return Object(r.d)("Angola", "format-country");
+                        return Object(i.d)("Angola", "format-country");
                     case "AP":
-                        return Object(r.d)("Asia/Pacific Region", "format-country");
+                        return Object(i.d)("Asia/Pacific Region", "format-country");
                     case "AQ":
-                        return Object(r.d)("Antarctica", "format-country");
+                        return Object(i.d)("Antarctica", "format-country");
                     case "AR":
-                        return Object(r.d)("Argentina", "format-country");
+                        return Object(i.d)("Argentina", "format-country");
                     case "AS":
-                        return Object(r.d)("American Samoa", "format-country");
+                        return Object(i.d)("American Samoa", "format-country");
                     case "AT":
-                        return Object(r.d)("Austria", "format-country");
+                        return Object(i.d)("Austria", "format-country");
                     case "AU":
-                        return Object(r.d)("Australia", "format-country");
+                        return Object(i.d)("Australia", "format-country");
                     case "AW":
-                        return Object(r.d)("Aruba", "format-country");
+                        return Object(i.d)("Aruba", "format-country");
                     case "AX":
-                        return Object(r.d)("Aland Islands", "format-country");
+                        return Object(i.d)("Aland Islands", "format-country");
                     case "AZ":
-                        return Object(r.d)("Azerbaijan", "format-country");
+                        return Object(i.d)("Azerbaijan", "format-country");
                     case "BA":
-                        return Object(r.d)("Bosnia and Herzegovina", "format-country");
+                        return Object(i.d)("Bosnia and Herzegovina", "format-country");
                     case "BB":
-                        return Object(r.d)("Barbados", "format-country");
+                        return Object(i.d)("Barbados", "format-country");
                     case "BD":
-                        return Object(r.d)("Bangladesh", "format-country");
+                        return Object(i.d)("Bangladesh", "format-country");
                     case "BE":
-                        return Object(r.d)("Belgium", "format-country");
+                        return Object(i.d)("Belgium", "format-country");
                     case "BF":
-                        return Object(r.d)("Burkina Faso", "format-country");
+                        return Object(i.d)("Burkina Faso", "format-country");
                     case "BG":
-                        return Object(r.d)("Bulgaria", "format-country");
+                        return Object(i.d)("Bulgaria", "format-country");
                     case "BH":
-                        return Object(r.d)("Bahrain", "format-country");
+                        return Object(i.d)("Bahrain", "format-country");
                     case "BI":
-                        return Object(r.d)("Burundi", "format-country");
+                        return Object(i.d)("Burundi", "format-country");
                     case "BJ":
-                        return Object(r.d)("Benin", "format-country");
+                        return Object(i.d)("Benin", "format-country");
                     case "BL":
-                        return Object(r.d)("Saint Bartelemey", "format-country");
+                        return Object(i.d)("Saint Bartelemey", "format-country");
                     case "BM":
-                        return Object(r.d)("Bermuda", "format-country");
+                        return Object(i.d)("Bermuda", "format-country");
                     case "BN":
-                        return Object(r.d)("Brunei", "format-country");
+                        return Object(i.d)("Brunei", "format-country");
                     case "BO":
-                        return Object(r.d)("Bolivia", "format-country");
+                        return Object(i.d)("Bolivia", "format-country");
                     case "BQ":
-                        return Object(r.d)("Bonaire, Saint Eustatius, and Saba", "format-country");
+                        return Object(i.d)("Bonaire, Saint Eustatius, and Saba", "format-country");
                     case "BR":
-                        return Object(r.d)("Brazil", "format-country");
+                        return Object(i.d)("Brazil", "format-country");
                     case "BS":
-                        return Object(r.d)("Bahamas", "format-country");
+                        return Object(i.d)("Bahamas", "format-country");
                     case "BT":
-                        return Object(r.d)("Bhutan", "format-country");
+                        return Object(i.d)("Bhutan", "format-country");
                     case "BV":
-                        return Object(r.d)("Bouvet Island", "format-country");
+                        return Object(i.d)("Bouvet Island", "format-country");
                     case "BW":
-                        return Object(r.d)("Botswana", "format-country");
+                        return Object(i.d)("Botswana", "format-country");
                     case "BY":
-                        return Object(r.d)("Belarus", "format-country");
+                        return Object(i.d)("Belarus", "format-country");
                     case "BZ":
-                        return Object(r.d)("Belize", "format-country");
+                        return Object(i.d)("Belize", "format-country");
                     case "CA":
-                        return Object(r.d)("Canada", "format-country");
+                        return Object(i.d)("Canada", "format-country");
                     case "CC":
-                        return Object(r.d)("Cocos (Keeling) Islands", "format-country");
+                        return Object(i.d)("Cocos (Keeling) Islands", "format-country");
                     case "CD":
-                        return Object(r.d)("Congo, The Democratic Republic of the", "format-country");
+                        return Object(i.d)("Congo, The Democratic Republic of the", "format-country");
                     case "CF":
-                        return Object(r.d)("Central African Republic", "format-country");
+                        return Object(i.d)("Central African Republic", "format-country");
                     case "CG":
-                        return Object(r.d)("Congo", "format-country");
+                        return Object(i.d)("Congo", "format-country");
                     case "CH":
-                        return Object(r.d)("Switzerland", "format-country");
+                        return Object(i.d)("Switzerland", "format-country");
                     case "CI":
-                        return Object(r.d)("Ivory Coast", "format-country");
+                        return Object(i.d)("Ivory Coast", "format-country");
                     case "CK":
-                        return Object(r.d)("Cook Islands", "format-country");
+                        return Object(i.d)("Cook Islands", "format-country");
                     case "CL":
-                        return Object(r.d)("Chile", "format-country");
+                        return Object(i.d)("Chile", "format-country");
                     case "CM":
-                        return Object(r.d)("Cameroon", "format-country");
+                        return Object(i.d)("Cameroon", "format-country");
                     case "CN":
-                        return Object(r.d)("China", "format-country");
+                        return Object(i.d)("China", "format-country");
                     case "CO":
-                        return Object(r.d)("Colombia", "format-country");
+                        return Object(i.d)("Colombia", "format-country");
                     case "CR":
-                        return Object(r.d)("Costa Rica", "format-country");
+                        return Object(i.d)("Costa Rica", "format-country");
                     case "CU":
-                        return Object(r.d)("Cuba", "format-country");
+                        return Object(i.d)("Cuba", "format-country");
                     case "CV":
-                        return Object(r.d)("Cape Verde", "format-country");
+                        return Object(i.d)("Cape Verde", "format-country");
                     case "CW":
-                        return Object(r.d)("Curacao", "format-country");
+                        return Object(i.d)("Curacao", "format-country");
                     case "CX":
-                        return Object(r.d)("Christmas Island", "format-country");
+                        return Object(i.d)("Christmas Island", "format-country");
                     case "CY":
-                        return Object(r.d)("Cyprus", "format-country");
+                        return Object(i.d)("Cyprus", "format-country");
                     case "CZ":
-                        return Object(r.d)("Czech Republic", "format-country");
+                        return Object(i.d)("Czech Republic", "format-country");
                     case "DE":
-                        return Object(r.d)("Germany", "format-country");
+                        return Object(i.d)("Germany", "format-country");
                     case "DJ":
-                        return Object(r.d)("Djibouti", "format-country");
+                        return Object(i.d)("Djibouti", "format-country");
                     case "DK":
-                        return Object(r.d)("Denmark", "format-country");
+                        return Object(i.d)("Denmark", "format-country");
                     case "DM":
-                        return Object(r.d)("Dominica", "format-country");
+                        return Object(i.d)("Dominica", "format-country");
                     case "DO":
-                        return Object(r.d)("Dominican Republic", "format-country");
+                        return Object(i.d)("Dominican Republic", "format-country");
                     case "DZ":
-                        return Object(r.d)("Algeria", "format-country");
+                        return Object(i.d)("Algeria", "format-country");
                     case "EC":
-                        return Object(r.d)("Ecuador", "format-country");
+                        return Object(i.d)("Ecuador", "format-country");
                     case "EE":
-                        return Object(r.d)("Estonia", "format-country");
+                        return Object(i.d)("Estonia", "format-country");
                     case "EG":
-                        return Object(r.d)("Egypt", "format-country");
+                        return Object(i.d)("Egypt", "format-country");
                     case "EH":
-                        return Object(r.d)("Western Sahara", "format-country");
+                        return Object(i.d)("Western Sahara", "format-country");
                     case "ER":
-                        return Object(r.d)("Eritrea", "format-country");
+                        return Object(i.d)("Eritrea", "format-country");
                     case "ES":
-                        return Object(r.d)("Spain", "format-country");
+                        return Object(i.d)("Spain", "format-country");
                     case "ET":
-                        return Object(r.d)("Ethiopia", "format-country");
+                        return Object(i.d)("Ethiopia", "format-country");
                     case "EU":
-                        return Object(r.d)("Europe", "format-country");
+                        return Object(i.d)("Europe", "format-country");
                     case "FI":
-                        return Object(r.d)("Finland", "format-country");
+                        return Object(i.d)("Finland", "format-country");
                     case "FJ":
-                        return Object(r.d)("Fiji", "format-country");
+                        return Object(i.d)("Fiji", "format-country");
                     case "FK":
-                        return Object(r.d)("Falkland Islands (Malvinas)", "format-country");
+                        return Object(i.d)("Falkland Islands (Malvinas)", "format-country");
                     case "FM":
-                        return Object(r.d)("Micronesia", "format-country");
+                        return Object(i.d)("Micronesia", "format-country");
                     case "FO":
-                        return Object(r.d)("Faroe Islands", "format-country");
+                        return Object(i.d)("Faroe Islands", "format-country");
                     case "FR":
-                        return Object(r.d)("France", "format-country");
+                        return Object(i.d)("France", "format-country");
                     case "GA":
-                        return Object(r.d)("Gabon", "format-country");
+                        return Object(i.d)("Gabon", "format-country");
                     case "GB":
-                        return Object(r.d)("United Kingdom", "format-country");
+                        return Object(i.d)("United Kingdom", "format-country");
                     case "GD":
-                        return Object(r.d)("Grenada", "format-country");
+                        return Object(i.d)("Grenada", "format-country");
                     case "GE":
-                        return Object(r.d)("Georgia", "format-country");
+                        return Object(i.d)("Georgia", "format-country");
                     case "GF":
-                        return Object(r.d)("French Guiana", "format-country");
+                        return Object(i.d)("French Guiana", "format-country");
                     case "GG":
-                        return Object(r.d)("Guernsey", "format-country");
+                        return Object(i.d)("Guernsey", "format-country");
                     case "GH":
-                        return Object(r.d)("Ghana", "format-country");
+                        return Object(i.d)("Ghana", "format-country");
                     case "GI":
-                        return Object(r.d)("Gibraltar", "format-country");
+                        return Object(i.d)("Gibraltar", "format-country");
                     case "GL":
-                        return Object(r.d)("Greenland", "format-country");
+                        return Object(i.d)("Greenland", "format-country");
                     case "GM":
-                        return Object(r.d)("Gambia", "format-country");
+                        return Object(i.d)("Gambia", "format-country");
                     case "GN":
-                        return Object(r.d)("Guinea", "format-country");
+                        return Object(i.d)("Guinea", "format-country");
                     case "GP":
-                        return Object(r.d)("Guadeloupe", "format-country");
+                        return Object(i.d)("Guadeloupe", "format-country");
                     case "GQ":
-                        return Object(r.d)("Equatorial Guinea", "format-country");
+                        return Object(i.d)("Equatorial Guinea", "format-country");
                     case "GR":
-                        return Object(r.d)("Greece", "format-country");
+                        return Object(i.d)("Greece", "format-country");
                     case "GS":
-                        return Object(r.d)("South Georgia and the South Sandwich Islands", "format-country");
+                        return Object(i.d)("South Georgia and the South Sandwich Islands", "format-country");
                     case "GT":
-                        return Object(r.d)("Guatemala", "format-country");
+                        return Object(i.d)("Guatemala", "format-country");
                     case "GU":
-                        return Object(r.d)("Guam", "format-country");
+                        return Object(i.d)("Guam", "format-country");
                     case "GW":
-                        return Object(r.d)("Guinea-Bissau", "format-country");
+                        return Object(i.d)("Guinea-Bissau", "format-country");
                     case "GY":
-                        return Object(r.d)("Guyana", "format-country");
+                        return Object(i.d)("Guyana", "format-country");
                     case "HK":
-                        return Object(r.d)("Hong Kong", "format-country");
+                        return Object(i.d)("Hong Kong", "format-country");
                     case "HM":
-                        return Object(r.d)("Heard Island and McDonald Islands", "format-country");
+                        return Object(i.d)("Heard Island and McDonald Islands", "format-country");
                     case "HN":
-                        return Object(r.d)("Honduras", "format-country");
+                        return Object(i.d)("Honduras", "format-country");
                     case "HR":
-                        return Object(r.d)("Croatia", "format-country");
+                        return Object(i.d)("Croatia", "format-country");
                     case "HT":
-                        return Object(r.d)("Haiti", "format-country");
+                        return Object(i.d)("Haiti", "format-country");
                     case "HU":
-                        return Object(r.d)("Hungary", "format-country");
+                        return Object(i.d)("Hungary", "format-country");
                     case "ID":
-                        return Object(r.d)("Indonesia", "format-country");
+                        return Object(i.d)("Indonesia", "format-country");
                     case "IE":
-                        return Object(r.d)("Ireland", "format-country");
+                        return Object(i.d)("Ireland", "format-country");
                     case "IL":
-                        return Object(r.d)("Israel", "format-country");
+                        return Object(i.d)("Israel", "format-country");
                     case "IM":
-                        return Object(r.d)("Isle of Man", "format-country");
+                        return Object(i.d)("Isle of Man", "format-country");
                     case "IN":
-                        return Object(r.d)("India", "format-country");
+                        return Object(i.d)("India", "format-country");
                     case "IO":
-                        return Object(r.d)("British Indian Ocean Territory", "format-country");
+                        return Object(i.d)("British Indian Ocean Territory", "format-country");
                     case "IQ":
-                        return Object(r.d)("Iraq", "format-country");
+                        return Object(i.d)("Iraq", "format-country");
                     case "IR":
-                        return Object(r.d)("Iran", "format-country");
+                        return Object(i.d)("Iran", "format-country");
                     case "IS":
-                        return Object(r.d)("Iceland", "format-country");
+                        return Object(i.d)("Iceland", "format-country");
                     case "IT":
-                        return Object(r.d)("Italy", "format-country");
+                        return Object(i.d)("Italy", "format-country");
                     case "JE":
-                        return Object(r.d)("Jersey", "format-country");
+                        return Object(i.d)("Jersey", "format-country");
                     case "JM":
-                        return Object(r.d)("Jamaica", "format-country");
+                        return Object(i.d)("Jamaica", "format-country");
                     case "JO":
-                        return Object(r.d)("Jordan", "format-country");
+                        return Object(i.d)("Jordan", "format-country");
                     case "JP":
-                        return Object(r.d)("Japan", "format-country");
+                        return Object(i.d)("Japan", "format-country");
                     case "KE":
-                        return Object(r.d)("Kenya", "format-country");
+                        return Object(i.d)("Kenya", "format-country");
                     case "KG":
-                        return Object(r.d)("Kyrgyzstan", "format-country");
+                        return Object(i.d)("Kyrgyzstan", "format-country");
                     case "KH":
-                        return Object(r.d)("Cambodia", "format-country");
+                        return Object(i.d)("Cambodia", "format-country");
                     case "KI":
-                        return Object(r.d)("Kiribati", "format-country");
+                        return Object(i.d)("Kiribati", "format-country");
                     case "KM":
-                        return Object(r.d)("Comoros", "format-country");
+                        return Object(i.d)("Comoros", "format-country");
                     case "KN":
-                        return Object(r.d)("Saint Kitts and Nevis", "format-country");
+                        return Object(i.d)("Saint Kitts and Nevis", "format-country");
                     case "KP":
-                        return Object(r.d)("North Korea", "format-country");
+                        return Object(i.d)("North Korea", "format-country");
                     case "KR":
-                        return Object(r.d)("South Korea", "format-country");
+                        return Object(i.d)("South Korea", "format-country");
                     case "KW":
-                        return Object(r.d)("Kuwait", "format-country");
+                        return Object(i.d)("Kuwait", "format-country");
                     case "KY":
-                        return Object(r.d)("Cayman Islands", "format-country");
+                        return Object(i.d)("Cayman Islands", "format-country");
                     case "KZ":
-                        return Object(r.d)("Kazakhstan", "format-country");
+                        return Object(i.d)("Kazakhstan", "format-country");
                     case "LA":
-                        return Object(r.d)("Laos", "format-country");
+                        return Object(i.d)("Laos", "format-country");
                     case "LB":
-                        return Object(r.d)("Lebanon", "format-country");
+                        return Object(i.d)("Lebanon", "format-country");
                     case "LC":
-                        return Object(r.d)("Saint Lucia", "format-country");
+                        return Object(i.d)("Saint Lucia", "format-country");
                     case "LI":
-                        return Object(r.d)("Liechtenstein", "format-country");
+                        return Object(i.d)("Liechtenstein", "format-country");
                     case "LK":
-                        return Object(r.d)("Sri Lanka", "format-country");
+                        return Object(i.d)("Sri Lanka", "format-country");
                     case "LR":
-                        return Object(r.d)("Liberia", "format-country");
+                        return Object(i.d)("Liberia", "format-country");
                     case "LS":
-                        return Object(r.d)("Lesotho", "format-country");
+                        return Object(i.d)("Lesotho", "format-country");
                     case "LT":
-                        return Object(r.d)("Lithuania", "format-country");
+                        return Object(i.d)("Lithuania", "format-country");
                     case "LU":
-                        return Object(r.d)("Luxembourg", "format-country");
+                        return Object(i.d)("Luxembourg", "format-country");
                     case "LV":
-                        return Object(r.d)("Latvia", "format-country");
+                        return Object(i.d)("Latvia", "format-country");
                     case "LY":
-                        return Object(r.d)("Libya", "format-country");
+                        return Object(i.d)("Libya", "format-country");
                     case "MA":
-                        return Object(r.d)("Morocco", "format-country");
+                        return Object(i.d)("Morocco", "format-country");
                     case "MC":
-                        return Object(r.d)("Monaco", "format-country");
+                        return Object(i.d)("Monaco", "format-country");
                     case "MD":
-                        return Object(r.d)("Moldova", "format-country");
+                        return Object(i.d)("Moldova", "format-country");
                     case "ME":
-                        return Object(r.d)("Montenegro", "format-country");
+                        return Object(i.d)("Montenegro", "format-country");
                     case "MF":
-                        return Object(r.d)("Saint Martin", "format-country");
+                        return Object(i.d)("Saint Martin", "format-country");
                     case "MG":
-                        return Object(r.d)("Madagascar", "format-country");
+                        return Object(i.d)("Madagascar", "format-country");
                     case "MH":
-                        return Object(r.d)("Marshall Islands", "format-country");
+                        return Object(i.d)("Marshall Islands", "format-country");
                     case "MK":
-                        return Object(r.d)("Macedonia", "format-country");
+                        return Object(i.d)("Macedonia", "format-country");
                     case "ML":
-                        return Object(r.d)("Mali", "format-country");
+                        return Object(i.d)("Mali", "format-country");
                     case "MM":
-                        return Object(r.d)("Myanmar", "format-country");
+                        return Object(i.d)("Myanmar", "format-country");
                     case "MN":
-                        return Object(r.d)("Mongolia", "format-country");
+                        return Object(i.d)("Mongolia", "format-country");
                     case "MO":
-                        return Object(r.d)("Macao", "format-country");
+                        return Object(i.d)("Macao", "format-country");
                     case "MP":
-                        return Object(r.d)("Northern Mariana Islands", "format-country");
+                        return Object(i.d)("Northern Mariana Islands", "format-country");
                     case "MQ":
-                        return Object(r.d)("Martinique", "format-country");
+                        return Object(i.d)("Martinique", "format-country");
                     case "MR":
-                        return Object(r.d)("Mauritania", "format-country");
+                        return Object(i.d)("Mauritania", "format-country");
                     case "MS":
-                        return Object(r.d)("Montserrat", "format-country");
+                        return Object(i.d)("Montserrat", "format-country");
                     case "MT":
-                        return Object(r.d)("Malta", "format-country");
+                        return Object(i.d)("Malta", "format-country");
                     case "MU":
-                        return Object(r.d)("Mauritius", "format-country");
+                        return Object(i.d)("Mauritius", "format-country");
                     case "MV":
-                        return Object(r.d)("Maldives", "format-country");
+                        return Object(i.d)("Maldives", "format-country");
                     case "MW":
-                        return Object(r.d)("Malawi", "format-country");
+                        return Object(i.d)("Malawi", "format-country");
                     case "MX":
-                        return Object(r.d)("Mexico", "format-country");
+                        return Object(i.d)("Mexico", "format-country");
                     case "MY":
-                        return Object(r.d)("Malaysia", "format-country");
+                        return Object(i.d)("Malaysia", "format-country");
                     case "MZ":
-                        return Object(r.d)("Mozambique", "format-country");
+                        return Object(i.d)("Mozambique", "format-country");
                     case "NA":
-                        return Object(r.d)("Namibia", "format-country");
+                        return Object(i.d)("Namibia", "format-country");
                     case "NC":
-                        return Object(r.d)("New Caledonia", "format-country");
+                        return Object(i.d)("New Caledonia", "format-country");
                     case "NE":
-                        return Object(r.d)("Niger", "format-country");
+                        return Object(i.d)("Niger", "format-country");
                     case "NF":
-                        return Object(r.d)("Norfolk Island", "format-country");
+                        return Object(i.d)("Norfolk Island", "format-country");
                     case "NG":
-                        return Object(r.d)("Nigeria", "format-country");
+                        return Object(i.d)("Nigeria", "format-country");
                     case "NI":
-                        return Object(r.d)("Nicaragua", "format-country");
+                        return Object(i.d)("Nicaragua", "format-country");
                     case "NL":
-                        return Object(r.d)("Netherlands", "format-country");
+                        return Object(i.d)("Netherlands", "format-country");
                     case "NO":
-                        return Object(r.d)("Norway", "format-country");
+                        return Object(i.d)("Norway", "format-country");
                     case "NP":
-                        return Object(r.d)("Nepal", "format-country");
+                        return Object(i.d)("Nepal", "format-country");
                     case "NR":
-                        return Object(r.d)("Nauru", "format-country");
+                        return Object(i.d)("Nauru", "format-country");
                     case "NU":
-                        return Object(r.d)("Niue", "format-country");
+                        return Object(i.d)("Niue", "format-country");
                     case "NZ":
-                        return Object(r.d)("New Zealand", "format-country");
+                        return Object(i.d)("New Zealand", "format-country");
                     case "O1":
-                        return Object(r.d)("Other Country", "format-country");
+                        return Object(i.d)("Other Country", "format-country");
                     case "OM":
-                        return Object(r.d)("Oman", "format-country");
+                        return Object(i.d)("Oman", "format-country");
                     case "PA":
-                        return Object(r.d)("Panama", "format-country");
+                        return Object(i.d)("Panama", "format-country");
                     case "PE":
-                        return Object(r.d)("Peru", "format-country");
+                        return Object(i.d)("Peru", "format-country");
                     case "PF":
-                        return Object(r.d)("French Polynesia", "format-country");
+                        return Object(i.d)("French Polynesia", "format-country");
                     case "PG":
-                        return Object(r.d)("Papua New Guinea", "format-country");
+                        return Object(i.d)("Papua New Guinea", "format-country");
                     case "PH":
-                        return Object(r.d)("Philippines", "format-country");
+                        return Object(i.d)("Philippines", "format-country");
                     case "PK":
-                        return Object(r.d)("Pakistan", "format-country");
+                        return Object(i.d)("Pakistan", "format-country");
                     case "PL":
-                        return Object(r.d)("Poland", "format-country");
+                        return Object(i.d)("Poland", "format-country");
                     case "PM":
-                        return Object(r.d)("Saint Pierre and Miquelon", "format-country");
+                        return Object(i.d)("Saint Pierre and Miquelon", "format-country");
                     case "PN":
-                        return Object(r.d)("Pitcairn", "format-country");
+                        return Object(i.d)("Pitcairn", "format-country");
                     case "PR":
-                        return Object(r.d)("Puerto Rico", "format-country");
+                        return Object(i.d)("Puerto Rico", "format-country");
                     case "PS":
-                        return Object(r.d)("Palestine", "format-country");
+                        return Object(i.d)("Palestine", "format-country");
                     case "PT":
-                        return Object(r.d)("Portugal", "format-country");
+                        return Object(i.d)("Portugal", "format-country");
                     case "PW":
-                        return Object(r.d)("Palau", "format-country");
+                        return Object(i.d)("Palau", "format-country");
                     case "PY":
-                        return Object(r.d)("Paraguay", "format-country");
+                        return Object(i.d)("Paraguay", "format-country");
                     case "QA":
-                        return Object(r.d)("Qatar", "format-country");
+                        return Object(i.d)("Qatar", "format-country");
                     case "RE":
-                        return Object(r.d)("Reunion", "format-country");
+                        return Object(i.d)("Reunion", "format-country");
                     case "RO":
-                        return Object(r.d)("Romania", "format-country");
+                        return Object(i.d)("Romania", "format-country");
                     case "RS":
-                        return Object(r.d)("Serbia", "format-country");
+                        return Object(i.d)("Serbia", "format-country");
                     case "RU":
-                        return Object(r.d)("Russia", "format-country");
+                        return Object(i.d)("Russia", "format-country");
                     case "RW":
-                        return Object(r.d)("Rwanda", "format-country");
+                        return Object(i.d)("Rwanda", "format-country");
                     case "SA":
-                        return Object(r.d)("Saudi Arabia", "format-country");
+                        return Object(i.d)("Saudi Arabia", "format-country");
                     case "SB":
-                        return Object(r.d)("Solomon Islands", "format-country");
+                        return Object(i.d)("Solomon Islands", "format-country");
                     case "SC":
-                        return Object(r.d)("Seychelles", "format-country");
+                        return Object(i.d)("Seychelles", "format-country");
                     case "SD":
-                        return Object(r.d)("Sudan", "format-country");
+                        return Object(i.d)("Sudan", "format-country");
                     case "SE":
-                        return Object(r.d)("Sweden", "format-country");
+                        return Object(i.d)("Sweden", "format-country");
                     case "SG":
-                        return Object(r.d)("Singapore", "format-country");
+                        return Object(i.d)("Singapore", "format-country");
                     case "SH":
-                        return Object(r.d)("Saint Helena", "format-country");
+                        return Object(i.d)("Saint Helena", "format-country");
                     case "SI":
-                        return Object(r.d)("Slovenia", "format-country");
+                        return Object(i.d)("Slovenia", "format-country");
                     case "SJ":
-                        return Object(r.d)("Svalbard and Jan Mayen", "format-country");
+                        return Object(i.d)("Svalbard and Jan Mayen", "format-country");
                     case "SK":
-                        return Object(r.d)("Slovakia", "format-country");
+                        return Object(i.d)("Slovakia", "format-country");
                     case "SL":
-                        return Object(r.d)("Sierra Leone", "format-country");
+                        return Object(i.d)("Sierra Leone", "format-country");
                     case "SM":
-                        return Object(r.d)("San Marino", "format-country");
+                        return Object(i.d)("San Marino", "format-country");
                     case "SN":
-                        return Object(r.d)("Senegal", "format-country");
+                        return Object(i.d)("Senegal", "format-country");
                     case "SO":
-                        return Object(r.d)("Somalia", "format-country");
+                        return Object(i.d)("Somalia", "format-country");
                     case "SR":
-                        return Object(r.d)("Suriname", "format-country");
+                        return Object(i.d)("Suriname", "format-country");
                     case "SS":
-                        return Object(r.d)("South Sudan", "format-country");
+                        return Object(i.d)("South Sudan", "format-country");
                     case "ST":
-                        return Object(r.d)("Sao Tome and Principe", "format-country");
+                        return Object(i.d)("Sao Tome and Principe", "format-country");
                     case "SV":
-                        return Object(r.d)("El Salvador", "format-country");
+                        return Object(i.d)("El Salvador", "format-country");
                     case "SX":
-                        return Object(r.d)("Sint Maarten", "format-country");
+                        return Object(i.d)("Sint Maarten", "format-country");
                     case "SY":
-                        return Object(r.d)("Syria", "format-country");
+                        return Object(i.d)("Syria", "format-country");
                     case "SZ":
-                        return Object(r.d)("Swaziland", "format-country");
+                        return Object(i.d)("Swaziland", "format-country");
                     case "TC":
-                        return Object(r.d)("Turks and Caicos Islands", "format-country");
+                        return Object(i.d)("Turks and Caicos Islands", "format-country");
                     case "TD":
-                        return Object(r.d)("Chad", "format-country");
+                        return Object(i.d)("Chad", "format-country");
                     case "TF":
-                        return Object(r.d)("French Southern Territories", "format-country");
+                        return Object(i.d)("French Southern Territories", "format-country");
                     case "TG":
-                        return Object(r.d)("Togo", "format-country");
+                        return Object(i.d)("Togo", "format-country");
                     case "TH":
-                        return Object(r.d)("Thailand", "format-country");
+                        return Object(i.d)("Thailand", "format-country");
                     case "TJ":
-                        return Object(r.d)("Tajikistan", "format-country");
+                        return Object(i.d)("Tajikistan", "format-country");
                     case "TK":
-                        return Object(r.d)("Tokelau", "format-country");
+                        return Object(i.d)("Tokelau", "format-country");
                     case "TL":
-                        return Object(r.d)("East Timor", "format-country");
+                        return Object(i.d)("East Timor", "format-country");
                     case "TM":
-                        return Object(r.d)("Turkmenistan", "format-country");
+                        return Object(i.d)("Turkmenistan", "format-country");
                     case "TN":
-                        return Object(r.d)("Tunisia", "format-country");
+                        return Object(i.d)("Tunisia", "format-country");
                     case "TO":
-                        return Object(r.d)("Tonga", "format-country");
+                        return Object(i.d)("Tonga", "format-country");
                     case "TR":
-                        return Object(r.d)("Turkey", "format-country");
+                        return Object(i.d)("Turkey", "format-country");
                     case "TT":
-                        return Object(r.d)("Trinidad and Tobago", "format-country");
+                        return Object(i.d)("Trinidad and Tobago", "format-country");
                     case "TV":
-                        return Object(r.d)("Tuvalu", "format-country");
+                        return Object(i.d)("Tuvalu", "format-country");
                     case "TW":
-                        return Object(r.d)("Taiwan", "format-country");
+                        return Object(i.d)("Taiwan", "format-country");
                     case "TZ":
-                        return Object(r.d)("Tanzania", "format-country");
+                        return Object(i.d)("Tanzania", "format-country");
                     case "UA":
-                        return Object(r.d)("Ukraine", "format-country");
+                        return Object(i.d)("Ukraine", "format-country");
                     case "UG":
-                        return Object(r.d)("Uganda", "format-country");
+                        return Object(i.d)("Uganda", "format-country");
                     case "UM":
-                        return Object(r.d)("United States Minor Outlying Islands", "format-country");
+                        return Object(i.d)("United States Minor Outlying Islands", "format-country");
                     case "US":
-                        return Object(r.d)("United States", "format-country");
+                        return Object(i.d)("United States", "format-country");
                     case "UY":
-                        return Object(r.d)("Uruguay", "format-country");
+                        return Object(i.d)("Uruguay", "format-country");
                     case "UZ":
-                        return Object(r.d)("Uzbekistan", "format-country");
+                        return Object(i.d)("Uzbekistan", "format-country");
                     case "VA":
-                        return Object(r.d)("Vatican City", "format-country");
+                        return Object(i.d)("Vatican City", "format-country");
                     case "VC":
-                        return Object(r.d)("Saint Vincent and the Grenadines", "format-country");
+                        return Object(i.d)("Saint Vincent and the Grenadines", "format-country");
                     case "VE":
-                        return Object(r.d)("Venezuela", "format-country");
+                        return Object(i.d)("Venezuela", "format-country");
                     case "VG":
-                        return Object(r.d)("British Virgin Islands", "format-country");
+                        return Object(i.d)("British Virgin Islands", "format-country");
                     case "VI":
-                        return Object(r.d)("U.S. Virgin Islands", "format-country");
+                        return Object(i.d)("U.S. Virgin Islands", "format-country");
                     case "VN":
-                        return Object(r.d)("Vietnam", "format-country");
+                        return Object(i.d)("Vietnam", "format-country");
                     case "VU":
-                        return Object(r.d)("Vanuatu", "format-country");
+                        return Object(i.d)("Vanuatu", "format-country");
                     case "WF":
-                        return Object(r.d)("Wallis and Futuna", "format-country");
+                        return Object(i.d)("Wallis and Futuna", "format-country");
                     case "WS":
-                        return Object(r.d)("Samoa", "format-country");
+                        return Object(i.d)("Samoa", "format-country");
                     case "YE":
-                        return Object(r.d)("Yemen", "format-country");
+                        return Object(i.d)("Yemen", "format-country");
                     case "YT":
-                        return Object(r.d)("Mayotte", "format-country");
+                        return Object(i.d)("Mayotte", "format-country");
                     case "ZA":
-                        return Object(r.d)("South Africa", "format-country");
+                        return Object(i.d)("South Africa", "format-country");
                     case "ZM":
-                        return Object(r.d)("Zambia", "format-country");
+                        return Object(i.d)("Zambia", "format-country");
                     case "ZW":
-                        return Object(r.d)("Zimbabwe", "format-country");
+                        return Object(i.d)("Zimbabwe", "format-country");
                     default:
                         return e
                 }
@@ -4293,26 +4257,26 @@
         KGBd: function(e, t, n) {
             "use strict";
 
-            function r(e, t, n, r, i, a, o) {
+            function i(e, t, n, i, r, a, o) {
                 var s = document.createElement("canvas");
                 s.width = a, s.height = o;
                 var c = s.getContext("2d"),
                     l = "";
                 if (c) {
                     var u = new Image;
-                    u.src = e, c.drawImage(u, t, n, r, i, 0, 0, a, o), l = s.toDataURL("image/png")
+                    u.src = e, c.drawImage(u, t, n, i, r, 0, 0, a, o), l = s.toDataURL("image/png")
                 }
                 return s.remove(), l
             }
             n.d(t, "a", function() {
-                return r
+                return i
             })
         },
         "KJv/": function(e, t, n) {
             "use strict";
             n.r(t);
-            var r = n("mrSG"),
-                i = n("q1tI"),
+            var i = n("mrSG"),
+                r = n("q1tI"),
                 a = n("oJmH"),
                 o = n("/7QA"),
                 s = n("cZKs"),
@@ -4344,7 +4308,7 @@
                             new f.a(o.p.tracking, o.p.logger).trackCompleteTransition(d.a.SubsCheckoutPage, p.PageviewLocation.SubsCheckoutPage, "SubsCheckoutPage", e, e, !1, document.hidden)
                         }, t
                     }
-                    return r.__extends(t, e), t.prototype.componentDidMount = function() {
+                    return i.__extends(t, e), t.prototype.componentDidMount = function() {
                         this.props.latencyTracking.subscribeToInteractivityCompletion(this.trackBenchmarkComplete), this.reportInteractive(), window.addEventListener("beforeunload", this.onBeforeUnloadHandler)
                     }, t.prototype.componentDidUpdate = function() {
                         this.reportInteractive()
@@ -4355,9 +4319,9 @@
                         if (this.props.data && this.props.data.loading) e = null;
                         else {
                             var t = this.props.data && this.props.data.recipient || null;
-                            e = i.createElement(c.b, {
+                            e = r.createElement(c.b, {
                                 suppressScrollX: !0
-                            }, i.createElement(m.a, {
+                            }, r.createElement(m.a, {
                                 productName: this.props.productName,
                                 isGift: !(!t || !t.id) || !!this.props.mysteryGiftCount,
                                 recipientID: t && t.id,
@@ -4368,10 +4332,10 @@
                                 onCheckoutProgress: this.props.onCheckoutProgress
                             }))
                         }
-                        return i.createElement(y.Eb, {
+                        return r.createElement(y.Eb, {
                             background: y.r.Alt,
                             className: "checkout-modal__container"
-                        }, e, i.createElement(s.a, {
+                        }, e, r.createElement(s.a, {
                             ignoreEscKey: !0,
                             closeOnPageNavigation: !0,
                             onClose: this.handleOnClose
@@ -4379,7 +4343,7 @@
                     }, t.prototype.reportInteractive = function() {
                         b(this.props) ? this.props.latencyTracking.reportInteractive() : !this.props.data || this.props.data.loading && !this.props.data.error || this.props.latencyTracking.reportInteractive()
                     }, t
-                }(i.Component),
+                }(r.Component),
                 E = Object(a.compose)(Object(h.b)("CheckoutModal"), Object(l.a)(g, {
                     options: function(e) {
                         return {
@@ -4405,22 +4369,22 @@
             })
         },
         KK1e: function(e, t, n) {
-            var r, i, a;
-            window, i = [n("CUlp"), n("QK1G")], void 0 === (a = "function" == typeof(r = function(e, t) {
+            var i, r, a;
+            window, r = [n("CUlp"), n("QK1G")], void 0 === (a = "function" == typeof(i = function(e, t) {
                 "use strict";
                 var n = document.documentElement.style,
-                    r = "string" == typeof n.transition ? "transition" : "WebkitTransition",
-                    i = "string" == typeof n.transform ? "transform" : "WebkitTransform",
+                    i = "string" == typeof n.transition ? "transition" : "WebkitTransition",
+                    r = "string" == typeof n.transform ? "transform" : "WebkitTransform",
                     a = {
                         WebkitTransition: "webkitTransitionEnd",
                         transition: "transitionend"
-                    }[r],
+                    }[i],
                     o = {
-                        transform: i,
-                        transition: r,
-                        transitionDuration: r + "Duration",
-                        transitionProperty: r + "Property",
-                        transitionDelay: r + "Delay"
+                        transform: r,
+                        transition: i,
+                        transitionDuration: i + "Duration",
+                        transitionProperty: i + "Property",
+                        transitionDelay: i + "Delay"
                     };
 
                 function s(e, t) {
@@ -4446,31 +4410,31 @@
                 }, c.css = function(e) {
                     var t = this.element.style;
                     for (var n in e) {
-                        var r = o[n] || n;
-                        t[r] = e[n]
+                        var i = o[n] || n;
+                        t[i] = e[n]
                     }
                 }, c.getPosition = function() {
                     var e = getComputedStyle(this.element),
                         t = this.layout._getOption("originLeft"),
                         n = this.layout._getOption("originTop"),
-                        r = e[t ? "left" : "right"],
-                        i = e[n ? "top" : "bottom"],
-                        a = parseFloat(r),
-                        o = parseFloat(i),
-                        s = this.layout.size; - 1 != r.indexOf("%") && (a = a / 100 * s.width), -1 != i.indexOf("%") && (o = o / 100 * s.height), a = isNaN(a) ? 0 : a, o = isNaN(o) ? 0 : o, a -= t ? s.paddingLeft : s.paddingRight, o -= n ? s.paddingTop : s.paddingBottom, this.position.x = a, this.position.y = o
+                        i = e[t ? "left" : "right"],
+                        r = e[n ? "top" : "bottom"],
+                        a = parseFloat(i),
+                        o = parseFloat(r),
+                        s = this.layout.size; - 1 != i.indexOf("%") && (a = a / 100 * s.width), -1 != r.indexOf("%") && (o = o / 100 * s.height), a = isNaN(a) ? 0 : a, o = isNaN(o) ? 0 : o, a -= t ? s.paddingLeft : s.paddingRight, o -= n ? s.paddingTop : s.paddingBottom, this.position.x = a, this.position.y = o
                 }, c.layoutPosition = function() {
                     var e = this.layout.size,
                         t = {},
                         n = this.layout._getOption("originLeft"),
-                        r = this.layout._getOption("originTop"),
-                        i = n ? "paddingLeft" : "paddingRight",
+                        i = this.layout._getOption("originTop"),
+                        r = n ? "paddingLeft" : "paddingRight",
                         a = n ? "left" : "right",
                         o = n ? "right" : "left",
-                        s = this.position.x + e[i];
+                        s = this.position.x + e[r];
                     t[a] = this.getXValue(s), t[o] = "";
-                    var c = r ? "paddingTop" : "paddingBottom",
-                        l = r ? "top" : "bottom",
-                        u = r ? "bottom" : "top",
+                    var c = i ? "paddingTop" : "paddingBottom",
+                        l = i ? "top" : "bottom",
+                        u = i ? "bottom" : "top",
                         d = this.position.y + e[c];
                     t[l] = this.getYValue(d), t[u] = "", this.css(t), this.emitEvent("layout", [this])
                 }, c.getXValue = function(e) {
@@ -4482,11 +4446,11 @@
                 }, c._transitionTo = function(e, t) {
                     this.getPosition();
                     var n = this.position.x,
-                        r = this.position.y,
-                        i = e == this.position.x && t == this.position.y;
-                    if (this.setPosition(e, t), !i || this.isTransitioning) {
+                        i = this.position.y,
+                        r = e == this.position.x && t == this.position.y;
+                    if (this.setPosition(e, t), !r || this.isTransitioning) {
                         var a = e - n,
-                            o = t - r,
+                            o = t - i,
                             s = {};
                         s.transform = this.getTranslate(a, o), this.transition({
                             to: s,
@@ -4498,8 +4462,8 @@
                     } else this.layoutPosition()
                 }, c.getTranslate = function(e, t) {
                     var n = this.layout._getOption("originLeft"),
-                        r = this.layout._getOption("originTop");
-                    return "translate3d(" + (e = n ? e : -e) + "px, " + (t = r ? t : -t) + "px, 0)"
+                        i = this.layout._getOption("originTop");
+                    return "translate3d(" + (e = n ? e : -e) + "px, " + (t = i ? t : -t) + "px, 0)"
                 }, c.goTo = function(e, t) {
                     this.setPosition(e, t), this.layoutPosition()
                 }, c.moveTo = c._transitionTo, c.setPosition = function(e, t) {
@@ -4518,7 +4482,7 @@
                     return e.replace(/([A-Z])/g, function(e) {
                         return "-" + e.toLowerCase()
                     })
-                }(i);
+                }(r);
                 c.enableTransition = function() {
                     if (!this.isTransitioning) {
                         var e = this.layout.options.transitionDuration;
@@ -4544,8 +4508,8 @@
                                 for (var t in e) return !1;
                                 return !0
                             }(t.ingProperties) && this.disableTransition(), n in t.clean && (this.element.style[e.propertyName] = "", delete t.clean[n]), n in t.onEnd) {
-                            var r = t.onEnd[n];
-                            r.call(this), delete t.onEnd[n]
+                            var i = t.onEnd[n];
+                            i.call(this), delete t.onEnd[n]
                         }
                         this.emitEvent("transitionEnd", [this])
                     }
@@ -4570,7 +4534,7 @@
                         display: ""
                     }), this.emitEvent("remove", [this])
                 }, c.remove = function() {
-                    r && parseFloat(this.layout.options.transitionDuration) ? (this.once("transitionEnd", function() {
+                    i && parseFloat(this.layout.options.transitionDuration) ? (this.once("transitionEnd", function() {
                         this.removeElem()
                     }), this.hide()) : this.removeElem()
                 }, c.reveal = function() {
@@ -4618,7 +4582,7 @@
                         transform: ""
                     })
                 }, s
-            }) ? r.apply(t, i) : r) || (e.exports = a)
+            }) ? i.apply(t, r) : i) || (e.exports = a)
         },
         KL9a: function(e, t, n) {
             e.exports = n.p + "assets/mastercard_dark-a85ba185886a8899fef1.svg"
@@ -4739,12 +4703,12 @@
         },
         Lrin: function(e, t, n) {
             "use strict";
-            var r = n("vylb");
+            var i = n("vylb");
 
-            function i() {}
+            function r() {}
             e.exports = function() {
-                function e(e, t, n, i, a, o) {
-                    if (o !== r) {
+                function e(e, t, n, r, a, o) {
+                    if (o !== i) {
                         var s = new Error("Calling PropTypes validators directly is not supported by the `prop-types` package. Use PropTypes.checkPropTypes() to call them. Read more at http://fb.me/use-check-prop-types");
                         throw s.name = "Invariant Violation", s
                     }
@@ -4773,7 +4737,7 @@
                     shape: t,
                     exact: t
                 };
-                return n.checkPropTypes = i, n.PropTypes = n, n
+                return n.checkPropTypes = r, n.PropTypes = n, n
             }
         },
         MU3X: function(e, t, n) {
@@ -4786,14 +4750,14 @@
             Object.defineProperty(t, "__esModule", {
                 value: !0
             }), t.arrayMove = t.sortableHandle = t.sortableElement = t.sortableContainer = t.SortableHandle = t.SortableElement = t.SortableContainer = void 0;
-            var r = n("jTc+");
+            var i = n("jTc+");
             Object.defineProperty(t, "arrayMove", {
                 enumerable: !0,
                 get: function() {
-                    return r.arrayMove
+                    return i.arrayMove
                 }
             });
-            var i = s(n("ezMb")),
+            var r = s(n("ezMb")),
                 a = s(n("hk6T")),
                 o = s(n("BCEg"));
 
@@ -4802,7 +4766,7 @@
                     default: e
                 }
             }
-            t.SortableContainer = i.default, t.SortableElement = a.default, t.SortableHandle = o.default, t.sortableContainer = i.default, t.sortableElement = a.default, t.sortableHandle = o.default
+            t.SortableContainer = r.default, t.SortableElement = a.default, t.SortableHandle = o.default, t.sortableContainer = r.default, t.sortableElement = a.default, t.sortableHandle = o.default
         },
         Og0W: function(e, t) {
             var n = {
@@ -5286,9 +5250,9 @@
         OzNJ: function(e, t, n) {
             "use strict";
             n.d(t, "b", function() {
-                return r
-            }), n.d(t, "a", function() {
                 return i
+            }), n.d(t, "a", function() {
+                return r
             }), n.d(t, "e", function() {
                 return s
             }), n.d(t, "f", function() {
@@ -5300,11 +5264,11 @@
             }), n.d(t, "d", function() {
                 return d
             });
-            var r, i, a = n("1hWM"),
+            var i, r, a = n("1hWM"),
                 o = n("DMoW");
 
             function s(e) {
-                return e.isBitsEnabled ? r.Bits : e.vendorCode && e.sku ? r.InExtensionPurchases : null
+                return e.isBitsEnabled ? i.Bits : e.vendorCode && e.sku ? i.InExtensionPurchases : null
             }
 
             function c(e) {
@@ -5325,26 +5289,26 @@
                 return u(e.extension.id, e.extension.version)
             }! function(e) {
                 e[e.Bits = 0] = "Bits", e[e.InExtensionPurchases = 1] = "InExtensionPurchases"
-            }(r || (r = {})),
+            }(i || (i = {})),
             function(e) {
                 e[e.Deactivate = 0] = "Deactivate", e[e.Replace = 1] = "Replace", e[e.Uninstall = 2] = "Uninstall"
-            }(i || (i = {}))
+            }(r || (r = {}))
         },
         PZVp: function(e, t, n) {
             "use strict";
-            var r;
+            var i;
             n.d(t, "a", function() {
-                    return r
+                    return i
                 }),
                 function(e) {
                     e[e.REQUESTED = 0] = "REQUESTED", e[e.POSTPROCESS_STARTED = 1] = "POSTPROCESS_STARTED", e[e.POSTPROCESS_COMPLETE = 2] = "POSTPROCESS_COMPLETE", e[e.COMPLETE = 3] = "COMPLETE", e[e.VALIDATION_FAILED = 4] = "VALIDATION_FAILED", e[e.POSTPROCESS_FAILED = 5] = "POSTPROCESS_FAILED", e[e.POSTPROCESS_RETRYING = 6] = "POSTPROCESS_RETRYING", e[e.FEATURE_SERVICE_FAILED = 7] = "FEATURE_SERVICE_FAILED", e[e.IS_IMAGE_VALIDATION_FAILED = 110] = "IS_IMAGE_VALIDATION_FAILED", e[e.ASPECT_RATIO_VALIDATION_FAILED = 111] = "ASPECT_RATIO_VALIDATION_FAILED", e[e.WIDTH_VALIDATION_FAILED = 112] = "WIDTH_VALIDATION_FAILED", e[e.HEIGHT_VALIDATION_FAILED = 113] = "HEIGHT_VALIDATION_FAILED", e[e.IMAGE_FORMAT_VALIDATION_FAILED = 114] = "IMAGE_FORMAT_VALIDATION_FAILED", e[e.FILE_SIZE_VALIDATION_FAILED = 120] = "FILE_SIZE_VALIDATION_FAILED", e[e.TRANSFORMATION_FAILED = 210] = "TRANSFORMATION_FAILED", e[e.PROCESSING_FAILED = 220] = "PROCESSING_FAILED"
-                }(r || (r = {}))
+                }(i || (i = {}))
         },
         PwAB: function(e, t, n) {
             e.exports = n.p + "assets/xsolla_2x-b8ef30f34626976fddc4.png"
         },
         QK1G: function(e, t, n) {
-            var r;
+            var i;
             /*!
              * getSize v2.0.2
              * measure size of elements
@@ -5355,9 +5319,9 @@
              * measure size of elements
              * MIT license
              */
-            ! function(i, a) {
+            ! function(r, a) {
                 "use strict";
-                void 0 === (r = function() {
+                void 0 === (i = function() {
                     return function() {
                         function e(e) {
                             var t = parseFloat(e),
@@ -5368,9 +5332,9 @@
                                 console.error(e)
                             },
                             n = ["paddingLeft", "paddingRight", "paddingTop", "paddingBottom", "marginLeft", "marginRight", "marginTop", "marginBottom", "borderLeftWidth", "borderRightWidth", "borderTopWidth", "borderBottomWidth"],
-                            r = n.length;
+                            i = n.length;
 
-                        function i(e) {
+                        function r(e) {
                             var n = getComputedStyle(e);
                             return n || t("Style returned " + n + ". Are you running this code in a hidden iframe on Firefox? See http://bit.ly/getsizebug1"), n
                         }
@@ -5384,10 +5348,10 @@
                                     t.style.width = "200px", t.style.padding = "1px 2px 3px 4px", t.style.borderStyle = "solid", t.style.borderWidth = "1px 2px 3px 4px", t.style.boxSizing = "border-box";
                                     var n = document.body || document.documentElement;
                                     n.appendChild(t);
-                                    var r = i(t);
-                                    s.isBoxSizeOuter = a = 200 == e(r.width), n.removeChild(t)
+                                    var i = r(t);
+                                    s.isBoxSizeOuter = a = 200 == e(i.width), n.removeChild(t)
                                 }(), "string" == typeof t && (t = document.querySelector(t)), t && "object" == typeof t && t.nodeType) {
-                                var c = i(t);
+                                var c = r(t);
                                 if ("none" == c.display) return function() {
                                     for (var e = {
                                             width: 0,
@@ -5396,15 +5360,15 @@
                                             innerHeight: 0,
                                             outerWidth: 0,
                                             outerHeight: 0
-                                        }, t = 0; t < r; t++) {
-                                        var i = n[t];
-                                        e[i] = 0
+                                        }, t = 0; t < i; t++) {
+                                        var r = n[t];
+                                        e[r] = 0
                                     }
                                     return e
                                 }();
                                 var l = {};
                                 l.width = t.offsetWidth, l.height = t.offsetHeight;
-                                for (var u = l.isBorderBox = "border-box" == c.boxSizing, d = 0; d < r; d++) {
+                                for (var u = l.isBorderBox = "border-box" == c.boxSizing, d = 0; d < i; d++) {
                                     var p = n[d],
                                         m = c[p],
                                         h = parseFloat(m);
@@ -5425,13 +5389,13 @@
                         }
                         return s
                     }()
-                }.call(t, n, t, e)) || (e.exports = r)
+                }.call(t, n, t, e)) || (e.exports = i)
             }(window)
         },
         QV0B: function(e, t, n) {
             "use strict";
-            var r = n("mrSG"),
-                i = n("q1tI"),
+            var i = n("mrSG"),
+                r = n("q1tI"),
                 a = n("Ue10"),
                 o = function(e) {
                     function t() {
@@ -5446,34 +5410,34 @@
                             })
                         }, t
                     }
-                    return r.__extends(t, e), t.prototype.render = function() {
-                        return this.props.collapsable ? i.createElement(i.Fragment, null, i.createElement(a.Xa, {
+                    return i.__extends(t, e), t.prototype.render = function() {
+                        return this.props.collapsable ? r.createElement(r.Fragment, null, r.createElement(a.Xa, {
                             display: this.state.collapsed ? a.X.Hide : a.X.Block,
                             breakpointLarge: {
                                 display: a.X.Block
                             }
-                        }, i.createElement(a.H, null, this.props.children)), i.createElement(a.Xa, {
+                        }, r.createElement(a.H, null, this.props.children)), r.createElement(a.Xa, {
                             display: a.X.Block,
                             breakpointLarge: {
                                 display: a.X.Hide
                             }
-                        }, i.createElement(a.Ua, {
+                        }, r.createElement(a.Ua, {
                             onClick: this.toggleCollapsed,
                             hover: !1,
                             type: a.Va.Alpha
-                        }, i.createElement(a.Xa, {
+                        }, r.createElement(a.Xa, {
                             fullWidth: !0,
                             textAlign: a.Rb.Center,
                             alignItems: a.f.Center,
                             padding: {
                                 y: 1
                             }
-                        }, i.createElement(a.W, {
+                        }, r.createElement(a.W, {
                             type: a.Vb.Span,
                             color: a.O.Link
-                        }, this.state.collapsed ? this.props.showButtonLabel : this.props.hideButtonLabel))))) : i.createElement(a.H, null, this.props.children)
+                        }, this.state.collapsed ? this.props.showButtonLabel : this.props.hideButtonLabel))))) : r.createElement(a.H, null, this.props.children)
                     }, t
-                }(i.Component);
+                }(r.Component);
             n.d(t, "a", function() {
                 return o
             })
@@ -5661,19 +5625,19 @@
                 var t = {};
 
                 function n(n) {
-                    var r = e.get(n);
-                    return void 0 === r ? [] : t[r] || []
+                    var i = e.get(n);
+                    return void 0 === i ? [] : t[i] || []
                 }
                 return {
                     get: n,
-                    add: function(n, r) {
-                        var i = e.get(n);
-                        t[i] || (t[i] = []), t[i].push(r)
+                    add: function(n, i) {
+                        var r = e.get(n);
+                        t[r] || (t[r] = []), t[r].push(i)
                     },
                     removeListener: function(e, t) {
-                        for (var r = n(e), i = 0, a = r.length; i < a; ++i)
-                            if (r[i] === t) {
-                                r.splice(i, 1);
+                        for (var i = n(e), r = 0, a = i.length; r < a; ++r)
+                            if (i[r] === t) {
+                                i.splice(r, 1);
                                 break
                             }
                     },
@@ -6758,8 +6722,8 @@
             n.d(t, "a", function() {
                 return l
             });
-            var r = n("mrSG"),
-                i = n("NAv5"),
+            var i = n("mrSG"),
+                r = n("NAv5"),
                 a = n("q1tI"),
                 o = n("/7QA"),
                 s = n("Ue10"),
@@ -6768,7 +6732,7 @@
                     function t() {
                         return null !== e && e.apply(this, arguments) || this
                     }
-                    return r.__extends(t, e), t.prototype.render = function() {
+                    return i.__extends(t, e), t.prototype.render = function() {
                         return a.createElement(s.Eb, {
                             className: this.isExpired ? "payment-method-display--expired" : "",
                             display: s.X.Flex,
@@ -6806,8 +6770,8 @@
                             t = this.props.expirationYear;
                         if (void 0 === e || !t) return null;
                         var n = new Date(t, e),
-                            r = "";
-                        return r = this.isExpired ? Object(o.d)("Expired {expirationDate}", {
+                            i = "";
+                        return i = this.isExpired ? Object(o.d)("Expired {expirationDate}", {
                             expirationDate: Object(o.c)(n, {
                                 month: "2-digit",
                                 year: "numeric"
@@ -6825,7 +6789,7 @@
                             ellipsis: !0,
                             color: s.O.Alt2,
                             bold: this.isExpired
-                        }, r))
+                        }, i))
                     }, t.prototype.renderBillingEmail = function() {
                         return this.props.billingEmail ? a.createElement(s.Xa, {
                             alignItems: s.f.Center,
@@ -6840,9 +6804,9 @@
                             var e = this.zeroIndexedMonth,
                                 t = this.props.expirationYear;
                             if (void 0 === e || !t) return !1;
-                            var n = Object(i.startOfMonth)(new Date),
-                                r = new Date(t, e, 1);
-                            return !!Object(i.isBefore)(r, n)
+                            var n = Object(r.startOfMonth)(new Date),
+                                i = new Date(t, e, 1);
+                            return !!Object(r.isBefore)(i, n)
                         },
                         enumerable: !0,
                         configurable: !0
@@ -6860,8 +6824,8 @@
         },
         TVJu: function(e, t, n) {
             "use strict";
-            var r = n("mrSG"),
-                i = n("/MKj"),
+            var i = n("mrSG"),
+                r = n("/MKj"),
                 a = n("fvjX"),
                 o = n("1/iK"),
                 s = n("aCAx"),
@@ -6900,10 +6864,10 @@
                 j = function(e) {
                     var t = Object(I.a)(),
                         n = Object(f.d)("Confirm", "BitsConfrimationDialogue"),
-                        r = Object(f.d)("Settings", "BitsConfrimationDialogue"),
-                        i = m.createElement(_.U, {
+                        i = Object(f.d)("Settings", "BitsConfrimationDialogue"),
+                        r = m.createElement(_.U, {
                             to: "https://www.twitch.tv/settings/connections"
-                        }, r),
+                        }, i),
                         a = m.createElement(_.Pa, {
                             display: _.X.InlineFlex,
                             alignContent: _.e.Center,
@@ -6929,7 +6893,7 @@
                         s = Object(f.d)('By clicking "{ConfirmText}," you agree to share your Twitch ID with {ExtensionName}. You can manage account connections under {Settings}.', {
                             ConfirmText: n,
                             ExtensionName: e.extensionName,
-                            Settings: i
+                            Settings: r
                         }, "BitsConfrimationDialogue");
                     return m.createElement(_.Xa, {
                         className: "bits-confirmation-dialog"
@@ -7003,8 +6967,8 @@
                 M = Object(I.a)(),
                 L = function(e) {
                     var t, n = e.bitsBalance - e.cost,
-                        r = Math.abs(n),
-                        i = m.createElement(_.Pa, {
+                        i = Math.abs(n),
+                        r = m.createElement(_.Pa, {
                             display: _.X.InlineFlex,
                             margin: {
                                 x: .5
@@ -7017,14 +6981,14 @@
                             bitsConfig: M,
                             size: E.b.ExtremelySmall,
                             display: _.X.InlineFlex,
-                            amount: r,
+                            amount: i,
                             alignItems: _.f.Center,
                             formattedNumber: !0
                         })));
                     return t = m.createElement(_.Pa, {
                         display: _.X.Flex
                     }, m.createElement(_.W, null, Object(f.d)("You need {BitsRequired} more Bits to proceed.", {
-                        BitsRequired: i
+                        BitsRequired: r
                     }, "BitsUpsellDialog"))), m.createElement(_.Xa, {
                         className: "bits-upsell-dialog",
                         padding: 1
@@ -7075,15 +7039,15 @@
                 B = function(e) {
                     var t = Object(f.d)("Buy Bits", "UseBitsDialog"),
                         n = Object(f.d)("Cancel", "UseBitsDialog"),
-                        r = null;
+                        i = null;
                     if (e)
                         if (e.bitsBalance >= e.cost) {
-                            var i = e.bitsBalance - e.cost;
-                            r = m.createElement(j, {
+                            var r = e.bitsBalance - e.cost;
+                            i = m.createElement(j, {
                                 cost: e.cost,
                                 extensionName: e.extensionName,
                                 extensionItemLabel: e.extensionItemLabel,
-                                newBalance: i,
+                                newBalance: r,
                                 bitsBalance: e.bitsBalance,
                                 bitsLandingPageUrl: "https://twitch.tv/bits",
                                 buyBitsText: t,
@@ -7092,7 +7056,7 @@
                                 onClose: e.onClose,
                                 userID: e.userID
                             })
-                        } else r = m.createElement(L, {
+                        } else i = m.createElement(L, {
                             cost: e.cost,
                             extensionName: e.extensionName,
                             extensionItemLabel: e.extensionItemLabel,
@@ -7105,7 +7069,7 @@
                         });
                     return m.createElement(_.Xa, {
                         className: "use-bits-dialog"
-                    }, r)
+                    }, i)
                 },
                 U = "test_selectors_close_button",
                 W = function(e) {
@@ -7137,7 +7101,7 @@
                     function t() {
                         return null !== e && e.apply(this, arguments) || this
                     }
-                    return r.__extends(t, e), t.prototype.componentWillReceiveProps = function(e) {
+                    return i.__extends(t, e), t.prototype.componentWillReceiveProps = function(e) {
                         e.data.currentUser && this.props.startTimer && this.props.startTimer()
                     }, t.prototype.render = function() {
                         if (this.props.data.loading || !this.props.data.currentUser) return null;
@@ -7169,7 +7133,7 @@
                 Q = Object(h.compose)(Object(Y.a)(function(e) {
                     return function(e, t, n) {
                         return {
-                            topic: n ? Object(P.D)(n) : "",
+                            topic: n ? Object(P.E)(n) : "",
                             type: C.PubsubMessageType.UserBitsBalanceUpdate,
                             mutator: function(e, t) {
                                 return t && e.message_type === S.b.Balance ? (t.currentUser && e.data && (t.currentUser.bitsBalance = e.data.balance), t) : t
@@ -7262,10 +7226,10 @@
                                 bold: !0
                             }, e.currentFollowRequest.options.channel)
                         }, "FollowDialog"),
-                        r = Object(f.d)("Receive updates on {name}'s activity, including when they go live and upload videos or clips, on mobile, email, and web.", {
+                        i = Object(f.d)("Receive updates on {name}'s activity, including when they go live and upload videos or clips, on mobile, email, and web.", {
                             name: e.currentFollowRequest.options.channel
                         }, "FollowDialog"),
-                        i = m.createElement(_.Xa, null, m.createElement("span", {
+                        r = m.createElement(_.Xa, null, m.createElement("span", {
                             "data-test-selector": "confirmation_message_selector"
                         }, n), m.createElement(_.Eb, {
                             borderTop: !0,
@@ -7307,14 +7271,14 @@
                             type: _.Vb.Span,
                             color: _.O.Alt2,
                             fontSize: _.Ca.Size7
-                        }, r)),
+                        }, i)),
                         a = Object(f.d)("You are already following {name}.", {
                             name: m.createElement(_.W, {
                                 type: _.Vb.Span,
                                 bold: !0
                             }, e.currentFollowRequest.options.channel)
                         }, "FollowDialog"),
-                        o = e.currentFollowRequest.options.isFollowing ? t(a) : i;
+                        o = e.currentFollowRequest.options.isFollowing ? t(a) : r;
                     return m.createElement(_.Xa, {
                         padding: 1
                     }, o)
@@ -7322,7 +7286,7 @@
             ! function(e) {
                 e.ManagePermissionsLink = "manage_permissions_link_selector", e.ToggleIdentityBalloon = "toggle_identity_balloon_selector", e.ToggleIdentityButton = "toggle_identity_button_selector"
             }($ || ($ = {}));
-            var ne, re = function(e) {
+            var ne, ie = function(e) {
                 function t() {
                     var t = null !== e && e.apply(this, arguments) || this;
                     return t.renderGrantPermissionsButton = function() {
@@ -7362,7 +7326,7 @@
                         t.props.isLinked ? t.props.onUnlinkIdentity && t.props.onUnlinkIdentity() : t.props.onLinkIdentity && t.props.onLinkIdentity(), t.grantPermissionsBalloon.toggleBalloon(!1)
                     }, t
                 }
-                return r.__extends(t, e), t.prototype.componentDidMount = function() {
+                return i.__extends(t, e), t.prototype.componentDidMount = function() {
                     this.grantPermissionsBalloon && this.grantPermissionsBalloon.toggleBalloon(this.props.isDialogOpen)
                 }, t.prototype.componentDidUpdate = function(e) {
                     e.isDialogOpen !== this.props.isDialogOpen && this.grantPermissionsBalloon && this.grantPermissionsBalloon.toggleBalloon(this.props.isDialogOpen)
@@ -7371,12 +7335,12 @@
                         t = e.isLinked;
                     if (!e.isLinkEnabled) return null;
                     var n = t ? this.renderRevokePermissionsButton() : this.renderGrantPermissionsButton(),
-                        r = Object(f.d)("You are granting {name} the following access:", {
+                        i = Object(f.d)("You are granting {name} the following access:", {
                             name: m.createElement(_.W, {
                                 type: _.Vb.Strong
                             }, this.props.extension.name)
                         }, "Extension Panel"),
-                        i = Object(f.d)("You are revoking the following access for {name}:", {
+                        r = Object(f.d)("You are revoking the following access for {name}:", {
                             name: m.createElement(_.W, {
                                 type: _.Vb.Strong
                             }, this.props.extension.name)
@@ -7392,7 +7356,7 @@
                         size: _.w.Small
                     }, m.createElement(_.Xa, {
                         padding: 1
-                    }, m.createElement(_.Xa, null, t ? i : r), m.createElement(_.Eb, {
+                    }, m.createElement(_.Xa, null, t ? r : i), m.createElement(_.Eb, {
                         borderTop: !0,
                         margin: {
                             y: 1
@@ -7429,14 +7393,14 @@
                 }, t
             }(m.Component);
             (ne || (ne = {})).PopoutButton = "popout_button_selector";
-            var ie, ae = function(e) {
+            var re, ae = function(e) {
                     function t() {
                         var t = null !== e && e.apply(this, arguments) || this;
                         return t.onClick = function(e) {
                             t.props.onClick && t.props.onClick(e)
                         }, t
                     }
-                    return r.__extends(t, e), t.prototype.render = function() {
+                    return i.__extends(t, e), t.prototype.render = function() {
                         var e = Object(f.d)("Pop Out Extension", "PopoutButton");
                         return m.createElement("span", null, m.createElement(_.Yb, {
                             label: e,
@@ -7456,12 +7420,12 @@
                 }(m.Component),
                 oe = function(e) {
                     var t, n = e.cancel,
-                        r = e.confirm,
-                        i = e.isLoggedIn,
+                        i = e.confirm,
+                        r = e.isLoggedIn,
                         a = e.isLinked,
                         o = e.isLinkEnabled,
                         s = e.purchaseIntentPayload;
-                    return t = i ? m.createElement(_.Xa, {
+                    return t = r ? m.createElement(_.Xa, {
                         padding: {
                             x: 1,
                             bottom: 1,
@@ -7521,7 +7485,7 @@
                         }
                     }, m.createElement(_.z, {
                         "data-test-selector": "purchase_ui_buy_selector",
-                        onClick: r,
+                        onClick: i,
                         fullWidth: !0
                     }, Object(f.d)("Buy", "PurchaseConfirmation"))), m.createElement(_.P, {
                         cols: {
@@ -7589,7 +7553,7 @@
                         alignItems: _.f.Center
                     }, t))
                 };
-            (ie || (ie = {})).RestoreDefaultSizeButton = "restore-default-size-button";
+            (re || (re = {})).RestoreDefaultSizeButton = "restore-default-size-button";
             var se, ce = function(e) {
                 function t() {
                     var t = null !== e && e.apply(this, arguments) || this;
@@ -7600,13 +7564,13 @@
                     }, t.onWindowResize = function() {
                         var e = window.outerWidth,
                             n = window.outerHeight,
-                            r = e !== t.defaultPopoutWidth || n !== t.defaultPopoutHeight;
+                            i = e !== t.defaultPopoutWidth || n !== t.defaultPopoutHeight;
                         t.setState({
-                            isRestoreDefaultSizeVisible: r
+                            isRestoreDefaultSizeVisible: i
                         })
                     }, t
                 }
-                return r.__extends(t, e), t.prototype.componentDidMount = function() {
+                return i.__extends(t, e), t.prototype.componentDidMount = function() {
                     window.addEventListener("resize", this.onWindowResize)
                 }, t.prototype.componentWillUnmount = function() {
                     window.removeEventListener("resize", this.onWindowResize)
@@ -7622,7 +7586,7 @@
                         display: _.X.Flex,
                         alignItems: _.f.Center
                     }, m.createElement(_.A, {
-                        "data-test-selector": ie.RestoreDefaultSizeButton,
+                        "data-test-selector": re.RestoreDefaultSizeButton,
                         onClick: this.onClick,
                         ariaLabel: e,
                         icon: _.tb.FullscreenExit
@@ -7643,7 +7607,7 @@
                         })
                     }, t
                 }
-                return r.__extends(t, e), t.prototype.render = function() {
+                return i.__extends(t, e), t.prototype.render = function() {
                     var e = null;
                     return e = this.state.declined ? m.createElement(m.Fragment, null, m.createElement(_.W, {
                         type: _.Vb.P,
@@ -7779,14 +7743,14 @@
                             });
                             else if (t.state.currentUseBitsRequest.options.payload) {
                                 var n = t.state.currentUseBitsRequest.options.payload,
-                                    r = n.bitsBalance,
-                                    i = n.extensionItemLabel,
+                                    i = n.bitsBalance,
+                                    r = n.extensionItemLabel,
                                     a = n.extensionName,
                                     o = t.state.currentUseBitsRequest.options.payload.bitsRequired;
                                 void 0 === o && (o = 0), e = m.createElement(B, {
-                                    bitsBalance: r,
+                                    bitsBalance: i,
                                     cost: o,
-                                    extensionItemLabel: i,
+                                    extensionItemLabel: r,
                                     extensionName: a,
                                     userID: t.props.loginID,
                                     onClose: t.cancelUseBits,
@@ -7829,8 +7793,8 @@
                             var e = t.props.installation.activationConfig,
                                 n = t.extension.clientId + "-" + t.extension.version;
                             t.extension.state === p.ExtensionState.Released && (n = t.extension.clientId);
-                            var r = "/popout/" + t.props.channelName + "/extensions/" + n + "/" + e.anchor;
-                            return t.props.mode !== p.ExtensionMode.Viewer && (r = r + "/" + t.props.mode), r
+                            var i = "/popout/" + t.props.channelName + "/extensions/" + n + "/" + e.anchor;
+                            return t.props.mode !== p.ExtensionMode.Viewer && (i = i + "/" + t.props.mode), i
                         }, t.onExtensionPopoutClosed = function() {
                             if (!t.state.popoutRestoreIntentTracked) {
                                 var e = t.props.installation.activationConfig;
@@ -7847,9 +7811,9 @@
                             }
                             if (t.props.onExtensionPopoutClosed) {
                                 var n = t.extension,
-                                    r = n.id,
-                                    i = n.version;
-                                t.props.onExtensionPopoutClosed(r, i)
+                                    i = n.id,
+                                    r = n.version;
+                                t.props.onExtensionPopoutClosed(i, r)
                             }
                         }, t.onExtensionPopout = function() {
                             var e = t.props.installation.activationConfig;
@@ -7862,18 +7826,18 @@
                                 channelID: t.props.channelID
                             });
                             var n = "width=320,height=" + t.getPopoutHeight() + ",resizable=yes,scrollbars=no,toolbar=no,location=no,directories=no,status=no,menubar=no,copyhistory=no",
-                                r = window.open(t.getExtensionPopoutUrl(), "_blank", n);
-                            if (r && (t.onExtensionPopoutClosed && Object(g.a)(r, t.onExtensionPopoutClosed), r.opener = null), t.props.onExtensionPoppedOut) {
-                                var i = t.extension,
-                                    a = i.id,
-                                    o = i.version;
-                                t.props.onExtensionPoppedOut(a, o, r)
+                                i = window.open(t.getExtensionPopoutUrl(), "_blank", n);
+                            if (i && (t.onExtensionPopoutClosed && Object(g.a)(i, t.onExtensionPopoutClosed), i.opener = null), t.props.onExtensionPoppedOut) {
+                                var r = t.extension,
+                                    a = r.id,
+                                    o = r.version;
+                                t.props.onExtensionPoppedOut(a, o, i)
                             }
-                        }, t.onFollowRequested = function(e, n, r) {
+                        }, t.onFollowRequested = function(e, n, i) {
                             t.setState({
                                 currentFollowRequest: {
                                     options: e,
-                                    defaultResult: r,
+                                    defaultResult: i,
                                     notifications: !0,
                                     onResult: n
                                 }
@@ -7894,11 +7858,11 @@
                             t.state.currentFollowRequest.onResult(t.state.currentFollowRequest.defaultResult), t.setState({
                                 currentFollowRequest: null
                             })
-                        }, t.onUseBitsRequested = function(e, n, r) {
+                        }, t.onUseBitsRequested = function(e, n, i) {
                             t.setState({
                                 currentUseBitsRequest: {
                                     options: e,
-                                    defaultResult: r,
+                                    defaultResult: i,
                                     onResult: n
                                 }
                             }), t.useBitsConfirmationBalloon.toggleBalloon(!0)
@@ -7993,7 +7957,7 @@
                         }, t.onNotificationsChanged = function(e) {
                             var n = t.state.currentFollowRequest;
                             null !== n && t.setState({
-                                currentFollowRequest: r.__assign({}, n, {
+                                currentFollowRequest: i.__assign({}, n, {
                                     notifications: e.currentTarget.checked
                                 })
                             })
@@ -8001,16 +7965,16 @@
                             switch (e.action) {
                                 case p.FunctionAction.FollowAction:
                                     var n = e,
-                                        r = n.options;
-                                    t.onFollowRequested(r, n.resultCallback, n.defaultResult);
+                                        i = n.options;
+                                    t.onFollowRequested(i, n.resultCallback, n.defaultResult);
                                     break;
                                 case p.FunctionAction.LoginRequest:
                                     t.featureNeedsAuthBalloon && t.onLoginRequested(e.resultCallback, e.defaultResult);
                                     break;
                                 case p.FunctionAction.UseBits:
-                                    var i = e,
-                                        a = i.options;
-                                    t.onUseBitsRequested(a, i.resultCallback, i.defaultResult);
+                                    var r = e,
+                                        a = r.options;
+                                    t.onUseBitsRequested(a, r.resultCallback, r.defaultResult);
                                     break;
                                 case p.FunctionAction.IdShareRequest:
                                     t.setState({
@@ -8020,16 +7984,16 @@
                         }, t.handleReportExtensionClick = function() {
                             var e = t.extension,
                                 n = e.id,
-                                r = e.version,
-                                i = e.name;
+                                i = e.version,
+                                r = e.name;
                             t.props.isLoggedIn ? t.props.showReportExtensionModal({
                                 reportContext: {
                                     contentType: b.N.EXTENSION_REPORT,
-                                    contentID: n + "-" + r,
+                                    contentID: n + "-" + i,
                                     targetUserID: t.props.channelID
                                 },
                                 title: Object(f.d)("Report {extensionName}", {
-                                    extensionName: i
+                                    extensionName: r
                                 }, "ReportExtensionModal")
                             }) : t.props.promptLogin()
                         }, t.dismissLoginPrompt = function() {
@@ -8045,7 +8009,7 @@
                             }
                         }, t
                     }
-                    return r.__extends(t, e), Object.defineProperty(t.prototype, "extension", {
+                    return i.__extends(t, e), Object.defineProperty(t.prototype, "extension", {
                         get: function() {
                             return this.props.installation.extension
                         },
@@ -8060,14 +8024,14 @@
                     }, t.prototype.render = function() {
                         var e, t = Object(f.d)("More Info", "ExtensionPanel"),
                             n = Object(f.d)("Report Extension", "ExtensionPanel"),
-                            r = Object(z.d)(this.extension.id, this.extension.version) + "?tt_medium=" + this.getCurrentMedium() + "&tt_content=" + v.PageviewContent.ExtensionPanel,
-                            i = d(this.props.className || "extension-panel", ((e = {})["extension-panel__popout"] = this.props.isPopout, e)),
+                            i = Object(z.d)(this.extension.id, this.extension.version) + "?tt_medium=" + this.getCurrentMedium() + "&tt_content=" + v.PageviewContent.ExtensionPanel,
+                            r = d(this.props.className || "extension-panel", ((e = {})["extension-panel__popout"] = this.props.isPopout, e)),
                             a = this.props.isFramePoppedOut ? m.createElement(J, {
                                 extension: this.extension,
                                 onExtensionShowClicked: this.onExtensionPopoutClosed
                             }) : this.renderExtensionFrame();
                         return m.createElement(_.Xa, {
-                            className: i,
+                            className: r,
                             margin: {
                                 bottom: 2,
                                 right: 2
@@ -8088,7 +8052,7 @@
                                 x: 1
                             }
                         }, m.createElement("a", {
-                            href: r,
+                            href: i,
                             target: "_blank",
                             "data-test-selector": le.ExtensionDetailsLink
                         }, this.extension.name)), this.props.isFramePoppedOut || this.props.isPopout ? null : m.createElement(ae, {
@@ -8096,7 +8060,7 @@
                             onClick: this.onExtensionPopout
                         }), m.createElement(ce, {
                             isPopout: this.props.isPopout
-                        }), m.createElement(re, {
+                        }), m.createElement(ie, {
                             extension: this.extension,
                             isDialogOpen: this.state.isIdentityLinkOpen,
                             onDialogToggle: this.onIdentityLinkDialogToggle,
@@ -8141,8 +8105,8 @@
                             t = this.state && this.state.purchaseIntent;
                         if (null !== t) {
                             var n = this.state,
-                                r = n.isLinked,
-                                i = n.isLinkEnabled,
+                                i = n.isLinked,
+                                r = n.isLinkEnabled,
                                 a = t,
                                 o = a.payload,
                                 s = a.makePurchase;
@@ -8153,8 +8117,8 @@
                                     })
                                 },
                                 cancel: this.cancelPurchase,
-                                isLinked: r,
-                                isLinkEnabled: i,
+                                isLinked: i,
+                                isLinkEnabled: r,
                                 purchaseIntentPayload: o,
                                 isLoggedIn: this.props.isLoggedIn
                             })
@@ -8179,12 +8143,12 @@
                         return Object(c.e)(o.a.ReportHoster)
                     },
                     showReportExtensionModal: function(e) {
-                        var t = r.__rest(e, []);
+                        var t = i.__rest(e, []);
                         return Object(s.d)(u.a, t)
                     }
                 }, e)
             }
-            var ge = Object(i.connect)(fe, ye)(he);
+            var ge = Object(r.connect)(fe, ye)(he);
             n.d(t, !1, function() {}), n.d(t, !1, function() {
                 return fe
             }), n.d(t, !1, function() {
@@ -8418,10 +8382,10 @@
                         return t && void 0 !== t.id ? t.id : null
                     },
                     set: function(e) {
-                        var r = n(e);
-                        if (!r) throw new Error("setId required the element to have a resize detection state.");
-                        var i = t.generate();
-                        return r.id = i, i
+                        var i = n(e);
+                        if (!i) throw new Error("setId required the element to have a resize detection state.");
+                        var r = t.generate();
+                        return i.id = r, r
                     }
                 }
             }
@@ -8429,15 +8393,15 @@
         UL9e: function(e, t, n) {
             "use strict";
             (e.exports = {}).getOption = function(e, t, n) {
-                var r = e[t];
-                if ((void 0 === r || null === r) && void 0 !== n) return n;
-                return r
+                var i = e[t];
+                if ((void 0 === i || null === i) && void 0 !== n) return n;
+                return i
             }
         },
         "V+q8": function(e, t, n) {
             "use strict";
-            var r = n("/MKj"),
-                i = n("kRBY"),
+            var i = n("/MKj"),
+                r = n("kRBY"),
                 a = n("mrSG"),
                 o = n("q1tI"),
                 s = n("oJmH"),
@@ -8674,8 +8638,8 @@
                         var e = this.props.data,
                             t = e.product,
                             n = e.loading,
-                            r = e.error;
-                        return !t && n ? o.createElement(x, null) : !t || r ? o.createElement(S, null) : this.isTurboProduct ? o.createElement(w, {
+                            i = e.error;
+                        return !t && n ? o.createElement(x, null) : !t || i ? o.createElement(S, null) : this.isTurboProduct ? o.createElement(w, {
                             productPrice: this.price,
                             productPriceInterval: t.interval && t.interval.unit,
                             productPriceTaxInclusive: this.taxInclusive,
@@ -8811,9 +8775,9 @@
                         }
                     }
                 }))(D);
-            var j = Object(r.connect)(function(e) {
+            var j = Object(i.connect)(function(e) {
                 return {
-                    sessionUser: Object(i.e)(e)
+                    sessionUser: Object(r.e)(e)
                 }
             })(R);
             n.d(t, "a", function() {
@@ -8846,7 +8810,7 @@
         },
         WXY0: function(e, t, n) {
             "use strict";
-            var r, i = n("/MKj"),
+            var i, r = n("/MKj"),
                 a = n("fvjX"),
                 o = n("1/iK"),
                 s = n("y5D0"),
@@ -8867,14 +8831,14 @@
                 k = n("tIid");
             ! function(e) {
                 e[e.PERSONAL_SUB = 0] = "PERSONAL_SUB", e[e.GIFT_SUB = 1] = "GIFT_SUB", e[e.MYSTERY_GIFT = 2] = "MYSTERY_GIFT"
-            }(r || (r = {}));
+            }(i || (i = {}));
             var P, S, x = n("Ue10"),
                 O = function(e) {
                     function t() {
                         return null !== e && e.apply(this, arguments) || this
                     }
                     return l.__extends(t, e), t.prototype.render = function() {
-                        return this.props.product ? (e = this.props.purchaseFlow === r.GIFT_SUB || this.props.purchaseFlow === r.MYSTERY_GIFT ? this.isEsportPurchase ? this.giftEsportMessageText : this.giftSubMessageText : this.isEsportPurchase ? this.personalEsportMessageText : "turbo" === this.props.product.product.name ? this.turboMessageText : this.personalSubMessageText, d.createElement(x.Xa, null, e)) : d.createElement(x.ib, null);
+                        return this.props.product ? (e = this.props.purchaseFlow === i.GIFT_SUB || this.props.purchaseFlow === i.MYSTERY_GIFT ? this.isEsportPurchase ? this.giftEsportMessageText : this.giftSubMessageText : this.isEsportPurchase ? this.personalEsportMessageText : "turbo" === this.props.product.product.name ? this.turboMessageText : this.personalSubMessageText, d.createElement(x.Xa, null, e)) : d.createElement(x.ib, null);
                         var e
                     }, Object.defineProperty(t.prototype, "turboMessageText", {
                         get: function() {
@@ -9051,7 +9015,7 @@
                         }, this.headerText)
                     }, Object.defineProperty(t.prototype, "headerText", {
                         get: function() {
-                            return this.props.purchaseFlow === r.GIFT_SUB || this.props.purchaseFlow === r.MYSTERY_GIFT ? this.isEsportPurchase ? Object(p.d)("Gift All-Access Pass", "CheckoutHeader") : Object(p.d)("Gift A Subscription", "CheckoutHeader") : this.props.purchaseFlow === r.PERSONAL_SUB ? this.isEsportPurchase ? Object(p.d)("Get Your All-Access Pass", "CheckoutHeader") : Object(p.d)("Subscription Payment Information", "CheckoutHeader") : Object(p.d)("Checkout", "CheckoutHeader")
+                            return this.props.purchaseFlow === i.GIFT_SUB || this.props.purchaseFlow === i.MYSTERY_GIFT ? this.isEsportPurchase ? Object(p.d)("Gift All-Access Pass", "CheckoutHeader") : Object(p.d)("Gift A Subscription", "CheckoutHeader") : this.props.purchaseFlow === i.PERSONAL_SUB ? this.isEsportPurchase ? Object(p.d)("Get Your All-Access Pass", "CheckoutHeader") : Object(p.d)("Subscription Payment Information", "CheckoutHeader") : Object(p.d)("Checkout", "CheckoutHeader")
                         },
                         enumerable: !0,
                         configurable: !0
@@ -9064,7 +9028,7 @@
                         configurable: !0
                     }), t
                 }(d.Component);
-            var T, D = Object(i.connect)(function(e) {
+            var T, D = Object(r.connect)(function(e) {
                     return {
                         sessionUser: Object(c.e)(e)
                     }
@@ -9279,9 +9243,9 @@
                         if (!this.props.product) return null;
                         var e = d.createElement(d.Fragment, null),
                             t = d.createElement(d.Fragment, null);
-                        if (this.props.purchaseFlow === r.GIFT_SUB) t = this.renderGiftSubPurchase();
-                        else if (this.props.purchaseFlow === r.MYSTERY_GIFT) t = this.renderMysteryGiftSubPurchase();
-                        else if (this.props.purchaseFlow === r.PERSONAL_SUB)
+                        if (this.props.purchaseFlow === i.GIFT_SUB) t = this.renderGiftSubPurchase();
+                        else if (this.props.purchaseFlow === i.MYSTERY_GIFT) t = this.renderMysteryGiftSubPurchase();
+                        else if (this.props.purchaseFlow === i.PERSONAL_SUB)
                             if (this.props.eligiblePromotions && this.props.eligiblePromotions.isOneMonthFreeEligible && (e = this.renderOneFreeMonth()), this.props.productEligibility === T.TIER_UPGRADE) t = this.renderTierUpgrade();
                             else if (this.props.productEligibility === T.PRIME_UPGRADE) {
                             var n = this.formattedPrice;
@@ -9289,7 +9253,7 @@
                                 newPrice: n
                             }))
                         } else this.props.productEligibility === T.NEW_PURCHASE && this.hasActiveGiftSubscription && (this.props.eligiblePromotions && this.props.eligiblePromotions.paidUpgradePromotion && (e = this.renderSubtemberDiscount()), t = this.renderGiftSubUpgrade());
-                        return d.createElement(d.Fragment, null, e, (!this.hasActiveGiftSubscription || this.props.purchaseFlow !== r.PERSONAL_SUB) && d.createElement(x.Xa, {
+                        return d.createElement(d.Fragment, null, e, (!this.hasActiveGiftSubscription || this.props.purchaseFlow !== i.PERSONAL_SUB) && d.createElement(x.Xa, {
                             margin: {
                                 top: 1
                             }
@@ -9299,14 +9263,14 @@
                         if (!e) return null;
                         var t = e.price,
                             n = e.currency,
-                            r = e.divisor,
-                            i = Object(p.f)(t / r, {
+                            i = e.divisor,
+                            r = Object(p.f)(t / i, {
                                 style: "currency",
                                 currency: n
                             }),
                             a = this.formattedPrice;
-                        return i && a ? d.createElement(B, {
-                            originalPrice: i,
+                        return r && a ? d.createElement(B, {
+                            originalPrice: r,
                             newPrice: a
                         }) : null
                     }, t.prototype.renderGiftSubUpgrade = function() {
@@ -9368,9 +9332,9 @@
                         if (!this.props.product) return null;
                         var e, t = this.props.isAnonymous,
                             n = this.props.product.product && this.props.product.product.tier,
-                            r = n && parseInt(n, 10) / 1e3,
-                            i = this.props.product.quantity;
-                        if (!i || !this.formattedPrice) return null;
+                            i = n && parseInt(n, 10) / 1e3,
+                            r = this.props.product.quantity;
+                        if (!r || !this.formattedPrice) return null;
                         var a = Object(p.d)("Gift recipients will be chosen at random, starting with viewers of the streamer's channel who do not currently subscribe. <x:gift-info>Learn how Twitch picks recipients.</x:gift-info>", {
                             "x:gift-info": function(e) {
                                 return d.createElement(x.U, {
@@ -9380,17 +9344,17 @@
                             }
                         }, "PurchasePreview");
                         e = this.isEsportPurchase ? t ? Object(p.d)("{quantity, plural, one {{quantity} x Anonymous Overwatch League All-Access Pass Gift} other {{quantity} x Anonymous Overwatch League All-Access Pass Gifts}}", {
-                            quantity: i
+                            quantity: r
                         }, "PurchasePreview") : Object(p.d)("{quantity, plural, one {{quantity} x Overwatch League All-Access Pass Gift} other {{quantity} x Overwatch League All-Access Pass Gifts}}", {
-                            quantity: i
+                            quantity: r
                         }, "PurchasePreview") : t ? Object(p.d)("{quantity, plural, one {{quantity} x Single Month Tier {numericalTier} Anonymous Gift Subscription} other {{quantity} x Single Month Tier {numericalTier} Anonymous Gift Subscriptions}}", {
-                            quantity: i,
-                            numericalTier: r
+                            quantity: r,
+                            numericalTier: i
                         }, "PurchasePreview") : Object(p.d)("{quantity, plural, one {{quantity} x Single Month Tier {numericalTier} Gift Subscription} other {{quantity} x Single Month Tier {numericalTier} Gift Subscriptions}}", {
-                            quantity: i,
-                            numericalTier: r
+                            quantity: r,
+                            numericalTier: i
                         }, "PurchasePreview");
-                        var o = this.props.product.product.priceInfo.total * i,
+                        var o = this.props.product.product.priceInfo.total * r,
                             s = Object(p.d)("{price} each", {
                                 price: this.formattedPrice
                             }, "PurchasePreview"),
@@ -9701,20 +9665,20 @@
                         var e = this.props.product.product && this.props.product.product.owner && this.props.product.product.owner.id || "",
                             t = Object(k.a)(e, this.props.sessionUser),
                             n = this.props.product.product,
-                            i = n && n.owner,
+                            r = n && n.owner,
                             a = this.props.benefit;
-                        return this.props.purchaseFlow === r.MYSTERY_GIFT ? d.createElement(H, {
-                            productOwnerDisplayName: i && i.displayName || "",
-                            productOwnerLogin: i && i.login || "",
+                        return this.props.purchaseFlow === i.MYSTERY_GIFT ? d.createElement(H, {
+                            productOwnerDisplayName: r && r.displayName || "",
+                            productOwnerLogin: r && r.login || "",
                             invoicePrice: this.props.purchaseInvoice.price,
                             invoiceCurrency: this.props.purchaseInvoice.currency || "USD",
                             tier: this.props.purchaseInvoice.tier || "",
                             mysteryGiftCount: this.props.product.quantity || 1,
                             isEsportChannel: t
-                        }) : this.props.purchaseFlow === r.GIFT_SUB ? this.props.product.recipient ? d.createElement(z, {
+                        }) : this.props.purchaseFlow === i.GIFT_SUB ? this.props.product.recipient ? d.createElement(z, {
                             recipientDisplayName: this.props.product.recipient.displayName,
-                            productOwnerDisplayName: i && i.displayName || "",
-                            productOwnerLogin: i && i.login || "",
+                            productOwnerDisplayName: r && r.displayName || "",
+                            productOwnerLogin: r && r.login || "",
                             invoicePrice: this.props.purchaseInvoice && this.props.purchaseInvoice.price || void 0,
                             invoiceCurrency: this.props.purchaseInvoice && this.props.purchaseInvoice.currency || "USD",
                             isEsportChannel: t
@@ -9728,8 +9692,8 @@
                             invoiceDivisor: this.props.purchaseInvoice.divisor || 100
                         }) : null : d.createElement(q, {
                             purchaserDisplayName: this.props.currentUser && this.props.currentUser.displayName || "",
-                            productOwnerDisplayName: i && i.displayName || "",
-                            productOwnerLogin: i && i.login || "",
+                            productOwnerDisplayName: r && r.displayName || "",
+                            productOwnerLogin: r && r.login || "",
                             giftSubEndsAt: a && a.gift && (a.gift.isGift || null) && a.endsAt || "",
                             invoicePrice: this.props.purchaseInvoice.price,
                             invoiceCurrency: this.props.purchaseInvoice.currency || "USD",
@@ -9822,7 +9786,7 @@
             }(A || (A = {}));
             var te = n("KriR"),
                 ne = n("GnwI"),
-                re = (n("TEvY"), function() {
+                ie = (n("TEvY"), function() {
                     function e(e) {}
                     e.prototype.bind = function(e) {}
                 }(), function(e) {
@@ -9981,7 +9945,7 @@
                         }, this.props.submitButtonCopy)))))) : d.createElement(x.Za, null)
                     }, t = l.__decorate([Object(ne.b)("RecurlyAmazonPay")], t)
                 }(d.Component)),
-                ie = n("/0dD"),
+                re = n("/0dD"),
                 ae = n("XDQu"),
                 oe = n("6fcp"),
                 se = (n("Aoab"), {
@@ -10028,8 +9992,8 @@
                                     }), window.recurly.token(this.form, function(e, n) {
                                         return l.__awaiter(t, void 0, void 0, function() {
                                             var t;
-                                            return l.__generator(this, function(r) {
-                                                switch (r.label) {
+                                            return l.__generator(this, function(i) {
+                                                switch (i.label) {
                                                     case 0:
                                                         return t = this.validateResidence(), e || t.length ? (this.handleValidationError(e, t), this.setState({
                                                             awaitingResponse: !1
@@ -10037,7 +10001,7 @@
                                                     case 1:
                                                         return [4, this.handleValidationSuccess(n)];
                                                     case 2:
-                                                        r.sent(), r.label = 3;
+                                                        i.sent(), i.label = 3;
                                                     case 3:
                                                         return [2]
                                                 }
@@ -10080,15 +10044,15 @@
                                 })
                             })
                         }, t.handleValidationError = function(e, n) {
-                            var r = le(),
-                                i = "";
+                            var i = le(),
+                                r = "";
                             n.length && n.forEach(function(e) {
-                                r[e] = !0
-                            }), e && (i = Object(p.d)("The transaction was declined due to invalid data. Please make sure you have entered the correct information.", "RecurlyCreditCard"), e.code !== oe.a.Validation && e.code !== oe.a.InvalidParameter || (e.fields && e.fields.forEach(function(e) {
-                                r[e] = !0
-                            }), i = Object(p.d)("We are sorry but your credit card payment could not be processed. Please correct the fields below.", "RecurlyCreditCard"))), t.setState({
-                                errorMessage: i,
-                                errorState: r
+                                i[e] = !0
+                            }), e && (r = Object(p.d)("The transaction was declined due to invalid data. Please make sure you have entered the correct information.", "RecurlyCreditCard"), e.code !== oe.a.Validation && e.code !== oe.a.InvalidParameter || (e.fields && e.fields.forEach(function(e) {
+                                i[e] = !0
+                            }), r = Object(p.d)("We are sorry but your credit card payment could not be processed. Please correct the fields below.", "RecurlyCreditCard"))), t.setState({
+                                errorMessage: r,
+                                errorState: i
                             })
                         }, t.handleFirstName = function(e) {
                             t.setState({
@@ -10325,9 +10289,9 @@
                         })
                     }, t = l.__decorate([Object(ne.b)("RecurlyCreditCard")], t)
                 }(d.Component);
-            var de, pe = Object(i.connect)(function(e) {
+            var de, pe = Object(r.connect)(function(e) {
                     return {
-                        darkModeEnabled: Object(ae.a)(e) === ie.a.Dark
+                        darkModeEnabled: Object(ae.a)(e) === re.a.Dark
                     }
                 })(ue),
                 me = (n("a7Xb"), function(e) {
@@ -10628,11 +10592,11 @@
                                 }
                             })
                         })
-                    }, t.errorCallback = function(e, n, r) {
+                    }, t.errorCallback = function(e, n, i) {
                         if (t.setState({
                                 awaitingResponse: !1
-                            }), "unknown" === n) return t.parseGatewayErrorMessage(r);
-                        window.Z.sendErrorMessageToHpm(e, r)
+                            }), "unknown" === n) return t.parseGatewayErrorMessage(i);
+                        window.Z.sendErrorMessageToHpm(e, i)
                     }, t.parseGatewayErrorMessage = function(e) {
                         return e.includes("NullValue") ? t.parseNullValueErrorMessage(e) : e.includes("Invalid CC Number") ? t.setState({
                             errorMessage: Object(p.d)("You entered an invalid card number. Please update your card and try again.", "ZuoraCreditCard")
@@ -10641,20 +10605,20 @@
                         })
                     }, t.parseNullValueErrorMessage = function(e) {
                         var n = e.replace("[HostedPageFieldValidationError]&nbsp; ", "").replace(/\s/g, "").split(":NullValue,"),
-                            r = {
+                            i = {
                                 creditCardHolderName: Object(p.d)("Name on Card", "ZuoraCreditCard"),
                                 creditCardAddress1: Object(p.d)("Billing Address", "ZuoraCreditCard"),
                                 creditCardCity: Object(p.d)("City", "ZuoraCreditCard"),
                                 creditCardPostalCode: Object(p.d)("Zip Code", "ZuoraCreditCard")
                             },
-                            i = n.map(function(e) {
-                                var t = r[e];
+                            r = n.map(function(e) {
+                                var t = i[e];
                                 return t || ""
                             }).filter(function(e) {
                                 return "" !== e
                             });
                         t.setState({
-                            nullValueErrors: i
+                            nullValueErrors: r
                         })
                     }, t
                 }
@@ -10734,7 +10698,7 @@
                     configurable: !0
                 }), t = l.__decorate([Object(ne.b)("ZuoraCreditCard")], t)
             }(d.Component);
-            var be, ve = Object(i.connect)(function(e) {
+            var be, ve = Object(r.connect)(function(e) {
                 return {
                     languageCode: Object(c.b)(e)
                 }
@@ -10750,7 +10714,7 @@
                     return l.__extends(t, e), t.prototype.render = function() {
                         switch (this.props.type) {
                             case be.RecurlyAmazonPay:
-                                return d.createElement(re, l.__assign({
+                                return d.createElement(ie, l.__assign({
                                     submitButtonCopy: this.submitButtonCopy,
                                     onSuccess: this.props.handleCompletePurchase
                                 }, this.props.configs.recurly.payWithAmazonConfigs, {
@@ -10974,8 +10938,8 @@
                         }, t.renderPaymentMethods = function() {
                             var e = t.props,
                                 n = e.configs,
-                                r = e.handleCompletePurchase,
-                                i = e.handleCountryChange,
+                                i = e.handleCompletePurchase,
+                                r = e.handleCountryChange,
                                 a = e.trackPaymentFormInteraction,
                                 o = t.props.eligiblePaymentMethods,
                                 s = t;
@@ -10992,8 +10956,8 @@
                                     eligibilityStatus: t.status,
                                     userCountryOfResidence: s.props.userCountryOfResidence,
                                     userZipCode: s.props.userZipCode,
-                                    handleCompletePurchase: r,
-                                    handleCountryChange: i,
+                                    handleCompletePurchase: i,
+                                    handleCountryChange: r,
                                     trackPaymentFormInteraction: a,
                                     showEuSubs: s.props.showEuSubs
                                 })) : null
@@ -11009,11 +10973,11 @@
                                 return e.status !== A.HIDDEN
                             }).map(function(e) {
                                 return e.type
-                            }), n = 0, r = e; n < r.length; n++) {
-                            var i = r[n];
-                            if (t.includes(i)) {
+                            }), n = 0, i = e; n < i.length; n++) {
+                            var r = i[n];
+                            if (t.includes(r)) {
                                 this.setState({
-                                    selectedProvider: i
+                                    selectedProvider: r
                                 });
                                 break
                             }
@@ -11043,18 +11007,18 @@
                             paymentMethodEnabled: t.props.eligibility.status === A.ACTIVE
                         }, t.isPaymentMethodExpired = function(e) {
                             var n = t.zeroIndexedMonth(e),
-                                r = e.expirationYear;
-                            if (void 0 === n || !r) return !1;
-                            var i = Object(u.startOfMonth)(new Date),
-                                a = new Date(r, n, 1);
-                            return !!Object(u.isBefore)(a, i)
+                                i = e.expirationYear;
+                            if (void 0 === n || !i) return !1;
+                            var r = Object(u.startOfMonth)(new Date),
+                                a = new Date(i, n, 1);
+                            return !!Object(u.isBefore)(a, r)
                         }, t.zeroIndexedMonth = function(e) {
                             if (e.expirationMonth) return e.expirationMonth - 1
                         }, t.handleSubmit = function() {
                             return l.__awaiter(t, void 0, void 0, function() {
                                 var e, t, n = this;
-                                return l.__generator(this, function(r) {
-                                    switch (r.label) {
+                                return l.__generator(this, function(i) {
+                                    switch (i.label) {
                                         case 0:
                                             if (!this.hasValidResidence()) return this.setState({
                                                 zipCodeError: !0
@@ -11092,7 +11056,7 @@
                                                 }
                                             })];
                                         case 1:
-                                            return r.sent(), [2]
+                                            return i.sent(), [2]
                                     }
                                 })
                             })
@@ -11210,14 +11174,14 @@
                     }), e
                 }(),
                 nt = n("iWNC");
-            var rt = function(e) {
+            var it = function(e) {
                 var t = Date.now() - e;
                 return function() {
                     var n = Date.now();
                     return t + e <= n ? (t = n, "cache-and-network") : "cache-first"
                 }
             }(3e3);
-            var it, at, ot = function(e) {
+            var rt, at, ot = function(e) {
                     function t() {
                         var t = null !== e && e.apply(this, arguments) || this;
                         return t.state = {
@@ -11284,30 +11248,30 @@
                                 disablePayPal: this.disablePayPal,
                                 disableAmazonPay: this.disableAmazonPay
                             });
-                            var r = this.eligibilityComputer.getAvailableMethods();
+                            var i = this.eligibilityComputer.getAvailableMethods();
                             if (this.props.showEuSubs) {
-                                var i = Object.values(be).map(function(e) {
+                                var r = Object.values(be).map(function(e) {
                                     var n = t.eligiblePaymentMethods.find(function(t) {
                                             return t.type === e
                                         }),
-                                        i = n && n.status === A.HIDDEN ? A.HIDDEN : A.DISABLED;
+                                        r = n && n.status === A.HIDDEN ? A.HIDDEN : A.DISABLED;
                                     return {
                                         type: e,
-                                        status: r.includes(e) ? A.ACTIVE : i
+                                        status: i.includes(e) ? A.ACTIVE : r
                                     }
                                 });
                                 this.setState({
-                                    eligiblePaymentMethods: i
+                                    eligiblePaymentMethods: r
                                 })
                             } else {
-                                i = r.map(function(e) {
+                                r = i.map(function(e) {
                                     return {
                                         type: e,
                                         status: A.ACTIVE
                                     }
                                 });
                                 this.setState({
-                                    eligiblePaymentMethods: i
+                                    eligiblePaymentMethods: r
                                 })
                             }
                         }
@@ -11455,7 +11419,7 @@
                 st = Object(K.compose)(Object(ne.b)("Wallet"), Object(h.a)(nt, {
                     options: function() {
                         return {
-                            fetchPolicy: rt()
+                            fetchPolicy: it()
                         }
                     }
                 }))(ot),
@@ -11474,7 +11438,7 @@
                             if (t.props.data.subscriptionProduct) {
                                 var n = t.props.isGift ? te.e.Gifting : te.e.Personal;
                                 t.props.mysteryGiftCount && (n = te.e.MysteryGifting);
-                                var r = {
+                                var i = {
                                     channelLogin: t.props.data.subscriptionProduct.owner && t.props.data.subscriptionProduct.owner.login,
                                     channelId: t.props.data.subscriptionProduct.owner && t.props.data.subscriptionProduct.owner.id,
                                     paymentType: n,
@@ -11488,7 +11452,7 @@
                                     savedPayment: e.savedPayment || !1,
                                     trackingContext: t.props.trackingContext
                                 };
-                                Object(te.g)(r)
+                                Object(te.g)(i)
                             }
                         }, t.handleCountryChange = function(e) {
                             t.setState({
@@ -11500,11 +11464,11 @@
                             t.props.data.refetch(n)
                         }, t.completePurchase = function(e) {
                             return l.__awaiter(t, void 0, void 0, function() {
-                                var t, n, r, i, a, o = this;
+                                var t, n, i, r, a, o = this;
                                 return l.__generator(this, function(s) {
                                     switch (s.label) {
                                         case 0:
-                                            t = this.props.data.subscriptionProduct, n = this.isAsync, r = {
+                                            t = this.props.data.subscriptionProduct, n = this.isAsync, i = {
                                                 payment_provider: e.payment_provider,
                                                 payment_info: l.__assign({}, e.payment_info),
                                                 is_gift: this.props.isGift,
@@ -11522,10 +11486,10 @@
                                                 tab_session_id: p.p.session.tabID
                                             }, this.setState({
                                                 showErrors: !1
-                                            }), i = "/kraken/checkout/users/" + (this.props.data.currentUser && this.props.data.currentUser.id) + "/products/" + this.props.productName + "/purchase/complete", s.label = 1;
+                                            }), r = "/kraken/checkout/users/" + (this.props.data.currentUser && this.props.data.currentUser.id) + "/products/" + this.props.productName + "/purchase/complete", s.label = 1;
                                         case 1:
-                                            return s.trys.push([1, 3, , 4]), [4, C.a.post(i, {
-                                                body: r
+                                            return s.trys.push([1, 3, , 4]), [4, C.a.post(r, {
+                                                body: i
                                             }, {
                                                 version: 5
                                             })];
@@ -11582,12 +11546,12 @@
                                                 action: te.a.CompletePurchaseClick,
                                                 actionDetail: te.f.Success,
                                                 savedPayment: e.savedPayment
-                                            }), this.props.data.refetch(), n ? this.setState({
+                                            }), n ? this.setState({
                                                 purchaseResponse: a.body
-                                            }) : this.setState({
+                                            }) : (this.props.data.refetch(), this.setState({
                                                 purchaseResponse: a.body,
                                                 progress: _.a.CONFIRMATION
-                                            }), [3, 4]);
+                                            })), [3, 4]);
                                         case 3:
                                             return s.sent(), this.setState({
                                                 showErrors: !0,
@@ -11617,22 +11581,25 @@
                             progress: _.a.CONFIRMATION
                         })), this.state.progress !== t.progress && this.props.onCheckoutProgress && this.props.onCheckoutProgress(this.state.progress)
                     }, t.prototype.componentWillReceiveProps = function(e) {
-                        var t = e.pubsub.messages.fulfillment && e.pubsub.messages.fulfillment.fulfillment;
-                        if (t) switch (clearTimeout(this.timeout), t.status) {
-                            case y.PurchaseFulfillmentStatus.Success:
-                                this.setState({
-                                    progress: _.a.CONFIRMATION
-                                });
-                                break;
-                            case y.PurchaseFulfillmentStatus.Failure:
-                            default:
-                                this.setState({
-                                    showErrors: !0,
-                                    errors: {
-                                        code: P.DefaultMessage,
-                                        level: S.Error
-                                    }
-                                })
+                        var t = e.pubsub.messages.fulfillment;
+                        if (this.isRelated(t)) {
+                            var n = t && t.fulfillment;
+                            if (n) switch (clearTimeout(this.timeout), n.status) {
+                                case y.PurchaseFulfillmentStatus.Success:
+                                    this.setState({
+                                        progress: _.a.CONFIRMATION
+                                    });
+                                    break;
+                                case y.PurchaseFulfillmentStatus.Failure:
+                                default:
+                                    this.setState({
+                                        showErrors: !0,
+                                        errors: {
+                                            code: P.DefaultMessage,
+                                            level: S.Error
+                                        }
+                                    })
+                            }
                         }
                     }, t.prototype.componentWillUnmount = function() {
                         clearTimeout(this.timeout)
@@ -11669,16 +11636,16 @@
                                 benefit: this.props.data.subscriptionProduct && this.props.data.subscriptionProduct.self && this.props.data.subscriptionProduct.self.benefit
                             }))
                         }
-                        var r = d.createElement(D, {
+                        var i = d.createElement(D, {
                                 product: this.shoppingCartItem,
                                 purchaseFlow: this.purchaseFlow,
                                 progress: this.state.progress
                             }),
-                            i = this.shoppingCartItem && this.shoppingCartItem.product.owner && this.shoppingCartItem.product.owner.displayName,
-                            a = "/" + (i || "");
+                            r = this.shoppingCartItem && this.shoppingCartItem.product.owner && this.shoppingCartItem.product.owner.displayName,
+                            a = "/" + (r || "");
                         return d.createElement(R, {
                             productDescription: this.renderTicketDescription(),
-                            header: r
+                            header: i
                         }, !this.dataReady && d.createElement(x.Xa, {
                             display: x.X.Flex,
                             justifyContent: x.Wa.Center,
@@ -11702,7 +11669,7 @@
                         }, d.createElement(x.z, {
                             linkTo: a
                         }, Object(p.d)("Go back to {channel}", {
-                            channel: i || "Twitch"
+                            channel: r || "Twitch"
                         }, "CheckoutPayments")))), d.createElement(x.Xa, {
                             display: F(this.productEligibility) ? x.X.Block : x.X.Hide,
                             "data-test-selector": at.ELIGIBLE_PURCHASE
@@ -11763,9 +11730,11 @@
                         },
                         enumerable: !0,
                         configurable: !0
-                    }), Object.defineProperty(t.prototype, "purchaseFlow", {
+                    }), t.prototype.isRelated = function(e) {
+                        return !(!this.state.purchaseResponse || !e) && e.fulfillment.product_details.origin_id === this.state.purchaseResponse.origin_id
+                    }, Object.defineProperty(t.prototype, "purchaseFlow", {
                         get: function() {
-                            return this.props.isGift ? this.props.mysteryGiftCount && this.props.mysteryGiftCount > 0 ? r.MYSTERY_GIFT : r.GIFT_SUB : r.PERSONAL_SUB
+                            return this.props.isGift ? this.props.mysteryGiftCount && this.props.mysteryGiftCount > 0 ? i.MYSTERY_GIFT : i.GIFT_SUB : i.PERSONAL_SUB
                         },
                         enumerable: !0,
                         configurable: !0
@@ -11780,14 +11749,14 @@
                             var e = this;
                             if (!this.canPurchase) return T.API_INELIGIBLE;
                             if (!this.shoppingCartItem) return T.NO_ITEM;
-                            if (this.purchaseFlow === r.GIFT_SUB) return this.canGift ? T.GIFTABLE_RECIPIENT : T.NON_GIFTABLE_RECIPIENT;
-                            if (this.purchaseFlow === r.MYSTERY_GIFT) return this.canGift ? T.GIFTABLE_RECIPIENT : T.NO_MASS_GIFTING;
+                            if (this.purchaseFlow === i.GIFT_SUB) return this.canGift ? T.GIFTABLE_RECIPIENT : T.NON_GIFTABLE_RECIPIENT;
+                            if (this.purchaseFlow === i.MYSTERY_GIFT) return this.canGift ? T.GIFTABLE_RECIPIENT : T.NO_MASS_GIFTING;
                             var t = this.existingPurchases && this.existingPurchases.compatiblePurchases;
                             if (t) {
                                 var n = t.find(function(e) {
                                         return e.paymentProvider.toUpperCase() === E.G.PRIME
                                     }),
-                                    i = t.find(function(t) {
+                                    r = t.find(function(t) {
                                         return t.productType.toUpperCase() === E.V.CHANSUB && !!t.productTier && parseInt(e.shoppingCartItem.product.tier, 10) < parseInt(t.productTier, 10)
                                     }),
                                     a = t.find(function(t) {
@@ -11797,7 +11766,7 @@
                                         return e.paymentProvider.toUpperCase() === E.G.GOOGLE_IAB
                                     });
                                 if (n) return T.PRIME_UPGRADE;
-                                if (i) return T.TIER_DOWNGRADE;
+                                if (r) return T.TIER_DOWNGRADE;
                                 if (a) return o ? T.MOBILE_UPGRADE : T.TIER_UPGRADE
                             }
                             return !this.existingPurchases || this.existingPurchases && !this.existingPurchases.details && !this.existingPurchases.compatiblePurchases || this.existingPurchases.details && this.existingPurchases.details.state === E.W.INACTIVE ? T.NEW_PURCHASE : T.UNKNOWN
@@ -11922,14 +11891,14 @@
                     }
                 }), Object(f.a)([{
                     topic: function(e) {
-                        return Object(b.u)("" + (e.data.currentUser && e.data.currentUser.id))
+                        return Object(b.v)("" + (e.data.currentUser && e.data.currentUser.id))
                     },
-                    mapMessageTypesToProps: (it = {}, it[y.PubsubMessageType.PurchaseFulfillmentEvents] = "fulfillment", it)
+                    mapMessageTypesToProps: (rt = {}, rt[y.PubsubMessageType.PurchaseFulfillmentEvents] = "fulfillment", rt)
                 }]), Object(ne.b)("CheckoutPayments"))(lt);
             n.d(t, "a", function() {
                 return dt
             });
-            var dt = Object(i.connect)(function(e) {
+            var dt = Object(r.connect)(function(e) {
                 return {
                     isLoggedIn: Object(c.f)(e),
                     sessionUser: Object(c.e)(e)
@@ -11944,13 +11913,13 @@
         },
         WlZp: function(e, t, n) {
             "use strict";
-            var r = n("mrSG"),
-                i = n("q1tI"),
+            var i = n("mrSG"),
+                r = n("q1tI"),
                 a = function(e) {
                     function t() {
                         return null !== e && e.apply(this, arguments) || this
                     }
-                    return r.__extends(t, e), Object.defineProperty(t.prototype, "kaptchaIframeSrc", {
+                    return i.__extends(t, e), Object.defineProperty(t.prototype, "kaptchaIframeSrc", {
                         get: function() {
                             return "https://secure" + (this.props.isProduction ? "" : "var") + ".paymentech.com/kount/LogoHtm?m=300532&s=" + this.props.sessionId
                         },
@@ -11963,27 +11932,27 @@
                         enumerable: !0,
                         configurable: !0
                     }), t.prototype.render = function() {
-                        return i.createElement("iframe", {
+                        return r.createElement("iframe", {
                             width: "1",
                             height: "1",
                             scrolling: "no",
                             src: this.kaptchaIframeSrc
-                        }, i.createElement("img", {
+                        }, r.createElement("img", {
                             width: "137",
                             height: "33",
                             src: this.kaptchaImgSrc
                         }))
                     }, t
-                }(i.Component);
+                }(r.Component);
             n.d(t, "a", function() {
                 return a
             })
         },
         XE3n: function(e, t, n) {},
         YVj6: function(e, t, n) {
-            var r, i;
+            var i, r;
             ! function(a, o) {
-                r = [n("x0Ue")], void 0 === (i = function(e) {
+                i = [n("x0Ue")], void 0 === (r = function(e) {
                     return function(e, t) {
                         "use strict";
                         var n = {
@@ -12014,25 +11983,25 @@
                         }, n.handleEvent = function(e) {
                             var t = "on" + e.type;
                             this[t] && this[t](e)
-                        }, n.filterFindElements = function(e, r) {
-                            var i = [];
+                        }, n.filterFindElements = function(e, i) {
+                            var r = [];
                             return (e = n.makeArray(e)).forEach(function(e) {
                                 if (e instanceof HTMLElement)
-                                    if (r) {
-                                        t(e, r) && i.push(e);
-                                        for (var n = e.querySelectorAll(r), a = 0; a < n.length; a++) i.push(n[a])
-                                    } else i.push(e)
-                            }), i
+                                    if (i) {
+                                        t(e, i) && r.push(e);
+                                        for (var n = e.querySelectorAll(i), a = 0; a < n.length; a++) r.push(n[a])
+                                    } else r.push(e)
+                            }), r
                         }, n.debounceMethod = function(e, t, n) {
-                            var r = e.prototype[t],
-                                i = t + "Timeout";
+                            var i = e.prototype[t],
+                                r = t + "Timeout";
                             e.prototype[t] = function() {
-                                var e = this[i];
+                                var e = this[r];
                                 e && clearTimeout(e);
                                 var t = arguments,
                                     a = this;
-                                this[i] = setTimeout(function() {
-                                    r.apply(a, t), delete a[i]
+                                this[r] = setTimeout(function() {
+                                    i.apply(a, t), delete a[r]
                                 }, n || 100)
                             }
                         }, n.docReady = function(e) {
@@ -12043,10 +12012,10 @@
                                 return t + "-" + n
                             }).toLowerCase()
                         };
-                        var r = e.console;
-                        return n.htmlInit = function(t, i) {
+                        var i = e.console;
+                        return n.htmlInit = function(t, r) {
                             n.docReady(function() {
-                                var a = n.toDashed(i),
+                                var a = n.toDashed(r),
                                     o = "data-" + a,
                                     s = document.querySelectorAll("[" + o + "]"),
                                     c = document.querySelectorAll(".js-" + a),
@@ -12058,15 +12027,15 @@
                                     try {
                                         n = a && JSON.parse(a)
                                     } catch (t) {
-                                        return void(r && r.error("Error parsing " + o + " on " + e.className + ": " + t))
+                                        return void(i && i.error("Error parsing " + o + " on " + e.className + ": " + t))
                                     }
                                     var s = new t(e, n);
-                                    d && d.data(e, i, s)
+                                    d && d.data(e, r, s)
                                 })
                             })
                         }, n
                     }(a, e)
-                }.apply(t, r)) || (e.exports = i)
+                }.apply(t, i)) || (e.exports = r)
             }(window)
         },
         "ZAO/": function(e, t, n) {},
@@ -12084,122 +12053,122 @@
             n.d(t, "a", function() {
                 return o
             });
-            var r = n("mrSG"),
-                i = n("/7QA"),
+            var i = n("mrSG"),
+                r = n("/7QA"),
                 a = n("kRBY"),
                 o = function() {
                     function e() {}
                     return e.get = function(e, t, n) {
-                        return void 0 === t && (t = {}), void 0 === n && (n = {}), r.__awaiter(this, void 0, Promise, function() {
-                            return r.__generator(this, function(i) {
-                                switch (i.label) {
+                        return void 0 === t && (t = {}), void 0 === n && (n = {}), i.__awaiter(this, void 0, Promise, function() {
+                            return i.__generator(this, function(r) {
+                                switch (r.label) {
                                     case 0:
-                                        return [4, this.request(e, r.__assign({}, t, {
+                                        return [4, this.request(e, i.__assign({}, t, {
                                             method: "GET"
                                         }), n)];
                                     case 1:
-                                        return [2, i.sent()]
+                                        return [2, r.sent()]
                                 }
                             })
                         })
                     }, e.getOrThrow = function(e, t, n) {
-                        return void 0 === t && (t = {}), void 0 === n && (n = {}), r.__awaiter(this, void 0, Promise, function() {
-                            return r.__generator(this, function(i) {
-                                switch (i.label) {
+                        return void 0 === t && (t = {}), void 0 === n && (n = {}), i.__awaiter(this, void 0, Promise, function() {
+                            return i.__generator(this, function(r) {
+                                switch (r.label) {
                                     case 0:
-                                        return [4, this.requestOrThrow(e, r.__assign({}, t, {
+                                        return [4, this.requestOrThrow(e, i.__assign({}, t, {
                                             method: "GET"
                                         }), n)];
                                     case 1:
-                                        return [2, i.sent()]
+                                        return [2, r.sent()]
                                 }
                             })
                         })
                     }, e.put = function(e, t, n) {
-                        return void 0 === t && (t = {}), void 0 === n && (n = {}), r.__awaiter(this, void 0, Promise, function() {
-                            return r.__generator(this, function(i) {
-                                switch (i.label) {
+                        return void 0 === t && (t = {}), void 0 === n && (n = {}), i.__awaiter(this, void 0, Promise, function() {
+                            return i.__generator(this, function(r) {
+                                switch (r.label) {
                                     case 0:
-                                        return [4, this.request(e, r.__assign({}, t, {
+                                        return [4, this.request(e, i.__assign({}, t, {
                                             method: "PUT"
                                         }), n)];
                                     case 1:
-                                        return [2, i.sent()]
+                                        return [2, r.sent()]
                                 }
                             })
                         })
                     }, e.putOrThrow = function(e, t, n) {
-                        return void 0 === t && (t = {}), void 0 === n && (n = {}), r.__awaiter(this, void 0, Promise, function() {
-                            return r.__generator(this, function(i) {
-                                switch (i.label) {
+                        return void 0 === t && (t = {}), void 0 === n && (n = {}), i.__awaiter(this, void 0, Promise, function() {
+                            return i.__generator(this, function(r) {
+                                switch (r.label) {
                                     case 0:
-                                        return [4, this.requestOrThrow(e, r.__assign({}, t, {
+                                        return [4, this.requestOrThrow(e, i.__assign({}, t, {
                                             method: "PUT"
                                         }), n)];
                                     case 1:
-                                        return [2, i.sent()]
+                                        return [2, r.sent()]
                                 }
                             })
                         })
                     }, e.post = function(e, t, n) {
-                        return void 0 === t && (t = {}), void 0 === n && (n = {}), r.__awaiter(this, void 0, Promise, function() {
-                            return r.__generator(this, function(i) {
-                                switch (i.label) {
+                        return void 0 === t && (t = {}), void 0 === n && (n = {}), i.__awaiter(this, void 0, Promise, function() {
+                            return i.__generator(this, function(r) {
+                                switch (r.label) {
                                     case 0:
-                                        return [4, this.request(e, r.__assign({}, t, {
+                                        return [4, this.request(e, i.__assign({}, t, {
                                             method: "POST"
                                         }), n)];
                                     case 1:
-                                        return [2, i.sent()]
+                                        return [2, r.sent()]
                                 }
                             })
                         })
                     }, e.postOrThrow = function(e, t, n) {
-                        return void 0 === t && (t = {}), void 0 === n && (n = {}), r.__awaiter(this, void 0, Promise, function() {
-                            return r.__generator(this, function(i) {
-                                switch (i.label) {
+                        return void 0 === t && (t = {}), void 0 === n && (n = {}), i.__awaiter(this, void 0, Promise, function() {
+                            return i.__generator(this, function(r) {
+                                switch (r.label) {
                                     case 0:
-                                        return [4, this.requestOrThrow(e, r.__assign({}, t, {
+                                        return [4, this.requestOrThrow(e, i.__assign({}, t, {
                                             method: "POST"
                                         }), n)];
                                     case 1:
-                                        return [2, i.sent()]
+                                        return [2, r.sent()]
                                 }
                             })
                         })
                     }, e.delete = function(e, t, n) {
-                        return void 0 === t && (t = {}), void 0 === n && (n = {}), r.__awaiter(this, void 0, Promise, function() {
-                            return r.__generator(this, function(i) {
-                                switch (i.label) {
+                        return void 0 === t && (t = {}), void 0 === n && (n = {}), i.__awaiter(this, void 0, Promise, function() {
+                            return i.__generator(this, function(r) {
+                                switch (r.label) {
                                     case 0:
-                                        return [4, this.request(e, r.__assign({}, t, {
+                                        return [4, this.request(e, i.__assign({}, t, {
                                             method: "DELETE"
                                         }), n)];
                                     case 1:
-                                        return [2, i.sent()]
+                                        return [2, r.sent()]
                                 }
                             })
                         })
                     }, e.deleteOrThrow = function(e, t, n) {
-                        return void 0 === t && (t = {}), void 0 === n && (n = {}), r.__awaiter(this, void 0, Promise, function() {
-                            return r.__generator(this, function(i) {
-                                switch (i.label) {
+                        return void 0 === t && (t = {}), void 0 === n && (n = {}), i.__awaiter(this, void 0, Promise, function() {
+                            return i.__generator(this, function(r) {
+                                switch (r.label) {
                                     case 0:
-                                        return [4, this.requestOrThrow(e, r.__assign({}, t, {
+                                        return [4, this.requestOrThrow(e, i.__assign({}, t, {
                                             method: "DELETE"
                                         }), n)];
                                     case 1:
-                                        return [2, i.sent()]
+                                        return [2, r.sent()]
                                 }
                             })
                         })
                     }, e.request = function(e, t, n) {
-                        return void 0 === t && (t = {}), void 0 === n && (n = {}), r.__awaiter(this, void 0, Promise, function() {
-                            var i, a, o, s;
-                            return r.__generator(this, function(c) {
+                        return void 0 === t && (t = {}), void 0 === n && (n = {}), i.__awaiter(this, void 0, Promise, function() {
+                            var r, a, o, s;
+                            return i.__generator(this, function(c) {
                                 switch (c.label) {
                                     case 0:
-                                        return t = this.constructOptions(t, n), i = t.headers ? t.headers["Content-Type"] : void 0, a = this.serialize(t.body, i), o = r.__assign({}, t, {
+                                        return t = this.constructOptions(t, n), r = t.headers ? t.headers["Content-Type"] : void 0, a = this.serialize(t.body, r), o = i.__assign({}, t, {
                                             body: a
                                         }), [4, this._fetch(e, o)];
                                     case 1:
@@ -12210,17 +12179,17 @@
                             })
                         })
                     }, e.requestOrThrow = function(e, t, n) {
-                        return void 0 === t && (t = {}), void 0 === n && (n = {}), r.__awaiter(this, void 0, Promise, function() {
-                            var i;
-                            return r.__generator(this, function(a) {
+                        return void 0 === t && (t = {}), void 0 === n && (n = {}), i.__awaiter(this, void 0, Promise, function() {
+                            var r;
+                            return i.__generator(this, function(a) {
                                 switch (a.label) {
                                     case 0:
                                         return a.trys.push([0, 2, , 3]), [4, this.request(e, t, n)];
                                     case 1:
-                                        if ((i = a.sent()).requestError) throw i.requestError;
-                                        if (i.error) throw new Error("Error while sending legacy-api request: " + i.error.status + " - " + i.error.message);
-                                        return [2, r.__assign({}, i, {
-                                            body: i.body
+                                        if ((r = a.sent()).requestError) throw r.requestError;
+                                        if (r.error) throw new Error("Error while sending legacy-api request: " + r.error.status + " - " + r.error.message);
+                                        return [2, i.__assign({}, r, {
+                                            body: r.body
                                         })];
                                     case 2:
                                         throw a.sent();
@@ -12230,30 +12199,30 @@
                             })
                         })
                     }, e.getAPIURL = function(e) {
-                        return new URL(e, i.p.config.apiBaseURL)
+                        return new URL(e, r.p.config.apiBaseURL)
                     }, e.constructLegacyAPIResponse = function(e) {
-                        return r.__awaiter(this, void 0, Promise, function() {
-                            var t, n, i, a;
-                            return r.__generator(this, function(r) {
-                                switch (r.label) {
+                        return i.__awaiter(this, void 0, Promise, function() {
+                            var t, n, r, a;
+                            return i.__generator(this, function(i) {
+                                switch (i.label) {
                                     case 0:
                                         t = {
                                             status: e.status
-                                        }, r.label = 1;
+                                        }, i.label = 1;
                                     case 1:
-                                        return r.trys.push([1, 3, , 4]), [4, e.json()];
+                                        return i.trys.push([1, 3, , 4]), [4, e.json()];
                                     case 2:
-                                        return n = r.sent(), e.ok ? t.body = n : t.error = n, [3, 4];
+                                        return n = i.sent(), e.ok ? t.body = n : t.error = n, [3, 4];
                                     case 3:
-                                        return i = r.sent(), e.headers && e.headers.get && (a = e.headers.get("Content-Type")) && -1 !== a.indexOf("application/json") && (t.requestError = i), [3, 4];
+                                        return r = i.sent(), e.headers && e.headers.get && (a = e.headers.get("Content-Type")) && -1 !== a.indexOf("application/json") && (t.requestError = r), [3, 4];
                                     case 4:
                                         return [2, t]
                                 }
                             })
                         })
                     }, e._fetch = function(e, t) {
-                        return void 0 === t && (t = {}), r.__awaiter(this, void 0, Promise, function() {
-                            return r.__generator(this, function(n) {
+                        return void 0 === t && (t = {}), i.__awaiter(this, void 0, Promise, function() {
+                            return i.__generator(this, function(n) {
                                 switch (n.label) {
                                     case 0:
                                         return [4, fetch(this.getAPIURL(e).toString(), t)];
@@ -12264,26 +12233,26 @@
                         })
                     }, e.constructOptions = function(e, t) {
                         return e = Object.assign({}, e, {
-                            headers: r.__assign({}, this.getDefaultHeaders(e, t), e.headers)
+                            headers: i.__assign({}, this.getDefaultHeaders(e, t), e.headers)
                         })
                     }, e.serialize = function(e, t) {
                         return "application/json; charset=UTF-8" === t ? JSON.stringify(e) : "string" == typeof e ? e : e && FormData.prototype.isPrototypeOf(e) ? e : e ? (this.logger.error(new Error("Could not serialize this request body for the content-type provided."), "attempting to serialize object with a non-JSON content-type", {
                             contentType: t
                         }), null) : null
                     }, e.getDefaultHeaders = function(e, t) {
-                        var n = i.p.store.getState(),
-                            r = {
+                        var n = r.p.store.getState(),
+                            i = {
                                 Accept: "application/vnd.twitchtv.v" + (t.version || 5) + "+json; charset=UTF-8",
                                 "Accept-Language": "en-us",
-                                "Client-ID": i.p.config.legacyClientID,
+                                "Client-ID": r.p.config.legacyClientID,
                                 "X-Requested-With": "XMLHttpRequest"
                             };
-                        e.body && FormData.prototype.isPrototypeOf(e.body) || (r["Content-Type"] = "application/json; charset=UTF-8");
+                        e.body && FormData.prototype.isPrototypeOf(e.body) || (i["Content-Type"] = "application/json; charset=UTF-8");
                         var o = Object(a.e)(n);
-                        return o && (r.Authorization = "OAuth " + o.authToken, o.legacyCSRFToken && (r["Twitch-Api-Token"] = o.legacyCSRFToken)), t.excludeHeaders && t.excludeHeaders.forEach(function(e) {
-                            r[e] && delete r[e]
-                        }), r
-                    }, e.logger = i.p.logger.withCategory("legacy-api"), e
+                        return o && (i.Authorization = "OAuth " + o.authToken, o.legacyCSRFToken && (i["Twitch-Api-Token"] = o.legacyCSRFToken)), t.excludeHeaders && t.excludeHeaders.forEach(function(e) {
+                            i[e] && delete i[e]
+                        }), i
+                    }, e.logger = r.p.logger.withCategory("legacy-api"), e
                 }()
         },
         bOWA: function(e, t, n) {
@@ -12305,30 +12274,30 @@
             Object.defineProperty(t, "__esModule", {
                 value: !0
             });
-            var r = Object.assign || function(e) {
+            var i = Object.assign || function(e) {
                     for (var t = 1; t < arguments.length; t++) {
                         var n = arguments[t];
-                        for (var r in n) Object.prototype.hasOwnProperty.call(n, r) && (e[r] = n[r])
+                        for (var i in n) Object.prototype.hasOwnProperty.call(n, i) && (e[i] = n[i])
                     }
                     return e
                 },
-                i = function() {
+                r = function() {
                     return function(e, t) {
                         if (Array.isArray(e)) return e;
                         if (Symbol.iterator in Object(e)) return function(e, t) {
                             var n = [],
-                                r = !0,
-                                i = !1,
+                                i = !0,
+                                r = !1,
                                 a = void 0;
                             try {
-                                for (var o, s = e[Symbol.iterator](); !(r = (o = s.next()).done) && (n.push(o.value), !t || n.length !== t); r = !0);
+                                for (var o, s = e[Symbol.iterator](); !(i = (o = s.next()).done) && (n.push(o.value), !t || n.length !== t); i = !0);
                             } catch (e) {
-                                i = !0, a = e
+                                r = !0, a = e
                             } finally {
                                 try {
-                                    !r && s.return && s.return()
+                                    !i && s.return && s.return()
                                 } finally {
-                                    if (i) throw a
+                                    if (r) throw a
                                 }
                             }
                             return n
@@ -12339,12 +12308,12 @@
                 a = function() {
                     function e(e, t) {
                         for (var n = 0; n < t.length; n++) {
-                            var r = t[n];
-                            r.enumerable = r.enumerable || !1, r.configurable = !0, "value" in r && (r.writable = !0), Object.defineProperty(e, r.key, r)
+                            var i = t[n];
+                            i.enumerable = i.enumerable || !1, i.configurable = !0, "value" in i && (i.writable = !0), Object.defineProperty(e, i.key, i)
                         }
                     }
-                    return function(t, n, r) {
-                        return n && e(t.prototype, n), r && e(t, r), t
+                    return function(t, n, i) {
+                        return n && e(t.prototype, n), i && e(t, i), t
                     }
                 }();
             t.default = function(e) {
@@ -12362,9 +12331,9 @@
                         }(this, (n.__proto__ || Object.getPrototypeOf(n)).call(this, e));
                         return t.handleStart = function(e) {
                             var n = t.props,
-                                r = n.distance,
-                                i = n.shouldCancelStart;
-                            if (2 === e.button || i(e)) return !1;
+                                i = n.distance,
+                                r = n.shouldCancelStart;
+                            if (2 === e.button || r(e)) return !1;
                             t._touched = !0, t._pos = {
                                 x: e.pageX,
                                 y: e.pageY
@@ -12383,7 +12352,7 @@
                                 t.manager.active = {
                                     index: c,
                                     collection: l
-                                }, "a" === e.target.tagName.toLowerCase() && e.preventDefault(), r || (0 === t.props.pressDelay ? t.handlePress(e) : t.pressTimer = setTimeout(function() {
+                                }, "a" === e.target.tagName.toLowerCase() && e.preventDefault(), i || (0 === t.props.pressDelay ? t.handlePress(e) : t.pressTimer = setTimeout(function() {
                                     return t.handlePress(e)
                                 }, t.props.pressDelay))
                             }
@@ -12391,15 +12360,15 @@
                             return e.sortableInfo.manager === t.manager
                         }, t.handleMove = function(e) {
                             var n = t.props,
-                                r = n.distance,
-                                i = n.pressThreshold;
+                                i = n.distance,
+                                r = n.pressThreshold;
                             if (!t.state.sorting && t._touched) {
                                 t._delta = {
                                     x: t._pos.x - e.pageX,
                                     y: t._pos.y - e.pageY
                                 };
                                 var a = Math.abs(t._delta.x) + Math.abs(t._delta.y);
-                                r || i && !(i && a >= i) ? r && a >= r && t.manager.isActive() && t.handlePress(e) : (clearTimeout(t.cancelTimer), t.cancelTimer = setTimeout(t.cancel, 0))
+                                i || r && !(r && a >= r) ? i && a >= i && t.manager.isActive() && t.handlePress(e) : (clearTimeout(t.cancelTimer), t.cancelTimer = setTimeout(t.cancel, 0))
                             }
                         }, t.handleEnd = function() {
                             var e = t.props.distance;
@@ -12409,13 +12378,13 @@
                         }, t.handlePress = function(e) {
                             var n = t.manager.getActive();
                             if (n) {
-                                var r = t.props,
-                                    i = r.axis,
-                                    a = r.getHelperDimensions,
-                                    o = r.helperClass,
-                                    s = r.hideSortableGhost,
-                                    c = r.onSortStart,
-                                    l = r.useWindowAsScrollContainer,
+                                var i = t.props,
+                                    r = i.axis,
+                                    a = i.getHelperDimensions,
+                                    o = i.helperClass,
+                                    s = i.hideSortableGhost,
+                                    c = i.onSortStart,
+                                    l = i.useWindowAsScrollContainer,
                                     u = n.node,
                                     d = n.collection,
                                     m = u.sortableInfo.index,
@@ -12430,8 +12399,8 @@
                                     x: t.margin.left + t.margin.right,
                                     y: Math.max(t.margin.top, t.margin.bottom)
                                 }, t.boundingClientRect = u.getBoundingClientRect(), t.containerBoundingRect = y, t.index = m, t.newIndex = m, t.axis = {
-                                    x: i.indexOf("x") >= 0,
-                                    y: i.indexOf("y") >= 0
+                                    x: r.indexOf("x") >= 0,
+                                    y: r.indexOf("y") >= 0
                                 }, t.offsetEdge = t.getEdgeOffset(u), t.initialOffset = t.getOffset(e), t.initialScroll = {
                                     top: t.scrollContainer.scrollTop,
                                     left: t.scrollContainer.scrollLeft
@@ -12463,14 +12432,14 @@
                             e.preventDefault(), t.updatePosition(e), t.animateNodes(), t.autoscroll(), n && n(e)
                         }, t.handleSortEnd = function(e) {
                             var n = t.props,
-                                r = n.hideSortableGhost,
-                                i = n.onSortEnd,
+                                i = n.hideSortableGhost,
+                                r = n.onSortEnd,
                                 a = t.manager.active.collection;
                             t.listenerNode && (p.events.move.forEach(function(e) {
                                 return t.listenerNode.removeEventListener(e, t.handleSortMove)
                             }), p.events.end.forEach(function(e) {
                                 return t.listenerNode.removeEventListener(e, t.handleSortEnd)
-                            })), t.helper.parentNode.removeChild(t.helper), r && t.sortableGhost && (t.sortableGhost.style.visibility = "", t.sortableGhost.style.opacity = "");
+                            })), t.helper.parentNode.removeChild(t.helper), i && t.sortableGhost && (t.sortableGhost.style.visibility = "", t.sortableGhost.style.opacity = "");
                             for (var o = t.manager.refs[a], s = 0, c = o.length; s < c; s++) {
                                 var l = o[s],
                                     u = l.node;
@@ -12479,7 +12448,7 @@
                             clearInterval(t.autoscrollInterval), t.autoscrollInterval = null, t.manager.active = null, t.setState({
                                 sorting: !1,
                                 sortingIndex: null
-                            }), "function" == typeof i && i({
+                            }), "function" == typeof r && r({
                                 oldIndex: t.index,
                                 newIndex: t.newIndex,
                                 collection: a
@@ -12490,19 +12459,19 @@
                                     x: 0,
                                     y: 0
                                 },
-                                r = {
+                                i = {
                                     x: 1,
                                     y: 1
                                 },
-                                i = {
+                                r = {
                                     x: 10,
                                     y: 10
                                 };
-                            e.y >= t.maxTranslate.y - t.height / 2 ? (n.y = 1, r.y = i.y * Math.abs((t.maxTranslate.y - t.height / 2 - e.y) / t.height)) : e.x >= t.maxTranslate.x - t.width / 2 ? (n.x = 1, r.x = i.x * Math.abs((t.maxTranslate.x - t.width / 2 - e.x) / t.width)) : e.y <= t.minTranslate.y + t.height / 2 ? (n.y = -1, r.y = i.y * Math.abs((e.y - t.height / 2 - t.minTranslate.y) / t.height)) : e.x <= t.minTranslate.x + t.width / 2 && (n.x = -1, r.x = i.x * Math.abs((e.x - t.width / 2 - t.minTranslate.x) / t.width)), t.autoscrollInterval && (clearInterval(t.autoscrollInterval), t.autoscrollInterval = null, t.isAutoScrolling = !1), 0 === n.x && 0 === n.y || (t.autoscrollInterval = setInterval(function() {
+                            e.y >= t.maxTranslate.y - t.height / 2 ? (n.y = 1, i.y = r.y * Math.abs((t.maxTranslate.y - t.height / 2 - e.y) / t.height)) : e.x >= t.maxTranslate.x - t.width / 2 ? (n.x = 1, i.x = r.x * Math.abs((t.maxTranslate.x - t.width / 2 - e.x) / t.width)) : e.y <= t.minTranslate.y + t.height / 2 ? (n.y = -1, i.y = r.y * Math.abs((e.y - t.height / 2 - t.minTranslate.y) / t.height)) : e.x <= t.minTranslate.x + t.width / 2 && (n.x = -1, i.x = r.x * Math.abs((e.x - t.width / 2 - t.minTranslate.x) / t.width)), t.autoscrollInterval && (clearInterval(t.autoscrollInterval), t.autoscrollInterval = null, t.isAutoScrolling = !1), 0 === n.x && 0 === n.y || (t.autoscrollInterval = setInterval(function() {
                                 t.isAutoScrolling = !0;
                                 var e = {
-                                    left: 1 * r.x * n.x,
-                                    top: 1 * r.y * n.y
+                                    left: 1 * i.x * n.x,
+                                    top: 1 * i.y * n.y
                                 };
                                 t.scrollContainer.scrollTop += e.top, t.scrollContainer.scrollLeft += e.left, t.translate.x += e.left, t.translate.y += e.top, t.animateNodes()
                             }, 5))
@@ -12535,9 +12504,9 @@
                             var e = this,
                                 t = this.props,
                                 n = t.getContainer,
-                                r = t.useWindowAsScrollContainer,
-                                i = this.props.contentWindow || window;
-                            this.container = "function" == typeof n ? n(this.getWrappedInstance()) : (0, l.findDOMNode)(this), this.document = this.container.ownerDocument || document, this.scrollContainer = r ? this.document.body : this.container, this.contentWindow = "function" == typeof i ? i() : i;
+                                i = t.useWindowAsScrollContainer,
+                                r = this.props.contentWindow || window;
+                            this.container = "function" == typeof n ? n(this.getWrappedInstance()) : (0, l.findDOMNode)(this), this.document = this.container.ownerDocument || document, this.scrollContainer = i ? this.document.body : this.container, this.contentWindow = "function" == typeof r ? r() : r;
                             var a = function(t) {
                                 e.events.hasOwnProperty(t) && p.events[t].forEach(function(n) {
                                     return e.container.addEventListener(n, e.events[t], !1)
@@ -12585,22 +12554,22 @@
                             var e = this.props.lockOffset;
                             Array.isArray(e) || (e = [e, e]), (0, u.default)(2 === e.length, "lockOffset prop of SortableContainer should be a single value or an array of exactly two values. Given %s", e);
                             var t = e,
-                                n = i(t, 2),
-                                r = n[0],
+                                n = r(t, 2),
+                                i = n[0],
                                 a = n[1];
-                            return [this.getLockPixelOffset(r), this.getLockPixelOffset(a)]
+                            return [this.getLockPixelOffset(i), this.getLockPixelOffset(a)]
                         }
                     }, {
                         key: "getLockPixelOffset",
                         value: function(e) {
                             var t = e,
                                 n = e,
-                                r = "px";
+                                i = "px";
                             if ("string" == typeof e) {
-                                var i = /^[+-]?\d*(?:\.\d*)?(px|%)$/.exec(e);
-                                (0, u.default)(null !== i, 'lockOffset value should be a number or a string of a number followed by "px" or "%". Given %s', e), t = n = parseFloat(e), r = i[1]
+                                var r = /^[+-]?\d*(?:\.\d*)?(px|%)$/.exec(e);
+                                (0, u.default)(null !== r, 'lockOffset value should be a number or a string of a number followed by "px" or "%". Given %s', e), t = n = parseFloat(e), i = r[1]
                             }
-                            return (0, u.default)(isFinite(t) && isFinite(n), "lockOffset value should be a finite. Given %s", e), "%" === r && (t = t * this.width / 100, n = n * this.height / 100), {
+                            return (0, u.default)(isFinite(t) && isFinite(n), "lockOffset value should be a finite. Given %s", e), "%" === i && (t = t * this.width / 100, n = n * this.height / 100), {
                                 x: t,
                                 y: n
                             }
@@ -12610,15 +12579,15 @@
                         value: function(e) {
                             var t = this.props,
                                 n = t.lockAxis,
-                                r = t.lockToContainerEdges,
+                                i = t.lockToContainerEdges,
                                 a = this.getOffset(e),
                                 o = {
                                     x: a.x - this.initialOffset.x,
                                     y: a.y - this.initialOffset.y
                                 };
-                            if (o.y -= window.pageYOffset - this.initialWindowScroll.top, o.x -= window.pageXOffset - this.initialWindowScroll.left, this.translate = o, r) {
+                            if (o.y -= window.pageYOffset - this.initialWindowScroll.top, o.x -= window.pageXOffset - this.initialWindowScroll.left, this.translate = o, i) {
                                 var s = this.getLockPixelOffsets(),
-                                    c = i(s, 2),
+                                    c = r(s, 2),
                                     l = c[0],
                                     u = c[1],
                                     d = {
@@ -12639,22 +12608,22 @@
                             var e = this.props,
                                 t = e.transitionDuration,
                                 n = e.hideSortableGhost,
-                                r = this.manager.getOrderedRefs(),
-                                i = {
+                                i = this.manager.getOrderedRefs(),
+                                r = {
                                     left: this.scrollContainer.scrollLeft - this.initialScroll.left,
                                     top: this.scrollContainer.scrollTop - this.initialScroll.top
                                 },
                                 a = {
-                                    left: this.offsetEdge.left + this.translate.x + i.left,
-                                    top: this.offsetEdge.top + this.translate.y + i.top
+                                    left: this.offsetEdge.left + this.translate.x + r.left,
+                                    top: this.offsetEdge.top + this.translate.y + r.top
                                 },
                                 o = {
                                     top: window.pageYOffset - this.initialWindowScroll.top,
                                     left: window.pageXOffset - this.initialWindowScroll.left
                                 };
                             this.newIndex = null;
-                            for (var s = 0, c = r.length; s < c; s++) {
-                                var l = r[s].node,
+                            for (var s = 0, c = i.length; s < c; s++) {
+                                var l = i[s].node,
                                     u = l.sortableInfo.index,
                                     d = l.offsetWidth,
                                     m = l.offsetHeight,
@@ -12666,10 +12635,10 @@
                                         x: 0,
                                         y: 0
                                     },
-                                    y = r[s].edgeOffset;
-                                y || (r[s].edgeOffset = y = this.getEdgeOffset(l));
-                                var g = s < r.length - 1 && r[s + 1],
-                                    b = s > 0 && r[s - 1];
+                                    y = i[s].edgeOffset;
+                                y || (i[s].edgeOffset = y = this.getEdgeOffset(l));
+                                var g = s < i.length - 1 && i[s + 1],
+                                    b = s > 0 && i[s - 1];
                                 g && !g.edgeOffset && (g.edgeOffset = this.getEdgeOffset(g.node)), u !== this.index ? (t && (l.style[p.vendorPrefix + "TransitionDuration"] = t + "ms"), this.axis.x ? this.axis.y ? u < this.index && (a.left + o.left - h.width <= y.left && a.top + o.top <= y.top + h.height || a.top + o.top + h.height <= y.top) ? (f.x = this.width + this.marginOffset.x, y.left + f.x > this.containerBoundingRect.width - h.width && (f.x = g.edgeOffset.left - y.left, f.y = g.edgeOffset.top - y.top), null === this.newIndex && (this.newIndex = u)) : u > this.index && (a.left + o.left + h.width >= y.left && a.top + o.top + h.height >= y.top || a.top + o.top + h.height >= y.top + m) && (f.x = -(this.width + this.marginOffset.x), y.left + f.x < this.containerBoundingRect.left + h.width && (f.x = b.edgeOffset.left - y.left, f.y = b.edgeOffset.top - y.top), this.newIndex = u) : u > this.index && a.left + o.left + h.width >= y.left ? (f.x = -(this.width + this.marginOffset.x), this.newIndex = u) : u < this.index && a.left + o.left <= y.left + h.width && (f.x = this.width + this.marginOffset.x, null == this.newIndex && (this.newIndex = u)) : this.axis.y && (u > this.index && a.top + o.top + h.height >= y.top ? (f.y = -(this.height + this.marginOffset.y), this.newIndex = u) : u < this.index && a.top + o.top <= y.top + h.height && (f.y = this.height + this.marginOffset.y, null == this.newIndex && (this.newIndex = u))), l.style[p.vendorPrefix + "Transform"] = "translate3d(" + f.x + "px," + f.y + "px,0)") : n && (this.sortableGhost = l, l.style.visibility = "hidden", l.style.opacity = 0)
                             }
                             null == this.newIndex && (this.newIndex = this.index)
@@ -12683,7 +12652,7 @@
                         key: "render",
                         value: function() {
                             var t = m.withRef ? "wrappedInstance" : null;
-                            return s.default.createElement(e, r({
+                            return s.default.createElement(e, i({
                                 ref: t
                             }, (0, p.omit)(this.props, "contentWindow", "useWindowAsScrollContainer", "distance", "helperClass", "hideSortableGhost", "transitionDuration", "useDragHandle", "pressDelay", "pressThreshold", "shouldCancelStart", "onSortStart", "onSortMove", "onSortEnd", "axis", "lockAxis", "lockOffset", "lockToContainerEdges", "getContainer", "getHelperDimensions")))
                         }
@@ -12754,7 +12723,7 @@
             }
         },
         hNNL: function(e, t, n) {
-            var r, i, a;
+            var i, r, a;
             /*!
              * Masonry v4.2.0
              * Cascading grid layout library
@@ -12762,109 +12731,109 @@
              * MIT License
              * by David DeSandro
              */
-            window, i = [n("Hy43"), n("QK1G")], void 0 === (a = "function" == typeof(r = function(e, t) {
+            window, r = [n("Hy43"), n("QK1G")], void 0 === (a = "function" == typeof(i = function(e, t) {
                 "use strict";
                 var n = e.create("masonry");
                 n.compatOptions.fitWidth = "isFitWidth";
-                var r = n.prototype;
-                return r._resetLayout = function() {
+                var i = n.prototype;
+                return i._resetLayout = function() {
                     this.getSize(), this._getMeasurement("columnWidth", "outerWidth"), this._getMeasurement("gutter", "outerWidth"), this.measureColumns(), this.colYs = [];
                     for (var e = 0; e < this.cols; e++) this.colYs.push(0);
                     this.maxY = 0, this.horizontalColIndex = 0
-                }, r.measureColumns = function() {
+                }, i.measureColumns = function() {
                     if (this.getContainerWidth(), !this.columnWidth) {
                         var e = this.items[0],
                             n = e && e.element;
                         this.columnWidth = n && t(n).outerWidth || this.containerWidth
                     }
-                    var r = this.columnWidth += this.gutter,
-                        i = this.containerWidth + this.gutter,
-                        a = i / r,
-                        o = r - i % r;
+                    var i = this.columnWidth += this.gutter,
+                        r = this.containerWidth + this.gutter,
+                        a = r / i,
+                        o = i - r % i;
                     a = Math[o && o < 1 ? "round" : "floor"](a), this.cols = Math.max(a, 1)
-                }, r.getContainerWidth = function() {
+                }, i.getContainerWidth = function() {
                     var e = this._getOption("fitWidth") ? this.element.parentNode : this.element,
                         n = t(e);
                     this.containerWidth = n && n.innerWidth
-                }, r._getItemLayoutPosition = function(e) {
+                }, i._getItemLayoutPosition = function(e) {
                     e.getSize();
                     var t = e.size.outerWidth % this.columnWidth,
                         n = Math[t && t < 1 ? "round" : "ceil"](e.size.outerWidth / this.columnWidth);
                     n = Math.min(n, this.cols);
-                    for (var r = this[this.options.horizontalOrder ? "_getHorizontalColPosition" : "_getTopColPosition"](n, e), i = {
-                            x: this.columnWidth * r.col,
-                            y: r.y
-                        }, a = r.y + e.size.outerHeight, o = n + r.col, s = r.col; s < o; s++) this.colYs[s] = a;
-                    return i
-                }, r._getTopColPosition = function(e) {
+                    for (var i = this[this.options.horizontalOrder ? "_getHorizontalColPosition" : "_getTopColPosition"](n, e), r = {
+                            x: this.columnWidth * i.col,
+                            y: i.y
+                        }, a = i.y + e.size.outerHeight, o = n + i.col, s = i.col; s < o; s++) this.colYs[s] = a;
+                    return r
+                }, i._getTopColPosition = function(e) {
                     var t = this._getTopColGroup(e),
                         n = Math.min.apply(Math, t);
                     return {
                         col: t.indexOf(n),
                         y: n
                     }
-                }, r._getTopColGroup = function(e) {
+                }, i._getTopColGroup = function(e) {
                     if (e < 2) return this.colYs;
-                    for (var t = [], n = this.cols + 1 - e, r = 0; r < n; r++) t[r] = this._getColGroupY(r, e);
+                    for (var t = [], n = this.cols + 1 - e, i = 0; i < n; i++) t[i] = this._getColGroupY(i, e);
                     return t
-                }, r._getColGroupY = function(e, t) {
+                }, i._getColGroupY = function(e, t) {
                     if (t < 2) return this.colYs[e];
                     var n = this.colYs.slice(e, e + t);
                     return Math.max.apply(Math, n)
-                }, r._getHorizontalColPosition = function(e, t) {
+                }, i._getHorizontalColPosition = function(e, t) {
                     var n = this.horizontalColIndex % this.cols;
                     n = e > 1 && n + e > this.cols ? 0 : n;
-                    var r = t.size.outerWidth && t.size.outerHeight;
-                    return this.horizontalColIndex = r ? n + e : this.horizontalColIndex, {
+                    var i = t.size.outerWidth && t.size.outerHeight;
+                    return this.horizontalColIndex = i ? n + e : this.horizontalColIndex, {
                         col: n,
                         y: this._getColGroupY(n, e)
                     }
-                }, r._manageStamp = function(e) {
+                }, i._manageStamp = function(e) {
                     var n = t(e),
-                        r = this._getElementOffset(e),
-                        i = this._getOption("originLeft") ? r.left : r.right,
-                        a = i + n.outerWidth,
-                        o = Math.floor(i / this.columnWidth);
+                        i = this._getElementOffset(e),
+                        r = this._getOption("originLeft") ? i.left : i.right,
+                        a = r + n.outerWidth,
+                        o = Math.floor(r / this.columnWidth);
                     o = Math.max(0, o);
                     var s = Math.floor(a / this.columnWidth);
                     s -= a % this.columnWidth ? 0 : 1, s = Math.min(this.cols - 1, s);
-                    for (var c = (this._getOption("originTop") ? r.top : r.bottom) + n.outerHeight, l = o; l <= s; l++) this.colYs[l] = Math.max(c, this.colYs[l])
-                }, r._getContainerSize = function() {
+                    for (var c = (this._getOption("originTop") ? i.top : i.bottom) + n.outerHeight, l = o; l <= s; l++) this.colYs[l] = Math.max(c, this.colYs[l])
+                }, i._getContainerSize = function() {
                     this.maxY = Math.max.apply(Math, this.colYs);
                     var e = {
                         height: this.maxY
                     };
                     return this._getOption("fitWidth") && (e.width = this._getContainerFitWidth()), e
-                }, r._getContainerFitWidth = function() {
+                }, i._getContainerFitWidth = function() {
                     for (var e = 0, t = this.cols; --t && 0 === this.colYs[t];) e++;
                     return (this.cols - e) * this.columnWidth - this.gutter
-                }, r.needsResizeLayout = function() {
+                }, i.needsResizeLayout = function() {
                     var e = this.containerWidth;
                     return this.getContainerWidth(), e != this.containerWidth
                 }, n
-            }) ? r.apply(t, i) : r) || (e.exports = a)
+            }) ? i.apply(t, r) : i) || (e.exports = a)
         },
         hk6T: function(e, t, n) {
             "use strict";
             Object.defineProperty(t, "__esModule", {
                 value: !0
             });
-            var r = Object.assign || function(e) {
+            var i = Object.assign || function(e) {
                     for (var t = 1; t < arguments.length; t++) {
                         var n = arguments[t];
-                        for (var r in n) Object.prototype.hasOwnProperty.call(n, r) && (e[r] = n[r])
+                        for (var i in n) Object.prototype.hasOwnProperty.call(n, i) && (e[i] = n[i])
                     }
                     return e
                 },
-                i = function() {
+                r = function() {
                     function e(e, t) {
                         for (var n = 0; n < t.length; n++) {
-                            var r = t[n];
-                            r.enumerable = r.enumerable || !1, r.configurable = !0, "value" in r && (r.writable = !0), Object.defineProperty(e, r.key, r)
+                            var i = t[n];
+                            i.enumerable = i.enumerable || !1, i.configurable = !0, "value" in i && (i.writable = !0), Object.defineProperty(e, i.key, i)
                         }
                     }
-                    return function(t, n, r) {
-                        return n && e(t.prototype, n), r && e(t, r), t
+                    return function(t, n, i) {
+                        return n && e(t.prototype, n), i && e(t, i), t
                     }
                 }();
             t.default = function(e) {
@@ -12891,14 +12860,14 @@
                                 configurable: !0
                             }
                         }), t && (Object.setPrototypeOf ? Object.setPrototypeOf(e, t) : e.__proto__ = t)
-                    }(n, t), i(n, [{
+                    }(n, t), r(n, [{
                         key: "componentDidMount",
                         value: function() {
                             var e = this.props,
                                 t = e.collection,
                                 n = e.disabled,
-                                r = e.index;
-                            n || this.setDraggable(t, r)
+                                i = e.index;
+                            n || this.setDraggable(t, i)
                         }
                     }, {
                         key: "componentWillReceiveProps",
@@ -12906,8 +12875,8 @@
                             if (this.props.index !== e.index && this.node && (this.node.sortableInfo.index = e.index), this.props.disabled !== e.disabled) {
                                 var t = e.collection,
                                     n = e.disabled,
-                                    r = e.index;
-                                n ? this.removeDraggable(t) : this.setDraggable(t, r)
+                                    i = e.index;
+                                n ? this.removeDraggable(t) : this.setDraggable(t, i)
                             } else this.props.collection !== e.collection && (this.removeDraggable(this.props.collection), this.setDraggable(e.collection, e.index))
                         }
                     }, {
@@ -12944,7 +12913,7 @@
                         key: "render",
                         value: function() {
                             var t = d.withRef ? "wrappedInstance" : null;
-                            return o.default.createElement(e, r({
+                            return o.default.createElement(e, i({
                                 ref: t
                             }, (0, u.omit)(this.props, "collection", "disabled", "index")))
                         }
@@ -13136,14 +13105,14 @@
             Object.defineProperty(t, "__esModule", {
                 value: !0
             }), t.arrayMove = function(e, t, n) {
-                var r = e.slice(0);
-                if (n >= r.length)
-                    for (var i = n - r.length; 1 + i--;) r.push(void 0);
-                return r.splice(n, 0, r.splice(t, 1)[0]), r
+                var i = e.slice(0);
+                if (n >= i.length)
+                    for (var r = n - i.length; 1 + r--;) i.push(void 0);
+                return i.splice(n, 0, i.splice(t, 1)[0]), i
             }, t.omit = function(e) {
-                for (var t = arguments.length, n = Array(t > 1 ? t - 1 : 0), r = 1; r < t; r++) n[r - 1] = arguments[r];
-                return Object.keys(e).reduce(function(t, r) {
-                    return -1 === n.indexOf(r) && (t[r] = e[r]), t
+                for (var t = arguments.length, n = Array(t > 1 ? t - 1 : 0), i = 1; i < t; i++) n[i - 1] = arguments[i];
+                return Object.keys(e).reduce(function(t, i) {
+                    return -1 === n.indexOf(i) && (t[i] = e[i]), t
                 }, {})
             }, t.closest = function(e, t) {
                 for (; e;) {
@@ -13157,10 +13126,10 @@
             }, t.getElementMargin = function(e) {
                 var t = window.getComputedStyle(e);
                 return {
-                    top: r(t.marginTop),
-                    right: r(t.marginRight),
-                    bottom: r(t.marginBottom),
-                    left: r(t.marginLeft)
+                    top: i(t.marginTop),
+                    right: i(t.marginRight),
+                    bottom: i(t.marginBottom),
+                    left: i(t.marginLeft)
                 }
             }, t.provideDisplayName = function(e, t) {
                 var n = t.displayName || t.name;
@@ -13182,7 +13151,7 @@
                 }
             }();
 
-            function r(e) {
+            function i(e) {
                 return "px" === e.substr(-2) ? parseFloat(e) : 0
             }
         },
@@ -13190,16 +13159,16 @@
         mIie: function(e, t, n) {},
         mb7O: function(e, t, n) {
             "use strict";
-            var r = n("q1tI"),
-                i = n("Ue10"),
+            var i = n("q1tI"),
+                r = n("Ue10"),
                 a = (n("bfgy"), function(e) {
-                    return r.createElement(i.Xa, {
+                    return i.createElement(r.Xa, {
                         className: "ticket-wrapper__container",
                         "data-a-target": "js-test-ticket-container",
                         margin: {
                             bottom: 2
                         }
-                    }, r.createElement(i.G, {
+                    }, i.createElement(r.G, {
                         elevation: 1
                     }, e.children))
                 }),
@@ -13215,9 +13184,9 @@
             e.exports = n.p + "assets/xsolla_1x-920aa1ba72411e5fe0aa.png"
         },
         pQUg: function(e, t, n) {
-            var r = "undefined" != typeof window,
-                i = r ? window.Masonry || n("hNNL") : null,
-                a = r ? n("vX6Q") : null,
+            var i = "undefined" != typeof window,
+                r = i ? window.Masonry || n("hNNL") : null,
+                a = i ? n("vX6Q") : null,
                 o = n("3OWR"),
                 s = n("7sSR"),
                 c = n("sEfC"),
@@ -13254,7 +13223,7 @@
                         }
                     },
                     initializeMasonry: function(e) {
-                        this.masonry && !e || (this.masonry = new i(this.masonryContainer, this.props.options), this.props.onLayoutComplete && this.masonry.on("layoutComplete", this.props.onLayoutComplete), this.props.onRemoveComplete && this.masonry.on("removeComplete", this.props.onRemoveComplete), this.latestKnownDomChildren = this.getCurrentDomChildren())
+                        this.masonry && !e || (this.masonry = new r(this.masonryContainer, this.props.options), this.props.onLayoutComplete && this.masonry.on("layoutComplete", this.props.onLayoutComplete), this.props.onRemoveComplete && this.masonry.on("removeComplete", this.props.onRemoveComplete), this.latestKnownDomChildren = this.getCurrentDomChildren())
                     },
                     getCurrentDomChildren: function() {
                         var e = this.masonryContainer,
@@ -13268,27 +13237,27 @@
                             });
                         t.length !== this.latestKnownDomChildren.length && (e = !0);
                         var n = this.getCurrentDomChildren(),
-                            r = t.filter(function(e) {
+                            i = t.filter(function(e) {
                                 return !~n.indexOf(e)
                             }),
-                            i = n.filter(function(e) {
+                            r = n.filter(function(e) {
                                 return !~t.indexOf(e)
                             }),
                             a = 0,
-                            o = i.filter(function(e) {
+                            o = r.filter(function(e) {
                                 var t = a === n.indexOf(e);
                                 return t && a++, t
                             }),
-                            s = i.filter(function(e) {
+                            s = r.filter(function(e) {
                                 return -1 === o.indexOf(e)
                             }),
                             c = [];
-                        return 0 === r.length && (c = t.filter(function(e, t) {
+                        return 0 === i.length && (c = t.filter(function(e, t) {
                             return t !== n.indexOf(e)
                         })), this.latestKnownDomChildren = n, {
                             old: t,
                             new: n,
-                            removed: r,
+                            removed: i,
                             appended: s,
                             prepended: o,
                             moved: c,
@@ -13349,7 +13318,7 @@
                     error: t
                 };
                 if (!e && window.console) {
-                    var r = function(e, t) {
+                    var i = function(e, t) {
                         e[t] = function() {
                             var e = console[t];
                             if (e.apply) e.apply(console, arguments);
@@ -13357,7 +13326,7 @@
                                 for (var n = 0; n < arguments.length; n++) e(arguments[n])
                         }
                     };
-                    r(n, "log"), r(n, "warn"), r(n, "error")
+                    i(n, "log"), i(n, "warn"), i(n, "error")
                 }
                 return n
             }
@@ -13540,15 +13509,15 @@
         sL9O: function(e, t, n) {},
         sV2v: function(e, t, n) {
             "use strict";
-            var r = n("mrSG"),
-                i = n("q1tI"),
+            var i = n("mrSG"),
+                r = n("q1tI"),
                 a = n("fvjX"),
                 o = n("GnwI"),
                 s = function(e) {
                     function t() {
                         return null !== e && e.apply(this, arguments) || this
                     }
-                    return r.__extends(t, e), t.prototype.componentDidMount = function() {
+                    return i.__extends(t, e), t.prototype.componentDidMount = function() {
                         if (!document.querySelector("#recurly-script")) {
                             var e = document.createElement("script");
                             e.src = "https://js.recurly.com/v4/recurly.js", e.async = !0, e.id = "recurly-script", document.body.appendChild(e)
@@ -13556,7 +13525,7 @@
                     }, t.prototype.render = function() {
                         return null
                     }, t
-                }(i.Component),
+                }(r.Component),
                 c = Object(a.compose)(Object(o.b)("RecurlyScript", {
                     autoReportInteractive: !0
                 }))(s);
@@ -13742,8 +13711,8 @@
             "use strict";
             (e.exports = {}).forEach = function(e, t) {
                 for (var n = 0; n < e.length; n++) {
-                    var r = t(e[n]);
-                    if (r) return r
+                    var i = t(e[n]);
+                    if (i) return i
                 }
             }
         },
@@ -13757,7 +13726,7 @@
         },
         vGoz: function(e, t, n) {},
         vX6Q: function(e, t, n) {
-            var r, i;
+            var i, r;
             /*!
              * imagesLoaded v4.1.3
              * JavaScript is all like "You images are done yet or what?"
@@ -13770,18 +13739,18 @@
              */
             ! function(a, o) {
                 "use strict";
-                r = [n("CUlp")], void 0 === (i = function(e) {
+                i = [n("CUlp")], void 0 === (r = function(e) {
                     return function(e, t) {
                         var n = e.jQuery,
-                            r = e.console;
+                            i = e.console;
 
-                        function i(e, t) {
+                        function r(e, t) {
                             for (var n in t) e[n] = t[n];
                             return e
                         }
 
-                        function a(e, t, r) {
-                            if (!(this instanceof a)) return new a(e, t, r);
+                        function a(e, t, i) {
+                            if (!(this instanceof a)) return new a(e, t, i);
                             "string" == typeof e && (e = document.querySelectorAll(e)), this.elements = function(e) {
                                 var t = [];
                                 if (Array.isArray(e)) t = e;
@@ -13789,7 +13758,7 @@
                                     for (var n = 0; n < e.length; n++) t.push(e[n]);
                                 else t.push(e);
                                 return t
-                            }(e), this.options = i({}, this.options), "function" == typeof t ? r = t : i(this.options, t), r && this.on("always", r), this.getImages(), n && (this.jqDeferred = new n.Deferred), setTimeout(function() {
+                            }(e), this.options = r({}, this.options), "function" == typeof t ? i = t : r(this.options, t), i && this.on("always", i), this.getImages(), n && (this.jqDeferred = new n.Deferred), setTimeout(function() {
                                 this.check()
                             }.bind(this))
                         }
@@ -13799,14 +13768,14 @@
                             "IMG" == e.nodeName && this.addImage(e), !0 === this.options.background && this.addElementBackgroundImages(e);
                             var t = e.nodeType;
                             if (t && o[t]) {
-                                for (var n = e.querySelectorAll("img"), r = 0; r < n.length; r++) {
-                                    var i = n[r];
-                                    this.addImage(i)
+                                for (var n = e.querySelectorAll("img"), i = 0; i < n.length; i++) {
+                                    var r = n[i];
+                                    this.addImage(r)
                                 }
                                 if ("string" == typeof this.options.background) {
                                     var a = e.querySelectorAll(this.options.background);
-                                    for (r = 0; r < a.length; r++) {
-                                        var s = a[r];
+                                    for (i = 0; i < a.length; i++) {
+                                        var s = a[i];
                                         this.addElementBackgroundImages(s)
                                     }
                                 }
@@ -13828,9 +13797,9 @@
                         return a.prototype.addElementBackgroundImages = function(e) {
                             var t = getComputedStyle(e);
                             if (t)
-                                for (var n = /url\((['"])?(.*?)\1\)/gi, r = n.exec(t.backgroundImage); null !== r;) {
-                                    var i = r && r[2];
-                                    i && this.addBackground(i, e), r = n.exec(t.backgroundImage)
+                                for (var n = /url\((['"])?(.*?)\1\)/gi, i = n.exec(t.backgroundImage); null !== i;) {
+                                    var r = i && i[2];
+                                    r && this.addBackground(r, e), i = n.exec(t.backgroundImage)
                                 }
                         }, a.prototype.addImage = function(e) {
                             var t = new s(e);
@@ -13841,16 +13810,16 @@
                         }, a.prototype.check = function() {
                             var e = this;
 
-                            function t(t, n, r) {
+                            function t(t, n, i) {
                                 setTimeout(function() {
-                                    e.progress(t, n, r)
+                                    e.progress(t, n, i)
                                 })
                             }
                             this.progressedCount = 0, this.hasAnyBroken = !1, this.images.length ? this.images.forEach(function(e) {
                                 e.once("progress", t), e.check()
                             }) : this.complete()
                         }, a.prototype.progress = function(e, t, n) {
-                            this.progressedCount++, this.hasAnyBroken = this.hasAnyBroken || !e.isLoaded, this.emitEvent("progress", [this, e, t]), this.jqDeferred && this.jqDeferred.notify && this.jqDeferred.notify(this, e), this.progressedCount == this.images.length && this.complete(), this.options.debug && r && r.log("progress: " + n, e, t)
+                            this.progressedCount++, this.hasAnyBroken = this.hasAnyBroken || !e.isLoaded, this.emitEvent("progress", [this, e, t]), this.jqDeferred && this.jqDeferred.notify && this.jqDeferred.notify(this, e), this.progressedCount == this.images.length && this.complete(), this.options.debug && i && i.log("progress: " + n, e, t)
                         }, a.prototype.complete = function() {
                             var e = this.hasAnyBroken ? "fail" : "done";
                             if (this.isComplete = !0, this.emitEvent(e, [this]), this.emitEvent("always", [this]), this.jqDeferred) {
@@ -13884,7 +13853,7 @@
                             })
                         }, a.makeJQueryPlugin(), a
                     }(a, e)
-                }.apply(t, r)) || (e.exports = i)
+                }.apply(t, i)) || (e.exports = r)
             }("undefined" != typeof window ? window : this)
         },
         vylb: function(e, t, n) {
@@ -13893,20 +13862,20 @@
         },
         wnTG: function(e, t, n) {
             "use strict";
-            var r = n("UL9e");
+            var i = n("UL9e");
 
-            function i() {
+            function r() {
                 var e = {},
                     t = 0,
                     n = 0,
-                    r = 0;
+                    i = 0;
                 return {
-                    add: function(i, a) {
-                        a || (a = i, i = 0), i > n ? n = i : i < r && (r = i), e[i] || (e[i] = []), e[i].push(a), t++
+                    add: function(r, a) {
+                        a || (a = r, r = 0), r > n ? n = r : r < i && (i = r), e[r] || (e[r] = []), e[r].push(a), t++
                     },
                     process: function() {
-                        for (var t = r; t <= n; t++)
-                            for (var i = e[t], a = 0; a < i.length; a++)(0, i[a])()
+                        for (var t = i; t <= n; t++)
+                            for (var r = e[t], a = 0; a < r.length; a++)(0, r[a])()
                     },
                     size: function() {
                         return t
@@ -13915,16 +13884,16 @@
             }
             e.exports = function(e) {
                 var t = (e = e || {}).reporter,
-                    n = r.getOption(e, "async", !0),
-                    a = r.getOption(e, "auto", !0);
+                    n = i.getOption(e, "async", !0),
+                    a = i.getOption(e, "auto", !0);
                 a && !n && (t && t.warn("Invalid options combination. auto=true and async=false is invalid. Setting async=true."), n = !0);
-                var o, s = i(),
+                var o, s = r(),
                     c = !1;
 
                 function l() {
                     for (c = !0; s.size();) {
                         var e = s;
-                        s = i(), e.process()
+                        s = r(), e.process()
                     }
                     c = !1
                 }
@@ -13949,10 +13918,10 @@
             }
         },
         x0Ue: function(e, t, n) {
-            var r, i;
+            var i, r;
             ! function(a, o) {
                 "use strict";
-                void 0 === (i = "function" == typeof(r = o) ? r.call(t, n, t, e) : r) || (e.exports = i)
+                void 0 === (r = "function" == typeof(i = o) ? i.call(t, n, t, e) : i) || (e.exports = r)
             }(window, function() {
                 "use strict";
                 var e = function() {
@@ -13960,8 +13929,8 @@
                     if (e.matches) return "matches";
                     if (e.matchesSelector) return "matchesSelector";
                     for (var t = ["webkit", "moz", "ms", "o"], n = 0; n < t.length; n++) {
-                        var r = t[n] + "MatchesSelector";
-                        if (e[r]) return r
+                        var i = t[n] + "MatchesSelector";
+                        if (e[i]) return i
                     }
                 }();
                 return function(t, n) {
@@ -13975,11 +13944,11 @@
         },
         yUZ2: function(e, t, n) {
             "use strict";
-            var r = n("t3DW").forEach;
+            var i = n("t3DW").forEach;
             e.exports = function(e) {
                 var t = (e = e || {}).reporter,
                     n = e.batchProcessor,
-                    i = e.stateHandler.getState,
+                    r = e.stateHandler.getState,
                     a = (e.stateHandler.hasState, e.idHandler);
                 if (!n) throw new Error("Missing required dependency: batchProcessor");
                 if (!t) throw new Error("Missing required dependency: reporter.");
@@ -13989,50 +13958,50 @@
                         var t = document.createElement("div");
                         t.style.cssText = "position: absolute; width: 500px; height: 500px; overflow: scroll; visibility: none; top: -1500px; left: -1500px; visibility: hidden; margin: 0; padding: 0;", t.appendChild(e), document.body.insertBefore(t, document.body.firstChild);
                         var n = 500 - t.clientWidth,
-                            r = 500 - t.clientHeight;
+                            i = 500 - t.clientHeight;
                         return document.body.removeChild(t), {
                             width: n,
-                            height: r
+                            height: i
                         }
                     }(),
                     s = "erd_scroll_detection_container";
 
-                function c(e, n, r) {
-                    if (e.addEventListener) e.addEventListener(n, r);
+                function c(e, n, i) {
+                    if (e.addEventListener) e.addEventListener(n, i);
                     else {
                         if (!e.attachEvent) return t.error("[scroll] Don't know how to add event listeners.");
-                        e.attachEvent("on" + n, r)
+                        e.attachEvent("on" + n, i)
                     }
                 }
 
-                function l(e, n, r) {
-                    if (e.removeEventListener) e.removeEventListener(n, r);
+                function l(e, n, i) {
+                    if (e.removeEventListener) e.removeEventListener(n, i);
                     else {
                         if (!e.detachEvent) return t.error("[scroll] Don't know how to remove event listeners.");
-                        e.detachEvent("on" + n, r)
+                        e.detachEvent("on" + n, i)
                     }
                 }
 
                 function u(e) {
-                    return i(e).container.childNodes[0].childNodes[0].childNodes[0]
+                    return r(e).container.childNodes[0].childNodes[0].childNodes[0]
                 }
 
                 function d(e) {
-                    return i(e).container.childNodes[0].childNodes[0].childNodes[1]
+                    return r(e).container.childNodes[0].childNodes[0].childNodes[1]
                 }
                 return function(e, t) {
                     if (!document.getElementById(e)) {
                         var n = t + "_animation",
-                            r = t + "_animation_active",
-                            i = "/* Created by the element-resize-detector library. */\n";
-                        i += "." + t + " > div::-webkit-scrollbar { display: none; }\n\n", i += "." + r + " { -webkit-animation-duration: 0.1s; animation-duration: 0.1s; -webkit-animation-name: " + n + "; animation-name: " + n + "; }\n", i += "@-webkit-keyframes " + n + " { 0% { opacity: 1; } 50% { opacity: 0; } 100% { opacity: 1; } }\n",
+                            i = t + "_animation_active",
+                            r = "/* Created by the element-resize-detector library. */\n";
+                        r += "." + t + " > div::-webkit-scrollbar { display: none; }\n\n", r += "." + i + " { -webkit-animation-duration: 0.1s; animation-duration: 0.1s; -webkit-animation-name: " + n + "; animation-name: " + n + "; }\n", r += "@-webkit-keyframes " + n + " { 0% { opacity: 1; } 50% { opacity: 0; } 100% { opacity: 1; } }\n",
                             function(t, n) {
                                 n = n || function(e) {
                                     document.head.appendChild(e)
                                 };
-                                var r = document.createElement("style");
-                                r.innerHTML = t, r.id = e, n(r)
-                            }(i += "@keyframes " + n + " { 0% { opacity: 1; } 50% { opacity: 0; } 100% { opacity: 1; } }")
+                                var i = document.createElement("style");
+                                i.innerHTML = t, i.id = e, n(i)
+                            }(r += "@keyframes " + n + " { 0% { opacity: 1; } 50% { opacity: 0; } 100% { opacity: 1; } }")
                     }
                 }("erd_scroll_detection_scrollbar_style", s), {
                     makeDetectable: function(e, l, p) {
@@ -14041,12 +14010,12 @@
                                 var n = Array.prototype.slice.call(arguments);
                                 if (n.unshift(a.get(l), "Scroll: "), t.log.apply) t.log.apply(null, n);
                                 else
-                                    for (var r = 0; r < n.length; r++) t.log(n[r])
+                                    for (var i = 0; i < n.length; i++) t.log(n[i])
                             }
                         }
 
                         function h(e) {
-                            var t = i(e).container.childNodes[0],
+                            var t = r(e).container.childNodes[0],
                                 n = getComputedStyle(t);
                             return !n.width || -1 === n.width.indexOf("px")
                         }
@@ -14058,14 +14027,14 @@
                         }
 
                         function y() {
-                            if (m("storeStyle invoked."), i(l)) {
+                            if (m("storeStyle invoked."), r(l)) {
                                 var e = f();
-                                i(l).style = e
+                                r(l).style = e
                             } else m("Aborting because element has been uninstalled")
                         }
 
                         function g(e, t, n) {
-                            i(e).lastWidth = t, i(e).lastHeight = n
+                            r(e).lastWidth = t, r(e).lastHeight = n
                         }
 
                         function b() {
@@ -14085,8 +14054,8 @@
                         }
 
                         function k(e, t, n) {
-                            var r = u(e),
-                                i = d(e),
+                            var i = u(e),
+                                r = d(e),
                                 a = E(t),
                                 o = C(n),
                                 s = function(e) {
@@ -14095,103 +14064,103 @@
                                 c = function(e) {
                                     return 2 * e + v()
                                 }(n);
-                            r.scrollLeft = a, r.scrollTop = o, i.scrollLeft = s, i.scrollTop = c
+                            i.scrollLeft = a, i.scrollTop = o, r.scrollLeft = s, r.scrollTop = c
                         }
 
                         function P() {
-                            var e = i(l).container;
+                            var e = r(l).container;
                             if (!e) {
-                                (e = document.createElement("div")).className = s, e.style.cssText = "visibility: hidden; display: inline; width: 0px; height: 0px; z-index: -1; overflow: hidden; margin: 0; padding: 0;", i(l).container = e,
+                                (e = document.createElement("div")).className = s, e.style.cssText = "visibility: hidden; display: inline; width: 0px; height: 0px; z-index: -1; overflow: hidden; margin: 0; padding: 0;", r(l).container = e,
                                     function(e) {
                                         e.className += " " + s + "_animation_active"
                                     }(e), l.appendChild(e);
                                 var t = function() {
-                                    i(l).onRendered && i(l).onRendered()
+                                    r(l).onRendered && r(l).onRendered()
                                 };
-                                c(e, "animationstart", t), i(l).onAnimationStart = t
+                                c(e, "animationstart", t), r(l).onAnimationStart = t
                             }
                             return e
                         }
 
                         function S() {
-                            if (m("Injecting elements"), i(l)) {
+                            if (m("Injecting elements"), r(l)) {
                                 ! function() {
-                                    var e = i(l).style;
+                                    var e = r(l).style;
                                     if ("static" === e.position) {
                                         l.style.position = "relative";
-                                        var n = function(e, t, n, r) {
-                                            var i = n[r];
-                                            "auto" !== i && "0" !== function(e) {
+                                        var n = function(e, t, n, i) {
+                                            var r = n[i];
+                                            "auto" !== r && "0" !== function(e) {
                                                 return e.replace(/[^-\d\.]/g, "")
-                                            }(i) && (e.warn("An element that is positioned static has style." + r + "=" + i + " which is ignored due to the static positioning. The element will need to be positioned relative, so the style." + r + " will be set to 0. Element: ", t), t.style[r] = 0)
+                                            }(r) && (e.warn("An element that is positioned static has style." + i + "=" + r + " which is ignored due to the static positioning. The element will need to be positioned relative, so the style." + i + " will be set to 0. Element: ", t), t.style[i] = 0)
                                         };
                                         n(t, l, e, "top"), n(t, l, e, "right"), n(t, l, e, "bottom"), n(t, l, e, "left")
                                     }
                                 }();
-                                var e = i(l).container;
+                                var e = r(l).container;
                                 e || (e = P());
                                 var n = o.width,
-                                    r = o.height,
-                                    a = "position: absolute; flex: none; overflow: hidden; z-index: -1; visibility: hidden; " + function(e, t, n, r) {
-                                        return e = e ? e + "px" : "0", t = t ? t + "px" : "0", n = n ? n + "px" : "0", "left: " + e + "; top: " + t + "; right: " + (r = r ? r + "px" : "0") + "; bottom: " + n + ";"
-                                    }(-(1 + n), -(1 + r), -r, -n),
+                                    i = o.height,
+                                    a = "position: absolute; flex: none; overflow: hidden; z-index: -1; visibility: hidden; " + function(e, t, n, i) {
+                                        return e = e ? e + "px" : "0", t = t ? t + "px" : "0", n = n ? n + "px" : "0", "left: " + e + "; top: " + t + "; right: " + (i = i ? i + "px" : "0") + "; bottom: " + n + ";"
+                                    }(-(1 + n), -(1 + i), -i, -n),
                                     u = document.createElement("div"),
                                     d = document.createElement("div"),
                                     p = document.createElement("div"),
                                     h = document.createElement("div"),
                                     f = document.createElement("div"),
                                     y = document.createElement("div");
-                                u.dir = "ltr", u.style.cssText = "position: absolute; flex: none; overflow: hidden; z-index: -1; visibility: hidden; width: 100%; height: 100%; left: 0px; top: 0px;", u.className = s, d.className = s, d.style.cssText = a, p.style.cssText = "position: absolute; flex: none; overflow: scroll; z-index: -1; visibility: hidden; width: 100%; height: 100%;", h.style.cssText = "position: absolute; left: 0; top: 0;", f.style.cssText = "position: absolute; flex: none; overflow: scroll; z-index: -1; visibility: hidden; width: 100%; height: 100%;", y.style.cssText = "position: absolute; width: 200%; height: 200%;", p.appendChild(h), f.appendChild(y), d.appendChild(p), d.appendChild(f), u.appendChild(d), e.appendChild(u), c(p, "scroll", g), c(f, "scroll", b), i(l).onExpandScroll = g, i(l).onShrinkScroll = b
+                                u.dir = "ltr", u.style.cssText = "position: absolute; flex: none; overflow: hidden; z-index: -1; visibility: hidden; width: 100%; height: 100%; left: 0px; top: 0px;", u.className = s, d.className = s, d.style.cssText = a, p.style.cssText = "position: absolute; flex: none; overflow: scroll; z-index: -1; visibility: hidden; width: 100%; height: 100%;", h.style.cssText = "position: absolute; left: 0; top: 0;", f.style.cssText = "position: absolute; flex: none; overflow: scroll; z-index: -1; visibility: hidden; width: 100%; height: 100%;", y.style.cssText = "position: absolute; width: 200%; height: 200%;", p.appendChild(h), f.appendChild(y), d.appendChild(p), d.appendChild(f), u.appendChild(d), e.appendChild(u), c(p, "scroll", g), c(f, "scroll", b), r(l).onExpandScroll = g, r(l).onShrinkScroll = b
                             } else m("Aborting because element has been uninstalled");
 
                             function g() {
-                                i(l).onExpand && i(l).onExpand()
+                                r(l).onExpand && r(l).onExpand()
                             }
 
                             function b() {
-                                i(l).onShrink && i(l).onShrink()
+                                r(l).onShrink && r(l).onShrink()
                             }
                         }
 
                         function x() {
                             function o(e, t, n) {
-                                var r = function(e) {
+                                var i = function(e) {
                                         return u(e).childNodes[0]
                                     }(e),
-                                    i = E(t),
+                                    r = E(t),
                                     a = C(n);
-                                r.style.width = i + "px", r.style.height = a + "px"
+                                i.style.width = r + "px", i.style.height = a + "px"
                             }
 
-                            function s(r) {
+                            function s(i) {
                                 var s = l.offsetWidth,
                                     u = l.offsetHeight;
                                 m("Storing current size", s, u), g(l, s, u), n.add(0, function() {
-                                    if (i(l))
+                                    if (r(l))
                                         if (c()) {
                                             if (e.debug) {
                                                 var n = l.offsetWidth,
-                                                    r = l.offsetHeight;
-                                                n === s && r === u || t.warn(a.get(l), "Scroll: Size changed before updating detector elements.")
+                                                    i = l.offsetHeight;
+                                                n === s && i === u || t.warn(a.get(l), "Scroll: Size changed before updating detector elements.")
                                             }
                                             o(l, s, u)
                                         } else m("Aborting because element container has not been initialized");
                                     else m("Aborting because element has been uninstalled")
                                 }), n.add(1, function() {
-                                    i(l) ? c() ? k(l, s, u) : m("Aborting because element container has not been initialized") : m("Aborting because element has been uninstalled")
-                                }), r && n.add(2, function() {
-                                    i(l) ? c() ? r() : m("Aborting because element container has not been initialized") : m("Aborting because element has been uninstalled")
+                                    r(l) ? c() ? k(l, s, u) : m("Aborting because element container has not been initialized") : m("Aborting because element has been uninstalled")
+                                }), i && n.add(2, function() {
+                                    r(l) ? c() ? i() : m("Aborting because element container has not been initialized") : m("Aborting because element has been uninstalled")
                                 })
                             }
 
                             function c() {
-                                return !!i(l).container
+                                return !!r(l).container
                             }
 
                             function p() {
                                 m("notifyListenersIfNeeded invoked");
-                                var e = i(l);
-                                return void 0 === i(l).lastNotifiedWidth && e.lastWidth === e.startSize.width && e.lastHeight === e.startSize.height ? m("Not notifying: Size is the same as the start size, and there has been no notification yet.") : e.lastWidth === e.lastNotifiedWidth && e.lastHeight === e.lastNotifiedHeight ? m("Not notifying: Size already notified") : (m("Current size not notified, notifying..."), e.lastNotifiedWidth = e.lastWidth, e.lastNotifiedHeight = e.lastHeight, void r(i(l).listeners, function(e) {
+                                var e = r(l);
+                                return void 0 === r(l).lastNotifiedWidth && e.lastWidth === e.startSize.width && e.lastHeight === e.startSize.height ? m("Not notifying: Size is the same as the start size, and there has been no notification yet.") : e.lastWidth === e.lastNotifiedWidth && e.lastHeight === e.lastNotifiedHeight ? m("Not notifying: Size already notified") : (m("Current size not notified, notifying..."), e.lastNotifiedWidth = e.lastWidth, e.lastNotifiedHeight = e.lastHeight, void i(r(l).listeners, function(e) {
                                     e(l)
                                 }))
                             }
@@ -14204,8 +14173,8 @@
                                     e !== l.lastWidth || t !== l.lastHeight ? (m("Element size changed."), s(p)) : m("Element size has not changed (" + e + "x" + t + ").")
                                 }
                             }
-                            if (m("registerListenersAndPositionElements invoked."), i(l)) {
-                                i(l).onRendered = function() {
+                            if (m("registerListenersAndPositionElements invoked."), r(l)) {
+                                r(l).onRendered = function() {
                                     if (m("startanimation triggered."), h(l)) m("Ignoring since element is still unrendered...");
                                     else {
                                         m("Element rendered.");
@@ -14213,15 +14182,15 @@
                                             t = d(l);
                                         0 !== e.scrollLeft && 0 !== e.scrollTop && 0 !== t.scrollLeft && 0 !== t.scrollTop || (m("Scrollbars out of sync. Updating detector elements..."), s(p))
                                     }
-                                }, i(l).onExpand = f, i(l).onShrink = f;
-                                var y = i(l).style;
+                                }, r(l).onExpand = f, r(l).onShrink = f;
+                                var y = r(l).style;
                                 o(l, y.width, y.height)
                             } else m("Aborting because element has been uninstalled")
                         }
 
                         function O() {
-                            if (m("finalizeDomMutation invoked."), i(l)) {
-                                var e = i(l).style;
+                            if (m("finalizeDomMutation invoked."), r(l)) {
+                                var e = r(l).style;
                                 g(l, e.width, e.height), k(l, e.width, e.height)
                             } else m("Aborting because element has been uninstalled")
                         }
@@ -14231,13 +14200,13 @@
                         }
 
                         function w() {
-                            m("Installing..."), i(l).listeners = [],
+                            m("Installing..."), r(l).listeners = [],
                                 function() {
                                     var e = f();
-                                    i(l).startSize = {
+                                    r(l).startSize = {
                                         width: e.width,
                                         height: e.height
-                                    }, m("Element start size", i(l).startSize)
+                                    }, m("Element start size", r(l).startSize)
                                 }(), n.add(0, y), n.add(1, S), n.add(2, x), n.add(3, O), n.add(4, I)
                         }
                         p || (p = l, l = e, e = null), e = e || {}, m("Making detectable..."),
@@ -14245,16 +14214,16 @@
                                 return ! function(e) {
                                     return e === e.ownerDocument.body || e.ownerDocument.body.contains(e)
                                 }(e) || null === getComputedStyle(e)
-                            }(l) ? (m("Element is detached"), P(), m("Waiting until element is attached..."), i(l).onRendered = function() {
+                            }(l) ? (m("Element is detached"), P(), m("Waiting until element is attached..."), r(l).onRendered = function() {
                                 m("Element is now attached"), w()
                             }) : w()
                     },
                     addListener: function(e, t) {
-                        if (!i(e).listeners.push) throw new Error("Cannot add listener to an element that is not detectable.");
-                        i(e).listeners.push(t)
+                        if (!r(e).listeners.push) throw new Error("Cannot add listener to an element that is not detectable.");
+                        r(e).listeners.push(t)
                     },
                     uninstall: function(e) {
-                        var t = i(e);
+                        var t = r(e);
                         t && (t.onExpandScroll && l(u(e), "scroll", t.onExpandScroll), t.onShrinkScroll && l(d(e), "scroll", t.onShrinkScroll), t.onAnimationStart && l(t.container, "animationstart", t.onAnimationStart), t.container && e.removeChild(t.container))
                     }
                 }

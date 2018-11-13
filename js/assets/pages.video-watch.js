@@ -7337,7 +7337,7 @@
                     }
                 }), Object(k.a)([{
                     topic: function(e) {
-                        return Object(E.H)(e.data.currentUser && e.data.currentUser.id || "")
+                        return Object(E.I)(e.data.currentUser && e.data.currentUser.id || "")
                     },
                     mapMessageTypesToProps: {
                         "*": "subscriptionInfo"
@@ -17250,7 +17250,7 @@
                     }
                 }), Object(p.a)([{
                     topic: function(e) {
-                        return e.channelLogin ? Object(h.J)(e.channelLogin) : ""
+                        return e.channelLogin ? Object(h.K)(e.channelLogin) : ""
                     },
                     skip: function(e) {
                         return !e.channelLogin || !e.firstPageLoaded
@@ -18242,6 +18242,7 @@
                         }, this.getFrequentlyUsedEmoteGrid(), this.getCurrentChannelEmoteGrid(), this.getOtherSubEmoteGrids(), this.getResidualEmoteGrids()))), this.renderTabNav())
                     }, t.prototype.getFrequentlyUsedEmoteGrid = function() {
                         return 0 === this.props.frequentlyUsedEmotes.length ? null : o.createElement(l.Xa, {
+                            className: "emote-picker__content-block",
                             refDelegate: this.saveFrequentlyUsedEmotesRef
                         }, o.createElement(z, {
                             context: V.FrequentlyUsed,
@@ -18286,8 +18287,7 @@
                             label: Object(s.d)("Unlocked", "EmotePickerCard"),
                             onClickEmote: this.onClickEmote
                         }))), this.props.globalEmotes.length > 0 && e.push(o.createElement(l.Xa, {
-                            key: "emote-grid--global-emotes",
-                            className: "emote-picker__content-block"
+                            key: "emote-grid--global-emotes"
                         }, o.createElement(z, {
                             context: V.Global,
                             emotes: this.props.globalEmotes,
@@ -22050,7 +22050,7 @@
                 a = (n("yzyL"), n("mrSG")),
                 s = function() {
                     function e(e, t, n) {
-                        this.globalsBySet = new Map, this.channelsBySet = new Map, this.indexBadges(e, this.globalsBySet, n), Array.isArray(t) && this.indexBadges(t, this.channelsBySet, n)
+                        this.count = 0, this.globalsBySet = new Map, this.channelsBySet = new Map, this.count = e.length + (t ? t.length : 0), this.indexBadges(e, this.globalsBySet, n), Array.isArray(t) && this.indexBadges(t, this.channelsBySet, n)
                     }
                     return e.prototype.getBadge = function(e, t) {
                         var n = this.channelsBySet.get(e);
@@ -24044,7 +24044,7 @@
                     }, r.createElement(o.U, i.__assign({
                         to: e.linkTo
                     }, Object(o.jc)(e), {
-                        targetBlank: !0
+                        targetBlank: e.targetBlank
                     }), e.title))))
                 };
             n.d(t, "a", function() {

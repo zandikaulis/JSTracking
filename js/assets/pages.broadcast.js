@@ -787,7 +787,7 @@
                 }(i.Component),
                 y = Object(s.a)([{
                     topic: function(e) {
-                        return Object(u.I)(e.channelID)
+                        return Object(u.J)(e.channelID)
                     },
                     mapMessageTypesToProps: (a = {}, a[c.PubsubMessageType.ChannelStreamUp] = "streamUp", a[c.PubsubMessageType.ChannelStreamDown] = "streamDown", a)
                 }])(C);
@@ -890,8 +890,8 @@
                         linkTo: e.setupGuideLink
                     }, Object(i.d)("Setup Guide", "BroadcastItemCard")))))
                 },
-                O = n("IFXb"),
-                L = (n("L/BW"), function(e) {
+                L = n("IFXb"),
+                O = (n("L/BW"), function(e) {
                     function t() {
                         return null !== e && e.apply(this, arguments) || this
                     }
@@ -909,7 +909,7 @@
                             flexGrow: 1,
                             fullHeight: !0,
                             overflow: _.cb.Hidden
-                        }, o.createElement(O.a, null, o.createElement(_.W, {
+                        }, o.createElement(L.a, null, o.createElement(_.W, {
                             bold: !0,
                             type: _.Vb.H4
                         }, Object(i.d)("Broadcast While You Play", "BroadcastRootPage")), o.createElement(_.Xa, {
@@ -1044,7 +1044,7 @@
                     }, t
                 }(o.Component));
             n.d(t, "a", function() {
-                return L
+                return O
             })
         },
         NkOX: function(e, t, n) {
@@ -1802,37 +1802,7 @@
                         }
                     }, t
                 }(p.Component)),
-                v = n("eJ65"),
-                b = n("N0BP"),
-                C = function(e) {
-                    function t() {
-                        var t = null !== e && e.apply(this, arguments) || this;
-                        return t.handleMouseDown = function(e) {
-                            e.stopPropagation()
-                        }, t.setContainerRef = function(e) {
-                            t.containerRef = e
-                        }, t
-                    }
-                    return l.__extends(t, e), t.prototype.componentDidMount = function() {
-                        this.containerRef.addEventListener("mousedown", this.handleMouseDown)
-                    }, t.prototype.componentWillUnmount = function() {
-                        this.containerRef.removeEventListener("mousedown", this.handleMouseDown)
-                    }, t.prototype.render = function() {
-                        return p.createElement(f.Xa, {
-                            position: f.jb.Relative,
-                            refDelegate: this.setContainerRef
-                        }, p.createElement(v.a, null, p.createElement(f.A, l.__assign({
-                            ariaLabel: Object(m.d)("Options", "CogWheelComponent"),
-                            icon: f.tb.Gear
-                        }, Object(b.a)(this.props))), p.createElement(f.u, {
-                            offsetY: "0",
-                            offsetX: "1rem",
-                            direction: f.v.Left,
-                            size: f.w.Small
-                        }, this.props.children)))
-                    }, t
-                }(p.Component),
-                y = function(e) {
+                v = function(e) {
                     function t() {
                         return null !== e && e.apply(this, arguments) || this
                     }
@@ -1855,9 +1825,9 @@
                 e.Card = "drag-and-drop-card", e.Container = "drag-and-drop-card-container", e.Content = "drag-and-drop-card-content"
             }(o || (o = {})),
             function(e) {
-                e.Carat = "carat", e.Card = "card", e.Container = "container", e.Header = "header"
+                e.Carat = "carat", e.Card = "card", e.Container = "container", e.Header = "header", e.Menu = "drag-and-drop-card-menu"
             }(i || (i = {}));
-            var w = function(e) {
+            var b = function(e) {
                 function t() {
                     var t = null !== e && e.apply(this, arguments) || this;
                     return t.handleContainerMouseEnter = function(e) {
@@ -1893,7 +1863,7 @@
                         t.props.updateCard(n, {
                             isCollapsed: !r
                         })
-                    }, t.handleCaratMouseDown = function(e) {
+                    }, t.stopMouseDownPropagation = function(e) {
                         e.stopPropagation()
                     }, t.handleCardMouseMove = function(e) {
                         var n = e.movementX,
@@ -1925,16 +1895,14 @@
                             isGrabbed: !1,
                             placeholderPosition: void 0
                         })
-                    }, t.registerRef = function(e) {
-                        return function(n) {
-                            t[e] = n
-                        }
+                    }, t.registerRef = function(e, n) {
+                        t[e] = n
                     }, t.addEventListeners = function() {
                         var e = t[i.Container];
-                        e.addEventListener("mousemove", t.handleContainerMouseMove), e.addEventListener("mouseleave", t.handleContainerMouseLeave), e.addEventListener("mouseenter", t.handleContainerMouseEnter), t[i.Carat].addEventListener("mousedown", t.handleCaratMouseDown), t[i.Header].addEventListener("mousedown", t.handleHeaderMouseDown), window.addEventListener("mouseup", t.handleCardMouseUp), window.addEventListener("mousemove", t.handleCardMouseMove)
+                        e.addEventListener("mousemove", t.handleContainerMouseMove), e.addEventListener("mouseleave", t.handleContainerMouseLeave), e.addEventListener("mouseenter", t.handleContainerMouseEnter), t[i.Carat].addEventListener("mousedown", t.stopMouseDownPropagation), t[i.Header].addEventListener("mousedown", t.handleHeaderMouseDown), t[i.Menu].addEventListener("mousedown", t.stopMouseDownPropagation), window.addEventListener("mouseup", t.handleCardMouseUp), window.addEventListener("mousemove", t.handleCardMouseMove)
                     }, t.removeEventListeners = function() {
                         var e = t[i.Container];
-                        e.removeEventListener("mousemove", t.handleContainerMouseMove), e.removeEventListener("mouseleave", t.handleContainerMouseLeave), e.removeEventListener("mouseenter", t.handleContainerMouseEnter), t[i.Carat].removeEventListener("mousedown", t.handleCaratMouseDown), t[i.Header].removeEventListener("mousedown", t.handleHeaderMouseDown), window.removeEventListener("mouseup", t.handleCardMouseUp), window.removeEventListener("mousemove", t.handleCardMouseMove)
+                        e.removeEventListener("mousemove", t.handleContainerMouseMove), e.removeEventListener("mouseleave", t.handleContainerMouseLeave), e.removeEventListener("mouseenter", t.handleContainerMouseEnter), t[i.Carat].removeEventListener("mousedown", t.stopMouseDownPropagation), t[i.Header].removeEventListener("mousedown", t.handleHeaderMouseDown), t[i.Menu].removeEventListener("mousedown", t.stopMouseDownPropagation), window.removeEventListener("mouseup", t.handleCardMouseUp), window.removeEventListener("mousemove", t.handleCardMouseMove)
                     }, t
                 }
                 return l.__extends(t, e), t.prototype.componentDidUpdate = function(e) {
@@ -1947,20 +1915,20 @@
                     this.removeEventListeners()
                 }, t.prototype.render = function() {
                     var e = this.props,
-                        t = e.cogWheel,
-                        n = e.card,
-                        r = n.isCollapsed,
-                        s = n.isGrabbed,
-                        c = n.placeholderPosition,
-                        u = e.grabbedCard;
+                        t = e.card,
+                        n = t.isCollapsed,
+                        r = t.isGrabbed,
+                        s = t.placeholderPosition,
+                        c = e.grabbedCard,
+                        u = e.menu;
                     return p.createElement(f.Xa, {
                         "data-test-selector": o.Container,
                         display: f.X.Flex,
                         flexDirection: f.Aa.Column,
-                        refDelegate: this.registerRef(i.Container)
+                        refDelegate: this.registerRef.bind(this, i.Container)
                     }, p.createElement(g, {
-                        cloneStyleRef: u && u.cardRef,
-                        show: c === h.c.Top
+                        cloneStyleRef: c && c.cardRef,
+                        show: s === h.c.Top
                     }), p.createElement(f.Eb, {
                         background: f.r.Base,
                         border: !0,
@@ -1969,15 +1937,15 @@
                                 bottom: 2
                             }
                         },
-                        className: "drag-and-drop-card-container" + (s ? " drag-and-drop-card-container__grabbed" : ""),
+                        className: "drag-and-drop-card-container" + (r ? " drag-and-drop-card-container__grabbed" : ""),
                         "data-test-selector": o.Card,
                         display: f.X.Flex,
-                        elevation: s ? 4 : 1,
+                        elevation: r ? 4 : 1,
                         flexDirection: f.Aa.Column,
                         margin: {
                             bottom: 1
                         },
-                        refDelegate: this.registerRef(i.Card)
+                        refDelegate: this.registerRef.bind(this, i.Card)
                     }, p.createElement(f.Eb, {
                         alignContent: f.e.Center,
                         alignItems: f.f.Center,
@@ -1989,7 +1957,7 @@
                             x: 1
                         },
                         position: f.jb.Relative,
-                        refDelegate: this.registerRef(i.Header)
+                        refDelegate: this.registerRef.bind(this, i.Header)
                     }, p.createElement(f.Xa, {
                         display: f.X.Flex,
                         justifyContent: f.Wa.Center
@@ -1998,33 +1966,33 @@
                             right: 1
                         }
                     }, p.createElement(f.Xa, {
-                        className: "drag-and-drop-card-carat" + (r ? "__collapsed" : ""),
-                        refDelegate: this.registerRef(i.Carat)
+                        className: "drag-and-drop-card-carat" + (n ? "__collapsed" : ""),
+                        refDelegate: this.registerRef.bind(this, i.Carat)
                     }, p.createElement(f.A, {
                         ariaLabel: Object(m.d)("Collapse/Expand", "DragAndDropCard"),
                         icon: f.tb.GlyphArrDown,
                         onClick: this.handleCaratClick
-                    }))), p.createElement(y, {
+                    }))), p.createElement(v, {
                         title: this.props.title
                     })), p.createElement(f.Xa, {
                         display: f.X.Flex,
                         alignItems: f.f.Center
-                    }, t && p.createElement(C, {
-                        "data-a-target": this.props.cogWheelTarget
-                    }, t), p.createElement(f.Xa, {
+                    }, p.createElement(f.Xa, {
+                        refDelegate: this.registerRef.bind(this, i.Menu)
+                    }, u), p.createElement(f.Xa, {
                         margin: {
-                            top: .5,
                             left: 1
                         }
-                    }, p.createElement(f.sb, {
-                        asset: f.tb.DragHandle
+                    }, p.createElement(f.A, {
+                        ariaLabel: Object(m.d)("Drag", "DragAndDropCard"),
+                        icon: f.tb.DragHandle
                     })))), p.createElement(f.Xa, {
-                        className: "drag-and-drop-card-content" + (r ? " " + a.ContentCollapsed : ""),
+                        className: "drag-and-drop-card-content" + (n ? " " + a.ContentCollapsed : ""),
                         "data-test-selector": o.Content,
                         position: f.jb.Relative
-                    }, r && this.props.unmountOnCollapse ? null : this.props.children)), p.createElement(g, {
-                        cloneStyleRef: u && u.cardRef,
-                        show: c === h.c.Bottom
+                    }, n && this.props.unmountOnCollapse ? null : this.props.children)), p.createElement(g, {
+                        cloneStyleRef: c && c.cardRef,
+                        show: s === h.c.Bottom
                     }))
                 }, Object.defineProperty(t.prototype, "isHoveringOtherCard", {
                     get: function() {
@@ -2042,21 +2010,21 @@
                     configurable: !0
                 }), t
             }(p.Component);
-            i.Carat, i.Card, i.Container, i.Header;
-            var S, E = w,
-                _ = (S = Object(c.a)("DragAndDropCardContext", {
+            i.Carat, i.Card, i.Container, i.Header, i.Menu;
+            var C, y = b,
+                w = (C = Object(c.a)("DragAndDropCardContext", {
                     card: new h.a("unknown")
                 })).InnerProvider,
-                k = S.withContext;
-            var O = Object(s.compose)(d(function(e) {
+                S = C.withContext;
+            var E = Object(s.compose)(d(function(e) {
                     return e
-                }), k(function(e) {
+                }), S(function(e) {
                     return e
-                }))(E),
-                L = n("i8i4"),
-                D = n("8/mp"),
-                R = n("b+ID"),
-                I = function(e) {
+                }))(y),
+                _ = n("i8i4"),
+                k = n("8/mp"),
+                L = n("b+ID"),
+                O = function(e) {
                     function t() {
                         var t = null !== e && e.apply(this, arguments) || this;
                         return t.setRootContainerRef = function(e) {
@@ -2071,7 +2039,7 @@
                         })
                     }, t
                 }(p.Component),
-                x = (n("6Ll5"), function(e) {
+                D = (n("6Ll5"), function(e) {
                     function t() {
                         var t = null !== e && e.apply(this, arguments) || this;
                         return t.handleContainerMouseOver = function() {
@@ -2131,7 +2099,7 @@
                         configurable: !0
                     }), t
                 }(p.Component)),
-                P = (n("uZYF"), function(e) {
+                R = (n("uZYF"), function(e) {
                     function t(t) {
                         var n = e.call(this, t) || this;
                         n.handleCardsUpdate = function() {
@@ -2231,7 +2199,7 @@
                     }, t.prototype.render = function() {
                         var e = this,
                             t = this.props.isExpandedView;
-                        return p.createElement(p.Fragment, null, p.createElement(D.b, {
+                        return p.createElement(p.Fragment, null, p.createElement(k.b, {
                             className: "drag-and-drop-layout-scrollable-area" + (t ? "__expanded-view" : "")
                         }, p.createElement(f.Xa, {
                             alignContent: f.e.Stretch,
@@ -2243,7 +2211,7 @@
                             fullWidth: !0,
                             justifyContent: f.Wa.Between
                         }, this.state.roots.map(function(t, n) {
-                            return p.createElement(x, {
+                            return p.createElement(D, {
                                 column: n,
                                 key: n,
                                 grabbedCard: e.state.common.grabbedCard,
@@ -2253,7 +2221,7 @@
                             }, t.map(function(e) {
                                 var t = e.el,
                                     n = e.name;
-                                return p.createElement(I, {
+                                return p.createElement(O, {
                                     element: t,
                                     key: n
                                 })
@@ -2262,7 +2230,7 @@
                             value: this.state.common
                         }, Object.keys(this.state.cards).map(function(t) {
                             var n = e.state.cards[t];
-                            return L.createPortal(p.createElement(_, {
+                            return _.createPortal(p.createElement(w, {
                                 value: {
                                     card: n
                                 }
@@ -2270,15 +2238,40 @@
                         })))
                     }, t
                 }(p.Component));
-            var T = Object(R.b)(function(e) {
-                return {
-                    isExpandedView: e.isExpandedView
-                }
-            })(P);
+            var I = Object(L.b)(function(e) {
+                    return {
+                        isExpandedView: e.isExpandedView
+                    }
+                })(R),
+                x = n("eJ65"),
+                P = n("N0BP"),
+                M = function(e) {
+                    function t() {
+                        return null !== e && e.apply(this, arguments) || this
+                    }
+                    return l.__extends(t, e), t.prototype.render = function() {
+                        return p.createElement(f.Xa, {
+                            margin: {
+                                left: 1
+                            },
+                            position: f.jb.Relative
+                        }, p.createElement(x.a, null, p.createElement(f.A, l.__assign({
+                            ariaLabel: this.props.ariaIconLabel,
+                            icon: this.props.icon
+                        }, Object(P.a)(this.props))), p.createElement(f.u, {
+                            offsetY: "0",
+                            offsetX: "1rem",
+                            direction: f.v.Left,
+                            size: f.w.Small
+                        }, this.props.children)))
+                    }, t
+                }(p.Component);
             n.d(t, "a", function() {
-                return O
+                return E
+            }), n.d(t, "c", function() {
+                return I
             }), n.d(t, "b", function() {
-                return T
+                return M
             })
         },
         rSo7: function(e, t, n) {

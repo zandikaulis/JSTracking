@@ -2987,17 +2987,18 @@
                             }
                         }, this.renderTagSearch()), this.renderErrorMessage(), this.renderSelectedTags()))
                     }, t.prototype.renderSelectedTags = function() {
-                        var e = this;
-                        if (0 === this.props.selectedTags.length && !this.props.readOnly) return null;
-                        if (0 === this.props.selectedTags.length) return r.createElement(u.Xa, {
+                        var e = this,
+                            t = this.props.data && this.props.data.game && this.props.data.game.tags;
+                        if (0 === this.props.selectedTags.length && !this.props.readOnly && (!t || t && !t.length)) return null;
+                        if (0 === this.props.selectedTags.length && (!t || t && !t.length)) return r.createElement(u.Xa, {
                             "data-test-selector": n.NoTagsSelected
                         }, r.createElement(u.Ra, {
                             type: u.Ta.Text,
                             placeholder: Object(s.d)("No tags were selected", "TagSelectorSearch"),
                             disabled: !0
                         }));
-                        var t = [],
-                            a = this.props.selectedTags.map(function(t, a) {
+                        var a = [],
+                            i = this.props.selectedTags.map(function(t, a) {
                                 return r.createElement(u.Xa, {
                                     display: u.X.InlineBlock,
                                     margin: {
@@ -3014,7 +3015,7 @@
                                     "data-idx": a
                                 }))
                             });
-                        return this.props.data && this.props.data.game && this.props.data.game.tags && (t = this.props.data.game.tags.map(function(e, t) {
+                        return t && (a = t.map(function(e, t) {
                             return r.createElement(u.Xa, {
                                 display: u.X.InlineBlock,
                                 margin: {
@@ -3039,7 +3040,7 @@
                                 top: .5
                             },
                             className: "selected-tags"
-                        }, a.concat(t))
+                        }, i.concat(a))
                     }, t.prototype.renderHelpButton = function() {
                         return this.props.showHelpButton ? r.createElement(u.Xa, null, Object(s.d)("<x:link>Learn More</x:link>", {
                             "x:link": function(e) {

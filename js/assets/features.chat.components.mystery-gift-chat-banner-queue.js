@@ -105,8 +105,8 @@
             n.r(t);
             var i = n("mrSG"),
                 r = n("q1tI"),
-                o = n("fvjX"),
-                a = n("x7UT"),
+                a = n("fvjX"),
+                o = n("x7UT"),
                 s = n("0Log"),
                 u = n("/aPz"),
                 p = n("/7QA"),
@@ -167,7 +167,7 @@
                                 n = null;
                             t.props.data && t.props.data.user && (t.props.data.user.displayName && (e = t.props.data.user.displayName), t.props.data.user.login && (n = t.props.data.user.login));
                             var i = Object(b.a)(t.props.tier) || "";
-                            return n || e ? Object(p.d)("{mysteryGiftCount, plural, one {{displayName} is giving out {mysteryGiftCount} Tier {tier} Community Sub Gift!} other {{displayName} is giving out {mysteryGiftCount} Tier {tier} Community Sub Gifts!}}", {
+                            return n || e ? Object(p.d)("{mysteryGiftCount, plural,          one {{displayName} is giving out {mysteryGiftCount} Tier {tier} Community Sub Gift!}          other {{displayName} is giving out {mysteryGiftCount} Tier {tier} Community Sub Gifts!}}", {
                                 displayName: r.createElement(v.W, {
                                     bold: !0,
                                     color: v.O.Link,
@@ -175,7 +175,7 @@
                                 }, Object(m.a)(n, e)),
                                 mysteryGiftCount: t.props.mysteryGiftCount,
                                 tier: i
-                            }, "MysteryGiftChatBanner") : Object(p.d)("{mysteryGiftCount, plural, one {Someone is giving out {mysteryGiftCount} Tier {tier} Community Sub Gift!} other {Someone is giving out {mysteryGiftCount} Tier {tier} Community Sub Gifts!}}", {
+                            }, "MysteryGiftChatBanner") : Object(p.d)("{mysteryGiftCount, plural,        one {An anonymous gifter is giving out {mysteryGiftCount} Tier {tier} Community Sub Gift!}        other {An anonymous gifter is giving out {mysteryGiftCount} Tier {tier} Community Sub Gifts!}}", {
                                 mysteryGiftCount: t.props.mysteryGiftCount,
                                 tier: i
                             }, "MysteryGiftChatBanner")
@@ -211,7 +211,7 @@
                         }))
                     }, t
                 }(r.Component),
-                D = Object(o.compose)(Object(l.a)(k, {
+                D = Object(a.compose)(Object(l.a)(k, {
                     options: function(e) {
                         return {
                             variables: {
@@ -255,7 +255,7 @@
                         }, t
                     }
                     return i.__extends(t, e), t.prototype.componentDidUpdate = function() {
-                        var e = this.props.pubsub.status[Object(u.q)(this.props.channelID)];
+                        var e = this.props.pubsub.status[Object(u.r)(this.props.channelID)];
                         !e || e.isSubscribing || e.error || this.props.latencyTracking.reportInteractive()
                     }, t.prototype.componentWillReceiveProps = function(e) {
                         var t = e.pubsub.messages.purchase || null;
@@ -278,10 +278,10 @@
                         })
                     }, t
                 }(r.Component),
-                N = Object(o.compose)(Object(a.a)([{
+                N = Object(a.compose)(Object(o.a)([{
                     mapMessageTypesToProps: (h = {}, h[s.PubsubMessageType.MysteryGiftPurchase] = "purchase", h),
                     topic: function(e) {
-                        return Object(u.q)(e.channelID)
+                        return Object(u.r)(e.channelID)
                     }
                 }]), Object(g.b)("MysteryGiftChatBannerQueue"))(E);
             n.d(t, "MysteryGiftChatBannersQueueContainer", function() {

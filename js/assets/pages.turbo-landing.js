@@ -11,74 +11,76 @@
                 return c
             }), n.d(t, "j", function() {
                 return l
-            }), n.d(t, "J", function() {
-                return u
             }), n.d(t, "K", function() {
+                return u
+            }), n.d(t, "L", function() {
                 return d
-            }), n.d(t, "n", function() {
-                return p
-            }), n.d(t, "C", function() {
-                return m
-            }), n.d(t, "I", function() {
-                return f
-            }), n.d(t, "s", function() {
-                return h
-            }), n.d(t, "t", function() {
-                return g
             }), n.d(t, "o", function() {
+                return p
+            }), n.d(t, "D", function() {
+                return m
+            }), n.d(t, "J", function() {
+                return f
+            }), n.d(t, "t", function() {
+                return h
+            }), n.d(t, "u", function() {
+                return g
+            }), n.d(t, "p", function() {
                 return b
-            }), n.d(t, "v", function() {
+            }), n.d(t, "w", function() {
                 return v
-            }), n.d(t, "x", function() {
+            }), n.d(t, "y", function() {
                 return E
-            }), n.d(t, "l", function() {
+            }), n.d(t, "m", function() {
                 return y
             }), n.d(t, "d", function() {
                 return _
             }), n.d(t, "c", function() {
                 return k
-            }), n.d(t, "D", function() {
+            }), n.d(t, "E", function() {
                 return N
             }), n.d(t, "b", function() {
                 return S
             }), n.d(t, "a", function() {
                 return O
-            }), n.d(t, "G", function() {
-                return C
             }), n.d(t, "H", function() {
+                return C
+            }), n.d(t, "I", function() {
                 return T
-            }), n.d(t, "m", function() {
+            }), n.d(t, "l", function() {
                 return I
-            }), n.d(t, "E", function() {
+            }), n.d(t, "n", function() {
                 return A
             }), n.d(t, "F", function() {
                 return R
-            }), n.d(t, "L", function() {
+            }), n.d(t, "G", function() {
                 return D
-            }), n.d(t, "r", function() {
+            }), n.d(t, "M", function() {
                 return w
-            }), n.d(t, "y", function() {
+            }), n.d(t, "s", function() {
                 return L
-            }), n.d(t, "f", function() {
-                return U
-            }), n.d(t, "g", function() {
-                return P
             }), n.d(t, "z", function() {
+                return U
+            }), n.d(t, "f", function() {
+                return P
+            }), n.d(t, "g", function() {
                 return x
-            }), n.d(t, "k", function() {
-                return F
-            }), n.d(t, "q", function() {
-                return B
-            }), n.d(t, "w", function() {
-                return M
-            }), n.d(t, "u", function() {
-                return j
-            }), n.d(t, "p", function() {
-                return W
-            }), n.d(t, "B", function() {
-                return G
             }), n.d(t, "A", function() {
+                return F
+            }), n.d(t, "k", function() {
+                return B
+            }), n.d(t, "r", function() {
+                return M
+            }), n.d(t, "x", function() {
+                return j
+            }), n.d(t, "v", function() {
+                return W
+            }), n.d(t, "q", function() {
+                return G
+            }), n.d(t, "C", function() {
                 return X
+            }), n.d(t, "B", function() {
+                return V
             });
             var i = n("/7QA"),
                 r = n("0Log"),
@@ -173,62 +175,66 @@
             }
 
             function I(e) {
-                return r.PubsubTopic.CampaignGlobalEvents + "." + e
+                return "follows." + e
             }
 
             function A(e) {
-                return r.PubsubTopic.CampaignUserEvents + "." + e
+                return r.PubsubTopic.CampaignGlobalEvents + "." + e
             }
 
             function R(e) {
-                return r.PubsubTopic.UserCommerceEvents + "." + e
+                return r.PubsubTopic.CampaignUserEvents + "." + e
             }
 
             function D(e) {
-                return r.PubsubTopic.Whispers + "." + e
+                return r.PubsubTopic.UserCommerceEvents + "." + e
             }
 
             function w(e) {
-                return r.PubsubTopic.OnsiteNotifications + "." + e
+                return r.PubsubTopic.Whispers + "." + e
             }
 
             function L(e) {
-                return r.PubsubTopic.StreamChatRoom + "." + e
+                return r.PubsubTopic.OnsiteNotifications + "." + e
             }
 
             function U(e) {
-                return r.PubsubTopic.ChannelEventUpdates + "." + e
+                return r.PubsubTopic.StreamChatRoom + "." + e
             }
 
             function P(e) {
-                return r.PubsubTopic.ChannelSquadUpdates + "." + e
+                return r.PubsubTopic.ChannelEventUpdates + "." + e
             }
 
             function x(e) {
-                return r.PubsubTopic.SubscribersCSV + "." + e
+                return r.PubsubTopic.ChannelSquadUpdates + "." + e
             }
 
             function F(e) {
-                return r.PubsubTopic.CheerbombEventsTopic + "." + e
+                return r.PubsubTopic.SubscribersCSV + "." + e
             }
 
             function B(e) {
-                return r.PubsubTopic.MysteryGift + "." + e
+                return r.PubsubTopic.CheerbombEventsTopic + "." + e
             }
 
             function M(e) {
-                return r.PubsubTopic.SquadUpdates + "." + e
+                return r.PubsubTopic.MysteryGift + "." + e
             }
 
             function j(e) {
-                return r.PubsubTopic.PurchaseFulfillmentEvents + "." + e
+                return r.PubsubTopic.SquadUpdates + "." + e
             }
 
             function W(e) {
-                return r.PubsubTopic.MultiviewChanletUpdate + "." + e
+                return r.PubsubTopic.PurchaseFulfillmentEvents + "." + e
             }
 
             function G(e) {
+                return r.PubsubTopic.MultiviewChanletUpdate + "." + e
+            }
+
+            function X(e) {
                 return i.l.subscribe({
                     topic: e.topic,
                     onMessage: function(t) {
@@ -241,7 +247,7 @@
                 })
             }
 
-            function X(e) {
+            function V(e) {
                 return i.l.subscribe({
                     topic: e.topic,
                     onMessage: function(t) {
@@ -5308,60 +5314,60 @@
                     return R
                 }), n.d(t, "P", function() {
                     return D
-                }), n.d(t, "c", function() {
-                    return F
-                }), n.d(t, "u", function() {
-                    return B
-                }), n.d(t, "Aa", function() {
-                    return M
-                }), n.d(t, "t", function() {
-                    return j
-                }), n.d(t, "T", function() {
-                    return W
-                }), n.d(t, "V", function() {
-                    return G
-                }), n.d(t, "G", function() {
-                    return X
-                }), n.d(t, "W", function() {
-                    return V
-                }), n.d(t, "F", function() {
-                    return H
-                }), n.d(t, "E", function() {
-                    return q
-                }), n.d(t, "q", function() {
-                    return z
-                }), n.d(t, "U", function() {
-                    return Y
-                }), n.d(t, "a", function() {
-                    return K
-                }), n.d(t, "x", function() {
-                    return Q
-                }), n.d(t, "z", function() {
-                    return J
-                }), n.d(t, "I", function() {
-                    return $
-                }), n.d(t, "J", function() {
-                    return ee
-                }), n.d(t, "H", function() {
-                    return ne
-                }), n.d(t, "K", function() {
-                    return ie
-                }), n.d(t, "Y", function() {
-                    return oe
-                }), n.d(t, "X", function() {
-                    return ge
-                }), n.d(t, "p", function() {
-                    return Oe
-                }), n.d(t, "o", function() {
-                    return Ce
-                }), n.d(t, "Da", function() {
-                    return Re
-                }), n.d(t, "D", function() {
-                    return Fe
-                }), n.d(t, "Ca", function() {
-                    return Be
                 }), n.d(t, "C", function() {
-                    return We
+                    return F
+                }), n.d(t, "c", function() {
+                    return B
+                }), n.d(t, "u", function() {
+                    return M
+                }), n.d(t, "Aa", function() {
+                    return j
+                }), n.d(t, "t", function() {
+                    return W
+                }), n.d(t, "T", function() {
+                    return G
+                }), n.d(t, "V", function() {
+                    return X
+                }), n.d(t, "G", function() {
+                    return V
+                }), n.d(t, "W", function() {
+                    return H
+                }), n.d(t, "F", function() {
+                    return q
+                }), n.d(t, "E", function() {
+                    return z
+                }), n.d(t, "q", function() {
+                    return Y
+                }), n.d(t, "U", function() {
+                    return K
+                }), n.d(t, "a", function() {
+                    return Q
+                }), n.d(t, "x", function() {
+                    return J
+                }), n.d(t, "z", function() {
+                    return Z
+                }), n.d(t, "I", function() {
+                    return ee
+                }), n.d(t, "J", function() {
+                    return te
+                }), n.d(t, "H", function() {
+                    return ie
+                }), n.d(t, "K", function() {
+                    return re
+                }), n.d(t, "Y", function() {
+                    return se
+                }), n.d(t, "X", function() {
+                    return be
+                }), n.d(t, "p", function() {
+                    return Ce
+                }), n.d(t, "o", function() {
+                    return Te
+                }), n.d(t, "Da", function() {
+                    return De
+                }), n.d(t, "D", function() {
+                    return Be
+                }), n.d(t, "Ca", function() {
+                    return Me
                 }), n.d(t, "k", function() {
                     return Ge
                 }), n.d(t, "w", function() {
@@ -5492,181 +5498,181 @@
                     e.AVAILABLE = "AVAILABLE", e.DISMISSED = "DISMISSED", e.ELIGIBLE = "ELIGIBLE", e.REDEEMED = "REDEEMED"
                 }(x || (x = {})),
                 function(e) {
-                    e.DURATION_INVALID = "DURATION_INVALID", e.FORBIDDEN = "FORBIDDEN", e.TARGET_ALREADY_BANNED = "TARGET_ALREADY_BANNED", e.TARGET_IS_ADMIN = "TARGET_IS_ADMIN", e.TARGET_IS_ANONYMOUS = "TARGET_IS_ANONYMOUS", e.TARGET_IS_BROADCASTER = "TARGET_IS_BROADCASTER", e.TARGET_IS_GLOBAL_MOD = "TARGET_IS_GLOBAL_MOD", e.TARGET_IS_MOD = "TARGET_IS_MOD", e.TARGET_IS_SELF = "TARGET_IS_SELF", e.TARGET_IS_STAFF = "TARGET_IS_STAFF", e.TARGET_IS_VIP = "TARGET_IS_VIP", e.TARGET_NOT_FOUND = "TARGET_NOT_FOUND"
+                    e.NONE = "NONE", e.READ = "READ", e.WRITE = "WRITE"
                 }(F || (F = {})),
                 function(e) {
-                    e.FORBIDDEN = "FORBIDDEN", e.SUCCESS = "SUCCESS", e.TARGET_IS_BROADCASTER = "TARGET_IS_BROADCASTER", e.TARGET_IS_MODERATOR = "TARGET_IS_MODERATOR"
+                    e.DURATION_INVALID = "DURATION_INVALID", e.FORBIDDEN = "FORBIDDEN", e.TARGET_ALREADY_BANNED = "TARGET_ALREADY_BANNED", e.TARGET_IS_ADMIN = "TARGET_IS_ADMIN", e.TARGET_IS_ANONYMOUS = "TARGET_IS_ANONYMOUS", e.TARGET_IS_BROADCASTER = "TARGET_IS_BROADCASTER", e.TARGET_IS_GLOBAL_MOD = "TARGET_IS_GLOBAL_MOD", e.TARGET_IS_MOD = "TARGET_IS_MOD", e.TARGET_IS_SELF = "TARGET_IS_SELF", e.TARGET_IS_STAFF = "TARGET_IS_STAFF", e.TARGET_IS_VIP = "TARGET_IS_VIP", e.TARGET_NOT_FOUND = "TARGET_NOT_FOUND"
                 }(B || (B = {})),
                 function(e) {
-                    e.FORBIDDEN = "FORBIDDEN", e.TARGET_NOT_BANNED = "TARGET_NOT_BANNED", e.TARGET_NOT_FOUND = "TARGET_NOT_FOUND"
+                    e.FORBIDDEN = "FORBIDDEN", e.SUCCESS = "SUCCESS", e.TARGET_IS_BROADCASTER = "TARGET_IS_BROADCASTER", e.TARGET_IS_MODERATOR = "TARGET_IS_MODERATOR"
                 }(M || (M = {})),
                 function(e) {
-                    e.EUR = "EUR", e.GBP = "GBP", e.USD = "USD"
+                    e.FORBIDDEN = "FORBIDDEN", e.TARGET_NOT_BANNED = "TARGET_NOT_BANNED", e.TARGET_NOT_FOUND = "TARGET_NOT_FOUND"
                 }(j || (j = {})),
                 function(e) {
-                    e.MONTH = "MONTH", e.ONE_TIME = "ONE_TIME", e.WEEK = "WEEK", e.YEAR = "YEAR"
+                    e.EUR = "EUR", e.GBP = "GBP", e.USD = "USD"
                 }(W || (W = {})),
                 function(e) {
-                    e.CHANSUB = "CHANSUB", e.TEAMSUB = "TEAMSUB", e.TURBO = "TURBO"
+                    e.MONTH = "MONTH", e.ONE_TIME = "ONE_TIME", e.WEEK = "WEEK", e.YEAR = "YEAR"
                 }(G || (G = {})),
                 function(e) {
-                    e.GOOGLE_IAB = "GOOGLE_IAB", e.PRIME = "PRIME", e.RECURLY = "RECURLY", e.XSOLLA_V3 = "XSOLLA_V3", e.ZUORA = "ZUORA"
+                    e.CHANSUB = "CHANSUB", e.TEAMSUB = "TEAMSUB", e.TURBO = "TURBO"
                 }(X || (X = {})),
                 function(e) {
-                    e.ACTIVE = "ACTIVE", e.CANCELLED = "CANCELLED", e.INACTIVE = "INACTIVE"
+                    e.GOOGLE_IAB = "GOOGLE_IAB", e.PRIME = "PRIME", e.RECURLY = "RECURLY", e.XSOLLA_V3 = "XSOLLA_V3", e.ZUORA = "ZUORA"
                 }(V || (V = {})),
                 function(e) {
-                    e.AMAZON = "AMAZON", e.CREDIT_CARD = "CREDIT_CARD", e.GOOGLE_IAB = "GOOGLE_IAB", e.PAYPAL = "PAYPAL"
+                    e.ACTIVE = "ACTIVE", e.CANCELLED = "CANCELLED", e.INACTIVE = "INACTIVE"
                 }(H || (H = {})),
                 function(e) {
-                    e.AMERICAN_EXPRESS = "AMERICAN_EXPRESS", e.DISCOVER = "DISCOVER", e.MASTERCARD = "MASTERCARD", e.VISA = "VISA"
+                    e.AMAZON = "AMAZON", e.CREDIT_CARD = "CREDIT_CARD", e.GOOGLE_IAB = "GOOGLE_IAB", e.PAYPAL = "PAYPAL"
                 }(q || (q = {})),
                 function(e) {
-                    e.CATEGORY = "CATEGORY", e.CLIP = "CLIP", e.LIVE_CHANNEL = "LIVE_CHANNEL", e.VOD = "VOD"
+                    e.AMERICAN_EXPRESS = "AMERICAN_EXPRESS", e.DISCOVER = "DISCOVER", e.MASTERCARD = "MASTERCARD", e.VISA = "VISA"
                 }(z || (z = {})),
                 function(e) {
-                    e.ANDROID = "ANDROID", e.IOS = "IOS", e.WEB = "WEB"
+                    e.CATEGORY = "CATEGORY", e.CLIP = "CLIP", e.LIVE_CHANNEL = "LIVE_CHANNEL", e.VOD = "VOD"
                 }(Y || (Y = {})),
                 function(e) {
-                    e.ACTIVE = "ACTIVE", e.INACTIVE = "INACTIVE", e.REJECTED_PERMISSIONS = "REJECTED_PERMISSIONS"
+                    e.ANDROID = "ANDROID", e.IOS = "IOS", e.WEB = "WEB"
                 }(K || (K = {})),
                 function(e) {
-                    e.COMPONENT = "COMPONENT", e.HIDDEN = "HIDDEN", e.PANEL = "PANEL", e.VIDEO_OVERLAY = "VIDEO_OVERLAY"
+                    e.ACTIVE = "ACTIVE", e.INACTIVE = "INACTIVE", e.REJECTED_PERMISSIONS = "REJECTED_PERMISSIONS"
                 }(Q || (Q = {})),
                 function(e) {
-                    e.APPROVED = "APPROVED", e.ASSETS_UPLOADED = "ASSETS_UPLOADED", e.DELETED = "DELETED", e.DEPRECATED = "DEPRECATED", e.IN_REVIEW = "IN_REVIEW", e.IN_TEST = "IN_TEST", e.PENDING_ACTION = "PENDING_ACTION", e.READY_FOR_REVIEW = "READY_FOR_REVIEW", e.REJECTED = "REJECTED", e.RELEASED = "RELEASED", e.UPLOADING = "UPLOADING"
+                    e.COMPONENT = "COMPONENT", e.HIDDEN = "HIDDEN", e.PANEL = "PANEL", e.VIDEO_OVERLAY = "VIDEO_OVERLAY"
                 }(J || (J = {})),
                 function(e) {
-                    e.GAME_COMMERCE = "GAME_COMMERCE", e.GAME_COMMERCE_V2 = "GAME_COMMERCE_V2"
+                    e.APPROVED = "APPROVED", e.ASSETS_UPLOADED = "ASSETS_UPLOADED", e.DELETED = "DELETED", e.DEPRECATED = "DEPRECATED", e.IN_REVIEW = "IN_REVIEW", e.IN_TEST = "IN_TEST", e.PENDING_ACTION = "PENDING_ACTION", e.READY_FOR_REVIEW = "READY_FOR_REVIEW", e.REJECTED = "REJECTED", e.RELEASED = "RELEASED", e.UPLOADING = "UPLOADING"
                 }(Z || (Z = {})),
                 function(e) {
-                    e.AFFILIATE = "AFFILIATE", e.CUSTOM_PARTNER = "CUSTOM_PARTNER", e.EXTENSIONS_DEVELOPER = "EXTENSIONS_DEVELOPER", e.PREMIUM_PARTNER = "PREMIUM_PARTNER", e.STANDARD_PARTNER = "STANDARD_PARTNER", e.UNPAID_PARTNER = "UNPAID_PARTNER"
+                    e.GAME_COMMERCE = "GAME_COMMERCE", e.GAME_COMMERCE_V2 = "GAME_COMMERCE_V2"
                 }($ || ($ = {})),
                 function(e) {
-                    e.AGREEMENT_NOT_STARTED = "AGREEMENT_NOT_STARTED", e.AGREEMENT_PENDING_UPGRADE = "AGREEMENT_PENDING_UPGRADE", e.CANCELED = "CANCELED", e.COMPLETED = "COMPLETED", e.PAYOUT_METHOD_NOT_STARTED = "PAYOUT_METHOD_NOT_STARTED", e.PAYOUT_METHOD_PENDING = "PAYOUT_METHOD_PENDING", e.REGISTRATION_NOT_STARTED = "REGISTRATION_NOT_STARTED", e.REVIEW_PENDING = "REVIEW_PENDING", e.ROYALTY_TAX_INTERVIEW_ACTION_REQUIRED = "ROYALTY_TAX_INTERVIEW_ACTION_REQUIRED", e.ROYALTY_TAX_INTERVIEW_FAILED = "ROYALTY_TAX_INTERVIEW_FAILED", e.ROYALTY_TAX_INTERVIEW_MISMATCH = "ROYALTY_TAX_INTERVIEW_MISMATCH", e.ROYALTY_TAX_INTERVIEW_NOT_STARTED = "ROYALTY_TAX_INTERVIEW_NOT_STARTED", e.ROYALTY_TAX_INTERVIEW_PENDING = "ROYALTY_TAX_INTERVIEW_PENDING", e.SERVICE_TAX_INTERVIEW_ACTION_REQUIRED = "SERVICE_TAX_INTERVIEW_ACTION_REQUIRED", e.SERVICE_TAX_INTERVIEW_FAILED = "SERVICE_TAX_INTERVIEW_FAILED", e.SERVICE_TAX_INTERVIEW_MISMATCH = "SERVICE_TAX_INTERVIEW_MISMATCH", e.SERVICE_TAX_INTERVIEW_NOT_STARTED = "SERVICE_TAX_INTERVIEW_NOT_STARTED", e.SERVICE_TAX_INTERVIEW_PENDING = "SERVICE_TAX_INTERVIEW_PENDING"
+                    e.AFFILIATE = "AFFILIATE", e.CUSTOM_PARTNER = "CUSTOM_PARTNER", e.EXTENSIONS_DEVELOPER = "EXTENSIONS_DEVELOPER", e.PREMIUM_PARTNER = "PREMIUM_PARTNER", e.STANDARD_PARTNER = "STANDARD_PARTNER", e.UNPAID_PARTNER = "UNPAID_PARTNER"
                 }(ee || (ee = {})),
                 function(e) {
-                    e.FORBIDDEN = "FORBIDDEN", e.INTERNAL_ERROR = "INTERNAL_ERROR", e.INVALID_AGREEMENT_VERSION = "INVALID_AGREEMENT_VERSION", e.UNAUTHENTICATED = "UNAUTHENTICATED"
+                    e.AGREEMENT_NOT_STARTED = "AGREEMENT_NOT_STARTED", e.AGREEMENT_PENDING_UPGRADE = "AGREEMENT_PENDING_UPGRADE", e.CANCELED = "CANCELED", e.COMPLETED = "COMPLETED", e.PAYOUT_METHOD_NOT_STARTED = "PAYOUT_METHOD_NOT_STARTED", e.PAYOUT_METHOD_PENDING = "PAYOUT_METHOD_PENDING", e.REGISTRATION_NOT_STARTED = "REGISTRATION_NOT_STARTED", e.REVIEW_PENDING = "REVIEW_PENDING", e.ROYALTY_TAX_INTERVIEW_ACTION_REQUIRED = "ROYALTY_TAX_INTERVIEW_ACTION_REQUIRED", e.ROYALTY_TAX_INTERVIEW_FAILED = "ROYALTY_TAX_INTERVIEW_FAILED", e.ROYALTY_TAX_INTERVIEW_MISMATCH = "ROYALTY_TAX_INTERVIEW_MISMATCH", e.ROYALTY_TAX_INTERVIEW_NOT_STARTED = "ROYALTY_TAX_INTERVIEW_NOT_STARTED", e.ROYALTY_TAX_INTERVIEW_PENDING = "ROYALTY_TAX_INTERVIEW_PENDING", e.SERVICE_TAX_INTERVIEW_ACTION_REQUIRED = "SERVICE_TAX_INTERVIEW_ACTION_REQUIRED", e.SERVICE_TAX_INTERVIEW_FAILED = "SERVICE_TAX_INTERVIEW_FAILED", e.SERVICE_TAX_INTERVIEW_MISMATCH = "SERVICE_TAX_INTERVIEW_MISMATCH", e.SERVICE_TAX_INTERVIEW_NOT_STARTED = "SERVICE_TAX_INTERVIEW_NOT_STARTED", e.SERVICE_TAX_INTERVIEW_PENDING = "SERVICE_TAX_INTERVIEW_PENDING"
                 }(te || (te = {})),
                 function(e) {
-                    e.AFFILIATE = "AFFILIATE", e.EXTENSIONS_DEVELOPER = "EXTENSIONS_DEVELOPER", e.PARTNER = "PARTNER"
+                    e.FORBIDDEN = "FORBIDDEN", e.INTERNAL_ERROR = "INTERNAL_ERROR", e.INVALID_AGREEMENT_VERSION = "INVALID_AGREEMENT_VERSION", e.UNAUTHENTICATED = "UNAUTHENTICATED"
                 }(ne || (ne = {})),
                 function(e) {
-                    e.CUSTOM = "CUSTOM", e.LEGACY = "LEGACY", e.PREMIUM = "PREMIUM", e.STANDARD = "STANDARD"
+                    e.AFFILIATE = "AFFILIATE", e.EXTENSIONS_DEVELOPER = "EXTENSIONS_DEVELOPER", e.PARTNER = "PARTNER"
                 }(ie || (ie = {})),
                 function(e) {
-                    e.FORBIDDEN = "FORBIDDEN", e.INTERNAL_ERROR = "INTERNAL_ERROR", e.INVALID_FORMAT = "INVALID_FORMAT", e.UNAUTHENTICATED = "UNAUTHENTICATED"
+                    e.CUSTOM = "CUSTOM", e.LEGACY = "LEGACY", e.PREMIUM = "PREMIUM", e.STANDARD = "STANDARD"
                 }(re || (re = {})),
                 function(e) {
-                    e.BIRTHDATE = "BIRTHDATE", e.CITY = "CITY", e.COMPANY_NAME = "COMPANY_NAME", e.COUNTRY_CODE = "COUNTRY_CODE", e.EMAIL = "EMAIL", e.FIRST_NAME = "FIRST_NAME", e.LAST_NAME = "LAST_NAME", e.MIDDLE_NAME = "MIDDLE_NAME", e.PARENT_EMAIL = "PARENT_EMAIL", e.PARENT_NAME = "PARENT_NAME", e.POSTAL = "POSTAL", e.STATE_CODE = "STATE_CODE", e.STREET_ADDRESS = "STREET_ADDRESS", e.STREET_ADDRESS_2 = "STREET_ADDRESS_2"
+                    e.FORBIDDEN = "FORBIDDEN", e.INTERNAL_ERROR = "INTERNAL_ERROR", e.INVALID_FORMAT = "INVALID_FORMAT", e.UNAUTHENTICATED = "UNAUTHENTICATED"
                 }(ae || (ae = {})),
                 function(e) {
-                    e.CITY = "CITY", e.COUNTRY = "COUNTRY", e.EMAIL = "EMAIL", e.NAME = "NAME", e.POSTAL = "POSTAL", e.STATE = "STATE", e.STREET_ADDRESS = "STREET_ADDRESS", e.STREET_ADDRESS_2 = "STREET_ADDRESS_2"
+                    e.BIRTHDATE = "BIRTHDATE", e.CITY = "CITY", e.COMPANY_NAME = "COMPANY_NAME", e.COUNTRY_CODE = "COUNTRY_CODE", e.EMAIL = "EMAIL", e.FIRST_NAME = "FIRST_NAME", e.LAST_NAME = "LAST_NAME", e.MIDDLE_NAME = "MIDDLE_NAME", e.PARENT_EMAIL = "PARENT_EMAIL", e.PARENT_NAME = "PARENT_NAME", e.POSTAL = "POSTAL", e.STATE_CODE = "STATE_CODE", e.STREET_ADDRESS = "STREET_ADDRESS", e.STREET_ADDRESS_2 = "STREET_ADDRESS_2"
                 }(oe || (oe = {})),
                 function(e) {
-                    e.ROYALTY = "ROYALTY", e.SERVICE = "SERVICE"
+                    e.CITY = "CITY", e.COUNTRY = "COUNTRY", e.EMAIL = "EMAIL", e.NAME = "NAME", e.POSTAL = "POSTAL", e.STATE = "STATE", e.STREET_ADDRESS = "STREET_ADDRESS", e.STREET_ADDRESS_2 = "STREET_ADDRESS_2"
                 }(se || (se = {})),
                 function(e) {
-                    e.BROADCASTER = "BROADCASTER", e.EVERYONE = "EVERYONE", e.MODERATOR = "MODERATOR", e.SUBSCRIBER = "SUBSCRIBER"
+                    e.ROYALTY = "ROYALTY", e.SERVICE = "SERVICE"
                 }(ce || (ce = {})),
                 function(e) {
-                    e.MAX_ROOMS_LIMIT_EXCEEDED = "MAX_ROOMS_LIMIT_EXCEEDED", e.NAME_CONTAINS_INVALID_CHARACTERS = "NAME_CONTAINS_INVALID_CHARACTERS", e.NAME_INAPPROPRIATE = "NAME_INAPPROPRIATE", e.NAME_LENGTH_INVALID = "NAME_LENGTH_INVALID", e.NAME_NOT_UNIQUE = "NAME_NOT_UNIQUE", e.ROLES_INVALID = "ROLES_INVALID", e.TOPIC_INAPPROPRIATE = "TOPIC_INAPPROPRIATE", e.TOPIC_LENGTH_INVALID = "TOPIC_LENGTH_INVALID"
+                    e.BROADCASTER = "BROADCASTER", e.EVERYONE = "EVERYONE", e.MODERATOR = "MODERATOR", e.SUBSCRIBER = "SUBSCRIBER"
                 }(le || (le = {})),
                 function(e) {
-                    e.ADMIN = "ADMIN", e.BROADCASTER = "BROADCASTER", e.GLOBALMOD = "GLOBALMOD", e.MOD = "MOD", e.REGULAR = "REGULAR", e.STAFF = "STAFF"
+                    e.MAX_ROOMS_LIMIT_EXCEEDED = "MAX_ROOMS_LIMIT_EXCEEDED", e.NAME_CONTAINS_INVALID_CHARACTERS = "NAME_CONTAINS_INVALID_CHARACTERS", e.NAME_INAPPROPRIATE = "NAME_INAPPROPRIATE", e.NAME_LENGTH_INVALID = "NAME_LENGTH_INVALID", e.NAME_NOT_UNIQUE = "NAME_NOT_UNIQUE", e.ROLES_INVALID = "ROLES_INVALID", e.TOPIC_INAPPROPRIATE = "TOPIC_INAPPROPRIATE", e.TOPIC_LENGTH_INVALID = "TOPIC_LENGTH_INVALID"
                 }(ue || (ue = {})),
                 function(e) {
-                    e.FORBIDDEN = "FORBIDDEN", e.NAME_CONTAINS_INVALID_CHARACTERS = "NAME_CONTAINS_INVALID_CHARACTERS", e.NAME_INAPPROPRIATE = "NAME_INAPPROPRIATE", e.NAME_LENGTH_INVALID = "NAME_LENGTH_INVALID", e.NAME_NOT_UNIQUE = "NAME_NOT_UNIQUE", e.ROLES_INVALID = "ROLES_INVALID", e.ROOM_NOT_FOUND = "ROOM_NOT_FOUND", e.TOPIC_INAPPROPRIATE = "TOPIC_INAPPROPRIATE", e.TOPIC_LENGTH_INVALID = "TOPIC_LENGTH_INVALID"
+                    e.ADMIN = "ADMIN", e.BROADCASTER = "BROADCASTER", e.GLOBALMOD = "GLOBALMOD", e.MOD = "MOD", e.REGULAR = "REGULAR", e.STAFF = "STAFF"
                 }(de || (de = {})),
                 function(e) {
-                    e.AUTO_MOD_ENFORCEMENT_FAILED = "AUTO_MOD_ENFORCEMENT_FAILED", e.EMOTE_ONLY_MODE_ENFORCEMENT_FAILED = "EMOTE_ONLY_MODE_ENFORCEMENT_FAILED", e.FORBIDDEN = "FORBIDDEN", e.R9K_MODE_ENFORCEMENT_FAILED = "R9K_MODE_ENFORCEMENT_FAILED", e.RATE_LIMIT_FAILED = "RATE_LIMIT_FAILED", e.SLOW_MODE_ENFORCEMENT_FAILED = "SLOW_MODE_ENFORCEMENT_FAILED", e.SPAM_ENFORCEMENT_FAILED = "SPAM_ENFORCEMENT_FAILED", e.USER_CHAT_BANNED = "USER_CHAT_BANNED", e.USER_CHAT_TIMED_OUT = "USER_CHAT_TIMED_OUT", e.USER_SUSPENDED = "USER_SUSPENDED", e.ZALGO_ENFORCEMENT_FAILED = "ZALGO_ENFORCEMENT_FAILED"
+                    e.FORBIDDEN = "FORBIDDEN", e.NAME_CONTAINS_INVALID_CHARACTERS = "NAME_CONTAINS_INVALID_CHARACTERS", e.NAME_INAPPROPRIATE = "NAME_INAPPROPRIATE", e.NAME_LENGTH_INVALID = "NAME_LENGTH_INVALID", e.NAME_NOT_UNIQUE = "NAME_NOT_UNIQUE", e.ROLES_INVALID = "ROLES_INVALID", e.ROOM_NOT_FOUND = "ROOM_NOT_FOUND", e.TOPIC_INAPPROPRIATE = "TOPIC_INAPPROPRIATE", e.TOPIC_LENGTH_INVALID = "TOPIC_LENGTH_INVALID"
                 }(pe || (pe = {})),
                 function(e) {
-                    e.FORBIDDEN = "FORBIDDEN", e.ROOM_NOT_FOUND = "ROOM_NOT_FOUND", e.SLOW_MODE_DURATION_INVALID = "SLOW_MODE_DURATION_INVALID"
+                    e.AUTO_MOD_ENFORCEMENT_FAILED = "AUTO_MOD_ENFORCEMENT_FAILED", e.EMOTE_ONLY_MODE_ENFORCEMENT_FAILED = "EMOTE_ONLY_MODE_ENFORCEMENT_FAILED", e.FORBIDDEN = "FORBIDDEN", e.R9K_MODE_ENFORCEMENT_FAILED = "R9K_MODE_ENFORCEMENT_FAILED", e.RATE_LIMIT_FAILED = "RATE_LIMIT_FAILED", e.SLOW_MODE_ENFORCEMENT_FAILED = "SLOW_MODE_ENFORCEMENT_FAILED", e.SPAM_ENFORCEMENT_FAILED = "SPAM_ENFORCEMENT_FAILED", e.USER_CHAT_BANNED = "USER_CHAT_BANNED", e.USER_CHAT_TIMED_OUT = "USER_CHAT_TIMED_OUT", e.USER_SUSPENDED = "USER_SUSPENDED", e.ZALGO_ENFORCEMENT_FAILED = "ZALGO_ENFORCEMENT_FAILED"
                 }(me || (me = {})),
                 function(e) {
-                    e.CSGO_SKILL = "CSGO_SKILL", e.LOL_SUMMONER_RANK = "LOL_SUMMONER_RANK", e.RELEVANCE = "RELEVANCE", e.VIEWER_COUNT = "VIEWER_COUNT"
+                    e.FORBIDDEN = "FORBIDDEN", e.ROOM_NOT_FOUND = "ROOM_NOT_FOUND", e.SLOW_MODE_DURATION_INVALID = "SLOW_MODE_DURATION_INVALID"
                 }(fe || (fe = {})),
                 function(e) {
-                    e.DNR_TO_RESUB = "DNR_TO_RESUB", e.GIFT_TO_PAID = "GIFT_TO_PAID"
+                    e.CSGO_SKILL = "CSGO_SKILL", e.LOL_SUMMONER_RANK = "LOL_SUMMONER_RANK", e.RELEVANCE = "RELEVANCE", e.VIEWER_COUNT = "VIEWER_COUNT"
                 }(he || (he = {})),
                 function(e) {
-                    e.CONTENT = "CONTENT", e.TOP = "TOP"
+                    e.DNR_TO_RESUB_NONRECURRING = "DNR_TO_RESUB_NONRECURRING", e.DNR_TO_RESUB_RECURRING = "DNR_TO_RESUB_RECURRING", e.GIFT_TO_PAID = "GIFT_TO_PAID"
                 }(ge || (ge = {})),
                 function(e) {
-                    e.AWAY = "AWAY", e.BUSY = "BUSY", e.OFFLINE = "OFFLINE", e.ONLINE = "ONLINE"
+                    e.CONTENT = "CONTENT", e.TOP = "TOP"
                 }(be || (be = {})),
                 function(e) {
-                    e.CLAIMABLE_GIFT_CREATION_ERROR = "CLAIMABLE_GIFT_CREATION_ERROR", e.GIFT_CREATION_ERROR = "GIFT_CREATION_ERROR", e.MAX_GIFTS_FOR_OFFER_EXCEEDED = "MAX_GIFTS_FOR_OFFER_EXCEEDED", e.UNKNOWN_ERROR = "UNKNOWN_ERROR"
+                    e.AWAY = "AWAY", e.BUSY = "BUSY", e.OFFLINE = "OFFLINE", e.ONLINE = "ONLINE"
                 }(ve || (ve = {})),
                 function(e) {
-                    e.CLAIM_CODE = "CLAIM_CODE", e.DIRECT_ENTITLEMENT = "DIRECT_ENTITLEMENT", e.EXTERNAL = "EXTERNAL"
+                    e.CLAIMABLE_GIFT_CREATION_ERROR = "CLAIMABLE_GIFT_CREATION_ERROR", e.GIFT_CREATION_ERROR = "GIFT_CREATION_ERROR", e.MAX_GIFTS_FOR_OFFER_EXCEEDED = "MAX_GIFTS_FOR_OFFER_EXCEEDED", e.UNKNOWN_ERROR = "UNKNOWN_ERROR"
                 }(Ee || (Ee = {})),
                 function(e) {
-                    e.ERROR_STATUS = "ERROR_STATUS", e.GIFT_CLAIMED = "GIFT_CLAIMED", e.GIFT_CLAIM_PENDING = "GIFT_CLAIM_PENDING"
+                    e.CLAIM_CODE = "CLAIM_CODE", e.DIRECT_ENTITLEMENT = "DIRECT_ENTITLEMENT", e.EXTERNAL = "EXTERNAL"
                 }(ye || (ye = {})),
                 function(e) {
-                    e.GIFT_NOT_CLAIMABLE = "GIFT_NOT_CLAIMABLE", e.NON_EXISTENT_GIFT = "NON_EXISTENT_GIFT", e.UNKNOWN_ERROR = "UNKNOWN_ERROR", e.USER_DOES_NOT_OWN_GIFT = "USER_DOES_NOT_OWN_GIFT"
+                    e.ERROR_STATUS = "ERROR_STATUS", e.GIFT_CLAIMED = "GIFT_CLAIMED", e.GIFT_CLAIM_PENDING = "GIFT_CLAIM_PENDING"
                 }(_e || (_e = {})),
                 function(e) {
-                    e.OFFERS_FAILED_TO_UPDATE = "OFFERS_FAILED_TO_UPDATE", e.UNKNOWN = "UNKNOWN"
+                    e.GIFT_NOT_CLAIMABLE = "GIFT_NOT_CLAIMABLE", e.NON_EXISTENT_GIFT = "NON_EXISTENT_GIFT", e.UNKNOWN_ERROR = "UNKNOWN_ERROR", e.USER_DOES_NOT_OWN_GIFT = "USER_DOES_NOT_OWN_GIFT"
                 }(ke || (ke = {})),
                 function(e) {
-                    e.TOO_MANY_RECENT_SPENDS = "TOO_MANY_RECENT_SPENDS", e.UNABLE_TO_SPEND = "UNABLE_TO_SPEND"
+                    e.OFFERS_FAILED_TO_UPDATE = "OFFERS_FAILED_TO_UPDATE", e.UNKNOWN = "UNKNOWN"
                 }(Ne || (Ne = {})),
                 function(e) {
-                    e.OFFER_ALREADY_CLAIMED = "OFFER_ALREADY_CLAIMED", e.UNKNOWN = "UNKNOWN"
+                    e.TOO_MANY_RECENT_SPENDS = "TOO_MANY_RECENT_SPENDS", e.UNABLE_TO_SPEND = "UNABLE_TO_SPEND"
                 }(Se || (Se = {})),
                 function(e) {
-                    e.DEFAULT = "DEFAULT", e.SERIES = "SERIES"
+                    e.OFFER_ALREADY_CLAIMED = "OFFER_ALREADY_CLAIMED", e.UNKNOWN = "UNKNOWN"
                 }(Oe || (Oe = {})),
                 function(e) {
-                    e.ALL_TIME = "ALL_TIME", e.LAST_DAY = "LAST_DAY", e.LAST_MONTH = "LAST_MONTH", e.LAST_WEEK = "LAST_WEEK", e.TRENDING = "TRENDING"
+                    e.DEFAULT = "DEFAULT", e.SERIES = "SERIES"
                 }(Ce || (Ce = {})),
                 function(e) {
-                    e.ALL_TIME = "ALL_TIME", e.LAST_DAY = "LAST_DAY", e.LAST_MONTH = "LAST_MONTH", e.LAST_WEEK = "LAST_WEEK"
+                    e.ALL_TIME = "ALL_TIME", e.LAST_DAY = "LAST_DAY", e.LAST_MONTH = "LAST_MONTH", e.LAST_WEEK = "LAST_WEEK", e.TRENDING = "TRENDING"
                 }(Te || (Te = {})),
                 function(e) {
-                    e.CREATED_AT_ASC = "CREATED_AT_ASC", e.CREATED_AT_DESC = "CREATED_AT_DESC", e.TRENDING = "TRENDING", e.VIEWS_ASC = "VIEWS_ASC", e.VIEWS_DESC = "VIEWS_DESC"
+                    e.ALL_TIME = "ALL_TIME", e.LAST_DAY = "LAST_DAY", e.LAST_MONTH = "LAST_MONTH", e.LAST_WEEK = "LAST_WEEK"
                 }(Ie || (Ie = {})),
                 function(e) {
-                    e.HIGH = "HIGH", e.LOW = "LOW", e.MEDIUM = "MEDIUM"
+                    e.CREATED_AT_ASC = "CREATED_AT_ASC", e.CREATED_AT_DESC = "CREATED_AT_DESC", e.TRENDING = "TRENDING", e.VIEWS_ASC = "VIEWS_ASC", e.VIEWS_DESC = "VIEWS_DESC"
                 }(Ae || (Ae = {})),
                 function(e) {
-                    e.NOT_PERMITTED = "NOT_PERMITTED", e.NOT_RESTRICTED = "NOT_RESTRICTED", e.PERMITTED = "PERMITTED", e.TEMPORARY = "TEMPORARY"
+                    e.HIGH = "HIGH", e.LOW = "LOW", e.MEDIUM = "MEDIUM"
                 }(Re || (Re = {})),
                 function(e) {
-                    e.BODY_EMPTY = "BODY_EMPTY", e.NOT_DELIVERED = "NOT_DELIVERED", e.TARGET_BANNED = "TARGET_BANNED", e.TARGET_RESTRICTED = "TARGET_RESTRICTED"
+                    e.NOT_PERMITTED = "NOT_PERMITTED", e.NOT_RESTRICTED = "NOT_RESTRICTED", e.PERMITTED = "PERMITTED", e.TEMPORARY = "TEMPORARY"
                 }(De || (De = {})),
                 function(e) {
-                    e.ALREADY_LINKED = "ALREADY_LINKED", e.CODE_EXPIRED = "CODE_EXPIRED", e.CODE_INCORRECT = "CODE_INCORRECT"
+                    e.BODY_EMPTY = "BODY_EMPTY", e.NOT_DELIVERED = "NOT_DELIVERED", e.TARGET_BANNED = "TARGET_BANNED", e.TARGET_RESTRICTED = "TARGET_RESTRICTED"
                 }(we || (we = {})),
                 function(e) {
-                    e.all = "all", e.ps4 = "ps4", e.xbox = "xbox"
+                    e.ALREADY_LINKED = "ALREADY_LINKED", e.CODE_EXPIRED = "CODE_EXPIRED", e.CODE_INCORRECT = "CODE_INCORRECT"
                 }(Le || (Le = {})),
                 function(e) {
-                    e.COMMUNITY = "COMMUNITY", e.GAME = "GAME"
+                    e.all = "all", e.ps4 = "ps4", e.xbox = "xbox"
                 }(Ue || (Ue = {})),
                 function(e) {
-                    e.ASC = "ASC", e.DESC = "DESC"
+                    e.COMMUNITY = "COMMUNITY", e.GAME = "GAME"
                 }(Pe || (Pe = {})),
                 function(e) {
-                    e.TIME = "TIME", e.VIEWS = "VIEWS"
+                    e.ASC = "ASC", e.DESC = "DESC"
                 }(xe || (xe = {})),
                 function(e) {
-                    e.DEFAULT = "DEFAULT", e.EXTENSION = "EXTENSION"
+                    e.TIME = "TIME", e.VIEWS = "VIEWS"
                 }(Fe || (Fe = {})),
                 function(e) {
-                    e.ALL_VIDEOS = "ALL_VIDEOS", e.COLLECTION = "COLLECTION", e.GAME_VIDEOS = "GAME_VIDEOS", e.LATEST_BROADCASTS = "LATEST_BROADCASTS", e.LONG_VIDEOS = "LONG_VIDEOS", e.SHORT_VIDEOS = "SHORT_VIDEOS", e.TOP_CLIPS = "TOP_CLIPS"
+                    e.DEFAULT = "DEFAULT", e.EXTENSION = "EXTENSION"
                 }(Be || (Be = {})),
                 function(e) {
-                    e.ALREADY_CLAIMED = "ALREADY_CLAIMED", e.REQUEST_THROTTLED = "REQUEST_THROTTLED", e.UNAUTHORIZED = "UNAUTHORIZED", e.UNKNOWN = "UNKNOWN"
+                    e.ALL_VIDEOS = "ALL_VIDEOS", e.COLLECTION = "COLLECTION", e.GAME_VIDEOS = "GAME_VIDEOS", e.LATEST_BROADCASTS = "LATEST_BROADCASTS", e.LONG_VIDEOS = "LONG_VIDEOS", e.SHORT_VIDEOS = "SHORT_VIDEOS", e.TOP_CLIPS = "TOP_CLIPS"
                 }(Me || (Me = {})),
                 function(e) {
-                    e.BITS_KEY_CODE = "BITS_KEY_CODE"
+                    e.ALREADY_CLAIMED = "ALREADY_CLAIMED", e.REQUEST_THROTTLED = "REQUEST_THROTTLED", e.UNAUTHORIZED = "UNAUTHORIZED", e.UNKNOWN = "UNKNOWN"
                 }(je || (je = {})),
                 function(e) {
-                    e.NONE = "NONE", e.READ = "READ", e.WRITE = "WRITE"
+                    e.BITS_KEY_CODE = "BITS_KEY_CODE"
                 }(We || (We = {})),
                 function(e) {
                     e.BROADCASTER = "BROADCASTER", e.EDITOR = "EDITOR", e.MODERATOR = "MODERATOR", e.REGULAR = "REGULAR", e.SUBSCRIBER = "SUBSCRIBER"
@@ -6943,9 +6949,9 @@
                 l = n("kRBY"),
                 u = n("mrSG"),
                 d = n("q1tI"),
-                p = n("2INN"),
-                m = n("uNOt"),
-                f = n("2iEm"),
+                p = n("uNOt"),
+                m = n("2iEm"),
+                f = n("2INN"),
                 h = n("/7QA"),
                 g = n("J4y2"),
                 b = n("eJ65"),
@@ -9164,6 +9170,7 @@
                             alignItems: L.f.Stretch,
                             fullHeight: !0
                         }, d.createElement(L.Ua, {
+                            blurAfterClick: !0,
                             onClick: this.onCardClick,
                             "data-a-target": "user-menu-toggle",
                             "data-test-selector": yt.Toggle
@@ -9302,7 +9309,7 @@
                     }), Object(Qe.a)(function(e) {
                         return {
                             query: Ct,
-                            topic: e.user ? Object(et.t)(e.user.id) : "",
+                            topic: e.user ? Object(et.u)(e.user.id) : "",
                             skip: !(e.data && !e.data.loading && !e.data.error && e.data.currentUser),
                             type: Ze.PubsubMessageType.PresenceSettings,
                             mutator: function(e, t) {
@@ -9311,7 +9318,7 @@
                         }
                     }), Object(Ke.a)([{
                         topic: function(e) {
-                            return e.user ? Object(et.t)(e.user.id) : ""
+                            return e.user ? Object(et.u)(e.user.id) : ""
                         },
                         mapMessageTypesToProps: (St = {}, St[Ze.PubsubMessageType.Presence] = "presence", St),
                         skip: function(e) {
@@ -9345,7 +9352,7 @@
                         return n.logger = h.p.logger.withCategory("top-nav"), n.renderFollowLink = function() {
                             if (n.props.isLoggedIn) {
                                 var e = Object(h.d)("Following", "TopNav");
-                                return d.createElement(m.a, {
+                                return d.createElement(p.a, {
                                     activeClassName: "active",
                                     to: {
                                         pathname: "/directory/following",
@@ -9366,7 +9373,7 @@
                             var t = e.match,
                                 n = t && "following" !== t.params.subpage,
                                 i = Object(h.d)("Browse", "TopNav");
-                            return d.createElement(f.a, {
+                            return d.createElement(m.a, {
                                 className: "top-nav__nav-link" + (n ? " active" : ""),
                                 "data-a-target": "browse-link",
                                 "data-test-selector": It.BrowseLink,
@@ -9394,21 +9401,11 @@
                         }, n.renderTryPrimeLink = function() {
                             if (n.props.data.loading || n.props.data.error) return null;
                             var e = n.props.data.requestInfo && !Object(E.a)(n.props.data.requestInfo.countryCode),
-                                t = !n.props.data.currentUser || !n.props.data.currentUser.hasTurbo,
-                                i = !n.props.data.currentUser || !n.props.data.currentUser.hasPrime;
-                            if (e) {
-                                if (t) return d.createElement(L.U, {
-                                    to: "/products/turbo?ref=top_nav",
-                                    targetBlank: !0,
-                                    onClick: Object(kt.b)(kt.a.GoTurbo),
-                                    className: "top-nav__nav-link",
-                                    "data-a-target": "try-prime-link",
-                                    "data-test-selector": It.GoTurboLink
-                                }, Object(h.d)("Go Turbo", "TopNavUpsell"))
-                            } else if (i) {
-                                var r = Object(Dt.e)(Dt.c, window.location.pathname.substring(1));
+                                t = !n.props.data.currentUser || !n.props.data.currentUser.hasPrime;
+                            if (!e && t) {
+                                var i = Object(Dt.e)(Dt.c, window.location.pathname.substring(1));
                                 return d.createElement("a", {
-                                    href: r,
+                                    href: i,
                                     target: "_blank",
                                     onClick: Object(kt.b)(kt.a.TryPrime),
                                     className: "top-nav__nav-link",
@@ -9419,7 +9416,7 @@
                             return null
                         }, n.renderModsLink = function() {
                             var e = Object(h.d)("Mods", "TopNav");
-                            return d.createElement(m.a, {
+                            return d.createElement(p.a, {
                                 activeClassName: "active",
                                 to: {
                                     pathname: "/mods",
@@ -9542,7 +9539,7 @@
                             flexWrap: L.Ba.NoWrap,
                             flexShrink: 0,
                             display: L.X.Flex
-                        }, this.renderFollowLink(), d.createElement(p.a, {
+                        }, this.renderFollowLink(), d.createElement(f.a, {
                             path: "/directory/:subpage?",
                             children: this.renderBrowseLink
                         }), !h.p.integrations.app && d.createElement(L.Pa, {
@@ -9683,6 +9680,12 @@
                             "data-a-target": "terms-link",
                             title: Object(h.d)("Terms", "TopNav"),
                             onClick: Object(kt.b)(kt.a.Terms)
+                        }), d.createElement(J, {
+                            targetBlank: !0,
+                            linkTo: "https://www.twitch.tv/turbo",
+                            "data-a-target": "turbo-link",
+                            title: Object(h.d)("Turbo", "TopNav"),
+                            onClick: Object(kt.b)(kt.a.Turbo)
                         }))))), d.createElement(L.Xa, {
                             className: "top-nav__search",
                             display: L.X.Hide,
@@ -13530,6 +13533,7 @@
                     ChatRoom: "chatrooms-room-v1",
                     ChatRoomsChannel: "chatrooms-channel-v1",
                     ChatRoomsUser: "chatrooms-user-v1",
+                    Follows: "follows",
                     Friendship: "friendship",
                     ImageUpload: "user-image-update",
                     ModerationActionsByUserAndChannel: "chat_moderator_actions",
@@ -13580,6 +13584,8 @@
                     ImageUploadSuccess: "imageuploadsuccess",
                     LiveEvent: "live-event",
                     ModerationAction: "moderation_action",
+                    ModeratorAdded: "moderator_added",
+                    ModeratorRemoved: "moderator_removed",
                     MultiviewChanletUpdate: "chanlet",
                     MysteryGiftPurchase: "mystery-gift-purchase",
                     OnsiteNotificationCreate: "create-notification",
@@ -13613,9 +13619,11 @@
                     UserCampaignProgressEvent: "progress",
                     UserCampaignRewardEvent: "reward",
                     UserCrateEvent: "crate-event",
+                    UserFollowedEvent: "user-followed",
                     UserGiftEvent: "gift-event",
                     UserMention: "user_mention",
                     UserPropertiesUpdate: "user_properties_update",
+                    UserUnfollowedEvent: "user-unfollowed",
                     VideoThumbnailProcessingComplete: "processing_complete",
                     VideoThumbnailProcessingError: "processing_error",
                     ViewCount: "viewcount",
@@ -15061,7 +15069,7 @@
                         }, o.prototype.render = function() {
                             return r.createElement(t, i.__assign({}, this.props))
                         }, o.prototype.subscribe = function(e) {
-                            this.unsubscriber = Object(a.B)({
+                            this.unsubscriber = Object(a.C)({
                                 query: e.query,
                                 variables: e.variables,
                                 topic: e.topic,
@@ -16477,7 +16485,7 @@
                                 }, a.prototype.render = function() {
                                     return r.createElement(t, i.__assign({}, this.props))
                                 }, a.prototype.subscribe = function(e) {
-                                    this.unsubscriber = Object(h.A)({
+                                    this.unsubscriber = Object(h.B)({
                                         fragment: e.fragment,
                                         id: e.id,
                                         topic: e.topic,
@@ -16495,7 +16503,7 @@
                             id: "User:" + n.id,
                             skip: n.skip,
                             fragment: v,
-                            topic: Object(h.t)(n.currentUserID),
+                            topic: Object(h.u)(n.currentUserID),
                             type: g.PubsubMessageType.Presence,
                             mutator: function(e, t) {
                                 if (!t) return null;
@@ -17458,7 +17466,7 @@
                         })
                     }, t = i.__decorate([Object(h.b)("OnsiteNotificationToastManager"), Object(q.a)([{
                         topic: function(e) {
-                            return Object(m.r)("" + (e.currentUser && e.currentUser.id))
+                            return Object(m.s)("" + (e.currentUser && e.currentUser.id))
                         },
                         mapMessageTypesToProps: (J = {}, J[d.PubsubMessageType.OnsiteNotificationCreate] = "info", J[d.PubsubMessageType.OnsiteNotificationUpdate] = "info", J),
                         skip: function(e) {
@@ -17942,7 +17950,7 @@
                         return {
                             query: le,
                             skip: !e.currentUser,
-                            topic: Object(m.r)("" + (e.currentUser && e.currentUser.id)),
+                            topic: Object(m.s)("" + (e.currentUser && e.currentUser.id)),
                             types: [d.PubsubMessageType.OnsiteNotificationSummaryUpdate, d.PubsubMessageType.OnsiteNotificationUpdate, d.PubsubMessageType.OnsiteNotificationCreate, d.PubsubMessageType.OnsiteNotificationDelete],
                             mutator: ie
                         }
@@ -17953,7 +17961,7 @@
                                 language: e.languageCode
                             }),
                             skip: !(e.currentUser && e.listData && e.listData.currentUser && e.listData.currentUser.notifications && e.listData.currentUser.notifications.edges),
-                            topic: Object(m.r)("" + (e.currentUser && e.currentUser.id)),
+                            topic: Object(m.s)("" + (e.currentUser && e.currentUser.id)),
                             types: [d.PubsubMessageType.OnsiteNotificationsRead, d.PubsubMessageType.OnsiteNotificationUpdate, d.PubsubMessageType.OnsiteNotificationCreate, d.PubsubMessageType.OnsiteNotificationDelete],
                             mutator: re
                         }
@@ -18847,7 +18855,7 @@
             var i, r = n("/7QA"),
                 a = n("2xye");
             ! function(e) {
-                e.HomeIcon = "home_icon", e.Following = "following", e.Browse = "browse", e.GetDesktop = "get_desktop", e.Store = "store", e.TryPrime = "try_prime", e.GoTurbo = "go_turbo", e.ThreeDot = "three_dot", e.PrimeCrown = "prime_crown", e.NotificationsBell = "notifications_bell", e.GetBits = "get_bits", e.AvatarDropdown = "avatar_dropdow", e.LogIn = "login", e.SignUp = "signup", e.About = "about", e.AdChoices = "ad_choices", e.Advertisers = "advertisers", e.Blog = "blog", e.CommunityGuidelines = "community_guidelines", e.CookiePolicy = "cookie_policy", e.Creative = "creative", e.Developers = "developers", e.Help = "help", e.Jobs = "jobs", e.Language = "language", e.Music = "music", e.Store2 = "store2", e.Partners = "partners", e.Press = "press", e.PrivacyPolicy = "privacy_policy", e.Security = "security", e.Terms = "terms", e.LanguageSelection = "language_"
+                e.HomeIcon = "home_icon", e.Following = "following", e.Browse = "browse", e.GetDesktop = "get_desktop", e.Store = "store", e.TryPrime = "try_prime", e.GoTurbo = "go_turbo", e.ThreeDot = "three_dot", e.PrimeCrown = "prime_crown", e.NotificationsBell = "notifications_bell", e.GetBits = "get_bits", e.AvatarDropdown = "avatar_dropdow", e.LogIn = "login", e.SignUp = "signup", e.About = "about", e.AdChoices = "ad_choices", e.Advertisers = "advertisers", e.Blog = "blog", e.CommunityGuidelines = "community_guidelines", e.CookiePolicy = "cookie_policy", e.Creative = "creative", e.Developers = "developers", e.Help = "help", e.Jobs = "jobs", e.Language = "language", e.Music = "music", e.Store2 = "store2", e.Partners = "partners", e.Press = "press", e.PrivacyPolicy = "privacy_policy", e.Security = "security", e.Terms = "terms", e.Turbo = "turbo", e.LanguageSelection = "language_"
             }(i || (i = {}));
             var o = function(e) {
                 return function() {

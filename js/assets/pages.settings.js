@@ -373,7 +373,7 @@
                                                     }), [2];
                                                 case 4:
                                                     return this.unsubscribe = c.l.subscribe({
-                                                        topic: Object(g.n)(this.props.userID),
+                                                        topic: Object(g.o)(this.props.userID),
                                                         success: function() {
                                                             try {
                                                                 Object(b.c)(n, o.currentImage)
@@ -1939,7 +1939,7 @@
                                             }), [2];
                                         case 4:
                                             return this.unsubscribe = d.l.subscribe({
-                                                topic: Object(h.n)(this.props.userID),
+                                                topic: Object(h.o)(this.props.userID),
                                                 success: function() {
                                                     try {
                                                         Object(S.c)(n, r.currentImage)

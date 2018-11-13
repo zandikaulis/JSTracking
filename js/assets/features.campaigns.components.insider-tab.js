@@ -1029,7 +1029,7 @@
             ! function(e) {
                 e.MarketingSpecialCalloutInfo = "marketing-special-callout-info", e.MarketingSpecialCalloutDesc = "margeting-special-callout-desc"
             }(S || (S = {}));
-            var N = function(e) {
+            var j = function(e) {
                     function t() {
                         return null !== e && e.apply(this, arguments) || this
                     }
@@ -1104,7 +1104,7 @@
                         })))))
                     }, t
                 }(o.PureComponent),
-                j = a("NAv5"),
+                N = a("NAv5"),
                 I = a("HGFl"),
                 L = "esport_insider_allstars_launch",
                 F = "2018-08-24T16:00:00Z";
@@ -1120,7 +1120,7 @@
                             t = function(e, t) {
                                 var a = w.b.get(L, F),
                                     n = Object(I.c)(a),
-                                    i = Object(j.isEqual)(e, n) || Object(j.isAfter)(e, n),
+                                    i = Object(N.isEqual)(e, n) || Object(N.isAfter)(e, n),
                                     r = t && t.roles && t.roles.isStaff || !1;
                                 return i || r
                             }(new Date(Date.now()), this.props.user);
@@ -1223,7 +1223,7 @@
                             "x:body": T
                         }, "CampaignsTabs")))))), t && o.createElement(p.Eb, {
                             borderBottom: !0
-                        }, o.createElement(N, {
+                        }, o.createElement(j, {
                             posterURL: k.c + "/owl-2017/insider-test/owl-igc-allstars-pack.png",
                             title: Object(w.d)("<x:header>PLAY LIKE AN ALL STAR</x:header>", {
                                 "x:header": B
@@ -1233,7 +1233,7 @@
                             isJustAdded: !0
                         })), o.createElement(p.Eb, {
                             borderBottom: !0
-                        }, o.createElement(N, {
+                        }, o.createElement(j, {
                             posterURL: k.c + "/owl-2017/insider-test/lucio-emote-static.png",
                             videoURL: k.c + "/owl-2017/insider-test/djlucio-emote-video.mp4",
                             title: Object(w.d)("<x:header>PUMP UP THE VOLUME</x:header> <x:body>with the new Lucio DJ emote</x:body>", {
@@ -1334,42 +1334,6 @@
             a.d(t, "PublicProps", function() {}), a.d(t, "CampaignsInsiderPassTab", function() {
                 return Q
             })
-        },
-        HGFl: function(e, t, a) {
-            "use strict";
-            a.d(t, "a", function() {
-                return i
-            }), a.d(t, "b", function() {
-                return r
-            }), a.d(t, "c", function() {
-                return s
-            }), a.d(t, "d", function() {
-                return o
-            });
-            var n = a("NAv5"),
-                i = {
-                    RFC3399: "YYYY-MM-DDTHH:mm:ssZ",
-                    timeString: "h:mma"
-                };
-
-            function r(e, t) {
-                return Object(n.format)(e, t)
-            }
-
-            function s(e) {
-                return Object(n.parse)(e)
-            }
-
-            function o(e, t) {
-                var a = e.split(":");
-                if (2 !== a.length) throw new Error("invalid time string: " + e);
-                var n = parseInt(a[0], 10),
-                    i = parseInt(a[1].substring(0, 2), 10),
-                    r = a[1].substring(a[1].length - 2);
-                if (12 === n && "am" === r && (n = 0), "pm" === r && n < 12 && (n += 12), isNaN(n) || n < 0 || n > 23 || isNaN(i) || i < 0 || i > 59) throw new Error("invalid time string: " + e);
-                var s = t || new Date;
-                return s.setHours(n, i), s
-            }
         },
         PvlP: function(e, t, a) {},
         R4QF: function(e, t, a) {},

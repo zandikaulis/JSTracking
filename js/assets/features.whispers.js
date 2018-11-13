@@ -59,9 +59,9 @@
             }), n.d(t, "O", function() {
                 return O
             }), n.d(t, "L", function() {
-                return R
-            }), n.d(t, "H", function() {
                 return M
+            }), n.d(t, "H", function() {
+                return R
             }), n.d(t, "C", function() {
                 return U
             }), n.d(t, "I", function() {
@@ -147,13 +147,13 @@
                 }
             }
 
-            function R() {
+            function M() {
                 return {
                     type: r
                 }
             }
 
-            function M() {
+            function R() {
                 return {
                     type: l
                 }
@@ -1492,8 +1492,8 @@
                 w = n("/aPz"),
                 I = n("u5aL"),
                 O = n("8/mp"),
-                R = n("eJ65"),
-                M = n("yLwq"),
+                M = n("eJ65"),
+                R = n("yLwq"),
                 U = n("f00E"),
                 j = n("kz7j"),
                 F = n("GnwI"),
@@ -1666,7 +1666,7 @@
                             var r = Object(i.d)("{username}'s avatar", {
                                     username: e.name
                                 }, "ThreadsBox"),
-                                a = e.profile_image || Object(M.c)(e.objectID, 30);
+                                a = e.profile_image || Object(R.c)(e.objectID, 30);
                             return E.createElement("div", {
                                 key: "searchResult:" + e.objectID,
                                 onClick: n.handleUserSearchResultClick(e, t)
@@ -1914,7 +1914,7 @@
                         }, E.createElement(B.W, {
                             type: B.Vb.Span,
                             bold: !0
-                        }, Object(i.d)("Whispers", "WhisperThreadsBox")))), E.createElement(R.a, {
+                        }, Object(i.d)("Whispers", "WhisperThreadsBox")))), E.createElement(M.a, {
                             ref: this.saveSettingsMenuRef
                         }, E.createElement(B.A, {
                             ariaLabel: Object(i.d)("Settings", "WhisperThreadsBox"),
@@ -2217,7 +2217,7 @@
                 }), ye.a, Object(be.a)())(Ne),
                 Ie = n("pORx");
             var Oe = n("NKxy");
-            var Re, Me = n("vGFN"),
+            var Me, Re = n("vGFN"),
                 Ue = (n("hRS0"), "report-as-spam-button"),
                 je = "mark-not-spam-button",
                 Fe = "dismiss-prompt-button",
@@ -2299,15 +2299,15 @@
                             }
                             return null
                         }, n.reportSpam = function() {
-                            n.props.reportUserMutation(n.interlocutor.id, fe.b.Spam, n.props.threadID), n.props.blockUserMutation(n.interlocutor.id, fe.a.Other, ae.e.WHISPER, n.props.currentUser), n.props.setThreadSpamStatusMutation(n.props.threadID, !0), Object(Me.l)(n.interlocutor.login, Me.a.SpamPropmt), n.setState({
+                            n.props.reportUserMutation(n.interlocutor.id, fe.b.Spam, n.props.threadID), n.props.blockUserMutation(n.interlocutor.id, fe.a.Other, ae.e.WHISPER, n.props.currentUser), n.props.setThreadSpamStatusMutation(n.props.threadID, !0), Object(Re.l)(n.interlocutor.login, Re.a.SpamPropmt), n.setState({
                                 potentialSpamResolution: "reported"
                             })
                         }, n.markNotSpam = function() {
-                            n.props.setThreadSpamStatusMutation(n.props.threadID, !1), Object(Me.o)(n.props.threadID), n.setState({
+                            n.props.setThreadSpamStatusMutation(n.props.threadID, !1), Object(Re.o)(n.props.threadID), n.setState({
                                 potentialSpamResolution: "dismissed"
                             })
                         }, n.dismissSpamPrompt = function() {
-                            n.props.onBlock && n.props.onBlock(n.props.threadID), Object(Me.n)(n.props.threadID), n.setState({
+                            n.props.onBlock && n.props.onBlock(n.props.threadID), Object(Re.n)(n.props.threadID), n.setState({
                                 potentialSpamResolution: "dismissed"
                             })
                         }, n.onSettingsClick = function(e) {
@@ -2443,7 +2443,7 @@
                                 })))
                             }
                         }
-                        this.props.isCollapsed || !this.props.currentUser || this.props.interactionsDisabled || (s = E.createElement(R.a, null, E.createElement(B.A, {
+                        this.props.isCollapsed || !this.props.currentUser || this.props.interactionsDisabled || (s = E.createElement(M.a, null, E.createElement(B.A, {
                             ariaLabel: o,
                             icon: B.tb.Gear,
                             overlay: e
@@ -2628,7 +2628,7 @@
                 Be = n("HAa/");
             ! function(e) {
                 e[e.Timestamp = 0] = "Timestamp", e[e.Whisper = 1] = "Whisper", e[e.Warning = 2] = "Warning", e[e.InactiveUserNotice = 3] = "InactiveUserNotice", e[e.NewMessages = 4] = "NewMessages", e[e.Notification = 5] = "Notification"
-            }(Re || (Re = {}));
+            }(Me || (Me = {}));
             n("0JUI");
             var ze = function(e) {
                     function t() {
@@ -2637,7 +2637,7 @@
                     return a.__extends(t, e), t.prototype.render = function() {
                         var e = this.props.message;
                         switch (e.type) {
-                            case Re.Timestamp:
+                            case Me.Timestamp:
                                 return E.createElement(B.Eb, {
                                     className: "thread-message__timestamp",
                                     color: B.O.Alt2,
@@ -2674,7 +2674,7 @@
                                         title: l
                                     }, "" + r))
                                 }(e));
-                            case Re.Warning:
+                            case Me.Warning:
                                 return E.createElement(B.Eb, {
                                     className: "thread-message__warning",
                                     color: B.O.Alt2
@@ -2684,7 +2684,7 @@
                                         x: 1
                                     }
                                 }, Object(i.d)("Please don't share passwords or personal information.", "whispers")));
-                            case Re.InactiveUserNotice:
+                            case Me.InactiveUserNotice:
                                 return E.createElement(B.Eb, {
                                     className: "thread-message__inactive-user",
                                     color: B.O.Alt2
@@ -2694,7 +2694,7 @@
                                         x: 1
                                     }
                                 }, Object(i.d)("This account is no longer active.", "whispers")));
-                            case Re.Whisper:
+                            case Me.Whisper:
                                 return this.props.reportOutgoingWhisperRendered && this.props.reportOutgoingWhisperRendered(e.content), E.createElement(B.Xa, {
                                     className: "thread-message__message",
                                     "data-a-target": "whisper-message"
@@ -2750,7 +2750,7 @@
                                         }
                                     }, n))
                                 }(e));
-                            case Re.NewMessages:
+                            case Me.NewMessages:
                                 return E.createElement(B.Eb, {
                                     className: "thread-message__new-messages",
                                     color: B.O.OverlayAlt,
@@ -2761,7 +2761,7 @@
                                         y: .5
                                     }
                                 }, Object(i.d)("New Whispers", "whispers")));
-                            case Re.Notification:
+                            case Me.Notification:
                                 return E.createElement(B.Xa, {
                                     className: "thread-message__notification"
                                 }, function(e) {
@@ -2806,7 +2806,7 @@
                                 n = [t.createWarningMessage()];
                             return n = (n = n.concat(t.notificationsFor())).concat(t.props.thread.messages.edges.map(function(e) {
                                 return {
-                                    type: Re.Whisper,
+                                    type: Me.Whisper,
                                     content: e.node.content.content,
                                     from: e.node.from && t.props.participantsByID[+e.node.from.id],
                                     emotes: e.node.content.emotes,
@@ -2829,7 +2829,7 @@
                             return e.sentAt.valueOf() - t.sentAt.valueOf() > 6e5 || e.sentAt.toDateString() !== t.sentAt.toDateString()
                         }, t.createTimestampMessage = function(e) {
                             return {
-                                type: Re.Timestamp,
+                                type: Me.Timestamp,
                                 timestamp: new Date(e.sentAt)
                             }
                         }, t.notificationsFor = function(e) {
@@ -2838,20 +2838,20 @@
                             }).map(t.createNotificationLine)
                         }, t.createNotificationLine = function(e) {
                             return {
-                                type: Re.Notification,
+                                type: Me.Notification,
                                 content: e.content
                             }
                         }, t.createNewMessagesIndicator = function() {
                             return {
-                                type: Re.NewMessages
+                                type: Me.NewMessages
                             }
                         }, t.createWarningMessage = function() {
                             return {
-                                type: Re.Warning
+                                type: Me.Warning
                             }
                         }, t.createInactiveUserMessage = function() {
                             return {
-                                type: Re.InactiveUserNotice
+                                type: Me.InactiveUserNotice
                             }
                         }, t.saveScrollRef = function(e) {
                             return t.scroll = e
@@ -2897,15 +2897,15 @@
                         }), this.renderMessages(e))))
                     }, t.prototype.generateMessageKey = function(e, t) {
                         switch (e.type) {
-                            case Re.NewMessages:
-                            case Re.Warning:
-                            case Re.InactiveUserNotice:
+                            case Me.NewMessages:
+                            case Me.Warning:
+                            case Me.InactiveUserNotice:
                                 return "" + e.type;
-                            case Re.Timestamp:
+                            case Me.Timestamp:
                                 return e.type + "-" + e.timestamp.getTime();
-                            case Re.Whisper:
+                            case Me.Whisper:
                                 return e.type + "-" + e.id;
-                            case Re.Notification:
+                            case Me.Notification:
                                 return e.type + "-" + t;
                             default:
                                 return i.k.warn("[ThreadMessages] Encountered an unknown message type."), t
@@ -3276,7 +3276,7 @@
                     }
                 }), Object(ne.a)([{
                     topic: function(e) {
-                        return Object(w.L)(e.currentUserID)
+                        return Object(w.M)(e.currentUserID)
                     },
                     mapMessageTypesToProps: (Ye = {}, Ye[D.PubsubMessageType.WhisperReceived] = "whisperReceived", Ye[D.PubsubMessageType.WhisperSent] = "whisperSent", Ye),
                     skipMessage: function(e, t) {
@@ -3605,7 +3605,7 @@
                             types: [D.PubsubMessageType.WhisperDeleted, D.PubsubMessageType.WhisperEdited, D.PubsubMessageType.WhisperSent, D.PubsubMessageType.WhisperAllThreadsUpdate, D.PubsubMessageType.WhisperReceived, D.PubsubMessageType.WhisperThreadUpdate],
                             variables: a.__assign({}, e.data.variables),
                             skip: !e.data.currentUser || void 0 === e.data.currentUser.id,
-                            topic: Object(w.L)(e.data.currentUser && e.data.currentUser.id || ""),
+                            topic: Object(w.M)(e.data.currentUser && e.data.currentUser.id || ""),
                             mutator: function(t, n) {
                                 if (!n.currentUser || !n.currentUser.whisperThreads) return n;
                                 if (Ke(t) || $e(t)) {
@@ -9164,7 +9164,7 @@
                 })(N),
                 I = n("gTu3"),
                 O = (n("lpj/"), (u = {})[I.a.Default] = "", u[I.a.Recipient] = "mention-fragment--recipient", u[I.a.Sender] = "mention-fragment--sender", u),
-                R = function(e) {
+                M = function(e) {
                     var t = e.isAtMention ? "@" : "",
                         n = m("mention-fragment", O[e.currentUserMentionRelation]);
                     return r.createElement("span", {
@@ -9172,8 +9172,8 @@
                         "data-a-target": "chat-message-mention"
                     }, "" + t + e.recipient)
                 };
-            R.displayName = "MentionFragment";
-            var M = n("QVaV"),
+            M.displayName = "MentionFragment";
+            var R = n("QVaV"),
                 U = n("sU0Q"),
                 j = function(e) {
                     function t() {
@@ -9191,7 +9191,7 @@
                             }
                         });
                         if (a || !t) return r.createElement(C, null);
-                        var o = r.createElement(y.W, null, Object(i.c)(new Date(t.publishedAt), "medium"), r.createElement("span", null, " · "), Object(M.a)(t.owner.login, t.owner.displayName));
+                        var o = r.createElement(y.W, null, Object(i.c)(new Date(t.publishedAt), "medium"), r.createElement("span", null, " · "), Object(R.a)(t.owner.login, t.owner.displayName));
                         return r.createElement(C, {
                             data: {
                                 title: t.title,
@@ -9247,7 +9247,7 @@
                                 }));
                                 break;
                             case h.a.CurrentUserHighlight:
-                                l.push(r.createElement(R, {
+                                l.push(r.createElement(M, {
                                     isAtMention: !1,
                                     currentUserMentionRelation: I.a.Recipient,
                                     recipient: o.content,
@@ -9255,7 +9255,7 @@
                                 }));
                                 break;
                             case h.a.Mention:
-                                l.push(r.createElement(R, {
+                                l.push(r.createElement(M, {
                                     isAtMention: !0,
                                     currentUserMentionRelation: o.content.currentUserMentionRelation,
                                     recipient: o.content.recipient,
@@ -10299,7 +10299,7 @@
             ! function(e) {
                 e.Confirm = "Confirm", e.MultipleChoice = "MultipleChoice", e.Info = "End Card"
             }(C || (C = {}));
-            var I, O, R, M = {
+            var I, O, M, R = {
                     contentGeneral: function() {
                         return Object(c.d)("What would you like to report?", "ReportModalWizard")
                     },
@@ -10408,21 +10408,21 @@
                 A = {
                     identifyUser: {
                         getTitle: U.reportVideo,
-                        getLabel: M.identifyUser,
+                        getLabel: R.identifyUser,
                         items: [D.video_streamer, D.video_someoneElse, D.video_chatSomeone],
                         type: C.MultipleChoice,
                         value: "video identify user"
                     },
                     content: {
                         getTitle: U.reportVideo,
-                        getLabel: M.contentGeneral,
+                        getLabel: R.contentGeneral,
                         items: [D.revealPersonalInfo, D.video_labeling, D.video_inactive, D.video_general, D.report_ip, D.violateDevAgreement, D.selfharm],
                         type: C.MultipleChoice,
                         value: "video report reason"
                     },
                     general: {
                         getTitle: U.reportVideo,
-                        getLabel: M.content,
+                        getLabel: R.content,
                         items: [D.report_username, D.violence, D.abusive, D.cheating, D.scam, D.inappropriateContent, D.evasion, D.impersonation, D.underage, D.bitsViolation],
                         type: C.MultipleChoice,
                         value: "video general report reason"
@@ -10431,14 +10431,14 @@
                 W = {
                     content: {
                         getTitle: U.reportMessage,
-                        getLabel: M.contentGeneral,
+                        getLabel: R.contentGeneral,
                         items: [D.revealPersonalInfo, D.evasion, D.spam, D.maliciousRaid, D.report_username, D.messaging_general, D.selfharm],
                         type: C.MultipleChoice,
                         value: "message report reason"
                     },
                     general: {
                         getTitle: U.reportMessage,
-                        getLabel: M.content,
+                        getLabel: R.content,
                         items: [D.report_emotes, D.violence, D.abusive, D.inappropriateContent, D.impersonation, D.underage, D.bitsViolation],
                         type: C.MultipleChoice,
                         value: "message general report reason"
@@ -10452,14 +10452,14 @@
                 L = {
                     content: {
                         getTitle: U.reportProfile,
-                        getLabel: M.contentGeneral,
+                        getLabel: R.contentGeneral,
                         items: [D.revealPersonalInfo, D.inappropriateBadge, D.inappropriateExtension, D.noModeration, D.profile_general, D.report_ip, D.violateDevAgreement, D.selfharm],
                         type: C.MultipleChoice,
                         value: "profile report reason"
                     },
                     general: {
                         getTitle: U.reportProfile,
-                        getLabel: M.content,
+                        getLabel: R.content,
                         items: [D.report_username, D.violence, D.abusive, D.scam, D.inappropriateContent, D.evasion, D.impersonation, D.underage, D.bitsViolation],
                         type: C.MultipleChoice,
                         value: "profile general report reason"
@@ -10471,7 +10471,7 @@
                             username: e
                         }, "ReportModalWizard")
                     },
-                    getLabel: M.identifyUser,
+                    getLabel: R.identifyUser,
                     items: [D.report_channelOwner, D.report_member],
                     value: "room report user",
                     type: C.MultipleChoice
@@ -10496,7 +10496,7 @@
                 X = {
                     content: {
                         getTitle: U.reportAbusive,
-                        getLabel: M.relevantStatements,
+                        getLabel: R.relevantStatements,
                         items: [D.hateSpeech, D.harassment, D.abusiveViolence, D.commitingViolence, D.swatting, D.personalInfo],
                         type: C.MultipleChoice,
                         value: "abuse type"
@@ -10535,7 +10535,7 @@
                                 username: e
                             }, "ReportModalWizard")
                         },
-                        getLabel: M.thisPersonIs,
+                        getLabel: R.thisPersonIs,
                         getDescription: function() {
                             return Object(c.d)("Please note that incidents reported through this form must involve Twitch community members. If possible, please submit a report to the site or service where the incident occurred as well.", "ReportModalWizard")
                         },
@@ -10559,7 +10559,7 @@
                             username: e
                         }, "ReportModalWizard")
                     },
-                    getLabel: M.contentGeneral,
+                    getLabel: R.contentGeneral,
                     items: [D.spam_bot, D.spam_scam, D.spam_repeated],
                     type: C.MultipleChoice,
                     value: "spam type"
@@ -10570,7 +10570,7 @@
                             username: e
                         }, "ReportModalWizard")
                     },
-                    getLabel: M.relevantStatements,
+                    getLabel: R.relevantStatements,
                     items: [D.inappropriate_game, D.gory, D.sexuallyViolent, D.childAnimal, D.pornographic, D.suggestive, D.nudity, D.other],
                     type: C.MultipleChoice,
                     value: "inappropriate content type"
@@ -10729,7 +10729,7 @@
                             t.setState({
                                 modalCloseTracked: !0
                             }, function() {
-                                return t.props.trackClose(R.Finish, t.state.currentCard.value)
+                                return t.props.trackClose(M.Finish, t.state.currentCard.value)
                             }), t.props.onClose()
                         }, t.handleNext = function() {
                             if (t.state.currentSelection && t.state.currentSelection.value) {
@@ -10863,7 +10863,7 @@
                         }, t
                     }
                     return a.__extends(t, e), t.prototype.componentWillUnmount = function() {
-                        this.state.modalCloseTracked || this.props.trackClose(R.Close, this.state.currentCard.value)
+                        this.state.modalCloseTracked || this.props.trackClose(M.Close, this.state.currentCard.value)
                     }, t.prototype.render = function() {
                         var e = this.state.currentCard.type === C.Info && this.state.currentCard.blockPrompt ? o.createElement(E, {
                                 targetUser: this.props.targetUser,
@@ -10913,7 +10913,7 @@
             n.d(t, "c", function() {
                     return O
                 }), n.d(t, "a", function() {
-                    return R
+                    return M
                 }), n.d(t, "b", function() {
                     return de
                 }),
@@ -10925,7 +10925,7 @@
                 }(O || (O = {})),
                 function(e) {
                     e.Close = "close", e.Finish = "finish"
-                }(R || (R = {}));
+                }(M || (M = {}));
             var ce = function(e) {
                 function t(t) {
                     var n = e.call(this, t) || this;
@@ -11914,8 +11914,8 @@
                 O = function(e) {
                     return e.tier && !isNaN(parseInt(e.tier, 10)) ? parseInt(e.tier, 10) / 1e3 : 1
                 },
-                R = n("GnwI"),
-                M = n("br9A"),
+                M = n("GnwI"),
+                R = n("br9A"),
                 U = n("TSYQ"),
                 j = n("8/mp"),
                 F = n("8Ad5");
@@ -12235,7 +12235,7 @@
                             }
                         }
                         return n
-                    }, t = i.__decorate([Object(R.b)("EmotePickerMenu", {
+                    }, t = i.__decorate([Object(M.b)("EmotePickerMenu", {
                         autoReportInteractive: !0
                     })], t)
                 }(a.Component)),
@@ -12480,7 +12480,7 @@
                     skip: function(e) {
                         return !e.channelID
                     }
-                }), Object(R.b)("EmoteSubUpsell"))(Z);
+                }), Object(M.b)("EmoteSubUpsell"))(Z);
             ! function(e) {
                 e.FrequentlyUsed = "frequently_used", e.CurrentChannel = "current_channel", e.OtherChannel = "other_subbed_channel", e.Unlocked = "unlocked", e.Global = "global"
             }(A || (A = {}));
@@ -12660,6 +12660,7 @@
                         }, this.getFrequentlyUsedEmoteGrid(), this.getCurrentChannelEmoteGrid(), this.getOtherSubEmoteGrids(), this.getResidualEmoteGrids()))), this.renderTabNav())
                     }, t.prototype.getFrequentlyUsedEmoteGrid = function() {
                         return 0 === this.props.frequentlyUsedEmotes.length ? null : a.createElement(l.Xa, {
+                            className: "emote-picker__content-block",
                             refDelegate: this.saveFrequentlyUsedEmotesRef
                         }, a.createElement(H, {
                             context: A.FrequentlyUsed,
@@ -12704,8 +12705,7 @@
                             label: Object(s.d)("Unlocked", "EmotePickerCard"),
                             onClickEmote: this.onClickEmote
                         }))), this.props.globalEmotes.length > 0 && e.push(a.createElement(l.Xa, {
-                            key: "emote-grid--global-emotes",
-                            className: "emote-picker__content-block"
+                            key: "emote-grid--global-emotes"
                         }, a.createElement(H, {
                             context: A.Global,
                             emotes: this.props.globalEmotes,
@@ -12770,8 +12770,8 @@
                     function t(t) {
                         var n = e.call(this, t) || this;
                         n.handleSubEvent = function(e) {
-                            e.action === M.a.ClickCheckout && n.checkAndDisplaySubscriptionCheckout(), Object(M.b)(i.__assign({}, e, {
-                                action: M.a.ClickCheckout,
+                            e.action === R.a.ClickCheckout && n.checkAndDisplaySubscriptionCheckout(), Object(R.b)(i.__assign({}, e, {
+                                action: R.a.ClickCheckout,
                                 channelID: n.props.channelData && n.props.channelData.user && n.props.channelData.user.id || "",
                                 channelLogin: n.props.channelData && n.props.channelData.user && n.props.channelData.user.displayName || "",
                                 isMenuOpen: null,
@@ -13015,7 +13015,7 @@
                     skip: function(e) {
                         return !e.currentUserID
                     }
-                }]), Object(R.b)("EmotePicker"), Object(g.a)())(re),
+                }]), Object(M.b)("EmotePicker"), Object(g.a)())(re),
                 ae = function(e) {
                     function t() {
                         var t = null !== e && e.apply(this, arguments) || this;
@@ -13092,7 +13092,7 @@
                         configurable: !0
                     }), t
                 }(a.Component),
-                oe = Object(R.b)("EmotePicker")(ae);
+                oe = Object(M.b)("EmotePicker")(ae);
             var se = Object(r.connect)(function(e) {
                 return {
                     firstPageLoaded: e.session.firstPageLoaded
@@ -14002,7 +14002,7 @@
             }), n.d(t, "c", function() {
                 return O
             }), n.d(t, "q", function() {
-                return M
+                return R
             }), n.d(t, "p", function() {
                 return U
             });
@@ -14024,7 +14024,7 @@
                     return c.__generator(this, function(n) {
                         switch (n.label) {
                             case 0:
-                                return [4, R()];
+                                return [4, M()];
                             case 1:
                                 return t = n.sent(), d.p.tracking.track(u.SpadeEventType.WhisperIgnoreUser, {
                                     ui_context: e.context,
@@ -14044,7 +14044,7 @@
                     return c.__generator(this, function(r) {
                         switch (r.label) {
                             case 0:
-                                return [4, R()];
+                                return [4, M()];
                             case 1:
                                 return n = r.sent(), d.p.tracking.track(u.SpadeEventType.WhisperThreadMod, {
                                     conversation_id: e,
@@ -14151,7 +14151,7 @@
                 })
             }
 
-            function R() {
+            function M() {
                 var e = this;
                 return new Promise(function(t) {
                     setTimeout(function() {
@@ -14178,13 +14178,13 @@
                 })
             }
 
-            function M(e) {
+            function R(e) {
                 return c.__awaiter(this, void 0, void 0, function() {
                     var t;
                     return c.__generator(this, function(n) {
                         switch (n.label) {
                             case 0:
-                                return [4, R()];
+                                return [4, M()];
                             case 1:
                                 return t = n.sent(), d.p.tracking.track(u.SpadeEventType.WhisperSent, {
                                     to: e.targetUserLogin,
@@ -14206,7 +14206,7 @@
                     return c.__generator(this, function(n) {
                         switch (n.label) {
                             case 0:
-                                return [4, R()];
+                                return [4, M()];
                             case 1:
                                 return t = n.sent(), d.p.tracking.track(u.SpadeEventType.WhisperReceived, {
                                     to: t && t.login,

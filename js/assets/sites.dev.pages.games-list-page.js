@@ -67,74 +67,76 @@
                 return u
             }), n.d(t, "j", function() {
                 return c
-            }), n.d(t, "J", function() {
-                return d
             }), n.d(t, "K", function() {
+                return d
+            }), n.d(t, "L", function() {
                 return l
-            }), n.d(t, "n", function() {
+            }), n.d(t, "o", function() {
                 return p
-            }), n.d(t, "C", function() {
+            }), n.d(t, "D", function() {
                 return m
-            }), n.d(t, "I", function() {
+            }), n.d(t, "J", function() {
                 return g
-            }), n.d(t, "s", function() {
-                return h
             }), n.d(t, "t", function() {
                 return f
-            }), n.d(t, "o", function() {
+            }), n.d(t, "u", function() {
+                return h
+            }), n.d(t, "p", function() {
                 return b
-            }), n.d(t, "v", function() {
+            }), n.d(t, "w", function() {
                 return v
-            }), n.d(t, "x", function() {
+            }), n.d(t, "y", function() {
                 return E
-            }), n.d(t, "l", function() {
+            }), n.d(t, "m", function() {
                 return _
             }), n.d(t, "d", function() {
                 return S
             }), n.d(t, "c", function() {
                 return A
-            }), n.d(t, "D", function() {
+            }), n.d(t, "E", function() {
                 return C
             }), n.d(t, "b", function() {
                 return y
             }), n.d(t, "a", function() {
                 return T
-            }), n.d(t, "G", function() {
-                return I
             }), n.d(t, "H", function() {
+                return I
+            }), n.d(t, "I", function() {
                 return P
-            }), n.d(t, "m", function() {
+            }), n.d(t, "l", function() {
                 return O
-            }), n.d(t, "E", function() {
-                return R
-            }), n.d(t, "F", function() {
-                return D
-            }), n.d(t, "L", function() {
+            }), n.d(t, "n", function() {
                 return w
-            }), n.d(t, "r", function() {
+            }), n.d(t, "F", function() {
+                return R
+            }), n.d(t, "G", function() {
+                return D
+            }), n.d(t, "M", function() {
                 return M
-            }), n.d(t, "y", function() {
+            }), n.d(t, "s", function() {
                 return U
-            }), n.d(t, "f", function() {
-                return x
-            }), n.d(t, "g", function() {
-                return k
             }), n.d(t, "z", function() {
+                return x
+            }), n.d(t, "f", function() {
+                return k
+            }), n.d(t, "g", function() {
                 return G
-            }), n.d(t, "k", function() {
-                return L
-            }), n.d(t, "q", function() {
-                return j
-            }), n.d(t, "w", function() {
-                return B
-            }), n.d(t, "u", function() {
-                return F
-            }), n.d(t, "p", function() {
-                return N
-            }), n.d(t, "B", function() {
-                return V
             }), n.d(t, "A", function() {
+                return L
+            }), n.d(t, "k", function() {
+                return j
+            }), n.d(t, "r", function() {
+                return B
+            }), n.d(t, "x", function() {
+                return F
+            }), n.d(t, "v", function() {
+                return N
+            }), n.d(t, "q", function() {
+                return V
+            }), n.d(t, "C", function() {
                 return W
+            }), n.d(t, "B", function() {
+                return z
             });
             var r = n("/7QA"),
                 a = n("0Log"),
@@ -176,11 +178,11 @@
                 return a.PubsubTopic.VideoPlaybackById + "." + e
             }
 
-            function h(e) {
+            function f(e) {
                 return a.PubsubTopic.PayoutOnboardingEvents + "." + e
             }
 
-            function f(e) {
+            function h(e) {
                 return a.PubsubTopic.Presence + "." + e
             }
 
@@ -229,6 +231,10 @@
             }
 
             function O(e) {
+                return "follows." + e
+            }
+
+            function w(e) {
                 return a.PubsubTopic.CampaignGlobalEvents + "." + e
             }
 
@@ -240,51 +246,51 @@
                 return a.PubsubTopic.UserCommerceEvents + "." + e
             }
 
-            function w(e) {
+            function M(e) {
                 return a.PubsubTopic.Whispers + "." + e
             }
 
-            function M(e) {
+            function U(e) {
                 return a.PubsubTopic.OnsiteNotifications + "." + e
             }
 
-            function U(e) {
+            function x(e) {
                 return a.PubsubTopic.StreamChatRoom + "." + e
             }
 
-            function x(e) {
+            function k(e) {
                 return a.PubsubTopic.ChannelEventUpdates + "." + e
             }
 
-            function k(e) {
+            function G(e) {
                 return a.PubsubTopic.ChannelSquadUpdates + "." + e
             }
 
-            function G(e) {
+            function L(e) {
                 return a.PubsubTopic.SubscribersCSV + "." + e
             }
 
-            function L(e) {
+            function j(e) {
                 return a.PubsubTopic.CheerbombEventsTopic + "." + e
             }
 
-            function j(e) {
+            function B(e) {
                 return a.PubsubTopic.MysteryGift + "." + e
             }
 
-            function B(e) {
+            function F(e) {
                 return a.PubsubTopic.SquadUpdates + "." + e
             }
 
-            function F(e) {
+            function N(e) {
                 return a.PubsubTopic.PurchaseFulfillmentEvents + "." + e
             }
 
-            function N(e) {
+            function V(e) {
                 return a.PubsubTopic.MultiviewChanletUpdate + "." + e
             }
 
-            function V(e) {
+            function W(e) {
                 return r.l.subscribe({
                     topic: e.topic,
                     onMessage: function(t) {
@@ -297,7 +303,7 @@
                 })
             }
 
-            function W(e) {
+            function z(e) {
                 return r.l.subscribe({
                     topic: e.topic,
                     onMessage: function(t) {
@@ -377,8 +383,8 @@
                 p = n("2xye"),
                 m = n("GnwI"),
                 g = n("1mFg"),
-                h = n("coZW"),
-                f = n("dEJ+"),
+                f = n("coZW"),
+                h = n("dEJ+"),
                 b = n("/7QA"),
                 v = n("cZKs"),
                 E = n("GD6M"),
@@ -507,7 +513,7 @@
                                                 body: JSON.stringify(t)
                                             })];
                                         case 2:
-                                            return 200 === (o = a.sent()).status ? (n = r.Success, Object(h.d)(h.a.RegisteredGame, e.id.toString())) : n = 403 === o.status ? r.PermissionsError : r.UnexpectedError, [3, 4];
+                                            return 200 === (o = a.sent()).status ? (n = r.Success, Object(f.d)(f.a.RegisteredGame, e.id.toString())) : n = 403 === o.status ? r.PermissionsError : r.UnexpectedError, [3, 4];
                                         case 3:
                                             return a.sent(), n = r.UnexpectedError, [3, 4];
                                         case 4:
@@ -528,22 +534,22 @@
                 }(o.Component),
                 T = Object(i.connect)(function(e) {
                     return {
-                        company: Object(f.c)(e)
+                        company: Object(h.c)(e)
                     }
                 })(y),
                 I = n("uLRL"),
                 P = n("PZVp"),
                 O = n("/aPz"),
-                R = n("kRBY"),
-                D = n("Sejb");
+                w = n("kRBY"),
+                R = n("Sejb");
             ! function(e) {
                 e[e.Success = 0] = "Success", e[e.UnexpectedError = 1] = "UnexpectedError", e[e.BadSizeError = 2] = "BadSizeError", e[e.NonImageError = 3] = "NonImageError", e[e.WrongFormatError = 4] = "WrongFormatError", e[e.TimeoutError = 5] = "TimeoutError", e[e.Uploading = 6] = "Uploading", e[e.ImageNotSelected = 7] = "ImageNotSelected"
             }(C || (C = {}));
-            var w, M = n("/ZC1");
+            var D, M = n("/ZC1");
             n("iYk3");
             ! function(e) {
                 e.Submit = "SUBMIT_SELECTOR", e.Status = "STATUS_MESSAGE", e.Instructions = "INSTRUCTIONS_MESSAGE", e.PreviewImage = "PreviewImage", e.UploadInfo = "UploadInfo"
-            }(w || (w = {}));
+            }(D || (D = {}));
             var U = ["image/jpeg", "image/jpg"],
                 x = function(e) {
                     function t() {
@@ -605,13 +611,13 @@
                             allowedFileTypes: U,
                             onFilesSubmitted: this.props.onImageInputChange
                         }, "" === this.props.imagePreviewURL && G()), "" !== this.props.imagePreviewURL && k(this.props.imagePreviewURL))), o.createElement(_.Eb, {
-                            "data-test-selector": w.Instructions,
+                            "data-test-selector": D.Instructions,
                             fontSize: _.Ca.Size6,
                             position: _.jb.Relative,
                             textAlign: _.Rb.Center,
                             className: "profile-edit__status-message"
                         }, t), o.createElement(_.Eb, {
-                            "data-test-selector": w.Status,
+                            "data-test-selector": D.Status,
                             fontSize: _.Ca.Size4,
                             position: _.jb.Relative,
                             textAlign: _.Rb.Center,
@@ -665,14 +671,14 @@
                                     }
                             }
                         }(this.props.statusMessage)))), o.createElement(_.z, {
-                            "data-test-selector": w.Submit,
+                            "data-test-selector": D.Submit,
                             onClick: this.submitForm
                         }, e))), o.createElement(v.a, null))
                     }, t
                 }(o.Component),
                 k = function(e) {
                     return o.createElement(_.Xa, {
-                        "data-test-selector": w.PreviewImage,
+                        "data-test-selector": D.PreviewImage,
                         className: "dev-edit-box-art-modal__image-preview"
                     }, o.createElement("img", {
                         src: "" + e
@@ -680,7 +686,7 @@
                 },
                 G = function() {
                     return o.createElement(_.Xa, {
-                        "data-test-selector": w.UploadInfo,
+                        "data-test-selector": D.UploadInfo,
                         className: "dev-edit-box-art-modal__upload-info"
                     }, o.createElement(_.Xa, null, o.createElement(_.sb, {
                         asset: _.tb.Plus,
@@ -709,8 +715,8 @@
                             });
                             else {
                                 n = e[0];
-                                var r = Object(D.a)(n);
-                                Object(D.b)(n, function(e) {
+                                var r = Object(R.a)(n);
+                                Object(R.b)(n, function(e) {
                                     t.state.currentImage = e, t.setState({
                                         statusMessage: null
                                     })
@@ -765,7 +771,7 @@
                                             }), [2];
                                         case 4:
                                             return this.unsubscribe = b.l.subscribe({
-                                                topic: Object(O.C)(n),
+                                                topic: Object(O.D)(n),
                                                 success: function() {
                                                     try {
                                                         ! function(e, t) {
@@ -819,10 +825,10 @@
                                                         var r = "";
                                                         if (o.props.game.id && (r = o.props.game.id.toString()), o.setState({
                                                                 statusMessage: t
-                                                            }), t === C.Success) return Object(h.d)(h.a.UploadedBoxArt, r), void o.setState({
+                                                            }), t === C.Success) return Object(f.d)(f.a.UploadedBoxArt, r), void o.setState({
                                                             imageUploaded: !0
                                                         });
-                                                        Object(h.d)(h.a.BoxArtUploadFailed, r), o.setState({
+                                                        Object(f.d)(f.a.BoxArtUploadFailed, r), o.setState({
                                                             imageUploaded: !1,
                                                             imagePreviewURL: "",
                                                             imageFormat: "",
@@ -854,7 +860,7 @@
                 }(o.Component),
                 B = Object(i.connect)(function(e) {
                     return {
-                        authToken: Object(R.a)(e)
+                        authToken: Object(w.a)(e)
                     }
                 })(j),
                 F = (n("Owpq"), {
@@ -876,7 +882,7 @@
                                 }
                             }, o.createElement(_.z, {
                                 "data-test-selector": F.LatestReportButton,
-                                onClick: Object(h.c)(h.a.GameCSVExport, t.props.game.id.toString()),
+                                onClick: Object(f.c)(f.a.GameCSVExport, t.props.game.id.toString()),
                                 linkTo: t.props.report,
                                 fullWidth: !0
                             }, Object(b.d)("Export Daily CSV", "DevGameCard"))) : null
@@ -938,7 +944,7 @@
                             }
                         }, o.createElement(_.z, {
                             "data-test-selector": F.QuarterlyInsightsButton,
-                            onClick: Object(h.c)(h.a.ViewQuarterlyInsights, this.props.game.id.toString()),
+                            onClick: Object(f.c)(f.a.ViewQuarterlyInsights, this.props.game.id.toString()),
                             linkTo: "/insights/games/" + this.props.game.id,
                             fullWidth: !0
                         }, Object(b.d)("View Quarterly Insights", "DevGameCard")))))
@@ -961,11 +967,11 @@
                                 })
                             })
                         }, t.onEditBoxArtClick = function(e) {
-                            Object(h.d)(h.a.EditBoxArtStarted, e.id.toString()), t.props.showEditBoxArtModal({
+                            Object(f.d)(f.a.EditBoxArtStarted, e.id.toString()), t.props.showEditBoxArtModal({
                                 game: e
                             })
                         }, t.onAddGameClick = function() {
-                            Object(h.d)(h.a.AddGameStarted), t.props.showAddGameModal({})
+                            Object(f.d)(f.a.AddGameStarted), t.props.showAddGameModal({})
                         }, t
                     }
                     return a.__extends(t, e), t.prototype.render = function() {
@@ -1314,10 +1320,10 @@
                         }, t)))
                     }, t
                 }(a.Component),
-                h = Object(o.compose)(Object(s.b)("DevGameSearch", {
+                f = Object(o.compose)(Object(s.b)("DevGameSearch", {
                     autoReportInteractive: !0
                 }))(g),
-                f = function(e) {
+                h = function(e) {
                     function t() {
                         var t = null !== e && e.apply(this, arguments) || this;
                         return t.state = {
@@ -1344,7 +1350,7 @@
                         }, t
                     }
                     return r.__extends(t, e), t.prototype.render = function() {
-                        return a.createElement(h, {
+                        return a.createElement(f, {
                             onGameSelect: this.onGameSelect,
                             gameSuggestions: this.state.games,
                             onInputChange: this.findGames,
@@ -1399,7 +1405,7 @@
                         }, n.state.games = t.defaultGames || [], n
                     }
                     return r.__extends(t, e), t.prototype.render = function() {
-                        return a.createElement(h, {
+                        return a.createElement(f, {
                             onGameSelect: this.onGameSelect,
                             gameSuggestions: this.state.games,
                             onInputChange: this.findGames,
@@ -1408,7 +1414,7 @@
                     }, t
                 }(a.Component);
             n.d(t, "a", function() {
-                return f
+                return h
             }), n.d(t, "b", function() {
                 return A
             })
@@ -1556,6 +1562,7 @@
                     ChatRoom: "chatrooms-room-v1",
                     ChatRoomsChannel: "chatrooms-channel-v1",
                     ChatRoomsUser: "chatrooms-user-v1",
+                    Follows: "follows",
                     Friendship: "friendship",
                     ImageUpload: "user-image-update",
                     ModerationActionsByUserAndChannel: "chat_moderator_actions",
@@ -1606,6 +1613,8 @@
                     ImageUploadSuccess: "imageuploadsuccess",
                     LiveEvent: "live-event",
                     ModerationAction: "moderation_action",
+                    ModeratorAdded: "moderator_added",
+                    ModeratorRemoved: "moderator_removed",
                     MultiviewChanletUpdate: "chanlet",
                     MysteryGiftPurchase: "mystery-gift-purchase",
                     OnsiteNotificationCreate: "create-notification",
@@ -1639,9 +1648,11 @@
                     UserCampaignProgressEvent: "progress",
                     UserCampaignRewardEvent: "reward",
                     UserCrateEvent: "crate-event",
+                    UserFollowedEvent: "user-followed",
                     UserGiftEvent: "gift-event",
                     UserMention: "user_mention",
                     UserPropertiesUpdate: "user_properties_update",
+                    UserUnfollowedEvent: "user-unfollowed",
                     VideoThumbnailProcessingComplete: "processing_complete",
                     VideoThumbnailProcessingError: "processing_error",
                     ViewCount: "viewcount",

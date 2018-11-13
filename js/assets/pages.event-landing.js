@@ -5817,7 +5817,7 @@
                     }
                 }), Object(k.a)([{
                     topic: function(e) {
-                        return Object(C.H)(e.data.currentUser && e.data.currentUser.id || "")
+                        return Object(C.I)(e.data.currentUser && e.data.currentUser.id || "")
                     },
                     mapMessageTypesToProps: {
                         "*": "subscriptionInfo"
@@ -10445,7 +10445,7 @@
                     }
                 }), Object(p.a)([{
                     topic: function(e) {
-                        return e.channelLogin ? Object(h.J)(e.channelLogin) : ""
+                        return e.channelLogin ? Object(h.K)(e.channelLogin) : ""
                     },
                     skip: function(e) {
                         return !e.channelLogin || !e.firstPageLoaded

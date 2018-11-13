@@ -170,7 +170,7 @@
                             padding: {
                                 left: 1
                             }
-                        }, E), this.props.timerPhase.isWaiting ? I(this.props, this.props.timerPhase.secondsUntilTransition) : x(this.props))), this.props.timerPhase.isReady && this.props.timerPhase.secondsUntilTransition <= 10 && i.createElement(v, {
+                        }, E), this.props.timerPhase.isWaiting ? x(this.props, this.props.timerPhase.secondsUntilTransition) : I(this.props))), this.props.timerPhase.isReady && this.props.timerPhase.secondsUntilTransition <= 10 && i.createElement(v, {
                             seconds: this.props.timerPhase.secondsUntilTransition
                         })), i.createElement(m.Xa, {
                             display: m.X.Flex,
@@ -202,7 +202,7 @@
                         }, Object(h.d)("Raid Now", "RaidCreatorButton"))))))
                     }, t
                 }(i.Component),
-                I = function(e, t) {
+                x = function(e, t) {
                     return Object(h.d)("{raiderCount, plural,       one {<x:strong># viewer </x:strong><x:span>is ready to raid</x:span><x:block>{targetDisplayName} in {secondsRemaining}</x:block>}       other {<x:strong># viewers </x:strong><x:span>are ready to raid</x:span><x:block>{targetDisplayName} in {secondsRemaining}</x:block>}}", {
                         "x:block": function(e) {
                             return i.createElement(m.W, {
@@ -225,7 +225,7 @@
                         targetDisplayName: e.targetChannel.displayName
                     }, "RaidCreatorMessageTimeLeft")
                 },
-                x = function(e) {
+                I = function(e) {
                     return Object(h.d)("{raiderCount, plural,       one {<x:strong># viewer </x:strong><x:span>is ready to raid</x:span><x:block>{targetDisplayName} now</x:block>}       other {<x:strong># viewers </x:strong><x:span>are ready to raid</x:span><x:block>{targetDisplayName} now</x:block>}}", {
                         "x:block": function(e) {
                             return i.createElement(m.W, {
@@ -693,7 +693,7 @@
                         }))
                     }, t.prototype.subscribe = function(e) {
                         this.unsubscribe = a.p.pubsub.subscribe({
-                            topic: Object(o.v)(e),
+                            topic: Object(o.w)(e),
                             onMessage: this.handlePubsubMessage
                         })
                     }, t
@@ -1158,26 +1158,6 @@
             }), n.d(t, "c", function() {
                 return a
             })
-        },
-        nIRf: function(e, t, n) {
-            "use strict";
-            n.d(t, "a", function() {
-                return r
-            });
-            var r = function() {
-                return function(e) {
-                    var t = this;
-                    this.timerId = null, this.start = function() {
-                        t.timerId && t.stop(), t.timerId = setInterval(t.onInterval, t.intervalMillis)
-                    }, this.stop = function() {
-                        t.timerId && (clearInterval(t.timerId), t.timerId = null)
-                    }, this.restart = function(e) {
-                        void 0 === e && (e = 0), t.stop(), t.timerId = setTimeout(function() {
-                            t.onInterval(), t.start()
-                        }, e)
-                    }, this.onInterval = e.onInterval, this.intervalMillis = e.intervalMillis
-                }
-            }()
         },
         oMhb: function(e, t) {
             var n = {

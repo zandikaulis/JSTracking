@@ -437,7 +437,7 @@
                                                     }), [2];
                                                 case 4:
                                                     return this.unsubscribe = d.l.subscribe({
-                                                        topic: Object(m.n)(this.props.userID),
+                                                        topic: Object(m.o)(this.props.userID),
                                                         success: function() {
                                                             try {
                                                                 Object(b.c)(n, o.currentImage)
@@ -1477,7 +1477,7 @@
                 }(o.Component),
                 S = Object(s.a)([{
                     topic: function(e) {
-                        return Object(c.I)(e.channelID)
+                        return Object(c.J)(e.channelID)
                     },
                     mapMessageTypesToProps: (a = {}, a[l.PubsubMessageType.ChannelStreamUp] = "streamUp", a[l.PubsubMessageType.ChannelStreamDown] = "streamDown", a)
                 }])(y);
@@ -4096,8 +4096,8 @@
                 G = n("Nxrd"),
                 Y = n("f00E"),
                 Q = n("b6Yk"),
-                Z = n("H/lO"),
-                J = n("NZDK");
+                J = n("H/lO"),
+                Z = n("NZDK");
 
             function $(e) {
                 var t = e.settings;
@@ -4436,7 +4436,7 @@
                                             if (!this.state.userTerm || this.state.queryID || this.state.isWaiting || !0 === this.state.exhaustedHits) return [2];
                                             e = this.state.currentPage + 1, t = null, i.label = 1;
                                         case 1:
-                                            return i.trys.push([1, 3, , 4]), [4, this.searchClient.queryForType(Z.a.Users, this.state.userTerm, "", {
+                                            return i.trys.push([1, 3, , 4]), [4, this.searchClient.queryForType(J.a.Users, this.state.userTerm, "", {
                                                 page: e
                                             })];
                                         case 2:
@@ -4640,7 +4640,7 @@
                             return n.setState({
                                 isSorting: !0
                             })
-                        }, n.searchClient = new J.a({
+                        }, n.searchClient = new Z.a({
                             appId: u.a.algoliaApplicationID,
                             apiKey: u.a.algoliaAPIKey,
                             apolloClient: u.p.apollo.client,
@@ -4684,7 +4684,7 @@
                                             queryID: t
                                         }), n = null, i.label = 1;
                                     case 1:
-                                        return i.trys.push([1, 3, , 4]), [4, this.searchClient.queryForType(Z.a.Users, e, t)];
+                                        return i.trys.push([1, 3, , 4]), [4, this.searchClient.queryForType(J.a.Users, e, t)];
                                     case 2:
                                         return n = i.sent(), [3, 4];
                                     case 3:
@@ -5457,14 +5457,14 @@
                 }(s.Component),
                 Ye = Object(E.b)("ChannelPropertiesSettingsForm")(Ge),
                 Qe = 1,
-                Ze = 90;
+                Je = 90;
             ! function(e) {
                 e.Normal = "normal", e.Low = "low"
             }(Ve || (Ve = {})),
             function(e) {
                 e.BackupSlate = "backup_slate", e.BackupIngest = "backup_ingest", e.Off = "off"
             }(He || (He = {}));
-            var Je = function(e) {
+            var Ze = function(e) {
                 function t() {
                     var t = null !== e && e.apply(this, arguments) || this;
                     return t.state = {
@@ -5621,7 +5621,7 @@
                                 switch (o.label) {
                                     case 0:
                                         if (!this.props.user || !this.state.channelProperties) return [2];
-                                        e === He.BackupSlate ? (t = 0, n = Ze) : e === He.BackupIngest ? (t = Qe, n = 0) : e === He.Off && (t = 0, n = 0), this.setState({
+                                        e === He.BackupSlate ? (t = 0, n = Je) : e === He.BackupIngest ? (t = Qe, n = 0) : e === He.Off && (t = 0, n = 0), this.setState({
                                             resilientIngestState: Te.a.Loading
                                         }), s = "/v5/channels/" + this.props.user.id + "/channel_properties", o.label = 1;
                                     case 1:
@@ -5688,7 +5688,7 @@
                     return {
                         user: Object(i.e)(e)
                     }
-                })(Je),
+                })(Ze),
                 tt = n("oJmH"),
                 nt = function(e) {
                     function t() {
@@ -6974,8 +6974,8 @@
                 }), Object(f.a)(Gt, {
                     name: "toggleRitualsEnabled"
                 }))(Yt),
-                Zt = n("4bS+"),
-                Jt = function(e) {
+                Jt = n("4bS+"),
+                Zt = function(e) {
                     function t() {
                         return null !== e && e.apply(this, arguments) || this
                     }
@@ -7000,7 +7000,7 @@
                         }))
                     }, t
                 }(s.Component),
-                $t = Object(m.compose)(Object(f.a)(Zt, {
+                $t = Object(m.compose)(Object(f.a)(Jt, {
                     options: function(e) {
                         return {
                             variables: {
@@ -7013,7 +7013,7 @@
                     destination: y.a.DashboardSettingsIndex
                 }), Object(b.a)({
                     location: S.PageviewLocation.DashboardSettingsIndex
-                }))(Jt),
+                }))(Zt),
                 en = n("3iFw"),
                 tn = "twilight.dashboard-managed-channels-explanation-dismissed",
                 nn = function(e) {
@@ -7519,37 +7519,7 @@
                         }
                     }, t
                 }(p.Component)),
-                b = n("eJ65"),
-                v = n("N0BP"),
-                y = function(e) {
-                    function t() {
-                        var t = null !== e && e.apply(this, arguments) || this;
-                        return t.handleMouseDown = function(e) {
-                            e.stopPropagation()
-                        }, t.setContainerRef = function(e) {
-                            t.containerRef = e
-                        }, t
-                    }
-                    return u.__extends(t, e), t.prototype.componentDidMount = function() {
-                        this.containerRef.addEventListener("mousedown", this.handleMouseDown)
-                    }, t.prototype.componentWillUnmount = function() {
-                        this.containerRef.removeEventListener("mousedown", this.handleMouseDown)
-                    }, t.prototype.render = function() {
-                        return p.createElement(g.Xa, {
-                            position: g.jb.Relative,
-                            refDelegate: this.setContainerRef
-                        }, p.createElement(b.a, null, p.createElement(g.A, u.__assign({
-                            ariaLabel: Object(h.d)("Options", "CogWheelComponent"),
-                            icon: g.tb.Gear
-                        }, Object(v.a)(this.props))), p.createElement(g.u, {
-                            offsetY: "0",
-                            offsetX: "1rem",
-                            direction: g.v.Left,
-                            size: g.w.Small
-                        }, this.props.children)))
-                    }, t
-                }(p.Component),
-                S = function(e) {
+                b = function(e) {
                     function t() {
                         return null !== e && e.apply(this, arguments) || this
                     }
@@ -7572,9 +7542,9 @@
                 e.Card = "drag-and-drop-card", e.Container = "drag-and-drop-card-container", e.Content = "drag-and-drop-card-content"
             }(i || (i = {})),
             function(e) {
-                e.Carat = "carat", e.Card = "card", e.Container = "container", e.Header = "header"
+                e.Carat = "carat", e.Card = "card", e.Container = "container", e.Header = "header", e.Menu = "drag-and-drop-card-menu"
             }(o || (o = {}));
-            var E = function(e) {
+            var v = function(e) {
                 function t() {
                     var t = null !== e && e.apply(this, arguments) || this;
                     return t.handleContainerMouseEnter = function(e) {
@@ -7610,7 +7580,7 @@
                         t.props.updateCard(n, {
                             isCollapsed: !r
                         })
-                    }, t.handleCaratMouseDown = function(e) {
+                    }, t.stopMouseDownPropagation = function(e) {
                         e.stopPropagation()
                     }, t.handleCardMouseMove = function(e) {
                         var n = e.movementX,
@@ -7642,16 +7612,14 @@
                             isGrabbed: !1,
                             placeholderPosition: void 0
                         })
-                    }, t.registerRef = function(e) {
-                        return function(n) {
-                            t[e] = n
-                        }
+                    }, t.registerRef = function(e, n) {
+                        t[e] = n
                     }, t.addEventListeners = function() {
                         var e = t[o.Container];
-                        e.addEventListener("mousemove", t.handleContainerMouseMove), e.addEventListener("mouseleave", t.handleContainerMouseLeave), e.addEventListener("mouseenter", t.handleContainerMouseEnter), t[o.Carat].addEventListener("mousedown", t.handleCaratMouseDown), t[o.Header].addEventListener("mousedown", t.handleHeaderMouseDown), window.addEventListener("mouseup", t.handleCardMouseUp), window.addEventListener("mousemove", t.handleCardMouseMove)
+                        e.addEventListener("mousemove", t.handleContainerMouseMove), e.addEventListener("mouseleave", t.handleContainerMouseLeave), e.addEventListener("mouseenter", t.handleContainerMouseEnter), t[o.Carat].addEventListener("mousedown", t.stopMouseDownPropagation), t[o.Header].addEventListener("mousedown", t.handleHeaderMouseDown), t[o.Menu].addEventListener("mousedown", t.stopMouseDownPropagation), window.addEventListener("mouseup", t.handleCardMouseUp), window.addEventListener("mousemove", t.handleCardMouseMove)
                     }, t.removeEventListeners = function() {
                         var e = t[o.Container];
-                        e.removeEventListener("mousemove", t.handleContainerMouseMove), e.removeEventListener("mouseleave", t.handleContainerMouseLeave), e.removeEventListener("mouseenter", t.handleContainerMouseEnter), t[o.Carat].removeEventListener("mousedown", t.handleCaratMouseDown), t[o.Header].removeEventListener("mousedown", t.handleHeaderMouseDown), window.removeEventListener("mouseup", t.handleCardMouseUp), window.removeEventListener("mousemove", t.handleCardMouseMove)
+                        e.removeEventListener("mousemove", t.handleContainerMouseMove), e.removeEventListener("mouseleave", t.handleContainerMouseLeave), e.removeEventListener("mouseenter", t.handleContainerMouseEnter), t[o.Carat].removeEventListener("mousedown", t.stopMouseDownPropagation), t[o.Header].removeEventListener("mousedown", t.handleHeaderMouseDown), t[o.Menu].removeEventListener("mousedown", t.stopMouseDownPropagation), window.removeEventListener("mouseup", t.handleCardMouseUp), window.removeEventListener("mousemove", t.handleCardMouseMove)
                     }, t
                 }
                 return u.__extends(t, e), t.prototype.componentDidUpdate = function(e) {
@@ -7664,20 +7632,20 @@
                     this.removeEventListeners()
                 }, t.prototype.render = function() {
                     var e = this.props,
-                        t = e.cogWheel,
-                        n = e.card,
-                        r = n.isCollapsed,
-                        s = n.isGrabbed,
-                        l = n.placeholderPosition,
-                        c = e.grabbedCard;
+                        t = e.card,
+                        n = t.isCollapsed,
+                        r = t.isGrabbed,
+                        s = t.placeholderPosition,
+                        l = e.grabbedCard,
+                        c = e.menu;
                     return p.createElement(g.Xa, {
                         "data-test-selector": i.Container,
                         display: g.X.Flex,
                         flexDirection: g.Aa.Column,
-                        refDelegate: this.registerRef(o.Container)
+                        refDelegate: this.registerRef.bind(this, o.Container)
                     }, p.createElement(f, {
-                        cloneStyleRef: c && c.cardRef,
-                        show: l === m.c.Top
+                        cloneStyleRef: l && l.cardRef,
+                        show: s === m.c.Top
                     }), p.createElement(g.Eb, {
                         background: g.r.Base,
                         border: !0,
@@ -7686,15 +7654,15 @@
                                 bottom: 2
                             }
                         },
-                        className: "drag-and-drop-card-container" + (s ? " drag-and-drop-card-container__grabbed" : ""),
+                        className: "drag-and-drop-card-container" + (r ? " drag-and-drop-card-container__grabbed" : ""),
                         "data-test-selector": i.Card,
                         display: g.X.Flex,
-                        elevation: s ? 4 : 1,
+                        elevation: r ? 4 : 1,
                         flexDirection: g.Aa.Column,
                         margin: {
                             bottom: 1
                         },
-                        refDelegate: this.registerRef(o.Card)
+                        refDelegate: this.registerRef.bind(this, o.Card)
                     }, p.createElement(g.Eb, {
                         alignContent: g.e.Center,
                         alignItems: g.f.Center,
@@ -7706,7 +7674,7 @@
                             x: 1
                         },
                         position: g.jb.Relative,
-                        refDelegate: this.registerRef(o.Header)
+                        refDelegate: this.registerRef.bind(this, o.Header)
                     }, p.createElement(g.Xa, {
                         display: g.X.Flex,
                         justifyContent: g.Wa.Center
@@ -7715,33 +7683,33 @@
                             right: 1
                         }
                     }, p.createElement(g.Xa, {
-                        className: "drag-and-drop-card-carat" + (r ? "__collapsed" : ""),
-                        refDelegate: this.registerRef(o.Carat)
+                        className: "drag-and-drop-card-carat" + (n ? "__collapsed" : ""),
+                        refDelegate: this.registerRef.bind(this, o.Carat)
                     }, p.createElement(g.A, {
                         ariaLabel: Object(h.d)("Collapse/Expand", "DragAndDropCard"),
                         icon: g.tb.GlyphArrDown,
                         onClick: this.handleCaratClick
-                    }))), p.createElement(S, {
+                    }))), p.createElement(b, {
                         title: this.props.title
                     })), p.createElement(g.Xa, {
                         display: g.X.Flex,
                         alignItems: g.f.Center
-                    }, t && p.createElement(y, {
-                        "data-a-target": this.props.cogWheelTarget
-                    }, t), p.createElement(g.Xa, {
+                    }, p.createElement(g.Xa, {
+                        refDelegate: this.registerRef.bind(this, o.Menu)
+                    }, c), p.createElement(g.Xa, {
                         margin: {
-                            top: .5,
                             left: 1
                         }
-                    }, p.createElement(g.sb, {
-                        asset: g.tb.DragHandle
+                    }, p.createElement(g.A, {
+                        ariaLabel: Object(h.d)("Drag", "DragAndDropCard"),
+                        icon: g.tb.DragHandle
                     })))), p.createElement(g.Xa, {
-                        className: "drag-and-drop-card-content" + (r ? " " + a.ContentCollapsed : ""),
+                        className: "drag-and-drop-card-content" + (n ? " " + a.ContentCollapsed : ""),
                         "data-test-selector": i.Content,
                         position: g.jb.Relative
-                    }, r && this.props.unmountOnCollapse ? null : this.props.children)), p.createElement(f, {
-                        cloneStyleRef: c && c.cardRef,
-                        show: l === m.c.Bottom
+                    }, n && this.props.unmountOnCollapse ? null : this.props.children)), p.createElement(f, {
+                        cloneStyleRef: l && l.cardRef,
+                        show: s === m.c.Bottom
                     }))
                 }, Object.defineProperty(t.prototype, "isHoveringOtherCard", {
                     get: function() {
@@ -7759,21 +7727,21 @@
                     configurable: !0
                 }), t
             }(p.Component);
-            o.Carat, o.Card, o.Container, o.Header;
-            var C, _ = E,
-                w = (C = Object(l.a)("DragAndDropCardContext", {
+            o.Carat, o.Card, o.Container, o.Header, o.Menu;
+            var y, S = v,
+                E = (y = Object(l.a)("DragAndDropCardContext", {
                     card: new m.a("unknown")
                 })).InnerProvider,
-                k = C.withContext;
-            var O = Object(s.compose)(d(function(e) {
+                C = y.withContext;
+            var _ = Object(s.compose)(d(function(e) {
                     return e
-                }), k(function(e) {
+                }), C(function(e) {
                     return e
-                }))(_),
-                I = n("i8i4"),
-                x = n("8/mp"),
-                T = n("b+ID"),
-                R = function(e) {
+                }))(S),
+                w = n("i8i4"),
+                k = n("8/mp"),
+                O = n("b+ID"),
+                I = function(e) {
                     function t() {
                         var t = null !== e && e.apply(this, arguments) || this;
                         return t.setRootContainerRef = function(e) {
@@ -7788,7 +7756,7 @@
                         })
                     }, t
                 }(p.Component),
-                D = (n("6Ll5"), function(e) {
+                x = (n("6Ll5"), function(e) {
                     function t() {
                         var t = null !== e && e.apply(this, arguments) || this;
                         return t.handleContainerMouseOver = function() {
@@ -7848,7 +7816,7 @@
                         configurable: !0
                     }), t
                 }(p.Component)),
-                P = (n("uZYF"), function(e) {
+                T = (n("uZYF"), function(e) {
                     function t(t) {
                         var n = e.call(this, t) || this;
                         n.handleCardsUpdate = function() {
@@ -7948,7 +7916,7 @@
                     }, t.prototype.render = function() {
                         var e = this,
                             t = this.props.isExpandedView;
-                        return p.createElement(p.Fragment, null, p.createElement(x.b, {
+                        return p.createElement(p.Fragment, null, p.createElement(k.b, {
                             className: "drag-and-drop-layout-scrollable-area" + (t ? "__expanded-view" : "")
                         }, p.createElement(g.Xa, {
                             alignContent: g.e.Stretch,
@@ -7960,7 +7928,7 @@
                             fullWidth: !0,
                             justifyContent: g.Wa.Between
                         }, this.state.roots.map(function(t, n) {
-                            return p.createElement(D, {
+                            return p.createElement(x, {
                                 column: n,
                                 key: n,
                                 grabbedCard: e.state.common.grabbedCard,
@@ -7970,7 +7938,7 @@
                             }, t.map(function(e) {
                                 var t = e.el,
                                     n = e.name;
-                                return p.createElement(R, {
+                                return p.createElement(I, {
                                     element: t,
                                     key: n
                                 })
@@ -7979,7 +7947,7 @@
                             value: this.state.common
                         }, Object.keys(this.state.cards).map(function(t) {
                             var n = e.state.cards[t];
-                            return I.createPortal(p.createElement(w, {
+                            return w.createPortal(p.createElement(E, {
                                 value: {
                                     card: n
                                 }
@@ -7987,13 +7955,38 @@
                         })))
                     }, t
                 }(p.Component));
-            var j = Object(T.b)(function(e) {
-                return {
-                    isExpandedView: e.isExpandedView
-                }
-            })(P);
+            var R = Object(O.b)(function(e) {
+                    return {
+                        isExpandedView: e.isExpandedView
+                    }
+                })(T),
+                D = n("eJ65"),
+                P = n("N0BP"),
+                j = function(e) {
+                    function t() {
+                        return null !== e && e.apply(this, arguments) || this
+                    }
+                    return u.__extends(t, e), t.prototype.render = function() {
+                        return p.createElement(g.Xa, {
+                            margin: {
+                                left: 1
+                            },
+                            position: g.jb.Relative
+                        }, p.createElement(D.a, null, p.createElement(g.A, u.__assign({
+                            ariaLabel: this.props.ariaIconLabel,
+                            icon: this.props.icon
+                        }, Object(P.a)(this.props))), p.createElement(g.u, {
+                            offsetY: "0",
+                            offsetX: "1rem",
+                            direction: g.v.Left,
+                            size: g.w.Small
+                        }, this.props.children)))
+                    }, t
+                }(p.Component);
             n.d(t, "a", function() {
-                return O
+                return _
+            }), n.d(t, "c", function() {
+                return R
             }), n.d(t, "b", function() {
                 return j
             })
