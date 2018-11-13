@@ -17031,6 +17031,1022 @@
           "possibleTypes": null
         }, 
         {
+          "description": "An action (and metadata about the action) which occurred for a channel's Dashboard Activity Feed.", 
+          "enumValues": null, 
+          "fields": [
+            {
+              "args": [], 
+              "deprecationReason": null, 
+              "description": "Unique identifier for this activity.", 
+              "isDeprecated": false, 
+              "name": "id", 
+              "type": {
+                "kind": "NON_NULL", 
+                "name": null, 
+                "ofType": {
+                  "kind": "SCALAR", 
+                  "name": "ID", 
+                  "ofType": null
+                }
+              }
+            }, 
+            {
+              "args": [], 
+              "deprecationReason": null, 
+              "description": "When this activity occurred.", 
+              "isDeprecated": false, 
+              "name": "timestamp", 
+              "type": {
+                "kind": "NON_NULL", 
+                "name": null, 
+                "ofType": {
+                  "kind": "SCALAR", 
+                  "name": "Time", 
+                  "ofType": null
+                }
+              }
+            }
+          ], 
+          "inputFields": null, 
+          "interfaces": null, 
+          "kind": "INTERFACE", 
+          "name": "DashboardActivityFeedActivity", 
+          "possibleTypes": [
+            {
+              "kind": "OBJECT", 
+              "name": "DashboardActivityFeedActivityBitsUsage", 
+              "ofType": null
+            }, 
+            {
+              "kind": "OBJECT", 
+              "name": "DashboardActivityFeedActivityCommunitySubscriptionGifting", 
+              "ofType": null
+            }, 
+            {
+              "kind": "OBJECT", 
+              "name": "DashboardActivityFeedActivityFollowing", 
+              "ofType": null
+            }, 
+            {
+              "kind": "OBJECT", 
+              "name": "DashboardActivityFeedActivityHosting", 
+              "ofType": null
+            }, 
+            {
+              "kind": "OBJECT", 
+              "name": "DashboardActivityFeedActivityIndividualSubscriptionGifting", 
+              "ofType": null
+            }, 
+            {
+              "kind": "OBJECT", 
+              "name": "DashboardActivityFeedActivityIngestSessionStarting", 
+              "ofType": null
+            }, 
+            {
+              "kind": "OBJECT", 
+              "name": "DashboardActivityFeedActivityPrimeResubscribing", 
+              "ofType": null
+            }, 
+            {
+              "kind": "OBJECT", 
+              "name": "DashboardActivityFeedActivityPrimeSubscribing", 
+              "ofType": null
+            }, 
+            {
+              "kind": "OBJECT", 
+              "name": "DashboardActivityFeedActivityRaiding", 
+              "ofType": null
+            }, 
+            {
+              "kind": "OBJECT", 
+              "name": "DashboardActivityFeedActivityResubscribing", 
+              "ofType": null
+            }, 
+            {
+              "kind": "OBJECT", 
+              "name": "DashboardActivityFeedActivitySubscribing", 
+              "ofType": null
+            }
+          ]
+        }, 
+        {
+          "description": "When a user uses Bits for or sends Bits to a channel.", 
+          "enumValues": null, 
+          "fields": [
+            {
+              "args": [], 
+              "deprecationReason": null, 
+              "description": "Bits spent.", 
+              "isDeprecated": false, 
+              "name": "amount", 
+              "type": {
+                "kind": "NON_NULL", 
+                "name": null, 
+                "ofType": {
+                  "kind": "SCALAR", 
+                  "name": "Int", 
+                  "ofType": null
+                }
+              }
+            }, 
+            {
+              "args": [], 
+              "deprecationReason": null, 
+              "description": "Unique identifier for this Bits usage.", 
+              "isDeprecated": false, 
+              "name": "id", 
+              "type": {
+                "kind": "NON_NULL", 
+                "name": null, 
+                "ofType": {
+                  "kind": "SCALAR", 
+                  "name": "ID", 
+                  "ofType": null
+                }
+              }
+            }, 
+            {
+              "args": [], 
+              "deprecationReason": null, 
+              "description": "When the Bits were used.", 
+              "isDeprecated": false, 
+              "name": "timestamp", 
+              "type": {
+                "kind": "NON_NULL", 
+                "name": null, 
+                "ofType": {
+                  "kind": "SCALAR", 
+                  "name": "Time", 
+                  "ofType": null
+                }
+              }
+            }, 
+            {
+              "args": [], 
+              "deprecationReason": null, 
+              "description": "Bits spender.", 
+              "isDeprecated": false, 
+              "name": "user", 
+              "type": {
+                "kind": "OBJECT", 
+                "name": "User", 
+                "ofType": null
+              }
+            }
+          ], 
+          "inputFields": null, 
+          "interfaces": [
+            {
+              "kind": "INTERFACE", 
+              "name": "DashboardActivityFeedActivity", 
+              "ofType": null
+            }
+          ], 
+          "kind": "OBJECT", 
+          "name": "DashboardActivityFeedActivityBitsUsage", 
+          "possibleTypes": null
+        }, 
+        {
+          "description": "When a user gifts subscriptions to a community for a channel.", 
+          "enumValues": null, 
+          "fields": [
+            {
+              "args": [], 
+              "deprecationReason": null, 
+              "description": "Subscription purchaser & gifter.", 
+              "isDeprecated": false, 
+              "name": "gifter", 
+              "type": {
+                "kind": "OBJECT", 
+                "name": "User", 
+                "ofType": null
+              }
+            }, 
+            {
+              "args": [], 
+              "deprecationReason": null, 
+              "description": "Unique identifier for this gifting action.", 
+              "isDeprecated": false, 
+              "name": "id", 
+              "type": {
+                "kind": "NON_NULL", 
+                "name": null, 
+                "ofType": {
+                  "kind": "SCALAR", 
+                  "name": "ID", 
+                  "ofType": null
+                }
+              }
+            }, 
+            {
+              "args": [], 
+              "deprecationReason": null, 
+              "description": "Users who received the gift.\nMaximum count is currently 100.", 
+              "isDeprecated": false, 
+              "name": "recipients", 
+              "type": {
+                "kind": "LIST", 
+                "name": null, 
+                "ofType": {
+                  "kind": "NON_NULL", 
+                  "name": null, 
+                  "ofType": {
+                    "kind": "OBJECT", 
+                    "name": "User", 
+                    "ofType": null
+                  }
+                }
+              }
+            }, 
+            {
+              "args": [], 
+              "deprecationReason": null, 
+              "description": "When the subscriptions were gifted.", 
+              "isDeprecated": false, 
+              "name": "timestamp", 
+              "type": {
+                "kind": "NON_NULL", 
+                "name": null, 
+                "ofType": {
+                  "kind": "SCALAR", 
+                  "name": "Time", 
+                  "ofType": null
+                }
+              }
+            }
+          ], 
+          "inputFields": null, 
+          "interfaces": [
+            {
+              "kind": "INTERFACE", 
+              "name": "DashboardActivityFeedActivity", 
+              "ofType": null
+            }
+          ], 
+          "kind": "OBJECT", 
+          "name": "DashboardActivityFeedActivityCommunitySubscriptionGifting", 
+          "possibleTypes": null
+        }, 
+        {
+          "description": "Paginated list of past activities for a channel's Dashboard Activity Feed.", 
+          "enumValues": null, 
+          "fields": [
+            {
+              "args": [], 
+              "deprecationReason": null, 
+              "description": "Activity elements of the list.", 
+              "isDeprecated": false, 
+              "name": "edges", 
+              "type": {
+                "kind": "NON_NULL", 
+                "name": null, 
+                "ofType": {
+                  "kind": "LIST", 
+                  "name": null, 
+                  "ofType": {
+                    "kind": "NON_NULL", 
+                    "name": null, 
+                    "ofType": {
+                      "kind": "OBJECT", 
+                      "name": "DashboardActivityFeedActivityEdge", 
+                      "ofType": null
+                    }
+                  }
+                }
+              }
+            }, 
+            {
+              "args": [], 
+              "deprecationReason": null, 
+              "description": "Information about this page.", 
+              "isDeprecated": false, 
+              "name": "pageInfo", 
+              "type": {
+                "kind": "NON_NULL", 
+                "name": null, 
+                "ofType": {
+                  "kind": "OBJECT", 
+                  "name": "PageInfo", 
+                  "ofType": null
+                }
+              }
+            }
+          ], 
+          "inputFields": null, 
+          "interfaces": [], 
+          "kind": "OBJECT", 
+          "name": "DashboardActivityFeedActivityConnection", 
+          "possibleTypes": null
+        }, 
+        {
+          "description": "Activity element in a list of past activities of a channel's Dashboard Activity Feed.", 
+          "enumValues": null, 
+          "fields": [
+            {
+              "args": [], 
+              "deprecationReason": null, 
+              "description": "Opaque cursor describing this edge's position in the paginated list.", 
+              "isDeprecated": false, 
+              "name": "cursor", 
+              "type": {
+                "kind": "NON_NULL", 
+                "name": null, 
+                "ofType": {
+                  "kind": "SCALAR", 
+                  "name": "Cursor", 
+                  "ofType": null
+                }
+              }
+            }, 
+            {
+              "args": [], 
+              "deprecationReason": null, 
+              "description": "Activity that occurred.", 
+              "isDeprecated": false, 
+              "name": "node", 
+              "type": {
+                "kind": "NON_NULL", 
+                "name": null, 
+                "ofType": {
+                  "kind": "INTERFACE", 
+                  "name": "DashboardActivityFeedActivity", 
+                  "ofType": null
+                }
+              }
+            }
+          ], 
+          "inputFields": null, 
+          "interfaces": [], 
+          "kind": "OBJECT", 
+          "name": "DashboardActivityFeedActivityEdge", 
+          "possibleTypes": null
+        }, 
+        {
+          "description": "When a user newly follows or refollows a channel.", 
+          "enumValues": null, 
+          "fields": [
+            {
+              "args": [], 
+              "deprecationReason": null, 
+              "description": "User who is now following the channel.", 
+              "isDeprecated": false, 
+              "name": "follower", 
+              "type": {
+                "kind": "OBJECT", 
+                "name": "User", 
+                "ofType": null
+              }
+            }, 
+            {
+              "args": [], 
+              "deprecationReason": null, 
+              "description": "Unique identifier for this follow action.", 
+              "isDeprecated": false, 
+              "name": "id", 
+              "type": {
+                "kind": "NON_NULL", 
+                "name": null, 
+                "ofType": {
+                  "kind": "SCALAR", 
+                  "name": "ID", 
+                  "ofType": null
+                }
+              }
+            }, 
+            {
+              "args": [], 
+              "deprecationReason": null, 
+              "description": "When the user followed the channel.", 
+              "isDeprecated": false, 
+              "name": "timestamp", 
+              "type": {
+                "kind": "NON_NULL", 
+                "name": null, 
+                "ofType": {
+                  "kind": "SCALAR", 
+                  "name": "Time", 
+                  "ofType": null
+                }
+              }
+            }
+          ], 
+          "inputFields": null, 
+          "interfaces": [
+            {
+              "kind": "INTERFACE", 
+              "name": "DashboardActivityFeedActivity", 
+              "ofType": null
+            }
+          ], 
+          "kind": "OBJECT", 
+          "name": "DashboardActivityFeedActivityFollowing", 
+          "possibleTypes": null
+        }, 
+        {
+          "description": "When a user hosts a channel.", 
+          "enumValues": null, 
+          "fields": [
+            {
+              "args": [], 
+              "deprecationReason": null, 
+              "description": "User/Channel who is now hosting the channel.", 
+              "isDeprecated": false, 
+              "name": "host", 
+              "type": {
+                "kind": "OBJECT", 
+                "name": "User", 
+                "ofType": null
+              }
+            }, 
+            {
+              "args": [], 
+              "deprecationReason": null, 
+              "description": "Unique identifier for this hosting action.", 
+              "isDeprecated": false, 
+              "name": "id", 
+              "type": {
+                "kind": "NON_NULL", 
+                "name": null, 
+                "ofType": {
+                  "kind": "SCALAR", 
+                  "name": "ID", 
+                  "ofType": null
+                }
+              }
+            }, 
+            {
+              "args": [], 
+              "deprecationReason": null, 
+              "description": "When the host initiated the hosting session.", 
+              "isDeprecated": false, 
+              "name": "timestamp", 
+              "type": {
+                "kind": "NON_NULL", 
+                "name": null, 
+                "ofType": {
+                  "kind": "SCALAR", 
+                  "name": "Time", 
+                  "ofType": null
+                }
+              }
+            }, 
+            {
+              "args": [], 
+              "deprecationReason": null, 
+              "description": "Number of viewers from the host channel.", 
+              "isDeprecated": false, 
+              "name": "viewerCount", 
+              "type": {
+                "kind": "SCALAR", 
+                "name": "Int", 
+                "ofType": null
+              }
+            }
+          ], 
+          "inputFields": null, 
+          "interfaces": [
+            {
+              "kind": "INTERFACE", 
+              "name": "DashboardActivityFeedActivity", 
+              "ofType": null
+            }
+          ], 
+          "kind": "OBJECT", 
+          "name": "DashboardActivityFeedActivityHosting", 
+          "possibleTypes": null
+        }, 
+        {
+          "description": "When a user gifts a single subscription to another individual user for a channel.", 
+          "enumValues": null, 
+          "fields": [
+            {
+              "args": [], 
+              "deprecationReason": null, 
+              "description": "Subscription purchaser & gifter.", 
+              "isDeprecated": false, 
+              "name": "gifter", 
+              "type": {
+                "kind": "OBJECT", 
+                "name": "User", 
+                "ofType": null
+              }
+            }, 
+            {
+              "args": [], 
+              "deprecationReason": null, 
+              "description": "Unique identifier for this gifting action.", 
+              "isDeprecated": false, 
+              "name": "id", 
+              "type": {
+                "kind": "NON_NULL", 
+                "name": null, 
+                "ofType": {
+                  "kind": "SCALAR", 
+                  "name": "ID", 
+                  "ofType": null
+                }
+              }
+            }, 
+            {
+              "args": [], 
+              "deprecationReason": null, 
+              "description": "User that received the gift.", 
+              "isDeprecated": false, 
+              "name": "recipient", 
+              "type": {
+                "kind": "OBJECT", 
+                "name": "User", 
+                "ofType": null
+              }
+            }, 
+            {
+              "args": [], 
+              "deprecationReason": null, 
+              "description": "When the subscription was gifted.", 
+              "isDeprecated": false, 
+              "name": "timestamp", 
+              "type": {
+                "kind": "NON_NULL", 
+                "name": null, 
+                "ofType": {
+                  "kind": "SCALAR", 
+                  "name": "Time", 
+                  "ofType": null
+                }
+              }
+            }
+          ], 
+          "inputFields": null, 
+          "interfaces": [
+            {
+              "kind": "INTERFACE", 
+              "name": "DashboardActivityFeedActivity", 
+              "ofType": null
+            }
+          ], 
+          "kind": "OBJECT", 
+          "name": "DashboardActivityFeedActivityIndividualSubscriptionGifting", 
+          "possibleTypes": null
+        }, 
+        {
+          "description": "When an ingest session begins.", 
+          "enumValues": null, 
+          "fields": [
+            {
+              "args": [], 
+              "deprecationReason": null, 
+              "description": "Unique identifier for the start of this ingest session.", 
+              "isDeprecated": false, 
+              "name": "id", 
+              "type": {
+                "kind": "NON_NULL", 
+                "name": null, 
+                "ofType": {
+                  "kind": "SCALAR", 
+                  "name": "ID", 
+                  "ofType": null
+                }
+              }
+            }, 
+            {
+              "args": [], 
+              "deprecationReason": null, 
+              "description": "Start time of the ingest session.", 
+              "isDeprecated": false, 
+              "name": "timestamp", 
+              "type": {
+                "kind": "NON_NULL", 
+                "name": null, 
+                "ofType": {
+                  "kind": "SCALAR", 
+                  "name": "Time", 
+                  "ofType": null
+                }
+              }
+            }
+          ], 
+          "inputFields": null, 
+          "interfaces": [
+            {
+              "kind": "INTERFACE", 
+              "name": "DashboardActivityFeedActivity", 
+              "ofType": null
+            }
+          ], 
+          "kind": "OBJECT", 
+          "name": "DashboardActivityFeedActivityIngestSessionStarting", 
+          "possibleTypes": null
+        }, 
+        {
+          "description": "When a user resubscribes via Twitch Prime to a channel.", 
+          "enumValues": null, 
+          "fields": [
+            {
+              "args": [], 
+              "deprecationReason": null, 
+              "description": "Duration of the subscription.", 
+              "isDeprecated": false, 
+              "name": "durationMonths", 
+              "type": {
+                "kind": "NON_NULL", 
+                "name": null, 
+                "ofType": {
+                  "kind": "SCALAR", 
+                  "name": "Int", 
+                  "ofType": null
+                }
+              }
+            }, 
+            {
+              "args": [], 
+              "deprecationReason": null, 
+              "description": "Unique identifier for the act of renewing the subscription.", 
+              "isDeprecated": false, 
+              "name": "id", 
+              "type": {
+                "kind": "NON_NULL", 
+                "name": null, 
+                "ofType": {
+                  "kind": "SCALAR", 
+                  "name": "ID", 
+                  "ofType": null
+                }
+              }
+            }, 
+            {
+              "args": [], 
+              "deprecationReason": null, 
+              "description": "Custom message submitted by the resubscribing user to share in chat.", 
+              "isDeprecated": false, 
+              "name": "message", 
+              "type": {
+                "kind": "SCALAR", 
+                "name": "String", 
+                "ofType": null
+              }
+            }, 
+            {
+              "args": [], 
+              "deprecationReason": null, 
+              "description": "User who is renewing the subscription.", 
+              "isDeprecated": false, 
+              "name": "resubscriber", 
+              "type": {
+                "kind": "OBJECT", 
+                "name": "User", 
+                "ofType": null
+              }
+            }, 
+            {
+              "args": [], 
+              "deprecationReason": null, 
+              "description": "When the subscription was renewed.", 
+              "isDeprecated": false, 
+              "name": "timestamp", 
+              "type": {
+                "kind": "NON_NULL", 
+                "name": null, 
+                "ofType": {
+                  "kind": "SCALAR", 
+                  "name": "Time", 
+                  "ofType": null
+                }
+              }
+            }
+          ], 
+          "inputFields": null, 
+          "interfaces": [
+            {
+              "kind": "INTERFACE", 
+              "name": "DashboardActivityFeedActivity", 
+              "ofType": null
+            }
+          ], 
+          "kind": "OBJECT", 
+          "name": "DashboardActivityFeedActivityPrimeResubscribing", 
+          "possibleTypes": null
+        }, 
+        {
+          "description": "When a user subscribes for the first time via Twitch Prime to a channel.", 
+          "enumValues": null, 
+          "fields": [
+            {
+              "args": [], 
+              "deprecationReason": null, 
+              "description": "Unique identifier for the act of subscribing.", 
+              "isDeprecated": false, 
+              "name": "id", 
+              "type": {
+                "kind": "NON_NULL", 
+                "name": null, 
+                "ofType": {
+                  "kind": "SCALAR", 
+                  "name": "ID", 
+                  "ofType": null
+                }
+              }
+            }, 
+            {
+              "args": [], 
+              "deprecationReason": null, 
+              "description": "User who made the subscription.", 
+              "isDeprecated": false, 
+              "name": "subscriber", 
+              "type": {
+                "kind": "OBJECT", 
+                "name": "User", 
+                "ofType": null
+              }
+            }, 
+            {
+              "args": [], 
+              "deprecationReason": null, 
+              "description": "When the subscription was made.", 
+              "isDeprecated": false, 
+              "name": "timestamp", 
+              "type": {
+                "kind": "NON_NULL", 
+                "name": null, 
+                "ofType": {
+                  "kind": "SCALAR", 
+                  "name": "Time", 
+                  "ofType": null
+                }
+              }
+            }
+          ], 
+          "inputFields": null, 
+          "interfaces": [
+            {
+              "kind": "INTERFACE", 
+              "name": "DashboardActivityFeedActivity", 
+              "ofType": null
+            }
+          ], 
+          "kind": "OBJECT", 
+          "name": "DashboardActivityFeedActivityPrimeSubscribing", 
+          "possibleTypes": null
+        }, 
+        {
+          "description": "When a user raids a channel.", 
+          "enumValues": null, 
+          "fields": [
+            {
+              "args": [], 
+              "deprecationReason": null, 
+              "description": "Unique identifier for this raiding action.", 
+              "isDeprecated": false, 
+              "name": "id", 
+              "type": {
+                "kind": "NON_NULL", 
+                "name": null, 
+                "ofType": {
+                  "kind": "SCALAR", 
+                  "name": "ID", 
+                  "ofType": null
+                }
+              }
+            }, 
+            {
+              "args": [], 
+              "deprecationReason": null, 
+              "description": "Number of users who participated in the raid.", 
+              "isDeprecated": false, 
+              "name": "partySize", 
+              "type": {
+                "kind": "NON_NULL", 
+                "name": null, 
+                "ofType": {
+                  "kind": "SCALAR", 
+                  "name": "Int", 
+                  "ofType": null
+                }
+              }
+            }, 
+            {
+              "args": [], 
+              "deprecationReason": null, 
+              "description": "User/Channel who is now raiding the channel.", 
+              "isDeprecated": false, 
+              "name": "raider", 
+              "type": {
+                "kind": "OBJECT", 
+                "name": "User", 
+                "ofType": null
+              }
+            }, 
+            {
+              "args": [], 
+              "deprecationReason": null, 
+              "description": "When the raid was initiated.", 
+              "isDeprecated": false, 
+              "name": "timestamp", 
+              "type": {
+                "kind": "NON_NULL", 
+                "name": null, 
+                "ofType": {
+                  "kind": "SCALAR", 
+                  "name": "Time", 
+                  "ofType": null
+                }
+              }
+            }
+          ], 
+          "inputFields": null, 
+          "interfaces": [
+            {
+              "kind": "INTERFACE", 
+              "name": "DashboardActivityFeedActivity", 
+              "ofType": null
+            }
+          ], 
+          "kind": "OBJECT", 
+          "name": "DashboardActivityFeedActivityRaiding", 
+          "possibleTypes": null
+        }, 
+        {
+          "description": "When a user resubscribes (NOT via Twitch Prime) to a channel.", 
+          "enumValues": null, 
+          "fields": [
+            {
+              "args": [], 
+              "deprecationReason": null, 
+              "description": "Duration of the subscription.", 
+              "isDeprecated": false, 
+              "name": "durationMonths", 
+              "type": {
+                "kind": "NON_NULL", 
+                "name": null, 
+                "ofType": {
+                  "kind": "SCALAR", 
+                  "name": "Int", 
+                  "ofType": null
+                }
+              }
+            }, 
+            {
+              "args": [], 
+              "deprecationReason": null, 
+              "description": "Unique identifier for the act of renewing the subscription.", 
+              "isDeprecated": false, 
+              "name": "id", 
+              "type": {
+                "kind": "NON_NULL", 
+                "name": null, 
+                "ofType": {
+                  "kind": "SCALAR", 
+                  "name": "ID", 
+                  "ofType": null
+                }
+              }
+            }, 
+            {
+              "args": [], 
+              "deprecationReason": null, 
+              "description": "Custom message submitted by the resubscribing user to share in chat.", 
+              "isDeprecated": false, 
+              "name": "message", 
+              "type": {
+                "kind": "SCALAR", 
+                "name": "String", 
+                "ofType": null
+              }
+            }, 
+            {
+              "args": [], 
+              "deprecationReason": null, 
+              "description": "User who is renewing the subscription.", 
+              "isDeprecated": false, 
+              "name": "resubscriber", 
+              "type": {
+                "kind": "OBJECT", 
+                "name": "User", 
+                "ofType": null
+              }
+            }, 
+            {
+              "args": [], 
+              "deprecationReason": null, 
+              "description": "Subscription tier.", 
+              "isDeprecated": false, 
+              "name": "tier", 
+              "type": {
+                "kind": "NON_NULL", 
+                "name": null, 
+                "ofType": {
+                  "kind": "ENUM", 
+                  "name": "SubscriptionTier", 
+                  "ofType": null
+                }
+              }
+            }, 
+            {
+              "args": [], 
+              "deprecationReason": null, 
+              "description": "When the subscription was renewed.", 
+              "isDeprecated": false, 
+              "name": "timestamp", 
+              "type": {
+                "kind": "NON_NULL", 
+                "name": null, 
+                "ofType": {
+                  "kind": "SCALAR", 
+                  "name": "Time", 
+                  "ofType": null
+                }
+              }
+            }
+          ], 
+          "inputFields": null, 
+          "interfaces": [
+            {
+              "kind": "INTERFACE", 
+              "name": "DashboardActivityFeedActivity", 
+              "ofType": null
+            }
+          ], 
+          "kind": "OBJECT", 
+          "name": "DashboardActivityFeedActivityResubscribing", 
+          "possibleTypes": null
+        }, 
+        {
+          "description": "When a user subscribes for the first time (NOT via Twitch Prime) to a channel.", 
+          "enumValues": null, 
+          "fields": [
+            {
+              "args": [], 
+              "deprecationReason": null, 
+              "description": "Unique identifier for the act of subscribing.", 
+              "isDeprecated": false, 
+              "name": "id", 
+              "type": {
+                "kind": "NON_NULL", 
+                "name": null, 
+                "ofType": {
+                  "kind": "SCALAR", 
+                  "name": "ID", 
+                  "ofType": null
+                }
+              }
+            }, 
+            {
+              "args": [], 
+              "deprecationReason": null, 
+              "description": "User who made the subscription.", 
+              "isDeprecated": false, 
+              "name": "subscriber", 
+              "type": {
+                "kind": "OBJECT", 
+                "name": "User", 
+                "ofType": null
+              }
+            }, 
+            {
+              "args": [], 
+              "deprecationReason": null, 
+              "description": "Subscription tier.", 
+              "isDeprecated": false, 
+              "name": "tier", 
+              "type": {
+                "kind": "NON_NULL", 
+                "name": null, 
+                "ofType": {
+                  "kind": "ENUM", 
+                  "name": "SubscriptionTier", 
+                  "ofType": null
+                }
+              }
+            }, 
+            {
+              "args": [], 
+              "deprecationReason": null, 
+              "description": "When the subscription was made.", 
+              "isDeprecated": false, 
+              "name": "timestamp", 
+              "type": {
+                "kind": "NON_NULL", 
+                "name": null, 
+                "ofType": {
+                  "kind": "SCALAR", 
+                  "name": "Time", 
+                  "ofType": null
+                }
+              }
+            }
+          ], 
+          "inputFields": null, 
+          "interfaces": [
+            {
+              "kind": "INTERFACE", 
+              "name": "DashboardActivityFeedActivity", 
+              "ofType": null
+            }
+          ], 
+          "kind": "OBJECT", 
+          "name": "DashboardActivityFeedActivitySubscribing", 
+          "possibleTypes": null
+        }, 
+        {
           "description": "The required input for a deactivateExtension mutation.", 
           "enumValues": null, 
           "fields": null, 
@@ -58764,6 +59780,47 @@
           "possibleTypes": null
         }, 
         {
+          "description": "A channel could have multiple subscription products at varying tiers.\nEach value will always map to the respective tier for every channel that has the given tier available as a product.\n\nExample:\nA channel with a \"tier 2\" subscription product will always have the tier represented as T_2000.", 
+          "enumValues": [
+            {
+              "deprecationReason": null, 
+              "description": "Custom tier.", 
+              "isDeprecated": false, 
+              "name": "CUSTOM"
+            }, 
+            {
+              "deprecationReason": null, 
+              "description": "Subscribed with Twitch Prime.", 
+              "isDeprecated": false, 
+              "name": "PRIME"
+            }, 
+            {
+              "deprecationReason": null, 
+              "description": "Tier \"1000\".", 
+              "isDeprecated": false, 
+              "name": "T_1000"
+            }, 
+            {
+              "deprecationReason": null, 
+              "description": "Tier \"2000\".", 
+              "isDeprecated": false, 
+              "name": "T_2000"
+            }, 
+            {
+              "deprecationReason": null, 
+              "description": "Tier \"3000\".", 
+              "isDeprecated": false, 
+              "name": "T_3000"
+            }
+          ], 
+          "fields": null, 
+          "inputFields": null, 
+          "interfaces": null, 
+          "kind": "ENUM", 
+          "name": "SubscriptionTier", 
+          "possibleTypes": null
+        }, 
+        {
           "description": "Platform information for a game.\nNOTE: Should have been named GameSupportedPlatform.\nFor Commerce.", 
           "enumValues": null, 
           "fields": [
@@ -66637,6 +67694,39 @@
               "type": {
                 "kind": "SCALAR", 
                 "name": "Time", 
+                "ofType": null
+              }
+            }, 
+            {
+              "args": [
+                {
+                  "defaultValue": "10", 
+                  "description": null, 
+                  "name": "first", 
+                  "type": {
+                    "kind": "SCALAR", 
+                    "name": "Int", 
+                    "ofType": null
+                  }
+                }, 
+                {
+                  "defaultValue": null, 
+                  "description": null, 
+                  "name": "after", 
+                  "type": {
+                    "kind": "SCALAR", 
+                    "name": "Cursor", 
+                    "ofType": null
+                  }
+                }
+              ], 
+              "deprecationReason": null, 
+              "description": "Paginated past activities for the Dashboard Activity Feed.\nAlways ordered by descending timestamp.", 
+              "isDeprecated": false, 
+              "name": "dashboardActivityFeedActivities", 
+              "type": {
+                "kind": "OBJECT", 
+                "name": "DashboardActivityFeedActivityConnection", 
                 "ofType": null
               }
             }, 

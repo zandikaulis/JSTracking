@@ -55,7 +55,6 @@ window.__twilightSettings = {
     "emote_card": "off",
     "env_test": "This is a test in Production.",
     "esport_channel_page_whitelist": ["137512364", "188863650", "188864445", "27697171", "191316249", "104874624", "139075904", "180833069", "48937001", "170846405", "189906299", "166458814", "189905698", "203316457"],
-    "esport_charity_start_date": "2018-08-25T07:01:00Z",
     "esport_insider_allstars_launch": "2018-08-25T23:00:00Z",
     "esport_insider_pass_secondary_channel": "overwatchleague_allaccess",
     "esport_insider_pass_whitelist": ["137512364", "188863650", "188864445", "27697171-staff", "240196222-staff"],
@@ -124,7 +123,7 @@ window.__twilightSettings = {
     "sizmek_versatag_events": ["YeUmkUI9R5GKR5WGtg046A", "f4aK8duASJKiAYAiETsUvw", "WN1Ly4NxRgOrSNWOSG40PQ", "YFCU_dppR6Oor32XLPrU2w", "2HsLVRMUTnqChbVy5YSsfg", "f4aK8duASJKiAYAiETsUvw"],
     "sizmek_versatag_games": ["496712", "Call of Duty: WWII", "497571", "Wrestling"],
     "sizmek_versatag_teams": ["wrestling"],
-    "spade_url": "https://video-edge-c666c6.sjc02.hls.ttvnw.net/v1/segment/CoiQYPvfMrkEU9QO7dV_c2Khh3J4VaagpokIj0mAlqGt5MK_6OM5zFxWgiitOHAIhUKWMohl1h77Ttco_kc8Z6EgyDR57-uL--5YRw2TSgOXQl4basqMFY2uJdfUiWW0JbJyiJODEVC-DfZTofU6qcp7rNDzkixfVRgaGaETBZDCgyOAHHAKzLJLzcOGqcqMabgdc8m7ficr7jxFjcVEgirCXI5Gi7cd8dphsAibcNcjuUJjf70qukN5IOwciV-6uRDbPerFXVH-AlkKF-_PtnH6oUyeY0Y-HcXk5BS5osVMascfEaEHxWPmEmJ7Ln7oqRvR3K4BQIYztG7nsSD8ctEiODBFlWZsg6AMqgko_j3ZDE5VntHVqYFbkbt7EFwWmzZNwjttq4ma32SCn8HPWdJvmn5Ncfp4yy_NYNOj27CYC7tlUahIw9nWbk89HlRKOgaSW50NjGD8f80K3OkxN6cRdubRhgFIG1fMEkYPmA6RGeDi1GANE_dw6ICRUF6JlxcoYZ5eHko7qKcPuvqSQncBm7JXb3v5uE9ipAe8hSpVrfbajBQ9ElkbHR168DxT_0qJgDEgSubM_a95ikv2A6vQjW_StWZFjQQlMywV1EBuO7oU55voVb85RFyMIX0kcoYK1MCnYVSVHIuEHPTqvofZBVTkjDvNZvsnOIowo3r9qLpweimazcZJfbZiXWNnNj5112pWPmBjxnZ-mmuhP0dGwQ4KqDvB5Nj2n5nYGDz47lnZU4A0r0gDQ3bkofhnvu-b.ts",
+    "spade_url": "https://video-edge-cc3dd5.sjc02.hls.ttvnw.net/v1/segment/CiMMicwn29OpEnpmMw6yFRnHO20uNiOn5nTaxsrNgXmCdXOffJayLJeBWutKc7XbankrD67QU3yw30lzNyxMH9JTz4l7wsQSVQAx4GlQhCV2wmC9zRrCEKLImV_S4gmjbnJmGvqQyrYjiiyk66kFbuCrXbdIkEaneR2WALjQZNZoSGTaPW8EQm7KrfDI53fli3dk83_CPjOHjb11ICyEB745gtjb1tHTzZR9DqR5Z62hqtvXVc7Ilj8AqxfKQHgVXmc19kPvGMVp-DdPs5sTC6fAj3QDZcaSGsnVpnLIggThKFelFE8OYjCnGtTRuBlAXeOhXVx5CZPVosvGRrXWuW_4167fc9E2Rs5pmf7OFIphox0Y3dLtYX1L0E2o1-Lz1c1R6nnDzLzcEpFUZCFNosK6OwKkqDkK7j43ZHUZQwGo9vbd2zUNSHCwTiOq8e9GhPFyk2vMqQ0jDEJ3cRhZTxIyDLMoazShGYtD4uPkUyxXMTs0aaFcOCH7iLiyaHr3-3CxGttZhhSMK4FSXOInxqhpIOte-xrQFqvGXgg1Np8dnYBXY7L3fSq8IU4jeRbiN1_ECXUw1TYDyM-UG0zb53PvBrCWKQPGgxYczKyWfR1jT41xhH-Qdd5xG5UdwHTvwpaJlsUuiJZuTTBPcxfVDoxlpL7IO21SeWkIOlnguZEsYEF8Pqx9ILhJSlRuixByz5DWDk2VxMikwZKU85xCJ3FifQkRvrl7fX3AUcK0zKGQw7uHz5yrZ3CLknUoAZbRDuj1B8beVnmtq5Li_9SivU8.ts",
     "squad_stream_dashboard": "off",
     "squad_stream_feature": "on",
     "squad_stream_survey_url": "https://twitchtv.az1.qualtrics.com/jfe/form/SV_4HZtpVZBKOr6Yv3?PPT={SESSION_ID}",
@@ -602,11 +601,11 @@ window.__twilightSettings = {
         },
         "3c3a5d48-117f-43ac-8b35-091f13b2d479": {
             "name": "MediaPlayer Staff Version",
-            "v": 5022,
+            "v": 5122,
             "t": 1,
             "groups": [{
                 "weight": 100,
-                "value": "2.6.33"
+                "value": "2.6.33+abrprobe"
             }]
         },
         "3f03eebb-3cbb-4f7c-b64b-e1ed0115a773": {
@@ -1742,29 +1741,14 @@ window.__twilightSettings = {
         },
         "ec70bd08-dbc8-4f48-9f60-d035fec3eb20": {
             "name": "CVP Player Core 2.0 Mediaplayer Experiment Aug 2017",
-            "v": 5070,
+            "v": 5121,
             "t": 1,
             "groups": [{
-                "weight": 88,
+                "weight": 90,
                 "value": "2.6.33"
             }, {
-                "weight": 2,
-                "value": "2.6.32+control"
-            }, {
-                "weight": 2,
-                "value": "2.6.33"
-            }, {
-                "weight": 2,
-                "value": "2.6.32+abrlower"
-            }, {
-                "weight": 2,
+                "weight": 10,
                 "value": "2.6.33+abrprobe"
-            }, {
-                "weight": 2,
-                "value": "2.6.32+abrreset"
-            }, {
-                "weight": 2,
-                "value": "2.6.32+range"
             }]
         },
         "ee491c3c-d6f7-4f00-8c53-c630dfa10f41": {
