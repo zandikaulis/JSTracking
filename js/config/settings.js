@@ -1459,13 +1459,13 @@ window.__twilightSettings = {
         },
         "bd9234fc-3c40-45f6-a544-868478744ba7": {
             "name": "featured_collection_disable",
-            "v": 5130,
+            "v": 5132,
             "t": 1,
             "groups": [{
-                "weight": 100,
+                "weight": 50,
                 "value": "control"
             }, {
-                "weight": 0,
+                "weight": 50,
                 "value": "disabled"
             }]
         },

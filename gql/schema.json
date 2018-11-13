@@ -32801,6 +32801,125 @@
           "possibleTypes": null
         }, 
         {
+          "description": "An interface to query subsets of the moderation logs information for a given channel.", 
+          "enumValues": null, 
+          "fields": [
+            {
+              "args": [
+                {
+                  "defaultValue": null, 
+                  "description": null, 
+                  "name": "senderID", 
+                  "type": {
+                    "kind": "NON_NULL", 
+                    "name": null, 
+                    "ofType": {
+                      "kind": "SCALAR", 
+                      "name": "ID", 
+                      "ofType": null
+                    }
+                  }
+                }, 
+                {
+                  "defaultValue": "100", 
+                  "description": null, 
+                  "name": "limit", 
+                  "type": {
+                    "kind": "SCALAR", 
+                    "name": "Int", 
+                    "ofType": null
+                  }
+                }, 
+                {
+                  "defaultValue": null, 
+                  "description": null, 
+                  "name": "cursor", 
+                  "type": {
+                    "kind": "SCALAR", 
+                    "name": "Cursor", 
+                    "ofType": null
+                  }
+                }, 
+                {
+                  "defaultValue": "ASC", 
+                  "description": null, 
+                  "name": "order", 
+                  "type": {
+                    "kind": "ENUM", 
+                    "name": "SortOrder", 
+                    "ofType": null
+                  }
+                }, 
+                {
+                  "defaultValue": "true", 
+                  "description": null, 
+                  "name": "includeMessageCount", 
+                  "type": {
+                    "kind": "SCALAR", 
+                    "name": "Boolean", 
+                    "ofType": null
+                  }
+                }
+              ], 
+              "deprecationReason": null, 
+              "description": "The chat history for an specified user on a given channel.", 
+              "isDeprecated": false, 
+              "name": "messagesBySender", 
+              "type": {
+                "kind": "OBJECT", 
+                "name": "ModLogsMessageConnection", 
+                "ofType": null
+              }
+            }, 
+            {
+              "args": [
+                {
+                  "defaultValue": null, 
+                  "description": null, 
+                  "name": "targetID", 
+                  "type": {
+                    "kind": "NON_NULL", 
+                    "name": null, 
+                    "ofType": {
+                      "kind": "SCALAR", 
+                      "name": "ID", 
+                      "ofType": null
+                    }
+                  }
+                }, 
+                {
+                  "defaultValue": null, 
+                  "description": null, 
+                  "name": "actionType", 
+                  "type": {
+                    "kind": "NON_NULL", 
+                    "name": null, 
+                    "ofType": {
+                      "kind": "ENUM", 
+                      "name": "ModLogsAction", 
+                      "ofType": null
+                    }
+                  }
+                }
+              ], 
+              "deprecationReason": null, 
+              "description": "The chat moderation history on a specified user on the given channel.", 
+              "isDeprecated": false, 
+              "name": "targetedModActions", 
+              "type": {
+                "kind": "OBJECT", 
+                "name": "ModLogsTargetedModActionsConnection", 
+                "ofType": null
+              }
+            }
+          ], 
+          "inputFields": null, 
+          "interfaces": [], 
+          "kind": "OBJECT", 
+          "name": "ModLogs", 
+          "possibleTypes": null
+        }, 
+        {
           "description": "ModLogsAccess defines the access level of a channel role to the channel's moderator logs.", 
           "enumValues": null, 
           "fields": [
@@ -32870,6 +32989,517 @@
           "interfaces": null, 
           "kind": "ENUM", 
           "name": "ModLogsAccessLevel", 
+          "possibleTypes": null
+        }, 
+        {
+          "description": "ModLogsAction represents the recorded actions a channel moderator takes on a channel.", 
+          "enumValues": [
+            {
+              "deprecationReason": null, 
+              "description": "Default Action.", 
+              "isDeprecated": false, 
+              "name": "INVALID_ACTION"
+            }, 
+            {
+              "deprecationReason": null, 
+              "description": "Channel Mod chat bans a user.", 
+              "isDeprecated": false, 
+              "name": "BAN_USER"
+            }, 
+            {
+              "deprecationReason": null, 
+              "description": "Channel Mod chat timeouts a user.", 
+              "isDeprecated": false, 
+              "name": "TIMEOUT_USER"
+            }, 
+            {
+              "deprecationReason": null, 
+              "description": "Channel Mod chat unbans a user.", 
+              "isDeprecated": false, 
+              "name": "UNBAN_USER"
+            }, 
+            {
+              "deprecationReason": null, 
+              "description": "Channel Mod sets chat mode.", 
+              "isDeprecated": false, 
+              "name": "SET_CHANNEL_MODE"
+            }, 
+            {
+              "deprecationReason": null, 
+              "description": "Channel Mod changes.", 
+              "isDeprecated": false, 
+              "name": "CHANGE_CHANNEL_RULES"
+            }, 
+            {
+              "deprecationReason": null, 
+              "description": "Channel Mod approves an automod caught message.", 
+              "isDeprecated": false, 
+              "name": "ALLOW_MESSAGE"
+            }, 
+            {
+              "deprecationReason": null, 
+              "description": "Channel Mod denies an automod caught message.", 
+              "isDeprecated": false, 
+              "name": "DENY_MESSAGE"
+            }, 
+            {
+              "deprecationReason": null, 
+              "description": "Channel Mod updates mod terms.", 
+              "isDeprecated": false, 
+              "name": "UPDATE_MODERATED_TERMS"
+            }, 
+            {
+              "deprecationReason": null, 
+              "description": "Channel Mod creates a mod comment about a user.", 
+              "isDeprecated": false, 
+              "name": "COMMENT"
+            }
+          ], 
+          "fields": null, 
+          "inputFields": null, 
+          "interfaces": null, 
+          "kind": "ENUM", 
+          "name": "ModLogsAction", 
+          "possibleTypes": null
+        }, 
+        {
+          "description": "A message sent from a user to a room.", 
+          "enumValues": null, 
+          "fields": [
+            {
+              "args": [], 
+              "deprecationReason": null, 
+              "description": "The text and emoticon content of a message.", 
+              "isDeprecated": false, 
+              "name": "content", 
+              "type": {
+                "kind": "NON_NULL", 
+                "name": null, 
+                "ofType": {
+                  "kind": "OBJECT", 
+                  "name": "ModLogsMessageContent", 
+                  "ofType": null
+                }
+              }
+            }, 
+            {
+              "args": [], 
+              "deprecationReason": null, 
+              "description": "UUID of the message.", 
+              "isDeprecated": false, 
+              "name": "id", 
+              "type": {
+                "kind": "NON_NULL", 
+                "name": null, 
+                "ofType": {
+                  "kind": "SCALAR", 
+                  "name": "ID", 
+                  "ofType": null
+                }
+              }
+            }, 
+            {
+              "args": [], 
+              "deprecationReason": null, 
+              "description": "The user that sent the message.", 
+              "isDeprecated": false, 
+              "name": "sender", 
+              "type": {
+                "kind": "OBJECT", 
+                "name": "User", 
+                "ofType": null
+              }
+            }, 
+            {
+              "args": [], 
+              "deprecationReason": null, 
+              "description": "Time the message was sent.", 
+              "isDeprecated": false, 
+              "name": "sentAt", 
+              "type": {
+                "kind": "NON_NULL", 
+                "name": null, 
+                "ofType": {
+                  "kind": "SCALAR", 
+                  "name": "Time", 
+                  "ofType": null
+                }
+              }
+            }
+          ], 
+          "inputFields": null, 
+          "interfaces": [], 
+          "kind": "OBJECT", 
+          "name": "ModLogsMessage", 
+          "possibleTypes": null
+        }, 
+        {
+          "description": "Paginated list of messages from a single sender in a channel.", 
+          "enumValues": null, 
+          "fields": [
+            {
+              "args": [], 
+              "deprecationReason": null, 
+              "description": "The elements of the list.", 
+              "isDeprecated": false, 
+              "name": "edges", 
+              "type": {
+                "kind": "NON_NULL", 
+                "name": null, 
+                "ofType": {
+                  "kind": "LIST", 
+                  "name": null, 
+                  "ofType": {
+                    "kind": "NON_NULL", 
+                    "name": null, 
+                    "ofType": {
+                      "kind": "OBJECT", 
+                      "name": "ModLogsMessageEdge", 
+                      "ofType": null
+                    }
+                  }
+                }
+              }
+            }, 
+            {
+              "args": [], 
+              "deprecationReason": null, 
+              "description": "The partial count of messages (up to 1000).\nEmpty if includeMessageCount was not set when the query was requested.", 
+              "isDeprecated": false, 
+              "name": "messageCount", 
+              "type": {
+                "kind": "SCALAR", 
+                "name": "Int", 
+                "ofType": null
+              }
+            }, 
+            {
+              "args": [], 
+              "deprecationReason": null, 
+              "description": "Information about this page.", 
+              "isDeprecated": false, 
+              "name": "pageInfo", 
+              "type": {
+                "kind": "NON_NULL", 
+                "name": null, 
+                "ofType": {
+                  "kind": "OBJECT", 
+                  "name": "PageInfo", 
+                  "ofType": null
+                }
+              }
+            }
+          ], 
+          "inputFields": null, 
+          "interfaces": [], 
+          "kind": "OBJECT", 
+          "name": "ModLogsMessageConnection", 
+          "possibleTypes": null
+        }, 
+        {
+          "description": "The content of a user's message to a room.", 
+          "enumValues": null, 
+          "fields": [
+            {
+              "args": [], 
+              "deprecationReason": null, 
+              "description": "Parsed list of fragments in the message, include emotes, mentions, and plaintext.", 
+              "isDeprecated": false, 
+              "name": "fragments", 
+              "type": {
+                "kind": "NON_NULL", 
+                "name": null, 
+                "ofType": {
+                  "kind": "LIST", 
+                  "name": null, 
+                  "ofType": {
+                    "kind": "NON_NULL", 
+                    "name": null, 
+                    "ofType": {
+                      "kind": "OBJECT", 
+                      "name": "ModLogsMessageFragment", 
+                      "ofType": null
+                    }
+                  }
+                }
+              }
+            }, 
+            {
+              "args": [], 
+              "deprecationReason": null, 
+              "description": "String representation of the user message.", 
+              "isDeprecated": false, 
+              "name": "text", 
+              "type": {
+                "kind": "NON_NULL", 
+                "name": null, 
+                "ofType": {
+                  "kind": "SCALAR", 
+                  "name": "String", 
+                  "ofType": null
+                }
+              }
+            }
+          ], 
+          "inputFields": null, 
+          "interfaces": [], 
+          "kind": "OBJECT", 
+          "name": "ModLogsMessageContent", 
+          "possibleTypes": null
+        }, 
+        {
+          "description": "Element in a list of messages.", 
+          "enumValues": null, 
+          "fields": [
+            {
+              "args": [], 
+              "deprecationReason": null, 
+              "description": "Opaque cursor describing this edge's position in the paginated list.", 
+              "isDeprecated": false, 
+              "name": "cursor", 
+              "type": {
+                "kind": "NON_NULL", 
+                "name": null, 
+                "ofType": {
+                  "kind": "SCALAR", 
+                  "name": "Cursor", 
+                  "ofType": null
+                }
+              }
+            }, 
+            {
+              "args": [], 
+              "deprecationReason": null, 
+              "description": "The message or targeted moderation action.", 
+              "isDeprecated": false, 
+              "name": "node", 
+              "type": {
+                "kind": "OBJECT", 
+                "name": "ModLogsMessage", 
+                "ofType": null
+              }
+            }
+          ], 
+          "inputFields": null, 
+          "interfaces": [], 
+          "kind": "OBJECT", 
+          "name": "ModLogsMessageEdge", 
+          "possibleTypes": null
+        }, 
+        {
+          "description": "One parsed part of a message, which may be an emote, mention, or plaintext.", 
+          "enumValues": null, 
+          "fields": [
+            {
+              "args": [], 
+              "deprecationReason": null, 
+              "description": "Contains an emote or a mentioned user depending on the text of the fragment.", 
+              "isDeprecated": false, 
+              "name": "content", 
+              "type": {
+                "kind": "UNION", 
+                "name": "FragmentContent", 
+                "ofType": null
+              }
+            }, 
+            {
+              "args": [], 
+              "deprecationReason": null, 
+              "description": "Plaintext representation of the fragment.", 
+              "isDeprecated": false, 
+              "name": "text", 
+              "type": {
+                "kind": "NON_NULL", 
+                "name": null, 
+                "ofType": {
+                  "kind": "SCALAR", 
+                  "name": "String", 
+                  "ofType": null
+                }
+              }
+            }
+          ], 
+          "inputFields": null, 
+          "interfaces": [], 
+          "kind": "OBJECT", 
+          "name": "ModLogsMessageFragment", 
+          "possibleTypes": null
+        }, 
+        {
+          "description": "Paginated list of mod logs of a user on a channel.", 
+          "enumValues": null, 
+          "fields": [
+            {
+              "args": [], 
+              "deprecationReason": null, 
+              "description": "The elements of the list.", 
+              "isDeprecated": false, 
+              "name": "edges", 
+              "type": {
+                "kind": "LIST", 
+                "name": null, 
+                "ofType": {
+                  "kind": "NON_NULL", 
+                  "name": null, 
+                  "ofType": {
+                    "kind": "OBJECT", 
+                    "name": "ModLogsTargetedModActionsEdge", 
+                    "ofType": null
+                  }
+                }
+              }
+            }, 
+            {
+              "args": [], 
+              "deprecationReason": null, 
+              "description": "# Information about this page of mod logs.", 
+              "isDeprecated": false, 
+              "name": "pageInfo", 
+              "type": {
+                "kind": "NON_NULL", 
+                "name": null, 
+                "ofType": {
+                  "kind": "OBJECT", 
+                  "name": "PageInfo", 
+                  "ofType": null
+                }
+              }
+            }
+          ], 
+          "inputFields": null, 
+          "interfaces": [], 
+          "kind": "OBJECT", 
+          "name": "ModLogsTargetedModActionsConnection", 
+          "possibleTypes": null
+        }, 
+        {
+          "description": "Element in a list of mod logs of a user on a channel.", 
+          "enumValues": null, 
+          "fields": [
+            {
+              "args": [], 
+              "deprecationReason": null, 
+              "description": "Opaque cursor describing this edge's position in the paginated list.", 
+              "isDeprecated": false, 
+              "name": "cursor", 
+              "type": {
+                "kind": "NON_NULL", 
+                "name": null, 
+                "ofType": {
+                  "kind": "SCALAR", 
+                  "name": "Cursor", 
+                  "ofType": null
+                }
+              }
+            }, 
+            {
+              "args": [], 
+              "deprecationReason": null, 
+              "description": "A mod log of the user.", 
+              "isDeprecated": false, 
+              "name": "node", 
+              "type": {
+                "kind": "OBJECT", 
+                "name": "ModLogsTargetedModActionsEntry", 
+                "ofType": null
+              }
+            }
+          ], 
+          "inputFields": null, 
+          "interfaces": [], 
+          "kind": "OBJECT", 
+          "name": "ModLogsTargetedModActionsEdge", 
+          "possibleTypes": null
+        }, 
+        {
+          "description": "ModLogsTargetedModActionsEntry defines an entry of a user's moderation history on a channel.", 
+          "enumValues": null, 
+          "fields": [
+            {
+              "args": [], 
+              "deprecationReason": null, 
+              "description": "Action is the mod action of the entry.", 
+              "isDeprecated": false, 
+              "name": "action", 
+              "type": {
+                "kind": "NON_NULL", 
+                "name": null, 
+                "ofType": {
+                  "kind": "ENUM", 
+                  "name": "ModLogsAction", 
+                  "ofType": null
+                }
+              }
+            }, 
+            {
+              "args": [], 
+              "deprecationReason": null, 
+              "description": "Channel is where the mod action was taken.", 
+              "isDeprecated": false, 
+              "name": "channel", 
+              "type": {
+                "kind": "OBJECT", 
+                "name": "User", 
+                "ofType": null
+              }
+            }, 
+            {
+              "args": [], 
+              "deprecationReason": null, 
+              "description": "Details about the mod action.", 
+              "isDeprecated": false, 
+              "name": "details", 
+              "type": {
+                "kind": "OBJECT", 
+                "name": "TargetedModActionDetails", 
+                "ofType": null
+              }
+            }, 
+            {
+              "args": [], 
+              "deprecationReason": null, 
+              "description": "Target is the target user of the mod action.", 
+              "isDeprecated": false, 
+              "name": "target", 
+              "type": {
+                "kind": "OBJECT", 
+                "name": "User", 
+                "ofType": null
+              }
+            }, 
+            {
+              "args": [], 
+              "deprecationReason": null, 
+              "description": "Timestamp when entry was created.", 
+              "isDeprecated": false, 
+              "name": "timestamp", 
+              "type": {
+                "kind": "NON_NULL", 
+                "name": null, 
+                "ofType": {
+                  "kind": "SCALAR", 
+                  "name": "Time", 
+                  "ofType": null
+                }
+              }
+            }, 
+            {
+              "args": [], 
+              "deprecationReason": null, 
+              "description": "User is the mod that created the action.", 
+              "isDeprecated": false, 
+              "name": "user", 
+              "type": {
+                "kind": "OBJECT", 
+                "name": "User", 
+                "ofType": null
+              }
+            }
+          ], 
+          "inputFields": null, 
+          "interfaces": [], 
+          "kind": "OBJECT", 
+          "name": "ModLogsTargetedModActionsEntry", 
           "possibleTypes": null
         }, 
         {
@@ -51899,7 +52529,7 @@
             {
               "args": [], 
               "deprecationReason": null, 
-              "description": "Time the msesage was sent.", 
+              "description": "Time the message was sent.", 
               "isDeprecated": false, 
               "name": "sentAt", 
               "type": {
@@ -60280,6 +60910,65 @@
               "ofType": null
             }
           ]
+        }, 
+        {
+          "description": "TargetedModerationAction is a ModLogs entry of a chat ban,timeout, or unban.", 
+          "enumValues": null, 
+          "fields": [
+            {
+              "args": [], 
+              "deprecationReason": null, 
+              "description": "Timestamp when user was banned/timed-out.", 
+              "isDeprecated": false, 
+              "name": "bannedAt", 
+              "type": {
+                "kind": "SCALAR", 
+                "name": "Time", 
+                "ofType": null
+              }
+            }, 
+            {
+              "args": [], 
+              "deprecationReason": null, 
+              "description": "Duration of the chat timeout (in seconds).", 
+              "isDeprecated": false, 
+              "name": "durationSeconds", 
+              "type": {
+                "kind": "SCALAR", 
+                "name": "Int", 
+                "ofType": null
+              }
+            }, 
+            {
+              "args": [], 
+              "deprecationReason": null, 
+              "description": "Timestamp when the chat timeout expires.", 
+              "isDeprecated": false, 
+              "name": "expiresAt", 
+              "type": {
+                "kind": "SCALAR", 
+                "name": "Time", 
+                "ofType": null
+              }
+            }, 
+            {
+              "args": [], 
+              "deprecationReason": null, 
+              "description": "Reason of the action.", 
+              "isDeprecated": false, 
+              "name": "reason", 
+              "type": {
+                "kind": "SCALAR", 
+                "name": "String", 
+                "ofType": null
+              }
+            }
+          ], 
+          "inputFields": null, 
+          "interfaces": [], 
+          "kind": "OBJECT", 
+          "name": "TargetedModActionDetails", 
+          "possibleTypes": null
         }, 
         {
           "description": "TaxInterview describes the information for a user's Amazon tax interview during payout onboarding.", 
@@ -69051,6 +69740,18 @@
                   "name": "Int", 
                   "ofType": null
                 }
+              }
+            }, 
+            {
+              "args": [], 
+              "deprecationReason": null, 
+              "description": "Returns a resolver to query different subsets of the moderation logs.", 
+              "isDeprecated": false, 
+              "name": "modLogs", 
+              "type": {
+                "kind": "OBJECT", 
+                "name": "ModLogs", 
+                "ofType": null
               }
             }, 
             {
