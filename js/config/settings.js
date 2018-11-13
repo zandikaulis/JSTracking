@@ -1165,7 +1165,7 @@ window.__twilightSettings = {
         },
         "8b4fa811-1db1-4347-8f26-5ff4141317e8": {
             "name": "bits_new_user_cheer",
-            "v": 4733,
+            "v": 5128,
             "t": 2,
             "groups": [{
                 "weight": 0,
