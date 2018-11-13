@@ -25,7 +25,7 @@ window.__twilightSettings = {
     "bounty_board_live_dashboard_widget": "on",
     "cc_v2_whitelist": ["cpt_meticulous-staff", "testnioh123-staff", "jnguyening-staff", "gummyace-staff", "MissCoded-staff", "buildgreatthings2018-staff", "jockeyethefish-staff", "qa_tw_partner-staff"],
     "channel_feed_enabled": false,
-    "chat_input_box_followers_only_restriction_enabled": "off",
+    "chat_input_box_followers_only_restriction_enabled": "on",
     "chat_input_box_verified_only_restriction_enabled": "on",
     "chatrooms_enabled": true,
     "chatrooms_staff_beta": true,
