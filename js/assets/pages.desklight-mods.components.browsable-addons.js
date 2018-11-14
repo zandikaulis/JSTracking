@@ -58,8 +58,8 @@
                                         "data-test-selector": u.BrowseFolderOption
                                     })
                                 });
-                                return r.createElement(h.Pa, {
-                                    position: h.jb.Relative
+                                return r.createElement(h.Qa, {
+                                    position: h.kb.Relative
                                 }, r.createElement("div", {
                                     "data-test-selector": u.BrowseFolder,
                                     onMouseOver: t.showFolders,
@@ -102,14 +102,14 @@
                     }, t.renderDiskAction = function() {
                         return t.props.instance.hasUpdate ? r.createElement(c.a, {
                             title: Object(i.d)("Update", "InstalledContextMenu"),
-                            icon: h.tb.Download,
+                            icon: h.ub.Download,
                             borderTop: !0,
                             borderBottom: !0,
                             "data-test-selector": u.DiskActionOption,
                             onClick: t.onUpdate
                         }) : r.createElement(c.a, {
                             title: Object(i.d)("Reinstall", "InstalledContextMenu"),
-                            icon: h.tb.Download,
+                            icon: h.ub.Download,
                             borderTop: !0,
                             borderBottom: !0,
                             "data-test-selector": u.DiskActionOption,
@@ -152,24 +152,24 @@
                 return o.__extends(t, e), t.prototype.render = function() {
                     var e = this.renderDiskAction(),
                         t = this.renderBrowseFolder();
-                    return r.createElement(h.Xa, {
+                    return r.createElement(h.Ya, {
                         margin: {
                             top: 2
                         }
                     }, e, r.createElement(c.a, {
                         title: Object(i.d)("Auto Install Updates", "InstalledContextMenu"),
-                        icon: this.props.instance.preferences.preferenceAutoInstallUpdates ? h.tb.Check : void 0,
+                        icon: this.props.instance.preferences.preferenceAutoInstallUpdates ? h.ub.Check : void 0,
                         onClick: this.setAutoInstallUpdates
                     }), r.createElement(c.a, {
                         title: Object(i.d)("Install Libraries Seperately", "InstalledContextMenu"),
-                        icon: this.props.instance.preferences.preferenceAlternateFile ? h.tb.Check : void 0,
+                        icon: this.props.instance.preferences.preferenceAlternateFile ? h.ub.Check : void 0,
                         onClick: this.setInstallSeperatly
                     }), r.createElement(c.a, {
                         title: Object(i.d)("Ignored", "InstalledContextMenu"),
-                        icon: this.props.instance.preferences.preferenceIsIgnored ? h.tb.Check : void 0,
+                        icon: this.props.instance.preferences.preferenceIsIgnored ? h.ub.Check : void 0,
                         onClick: this.setIsignored
-                    }), r.createElement(h.Pa, {
-                        position: h.jb.Relative
+                    }), r.createElement(h.Qa, {
+                        position: h.kb.Relative
                     }, r.createElement("div", {
                         "data-test-selector": u.ReleaseTypeItem,
                         onMouseOver: this.showReleaseTypes,
@@ -183,44 +183,44 @@
                     }, r.createElement(c.a, {
                         "data-test-selector": u.ReleaseOption,
                         title: Object(i.d)("Release", "InstalledContextMenu"),
-                        icon: this.props.instance.preferences.preferredReleaseType === g.ModsIntegrationFileType.Release ? h.tb.Check : void 0,
+                        icon: this.props.instance.preferences.preferredReleaseType === g.ModsIntegrationFileType.Release ? h.ub.Check : void 0,
                         value: g.ModsIntegrationFileType.Release,
                         onClick: this.setFileType,
                         borderBottom: !0
                     }), r.createElement(c.a, {
                         title: Object(i.d)("Beta", "InstalledContextMenu"),
-                        icon: this.props.instance.preferences.preferredReleaseType === g.ModsIntegrationFileType.Beta ? h.tb.Check : void 0,
+                        icon: this.props.instance.preferences.preferredReleaseType === g.ModsIntegrationFileType.Beta ? h.ub.Check : void 0,
                         value: g.ModsIntegrationFileType.Beta,
                         onClick: this.setFileType
                     }), r.createElement(c.a, {
                         title: Object(i.d)("Alpha", "InstalledContextMenu"),
-                        icon: this.props.instance.preferences.preferredReleaseType === g.ModsIntegrationFileType.Alpha ? h.tb.Check : void 0,
+                        icon: this.props.instance.preferences.preferredReleaseType === g.ModsIntegrationFileType.Alpha ? h.ub.Check : void 0,
                         value: g.ModsIntegrationFileType.Alpha,
                         onClick: this.setFileType
                     })))), r.createElement(c.a, {
                         title: Object(i.d)("Report a Bug", "InstalledContextMenu"),
-                        icon: h.tb.Sword,
+                        icon: h.ub.Sword,
                         borderTop: !0,
                         onClick: this.reportABug,
                         "data-test-selector": u.ReportABugOption
                     }), r.createElement(c.a, {
                         title: Object(i.d)("View Addon Website", "InstalledContextMenu"),
-                        icon: h.tb.Popout,
+                        icon: h.ub.Popout,
                         onClick: this.visitWebsite,
                         "data-test-selector": u.VisitWebsiteOption
                     }), r.createElement(c.a, {
                         title: Object(i.d)("View Changelogs", "InstalledContextMenu"),
-                        icon: h.tb.ViewerList,
+                        icon: h.ub.ViewerList,
                         onClick: this.viewChanelogs,
                         "data-test-selector": u.ViewChangelogOption
                     }), t, r.createElement(c.a, {
                         title: Object(i.d)("Delete Settings (Saved Variables)", "InstalledContextMenu"),
-                        icon: h.tb.Close,
+                        icon: h.ub.Close,
                         borderBottom: !0
                     }), r.createElement(c.a, {
                         title: Object(i.d)("Delete", "InstalledContextMenu"),
-                        icon: h.tb.Trash,
-                        interactableType: h.Va.Alert,
+                        icon: h.ub.Trash,
+                        interactableType: h.Wa.Alert,
                         onClick: this.onUninstall
                     }))
                 }, t
@@ -245,19 +245,19 @@
                     }, t
                 }
                 return o.__extends(t, e), t.prototype.render = function() {
-                    return r.createElement(h.Xa, {
+                    return r.createElement(h.Ya, {
                         padding: {
                             top: 2
                         }
                     }, r.createElement(c.a, {
-                        icon: h.tb.Download,
+                        icon: h.ub.Download,
                         title: Object(i.d)("Install", "NotInstalledMenu"),
                         borderBottom: !0,
                         borderTop: !0,
                         "data-test-selector": m.InstallOption,
                         onClick: this.onInstall
                     }), r.createElement(c.a, {
-                        icon: h.tb.Popout,
+                        icon: h.ub.Popout,
                         title: Object(i.d)("Browse Addon Website", "NotInstalledMenu"),
                         onClick: this.openSite,
                         "data-test-selector": m.OpenSiteOption
@@ -275,7 +275,7 @@
                         var t = null !== e && e.apply(this, arguments) || this;
                         return t.renderAddonHeader = function() {
                             var e = Object(y.c)(t.props.addon);
-                            return r.createElement(h.Xa, {
+                            return r.createElement(h.Ya, {
                                 padding: {
                                     x: 1
                                 },
@@ -286,12 +286,12 @@
                                 src: t.props.addon.primaryCategoryAvatarUrl,
                                 alt: t.props.addon.name,
                                 size: 36
-                            }), r.createElement(h.Xa, {
+                            }), r.createElement(h.Ya, {
                                 margin: {
                                     left: 1
                                 }
                             }, r.createElement(h.W, {
-                                type: h.Vb.H2,
+                                type: h.Wb.H2,
                                 fontSize: h.Ca.Size4
                             }, t.props.addon.name), r.createElement(h.W, {
                                 color: h.O.Alt2
@@ -312,7 +312,7 @@
                                 addon: this.props.addon,
                                 onClose: this.props.onClose
                             });
-                        return r.createElement(h.Xa, {
+                        return r.createElement(h.Ya, {
                             padding: {
                                 top: 1
                             },
@@ -389,37 +389,37 @@
                     }
                     return o.__extends(t, e), t.prototype.render = function() {
                         var e = this.renderCategoryOptions();
-                        return s.createElement(y.Xa, {
+                        return s.createElement(y.Ya, {
                             display: y.X.Flex,
                             margin: {
                                 y: 1
                             },
-                            justifyContent: y.Wa.Between
-                        }, s.createElement(y.Xa, null, s.createElement(y.z, {
+                            justifyContent: y.Xa.Between
+                        }, s.createElement(y.Ya, null, s.createElement(y.z, {
                             onClick: this.props.onRefresh,
-                            icon: y.tb.Refresh,
+                            icon: y.ub.Refresh,
                             type: y.F.Text
                         }, Object(d.d)("Refresh", "BrowsableAddonNavigationBar")), s.createElement(y.z, {
                             disabled: !this.props.canDownload,
                             onClick: this.props.onDownload,
-                            icon: y.tb.ToBottom,
+                            icon: y.ub.ToBottom,
                             type: y.F.Text
                         }, Object(d.d)("Install", "BrowsableAddonNavigationBar")), s.createElement(y.z, {
                             onClick: this.onFeatured,
-                            icon: y.tb.GridLayout,
+                            icon: y.ub.GridLayout,
                             type: y.F.Text
-                        }, Object(d.d)("Featured", "BrowsableAddonNavigationBar"))), s.createElement(y.Xa, {
+                        }, Object(d.d)("Featured", "BrowsableAddonNavigationBar"))), s.createElement(y.Ya, {
                             display: y.X.Flex
-                        }, s.createElement(y.Xa, {
+                        }, s.createElement(y.Ya, {
                             margin: {
                                 right: 1
                             }
-                        }, s.createElement(y.zb, {
+                        }, s.createElement(y.Ab, {
                             onChange: this.onCategoryChange,
                             value: this.props.selectedCategory.toString()
-                        }, e)), s.createElement(y.Ra, {
-                            icon: y.tb.NavSearch,
-                            type: y.Ta.Search,
+                        }, e)), s.createElement(y.Sa, {
+                            icon: y.ub.NavSearch,
+                            type: y.Ua.Search,
                             placeholder: Object(d.d)("Search", "BrowsableAddonsNavigationBar"),
                             value: this.state.searchTerm,
                             onChange: this.onSearchTermChange
@@ -433,7 +433,7 @@
                 }), a.a)(I),
                 E = n("mCR5"),
                 O = n("ew8U"),
-                B = (n("7i+i"), function(e) {
+                x = (n("7i+i"), function(e) {
                     function t() {
                         var t = null !== e && e.apply(this, arguments) || this;
                         return t.getSubtitle = function() {
@@ -471,7 +471,7 @@
                             i = this.props.instances.find(function(t) {
                                 return t.installedData.id === e.props.addon.id
                             });
-                        return s.createElement(y.Qa, {
+                        return s.createElement(y.Ra, {
                             background: a
                         }, s.createElement("div", {
                             onContextMenu: this.onContextMenu,
@@ -479,16 +479,16 @@
                             onClick: this.selectAddon
                         }, s.createElement("div", {
                             className: "browsable-addon__avatar"
-                        }, s.createElement(y.Xa, {
+                        }, s.createElement(y.Ya, {
                             display: y.X.Flex,
-                            justifyContent: y.Wa.Center
+                            justifyContent: y.Xa.Center
                         }, s.createElement(y.q, {
                             src: this.props.addon.primaryCategoryAvatarUrl,
                             alt: this.props.addon.name,
                             size: 40
-                        }))), s.createElement(y.Jb, {
-                            verticalAlign: y.fc.Middle
-                        }, s.createElement(y.Xa, {
+                        }))), s.createElement(y.Kb, {
+                            verticalAlign: y.gc.Middle
+                        }, s.createElement(y.Ya, {
                             className: "browsable-addon__name"
                         }, s.createElement(y.U, {
                             underline: !1,
@@ -498,55 +498,55 @@
                             color: y.O.Base
                         }, this.props.addon.name)), s.createElement(y.W, null, t))), s.createElement("div", {
                             className: "browsable-addon__action"
-                        }, s.createElement(y.Xa, {
+                        }, s.createElement(y.Ya, {
                             fullHeight: !0,
                             fullWidth: !0,
                             display: y.X.Flex,
-                            justifyContent: y.Wa.Center,
+                            justifyContent: y.Xa.Center,
                             alignItems: y.f.Center
                         }, s.createElement(E.a, {
                             instance: i && i.installedData,
                             addon: this.props.addon
-                        }))), s.createElement(y.Jb, {
-                            verticalAlign: y.fc.Middle
-                        }, r), s.createElement(y.Jb, {
-                            verticalAlign: y.fc.Middle
-                        }, this.props.addon.gamePopularityRank), s.createElement(y.Jb, {
-                            verticalAlign: y.fc.Middle
-                        }, o), s.createElement(y.Jb, {
-                            verticalAlign: y.fc.Middle
-                        }, this.props.addon.primaryCategoryName), s.createElement(y.Jb, {
-                            verticalAlign: y.fc.Middle
-                        }, n), s.createElement(y.Jb, {
-                            verticalAlign: y.fc.Middle
+                        }))), s.createElement(y.Kb, {
+                            verticalAlign: y.gc.Middle
+                        }, r), s.createElement(y.Kb, {
+                            verticalAlign: y.gc.Middle
+                        }, this.props.addon.gamePopularityRank), s.createElement(y.Kb, {
+                            verticalAlign: y.gc.Middle
+                        }, o), s.createElement(y.Kb, {
+                            verticalAlign: y.gc.Middle
+                        }, this.props.addon.primaryCategoryName), s.createElement(y.Kb, {
+                            verticalAlign: y.gc.Middle
+                        }, n), s.createElement(y.Kb, {
+                            verticalAlign: y.gc.Middle
                         }, this.props.addon.primaryAuthorName)))
                     }, t
                 }(s.Component));
-            var x, T = Object(i.compose)(Object(g.b)(function(e) {
+            var T, j = Object(i.compose)(Object(g.b)(function(e) {
                 return {
                     instances: e.addonInstances
                 }
-            }), a.a)(B);
+            }), a.a)(x);
             ! function(e) {
                 e.AddonName = "addon-name-selector"
-            }(x || (x = {}));
-            var j = function(e) {
+            }(T || (T = {}));
+            var B = function(e) {
                     function t() {
                         var t = null !== e && e.apply(this, arguments) || this;
                         return t.state = {
-                            nameSorting: y.Bb.Default,
-                            downloadsSorting: y.Bb.Default,
-                            topSorting: y.Bb.Ascending,
-                            latestSorting: y.Bb.Default,
-                            categorySorting: y.Bb.Default,
-                            gameVersionSorting: y.Bb.Default,
-                            authorSorting: y.Bb.Default
+                            nameSorting: y.Cb.Default,
+                            downloadsSorting: y.Cb.Default,
+                            topSorting: y.Cb.Ascending,
+                            latestSorting: y.Cb.Default,
+                            categorySorting: y.Cb.Default,
+                            gameVersionSorting: y.Cb.Default,
+                            authorSorting: y.Cb.Default
                         }, t.renderAddons = function() {
                             return t.props.addons.map(function(e, n) {
                                 var o = t.props.selectedAddons.some(function(t) {
                                     return e.id === t.addonId
                                 });
-                                return s.createElement(T, {
+                                return s.createElement(j, {
                                     addon: e,
                                     key: n,
                                     onContextClick: t.props.onContextClick,
@@ -556,10 +556,10 @@
                                 })
                             })
                         }, t.renderNoResult = function() {
-                            return t.props.addons.length ? null : s.createElement(y.Xa, {
+                            return t.props.addons.length ? null : s.createElement(y.Ya, {
                                 fullWidth: !0,
                                 display: y.X.Flex,
-                                justifyContent: y.Wa.Center,
+                                justifyContent: y.Xa.Center,
                                 margin: {
                                     top: 5
                                 }
@@ -569,35 +569,35 @@
                             }, Object(d.d)("No result match your search criteria.", "BrowsableAddonsTable")))
                         }, t.sortByName = function() {
                             var e = t.setSorting("nameSorting");
-                            t.props.onSort(A.a.Name, e === y.Bb.Descending)
+                            t.props.onSort(A.a.Name, e === y.Cb.Descending)
                         }, t.sortByDownloads = function() {
                             var e = t.setSorting("downloadsSorting");
-                            t.props.onSort(A.a.TotalDownloads, e === y.Bb.Descending)
+                            t.props.onSort(A.a.TotalDownloads, e === y.Cb.Descending)
                         }, t.sortByRanking = function() {
                             var e = t.setSorting("topSorting");
-                            t.props.onSort(A.a.Popularity, e === y.Bb.Descending)
+                            t.props.onSort(A.a.Popularity, e === y.Cb.Descending)
                         }, t.sortByLatest = function() {
                             var e = t.setSorting("latestSorting");
-                            t.props.onSort(A.a.LastUpdated, e === y.Bb.Descending)
+                            t.props.onSort(A.a.LastUpdated, e === y.Cb.Descending)
                         }, t.sortByCategory = function() {
                             var e = t.setSorting("categorySorting");
-                            t.props.onSort(A.a.Category, e === y.Bb.Descending)
+                            t.props.onSort(A.a.Category, e === y.Cb.Descending)
                         }, t.sortByGameVersion = function() {
                             var e = t.setSorting("gameVersionSorting");
-                            t.props.onSort(A.a.GameVersion, e === y.Bb.Descending)
+                            t.props.onSort(A.a.GameVersion, e === y.Cb.Descending)
                         }, t.sortByAuthor = function() {
                             var e = t.setSorting("authorSorting");
-                            t.props.onSort(A.a.Author, e === y.Bb.Descending)
+                            t.props.onSort(A.a.Author, e === y.Cb.Descending)
                         }, t.setSorting = function(e) {
-                            var n, o = t.state[e] === y.Bb.Descending ? y.Bb.Ascending : y.Bb.Descending,
+                            var n, o = t.state[e] === y.Cb.Descending ? y.Cb.Ascending : y.Cb.Descending,
                                 r = ((n = {
-                                    nameSorting: y.Bb.Default,
-                                    downloadsSorting: y.Bb.Default,
-                                    topSorting: y.Bb.Default,
-                                    latestSorting: y.Bb.Default,
-                                    categorySorting: y.Bb.Default,
-                                    gameVersionSorting: y.Bb.Default,
-                                    authorSorting: y.Bb.Default
+                                    nameSorting: y.Cb.Default,
+                                    downloadsSorting: y.Cb.Default,
+                                    topSorting: y.Cb.Default,
+                                    latestSorting: y.Cb.Default,
+                                    categorySorting: y.Cb.Default,
+                                    gameVersionSorting: y.Cb.Default,
+                                    authorSorting: y.Cb.Default
                                 })[e] = o, n);
                             return t.setState(r), o
                         }, t
@@ -605,43 +605,43 @@
                     return o.__extends(t, e), t.prototype.render = function() {
                         var e = this.renderAddons(),
                             t = this.renderNoResult();
-                        return s.createElement(s.Fragment, null, s.createElement(y.Hb, null, s.createElement(y.Kb, null, s.createElement(y.Lb, {
+                        return s.createElement(s.Fragment, null, s.createElement(y.Ib, null, s.createElement(y.Lb, null, s.createElement(y.Mb, {
                             label: ""
-                        }), s.createElement(y.Lb, {
-                            "data-test-selector": x.AddonName,
+                        }), s.createElement(y.Mb, {
+                            "data-test-selector": T.AddonName,
                             label: Object(d.d)("Addon", "BrowsableAddonsPage"),
                             sorting: this.state.nameSorting,
                             onClick: this.sortByName
-                        }), s.createElement(y.Lb, {
+                        }), s.createElement(y.Mb, {
                             label: Object(d.d)("Action", "BrowsableAddonsTable")
-                        }), s.createElement(y.Lb, {
+                        }), s.createElement(y.Mb, {
                             label: Object(d.d)("Downloads", "BrowsableAddonsPage"),
                             sorting: this.state.downloadsSorting,
                             onClick: this.sortByDownloads
-                        }), s.createElement(y.Lb, {
+                        }), s.createElement(y.Mb, {
                             label: Object(d.d)("Top", "BrowsableAddonsPage"),
                             sorting: this.state.topSorting,
                             onClick: this.sortByRanking
-                        }), s.createElement(y.Lb, {
+                        }), s.createElement(y.Mb, {
                             label: Object(d.d)("Latest", "BrowsableAddonsTable"),
                             sorting: this.state.latestSorting,
                             onClick: this.sortByLatest
-                        }), s.createElement(y.Lb, {
+                        }), s.createElement(y.Mb, {
                             label: Object(d.d)("Category", "BrowsableAddonsTable"),
                             sorting: this.state.categorySorting,
                             onClick: this.sortByCategory
-                        }), s.createElement(y.Lb, {
+                        }), s.createElement(y.Mb, {
                             label: Object(d.d)("Game Version", "BrowsableAddonsTable"),
                             sorting: this.state.gameVersionSorting,
                             onClick: this.sortByGameVersion
-                        }), s.createElement(y.Lb, {
+                        }), s.createElement(y.Mb, {
                             label: Object(d.d)("Author", "BrowsableAddonsTable"),
                             sorting: this.state.authorSorting,
                             onClick: this.sortByAuthor
-                        })), s.createElement(y.Ib, null, e)), t)
+                        })), s.createElement(y.Jb, null, e)), t)
                     }, t
                 }(s.Component),
-                F = function(e) {
+                k = function(e) {
                     function t() {
                         var t = null !== e && e.apply(this, arguments) || this;
                         return t.state = {
@@ -668,8 +668,8 @@
                             n > o && o + t.state.contextY > n && (i += o);
                             var d = t.state.contextX - a + "px",
                                 l = t.state.contextY - i + "px";
-                            return s.createElement(y.Xa, {
-                                position: y.jb.Relative
+                            return s.createElement(y.Ya, {
+                                position: y.kb.Relative
                             }, s.createElement(v.a, {
                                 onClickOut: t.closeContext
                             }, s.createElement(y.u, {
@@ -694,11 +694,11 @@
                         var e = this.renderContextMenu();
                         return s.createElement("div", {
                             ref: this.elementRef
-                        }, s.createElement(y.Xa, {
+                        }, s.createElement(y.Ya, {
                             padding: {
                                 x: 2
                             },
-                            position: y.jb.Relative,
+                            position: y.kb.Relative,
                             className: "browsable-addons"
                         }, e, s.createElement(S, {
                             categories: this.props.categories,
@@ -708,7 +708,7 @@
                             onRefresh: this.props.onRefresh,
                             onDownload: this.props.onDownload,
                             canDownload: !!this.props.selectedAddons.length
-                        }), s.createElement(y.Xa, null, s.createElement(j, {
+                        }), s.createElement(y.Ya, null, s.createElement(B, {
                             addons: this.props.addons,
                             onSort: this.props.onSort,
                             onContextClick: this.onContextClick,
@@ -717,7 +717,7 @@
                         }))))
                     }, t
                 }(s.Component),
-                k = 25,
+                F = 25,
                 D = function(e) {
                     function t() {
                         var t = null !== e && e.apply(this, arguments) || this;
@@ -749,7 +749,7 @@
                                                 gameId: this.props.instance.gameId,
                                                 sectionId: this.props.section.Id,
                                                 categoryId: this.state.selectedCategory,
-                                                pageSize: k,
+                                                pageSize: F,
                                                 index: this.state.currentPosition,
                                                 sort: this.state.currentSorting,
                                                 sortDescending: this.state.sortDescending,
@@ -760,7 +760,7 @@
                                         case 3:
                                             return s = o.sent(), this.setState({
                                                 initialized: !0,
-                                                canPaginate: s.length >= k
+                                                canPaginate: s.length >= F
                                             }), [2, s];
                                         case 4:
                                             return this.setState({
@@ -815,7 +815,7 @@
                                         case 0:
                                             return [4, new Promise(function(t) {
                                                 e.setState({
-                                                    currentPosition: e.state.currentPosition + k
+                                                    currentPosition: e.state.currentPosition + F
                                                 }, function() {
                                                     return o.__awaiter(e, void 0, void 0, function() {
                                                         var e;
@@ -974,15 +974,15 @@
                             })
                         })
                     }, t.prototype.render = function() {
-                        if (!this.props.instance || !this.props.section || !this.props.gameData) return s.createElement(y.Xa, {
+                        if (!this.props.instance || !this.props.section || !this.props.gameData) return s.createElement(y.Ya, {
                             display: y.X.Flex,
-                            justifyContent: y.Wa.Center,
+                            justifyContent: y.Xa.Center,
                             alignItems: y.f.Center,
                             fullWidth: !0,
                             fullHeight: !0
-                        }, s.createElement(y.Za, null));
+                        }, s.createElement(y.ab, null));
                         var e = this.state.initialized && !this.state.loading && this.state.canPaginate;
-                        return s.createElement(y.Xa, null, s.createElement(F, {
+                        return s.createElement(y.Ya, null, s.createElement(k, {
                             onSort: this.onSort,
                             instance: this.props.instance,
                             addons: this.state.addons,
@@ -1005,7 +1005,7 @@
                         return o && "number" == typeof t && (o = parseInt(o, 10)), o || t
                     }, t
                 }(s.Component);
-            var R = Object(i.compose)(Object(C.b)("BrowsableaddonsPage", {
+            var M = Object(i.compose)(Object(C.b)("BrowsableaddonsPage", {
                 destination: u.a.DesklightModsBrowsableAddons
             }), Object(c.a)({
                 location: h.PageviewLocation.DesklightModsBrowsableAddons
@@ -1025,7 +1025,7 @@
             n.d(t, "BrowsableAddonsContainer", function() {
                 return D
             }), n.d(t, "BrowsableaddonsPage", function() {
-                return R
+                return M
             })
         },
         ew8U: function(e, t, n) {
@@ -1107,13 +1107,13 @@
                 function t() {
                     var t = null !== e && e.apply(this, arguments) || this;
                     return t.renderInstallProgress = function(e) {
-                        return s.createElement(l.Xa, {
+                        return s.createElement(l.Ya, {
                             display: l.X.Flex,
                             flexDirection: l.Aa.Column,
-                            justifyContent: l.Wa.Center,
+                            justifyContent: l.Xa.Center,
                             alignItems: l.f.Center,
                             "data-test-selector": o.InstallProgress
-                        }, s.createElement(l.mb, {
+                        }, s.createElement(l.nb, {
                             value: e.progress
                         }), s.createElement(l.W, null, e.shortStatusText))
                     }, t.onUpdate = function() {
@@ -1148,12 +1148,12 @@
                         case c.ModsIntegrationAddonStatus.Pending:
                             return s.createElement(l.W, null, Object(i.d)("Pending", "AddonAction"));
                         case c.ModsIntegrationAddonStatus.WorkingCopy:
-                            return s.createElement(l.Xa, {
+                            return s.createElement(l.Ya, {
                                 display: l.X.Flex,
                                 "data-test-selector": o.WorkingCopy
-                            }, s.createElement(l.sb, {
-                                asset: l.tb.Wrench
-                            }), s.createElement(l.Xa, {
+                            }, s.createElement(l.tb, {
+                                asset: l.ub.Wrench
+                            }), s.createElement(l.Ya, {
                                 margin: {
                                     left: .5
                                 }

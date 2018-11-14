@@ -138,14 +138,14 @@
                     }), r.createElement(c.U, {
                         to: t,
                         hoverUnderlineNone: !0
-                    }, r.createElement(c.Xa, {
+                    }, r.createElement(c.Ya, {
                         display: c.X.InlineFlex,
                         flexDirection: c.Aa.Row,
                         alignItems: c.f.Center
                     }, r.createElement(c.W, {
-                        type: c.Vb.H5
-                    }, Object(s.d)("Expand All", "VideoShelfExpandLink")), r.createElement(c.sb, {
-                        asset: c.tb.AngleRight,
+                        type: c.Wb.H5
+                    }, Object(s.d)("Expand All", "VideoShelfExpandLink")), r.createElement(c.tb, {
+                        asset: c.ub.AngleRight,
                         height: 14
                     })))
                 });
@@ -156,11 +156,11 @@
                     e.Title = "title", e.SubTitle = "subtitle"
                 }(n || (n = {}));
             var p = function(e) {
-                if (!e.titleMessage) return r.createElement(c.ib, {
+                if (!e.titleMessage) return r.createElement(c.jb, {
                     width: 200
                 });
                 var t = r.createElement(c.W, {
-                    type: c.Vb.H4,
+                    type: c.Wb.H4,
                     color: c.O.Base,
                     bold: !0,
                     "data-test-selector": n.Title
@@ -172,15 +172,15 @@
                 var i = e.subTitle;
                 return e.subTitle && "string" == typeof e.subTitle ? i = r.createElement(c.W, {
                     color: c.O.Alt2,
-                    type: c.Vb.Span,
+                    type: c.Wb.Span,
                     "data-test-selector": n.SubTitle
-                }, e.subTitle) : e.subTitle && (i = r.createElement(c.Xa, {
+                }, e.subTitle) : e.subTitle && (i = r.createElement(c.Ya, {
                     "data-test-selector": n.SubTitle
-                }, i)), r.createElement(r.Fragment, null, r.createElement(c.Xa, {
+                }, i)), r.createElement(r.Fragment, null, r.createElement(c.Ya, {
                     display: c.X.Flex,
                     flexDirection: c.Aa.Row,
                     alignItems: c.f.End
-                }, t, e.expandLink && r.createElement(c.Xa, {
+                }, t, e.expandLink && r.createElement(c.Ya, {
                     padding: {
                         left: 1
                     }
@@ -239,7 +239,7 @@
                         this.props.data.loading || this.props.latencyTracking.reportInteractive()
                     }, t.prototype.render = function() {
                         var e = this.props.data && !this.props.data.loading && this.props.data.currentUser && Object(h.b)(this.props.data.currentUser.followedVideos) || null;
-                        return !this.props.data || this.props.data.loading || e && 0 !== e.length ? r.createElement("div", null, r.createElement(g.Xa, {
+                        return !this.props.data || this.props.data.loading || e && 0 !== e.length ? r.createElement("div", null, r.createElement(g.Ya, {
                             padding: {
                                 bottom: 1
                             }
@@ -256,7 +256,7 @@
                                 source: {},
                                 itemType: c.TwitchDataType.Video
                             },
-                            videoCardSize: g.cc.Large,
+                            videoCardSize: g.dc.Large,
                             videos: e
                         })) : null
                     }, t
@@ -412,21 +412,21 @@
                     }, t.prototype.componentWillUnmount = function() {
                         this.unregisterScrollHandler && this.unregisterScrollHandler()
                     }, t.prototype.render = function() {
-                        return a.createElement(u.Pa, {
+                        return a.createElement(u.Qa, {
                             margin: {
                                 y: 1
                             },
-                            position: u.jb.Relative
+                            position: u.kb.Relative
                         }, a.createElement("div", {
                             className: "preview-card-carousel",
                             ref: this.refHandler
-                        }, a.createElement(u.Xa, {
+                        }, a.createElement(u.Ya, {
                             className: "preview-card-carousel__child-container",
-                            overflow: u.cb.Hidden,
-                            position: u.jb.Relative,
+                            overflow: u.db.Hidden,
+                            position: u.kb.Relative,
                             fullWidth: !0,
                             "data-test-selector": "child-container"
-                        }, a.createElement(u.Pa, {
+                        }, a.createElement(u.Qa, {
                             margin: {
                                 bottom: 1
                             }
@@ -436,37 +436,21 @@
                                 transform: this.transformString()
                             },
                             "data-test-selector": "carousel-body"
-                        }, a.createElement(u.bc, {
+                        }, a.createElement(u.cc, {
                             noWrap: !0,
                             noGrow: !0,
-                            childWidth: this.props.cardWidth || u.cc.Large,
-                            gutterSize: u.dc.Small,
+                            childWidth: this.props.cardWidth || u.dc.Large,
+                            gutterSize: u.ec.Small,
                             "data-js-selector": h
-                        }, this.props.children)))), a.createElement(u.Xa, {
-                            className: "preview-card-carousel__nav",
-                            display: u.X.Flex,
-                            alignItems: u.f.Center,
-                            position: u.jb.Absolute,
-                            attachTop: !0,
-                            attachLeft: !0,
-                            fullHeight: !0
-                        }, a.createElement(b, {
+                        }, this.props.children)))), a.createElement(b, {
                             direction: m.DirectionPrevious,
                             disabled: !this.props.children || this.isBackButtonDisabled(),
                             onClickHandler: this.moveCarouselBackward
-                        })), a.createElement(u.Xa, {
-                            className: "preview-card-carousel__nav",
-                            display: u.X.Flex,
-                            alignItems: u.f.Center,
-                            position: u.jb.Absolute,
-                            attachTop: !0,
-                            attachRight: !0,
-                            fullHeight: !0
-                        }, a.createElement(b, {
+                        }), a.createElement(b, {
                             direction: m.DirectionNext,
                             disabled: !this.props.children || this.isForwardButtonDisabled(),
                             onClickHandler: this.moveCarouselForward
-                        }))))
+                        })))
                     }, t.prototype.checkVisible = function(e) {
                         this.props.children && this.props.children.length > 0 && !this.state.hasBeenVisible && function(e) {
                             if (!e) return !1;
@@ -484,32 +468,51 @@
                     DirectionNext: "next"
                 },
                 v = ((n = {})[m.DirectionPrevious] = "previous", n[m.DirectionNext] = "next", n),
-                f = ((r = {})[m.DirectionPrevious] = u.tb.AngleLeft, r[m.DirectionNext] = u.tb.AngleRight, r),
+                f = ((r = {})[m.DirectionPrevious] = u.ub.AngleLeft, r[m.DirectionNext] = u.ub.AngleRight, r),
                 b = function(e) {
                     var t, i = v[e.direction],
                         n = ((t = {})[m.DirectionPrevious] = Object(l.d)("previous", "CarouselNavButton"), t[m.DirectionNext] = Object(l.d)("next", "CarouselNavButton"), t),
                         r = d("preview-card-carousel__button", "preview-card-carousel__button--" + i, {
                             "preview-card-carousel__button--disabled": e.disabled
                         });
-                    return a.createElement(u.Xa, {
-                        className: r,
-                        position: u.jb.Relative,
+                    return a.createElement(u.Ya, {
+                        className: "preview-card-carousel__nav",
                         display: u.X.Flex,
-                        alignItems: u.f.Stretch
-                    }, a.createElement(u.A, {
+                        alignItems: u.f.Center,
+                        position: u.kb.Absolute,
+                        attachTop: !0,
+                        attachLeft: e.direction && "previous" === e.direction,
+                        attachRight: e.direction && "next" === e.direction,
+                        fullHeight: !0
+                    }, a.createElement(u.Fb, {
+                        className: r,
+                        position: u.kb.Relative,
+                        display: u.X.Flex,
+                        borderRadius: u.x.Medium,
+                        background: e.disabled ? u.r.Base : void 0
+                    }, a.createElement(u.Va, {
                         ariaLabel: n[e.direction],
                         blurAfterClick: !0,
                         "data-test-selector": i + "-button",
                         disabled: e.disabled,
-                        icon: f[e.direction],
                         onClick: e.onClickHandler,
-                        size: u.B.Large
-                    }))
+                        type: u.Wa.Base,
+                        borderRadius: u.x.Medium
+                    }, a.createElement(u.Fb, {
+                        color: u.O.Link,
+                        display: u.X.InlineFlex,
+                        padding: {
+                            x: .5,
+                            y: 2
+                        }
+                    }, a.createElement(u.La, {
+                        asset: f[e.direction]
+                    })))))
                 },
-                C = i("bdIb"),
-                k = i("XEwr"),
-                y = i("RXle"),
-                x = 10,
+                k = i("bdIb"),
+                C = i("XEwr"),
+                x = i("RXle"),
+                y = 10,
                 I = function(e) {
                     function t() {
                         var t = null !== e && e.apply(this, arguments) || this;
@@ -563,14 +566,14 @@
                         }, t.getVideoCards = function() {
                             var e = t.props.videos;
                             if (null === e) {
-                                for (var i = [], n = 0; n < x; n++) i.push(a.createElement(y.VideoPreviewCardPlaceholder, {
+                                for (var i = [], n = 0; n < y; n++) i.push(a.createElement(x.VideoPreviewCardPlaceholder, {
                                     key: "carousel-placeholder-" + n
                                 }));
                                 return i
                             }
                             var r = [];
                             if (t.props.spotlight) {
-                                var o = a.createElement(y.VideoPreviewCard, {
+                                var o = a.createElement(x.VideoPreviewCard, {
                                     key: "spotlight",
                                     collectionID: t.props.collectionID,
                                     topBar: {
@@ -592,7 +595,7 @@
                             if (t.props.currentlyWatchingVideoID && t.props.renderCurrentlyWatchingCard && t.props.scrollToCurrentlyWatching)
                                 for (var l = t.getCurrentlyWatchingVideoIndex(), c = 0; c < e.length; c++) {
                                     var d = e[c];
-                                    t.props.firstPageLoaded || !(c < l || c > l + x) ? Object(k.a)(d) || r.push(a.createElement(y.VideoPreviewCard, {
+                                    t.props.firstPageLoaded || !(c < l || c > l + y) ? Object(C.a)(d) || r.push(a.createElement(x.VideoPreviewCard, {
                                         context: t.props.listContext,
                                         collectionID: t.props.collectionID,
                                         onClick: t.onPreviewCardClick,
@@ -608,16 +611,16 @@
                                         topBar: t.getPositionBanner(c),
                                         hideDuration: t.willRenderPositionBanner(c),
                                         hideTags: t.props.hideTags
-                                    })) : r.push(a.createElement(y.VideoPreviewCardPlaceholder, {
+                                    })) : r.push(a.createElement(x.VideoPreviewCardPlaceholder, {
                                         key: "carousel-placeholder-" + c
                                     }))
                                 } else
                                     for (c = 0; c < e.length; c++)
-                                        if (c + s < x || t.props.firstPageLoaded) {
+                                        if (c + s < y || t.props.firstPageLoaded) {
                                             d = e[c];
-                                            if (Object(k.a)(d)) {
+                                            if (Object(C.a)(d)) {
                                                 if (d.slug === t.props.currentlyWatchingVideoID) continue;
-                                                r.push(a.createElement(C.a, {
+                                                r.push(a.createElement(k.a, {
                                                     context: t.props.listContext,
                                                     onClick: t.onPreviewCardClick,
                                                     key: "video-" + c,
@@ -630,7 +633,7 @@
                                                 }))
                                             } else {
                                                 if (d.id === t.props.currentlyWatchingVideoID && !t.props.renderCurrentlyWatchingCard) continue;
-                                                r.push(a.createElement(y.VideoPreviewCard, {
+                                                r.push(a.createElement(x.VideoPreviewCard, {
                                                     context: t.props.listContext,
                                                     collectionID: t.props.collectionID,
                                                     onClick: t.onPreviewCardClick,
@@ -648,7 +651,7 @@
                                                     hideTags: t.props.hideTags
                                                 }))
                                             }
-                                        } else r.push(a.createElement(y.VideoPreviewCardPlaceholder, {
+                                        } else r.push(a.createElement(x.VideoPreviewCardPlaceholder, {
                                             key: "carousel-placeholder-" + c
                                         }));
                             return r

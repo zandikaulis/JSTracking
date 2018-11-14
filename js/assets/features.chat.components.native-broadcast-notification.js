@@ -119,21 +119,21 @@
                         if (!e) return null;
                         if (this.hasDismissedForEvent(e.startDate)) return null;
                         var t = this.getChannelLinks(e);
-                        return t.length ? s.createElement(r.Eb, {
+                        return t.length ? s.createElement(r.Fb, {
                             attachLeft: !0,
                             attachRight: !0,
                             attachTop: !0,
                             background: r.r.AccentAlt2,
                             color: r.O.Overlay,
                             padding: 1,
-                            position: r.jb.Absolute
-                        }, s.createElement(r.Xa, {
+                            position: r.kb.Absolute
+                        }, s.createElement(r.Ya, {
                             margin: {
                                 bottom: 1
                             }
                         }, s.createElement(r.W, {
-                            type: r.Vb.H4
-                        }, e.title)), s.createElement(r.Xa, {
+                            type: r.Wb.H4
+                        }, e.title)), s.createElement(r.Ya, {
                             margin: {
                                 bottom: 1
                             }
@@ -141,27 +141,27 @@
                             color: r.O.OverlayAlt
                         }, Object(i.d)("Want to watch {eventName} in your local language? Try one of these international broadcasts!", {
                             eventName: e.shortName
-                        }, "NativeBroadcastNotification"))), s.createElement("ul", null, t), s.createElement(r.Xa, {
+                        }, "NativeBroadcastNotification"))), s.createElement("ul", null, t), s.createElement(r.Ya, {
                             attachRight: !0,
                             attachTop: !0,
                             margin: 1,
-                            position: r.jb.Absolute
+                            position: r.kb.Absolute
                         }, s.createElement(r.A, {
                             ariaLabel: Object(i.d)("Close", "NativeBroadcastNotification"),
-                            icon: r.tb.Close,
+                            icon: r.ub.Close,
                             onClick: this.onDismiss,
                             overlay: !0,
                             size: r.B.Small,
                             "data-a-target": "native-broadcast-notification-close-button"
-                        })), s.createElement(r.Xa, {
+                        })), s.createElement(r.Ya, {
                             margin: {
                                 top: .5
                             }
-                        }, s.createElement(r.mb, {
-                            animationDirection: r.nb.Down,
+                        }, s.createElement(r.nb, {
+                            animationDirection: r.ob.Down,
                             animationDuration: 30,
                             onAnimationEnd: this.onExpire,
-                            size: r.ob.ExtraSmall
+                            size: r.pb.ExtraSmall
                         }))) : null
                     }, t.prototype.eventForChannel = function() {
                         var e = Date.now(),

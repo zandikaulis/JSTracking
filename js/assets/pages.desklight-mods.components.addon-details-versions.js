@@ -40,8 +40,8 @@
                     }
                     return a.__extends(t, e), t.prototype.render = function() {
                         var e = Object(f.c)(new Date(this.props.file.fileDate), "short");
-                        return o.createElement(h.Mb, null, o.createElement(h.Jb, null, e), o.createElement(h.Jb, null, this.props.file.fileName), o.createElement(h.Jb, null, b.a[this.props.file.releaseType]), o.createElement(h.Jb, null, this.props.installed && o.createElement(h.W, null, Object(f.d)("Installed", "AddonDetailVersion")), !this.props.installed && o.createElement(h.A, {
-                            icon: h.tb.Download,
+                        return o.createElement(h.Nb, null, o.createElement(h.Kb, null, e), o.createElement(h.Kb, null, this.props.file.fileName), o.createElement(h.Kb, null, b.a[this.props.file.releaseType]), o.createElement(h.Kb, null, this.props.installed && o.createElement(h.W, null, Object(f.d)("Installed", "AddonDetailVersion")), !this.props.installed && o.createElement(h.A, {
+                            icon: h.ub.Download,
                             onClick: this.onDownload
                         })))
                     }, t
@@ -53,9 +53,9 @@
                     function t() {
                         var t = null !== e && e.apply(this, arguments) || this;
                         return t.state = {
-                            dateSorting: h.Bb.Descending
+                            dateSorting: h.Cb.Descending
                         }, t.renderRows = function() {
-                            return (t.state.dateSorting === h.Bb.Descending ? t.props.files.sort(function(e, t) {
+                            return (t.state.dateSorting === h.Cb.Descending ? t.props.files.sort(function(e, t) {
                                 return new Date(t.fileDate).getTime() - new Date(e.fileDate).getTime()
                             }) : t.props.files.sort(function(e, t) {
                                 return new Date(e.fileDate).getTime() - new Date(t.fileDate).getTime()
@@ -69,28 +69,28 @@
                             })
                         }, t.onChangeSort = function() {
                             t.setState({
-                                dateSorting: t.state.dateSorting === h.Bb.Descending ? h.Bb.Ascending : h.Bb.Descending
+                                dateSorting: t.state.dateSorting === h.Cb.Descending ? h.Cb.Ascending : h.Cb.Descending
                             })
                         }, t
                     }
                     return a.__extends(t, e), t.prototype.render = function() {
                         var e = this.renderRows();
-                        return o.createElement(h.Xa, {
+                        return o.createElement(h.Ya, {
                             padding: {
                                 x: 2
                             }
-                        }, o.createElement(h.Hb, null, o.createElement(h.Kb, null, o.createElement(h.Lb, {
+                        }, o.createElement(h.Ib, null, o.createElement(h.Lb, null, o.createElement(h.Mb, {
                             "data-test-selector": i.SortingHeader,
                             onClick: this.onChangeSort,
                             sorting: this.state.dateSorting,
                             label: Object(f.d)("Release Date", "AddonDetailsVersionTable")
-                        }), o.createElement(h.Lb, {
+                        }), o.createElement(h.Mb, {
                             label: Object(f.d)("File Name", "AddonDetailsVersionTable")
-                        }), o.createElement(h.Lb, {
+                        }), o.createElement(h.Mb, {
                             label: Object(f.d)("File Type", "AddonDetailsVersionTable")
-                        }), o.createElement(h.Lb, {
+                        }), o.createElement(h.Mb, {
                             label: Object(f.d)("Actions", "AddonDetailsVersionTable")
-                        })), o.createElement(h.Ib, null, e)))
+                        })), o.createElement(h.Jb, null, e)))
                     }, t
                 }(o.Component),
                 w = n("3lt/"),
@@ -140,13 +140,13 @@
                             files: this.state.files,
                             installedFile: this.props.addonInstance && this.props.addonInstance.installedFile.fileName,
                             onDownload: this.onDownload
-                        }) : o.createElement(h.Xa, {
+                        }) : o.createElement(h.Ya, {
                             fullWidth: !0,
                             fullHeight: !0,
                             display: h.X.Flex,
-                            justifyContent: h.Wa.Center,
+                            justifyContent: h.Xa.Center,
                             alignItems: h.f.Center
-                        }, o.createElement(h.Za, null))
+                        }, o.createElement(h.ab, null))
                     }, t
                 }(o.Component);
             var v = Object(r.compose)(Object(p.b)("AddonDetailsVersionPage", {

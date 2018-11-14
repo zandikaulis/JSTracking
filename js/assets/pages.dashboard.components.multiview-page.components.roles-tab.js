@@ -60,9 +60,9 @@
                             className: "modal__content",
                             isOpen: this.props.isOpen,
                             ariaHideApp: !1
-                        }, o.createElement(s.Xa, {
+                        }, o.createElement(s.Ya, {
                             className: "multiview-modal"
-                        }, o.createElement(s.Eb, {
+                        }, o.createElement(s.Fb, {
                             className: "multiview-modal__content",
                             padding: 4,
                             margin: {
@@ -99,10 +99,10 @@
                             triggerModal: t.renderDeleteModal
                         }, t.renderBaseDeleteButton) : t.renderBaseDeleteButton(t.props.onDelete)
                     }, t.renderBaseDeleteButton = function(e) {
-                        return r.createElement(d.Ua, {
+                        return r.createElement(d.Va, {
                             onClick: e,
                             "data-test-selector": a.Delete
-                        }, r.createElement(d.Xa, {
+                        }, r.createElement(d.Ya, {
                             className: "more-balloon__balloon-item",
                             padding: {
                                 x: 1,
@@ -110,40 +110,40 @@
                             },
                             display: d.X.Flex,
                             alignItems: d.f.Center
-                        }, r.createElement(d.sb, {
-                            asset: d.tb.Trash,
-                            type: d.ub.Brand
-                        }), r.createElement(d.Xa, {
+                        }, r.createElement(d.tb, {
+                            asset: d.ub.Trash,
+                            type: d.vb.Brand
+                        }), r.createElement(d.Ya, {
                             margin: {
                                 left: 1
                             }
                         }, Object(l.e)("Delete", "MultiviewMoreBalloon"))))
                     }, t.renderDeleteModal = function(e) {
-                        if (t.props.deleteModalMessage) return r.createElement(d.Eb, {
+                        if (t.props.deleteModalMessage) return r.createElement(d.Fb, {
                             background: d.r.Base,
                             className: "multiview-more-balloon__delete-prompt",
                             elevation: 3
-                        }, r.createElement(d.Eb, {
+                        }, r.createElement(d.Fb, {
                             borderBottom: !0,
                             display: d.X.Flex,
-                            justifyContent: d.Wa.Center,
+                            justifyContent: d.Xa.Center,
                             padding: 2
                         }, r.createElement(d.W, {
                             bold: !0,
                             fontSize: d.Ca.Size4
-                        }, t.props.deleteModalMessage)), r.createElement(d.Eb, {
+                        }, t.props.deleteModalMessage)), r.createElement(d.Fb, {
                             background: d.r.Alt,
                             display: d.X.Flex,
-                            justifyContent: d.Wa.Center,
+                            justifyContent: d.Xa.Center,
                             padding: 2
-                        }, r.createElement(d.Xa, {
+                        }, r.createElement(d.Ya, {
                             margin: {
                                 right: .5
                             }
                         }, r.createElement(d.z, {
                             onClick: e,
                             type: d.F.Hollow
-                        }, Object(l.e)("Cancel", "MultiviewMoreBalloon"))), r.createElement(d.Xa, {
+                        }, Object(l.e)("Cancel", "MultiviewMoreBalloon"))), r.createElement(d.Ya, {
                             margin: {
                                 left: 1
                             }
@@ -158,20 +158,20 @@
                     }, t
                 }
                 return o.__extends(t, e), t.prototype.render = function() {
-                    return r.createElement(d.Xa, {
+                    return r.createElement(d.Ya, {
                         margin: {
                             right: .5
                         }
                     }, r.createElement(s.a, null, r.createElement(d.z, {
-                        icon: d.tb.More,
+                        icon: d.ub.More,
                         type: d.F.Text
                     }), r.createElement(d.u, {
                         direction: this.props.last ? d.v.TopRight : d.v.BottomRight,
                         tailOffset: 8
-                    }, this.props.onEdit && r.createElement(d.Ua, {
+                    }, this.props.onEdit && r.createElement(d.Va, {
                         onClick: this.props.onEdit,
                         "data-test-selector": a.Edit
-                    }, r.createElement(d.Xa, {
+                    }, r.createElement(d.Ya, {
                         className: "more-balloon__balloon-item",
                         padding: {
                             x: 1,
@@ -179,10 +179,10 @@
                         },
                         display: d.X.Flex,
                         alignItems: d.f.Center
-                    }, r.createElement(d.sb, {
-                        asset: d.tb.Edit,
-                        type: d.ub.Brand
-                    }), r.createElement(d.Xa, {
+                    }, r.createElement(d.tb, {
+                        asset: d.ub.Edit,
+                        type: d.vb.Brand
+                    }), r.createElement(d.Ya, {
                         margin: {
                             left: 1
                         }
@@ -289,7 +289,7 @@
                         var e = this.state.role;
                         return r.createElement(u.a, {
                             isOpen: !0
-                        }, r.createElement(m.Eb, {
+                        }, r.createElement(m.Fb, {
                             display: m.X.Flex,
                             padding: {
                                 bottom: 2
@@ -297,21 +297,21 @@
                             margin: {
                                 bottom: 2
                             },
-                            justifyContent: m.Wa.Between,
+                            justifyContent: m.Xa.Between,
                             borderBottom: !0
-                        }, r.createElement(m.Xa, {
+                        }, r.createElement(m.Ya, {
                             flexGrow: 0,
                             flexShrink: 1
                         }, r.createElement(m.W, {
-                            type: m.Vb.H3
-                        }, Object(i.e)("Edit Role", "EditRoleModal"))), r.createElement(m.Xa, {
+                            type: m.Wb.H3
+                        }, Object(i.e)("Edit Role", "EditRoleModal"))), r.createElement(m.Ya, {
                             flexGrow: 0,
                             flexShrink: 0
                         }, r.createElement(m.z, {
                             onClick: this.props.onClose,
                             "data-test-selector": a.Cancel,
                             type: m.F.Text
-                        }, Object(i.e)("Cancel", "EditRoleModal")), r.createElement(m.Xa, {
+                        }, Object(i.e)("Cancel", "EditRoleModal")), r.createElement(m.Ya, {
                             margin: {
                                 left: 1
                             },
@@ -320,13 +320,13 @@
                             onClick: this.updateRole,
                             "data-test-selector": a.Update,
                             disabled: !this.canSave()
-                        }, Object(i.e)("Update", "EditRoleModal"))))), r.createElement(m.Xa, {
+                        }, Object(i.e)("Update", "EditRoleModal"))))), r.createElement(m.Ya, {
                             margin: {
                                 y: 1
                             }
                         }, this.state.errorMessage && r.createElement(m.Da, {
                             errorMessage: this.state.errorMessage
-                        })), r.createElement(d.b, null, r.createElement(m.Xa, {
+                        })), r.createElement(d.b, null, r.createElement(m.Ya, {
                             padding: {
                                 right: 2
                             }
@@ -336,8 +336,8 @@
                             label: Object(i.e)("Role Name", "EditRoleModal"),
                             error: !this.validRoleName(),
                             errorMessage: Object(i.e)("Invalid Role Name", "EditRoleModal")
-                        }, r.createElement(m.Ra, {
-                            type: m.Ta.Text,
+                        }, r.createElement(m.Sa, {
+                            type: m.Ua.Text,
                             "data-test-selector": a.Value,
                             onChange: this.onRoleNameChange,
                             value: e.value
@@ -458,9 +458,9 @@
                     }, t.prototype.render = function() {
                         var e = this,
                             t = this.filteredRoleContentAttributes();
-                        return r.createElement(c.a, null, r.createElement(m.Eb, {
+                        return r.createElement(c.a, null, r.createElement(m.Fb, {
                             display: m.X.Flex,
-                            justifyContent: m.Wa.Between,
+                            justifyContent: m.Xa.Between,
                             padding: {
                                 bottom: 1
                             },
@@ -469,14 +469,14 @@
                             },
                             borderBottom: !0
                         }, r.createElement(m.W, {
-                            type: m.Vb.H4,
+                            type: m.Wb.H4,
                             bold: !0
-                        }, Object(i.e)("Roles", "RolesTab")), r.createElement(m.Xa, null, r.createElement(m.z, {
+                        }, Object(i.e)("Roles", "RolesTab")), r.createElement(m.Ya, null, r.createElement(m.z, {
                             "data-test-selector": f.AddButton,
-                            icon: m.tb.Plus,
+                            icon: m.ub.Plus,
                             type: m.F.Hollow,
                             onClick: this.startAddingNewRole
-                        }, Object(i.e)("Add Role", "RolesTab")))), r.createElement(m.Xa, {
+                        }, Object(i.e)("Add Role", "RolesTab")))), r.createElement(m.Ya, {
                             margin: {
                                 y: 1
                             }
@@ -485,31 +485,31 @@
                         })), !t.length && r.createElement(m.W, {
                             "data-test-selector": f.EmptyList,
                             italic: !0
-                        }, Object(i.e)("No Roles", "RolesTab")), this.state.isAddingRole && r.createElement(m.Eb, {
+                        }, Object(i.e)("No Roles", "RolesTab")), this.state.isAddingRole && r.createElement(m.Fb, {
                             "data-test-selector": f.AddRow,
                             background: m.r.Base,
                             elevation: 1,
                             alignItems: m.f.Center,
-                            justifyContent: m.Wa.Between,
+                            justifyContent: m.Xa.Between,
                             display: m.X.Flex,
                             flexDirection: m.Aa.Row,
                             margin: {
                                 bottom: 1
                             }
-                        }, r.createElement(m.Xa, {
+                        }, r.createElement(m.Ya, {
                             flexDirection: m.Aa.Column,
                             padding: 2,
                             flexGrow: 1
-                        }, r.createElement(m.Ra, {
+                        }, r.createElement(m.Sa, {
                             autoFocus: !0,
                             placeholder: Object(i.e)("Add Role Name", "RolesTab"),
                             onChange: this.onRoleNameChange,
-                            type: m.Ta.Text,
+                            type: m.Ua.Text,
                             value: this.state.addingRoleName
                         })), r.createElement(m.z, {
                             type: m.F.Hollow,
                             onClick: this.cancelAddingRole
-                        }, Object(i.e)("Cancel", "RolesTab")), r.createElement(m.Xa, {
+                        }, Object(i.e)("Cancel", "RolesTab")), r.createElement(m.Ya, {
                             margin: {
                                 x: 1
                             },
@@ -518,18 +518,18 @@
                             disabled: !this.validRoleName() || this.state.isSaving,
                             onClick: this.createRole
                         }, Object(i.e)("Save", "RolesTab")))), t.map(function(t, n) {
-                            return r.createElement(m.Eb, {
+                            return r.createElement(m.Fb, {
                                 background: m.r.Base,
                                 elevation: 1,
                                 alignItems: m.f.Center,
-                                justifyContent: m.Wa.Between,
+                                justifyContent: m.Xa.Between,
                                 display: m.X.Flex,
                                 flexDirection: m.Aa.Row,
                                 margin: {
                                     bottom: 1
                                 },
                                 key: n
-                            }, r.createElement(m.Xa, {
+                            }, r.createElement(m.Ya, {
                                 flexDirection: m.Aa.Column,
                                 padding: 2,
                                 flexGrow: 1

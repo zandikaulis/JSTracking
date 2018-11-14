@@ -76,9 +76,9 @@
                     return o.__extends(n, e), n.prototype.render = function() {
                         return this.props.isLoggedIn ? i.createElement(b.a, {
                             name: "bounty_board_brand_portal_enabled"
-                        }, i.createElement(p.a, null, i.createElement(v.Xa, {
+                        }, i.createElement(p.a, null, i.createElement(v.Ya, {
                             className: "dev-dashboard"
-                        }, i.createElement(v.Eb, {
+                        }, i.createElement(v.Fb, {
                             padding: {
                                 top: 1
                             },
@@ -87,23 +87,23 @@
                             },
                             borderBottom: !0,
                             background: v.r.Base
-                        }, i.createElement("header", null, i.createElement(v.Xa, {
+                        }, i.createElement("header", null, i.createElement(v.Ya, {
                             className: "dev-dashboard__container",
                             margin: {
                                 x: "auto"
                             }
-                        }, i.createElement(v.Xa, {
+                        }, i.createElement(v.Ya, {
                             padding: {
                                 y: 1
                             }
                         }, i.createElement(v.z, {
                             "data-test-selector": "dev-bounty-board-dashboard-dashboard-button-selector",
-                            icon: v.tb.GlyphArrLeft,
+                            icon: v.ub.GlyphArrLeft,
                             type: v.F.Text,
                             linkTo: "/console"
                         }, Object(u.d)("Dashboard", "DevBountyBoardDashboardRoot"))), i.createElement(v.W, {
-                            type: v.Vb.H3
-                        }, Object(u.d)("Bounty Board Dashboard", "DevBountyBoardDashboardRoot")), i.createElement(v.Eb, {
+                            type: v.Wb.H3
+                        }, Object(u.d)("Bounty Board Dashboard", "DevBountyBoardDashboardRoot")), i.createElement(v.Fb, {
                             borderTop: !0,
                             margin: {
                                 top: 1
@@ -112,11 +112,11 @@
                                 top: 1
                             },
                             display: v.X.Flex
-                        }, i.createElement(v.Fb, {
+                        }, i.createElement(v.Gb, {
                             "data-test-selector": "dev-bounty-board-dashboard-campaign-tab-selector",
                             linkTo: "/console/bounty-board",
                             active: this.isActive("", !0)
-                        }, Object(u.d)("Campaign Manager", "DevBountyBoardDashboardRoot")))))), i.createElement(v.Xa, {
+                        }, Object(u.d)("Campaign Manager", "DevBountyBoardDashboardRoot")))))), i.createElement(v.Ya, {
                             "data-test-selector": "dev-bounty-board-dashboard-route-container-selector",
                             className: "dev-dashboard__container",
                             margin: {

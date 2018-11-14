@@ -14,10 +14,10 @@
                 p = n("ZDlU"),
                 g = n("jCRX"),
                 b = n.n(g),
-                E = n("yR8l"),
+                S = n("yR8l"),
                 f = n("geRD"),
-                h = n("Ue10"),
-                S = n("wHfN");
+                k = n("Ue10"),
+                E = n("wHfN");
             n("Bt4M");
             ! function(e) {
                 e.ActivateButton = "activate-button", e.ActivationSuccessMessage = "activate-success", e.ActivationFailureMessage = "activate-failure"
@@ -28,7 +28,7 @@
             function(e) {
                 e.CodeIncorrect = "CODE_INCORRECT", e.CodeExpired = "CODE_EXPIRED", e.AlreadyLinked = "ALREADY_LINKED"
             }(c || (c = {}));
-            var k = function(e) {
+            var h = function(e) {
                     function t() {
                         var t = null !== e && e.apply(this, arguments) || this;
                         return t.state = {
@@ -75,45 +75,45 @@
                             message: Object(m.d)("You must be logged in to view this page", "ActivateDevice")
                         }))
                     }, t.prototype.renderActivateForm = function() {
-                        return v.createElement(h.Xa, {
+                        return v.createElement(k.Ya, {
                             className: "activate-device-wrapper",
-                            alignSelf: h.g.Center,
-                            textAlign: h.Rb.Center,
+                            alignSelf: k.g.Center,
+                            textAlign: k.Sb.Center,
                             fullHeight: !0,
                             fullWidth: !0
-                        }, v.createElement(h.Eb, {
+                        }, v.createElement(k.Fb, {
                             className: "activate-device-wrapper__background-container",
-                            background: h.r.Base,
-                            display: h.X.InlineBlock,
-                            position: h.jb.Relative,
-                            textAlign: h.Rb.Center
-                        }, v.createElement(h.Ja, null, v.createElement(h.P, {
+                            background: k.r.Base,
+                            display: k.X.InlineBlock,
+                            position: k.kb.Relative,
+                            textAlign: k.Sb.Center
+                        }, v.createElement(k.Ja, null, v.createElement(k.P, {
                             cols: 6
-                        }, v.createElement(h.Eb, {
+                        }, v.createElement(k.Fb, {
                             padding: 2
-                        }, v.createElement(h.sb, {
-                            asset: h.tb.LogoTwitch,
-                            type: h.ub.Brand,
+                        }, v.createElement(k.tb, {
+                            asset: k.ub.LogoTwitch,
+                            type: k.vb.Brand,
                             height: 50,
                             width: 129
-                        }))), v.createElement(h.P, {
+                        }))), v.createElement(k.P, {
                             cols: 6
-                        }, v.createElement(h.Eb, {
+                        }, v.createElement(k.Fb, {
                             padding: 3
-                        }, v.createElement(h.z, {
-                            type: h.F.Default,
+                        }, v.createElement(k.z, {
+                            type: k.F.Default,
                             linkTo: "/"
-                        }, Object(m.d)("Return To Twitch", "ActivateDevice"))))), this.renderInputForm(), this.renderSuccessPage(), v.createElement(h.Ja, null, v.createElement(h.P, {
+                        }, Object(m.d)("Return To Twitch", "ActivateDevice"))))), this.renderInputForm(), this.renderSuccessPage(), v.createElement(k.Ja, null, v.createElement(k.P, {
                             cols: 6
-                        }, v.createElement(h.Eb, {
+                        }, v.createElement(k.Fb, {
                             padding: 2
-                        }, v.createElement(h.W, {
-                            color: h.O.Alt2
-                        }, "© ", (new Date).getFullYear(), " Twitch Interactive, Inc."))), v.createElement(h.P, {
+                        }, v.createElement(k.W, {
+                            color: k.O.Alt2
+                        }, "© ", (new Date).getFullYear(), " Twitch Interactive, Inc."))), v.createElement(k.P, {
                             cols: 6
-                        }, v.createElement(h.Eb, {
+                        }, v.createElement(k.Fb, {
                             padding: 2
-                        }, v.createElement(h.U, {
+                        }, v.createElement(k.U, {
                             to: "https://www.twitch.tv/p/legal/terms-of-service/"
                         }, Object(m.d)("Terms of Service", "ActivateDevice")))))))
                     }, t.prototype.renderSuccessPage = function() {
@@ -130,85 +130,85 @@
                                     }, e)
                                 }
                             }, "ActivateDevice");
-                            return v.createElement(h.Xa, {
+                            return v.createElement(k.Ya, {
                                 className: "activate-device-wrapper__success",
-                                alignItems: h.f.Center,
-                                position: h.jb.Relative,
-                                textAlign: h.Rb.Center,
+                                alignItems: k.f.Center,
+                                position: k.kb.Relative,
+                                textAlign: k.Sb.Center,
                                 "data-test-selector": i.ActivationSuccessMessage
-                            }, v.createElement(h.Xa, {
+                            }, v.createElement(k.Ya, {
                                 className: "activate-device-wrapper__check_mark",
                                 padding: 2
                             }, v.createElement("img", {
                                 src: b.a
-                            })), v.createElement(h.Xa, {
+                            })), v.createElement(k.Ya, {
                                 margin: {
                                     x: 1
                                 },
                                 padding: {
                                     bottom: 1
                                 }
-                            }, v.createElement(h.W, {
-                                type: h.Vb.H2
-                            }, Object(m.d)("You've Done It!", "ActivateDevice"))), v.createElement(h.Xa, {
+                            }, v.createElement(k.W, {
+                                type: k.Wb.H2
+                            }, Object(m.d)("You've Done It!", "ActivateDevice"))), v.createElement(k.Ya, {
                                 margin: {
                                     x: 1
                                 },
                                 padding: {
                                     bottom: 2
                                 }
-                            }, v.createElement(h.W, {
-                                color: h.O.Alt2
-                            }, Object(m.d)("You've linked your Twitch Account!", "ActivateDevice"))), v.createElement(h.Xa, {
-                                display: h.X.Block,
+                            }, v.createElement(k.W, {
+                                color: k.O.Alt2
+                            }, Object(m.d)("You've linked your Twitch Account!", "ActivateDevice"))), v.createElement(k.Ya, {
+                                display: k.X.Block,
                                 margin: 1,
                                 className: "activate-device-success-wrapper__divider"
-                            }), v.createElement(h.Xa, {
+                            }), v.createElement(k.Ya, {
                                 margin: {
                                     x: 1
                                 },
                                 padding: 2
-                            }, v.createElement(h.W, {
-                                color: h.O.Alt2
+                            }, v.createElement(k.W, {
+                                color: k.O.Alt2
                             }, e)))
                         }
                     }, t.prototype.renderInputForm = function() {
                         var e = this.state.activateStatus === a.Processing;
-                        if (this.state.activateStatus !== a.Success) return v.createElement(h.Xa, {
+                        if (this.state.activateStatus !== a.Success) return v.createElement(k.Ya, {
                             className: "activate-device-wrapper__form",
-                            alignItems: h.f.Center,
-                            position: h.jb.Relative,
-                            textAlign: h.Rb.Center
-                        }, v.createElement(h.Xa, {
+                            alignItems: k.f.Center,
+                            position: k.kb.Relative,
+                            textAlign: k.Sb.Center
+                        }, v.createElement(k.Ya, {
                             padding: {
                                 top: 2
                             }
-                        }, v.createElement(h.W, {
-                            type: h.Vb.H2
-                        }, Object(m.d)("Activate Your Device", "ActivateDevice"))), v.createElement(h.Xa, {
+                        }, v.createElement(k.W, {
+                            type: k.Wb.H2
+                        }, Object(m.d)("Activate Your Device", "ActivateDevice"))), v.createElement(k.Ya, {
                             padding: 1
-                        }, v.createElement(h.W, {
-                            color: h.O.Alt2
-                        }, Object(m.d)("Enter the code given to you by your device to link it to your Twitch account.", "ActivateDevice"))), this.state.activateStatus === a.Error && this.renderErrorBar(), v.createElement(h.Xa, {
+                        }, v.createElement(k.W, {
+                            color: k.O.Alt2
+                        }, Object(m.d)("Enter the code given to you by your device to link it to your Twitch account.", "ActivateDevice"))), this.state.activateStatus === a.Error && this.renderErrorBar(), v.createElement(k.Ya, {
                             padding: 1,
                             flexGrow: 1,
                             className: "activate-device-wrapper__input",
-                            alignItems: h.f.Center,
-                            position: h.jb.Relative,
-                            textAlign: h.Rb.Center
-                        }, v.createElement(h.Ra, {
-                            type: h.Ta.Text,
+                            alignItems: k.f.Center,
+                            position: k.kb.Relative,
+                            textAlign: k.Sb.Center
+                        }, v.createElement(k.Sa, {
+                            type: k.Ua.Text,
                             onChange: this.onChange,
                             value: this.state.code,
                             placeholder: Object(m.d)("Enter Code", "ActivateDevice")
-                        })), v.createElement(h.Xa, {
+                        })), v.createElement(k.Ya, {
                             padding: {
                                 bottom: 2,
                                 top: 1
                             }
-                        }, v.createElement(h.z, {
+                        }, v.createElement(k.z, {
                             onClick: this.onActivateButtonClick,
-                            type: h.F.Default,
+                            type: k.F.Default,
                             "data-test-selector": i.ActivateButton,
                             disabled: e
                         }, Object(m.d)("Activate", "ActivateDevice"))))
@@ -224,20 +224,20 @@
                             default:
                                 e = Object(m.d)("Incorrect code!", "ActivateDevice")
                         }
-                        return v.createElement(h.Eb, {
+                        return v.createElement(k.Fb, {
                             className: "activate-device-form__error",
-                            textAlign: h.Rb.Center,
-                            fontSize: h.Ca.Size4
-                        }, v.createElement(h.gb, {
+                            textAlign: k.Sb.Center,
+                            fontSize: k.Ca.Size4
+                        }, v.createElement(k.hb, {
                             label: e,
-                            type: h.hb.Alert,
+                            type: k.ib.Alert,
                             "data-test-selector": i.ActivationFailureMessage
                         }))
                     }, t
                 }(v.Component),
-                A = Object(E.a)(S, {
+                A = Object(S.a)(E, {
                     name: "linkSSO"
-                })(k);
+                })(h);
             var O = Object(r.connect)(function(e) {
                     return {
                         isLoggedIn: Object(d.f)(e)
@@ -254,14 +254,14 @@
                         return null !== e && e.apply(this, arguments) || this
                     }
                     return u.__extends(t, e), t.prototype.render = function() {
-                        return this.props.isLoggedIn ? v.createElement(h.Xa, {
+                        return this.props.isLoggedIn ? v.createElement(k.Ya, {
                             className: "activate-device-root",
                             fullHeight: !0,
                             fullWidth: !0
-                        }, v.createElement(h.Xa, {
+                        }, v.createElement(k.Ya, {
                             fullHeight: !0,
                             fullWidth: !0
-                        }, v.createElement(O, null))) : (this.props.login(), v.createElement(h.Xa, null, v.createElement(p.a, {
+                        }, v.createElement(O, null))) : (this.props.login(), v.createElement(k.Ya, null, v.createElement(p.a, {
                             message: Object(m.d)("You must be logged in to view this page", "ActivateDevicePage")
                         })))
                     }, t

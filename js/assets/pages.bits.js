@@ -21,10 +21,10 @@
                         return null !== e && e.apply(this, arguments) || this
                     }
                     return r.__extends(t, e), t.prototype.render = function() {
-                        return s.createElement(d.Xa, {
+                        return s.createElement(d.Ya, {
                             className: "bits-root " + Object(p.b)(this.props.theme),
-                            position: d.jb.Absolute,
-                            overflow: d.cb.Hidden,
+                            position: d.kb.Absolute,
+                            overflow: d.db.Hidden,
                             attachRight: !0,
                             attachTop: !0,
                             attachBottom: !0,
@@ -34,14 +34,14 @@
                             }
                         }, s.createElement(u.a, {
                             darkModeEnabled: !0
-                        }), s.createElement(d.Xa, {
+                        }), s.createElement(d.Ya, {
                             display: d.X.Flex,
                             flexWrap: d.Ba.NoWrap,
                             fullHeight: !0,
-                            position: d.jb.Relative
-                        }, s.createElement(d.Pa, {
+                            position: d.kb.Relative
+                        }, s.createElement(d.Qa, {
                             display: d.X.Flex,
-                            position: d.jb.Relative,
+                            position: d.kb.Relative,
                             flexGrow: 1,
                             fullHeight: !0,
                             fullWidth: !0

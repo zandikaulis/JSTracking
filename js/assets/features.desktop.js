@@ -147,7 +147,7 @@
                         return e
                 }
             });
-            var m, d, h, f, v, b = n("/MKj"),
+            var m, d, h, f, b, v = n("/MKj"),
                 y = n("fvjX"),
                 g = n("q1tI");
             ! function(e) {
@@ -164,7 +164,7 @@
             }(f || (f = {})),
             function(e) {
                 e.Electron = "electron", e.Launcher = "launcher"
-            }(v || (v = {}));
+            }(b || (b = {}));
             var _ = function(e) {
                 function t() {
                     return null !== e && e.apply(this, arguments) || this
@@ -177,7 +177,7 @@
                     return null
                 }, t.prototype.init = function() {
                     return a.__awaiter(this, void 0, void 0, function() {
-                        var e, t, n, r, s, o, l, u, p, d, b, y, g = this;
+                        var e, t, n, r, s, o, l, u, p, d, v, y, g = this;
                         return a.__generator(this, function(a) {
                             switch (a.label) {
                                 case 0:
@@ -186,20 +186,20 @@
                                 case 1:
                                     return a.trys.push([1, 3, , 4]), [4, i.p.integrations.performance.getPerfSamples()];
                                 case 2:
-                                    for (e = a.sent(), t = this.props.samples.customEvents, n = this.props.samples.firstPaintDuration, r = this.props.samples.electronTotalDuration, s = this.props.samples.launcherTotalDuration, o = this.props.samples.updateDuration, l = void 0, u = void 0, e.timestamps && (l = e.timestamps.electronProcessStartTime, u = e.timestamps.launcherProcessStartTime), p = 0, d = e.samples; p < d.length; p++) b = d[p], this.addCustomEvent(b, t), b.group === v.Launcher && b.key === f.WindowShown && u && (n = {
-                                        value: b.startTime - u + b.duration,
+                                    for (e = a.sent(), t = this.props.samples.customEvents, n = this.props.samples.firstPaintDuration, r = this.props.samples.electronTotalDuration, s = this.props.samples.launcherTotalDuration, o = this.props.samples.updateDuration, l = void 0, u = void 0, e.timestamps && (l = e.timestamps.electronProcessStartTime, u = e.timestamps.launcherProcessStartTime), p = 0, d = e.samples; p < d.length; p++) v = d[p], this.addCustomEvent(v, t), v.group === b.Launcher && v.key === f.WindowShown && u && (n = {
+                                        value: v.startTime - u + v.duration,
                                         latencyStatus: c.a.Pass
-                                    }), b.group === v.Electron && b.key === m.AppLoaded && this.props.updateAppLoadMetric({
-                                        value: b.duration,
+                                    }), v.group === b.Electron && v.key === m.AppLoaded && this.props.updateAppLoadMetric({
+                                        value: v.duration,
                                         latencyStatus: c.a.Pass
-                                    }), b.group === v.Launcher && b.key === f.ElectronLaunched && u && (s = {
-                                        value: b.startTime - u + b.duration,
+                                    }), v.group === b.Launcher && v.key === f.ElectronLaunched && u && (s = {
+                                        value: v.startTime - u + v.duration,
                                         latencyStatus: c.a.Pass
-                                    }), b.group === v.Launcher && b.key === f.Update && u && (o = {
-                                        value: b.duration,
+                                    }), v.group === b.Launcher && v.key === f.Update && u && (o = {
+                                        value: v.duration,
                                         latencyStatus: c.a.Pass
-                                    }), b.group === v.Electron && b.key === h.ShowWindow && l && (r = {
-                                        value: b.startTime - l + b.duration,
+                                    }), v.group === b.Electron && v.key === h.ShowWindow && l && (r = {
+                                        value: v.startTime - l + v.duration,
                                         latencyStatus: c.a.Pass
                                     });
                                     return i.p.benchmarking.getRootLatencyTracker().subscribeToUpdates(function() {
@@ -249,7 +249,7 @@
                                     startTime: this.props.samples.launcherProcessStartTime,
                                     duration: t.value,
                                     isKeyMetric: !0,
-                                    group: v.Electron,
+                                    group: b.Electron,
                                     key: m.AppLoaded,
                                     label: d.AppLoaded
                                 };
@@ -265,7 +265,7 @@
                     }
                 }, t
             }(g.Component);
-            var S = Object(b.connect)(function(e) {
+            var S = Object(v.connect)(function(e) {
                     return {
                         appLoadDuration: p(e),
                         samples: u(e)
@@ -285,22 +285,22 @@
                         var n = e.call(this, t) || this;
                         return n.renderTabButton = function(e, t, a) {
                             var i = n.state.selectedTab === e;
-                            return g.createElement(T.Fb, {
+                            return g.createElement(T.Gb, {
                                 active: i,
                                 onClick: function() {
                                     return n.onClickTab(e)
                                 }
-                            }, g.createElement(T.Xa, {
+                            }, g.createElement(T.Ya, {
                                 display: T.X.Flex
                             }, t, a && n.renderTabBubble(a)))
                         }, n.renderTabBubble = function(e) {
-                            return g.createElement(T.Xa, {
+                            return g.createElement(T.Ya, {
                                 margin: {
                                     left: .5
                                 }
-                            }, g.createElement(T.gb, {
+                            }, g.createElement(T.hb, {
                                 label: e.toString(),
-                                type: T.hb.Notification
+                                type: T.ib.Notification
                             }))
                         }, n.onClickTab = function(e) {
                             i.m.set(w, e), n.setState({
@@ -311,27 +311,27 @@
                         }, n
                     }
                     return a.__extends(t, e), t.prototype.render = function() {
-                        return g.createElement(T.Xa, {
+                        return g.createElement(T.Ya, {
                             display: T.X.Flex,
                             flexDirection: T.Aa.Column,
                             fullHeight: !0,
                             fullWidth: !0
-                        }, g.createElement(T.Xa, {
+                        }, g.createElement(T.Ya, {
                             className: "latency-metrics__header-container",
                             display: T.X.Flex,
-                            justifyContent: T.Wa.Between,
+                            justifyContent: T.Xa.Between,
                             flexWrap: T.Ba.NoWrap,
                             alignItems: T.f.Start
-                        }, g.createElement(T.Gb, null, this.renderTabButton("overview", "Overview"), this.props.samples.electronProcessStartTime && this.renderTabButton("electron", "Electron"), this.props.samples.launcherProcessStartTime && this.renderTabButton("launcher", "Launcher"))), g.createElement(T.Xa, {
+                        }, g.createElement(T.Hb, null, this.renderTabButton("overview", "Overview"), this.props.samples.electronProcessStartTime && this.renderTabButton("electron", "Electron"), this.props.samples.launcherProcessStartTime && this.renderTabButton("launcher", "Launcher"))), g.createElement(T.Ya, {
                             className: "latency-metrics__body",
                             display: T.X.Flex,
                             flexDirection: T.Aa.Column,
                             flexGrow: 1,
-                            overflow: T.cb.Hidden,
+                            overflow: T.db.Hidden,
                             fullHeight: !0
                         }, g.createElement(k.b, {
                             className: "latency-metrics__scroller"
-                        }, g.createElement(T.Xa, {
+                        }, g.createElement(T.Ya, {
                             margin: {
                                 y: 1,
                                 right: 1
@@ -349,75 +349,75 @@
                                 return null
                         }
                     }, t.prototype.renderOverviewTab = function() {
-                        return g.createElement(T.Xa, null, g.createElement(T.Xa, {
+                        return g.createElement(T.Ya, null, g.createElement(T.Ya, {
                             className: "latency-metrics__item",
                             display: T.X.Flex,
-                            justifyContent: T.Wa.Between,
+                            justifyContent: T.Xa.Between,
                             flexWrap: T.Ba.NoWrap
-                        }, g.createElement(T.Yb, {
+                        }, g.createElement(T.Zb, {
                             label: "= Launcher Window Shown - Launcher Start Time",
-                            direction: T.ac.Right
-                        }, g.createElement(T.Xa, {
+                            direction: T.bc.Right
+                        }, g.createElement(T.Ya, {
                             className: "latency-metrics__item-left latency-metrics__item-name",
                             ellipsis: !0
                         }, g.createElement("span", null, "First Paint"))), g.createElement("div", {
                             className: "latency-metrics__item-number"
                         }, this.props.samples.launcherProcessStartTime ? g.createElement(E.a, {
                             metric: this.props.samples.firstPaintDuration
-                        }) : g.createElement("span", null, "n/a"))), g.createElement(T.Xa, {
+                        }) : g.createElement("span", null, "n/a"))), g.createElement(T.Ya, {
                             className: "latency-metrics__item",
                             display: T.X.Flex,
-                            justifyContent: T.Wa.Between,
+                            justifyContent: T.Xa.Between,
                             flexWrap: T.Ba.NoWrap
-                        }, g.createElement(T.Yb, {
+                        }, g.createElement(T.Zb, {
                             label: "= Twilight Complete - Launcher Start",
-                            direction: T.ac.Right
-                        }, g.createElement(T.Xa, {
+                            direction: T.bc.Right
+                        }, g.createElement(T.Ya, {
                             className: "latency-metrics__item-left latency-metrics__item-name",
                             ellipsis: !0
                         }, g.createElement("span", null, "Loaded"))), g.createElement("div", {
                             className: "latency-metrics__item-number"
                         }, this.props.samples.launcherProcessStartTime ? g.createElement(E.a, {
                             metric: this.props.appLoadDuration
-                        }) : g.createElement("span", null, "n/a"))), g.createElement(T.Xa, {
+                        }) : g.createElement("span", null, "n/a"))), g.createElement(T.Ya, {
                             className: "latency-metrics__item",
                             display: T.X.Flex,
-                            justifyContent: T.Wa.Between,
+                            justifyContent: T.Xa.Between,
                             flexWrap: T.Ba.NoWrap
-                        }, g.createElement(T.Yb, {
+                        }, g.createElement(T.Zb, {
                             label: "= Launcher End Update - Launcher Start Update",
-                            direction: T.ac.Right
-                        }, g.createElement(T.Xa, {
+                            direction: T.bc.Right
+                        }, g.createElement(T.Ya, {
                             className: "latency-metrics__item-left latency-metrics__item-name",
                             ellipsis: !0
                         }, g.createElement("span", null, "Update Time"))), g.createElement("div", {
                             className: "latency-metrics__item-number"
                         }, this.props.samples.launcherProcessStartTime ? g.createElement(E.a, {
                             metric: this.props.samples.updateDuration
-                        }) : g.createElement("span", null, "n/a"))), g.createElement(T.Xa, {
+                        }) : g.createElement("span", null, "n/a"))), g.createElement(T.Ya, {
                             className: "latency-metrics__item",
                             display: T.X.Flex,
-                            justifyContent: T.Wa.Between,
+                            justifyContent: T.Xa.Between,
                             flexWrap: T.Ba.NoWrap
-                        }, g.createElement(T.Yb, {
+                        }, g.createElement(T.Zb, {
                             label: "= Electron Launch - Launcher Process Start",
-                            direction: T.ac.Right
-                        }, g.createElement(T.Xa, {
+                            direction: T.bc.Right
+                        }, g.createElement(T.Ya, {
                             className: "latency-metrics__item-left latency-metrics__item-name",
                             ellipsis: !0
                         }, g.createElement("span", null, "Launcher Total"))), g.createElement("div", {
                             className: "latency-metrics__item-number"
                         }, this.props.samples.launcherProcessStartTime ? g.createElement(E.a, {
                             metric: this.props.samples.launcherTotalDuration
-                        }) : g.createElement("span", null, "n/a"))), g.createElement(T.Xa, {
+                        }) : g.createElement("span", null, "n/a"))), g.createElement(T.Ya, {
                             className: "latency-metrics__item",
                             display: T.X.Flex,
-                            justifyContent: T.Wa.Between,
+                            justifyContent: T.Xa.Between,
                             flexWrap: T.Ba.NoWrap
-                        }, g.createElement(T.Yb, {
+                        }, g.createElement(T.Zb, {
                             label: "= Show Window - Electron Process Start",
-                            direction: T.ac.Right
-                        }, g.createElement(T.Xa, {
+                            direction: T.bc.Right
+                        }, g.createElement(T.Ya, {
                             className: "latency-metrics__item-left latency-metrics__item-name",
                             ellipsis: !0
                         }, g.createElement("span", null, "Electron Total"))), g.createElement("div", {
@@ -433,16 +433,16 @@
                             return t.renderEvent(e)
                         }) : null
                     }, t.prototype.renderEvent = function(e) {
-                        return g.createElement(T.Xa, {
+                        return g.createElement(T.Ya, {
                             key: e.key,
                             className: "latency-metrics__item",
                             display: T.X.Flex,
-                            justifyContent: T.Wa.Between,
+                            justifyContent: T.Xa.Between,
                             flexWrap: T.Ba.NoWrap
-                        }, g.createElement(T.Yb, {
+                        }, g.createElement(T.Zb, {
                             label: "Start Time: " + e.startTime,
-                            direction: T.ac.Right
-                        }, g.createElement(T.Xa, {
+                            direction: T.bc.Right
+                        }, g.createElement(T.Ya, {
                             className: "latency-metrics__item-left latency-metrics__item-name",
                             ellipsis: !0
                         }, g.createElement("span", null, e.label))), g.createElement("div", {
@@ -452,7 +452,7 @@
                         })))
                     }, t
                 }(g.Component);
-            var D = Object(b.connect)(function(e) {
+            var D = Object(v.connect)(function(e) {
                     return {
                         appLoadDuration: p(e),
                         samples: u(e)
@@ -628,9 +628,9 @@
             }), n.d(t, "e", function() {
                 return f
             }), n.d(t, "c", function() {
-                return v
-            }), n.d(t, "b", function() {
                 return b
+            }), n.d(t, "b", function() {
+                return v
             }), n.d(t, "d", function() {
                 return y
             }), n.d(t, "a", function() {
@@ -696,18 +696,18 @@
                     }(e)
             }
 
-            function v(e) {
+            function b(e) {
                 p.debug("Saving current availability", e), d = a.__assign({}, d, {
                     availability: e
                 })
             }
 
-            function b() {
-                v(r.a.Online)
+            function v() {
+                b(r.a.Online)
             }
 
             function y() {
-                v(r.a.Idle)
+                b(r.a.Idle)
             }
 
             function g() {

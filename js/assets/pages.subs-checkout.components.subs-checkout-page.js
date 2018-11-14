@@ -33,6 +33,7 @@
                     ticket_price: e.ticketPrice,
                     currency: e.currency,
                     saved_payment: e.savedPayment,
+                    is_anonymous: e.isAnonymous,
                     checkout_source: e.trackingContext.source
                 };
                 e.trackingContext.detail && (t.checkout_source_detail = e.trackingContext.detail), i.o.track(a.SpadeEventType.PaymentFormInteraction, t)
@@ -189,26 +190,26 @@
                     }, t.prototype.componentDidUpdate = function() {
                         this.props.data && (this.props.data.loading || this.props.data.error) || this.props.latencyTracking.reportInteractive()
                     }, t.prototype.render = function() {
-                        return l.createElement(N.Xa, {
+                        return l.createElement(N.Ya, {
                             className: "" + Object(g.b)(this.props.theme),
-                            position: N.jb.Relative,
+                            position: N.kb.Relative,
                             fullWidth: !0,
                             fullHeight: !0
                         }, l.createElement(w.a, {
                             darkModeEnabled: !0
-                        }), l.createElement(N.Xa, {
+                        }), l.createElement(N.Ya, {
                             className: "subs-checkout-root",
                             padding: {
                                 top: 5
                             },
                             fullHeight: !0,
-                            overflow: N.cb.Auto
+                            overflow: N.db.Auto
                         }, this.renderBody))
                     }, Object.defineProperty(t.prototype, "renderBody", {
                         get: function() {
                             if (this.props.match.params.productName) {
                                 if (this.props.isLoggedIn) {
-                                    if (this.props.data && this.props.data.loading) return l.createElement(N.Za, {
+                                    if (this.props.data && this.props.data.loading) return l.createElement(N.ab, {
                                         fillContent: !0
                                     });
                                     var e = !("turbo" === this.props.match.params.productName) && this.props.data && this.props.data.recipient || null,
@@ -227,15 +228,15 @@
                                         "data-test-selector": i.CheckoutPayments
                                     }))
                                 }
-                                return this.props.onAnonymousVisit(), l.createElement(N.Xa, {
+                                return this.props.onAnonymousVisit(), l.createElement(N.Ya, {
                                     padding: 3,
                                     display: N.X.Flex,
                                     flexDirection: N.Aa.Column,
-                                    justifyContent: N.Wa.Center,
+                                    justifyContent: N.Xa.Center,
                                     fullHeight: !0
                                 }, l.createElement(y.a, {
                                     message: Object(m.d)("You must be logged in to view this page", "SubsCheckoutPage")
-                                }, l.createElement(N.Xa, {
+                                }, l.createElement(N.Ya, {
                                     margin: {
                                         top: 1
                                     }

@@ -657,8 +657,8 @@
                 m = n("X7a7"),
                 h = n("moLQ"),
                 f = n("q1tI"),
-                v = n("4p7I"),
-                k = n("yoKv"),
+                k = n("4p7I"),
+                v = n("yoKv"),
                 T = n("mf+E"),
                 y = n("ZS2+"),
                 b = n("yR8l"),
@@ -690,23 +690,23 @@
                             "data-a-target": "browse-filter-dropdown"
                         }, this.renderShowingItem(s.Categories), this.renderShowingItem(s.LiveChannels))
                     }, t.prototype.renderShowingItem = function(e) {
-                        var t = this.props.showingType === e ? f.createElement(_.Xa, {
+                        var t = this.props.showingType === e ? f.createElement(_.Ya, {
                                 attachRight: !0,
-                                position: _.jb.Absolute,
+                                position: _.kb.Absolute,
                                 margin: {
                                     right: 1
                                 }
-                            }, f.createElement(_.sb, {
-                                asset: _.tb.Check,
+                            }, f.createElement(_.tb, {
+                                asset: _.ub.Check,
                                 height: 18,
                                 width: 18
                             })) : null,
                             n = "categories";
-                        return e === s.LiveChannels && (n = "channels"), f.createElement(_.Ua, {
+                        return e === s.LiveChannels && (n = "channels"), f.createElement(_.Va, {
                             "data-test-selector": e + "-selector",
                             "data-a-target": "browse-" + n + "-button",
                             linkTo: this.getLinkTo(e)
-                        }, f.createElement(_.Xa, {
+                        }, f.createElement(_.Ya, {
                             display: _.X.Flex,
                             padding: {
                                 y: .5,
@@ -726,13 +726,13 @@
                 }(f.Component),
                 N = n("si2W"),
                 D = n("C29h"),
-                E = n("TCeE"),
-                F = n("AZIu"),
+                F = n("TCeE"),
+                E = n("AZIu"),
                 x = (n("TFM5"), function(e) {
                     function t() {
                         var t = null !== e && e.apply(this, arguments) || this;
                         return t.addTagFilter = function(e, n) {
-                            var a = n === E.b.All ? h.a.LiveChannels : h.a.Categories;
+                            var a = n === F.b.All ? h.a.LiveChannels : h.a.Categories;
                             t.props.addTagFilter(e, a)
                         }, t.removeTagFilter = function(e) {
                             var n = t.props.showingType === s.LiveChannels ? h.a.LiveChannels : h.a.Categories;
@@ -740,7 +740,7 @@
                         }, t
                     }
                     return a.__extends(t, e), t.prototype.render = function() {
-                        return f.createElement(_.Xa, {
+                        return f.createElement(_.Ya, {
                             className: "browse-header__filters",
                             display: _.X.Flex,
                             flexWrap: _.Ba.Wrap,
@@ -748,14 +748,14 @@
                                 top: 2,
                                 right: 3
                             }
-                        }, f.createElement(_.Xa, null, f.createElement(_.Xa, {
+                        }, f.createElement(_.Ya, null, f.createElement(_.Ya, {
                             padding: {
                                 left: .5,
                                 top: 1
                             }
                         }, f.createElement(_.W, null, Object(r.d)("Showing", "BrowseHeader"))), f.createElement(I, {
                             showingType: this.props.showingType
-                        })), f.createElement(_.Xa, null, f.createElement(_.Xa, {
+                        })), f.createElement(_.Ya, null, f.createElement(_.Ya, {
                             padding: {
                                 left: .5,
                                 top: 1
@@ -763,7 +763,7 @@
                         }, f.createElement(_.W, null, Object(r.d)("Filters", "BrowseHeader"))), f.createElement(N.a, {
                             onAddTagFilter: this.addTagFilter,
                             onRemoveTagFilter: this.removeTagFilter,
-                            section: this.props.showingType === s.Categories ? F.a.Categories : F.a.LiveChannels,
+                            section: this.props.showingType === s.Categories ? E.a.Categories : E.a.LiveChannels,
                             selectedTags: this.props.tagFilters,
                             tagSearchType: this.props.showingType === s.Categories ? D.b.TagCategory : D.b.TagAll
                         })))
@@ -782,8 +782,8 @@
                 })(x),
                 P = n("JoTo"),
                 L = n("cnlr"),
-                R = n("y5I9"),
-                A = function(e) {
+                A = n("y5I9"),
+                R = function(e) {
                     return e === u.a.DirectoryTag || e === u.a.PopularTag
                 },
                 j = n("G1iw"),
@@ -835,16 +835,16 @@
                                 return !!a && e.id === a.id
                             }) || (i = [a].concat(i)));
                             var o = p(n.match.path) ? h.a.LiveChannels : h.a.Categories;
-                            Object(R.b)(n.tagFilters, i) && t.props.changeTagFilters(i, o), Object(R.a)(n.languageTagFilters, r) && t.props.replaceLanguageTags(r)
+                            Object(A.b)(n.tagFilters, i) && t.props.changeTagFilters(i, o), Object(A.a)(n.languageTagFilters, r) && t.props.replaceLanguageTags(r)
                         }, t.updateHistory = function(e, n) {
-                            if (void 0 === n && (n = !1), A(e.match.path) && 1 === e.tagFilters.length) t.props.history.replace({
+                            if (void 0 === n && (n = !1), R(e.match.path) && 1 === e.tagFilters.length) t.props.history.replace({
                                 pathname: e.location.pathname,
                                 state: {
                                     languageTagFilters: e.languageTagFilters,
                                     tagFilters: e.tagFilters
                                 }
                             });
-                            else if (Object(R.b)(e.tagFilters, t.getLocationStateTagFilters(e)) || Object(R.a)(e.languageTagFilters, t.getLocationStateLanguageTags(e))) {
+                            else if (Object(A.b)(e.tagFilters, t.getLocationStateTagFilters(e)) || Object(A.a)(e.languageTagFilters, t.getLocationStateLanguageTags(e))) {
                                 var a = e.tagFilters.length + e.languageTagFilters.length;
                                 t.props.history[n ? "replace" : "push"]({
                                     pathname: e.location.pathname,
@@ -858,41 +858,41 @@
                         }, t
                     }
                     return a.__extends(t, e), t.prototype.componentDidMount = function() {
-                        this.setBrowseType(this.props.match.path), A(this.props.match.path) ? this.updateTagFiltersFromPath(this.props) : this.setTagFilters({
+                        this.setBrowseType(this.props.match.path), R(this.props.match.path) ? this.updateTagFiltersFromPath(this.props) : this.setTagFilters({
                             props: this.props,
                             getTagsFromRedux: !0
                         }), this.updateHistory(this.props, !0)
                     }, t.prototype.componentWillReceiveProps = function(e) {
                         var t = this.props.match.path,
                             n = e.match.path;
-                        t !== n ? (this.setBrowseType(n), A(n) ? this.updateTagFiltersFromPath(e) : this.setTagFilters({
+                        t !== n ? (this.setBrowseType(n), R(n) ? this.updateTagFiltersFromPath(e) : this.setTagFilters({
                             props: e,
                             getTagsFromRedux: !0
                         })) : this.props.location.search !== e.location.search ? this.setTagFilters({
                             props: e
-                        }) : A(n) && this.updateTagFiltersFromPath(e), (Object(R.b)(this.props.tagFilters, e.tagFilters) || Object(R.a)(this.props.languageTagFilters, e.languageTagFilters)) && this.updateHistory(e, t !== n)
+                        }) : R(n) && this.updateTagFiltersFromPath(e), (Object(A.b)(this.props.tagFilters, e.tagFilters) || Object(A.a)(this.props.languageTagFilters, e.languageTagFilters)) && this.updateHistory(e, t !== n)
                     }, t.prototype.render = function() {
-                        return f.createElement(_.Xa, null, this.renderAds(), f.createElement(O, {
+                        return f.createElement(_.Ya, null, this.renderAds(), f.createElement(O, {
                             showingType: this.getActiveShowing()
-                        }), f.createElement(_.Xa, {
+                        }), f.createElement(_.Ya, {
                             padding: {
                                 bottom: 3,
                                 top: 2,
                                 x: 3
                             }
-                        }, this.renderSideNavInfoSection(), f.createElement(k.a, null, f.createElement(v.a, {
+                        }, this.renderSideNavInfoSection(), f.createElement(v.a, null, f.createElement(k.a, {
                             path: u.a.CreativeCommunities,
                             render: this.redirectToTagCreative
-                        }), f.createElement(v.a, {
+                        }), f.createElement(k.a, {
                             path: u.a.PopularTag,
                             component: B
-                        }), f.createElement(v.a, {
+                        }), f.createElement(k.a, {
                             path: u.a.Popular,
                             component: B
-                        }), f.createElement(v.a, {
+                        }), f.createElement(k.a, {
                             path: u.a.DirectoryTag,
                             component: M
-                        }), f.createElement(v.a, {
+                        }), f.createElement(k.a, {
                             path: u.a.DirectoryCategory,
                             component: M
                         }))))
@@ -905,13 +905,13 @@
                         e === u.a.DirectoryCategory ? this.props.changeBrowseType(o.a.Games) : p(e) && this.props.changeBrowseType(o.a.Channels)
                     }, t.prototype.trackEdit = function(e, t) {
                         var n = {
-                            section: t.match.path === u.a.DirectoryTag ? F.a.Categories : F.a.LiveChannels,
+                            section: t.match.path === u.a.DirectoryTag ? E.a.Categories : E.a.LiveChannels,
                             tagPosition: 0,
                             searchEvent: !1,
                             tagId: e.id,
                             dismiss: !1
                         };
-                        Object(F.b)(n)
+                        Object(E.b)(n)
                     }, t.prototype.getLocationStateTagFilters = function(e) {
                         return e.location.state && e.location.state.tagFilters || []
                     }, t.prototype.getLocationStateLanguageTags = function(e) {
@@ -1155,22 +1155,22 @@
                 m = n("yR8l"),
                 h = n("DMoW"),
                 f = n("GIun"),
-                v = n("Ue10"),
-                k = function(e) {
+                k = n("Ue10"),
+                v = function(e) {
                     var t, n = e.onClick,
                         a = e.tag;
                     n && (t = function() {
                         return n(a)
                     });
                     var r = "localizedDescription" in e.tag ? e.tag.localizedDescription : void 0;
-                    return i.createElement(f.a, null, i.createElement(v.Ua, {
+                    return i.createElement(f.a, null, i.createElement(k.Va, {
                         onClick: t
-                    }, i.createElement(v.Xa, {
+                    }, i.createElement(k.Ya, {
                         padding: {
                             y: .5,
                             x: 1
                         }
-                    }, i.createElement(v.W, {
+                    }, i.createElement(k.W, {
                         title: r
                     }, a.localizedName))))
                 },
@@ -1191,13 +1191,13 @@
                         }, t.renderTags = function() {
                             if (!t.props.data.game || !t.props.data.game.tags || !t.state.filteredTopTags) return null;
                             var e;
-                            return e = t.state.filteredTopTags.map(t.renderSuggestedTag), i.createElement(v.Xa, {
+                            return e = t.state.filteredTopTags.map(t.renderSuggestedTag), i.createElement(k.Ya, {
                                 padding: {
                                     bottom: 1
                                 }
                             }, e)
                         }, t.renderSuggestedTag = function(e) {
-                            return i.createElement(k, {
+                            return i.createElement(v, {
                                 "data-test-selector": a.SuggestedTags,
                                 key: e.id,
                                 onClick: function() {
@@ -1221,19 +1221,19 @@
                             })
                         }
                     }, t.prototype.render = function() {
-                        return this.props.data.loading || this.props.data.error ? null : this.props.data.game && this.props.data.game.tags && 0 !== this.props.data.game.tags.length && this.state.filteredTopTags && 0 !== this.state.filteredTopTags.length ? i.createElement(v.Xa, null, i.createElement(v.Xa, {
+                        return this.props.data.loading || this.props.data.error ? null : this.props.data.game && this.props.data.game.tags && 0 !== this.props.data.game.tags.length && this.state.filteredTopTags && 0 !== this.state.filteredTopTags.length ? i.createElement(k.Ya, null, i.createElement(k.Ya, {
                             padding: {
                                 y: .5,
                                 x: 1
                             }
-                        }, i.createElement(v.W, {
+                        }, i.createElement(k.W, {
                             bold: !0
-                        }, Object(c.d)("Suggestions", "TagSuggestions"))), this.renderTags(), i.createElement(v.Xa, {
+                        }, Object(c.d)("Suggestions", "TagSuggestions"))), this.renderTags(), i.createElement(k.Ya, {
                             padding: {
                                 y: .5,
                                 x: 1
                             }
-                        }, i.createElement(v.W, {
+                        }, i.createElement(k.W, {
                             bold: !0
                         }, Object(c.d)("All Tags", "AllTagsTitle")))) : null
                     }, t
@@ -1264,11 +1264,11 @@
                             var n = t.props.categoryName ? _.b.Category : _.b.All;
                             return i.createElement(f.a, {
                                 key: e.id
-                            }, i.createElement(v.Ua, {
+                            }, i.createElement(k.Va, {
                                 onClick: function() {
                                     return t.props.onAddTag(e, n)
                                 }
-                            }, i.createElement(v.Xa, {
+                            }, i.createElement(k.Ya, {
                                 padding: {
                                     y: .5,
                                     x: 1
@@ -1277,14 +1277,14 @@
                         }, t
                     }
                     return r.__extends(t, e), t.prototype.render = function() {
-                        return this.props.data.error ? null : this.props.data.loading ? i.createElement(v.Xa, {
-                            display: v.X.Flex,
-                            justifyContent: v.Wa.Center,
+                        return this.props.data.error ? null : this.props.data.loading ? i.createElement(k.Ya, {
+                            display: k.X.Flex,
+                            justifyContent: k.Xa.Center,
                             padding: {
                                 y: .5,
                                 x: 1
                             }
-                        }, i.createElement(v.Za, null)) : i.createElement(v.Xa, null, this.renderTags())
+                        }, i.createElement(k.ab, null)) : i.createElement(k.Ya, null, this.renderTags())
                     }, t
                 }(i.Component),
                 D = Object(s.compose)(Object(m.a)(I, {
@@ -1298,8 +1298,8 @@
                         }
                     }
                 }))(N),
-                E = n("sLmD"),
-                F = n("AZIu"),
+                F = n("sLmD"),
+                E = n("AZIu"),
                 x = n("4HIT");
             n("97MP");
             ! function(e) {
@@ -1315,18 +1315,18 @@
                             isOpen: !1,
                             searching: !1,
                             searchTerm: ""
-                        }, n.languageCode = Object(E.a)(), n.renderSearchContent = function() {
+                        }, n.languageCode = Object(F.a)(), n.renderSearchContent = function() {
                             var e = null;
                             return e = n.props.type === b.StreamTag ? n.renderStreamTagResults() : n.renderTagResults(), i.createElement(d.b, {
                                 className: "tag-search__scrollable-area",
                                 suppressScrollX: !0
-                            }, i.createElement(v.Xa, {
+                            }, i.createElement(k.Ya, {
                                 "data-test-selector": C.SearchContent
                             }, n.renderSuggestedTags(), e))
                         }, n.renderTagSearchResult = function(e) {
-                            var t = Object(E.b)(e, n.props.type === b.TagAllMinusAutomation),
+                            var t = Object(F.b)(e, n.props.type === b.TagAllMinusAutomation),
                                 a = "tag_scope" in e ? e.tag_scope : void 0;
-                            return i.createElement(k, {
+                            return i.createElement(v, {
                                 key: t.id,
                                 onClick: function() {
                                     return n.onTagResultSelected(t, a)
@@ -1355,7 +1355,7 @@
                                     tagId: e.id,
                                     dismiss: !1
                                 };
-                                Object(F.b)(a)
+                                Object(E.b)(a)
                             }
                         }, n.onInputChange = function(e) {
                             n.props.onInputChange && n.props.onInputChange(e), clearTimeout(n.inputTimeout), n.toggleTagSearch(!0), n.setState({
@@ -1401,18 +1401,18 @@
                             ref: this.setTagSearchRef
                         }, this.renderSearchContent())
                     }, t.prototype.renderLoading = function() {
-                        return i.createElement(v.Xa, {
-                            display: v.X.Flex,
-                            justifyContent: v.Wa.Center,
+                        return i.createElement(k.Ya, {
+                            display: k.X.Flex,
+                            justifyContent: k.Xa.Center,
                             padding: {
                                 y: .5,
                                 x: 1
                             }
-                        }, i.createElement(v.Za, {
+                        }, i.createElement(k.ab, {
                             delay: 0
                         }))
                     }, t.prototype.renderNoResults = function() {
-                        return this.state.searching ? null : i.createElement(v.Xa, {
+                        return this.state.searching ? null : i.createElement(k.Ya, {
                             padding: {
                                 y: .5,
                                 x: 1
@@ -1423,7 +1423,7 @@
                         var e = this.props.selectedTags && this.props.selectedTags.map(function(e) {
                             return e.id
                         }) || [];
-                        return i.createElement(v.Xa, null, i.createElement(w, {
+                        return i.createElement(k.Ya, null, i.createElement(w, {
                             gameName: this.props.categoryName,
                             onAddTag: this.onTagResultSelected,
                             selectedTagIDs: e
@@ -1759,35 +1759,35 @@
                 o = n("/7QA"),
                 s = n("Ue10"),
                 c = function() {
-                    return r.createElement(s.Xa, {
+                    return r.createElement(s.Ya, {
                         display: s.X.Flex,
                         flexDirection: s.Aa.Column,
-                        justifyContent: s.Wa.Center,
+                        justifyContent: s.Xa.Center,
                         alignItems: s.f.Center,
                         flexGrow: 1,
                         fullHeight: !0,
                         padding: {
                             y: 1
                         },
-                        zIndex: s.ic.Above
-                    }, r.createElement(s.Eb, {
+                        zIndex: s.jc.Above
+                    }, r.createElement(s.Fb, {
                         color: s.O.Alt2,
-                        textAlign: s.Rb.Center,
+                        textAlign: s.Sb.Center,
                         flexShrink: 1
-                    }, r.createElement(s.sb, {
-                        asset: s.tb.DeadGlitch,
+                    }, r.createElement(s.tb, {
+                        asset: s.ub.DeadGlitch,
                         width: 46,
                         height: 48
-                    })), r.createElement(s.Pa, {
+                    })), r.createElement(s.Qa, {
                         margin: {
                             top: 1
                         },
-                        textAlign: s.Rb.Center
+                        textAlign: s.Sb.Center
                     }, r.createElement(s.W, {
-                        type: s.Vb.H4,
+                        type: s.Wb.H4,
                         "data-test-selector": "search-error-message"
                     }, Object(o.d)("Search is not available at this time", "DropdownSearchError"))), r.createElement(s.W, {
-                        type: s.Vb.P
+                        type: s.Wb.P
                     }, Object(o.d)("Please try again later", "DropdownSearchError")))
                 },
                 l = n("8Ad5"),
@@ -1831,7 +1831,7 @@
                     return a.__extends(t, e), t.prototype.render = function() {
                         var e = void 0 === this.props.showDropdown || this.props.showDropdown,
                             t = this.props.isErrored ? r.createElement(c, null) : r.Children.only(this.props.children),
-                            n = r.createElement(s.vb, {
+                            n = r.createElement(s.wb, {
                                 onChange: this.handleChange,
                                 onKeyDown: this.onKeyDown,
                                 onBlur: this.handleBlur,
@@ -1846,13 +1846,13 @@
                             });
                         return this.props.inline ? r.createElement(i.a, {
                             onClickOut: this.onClickOut
-                        }, r.createElement(s.Eb, {
+                        }, r.createElement(s.Fb, {
                             background: this.state.isInputFocused || this.state.isOpen ? s.r.Base : void 0,
                             borderRadius: s.x.Large,
                             padding: .5,
-                            position: s.jb.Relative,
+                            position: s.kb.Relative,
                             elevation: this.state.isInputFocused || this.state.isOpen ? 3 : void 0
-                        }, n, e && r.createElement(s.Eb, {
+                        }, n, e && r.createElement(s.Fb, {
                             attachLeft: !0,
                             background: s.r.Base,
                             borderRadius: s.x.Large,
@@ -1861,8 +1861,8 @@
                             padding: {
                                 y: 1
                             },
-                            position: s.jb.Absolute,
-                            zIndex: s.ic.Above,
+                            position: s.kb.Absolute,
+                            zIndex: s.jc.Above,
                             elevation: 3
                         }, r.createElement("div", {
                             tabIndex: 0,
@@ -2092,8 +2092,8 @@
                 m = n("Igt5"),
                 h = n("moLQ"),
                 f = n("17x9"),
-                v = n("wIs1"),
-                k = n("ZDlU"),
+                k = n("wIs1"),
+                v = n("ZDlU"),
                 T = n("8/mp"),
                 y = n("yR8l"),
                 b = n("Bk78"),
@@ -2104,22 +2104,22 @@
                 I = n("cTNz"),
                 N = n("oJov"),
                 D = n("Bh3T"),
-                E = n("bUox"),
-                F = n("TCeE"),
+                F = n("bUox"),
+                E = n("TCeE"),
                 x = n("AZIu"),
                 O = n("9x/k"),
                 P = n("rShu"),
                 L = n("x/sq"),
-                R = n("vuN2"),
-                A = n("yI6f"),
+                A = n("vuN2"),
+                R = n("yI6f"),
                 j = n("T2RZ"),
                 M = n("Ue10"),
                 B = n("0egc"),
-                G = Object(j.a)(l.PageviewMedium.Browse, A.b.Game, A.c.BrowseCategories)(N.a),
+                G = Object(j.a)(l.PageviewMedium.Browse, R.b.Game, R.c.BrowseCategories)(N.a),
                 W = "directory-first-item",
                 q = "directory-container",
                 U = Object(b.a)(3e5),
-                X = Object(R.a)();
+                Y = Object(A.a)();
 
             function z(e) {
                 return (e.directoriesWithTags && e.directoriesWithTags.edges || []).filter(function(e) {
@@ -2176,19 +2176,19 @@
                         this.props.sideNavExpanded !== e.sideNavExpanded && this.onWindowResize(), this.props.lastBrowsePath !== e.location.pathname && this.props.changeLastBrowsePath(decodeURIComponent(e.location.pathname))
                     }, t.prototype.render = function() {
                         var e = this;
-                        if (this.props.tagFilters.length > F.a) return r.createElement(E.a, {
-                            errorType: E.b.TooManyTags,
+                        if (this.props.tagFilters.length > E.a) return r.createElement(F.a, {
+                            errorType: F.b.TooManyTags,
                             onClickRemoveLastTag: this.removeLastTag,
                             tagFilters: this.props.tagFilters
                         });
-                        if (this.props.data.loading) return r.createElement(M.Za, {
+                        if (this.props.data.loading) return r.createElement(M.ab, {
                             fillContent: !0
                         });
-                        if (!this.props.data.directoriesWithTags) return r.createElement(k.a, {
+                        if (!this.props.data.directoriesWithTags) return r.createElement(v.a, {
                             message: Object(o.d)("Error loading data.", "BrowseDirectory")
                         });
-                        if (this.props.data.directoriesWithTags && this.props.data.directoriesWithTags.edges && 0 === this.props.data.directoriesWithTags.edges.length) return r.createElement(E.a, {
-                            errorType: E.b.NoResults,
+                        if (this.props.data.directoriesWithTags && this.props.data.directoriesWithTags.edges && 0 === this.props.data.directoriesWithTags.edges.length) return r.createElement(F.a, {
+                            errorType: F.b.NoResults,
                             onClickRemoveLastTag: this.removeLastTag,
                             tagFilters: this.props.tagFilters
                         });
@@ -2213,12 +2213,12 @@
                                         style: {
                                             order: a
                                         }
-                                    }, r.createElement(M.Xa, {
+                                    }, r.createElement(M.Ya, {
                                         margin: {
                                             bottom: 2
                                         },
                                         "data-target": "directory-page__card-container",
-                                        position: M.jb.Relative
+                                        position: M.kb.Relative
                                     }, r.createElement(G, {
                                         linkTo: {
                                             pathname: Object(S.c)(i.name),
@@ -2251,13 +2251,13 @@
                                 }
                                 return null
                             });
-                        return r.createElement(M.Xa, null, r.createElement(D.b, {
+                        return r.createElement(M.Ya, null, r.createElement(D.b, {
                             addPaddingWhenPlayerIsPersisting: !0
                         }), r.createElement("div", {
                             "data-target": q
-                        }, r.createElement(M.bc, {
-                            gutterSize: M.dc.Small,
-                            childWidth: M.cc.Small,
+                        }, r.createElement(M.cc, {
+                            gutterSize: M.ec.Small,
+                            childWidth: M.dc.Small,
                             placeholderItems: 20
                         }, r.createElement(_.a, {
                             key: -1,
@@ -2291,7 +2291,7 @@
                 H = Object(p.compose)(Object(d.b)("BrowseDirectory"), Object(y.a)(B, {
                     options: function(e) {
                         return {
-                            fetchPolicy: X() ? U() : "network-only",
+                            fetchPolicy: Y() ? U() : "network-only",
                             errorPolicy: "all",
                             variables: {
                                 limit: 30,
@@ -2327,7 +2327,7 @@
                             }
                         })
                     }
-                }))(Object(v.a)(V));
+                }))(Object(k.a)(V));
             var Q = Object(u.connect)(function(e) {
                     return {
                         browseType: e.browse.browseType,
@@ -2342,7 +2342,7 @@
                         removeTagFilter: m.h
                     }, e)
                 })(H),
-                Y = function(e) {
+                X = function(e) {
                     function t() {
                         return null !== e && e.apply(this, arguments) || this
                     }
@@ -2359,9 +2359,9 @@
                     destination: c.a.BrowseGames
                 }), Object(s.a)({
                     location: l.PageviewLocation.Browse
-                }))(Y);
+                }))(X);
             n.d(t, "BrowseGamesPageComponent", function() {
-                return Y
+                return X
             }), n.d(t, "BrowseGamesPage", function() {
                 return $
             })
@@ -2369,7 +2369,7 @@
         T2RZ: function(e, t, n) {
             "use strict";
             n.d(t, "a", function() {
-                return v
+                return k
             });
             var a = n("mrSG"),
                 r = n("q1tI"),
@@ -2414,9 +2414,9 @@
                 })
             }
 
-            function v(e, t, n) {
-                return function(v) {
-                    var k = function(i) {
+            function k(e, t, n) {
+                return function(k) {
+                    var v = function(i) {
                         function o() {
                             var e = null !== i && i.apply(this, arguments) || this;
                             return e.itemTrackingID = Object(g.f)(), e.trackImpression = function() {
@@ -2426,12 +2426,12 @@
                         return a.__extends(o, i), o.prototype.componentDidMount = function() {
                             this.props.impressionListener.registerImpressionCallback(this.trackImpression)
                         }, o.prototype.render = function() {
-                            if (v === d.a) {
+                            if (k === d.a) {
                                 var e = this.props;
-                                return r.createElement(v, a.__assign({}, e, this.wrapGameCardPropsWithTracking(e)))
+                                return r.createElement(k, a.__assign({}, e, this.wrapGameCardPropsWithTracking(e)))
                             }
                             e = this.props;
-                            return r.createElement(v, a.__assign({}, e, this.wrapPreviewCardPropsWithTracking(e)))
+                            return r.createElement(k, a.__assign({}, e, this.wrapPreviewCardPropsWithTracking(e)))
                         }, o.prototype.getTrackingLocationState = function() {
                             var t = this.props.tagListProps ? this.props.tagListProps.tags.map(function(e) {
                                     return e.id
@@ -2510,7 +2510,7 @@
                             }, e.tagListProps && {
                                 tagListProps: f(t, e.tagListProps)
                             })
-                        }, o.displayName = Object(c.a)(o.name, v), o
+                        }, o.displayName = Object(c.a)(o.name, k), o
                     }(r.Component);
                     return Object(o.compose)(Object(u.a)("PreviewCard-" + e + "-" + t, {
                         percentage: 75
@@ -2523,7 +2523,7 @@
                         return {
                             tagFilters: r
                         }
-                    }))(k)
+                    }))(v)
                 }
             }
         },
@@ -2871,7 +2871,7 @@
                     return t.renderRemoveButton = function() {
                         if (t.props.tagFilters && t.props.tagFilters.length && t.props.onClickRemoveLastTag) {
                             var e = t.props.tagFilters[t.props.tagFilters.length - 1];
-                            return i.createElement(s.Xa, {
+                            return i.createElement(s.Ya, {
                                 margin: {
                                     top: 2
                                 }
@@ -2894,8 +2894,8 @@
                     }, t
                 }
                 return r.__extends(t, e), t.prototype.render = function() {
-                    return i.createElement(s.Xa, null, i.createElement(s.W, {
-                        type: s.Vb.H3
+                    return i.createElement(s.Ya, null, i.createElement(s.W, {
+                        type: s.Wb.H3
                     }, this.getErrorMessage()), i.createElement(s.W, {
                         color: s.O.Alt2,
                         fontSize: s.Ca.Size5
@@ -2925,7 +2925,7 @@
             ! function(e) {
                 e.Learn = "learn", e.Support = "support", e.LiveUp = "liveup", e.Recommendation = "rec", e.Bullet = "bullet"
             }(a || (a = {}));
-            var f, v, k = n("Ue10"),
+            var f, k, v = n("Ue10"),
                 T = function(e) {
                     function t() {
                         var t = null !== e && e.apply(this, arguments) || this;
@@ -2937,7 +2937,7 @@
                         }, t
                     }
                     return r.__extends(t, e), t.prototype.render = function() {
-                        return i.createElement(k.Xa, {
+                        return i.createElement(v.Ya, {
                             margin: {
                                 y: 1
                             }
@@ -2976,37 +2976,37 @@
                     }, t.prototype.renderDefault = function() {
                         return this.renderTextContent(Object(c.d)("Join the Twitch community!", "UpsellCenterText"), Object(c.d)("Discover the best live streams anywhere.", "UpsellCenterText"))
                     }, t.prototype.renderTextContent = function(e, t) {
-                        return i.createElement(i.Fragment, null, i.createElement(k.W, {
-                            color: k.O.Base,
-                            fontSize: k.Ca.Size4
-                        }, e), i.createElement(k.W, {
-                            color: k.O.Alt2,
-                            fontSize: k.Ca.Size5
+                        return i.createElement(i.Fragment, null, i.createElement(v.W, {
+                            color: v.O.Base,
+                            fontSize: v.Ca.Size4
+                        }, e), i.createElement(v.W, {
+                            color: v.O.Alt2,
+                            fontSize: v.Ca.Size5
                         }, t))
                     }, t.prototype.renderBulletPoints = function(e, t) {
                         var n = t.map(function(e, t) {
-                            return i.createElement(k.Xa, {
+                            return i.createElement(v.Ya, {
                                 key: "upsell-center-text-" + t,
-                                display: k.X.Flex,
-                                flexDirection: k.Aa.Row,
-                                alignItems: k.f.Start
-                            }, i.createElement(k.sb, {
-                                type: k.ub.Alt2,
-                                asset: k.tb.Check
-                            }), i.createElement(k.Xa, {
+                                display: v.X.Flex,
+                                flexDirection: v.Aa.Row,
+                                alignItems: v.f.Start
+                            }, i.createElement(v.tb, {
+                                type: v.vb.Alt2,
+                                asset: v.ub.Check
+                            }), i.createElement(v.Ya, {
                                 margin: {
                                     left: 1
                                 },
-                                textAlign: k.Rb.Left
-                            }, i.createElement(k.W, {
-                                color: k.O.Alt2,
-                                fontSize: k.Ca.Size6
+                                textAlign: v.Sb.Left
+                            }, i.createElement(v.W, {
+                                color: v.O.Alt2,
+                                fontSize: v.Ca.Size6
                             }, e)))
                         });
-                        return i.createElement(i.Fragment, null, i.createElement(k.W, {
-                            color: k.O.Base,
-                            fontSize: k.Ca.Size4
-                        }, e), i.createElement(k.Xa, {
+                        return i.createElement(i.Fragment, null, i.createElement(v.W, {
+                            color: v.O.Base,
+                            fontSize: v.Ca.Size4
+                        }, e), i.createElement(v.Ya, {
                             margin: {
                                 top: 1
                             }
@@ -3019,7 +3019,7 @@
             }(f || (f = {})),
             function(e) {
                 e.Upsell = "upsell"
-            }(v || (v = {}));
+            }(k || (k = {}));
             var b = n("Ve5Q"),
                 C = (n("wqI2"), function(e) {
                     function t() {
@@ -3028,7 +3028,7 @@
                             ! function(e) {
                                 var t = r.__assign({
                                     section: f.SideNav,
-                                    click_subsection: v.Upsell
+                                    click_subsection: k.Upsell
                                 }, e);
                                 c.o.track(y.SpadeEventType.ItemClick, t)
                             }(), t.props.signup()
@@ -3039,26 +3039,26 @@
                     }, t.prototype.componentDidUpdate = function() {
                         this.trackImpression()
                     }, t.prototype.render = function() {
-                        return i.createElement(k.Eb, {
-                            background: k.r.AccentAlt2,
-                            display: k.X.Flex,
-                            flexDirection: k.Aa.Column,
+                        return i.createElement(v.Fb, {
+                            background: v.r.AccentAlt2,
+                            display: v.X.Flex,
+                            flexDirection: v.Aa.Column,
                             padding: {
                                 y: 2,
                                 x: 1
                             },
                             margin: 1
-                        }, this.renderImage(), i.createElement(k.Xa, {
-                            textAlign: k.Rb.Center
-                        }, this.renderText(), i.createElement(k.z, {
+                        }, this.renderImage(), i.createElement(v.Ya, {
+                            textAlign: v.Sb.Center
+                        }, this.renderText(), i.createElement(v.z, {
                             onClick: this.signup,
-                            size: k.D.Large
-                        }, i.createElement(k.Xa, {
+                            size: v.D.Large
+                        }, i.createElement(v.Ya, {
                             padding: {
                                 x: 1
                             }
-                        }, i.createElement(k.W, {
-                            color: k.O.Base
+                        }, i.createElement(v.W, {
+                            color: v.O.Base
                         }, Object(c.d)("Sign up", "UpsellCenter"))))))
                     }, t.prototype.renderText = function() {
                         if (!this.props.channelLogin) return i.createElement(T, {
@@ -3074,22 +3074,22 @@
                             })
                         }
                     }, t.prototype.renderImage = function() {
-                        var e = i.createElement(k.S, {
+                        var e = i.createElement(v.S, {
                             alt: Object(c.d)("Upsell Center", "UpsellCenter"),
                             src: d.a
                         });
-                        return this.props.channelLogin && this.props.data && this.props.data.user && this.props.data.user.profileImageURL ? i.createElement(k.Xa, {
-                            position: k.jb.Relative
-                        }, i.createElement(k.Xa, {
+                        return this.props.channelLogin && this.props.data && this.props.data.user && this.props.data.user.profileImageURL ? i.createElement(v.Ya, {
+                            position: v.kb.Relative
+                        }, i.createElement(v.Ya, {
                             className: "upsell-center__avatar",
-                            position: k.jb.Absolute,
-                            zIndex: k.ic.Above
-                        }, i.createElement(k.q, {
+                            position: v.kb.Absolute,
+                            zIndex: v.jc.Above
+                        }, i.createElement(v.q, {
                             src: this.props.data.user.profileImageURL,
                             alt: Object(c.d)("{displayName}'s Profile Image", {
                                 displayName: this.props.data.user.displayName || ""
                             }, "UpsellCenter"),
-                            borderRadius: k.x.Large,
+                            borderRadius: v.x.Large,
                             size: 40
                         })), e) : e
                     }, t.prototype.trackImpression = function() {
@@ -3347,33 +3347,33 @@
                 i = n("/7QA"),
                 o = n("Ue10"),
                 s = (n("1mcJ"), function(e) {
-                    return r.createElement(o.Xa, a.__assign({
+                    return r.createElement(o.Ya, a.__assign({
                         className: "drops-badge",
-                        position: o.jb.Absolute,
+                        position: o.kb.Absolute,
                         attachTop: !0,
                         attachRight: !0
-                    }, Object(o.jc)(e)), r.createElement(o.Yb, {
-                        direction: o.ac.Top,
-                        align: o.Zb.Right,
+                    }, Object(o.kc)(e)), r.createElement(o.Zb, {
+                        direction: o.bc.Top,
+                        align: o.ac.Right,
                         label: Object(i.d)("Offers in-game Drops", "DropsBadge")
-                    }, r.createElement(o.Eb, {
+                    }, r.createElement(o.Fb, {
                         className: "drops-badge__drops-icon",
-                        position: o.jb.Relative,
+                        position: o.kb.Relative,
                         padding: {
                             top: .5,
                             right: .5,
                             bottom: 3,
                             left: 3
                         },
-                        overflow: o.cb.Hidden,
+                        overflow: o.db.Hidden,
                         color: o.O.Overlay,
-                        zIndex: o.ic.Default
+                        zIndex: o.jc.Default
                     }, r.createElement(o.U, {
                         type: o.V.Inherit,
                         hoverColorInherit: !0,
                         to: "https://help.twitch.tv/customer/en/portal/articles/2754380-how-to-earn-drops"
-                    }, r.createElement(o.sb, {
-                        asset: o.tb.Drops
+                    }, r.createElement(o.tb, {
+                        asset: o.ub.Drops
                     })))))
                 }),
                 c = n("0LAi"),
@@ -3388,28 +3388,28 @@
             }
             var u = function(e) {
                 var t;
-                return e.placeholder ? r.createElement(r.Fragment, null, r.createElement(o.Xa, {
+                return e.placeholder ? r.createElement(r.Fragment, null, r.createElement(o.Ya, {
                     margin: {
                         bottom: .5
                     }
                 }, r.createElement(o.o, {
                     ratio: o.p.Aspect3x4
-                }, r.createElement(o.ib, null))), r.createElement(o.W, null, r.createElement(o.ib, {
+                }, r.createElement(o.jb, null))), r.createElement(o.W, null, r.createElement(o.jb, {
                     width: 150
                 })), r.createElement(o.W, {
                     fontSize: o.Ca.Size7
-                }, r.createElement(o.ib, {
+                }, r.createElement(o.jb, {
                     width: 100
-                }))) : (t = r.createElement(r.Fragment, null, r.createElement(o.Xa, {
+                }))) : (t = r.createElement(r.Fragment, null, r.createElement(o.Ya, {
                     className: "tw-box-art-card__image " + (e.unavailable && !e.disabled ? "tw-box-art-card__image--unavailable" : ""),
                     "data-test-selector": "tw-card-image",
                     "data-a-target": "tw-card-image"
                 }, r.createElement(o.I, a.__assign({
                     aspect: o.p.BoxArt,
                     borderRadius: o.x.Medium
-                }, d(e)))), r.createElement(o.H, null, r.createElement(o.Xa, {
+                }, d(e)))), r.createElement(o.H, null, r.createElement(o.Ya, {
                     display: o.X.Flex
-                }, r.createElement(o.Xa, {
+                }, r.createElement(o.Ya, {
                     "data-test-selector": "tw-card-title",
                     "data-a-target": "tw-card-title",
                     flexGrow: 1,
@@ -3420,11 +3420,11 @@
                     ellipsis: !0
                 }, r.createElement(o.W, {
                     className: "tw-box-art-card__title",
-                    type: o.Vb.H3,
+                    type: o.Wb.H3,
                     fontSize: o.Ca.Size5,
-                    lineHeight: o.Ya.Body,
+                    lineHeight: o.Za.Body,
                     ellipsis: !0
-                }, e.title)), e.contextualCardActionProps && r.createElement(o.Xa, {
+                }, e.title)), e.contextualCardActionProps && r.createElement(o.Ya, {
                     margin: {
                         top: .5
                     },
@@ -3447,9 +3447,9 @@
                     tabIndex: e.tabIndex
                 }, t)), r.createElement("div", a.__assign({
                     className: "tw-box-art-card"
-                }, Object(o.jc)(e)), r.createElement(o.G, {
+                }, Object(o.kc)(e)), r.createElement(o.G, {
                     key: e.title
-                }, t), e.tagListProps && 0 !== e.tagListProps.tags.length && r.createElement(o.Xa, {
+                }, t), e.tagListProps && 0 !== e.tagListProps.tags.length && r.createElement(o.Ya, {
                     margin: {
                         top: .5
                     }
@@ -3492,7 +3492,7 @@
                                 label: t.localizedName,
                                 onClick: this.props.onClickForGQLTag && this.props.onClickForGQLTag.bind(this, t),
                                 selected: !0,
-                                size: l.Sa.Large
+                                size: l.Ta.Large
                             })
                         } else this.props.formTagProps && (e = i.createElement(l.Ia, r.__assign({}, this.props.formTagProps)));
                         return i.createElement("div", {
@@ -3548,8 +3548,8 @@
                 m = n("C29h"),
                 h = n("AZIu"),
                 f = n("4HIT"),
-                v = n("Ue10"),
-                k = [f.a.Popular, f.a.PopularTag, "/directory/game/:encodedCommunityName"];
+                k = n("Ue10"),
+                v = [f.a.Popular, f.a.PopularTag, "/directory/game/:encodedCommunityName"];
             ! function(e) {
                 e.Tag = "tag-filter", e.TagAddButton = "tag-add-button-selector", e.TagAddButtonWrapper = "tag-add-button-wrapper-selector", e.TagSearchWrapper = "tag-search-wrapper-selector"
             }(a || (a = {}));
@@ -3559,7 +3559,7 @@
                         return t.state = {
                             isShowingTagSearch: !1
                         }, t.renderLanguageTags = function() {
-                            if (!k.includes(t.props.match.path)) return null;
+                            if (!v.includes(t.props.match.path)) return null;
                             var e = t.props.selectedTags.map(function(e) {
                                     return e.id
                                 }),
@@ -3567,7 +3567,7 @@
                             return (n = n.filter(function(t) {
                                 return !e.includes(t)
                             })).map(function(e) {
-                                return l.createElement(v.Xa, {
+                                return l.createElement(k.Ya, {
                                     key: "language-tag-filter-" + e,
                                     margin: .5
                                 }, l.createElement(g.a, {
@@ -3579,7 +3579,7 @@
                             })
                         }, t.renderTags = function() {
                             return t.props.selectedTags.map(function(e) {
-                                return l.createElement(v.Xa, {
+                                return l.createElement(k.Ya, {
                                     key: "tag-filter-" + e.id,
                                     margin: .5
                                 }, l.createElement(g.a, {
@@ -3588,30 +3588,30 @@
                                         label: e.localizedName || e.tagName,
                                         onClick: t.removeTagOnClick.bind(t, e),
                                         selected: !0,
-                                        size: v.Sa.Large
+                                        size: k.Ta.Large
                                     },
                                     tagID: e.id
                                 }))
                             })
                         }, t.renderAddTags = function() {
-                            return l.createElement(l.Fragment, null, l.createElement(v.Xa, {
+                            return l.createElement(l.Fragment, null, l.createElement(k.Ya, {
                                 "data-test-selector": a.TagSearchWrapper,
-                                display: t.state.isShowingTagSearch ? v.X.Block : v.X.Hide,
+                                display: t.state.isShowingTagSearch ? k.X.Block : k.X.Hide,
                                 margin: {
                                     right: 1
                                 }
-                            }, t.renderTagSearch()), l.createElement(v.Xa, {
+                            }, t.renderTagSearch()), l.createElement(k.Ya, {
                                 "data-test-selector": a.TagAddButtonWrapper,
-                                display: t.state.isShowingTagSearch ? v.X.Hide : v.X.Block,
+                                display: t.state.isShowingTagSearch ? k.X.Hide : k.X.Block,
                                 margin: {
                                     left: .5,
                                     y: .5
                                 }
-                            }, l.createElement(v.Ia, {
+                            }, l.createElement(k.Ia, {
                                 "data-test-selector": a.TagAddButton,
                                 label: Object(u.d)("Add Filter", "TagFilter"),
                                 onClick: t.showTagSearch,
-                                size: v.Sa.Large
+                                size: k.Ta.Large
                             })))
                         }, t.renderTagSearch = function() {
                             if (t.props.tagSearchType === m.b.StreamTag) {
@@ -3620,7 +3620,7 @@
                                     categoryID: t.props.categoryID,
                                     categoryName: t.props.categoryName,
                                     inline: !0,
-                                    inputSize: v.Sa.Large,
+                                    inputSize: k.Ta.Large,
                                     onTagClick: t.addTagOnClick,
                                     type: t.props.tagSearchType,
                                     section: t.props.section,
@@ -3632,7 +3632,7 @@
                             var n = {
                                 autoFocus: t.state.isShowingTagSearch,
                                 inline: !0,
-                                inputSize: v.Sa.Large,
+                                inputSize: k.Ta.Large,
                                 onTagClick: t.addTagOnClick,
                                 type: t.props.tagSearchType,
                                 section: t.props.section,
@@ -3664,9 +3664,9 @@
                         }, t
                     }
                     return c.__extends(t, e), t.prototype.render = function() {
-                        return l.createElement(v.Xa, {
-                            display: v.X.Flex,
-                            flexWrap: v.Ba.Wrap,
+                        return l.createElement(k.Ya, {
+                            display: k.X.Flex,
+                            flexWrap: k.Ba.Wrap,
                             "data-a-target": "tags-filter-dropdown"
                         }, this.renderLanguageTags(), this.renderTags(), this.renderAddTags())
                     }, t
@@ -3710,9 +3710,9 @@
             }), n.d(t, "f", function() {
                 return f
             }), n.d(t, "g", function() {
-                return v
-            }), n.d(t, "a", function() {
                 return k
+            }), n.d(t, "a", function() {
+                return v
             });
             var a = n("q1tI"),
                 r = n("/7QA"),
@@ -3721,7 +3721,7 @@
 
             function s(e) {
                 return a.createElement(o.W, {
-                    type: o.Vb.Strong
+                    type: o.Wb.Strong
                 }, e)
             }
 
@@ -3794,7 +3794,7 @@
                 }, "ServerMessage")
             }
 
-            function v(e) {
+            function k(e) {
                 return Object(r.d)("If you need a Twitch account, you can <x:click>create one here</x:click>.", {
                     "x:click": function(t) {
                         return l(t, e)
@@ -3802,7 +3802,7 @@
                 }, "ServerMessage")
             }
 
-            function k(e) {
+            function v(e) {
                 return Object(r.d)("If you want to use an existing Twitch ID, you can <x:click>connect it here</x:click>.", {
                     "x:click": function(t) {
                         return l(t, e)
@@ -3853,13 +3853,13 @@
                         onClick: this.handleInsideDropdownClick
                     }, e)), i.createElement(o.a, {
                         onClickOut: this.handleOnClickOut
-                    }, i.createElement(c.Eb, r.__assign({
+                    }, i.createElement(c.Fb, r.__assign({
                         background: this.state.isOpen ? c.r.Base : void 0,
                         borderRadius: c.x.Large,
                         className: "inline-dropdown",
                         elevation: this.state.isOpen ? 3 : void 0,
                         padding: .5,
-                        position: c.jb.Relative
+                        position: c.kb.Relative
                     }, Object(s.a)(this.props)), i.createElement("div", {
                         className: "inline-dropdown__button-wrapper"
                     }, i.createElement(c.z, {
@@ -3868,7 +3868,7 @@
                         onClick: this.handleButtonClick,
                         size: c.D.Large,
                         type: c.F.Hollow
-                    }, this.props.buttonLabel)), i.createElement(c.Eb, {
+                    }, this.props.buttonLabel)), i.createElement(c.Fb, {
                         attachLeft: !0,
                         background: c.r.Base,
                         borderRadius: c.x.Large,
@@ -3879,8 +3879,8 @@
                         padding: {
                             y: 1
                         },
-                        position: c.jb.Absolute,
-                        zIndex: c.ic.Above
+                        position: c.kb.Absolute,
+                        zIndex: c.jc.Above
                     }, e)))
                 }, t.prototype.toggleDropdown = function(e) {
                     void 0 === e && (e = !this.state.isOpen), this.setState({
@@ -4126,9 +4126,9 @@
                                     m = u.reasonTargetType,
                                     h = u.rowName,
                                     f = Object(s.e)(r),
-                                    v = f.itemID,
-                                    k = f.contentType,
-                                    T = v || t.id,
+                                    k = f.itemID,
+                                    v = f.contentType,
+                                    T = k || t.id,
                                     y = {
                                         clickStep: e,
                                         itemTrackingID: r && r.node ? d[r.node.id] : null,
@@ -4140,8 +4140,8 @@
                                         rowName: h,
                                         itemName: o,
                                         modelTrackingID: r ? r.trackingID : null,
-                                        clickedContentType: k || s.b.Shelf,
-                                        clickedItemID: v || t.id
+                                        clickedContentType: v || s.b.Shelf,
+                                        clickedItemID: k || t.id
                                     };
                                 n.feedbackDataMap = a.__assign({}, n.feedbackDataMap, ((l = {})[T] = y, l)), Object(c.c)(y)
                             }, n.trackRecFeedbackClickStep = function(e, t) {
@@ -4319,7 +4319,7 @@
             }
 
             function f(e, t) {
-                var n = v(e.contentEdge),
+                var n = k(e.contentEdge),
                     a = n.itemID,
                     i = n.channelID,
                     o = n.category,
@@ -4349,7 +4349,7 @@
                 }
             }
 
-            function v(e) {
+            function k(e) {
                 var t, n = null,
                     a = null,
                     r = null,
@@ -4375,7 +4375,7 @@
                 }
             }
 
-            function k(e, t) {
+            function v(e, t) {
                 var n = f(e, t);
                 l.o.track(u.SpadeEventType.ItemClick, n)
             }
@@ -4410,9 +4410,9 @@
             }), n.d(t, "g", function() {
                 return h
             }), n.d(t, "e", function() {
-                return v
-            }), n.d(t, "h", function() {
                 return k
+            }), n.d(t, "h", function() {
+                return v
             }), n.d(t, "i", function() {
                 return T
             }), n.d(t, "j", function() {

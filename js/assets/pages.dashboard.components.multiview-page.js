@@ -889,7 +889,7 @@
                     function t() {
                         var t = null !== e && e.apply(this, arguments) || this;
                         return t.renderChanletsTab = function() {
-                            if (!t.props.data || !t.props.data.user || !t.props.data.user.channel) return s.createElement(g.Za, {
+                            if (!t.props.data || !t.props.data.user || !t.props.data.user.channel) return s.createElement(g.ab, {
                                 fillContent: !0
                             });
                             var e = t.props.data.user.channel;
@@ -905,7 +905,7 @@
                                 updateContentAttributes: t.updateContentAttributes
                             })
                         }, t.renderTeamsTab = function() {
-                            if (!t.props.data || !t.props.data.user || !t.props.data.user.channel) return s.createElement(g.Za, {
+                            if (!t.props.data || !t.props.data.user || !t.props.data.user.channel) return s.createElement(g.ab, {
                                 fillContent: !0
                             });
                             var e = t.props.data.user.channel;
@@ -918,7 +918,7 @@
                                 deleteContentAttributes: t.deleteContentAttributes
                             })
                         }, t.renderPlayersTab = function() {
-                            if (!t.props.data || !t.props.data.user || !t.props.data.user.channel) return s.createElement(g.Za, {
+                            if (!t.props.data || !t.props.data.user || !t.props.data.user.channel) return s.createElement(g.ab, {
                                 fillContent: !0
                             });
                             var e = t.props.data.user.channel;
@@ -931,7 +931,7 @@
                                 deleteContentAttributes: t.deleteContentAttributes
                             })
                         }, t.renderRolesTab = function() {
-                            if (!t.props.data || !t.props.data.user || !t.props.data.user.channel) return s.createElement(g.Za, {
+                            if (!t.props.data || !t.props.data.user || !t.props.data.user.channel) return s.createElement(g.ab, {
                                 fillContent: !0
                             });
                             var e = t.props.data.user.channel;
@@ -1085,17 +1085,17 @@
                         this.props.data.loading || this.props.latencyTracking.reportInteractive()
                     }, t.prototype.render = function() {
                         if (!Object(f.b)(f.a, this.props.match.params.channelLogin)) return s.createElement(p.a, null);
-                        if (this.props.data.loading) return s.createElement(g.Za, {
+                        if (this.props.data.loading) return s.createElement(g.ab, {
                             fillContent: !0
                         });
-                        if (this.props.data.error || !this.props.data.user || !this.props.data.user.channel) return s.createElement(g.Xa, {
+                        if (this.props.data.error || !this.props.data.user || !this.props.data.user.channel) return s.createElement(g.Ya, {
                             padding: 2
                         }, s.createElement(g.W, {
                             italic: !0
                         }, Object(c.e)("There was an issue loading your Multiview settings.", "MultiviewPage")));
                         if (this.props.user && this.props.user.id !== this.props.data.user.id) {
                             var e = this.props.user.login;
-                            return s.createElement(g.Xa, {
+                            return s.createElement(g.Ya, {
                                 padding: 2,
                                 "data-test-selector": i.WrongUser
                             }, s.createElement(g.W, {
@@ -1121,14 +1121,14 @@
                                 linkTo: "/roles",
                                 label: Object(c.e)("Roles", "MultiviewPage")
                             }], n = 0, a = 0; a < t.length; a++) this.props.location.pathname.match(t[a].linkTo) && (n = a), t[a].linkTo = "/" + this.props.match.params.channelLogin + "/dashboard/multiview" + t[a].linkTo;
-                        return s.createElement(v.b, null, s.createElement(g.Xa, {
+                        return s.createElement(v.b, null, s.createElement(g.Ya, {
                             padding: 2
-                        }, s.createElement(g.Nb, {
+                        }, s.createElement(g.Ob, {
                             "data-test-selector": i.Tabs,
                             activeTabIndex: n,
-                            justifyContent: g.Wa.Start,
+                            justifyContent: g.Xa.Start,
                             tabs: t
-                        }), s.createElement(g.Xa, {
+                        }), s.createElement(g.Ya, {
                             padding: 2
                         }, s.createElement(u.a, null, s.createElement(o.a, {
                             path: "/" + this.props.match.params.channelLogin + "/dashboard/multiview/teams",

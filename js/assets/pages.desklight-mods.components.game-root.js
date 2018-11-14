@@ -271,13 +271,13 @@
                         }, t
                     }
                     return a.__extends(t, e), t.prototype.render = function() {
-                        return s.createElement(r.Xa, {
+                        return s.createElement(r.Ya, {
                             className: "addon-context-menu-item"
-                        }, s.createElement(r.Ua, {
-                            type: this.props.interactableType ? this.props.interactableType : r.Va.Base,
+                        }, s.createElement(r.Va, {
+                            type: this.props.interactableType ? this.props.interactableType : r.Wa.Base,
                             onClick: this.onClick,
                             blurAfterClick: !0
-                        }, s.createElement(r.Eb, {
+                        }, s.createElement(r.Fb, {
                             padding: {
                                 x: 1,
                                 y: .5
@@ -286,24 +286,24 @@
                             borderBottom: this.props.borderBottom,
                             display: r.X.Flex,
                             alignItems: r.f.Center
-                        }, this.props.icon && s.createElement(r.Xa, {
+                        }, this.props.icon && s.createElement(r.Ya, {
                             margin: {
                                 right: 1
                             }
-                        }, s.createElement(r.sb, {
+                        }, s.createElement(r.tb, {
                             asset: this.props.icon,
                             width: 20,
                             height: 15
-                        })), s.createElement(r.Xa, {
+                        })), s.createElement(r.Ya, {
                             margin: {
                                 left: this.props.icon ? 0 : 3
                             }
-                        }, s.createElement(r.W, null, this.props.title)), this.props.more && s.createElement(r.Xa, {
+                        }, s.createElement(r.W, null, this.props.title)), this.props.more && s.createElement(r.Ya, {
                             margin: {
                                 left: "auto"
                             }
-                        }, s.createElement(r.sb, {
-                            asset: r.tb.AngleRight
+                        }, s.createElement(r.tb, {
+                            asset: r.ub.AngleRight
                         })))))
                     }, t
                 }(s.Component));
@@ -387,19 +387,19 @@
                     }
                     return a.__extends(t, e), t.prototype.render = function() {
                         var e = u.p.integrations && u.p.integrations.mods && u.p.integrations.mods.repairFileAssociations;
-                        return s.createElement(b.Xa, null, s.createElement(I.a, {
-                            icon: b.tb.NavSettings,
+                        return s.createElement(b.Ya, null, s.createElement(I.a, {
+                            icon: b.ub.NavSettings,
                             title: Object(u.d)("Settings", "GameInstanceActionsMenu")
                         }), s.createElement(I.a, {
-                            icon: b.tb.Plus,
+                            icon: b.ub.Plus,
                             title: Object(u.d)("Add a Game", "GameInstanceActionsMenu"),
                             onClick: this.props.onAddGame
                         }), s.createElement(I.a, {
-                            icon: b.tb.Desktop,
+                            icon: b.ub.Desktop,
                             title: Object(u.d)("Scan for installed games", "GameInstanceActionsMenu"),
                             onClick: this.props.onScan
                         }), e && s.createElement(I.a, {
-                            icon: b.tb.Wrench,
+                            icon: b.ub.Wrench,
                             title: Object(u.d)("Repair File Associactions", "GameInstanceActionsMenu"),
                             onClick: this.props.onRepairAssociations
                         }))
@@ -410,13 +410,13 @@
                     function t() {
                         var t = null !== e && e.apply(this, arguments) || this;
                         return t.renderInstructions = function() {
-                            return s.createElement(b.Xa, null, s.createElement(b.W, null, Object(u.d)("Would you like to scan every drive for installed games?", "GameInstanceScanModal")), s.createElement(b.Xa, {
+                            return s.createElement(b.Ya, null, s.createElement(b.W, null, Object(u.d)("Would you like to scan every drive for installed games?", "GameInstanceScanModal")), s.createElement(b.Ya, {
                                 margin: {
                                     top: 1
                                 },
                                 display: b.X.Flex,
-                                justifyContent: b.Wa.Center
-                            }, s.createElement(b.Xa, {
+                                justifyContent: b.Xa.Center
+                            }, s.createElement(b.Ya, {
                                 margin: {
                                     right: 1
                                 }
@@ -428,27 +428,27 @@
                             }, Object(u.d)("Cancel", "GameInstanceScanModal"))))
                         }, t.renderScanning = function() {
                             var e = t.renderProgress();
-                            return s.createElement(b.Xa, {
+                            return s.createElement(b.Ya, {
                                 display: b.X.Flex,
                                 flexDirection: b.Aa.Column,
-                                justifyContent: b.Wa.Center
-                            }, s.createElement(b.Xa, {
+                                justifyContent: b.Xa.Center
+                            }, s.createElement(b.Ya, {
                                 margin: {
                                     bottom: 1
                                 }
-                            }, e), s.createElement(b.Xa, {
+                            }, e), s.createElement(b.Ya, {
                                 display: b.X.Flex,
-                                justifyContent: b.Wa.Center
+                                justifyContent: b.Xa.Center
                             }, s.createElement(b.z, {
                                 type: b.F.Hollow,
                                 onClick: t.props.cancelScan
                             }, Object(u.d)("Cancel Scan", "GameInstanceScanModal"))))
                         }, t.renderProgress = function() {
-                            return t.props.scanCurrentProgress && t.props.scanCurrentFolder && t.props.scanCurrentRootFolder ? s.createElement(b.Xa, null, s.createElement(b.Xa, {
+                            return t.props.scanCurrentProgress && t.props.scanCurrentFolder && t.props.scanCurrentRootFolder ? s.createElement(b.Ya, null, s.createElement(b.Ya, {
                                 margin: {
                                     bottom: 1
                                 }
-                            }, s.createElement(b.mb, {
+                            }, s.createElement(b.nb, {
                                 value: t.props.scanCurrentProgress
                             })), s.createElement(b.W, null, Object(u.d)("Folder: {folder}", {
                                 folder: t.props.scanCurrentFolder
@@ -457,11 +457,11 @@
                             }, "GameInstanceScanModal"))) : null
                         }, t.renderComplete = function() {
                             var e = t.props.errorMessage ? t.props.errorMessage : Object(u.d)("Scan Complete", "GameInstanceScanModal");
-                            return s.createElement(b.Xa, null, s.createElement(b.Eb, {
-                                textAlign: b.Rb.Center
-                            }, s.createElement(b.W, null, e)), s.createElement(b.Xa, {
+                            return s.createElement(b.Ya, null, s.createElement(b.Fb, {
+                                textAlign: b.Sb.Center
+                            }, s.createElement(b.W, null, e)), s.createElement(b.Ya, {
                                 display: b.X.Flex,
-                                justifyContent: b.Wa.Center,
+                                justifyContent: b.Xa.Center,
                                 margin: {
                                     top: 1
                                 }
@@ -472,18 +472,18 @@
                     }
                     return a.__extends(t, e), t.prototype.render = function() {
                         var e = null;
-                        return e = this.props.isScanning ? this.renderScanning() : this.props.isComplete ? this.renderComplete() : this.renderInstructions(), s.createElement(b.Eb, {
+                        return e = this.props.isScanning ? this.renderScanning() : this.props.isComplete ? this.renderComplete() : this.renderInstructions(), s.createElement(b.Fb, {
                             background: b.r.Base,
                             padding: 2
-                        }, s.createElement(b.Xa, {
+                        }, s.createElement(b.Ya, {
                             display: b.X.Flex,
                             flexDirection: b.Aa.Column
-                        }, s.createElement(b.Xa, {
+                        }, s.createElement(b.Ya, {
                             margin: {
                                 bottom: 1
                             }
                         }, s.createElement(b.W, {
-                            type: b.Vb.H2
+                            type: b.Wb.H2
                         }, Object(u.d)("Scan for Installed Games", "GameInstanceScanModal"))), e))
                     }, t
                 }(s.Component),
@@ -539,7 +539,7 @@
                     }, t.prototype.componentWillUnmount = function() {
                         this.progressSubscriber && this.progressSubscriber(), this.completeSubscriber && this.completeSubscriber()
                     }, t.prototype.render = function() {
-                        return s.createElement(b.Xa, null, s.createElement(S, {
+                        return s.createElement(b.Ya, null, s.createElement(S, {
                             closeModal: this.props.closeModal,
                             isScanning: this.state.isScanning,
                             isComplete: this.state.isComplete,
@@ -570,8 +570,8 @@
                     }, t.renderMenu = function() {
                         return t.state.menuOpen ? s.createElement(f.a, {
                             onClickOut: t.closeMenu
-                        }, s.createElement(b.Xa, {
-                            position: b.jb.Relative
+                        }, s.createElement(b.Ya, {
+                            position: b.kb.Relative
                         }, s.createElement(b.u, {
                             show: !0,
                             direction: b.v.Left
@@ -588,7 +588,7 @@
                                 key: e.guid
                             }, e.installPath)
                         });
-                        return s.createElement(b.zb, {
+                        return s.createElement(b.Ab, {
                             value: t.props.instance.guid,
                             onChange: t.onInstanceSelection
                         }, e)
@@ -667,20 +667,20 @@
                 return a.__extends(t, e), t.prototype.render = function() {
                     var e = this.renderInstanceSelection(),
                         t = this.renderMenu();
-                    return s.createElement(b.Xa, {
+                    return s.createElement(b.Ya, {
                         display: b.X.Flex
-                    }, s.createElement(b.Xa, {
+                    }, s.createElement(b.Ya, {
                         margin: {
                             right: 2
                         }
-                    }, e), s.createElement(b.Xa, {
+                    }, e), s.createElement(b.Ya, {
                         display: b.X.Flex
                     }, s.createElement(b.A, {
-                        icon: b.tb.Play,
+                        icon: b.ub.Play,
                         "data-test-selector": y.PlayButton,
                         onClick: this.launchGame
-                    }), s.createElement(b.Xa, null, t, s.createElement(b.A, {
-                        icon: b.tb.NavSettings,
+                    }), s.createElement(b.Ya, null, t, s.createElement(b.A, {
+                        icon: b.ub.NavSettings,
                         onClick: this.openMenu,
                         "data-test-selector": y.MenuButton
                     }))))
@@ -716,7 +716,7 @@
                         }, t.getLogoURL = function() {
                             return "https://client.forgecdn.net/desktopAssets/gameAssets/addonBanner/" + t.props.gameId + "/bannerLogo.svg"
                         }, t.renderMoreAddons = function() {
-                            if (t.props.installed) return s.createElement(b.Fb, {
+                            if (t.props.installed) return s.createElement(b.Gb, {
                                 active: t.isActive(j.Browse),
                                 linkTo: "/mods/games/" + t.props.gameId + "/featured",
                                 "data-test-selector": _.MoreAddonsTab
@@ -737,37 +737,37 @@
                         var e = this.getBannerURL(),
                             t = this.getLogoURL(),
                             n = this.renderMoreAddons();
-                        return s.createElement(b.Eb, {
+                        return s.createElement(b.Fb, {
                             background: b.r.Alt2,
                             padding: {
                                 x: 3
                             },
                             className: "mods-game-detail-banner"
-                        }, s.createElement(b.Xa, {
+                        }, s.createElement(b.Ya, {
                             display: b.X.Flex
-                        }, s.createElement(b.Xa, {
+                        }, s.createElement(b.Ya, {
                             margin: {
                                 right: 5
                             },
                             display: b.X.Flex,
                             alignItems: b.f.Center
-                        }, s.createElement(b.Xa, {
+                        }, s.createElement(b.Ya, {
                             fullHeight: !0,
                             display: b.X.Flex,
                             flexDirection: b.Aa.Column,
-                            justifyContent: b.Wa.Between
-                        }, s.createElement(b.Xa, null), s.createElement(b.Xa, {
+                            justifyContent: b.Xa.Between
+                        }, s.createElement(b.Ya, null), s.createElement(b.Ya, {
                             className: "mods-game-detail-banner__logo-container"
                         }, s.createElement(b.S, {
                             src: t,
                             alt: Object(u.d)("Game Logo", "DesklightModsGameDetailBanner")
-                        })), s.createElement(b.Gb, null, s.createElement(b.Fb, {
+                        })), s.createElement(b.Hb, null, s.createElement(b.Gb, {
                             active: this.isActive(j.Installed),
                             linkTo: "/mods/games/" + this.props.gameId
                         }, Object(u.d)("My Addons", "DesklightModsGameDetailBanner")), n))), s.createElement(b.S, {
                             src: e,
                             alt: Object(u.d)("Game Banner", "DesklightModsGameDetailBanner")
-                        }), s.createElement(b.Xa, {
+                        }), s.createElement(b.Ya, {
                             margin: {
                                 left: "auto"
                             },
@@ -821,21 +821,21 @@
                         }, t
                     }
                     return a.__extends(t, e), t.prototype.render = function() {
-                        return s.createElement(b.Xa, null, s.createElement(b.Xa, {
+                        return s.createElement(b.Ya, null, s.createElement(b.Ya, {
                             padding: {
                                 left: 5,
                                 top: 5
                             }
-                        }, s.createElement(b.Xa, {
+                        }, s.createElement(b.Ya, {
                             margin: {
                                 bottom: 3
                             }
                         }, s.createElement(b.W, {
-                            type: b.Vb.P,
+                            type: b.Wb.P,
                             fontSize: b.Ca.Size3
-                        }, Object(u.d)("We didn't find this game! Lets try this again.", "DesklightModsNoAddonsFound"))), s.createElement(b.Xa, {
+                        }, Object(u.d)("We didn't find this game! Lets try this again.", "DesklightModsNoAddonsFound"))), s.createElement(b.Ya, {
                             display: b.X.Flex
-                        }, s.createElement(b.Xa, {
+                        }, s.createElement(b.Ya, {
                             margin: {
                                 right: 1
                             }
@@ -864,7 +864,7 @@
                 x = l.a.wrap(function() {
                     return n.e(137).then(n.bind(null, "E7BC"))
                 }, "BrowsableaddonsPage"),
-                X = l.a.wrap(function() {
+                Y = l.a.wrap(function() {
                     return n.e(136).then(n.bind(null, "BBBA"))
                 }, "FeaturedAddonsPage"),
                 N = l.a.wrap(function() {
@@ -874,7 +874,7 @@
                     function t() {
                         var t = null !== e && e.apply(this, arguments) || this;
                         return t.renderContent = function() {
-                            return !!t.props.selectedGameInstance ? s.createElement(b.Xa, {
+                            return !!t.props.selectedGameInstance ? s.createElement(b.Ya, {
                                 fullWidth: !0,
                                 fullHeight: !0
                             }, s.createElement(d.a, null, s.createElement(c.a, {
@@ -888,7 +888,7 @@
                             }), s.createElement(c.a, {
                                 exact: !0,
                                 path: "/mods/games/:gameId/featured",
-                                component: X
+                                component: Y
                             }), s.createElement(c.a, {
                                 path: "/mods/games/:gameId/addons/:addonId",
                                 component: N
@@ -898,7 +898,7 @@
                     return a.__extends(t, e), t.prototype.render = function() {
                         var e = this.renderContent(),
                             t = !!this.props.selectedGameInstance;
-                        return s.createElement(b.Xa, {
+                        return s.createElement(b.Ya, {
                             className: "game-instance-root",
                             fullWidth: !0,
                             fullHeight: !0
@@ -950,7 +950,7 @@
                     return a.__extends(t, e), t.prototype.componentDidMount = function() {
                         this.fetchGame()
                     }, t.prototype.render = function() {
-                        if (!this.state.game) return s.createElement(b.Za, null);
+                        if (!this.state.game) return s.createElement(b.ab, null);
                         var e = parseInt(this.props.match.params.gameId, 10);
                         return s.createElement(o.a, {
                             gameId: e

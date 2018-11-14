@@ -62,48 +62,48 @@
                         return null !== t && t.apply(this, arguments) || this
                     }
                     return a.__extends(e, t), e.prototype.render = function() {
-                        return r.createElement(v.Eb, {
+                        return r.createElement(v.Fb, {
                             className: "tenant-panel",
                             display: v.X.Flex,
                             flexDirection: v.Aa.Column,
                             border: !0
-                        }, r.createElement(v.Xa, {
+                        }, r.createElement(v.Ya, {
                             className: "tenant-panel__info",
                             display: v.X.Block,
-                            textAlign: v.Rb.Center,
+                            textAlign: v.Sb.Center,
                             margin: {
                                 y: 1
                             },
                             padding: {
                                 top: 2
                             }
-                        }, r.createElement(v.Pa, {
+                        }, r.createElement(v.Qa, {
                             margin: {
                                 bottom: 2
                             }
                         }, r.createElement(v.W, {
-                            type: v.Vb.H2,
+                            type: v.Wb.H2,
                             className: "tenant-panel__count",
                             color: v.O.Alt2
                         }, this.props.tenant.count)), r.createElement(v.W, {
-                            type: v.Vb.H3,
-                            transform: v.Ub.Uppercase,
+                            type: v.Wb.H3,
+                            transform: v.Vb.Uppercase,
                             className: "tenant-panel__name",
                             color: v.O.Alt2
-                        }, this.props.tenant.name)), r.createElement(v.Eb, {
+                        }, this.props.tenant.name)), r.createElement(v.Fb, {
                             className: "tenant-panel__action",
                             display: v.X.Flex,
                             padding: {
                                 y: 1
                             },
                             background: v.r.Alt2,
-                            justifyContent: v.Wa.Center
+                            justifyContent: v.Xa.Center
                         }, r.createElement(v.z, {
                             type: v.F.Hollow,
                             onClick: Object(g.c)(this.trackLabel()),
                             linkTo: this.props.tenant.entryUrl
                         }, r.createElement(v.W, {
-                            transform: v.Ub.Uppercase
+                            transform: v.Vb.Uppercase
                         }, this.buttonText()))))
                     }, e.prototype.trackLabel = function() {
                         var t = this.props.tenant.name.toLowerCase();
@@ -146,7 +146,7 @@
                                         md: 3
                                     },
                                     key: n
-                                }, r.createElement(v.Xa, {
+                                }, r.createElement(v.Ya, {
                                     margin: {
                                         bottom: 1
                                     }

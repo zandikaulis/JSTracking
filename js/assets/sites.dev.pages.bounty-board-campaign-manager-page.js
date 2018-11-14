@@ -82,7 +82,7 @@
         "4brS": function(e, n, t) {},
         DMoW: function(e, n, t) {
             "use strict";
-            var E, a, i, o, r, N, T, R, _, c, A, u, O, d, I, l, D, S, s, m, C, L, f, p, U, M, b, P, v, g, B, F, V, G, y, k, H, h, W, Y, j, K, X, w, x, Q, J, z, Z, q, $, ee, ne, te, Ee, ae, ie, oe, re, Ne, Te, Re, _e, ce, Ae, ue, Oe, de, Ie, le, De, Se, se, me, Ce, Le, fe, pe, Ue, Me, be, Pe, ve, ge, Be, Fe, Ve, Ge, ye, ke, He, he, We, Ye, je, Ke, Xe, we, xe, Qe, Je, ze, Ze, qe, $e, en, nn, tn, En, an, on, rn, Nn, Tn, Rn, _n, cn, An, un, On, dn, In, ln, Dn, Sn;
+            var E, a, i, o, r, N, T, R, _, c, A, u, O, d, I, l, D, S, s, m, C, L, f, p, U, M, b, P, v, g, B, F, V, G, y, k, H, h, Y, W, j, K, w, X, x, Q, z, Z, J, q, $, ee, ne, te, Ee, ae, ie, oe, re, Ne, Te, Re, _e, ce, Ae, ue, Oe, de, Ie, le, De, Se, se, me, Ce, Le, fe, pe, Ue, Me, be, Pe, ve, ge, Be, Fe, Ve, Ge, ye, ke, He, he, Ye, We, je, Ke, we, Xe, xe, Qe, ze, Ze, Je, qe, $e, en, nn, tn, En, an, on, rn, Nn, Tn, Rn, _n, cn, An, un, On, dn, In, ln, Dn, Sn;
             t.d(n, "N", function() {
                     return E
                 }), t.d(n, "e", function() {
@@ -124,27 +124,27 @@
                 }), t.d(n, "Aa", function() {
                     return h
                 }), t.d(n, "t", function() {
-                    return W
-                }), t.d(n, "T", function() {
                     return Y
+                }), t.d(n, "T", function() {
+                    return W
                 }), t.d(n, "V", function() {
                     return j
                 }), t.d(n, "G", function() {
                     return K
                 }), t.d(n, "W", function() {
-                    return X
-                }), t.d(n, "F", function() {
                     return w
+                }), t.d(n, "F", function() {
+                    return X
                 }), t.d(n, "E", function() {
                     return x
                 }), t.d(n, "q", function() {
                     return Q
                 }), t.d(n, "U", function() {
-                    return J
-                }), t.d(n, "a", function() {
                     return z
-                }), t.d(n, "x", function() {
+                }), t.d(n, "a", function() {
                     return Z
+                }), t.d(n, "x", function() {
+                    return J
                 }), t.d(n, "z", function() {
                     return q
                 }), t.d(n, "I", function() {
@@ -170,19 +170,19 @@
                 }), t.d(n, "Ca", function() {
                     return He
                 }), t.d(n, "k", function() {
-                    return Ye
+                    return We
                 }), t.d(n, "w", function() {
                     return je
                 }), t.d(n, "m", function() {
-                    return Xe
-                }), t.d(n, "j", function() {
                     return we
+                }), t.d(n, "j", function() {
+                    return Xe
                 }), t.d(n, "y", function() {
                     return xe
                 }), t.d(n, "S", function() {
-                    return Je
-                }), t.d(n, "r", function() {
                     return ze
+                }), t.d(n, "r", function() {
+                    return Ze
                 }), t.d(n, "Q", function() {
                     return en
                 }), t.d(n, "A", function() {
@@ -312,10 +312,10 @@
                 }(h || (h = {})),
                 function(e) {
                     e.EUR = "EUR", e.GBP = "GBP", e.USD = "USD"
-                }(W || (W = {})),
+                }(Y || (Y = {})),
                 function(e) {
                     e.MONTH = "MONTH", e.ONE_TIME = "ONE_TIME", e.WEEK = "WEEK", e.YEAR = "YEAR"
-                }(Y || (Y = {})),
+                }(W || (W = {})),
                 function(e) {
                     e.CHANSUB = "CHANSUB", e.TEAMSUB = "TEAMSUB", e.TURBO = "TURBO"
                 }(j || (j = {})),
@@ -324,10 +324,10 @@
                 }(K || (K = {})),
                 function(e) {
                     e.ACTIVE = "ACTIVE", e.CANCELLED = "CANCELLED", e.INACTIVE = "INACTIVE"
-                }(X || (X = {})),
+                }(w || (w = {})),
                 function(e) {
                     e.AMAZON = "AMAZON", e.CREDIT_CARD = "CREDIT_CARD", e.GOOGLE_IAB = "GOOGLE_IAB", e.PAYPAL = "PAYPAL"
-                }(w || (w = {})),
+                }(X || (X = {})),
                 function(e) {
                     e.AMERICAN_EXPRESS = "AMERICAN_EXPRESS", e.DISCOVER = "DISCOVER", e.MASTERCARD = "MASTERCARD", e.VISA = "VISA"
                 }(x || (x = {})),
@@ -336,13 +336,13 @@
                 }(Q || (Q = {})),
                 function(e) {
                     e.ANDROID = "ANDROID", e.IOS = "IOS", e.WEB = "WEB"
-                }(J || (J = {})),
-                function(e) {
-                    e.ACTIVE = "ACTIVE", e.INACTIVE = "INACTIVE", e.REJECTED_PERMISSIONS = "REJECTED_PERMISSIONS"
                 }(z || (z = {})),
                 function(e) {
-                    e.COMPONENT = "COMPONENT", e.HIDDEN = "HIDDEN", e.PANEL = "PANEL", e.VIDEO_OVERLAY = "VIDEO_OVERLAY"
+                    e.ACTIVE = "ACTIVE", e.INACTIVE = "INACTIVE", e.REJECTED_PERMISSIONS = "REJECTED_PERMISSIONS"
                 }(Z || (Z = {})),
+                function(e) {
+                    e.COMPONENT = "COMPONENT", e.HIDDEN = "HIDDEN", e.PANEL = "PANEL", e.VIDEO_OVERLAY = "VIDEO_OVERLAY"
+                }(J || (J = {})),
                 function(e) {
                     e.APPROVED = "APPROVED", e.ASSETS_UPLOADED = "ASSETS_UPLOADED", e.DELETED = "DELETED", e.DEPRECATED = "DEPRECATED", e.IN_REVIEW = "IN_REVIEW", e.IN_TEST = "IN_TEST", e.PENDING_ACTION = "PENDING_ACTION", e.READY_FOR_REVIEW = "READY_FOR_REVIEW", e.REJECTED = "REJECTED", e.RELEASED = "RELEASED", e.UPLOADING = "UPLOADING"
                 }(q || (q = {})),
@@ -474,10 +474,10 @@
                 }(he || (he = {})),
                 function(e) {
                     e.BITS_KEY_CODE = "BITS_KEY_CODE"
-                }(We || (We = {})),
+                }(Ye || (Ye = {})),
                 function(e) {
                     e.BROADCASTER = "BROADCASTER", e.EDITOR = "EDITOR", e.MODERATOR = "MODERATOR", e.REGULAR = "REGULAR", e.SUBSCRIBER = "SUBSCRIBER"
-                }(Ye || (Ye = {})),
+                }(We || (We = {})),
                 function(e) {
                     e.ACTIVE = "ACTIVE", e.PENDING = "PENDING", e.REJECTED = "REJECTED", e.UNKNOWN = "UNKNOWN", e.UNSET = "UNSET"
                 }(je || (je = {})),
@@ -486,10 +486,10 @@
                 }(Ke || (Ke = {})),
                 function(e) {
                     e.BOUNTY_ALREADY_CLAIMED = "BOUNTY_ALREADY_CLAIMED", e.BOUNTY_LIMIT_REACHED = "BOUNTY_LIMIT_REACHED", e.INVALID_PARAMETER = "INVALID_PARAMETER", e.UNKNOWN_ERROR = "UNKNOWN_ERROR"
-                }(Xe || (Xe = {})),
+                }(we || (we = {})),
                 function(e) {
                     e.BOUNTY_NOT_LIVE = "BOUNTY_NOT_LIVE", e.INVALID_PARAMETER = "INVALID_PARAMETER", e.UNKNOWN_ERROR = "UNKNOWN_ERROR"
-                }(we || (we = {})),
+                }(Xe || (Xe = {})),
                 function(e) {
                     e.PROMPT_FOR_PERMISSIONS = "PROMPT_FOR_PERMISSIONS", e.REQUIRES_CONFIGURATION = "REQUIRES_CONFIGURATION"
                 }(xe || (xe = {})),
@@ -498,13 +498,13 @@
                 }(Qe || (Qe = {})),
                 function(e) {
                     e.BOUNTY_NOT_LIVE = "BOUNTY_NOT_LIVE", e.INVALID_PARAMETER = "INVALID_PARAMETER", e.UNAUTHORIZED = "UNAUTHORIZED", e.UNKNOWN_ERROR = "UNKNOWN_ERROR"
-                }(Je || (Je = {})),
-                function(e) {
-                    e.INVITATION_ALREADY_EXISTS = "INVITATION_ALREADY_EXISTS", e.INVITATION_INVALID = "INVITATION_INVALID", e.SQUAD_FULL = "SQUAD_FULL", e.UNAUTHORIZED = "UNAUTHORIZED", e.USER_ALREADY_IN_SQUAD = "USER_ALREADY_IN_SQUAD"
                 }(ze || (ze = {})),
                 function(e) {
-                    e.SQUAD_CANNOT_BE_UPDATED = "SQUAD_CANNOT_BE_UPDATED", e.SQUAD_NOT_FOUND = "SQUAD_NOT_FOUND", e.SQUAD_TOO_FEW_MEMBERS = "SQUAD_TOO_FEW_MEMBERS", e.UNAUTHORIZED = "UNAUTHORIZED"
+                    e.INVITATION_ALREADY_EXISTS = "INVITATION_ALREADY_EXISTS", e.INVITATION_INVALID = "INVITATION_INVALID", e.SQUAD_FULL = "SQUAD_FULL", e.UNAUTHORIZED = "UNAUTHORIZED", e.USER_ALREADY_IN_SQUAD = "USER_ALREADY_IN_SQUAD"
                 }(Ze || (Ze = {})),
+                function(e) {
+                    e.SQUAD_CANNOT_BE_UPDATED = "SQUAD_CANNOT_BE_UPDATED", e.SQUAD_NOT_FOUND = "SQUAD_NOT_FOUND", e.SQUAD_TOO_FEW_MEMBERS = "SQUAD_TOO_FEW_MEMBERS", e.UNAUTHORIZED = "UNAUTHORIZED"
+                }(Je || (Je = {})),
                 function(e) {
                     e.UNAUTHORIZED = "UNAUTHORIZED", e.USER_NOT_IN_SQUAD = "USER_NOT_IN_SQUAD"
                 }(qe || (qe = {})),
@@ -1219,22 +1219,22 @@
                         }, n
                     }
                     return a.__extends(n, e), n.prototype.render = function() {
-                        return i.createElement(T.Xa, {
+                        return i.createElement(T.Ya, {
                             className: "dev-bounty-board-cancel-campaign-modal"
-                        }, i.createElement(T.Eb, {
+                        }, i.createElement(T.Fb, {
                             borderBottom: !0,
                             padding: 2,
-                            textAlign: T.Rb.Center
+                            textAlign: T.Sb.Center
                         }, i.createElement(T.W, {
-                            type: T.Vb.H4,
+                            type: T.Wb.H4,
                             bold: !0,
                             "data-test-selector": E.TitleText
-                        }, Object(R.d)("Cancel Campaign", "DevBountyCancelCampaignModal")), i.createElement(_.a, null)), i.createElement(T.Xa, {
+                        }, Object(R.d)("Cancel Campaign", "DevBountyCancelCampaignModal")), i.createElement(_.a, null)), i.createElement(T.Ya, {
                             display: T.X.Flex,
                             flexDirection: T.Aa.Column,
                             padding: 2
                         }, i.createElement(T.W, {
-                            type: T.Vb.P,
+                            type: T.Wb.P,
                             "data-test-selector": E.ContentText
                         }, Object(R.d)("You must contact <x:link>bountyboard@twitch.tv</x:link> in order to cancel your campaign. Once contacted, cancellations typically take 24-48 hours to process.", {
                             "x:link": function(e) {
@@ -1243,16 +1243,16 @@
                                 }, e)
                             }
                         }, "DevBountyBoardCampaignPage")), i.createElement("br", null), i.createElement(T.W, {
-                            type: T.Vb.P,
+                            type: T.Wb.P,
                             "data-test-selector": E.ContentText
-                        }, Object(R.d)("By cancelling a campaign early you will only have your unclaimed budget refunded. Broadcasters who have already claimed bounties will have their remaining time to complete the bounty.", "DevBountyCancelCampaignModal"))), i.createElement(T.Eb, {
+                        }, Object(R.d)("By cancelling a campaign early you will only have your unclaimed budget refunded. Broadcasters who have already claimed bounties will have their remaining time to complete the bounty.", "DevBountyCancelCampaignModal"))), i.createElement(T.Fb, {
                             alignItems: T.f.Center,
                             background: T.r.Alt2,
                             borderTop: !0,
                             display: T.X.Flex,
                             flexDirection: T.Aa.Row,
                             flexWrap: T.Ba.Wrap,
-                            justifyContent: T.Wa.End,
+                            justifyContent: T.Xa.End,
                             padding: 1
                         }, i.createElement(T.z, {
                             onClick: this.onClose,
@@ -1265,7 +1265,7 @@
                         return null !== e && e.apply(this, arguments) || this
                     }
                     return a.__extends(n, e), n.prototype.render = function() {
-                        return i.createElement(T.Eb, {
+                        return i.createElement(T.Fb, {
                             background: T.r.Base,
                             className: "dev-bounty-board-cancel-campaign-modal__container"
                         }, i.createElement(c, {
@@ -1620,34 +1620,34 @@
                             isOpen: this.state.isOpen,
                             onClick: this.toggleAccordion,
                             "data-test-selector": E.AccordionHeaderSelector
-                        }), i.createElement(T.Eb, {
+                        }), i.createElement(T.Fb, {
                             background: T.r.Base,
                             elevation: 1,
                             display: this.state.isOpen ? T.X.Block : T.X.HideAccessible,
                             "data-test-selector": E.AccordionBodySelector,
-                            overflow: T.cb.Auto
-                        }, i.createElement(T.Hb, null, this.props.renderHeader(), i.createElement(T.Ib, null, n.map(this.props.renderRow)))))
+                            overflow: T.db.Auto
+                        }, i.createElement(T.Ib, null, this.props.renderHeader(), i.createElement(T.Jb, null, n.map(this.props.renderRow)))))
                     }, n.prototype.compareCampaigns = function(e, n) {
                         return (n.node && n.node.startTime && new Date(n.node.startTime).getTime() || 0) - (e.node && e.node.startTime && new Date(e.node.startTime).getTime() || 0)
                     }, n.prototype.renderLoading = function() {
-                        return i.createElement(T.Eb, {
+                        return i.createElement(T.Fb, {
                             "data-test-selector": E.LoadingSelector,
                             border: !0,
                             borderRadius: T.x.Small,
                             background: T.r.Base,
                             display: T.X.Flex,
-                            justifyContent: T.Wa.Center,
+                            justifyContent: T.Xa.Center,
                             padding: 1
-                        }, i.createElement(T.Za, null))
+                        }, i.createElement(T.ab, null))
                     }, n.prototype.renderEmpty = function() {
                         var e = this.props.emptyMessage;
-                        return i.createElement(T.Eb, {
+                        return i.createElement(T.Fb, {
                             "data-test-selector": E.EmptySelector,
                             border: !0,
                             borderRadius: T.x.Small,
                             background: T.r.Base,
                             display: T.X.Flex,
-                            justifyContent: T.Wa.Center,
+                            justifyContent: T.Xa.Center,
                             padding: 1
                         }, i.createElement(T.W, null, e))
                     }, n
@@ -1679,17 +1679,17 @@
                             emptyMessage: Object(r.d)("No completed campaigns were found.", "DevBountyDashboardCompletedCampaignList")
                         })
                     }, n.prototype.renderCampaignHeader = function() {
-                        return i.createElement(T.Kb, null, i.createElement(T.Lb, {
+                        return i.createElement(T.Lb, null, i.createElement(T.Mb, {
                             label: Object(r.d)("Campaign", "DevBountyDashboardCompletedCampaignList")
-                        }), i.createElement(T.Lb, {
+                        }), i.createElement(T.Mb, {
                             label: Object(r.d)("Budget Spent", "DevBountyDashboardCompletedCampaignList")
-                        }), i.createElement(T.Lb, {
+                        }), i.createElement(T.Mb, {
                             label: Object(r.d)("Content", "DevBountyDashboardCompletedCampaignList")
-                        }), i.createElement(T.Lb, {
+                        }), i.createElement(T.Mb, {
                             label: Object(r.d)("Start (ET)", "DevBountyDashboardCompletedCampaignList")
-                        }), i.createElement(T.Lb, {
+                        }), i.createElement(T.Mb, {
                             label: Object(r.d)("End (ET)", "DevBountyDashboardCompletedCampaignList")
-                        }), i.createElement(T.Lb, {
+                        }), i.createElement(T.Mb, {
                             label: ""
                         }))
                     }, n.prototype.renderCampaignRow = function(e) {
@@ -1699,27 +1699,27 @@
                             E = Object(R.f)(new Date(n.endTime)),
                             a = Object(R.b)(e),
                             o = n.brandDetails && n.brandDetails.spentBudgetCents || 0;
-                        return i.createElement(T.Mb, {
+                        return i.createElement(T.Nb, {
                             key: n.id
-                        }, i.createElement(T.Jb, null, i.createElement(T.U, {
+                        }, i.createElement(T.Kb, null, i.createElement(T.U, {
                             linkTo: "/console/bounty-board/campaign/" + n.id
                         }, i.createElement(T.W, {
                             ellipsis: !0,
                             title: n.title,
                             fontSize: T.Ca.Size5
-                        }, n.title))), i.createElement(T.Jb, null, i.createElement(T.W, {
+                        }, n.title))), i.createElement(T.Kb, null, i.createElement(T.W, {
                             fontSize: T.Ca.Size5
-                        }, Object(R.a)(o))), i.createElement(T.Jb, null, i.createElement(T.W, {
+                        }, Object(R.a)(o))), i.createElement(T.Kb, null, i.createElement(T.W, {
                             ellipsis: !0,
                             title: a,
                             fontSize: T.Ca.Size5
-                        }, a)), i.createElement(T.Jb, null, i.createElement(T.W, {
+                        }, a)), i.createElement(T.Kb, null, i.createElement(T.W, {
                             fontSize: T.Ca.Size5
-                        }, Object(r.c)(t) + " " + Object(r.j)(t))), i.createElement(T.Jb, null, i.createElement(T.W, {
+                        }, Object(r.c)(t) + " " + Object(r.j)(t))), i.createElement(T.Kb, null, i.createElement(T.W, {
                             fontSize: T.Ca.Size5
-                        }, Object(r.c)(E) + " " + Object(r.j)(E))), i.createElement(T.Jb, {
-                            textAlign: T.Rb.Center
-                        }, i.createElement(T.Xa, {
+                        }, Object(r.c)(E) + " " + Object(r.j)(E))), i.createElement(T.Kb, {
+                            textAlign: T.Sb.Center
+                        }, i.createElement(T.Ya, {
                             display: T.X.Inline,
                             margin: {
                                 right: 1
@@ -1729,7 +1729,7 @@
                             fullWidth: !0,
                             type: T.F.Hollow,
                             linkTo: "/console/bounty-board/campaign/" + n.id
-                        }, i.createElement(T.Xa, {
+                        }, i.createElement(T.Ya, {
                             display: T.X.Inline,
                             margin: {
                                 x: 2
@@ -1757,27 +1757,27 @@
                                 a = Object(R.f)(new Date(t.endTime)),
                                 o = Object(R.b)(e),
                                 N = t.brandDetails && t.brandDetails.totalBudgetCents || 0;
-                            return i.createElement(T.Mb, {
+                            return i.createElement(T.Nb, {
                                 key: t.id
-                            }, i.createElement(T.Jb, null, i.createElement(T.U, {
+                            }, i.createElement(T.Kb, null, i.createElement(T.U, {
                                 linkTo: "/console/bounty-board/campaign/" + t.id
                             }, i.createElement(T.W, {
                                 ellipsis: !0,
                                 title: t.title,
                                 fontSize: T.Ca.Size5
-                            }, t.title))), i.createElement(T.Jb, null, i.createElement(T.W, {
+                            }, t.title))), i.createElement(T.Kb, null, i.createElement(T.W, {
                                 fontSize: T.Ca.Size5
-                            }, Object(R.a)(N))), i.createElement(T.Jb, null, i.createElement(T.W, {
+                            }, Object(R.a)(N))), i.createElement(T.Kb, null, i.createElement(T.W, {
                                 ellipsis: !0,
                                 title: o,
                                 fontSize: T.Ca.Size5
-                            }, o)), i.createElement(T.Jb, null, i.createElement(T.W, {
+                            }, o)), i.createElement(T.Kb, null, i.createElement(T.W, {
                                 fontSize: T.Ca.Size5
-                            }, Object(r.c)(E) + " " + Object(r.j)(E))), i.createElement(T.Jb, null, i.createElement(T.W, {
+                            }, Object(r.c)(E) + " " + Object(r.j)(E))), i.createElement(T.Kb, null, i.createElement(T.W, {
                                 fontSize: T.Ca.Size5
-                            }, Object(r.c)(a) + " " + Object(r.j)(a))), i.createElement(T.Jb, {
-                                textAlign: T.Rb.Center
-                            }, i.createElement(T.Xa, {
+                            }, Object(r.c)(a) + " " + Object(r.j)(a))), i.createElement(T.Kb, {
+                                textAlign: T.Sb.Center
+                            }, i.createElement(T.Ya, {
                                 display: T.X.Inline,
                                 margin: {
                                     right: 1
@@ -1786,7 +1786,7 @@
                                 "data-test-selector": I.DetailsButtonSelector,
                                 type: T.F.Hollow,
                                 linkTo: "/console/bounty-board/campaign/" + t.id
-                            }, i.createElement(T.Xa, {
+                            }, i.createElement(T.Ya, {
                                 display: T.X.Inline,
                                 margin: {
                                     x: 2
@@ -1807,17 +1807,17 @@
                             renderRow: this.renderCampaignRow
                         })
                     }, n.prototype.renderCampaignHeader = function() {
-                        return i.createElement(T.Kb, null, i.createElement(T.Lb, {
+                        return i.createElement(T.Lb, null, i.createElement(T.Mb, {
                             label: Object(r.d)("Campaign", "DevBountyDashboardLiveCampaignList")
-                        }), i.createElement(T.Lb, {
+                        }), i.createElement(T.Mb, {
                             label: Object(r.d)("Budget", "DevBountyDashboardLiveCampaignList")
-                        }), i.createElement(T.Lb, {
+                        }), i.createElement(T.Mb, {
                             label: Object(r.d)("Content", "DevBountyDashboardLiveCampaignList")
-                        }), i.createElement(T.Lb, {
+                        }), i.createElement(T.Mb, {
                             label: Object(r.d)("Start (ET)", "DevBountyDashboardLiveCampaignList")
-                        }), i.createElement(T.Lb, {
+                        }), i.createElement(T.Mb, {
                             label: Object(r.d)("End (ET)", "DevBountyDashboardLiveCampaignList")
-                        }), i.createElement(T.Lb, {
+                        }), i.createElement(T.Mb, {
                             label: ""
                         }))
                     }, n
@@ -1845,29 +1845,29 @@
                                 a = Object(R.f)(new Date(t.endTime)),
                                 o = Object(R.b)(e),
                                 N = t.brandDetails && t.brandDetails.totalBudgetCents || 0;
-                            return i.createElement(T.Mb, {
+                            return i.createElement(T.Nb, {
                                 key: t.id
-                            }, i.createElement(T.Jb, null, i.createElement(T.U, {
+                            }, i.createElement(T.Kb, null, i.createElement(T.U, {
                                 linkTo: "/console/bounty-board/campaign/" + t.id
                             }, i.createElement(T.W, {
                                 ellipsis: !0,
                                 title: t.title,
                                 fontSize: T.Ca.Size5
-                            }, t.title))), i.createElement(T.Jb, null, i.createElement(T.W, {
+                            }, t.title))), i.createElement(T.Kb, null, i.createElement(T.W, {
                                 fontSize: T.Ca.Size5
-                            }, t.status)), i.createElement(T.Jb, null, i.createElement(T.W, {
+                            }, t.status)), i.createElement(T.Kb, null, i.createElement(T.W, {
                                 fontSize: T.Ca.Size5
-                            }, Object(R.a)(N))), i.createElement(T.Jb, null, i.createElement(T.W, {
+                            }, Object(R.a)(N))), i.createElement(T.Kb, null, i.createElement(T.W, {
                                 ellipsis: !0,
                                 title: o,
                                 fontSize: T.Ca.Size5
-                            }, o)), i.createElement(T.Jb, null, i.createElement(T.W, {
+                            }, o)), i.createElement(T.Kb, null, i.createElement(T.W, {
                                 fontSize: T.Ca.Size5
-                            }, Object(r.c)(E) + " " + Object(r.j)(E))), i.createElement(T.Jb, null, i.createElement(T.W, {
+                            }, Object(r.c)(E) + " " + Object(r.j)(E))), i.createElement(T.Kb, null, i.createElement(T.W, {
                                 fontSize: T.Ca.Size5
-                            }, Object(r.c)(a) + " " + Object(r.j)(a))), i.createElement(T.Jb, {
-                                textAlign: T.Rb.Center
-                            }, i.createElement(T.Xa, {
+                            }, Object(r.c)(a) + " " + Object(r.j)(a))), i.createElement(T.Kb, {
+                                textAlign: T.Sb.Center
+                            }, i.createElement(T.Ya, {
                                 display: T.X.Inline,
                                 margin: {
                                     right: 1
@@ -1876,7 +1876,7 @@
                                 "data-test-selector": p.DetailsButtonSelector,
                                 type: T.F.Hollow,
                                 linkTo: "/console/bounty-board/campaign/" + t.id
-                            }, i.createElement(T.Xa, {
+                            }, i.createElement(T.Ya, {
                                 display: T.X.Inline,
                                 margin: {
                                     x: 2
@@ -1898,19 +1898,19 @@
                             renderRow: this.renderCampaignRow
                         })
                     }, n.prototype.renderCampaignHeader = function() {
-                        return i.createElement(T.Kb, null, i.createElement(T.Lb, {
+                        return i.createElement(T.Lb, null, i.createElement(T.Mb, {
                             label: Object(r.d)("Campaign", "DevBountyDashboardQueueCampaignList")
-                        }), i.createElement(T.Lb, {
+                        }), i.createElement(T.Mb, {
                             label: Object(r.d)("Approval", "DevBountyDashboardQueueCampaignList")
-                        }), i.createElement(T.Lb, {
+                        }), i.createElement(T.Mb, {
                             label: Object(r.d)("Budget", "DevBountyDashboardQueueCampaignList")
-                        }), i.createElement(T.Lb, {
+                        }), i.createElement(T.Mb, {
                             label: Object(r.d)("Content", "DevBountyDashboardQueueCampaignList")
-                        }), i.createElement(T.Lb, {
+                        }), i.createElement(T.Mb, {
                             label: Object(r.d)("Start (ET)", "DevBountyDashboardQueueCampaignList")
-                        }), i.createElement(T.Lb, {
+                        }), i.createElement(T.Mb, {
                             label: Object(r.d)("End (ET)", "DevBountyDashboardQueueCampaignList")
-                        }), i.createElement(T.Lb, {
+                        }), i.createElement(T.Mb, {
                             label: ""
                         }))
                     }, n
@@ -1941,28 +1941,28 @@
                             renderRow: this.renderCampaignRow
                         })
                     }, n.prototype.renderCampaignHeader = function() {
-                        return i.createElement(T.Kb, null, i.createElement(T.Lb, {
+                        return i.createElement(T.Lb, null, i.createElement(T.Mb, {
                             label: Object(r.d)("Campaign", "DevBountyDashboardRejectedCampaignList")
-                        }), i.createElement(T.Lb, {
+                        }), i.createElement(T.Mb, {
                             label: Object(r.d)("Reject Reason", "DevBountyDashboardRejectedCampaignList")
-                        }), i.createElement(T.Lb, {
+                        }), i.createElement(T.Mb, {
                             label: ""
                         }))
                     }, n.prototype.renderCampaignRow = function(e) {
                         var n = e.node;
-                        return n ? i.createElement(T.Mb, {
+                        return n ? i.createElement(T.Nb, {
                             key: n.id
-                        }, i.createElement(T.Jb, null, i.createElement(T.U, {
+                        }, i.createElement(T.Kb, null, i.createElement(T.U, {
                             linkTo: "/console/bounty-board/campaign/" + n.id
                         }, i.createElement(T.W, {
                             ellipsis: !0,
                             title: n.title,
                             fontSize: T.Ca.Size5
-                        }, n.title))), i.createElement(T.Jb, null, i.createElement(T.W, {
+                        }, n.title))), i.createElement(T.Kb, null, i.createElement(T.W, {
                             fontSize: T.Ca.Size5
-                        }, n.rejectionReason)), i.createElement(T.Jb, {
-                            textAlign: T.Rb.Center
-                        }, i.createElement(T.Xa, {
+                        }, n.rejectionReason)), i.createElement(T.Kb, {
+                            textAlign: T.Sb.Center
+                        }, i.createElement(T.Ya, {
                             display: T.X.Inline,
                             margin: {
                                 right: 1
@@ -1972,7 +1972,7 @@
                             fullWidth: !0,
                             type: T.F.Hollow,
                             linkTo: "/console/bounty-board/campaign/" + n.id
-                        }, i.createElement(T.Xa, {
+                        }, i.createElement(T.Ya, {
                             display: T.X.Inline,
                             margin: {
                                 x: 2
@@ -1988,9 +1988,9 @@
                         return null !== e && e.apply(this, arguments) || this
                     }
                     return a.__extends(n, e), n.prototype.render = function() {
-                        return i.createElement(T.Xa, {
+                        return i.createElement(T.Ya, {
                             className: "dev-bounty-board-campaign-manager"
-                        }, i.createElement(T.Xa, {
+                        }, i.createElement(T.Ya, {
                             padding: {
                                 top: 1,
                                 bottom: .5
@@ -1999,24 +1999,24 @@
                                 bottom: 1
                             },
                             display: T.X.Flex,
-                            justifyContent: T.Wa.End
+                            justifyContent: T.Xa.End
                         }, i.createElement(T.z, {
                             "data-test-selector": "dev-bounty-board-campaign-manager-create-campaign-selector",
-                            icon: T.tb.Plus,
+                            icon: T.ub.Plus,
                             linkTo: "/console/bounty-board/campaign"
-                        }, Object(r.d)("Create Campaign", "DevBountyBoardCampaignManagerPage"))), i.createElement(T.Xa, {
+                        }, Object(r.d)("Create Campaign", "DevBountyBoardCampaignManagerPage"))), i.createElement(T.Ya, {
                             margin: {
                                 y: 2
                             }
-                        }, i.createElement(U, null)), i.createElement(T.Xa, {
+                        }, i.createElement(U, null)), i.createElement(T.Ya, {
                             margin: {
                                 y: 2
                             }
-                        }, i.createElement(v, null)), i.createElement(T.Xa, {
+                        }, i.createElement(v, null)), i.createElement(T.Ya, {
                             margin: {
                                 y: 2
                             }
-                        }, i.createElement(B, null)), i.createElement(T.Xa, {
+                        }, i.createElement(B, null)), i.createElement(T.Ya, {
                             margin: {
                                 y: 2
                             }

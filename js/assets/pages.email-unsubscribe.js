@@ -26,43 +26,43 @@
                             isLoading: !1,
                             isSuccess: !1
                         }, t.renderStatus = function() {
-                            return t.state.isError ? s.createElement(E.Xa, {
+                            return t.state.isError ? s.createElement(E.Ya, {
                                 margin: {
                                     top: 1
                                 },
                                 "data-test-selector": h
                             }, s.createElement(E.W, {
-                                type: E.Vb.H5,
+                                type: E.Wb.H5,
                                 color: E.O.Error
-                            }, Object(c.d)("There was an error when unsubscribing.", "EmailUnsubscribe"))) : t.state.isSuccess ? s.createElement(E.Xa, {
+                            }, Object(c.d)("There was an error when unsubscribing.", "EmailUnsubscribe"))) : t.state.isSuccess ? s.createElement(E.Ya, {
                                 margin: {
                                     top: 1
                                 },
                                 "data-test-selector": f
                             }, s.createElement(E.W, {
-                                type: E.Vb.H5,
+                                type: E.Wb.H5,
                                 color: E.O.Alt2
-                            }, Object(c.d)("You have successfully unsubscribed.", "EmailUnsubscribe"))) : t.state.isLoading ? s.createElement(E.Xa, {
+                            }, Object(c.d)("You have successfully unsubscribed.", "EmailUnsubscribe"))) : t.state.isLoading ? s.createElement(E.Ya, {
                                 margin: {
                                     top: 1
                                 }
                             }, s.createElement(E.W, {
-                                type: E.Vb.H5,
+                                type: E.Wb.H5,
                                 bold: !0
-                            }, Object(c.d)("Unsubscribing...", "EmailUnsubscribe"))) : s.createElement(E.Eb, {
+                            }, Object(c.d)("Unsubscribing...", "EmailUnsubscribe"))) : s.createElement(E.Fb, {
                                 display: E.X.Flex,
                                 flexDirection: E.Aa.Column,
                                 margin: {
                                     top: 1
                                 }
-                            }, s.createElement(E.Xa, {
+                            }, s.createElement(E.Ya, {
                                 margin: {
                                     bottom: 1
                                 }
                             }, s.createElement(E.W, {
-                                type: E.Vb.H5,
+                                type: E.Wb.H5,
                                 color: E.O.Alt2
-                            }, Object(c.d)("You will unsubscribe from future emails of this type from Twitch.", "EmailUnsubscribe"))), s.createElement(E.Xa, {
+                            }, Object(c.d)("You will unsubscribe from future emails of this type from Twitch.", "EmailUnsubscribe"))), s.createElement(E.Ya, {
                                 flexGrow: 0
                             }, s.createElement(E.z, {
                                 type: E.F.Default,
@@ -105,7 +105,7 @@
                     return n.__extends(t, e), t.prototype.componentDidMount = function() {
                         this.props.latencyTracking.reportInteractive()
                     }, t.prototype.render = function() {
-                        return s.createElement(E.Eb, {
+                        return s.createElement(E.Fb, {
                             padding: {
                                 x: 3,
                                 top: 3,
@@ -115,7 +115,7 @@
                             flexDirection: E.Aa.Column
                         }, s.createElement(E.W, {
                             className: "title",
-                            type: E.Vb.H2
+                            type: E.Wb.H2
                         }, Object(c.d)("Email Unsubscribe", "EmailUnsubscribe")), this.renderStatus())
                     }, t
                 }(s.Component),

@@ -14,8 +14,8 @@
                 u = n.n(p),
                 m = n("V+GM"),
                 b = n("NvVO"),
-                E = n("2xye"),
-                h = n("kRBY"),
+                h = n("2xye"),
+                E = n("kRBY"),
                 f = n("GnwI"),
                 g = n("coZW"),
                 v = n("Ue10");
@@ -34,7 +34,7 @@
                         t = a.parse(this.props.location.search),
                         n = t.extensionId,
                         i = t.projectId;
-                    return n && i && (e = "https://dev.twitch.tv/projects/" + n + "/files/" + i + "/edit"), r.createElement(v.rb, {
+                    return n && i && (e = "https://dev.twitch.tv/projects/" + n + "/files/" + i + "/edit"), r.createElement(v.sb, {
                         centered: !0
                     }, r.createElement(v.Ja, null, r.createElement(v.P, {
                         cols: {
@@ -45,39 +45,39 @@
                             lg: 6,
                             xl: 4
                         }
-                    }, r.createElement(v.Xa, {
+                    }, r.createElement(v.Ya, {
                         display: v.X.Flex,
                         flexDirection: v.Aa.Column
-                    }, r.createElement(v.Eb, {
+                    }, r.createElement(v.Fb, {
                         margin: {
                             bottom: 1
                         },
                         display: v.X.Flex,
                         flexDirection: v.Aa.Row,
                         alignItems: v.f.Center
-                    }, r.createElement(v.Eb, {
+                    }, r.createElement(v.Fb, {
                         padding: {
                             right: 1
                         }
-                    }, r.createElement(v.sb, {
-                        asset: v.tb.LogoGlitch,
+                    }, r.createElement(v.tb, {
+                        asset: v.ub.LogoGlitch,
                         width: 50,
                         height: 50
                     })), r.createElement(v.W, {
-                        type: v.Vb.H3
-                    }, Object(d.d)("Earn revenue as an extension developer!", "DevExtensionsEnableMonetization"))), r.createElement(v.Eb, {
+                        type: v.Wb.H3
+                    }, Object(d.d)("Earn revenue as an extension developer!", "DevExtensionsEnableMonetization"))), r.createElement(v.Fb, {
                         margin: {
                             bottom: 2
                         }
                     }, r.createElement(v.W, {
                         fontSize: v.Ca.Size4
-                    }, Object(d.d)('Hello! Thanks for your interest in extension monetization. To earn revenue for your account or business, you will need to complete a one-time onboarding. If this is a non-monetized extension, return to the previous extensions details screen and indicate "no".', "DevExtensionsEnableMonetization"))), r.createElement(v.Eb, {
+                    }, Object(d.d)('Hello! Thanks for your interest in extension monetization. To earn revenue for your account or business, you will need to complete a one-time onboarding. If this is a non-monetized extension, return to the previous extensions details screen and indicate "no".', "DevExtensionsEnableMonetization"))), r.createElement(v.Fb, {
                         margin: {
                             bottom: 2
                         }
                     }, r.createElement(v.W, {
                         fontSize: v.Ca.Size4
-                    }, Object(d.d)("In most cases, the interview process takes five minutes. Once completed, you will be eligible to receive revenue for any extensions you create.", "DevExtensionsEnableMonetization"))), r.createElement(v.Eb, {
+                    }, Object(d.d)("In most cases, the interview process takes five minutes. Once completed, you will be eligible to receive revenue for any extensions you create.", "DevExtensionsEnableMonetization"))), r.createElement(v.Fb, {
                         margin: {
                             bottom: 1
                         }
@@ -85,7 +85,7 @@
                         linkTo: "https://twitch.tv/" + this.props.user.login + "/dashboard/settings/revenue",
                         onClick: Object(g.c)(g.a.ExtensionsEnableMonetizationContinue),
                         "data-test-selector": o.ContinueButton
-                    }, Object(d.d)("Continue to Onboarding", "DevExtensionsEnableMonetization"))), r.createElement(v.Eb, {
+                    }, Object(d.d)("Continue to Onboarding", "DevExtensionsEnableMonetization"))), r.createElement(v.Fb, {
                         margin: {
                             bottom: 3
                         }
@@ -102,9 +102,9 @@
                             lg: 4,
                             xl: 4
                         }
-                    }, r.createElement(v.Eb, {
+                    }, r.createElement(v.Fb, {
                         background: v.r.Alt2
-                    }, r.createElement(v.Xa, {
+                    }, r.createElement(v.Ya, {
                         padding: {
                             top: 1,
                             left: 2,
@@ -119,9 +119,9 @@
                                 onClick: Object(g.c)(g.a.ExtensionsEnableMonetizationLearnMore)
                             }, e)
                         }
-                    }, "DevExtensionsEnableMonetization"))), r.createElement(v.Xa, {
+                    }, "DevExtensionsEnableMonetization"))), r.createElement(v.Ya, {
                         display: v.X.Block,
-                        textAlign: v.Rb.Center,
+                        textAlign: v.Sb.Center,
                         padding: {
                             left: 2,
                             right: 2,
@@ -136,14 +136,14 @@
             }(r.Component);
             var k = Object(l.compose)(Object(s.connect)(function(e) {
                 return {
-                    isLoggedIn: Object(h.f)(e),
-                    user: Object(h.e)(e)
+                    isLoggedIn: Object(E.f)(e),
+                    user: Object(E.e)(e)
                 }
             }, null), Object(f.b)("DevExtensionsEnableMonetization", {
                 autoReportInteractive: !0,
                 destination: b.a.DevSiteExtensionsEnableMonetization
             }), Object(m.a)({
-                location: E.PageviewLocation.DevSiteExtensionsEnableMonetization
+                location: h.PageviewLocation.DevSiteExtensionsEnableMonetization
             }))(x);
             n.d(t, "DevExtensionsEnableMonetizationPage", function() {
                 return k

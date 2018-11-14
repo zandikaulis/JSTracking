@@ -174,8 +174,8 @@
         },
         Jhye: function(e, n, t) {
             "use strict";
-            var a = t("mrSG"),
-                i = t("q1tI"),
+            var i = t("mrSG"),
+                a = t("q1tI"),
                 l = t("/7QA"),
                 r = t("X7Ac"),
                 o = t("eJ65");
@@ -214,59 +214,59 @@
                             })
                         }, n
                     }
-                    return a.__extends(n, e), n.prototype.render = function() {
+                    return i.__extends(n, e), n.prototype.render = function() {
                         var e = function(e) {
                                 return "https://www.twitch.tv/events/" + e
                             }(this.props.id),
                             n = this.props.children;
-                        return this.props.children || (n = i.createElement(s.z, {
+                        return this.props.children || (n = a.createElement(s.z, {
                             dropdown: !0,
                             type: s.F.Hollow
-                        }, Object(l.d)("Share", "ShareEvent"))), i.createElement(o.a, null, n, i.createElement(s.u, {
+                        }, Object(l.d)("Share", "ShareEvent"))), a.createElement(o.a, null, n, a.createElement(s.u, {
                             direction: this.props.balloonDirection
-                        }, i.createElement(s.Xa, {
+                        }, a.createElement(s.Ya, {
                             padding: 1
-                        }, i.createElement(s.Xa, {
+                        }, a.createElement(s.Ya, {
                             display: s.X.Flex,
                             flexDirection: s.Aa.Row,
                             flexWrap: s.Ba.NoWrap,
-                            justifyContent: s.Wa.Center
-                        }, i.createElement(r.a, {
+                            justifyContent: s.Xa.Center
+                        }, a.createElement(r.a, {
                             type: r.b.Twitter,
                             text: this.props.title,
                             url: e,
                             onShareClick: this.onShareClicked
-                        }), i.createElement(r.a, {
+                        }), a.createElement(r.a, {
                             type: r.b.Facebook,
                             text: this.props.title,
                             url: e,
                             onShareClick: this.onShareClicked
-                        }), i.createElement(r.a, {
+                        }), a.createElement(r.a, {
                             type: r.b.Reddit,
                             text: this.props.title,
                             url: e,
                             onShareClick: this.onShareClicked
-                        }), i.createElement(r.a, {
+                        }), a.createElement(r.a, {
                             type: r.b.VKontakte,
                             text: this.props.title,
                             url: e,
                             onShareClick: this.onShareClicked
-                        }), i.createElement(r.a, {
+                        }), a.createElement(r.a, {
                             type: r.b.Copy,
                             text: this.props.title,
                             url: e,
                             onShareClick: this.onShareClicked
                         })))))
                     }, n
-                }(i.Component);
+                }(a.Component);
             t.d(n, "a", function() {
                 return c
             })
         },
         LfZz: function(e, n, t) {
             "use strict";
-            var a = t("mrSG"),
-                i = t("/MKj"),
+            var i = t("mrSG"),
+                a = t("/MKj"),
                 l = t("fvjX"),
                 r = t("1/iK"),
                 o = t("aCAx"),
@@ -298,21 +298,21 @@
                             }
                         }, n
                     }
-                    return a.__extends(n, e), n.prototype.render = function() {
+                    return i.__extends(n, e), n.prototype.render = function() {
                         return u.createElement(v.a, null, u.createElement(k.z, {
-                            icon: k.tb.More,
+                            icon: k.ub.More,
                             type: k.F.Hollow
                         }), u.createElement(k.u, {
                             direction: this.props.balloonDirection,
                             tailOffset: this.props.tailOffset
-                        }, u.createElement(k.Xa, {
+                        }, u.createElement(k.Ya, {
                             padding: {
                                 y: 1
                             }
-                        }, u.createElement(k.Ua, {
+                        }, u.createElement(k.Va, {
                             disabled: !this.props.targetUser,
                             onClick: this.handleReportClick
-                        }, u.createElement(k.Xa, {
+                        }, u.createElement(k.Ya, {
                             padding: {
                                 x: 1,
                                 y: .5
@@ -320,7 +320,7 @@
                         }, Object(m.d)("Report", "EventMoreMenu"))))))
                     }, n
                 }(u.Component);
-            var g = Object(i.connect)(function(e) {
+            var g = Object(a.connect)(function(e) {
                 return {
                     isLoggedIn: Object(s.f)(e)
                 }
@@ -330,7 +330,7 @@
                         return Object(d.e)(r.a.ReportChannel)
                     },
                     showReportUserModal: function(e) {
-                        var n = a.__rest(e, []);
+                        var n = i.__rest(e, []);
                         return Object(o.d)(c.a, n)
                     }
                 }, e)
@@ -341,30 +341,30 @@
         },
         ePeS: function(e, n, t) {
             "use strict";
-            var a;
+            var i;
 
-            function i(e) {
+            function a(e) {
                 switch (e) {
                     case "past":
-                        return a.Past;
+                        return i.Past;
                     case "future":
                     default:
-                        return a.Future
+                        return i.Future
                 }
             }
             t.d(n, "a", function() {
-                    return a
-                }), t.d(n, "b", function() {
                     return i
+                }), t.d(n, "b", function() {
+                    return a
                 }),
                 function(e) {
                     e.Future = "future", e.Past = "past"
-                }(a || (a = {}))
+                }(i || (i = {}))
         },
         irYM: function(e, n, t) {
             "use strict";
-            var a = t("/MKj"),
-                i = t("fvjX"),
+            var i = t("/MKj"),
+                a = t("fvjX"),
                 l = t("1/iK"),
                 r = t("y5D0"),
                 o = t("kRBY"),
@@ -389,13 +389,13 @@
                             n = Object(c.d)("Reminder Set", "FollowEvent");
                         if (this.props.small) {
                             var t = e,
-                                a = p.tb.Heart;
-                            return this.props.areNotificationsEnabled && (t = n, a = p.tb.FollowCheck), s.createElement(p.Yb, {
+                                i = p.ub.Heart;
+                            return this.props.areNotificationsEnabled && (t = n, i = p.ub.FollowCheck), s.createElement(p.Zb, {
                                 label: t,
                                 direction: this.props.tooltipDirection
                             }, s.createElement(p.A, {
                                 size: p.B.Default,
-                                icon: a,
+                                icon: i,
                                 onClick: this.handleButton,
                                 ariaLabel: t
                             }))
@@ -403,7 +403,7 @@
                         return s.createElement(p.z, {
                             type: this.props.areNotificationsEnabled ? p.F.Success : p.F.Default,
                             onClick: this.handleButton,
-                            icon: this.props.areNotificationsEnabled ? p.tb.FollowCheck : p.tb.Heart,
+                            icon: this.props.areNotificationsEnabled ? p.ub.FollowCheck : p.ub.Heart,
                             ariaLabel: this.props.areNotificationsEnabled ? n : e
                         }, this.props.areNotificationsEnabled ? n : e)
                     }, n.prototype.toggleFollowing = function() {
@@ -479,17 +479,17 @@
                         this.props.unfollowEvent(t)
                     }, n
                 }(s.PureComponent),
-                h = Object(i.compose)(Object(u.a)(k, {
+                h = Object(a.compose)(Object(u.a)(k, {
                     name: "followEvent"
                 }), Object(u.a)(f, {
                     name: "unfollowEvent"
                 }))(g);
-            var b = Object(a.connect)(function(e) {
+            var b = Object(i.connect)(function(e) {
                 return {
                     isLoggedIn: Object(o.f)(e)
                 }
             }, function(e) {
-                return Object(i.bindActionCreators)({
+                return Object(a.bindActionCreators)({
                     login: function() {
                         return Object(r.e)(l.a.EventFollowButton)
                     }
@@ -502,8 +502,8 @@
         r93r: function(e, n, t) {
             "use strict";
             t.r(n);
-            var a = t("mrSG"),
-                i = t("cr+I"),
+            var i = t("mrSG"),
+                a = t("cr+I"),
                 l = t("q1tI"),
                 r = t("/7QA"),
                 o = t("8/mp"),
@@ -522,17 +522,17 @@
                 })(function(e) {
                     var n = new Date(e.event.startAt),
                         t = new Date(e.event.endAt),
-                        i = n > new Date,
+                        a = n > new Date,
                         o = Object(u.b)(e.event.id),
                         d = !(!e.event.self || !e.event.self.isFollowing),
                         s = e.upwardBalloons ? g.v.Top : g.v.Bottom,
-                        c = e.upwardBalloons ? g.ac.Top : g.ac.Bottom,
+                        c = e.upwardBalloons ? g.bc.Top : g.bc.Bottom,
                         h = e.event.game && e.event.game.displayName || "-",
                         b = e.channel && (e.channel.displayName || e.channel.login) || "-",
                         E = null,
                         y = null,
                         N = null;
-                    return e.channel && e.channel.id && e.channel.login && (i && (E = l.createElement(g.Xa, {
+                    return e.channel && e.channel.id && e.channel.login && (a && (E = l.createElement(g.Ya, {
                         margin: {
                             right: 1
                         }
@@ -544,7 +544,7 @@
                         channelID: e.channel.id,
                         eventLocation: f.a.ChannelEvents,
                         tooltipDirection: c
-                    }))), y = l.createElement(g.Xa, {
+                    }))), y = l.createElement(g.Ya, {
                         margin: {
                             right: 1
                         }
@@ -562,7 +562,7 @@
                         },
                         eventID: e.event.id,
                         balloonDirection: s
-                    })), l.createElement(g.Eb, {
+                    })), l.createElement(g.Fb, {
                         margin: {
                             y: 1
                         },
@@ -570,7 +570,7 @@
                         elevation: 1
                     }, l.createElement(g.G, {
                         row: !0
-                    }, l.createElement(g.Pa, {
+                    }, l.createElement(g.Qa, {
                         flexShrink: 0
                     }, l.createElement(g.U, {
                         to: o
@@ -581,23 +581,23 @@
                         alt: e.event.title
                     }, l.createElement(m.a, {
                         date: n
-                    })))), l.createElement(g.H, null, l.createElement(g.Xa, {
+                    })))), l.createElement(g.H, null, l.createElement(g.Ya, {
                         margin: {
                             x: 2
                         }
-                    }, l.createElement(g.Pa, {
+                    }, l.createElement(g.Qa, {
                         margin: {
                             bottom: 1
                         }
                     }, l.createElement(g.U, {
                         to: o
                     }, l.createElement(g.W, {
-                        type: g.Vb.H4
+                        type: g.Wb.H4
                     }, e.event.title))), l.createElement(g.W, {
                         color: g.O.Alt2
                     }, function(e, n) {
                         var t = new Date,
-                            i = {
+                            a = {
                                 weekday: "long",
                                 month: "short",
                                 day: "numeric"
@@ -605,16 +605,16 @@
                             l = {
                                 timeZoneName: "short"
                             };
-                        t.getFullYear() !== e.getFullYear() && (i = a.__assign({}, i, {
+                        t.getFullYear() !== e.getFullYear() && (a = i.__assign({}, a, {
                             year: "numeric"
-                        })), e.getDate() !== n.getDate() && (l = a.__assign({}, l, {
+                        })), e.getDate() !== n.getDate() && (l = i.__assign({}, l, {
                             weekday: "long",
                             month: "short",
                             day: "numeric"
-                        }), t.getFullYear() !== n.getFullYear() && (l = a.__assign({}, l, {
+                        }), t.getFullYear() !== n.getFullYear() && (l = i.__assign({}, l, {
                             year: "numeric"
                         })));
-                        var o = Object(r.j)(e, i),
+                        var o = Object(r.j)(e, a),
                             d = Object(r.j)(n, l);
                         return Object(r.d)("{startTime} - {endTime}", {
                             startTime: o,
@@ -625,12 +625,12 @@
                     }, Object(r.d)("{channelName} streaming {gameName}", {
                         channelName: b,
                         gameName: h
-                    }, "EventListCard")), l.createElement(g.Xa, {
+                    }, "EventListCard")), l.createElement(g.Ya, {
                         display: g.X.Flex,
                         margin: {
                             top: 2
                         }
-                    }, E, y, l.createElement(g.Xa, {
+                    }, E, y, l.createElement(g.Ya, {
                         margin: {
                             right: 1
                         }
@@ -655,23 +655,23 @@
                         }
                     },
                     props: function(e) {
-                        return a.__assign({}, e, {
+                        return i.__assign({}, e, {
                             loadMore: function() {
                                 if (e.data.user && e.data.user.eventLeaves && e.data.user.eventLeaves.edges) {
                                     var n = e.data.user.eventLeaves.edges[Math.max(e.data.user.eventLeaves.edges.length - 1, 0)],
                                         t = n && n.cursor || "";
                                     return e.data.fetchMore({
                                         query: y,
-                                        variables: a.__assign({}, e.data.variables, {
+                                        variables: i.__assign({}, e.data.variables, {
                                             cursor: t
                                         }),
                                         updateQuery: function(e, n) {
                                             var t = n.fetchMoreResult,
-                                                i = e.user && e.user.eventLeaves && e.user.eventLeaves.edges || [];
-                                            return t.user && t.user.eventLeaves && t.user.eventLeaves.edges && (i = i.concat(t.user.eventLeaves.edges)), {
-                                                user: a.__assign({}, t.user, {
-                                                    eventLeaves: a.__assign({}, t.user && t.user.eventLeaves || {}, {
-                                                        edges: i
+                                                a = e.user && e.user.eventLeaves && e.user.eventLeaves.edges || [];
+                                            return t.user && t.user.eventLeaves && t.user.eventLeaves.edges && (a = a.concat(t.user.eventLeaves.edges)), {
+                                                user: i.__assign({}, t.user, {
+                                                    eventLeaves: i.__assign({}, t.user && t.user.eventLeaves || {}, {
+                                                        edges: a
                                                     })
                                                 })
                                             }
@@ -687,13 +687,13 @@
                 }))(function(e) {
                     var n = null,
                         t = null,
-                        a = null,
-                        i = !1;
-                    if (!e.data.loading && !e.data.error && e.data.user && e.data.user.eventLeaves) e.data.user.eventLeaves.edges && 0 !== e.data.user.eventLeaves.edges.length ? a = e.data.user.eventLeaves.edges.map(function(e, n, t) {
+                        i = null,
+                        a = !1;
+                    if (!e.data.loading && !e.data.error && e.data.user && e.data.user.eventLeaves) e.data.user.eventLeaves.edges && 0 !== e.data.user.eventLeaves.edges.length ? i = e.data.user.eventLeaves.edges.map(function(e, n, t) {
                         if (!e || !e.node) return null;
-                        var a = n === t.length - 1,
-                            i = null;
-                        switch (e.node.channel && e.node.channel.id && e.node.channel.login && (i = {
+                        var i = n === t.length - 1,
+                            a = null;
+                        switch (e.node.channel && e.node.channel.id && e.node.channel.login && (a = {
                             id: e.node.channel.id,
                             login: e.node.channel.login,
                             displayName: e.node.channel.displayName
@@ -702,31 +702,31 @@
                                 return l.createElement(h, {
                                     key: e.node.id,
                                     event: e.node,
-                                    channel: i,
-                                    upwardBalloons: a
+                                    channel: a,
+                                    upwardBalloons: i
                                 });
                             default:
                                 return null
                         }
-                    }) : n = Object(r.d)("Nothing here yet", "ChannelEventsSchedule"), i = e.data.user.eventLeaves.pageInfo.hasNextPage;
+                    }) : n = Object(r.d)("Nothing here yet", "ChannelEventsSchedule"), a = e.data.user.eventLeaves.pageInfo.hasNextPage;
                     else if (e.data.error) n = Object(r.d)("Error loading events", "ChannelEventsSchedule");
                     else if (e.data.loading && (!e.data.user || !e.data.user.eventLeaves)) return l.createElement(b.a, null);
-                    return null !== n && (t = l.createElement(g.Xa, {
+                    return null !== n && (t = l.createElement(g.Ya, {
                         margin: {
                             top: 5
                         },
                         display: g.X.Flex,
                         flexDirection: g.Aa.Row,
-                        justifyContent: g.Wa.Center
+                        justifyContent: g.Xa.Center
                     }, l.createElement(g.W, {
-                        type: g.Vb.H4,
+                        type: g.Wb.H4,
                         color: g.O.Alt2,
                         italic: !0
-                    }, n))), l.createElement(g.Xa, null, a, t, e.data.loading && l.createElement(g.Za, {
+                    }, n))), l.createElement(g.Ya, null, i, t, e.data.loading && l.createElement(g.ab, {
                         fillContent: !0
                     }), l.createElement(o.a, {
                         loadMore: e.loadMore,
-                        enabled: i
+                        enabled: a
                     }))
                 }),
                 F = function(e) {
@@ -734,33 +734,33 @@
                         var n = null !== e && e.apply(this, arguments) || this;
                         return n.handleToggleChange = function(e) {
                             var t = Object(E.b)(e.currentTarget.value),
-                                a = i.parse(n.props.searchQuery);
-                            t !== E.a.Future ? a.filter = t : delete a.filter, n.props.onEventToggle(i.stringify(a))
+                                i = a.parse(n.props.searchQuery);
+                            t !== E.a.Future ? i.filter = t : delete i.filter, n.props.onEventToggle(a.stringify(i))
                         }, n
                     }
-                    return a.__extends(n, e), n.prototype.render = function() {
+                    return i.__extends(n, e), n.prototype.render = function() {
                         var e = this.props.channelLogin,
-                            n = i.parse(this.props.searchQuery),
+                            n = a.parse(this.props.searchQuery),
                             t = Object(E.b)(n.filter);
-                        return l.createElement(g.Xa, {
+                        return l.createElement(g.Ya, {
                             display: g.X.Flex,
                             flexGrow: 1,
                             fullHeight: !0
-                        }, l.createElement(g.Pa, {
+                        }, l.createElement(g.Qa, {
                             fullWidth: !0
-                        }, l.createElement(o.b, null, l.createElement(g.Xa, {
+                        }, l.createElement(o.b, null, l.createElement(g.Ya, {
                             fullWidth: !0,
                             padding: {
                                 y: 2,
                                 x: 3
                             }
-                        }, l.createElement(g.wb, null, l.createElement(g.xb, {
+                        }, l.createElement(g.xb, null, l.createElement(g.yb, {
                             name: "events-toggle",
                             label: Object(r.d)("Future Events", "ChannelEventsPage"),
                             defaultChecked: t === E.a.Future,
                             onChange: this.handleToggleChange,
                             value: E.a.Future
-                        }), l.createElement(g.xb, {
+                        }), l.createElement(g.yb, {
                             name: "events-toggle",
                             label: Object(r.d)("Past Events", "ChannelEventsPage"),
                             defaultChecked: t === E.a.Past,
@@ -783,17 +783,17 @@
         },
         rO6o: function(e, n, t) {
             "use strict";
-            var a = t("q1tI"),
-                i = t("/7QA"),
+            var i = t("q1tI"),
+                a = t("/7QA"),
                 l = t("Ue10"),
                 r = (t("z3xZ"), function(e) {
-                    var n = Object(i.c)(e.date, {
+                    var n = Object(a.c)(e.date, {
                             month: "short"
                         }),
-                        t = Object(i.c)(e.date, {
+                        t = Object(a.c)(e.date, {
                             day: "numeric"
                         });
-                    return a.createElement(l.Eb, {
+                    return i.createElement(l.Fb, {
                         background: l.r.Base,
                         elevation: 2,
                         display: l.X.Flex,
@@ -803,23 +803,23 @@
                             top: .5,
                             left: .5
                         },
-                        position: l.jb.Absolute,
+                        position: l.kb.Absolute,
                         attachTop: !0,
                         attachLeft: !0,
                         flexWrap: l.Ba.NoWrap
-                    }, a.createElement(l.Eb, {
+                    }, i.createElement(l.Fb, {
                         className: "event-calendar-date__month",
                         display: l.X.Flex,
-                        justifyContent: l.Wa.Center,
+                        justifyContent: l.Xa.Center,
                         background: l.r.AccentAlt2
-                    }, a.createElement(l.W, {
+                    }, i.createElement(l.W, {
                         fontSize: l.Ca.Size6,
-                        transform: l.Ub.Uppercase,
+                        transform: l.Vb.Uppercase,
                         color: l.O.Overlay
-                    }, n)), a.createElement(l.Xa, {
+                    }, n)), i.createElement(l.Ya, {
                         display: l.X.Flex,
-                        justifyContent: l.Wa.Center
-                    }, a.createElement(l.W, {
+                        justifyContent: l.Xa.Center
+                    }, i.createElement(l.W, {
                         fontSize: l.Ca.Size3,
                         color: l.O.Base
                     }, t)))
@@ -831,15 +831,15 @@
         "ug+5": function(e, n, t) {
             "use strict";
             t.d(n, "a", function() {
-                return a
-            }), t.d(n, "b", function() {
                 return i
+            }), t.d(n, "b", function() {
+                return a
             }), t.d(n, "c", function() {
                 return o
             }), t.d(n, "d", function() {
                 return d
             });
-            var a, i, l = t("/7QA"),
+            var i, a, l = t("/7QA"),
                 r = t("2xye");
 
             function o(e) {
@@ -864,10 +864,10 @@
                 return l.p.tracking.track(r.SpadeEventType.EventFollowing, n)
             }! function(e) {
                 e.ChannelEvents = "channel_events", e.DashboardEvents = "dashboard_events", e.EventDetails = "event_details", e.EventManagment = "event_managment", e.EventSidebar = "event_sidebar"
-            }(a || (a = {})),
+            }(i || (i = {})),
             function(e) {
                 e.RemindMeOpen = "remind_me_open_modal", e.EmailReminderOn = "email_reminder_on", e.EmailReminderOff = "email_reminder_off"
-            }(i || (i = {}))
+            }(a || (a = {}))
         },
         wSZZ: function(e, n) {
             var t = {

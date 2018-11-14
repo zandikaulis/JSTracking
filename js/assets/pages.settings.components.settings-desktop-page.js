@@ -76,19 +76,19 @@
                             orientation: u.Fa.Horizontal,
                             label: Object(r.d)("When I Close the App", "DesktopSettingCloseOption"),
                             error: this.state.error
-                        }, i.createElement(u.Xa, {
+                        }, i.createElement(u.Ya, {
                             display: u.X.Flex,
                             flexDirection: u.Aa.Row
                         }, n.map(function(n) {
                             var s = "desktop-close-option:" + n.label;
-                            return i.createElement(u.Xa, {
+                            return i.createElement(u.Ya, {
                                 key: s,
                                 margin: {
                                     right: 2
                                 },
                                 display: u.X.Flex,
                                 flexDirection: u.Aa.Row
-                            }, i.createElement(u.pb, {
+                            }, i.createElement(u.qb, {
                                 checked: n.selected,
                                 value: n.value,
                                 label: n.label,

@@ -18,7 +18,7 @@
                     var e = document.createElement("div");
                     return e.innerHTML = t.description, e.querySelectorAll("a").forEach(function(t) {
                         t.setAttribute("target", "_BLANK")
-                    }), r.createElement(p.Xa, {
+                    }), r.createElement(p.Ya, {
                         padding: {
                             x: 2
                         },
@@ -72,13 +72,13 @@
                     }, e.prototype.render = function() {
                         return this.state.initialized ? r.createElement(h, {
                             description: this.state.description
-                        }) : r.createElement(p.Xa, {
+                        }) : r.createElement(p.Ya, {
                             display: p.X.Flex,
-                            justifyContent: p.Wa.Center,
+                            justifyContent: p.Xa.Center,
                             alignItems: p.f.Center,
                             fullWidth: !0,
                             fullHeight: !0
-                        }, r.createElement(p.Za, null))
+                        }, r.createElement(p.ab, null))
                     }, e
                 }(r.Component),
                 m = Object(s.compose)(Object(u.b)("AddonDetailsDescriptionPage", {

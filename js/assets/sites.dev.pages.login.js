@@ -27,8 +27,8 @@
                 s = n("GnwI"),
                 l = n("3lt/"),
                 p = n("mrSG"),
-                d = n("q1tI"),
-                u = n("mf+E"),
+                u = n("q1tI"),
+                d = n("mf+E"),
                 g = n("/7QA"),
                 m = n("kYGc"),
                 f = n("Ue10"),
@@ -41,63 +41,63 @@
                         }, t
                     }
                     return p.__extends(t, e), t.prototype.render = function() {
-                        return this.props.isLoggedIn ? d.createElement(u.a, {
+                        return this.props.isLoggedIn ? u.createElement(d.a, {
                             to: "/"
-                        }) : d.createElement(f.Xa, {
+                        }) : u.createElement(f.Ya, {
                             fullHeight: !0,
                             fullWidth: !0,
                             display: f.X.Flex,
                             flexDirection: f.Aa.Column,
-                            position: f.jb.Absolute,
+                            position: f.kb.Absolute,
                             attachTop: !0,
                             attachBottom: !0,
                             breakpointSmall: {
                                 flexDirection: f.Aa.Row
                             },
                             className: "dev-login-page"
-                        }, d.createElement(f.Eb, {
+                        }, u.createElement(f.Fb, {
                             flexGrow: 1,
                             flexShrink: 1,
                             display: f.X.Flex,
                             background: f.r.Accent,
-                            justifyContent: f.Wa.Center,
+                            justifyContent: f.Xa.Center,
                             alignItems: f.f.Center,
                             className: "dev-login-page__logo-panel"
-                        }, d.createElement(f.U, {
+                        }, u.createElement(f.U, {
                             to: "/"
-                        }, d.createElement(f.Eb, {
+                        }, u.createElement(f.Fb, {
                             color: f.O.Overlay
-                        }, d.createElement(f.sb, {
-                            asset: f.tb.LogoTwitchDevelopers,
-                            type: f.ub.Inherit,
+                        }, u.createElement(f.tb, {
+                            asset: f.ub.LogoTwitchDevelopers,
+                            type: f.vb.Inherit,
                             width: 220,
                             height: 142
-                        })))), d.createElement(f.Xa, {
+                        })))), u.createElement(f.Ya, {
                             display: f.X.Flex,
                             flexGrow: 1,
                             flexShrink: 1,
                             className: "dev-login-page__login-panel",
-                            justifyContent: f.Wa.Center,
+                            justifyContent: f.Xa.Center,
                             alignItems: f.f.Center
-                        }, d.createElement(f.Xa, {
+                        }, u.createElement(f.Ya, {
                             padding: {
                                 x: 4
                             }
-                        }, d.createElement(f.Xa, {
+                        }, u.createElement(f.Ya, {
                             margin: {
                                 bottom: 2
                             }
-                        }, d.createElement(f.W, {
-                            type: f.Vb.P,
+                        }, u.createElement(f.W, {
+                            type: f.Wb.P,
                             fontSize: f.Ca.Size3
-                        }, Object(g.d)("Welcome to the Twitch Developer Console, where code enhances live streaming experiences", "DevLogin"))), d.createElement(f.z, {
+                        }, Object(g.d)("Welcome to the Twitch Developer Console, where code enhances live streaming experiences", "DevLogin"))), u.createElement(f.z, {
                             onClick: this.login,
                             size: f.D.Large,
-                            icon: f.tb.LogoGlitch,
+                            icon: f.ub.LogoGlitch,
                             "data-a-target": "glass-login-button"
                         }, Object(g.d)("Login with Twitch", "DevLogin")))))
                     }, t
-                }(d.Component);
+                }(u.Component);
             var _ = Object(o.compose)(Object(i.connect)(function(e) {
                 return {
                     isLoggedIn: Object(c.f)(e)

@@ -102,12 +102,12 @@
                     }, t.prototype.render = function() {
                         var e = h(new Date(this.props.app.created_at), "MM/DD/YYYY, hh:mm a"),
                             t = h(new Date(this.props.app.updated_at), "MM/DD/YYYY, hh:mm a");
-                        return a.createElement(_.Mb, {
+                        return a.createElement(_.Nb, {
                             key: this.props.app.id
-                        }, a.createElement(_.Jb, null, this.props.app.name), a.createElement(_.Jb, null, this.props.app.redirect_uri), a.createElement(_.Jb, null, e), a.createElement(_.Jb, null, t), a.createElement(_.Jb, null, a.createElement(_.Xa, {
+                        }, a.createElement(_.Kb, null, this.props.app.name), a.createElement(_.Kb, null, this.props.app.redirect_uri), a.createElement(_.Kb, null, e), a.createElement(_.Kb, null, t), a.createElement(_.Kb, null, a.createElement(_.Ya, {
                             display: _.X.Flex,
-                            justifyContent: _.Wa.Center
-                        }, a.createElement(_.Xa, {
+                            justifyContent: _.Xa.Center
+                        }, a.createElement(_.Ya, {
                             margin: {
                                 right: 1
                             }
@@ -140,19 +140,19 @@
                         this.props.latencyTracking.reportInteractive()
                     }, t.prototype.render = function() {
                         var e = this.renderAppRows();
-                        return a.createElement(_.Hb, {
+                        return a.createElement(_.Ib, {
                             alternateRows: !0
-                        }, a.createElement(_.Kb, null, a.createElement(_.Lb, {
+                        }, a.createElement(_.Lb, null, a.createElement(_.Mb, {
                             label: Object(o.d)("Name", "DevAppsList")
-                        }), a.createElement(_.Lb, {
+                        }), a.createElement(_.Mb, {
                             label: Object(o.d)("URL", "DevAppsList")
-                        }), a.createElement(_.Lb, {
+                        }), a.createElement(_.Mb, {
                             label: Object(o.d)("Date Created", "DevAppsList")
-                        }), a.createElement(_.Lb, {
+                        }), a.createElement(_.Mb, {
                             label: Object(o.d)("Last Updated", "DevAppsList")
-                        }), a.createElement(_.Lb, {
+                        }), a.createElement(_.Mb, {
                             label: ""
-                        })), a.createElement(_.Ib, null, e))
+                        })), a.createElement(_.Jb, null, e))
                     }, t = r.__decorate([Object(l.b)("DevAppsList", {
                         autoReportInteractive: !0
                     })], t)
@@ -164,33 +164,33 @@
                     return r.__extends(t, e), t.prototype.componentDidMount = function() {
                         this.props.latencyTracking.reportInteractive()
                     }, t.prototype.render = function() {
-                        return a.createElement(_.Xa, {
+                        return a.createElement(_.Ya, {
                             className: "dev-apps"
-                        }, a.createElement(_.Pa, {
+                        }, a.createElement(_.Qa, {
                             margin: {
                                 bottom: 2
                             },
                             display: _.X.Flex,
-                            justifyContent: _.Wa.Between
-                        }, a.createElement("header", null, a.createElement(_.Xa, null, a.createElement(_.Xa, {
+                            justifyContent: _.Xa.Between
+                        }, a.createElement("header", null, a.createElement(_.Ya, null, a.createElement(_.Ya, {
                             margin: {
                                 bottom: .5
                             }
                         }, a.createElement(_.W, {
-                            type: _.Vb.H3
+                            type: _.Wb.H3
                         }, Object(o.d)("Developer Applications", "DevApps"))), a.createElement(_.W, {
-                            type: _.Vb.P
-                        }, Object(o.d)("You have registered these apps to use the Twitch API", "DevApps"))), a.createElement(_.Xa, {
+                            type: _.Wb.P
+                        }, Object(o.d)("You have registered these apps to use the Twitch API", "DevApps"))), a.createElement(_.Ya, {
                             margin: {
                                 bottom: 1
                             },
-                            justifyContent: _.Wa.End,
+                            justifyContent: _.Xa.End,
                             display: _.X.Flex
                         }, a.createElement(_.z, {
-                            icon: _.tb.Plus,
+                            icon: _.ub.Plus,
                             onClick: Object(d.c)(d.a.RegisterApp),
                             linkTo: "/console/apps/create"
-                        }, Object(o.d)("Register Your Application", "DevApps"))))), a.createElement(_.Xa, null, a.createElement(v, {
+                        }, Object(o.d)("Register Your Application", "DevApps"))))), a.createElement(_.Ya, null, a.createElement(v, {
                             apps: this.props.apps,
                             onDelete: this.props.onDelete
                         })))

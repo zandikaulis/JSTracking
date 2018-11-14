@@ -4,12 +4,12 @@
         b6Yk: function(e, t, n) {
             "use strict";
             n.d(t, "a", function() {
-                return i
+                return a
             });
             var r = n("mrSG"),
                 s = n("/7QA"),
                 o = n("kRBY"),
-                i = function() {
+                a = function() {
                     function e() {}
                     return e.get = function(e, t, n) {
                         return void 0 === t && (t = {}), void 0 === n && (n = {}), r.__awaiter(this, void 0, Promise, function() {
@@ -117,15 +117,15 @@
                         })
                     }, e.request = function(e, t, n) {
                         return void 0 === t && (t = {}), void 0 === n && (n = {}), r.__awaiter(this, void 0, Promise, function() {
-                            var s, o, i, a;
+                            var s, o, a, i;
                             return r.__generator(this, function(c) {
                                 switch (c.label) {
                                     case 0:
-                                        return t = this.constructOptions(t, n), s = t.headers ? t.headers["Content-Type"] : void 0, o = this.serialize(t.body, s), i = r.__assign({}, t, {
+                                        return t = this.constructOptions(t, n), s = t.headers ? t.headers["Content-Type"] : void 0, o = this.serialize(t.body, s), a = r.__assign({}, t, {
                                             body: o
-                                        }), [4, this._fetch(e, i)];
+                                        }), [4, this._fetch(e, a)];
                                     case 1:
-                                        return a = c.sent(), [4, this.constructLegacyAPIResponse(a)];
+                                        return i = c.sent(), [4, this.constructLegacyAPIResponse(i)];
                                     case 2:
                                         return [2, c.sent()]
                                 }
@@ -201,8 +201,8 @@
                                 "X-Requested-With": "XMLHttpRequest"
                             };
                         e.body && FormData.prototype.isPrototypeOf(e.body) || (r["Content-Type"] = "application/json; charset=UTF-8");
-                        var i = Object(o.e)(n);
-                        return i && (r.Authorization = "OAuth " + i.authToken, i.legacyCSRFToken && (r["Twitch-Api-Token"] = i.legacyCSRFToken)), t.excludeHeaders && t.excludeHeaders.forEach(function(e) {
+                        var a = Object(o.e)(n);
+                        return a && (r.Authorization = "OAuth " + a.authToken, a.legacyCSRFToken && (r["Twitch-Api-Token"] = a.legacyCSRFToken)), t.excludeHeaders && t.excludeHeaders.forEach(function(e) {
                             r[e] && delete r[e]
                         }), r
                     }, e.logger = s.p.logger.withCategory("legacy-api"), e
@@ -214,8 +214,8 @@
             var r = n("/MKj"),
                 s = n("fvjX"),
                 o = n("1/iK"),
-                i = n("y5D0"),
-                a = n("kRBY"),
+                a = n("y5D0"),
+                i = n("kRBY"),
                 c = n("mrSG"),
                 u = n("q1tI"),
                 l = n("/7QA"),
@@ -231,10 +231,10 @@
                         }, t
                     }
                     return c.__extends(t, e), t.prototype.render = function() {
-                        return u.createElement(g.Xa, {
+                        return u.createElement(g.Ya, {
                             className: "file-download-button"
                         }, u.createElement(g.z, {
-                            icon: g.tb.Download,
+                            icon: g.ub.Download,
                             type: g.F.Default,
                             onClick: this.initiateDownload
                         }, Object(l.d)("Download", "FileDownload")))
@@ -282,72 +282,72 @@
                             message: Object(l.d)("You must be logged in to view this page", "MessagesPage")
                         })) : this.state.errorLoadingMessageHistory ? u.createElement(f.a, {
                             message: Object(l.d)("Oops, something went wrong.", "MessagesPage")
-                        }) : u.createElement(g.Xa, {
+                        }) : u.createElement(g.Ya, {
                             className: "messages-page",
                             alignItems: g.f.Center,
                             display: g.X.Flex,
                             fullWidth: !0,
                             fullHeight: !0,
-                            justifyContent: g.Wa.Center,
-                            position: g.jb.Absolute
-                        }, u.createElement(g.Xa, {
+                            justifyContent: g.Xa.Center,
+                            position: g.kb.Absolute
+                        }, u.createElement(g.Ya, {
                             alignItems: g.f.Center,
                             className: "messages-page__body",
                             display: g.X.Flex,
                             flexDirection: g.Aa.Column
                         }, !this.state.hasLoadedMessageHistory && this.renderPlaceholder(), this.state.hasLoadedMessageHistory && this.renderLoadedBody())) : u.createElement(m.a, null)
                     }, t.prototype.renderPlaceholder = function() {
-                        return u.createElement(u.Fragment, null, u.createElement(g.Xa, {
-                            justifyContent: g.Wa.Center
-                        }, u.createElement(g.ib, {
+                        return u.createElement(u.Fragment, null, u.createElement(g.Ya, {
+                            justifyContent: g.Xa.Center
+                        }, u.createElement(g.jb, {
                             height: 130,
                             width: 180
-                        })), u.createElement(g.Xa, {
+                        })), u.createElement(g.Ya, {
                             margin: {
                                 bottom: 1,
                                 top: 4
                             }
-                        }, u.createElement(g.ib, {
+                        }, u.createElement(g.jb, {
                             height: 15,
                             width: 370
-                        }), u.createElement(g.Xa, {
+                        }), u.createElement(g.Ya, {
                             margin: {
                                 y: 1
                             }
-                        }), u.createElement(g.ib, {
+                        }), u.createElement(g.jb, {
                             height: 15,
                             width: 380
-                        }), u.createElement(g.Xa, {
+                        }), u.createElement(g.Ya, {
                             margin: {
                                 y: 1
                             }
-                        }), u.createElement(g.ib, {
+                        }), u.createElement(g.jb, {
                             height: 15,
                             width: 65
-                        }), u.createElement(g.Xa, {
+                        }), u.createElement(g.Ya, {
                             margin: {
                                 y: 2
                             }
-                        }), u.createElement(g.ib, {
+                        }), u.createElement(g.jb, {
                             height: 15,
                             width: 310
-                        }), u.createElement(g.Xa, {
+                        }), u.createElement(g.Ya, {
                             margin: {
                                 y: 2
                             }
-                        }), u.createElement(g.ib, {
+                        }), u.createElement(g.jb, {
                             height: 15,
                             width: 390
-                        }), u.createElement(g.Xa, {
+                        }), u.createElement(g.Ya, {
                             margin: {
                                 y: 1
                             }
-                        }), u.createElement(g.ib, {
+                        }), u.createElement(g.jb, {
                             height: 15,
                             width: 300
-                        })), u.createElement(g.Xa, {
-                            justifyContent: g.Wa.Center
-                        }, u.createElement(g.ib, {
+                        })), u.createElement(g.Ya, {
+                            justifyContent: g.Xa.Center
+                        }, u.createElement(g.jb, {
                             height: 25,
                             width: 100
                         })))
@@ -355,17 +355,17 @@
                         return u.createElement(u.Fragment, null, u.createElement(g.S, {
                             src: h.a,
                             alt: Object(l.d)("Envelope fading into smoke", "MessagesPage")
-                        }), u.createElement(g.Xa, {
+                        }), u.createElement(g.Ya, {
                             margin: {
                                 y: 1
                             }
                         }, u.createElement(g.W, {
                             fontSize: g.Ca.Size5
-                        }, Object(l.d)("Messages have been deprecated due to legacy technology. This allows us to work on new ways for you to contact others on Twitch!", "MessagesPage")), u.createElement(g.Xa, {
+                        }, Object(l.d)("Messages have been deprecated due to legacy technology. This allows us to work on new ways for you to contact others on Twitch!", "MessagesPage")), u.createElement(g.Ya, {
                             margin: {
                                 y: .5
                             }
-                        }), this.getActionCopy(), u.createElement(g.Xa, {
+                        }), this.getActionCopy(), u.createElement(g.Ya, {
                             margin: {
                                 y: .5
                             }
@@ -391,12 +391,12 @@
                 }))(v);
             var O = Object(r.connect)(function(e) {
                 return {
-                    sessionUser: Object(a.e)(e)
+                    sessionUser: Object(i.e)(e)
                 }
             }, function(e) {
                 return Object(s.bindActionCreators)({
                     login: function() {
-                        return Object(i.e)(o.a.MessagesPage)
+                        return Object(a.e)(o.a.MessagesPage)
                     }
                 }, e)
             })(E);

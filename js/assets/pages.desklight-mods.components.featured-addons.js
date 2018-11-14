@@ -21,10 +21,10 @@
                     var t = Object(h.g)(e.addon.downloadCount, {
                         maximumFractionDigits: 1
                     });
-                    return r.createElement(f.Xa, {
+                    return r.createElement(f.Ya, {
                         display: f.X.Flex,
                         className: "featured-mod"
-                    }, r.createElement(f.Xa, {
+                    }, r.createElement(f.Ya, {
                         margin: {
                             bottom: .5
                         },
@@ -34,7 +34,7 @@
                         alt: e.addon.name,
                         src: e.addon.primaryCategoryAvatarUrl,
                         className: "featured-mod__logo"
-                    })), r.createElement(f.Xa, {
+                    })), r.createElement(f.Ya, {
                         display: f.X.Flex,
                         flexDirection: f.Aa.Column,
                         margin: {
@@ -42,35 +42,35 @@
                         },
                         flexGrow: 1,
                         flexShrink: 1,
-                        overflow: f.cb.Hidden
+                        overflow: f.db.Hidden
                     }, r.createElement(f.W, {
-                        type: f.Vb.H2,
+                        type: f.Wb.H2,
                         fontSize: f.Ca.Size4,
                         ellipsis: !0
-                    }, e.addon.name), r.createElement(f.Xa, {
+                    }, e.addon.name), r.createElement(f.Ya, {
                         margin: {
                             bottom: .5
                         }
                     }, r.createElement(f.W, {
                         ellipsis: !0
-                    }, e.addon.primaryCategoryName)), r.createElement(f.Xa, {
+                    }, e.addon.primaryCategoryName)), r.createElement(f.Ya, {
                         display: f.X.Flex
-                    }, r.createElement(f.Xa, {
+                    }, r.createElement(f.Ya, {
                         display: f.X.Flex
-                    }, r.createElement(f.sb, {
-                        asset: f.tb.Download
-                    }), r.createElement(f.Xa, {
+                    }, r.createElement(f.tb, {
+                        asset: f.ub.Download
+                    }), r.createElement(f.Ya, {
                         margin: {
                             left: .5
                         }
-                    }, r.createElement(f.W, null, t))), r.createElement(f.Xa, {
+                    }, r.createElement(f.W, null, t))), r.createElement(f.Ya, {
                         display: f.X.Flex,
                         margin: {
                             left: 1
                         }
-                    }, r.createElement(f.sb, {
-                        asset: f.tb.NavProfile
-                    }), r.createElement(f.Xa, {
+                    }, r.createElement(f.tb, {
+                        asset: f.ub.NavProfile
+                    }), r.createElement(f.Ya, {
                         margin: {
                             left: .5
                         }
@@ -106,32 +106,32 @@
                     }
                     return n.__extends(t, e), t.prototype.render = function() {
                         var e = this.renderCategoryOptions();
-                        return r.createElement(f.Xa, {
+                        return r.createElement(f.Ya, {
                             display: f.X.Flex,
                             padding: {
                                 y: 1
                             },
-                            justifyContent: f.Wa.Between
-                        }, r.createElement(f.Xa, null, r.createElement(f.z, {
+                            justifyContent: f.Xa.Between
+                        }, r.createElement(f.Ya, null, r.createElement(f.z, {
                             onClick: this.props.onRefresh,
-                            icon: f.tb.Refresh,
+                            icon: f.ub.Refresh,
                             type: f.F.Text
                         }, Object(h.d)("Refresh", "FeaturedAddonsNavigationBar")), r.createElement(f.z, {
                             linkTo: "/mods/games/" + this.props.match.params.gameId + "/browse",
-                            icon: f.tb.ViewerList,
+                            icon: f.ub.ViewerList,
                             type: f.F.Text
-                        }, Object(h.d)("See All", "FeaturedAddonsNavigationBar"))), r.createElement(f.Xa, {
+                        }, Object(h.d)("See All", "FeaturedAddonsNavigationBar"))), r.createElement(f.Ya, {
                             display: f.X.Flex
-                        }, r.createElement(f.Xa, {
+                        }, r.createElement(f.Ya, {
                             margin: {
                                 right: 1
                             }
-                        }, r.createElement(f.zb, {
+                        }, r.createElement(f.Ab, {
                             defaultValue: this.props.selectedCategory.toString(),
                             onChange: this.onCategoryChange
                         }, e)), r.createElement("form", {
                             onSubmit: this.onSearchSubmit
-                        }, r.createElement(f.vb, {
+                        }, r.createElement(f.wb, {
                             placeholder: Object(h.d)("Search", "FeaturedAddonsNavigationBar"),
                             value: this.state.searchTerm,
                             onChange: this.setSearchTerm
@@ -153,7 +153,7 @@
                                         default: 2
                                     },
                                     key: e.id
-                                }, r.createElement(f.Xa, {
+                                }, r.createElement(f.Ya, {
                                     margin: {
                                         top: 2
                                     }
@@ -172,7 +172,7 @@
                         var e = this.renderAddons(this.props.popularAddons),
                             t = this.renderAddons(this.props.updatedAddons),
                             a = Object(h.d)("See all", "FeaturedAddonsPage");
-                        return r.createElement(f.Xa, {
+                        return r.createElement(f.Ya, {
                             padding: {
                                 x: 2
                             }
@@ -182,16 +182,16 @@
                             onCategoryChange: this.props.onCategoryChange,
                             onSearchSubmit: this.props.onSearchSubmit,
                             onRefresh: this.props.onRefresh
-                        }), r.createElement(f.Xa, null, r.createElement(f.Xa, {
+                        }), r.createElement(f.Ya, null, r.createElement(f.Ya, {
                             margin: {
                                 bottom: 2
                             }
-                        }, r.createElement(f.Xa, {
+                        }, r.createElement(f.Ya, {
                             display: f.X.Flex,
                             alignItems: f.f.Center
                         }, r.createElement(f.W, {
-                            type: f.Vb.H2
-                        }, Object(h.d)("Popular", "FeaturedAddonsPage")), r.createElement(f.Xa, {
+                            type: f.Wb.H2
+                        }, Object(h.d)("Popular", "FeaturedAddonsPage")), r.createElement(f.Ya, {
                             margin: {
                                 left: 2
                             },
@@ -199,24 +199,24 @@
                             alignItems: f.f.Center
                         }, r.createElement(f.U, {
                             to: "/mods/games/" + this.props.gameId + "/browse?sort=" + g.a.Popularity
-                        }, r.createElement(f.Xa, {
+                        }, r.createElement(f.Ya, {
                             display: f.X.Flex,
                             alignItems: f.f.Center
                         }, r.createElement(f.W, {
                             color: f.O.Alt,
                             bold: !0
-                        }, a), r.createElement(f.sb, {
-                            asset: f.tb.AngleRight,
+                        }, a), r.createElement(f.tb, {
+                            asset: f.ub.AngleRight,
                             height: 10,
                             width: 10
                         }))))), r.createElement(f.W, null, Object(h.d)("Check out the hottest addons in the {game} community.", {
                             game: this.props.gameName
-                        }, "FeaturedAddonsPage")), r.createElement(f.Ja, null, e)), r.createElement(f.Xa, null, r.createElement(f.Xa, {
+                        }, "FeaturedAddonsPage")), r.createElement(f.Ja, null, e)), r.createElement(f.Ya, null, r.createElement(f.Ya, {
                             display: f.X.Flex,
                             alignItems: f.f.Center
                         }, r.createElement(f.W, {
-                            type: f.Vb.H2
-                        }, Object(h.d)("New Releases", "FeaturedAddonsPage")), r.createElement(f.Xa, {
+                            type: f.Wb.H2
+                        }, Object(h.d)("New Releases", "FeaturedAddonsPage")), r.createElement(f.Ya, {
                             margin: {
                                 left: 2
                             },
@@ -224,14 +224,14 @@
                             alignItems: f.f.Center
                         }, r.createElement(f.U, {
                             to: "/mods/games/" + this.props.gameId + "/browse?sort=" + g.a.LastUpdated
-                        }, r.createElement(f.Xa, {
+                        }, r.createElement(f.Ya, {
                             display: f.X.Flex,
                             alignItems: f.f.Center
                         }, r.createElement(f.W, {
                             color: f.O.Alt,
                             bold: !0
-                        }, a), r.createElement(f.sb, {
-                            asset: f.tb.AngleRight,
+                        }, a), r.createElement(f.tb, {
+                            asset: f.ub.AngleRight,
                             height: 10,
                             width: 10
                         }))))), r.createElement(f.W, null, Object(h.d)("Looking for a change? Explore new addons for {game}", {
@@ -354,16 +354,16 @@
                             gameName: this.props.gameInstance.name,
                             onSearchSubmit: this.onSearchSubmit,
                             onRefresh: this.onRefresh
-                        }) : r.createElement(f.Xa, {
+                        }) : r.createElement(f.Ya, {
                             display: f.X.Flex,
-                            justifyContent: f.Wa.Center,
+                            justifyContent: f.Xa.Center,
                             alignItems: f.f.Center,
                             fullWidth: !0,
                             fullHeight: !0
-                        }, r.createElement(f.Za, null))
+                        }, r.createElement(f.ab, null))
                     }, t
                 }(r.Component);
-            var I = Object(o.compose)(Object(p.b)("FeaturedAddonsPage", {
+            var A = Object(o.compose)(Object(p.b)("FeaturedAddonsPage", {
                 destination: c.a.DesklightModsFeaturedAddons
             }), Object(i.a)({
                 location: d.PageviewLocation.DesklightModsFeaturedAddons
@@ -381,7 +381,7 @@
             a.d(t, "FeaturedAddonsContainer", function() {
                 return v
             }), a.d(t, "FeaturedAddonsPage", function() {
-                return I
+                return A
             })
         },
         Fqw2: function(e, t, a) {},

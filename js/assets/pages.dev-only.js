@@ -332,7 +332,7 @@
         VQbD: function(e, t, n) {
             "use strict";
             n.d(t, "a", function() {
-                return h
+                return p
             });
             var r, a, i = n("mrSG"),
                 o = n("TSYQ"),
@@ -344,8 +344,8 @@
             ! function(e) {
                 e.Previous = "previous", e.Next = "next"
             }(a || (a = {}));
-            var m = ((r = {})[a.Previous] = u.tb.AngleLeft, r[a.Next] = u.tb.AngleRight, r),
-                h = function(e) {
+            var m = ((r = {})[a.Previous] = u.ub.AngleLeft, r[a.Next] = u.ub.AngleRight, r),
+                p = function(e) {
                     function t() {
                         var t = null !== e && e.apply(this, arguments) || this;
                         return t.state = {
@@ -422,20 +422,40 @@
                                 }, {
                                     "media-carousel__button--inset": !0 === t.props.insetStyle
                                 });
-                            return l.createElement(u.Xa, {
-                                className: d,
-                                position: u.jb.Relative,
+                            return l.createElement(u.Ya, {
                                 display: u.X.Flex,
-                                alignItems: u.f.Stretch
-                            }, l.createElement(u.A, {
+                                alignItems: u.f.Center,
+                                position: u.kb.Absolute,
+                                attachTop: !0,
+                                attachLeft: e && e === a.Previous,
+                                attachRight: e && e === a.Next,
+                                fullHeight: !0
+                            }, l.createElement(u.Fb, {
+                                className: d,
+                                position: u.kb.Relative,
+                                display: u.X.Flex,
+                                borderRadius: u.x.Medium,
+                                background: n ? u.r.Base : void 0
+                            }, l.createElement(u.Va, {
+                                ariaLabel: c[e],
+                                blurAfterClick: !0,
                                 "data-test-selector": e + "-button",
                                 "data-a-target": e + "-button",
-                                onClick: r,
                                 disabled: n,
-                                ariaLabel: c[e],
-                                icon: m[e],
-                                size: u.B.Large
-                            }))
+                                onClick: r,
+                                type: u.Wa.Base,
+                                borderRadius: t.props.insetStyle ? u.x.None : u.x.Medium,
+                                border: t.props.insetStyle
+                            }, l.createElement(u.Fb, {
+                                color: u.O.Link,
+                                display: u.X.InlineFlex,
+                                padding: {
+                                    x: .5,
+                                    y: 2
+                                }
+                            }, l.createElement(u.La, {
+                                asset: m[e]
+                            })))))
                         }, t
                     }
                     return i.__extends(t, e), t.prototype.componentDidUpdate = function() {
@@ -447,15 +467,15 @@
                     }, t.prototype.componentWillUnmount = function() {
                         window.removeEventListener("resize", this.onResize)
                     }, t.prototype.render = function() {
-                        return l.createElement(u.Pa, i.__assign({}, this.props, {
-                            position: u.jb.Relative
+                        return l.createElement(u.Qa, i.__assign({}, this.props, {
+                            position: u.kb.Relative
                         }), l.createElement("div", {
                             className: "media-carousel",
                             ref: this.refHandler,
                             "data-test-selector": "carousel-container"
-                        }, l.createElement(u.Xa, {
+                        }, l.createElement(u.Ya, {
                             className: "media-carousel__child-container",
-                            overflow: u.cb.Hidden,
+                            overflow: u.db.Hidden,
                             fullWidth: !0,
                             "data-test-selector": "child-container"
                         }, l.createElement("div", {
@@ -464,7 +484,7 @@
                                 marginLeft: this.transformString()
                             },
                             "data-test-selector": "carousel-body"
-                        }, l.createElement(u.Pa, {
+                        }, l.createElement(u.Qa, {
                             className: "media-carousel__content",
                             display: u.X.Flex,
                             flexWrap: u.Ba.NoWrap,
@@ -475,19 +495,19 @@
                             style: {
                                 width: "max-content"
                             }
-                        }, this.props.items)))), l.createElement(u.Xa, {
+                        }, this.props.items)))), l.createElement(u.Ya, {
                             className: "media-carousel__nav",
                             display: u.X.Flex,
                             alignItems: u.f.Center,
-                            position: u.jb.Absolute,
+                            position: u.kb.Absolute,
                             attachTop: !0,
                             attachLeft: !0,
                             fullHeight: !0
-                        }, this.renderNavButton(a.Previous, !this.state.childrenRendered || this.isBackButtonDisabled(), this.moveCarouselBackward)), l.createElement(u.Xa, {
+                        }, this.renderNavButton(a.Previous, !this.state.childrenRendered || this.isBackButtonDisabled(), this.moveCarouselBackward)), l.createElement(u.Ya, {
                             className: "media-carousel__nav",
                             display: u.X.Flex,
                             alignItems: u.f.Center,
-                            position: u.jb.Absolute,
+                            position: u.kb.Absolute,
                             attachTop: !0,
                             attachRight: !0,
                             fullHeight: !0
@@ -814,26 +834,26 @@
                         }, this.props.children)
                     }, t
                 }(a.Component);
-            var h = function(e) {
-                return a.createElement(c.Xa, null, "Current value: ", e.interestingValue, a.createElement("br", null), a.createElement(c.z, {
+            var p = function(e) {
+                return a.createElement(c.Ya, null, "Current value: ", e.interestingValue, a.createElement("br", null), a.createElement(c.z, {
                     onClick: function() {
                         return e.doAnUpdate(e.buttonUpdatesContextTo)
                     }
                 }, "Set context to ", e.buttonUpdatesContextTo))
             };
-            h.displayName = "TestContextFormComponent";
-            var p = d(function(e) {
+            p.displayName = "TestContextFormComponent";
+            var h = d(function(e) {
                     return {
                         interestingValue: e.value,
                         doAnUpdate: e.updateValue
                     }
-                })(h),
+                })(p),
                 g = function() {
-                    return a.createElement(m, null, a.createElement(p, {
+                    return a.createElement(m, null, a.createElement(h, {
                         buttonUpdatesContextTo: "foo"
-                    }), a.createElement(p, {
+                    }), a.createElement(h, {
                         buttonUpdatesContextTo: "bar"
-                    }), a.createElement(m, null, "Nested context override:", a.createElement(p, {
+                    }), a.createElement(m, null, "Nested context override:", a.createElement(h, {
                         buttonUpdatesContextTo: "baz"
                     })))
                 },
@@ -841,7 +861,7 @@
                 v = n("8/mp"),
                 E = n("NvVO"),
                 y = n("GnwI"),
-                _ = function(e) {
+                b = function(e) {
                     function t(t) {
                         var n = e.call(this, t) || this;
                         return n.loadMoreA = function() {
@@ -874,36 +894,36 @@
                         }, n
                     }
                     return l.__extends(t, e), t.prototype.render = function() {
-                        for (var e = [], t = 0; t < this.state.colA; t++) e.push(a.createElement(c.Xa, {
+                        for (var e = [], t = 0; t < this.state.colA; t++) e.push(a.createElement(c.Ya, {
                             key: t,
                             display: c.X.Flex,
                             flexWrap: c.Ba.NoWrap,
                             margin: 1
-                        }, a.createElement(c.Xa, {
+                        }, a.createElement(c.Ya, {
                             margin: {
                                 right: 1
                             }
-                        }, a.createElement(c.ib, {
+                        }, a.createElement(c.jb, {
                             height: 90,
                             width: 90
-                        })), a.createElement(c.Xa, null, a.createElement(c.ib, {
+                        })), a.createElement(c.Ya, null, a.createElement(c.jb, {
                             width: 300,
                             lineCount: 3
                         }))));
                         var n = [];
-                        for (t = 0; t < this.state.colB; t++) n.push(a.createElement(c.Xa, {
+                        for (t = 0; t < this.state.colB; t++) n.push(a.createElement(c.Ya, {
                             key: t,
                             display: c.X.Flex,
                             flexWrap: c.Ba.NoWrap,
                             margin: 1
-                        }, a.createElement(c.Xa, {
+                        }, a.createElement(c.Ya, {
                             margin: {
                                 right: 1
                             }
-                        }, a.createElement(c.ib, {
+                        }, a.createElement(c.jb, {
                             height: 90,
                             width: 90
-                        })), a.createElement(c.Xa, null, a.createElement(c.ib, {
+                        })), a.createElement(c.Ya, null, a.createElement(c.jb, {
                             width: 300,
                             lineCount: 3
                         }))));
@@ -914,20 +934,20 @@
                         };
                         return a.createElement("div", {
                             style: r
-                        }, a.createElement(v.b, null, a.createElement(c.Xa, {
+                        }, a.createElement(v.b, null, a.createElement(c.Ya, {
                             display: c.X.Flex,
                             flexWrap: c.Ba.NoWrap
-                        }, a.createElement(c.Xa, {
+                        }, a.createElement(c.Ya, {
                             margin: {
                                 right: 1
                             }
-                        }, e, this.state.loadingA && a.createElement(c.Xa, null, a.createElement(c.Za, {
+                        }, e, this.state.loadingA && a.createElement(c.Ya, null, a.createElement(c.ab, {
                             fillContent: !0
                         })), a.createElement(v.a, {
                             enabled: !0,
                             loadMore: this.loadMoreA,
                             pixelThreshold: 0
-                        })), a.createElement(c.Xa, null, n, this.state.loadingB && a.createElement(c.Xa, null, a.createElement(c.Za, {
+                        })), a.createElement(c.Ya, null, n, this.state.loadingB && a.createElement(c.Ya, null, a.createElement(c.ab, {
                             fillContent: !0
                         })), a.createElement(v.a, {
                             contentLength: n.length,
@@ -937,7 +957,7 @@
                         })))))
                     }, t
                 }(a.Component),
-                b = Object(y.b)("DevOnlyPage", {
+                _ = Object(y.b)("DevOnlyPage", {
                     destination: E.a.DevOnly,
                     autoReportInteractive: !0
                 })(function() {
@@ -960,9 +980,9 @@
                     }, "Log a info-level message"), a.createElement(c.z, {
                         onClick: C
                     }, "Log a warning-level message"), a.createElement(c.z, {
-                        onClick: O
-                    }, "Log an error-level message with error"), a.createElement(c.z, {
                         onClick: x
+                    }, "Log an error-level message with error"), a.createElement(c.z, {
+                        onClick: O
                     }, "Log a fatal-level message with error"), a.createElement(c.z, {
                         onClick: S
                     }, "Log message with unserializable argument"), a.createElement(c.z, {
@@ -1029,13 +1049,13 @@
                         }
                     }, "Internal Link with location state, including tt_codes")), a.createElement("li", null, a.createElement(c.U, {
                         to: "/adamar/dashboard"
-                    }, "Legacy Link (dashbaord)"))), a.createElement(c.Xa, {
+                    }, "Legacy Link (dashbaord)"))), a.createElement(c.Ya, {
                         margin: {
                             top: 2
                         }
                     }, a.createElement(c.W, {
-                        type: c.Vb.H2
-                    }, "Infinite Scroll Test"), a.createElement(_, null))))
+                        type: c.Wb.H2
+                    }, "Infinite Scroll Test"), a.createElement(b, null))))
                 });
 
             function k() {
@@ -1055,7 +1075,7 @@
                 e.self = e, f.k.info("Can't serialize this arg, oh no.", e)
             }
 
-            function O() {
+            function x() {
                 try {
                     throw new Error("throwing an error.")
                 } catch (e) {
@@ -1063,7 +1083,7 @@
                 }
             }
 
-            function x() {
+            function O() {
                 try {
                     throw new Error("throwing a super bad unrecoverable error.")
                 } catch (e) {
@@ -1074,85 +1094,85 @@
             function N() {
                 throw new Error("Throwing an uncaught error.")
             }
-            var P = n("VQbD"),
-                T = (n("NrqC"), function(e) {
+            var T = n("VQbD"),
+                W = (n("NrqC"), function(e) {
                     function t() {
                         return null !== e && e.apply(this, arguments) || this
                     }
                     return l.__extends(t, e), t.prototype.render = function() {
-                        return a.createElement(v.b, null, a.createElement(c.Xa, {
+                        return a.createElement(v.b, null, a.createElement(c.Ya, {
                             className: "testing-carousel",
                             padding: 3
                         }, a.createElement(c.W, {
-                            type: c.Vb.H2
-                        }, "Media Carousel - Standard"), a.createElement(c.Xa, {
+                            type: c.Wb.H2
+                        }, "Media Carousel - Standard"), a.createElement(c.Ya, {
                             "data-a-target": "carousel-standard"
-                        }, a.createElement(c.Pa, {
+                        }, a.createElement(c.Qa, {
                             margin: {
                                 bottom: 3,
                                 top: 1
                             }
-                        }, a.createElement(P.a, {
+                        }, a.createElement(T.a, {
                             items: this.renderStandardItems()
                         }))), a.createElement(c.W, {
-                            type: c.Vb.H2
-                        }, "Media Carousel - Tiny"), a.createElement(c.Xa, {
+                            type: c.Wb.H2
+                        }, "Media Carousel - Tiny"), a.createElement(c.Ya, {
                             "data-a-target": "carousel-standard-tiny"
-                        }, a.createElement(c.Pa, {
+                        }, a.createElement(c.Qa, {
                             margin: {
                                 bottom: 3,
                                 top: 1
                             }
-                        }, a.createElement(P.a, {
+                        }, a.createElement(T.a, {
                             items: this.renderStandardTinyItems()
                         }))), a.createElement(c.W, {
-                            type: c.Vb.H2
-                        }, "Media Carousel - HUGE"), a.createElement(c.Xa, {
+                            type: c.Wb.H2
+                        }, "Media Carousel - HUGE"), a.createElement(c.Ya, {
                             "data-a-target": "carousel-standard-huge"
-                        }, a.createElement(c.Pa, {
+                        }, a.createElement(c.Qa, {
                             margin: {
                                 bottom: 3,
                                 top: 1
                             }
-                        }, a.createElement(P.a, {
+                        }, a.createElement(T.a, {
                             items: this.renderStandardHugeItems()
                         }))), a.createElement(c.W, {
-                            type: c.Vb.H2
-                        }, "Media Carousel - Single"), a.createElement(c.Xa, {
+                            type: c.Wb.H2
+                        }, "Media Carousel - Single"), a.createElement(c.Ya, {
                             "data-a-target": "carousel-single"
-                        }, a.createElement(c.Pa, {
+                        }, a.createElement(c.Qa, {
                             margin: {
                                 bottom: 3,
                                 top: 1
                             }
-                        }, a.createElement(P.a, {
+                        }, a.createElement(T.a, {
                             items: this.renderSingleItem()
                         }))), a.createElement(c.W, {
-                            type: c.Vb.H2
-                        }, "Media Carousel - Single and HUGE"), a.createElement(c.Xa, {
+                            type: c.Wb.H2
+                        }, "Media Carousel - Single and HUGE"), a.createElement(c.Ya, {
                             "data-a-target": "carousel-single-huge"
-                        }, a.createElement(c.Pa, {
+                        }, a.createElement(c.Qa, {
                             margin: {
                                 bottom: 3,
                                 top: 1
                             }
-                        }, a.createElement(P.a, {
+                        }, a.createElement(T.a, {
                             items: this.renderSingleHugeItem()
                         }))), a.createElement(c.W, {
-                            type: c.Vb.H2
-                        }, "Media Carousel - Various Widths"), a.createElement(c.Xa, {
+                            type: c.Wb.H2
+                        }, "Media Carousel - Various Widths"), a.createElement(c.Ya, {
                             "data-a-target": "carousel-various-widths"
-                        }, a.createElement(c.Pa, {
+                        }, a.createElement(c.Qa, {
                             margin: {
                                 bottom: 3,
                                 top: 1
                             }
-                        }, a.createElement(P.a, {
+                        }, a.createElement(T.a, {
                             items: this.renderVariousWidthItems()
                         })))))
                     }, t.prototype.renderStandardItems = function() {
                         return [0, 1, 2, 3, 4, 5, 6, 7, 8].map(function(e) {
-                            return a.createElement(c.Xa, {
+                            return a.createElement(c.Ya, {
                                 key: "placeholder-" + e,
                                 padding: {
                                     right: 2
@@ -1165,13 +1185,13 @@
                                     height: 100
                                 }
                             }, a.createElement(c.W, {
-                                type: c.Vb.H1,
+                                type: c.Wb.H1,
                                 color: c.O.Overlay
                             }, e)))
                         })
                     }, t.prototype.renderStandardTinyItems = function() {
                         return [0, 1, 2].map(function(e) {
-                            return a.createElement(c.Xa, {
+                            return a.createElement(c.Ya, {
                                 key: "placeholder-" + e,
                                 padding: {
                                     right: 2
@@ -1184,13 +1204,13 @@
                                     height: 100
                                 }
                             }, a.createElement(c.W, {
-                                type: c.Vb.H1,
+                                type: c.Wb.H1,
                                 color: c.O.Overlay
                             }, e)))
                         })
                     }, t.prototype.renderStandardHugeItems = function() {
                         return [0, 1, 2, 3, 4, 5, 6, 7, 8].map(function(e) {
-                            return a.createElement(c.Xa, {
+                            return a.createElement(c.Ya, {
                                 key: "placeholder-" + e,
                                 padding: {
                                     right: 2
@@ -1203,13 +1223,13 @@
                                     height: 100
                                 }
                             }, a.createElement(c.W, {
-                                type: c.Vb.H1,
+                                type: c.Wb.H1,
                                 color: c.O.Overlay
                             }, e)))
                         })
                     }, t.prototype.renderSingleItem = function() {
                         return [0].map(function(e) {
-                            return a.createElement(c.Xa, {
+                            return a.createElement(c.Ya, {
                                 key: "placeholder-" + e,
                                 padding: {
                                     right: 2
@@ -1222,13 +1242,13 @@
                                     height: 100
                                 }
                             }, a.createElement(c.W, {
-                                type: c.Vb.H1,
+                                type: c.Wb.H1,
                                 color: c.O.Overlay
                             }, e)))
                         })
                     }, t.prototype.renderSingleHugeItem = function() {
                         return [0].map(function(e) {
-                            return a.createElement(c.Xa, {
+                            return a.createElement(c.Ya, {
                                 key: "placeholder-" + e,
                                 padding: {
                                     right: 2
@@ -1241,13 +1261,13 @@
                                     height: 100
                                 }
                             }, a.createElement(c.W, {
-                                type: c.Vb.H1,
+                                type: c.Wb.H1,
                                 color: c.O.Overlay
                             }, e)))
                         })
                     }, t.prototype.renderVariousWidthItems = function() {
                         return [0, 1, 2, 3, 4, 5, 6, 7, 8].map(function(e) {
-                            return a.createElement(c.Xa, {
+                            return a.createElement(c.Ya, {
                                 key: "placeholder-" + e,
                                 padding: {
                                     right: 2
@@ -1260,23 +1280,23 @@
                                     height: 100
                                 }
                             }, a.createElement(c.W, {
-                                type: c.Vb.H1,
+                                type: c.Wb.H1,
                                 color: c.O.Overlay
                             }, e)))
                         })
                     }, t
                 }(a.Component)),
-                U = n("/MKj"),
-                R = n("fvjX"),
-                D = n("KxT4"),
-                L = n("IX50"),
-                A = (n("+6bW"), D.c.Google),
-                I = function(e) {
+                R = n("/MKj"),
+                P = n("fvjX"),
+                U = n("KxT4"),
+                D = n("IX50"),
+                L = (n("+6bW"), U.c.Google),
+                A = function(e) {
                     function t(t) {
                         var n = e.call(this, t) || this;
                         return n.onToggleTwitchAdsConsent = function() {
                             var e, t = !n.props.twitchAdsConsent;
-                            n.props.saveVendorPreferences(((e = {})[A] = t, e))
+                            n.props.saveVendorPreferences(((e = {})[L] = t, e))
                         }, n.state = {
                             gdprStates: [t.gdpr],
                             toggleValue: t.twitchAdsConsent
@@ -1291,12 +1311,12 @@
                         })
                     }, t.prototype.render = function() {
                         var e = window.location.search.includes("gdpr_override"),
-                            t = Object(D.f)();
-                        return a.createElement(c.Xa, {
+                            t = Object(U.f)();
+                        return a.createElement(c.Ya, {
                             padding: 2
                         }, a.createElement(c.W, {
                             fontSize: c.Ca.Size2
-                        }, "GDPR Consent"), a.createElement(c.W, null, "Testing our withGDPRConsent HOC. Each prop update will render the current GDPRStatus value in the section below."), a.createElement(c.W, null, "Red indicates it is not safe to load content - Green indicates it is."), a.createElement(c.Xa, {
+                        }, "GDPR Consent"), a.createElement(c.W, null, "Testing our withGDPRConsent HOC. Each prop update will render the current GDPRStatus value in the section below."), a.createElement(c.W, null, "Red indicates it is not safe to load content - Green indicates it is."), a.createElement(c.Ya, {
                             margin: {
                                 y: 2
                             }
@@ -1305,10 +1325,10 @@
                         }, t ? "Enabled" : "Disabled"), a.createElement(c.W, null, "Query String: ?gdpr_override / ?eea"), a.createElement(c.W, null, "Dynamic Settings: gdpr_consent_enabled"), a.createElement(c.Ea, {
                             label: "Grant test consent",
                             orientation: c.Fa.Horizontal
-                        }, a.createElement(c.Xb, {
+                        }, a.createElement(c.Yb, {
                             onChange: this.onToggleTwitchAdsConsent,
                             checked: this.props.twitchAdsConsent
-                        }))), a.createElement(c.Eb, {
+                        }))), a.createElement(c.Fb, {
                             padding: {
                                 y: 1
                             },
@@ -1319,7 +1339,7 @@
                         }, this.state.gdprStates.map(function(e, t) {
                             var n = e.status,
                                 r = e.blockConsentRequiredContent ? "gdpr-status-text" : "gdpr-status-text--safe";
-                            return a.createElement(c.Eb, {
+                            return a.createElement(c.Fb, {
                                 border: !0,
                                 margin: {
                                     right: 1
@@ -1331,7 +1351,7 @@
                                 fontSize: c.Ca.Size4,
                                 color: c.O.Overlay
                             }, n))
-                        })), e && a.createElement(c.Xa, {
+                        })), e && a.createElement(c.Ya, {
                             margin: {
                                 top: 1
                             }
@@ -1339,7 +1359,7 @@
                             italic: !0
                         }, "The query param override is enabled, which means you will see the consent notice even if you are not in an EEA country."), a.createElement(c.W, {
                             italic: !0
-                        }, "Use the dynamic settings override instead to simulate the scenario where our consent solution determines you do not need to see the notice since you are not in an EEA country.")), a.createElement(c.Xa, {
+                        }, "Use the dynamic settings override instead to simulate the scenario where our consent solution determines you do not need to see the notice since you are not in an EEA country.")), a.createElement(c.Ya, {
                             margin: {
                                 top: 1
                             }
@@ -1348,26 +1368,26 @@
                         }, "Reset Test")))
                     }, t
                 }(a.Component),
-                W = Object(R.compose)(Object(y.b)("GDPRTestPage", {
+                F = Object(P.compose)(Object(y.b)("GDPRTestPage", {
                     autoReportInteractive: !0,
                     destination: E.a.Unknown
-                }), Object(U.connect)(function(e) {
+                }), Object(R.connect)(function(e) {
                     return {
-                        twitchAdsConsent: !!e.gdpr.vendorPreferences[A]
+                        twitchAdsConsent: !!e.gdpr.vendorPreferences[L]
                     }
                 }, function(e) {
-                    return Object(R.bindActionCreators)({
-                        saveVendorPreferences: L.c,
-                        resetConsent: L.b
+                    return Object(P.bindActionCreators)({
+                        saveVendorPreferences: D.c,
+                        resetConsent: D.b
                     }, e)
-                }), Object(D.j)(A))(I),
-                q = n("yR8l"),
-                F = n("cViM"),
-                X = function(e) {
+                }), Object(U.j)(L))(A),
+                I = n("yR8l"),
+                q = n("cViM"),
+                B = function(e) {
                     function t(t) {
                         var n = e.call(this, t) || this;
                         return n.renderPropState = function(e, t) {
-                            return a.createElement(c.Eb, {
+                            return a.createElement(c.Fb, {
                                 border: !0,
                                 margin: 1,
                                 padding: 1,
@@ -1406,7 +1426,7 @@
                         })
                     }, t.prototype.render = function() {
                         var e = this;
-                        return a.createElement(c.Xa, {
+                        return a.createElement(c.Ya, {
                             flexDirection: c.Aa.Row,
                             display: c.X.Flex
                         }, this.state.propStates.map(function(t, n) {
@@ -1414,30 +1434,30 @@
                         }))
                     }, t
                 }(a.Component),
-                B = Object(q.a)(F)(X),
+                Y = Object(I.a)(q)(B),
                 j = n("+6oQ"),
-                V = function(e) {
+                H = function(e) {
                     function t() {
                         return null !== e && e.apply(this, arguments) || this
                     }
                     return l.__extends(t, e), t.prototype.render = function() {
-                        return this.props.data.currentUser ? a.createElement(B, null) : null
+                        return this.props.data.currentUser ? a.createElement(Y, null) : null
                     }, t
                 }(a.Component),
-                H = Object(q.a)(j)(V),
+                Q = Object(I.a)(j)(H),
                 z = n("+5a/"),
                 G = function(e) {
                     function t() {
                         return null !== e && e.apply(this, arguments) || this
                     }
                     return l.__extends(t, e), t.prototype.render = function() {
-                        return a.createElement(H, null)
+                        return a.createElement(Q, null)
                     }, t
                 }(a.Component),
-                M = Object(q.a)(z)(G),
-                Q = n("oJmH"),
-                J = n("wIs1"),
-                Y = n("LL7G"),
+                M = Object(I.a)(z)(G),
+                V = n("oJmH"),
+                X = n("wIs1"),
+                J = n("LL7G"),
                 K = function(e) {
                     function t() {
                         return null !== e && e.apply(this, arguments) || this
@@ -1450,7 +1470,7 @@
                         }, a.createElement("p", null, "Testing GraphQL"))
                     }, t
                 }(a.Component),
-                $ = Object(Q.compose)(Object(q.a)(Y, {
+                $ = Object(V.compose)(Object(I.a)(J, {
                     options: function(e) {
                         return {
                             variables: {
@@ -1458,7 +1478,7 @@
                             }
                         }
                     }
-                }), J.a)(K),
+                }), X.a)(K),
                 Z = function(e) {
                     function t() {
                         var t = null !== e && e.apply(this, arguments) || this;
@@ -1528,19 +1548,19 @@
                         component: M
                     }), a.createElement(i.a, {
                         path: "/_dev/gdpr",
-                        component: W
+                        component: F
                     }), a.createElement(i.a, {
                         path: "/_dev/legacy-api",
                         component: te
                     }), a.createElement(i.a, {
                         path: "/_dev/testing/carousel",
-                        component: T
+                        component: W
                     }), a.createElement(i.a, {
                         path: "/_dev/context",
                         component: g
                     }), a.createElement(i.a, {
                         path: "/_dev",
-                        component: b
+                        component: _
                     }))
                 };
             n.d(t, "DevOnlyRoot", function() {

@@ -80,13 +80,13 @@
                     var t = e.children,
                         r = e.tooltip,
                         i = e.title;
-                    return n.createElement(s.Xa, {
+                    return n.createElement(s.Ya, {
                         margin: {
                             bottom: 4
                         }
                     }, n.createElement(c, {
                         tooltip: r
-                    }, i), n.createElement(s.Eb, {
+                    }, i), n.createElement(s.Fb, {
                         borderRadius: Object(a.b)() ? s.x.Large : void 0,
                         elevation: 1,
                         background: s.r.Base
@@ -95,14 +95,14 @@
                 c = function(e) {
                     var t = e.children,
                         r = e.tooltip;
-                    return n.createElement(s.Xa, {
+                    return n.createElement(s.Ya, {
                         alignItems: s.f.Center,
                         display: s.X.Flex,
                         margin: {
                             bottom: 1
                         }
                     }, n.createElement(s.W, {
-                        type: s.Vb.H5,
+                        type: s.Wb.H5,
                         bold: !0
                     }, t), r && n.createElement(i.a, {
                         direction: s.v.TopRight
@@ -150,64 +150,64 @@
                                 "data-test-selector": n.Overlay
                             }, l.createElement(h.o, {
                                 ratio: h.p.Aspect16x9
-                            }, l.createElement(h.Xa, null, l.createElement(h.Pa, {
+                            }, l.createElement(h.Ya, null, l.createElement(h.Qa, {
                                 fullWidth: !0,
                                 fullHeight: !0,
-                                position: h.jb.Absolute
+                                position: h.kb.Absolute
                             }, l.createElement("img", {
                                 src: i
-                            })), l.createElement(h.Xa, {
+                            })), l.createElement(h.Ya, {
                                 className: "embed-card__overlay",
-                                position: h.jb.Absolute,
+                                position: h.kb.Absolute,
                                 attachLeft: !0,
                                 attachTop: !0,
                                 fullWidth: !0,
                                 fullHeight: !0
-                            }, l.createElement(h.Xa, {
+                            }, l.createElement(h.Ya, {
                                 className: "embed-card__play",
                                 display: h.X.Flex,
-                                justifyContent: h.Wa.Center,
-                                position: h.jb.Absolute,
+                                justifyContent: h.Xa.Center,
+                                position: h.kb.Absolute,
                                 attachLeft: !0,
                                 attachTop: !0,
                                 fullWidth: !0,
                                 fullHeight: !0
-                            }, l.createElement(h.sb, {
-                                asset: h.tb.Play,
+                            }, l.createElement(h.tb, {
+                                asset: h.ub.Play,
                                 width: 50,
                                 height: 50
-                            })), l.createElement(h.Xa, {
-                                position: h.jb.Absolute,
+                            })), l.createElement(h.Ya, {
+                                position: h.kb.Absolute,
                                 padding: 1,
                                 attachBottom: !0,
                                 attachLeft: !0
-                            }, r && l.createElement(h.W, null, Object(u.c)(new Date(r), "medium")), l.createElement(h.Xa, null, s === f.Stream && l.createElement(h.Xa, {
+                            }, r && l.createElement(h.W, null, Object(u.c)(new Date(r), "medium")), l.createElement(h.Ya, null, s === f.Stream && l.createElement(h.Ya, {
                                 display: h.X.Inline,
                                 margin: {
                                     right: .5
                                 }
                             }, l.createElement(h.K, {
                                 status: h.M.Live
-                            })), void 0 !== o && l.createElement("span", null, t.getFormattedViewCount(o, s)))), l.createElement(h.Xa, {
-                                position: h.jb.Absolute,
+                            })), void 0 !== o && l.createElement("span", null, t.getFormattedViewCount(o, s)))), l.createElement(h.Ya, {
+                                position: h.kb.Absolute,
                                 padding: 1,
                                 attachBottom: !0,
                                 attachRight: !0
-                            }, c && l.createElement(h.Xa, null, l.createElement(h.W, null, c)))), l.createElement(h.Eb, {
-                                position: h.jb.Absolute,
+                            }, c && l.createElement(h.Ya, null, l.createElement(h.W, null, c)))), l.createElement(h.Fb, {
+                                position: h.kb.Absolute,
                                 attachTop: !0,
                                 attachLeft: !0,
                                 margin: 1,
                                 fontSize: h.Ca.Size5
-                            }, s === f.Stream && l.createElement(h.gb, {
+                            }, s === f.Stream && l.createElement(h.hb, {
                                 label: Object(u.d)("Live", "EmbedOverlayPill"),
-                                type: h.hb.Live
-                            }), s === f.Video && l.createElement(h.gb, {
+                                type: h.ib.Live
+                            }), s === f.Video && l.createElement(h.hb, {
                                 label: Object(u.d)("Video", "EmbedOverlayPill"),
-                                type: h.hb.Overlay
-                            }), s === f.Clip && l.createElement(h.gb, {
+                                type: h.ib.Overlay
+                            }), s === f.Clip && l.createElement(h.hb, {
                                 label: Object(u.d)("Clip", "EmbedOverlayPill"),
-                                type: h.hb.Overlay
+                                type: h.ib.Overlay
                             })))))
                         }, t.handleClick = function(e) {
                             e.preventDefault(), t.setState({
@@ -248,8 +248,8 @@
                         }
                     }, t
                 }(l.Component),
-                g = Object(p.b)("EmbedOverlay")(b);
-            var v = Object(a.connect)(function(e) {
+                v = Object(p.b)("EmbedOverlay")(b);
+            var g = Object(a.connect)(function(e) {
                 return {
                     activeVideoPlayerRefID: Object(o.a)(e)
                 }
@@ -257,9 +257,9 @@
                 return Object(i.bindActionCreators)({
                     reportPlayerInstanceStarted: s.b
                 }, e)
-            })(g);
+            })(v);
             r.d(t, "a", function() {
-                return v
+                return g
             }), r.d(t, !1, function() {
                 return n
             }), r.d(t, !1, function() {
@@ -271,7 +271,7 @@
             }), r.d(t, !1, function() {
                 return b
             }), r.d(t, !1, function() {
-                return g
+                return v
             })
         },
         "4eyL": function(e, t, r) {
@@ -607,7 +607,7 @@
                 });
                 return s.e.sort(r)
             }
-            var g = function(e) {
+            var v = function(e) {
                 function t() {
                     var t = null !== e && e.apply(this, arguments) || this;
                     return t.state = {
@@ -669,7 +669,7 @@
                 }, t
             }(a.Component);
             r.d(t, "a", function() {
-                return g
+                return v
             })
         },
         "6E8S": function(e, t, r) {
@@ -708,7 +708,7 @@
                             borderTop: !0,
                             borderBottom: !0
                         };
-                    return s.createElement(u.Eb, n.__assign({}, m), s.createElement(u.Xa, {
+                    return s.createElement(u.Fb, n.__assign({}, m), s.createElement(u.Ya, {
                         padding: {
                             left: 1
                         },
@@ -719,12 +719,12 @@
                         "x:strong": function(e) {
                             return s.createElement(u.W, {
                                 bold: !0,
-                                type: u.Vb.Span
+                                type: u.Wb.Span
                             }, e)
                         },
                         startDate: r,
                         endDate: t
-                    }, "QuestTimeFrameBar"))), e.questKey !== c.b.PATH_TO_PARTNER && s.createElement(u.Xa, {
+                    }, "QuestTimeFrameBar"))), e.questKey !== c.b.PATH_TO_PARTNER && s.createElement(u.Ya, {
                         padding: {
                             right: 1
                         }
@@ -761,8 +761,8 @@
                 h = r("m9vr"),
                 f = r("IFXb"),
                 b = r("0us7"),
-                g = r("VxtK"),
-                v = r("S3iq"),
+                v = r("VxtK"),
+                g = r("S3iq"),
                 y = r("xMok"),
                 S = r("gq0V"),
                 E = r("6E8S"),
@@ -771,11 +771,11 @@
                 _ = r("6XEL"),
                 C = r("Ue10"),
                 O = function(e) {
-                    if (e.query.isLoading || !e.streamSummaryCursor.current) return a.createElement(C.Xa, {
+                    if (e.query.isLoading || !e.streamSummaryCursor.current) return a.createElement(C.Ya, {
                         margin: {
                             bottom: 2
                         }
-                    }, a.createElement(C.ib, {
+                    }, a.createElement(C.jb, {
                         height: 400
                     }));
                     var t = e.streamSummaryCursor.current.interval,
@@ -786,17 +786,17 @@
                     }
                     return r.length ? a.createElement(E.a, {
                         title: Object(o.d)("What is my achievements progress?", "StreamSummaryAchievementsPanel")
-                    }, a.createElement(C.Eb, {
+                    }, a.createElement(C.Fb, {
                         borderRadius: C.x.Large,
                         elevation: 1,
                         background: C.r.Base
-                    }, a.createElement(C.Eb, {
+                    }, a.createElement(C.Fb, {
                         padding: Object(S.b)() ? {
                             top: 1
                         } : 2,
                         borderBottom: !0
                     }, r.map(function(e) {
-                        return a.createElement(v.a, {
+                        return a.createElement(g.a, {
                             key: e.id,
                             achievement: e
                         }, Object(y.b)(e))
@@ -812,7 +812,7 @@
                         return null !== e && e.apply(this, arguments) || this
                     }
                     return n.__extends(t, e), t.prototype.render = function() {
-                        return a.createElement(C.Xa, {
+                        return a.createElement(C.Ya, {
                             className: "sm-mw__col",
                             display: C.X.Flex,
                             flexGrow: 1,
@@ -830,7 +830,7 @@
                         return null !== e && e.apply(this, arguments) || this
                     }
                     return n.__extends(t, e), t.prototype.render = function() {
-                        return a.createElement(C.Eb, {
+                        return a.createElement(C.Fb, {
                             className: "sm-mw",
                             margin: {
                                 top: 1,
@@ -868,15 +868,15 @@
                     }, x), Object(o.d)("Go to Live Dashboard", "StreamSummaryNoAvailableStreamSummariesNotice"));
                     return t.channel.role === T.d.None && (i = a.createElement(C.z, n.__assign({
                         linkTo: "/" + t.channel.name + "/dashboard/broadcast"
-                    }, D), Object(o.d)("Go to Streaming Tools", "StreamSummaryNoAvailableStreamSummariesNotice"))), a.createElement(C.Xa, {
-                        position: C.jb.Absolute,
+                    }, D), Object(o.d)("Go to Streaming Tools", "StreamSummaryNoAvailableStreamSummariesNotice"))), a.createElement(C.Ya, {
+                        position: C.kb.Absolute,
                         fullWidth: !0,
                         margin: {
                             top: 5
                         },
-                        zIndex: C.ic.Above
-                    }, a.createElement(C.bc, {
-                        childWidth: C.cc.Medium,
+                        zIndex: C.jc.Above
+                    }, a.createElement(C.cc, {
+                        childWidth: C.dc.Medium,
                         center: !0
                     }, a.createElement("div", {
                         className: "sm-welcome-modal"
@@ -885,12 +885,12 @@
                         duration: C.k.Medium,
                         enabled: !0,
                         timing: C.m.EaseInOut
-                    }, a.createElement(C.Eb, {
+                    }, a.createElement(C.Fb, {
                         border: !0,
                         padding: 2,
                         background: C.r.Base,
                         elevation: 3
-                    }, a.createElement(C.Xa, {
+                    }, a.createElement(C.Ya, {
                         display: C.X.Flex,
                         alignItems: C.f.Center,
                         margin: {
@@ -898,20 +898,20 @@
                         }
                     }, a.createElement(C.q, n.__assign({}, R, {
                         size: 30
-                    })), a.createElement(C.Xa, {
+                    })), a.createElement(C.Ya, {
                         margin: {
                             left: .5
                         }
                     }, a.createElement(C.W, {
-                        type: C.Vb.H4,
+                        type: C.Wb.H4,
                         bold: !0
-                    }, Object(o.d)("Welcome to Stream Summary", "StreamSummaryNoAvailableStreamSummariesNotice")))), a.createElement(C.ec, null, a.createElement(C.W, {
+                    }, Object(o.d)("Welcome to Stream Summary", "StreamSummaryNoAvailableStreamSummariesNotice")))), a.createElement(C.fc, null, a.createElement(C.W, {
                         fontSize: C.Ca.Size5
-                    }, Object(o.d)("See a summary of your past streams with stats, clips, achievements, and more. Stream to get started!", "StreamSummaryNoAvailableStreamSummariesNotice"))), a.createElement(C.Xa, {
+                    }, Object(o.d)("See a summary of your past streams with stats, clips, achievements, and more. Stream to get started!", "StreamSummaryNoAvailableStreamSummariesNotice"))), a.createElement(C.Ya, {
                         padding: {
                             top: 1
                         }
-                    }, a.createElement(C.Xa, {
+                    }, a.createElement(C.Ya, {
                         margin: {
                             right: 1
                         },
@@ -924,10 +924,10 @@
                 return a.createElement("div", null)
             }
             var L = r("5NYc"),
-                V = (r("wQAB"), r("y/W1")),
-                N = r("qe41"),
-                M = r("9+Lo"),
-                X = (r("Dm0L"), function(e, t) {
+                N = (r("wQAB"), r("y/W1")),
+                F = r("qe41"),
+                V = r("9+Lo"),
+                M = (r("Dm0L"), function(e, t) {
                     return Object(o.d)("{numCompleted, number} of {numTotal, number} requirements met", {
                         numCompleted: e,
                         numTotal: t
@@ -938,7 +938,7 @@
                         r = e.quest,
                         i = !1;
                     if (r && !r.isComplete) {
-                        var s = Object(V.c)(r.requirements),
+                        var s = Object(N.c)(r.requirements),
                             c = r.getQuestReqStrings(),
                             l = t && {
                                 alignItems: C.f.Center,
@@ -954,36 +954,36 @@
                             },
                             m = t && {
                                 borderRadius: C.x.Large,
-                                overflow: C.cb.Hidden
+                                overflow: C.db.Hidden
                             };
-                        return a.createElement(C.Eb, n.__assign({
+                        return a.createElement(C.Fb, n.__assign({
                             elevation: 1,
                             background: C.r.Base,
                             margin: {
                                 bottom: 2
                             }
-                        }, m), a.createElement(C.Eb, n.__assign({
+                        }, m), a.createElement(C.Fb, n.__assign({
                             display: C.X.Flex,
                             alignItems: C.f.Center
                         }, u, {
                             borderBottom: !0
-                        }), t && a.createElement(C.Eb, {
+                        }), t && a.createElement(C.Fb, {
                             borderRadius: C.x.Large,
                             className: "quest-header__badge-wrap",
                             margin: {
                                 y: 1,
                                 right: 1
                             },
-                            overflow: C.cb.Hidden
+                            overflow: C.db.Hidden
                         }, a.createElement(C.S, {
                             src: r.image,
                             alt: Object(o.d)("quest image", "StreamSummaryQuestPanel")
-                        })), a.createElement(C.Xa, n.__assign({
+                        })), a.createElement(C.Ya, n.__assign({
                             flexGrow: 1
                         }, l), a.createElement(C.W, {
-                            type: C.Vb.H4,
+                            type: C.Wb.H4,
                             bold: !0
-                        }, r.title)), a.createElement(C.Eb, {
+                        }, r.title)), a.createElement(C.Fb, {
                             display: C.X.Flex,
                             flexShrink: 0,
                             padding: {
@@ -991,13 +991,13 @@
                             },
                             color: C.O.Alt2
                         }, function(e, t) {
-                            return Object(S.b)() ? a.createElement(C.Yb, {
-                                label: X(e, t),
-                                direction: C.ac.Left
+                            return Object(S.b)() ? a.createElement(C.Zb, {
+                                label: M(e, t),
+                                direction: C.bc.Left
                             }, Array.from({
                                 length: e
                             }).map(function(e, t) {
-                                return a.createElement(C.Eb, {
+                                return a.createElement(C.Fb, {
                                     key: "completeReqBar-" + t,
                                     className: "quest-progress-bars quest-progress-bars__complete",
                                     borderRadius: C.x.Large,
@@ -1008,7 +1008,7 @@
                             }), Array.from({
                                 length: t - e
                             }).map(function(e, t) {
-                                return a.createElement(C.Eb, {
+                                return a.createElement(C.Fb, {
                                     key: "incompleteReqBar-" + t,
                                     className: "quest-progress-bars quest-progress-bars__incomplete",
                                     borderRadius: C.x.Large,
@@ -1019,50 +1019,50 @@
                             })) : a.createElement(C.W, {
                                 color: C.O.Alt2,
                                 fontSize: C.Ca.Size5
-                            }, X(e, t))
+                            }, M(e, t))
                         }(r.completedRequirementsCount, r.totalRequirements))), s.map(function(t) {
-                            return a.createElement(C.Xa, {
+                            return a.createElement(C.Ya, {
                                 key: t.metric
                             }, function(t) {
-                                if (!r.isComplete && t.time_based && !i) return i = !0, a.createElement(M.a, {
+                                if (!r.isComplete && t.time_based && !i) return i = !0, a.createElement(V.a, {
                                     channelLogin: e.channelName,
                                     questKey: r.key
                                 })
-                            }(t), a.createElement(N.a, {
+                            }(t), a.createElement(F.a, {
                                 requirement: t,
                                 requirementInstructionString: c,
                                 isComplete: r.isComplete,
-                                subtext: t.metric === L.a.AVERAGE_CCU ? Object(V.a)(r.requirements) : void 0,
+                                subtext: t.metric === L.a.AVERAGE_CCU ? Object(N.a)(r.requirements) : void 0,
                                 ccuTooltipLabel: r.ccuTooltipLabel
                             }))
                         }))
                     }
-                    return e.quest ? a.createElement("span", null) : a.createElement(C.Xa, {
+                    return e.quest ? a.createElement("span", null) : a.createElement(C.Ya, {
                         margin: {
                             bottom: 2
                         }
-                    }, a.createElement(C.ib, {
+                    }, a.createElement(C.jb, {
                         height: 400
                     }))
                 },
-                B = r("NAv5"),
-                z = r("gi7w"),
-                W = r("ybsN"),
-                F = function(e) {
+                W = r("NAv5"),
+                B = r("gi7w"),
+                Y = r("ybsN"),
+                z = function(e) {
                     function t() {
                         var t = null !== e && e.apply(this, arguments) || this;
                         return t.handleTrackClick = function() {
-                            Object(W.f)(W.a, t.props.streamSummary)
+                            Object(Y.f)(Y.a, t.props.streamSummary)
                         }, t
                     }
                     return n.__extends(t, e), t.prototype.componentDidMount = function() {
-                        Object(W.g)(W.a, this.props.streamSummary)
+                        Object(Y.g)(Y.a, this.props.streamSummary)
                     }, Object.defineProperty(t.prototype, "bannerTitle", {
                         get: function() {
                             var e = this.props.achievement,
                                 t = e.title,
                                 r = e.level,
-                                n = a.createElement("span", null, Object(z.b)(r));
+                                n = a.createElement("span", null, Object(B.b)(r));
                             return r ? Object(o.d)("Achievement Unlocked! {title} {romanNumeralLevel}", {
                                 title: t,
                                 romanNumeralLevel: n
@@ -1084,18 +1084,18 @@
                     }, t
                 }(a.PureComponent),
                 U = r("Tc9I"),
-                G = function(e) {
+                X = function(e) {
                     function t() {
                         var t = null !== e && e.apply(this, arguments) || this;
                         return t.handleTrackClick = function() {
-                            Object(W.f)(W.c, t.props.streamSummary)
+                            Object(Y.f)(Y.c, t.props.streamSummary)
                         }, t
                     }
                     return n.__extends(t, e), t.prototype.componentDidMount = function() {
-                        Object(W.g)(W.c, this.props.streamSummary)
+                        Object(Y.g)(Y.c, this.props.streamSummary)
                     }, t.prototype.render = function() {
                         var e = Object(U.b)(this.props.quest.key),
-                            t = a.createElement(H, {
+                            t = a.createElement(G, {
                                 title: e.title
                             }),
                             r = e.bannerTitle(t);
@@ -1108,15 +1108,15 @@
                         })
                     }, t
                 }(a.PureComponent),
-                H = function(e) {
+                G = function(e) {
                     var t = e.title;
                     return a.createElement(C.W, {
-                        type: C.Vb.Span,
+                        type: C.Wb.Span,
                         color: C.O.Base
                     }, t)
                 },
-                Q = r("ll/k"),
-                Y = ["0s", "0.2s", "0.4s", "0.6s"],
+                H = r("ll/k"),
+                Q = ["0s", "0.2s", "0.4s", "0.6s"],
                 K = ["3%", "14%", "26%", "42%", "55%", "66%", "78%", "90%"],
                 Z = [{
                     src: "https://static-cdn.jtvnw.net/emoticons/v1/192363/3.0",
@@ -1129,11 +1129,11 @@
                     function t() {
                         var t = null !== e && e.apply(this, arguments) || this;
                         return t.handleTrackClick = function() {
-                            Object(W.f)(W.b, t.props.streamSummary)
+                            Object(Y.f)(Y.b, t.props.streamSummary)
                         }, t
                     }
                     return n.__extends(t, e), t.prototype.componentDidMount = function() {
-                        Object(W.g)(W.b, this.props.streamSummary)
+                        Object(Y.g)(Y.b, this.props.streamSummary)
                     }, t.prototype.render = function() {
                         return a.createElement(se, {
                             title: Object(o.d)("Top Clip of the Stream", "StreamSummarySpotlightClip"),
@@ -1141,15 +1141,15 @@
                             url: this.props.topClip.url,
                             onSpotlightDismiss: this.props.onSpotlightDismiss,
                             onSpotlightClick: this.handleTrackClick,
-                            flourish: Object(Q.c)(8, function(e) {
-                                return a.createElement($, n.__assign({}, Object(Q.b)(Z), {
+                            flourish: Object(H.c)(8, function(e) {
+                                return a.createElement($, n.__assign({}, Object(H.b)(Z), {
                                     key: e,
                                     style: function(e) {
                                         return {
                                             left: "" + K[e],
-                                            top: Object(Q.a)(-10, 58) + "%",
-                                            width: Object(Q.a)(3, 7) + "rem",
-                                            animationDelay: "" + Object(Q.b)(Y)
+                                            top: Object(H.a)(-10, 58) + "%",
+                                            width: Object(H.a)(3, 7) + "rem",
+                                            animationDelay: "" + Object(H.b)(Q)
                                         }
                                     }(e)
                                 }))
@@ -1175,7 +1175,7 @@
                     src: e.src,
                     alt: e.alt,
                     style: {
-                        transform: "rotate(" + Object(Q.a)(65) + "deg)"
+                        transform: "rotate(" + Object(H.a)(65) + "deg)"
                     }
                 }))
             };
@@ -1221,11 +1221,11 @@
                         var t = this.props.topClips.clips[0],
                             r = this.completedQuest,
                             n = this.completedAchievement;
-                        return r ? a.createElement(G, {
+                        return r ? a.createElement(X, {
                             quest: r,
                             onSpotlightDismiss: this.handleSpotlightDismiss,
                             streamSummary: this.props.streamSummary
-                        }) : n ? a.createElement(F, {
+                        }) : n ? a.createElement(z, {
                             achievement: n,
                             onSpotlightDismiss: this.handleSpotlightDismiss,
                             streamSummary: this.props.streamSummary
@@ -1238,7 +1238,7 @@
                         get: function() {
                             var e = this.props.streamSummary.interval,
                                 t = this.props.query.quests.filter(function(t) {
-                                    return t.completedAt && Object(B.isWithinRange)(t.completedAt, e.start, e.end)
+                                    return t.completedAt && Object(W.isWithinRange)(t.completedAt, e.start, e.end)
                                 });
                             return T.e.topCelebratable(t)
                         },
@@ -1266,24 +1266,24 @@
                     "data-test-selector": "dismiss"
                 },
                 se = (r("Qtpw"), function(e) {
-                    return a.createElement(C.Xa, {
+                    return a.createElement(C.Ya, {
                         className: "sm-sb-flourish-emotes",
-                        position: C.jb.Relative
+                        position: C.kb.Relative
                     }, a.createElement(C.i, {
                         type: C.n.BounceIn,
                         duration: C.k.Medium,
                         enabled: !0,
                         timing: C.m.EaseInOut
-                    }, a.createElement(oe, n.__assign({}, e)), a.createElement(C.Xa, {
+                    }, a.createElement(oe, n.__assign({}, e)), a.createElement(C.Ya, {
                         className: "sm-sb-flourish-emotes__dismiss",
-                        position: C.jb.Absolute,
-                        zIndex: C.ic.Above,
+                        position: C.kb.Absolute,
+                        zIndex: C.jc.Above,
                         attachTop: !0,
                         attachRight: !0
                     }, a.createElement(C.A, n.__assign({}, ie, {
                         ariaLabel: Object(U.a)().spotlightDismiss,
                         size: C.B.Large,
-                        icon: C.tb.Close,
+                        icon: C.ub.Close,
                         onClick: e.onSpotlightDismiss,
                         overlay: !0
                     })))))
@@ -1294,30 +1294,30 @@
                         className: "sm-sb-flourish-emotes__link",
                         target: "_blank",
                         onClick: e.onSpotlightClick
-                    }), a.createElement(C.Eb, {
+                    }), a.createElement(C.Fb, {
                         className: "sm-sb-flourish-emotes__content",
-                        position: C.jb.Relative,
-                        zIndex: C.ic.Default,
+                        position: C.kb.Relative,
+                        zIndex: C.jc.Default,
                         color: C.O.Overlay,
-                        textAlign: C.Rb.Center,
+                        textAlign: C.Sb.Center,
                         margin: {
                             bottom: 2
                         },
                         padding: 2,
                         borderRadius: C.x.Small
-                    }, a.createElement(C.Eb, {
+                    }, a.createElement(C.Fb, {
                         className: "sm-sb-flourish-emotes__emotes-layer",
-                        position: C.jb.Absolute,
-                        overflow: C.cb.Hidden,
+                        position: C.kb.Absolute,
+                        overflow: C.db.Hidden,
                         attachTop: !0,
                         attachRight: !0,
                         attachBottom: !0,
                         attachLeft: !0,
                         borderRadius: C.x.Small
-                    }, e.flourish), a.createElement(C.Eb, {
+                    }, e.flourish), a.createElement(C.Fb, {
                         className: "sm-sb-flourish-emotes__text",
-                        position: C.jb.Relative,
-                        zIndex: C.ic.Above,
+                        position: C.kb.Relative,
+                        zIndex: C.jc.Above,
                         padding: {
                             x: .5,
                             y: 0
@@ -1337,34 +1337,34 @@
                 le = r("FuXV"),
                 ue = (r("xcDG"), ["rgba(168, 136, 230, 1)", "rgba(158, 128, 221, 1)", "rgba(136, 109, 200, 1)", "rgba(129, 104, 193, 1)"]),
                 me = function(e) {
-                    return a.createElement(C.Xa, {
+                    return a.createElement(C.Ya, {
                         className: "sm-sb-flourish-confetti",
-                        position: C.jb.Relative
+                        position: C.kb.Relative
                     }, a.createElement(C.i, {
                         type: C.n.BounceIn,
                         duration: C.k.Medium,
                         enabled: !0,
                         timing: C.m.EaseInOut
-                    }, a.createElement(C.Eb, {
+                    }, a.createElement(C.Fb, {
                         className: "sm-sb-flourish-confetti__wrap",
-                        position: C.jb.Relative,
+                        position: C.kb.Relative,
                         margin: {
                             bottom: 2
                         },
                         elevation: 1,
                         border: !0,
                         borderRadius: C.x.Small
-                    }, a.createElement(de, n.__assign({}, e)), a.createElement(C.Xa, {
+                    }, a.createElement(de, n.__assign({}, e)), a.createElement(C.Ya, {
                         className: "sm-sb-flourish-confetti__dismiss",
-                        position: C.jb.Absolute,
-                        zIndex: C.ic.Above,
+                        position: C.kb.Absolute,
+                        zIndex: C.jc.Above,
                         attachTop: !0,
                         attachRight: !0
                     }, a.createElement(C.A, n.__assign({}, ie, {
                         ariaLabel: Object(U.a)().spotlightDismiss,
                         type: C.C.Default,
                         size: C.B.Large,
-                        icon: C.tb.Close,
+                        icon: C.ub.Close,
                         onClick: e.onSpotlightDismiss,
                         overlay: e.purpleScale
                     }))), a.createElement(le.a, {
@@ -1383,16 +1383,16 @@
                         href: e.url,
                         target: "_blank",
                         onClick: e.onSpotlightClick
-                    }), a.createElement(C.Eb, {
+                    }), a.createElement(C.Fb, {
                         className: t,
-                        position: C.jb.Relative,
-                        zIndex: C.ic.Default,
-                        textAlign: C.Rb.Center,
+                        position: C.kb.Relative,
+                        zIndex: C.jc.Default,
+                        textAlign: C.Sb.Center,
                         padding: 2,
                         fullWidth: !0,
                         borderRadius: C.x.Small
                     }, a.createElement(C.W, n.__assign({}, re, {
-                        type: C.Vb.Span,
+                        type: C.Wb.Span,
                         fontSize: C.Ca.Size4,
                         color: e.purpleScale ? C.O.Overlay : C.O.Base,
                         bold: !0,
@@ -1413,11 +1413,11 @@
                 be = {
                     "data-test-selector": "increase"
                 },
-                ge = function(e) {
-                    return a.createElement(C.Xa, n.__assign({
+                ve = function(e) {
+                    return a.createElement(C.Ya, n.__assign({
                         display: C.X.Flex,
                         flexDirection: C.Aa.Column
-                    }, Object(pe.a)(e)), a.createElement(C.Eb, {
+                    }, Object(pe.a)(e)), a.createElement(C.Fb, {
                         display: C.X.Flex,
                         flexGrow: 1,
                         flexDirection: C.Aa.Column,
@@ -1427,7 +1427,7 @@
                         elevation: 1,
                         padding: 2,
                         background: C.r.Base
-                    }, a.createElement(C.Eb, {
+                    }, a.createElement(C.Fb, {
                         display: C.X.Flex,
                         flexDirection: C.Aa.Column
                     }, a.createElement(C.W, {
@@ -1436,7 +1436,7 @@
                     }, e.title), a.createElement(C.W, n.__assign({
                         fontSize: C.Ca.Size5,
                         color: C.O.Alt2
-                    }, he), e.subtitle || a.createElement("br", null))), a.createElement(C.Eb, {
+                    }, he), e.subtitle || a.createElement("br", null))), a.createElement(C.Fb, {
                         display: C.X.Flex,
                         flexGrow: 1,
                         alignItems: C.f.End,
@@ -1444,17 +1444,17 @@
                             top: 2
                         }
                     }, a.createElement(C.W, n.__assign({
-                        type: C.Vb.Span,
+                        type: C.Wb.Span,
                         fontSize: C.Ca.Size2,
                         bold: !0,
                         color: C.O.Link
-                    }, fe), e.value, e.isIncrease && a.createElement(ve, null)))))
+                    }, fe), e.value, e.isIncrease && a.createElement(ge, null)))))
                 };
 
-            function ve() {
-                return a.createElement(C.sb, n.__assign({
-                    asset: C.tb.GlyphArrUp,
-                    type: C.ub.Success
+            function ge() {
+                return a.createElement(C.tb, n.__assign({
+                    asset: C.ub.GlyphArrUp,
+                    type: C.vb.Success
                 }, be))
             }
 
@@ -1462,7 +1462,7 @@
                 var t = Math.floor(e.currentValue),
                     r = e.previousValue && Math.floor(e.previousValue),
                     i = "number" == typeof r && t - r;
-                return a.createElement(ge, n.__assign({
+                return a.createElement(ve, n.__assign({
                     title: e.title,
                     subtitle: function(e) {
                         if ("number" != typeof e) return "";
@@ -1484,7 +1484,7 @@
             function we(e) {
                 var t = e.currentStreamSummary,
                     r = e.previousStreamSummary;
-                return a.createElement(ge, n.__assign({
+                return a.createElement(ve, n.__assign({
                     title: Object(o.d)("Stream Duration", "StreamSummaryDuration"),
                     subtitle: function(e, t) {
                         if (!t) return "";
@@ -1527,9 +1527,9 @@
                         return null !== e && e.apply(this, arguments) || this
                     }
                     return n.__extends(t, e), t.prototype.render = function() {
-                        return a.createElement(C.bc, {
-                            childWidth: C.cc.Medium,
-                            gutterSize: C.dc.Small,
+                        return a.createElement(C.cc, {
+                            childWidth: C.dc.Medium,
+                            gutterSize: C.ec.Small,
                             placeholderItems: 3
                         }, this.cards())
                     }, t.prototype.cards = function() {
@@ -1538,12 +1538,12 @@
                             r = e.previousStreamSummary,
                             i = e.data.user;
                         if (!t) return Array(8).fill("").map(function(e, t) {
-                            return a.createElement(C.Xa, {
+                            return a.createElement(C.Ya, {
                                 key: "placeholder-" + t,
                                 margin: {
                                     bottom: 2
                                 }
-                            }, a.createElement(C.ib, {
+                            }, a.createElement(C.jb, {
                                 height: 131
                             }))
                         });
@@ -1606,9 +1606,9 @@
                 })(Re),
                 Ie = r("KYAw"),
                 Le = r("WyAD"),
-                Ve = r("OGSR"),
-                Ne = C.R.Purple12,
-                Me = function(e) {
+                Ne = r("OGSR"),
+                Fe = C.R.Purple12,
+                Ve = function(e) {
                     function t() {
                         var t = null !== e && e.apply(this, arguments) || this;
                         return t.handleCanvasReady = function(e) {
@@ -1622,7 +1622,7 @@
                                                 maxRotation: 0,
                                                 minRotation: 0,
                                                 maxTicksLimit: 4,
-                                                fontColor: Ne,
+                                                fontColor: Fe,
                                                 fontSize: 10,
                                                 padding: 5
                                             },
@@ -1637,7 +1637,7 @@
                                             ticks: {
                                                 min: 0,
                                                 maxTicksLimit: 6,
-                                                fontColor: Ne,
+                                                fontColor: Fe,
                                                 fontSize: 10,
                                                 padding: 5
                                             },
@@ -1675,7 +1675,7 @@
                         }, t
                     }
                     return n.__extends(t, e), t.prototype.render = function() {
-                        return a.createElement(Ve.a, {
+                        return a.createElement(Ne.a, {
                             onCanvasReady: this.handleCanvasReady
                         })
                     }, t.prototype.componentDidUpdate = function() {
@@ -1697,21 +1697,21 @@
                         return t.addColorStop(0, C.R.Purple15), t.addColorStop(1, C.R.Purple11), t
                     }, t
                 }(a.Component),
-                Xe = r("17YR"),
+                Me = r("17YR"),
                 qe = 5;
-            var Be = {
+            var We = {
                 get: function() {
                     return Object(o.d)("Error", "StreamSummaryExportTimeseriesStats")
                 }
             };
 
-            function ze(e, t) {
-                return e.isError ? Be : e.data.dates.reduce(function(r, n, a) {
+            function Be(e, t) {
+                return e.isError ? We : e.data.dates.reduce(function(r, n, a) {
                     return r.set(n.getTime(), String(t(e.data)[a] || ""))
                 }, new Map)
             }
-            var We = r("cr+I"),
-                Fe = 5;
+            var Ye = r("cr+I"),
+                ze = 5;
 
             function Ue(e, t) {
                 return n.__awaiter(this, void 0, void 0, function() {
@@ -1719,7 +1719,7 @@
                     return n.__generator(this, function(n) {
                         switch (n.label) {
                             case 0:
-                                return r = We.stringify(Object(Se.i)(t)), [4, Object(_.c)({
+                                return r = Ye.stringify(Object(Se.i)(t)), [4, Object(_.c)({
                                     path: "/v5/channels/" + e + "/analytics/chat_time_series?" + r
                                 })];
                             case 1:
@@ -1727,7 +1727,7 @@
                                         messages: [],
                                         participants: [],
                                         dates: [],
-                                        interpolationChunkMinutes: Fe
+                                        interpolationChunkMinutes: ze
                                     }, a.isError()) return [2, {
                                     isError: !0,
                                     data: i
@@ -1742,13 +1742,13 @@
                 })
             }
 
-            function Ge(e, t) {
+            function Xe(e, t) {
                 return n.__awaiter(this, void 0, void 0, function() {
                     var r, a, i, s, o, c, l, u, m, d;
                     return n.__generator(this, function(n) {
                         switch (n.label) {
                             case 0:
-                                return r = We.stringify(Object(Se.i)(t)), [4, Object(_.c)({
+                                return r = Ye.stringify(Object(Se.i)(t)), [4, Object(_.c)({
                                     path: "/v5/channels/" + e + "/analytics/clips_time_series?" + r
                                 })];
                             case 1:
@@ -1761,7 +1761,7 @@
                                         facebookPlays: [],
                                         twitterPlays: [],
                                         dates: [],
-                                        interpolationChunkMinutes: Fe
+                                        interpolationChunkMinutes: ze
                                     }, a.isError()) return [2, {
                                     isError: !0,
                                     data: i
@@ -1776,25 +1776,53 @@
                 })
             }
 
-            function He(e, t) {
+            function Ge(e, t) {
                 return n.__awaiter(this, void 0, void 0, function() {
                     var r, a, i, s, o, c, l, u;
                     return n.__generator(this, function(n) {
                         switch (n.label) {
                             case 0:
-                                return r = We.stringify(Object(Se.i)(t)), [4, Object(_.c)({
+                                return r = Ye.stringify(Object(Se.i)(t)), [4, Object(_.c)({
                                     path: "/v5/channels/" + e + "/analytics/commercials_time_series?" + r
                                 })];
                             case 1:
                                 if (a = n.sent(), i = {
                                         values: [],
                                         dates: [],
-                                        interpolationChunkMinutes: Fe
+                                        interpolationChunkMinutes: ze
                                     }, a.isError()) return [2, {
                                     isError: !0,
                                     data: i
                                 }];
                                 for (s = 0, o = a.body.commercial; s < o.length; s++) c = o[s], l = c.length, u = c.timestamp, i.values.push(l), i.dates.push(new Date(u));
+                                return i.interpolationChunkMinutes = a.body.interpolation_chunk_minutes, [2, {
+                                    isError: !1,
+                                    data: i
+                                }]
+                        }
+                    })
+                })
+            }
+
+            function He(e, t) {
+                return n.__awaiter(this, void 0, void 0, function() {
+                    var r, a, i, s, o, c, l, u;
+                    return n.__generator(this, function(n) {
+                        switch (n.label) {
+                            case 0:
+                                return r = Ye.stringify(Object(Se.i)(t)), [4, Object(_.c)({
+                                    path: "/v5/channels/" + e + "/analytics/stats_time_series?" + r
+                                })];
+                            case 1:
+                                if (a = n.sent(), i = {
+                                        values: [],
+                                        dates: [],
+                                        interpolationChunkMinutes: ze
+                                    }, a.isError()) return [2, {
+                                    isError: !0,
+                                    data: i
+                                }];
+                                for (s = 0, o = a.body.concurrent_viewers; s < o.length; s++) c = o[s], l = c.count, u = c.timestamp, i.values.push(l), i.dates.push(new Date(u));
                                 return i.interpolationChunkMinutes = a.body.interpolation_chunk_minutes, [2, {
                                     isError: !1,
                                     data: i
@@ -1810,42 +1838,14 @@
                     return n.__generator(this, function(n) {
                         switch (n.label) {
                             case 0:
-                                return r = We.stringify(Object(Se.i)(t)), [4, Object(_.c)({
-                                    path: "/v5/channels/" + e + "/analytics/stats_time_series?" + r
-                                })];
-                            case 1:
-                                if (a = n.sent(), i = {
-                                        values: [],
-                                        dates: [],
-                                        interpolationChunkMinutes: Fe
-                                    }, a.isError()) return [2, {
-                                    isError: !0,
-                                    data: i
-                                }];
-                                for (s = 0, o = a.body.concurrent_viewers; s < o.length; s++) c = o[s], l = c.count, u = c.timestamp, i.values.push(l), i.dates.push(new Date(u));
-                                return i.interpolationChunkMinutes = a.body.interpolation_chunk_minutes, [2, {
-                                    isError: !1,
-                                    data: i
-                                }]
-                        }
-                    })
-                })
-            }
-
-            function Ye(e, t) {
-                return n.__awaiter(this, void 0, void 0, function() {
-                    var r, a, i, s, o, c, l, u;
-                    return n.__generator(this, function(n) {
-                        switch (n.label) {
-                            case 0:
-                                return r = We.stringify(Object(Se.i)(t)), [4, Object(_.c)({
+                                return r = Ye.stringify(Object(Se.i)(t)), [4, Object(_.c)({
                                     path: "/v5/channels/" + e + "/analytics/followers_time_series?" + r
                                 })];
                             case 1:
                                 if (a = n.sent(), i = {
                                         values: [],
                                         dates: [],
-                                        interpolationChunkMinutes: Fe
+                                        interpolationChunkMinutes: ze
                                     }, a.isError()) return [2, {
                                     isError: !0,
                                     data: i
@@ -1866,14 +1866,14 @@
                     return n.__generator(this, function(n) {
                         switch (n.label) {
                             case 0:
-                                return r = We.stringify(Object(Se.i)(t)), [4, Object(_.c)({
+                                return r = Ye.stringify(Object(Se.i)(t)), [4, Object(_.c)({
                                     path: "/v5/channels/" + e + "/analytics/subscription_purchase?" + r
                                 })];
                             case 1:
                                 if (a = n.sent(), i = {
                                         values: [],
                                         dates: [],
-                                        interpolationChunkMinutes: Fe
+                                        interpolationChunkMinutes: ze
                                     }, a.isError()) return [2, {
                                     isError: !0,
                                     data: i
@@ -1894,14 +1894,14 @@
                     return n.__generator(this, function(n) {
                         switch (n.label) {
                             case 0:
-                                return r = We.stringify(Object(Se.i)(t)), [4, Object(_.c)({
+                                return r = Ye.stringify(Object(Se.i)(t)), [4, Object(_.c)({
                                     path: "/v5/channels/" + e + "/analytics/view_summary_time_series?" + r
                                 })];
                             case 1:
                                 if (a = n.sent(), i = {
                                         dates: [],
                                         totalViews: [],
-                                        interpolationChunkMinutes: Fe
+                                        interpolationChunkMinutes: ze
                                     }, a.isError()) return [2, {
                                     isError: !0,
                                     data: i
@@ -1922,7 +1922,7 @@
                     return n.__generator(this, function(n) {
                         switch (n.label) {
                             case 0:
-                                return [4, Promise.all([Ue(e, t), Ge(e, t), He(e, t), Qe(e, t), Ze(e, t), Ye(e, t), Ke(e, t)])];
+                                return [4, Promise.all([Ue(e, t), Xe(e, t), Ge(e, t), He(e, t), Ze(e, t), Qe(e, t), Ke(e, t)])];
                             case 1:
                                 return r = n.sent(), a = r[0], i = r[1], s = r[2], o = r[3], c = r[4], l = r[5], u = r[6], [2, {
                                     chat: a,
@@ -1960,7 +1960,7 @@
                                                     return e[t].isError
                                                 }))
                                             }(t) && this.alert(Object(o.d)("Part of the CSV export failed. Please try again in a few minutes.", "StreamSummaryTimeseriesExport")), a = function(e) {
-                                                for (var t = e.interval, r = e.timeseriesResponse, n = [], a = Object(B.addMinutes)(t.start, (qe - t.start.getMinutes() % qe) % qe); a.getTime() <= t.end.getTime();) n.push(a), a = Object(B.addMinutes)(a, qe);
+                                                for (var t = e.interval, r = e.timeseriesResponse, n = [], a = Object(W.addMinutes)(t.start, (qe - t.start.getMinutes() % qe) % qe); a.getTime() <= t.end.getTime();) n.push(a), a = Object(W.addMinutes)(a, qe);
                                                 var i = [
                                                     [Object(o.d)("Timestamp", "StreamSummaryExportTimeseriesStats")].concat(n.map(function(e) {
                                                         return Object(o.c)(e, {
@@ -1970,46 +1970,46 @@
                                                     }))
                                                 ];
                                                 return new Map([
-                                                    [Object(o.d)("Viewers", "StreamSummaryExportTimeseriesStats"), ze(r.viewers, function(e) {
+                                                    [Object(o.d)("Viewers", "StreamSummaryExportTimeseriesStats"), Be(r.viewers, function(e) {
                                                         return e.values
                                                     })],
-                                                    [Object(o.d)("Live Views", "StreamSummaryExportTimeseriesStats"), ze(r.liveViews, function(e) {
+                                                    [Object(o.d)("Live Views", "StreamSummaryExportTimeseriesStats"), Be(r.liveViews, function(e) {
                                                         return e.totalViews
                                                     })],
-                                                    [Object(o.d)("New Followers", "StreamSummaryExportTimeseriesStats"), ze(r.followers, function(e) {
+                                                    [Object(o.d)("New Followers", "StreamSummaryExportTimeseriesStats"), Be(r.followers, function(e) {
                                                         return e.values
                                                     })],
-                                                    [Object(o.d)("Chatters", "StreamSummaryExportTimeseriesStats"), ze(r.chat, function(e) {
+                                                    [Object(o.d)("Chatters", "StreamSummaryExportTimeseriesStats"), Be(r.chat, function(e) {
                                                         return e.participants
                                                     })],
-                                                    [Object(o.d)("Chat Messages", "StreamSummaryExportTimeseriesStats"), ze(r.chat, function(e) {
+                                                    [Object(o.d)("Chat Messages", "StreamSummaryExportTimeseriesStats"), Be(r.chat, function(e) {
                                                         return e.messages
                                                     })],
-                                                    [Object(o.d)("Ad Breaks", "StreamSummaryExportTimeseriesStats"), ze(r.commercials, function(e) {
+                                                    [Object(o.d)("Ad Breaks", "StreamSummaryExportTimeseriesStats"), Be(r.commercials, function(e) {
                                                         return e.values
                                                     })],
-                                                    [Object(o.d)("Subscriptions", "StreamSummaryExportTimeseriesStats"), ze(r.subscriptions, function(e) {
+                                                    [Object(o.d)("Subscriptions", "StreamSummaryExportTimeseriesStats"), Be(r.subscriptions, function(e) {
                                                         return e.values
                                                     })],
-                                                    [Object(o.d)("Clips Created", "StreamSummaryExportTimeseriesStats"), ze(r.clips, function(e) {
+                                                    [Object(o.d)("Clips Created", "StreamSummaryExportTimeseriesStats"), Be(r.clips, function(e) {
                                                         return e.creates
                                                     })],
-                                                    [Object(o.d)("All Clip Views", "StreamSummaryExportTimeseriesStats"), ze(r.clips, function(e) {
+                                                    [Object(o.d)("All Clip Views", "StreamSummaryExportTimeseriesStats"), Be(r.clips, function(e) {
                                                         return e.plays
                                                     })],
-                                                    [Object(o.d)("Twitch Clip Views", "StreamSummaryExportTimeseriesStats"), ze(r.clips, function(e) {
+                                                    [Object(o.d)("Twitch Clip Views", "StreamSummaryExportTimeseriesStats"), Be(r.clips, function(e) {
                                                         return e.twitchPlays
                                                     })],
-                                                    [Object(o.d)("Reddit Clip Views", "StreamSummaryExportTimeseriesStats"), ze(r.clips, function(e) {
+                                                    [Object(o.d)("Reddit Clip Views", "StreamSummaryExportTimeseriesStats"), Be(r.clips, function(e) {
                                                         return e.redditPlays
                                                     })],
-                                                    [Object(o.d)("Facebook Clip Views", "StreamSummaryExportTimeseriesStats"), ze(r.clips, function(e) {
+                                                    [Object(o.d)("Facebook Clip Views", "StreamSummaryExportTimeseriesStats"), Be(r.clips, function(e) {
                                                         return e.facebookPlays
                                                     })],
-                                                    [Object(o.d)("Twitter Clip Views", "StreamSummaryExportTimeseriesStats"), ze(r.clips, function(e) {
+                                                    [Object(o.d)("Twitter Clip Views", "StreamSummaryExportTimeseriesStats"), Be(r.clips, function(e) {
                                                         return e.twitterPlays
                                                     })],
-                                                    [Object(o.d)("Other Clip Views", "StreamSummaryExportTimeseriesStats"), ze(r.clips, function(e) {
+                                                    [Object(o.d)("Other Clip Views", "StreamSummaryExportTimeseriesStats"), Be(r.clips, function(e) {
                                                         return e.otherPlays
                                                     })]
                                                 ]).forEach(function(e, t) {
@@ -2021,19 +2021,19 @@
                                                         start: t.start,
                                                         end: t.end
                                                     }, "StreamSummaryExportTimeseriesStats"),
-                                                    rows: Object(Xe.c)(i)
+                                                    rows: Object(Me.c)(i)
                                                 }
                                             }({
                                                 interval: e.interval,
                                                 timeseriesResponse: t
-                                            }), this.downloadFile(a.fileName, Object(Xe.b)(a.rows)), [2]
+                                            }), this.downloadFile(a.fileName, Object(Me.b)(a.rows)), [2]
                                     }
                                 })
                             })
-                        }, r.downloadFile = t.downloadFile || Xe.a, r.alert = t.alert || window.alert, r.fetchAllTimeseries = t.fetchAllTimeseries || Je, r
+                        }, r.downloadFile = t.downloadFile || Me.a, r.alert = t.alert || window.alert, r.fetchAllTimeseries = t.fetchAllTimeseries || Je, r
                     }
                     return n.__extends(t, e), t.prototype.render = function() {
-                        return a.createElement(C.Eb, {
+                        return a.createElement(C.Fb, {
                             className: "timeseries-panel__btn",
                             display: C.X.Flex,
                             flexGrow: 1,
@@ -2048,7 +2048,7 @@
                     }, t
                 }(a.Component),
                 tt = (r("SwG+"), function(e) {
-                    return a.createElement(C.Qa, {
+                    return a.createElement(C.Ra, {
                         display: C.X.Block,
                         borderRadius: C.x.Medium,
                         fontSize: C.Ca.Size6,
@@ -2111,7 +2111,7 @@
                     }, t.prototype.componentDidUpdate = function(e, t) {
                         e.streamSummary !== this.props.streamSummary && this.fetchCurrentStatData(), e.streamSummary === this.props.streamSummary && t.currentStatIndex === this.state.currentStatIndex || this.trackChartView()
                     }, t.prototype.render = function() {
-                        return this.props.streamSummary ? a.createElement(C.Eb, {
+                        return this.props.streamSummary ? a.createElement(C.Fb, {
                             className: "timeseries-panel",
                             background: C.r.Accent,
                             borderRadius: C.x.Small,
@@ -2119,9 +2119,9 @@
                                 bottom: 4
                             },
                             elevation: 1
-                        }, a.createElement(C.Xa, {
+                        }, a.createElement(C.Ya, {
                             padding: 2
-                        }, a.createElement(C.Eb, {
+                        }, a.createElement(C.Fb, {
                             margin: {
                                 bottom: 2
                             },
@@ -2130,7 +2130,7 @@
                             },
                             display: C.X.Flex,
                             color: C.O.Overlay,
-                            justifyContent: C.Wa.Between,
+                            justifyContent: C.Xa.Between,
                             alignItems: C.f.Center
                         }, a.createElement("div", null, a.createElement("div", {
                             className: "timeseries-panel__select-wrap"
@@ -2143,24 +2143,24 @@
                             }, e.titleMessage())
                         })))), a.createElement("div", n.__assign({}, rt), Boolean(this.state.statData.values.length) && this.currentStat.subtitleMessage(this.props.streamSummary))), this.chartContent()), a.createElement(et, {
                             streamSummary: this.props.streamSummary
-                        })) : a.createElement(C.Xa, {
+                        })) : a.createElement(C.Ya, {
                             margin: {
                                 bottom: 2
                             }
-                        }, a.createElement(C.ib, {
+                        }, a.createElement(C.jb, {
                             height: 378
                         }))
                     }, t.prototype.chartContent = function() {
-                        return this.state.inFlightStatRequest ? a.createElement(C.Eb, {
+                        return this.state.inFlightStatRequest ? a.createElement(C.Fb, {
                             color: C.O.Overlay,
                             fullHeight: !0
-                        }, a.createElement(C.Za, {
+                        }, a.createElement(C.ab, {
                             inheritColor: !0,
                             fillContent: !0
                         })) : this.state.didError ? a.createElement(C.W, n.__assign({
                             color: C.O.OverlayAlt,
                             fontSize: C.Ca.Size5
-                        }, nt), Object(o.d)("Whoops. Something went wrong.", "StreamSummaryTimeseriesPanel")) : 0 === this.state.statData.values.length ? a.createElement(C.Xa, {
+                        }, nt), Object(o.d)("Whoops. Something went wrong.", "StreamSummaryTimeseriesPanel")) : 0 === this.state.statData.values.length ? a.createElement(C.Ya, {
                             padding: {
                                 y: 2
                             },
@@ -2168,9 +2168,9 @@
                             flexDirection: C.Aa.Column,
                             alignItems: C.f.Center,
                             alignContent: C.e.Center,
-                            justifyContent: C.Wa.Center,
+                            justifyContent: C.Xa.Center,
                             fullHeight: !0
-                        }, a.createElement(C.Xa, {
+                        }, a.createElement(C.Ya, {
                             padding: {
                                 bottom: .5
                             }
@@ -2181,7 +2181,7 @@
                         })), a.createElement(C.W, {
                             color: C.O.OverlayAlt,
                             fontSize: C.Ca.Size5
-                        }, Object(o.d)("Not enough data for us to display", "StreamSummaryTimeseriesPanel"))) : a.createElement(Me, {
+                        }, Object(o.d)("Not enough data for us to display", "StreamSummaryTimeseriesPanel"))) : a.createElement(Ve, {
                             datasetLabel: this.currentStat.titleMessage(),
                             labels: this.formattedDates,
                             onDatasetClick: this.onDatasetClick,
@@ -2225,12 +2225,12 @@
                                                 },
                                                 n = e.dates[0];
                                             if (!n) return r;
-                                            for (var a = e.interpolationChunkMinutes, i = Object(B.subMinutes)(n, a); i.getTime() >= t.start.getTime();) r.dates.push(i), r.values.push(0), i = Object(B.subMinutes)(i, a);
+                                            for (var a = e.interpolationChunkMinutes, i = Object(W.subMinutes)(n, a); i.getTime() >= t.start.getTime();) r.dates.push(i), r.values.push(0), i = Object(W.subMinutes)(i, a);
                                             r.dates.reverse();
                                             var s = 0;
                                             for (i = n; i.getTime() <= t.end.getTime();) {
                                                 var o = e.dates[s];
-                                                o && o.getTime() === i.getTime() ? (r.dates.push(e.dates[s]), r.values.push(e.values[s]), s++) : (r.dates.push(i), r.values.push(0)), i = Object(B.addMinutes)(i, a)
+                                                o && o.getTime() === i.getTime() ? (r.dates.push(e.dates[s]), r.values.push(e.values[s]), s++) : (r.dates.push(i), r.values.push(0)), i = Object(W.addMinutes)(i, a)
                                             }
                                             return r
                                         }(r.data, this.props.streamSummary.interval), this.setState({
@@ -2250,7 +2250,7 @@
                 }(a.PureComponent),
                 it = r("5zf8"),
                 st = [{
-                    fetch: Qe,
+                    fetch: He,
                     titleMessage: function() {
                         return Object(o.d)("Average Viewers", "StreamSummaryTimeseriesStats")
                     },
@@ -2301,7 +2301,7 @@
                     },
                     trackingKey: $e.AverageViewers
                 }, {
-                    fetch: Ye,
+                    fetch: Qe,
                     titleMessage: function() {
                         return Object(o.d)("New Followers", "StreamSummaryTimeseriesStats")
                     },
@@ -2395,7 +2395,7 @@
                     },
                     trackingKey: $e.ChatMessages
                 }, {
-                    fetch: He,
+                    fetch: Ge,
                     titleMessage: function() {
                         return Object(o.d)("Ad Breaks", "StreamSummaryTimeseriesStats")
                     },
@@ -2418,7 +2418,7 @@
                             return n.__generator(this, function(n) {
                                 switch (n.label) {
                                     case 0:
-                                        return [4, Ge(e, t)];
+                                        return [4, Xe(e, t)];
                                     case 1:
                                         return [2, {
                                             isError: (r = n.sent()).isError,
@@ -2451,7 +2451,7 @@
                             return n.__generator(this, function(n) {
                                 switch (n.label) {
                                     case 0:
-                                        return [4, Ge(e, t)];
+                                        return [4, Xe(e, t)];
                                     case 1:
                                         return [2, {
                                             isError: (r = n.sent()).isError,
@@ -2490,22 +2490,22 @@
                 dt = "VoHiYo",
                 pt = function(e) {
                     var t = e.tip;
-                    return e.isLoading ? a.createElement(C.Xa, {
+                    return e.isLoading ? a.createElement(C.Ya, {
                         margin: {
                             bottom: 2
                         }
-                    }, a.createElement(C.ib, {
+                    }, a.createElement(C.jb, {
                         height: 121
                     })) : a.createElement("div", null, a.createElement(E.a, {
                         title: Object(o.d)("What is my tip of the day?", "StreamSummaryTipsPanel")
-                    }, a.createElement(C.Eb, {
+                    }, a.createElement(C.Fb, {
                         margin: {
                             bottom: 2
                         },
                         elevation: 1,
                         padding: 2,
                         background: C.r.Base
-                    }, a.createElement(C.Xa, {
+                    }, a.createElement(C.Ya, {
                         display: C.X.Flex,
                         alignItems: C.f.Center,
                         margin: {
@@ -2515,12 +2515,12 @@
                         src: mt,
                         alt: dt,
                         size: 30
-                    }), a.createElement(C.Xa, {
+                    }), a.createElement(C.Ya, {
                         margin: {
                             left: .5
                         }
                     }, a.createElement(C.W, n.__assign({
-                        type: C.Vb.Span,
+                        type: C.Wb.Span,
                         fontSize: C.Ca.Size5
                     }, lt), t.body), a.createElement(ht, {
                         url: t.url
@@ -2529,7 +2529,7 @@
                 ht = function(e) {
                     var t = e.url;
                     return t ? a.createElement(C.W, n.__assign({
-                        type: C.Vb.Span,
+                        type: C.Wb.Span,
                         fontSize: C.Ca.Size5
                     }, ut), " ", a.createElement("a", {
                         target: "_blank",
@@ -2570,7 +2570,7 @@
                     }, t
                 }(a.Component),
                 bt = r("FXHi"),
-                gt = function(e) {
+                vt = function(e) {
                     var t = e.streamSummary,
                         r = e.topClips;
                     if (r.isLoading) return a.createElement(yt, null);
@@ -2578,7 +2578,7 @@
                     var n = Object(o.d)("View more clips", "StreamSummaryTopClipsPanelCTA");
                     return a.createElement(E.a, {
                         title: Object(o.d)("What were my top clips?", "StreamSummaryTopClipsPanel")
-                    }, a.createElement(vt, {
+                    }, a.createElement(gt, {
                         clipsAttrs: r
                     }), t ? a.createElement(w.a, {
                         message: n,
@@ -2587,19 +2587,19 @@
                         targetBlank: !0
                     }) : a.createElement("p", null, n))
                 },
-                vt = function(e) {
+                gt = function(e) {
                     if (e.clipsAttrs.isLoading)
-                        for (var t = [], r = 0; r < 5; r++) t.push(a.createElement(C.Eb, {
+                        for (var t = [], r = 0; r < 5; r++) t.push(a.createElement(C.Fb, {
                             padding: {
                                 x: 2,
                                 y: 1
                             },
                             key: r,
                             borderBottom: !0
-                        }, a.createElement(C.ib, {
+                        }, a.createElement(C.jb, {
                             height: 50
                         })));
-                    return a.createElement(C.Eb, {
+                    return a.createElement(C.Fb, {
                         borderBottom: !0
                     }, e.clipsAttrs.clips.slice(0, 5).map(function(e, t) {
                         return a.createElement(bt.a, n.__assign({}, e, {
@@ -2609,11 +2609,11 @@
                     }))
                 },
                 yt = function() {
-                    return a.createElement(C.Xa, {
+                    return a.createElement(C.Ya, {
                         margin: {
                             bottom: 2
                         }
-                    }, a.createElement(C.ib, {
+                    }, a.createElement(C.jb, {
                         height: 448
                     }))
                 },
@@ -2639,11 +2639,11 @@
                         onClick: j.h,
                         linkTo: Object(wt.c)(t.channel.name, t.videoId.substring(1)),
                         targetBlank: !0
-                    })) : null : a.createElement(C.Xa, {
+                    })) : null : a.createElement(C.Ya, {
                         margin: {
                             bottom: 2
                         }
-                    }, a.createElement(C.ib, {
+                    }, a.createElement(C.jb, {
                         height: 448
                     }))
                 },
@@ -2669,7 +2669,7 @@
                         }), a.createElement(A, null, a.createElement(k, null, a.createElement(at, {
                             streamSummary: this.props.sessionCursor.current,
                             timeseriesStats: st
-                        }), a.createElement(gt, {
+                        }), a.createElement(vt, {
                             streamSummary: this.props.sessionCursor.current,
                             topClips: this.props.topClips
                         }), a.createElement(jt, {
@@ -2682,7 +2682,7 @@
                         }), a.createElement(O, {
                             query: this.props.achievementProgressions,
                             streamSummaryCursor: this.props.sessionCursor
-                        }), a.createElement(g.a, {
+                        }), a.createElement(v.a, {
                             streamSessionsQuery: {
                                 isLoading: 0 === t.length,
                                 sessions: t
@@ -2768,7 +2768,7 @@
                         return a.createElement(a.Fragment, null, a.createElement(f.a, null, a.createElement(Tt.a, {
                             query: this.props.streamSummaryQuery,
                             summaryID: this.props.streamSummaryID,
-                            getURLForStreamSummary: W.d
+                            getURLForStreamSummary: Y.d
                         }, function(r) {
                             return a.createElement(At, {
                                 previousStreamSummary: r.previous,
@@ -2863,15 +2863,15 @@
                 i = r("2xye"),
                 s = r("Ue10"),
                 o = (r("qZmV"), function(e) {
-                    return n.createElement(s.Xa, {
+                    return n.createElement(s.Ya, {
                         className: "clip-card-row"
-                    }, n.createElement(s.Ua, {
-                        type: s.Va.Alpha,
+                    }, n.createElement(s.Va, {
+                        type: s.Wa.Alpha,
                         blurAfterClick: !0,
                         targetBlank: !0,
                         linkTo: e.url + "?tt_content=" + i.PageviewContent.TopClips + "&tt_medium=" + i.PageviewMedium.ChannelAnalytics,
                         onClick: e.onClick
-                    }, n.createElement(s.Eb, {
+                    }, n.createElement(s.Fb, {
                         padding: {
                             x: 2,
                             y: 1
@@ -2884,49 +2884,49 @@
                         size: s.J.Size8,
                         aspect: s.p.Aspect16x9
                     }), n.createElement(s.H, {
-                        overflow: s.cb.Hidden
-                    }, n.createElement(s.Xa, {
+                        overflow: s.db.Hidden
+                    }, n.createElement(s.Ya, {
                         display: s.X.Flex,
                         flexGrow: 1,
                         alignItems: s.f.Center,
-                        justifyContent: s.Wa.Between,
+                        justifyContent: s.Xa.Between,
                         margin: {
                             left: 1
                         },
                         ellipsis: !0
-                    }, n.createElement(s.Xa, {
+                    }, n.createElement(s.Ya, {
                         display: s.X.Flex,
                         flexDirection: s.Aa.Column,
                         ellipsis: !0
                     }, n.createElement(s.W, {
                         color: s.O.Base,
-                        type: s.Vb.H5,
+                        type: s.Wb.H5,
                         ellipsis: !0
-                    }, e.title), n.createElement(s.Xa, {
+                    }, e.title), n.createElement(s.Ya, {
                         display: s.X.Flex,
                         flexWrap: s.Ba.NoWrap
-                    }, n.createElement(s.sb, {
-                        asset: s.tb.GlyphLive,
-                        type: s.ub.Alt2
-                    }), n.createElement(s.Xa, {
+                    }, n.createElement(s.tb, {
+                        asset: s.ub.GlyphLive,
+                        type: s.vb.Alt2
+                    }), n.createElement(s.Ya, {
                         display: s.X.Inline,
                         padding: {
                             left: .5
                         },
                         ellipsis: !0
                     }, n.createElement(s.W, {
-                        type: s.Vb.Span
-                    }, e.curatorName)))))), n.createElement(s.Xa, {
+                        type: s.Wb.Span
+                    }, e.curatorName)))))), n.createElement(s.Ya, {
                         display: s.X.Flex,
                         flexGrow: 1,
-                        justifyContent: s.Wa.End,
+                        justifyContent: s.Xa.End,
                         padding: {
                             left: 2
                         }
-                    }, n.createElement(s.sb, {
-                        asset: s.tb.GlyphViews,
-                        type: s.ub.Alt2
-                    }), n.createElement(s.Xa, {
+                    }, n.createElement(s.tb, {
+                        asset: s.ub.GlyphViews,
+                        type: s.vb.Alt2
+                    }), n.createElement(s.Ya, {
                         display: s.X.Flex,
                         padding: {
                             left: .5
@@ -2935,7 +2935,7 @@
                         bold: !0,
                         fontSize: s.Ca.Size5,
                         color: s.O.Alt,
-                        type: s.Vb.Span
+                        type: s.Wb.Span
                     }, Object(a.d)("{views, number}", {
                         views: e.views
                     }, "StreamSummaryClipViews"))))))))
@@ -2965,11 +2965,11 @@
                                 "confetti-layer__confetti": !0,
                                 "confetti-layer__confetti--infinite": this.props.infinite
                             });
-                        return i.createElement(o.Xa, {
+                        return i.createElement(o.Ya, {
                             className: "confetti-layer",
-                            position: o.jb.Absolute,
-                            overflow: o.cb.Hidden,
-                            zIndex: o.ic.Default,
+                            position: o.kb.Absolute,
+                            overflow: o.db.Hidden,
+                            zIndex: o.jc.Default,
                             attachTop: !0,
                             attachRight: !0,
                             attachBottom: !0,
@@ -3030,7 +3030,7 @@
                 l = function(e) {
                     var t = Object(o.b)(),
                         r = t && {
-                            overflow: c.cb.Hidden,
+                            overflow: c.db.Hidden,
                             borderRadius: c.x.Large
                         },
                         l = a({
@@ -3044,16 +3044,16 @@
                         m = t && {
                             borderRadius: c.x.Large
                         };
-                    return i.createElement(c.Xa, n.__assign({
+                    return i.createElement(c.Ya, n.__assign({
                         display: c.X.Flex,
                         flexWrap: c.Ba.NoWrap,
-                        position: c.jb.Relative,
+                        position: c.kb.Relative,
                         flexShrink: 0
-                    }, m), i.createElement(c.Xa, {
+                    }, m), i.createElement(c.Ya, {
                         className: l,
-                        position: c.jb.Relative,
+                        position: c.kb.Relative,
                         flexShrink: 0
-                    }, i.createElement(c.Eb, n.__assign({
+                    }, i.createElement(c.Fb, n.__assign({
                         className: u,
                         background: c.r.Alt2
                     }, r), i.createElement("img", {
@@ -3061,19 +3061,19 @@
                         className: "ach-card__img",
                         src: e.achievement.image.scale1x,
                         srcSet: e.achievement.image.scale1x + " 1x, " + e.achievement.image.scale3x + " 3x"
-                    })), Boolean(e.achievement.level) && i.createElement(c.Eb, {
+                    })), Boolean(e.achievement.level) && i.createElement(c.Fb, {
                         className: "ach-card__lvl",
-                        position: c.jb.Absolute,
+                        position: c.kb.Absolute,
                         background: c.r.Alt
                     }, i.createElement(c.s, {
                         border: !0,
                         icon: Object(s.a)(e.achievement.level),
                         size: 20,
                         type: c.t.Dashboard
-                    }))), i.createElement(c.Eb, {
-                        overflow: c.cb.Hidden,
+                    }))), i.createElement(c.Fb, {
+                        overflow: c.db.Hidden,
                         display: c.X.Flex,
-                        justifyContent: c.Wa.Center,
+                        justifyContent: c.Xa.Center,
                         flexDirection: c.Aa.Column,
                         margin: {
                             left: 2
@@ -3087,12 +3087,12 @@
                         fontSize: c.Ca.Size5,
                         color: c.O.Alt2,
                         ellipsis: !0
-                    }, e.achievement.description)), i.createElement(c.Eb, {
+                    }, e.achievement.description)), i.createElement(c.Fb, {
                         className: "ach-card__progress-meta",
                         display: c.X.Flex,
                         alignContent: c.e.Center,
                         alignItems: c.f.Center,
-                        justifyContent: c.Wa.End,
+                        justifyContent: c.Xa.End,
                         flexGrow: 1,
                         flexShrink: 0,
                         margin: {
@@ -3118,7 +3118,7 @@
                         }, t
                     }
                     return n.__extends(t, e), t.prototype.render = function() {
-                        return a.createElement(i.Pa, {
+                        return a.createElement(i.Qa, {
                             fullWidth: !0
                         }, a.createElement("canvas", {
                             ref: this.handleCanvasReady
@@ -3401,7 +3401,7 @@
                     "data-test-selector": "achievement-card"
                 },
                 m = function(e) {
-                    return i.createElement(l.Xa, n.__assign({
+                    return i.createElement(l.Ya, n.__assign({
                         className: "ach-link",
                         "aria-hidden": e.isHidden
                     }, u), i.createElement(d, {
@@ -3421,22 +3421,22 @@
                         m = r && {
                             padding: 1
                         };
-                    return e.achievement.completedAt || (t = i.createElement(l.Xa, {
-                        position: l.jb.Absolute,
+                    return e.achievement.completedAt || (t = i.createElement(l.Ya, {
+                        position: l.kb.Absolute,
                         attachBottom: !0,
                         attachLeft: !0,
                         attachRight: !0
-                    }, i.createElement(l.mb, {
-                        size: l.ob.ExtraSmall,
+                    }, i.createElement(l.nb, {
+                        size: l.pb.ExtraSmall,
                         value: 100 * e.achievement.progressRatio
-                    }))), i.createElement(l.Eb, {
+                    }))), i.createElement(l.Fb, {
                         className: u,
-                        position: l.jb.Relative
-                    }, i.createElement(l.Ua, {
+                        position: l.kb.Relative
+                    }, i.createElement(l.Va, {
                         tabIndex: e.isHidden ? -1 : void 0,
-                        type: l.Va.Base,
+                        type: l.Wa.Base,
                         linkTo: c.b.achievement(e.achievement)
-                    }, i.createElement(l.Eb, n.__assign({
+                    }, i.createElement(l.Fb, n.__assign({
                         className: "ach-card__inner"
                     }, m), i.createElement(s.a, {
                         achievement: e.achievement
@@ -3531,14 +3531,14 @@
                         b = Object(l.a)(h.map(function(e) {
                             return e.videoPlayInternalTwitchReferrers
                         })),
-                        g = Object(l.a)(h.map(function(e) {
+                        v = Object(l.a)(h.map(function(e) {
                             return e.videoPlayInternalChannelsReferrers
                         })),
-                        v = Object(l.a)(h.map(function(e) {
+                        g = Object(l.a)(h.map(function(e) {
                             return e.videoPlayExternalReferrers
                         })),
                         y = n.createElement(s.a, null);
-                    return (b.total || g.total || v.total) && (y = n.createElement(n.Fragment, null, n.createElement(m.Eb, {
+                    return (b.total || v.total || g.total) && (y = n.createElement(n.Fragment, null, n.createElement(m.Fb, {
                         borderBottom: !0,
                         padding: {
                             bottom: 1
@@ -3549,13 +3549,13 @@
                         translationFunc: i.b,
                         title: Object(a.d)("Twitch", "DashboardReferralPanel")
                     }), n.createElement(u.a, {
-                        referrals: g.items.slice(0, 3),
-                        total: g.total,
+                        referrals: v.items.slice(0, 3),
+                        total: v.total,
                         translationFunc: p,
                         title: Object(a.d)("Channels", "DashboardReferralPanel")
                     }), n.createElement(u.a, {
-                        referrals: v.items.slice(0, 3),
-                        total: v.total,
+                        referrals: g.items.slice(0, 3),
+                        total: g.total,
                         translationFunc: i.a,
                         title: Object(a.d)("External", "DashboardReferralPanel")
                     })), n.createElement(c.a, {
@@ -3567,11 +3567,11 @@
                     }, y)
                 },
                 f = function() {
-                    return n.createElement(m.Xa, {
+                    return n.createElement(m.Ya, {
                         margin: {
                             bottom: 2
                         }
-                    }, n.createElement(m.ib, {
+                    }, n.createElement(m.jb, {
                         height: 448
                     }))
                 };
@@ -3739,11 +3739,11 @@
                     alt: "TearGlove"
                 },
                 l = function() {
-                    return a.createElement(s.Xa, n.__assign({
+                    return a.createElement(s.Ya, n.__assign({
                         alignItems: s.f.Center,
                         display: s.X.Flex,
                         flexDirection: s.Aa.Column,
-                        justifyContent: s.Wa.Center,
+                        justifyContent: s.Xa.Center,
                         flexGrow: 0,
                         flexShrink: 1,
                         fullWidth: !0,
@@ -3751,7 +3751,7 @@
                             top: 5,
                             bottom: 5
                         }
-                    }, o), a.createElement(s.Xa, {
+                    }, o), a.createElement(s.Ya, {
                         padding: {
                             bottom: 1
                         }
@@ -3775,12 +3775,12 @@
                 i = r("tmT/"),
                 s = r("Ue10"),
                 o = function(e) {
-                    return n.createElement(s.Xa, {
+                    return n.createElement(s.Ya, {
                         display: s.X.Flex,
-                        justifyContent: s.Wa.End
-                    }, n.createElement(s.sb, {
+                        justifyContent: s.Xa.End
+                    }, n.createElement(s.tb, {
                         type: e.checkMarkType,
-                        asset: s.tb.Check,
+                        asset: s.ub.Check,
                         width: 20,
                         height: 20
                     }))
@@ -3792,17 +3792,17 @@
                 var t = e.progress,
                     r = e.progressCap;
                 if (e.isComplete) return n.createElement(o, {
-                    checkMarkType: s.ub.Success
+                    checkMarkType: s.vb.Success
                 });
                 if (e.completedAt) return n.createElement(i.a, {
                     date: e.completedAt
                 });
                 if (1 === r && 1 === t) return n.createElement(o, {
-                    checkMarkType: s.ub.Alt
+                    checkMarkType: s.vb.Alt
                 });
                 var c = Math.floor(100 * t) / 100,
-                    l = n.createElement(s.Xa, {
-                        position: s.jb.Relative,
+                    l = n.createElement(s.Ya, {
+                        position: s.kb.Relative,
                         display: s.X.Flex,
                         alignItems: s.f.Center
                     }, n.createElement(s.W, {
@@ -3810,26 +3810,26 @@
                         color: t >= r ? void 0 : s.O.Alt2,
                         bold: !0,
                         fontSize: s.Ca.Size4,
-                        type: s.Vb.Span
+                        type: s.Wb.Span
                     }, Object(a.g)(c, {
                         maximumFractionDigits: 2
-                    })), n.createElement(s.Xa, {
+                    })), n.createElement(s.Ya, {
                         margin: {
                             right: .5
                         }
                     }, n.createElement(s.W, {
                         fontSize: s.Ca.Size5,
                         color: s.O.Alt2,
-                        type: s.Vb.Span
+                        type: s.Wb.Span
                     }, "/")), n.createElement(s.W, {
                         fontSize: s.Ca.Size5,
                         color: s.O.Alt2
                     }, Object(a.g)(r, {
                         maximumFractionDigits: 2
                     })));
-                return t > 999 ? n.createElement(s.Yb, {
+                return t > 999 ? n.createElement(s.Zb, {
                     label: Object(a.f)(c),
-                    direction: s.ac.Left
+                    direction: s.bc.Left
                 }, l) : l
             }
         },
@@ -3838,11 +3838,11 @@
             "use strict";
             var n = r("Ue10"),
                 a = {
-                    1: n.tb.Roman1,
-                    2: n.tb.Roman2,
-                    3: n.tb.Roman3,
-                    4: n.tb.Roman4,
-                    5: n.tb.Roman5
+                    1: n.ub.Roman1,
+                    2: n.ub.Roman2,
+                    3: n.ub.Roman3,
+                    4: n.ub.Roman4,
+                    5: n.ub.Roman5
                 };
 
             function i(e) {
@@ -4030,27 +4030,27 @@
                         return a.createElement("div", {
                             onMouseEnter: this.handleMouseEnter,
                             onMouseLeave: this.handleMouseLeave
-                        }, a.createElement(i.Eb, {
+                        }, a.createElement(i.Fb, {
                             display: i.X.Flex,
                             margin: {
                                 x: 1
                             },
-                            position: i.jb.Relative
-                        }, a.createElement(i.Eb, {
+                            position: i.kb.Relative
+                        }, a.createElement(i.Fb, {
                             className: "hoverable-icon",
                             display: i.X.InlineFlex,
                             color: i.O.Alt2,
                             alignItems: i.f.Center,
-                            justifyContent: i.Wa.Center
-                        }, a.createElement(i.sb, {
-                            asset: i.tb.NotificationInfo,
+                            justifyContent: i.Xa.Center
+                        }, a.createElement(i.tb, {
+                            asset: i.ub.NotificationInfo,
                             width: 16,
                             height: 16
                         })), a.createElement(i.u, {
                             show: this.state.isHovered,
                             direction: r,
                             size: n
-                        }, a.createElement(i.Xa, {
+                        }, a.createElement(i.Ya, {
                             padding: {
                                 x: 1,
                                 y: 1
@@ -4080,8 +4080,8 @@
             var l = function(e) {
                 var t = e.requirement,
                     r = t.metric === s.a.AVERAGE_CCU;
-                return i.createElement(c.Eb, {
-                    position: c.jb.Relative,
+                return i.createElement(c.Fb, {
+                    position: c.kb.Relative,
                     display: c.X.Flex,
                     alignItems: c.f.Center,
                     padding: {
@@ -4089,7 +4089,7 @@
                         left: 2
                     },
                     borderBottom: !0
-                }, i.createElement(c.Xa, a.__assign({
+                }, i.createElement(c.Ya, a.__assign({
                     display: c.X.Flex,
                     flexGrow: 1,
                     alignItems: c.f.Center
@@ -4098,33 +4098,33 @@
                         right: 3
                     },
                     flexGrow: 1
-                }), i.createElement(c.Xa, null, i.createElement(c.Xa, {
+                }), i.createElement(c.Ya, null, i.createElement(c.Ya, {
                     display: c.X.Flex,
                     alignItems: c.f.Center
                 }, i.createElement(c.W, {
                     bold: !0,
                     fontSize: c.Ca.Size5
-                }, e.requirementInstructionString[t.metric]), r && i.createElement(c.Xa, {
+                }, e.requirementInstructionString[t.metric]), r && i.createElement(c.Ya, {
                     display: c.X.Flex,
                     padding: {
                         left: .5,
                         right: 3
                     }
-                }, i.createElement(c.Yb, {
+                }, i.createElement(c.Zb, {
                     label: e.ccuTooltipLabel,
-                    direction: c.ac.Top,
+                    direction: c.bc.Top,
                     width: 230
-                }, i.createElement(c.sb, {
-                    asset: c.tb.NotificationInfo,
+                }, i.createElement(c.tb, {
+                    asset: c.ub.NotificationInfo,
                     width: 16,
                     height: 16,
-                    type: c.ub.Alt2
+                    type: c.vb.Alt2
                 })))), e.subtext && !e.isComplete && i.createElement(c.W, {
                     color: c.O.Alt2,
                     "data-test-selector": n.QUEST_SUBTEXT
-                }, e.subtext))), i.createElement(c.Xa, {
+                }, e.subtext))), i.createElement(c.Ya, {
                     display: c.X.Flex,
-                    justifyContent: c.Wa.End,
+                    justifyContent: c.Xa.End,
                     padding: {
                         right: 2
                     },
@@ -4150,7 +4150,7 @@
             r("qnLe");
 
             function i(e) {
-                return n.createElement(a.Eb, {
+                return n.createElement(a.Fb, {
                     className: "insight-panel-btn",
                     background: e.background || a.r.Alt,
                     display: a.X.Flex,
@@ -4227,15 +4227,15 @@
                 c = r("tmT/"),
                 l = r("Ue10"),
                 u = function(e) {
-                    return 0 === e.achievement.progress ? a.createElement("span", null) : e.achievement.completedAt ? a.createElement(l.Xa, {
+                    return 0 === e.achievement.progress ? a.createElement("span", null) : e.achievement.completedAt ? a.createElement(l.Ya, {
                         display: l.X.InlineFlex,
                         alignItems: l.f.Center
                     }, a.createElement(c.a, {
                         date: e.achievement.completedAt
-                    })) : a.createElement(l.Eb, {
+                    })) : a.createElement(l.Fb, {
                         className: "ach-card__pill-wrapper",
                         fontSize: l.Ca.Size5
-                    }, a.createElement(l.gb, {
+                    }, a.createElement(l.hb, {
                         label: Object(s.f)(e.achievement.progressRatio, "percent")
                     }))
                 },
@@ -4269,7 +4269,7 @@
                             margin: {
                                 y: 2
                             },
-                            zIndex: l.ic.Above,
+                            zIndex: l.jc.Above,
                             borderRadius: l.x.Large,
                             fullWidth: !0,
                             fullHeight: !0
@@ -4291,19 +4291,19 @@
                             background: l.r.Alt2,
                             border: !0
                         };
-                    return a.createElement(l.Eb, n.__assign({
+                    return a.createElement(l.Fb, n.__assign({
                         className: r,
-                        position: l.jb.Relative
-                    }, s), a.createElement(l.Eb, n.__assign({
+                        position: l.kb.Relative
+                    }, s), a.createElement(l.Fb, n.__assign({
                         className: "ach-card__inner"
                     }, i, {
                         refDelegate: e.refDelegate
                     }), a.createElement(d.a, {
                         achievement: e.achievement
-                    }, t ? void 0 : a.createElement(g, {
+                    }, t ? void 0 : a.createElement(v, {
                         achievement: e.achievement
-                    })), a.createElement(l.Xa, {
-                        position: l.jb.Absolute,
+                    })), a.createElement(l.Ya, {
+                        position: l.kb.Absolute,
                         attachTop: !0,
                         attachRight: !0,
                         margin: {
@@ -4312,18 +4312,18 @@
                         }
                     }, a.createElement(l.A, {
                         ariaLabel: "Close",
-                        icon: l.tb.Close,
+                        icon: l.ub.Close,
                         linkTo: h.b.channelAchievements(e.achievement.channelLogin)
-                    })), a.createElement(l.Xa, {
+                    })), a.createElement(l.Ya, {
                         display: l.X.Flex,
                         flexGrow: 1,
-                        position: l.jb.Relative,
+                        position: l.kb.Relative,
                         padding: {
                             top: 1
                         }
-                    }, a.createElement(l.Eb, n.__assign({}, o), a.createElement(l.q, n.__assign({}, f, {
+                    }, a.createElement(l.Fb, n.__assign({}, o), a.createElement(l.q, n.__assign({}, f, {
                         size: 30
-                    })), a.createElement(l.Eb, {
+                    })), a.createElement(l.Fb, {
                         color: l.O.Alt,
                         margin: {
                             left: .5
@@ -4333,17 +4333,17 @@
                         }
                     }, a.createElement("p", null, e.achievement.longDescription))))))
                 },
-                g = function(e) {
+                v = function(e) {
                     return 0 === e.achievement.progress ? a.createElement("span", null) : e.achievement.completedAt ? a.createElement(c.a, {
                         date: e.achievement.completedAt
-                    }) : a.createElement(l.Eb, {
+                    }) : a.createElement(l.Fb, {
                         className: "ach-card__pill-wrapper",
                         fontSize: l.Ca.Size5
-                    }, a.createElement(l.gb, {
+                    }, a.createElement(l.hb, {
                         label: Object(s.f)(e.achievement.progressRatio, "percent")
                     }))
                 },
-                v = r("bF3S"),
+                g = r("bF3S"),
                 y = r("FuXV"),
                 S = r("eAwD"),
                 E = {
@@ -4362,7 +4362,7 @@
                         x: 4,
                         y: 4
                     };
-                    return a.createElement(l.Xa, {
+                    return a.createElement(l.Ya, {
                         padding: t,
                         margin: {
                             bottom: 2
@@ -4391,11 +4391,11 @@
                         var e = this;
                         return a.createElement("div", {
                             className: "ach-page"
-                        }, Boolean(this.props.achievements.topRecentlyCompleted.length) && a.createElement(l.Xa, n.__assign({
+                        }, Boolean(this.props.achievements.topRecentlyCompleted.length) && a.createElement(l.Ya, n.__assign({
                             margin: {
                                 bottom: 3
                             }
-                        }, E), a.createElement(l.Xa, {
+                        }, E), a.createElement(l.Ya, {
                             padding: {
                                 bottom: 1
                             },
@@ -4403,7 +4403,7 @@
                                 bottom: .5
                             }
                         }, a.createElement(l.W, {
-                            type: l.Vb.H3,
+                            type: l.Wb.H3,
                             fontSize: l.Ca.Size4,
                             bold: !0
                         }, Object(s.d)("Recently Completed", "AchievementsList"))), this.props.achievements.topRecentlyCompleted.map(function(t) {
@@ -4413,7 +4413,7 @@
                             }, !e.state.didCelebrate && a.createElement(y.a, {
                                 confettiCount: 30
                             }))
-                        })), Boolean(this.props.achievements.notCompleted.length) && a.createElement("div", n.__assign({}, w), a.createElement(l.Xa, {
+                        })), Boolean(this.props.achievements.notCompleted.length) && a.createElement("div", n.__assign({}, w), a.createElement(l.Ya, {
                             padding: {
                                 bottom: 1
                             },
@@ -4421,7 +4421,7 @@
                                 bottom: .5
                             }
                         }, a.createElement(l.W, {
-                            type: l.Vb.H3,
+                            type: l.Wb.H3,
                             fontSize: l.Ca.Size4,
                             bold: !0
                         }, Object(s.d)("In Progress", "AchievementsList"))), this.props.achievements.notCompleted.map(function(e) {
@@ -4429,11 +4429,11 @@
                                 achievement: e,
                                 key: e.id
                             })
-                        })), Boolean(this.props.achievements.pastCompleted.length) && a.createElement(l.Xa, n.__assign({
+                        })), Boolean(this.props.achievements.pastCompleted.length) && a.createElement(l.Ya, n.__assign({
                             margin: {
                                 top: 3
                             }
-                        }, j), a.createElement(l.Xa, {
+                        }, j), a.createElement(l.Ya, {
                             padding: {
                                 bottom: 1
                             },
@@ -4441,7 +4441,7 @@
                                 bottom: .5
                             }
                         }, a.createElement(l.W, {
-                            type: l.Vb.H3,
+                            type: l.Wb.H3,
                             fontSize: l.Ca.Size4,
                             bold: !0
                         }, Object(s.d)("Completed", "AchievementsList"))), this.props.achievements.pastCompleted.map(function(e) {
@@ -4469,9 +4469,9 @@
                             },
                             borderRadius: l.x.Large,
                             background: l.r.Base,
-                            overflow: l.cb.Hidden
+                            overflow: l.db.Hidden
                         };
-                        return a.createElement(l.Eb, n.__assign({
+                        return a.createElement(l.Fb, n.__assign({
                             elevation: 1
                         }, s), a.createElement(o.a, {
                             achievement: e.achievement,
@@ -4480,7 +4480,7 @@
                     })
                 },
                 k = function(e) {
-                    return Object(p.b)() ? a.createElement(v.a, {
+                    return Object(p.b)() ? a.createElement(g.a, {
                         progress: e.progress,
                         progressCap: e.progressCap,
                         completedAt: e.completedAt
@@ -4490,16 +4490,16 @@
                 },
                 A = function() {
                     var e = Array(3).fill("").map(function(e, t) {
-                        return a.createElement(l.Xa, {
+                        return a.createElement(l.Ya, {
                             margin: {
                                 bottom: 1
                             },
                             key: t
-                        }, a.createElement(l.ib, {
+                        }, a.createElement(l.jb, {
                             height: 70
                         }))
                     });
-                    return [a.createElement(l.Xa, n.__assign({
+                    return [a.createElement(l.Ya, n.__assign({
                         margin: {
                             bottom: 3
                         }
@@ -4507,7 +4507,7 @@
                         key: "recently-completed"
                     }), e), a.createElement("div", n.__assign({}, w, {
                         key: "not-completed"
-                    }), e), a.createElement(l.Xa, n.__assign({
+                    }), e), a.createElement(l.Ya, n.__assign({
                         margin: {
                             top: 3
                         }
@@ -4551,7 +4551,7 @@
                             "x:strong": function(e) {
                                 return n.createElement(s.W, {
                                     bold: !0,
-                                    type: s.Vb.Span
+                                    type: s.Wb.Span
                                 }, e)
                             },
                             duration: Object(a.f)(Math.floor(100 * r) / 100)

@@ -24,7 +24,7 @@
                             delay: l.j.Medium,
                             duration: l.k.Medium,
                             enabled: !0
-                        }, o.createElement(l.Eb, {
+                        }, o.createElement(l.Fb, {
                             "data-test-selector": r.TRIAL_BANNER,
                             display: l.X.Flex,
                             background: l.r.Base,
@@ -37,24 +37,24 @@
                                 topLeft: l.x.Large,
                                 topRight: l.x.Large
                             }
-                        }, o.createElement(l.sb, {
-                            asset: l.tb.MultiscreenEqualThree,
-                            type: l.ub.Inherit
-                        }), o.createElement(l.Xa, {
+                        }, o.createElement(l.tb, {
+                            asset: l.ub.MultiscreenEqualThree,
+                            type: l.vb.Inherit
+                        }), o.createElement(l.Ya, {
                             margin: {
                                 x: 1
                             }
-                        }, o.createElement(l.Pa, {
+                        }, o.createElement(l.Qa, {
                             margin: {
                                 right: 1
                             }
                         }, o.createElement(l.W, {
                             fontSize: l.Ca.Size5,
-                            type: l.Vb.Strong
+                            type: l.Wb.Strong
                         }, Object(a.e)("Twitch Multiview", "MultiviewBanner"))), o.createElement(l.W, {
                             fontSize: l.Ca.Size5,
-                            type: l.Vb.Span
-                        }, Object(a.e)("Choose your own streams including player POVs", "MultiviewBanner"))), o.createElement(l.Xa, {
+                            type: l.Wb.Span
+                        }, Object(a.e)("Choose your own streams including player POVs", "MultiviewBanner"))), o.createElement(l.Ya, {
                             margin: {
                                 left: "auto"
                             }

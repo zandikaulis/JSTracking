@@ -119,14 +119,14 @@
                     }
                     return r.__extends(t, e), t.prototype.render = function() {
                         var e = this.props.filterAction || n.All;
-                        return i.createElement(g.Eb, {
+                        return i.createElement(g.Fb, {
                             padding: 2,
                             borderBottom: !0
-                        }, i.createElement(g.Xa, {
+                        }, i.createElement(g.Ya, {
                             className: "activity-page__select",
                             flexGrow: 0,
                             flexShrink: 0
-                        }, i.createElement(g.zb, r.__assign({
+                        }, i.createElement(g.Ab, r.__assign({
                             name: "activity_type",
                             onChange: this.handleTypeChange,
                             value: e,
@@ -167,7 +167,7 @@
                             if (e.props.filterAction === n.All || t.action === e.props.filterAction) {
                                 switch (t.actor && (c = t.actor.logo, s = t.actor.display_name, d = i.createElement(g.W, {
                                     bold: !0,
-                                    type: g.Vb.Span
+                                    type: g.Wb.Span
                                 }, i.createElement(g.U, {
                                     to: "/" + t.actor.name
                                 }, s))), t.action) {
@@ -206,7 +206,7 @@
                                     default:
                                         r = ""
                                 }
-                                return i.createElement(g.Eb, {
+                                return i.createElement(g.Fb, {
                                     key: "audit" + a,
                                     alignItems: g.f.Center,
                                     display: g.X.Flex,
@@ -215,7 +215,7 @@
                                     padding: {
                                         y: 1
                                     }
-                                }, i.createElement(g.Xa, {
+                                }, i.createElement(g.Ya, {
                                     flexGrow: 0,
                                     flexShrink: 0,
                                     margin: {
@@ -225,15 +225,15 @@
                                     src: c,
                                     alt: s,
                                     size: 40,
-                                    presenceStatus: g.lb.Online,
+                                    presenceStatus: g.mb.Online,
                                     borderRadius: g.x.Small
-                                })), i.createElement(g.Xa, {
+                                })), i.createElement(g.Ya, {
                                     flexGrow: 1,
                                     flexShrink: 1
-                                }, i.createElement(g.Xa, null, i.createElement(g.W, {
+                                }, i.createElement(g.Ya, null, i.createElement(g.W, {
                                     color: g.O.Alt,
                                     fontSize: g.Ca.Size5
-                                }, r))), i.createElement(g.Xa, {
+                                }, r))), i.createElement(g.Ya, {
                                     flexGrow: 0,
                                     flexShrink: 0
                                 }, i.createElement(g.W, {
@@ -242,20 +242,20 @@
                                 }, o)))
                             }
                         });
-                        return i.createElement(g.Xa, r.__assign({
+                        return i.createElement(g.Ya, r.__assign({
                             className: "activity-page__list",
                             flexGrow: 0,
                             flexShrink: 0
                         }, y), t)
                     }, t.prototype.renderNotEnoughDataPlaceholder = function() {
-                        return i.createElement(g.Eb, r.__assign({
+                        return i.createElement(g.Fb, r.__assign({
                             className: "activity-page__no-data",
                             display: g.X.Flex,
                             flexGrow: 1,
                             flexDirection: g.Aa.Column,
                             alignItems: g.f.Center,
                             alignContent: g.e.Center,
-                            justifyContent: g.Wa.Center,
+                            justifyContent: g.Xa.Center,
                             padding: {
                                 left: 2,
                                 right: 2
@@ -347,12 +347,12 @@
                         })
                     }, t.prototype.render = function() {
                         var e = this.state.requestState;
-                        if (this.props.data.loading || e === S.Loading || e === S.Error) return i.createElement(w.a, null, i.createElement(g.Xa, {
+                        if (this.props.data.loading || e === S.Loading || e === S.Error) return i.createElement(w.a, null, i.createElement(g.Ya, {
                             margin: {
                                 top: 3,
                                 bottom: 1
                             }
-                        }, i.createElement(g.ib, {
+                        }, i.createElement(g.jb, {
                             height: 448,
                             width: 1040
                         })));
@@ -360,21 +360,21 @@
                             a = t.filterAction,
                             n = t.list,
                             r = e === S.Success && n.audits.length > 0;
-                        return i.createElement(w.a, null, i.createElement(g.Eb, {
+                        return i.createElement(w.a, null, i.createElement(g.Fb, {
                             className: "activity-page",
                             background: g.r.Base,
                             elevation: 1,
-                            overflow: g.cb.Hidden
+                            overflow: g.db.Hidden
                         }, i.createElement(b, {
                             filterAction: a,
                             onActionChange: this.handleActionChange,
                             enabled: r
-                        }), i.createElement(g.Xa, {
+                        }), i.createElement(g.Ya, {
                             className: "activity-page__scrollable",
-                            overflow: g.cb.Hidden
+                            overflow: g.db.Hidden
                         }, i.createElement(c.b, {
                             suppressScrollX: !0
-                        }, i.createElement(g.Xa, {
+                        }, i.createElement(g.Ya, {
                             padding: {
                                 x: 2
                             }

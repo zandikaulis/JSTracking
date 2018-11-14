@@ -14,7 +14,7 @@
                         return null !== t && t.apply(this, arguments) || this
                     }
                     return a.__extends(e, t), e.prototype.render = function() {
-                        return o.createElement(l.Xa, null, o.createElement(l.Xa, {
+                        return o.createElement(l.Ya, null, o.createElement(l.Ya, {
                             "data-test-selector": "dev-bounty-board-analytics-info-text-selector",
                             padding: {
                                 top: 1,
@@ -24,7 +24,7 @@
                                 bottom: 1
                             },
                             display: l.X.Flex,
-                            justifyContent: l.Wa.Start
+                            justifyContent: l.Xa.Start
                         }, o.createElement(l.W, null, Object(r.d)("Live campaign analytics can be tracked here. Historical data is available in individual campaign detail pages. Please visit the <x:link>Campaign Manager</x:link> for details.", {
                             "x:link": function(t) {
                                 return o.createElement(l.U, {

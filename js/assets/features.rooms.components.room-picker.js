@@ -19,7 +19,7 @@
                         }, t
                     }
                     return r.__extends(t, e), t.prototype.render = function() {
-                        return i.createElement(m.Eb, {
+                        return i.createElement(m.Fb, {
                             className: "reporting-modal__container",
                             background: m.r.Base,
                             padding: {
@@ -348,7 +348,7 @@
                         }, t
                     }
                     return o.__extends(t, e), t.prototype.render = function() {
-                        return r.createElement(s.Xa, null, r.createElement(s.Eb, {
+                        return r.createElement(s.Ya, null, r.createElement(s.Fb, {
                             padding: {
                                 top: 1,
                                 bottom: .5,
@@ -358,8 +358,8 @@
                                 x: .5
                             }
                         }, r.createElement(s.W, {
-                            type: s.Vb.Span
-                        }, Object(i.d)("Who can chat in this room?", "RoomPermissionsToggle"))), r.createElement(s.Eb, {
+                            type: s.Wb.Span
+                        }, Object(i.d)("Who can chat in this room?", "RoomPermissionsToggle"))), r.createElement(s.Fb, {
                             padding: {
                                 x: 1
                             },
@@ -368,7 +368,7 @@
                             },
                             display: s.X.Flex,
                             alignItems: s.f.Center
-                        }, r.createElement(s.Pa, {
+                        }, r.createElement(s.Qa, {
                             flexGrow: 1,
                             display: s.X.Flex,
                             alignItems: s.f.Center,
@@ -376,14 +376,14 @@
                         }, r.createElement("label", {
                             htmlFor: "room-permissions-toggle__mods-permission"
                         }, r.createElement(s.W, {
-                            type: s.Vb.Strong,
+                            type: s.Wb.Strong,
                             color: s.O.Alt
-                        }, Object(i.d)("Mods", "RoomPermissionsToggle")))), r.createElement(s.Xb, {
+                        }, Object(i.d)("Mods", "RoomPermissionsToggle")))), r.createElement(s.Yb, {
                             id: "room-permissions-toggle__mods-permission",
                             disabled: !0,
                             checked: !0,
                             "data-test-selector": "moderator-role"
-                        })), r.createElement(s.Eb, {
+                        })), r.createElement(s.Fb, {
                             padding: {
                                 x: 1
                             },
@@ -392,7 +392,7 @@
                             },
                             display: s.X.Flex,
                             alignItems: s.f.Center
-                        }, r.createElement(s.Pa, {
+                        }, r.createElement(s.Qa, {
                             flexGrow: 1,
                             display: s.X.Flex,
                             alignItems: s.f.Center,
@@ -400,14 +400,14 @@
                         }, r.createElement("label", {
                             htmlFor: "room-permissions-toggle__subs-permission"
                         }, r.createElement(s.W, {
-                            type: s.Vb.Strong,
+                            type: s.Wb.Strong,
                             color: s.O.Alt
-                        }, Object(i.d)("Subs", "RoomPermissionsToggle")))), r.createElement(s.Xb, {
+                        }, Object(i.d)("Subs", "RoomPermissionsToggle")))), r.createElement(s.Yb, {
                             id: "room-permissions-toggle__subs-permission",
                             checked: this.state.minimumAllowedRole !== a.b.Moderator,
                             onChange: this.toggleSubRole,
                             "data-test-selector": "subscriber-role"
-                        })), r.createElement(s.Eb, {
+                        })), r.createElement(s.Fb, {
                             padding: {
                                 x: 1
                             },
@@ -416,7 +416,7 @@
                             },
                             display: s.X.Flex,
                             alignItems: s.f.Center
-                        }, r.createElement(s.Pa, {
+                        }, r.createElement(s.Qa, {
                             flexGrow: 1,
                             display: s.X.Flex,
                             alignItems: s.f.Center,
@@ -424,27 +424,27 @@
                         }, r.createElement("label", {
                             htmlFor: "room-permissions-toggle__everyone-permission"
                         }, r.createElement(s.W, {
-                            type: s.Vb.Strong,
+                            type: s.Wb.Strong,
                             color: s.O.Alt
-                        }, Object(i.d)("Everyone", "RoomPermissionsToggle")))), r.createElement(s.Xb, {
+                        }, Object(i.d)("Everyone", "RoomPermissionsToggle")))), r.createElement(s.Yb, {
                             id: "room-permissions-toggle__everyone-permission",
                             checked: this.state.minimumAllowedRole === a.b.Everyone,
                             onChange: this.toggleAllRole,
                             "data-test-selector": "everyone-role"
-                        })), r.createElement(s.Xa, {
+                        })), r.createElement(s.Ya, {
                             padding: {
                                 x: .5
                             }
-                        }, r.createElement(s.Eb, {
+                        }, r.createElement(s.Fb, {
                             borderTop: !0,
                             margin: {
                                 top: .5,
                                 bottom: 1,
                                 x: 1
                             }
-                        })), r.createElement(s.Eb, {
+                        })), r.createElement(s.Fb, {
                             display: s.X.Flex,
-                            justifyContent: s.Wa.Between,
+                            justifyContent: s.Xa.Between,
                             alignItems: s.f.Center,
                             padding: {
                                 bottom: .5,
@@ -460,24 +460,24 @@
                             cols: 8
                         }, r.createElement(s.W, null, Object(i.d)("Allow others to read chat but not send messages", "RoomPermissionsToggle"))), r.createElement(s.P, {
                             cols: 4
-                        }, r.createElement(s.Xa, {
+                        }, r.createElement(s.Ya, {
                             display: s.X.Flex,
                             fullHeight: !0,
-                            justifyContent: s.Wa.Center,
+                            justifyContent: s.Xa.Center,
                             flexDirection: s.Aa.Column,
                             alignContent: s.e.End,
                             alignItems: s.f.End
                         }, this.renderPreviewabilityToggle())))))
                     }, t.prototype.renderPreviewabilityToggle = function() {
                         var e = this.state.minimumAllowedRole !== a.b.Subscriber,
-                            t = r.createElement(s.Xb, {
+                            t = r.createElement(s.Yb, {
                                 disabled: e,
                                 checked: this.state.isPreviewable,
                                 onChange: this.togglePreviewability,
                                 "data-test-selector": "previewability-toggle"
                             });
-                        return this.state.minimumAllowedRole === a.b.Moderator && (t = r.createElement(s.Yb, {
-                            direction: s.ac.Left,
+                        return this.state.minimumAllowedRole === a.b.Moderator && (t = r.createElement(s.Zb, {
+                            direction: s.bc.Left,
                             width: 100,
                             label: Object(i.d)("This room is only for moderators", "RoomPermissionsToggle")
                         }, t)), t
@@ -1213,14 +1213,14 @@
                                 value: e.id
                             }, e.text)
                         });
-                        return i.createElement(c.Xa, {
+                        return i.createElement(c.Ya, {
                             margin: {
                                 bottom: 2
                             }
                         }, i.createElement(c.Ea, {
                             id: "reporting-modal__select",
                             label: Object(a.d)("Select Reason (required)", "ReportUserModal")
-                        }, i.createElement(c.zb, {
+                        }, i.createElement(c.Ab, {
                             id: "reporting-modal__select",
                             "data-test-selector": "reporting-modal.select",
                             disabled: this.props.data.loading || !!this.props.data.error,
@@ -1276,33 +1276,33 @@
                     }, t
                 }
                 return o.__extends(t, e), t.prototype.render = function() {
-                    return i.createElement(c.Xa, {
+                    return i.createElement(c.Ya, {
                         display: c.X.Flex,
                         flexDirection: c.Aa.Column,
                         alignItems: c.f.Center,
-                        justifyContent: c.Wa.Center
+                        justifyContent: c.Xa.Center
                     }, this.renderStatusMessage(), this.renderBody())
                 }, t.prototype.renderBody = function() {
                     return this.props.submitStatus === h.Success ? i.createElement("div", null, i.createElement(c.z, {
                         onClick: this.props.onClose
-                    }, i.createElement(c.Xa, {
+                    }, i.createElement(c.Ya, {
                         padding: {
                             x: 2
                         }
-                    }, Object(a.d)("Close", "ReportUser")))) : i.createElement("div", null, i.createElement(c.Xa, {
+                    }, Object(a.d)("Close", "ReportUser")))) : i.createElement("div", null, i.createElement(c.Ya, {
                         "data-test-selector": "reporting.title",
                         margin: {
                             bottom: 1
                         },
                         "data-a-target": "reporting-channel-name"
                     }, i.createElement(c.W, {
-                        type: c.Vb.H4
-                    }, this.props.title), i.createElement(c.Eb, {
+                        type: c.Wb.H4
+                    }, this.props.title), i.createElement(c.Fb, {
                         color: c.O.Alt2,
                         margin: {
                             top: 1
                         }
-                    }, this.headerMessage)), i.createElement("form", null, i.createElement(c.Eb, {
+                    }, this.headerMessage)), i.createElement("form", null, i.createElement(c.Fb, {
                         borderTop: !0,
                         borderBottom: !0,
                         margin: {
@@ -1317,15 +1317,15 @@
                     }), i.createElement(c.Ea, {
                         id: "reporting__text-area",
                         label: Object(a.d)("Description (required)", "ReportUser")
-                    }, i.createElement(c.Sb, {
+                    }, i.createElement(c.Tb, {
                         defaultValue: this.props.defaultDescription,
                         onChange: this.handleTextAreaChange
-                    }))), i.createElement(c.Eb, {
+                    }))), i.createElement(c.Fb, {
                         display: c.X.Flex,
-                        justifyContent: c.Wa.Center
+                        justifyContent: c.Xa.Center
                     }, i.createElement(c.z, {
                         onClick: this.handleSubmit
-                    }, i.createElement(c.Xa, {
+                    }, i.createElement(c.Ya, {
                         padding: {
                             x: 2
                         }
@@ -1352,7 +1352,7 @@
                         "reporting__error-container": this.props.submitStatus !== h.Success,
                         "reporting__success-container": this.props.submitStatus === h.Success
                     });
-                    return i.createElement(c.Eb, {
+                    return i.createElement(c.Fb, {
                         className: t,
                         fullWidth: this.props.submitStatus !== h.Success,
                         "data-test-selector": "reporting.error",
@@ -1951,7 +1951,7 @@
                     return i.__extends(t, e), t.prototype.componentDidMount = function() {
                         this.props.latencyTracking.reportInteractive()
                     }, t.prototype.render = function() {
-                        return this.shouldRender() ? a.createElement(h.Xa, null, this.getButtonContent(), this.renderBanText()) : null
+                        return this.shouldRender() ? a.createElement(h.Ya, null, this.getButtonContent(), this.renderBanText()) : null
                     }, t.prototype.shouldRender = function() {
                         return this.props.data && !this.props.data.error && this.props.data.channel && this.props.sessionUser && this.props.sessionUser.id.toString() !== this.props.channelID && !this.props.data.channel.self.isChannelMember
                     }, t.prototype.getButtonContent = function() {
@@ -1969,7 +1969,7 @@
                                 onClick: this.handleClick
                             }, r)
                         }
-                        if (e && e.loading) return a.createElement(h.ib, {
+                        if (e && e.loading) return a.createElement(h.jb, {
                             width: 160,
                             height: 30
                         })
@@ -1977,7 +1977,7 @@
                         var e = this.props.data;
                         if (e && !e.loading) {
                             var t = e.channel.self;
-                            if (t && t.banStatus && t.banStatus.isPermanent) return a.createElement(h.Xa, {
+                            if (t && t.banStatus && t.banStatus.isPermanent) return a.createElement(h.Ya, {
                                 padding: {
                                     top: .5
                                 }
@@ -2009,8 +2009,8 @@
                     }
                 })(f),
                 y = n("eJ65"),
-                E = n("vcHY"),
-                S = n("UJc8");
+                S = n("vcHY"),
+                E = n("UJc8");
             ! function(e) {
                 e.Moderator = "moderator", e.Subscriber = "subscriber"
             }(k || (k = {}));
@@ -2040,13 +2040,13 @@
                                             }))] : [3, 2];
                                         case 1:
                                             if (!(e = i.sent()).data.createRoom.error) switch (this.props.roomMinimumAllowedRole) {
-                                                case S.b.Subscriber:
+                                                case E.b.Subscriber:
                                                     O(k.Subscriber);
                                                     break;
-                                                case S.b.Moderator:
+                                                case E.b.Moderator:
                                                     O(k.Moderator)
                                             }
-                                            return this.props.onCreateHandler && (d = void 0, e.data.createRoom.error && (t = e.data.createRoom.error, n = t.code, o = t.minLength, r = t.maxLength, a = r, s = o, d = Object(E.a)(n, {
+                                            return this.props.onCreateHandler && (d = void 0, e.data.createRoom.error && (t = e.data.createRoom.error, n = t.code, o = t.minLength, r = t.maxLength, a = r, s = o, d = Object(S.a)(n, {
                                                 maxChars: a,
                                                 minChars: s
                                             })), this.props.onCreateHandler(d)), [3, 3];
@@ -2054,7 +2054,7 @@
                                             this.props.onCreateHandler && (l = {
                                                 maxChars: N.a,
                                                 minChars: N.c
-                                            }, d = Object(E.a)("NAME_LENGTH_INVALID", l), this.props.onCreateHandler(d)), i.label = 3;
+                                            }, d = Object(S.a)("NAME_LENGTH_INVALID", l), this.props.onCreateHandler(d)), i.label = 3;
                                         case 3:
                                             return [2]
                                     }
@@ -2080,8 +2080,8 @@
                 M = n("2j4q"),
                 j = n("zmJd"),
                 x = (n("Hxgj"), {
-                    align: h.Zb.Right,
-                    direction: h.ac.Top,
+                    align: h.ac.Right,
+                    direction: h.bc.Top,
                     label: "",
                     offsetX: "-2%"
                 }),
@@ -2100,9 +2100,9 @@
                                         maxChars: N.a,
                                         minChars: N.c
                                     };
-                                    t = Object(E.a)("NAME_LENGTH_INVALID", r)
+                                    t = Object(S.a)("NAME_LENGTH_INVALID", r)
                                 }
-                            } else t = Object(E.a)("NAME_CONTAINS_INVALID_CHARACTERS");
+                            } else t = Object(S.a)("NAME_CONTAINS_INVALID_CHARACTERS");
                             n.setState({
                                 roomName: o,
                                 roomCreationError: t
@@ -2116,11 +2116,11 @@
                             roomName: t.roomName || "",
                             roomTopic: "",
                             isRoomPreviewable: !0,
-                            roomMinimumAllowedRole: S.b.Everyone
+                            roomMinimumAllowedRole: E.b.Everyone
                         }, n
                     }
                     return i.__extends(t, e), t.prototype.render = function() {
-                        var e = S.a[this.state.roomMinimumAllowedRole];
+                        var e = E.a[this.state.roomMinimumAllowedRole];
                         x.label = Object(s.d)("Chat Permission: {permissionRole}", {
                             permissionRole: e
                         }, "RoomCreator");
@@ -2128,31 +2128,31 @@
                             isPreviewable: this.state.isRoomPreviewable,
                             minimumAllowedRole: this.state.roomMinimumAllowedRole
                         };
-                        return a.createElement(h.Xa, {
+                        return a.createElement(h.Ya, {
                             className: "room-creator",
                             padding: {
                                 y: 1,
                                 x: 2
                             }
-                        }, a.createElement(h.Xa, null, a.createElement(h.Xa, {
-                            position: h.jb.Relative
-                        }, a.createElement(h.Ra, {
+                        }, a.createElement(h.Ya, null, a.createElement(h.Ya, {
+                            position: h.kb.Relative
+                        }, a.createElement(h.Sa, {
                             autoFocus: !0,
                             "data-test-selector": "room-creator-input",
                             error: !!this.state.roomCreationError,
                             icon: Object(j.a)(t, !0),
-                            type: h.Ta.Text,
+                            type: h.Ua.Text,
                             value: this.state.roomName,
                             onChange: this.onRoomNameChange,
                             maxLength: 26,
                             placeholder: Object(s.d)("Enter Room name here", "RoomCreator")
-                        }), this.renderRoomCreationError(), a.createElement(h.Xa, {
-                            position: h.jb.Absolute,
+                        }), this.renderRoomCreationError(), a.createElement(h.Ya, {
+                            position: h.kb.Absolute,
                             attachRight: !0,
                             attachTop: !0,
                             display: h.X.Flex,
                             className: "room-creator__permissions"
-                        }, a.createElement(h.Eb, {
+                        }, a.createElement(h.Fb, {
                             display: h.X.Flex,
                             alignItems: h.f.Center,
                             padding: {
@@ -2160,16 +2160,16 @@
                             }
                         }, a.createElement(y.a, {
                             tooltipProps: x
-                        }, a.createElement(h.U, null, a.createElement(h.Xa, {
+                        }, a.createElement(h.U, null, a.createElement(h.Ya, {
                             display: h.X.Flex
-                        }, a.createElement(h.Xa, {
+                        }, a.createElement(h.Ya, {
                             padding: {
                                 right: .5
                             }
                         }, Object(s.d)("{permissionRole}", {
                             permissionRole: e
-                        }, "RoomCreator")), a.createElement(h.sb, {
-                            asset: h.tb.GlyphArrDown
+                        }, "RoomCreator")), a.createElement(h.tb, {
+                            asset: h.ub.GlyphArrDown
                         }))), a.createElement(h.u, {
                             direction: h.v.BottomRight,
                             size: h.w.Small,
@@ -2178,13 +2178,13 @@
                             offsetX: "-1rem"
                         }, a.createElement(M.a, {
                             updatePermissions: this.updatePermissions
-                        })))))), a.createElement(h.Xa, {
+                        })))))), a.createElement(h.Ya, {
                             display: h.X.Flex,
                             margin: {
                                 top: 1
                             },
-                            justifyContent: h.Wa.End
-                        }, a.createElement(h.Xa, {
+                            justifyContent: h.Xa.End
+                        }, a.createElement(h.Ya, {
                             padding: {
                                 right: 1
                             }
@@ -2199,7 +2199,7 @@
                             roomMinimumAllowedRole: this.state.roomMinimumAllowedRole,
                             onCreateHandler: this.onCreateHandler,
                             "data-test-selector": "create-room-button"
-                        })), a.createElement(h.Eb, {
+                        })), a.createElement(h.Fb, {
                             borderTop: !0,
                             fullWidth: !0,
                             margin: {
@@ -2214,9 +2214,9 @@
                     }, t
                 }(a.Component),
                 I = n("u5aL"),
-                A = n("uQjW"),
-                U = n("eO4L"),
-                F = (n("ep4/"), function(e) {
+                F = n("uQjW"),
+                A = n("eO4L"),
+                U = (n("ep4/"), function(e) {
                     function t(t) {
                         var n = e.call(this, t) || this;
                         return n.onClick = function() {
@@ -2235,12 +2235,12 @@
                     }
                     return i.__extends(t, e), t.prototype.render = function() {
                         var e = this.props.data;
-                        if (e && e.loading) return a.createElement(h.ib, {
+                        if (e && e.loading) return a.createElement(h.jb, {
                             width: 160
                         });
-                        if (e && e.error) return a.createElement(h.Xa, null);
+                        if (e && e.error) return a.createElement(h.Ya, null);
                         var t = !this.props.sessionUser || e && !e.room.owner.self.isChannelMember,
-                            n = h.tb.Lock,
+                            n = h.ub.Lock,
                             o = !1,
                             r = !1;
                         if (e) {
@@ -2250,16 +2250,16 @@
                             };
                             n = Object(j.a)(i, e.room.self.permissions.sendMessages), o = e.room.self.isUnread && e.room.owner.self.isChannelMember, r = e.room.self.isMuted && e.room.owner.self.isChannelMember
                         }
-                        return a.createElement(h.Eb, {
-                            position: h.jb.Relative,
+                        return a.createElement(h.Fb, {
+                            position: h.kb.Relative,
                             "data-test-selector": "interactable-wrapper",
                             className: "room-picker-option\n          " + (this.props.isActiveRoom ? "room-picker-option--active" : "") + "\n          " + (this.state.showOptionView && !t ? "room-picker-option--hover" : "") + "\n          " + (t ? "room-picker-option--disabled" : "")
-                        }, a.createElement(h.Ua, {
+                        }, a.createElement(h.Va, {
                             onClick: this.onClick,
                             disabled: t,
                             "data-test-selector": "room-option-interactable",
                             hover: this.state.showOptionView && !t
-                        }, a.createElement(h.Xa, {
+                        }, a.createElement(h.Ya, {
                             padding: {
                                 y: .5,
                                 x: 2
@@ -2267,45 +2267,45 @@
                             display: h.X.Flex,
                             className: "room-picker-option__label",
                             fullWidth: !0
-                        }, a.createElement(h.Xa, {
+                        }, a.createElement(h.Ya, {
                             display: h.X.Flex,
                             alignItems: h.f.Center,
                             flexGrow: 1
-                        }, a.createElement(h.Eb, {
+                        }, a.createElement(h.Fb, {
                             className: "room-picker-option__permission-icon",
                             display: h.X.Flex,
                             padding: {
                                 right: .5
                             }
-                        }, a.createElement(h.sb, {
+                        }, a.createElement(h.tb, {
                             height: 14,
                             asset: n
                         })), a.createElement(h.W, {
                             bold: o && !this.props.isActiveRoom
-                        }, this.props.roomName)), a.createElement(h.Xa, {
+                        }, this.props.roomName)), a.createElement(h.Ya, {
                             display: h.X.Flex,
                             alignItems: h.f.Center,
                             margin: {
                                 right: 2
                             }
-                        }, r && a.createElement(h.Eb, {
+                        }, r && a.createElement(h.Fb, {
                             padding: {
                                 left: .5
                             },
                             display: h.X.Flex,
                             className: "room-picker-option__muted-icon"
-                        }, a.createElement(h.sb, {
-                            asset: h.tb.WhisperMuted
+                        }, a.createElement(h.tb, {
+                            asset: h.ub.WhisperMuted
                         })), this.renderMentionsPill()))), this.renderRoomDetailsBalloonToggle())
                     }, t.prototype.renderRoomDetailsBalloonToggle = function() {
                         var e = this.props.data;
                         if (!this.props.sessionUser || !e || e.chatRoomBanStatus && e.chatRoomBanStatus.isPermanent) return null;
                         var t = e.room.owner.self.isChannelMember;
-                        return a.createElement(h.Xa, {
+                        return a.createElement(h.Ya, {
                             margin: {
                                 right: 1
                             },
-                            position: h.jb.Absolute,
+                            position: h.kb.Absolute,
                             attachRight: !0,
                             attachTop: !0,
                             display: t ? void 0 : h.X.Block,
@@ -2317,7 +2317,7 @@
                         }, a.createElement(h.A, {
                             ariaLabel: Object(s.d)("More options", "RoomPickerOption"),
                             "data-test-selector": "room-details",
-                            icon: h.tb.More,
+                            icon: h.ub.More,
                             onClick: this.toggleOptionView,
                             overlay: t
                         })), a.createElement(h.u, {
@@ -2327,19 +2327,19 @@
                             offsetY: "-0.5rem",
                             offsetX: "1rem",
                             show: !!this.state.showOptionView
-                        }, a.createElement(A.a, {
+                        }, a.createElement(F.a, {
                             roomID: this.props.roomID
                         }))))
                     }, t.prototype.renderMentionsPill = function() {
-                        return this.props.isActiveRoom || !this.props.data || this.props.data.room.self.unreadMentionCount <= 0 || this.props.data.room.self.isMuted || !this.props.data.room.owner.self.isChannelMember ? null : a.createElement(h.Xa, {
+                        return this.props.isActiveRoom || !this.props.data || this.props.data.room.self.unreadMentionCount <= 0 || this.props.data.room.self.isMuted || !this.props.data.room.owner.self.isChannelMember ? null : a.createElement(h.Ya, {
                             padding: {
                                 left: .5
                             }
-                        }, a.createElement(h.gb, {
+                        }, a.createElement(h.hb, {
                             label: this.props.data.room.self.unreadMentionCount.toString(),
-                            type: h.hb.Alert
+                            type: h.ib.Alert
                         }))
-                    }, t = i.__decorate([Object(c.a)(U, {
+                    }, t = i.__decorate([Object(c.a)(A, {
                         options: function(e) {
                             return {
                                 variables: {
@@ -2356,7 +2356,7 @@
                 }(a.Component)),
                 W = (n("TZHj"), function(e) {
                     var t, n, o, r, i, l;
-                    return e.type === k.Subscriber ? (t = Object(s.d)("subscriber-room", "RoomUpsell_SubUpsellName"), n = Object(s.d)("Create a place for your subscribers to hang out", "RoomUpsell_SubUpsellTopic"), o = Object(s.d)("subscriber-room", "RoomUpsell_SubUpsellNameCreate"), r = Object(s.d)("Create a place for your subscribers to hang out", "RoomUpsell_SubUpsellTopicCreate"), i = S.b.Subscriber, l = !0) : (t = Object(s.d)("moderator-room", "RoomUpsell_ModUpsellName"), n = Object(s.d)("Give your moderators a place to sharpen their swords", "RoomUpsell_ModUpsellTopic"), o = Object(s.d)("moderator-room", "RoomUpsell_ModUpsellNameCreate"), r = Object(s.d)("Give your moderators a place to sharpen their swords", "RoomUpsell_ModUpsellTopicCreate"), i = S.b.Moderator, l = !1), a.createElement(h.Eb, {
+                    return e.type === k.Subscriber ? (t = Object(s.d)("subscriber-room", "RoomUpsell_SubUpsellName"), n = Object(s.d)("Create a place for your subscribers to hang out", "RoomUpsell_SubUpsellTopic"), o = Object(s.d)("subscriber-room", "RoomUpsell_SubUpsellNameCreate"), r = Object(s.d)("Create a place for your subscribers to hang out", "RoomUpsell_SubUpsellTopicCreate"), i = E.b.Subscriber, l = !0) : (t = Object(s.d)("moderator-room", "RoomUpsell_ModUpsellName"), n = Object(s.d)("Give your moderators a place to sharpen their swords", "RoomUpsell_ModUpsellTopic"), o = Object(s.d)("moderator-room", "RoomUpsell_ModUpsellNameCreate"), r = Object(s.d)("Give your moderators a place to sharpen their swords", "RoomUpsell_ModUpsellTopicCreate"), i = E.b.Moderator, l = !1), a.createElement(h.Fb, {
                         display: h.X.Flex,
                         padding: {
                             y: 1,
@@ -2368,31 +2368,31 @@
                         gutterSize: h.Ka.None
                     }, a.createElement(h.P, {
                         cols: 9
-                    }, a.createElement(h.Xa, {
+                    }, a.createElement(h.Ya, {
                         display: h.X.Flex
-                    }, a.createElement(h.Xa, {
+                    }, a.createElement(h.Ya, {
                         padding: {
                             right: .5
                         },
                         display: h.X.Flex,
                         alignItems: h.f.Center
-                    }, a.createElement(h.sb, {
-                        type: h.ub.Alt2,
+                    }, a.createElement(h.tb, {
+                        type: h.vb.Alt2,
                         height: 14,
-                        asset: h.tb.Unlock
+                        asset: h.ub.Unlock
                     })), a.createElement(h.W, {
                         color: h.O.Alt,
-                        type: h.Vb.Strong
+                        type: h.Wb.Strong
                     }, t)), a.createElement(h.W, {
                         color: h.O.Alt2,
                         className: "room-upsell__text"
                     }, n)), a.createElement(h.P, {
                         cols: 3
-                    }, a.createElement(h.Xa, {
+                    }, a.createElement(h.Ya, {
                         display: h.X.Flex,
                         flexDirection: h.Aa.Column,
                         fullHeight: !0,
-                        justifyContent: h.Wa.Center,
+                        justifyContent: h.Xa.Center,
                         padding: {
                             left: .5
                         }
@@ -2406,7 +2406,7 @@
                 }),
                 P = n("rayB"),
                 z = n("2jz6"),
-                V = function(e) {
+                L = function(e) {
                     function t() {
                         var t = null !== e && e.apply(this, arguments) || this;
                         return t.handleLeave = function() {
@@ -2445,9 +2445,9 @@
                     return i.__extends(t, e), t.prototype.componentDidMount = function() {
                         this.props.latencyTracking.reportInteractive()
                     }, t.prototype.render = function() {
-                        if (this.props.data.loading || this.props.data.error) return a.createElement(h.Xa, null);
+                        if (this.props.data.loading || this.props.data.error) return a.createElement(h.Ya, null);
                         var e = this.props.data.user.displayName;
-                        return a.createElement(h.Xa, {
+                        return a.createElement(h.Ya, {
                             padding: {
                                 y: 1,
                                 x: 1
@@ -2459,12 +2459,12 @@
                             color: h.O.Error
                         }, Object(s.d)("Leave {displayName}'s Rooms?", {
                             displayName: e
-                        }, "LeaveRoomsPrompt")), a.createElement(h.Xa, {
+                        }, "LeaveRoomsPrompt")), a.createElement(h.Ya, {
                             display: h.X.Flex,
                             padding: {
                                 top: .5
                             }
-                        }, a.createElement(h.Xa, {
+                        }, a.createElement(h.Ya, {
                             padding: {
                                 right: .5
                             }
@@ -2489,8 +2489,8 @@
                         }
                     })], t)
                 }(a.Component),
-                L = n("B1bA"),
-                X = function(e) {
+                V = n("B1bA"),
+                B = function(e) {
                     function t() {
                         var t = null !== e && e.apply(this, arguments) || this;
                         return t.state = {
@@ -2506,15 +2506,15 @@
                         }, t
                     }
                     return i.__extends(t, e), t.prototype.render = function() {
-                        return this.props.data.loading || this.props.data.error ? a.createElement(h.Xa, null) : this.shouldRender() ? a.createElement(y.a, null, a.createElement(h.A, {
+                        return this.props.data.loading || this.props.data.error ? a.createElement(h.Ya, null) : this.shouldRender() ? a.createElement(y.a, null, a.createElement(h.A, {
                             "data-test-selector": "toggle-balloon-button",
                             ariaLabel: Object(s.d)("More options", "RoomsMemberOptions"),
-                            icon: h.tb.More
+                            icon: h.ub.More
                         }), a.createElement(h.u, {
                             direction: h.v.BottomRight,
                             noTail: !0,
                             offsetY: "0rem"
-                        }, a.createElement(h.Xa, {
+                        }, a.createElement(h.Ya, {
                             padding: {
                                 y: .5
                             }
@@ -2522,14 +2522,14 @@
                     }, t.prototype.shouldRender = function() {
                         return this.props.isLoggedIn && this.props.data.user.self.isChannelMember
                     }, t.prototype.renderLeaveOption = function() {
-                        return this.state.shouldShowLeaveRoomsPrompt ? a.createElement(V, {
+                        return this.state.shouldShowLeaveRoomsPrompt ? a.createElement(L, {
                             channelID: this.props.channelID,
                             handleDismiss: this.closeLeaveRoomsPrompt
-                        }) : a.createElement(h.Ua, {
-                            type: h.Va.Alert,
+                        }) : a.createElement(h.Va, {
+                            type: h.Wa.Alert,
                             "data-test-selector": "open-leave-prompt",
                             onClick: this.openLeaveRoomsPrompt
-                        }, a.createElement(h.Eb, {
+                        }, a.createElement(h.Fb, {
                             padding: {
                                 y: .5,
                                 x: 1
@@ -2538,7 +2538,7 @@
                                 left: .5
                             }
                         }, Object(s.d)("Leave", "RoomsMemberOptions")))
-                    }, t = i.__decorate([Object(c.a)(L, {
+                    }, t = i.__decorate([Object(c.a)(V, {
                         options: function(e) {
                             return {
                                 variables: {
@@ -2548,9 +2548,9 @@
                         }
                     })], t)
                 }(a.Component),
-                B = n("ZwP8"),
+                Y = n("ZwP8"),
                 H = (n("U+nV"), "Stream Chat"),
-                q = function(e) {
+                X = function(e) {
                     function t() {
                         var t = null !== e && e.apply(this, arguments) || this;
                         return t.state = {
@@ -2574,26 +2574,26 @@
                             this.props.latencyTracking.reportInteractive(e)
                         }
                     }, t.prototype.render = function() {
-                        if (this.props.data.loading && !this.props.data.user) return a.createElement(h.Eb, {
+                        if (this.props.data.loading && !this.props.data.user) return a.createElement(h.Fb, {
                             className: "room-picker",
                             "data-test-selector": "room-picker-loading-state"
-                        }, a.createElement(h.Xa, {
+                        }, a.createElement(h.Ya, {
                             key: "chat",
                             margin: {
                                 y: .5
                             }
-                        }, a.createElement(h.Ua, {
+                        }, a.createElement(h.Va, {
                             onClick: this.onPickChat,
-                            type: h.Va.Alpha
-                        }, a.createElement(h.Xa, {
+                            type: h.Wa.Alpha
+                        }, a.createElement(h.Ya, {
                             padding: {
                                 y: .5,
                                 x: 2
                             },
                             display: h.X.Flex
-                        }, a.createElement(h.ib, {
+                        }, a.createElement(h.jb, {
                             width: 160
-                        })))), a.createElement(h.Eb, {
+                        })))), a.createElement(h.Fb, {
                             background: h.r.Alt2,
                             padding: {
                                 left: 2,
@@ -2602,32 +2602,32 @@
                             fullWidth: !0,
                             borderTop: !0,
                             borderBottom: !0
-                        }, a.createElement(h.ib, {
+                        }, a.createElement(h.jb, {
                             width: 80
-                        })), a.createElement(h.Xa, {
+                        })), a.createElement(h.Ya, {
                             padding: {
                                 y: .5,
                                 x: 2
                             }
-                        }, a.createElement(h.ib, {
+                        }, a.createElement(h.jb, {
                             width: 120
-                        }), a.createElement(h.ib, {
+                        }), a.createElement(h.jb, {
                             width: 160
                         })));
-                        if (this.props.data.error) return a.createElement(h.Xa, null);
+                        if (this.props.data.error) return a.createElement(h.Ya, null);
                         var e, t = this.props.isChannelLive ? h.M.Live : h.M.Offline;
                         return e = this.props.renderChannelName && this.props.data && this.props.data.user ? Object(s.d)("{displayName}'s Chat", {
                             displayName: this.props.data.user.displayName
-                        }, "RoomPicker") : Object(s.d)("Stream Chat", "RoomPicker"), a.createElement(h.Eb, {
+                        }, "RoomPicker") : Object(s.d)("Stream Chat", "RoomPicker"), a.createElement(h.Fb, {
                             className: "room-picker"
-                        }, a.createElement(h.Xa, {
+                        }, a.createElement(h.Ya, {
                             margin: {
                                 y: .5
                             }
-                        }, a.createElement(h.Ua, {
+                        }, a.createElement(h.Va, {
                             "data-test-selector": "stream-chat-room-picker-option",
                             onClick: this.onPickChat
-                        }, a.createElement(h.Xa, {
+                        }, a.createElement(h.Ya, {
                             className: "room-picker__label " + (this.props.activeRoomID === H ? "room-picker__label--active-main" : ""),
                             key: H,
                             padding: {
@@ -2635,15 +2635,15 @@
                                 x: 2
                             },
                             display: h.X.Flex
-                        }, a.createElement(h.Eb, {
-                            textAlign: h.Rb.Center,
+                        }, a.createElement(h.Fb, {
+                            textAlign: h.Sb.Center,
                             padding: {
                                 left: .5,
                                 right: 1
                             }
                         }, a.createElement(h.K, {
                             status: t
-                        })), a.createElement(h.Xa, {
+                        })), a.createElement(h.Ya, {
                             "data-test-selector": "stream-chat-title"
                         }, a.createElement("span", null, e))))), this.getRoomNumberHeader(), this.renderRoomCreator(), this.renderRoomOnboarding(), this.getExistingRoomsList(), this.getUpsellRoomsList(), this.renderParticipationCTA())
                     }, t.prototype.getExistingRoomsList = function() {
@@ -2651,7 +2651,7 @@
                             t = this.props.data.user.channelRooms;
                         if (0 === t.length) return null;
                         var n = t.map(function(t) {
-                            return a.createElement(F, {
+                            return a.createElement(U, {
                                 channelID: e.props.channelID,
                                 isActiveRoom: t.id === e.props.activeRoomID,
                                 key: "room-picker-option-" + t.id,
@@ -2661,7 +2661,7 @@
                                 sessionUser: e.props.sessionUser
                             })
                         });
-                        return a.createElement(h.Xa, {
+                        return a.createElement(h.Ya, {
                             margin: {
                                 y: .5
                             }
@@ -2676,7 +2676,7 @@
                                 var r = !C(k.Subscriber),
                                     i = !C(k.Moderator);
                                 t.forEach(function(e) {
-                                    e.name !== Object(s.d)("subscriber-room", "RoomPicker_SubUpsellCheck") && e.minimumAllowedRole !== S.b.Subscriber || (r = !1), e.name !== Object(s.d)("moderator-room", "RoomPicker_ModUpsellCheck") && e.minimumAllowedRole !== S.b.Moderator || (i = !1)
+                                    e.name !== Object(s.d)("subscriber-room", "RoomPicker_SubUpsellCheck") && e.minimumAllowedRole !== E.b.Subscriber || (r = !1), e.name !== Object(s.d)("moderator-room", "RoomPicker_ModUpsellCheck") && e.minimumAllowedRole !== E.b.Moderator || (i = !1)
                                 }), r && this.props.data.user.subscriptionProducts.length > 0 && o.push(a.createElement(W, {
                                     type: k.Subscriber,
                                     key: "sub-upsell"
@@ -2685,20 +2685,20 @@
                                     key: "mod-upsell"
                                 }))
                             }
-                            return a.createElement(h.Xa, null, o)
+                            return a.createElement(h.Ya, null, o)
                         }
                     }, t.prototype.getRoomNumberHeader = function() {
                         var e, t = this.props.data.user.channelRooms.length,
                             n = !this.props.data.user.maxAllowedChannelRooms || t >= this.props.data.user.maxAllowedChannelRooms;
                         return e = 0 === t ? Object(s.d)("NO ROOMS YET.", "RoomPicker") : 1 === t ? Object(s.d)("1 ROOM", "RoomPicker") : Object(s.d)("{numRooms} ROOMS", {
                             numRooms: t
-                        }, "RoomPicker"), a.createElement(h.Eb, {
+                        }, "RoomPicker"), a.createElement(h.Fb, {
                             "data-test-selector": "room-picker-header",
                             className: "room-picker__header",
                             background: h.r.Alt2,
                             display: h.X.Flex,
                             alignItems: h.f.Center,
-                            justifyContent: h.Wa.Between,
+                            justifyContent: h.Xa.Between,
                             padding: {
                                 left: 2,
                                 right: 1
@@ -2707,12 +2707,12 @@
                             borderTop: !0,
                             borderBottom: !0
                         }, a.createElement(h.W, {
-                            type: h.Vb.Strong,
+                            type: h.Wb.Strong,
                             color: h.O.Alt2
                         }, e), this.renderRoomNumHeaderButton(n))
                     }, t.prototype.renderParticipationCTA = function() {
                         var e = this.props.data.user.displayName;
-                        return this.props.sessionUser ? 0 === this.props.data.user.channelRooms.length && this.props.channelID !== this.props.sessionUser.id ? a.createElement(h.Xa, {
+                        return this.props.sessionUser ? 0 === this.props.data.user.channelRooms.length && this.props.channelID !== this.props.sessionUser.id ? a.createElement(h.Ya, {
                             padding: {
                                 y: .5,
                                 x: 2
@@ -2725,7 +2725,7 @@
                             color: h.O.Alt2
                         }, Object(s.d)("{displayName} hasn't created any rooms yet!", {
                             displayName: e
-                        }, "RoomPicker"))) : this.props.data.user.self.isChannelMember ? void 0 : a.createElement(h.Xa, {
+                        }, "RoomPicker"))) : this.props.data.user.self.isChannelMember ? void 0 : a.createElement(h.Ya, {
                             padding: {
                                 y: .5,
                                 x: 2
@@ -2733,13 +2733,13 @@
                             margin: {
                                 bottom: 1
                             }
-                        }, a.createElement(h.W, null, Object(s.d)("More chat in your chat. You will get notifications when you are @mentioned.", "RoomPicker")), a.createElement(h.Xa, {
+                        }, a.createElement(h.W, null, Object(s.d)("More chat in your chat. You will get notifications when you are @mentioned.", "RoomPicker")), a.createElement(h.Ya, {
                             margin: {
                                 top: .5
                             }
                         }, a.createElement(R, {
                             channelID: this.props.channelID
-                        }))) : a.createElement(h.Xa, {
+                        }))) : a.createElement(h.Ya, {
                             "data-test-selector": "room-picker-logged-out-cta",
                             padding: {
                                 y: .5,
@@ -2761,15 +2761,15 @@
                         var e = this.props.sessionUser && this.props.sessionUser.id === this.props.channelID,
                             t = this.props.data.user.channelRooms.length,
                             n = !this.props.data.user.maxAllowedChannelRooms || t >= this.props.data.user.maxAllowedChannelRooms;
-                        if (e && 0 === t && !n) return a.createElement(h.Eb, {
+                        if (e && 0 === t && !n) return a.createElement(h.Fb, {
                             background: h.r.Alt,
                             color: h.O.Alt2,
                             padding: {
                                 bottom: 2,
                                 top: 1
                             },
-                            textAlign: h.Rb.Center
-                        }, a.createElement(h.Xa, {
+                            textAlign: h.Sb.Center
+                        }, a.createElement(h.Ya, {
                             margin: {
                                 y: 1
                             },
@@ -2777,7 +2777,7 @@
                         }, a.createElement("img", {
                             src: d.a,
                             height: "50"
-                        })), a.createElement(h.Xa, {
+                        })), a.createElement(h.Ya, {
                             padding: {
                                 x: 5
                             }
@@ -2791,34 +2791,34 @@
                                         disabled: e,
                                         type: h.F.Text,
                                         "data-a-target": "add-room-button"
-                                    }, a.createElement(h.Xa, {
+                                    }, a.createElement(h.Ya, {
                                         display: h.X.Flex,
                                         alignItems: h.f.Center
-                                    }, a.createElement(h.Xa, {
+                                    }, a.createElement(h.Ya, {
                                         padding: {
                                             right: .5
                                         }
-                                    }, a.createElement(h.sb, {
-                                        asset: h.tb.Plus,
+                                    }, a.createElement(h.tb, {
+                                        asset: h.ub.Plus,
                                         height: 10
                                     })), Object(s.d)("Create Room", "RoomPicker"))), e && this.props.data.user.maxAllowedChannelRooms) {
                                     var o = this.props.data.user.maxAllowedChannelRooms,
                                         r = Object(s.d)("You can have a maximum of {numMaxRooms} rooms", {
                                             numMaxRooms: o
                                         }, "RoomPicker");
-                                    t = a.createElement(h.Yb, {
-                                        direction: h.ac.Left,
+                                    t = a.createElement(h.Zb, {
+                                        direction: h.bc.Left,
                                         label: r,
                                         width: 160
                                     }, t)
                                 }
-                            } else n || (t = a.createElement(X, {
+                            } else n || (t = a.createElement(B, {
                                 channelID: this.props.channelID,
                                 isLoggedIn: this.props.isLoggedIn
                             }));
                             return t
                         }
-                    }, t = i.__decorate([Object(c.a)(B, {
+                    }, t = i.__decorate([Object(c.a)(Y, {
                         options: function(e) {
                             return {
                                 fetchPolicy: "cache-and-network",
@@ -2830,14 +2830,14 @@
                         }
                     }), Object(m.b)("RoomPicker")], t)
                 }(a.Component);
-            var G = Object(o.connect)(function(e) {
+            var q = Object(o.connect)(function(e) {
                 return {
                     sessionUser: Object(r.e)(e),
                     isLoggedIn: Object(r.f)(e)
                 }
-            })(q);
+            })(X);
             n.d(t, "RoomPicker", function() {
-                return G
+                return q
             })
         },
         dAHa: function(e, t, n) {
@@ -2859,8 +2859,8 @@
                 k = n("QVaV"),
                 R = n("Ue10"),
                 y = (n("MPK0"), "report-wizard-block"),
-                E = "report-wizard-unblock",
-                S = function(e) {
+                S = "report-wizard-unblock",
+                E = function(e) {
                     function t() {
                         var t = null !== e && e.apply(this, arguments) || this;
                         return t.state = {
@@ -2870,13 +2870,13 @@
                                 hoverUnderlineNone: !0,
                                 onClick: t.handleBlock,
                                 "data-test-selector": y
-                            }, a.createElement(R.Xa, {
+                            }, a.createElement(R.Ya, {
                                 display: R.X.Flex,
                                 alignItems: R.f.Center
-                            }, a.createElement(R.sb, {
-                                type: R.ub.Brand,
-                                asset: R.tb.Ban
-                            }), a.createElement(R.Xa, {
+                            }, a.createElement(R.tb, {
+                                type: R.vb.Brand,
+                                asset: R.ub.Ban
+                            }), a.createElement(R.Ya, {
                                 margin: {
                                     left: .5
                                 }
@@ -2884,27 +2884,27 @@
                                 user: t.displayName()
                             }, "ReportWizardBlockActions"))))
                         }, t.renderUnblock = function() {
-                            return a.createElement(R.Xa, {
+                            return a.createElement(R.Ya, {
                                 className: "reporting-wizard__block-actions",
                                 display: R.X.Flex,
                                 alignItems: R.f.Center
-                            }, a.createElement(R.sb, {
-                                type: R.ub.Success,
-                                asset: R.tb.FollowCheck
-                            }), a.createElement(R.Xa, {
+                            }, a.createElement(R.tb, {
+                                type: R.vb.Success,
+                                asset: R.ub.FollowCheck
+                            }), a.createElement(R.Ya, {
                                 margin: {
                                     right: 1
                                 }
                             }, a.createElement(R.W, {
                                 className: "block-user__success",
-                                type: R.Vb.Span
+                                type: R.Wb.Span
                             }, Object(d.d)("{user} blocked", {
                                 user: t.displayName()
                             }, "ReportWizardBlockActions"))), a.createElement(R.U, {
                                 hoverUnderlineNone: !0,
                                 onClick: t.handleUnblock,
-                                "data-test-selector": E
-                            }, a.createElement(R.Xa, {
+                                "data-test-selector": S
+                            }, a.createElement(R.Ya, {
                                 margin: {
                                     left: .5
                                 }
@@ -2930,7 +2930,7 @@
                     return i.__extends(t, e), t.prototype.render = function() {
                         var e = this.state.userBlocked ? this.renderUnblock() : this.renderBlock(),
                             t = Object(k.a)(this.props.targetUser.login, this.props.targetUser.displayName, !0);
-                        return a.createElement(R.Eb, {
+                        return a.createElement(R.Fb, {
                             borderTop: !0,
                             padding: {
                                 y: 1
@@ -2938,18 +2938,18 @@
                             margin: {
                                 top: 1
                             }
-                        }, a.createElement(R.Xa, null, Object(d.d)("Would you like to block {user}?", {
+                        }, a.createElement(R.Ya, null, Object(d.d)("Would you like to block {user}?", {
                             user: t
-                        }, "ReportWizardBlockActions")), a.createElement(R.Eb, {
+                        }, "ReportWizardBlockActions")), a.createElement(R.Fb, {
                             color: R.O.Alt2,
                             margin: {
                                 y: 1
                             }
-                        }, a.createElement(R.ec, {
+                        }, a.createElement(R.fc, {
                             baseFontSize: R.Ca.Size6
                         }, a.createElement("p", null, Object(d.d)("Blocking {user} will:", {
                             user: t
-                        }, "ReportWizardBlockActions")), a.createElement("ul", null, a.createElement("li", null, Object(d.d)("Prevent them from sending you whispers", "ReportWizardBlockActions")), a.createElement("li", null, Object(d.d)("Prevent them from hosting you", "ReportWizardBlockActions")), a.createElement("li", null, Object(d.d)("Prevent them from adding you as a friend", "ReportWizardBlockActions")), a.createElement("li", null, Object(d.d)("Filter their messages out of chats you don’t moderate", "ReportWizardBlockActions"))))), a.createElement(R.Xa, {
+                        }, "ReportWizardBlockActions")), a.createElement("ul", null, a.createElement("li", null, Object(d.d)("Prevent them from sending you whispers", "ReportWizardBlockActions")), a.createElement("li", null, Object(d.d)("Prevent them from hosting you", "ReportWizardBlockActions")), a.createElement("li", null, Object(d.d)("Prevent them from adding you as a friend", "ReportWizardBlockActions")), a.createElement("li", null, Object(d.d)("Filter their messages out of chats you don’t moderate", "ReportWizardBlockActions"))))), a.createElement(R.Ya, {
                             margin: {
                                 top: 1
                             }
@@ -3576,12 +3576,12 @@
                         }, t
                     }
                     return i.__extends(t, e), t.prototype.render = function() {
-                        var e = this.props.currentCard.getDescription ? a.createElement(R.Xa, {
+                        var e = this.props.currentCard.getDescription ? a.createElement(R.Ya, {
                             padding: {
                                 bottom: 1
                             }
                         }, this.props.currentCard.getDescription()) : null;
-                        return a.createElement(R.Xa, {
+                        return a.createElement(R.Ya, {
                             className: "reporting-wizard-card"
                         }, e, a.createElement(R.Ea, {
                             label: this.props.currentCard.getLabel ? this.props.currentCard.getLabel() : ""
@@ -3595,14 +3595,14 @@
                         }).map(function(t, n) {
                             switch (t.type) {
                                 case r.Text:
-                                    return a.createElement(R.Xa, {
+                                    return a.createElement(R.Ya, {
                                         key: n,
                                         padding: {
                                             bottom: 1
                                         }
                                     }, t.getTitle());
                                 case r.Link:
-                                    return a.createElement(R.Xa, {
+                                    return a.createElement(R.Ya, {
                                         key: n,
                                         padding: {
                                             bottom: 1
@@ -3610,20 +3610,20 @@
                                     }, a.createElement(R.U, {
                                         to: t.value,
                                         targetBlank: !0
-                                    }, a.createElement(R.Xa, {
+                                    }, a.createElement(R.Ya, {
                                         display: R.X.Flex
-                                    }, a.createElement(R.Xa, {
+                                    }, a.createElement(R.Ya, {
                                         display: R.X.Inline,
                                         padding: {
                                             right: .5
                                         }
-                                    }, a.createElement(R.sb, {
-                                        asset: R.tb.Document
+                                    }, a.createElement(R.tb, {
+                                        asset: R.ub.Document
                                     })), t.getTitle())));
                                 case r.Textarea:
                                     var o = t.value ? e.props.userTextInputs[t.value] : void 0,
                                         i = t.required && (!o || !!o && 0 === o.trim().length);
-                                    return a.createElement(R.Xa, {
+                                    return a.createElement(R.Ya, {
                                         key: n,
                                         padding: {
                                             bottom: 1
@@ -3631,7 +3631,7 @@
                                     }, a.createElement(R.Ea, {
                                         label: t.getTitle(),
                                         labelOptional: t.required ? "" : Object(d.d)("Optional", "ReportModalWizardCard")
-                                    }, a.createElement(R.Sb, {
+                                    }, a.createElement(R.Tb, {
                                         onChange: e.onChange,
                                         rows: t.rows || 3,
                                         name: t.value,
@@ -3641,12 +3641,12 @@
                                     })));
                                 case r.MultipleChoice:
                                 default:
-                                    return a.createElement(R.Xa, {
+                                    return a.createElement(R.Ya, {
                                         key: n,
                                         padding: {
                                             y: .5
                                         }
-                                    }, a.createElement(R.pb, {
+                                    }, a.createElement(R.qb, {
                                         checked: !!e.props.currentSelection && e.props.currentSelection.value === t.value,
                                         onChange: e.onSelect,
                                         label: t.getTitle(e.props.targetUser.displayName),
@@ -3724,7 +3724,7 @@
                     type: C.Info,
                     value: "end card"
                 },
-                A = {
+                F = {
                     socialMedia: i.__assign({}, I, {
                         items: [N.endBlurb_socialmedia]
                     }),
@@ -3759,7 +3759,7 @@
                         type: C.Info
                     }
                 },
-                U = {
+                A = {
                     getTitle: D.report,
                     getLabel: function() {
                         return Object(d.d)("Where is the problem?", "ReportModalWizard")
@@ -3768,7 +3768,7 @@
                     type: C.MultipleChoice,
                     value: "content type"
                 },
-                F = {
+                U = {
                     identifyUser: {
                         getTitle: D.reportVideo,
                         getLabel: x.identifyUser,
@@ -3828,7 +3828,7 @@
                         value: "profile general report reason"
                     }
                 },
-                V = {
+                L = {
                     getTitle: function(e) {
                         return Object(d.d)("Report {username}'s Room", {
                             username: e
@@ -3839,24 +3839,24 @@
                     value: "room report user",
                     type: C.MultipleChoice
                 },
-                L = {
+                V = {
                     getTitle: D.tellUsMore,
                     items: [N.input_description],
                     type: C.Confirm,
                     value: "tell us more"
                 },
-                X = {
-                    banEvasion: i.__assign({}, L, {
+                B = {
+                    banEvasion: i.__assign({}, V, {
                         items: [N.input_usernames, N.input_description],
                         value: "ban evasion tell us more"
                     }),
-                    socialMedia: i.__assign({}, L, {
+                    socialMedia: i.__assign({}, V, {
                         items: [N.input_link, N.input_connection, N.input_description],
-                        nextCard: A.socialMedia,
+                        nextCard: F.socialMedia,
                         value: "social media tell us more"
                     })
                 },
-                B = {
+                Y = {
                     content: {
                         getTitle: D.reportAbusive,
                         getLabel: x.relevantStatements,
@@ -3904,19 +3904,19 @@
                         },
                         items: [N.external_incitingRaids, N.external_threatening, N.external_harassment],
                         type: C.MultipleChoice,
-                        nextCard: X.socialMedia,
+                        nextCard: B.socialMedia,
                         value: "external site conduct"
                     },
-                    external_violence: i.__assign({}, B.violence, {
+                    external_violence: i.__assign({}, Y.violence, {
                         items: [N.threat_me, N.threat_person, N.threat_group],
-                        nextCard: X.socialMedia
+                        nextCard: B.socialMedia
                     }),
-                    external_abusive: i.__assign({}, B.content, {
+                    external_abusive: i.__assign({}, Y.content, {
                         items: [N.hateSpeech, N.harassment, N.external_abusiveViolence, N.external_commitingViolence, N.swatting, N.personalInfo],
-                        nextCard: X.socialMedia
+                        nextCard: B.socialMedia
                     })
                 },
-                q = {
+                X = {
                     getTitle: function(e) {
                         return Object(d.d)("Report {username}'s Spam or Malicious Links", {
                             username: e
@@ -3927,7 +3927,7 @@
                     type: C.MultipleChoice,
                     value: "spam type"
                 },
-                G = {
+                q = {
                     getTitle: function(e) {
                         return Object(d.d)("Report {username} for Inappropriate Content", {
                             username: e
@@ -3938,7 +3938,7 @@
                     type: C.MultipleChoice,
                     value: "inappropriate content type"
                 },
-                $ = {
+                G = {
                     getTitle: function(e) {
                         return Object(d.d)("Report {username} for Evading a Ban", {
                             username: e
@@ -3950,9 +3950,9 @@
                     value: "ban type",
                     items: [N.evasion_chat, N.evasion_sitewide, N.evasion_messaging],
                     type: C.MultipleChoice,
-                    nextCard: X.banEvasion
+                    nextCard: B.banEvasion
                 },
-                Q = {
+                $ = {
                     getTitle: function(e) {
                         return Object(d.d)("Report {username} for Impersonation", {
                             username: e
@@ -3968,59 +3968,59 @@
                     type: C.MultipleChoice,
                     value: "impersonation type"
                 },
-                Y = U,
-                J = L,
+                Q = A,
+                J = V,
                 K = I,
                 Z = {
-                    video: F.identifyUser,
+                    video: U.identifyUser,
                     whisper: P,
                     chat: W.content,
                     profile: z.content,
-                    room: V,
+                    room: L,
                     "somewhere else": H.identifyLocation,
-                    streamer: F.content,
-                    "someone else in video": F.content,
+                    streamer: U.content,
+                    "someone else in video": U.content,
                     "someone in chat": W.content,
-                    general_video: F.general,
+                    general_video: U.general,
                     general_messaging: W.general,
                     general_profile: z.general,
                     "channel owner": z.content,
                     "community member": W.content,
                     "on twitch": z.content,
                     "another site": H.externalSite,
-                    "twitch event": A.twitchEvent,
-                    "brigading/raids": X.socialMedia,
+                    "twitch event": F.twitchEvent,
+                    "brigading/raids": B.socialMedia,
                     threatening: H.external_violence,
                     "hateful/harassing": H.external_abusive,
                     "external site; threatening violence": H.external_violence,
                     "external site; committing violence": H.external_violence,
-                    "external site; scam": X.socialMedia,
-                    "ban evasion": $,
-                    spam: q,
-                    hateful: B.content,
-                    impersonation: Q,
-                    "violence/threats": B.violence,
-                    "threatening violence": B.violence,
-                    "committing violence": B.violence,
-                    abusive: B.content,
-                    "inappropriate content": G,
-                    "intellectual property": A.legal,
-                    "violating developer agreement": A.legal
+                    "external site; scam": B.socialMedia,
+                    "ban evasion": G,
+                    spam: X,
+                    hateful: Y.content,
+                    impersonation: $,
+                    "violence/threats": Y.violence,
+                    "threatening violence": Y.violence,
+                    "committing violence": Y.violence,
+                    abusive: Y.content,
+                    "inappropriate content": q,
+                    "intellectual property": F.legal,
+                    "violating developer agreement": F.legal
                 },
                 ee = {
-                    selfharm: A.selfharm,
-                    harm: A.violence,
+                    selfharm: F.selfharm,
+                    harm: F.violence,
                     other: K
                 },
                 te = {
                     CHANNEL_FEED_POST_REPORT: z.content,
                     COMMUNITY_REPORT: z.content,
                     CHAT_REPORT: W.content,
-                    CLIP_REPORT: F.content,
+                    CLIP_REPORT: U.content,
                     EVENT_REPORT: z.content,
                     EXTENSION_REPORT: z.content,
                     LIVE_UP_REPORT: z.content,
-                    ROOM_REPORT: V,
+                    ROOM_REPORT: L,
                     WHISPER_REPORT: P,
                     VOD_COMMENT_REPORT: W.content
                 },
@@ -4032,7 +4032,7 @@
                     function t() {
                         var t = null !== e && e.apply(this, arguments) || this;
                         return t.state = {
-                            currentCard: t.props.currentCard || te[t.props.reportContentType] || Y,
+                            currentCard: t.props.currentCard || te[t.props.reportContentType] || Q,
                             prevCards: [],
                             currentSelection: null,
                             prevSelections: [],
@@ -4044,7 +4044,7 @@
                             targetUnknown: !1,
                             reportContext: t.props.reportContentType
                         }, t.renderPrimer = function() {
-                            return a.createElement(R.Xa, {
+                            return a.createElement(R.Ya, {
                                 margin: {
                                     top: 1
                                 }
@@ -4062,17 +4062,17 @@
                                 case C.Confirm:
                                     e = Object(d.d)("Submit Report", "ReportModalWizard"), n = t.handleSubmit, r = !t.state.userTextInput, o = ie
                             }
-                            return a.createElement(R.Xa, null, i, a.createElement(R.z, {
+                            return a.createElement(R.Ya, null, i, a.createElement(R.z, {
                                 onClick: n,
                                 disabled: r,
                                 "data-test-selector": o
-                            }, a.createElement(R.Xa, {
+                            }, a.createElement(R.Ya, {
                                 padding: {
                                     x: 1
                                 }
                             }, e)))
                         }, t.renderBack = function() {
-                            return a.createElement(R.Xa, {
+                            return a.createElement(R.Ya, {
                                 margin: {
                                     right: 1
                                 },
@@ -4081,7 +4081,7 @@
                                 type: R.F.Hollow,
                                 onClick: t.handleBack,
                                 "data-test-selector": ne
-                            }, a.createElement(R.Xa, {
+                            }, a.createElement(R.Ya, {
                                 padding: {
                                     x: 1
                                 }
@@ -4228,13 +4228,13 @@
                     return i.__extends(t, e), t.prototype.componentWillUnmount = function() {
                         this.state.modalCloseTracked || this.props.trackClose(j.Close, this.state.currentCard.value)
                     }, t.prototype.render = function() {
-                        var e = this.state.currentCard.type === C.Info && this.state.currentCard.blockPrompt ? a.createElement(S, {
+                        var e = this.state.currentCard.type === C.Info && this.state.currentCard.blockPrompt ? a.createElement(E, {
                                 targetUser: this.props.targetUser,
                                 onBlock: this.props.onBlock,
                                 onUnblock: this.props.onUnblock,
                                 userBlocked: this.props.userBlocked
                             }) : null,
-                            t = this.state.error ? a.createElement(R.Eb, {
+                            t = this.state.error ? a.createElement(R.Fb, {
                                 fullWidth: !0,
                                 margin: {
                                     bottom: 1
@@ -4243,7 +4243,7 @@
                                 className: "reporting__error-container"
                             }, this.state.error) : null,
                             n = this.state.prevCards.length || this.state.currentCard.type === C.Info ? null : this.renderPrimer();
-                        return a.createElement(R.Eb, {
+                        return a.createElement(R.Fb, {
                             className: "reporting-wizard",
                             display: R.X.Flex,
                             margin: {
@@ -4255,7 +4255,7 @@
                         }, t, a.createElement(R.W, {
                             bold: !0,
                             fontSize: R.Ca.Size4
-                        }, this.getTitle()), n, a.createElement(R.Xa, {
+                        }, this.getTitle()), n, a.createElement(R.Ya, {
                             margin: {
                                 y: 1
                             }
@@ -4389,14 +4389,14 @@
                 }, t.prototype.componentWillUnmount = function() {
                     this.handleClose(), this.state.showWizard || this.trackClose()
                 }, t.prototype.render = function() {
-                    if (this.props.data.error) return a.createElement(R.Xa, {
+                    if (this.props.data.error) return a.createElement(R.Ya, {
                         margin: {
                             bottom: 1
                         }
                     }, a.createElement(R.W, {
                         fontSize: R.Ca.Size5
                     }, Object(d.d)("There was an unexpected error. Please refresh the page and try again", "ReportUser")));
-                    if (this.props.data.loading) return a.createElement(R.ib, {
+                    if (this.props.data.loading) return a.createElement(R.jb, {
                         lineCount: 3
                     });
                     if (this.props.data.targetUser) {
@@ -4409,7 +4409,7 @@
                             title: this.props.title,
                             defaultDescription: this.props.defaultDescription
                         };
-                        return this.state.showWizard ? this.props.data.loading ? a.createElement(R.Za, null) : a.createElement(ae, i.__assign({}, e, {
+                        return this.state.showWizard ? this.props.data.loading ? a.createElement(R.ab, null) : a.createElement(ae, i.__assign({}, e, {
                             user: this.props.sessionUser,
                             onBlock: this.onBlock,
                             onUnblock: this.onUnblock,
@@ -4421,7 +4421,7 @@
                             targetUser: this.props.data.targetUser
                         }))
                     }
-                    return a.createElement(R.Xa, {
+                    return a.createElement(R.Ya, {
                         margin: {
                             bottom: 1
                         }
@@ -5250,36 +5250,36 @@
                         }, t
                     }
                     return d.__extends(t, e), t.prototype.render = function() {
-                        return c.createElement(g.Eb, {
+                        return c.createElement(g.Fb, {
                             background: g.r.Base,
                             className: "delete-room-modal",
-                            position: g.jb.Relative
-                        }, c.createElement(g.Xa, {
+                            position: g.kb.Relative
+                        }, c.createElement(g.Ya, {
                             padding: 2,
                             margin: {
                                 top: 1
                             }
-                        }, c.createElement(g.Xa, {
+                        }, c.createElement(g.Ya, {
                             margin: {
                                 bottom: 2
                             }
                         }, c.createElement(g.W, {
-                            type: g.Vb.H4
+                            type: g.Wb.H4
                         }, Object(m.d)("Delete #{roomName}?", {
                             roomName: this.props.roomName
-                        }, "DeleteRoomModal")), c.createElement(g.Xa, {
+                        }, "DeleteRoomModal")), c.createElement(g.Ya, {
                             padding: {
                                 top: 1
                             }
                         }, c.createElement(g.W, {
-                            type: g.Vb.Span,
+                            type: g.Wb.Span,
                             color: g.O.Alt2
-                        }, Object(m.d)("This will remove all messages in this room permanently from your channel", "DeleteRoomModal")))), c.createElement(g.Xa, {
+                        }, Object(m.d)("This will remove all messages in this room permanently from your channel", "DeleteRoomModal")))), c.createElement(g.Ya, {
                             padding: {
                                 top: 2
                             },
-                            textAlign: g.Rb.Right
-                        }, c.createElement(g.Xa, {
+                            textAlign: g.Sb.Right
+                        }, c.createElement(g.Ya, {
                             display: g.X.Inline,
                             margin: {
                                 right: .5
@@ -5288,7 +5288,7 @@
                             type: g.F.Hollow,
                             onClick: this.props.onCloseModal,
                             "data-test-selector": "cancel-button"
-                        }, Object(m.d)("No, keep this room", "DeleteRoomModal"))), c.createElement(g.Xa, {
+                        }, Object(m.d)("No, keep this room", "DeleteRoomModal"))), c.createElement(g.Ya, {
                             display: g.X.Inline,
                             margin: {
                                 left: .5
@@ -5311,8 +5311,8 @@
                     }, e)
                 })(k),
                 y = n("9Vxt"),
-                E = n("20fZ"),
-                S = function(e) {
+                S = n("20fZ"),
+                E = function(e) {
                     function t() {
                         var t = null !== e && e.apply(this, arguments) || this;
                         return t.toggleMuteSetting = function() {
@@ -5347,17 +5347,17 @@
                         }, t
                     }
                     return d.__extends(t, e), t.prototype.render = function() {
-                        if (this.props.data.loading) return c.createElement(g.ib, {
+                        if (this.props.data.loading) return c.createElement(g.jb, {
                             height: 30,
                             width: 160
                         });
                         if (this.props.data.error || !this.props.data.room.owner.self.isChannelMember) return null;
                         var e = Object(m.d)("Mute all notifications", "MuteButton");
-                        return this.props.data.room.self.isMuted && (e = Object(m.d)("Unmute all notifications", "MuteButton")), c.createElement(g.Ua, {
-                            type: g.Va.Alpha,
+                        return this.props.data.room.self.isMuted && (e = Object(m.d)("Unmute all notifications", "MuteButton")), c.createElement(g.Va, {
+                            type: g.Wa.Alpha,
                             "data-test-selector": "mute-room-button",
                             onClick: this.toggleMuteSetting
-                        }, c.createElement(g.Eb, {
+                        }, c.createElement(g.Fb, {
                             padding: {
                                 y: .5,
                                 x: 1
@@ -5374,7 +5374,7 @@
                                 }
                             }
                         }
-                    }), Object(u.a)(E, {
+                    }), Object(u.a)(S, {
                         name: "muteRoom"
                     })], t)
                 }(c.Component),
@@ -5399,11 +5399,11 @@
                         }, t
                     }
                     return d.__extends(t, e), t.prototype.render = function() {
-                        return this.props.data.loading ? c.createElement(g.ib, null) : this.props.data.error ? c.createElement(g.Xa, null) : c.createElement(g.Ua, {
-                            type: g.Va.Alert,
+                        return this.props.data.loading ? c.createElement(g.jb, null) : this.props.data.error ? c.createElement(g.Ya, null) : c.createElement(g.Va, {
+                            type: g.Wa.Alert,
                             "data-test-selector": "report-room-button-selector",
                             onClick: this.openReportModal
-                        }, c.createElement(g.Eb, {
+                        }, c.createElement(g.Fb, {
                             padding: {
                                 y: .5,
                                 x: 1
@@ -5433,19 +5433,19 @@
                         }, t
                     }
                     return d.__extends(t, e), t.prototype.render = function() {
-                        return c.createElement(g.Xa, null, c.createElement(g.Ea, {
+                        return c.createElement(g.Ya, null, c.createElement(g.Ea, {
                             label: Object(m.d)("Room name", "RoomLabelsEditor"),
                             error: !!this.props.editRoomNameError,
                             errorMessage: this.props.editRoomNameError
-                        }, c.createElement(g.Ra, {
-                            type: g.Ta.Text,
+                        }, c.createElement(g.Sa, {
+                            type: g.Ua.Text,
                             value: this.props.roomName,
                             onChange: this.onRoomNameChange,
                             "data-test-selector": "name-input",
                             placeholder: Object(m.d)("Enter Room name here", "RoomLabelsEditor")
                         })), this.renderRoomTopicEditor())
                     }, t.prototype.renderRoomTopicEditor = function() {
-                        if (void 0 !== this.props.roomTopic) return c.createElement(g.Xa, null, c.createElement(g.Eb, {
+                        if (void 0 !== this.props.roomTopic) return c.createElement(g.Ya, null, c.createElement(g.Fb, {
                             fullWidth: !0,
                             margin: {
                                 top: 1,
@@ -5455,7 +5455,7 @@
                             label: Object(m.d)("Room topic", "RoomLabelsEditor"),
                             error: !!this.props.editRoomTopicError,
                             errorMessage: this.props.editRoomTopicError
-                        }, c.createElement(g.Sb, {
+                        }, c.createElement(g.Tb, {
                             noResize: !0,
                             value: this.props.roomTopic,
                             onChange: this.onRoomTopicChange,
@@ -5469,9 +5469,9 @@
                 x = n("vcHY"),
                 D = n("UJc8"),
                 I = n("drmE"),
-                A = n("vznD"),
-                U = (n("zgDu"), n("jhcA")),
-                F = {
+                F = n("vznD"),
+                A = (n("zgDu"), n("jhcA")),
+                U = {
                     OPTIONS: "OPTIONS",
                     PERMISSIONS: "PERMISSIONS",
                     LABELS: "LABELS"
@@ -5480,7 +5480,7 @@
                     function t() {
                         var t = null !== e && e.apply(this, arguments) || this;
                         return t.state = {
-                            currentView: F.OPTIONS,
+                            currentView: U.OPTIONS,
                             isSaveButtonStateSuccess: !1
                         }, t.updatePermissions = function(e) {
                             t.setState({
@@ -5520,7 +5520,7 @@
                             t.setState({
                                 editRoomNameError: void 0,
                                 editRoomTopicError: void 0,
-                                currentView: F.OPTIONS,
+                                currentView: U.OPTIONS,
                                 isSaveButtonStateSuccess: !1,
                                 updatedRoomName: void 0,
                                 updatedRoomTopic: void 0,
@@ -5528,12 +5528,12 @@
                             })
                         }, t.setPermissionsView = function() {
                             t.setState({
-                                currentView: F.PERMISSIONS,
+                                currentView: U.PERMISSIONS,
                                 isSaveButtonStateSuccess: !1
                             })
                         }, t.setLabelsView = function() {
                             t.setState({
-                                currentView: F.LABELS,
+                                currentView: U.LABELS,
                                 isSaveButtonStateSuccess: !1
                             })
                         }, t.saveUpdate = function() {
@@ -5576,7 +5576,7 @@
                                             editRoomTopicError: a
                                         })
                                     } else {
-                                        Object(p.e)(A, {
+                                        Object(p.e)(F, {
                                             id: t.props.roomID
                                         }, function(t) {
                                             return t.room.name = e.data.updateRoom.room.name, t.room.topic = e.data.updateRoom.room.topic, t.room.isPreviewable = e.data.updateRoom.room.isPreviewable, t.room.minimumAllowedRole = e.data.updateRoom.room.minimumAllowedRole, t
@@ -5614,37 +5614,37 @@
                         }, t
                     }
                     return d.__extends(t, e), t.prototype.render = function() {
-                        if (this.props.data.loading) return c.createElement(g.ib, null);
-                        if (this.props.data.error || !this.props.data.room) return c.createElement(g.Xa, null);
+                        if (this.props.data.loading) return c.createElement(g.jb, null);
+                        if (this.props.data.error || !this.props.data.room) return c.createElement(g.Ya, null);
                         var e;
                         switch (this.state.currentView) {
-                            case F.OPTIONS:
+                            case U.OPTIONS:
                                 e = this.getOptionsView();
                                 break;
-                            case F.PERMISSIONS:
+                            case U.PERMISSIONS:
                                 e = this.getPermissionsView();
                                 break;
-                            case F.LABELS:
+                            case U.LABELS:
                                 e = this.getLabelsView();
                                 break;
                             default:
                                 e = this.getOptionsView()
                         }
-                        return c.createElement(g.Xa, null, e)
+                        return c.createElement(g.Ya, null, e)
                     }, t.prototype.getOptionsView = function() {
                         return this.props.sessionUser && this.props.sessionUser.id.toString() === this.props.data.room.owner.id ? this.getBroadcasterOptionsView() : this.getNonBroadcasterOptionsView()
                     }, t.prototype.getBroadcasterOptionsView = function() {
-                        return c.createElement(g.Xa, {
+                        return c.createElement(g.Ya, {
                             padding: {
                                 y: .5
                             }
-                        }, this.getEditLabelsSection(), c.createElement(g.Pa, null, c.createElement(g.Xa, {
+                        }, this.getEditLabelsSection(), c.createElement(g.Qa, null, c.createElement(g.Ya, {
                             display: g.X.Flex
-                        }, c.createElement(g.Ua, {
-                            type: g.Va.Alpha,
+                        }, c.createElement(g.Va, {
+                            type: g.Wa.Alpha,
                             onClick: this.setPermissionsView,
                             "data-test-selector": "permissions-toggle"
-                        }, c.createElement(g.Eb, {
+                        }, c.createElement(g.Fb, {
                             padding: {
                                 y: .5,
                                 x: 1
@@ -5653,25 +5653,25 @@
                                 left: .5
                             },
                             display: g.X.Flex,
-                            justifyContent: g.Wa.Between
-                        }, Object(m.d)("Permissions", "RoomDetails"), c.createElement(g.Xa, {
+                            justifyContent: g.Xa.Between
+                        }, Object(m.d)("Permissions", "RoomDetails"), c.createElement(g.Ya, {
                             display: g.X.Flex
                         }, c.createElement(g.W, {
                             color: g.O.Alt2
-                        }, D.a[this.props.data.room.minimumAllowedRole]), c.createElement(g.Eb, {
+                        }, D.a[this.props.data.room.minimumAllowedRole]), c.createElement(g.Fb, {
                             className: "room-details__open-edit",
                             color: g.O.Link,
                             margin: {
                                 left: .5
                             }
-                        }, c.createElement(g.sb, {
-                            asset: g.tb.GlyphArrDown,
+                        }, c.createElement(g.tb, {
+                            asset: g.ub.GlyphArrDown,
                             height: 13
-                        }))))))), c.createElement(g.Ua, {
-                            type: g.Va.Alert,
+                        }))))))), c.createElement(g.Va, {
+                            type: g.Wa.Alert,
                             onClick: this.openDeleteRoomModal,
                             "data-test-selector": "delete-button"
-                        }, c.createElement(g.Eb, {
+                        }, c.createElement(g.Fb, {
                             padding: {
                                 y: .5,
                                 x: 1
@@ -5679,25 +5679,25 @@
                             margin: {
                                 left: .5
                             }
-                        }, Object(m.d)("Delete", "RoomDetails"))), c.createElement(g.Xa, {
+                        }, Object(m.d)("Delete", "RoomDetails"))), c.createElement(g.Ya, {
                             padding: {
                                 x: 1
                             }
-                        }, c.createElement(g.Eb, {
+                        }, c.createElement(g.Fb, {
                             borderTop: !0,
                             margin: {
                                 y: .5,
                                 x: .5
                             }
-                        })), c.createElement(S, {
+                        })), c.createElement(E, {
                             roomID: this.props.roomID
                         }))
                     }, t.prototype.getNonBroadcasterOptionsView = function() {
-                        return c.createElement(g.Xa, {
+                        return c.createElement(g.Ya, {
                             padding: {
                                 y: .5
                             }
-                        }, this.props.forActiveRoom && !!this.props.data.room.topic.length && c.createElement(g.Xa, {
+                        }, this.props.forActiveRoom && !!this.props.data.room.topic.length && c.createElement(g.Ya, {
                             padding: {
                                 bottom: .5,
                                 top: 1,
@@ -5709,13 +5709,13 @@
                         }, c.createElement(g.W, {
                             className: "room-details__topic-description",
                             color: g.O.Alt2
-                        }, this.props.data.room.topic), c.createElement(g.Eb, {
+                        }, this.props.data.room.topic), c.createElement(g.Fb, {
                             borderTop: !0,
                             fullWidth: !0,
                             margin: {
                                 top: 1
                             }
-                        })), this.props.data.room.owner.self.isChannelMember && c.createElement(S, {
+                        })), this.props.data.room.owner.self.isChannelMember && c.createElement(E, {
                             roomID: this.props.roomID
                         }), c.createElement(w, {
                             roomID: this.props.roomID,
@@ -5726,11 +5726,11 @@
                     }, t.prototype.getEditLabelsSection = function() {
                         var e = Object(m.d)("Edit name or topic", "RoomDetails");
                         this.props.forActiveRoom && (e = Object(m.d)("Edit name", "RoomDetails"));
-                        var t = c.createElement(g.Pa, null, c.createElement(g.Ua, {
-                            type: g.Va.Alpha,
+                        var t = c.createElement(g.Qa, null, c.createElement(g.Va, {
+                            type: g.Wa.Alpha,
                             onClick: this.setLabelsView,
                             "data-test-selector": "edit-labels"
-                        }, c.createElement(g.Eb, {
+                        }, c.createElement(g.Fb, {
                             padding: {
                                 y: .5,
                                 x: 1
@@ -5739,20 +5739,20 @@
                                 left: .5
                             },
                             display: g.X.Flex,
-                            justifyContent: g.Wa.Between
-                        }, e, c.createElement(g.Xa, {
+                            justifyContent: g.Xa.Between
+                        }, e, c.createElement(g.Ya, {
                             display: g.X.Flex
-                        }, c.createElement(g.Eb, {
+                        }, c.createElement(g.Fb, {
                             className: "room-details__open-edit",
                             color: g.O.Link,
                             margin: {
                                 left: .5
                             }
-                        }, c.createElement(g.sb, {
-                            asset: g.tb.GlyphArrDown,
+                        }, c.createElement(g.tb, {
+                            asset: g.ub.GlyphArrDown,
                             height: 13
                         }))))));
-                        return this.props.forActiveRoom ? c.createElement(g.Xa, null, c.createElement(g.Xa, {
+                        return this.props.forActiveRoom ? c.createElement(g.Ya, null, c.createElement(g.Ya, {
                             padding: {
                                 top: 1,
                                 x: 1
@@ -5760,15 +5760,15 @@
                             margin: {
                                 x: .5
                             }
-                        }, c.createElement(g.Pa, {
-                            position: g.jb.Relative
-                        }, this.getTopicField()), !this.state.isTopicHovered && c.createElement(g.Eb, {
+                        }, c.createElement(g.Qa, {
+                            position: g.kb.Relative
+                        }, this.getTopicField()), !this.state.isTopicHovered && c.createElement(g.Fb, {
                             borderTop: !0,
                             fullWidth: !0,
                             margin: {
                                 top: 1
                             }
-                        })), c.createElement(g.Xa, {
+                        })), c.createElement(g.Ya, {
                             padding: {
                                 top: .5
                             }
@@ -5777,15 +5777,15 @@
                         var e = void 0 !== this.state.updatedRoomName ? this.state.updatedRoomName : this.props.data.room.name,
                             t = void 0 !== this.state.updatedRoomTopic ? this.state.updatedRoomTopic : this.props.data.room.topic,
                             n = Object(m.d)("Edit name or topic", "RoomDetailsReturn");
-                        return this.props.forActiveRoom && (n = Object(m.d)("Edit name", "RoomDetailsReturn")), c.createElement(g.Xa, null, c.createElement(g.Pa, null, c.createElement(g.Xa, {
+                        return this.props.forActiveRoom && (n = Object(m.d)("Edit name", "RoomDetailsReturn")), c.createElement(g.Ya, null, c.createElement(g.Qa, null, c.createElement(g.Ya, {
                             display: g.X.Flex,
                             padding: {
                                 y: .5
                             }
-                        }, c.createElement(g.Ua, {
-                            type: g.Va.Alpha,
+                        }, c.createElement(g.Va, {
+                            type: g.Wa.Alpha,
                             onClick: this.setOptionsView
-                        }, c.createElement(g.Eb, {
+                        }, c.createElement(g.Fb, {
                             padding: {
                                 y: .5
                             },
@@ -5793,25 +5793,25 @@
                                 left: 1
                             },
                             display: g.X.Flex
-                        }, c.createElement(g.Eb, {
+                        }, c.createElement(g.Fb, {
                             className: "room-details__close-edit",
                             color: g.O.Link,
                             margin: {
                                 right: 1
                             }
-                        }, c.createElement(g.sb, {
-                            asset: g.tb.GlyphArrDown,
+                        }, c.createElement(g.tb, {
+                            asset: g.ub.GlyphArrDown,
                             height: 13
-                        })), n)))), c.createElement(g.Xa, {
+                        })), n)))), c.createElement(g.Ya, {
                             padding: {
                                 x: .5
                             }
-                        }, c.createElement(g.Eb, {
+                        }, c.createElement(g.Fb, {
                             borderTop: !0,
                             margin: {
                                 x: 1
                             }
-                        })), c.createElement(g.Xa, {
+                        })), c.createElement(g.Ya, {
                             padding: {
                                 x: 1,
                                 y: 1
@@ -5826,7 +5826,7 @@
                             updateRoomName: this.updateRoomName,
                             roomTopic: this.props.forActiveRoom ? void 0 : t,
                             updateRoomTopic: this.updateRoomTopic
-                        })), c.createElement(g.Eb, {
+                        })), c.createElement(g.Fb, {
                             margin: {
                                 y: 1,
                                 left: 1,
@@ -5838,15 +5838,15 @@
                             }
                         }, this.getSaveButton()))
                     }, t.prototype.getPermissionsView = function() {
-                        return c.createElement(g.Xa, null, c.createElement(g.Pa, null, c.createElement(g.Xa, {
+                        return c.createElement(g.Ya, null, c.createElement(g.Qa, null, c.createElement(g.Ya, {
                             display: g.X.Flex,
                             padding: {
                                 y: .5
                             }
-                        }, c.createElement(g.Ua, {
-                            type: g.Va.Alpha,
+                        }, c.createElement(g.Va, {
+                            type: g.Wa.Alpha,
                             onClick: this.setOptionsView
-                        }, c.createElement(g.Eb, {
+                        }, c.createElement(g.Fb, {
                             padding: {
                                 y: .5
                             },
@@ -5854,20 +5854,20 @@
                                 left: 1
                             },
                             display: g.X.Flex
-                        }, c.createElement(g.Eb, {
+                        }, c.createElement(g.Fb, {
                             className: "room-details__close-edit",
                             color: g.O.Link,
                             margin: {
                                 right: 1
                             }
-                        }, c.createElement(g.sb, {
-                            asset: g.tb.GlyphArrDown,
+                        }, c.createElement(g.tb, {
+                            asset: g.ub.GlyphArrDown,
                             height: 13
-                        })), Object(m.d)("Permissions", "RoomDetailsReturn"))))), c.createElement(g.Xa, {
+                        })), Object(m.d)("Permissions", "RoomDetailsReturn"))))), c.createElement(g.Ya, {
                             padding: {
                                 x: .5
                             }
-                        }, c.createElement(g.Eb, {
+                        }, c.createElement(g.Fb, {
                             borderTop: !0,
                             margin: {
                                 x: 1
@@ -5876,7 +5876,7 @@
                             isPreviewable: this.props.data.room.isPreviewable,
                             minimumAllowedRole: this.props.data.room.minimumAllowedRole,
                             updatePermissions: this.updatePermissions
-                        }), c.createElement(g.Eb, {
+                        }), c.createElement(g.Fb, {
                             margin: {
                                 y: 1,
                                 left: 1
@@ -5894,7 +5894,7 @@
                     }, t.prototype.getTopicField = function() {
                         var e, t = void 0 === this.state.updatedRoomTopic ? this.props.data.room.topic : this.state.updatedRoomTopic,
                             n = Object(m.d)("What do you want your community to talk about in this room?", "RoomDetails");
-                        return e = this.state.isTopicFocused ? c.createElement(g.Sb, {
+                        return e = this.state.isTopicFocused ? c.createElement(g.Tb, {
                             autoFocus: !0,
                             noResize: !0,
                             onChange: this.onRoomTopicChange,
@@ -5906,30 +5906,30 @@
                             italic: !t
                         }, t || n, c.createElement(g.U, {
                             onClick: this.focusTopic
-                        }, c.createElement(g.Xa, {
+                        }, c.createElement(g.Ya, {
                             padding: {
                                 left: .5
                             },
                             className: "room-details__edit-topic"
                         }, Object(m.d)("Edit", "RoomDetails")))), c.createElement("div", null, e, this.state.editRoomTopicError && c.createElement(g.W, {
                             color: g.O.Error
-                        }, this.state.editRoomTopicError), this.state.isTopicFocused && c.createElement(g.Xa, {
+                        }, this.state.editRoomTopicError), this.state.isTopicFocused && c.createElement(g.Ya, {
                             display: g.X.Flex,
-                            justifyContent: g.Wa.End
-                        }, !this.state.isSaveButtonStateSuccess && c.createElement(g.Xa, {
+                            justifyContent: g.Xa.End
+                        }, !this.state.isSaveButtonStateSuccess && c.createElement(g.Ya, {
                             padding: {
                                 top: .5
                             }
                         }, c.createElement(g.z, {
                             onClick: this.blurTopic,
                             type: g.F.Text
-                        }, Object(m.d)("Cancel", "RoomDetails"))), c.createElement(g.Xa, {
+                        }, Object(m.d)("Cancel", "RoomDetails"))), c.createElement(g.Ya, {
                             padding: {
                                 top: .5,
                                 left: 1
                             }
                         }, this.getSaveButton())))
-                    }, t = d.__decorate([Object(u.a)(A, {
+                    }, t = d.__decorate([Object(u.a)(F, {
                         options: function(e) {
                             return {
                                 variables: {
@@ -5937,7 +5937,7 @@
                                 }
                             }
                         }
-                    }), Object(u.a)(U, {
+                    }), Object(u.a)(A, {
                         name: "updateRoom"
                     })], t)
                 }(c.Component);
@@ -6196,7 +6196,7 @@
                 r = n("Ue10");
 
             function i(e, t) {
-                return e.minimumAllowedRole === o.b.Everyone ? r.tb.Hash : t ? r.tb.Unlock : r.tb.Lock
+                return e.minimumAllowedRole === o.b.Everyone ? r.ub.Hash : t ? r.ub.Unlock : r.ub.Lock
             }
         }
     }

@@ -914,18 +914,18 @@
                 e.bi_valid > 8 ? z(e, e.bi_buf) : e.bi_valid > 0 && (e.pending_buf[e.pending++] = e.bi_buf), e.bi_buf = 0, e.bi_valid = 0
             }
 
-            function X(e, t, n, r) {
+            function Y(e, t, n, r) {
                 var i = 2 * t,
                     o = 2 * n;
                 return e[i] < e[o] || e[i] === e[o] && r[t] <= r[n]
             }
 
             function K(e, t, n) {
-                for (var r = e.heap[n], i = n << 1; i <= e.heap_len && (i < e.heap_len && X(t, e.heap[i + 1], e.heap[i], e.depth) && i++, !X(t, r, e.heap[i], e.depth));) e.heap[n] = e.heap[i], n = i, i <<= 1;
+                for (var r = e.heap[n], i = n << 1; i <= e.heap_len && (i < e.heap_len && Y(t, e.heap[i + 1], e.heap[i], e.depth) && i++, !Y(t, r, e.heap[i], e.depth));) e.heap[n] = e.heap[i], n = i, i <<= 1;
                 e.heap[n] = r
             }
 
-            function Y(e, t, n) {
+            function X(e, t, n) {
                 var r, i, o, a, s = 0;
                 if (0 !== e.last_lit)
                     do {
@@ -1035,11 +1035,11 @@
                     var t;
                     for (Z(e, e.dyn_ltree, e.l_desc.max_code), Z(e, e.dyn_dtree, e.d_desc.max_code), J(e, e.bl_desc), t = g - 1; t >= 3 && 0 === e.bl_tree[2 * T[t] + 1]; t--);
                     return e.opt_len += 3 * (t + 1) + 5 + 5 + 4, t
-                }(e), l = e.opt_len + 3 + 7 >>> 3, (c = e.static_len + 3 + 7 >>> 3) <= l && (l = c)) : l = c = n + 5, n + 4 <= l && -1 !== t ? te(e, t, n, r) : e.strategy === i || c === l ? (W(e, (u << 1) + (r ? 1 : 0), 3), Y(e, F, L)) : (W(e, (d << 1) + (r ? 1 : 0), 3), function(e, t, n, r) {
+                }(e), l = e.opt_len + 3 + 7 >>> 3, (c = e.static_len + 3 + 7 >>> 3) <= l && (l = c)) : l = c = n + 5, n + 4 <= l && -1 !== t ? te(e, t, n, r) : e.strategy === i || c === l ? (W(e, (u << 1) + (r ? 1 : 0), 3), X(e, F, L)) : (W(e, (d << 1) + (r ? 1 : 0), 3), function(e, t, n, r) {
                     var i;
                     for (W(e, t - 257, 5), W(e, n - 1, 5), W(e, r - 4, 4), i = 0; i < r; i++) W(e, e.bl_tree[2 * T[i] + 1], 3);
                     Q(e, e.dyn_ltree, t - 1), Q(e, e.dyn_dtree, n - 1)
-                }(e, e.l_desc.max_code + 1, e.d_desc.max_code + 1, h + 1), Y(e, e.dyn_ltree, e.dyn_dtree)), V(e), r && G(e)
+                }(e, e.l_desc.max_code + 1, e.d_desc.max_code + 1, h + 1), X(e, e.dyn_ltree, e.dyn_dtree)), V(e), r && G(e)
             }, t._tr_tally = function(e, t, n) {
                 return e.pending_buf[e.d_buf + 2 * e.last_lit] = t >>> 8 & 255, e.pending_buf[e.d_buf + 2 * e.last_lit + 1] = 255 & t, e.pending_buf[e.l_buf + e.last_lit] = 255 & n, e.last_lit++, 0 === t ? e.dyn_ltree[2 * n]++ : (e.matches++, t--, e.dyn_ltree[2 * (B[n] + p + 1)]++, e.dyn_dtree[2 * $(t)]++), e.last_lit === e.lit_bufsize - 1
             }, t._tr_align = function(e) {
@@ -12009,7 +12009,7 @@
                 m = n("4rCz"),
                 g = n("Ue10"),
                 b = function(e) {
-                    return d.createElement(g.Xa, {
+                    return d.createElement(g.Ya, {
                         padding: {
                             top: 1,
                             left: 1
@@ -12018,7 +12018,7 @@
                         onClick: e.onClick,
                         type: g.F.Default,
                         targetBlank: !0
-                    }, d.createElement(g.Xa, {
+                    }, d.createElement(g.Ya, {
                         padding: {
                             left: 2,
                             right: 2
@@ -12034,15 +12034,15 @@
                         return null !== e && e.apply(this, arguments) || this
                     }
                     return i.__extends(t, e), t.prototype.render = function() {
-                        for (var e = [], t = 1; t <= 7; t++) e.push(d.createElement(g.Xa, {
+                        for (var e = [], t = 1; t <= 7; t++) e.push(d.createElement(g.Ya, {
                             padding: .5
                         }, d.createElement("div", {
                             className: this.props.pageNum >= t ? "dev-circle-fill" : "dev-circle"
                         })));
-                        return d.createElement(g.Xa, {
+                        return d.createElement(g.Ya, {
                             padding: 2,
                             display: g.X.Flex,
-                            position: g.jb.Absolute,
+                            position: g.kb.Absolute,
                             attachBottom: !0
                         }, e)
                     }, t
@@ -12061,43 +12061,43 @@
                         return null !== e && e.apply(this, arguments) || this
                     }
                     return i.__extends(t, e), t.prototype.render = function() {
-                        return d.createElement(g.Eb, {
+                        return d.createElement(g.Fb, {
                             className: "dev-sandbox-onboarding-channel-selection__container dev-sandbox-onboarding-channel-selection__gradient-border",
                             background: g.r.Base,
-                            position: g.jb.Relative,
-                            justifyContent: g.Wa.Center,
+                            position: g.kb.Relative,
+                            justifyContent: g.Xa.Center,
                             alignItems: g.f.Center,
-                            textAlign: g.Rb.Center
-                        }, d.createElement(g.Xa, {
+                            textAlign: g.Sb.Center
+                        }, d.createElement(g.Ya, {
                             className: "dev-sandbox-onboarding-channel-selection",
                             fullHeight: !0,
                             display: g.X.Flex,
                             flexDirection: g.Aa.Column,
-                            justifyContent: g.Wa.Center,
+                            justifyContent: g.Xa.Center,
                             alignItems: g.f.Center,
-                            textAlign: g.Rb.Center
-                        }, d.createElement(g.Xa, {
+                            textAlign: g.Sb.Center
+                        }, d.createElement(g.Ya, {
                             padding: 1
                         }, d.createElement(g.W, {
                             bold: !0,
                             fontSize: g.Ca.Size3,
                             color: g.O.Link
-                        }, k())), d.createElement(g.Xa, {
+                        }, k())), d.createElement(g.Ya, {
                             padding: 1,
-                            position: g.jb.Relative,
+                            position: g.kb.Relative,
                             display: g.X.Flex,
                             fullWidth: !0,
-                            justifyContent: g.Wa.Center,
+                            justifyContent: g.Xa.Center,
                             alignItems: g.f.Center
-                        }, d.createElement(g.Xa, {
+                        }, d.createElement(g.Ya, {
                             padding: {
                                 left: 1,
                                 right: 2
                             }
                         }, d.createElement(g.A, i.__assign({
-                            icon: g.tb.AngleLeft,
+                            icon: g.ub.AngleLeft,
                             onClick: this.props.onPre
-                        }, y))), d.createElement(g.Xa, {
+                        }, y))), d.createElement(g.Ya, {
                             padding: {
                                 left: 2,
                                 right: 2
@@ -12105,15 +12105,15 @@
                         }, d.createElement(g.W, {
                             fontSize: g.Ca.Size5,
                             color: g.O.Link
-                        }, Object(p.d)("You can change the Twitch.tv channel shown here in the simulated stream. Note: if you toggle the hide browser, the stream will not be visible for panel extensions.", "DevSandboxOnBoardingChannelSelectionStep"))), d.createElement(g.Xa, {
+                        }, Object(p.d)("You can change the Twitch.tv channel shown here in the simulated stream. Note: if you toggle the hide browser, the stream will not be visible for panel extensions.", "DevSandboxOnBoardingChannelSelectionStep"))), d.createElement(g.Ya, {
                             padding: {
                                 left: 1,
                                 right: 2
                             }
                         }, d.createElement(g.A, i.__assign({
-                            icon: g.tb.AngleRight,
+                            icon: g.ub.AngleRight,
                             onClick: this.props.onNext
-                        }, w)))), d.createElement(g.Xa, {
+                        }, w)))), d.createElement(g.Ya, {
                             display: g.X.Flex
                         }, d.createElement(b, {
                             onClick: this.props.onNext
@@ -12125,7 +12125,7 @@
                     }, t
                 }(d.Component),
                 E = function(e) {
-                    return d.createElement(g.Xa, {
+                    return d.createElement(g.Ya, {
                         padding: {
                             top: 1
                         }
@@ -12134,7 +12134,7 @@
                         onClick: Object(h.c)(e.trackLabel),
                         type: g.F.Hollow,
                         targetBlank: !0
-                    }, d.createElement(g.Xa, {
+                    }, d.createElement(g.Ya, {
                         padding: {
                             left: 2,
                             right: 2
@@ -12159,51 +12159,51 @@
                         return null !== e && e.apply(this, arguments) || this
                     }
                     return i.__extends(t, e), t.prototype.render = function() {
-                        return d.createElement(g.Eb, {
+                        return d.createElement(g.Fb, {
                             className: "dev-sandbox-onboarding-choose-sample__container dev-sandbox-onboarding-choose-sample__gradient-border",
                             background: g.r.Base,
-                            position: g.jb.Relative,
-                            justifyContent: g.Wa.Center,
+                            position: g.kb.Relative,
+                            justifyContent: g.Xa.Center,
                             alignItems: g.f.Center,
-                            textAlign: g.Rb.Center
-                        }, d.createElement(g.Xa, {
+                            textAlign: g.Sb.Center
+                        }, d.createElement(g.Ya, {
                             className: "dev-sandbox-onboarding-choose-sample",
                             fullHeight: !0,
                             display: g.X.Flex,
                             flexDirection: g.Aa.Column,
-                            justifyContent: g.Wa.Center,
+                            justifyContent: g.Xa.Center,
                             alignItems: g.f.Center,
-                            textAlign: g.Rb.Center
-                        }, d.createElement(g.Xa, {
+                            textAlign: g.Sb.Center
+                        }, d.createElement(g.Ya, {
                             padding: 1
                         }, d.createElement(g.W, {
                             bold: !0,
                             fontSize: g.Ca.Size3,
                             color: g.O.Link
-                        }, S())), d.createElement(g.Xa, {
+                        }, S())), d.createElement(g.Ya, {
                             padding: 1,
-                            position: g.jb.Relative,
+                            position: g.kb.Relative,
                             display: g.X.Flex
-                        }, d.createElement(g.Xa, {
+                        }, d.createElement(g.Ya, {
                             padding: {
                                 left: 1,
                                 right: 2
                             }
                         }, d.createElement(g.A, i.__assign({}, _, {
-                            icon: g.tb.AngleLeft,
+                            icon: g.ub.AngleLeft,
                             onClick: this.props.onPre
-                        }))), d.createElement(g.Xa, null, d.createElement(g.W, {
+                        }))), d.createElement(g.Ya, null, d.createElement(g.W, {
                             fontSize: g.Ca.Size5,
                             color: g.O.Link
-                        }, Object(p.d)('By default, we have loaded a "Hello, World!" sample extension. In the future, we\'ll have more samples that you can select from using the dropdown here.', "DevSandboxOnBoardingChooseSampleStep"))), d.createElement(g.Xa, {
+                        }, Object(p.d)('By default, we have loaded a "Hello, World!" sample extension. In the future, we\'ll have more samples that you can select from using the dropdown here.', "DevSandboxOnBoardingChooseSampleStep"))), d.createElement(g.Ya, {
                             padding: {
                                 left: 1,
                                 right: 2
                             }
                         }, d.createElement(g.A, i.__assign({}, C, {
-                            icon: g.tb.AngleRight,
+                            icon: g.ub.AngleRight,
                             onClick: this.props.onNext
-                        })))), d.createElement(g.Xa, {
+                        })))), d.createElement(g.Ya, {
                             display: g.X.Flex
                         }, d.createElement(E, {
                             linkTo: "https://github.com/twitchdev/extensions-hello-world",
@@ -12232,51 +12232,51 @@
                         return null !== e && e.apply(this, arguments) || this
                     }
                     return i.__extends(t, e), t.prototype.render = function() {
-                        return d.createElement(g.Eb, {
+                        return d.createElement(g.Fb, {
                             className: "dev-sandbox-onboarding-choose-type__container dev-sandbox-onboarding-choose-type__gradient-border",
                             background: g.r.Base,
-                            position: g.jb.Relative,
-                            justifyContent: g.Wa.Center,
+                            position: g.kb.Relative,
+                            justifyContent: g.Xa.Center,
                             alignItems: g.f.Center,
-                            textAlign: g.Rb.Center
-                        }, d.createElement(g.Xa, {
+                            textAlign: g.Sb.Center
+                        }, d.createElement(g.Ya, {
                             className: "dev-sandbox-onboarding-choose-type",
                             fullHeight: !0,
                             display: g.X.Flex,
                             flexDirection: g.Aa.Column,
-                            justifyContent: g.Wa.Center,
+                            justifyContent: g.Xa.Center,
                             alignItems: g.f.Center,
-                            textAlign: g.Rb.Center
-                        }, d.createElement(g.Xa, {
+                            textAlign: g.Sb.Center
+                        }, d.createElement(g.Ya, {
                             padding: 1
                         }, d.createElement(g.W, {
                             bold: !0,
                             fontSize: g.Ca.Size3,
                             color: g.O.Link
-                        }, L())), d.createElement(g.Xa, {
+                        }, L())), d.createElement(g.Ya, {
                             padding: 1,
-                            position: g.jb.Relative,
+                            position: g.kb.Relative,
                             display: g.X.Flex
-                        }, d.createElement(g.Xa, {
+                        }, d.createElement(g.Ya, {
                             padding: {
                                 left: 1,
                                 right: 2
                             }
                         }, d.createElement(g.A, i.__assign({}, T, {
-                            icon: g.tb.AngleLeft,
+                            icon: g.ub.AngleLeft,
                             onClick: this.props.onPre
-                        }))), d.createElement(g.Xa, null, d.createElement(g.W, {
+                        }))), d.createElement(g.Ya, null, d.createElement(g.W, {
                             fontSize: g.Ca.Size5,
                             color: g.O.Link
-                        }, Object(p.d)("Use this dropdown to switch which extension is rendered, for extensions that have more than one view type as reflected in the *sample code within the code editor.", "DevSandboxOnBoardingChooseTypeStep"))), d.createElement(g.Xa, {
+                        }, Object(p.d)("Use this dropdown to switch which extension is rendered, for extensions that have more than one view type as reflected in the *sample code within the code editor.", "DevSandboxOnBoardingChooseTypeStep"))), d.createElement(g.Ya, {
                             padding: {
                                 left: 1,
                                 right: 2
                             }
                         }, d.createElement(g.A, i.__assign({}, F, {
-                            icon: g.tb.AngleRight,
+                            icon: g.ub.AngleRight,
                             onClick: this.props.onNext
-                        })))), d.createElement(g.Xa, {
+                        })))), d.createElement(g.Ya, {
                             display: g.X.Flex
                         }, d.createElement(E, {
                             linkTo: "https://dev.twitch.tv/docs/extensions/required-technical-background",
@@ -12305,66 +12305,66 @@
                         return null !== e && e.apply(this, arguments) || this
                     }
                     return i.__extends(t, e), t.prototype.render = function() {
-                        return d.createElement(g.Eb, {
+                        return d.createElement(g.Fb, {
                             className: "dev-sandbox-onboarding-code-section__container dev-sandbox-onboarding-code-section__gradient-border",
                             background: g.r.Base,
-                            position: g.jb.Relative,
-                            justifyContent: g.Wa.Center,
+                            position: g.kb.Relative,
+                            justifyContent: g.Xa.Center,
                             alignItems: g.f.Center,
-                            textAlign: g.Rb.Center
-                        }, d.createElement(g.Xa, {
+                            textAlign: g.Sb.Center
+                        }, d.createElement(g.Ya, {
                             className: "dev-sandbox-onboarding-code-section",
                             fullHeight: !0,
                             display: g.X.Flex,
                             flexDirection: g.Aa.Column,
-                            justifyContent: g.Wa.Center,
+                            justifyContent: g.Xa.Center,
                             alignItems: g.f.Center,
-                            textAlign: g.Rb.Center
-                        }, d.createElement(g.Xa, {
+                            textAlign: g.Sb.Center
+                        }, d.createElement(g.Ya, {
                             padding: 1
                         }, d.createElement(g.W, {
                             bold: !0,
                             fontSize: g.Ca.Size3,
                             color: g.O.Link
-                        }, D())), d.createElement(g.Xa, {
+                        }, D())), d.createElement(g.Ya, {
                             padding: 1,
-                            position: g.jb.Relative,
+                            position: g.kb.Relative,
                             display: g.X.Flex,
                             alignItems: g.f.Center
-                        }, d.createElement(g.Xa, {
+                        }, d.createElement(g.Ya, {
                             padding: {
                                 left: 1,
                                 right: 2
                             }
                         }, d.createElement(g.A, i.__assign({
-                            icon: g.tb.AngleLeft,
+                            icon: g.ub.AngleLeft,
                             onClick: this.props.onPre
-                        }, B))), d.createElement(g.Xa, null, d.createElement(g.Xa, null, d.createElement(g.W, {
+                        }, B))), d.createElement(g.Ya, null, d.createElement(g.Ya, null, d.createElement(g.W, {
                             fontSize: g.Ca.Size5,
                             color: g.O.Link
-                        }, Object(p.d)("Edit the sample extension code in this section. To see a preview on the channel, click the Run button. Note: after the first run, changes will be reflected live as you code.", "DevSandboxOnBoardingCodeSectionStep"))), d.createElement(g.Xa, {
+                        }, Object(p.d)("Edit the sample extension code in this section. To see a preview on the channel, click the Run button. Note: after the first run, changes will be reflected live as you code.", "DevSandboxOnBoardingCodeSectionStep"))), d.createElement(g.Ya, {
                             padding: {
                                 top: 2
                             }
                         }, d.createElement(g.W, {
                             fontSize: g.Ca.Size5,
                             color: g.O.Link
-                        }, Object(p.d)("To switch between the files that support the extension, use the dropdown. Changes you make will be saved in your browser cache. If you need to start over, click the undo button next to the dropdown.", "DevSandboxOnBoardingCodeSectionStep"))), d.createElement(g.Xa, {
+                        }, Object(p.d)("To switch between the files that support the extension, use the dropdown. Changes you make will be saved in your browser cache. If you need to start over, click the undo button next to the dropdown.", "DevSandboxOnBoardingCodeSectionStep"))), d.createElement(g.Ya, {
                             padding: {
                                 top: 2
                             }
                         }, d.createElement(g.W, {
                             fontSize: g.Ca.Size5,
                             color: g.O.Link
-                        }, Object(p.d)("You can download the code and save your progress onto your desktop. The .zip file contains the files that you’ve worked with. The readme file can help you take the next steps in continuing local development.", "DevSandboxOnBoardingCodeSectionStep")))), d.createElement(g.Xa, {
+                        }, Object(p.d)("You can download the code and save your progress onto your desktop. The .zip file contains the files that you’ve worked with. The readme file can help you take the next steps in continuing local development.", "DevSandboxOnBoardingCodeSectionStep")))), d.createElement(g.Ya, {
                             padding: {
                                 left: 1,
                                 right: 2
                             }
                         }, d.createElement(g.A, i.__assign({
-                            icon: g.tb.AngleRight,
+                            icon: g.ub.AngleRight,
                             onClick: this.props.onNext
-                        }, O)))), d.createElement(g.Xa, {
+                        }, O)))), d.createElement(g.Ya, {
                             display: g.X.Flex
                         }, d.createElement(E, {
                             linkTo: "https://dev.twitch.tv/docs/extensions/required-technical-background/#architecture-overview",
@@ -12393,57 +12393,57 @@
                         return null !== e && e.apply(this, arguments) || this
                     }
                     return i.__extends(t, e), t.prototype.render = function() {
-                        return d.createElement(g.Eb, {
+                        return d.createElement(g.Fb, {
                             className: "dev-sandbox-onboarding-download__container dev-sandbox-onboarding-download__gradient-border",
                             background: g.r.Base,
-                            position: g.jb.Relative,
-                            justifyContent: g.Wa.Center,
+                            position: g.kb.Relative,
+                            justifyContent: g.Xa.Center,
                             alignItems: g.f.Center,
-                            textAlign: g.Rb.Center
-                        }, d.createElement(g.Xa, {
+                            textAlign: g.Sb.Center
+                        }, d.createElement(g.Ya, {
                             className: "dev-sandbox-onboarding-download",
                             fullHeight: !0,
                             display: g.X.Flex,
                             flexDirection: g.Aa.Column,
-                            justifyContent: g.Wa.Center,
+                            justifyContent: g.Xa.Center,
                             alignItems: g.f.Center,
-                            textAlign: g.Rb.Center
-                        }, d.createElement(g.Xa, {
+                            textAlign: g.Sb.Center
+                        }, d.createElement(g.Ya, {
                             padding: 1
                         }, d.createElement(g.W, {
                             bold: !0,
                             fontSize: g.Ca.Size3,
                             color: g.O.Link
-                        }, N())), d.createElement(g.Xa, {
+                        }, N())), d.createElement(g.Ya, {
                             padding: 1,
-                            position: g.jb.Relative,
+                            position: g.kb.Relative,
                             display: g.X.Flex
-                        }, d.createElement(g.Xa, {
+                        }, d.createElement(g.Ya, {
                             padding: {
                                 left: 1,
                                 right: 2
                             }
                         }, d.createElement(g.A, i.__assign({}, j, {
-                            icon: g.tb.AngleLeft,
+                            icon: g.ub.AngleLeft,
                             onClick: this.props.onPre
-                        }))), d.createElement(g.Xa, null, d.createElement(g.W, {
+                        }))), d.createElement(g.Ya, null, d.createElement(g.W, {
                             fontSize: g.Ca.Size5,
                             color: g.O.Link
-                        }, Object(p.d)("Once you are done exploring the sample code in the sandbox, download your code and follow the instructions to continue development in the Developer Rig.", "DevSandboxOnBoardingDownloadStep"))), d.createElement(g.Xa, {
+                        }, Object(p.d)("Once you are done exploring the sample code in the sandbox, download your code and follow the instructions to continue development in the Developer Rig.", "DevSandboxOnBoardingDownloadStep"))), d.createElement(g.Ya, {
                             padding: {
                                 left: 1,
                                 right: 2
                             }
                         }, d.createElement(g.A, i.__assign({}, I, {
-                            icon: g.tb.AngleRight,
+                            icon: g.ub.AngleRight,
                             onClick: this.props.onNext
-                        })))), d.createElement(g.Xa, {
+                        })))), d.createElement(g.Ya, {
                             display: g.X.Flex
                         }, d.createElement(E, {
                             linkTo: "https://github.com/twitchdev/developer-rig",
                             message: Object(p.d)("View Developer Rig on Github", "DevSandboxOnBoardingDownloadStep"),
                             trackLabel: h.a.SandboxGuideAllDoneDocs
-                        }), d.createElement(g.Xa, {
+                        }), d.createElement(g.Ya, {
                             padding: {
                                 top: 1,
                                 left: 1
@@ -12452,7 +12452,7 @@
                             onClick: this.props.onClose,
                             type: g.F.Default,
                             targetBlank: !0
-                        }, d.createElement(g.Xa, {
+                        }, d.createElement(g.Ya, {
                             padding: {
                                 left: 2,
                                 right: 2
@@ -12473,28 +12473,28 @@
                         return null !== e && e.apply(this, arguments) || this
                     }
                     return i.__extends(t, e), t.prototype.render = function() {
-                        return d.createElement(g.Eb, {
+                        return d.createElement(g.Fb, {
                             className: "dev-sandbox-onboarding-intro__container dev-sandbox-onboarding-intro__gradient-border",
                             background: g.r.Base,
-                            position: g.jb.Relative,
-                            justifyContent: g.Wa.Center,
+                            position: g.kb.Relative,
+                            justifyContent: g.Xa.Center,
                             alignItems: g.f.Center,
-                            textAlign: g.Rb.Center
-                        }, d.createElement(g.Xa, {
+                            textAlign: g.Sb.Center
+                        }, d.createElement(g.Ya, {
                             className: "dev-sandbox-onboarding-intro",
                             fullHeight: !0,
                             display: g.X.Flex,
                             flexDirection: g.Aa.Column,
-                            justifyContent: g.Wa.Center,
+                            justifyContent: g.Xa.Center,
                             alignItems: g.f.Center,
-                            textAlign: g.Rb.Center
-                        }, d.createElement(g.Xa, {
+                            textAlign: g.Sb.Center
+                        }, d.createElement(g.Ya, {
                             padding: 1
                         }, d.createElement(g.W, {
                             bold: !0,
                             className: "dev-sandbox-onboarding-intro__heading",
                             color: g.O.Link
-                        }, Object(p.d)("Welcome!", "DevSandboxOnBoardingIntroStep"))), d.createElement(g.Xa, {
+                        }, Object(p.d)("Welcome!", "DevSandboxOnBoardingIntroStep"))), d.createElement(g.Ya, {
                             padding: {
                                 left: 3,
                                 right: 3,
@@ -12504,11 +12504,11 @@
                         }, d.createElement(g.W, {
                             fontSize: g.Ca.Size5,
                             color: g.O.Link
-                        }, Object(p.d)("Welcome to the Twitch Developers Extension sandbox. Here, you can try writing the front-end code of an Extension, see what your Extension will look like on a real channel, and download your code to finish building in the Developer Rig. Give it a try!", "DevSandboxOnBoardingIntroStep"))), d.createElement(g.Xa, {
+                        }, Object(p.d)("Welcome to the Twitch Developers Extension sandbox. Here, you can try writing the front-end code of an Extension, see what your Extension will look like on a real channel, and download your code to finish building in the Developer Rig. Give it a try!", "DevSandboxOnBoardingIntroStep"))), d.createElement(g.Ya, {
                             className: "dev-sandbox-onboarding-intro__btn-group"
                         }, d.createElement(g.z, {
                             onClick: this.props.onNext
-                        }, d.createElement(g.Xa, {
+                        }, d.createElement(g.Ya, {
                             padding: {
                                 left: 2,
                                 right: 2,
@@ -12536,43 +12536,43 @@
                         return null !== e && e.apply(this, arguments) || this
                     }
                     return i.__extends(t, e), t.prototype.render = function() {
-                        return d.createElement(g.Eb, {
+                        return d.createElement(g.Fb, {
                             className: "dev-sandbox-onboarding-manual-run__container dev-sandbox-onboarding-manual-run__gradient-border",
                             background: g.r.Base,
-                            position: g.jb.Relative,
-                            justifyContent: g.Wa.Center,
+                            position: g.kb.Relative,
+                            justifyContent: g.Xa.Center,
                             alignItems: g.f.Center,
-                            textAlign: g.Rb.Center
-                        }, d.createElement(g.Xa, {
+                            textAlign: g.Sb.Center
+                        }, d.createElement(g.Ya, {
                             className: "dev-sandbox-onboarding-manual-run",
                             fullHeight: !0,
                             display: g.X.Flex,
                             flexDirection: g.Aa.Column,
-                            justifyContent: g.Wa.Center,
+                            justifyContent: g.Xa.Center,
                             alignItems: g.f.Center,
-                            textAlign: g.Rb.Center
-                        }, d.createElement(g.Xa, {
+                            textAlign: g.Sb.Center
+                        }, d.createElement(g.Ya, {
                             padding: 1
                         }, d.createElement(g.W, {
                             bold: !0,
                             fontSize: g.Ca.Size3,
                             color: g.O.Link
-                        }, H())), d.createElement(g.Xa, {
+                        }, H())), d.createElement(g.Ya, {
                             padding: 1,
-                            position: g.jb.Relative,
+                            position: g.kb.Relative,
                             display: g.X.Flex
-                        }, d.createElement(g.Xa, {
+                        }, d.createElement(g.Ya, {
                             padding: {
                                 left: 1,
                                 right: 2
                             }
                         }, d.createElement(g.A, i.__assign({}, z, {
-                            icon: g.tb.AngleLeft,
+                            icon: g.ub.AngleLeft,
                             onClick: this.props.onPre
-                        }))), d.createElement(g.Xa, null, d.createElement(g.W, {
+                        }))), d.createElement(g.Ya, null, d.createElement(g.W, {
                             fontSize: g.Ca.Size5,
                             color: g.O.Link
-                        }, Object(p.d)("We'll automatically re-run code after you make changes and stop typing for a few seconds.", "DevSandboxOnBoardingManualRunStep")), d.createElement(g.Pa, {
+                        }, Object(p.d)("We'll automatically re-run code after you make changes and stop typing for a few seconds.", "DevSandboxOnBoardingManualRunStep")), d.createElement(g.Qa, {
                             padding: {
                                 top: 1
                             }
@@ -12580,20 +12580,20 @@
                             fontSize: g.Ca.Size5,
                             color: g.O.Link
                         }, Object(p.d)("If there is an issue with the refresh or you are making a change that requires a re-run (i.e call an API), then you may need to manually run the extension. Click the {run} button to do so.", {
-                            run: d.createElement(g.sb, {
-                                asset: g.tb.MiniPlayerPlay,
+                            run: d.createElement(g.tb, {
+                                asset: g.ub.MiniPlayerPlay,
                                 height: 14,
                                 width: 14
                             })
-                        }, "DevSandboxOnBoardingManualRunStep")))), d.createElement(g.Xa, {
+                        }, "DevSandboxOnBoardingManualRunStep")))), d.createElement(g.Ya, {
                             padding: {
                                 left: 1,
                                 right: 2
                             }
                         }, d.createElement(g.A, i.__assign({}, W, {
-                            icon: g.tb.AngleRight,
+                            icon: g.ub.AngleRight,
                             onClick: this.props.onNext
-                        })))), d.createElement(g.Xa, {
+                        })))), d.createElement(g.Ya, {
                             display: g.X.Flex
                         }, d.createElement(b, {
                             onClick: this.props.onNext
@@ -12615,43 +12615,43 @@
                         return null !== e && e.apply(this, arguments) || this
                     }
                     return i.__extends(t, e), t.prototype.render = function() {
-                        return d.createElement(g.Eb, {
+                        return d.createElement(g.Fb, {
                             className: "dev-sandbox-onboarding-switch-window__container dev-sandbox-onboarding-intro__gradient-border",
                             background: g.r.Base,
-                            position: g.jb.Relative,
-                            justifyContent: g.Wa.Center,
+                            position: g.kb.Relative,
+                            justifyContent: g.Xa.Center,
                             alignItems: g.f.Center,
-                            textAlign: g.Rb.Center
-                        }, d.createElement(g.Xa, {
+                            textAlign: g.Sb.Center
+                        }, d.createElement(g.Ya, {
                             className: "dev-sandbox-onboarding-switch-window",
                             fullHeight: !0,
                             display: g.X.Flex,
                             flexDirection: g.Aa.Column,
-                            justifyContent: g.Wa.Center,
+                            justifyContent: g.Xa.Center,
                             alignItems: g.f.Center,
-                            textAlign: g.Rb.Center
-                        }, d.createElement(g.Xa, {
+                            textAlign: g.Sb.Center
+                        }, d.createElement(g.Ya, {
                             padding: 1
                         }, d.createElement(g.W, {
                             bold: !0,
                             fontSize: g.Ca.Size3,
                             color: g.O.Link
-                        }, Object(p.d)("Focus your work", "DevSandboxOnBoardingSwitchWindowStep"))), d.createElement(g.Xa, {
+                        }, Object(p.d)("Focus your work", "DevSandboxOnBoardingSwitchWindowStep"))), d.createElement(g.Ya, {
                             padding: 1,
-                            position: g.jb.Relative,
+                            position: g.kb.Relative,
                             display: g.X.Flex,
-                            justifyContent: g.Wa.Center,
+                            justifyContent: g.Xa.Center,
                             alignItems: g.f.Center
-                        }, d.createElement(g.Xa, null, d.createElement(g.A, i.__assign({
-                            icon: g.tb.AngleLeft,
+                        }, d.createElement(g.Ya, null, d.createElement(g.A, i.__assign({
+                            icon: g.ub.AngleLeft,
                             onClick: this.props.onPre
-                        }, q))), d.createElement(g.Xa, null, d.createElement(g.W, {
+                        }, q))), d.createElement(g.Ya, null, d.createElement(g.W, {
                             fontSize: g.Ca.Size5,
                             color: g.O.Link
-                        }, Object(p.d)("If you want to just focus on code or just preview the design, you can use this toggle to change the view of the sandbox.", "DevSandboxOnBoardingSwitchWindowStep"))), d.createElement(g.Xa, null, d.createElement(g.A, i.__assign({
-                            icon: g.tb.AngleRight,
+                        }, Object(p.d)("If you want to just focus on code or just preview the design, you can use this toggle to change the view of the sandbox.", "DevSandboxOnBoardingSwitchWindowStep"))), d.createElement(g.Ya, null, d.createElement(g.A, i.__assign({
+                            icon: g.ub.AngleRight,
                             onClick: this.props.onNext
-                        }, V)))), d.createElement(g.Xa, {
+                        }, V)))), d.createElement(g.Ya, {
                             display: g.X.Flex
                         }, d.createElement(b, {
                             onClick: this.props.onNext
@@ -12662,7 +12662,7 @@
                         }))
                     }, t
                 }(d.Component),
-                X = (n("FROI"), function(e) {
+                Y = (n("FROI"), function(e) {
                     function t() {
                         var t = null !== e && e.apply(this, arguments) || this;
                         return t.navigateToOnBoardingModal = function(e) {
@@ -12672,42 +12672,42 @@
                         }, t
                     }
                     return i.__extends(t, e), t.prototype.render = function() {
-                        return d.createElement(g.Eb, {
+                        return d.createElement(g.Fb, {
                             className: "dev-sandbox-onboarding-welcome-back__container dev-sandbox-onboarding-welcome-back__gradient-border",
                             background: g.r.Base,
-                            position: g.jb.Relative,
-                            justifyContent: g.Wa.Center,
+                            position: g.kb.Relative,
+                            justifyContent: g.Xa.Center,
                             alignItems: g.f.Center,
-                            textAlign: g.Rb.Center
-                        }, d.createElement(g.Xa, {
+                            textAlign: g.Sb.Center
+                        }, d.createElement(g.Ya, {
                             className: "dev-sandbox-onboarding-welcome-back",
                             fullHeight: !0,
                             display: g.X.Flex,
                             flexDirection: g.Aa.Column,
-                            justifyContent: g.Wa.Center,
+                            justifyContent: g.Xa.Center,
                             alignItems: g.f.Center,
-                            textAlign: g.Rb.Center
-                        }, d.createElement(g.Xa, {
+                            textAlign: g.Sb.Center
+                        }, d.createElement(g.Ya, {
                             padding: 1
                         }, d.createElement(g.W, {
                             bold: !0,
                             fontSize: g.Ca.Size2,
                             color: g.O.Link
-                        }, Object(p.d)("Welcome Back!", "DevSandboxOnBoardingSwitchWindowStep"))), d.createElement(g.Xa, {
+                        }, Object(p.d)("Welcome Back!", "DevSandboxOnBoardingSwitchWindowStep"))), d.createElement(g.Ya, {
                             padding: 1
                         }, d.createElement(g.W, {
                             fontSize: g.Ca.Size5,
                             color: g.O.Link
-                        }, Object(p.d)("Please review the link below for the part you are most interested in.", "DevSandboxOnBoardingSwitchWindowStep"))), d.createElement(g.Xa, {
+                        }, Object(p.d)("Please review the link below for the part you are most interested in.", "DevSandboxOnBoardingSwitchWindowStep"))), d.createElement(g.Ya, {
                             padding: 1
                         }, d.createElement(g.W, {
                             bold: !0,
                             fontSize: g.Ca.Size3,
                             color: g.O.Link
-                        }, Object(p.d)("What would you like to learn about?", "DevSandboxOnBoardingSwitchWindowStep"))), d.createElement(g.Xa, {
+                        }, Object(p.d)("What would you like to learn about?", "DevSandboxOnBoardingSwitchWindowStep"))), d.createElement(g.Ya, {
                             padding: 1,
                             className: "dev-sandbox-onboarding-welcome-back__link-group"
-                        }, d.createElement(g.Xa, {
+                        }, d.createElement(g.Ya, {
                             className: "dev-sandbox-onboarding-welcome-back__link",
                             padding: {
                                 top: .5
@@ -12718,7 +12718,7 @@
                         }, d.createElement(g.W, {
                             bold: !0,
                             fontSize: g.Ca.Size5
-                        }, S()))), d.createElement(g.Xa, {
+                        }, S()))), d.createElement(g.Ya, {
                             className: "dev-sandbox-onboarding-welcome-back__link",
                             padding: {
                                 top: .5
@@ -12729,7 +12729,7 @@
                         }, d.createElement(g.W, {
                             bold: !0,
                             fontSize: g.Ca.Size5
-                        }, D()))), d.createElement(g.Xa, {
+                        }, D()))), d.createElement(g.Ya, {
                             className: "dev-sandbox-onboarding-welcome-back__link",
                             padding: {
                                 top: .5
@@ -12740,7 +12740,7 @@
                         }, d.createElement(g.W, {
                             bold: !0,
                             fontSize: g.Ca.Size5
-                        }, H()))), d.createElement(g.Xa, {
+                        }, H()))), d.createElement(g.Ya, {
                             className: "dev-sandbox-onboarding-welcome-back__link",
                             padding: {
                                 top: .5
@@ -12751,7 +12751,7 @@
                         }, d.createElement(g.W, {
                             bold: !0,
                             fontSize: g.Ca.Size5
-                        }, k()))), d.createElement(g.Xa, {
+                        }, k()))), d.createElement(g.Ya, {
                             className: "dev-sandbox-onboarding-welcome-back__link",
                             padding: {
                                 top: .5
@@ -12762,7 +12762,7 @@
                         }, d.createElement(g.W, {
                             bold: !0,
                             fontSize: g.Ca.Size5
-                        }, L()))), d.createElement(g.Xa, {
+                        }, L()))), d.createElement(g.Ya, {
                             className: "dev-sandbox-onboarding-welcome-back__link",
                             padding: {
                                 top: .5
@@ -12773,7 +12773,7 @@
                         }, d.createElement(g.W, {
                             bold: !0,
                             fontSize: g.Ca.Size5
-                        }, Object(p.d)("Change Sandbox View", "DevSandboxOnBoardingWelcomeBackStep")))), d.createElement(g.Xa, {
+                        }, Object(p.d)("Change Sandbox View", "DevSandboxOnBoardingWelcomeBackStep")))), d.createElement(g.Ya, {
                             className: "dev-sandbox-onboarding-welcome-back__link",
                             padding: {
                                 top: .5
@@ -12802,7 +12802,7 @@
             }! function(e) {
                 e[e.welcome = 0] = "welcome", e[e.chooseSample = 1] = "chooseSample", e[e.codeSection = 2] = "codeSection", e[e.manualRun = 3] = "manualRun", e[e.channelSelection = 4] = "channelSelection", e[e.chooseType = 5] = "chooseType", e[e.switchWindow = 6] = "switchWindow", e[e.codeDownload = 7] = "codeDownload", e[e.welcomeBack = 8] = "welcomeBack"
             }(r || (r = {}));
-            var Y = function(e) {
+            var X = function(e) {
                     function t() {
                         var t = null !== e && e.apply(this, arguments) || this;
                         return t.state = {
@@ -12891,7 +12891,7 @@
                                         },
                                         onClose: K(h.a.SandboxGuideWelcomeBackClose, t.props.onClose)
                                     };
-                                    return d.createElement(X, i.__assign({}, u));
+                                    return d.createElement(Y, i.__assign({}, u));
                                 case r.welcome:
                                 default:
                                     var p = {
@@ -12917,7 +12917,7 @@
                         }, t
                     }
                     return i.__extends(t, e), t.prototype.render = function() {
-                        return d.createElement(g.Xa, {
+                        return d.createElement(g.Ya, {
                             className: "dev-sandbox-onboarding-modal"
                         }, this.renderBasedOnStep())
                     }, t
@@ -12936,17 +12936,17 @@
                         }, t
                     }
                     return i.__extends(t, e), t.prototype.render = function() {
-                        return d.createElement(g.Ua, {
+                        return d.createElement(g.Va, {
                             onClick: this.mobileWarnBarClick
-                        }, d.createElement(g.Xa, {
+                        }, d.createElement(g.Ya, {
                             fullWidth: !0,
-                            position: g.jb.Relative,
+                            position: g.kb.Relative,
                             className: "mobile-warning-bar"
-                        }, d.createElement(g.Eb, {
+                        }, d.createElement(g.Fb, {
                             className: "mobile-warning-bar__content",
                             display: g.X.Flex,
                             alignItems: g.f.Center,
-                            justifyContent: g.Wa.Start,
+                            justifyContent: g.Xa.Start,
                             elevation: 1,
                             padding: {
                                 left: 3
@@ -12964,7 +12964,7 @@
                     function t() {
                         var t = null !== e && e.apply(this, arguments) || this;
                         return t.renderHeaderPlaceHolder = function(e) {
-                            return d.createElement(g.Xa, i.__assign({
+                            return d.createElement(g.Ya, i.__assign({
                                 margin: {
                                     top: 1,
                                     left: 1
@@ -12977,18 +12977,18 @@
                     }
                     return i.__extends(t, e), t.prototype.render = function() {
                         for (var e = [], t = 0; t < 4; t++) e.push(this.renderHeaderPlaceHolder(t));
-                        return d.createElement(g.Eb, {
+                        return d.createElement(g.Fb, {
                             display: g.X.Flex,
-                            position: g.jb.Relative,
+                            position: g.kb.Relative,
                             attachTop: !0,
                             className: "dev-channel-header-mock",
                             fullWidth: !0,
                             alignItems: g.f.Center,
-                            textAlign: g.Rb.Center,
+                            textAlign: g.Sb.Center,
                             margin: {
                                 bottom: 1
                             }
-                        }, d.createElement(g.Xa, {
+                        }, d.createElement(g.Ya, {
                             margin: {
                                 top: 1,
                                 left: 1,
@@ -12996,7 +12996,7 @@
                             },
                             alignItems: g.f.Center,
                             className: "dev-channel-header-mock__logo-mock"
-                        }), e, d.createElement(g.Xa, {
+                        }), e, d.createElement(g.Ya, {
                             margin: {
                                 top: .5,
                                 left: 1,
@@ -13004,7 +13004,7 @@
                             },
                             className: "dev-channel-header-mock__btn-mock",
                             attachRight: !0,
-                            position: g.jb.Absolute,
+                            position: g.kb.Absolute,
                             display: g.X.Flex
                         }))
                     }, t
@@ -13019,7 +13019,7 @@
                     function t() {
                         var t = null !== e && e.apply(this, arguments) || this;
                         return t.renderNavPlaceholder = function(e) {
-                            return d.createElement(g.Xa, {
+                            return d.createElement(g.Ya, {
                                 margin: {
                                     left: .5,
                                     right: 1
@@ -13029,7 +13029,7 @@
                                 key: e
                             })
                         }, t.renderBtnPlaceholder = function(e) {
-                            return d.createElement(g.Xa, {
+                            return d.createElement(g.Ya, {
                                 margin: {
                                     left: 1,
                                     right: 1
@@ -13052,34 +13052,34 @@
                         for (var e = [], t = 0; t < 4; t++) e.push(this.renderNavPlaceholder(t));
                         var n = [];
                         for (t = 0; t < 2; t++) n.push(this.renderBtnPlaceholder(t));
-                        return d.createElement(g.Xa, {
+                        return d.createElement(g.Ya, {
                             className: "dev-channel-nav-mock__menu dev-channel-nav-mock",
                             alignItems: g.f.Center,
-                            position: g.jb.Relative
-                        }, d.createElement(g.Xa, {
+                            position: g.kb.Relative
+                        }, d.createElement(g.Ya, {
                             display: g.X.Flex
-                        }, d.createElement(g.Xa, {
+                        }, d.createElement(g.Ya, {
                             margin: 1,
                             display: g.X.Flex,
                             alignItems: g.f.Center,
                             className: "dev-channel-nav-mock__logo"
-                        }, this.renderTwitchLogo()), d.createElement(g.Xa, {
+                        }, this.renderTwitchLogo()), d.createElement(g.Ya, {
                             className: "dev-channel-nav-mock__nav-items-container",
                             display: g.X.Flex,
                             alignItems: g.f.Center
-                        }, e, d.createElement(g.Xa, {
+                        }, e, d.createElement(g.Ya, {
                             margin: {
                                 left: 1,
                                 right: 1
                             },
                             alignItems: g.f.Center,
                             className: "dev-channel-nav-mock__search-mock"
-                        })), d.createElement(g.Xa, {
+                        })), d.createElement(g.Ya, {
                             display: g.X.Flex,
-                            position: g.jb.Absolute,
+                            position: g.kb.Absolute,
                             attachRight: !0,
                             alignItems: g.f.Center,
-                            justifyContent: g.Wa.End,
+                            justifyContent: g.Xa.End,
                             className: "dev-channel-nav-mock__nav-btn-container"
                         }, n)))
                     }, t
@@ -13090,29 +13090,29 @@
                     }
                     return i.__extends(t, e), t.prototype.render = function() {
                         var e, t = J("dev-channel-panel-mock__placeholder-box", ((e = {})["dev-channel-panel-mock__placeholder-box-both"] = this.props.sandboxMode === He.both, e["dev-channel-panel-mock__placeholder-box-channel-only"] = this.props.sandboxMode === He.channelOnly, e));
-                        return d.createElement(g.Eb, {
+                        return d.createElement(g.Fb, {
                             flexDirection: g.Aa.Column,
                             display: g.X.Flex,
-                            position: g.jb.Relative,
+                            position: g.kb.Relative,
                             className: "dev-channel-panel-mock",
                             fullWidth: !0,
                             alignItems: g.f.Start,
-                            justifyContent: g.Wa.Start,
+                            justifyContent: g.Xa.Start,
                             padding: {
                                 left: 2,
                                 top: 2
                             }
-                        }, d.createElement(g.Xa, {
+                        }, d.createElement(g.Ya, {
                             margin: {
                                 top: 1
                             },
                             className: "dev-channel-panel-mock__placeholder-short"
-                        }), d.createElement(g.Xa, {
+                        }), d.createElement(g.Ya, {
                             margin: {
                                 top: 1
                             },
                             className: "dev-channel-panel-mock__placeholder-long"
-                        }), d.createElement(g.Eb, {
+                        }), d.createElement(g.Fb, {
                             margin: {
                                 top: 1
                             },
@@ -13125,7 +13125,7 @@
                     function t() {
                         var t = null !== e && e.apply(this, arguments) || this;
                         return t.renderLogoMockGroup = function(e) {
-                            return d.createElement(g.Xa, {
+                            return d.createElement(g.Ya, {
                                 margin: {
                                     top: 1
                                 },
@@ -13137,7 +13137,7 @@
                     }
                     return i.__extends(t, e), t.prototype.render = function() {
                         for (var e = [], t = 0; t < 3; t++) e.push(this.renderLogoMockGroup(t));
-                        return d.createElement(g.Eb, {
+                        return d.createElement(g.Fb, {
                             display: g.X.Flex,
                             flexDirection: g.Aa.Column,
                             className: "dev-channel-side-nav-mock",
@@ -13151,23 +13151,23 @@
                         return null !== e && e.apply(this, arguments) || this
                     }
                     return i.__extends(t, e), t.prototype.render = function() {
-                        return d.createElement(g.Eb, {
+                        return d.createElement(g.Fb, {
                             background: g.r.Base,
-                            position: g.jb.Relative,
+                            position: g.kb.Relative,
                             className: "channel-placeholder__menu-bar",
                             margin: {
                                 left: 2,
                                 right: 2
                             }
-                        }, d.createElement(g.Eb, {
+                        }, d.createElement(g.Fb, {
                             display: g.X.Flex,
-                            position: g.jb.Relative,
+                            position: g.kb.Relative,
                             className: "dev-channel-video-bar-mock",
                             alignItems: g.f.Center,
                             padding: {
                                 bottom: 2
                             }
-                        }, d.createElement(g.Xa, {
+                        }, d.createElement(g.Ya, {
                             margin: {
                                 top: 1,
                                 left: 1,
@@ -13175,28 +13175,28 @@
                             },
                             alignItems: g.f.Center,
                             className: "dev-channel-video-bar-mock__logo-mock"
-                        }), d.createElement(g.Xa, null, d.createElement(g.Xa, {
+                        }), d.createElement(g.Ya, null, d.createElement(g.Ya, {
                             margin: {
                                 top: 1,
                                 left: 1
                             },
                             alignItems: g.f.Center,
                             className: "dev-channel-video-bar-mock__placeholder-long"
-                        }), d.createElement(g.Xa, {
+                        }), d.createElement(g.Ya, {
                             margin: {
                                 top: 1,
                                 left: 1
                             },
                             alignItems: g.f.Center,
                             className: "dev-channel-video-bar-mock__placeholder-short"
-                        })), d.createElement(g.Xa, {
+                        })), d.createElement(g.Ya, {
                             margin: {
                                 top: 1,
                                 right: 1
                             },
                             className: "dev-channel-video-bar-mock__btn-mock",
                             attachRight: !0,
-                            position: g.jb.Absolute,
+                            position: g.kb.Absolute,
                             display: g.X.Flex
                         })))
                     }, t
@@ -13212,33 +13212,33 @@
                         }, t
                     }
                     return i.__extends(t, e), t.prototype.render = function() {
-                        return d.createElement(g.Eb, {
+                        return d.createElement(g.Fb, {
                             className: "dev-sandbox-download-modal__container dev-sandbox-share-modal__gradient-border",
                             background: g.r.Base,
-                            position: g.jb.Relative,
-                            justifyContent: g.Wa.Start,
+                            position: g.kb.Relative,
+                            justifyContent: g.Xa.Start,
                             alignItems: g.f.Center,
-                            textAlign: g.Rb.Center,
+                            textAlign: g.Sb.Center,
                             display: g.X.Flex
-                        }, d.createElement(g.Xa, {
+                        }, d.createElement(g.Ya, {
                             className: "dev-sandbox-download-modal",
                             display: g.X.Flex,
                             flexDirection: g.Aa.Column,
-                            justifyContent: g.Wa.Start,
+                            justifyContent: g.Xa.Start,
                             alignItems: g.f.Center,
-                            textAlign: g.Rb.Center,
+                            textAlign: g.Sb.Center,
                             padding: {
                                 left: 4,
                                 right: 4
                             }
-                        }, d.createElement(g.Xa, {
+                        }, d.createElement(g.Ya, {
                             margin: {
                                 bottom: 1
                             }
                         }, d.createElement(g.W, {
                             color: g.O.Link,
                             fontSize: g.Ca.Size3
-                        }, Object(p.d)("Your code is now downloading.", "DevSandboxDownload"))), d.createElement(g.Xa, {
+                        }, Object(p.d)("Your code is now downloading.", "DevSandboxDownload"))), d.createElement(g.Ya, {
                             padding: {
                                 top: 1,
                                 bottom: 2,
@@ -13249,16 +13249,16 @@
                             bold: !0,
                             color: g.O.Link,
                             fontSize: g.Ca.Size2
-                        }, Object(p.d)("Continue building extensions with the Developer Rig.", "DevSandboxDownload"))), d.createElement(g.Xa, {
+                        }, Object(p.d)("Continue building extensions with the Developer Rig.", "DevSandboxDownload"))), d.createElement(g.Ya, {
                             padding: {
                                 bottom: 2
                             }
                         }, d.createElement(g.W, {
                             color: g.O.Link,
                             fontSize: g.Ca.Size4
-                        }, Object(p.d)("Follow the instructions in the readme to run the rig and build from your first project.", "DevSandboxDownload"))), d.createElement(g.Xa, {
+                        }, Object(p.d)("Follow the instructions in the readme to run the rig and build from your first project.", "DevSandboxDownload"))), d.createElement(g.Ya, {
                             display: g.X.Flex
-                        }, d.createElement(g.Xa, {
+                        }, d.createElement(g.Ya, {
                             margin: {
                                 right: 1
                             }
@@ -13266,7 +13266,7 @@
                             type: g.F.Hollow,
                             size: g.D.Small,
                             onClick: this.onOpenDownloadModalClose
-                        }, d.createElement(g.W, null, Object(p.d)("Go back to Sandbox", "DevSandboxDownload")))), d.createElement(g.Xa, {
+                        }, d.createElement(g.W, null, Object(p.d)("Go back to Sandbox", "DevSandboxDownload")))), d.createElement(g.Ya, {
                             margin: {
                                 left: 1
                             }
@@ -13294,50 +13294,50 @@
                         }, t
                     }
                     return i.__extends(t, e), t.prototype.render = function() {
-                        return d.createElement(g.Eb, {
+                        return d.createElement(g.Fb, {
                             className: "dev-sandbox-share-modal__container dev-sandbox-share-modal__gradient-border",
                             background: g.r.Base,
-                            position: g.jb.Relative,
-                            justifyContent: g.Wa.Start,
+                            position: g.kb.Relative,
+                            justifyContent: g.Xa.Start,
                             alignItems: g.f.Center,
-                            textAlign: g.Rb.Center
-                        }, d.createElement(g.Xa, {
+                            textAlign: g.Sb.Center
+                        }, d.createElement(g.Ya, {
                             className: "dev-sandbox-share-modal",
                             fullHeight: !0,
                             display: g.X.Flex,
                             flexDirection: g.Aa.Column,
-                            justifyContent: g.Wa.Start,
+                            justifyContent: g.Xa.Start,
                             alignItems: g.f.Center,
-                            textAlign: g.Rb.Center
-                        }, d.createElement(g.Eb, {
+                            textAlign: g.Sb.Center
+                        }, d.createElement(g.Fb, {
                             color: g.O.Link
-                        }, d.createElement(g.sb, {
-                            asset: g.tb.LogoTwitch,
+                        }, d.createElement(g.tb, {
+                            asset: g.ub.LogoTwitch,
                             height: 200,
                             width: 200
-                        })), d.createElement(g.Xa, {
+                        })), d.createElement(g.Ya, {
                             className: "dev-sandbox-share-modal__share-with-friend"
                         }, d.createElement(g.W, {
                             color: g.O.Link,
                             fontSize: g.Ca.Size3
-                        }, Object(p.d)("Share the sandbox with a friend", "DevSandboxShare"))), d.createElement(g.Eb, {
+                        }, Object(p.d)("Share the sandbox with a friend", "DevSandboxShare"))), d.createElement(g.Fb, {
                             className: "dev-sandbox-share-modal__copy-link-box",
                             background: g.r.Alt2,
                             margin: {
                                 top: 2
                             },
                             display: g.X.Flex,
-                            justifyContent: g.Wa.Center,
+                            justifyContent: g.Xa.Center,
                             alignItems: g.f.Center,
-                            textAlign: g.Rb.Center
-                        }, d.createElement(g.Xa, {
+                            textAlign: g.Sb.Center
+                        }, d.createElement(g.Ya, {
                             padding: {
                                 right: 5,
                                 left: 1,
                                 top: .5,
                                 bottom: .5
                             }
-                        }, d.createElement(g.W, null, Object(p.d)("https://dev.twitch.tv/extensions/sandbox", "DevSandboxShare"))), d.createElement(g.Xa, {
+                        }, d.createElement(g.W, null, Object(p.d)("https://dev.twitch.tv/extensions/sandbox", "DevSandboxShare"))), d.createElement(g.Ya, {
                             padding: {
                                 right: 1,
                                 bottom: .5
@@ -13348,7 +13348,7 @@
                             bold: !0,
                             color: g.O.Link,
                             fontSize: g.Ca.Size5
-                        }, Object(p.d)("Copy Link", "DevSandboxShare"))))), d.createElement(g.Xa, {
+                        }, Object(p.d)("Copy Link", "DevSandboxShare"))))), d.createElement(g.Ya, {
                             margin: {
                                 top: 2
                             }
@@ -13378,49 +13378,49 @@
                         return t.state = {
                             ifShown: !1
                         }, t.showDropDown = function() {
-                            return d.createElement(g.Eb, i.__assign({
+                            return d.createElement(g.Fb, i.__assign({
                                 className: "dev-extension-sample-code-btn__dropdown",
                                 background: g.r.Alt2,
                                 display: g.X.Flex,
-                                position: g.jb.Absolute,
+                                position: g.kb.Absolute,
                                 alignItems: g.f.Center,
                                 flexDirection: g.Aa.Column,
-                                justifyContent: g.Wa.Center
-                            }, ke), d.createElement(g.Xa, {
+                                justifyContent: g.Xa.Center
+                            }, ke), d.createElement(g.Ya, {
                                 fullHeight: !0,
                                 fullWidth: !0
-                            }, d.createElement(g.Pa, null, d.createElement(g.Ua, {
+                            }, d.createElement(g.Qa, null, d.createElement(g.Va, {
                                 onClick: t.selectSample(ge.helloWorld)
-                            }, d.createElement(g.Xa, {
-                                position: g.jb.Relative,
+                            }, d.createElement(g.Ya, {
+                                position: g.kb.Relative,
                                 display: g.X.Flex,
-                                justifyContent: g.Wa.Start,
+                                justifyContent: g.Xa.Start,
                                 alignItems: g.f.Center,
                                 padding: 2
-                            }, d.createElement(g.Xa, {
+                            }, d.createElement(g.Ya, {
                                 padding: {
                                     left: 1
                                 },
                                 display: g.X.Flex,
-                                textAlign: g.Rb.Center,
+                                textAlign: g.Sb.Center,
                                 alignItems: g.f.Center,
                                 className: "dev-editor-extension-type-btn__text"
                             }, d.createElement(g.W, {
                                 fontSize: g.Ca.Size4
-                            }, xe()))))), d.createElement(g.Pa, null, d.createElement(g.Ua, {
+                            }, xe()))))), d.createElement(g.Qa, null, d.createElement(g.Va, {
                                 onClick: t.selectSample(ge.helloGlitch)
-                            }, d.createElement(g.Xa, {
-                                position: g.jb.Relative,
+                            }, d.createElement(g.Ya, {
+                                position: g.kb.Relative,
                                 display: g.X.Flex,
-                                justifyContent: g.Wa.Start,
+                                justifyContent: g.Xa.Start,
                                 alignItems: g.f.Center,
                                 padding: 2
-                            }, d.createElement(g.Xa, {
+                            }, d.createElement(g.Ya, {
                                 padding: {
                                     left: 1
                                 },
                                 display: g.X.Flex,
-                                textAlign: g.Rb.Center,
+                                textAlign: g.Sb.Center,
                                 alignItems: g.f.Center
                             }, d.createElement(g.W, {
                                 fontSize: g.Ca.Size4
@@ -13442,7 +13442,7 @@
                         }, t
                     }
                     return i.__extends(t, e), t.prototype.render = function() {
-                        return d.createElement(g.Xa, {
+                        return d.createElement(g.Ya, {
                             display: g.X.Flex,
                             fullWidth: !0,
                             fullHeight: !0
@@ -13451,7 +13451,7 @@
                             onClick: this.onClickButton,
                             fullWidth: !0,
                             type: g.F.Hollow
-                        }, we), d.createElement(g.Pa, {
+                        }, we), d.createElement(g.Qa, {
                             padding: {
                                 left: 2
                             }
@@ -13485,11 +13485,11 @@
                             }
                         }, t.renderDropDown = function() {
                             var e, n = J("sandbox-top-nav-bar__selection-content", ((e = {})["dev-onboarding-on-going"] = t.props.onBoardingStep === r.chooseSample, e));
-                            return d.createElement(g.Xa, {
+                            return d.createElement(g.Ya, {
                                 display: g.X.Flex,
                                 flexGrow: 1,
                                 flexShrink: 1
-                            }, d.createElement(g.Eb, {
+                            }, d.createElement(g.Fb, {
                                 background: g.r.Alt2,
                                 display: g.X.Flex,
                                 fullWidth: !0,
@@ -13502,10 +13502,10 @@
                         }, t.renderModeSwitchButton = function(e) {
                             var n = Object(p.d)("Code", "DevSandboxTopNavBarComponent"),
                                 r = Se;
-                            return e === He.both ? (n = Object(p.d)("Both", "DevSandboxTopNavBarComponent"), r = Te) : e === He.channelOnly && (n = Object(p.d)("Channel", "DevSandboxTopNavBarComponent"), r = Ae), d.createElement(g.xb, i.__assign({
+                            return e === He.both ? (n = Object(p.d)("Both", "DevSandboxTopNavBarComponent"), r = Te) : e === He.channelOnly && (n = Object(p.d)("Channel", "DevSandboxTopNavBarComponent"), r = Ae), d.createElement(g.yb, i.__assign({
                                 name: "sandbox-top-nav-bar__segment-btn",
                                 label: n,
-                                type: g.yb.Radio,
+                                type: g.zb.Radio,
                                 onChange: t.windowModeSelectionButtonClick(e),
                                 checked: t.props.sandboxMode === e
                             }, r))
@@ -13514,24 +13514,24 @@
                     return i.__extends(t, e), t.prototype.render = function() {
                         var e, t, n = J("sandbox-top-nav-bar__window", ((e = {})["dev-onboarding-on-going"] = this.props.onBoardingStep === r.switchWindow, e)),
                             i = J("sandbox-top-nav-bar__start-building-btn", ((t = {})["dev-onboarding-on-going"] = this.props.onBoardingStep === r.codeDownload, t));
-                        return d.createElement(g.Eb, {
+                        return d.createElement(g.Fb, {
                             display: g.X.InlineFlex,
                             className: "sandbox-top-nav-bar",
                             background: g.r.Alt2,
                             fullWidth: !0
-                        }, this.renderDropDown(), d.createElement(g.Eb, {
+                        }, this.renderDropDown(), d.createElement(g.Fb, {
                             background: g.r.Alt2,
                             className: n,
                             display: g.X.Flex,
-                            justifyContent: g.Wa.Center,
+                            justifyContent: g.Xa.Center,
                             alignItems: g.f.Center
-                        }, d.createElement(g.wb, null, this.renderModeSwitchButton(He.editorOnly), this.renderModeSwitchButton(He.both), this.renderModeSwitchButton(He.channelOnly))), d.createElement(g.Xa, {
+                        }, d.createElement(g.xb, null, this.renderModeSwitchButton(He.editorOnly), this.renderModeSwitchButton(He.both), this.renderModeSwitchButton(He.channelOnly))), d.createElement(g.Ya, {
                             className: "sandbox-top-nav-bar__btn-group",
                             display: g.X.Flex,
-                            justifyContent: g.Wa.End,
+                            justifyContent: g.Xa.End,
                             alignItems: g.f.Center,
                             fullHeight: !0
-                        }, d.createElement(g.Xa, {
+                        }, d.createElement(g.Ya, {
                             display: g.X.Flex,
                             margin: {
                                 right: 2
@@ -13539,36 +13539,36 @@
                         }, d.createElement(g.z, {
                             type: g.F.Hollow,
                             onClick: this.onOpenShareModal
-                        }, d.createElement(g.Xa, {
-                            justifyContent: g.Wa.Center,
+                        }, d.createElement(g.Ya, {
+                            justifyContent: g.Xa.Center,
                             alignItems: g.f.Center,
                             display: g.X.Flex
-                        }, d.createElement(g.Xa, {
+                        }, d.createElement(g.Ya, {
                             padding: {
                                 right: 1,
                                 top: .5
                             }
-                        }, d.createElement(g.sb, {
-                            asset: g.tb.Share,
+                        }, d.createElement(g.tb, {
+                            asset: g.ub.Share,
                             height: 15,
                             width: 15
                         })), d.createElement(g.W, null, Object(p.d)("Share", "DevSandboxTopNavBarComponent"))))), d.createElement(g.z, {
                             type: g.F.Hollow,
                             onClick: this.onOpenOnBoardingModal
-                        }, d.createElement(g.Xa, {
-                            justifyContent: g.Wa.Center,
+                        }, d.createElement(g.Ya, {
+                            justifyContent: g.Xa.Center,
                             alignItems: g.f.Center,
                             display: g.X.Flex
-                        }, d.createElement(g.Xa, {
+                        }, d.createElement(g.Ya, {
                             padding: {
                                 right: 1,
                                 top: .5
                             }
-                        }, d.createElement(g.sb, {
-                            asset: g.tb.Document,
+                        }, d.createElement(g.tb, {
+                            asset: g.ub.Document,
                             height: 15,
                             width: 15
-                        })), d.createElement(g.W, null, Object(p.d)("View Guide", "DevSandboxTopNavBarComponent")))), d.createElement(g.Xa, {
+                        })), d.createElement(g.W, null, Object(p.d)("View Guide", "DevSandboxTopNavBarComponent")))), d.createElement(g.Ya, {
                             className: i,
                             display: g.X.Flex,
                             margin: {
@@ -13578,17 +13578,17 @@
                         }, d.createElement(g.z, {
                             type: g.F.Default,
                             onClick: this.openDownloadModal
-                        }, d.createElement(g.Xa, {
-                            justifyContent: g.Wa.Center,
+                        }, d.createElement(g.Ya, {
+                            justifyContent: g.Xa.Center,
                             alignItems: g.f.Center,
                             display: g.X.Flex
-                        }, d.createElement(g.Xa, {
+                        }, d.createElement(g.Ya, {
                             padding: {
                                 right: 1,
                                 top: .5
                             }
-                        }, d.createElement(g.sb, {
-                            asset: g.tb.Wrench,
+                        }, d.createElement(g.tb, {
+                            asset: g.ub.Wrench,
                             height: 15,
                             width: 15
                         })), d.createElement(g.W, null, Object(p.d)("Download Code", "DevSandboxTopNavBarComponent")))))))
@@ -13624,8 +13624,8 @@
                             e.keyCode !== he.a.Enter && e.key !== pe.b || t.onConfirmChangeChannelBtnClick()
                         }, t.renderExtensionTypeSelectionDropDown = function() {
                             var e, n = J(((e = {})["dev-onboarding-on-going"] = t.props.onBoardingStep === r.chooseType, e));
-                            return d.createElement(g.Xa, {
-                                position: g.jb.Relative,
+                            return d.createElement(g.Ya, {
+                                position: g.kb.Relative,
                                 className: n
                             }, d.createElement(fe.a, {
                                 control: t.openExtensionTypeSelectionBar
@@ -13640,66 +13640,66 @@
                         }, t.renderExtensionOnlyModeSticker = function() {
                             var e = t.props.ifHideChannelMock && t.props.extensionTypeSelected === _e.panel,
                                 n = e ? void 0 : g.r.Alt2,
-                                r = e ? g.jb.Relative : g.jb.Absolute;
-                            return d.createElement(g.Eb, {
+                                r = e ? g.kb.Relative : g.kb.Absolute;
+                            return d.createElement(g.Fb, {
                                 display: g.X.Flex,
                                 position: r,
                                 attachRight: !0,
                                 margin: {
                                     right: 2
                                 }
-                            }, d.createElement(g.Eb, {
+                            }, d.createElement(g.Fb, {
                                 background: n,
                                 display: g.X.Flex
-                            }, d.createElement(g.Xa, {
+                            }, d.createElement(g.Ya, {
                                 padding: 1
                             }, d.createElement(g.W, {
                                 color: g.O.Link
-                            }, Object(p.d)("Hide Browser", "DevSandboxIPAddressBarMock"))), d.createElement(g.Xa, {
+                            }, Object(p.d)("Hide Browser", "DevSandboxIPAddressBarMock"))), d.createElement(g.Ya, {
                                 padding: {
                                     top: 1,
                                     right: 1,
                                     bottom: 1
                                 }
-                            }, d.createElement(g.Xb, {
+                            }, d.createElement(g.Yb, {
                                 onChange: t.props.onHideChannelMockClick,
                                 checked: t.props.ifHideChannelMock
                             }))))
                         }, t.openExtensionTypeSelectionBar = function(e) {
                             var n = e.toggle;
-                            return d.createElement(g.Xa, {
+                            return d.createElement(g.Ya, {
                                 className: "dev-ip-address-bar__selection"
-                            }, d.createElement(g.Eb, {
+                            }, d.createElement(g.Fb, {
                                 className: "dev-ip-address-bar__selection-content",
                                 background: g.r.Base,
                                 display: g.X.Flex,
                                 alignItems: g.f.Center,
-                                textAlign: g.Rb.Left,
-                                justifyContent: g.Wa.Start,
+                                textAlign: g.Sb.Left,
+                                justifyContent: g.Xa.Start,
                                 fullHeight: !0
-                            }, d.createElement(g.Ua, {
+                            }, d.createElement(g.Va, {
                                 onClick: n,
                                 blurAfterClick: !0
-                            }, d.createElement(g.Xa, {
+                            }, d.createElement(g.Ya, {
                                 display: g.X.Flex,
-                                position: g.jb.Relative,
+                                position: g.kb.Relative,
                                 fullWidth: !0,
                                 className: "dev-ip-address-bar__selection-text-wrapper",
-                                justifyContent: g.Wa.Start,
+                                justifyContent: g.Xa.Start,
                                 alignItems: g.f.Center,
-                                textAlign: g.Rb.Left
-                            }, d.createElement(g.Xa, {
+                                textAlign: g.Sb.Left
+                            }, d.createElement(g.Ya, {
                                 padding: {
                                     left: 2,
                                     right: .5
                                 },
                                 className: "dev-ip-address-bar__selection-text",
-                                justifyContent: g.Wa.Start,
+                                justifyContent: g.Xa.Start,
                                 alignItems: g.f.Center,
-                                textAlign: g.Rb.Left
+                                textAlign: g.Sb.Left
                             }, d.createElement(g.W, {
                                 fontSize: g.Ca.Size4
-                            }, t.extensionType())), d.createElement(g.Xa, {
+                            }, t.extensionType())), d.createElement(g.Ya, {
                                 padding: {
                                     top: .5,
                                     right: 1,
@@ -13709,10 +13709,10 @@
                                     left: 1
                                 },
                                 className: "dev-ip-address-bar__selection-arrow",
-                                position: g.jb.Absolute,
+                                position: g.kb.Absolute,
                                 attachRight: !0
-                            }, d.createElement(g.sb, {
-                                asset: g.tb.AngleDown,
+                            }, d.createElement(g.tb, {
+                                asset: g.ub.AngleDown,
                                 height: 15,
                                 width: 15
                             }))))))
@@ -13724,20 +13724,20 @@
                             }
                         }, t.renderTypeDropDown = function(e) {
                             var n = e.close;
-                            return d.createElement(g.Eb, {
+                            return d.createElement(g.Fb, {
                                 className: "dev-ip-address-bar__dropdown",
                                 background: g.r.Base,
                                 display: g.X.Flex,
                                 alignItems: g.f.Center,
                                 flexDirection: g.Aa.Column,
-                                zIndex: g.ic.Above,
-                                position: g.jb.Absolute
-                            }, d.createElement(g.Eb, {
-                                position: g.jb.Relative,
+                                zIndex: g.jc.Above,
+                                position: g.kb.Absolute
+                            }, d.createElement(g.Fb, {
+                                position: g.kb.Relative,
                                 className: "dev-ip-address-bar__dropdown-content",
                                 fullWidth: !0,
                                 background: g.r.Base,
-                                zIndex: g.ic.Above,
+                                zIndex: g.jc.Above,
                                 attachTop: !0,
                                 flexDirection: g.Aa.Row,
                                 flexWrap: g.Ba.Wrap,
@@ -13745,24 +13745,24 @@
                                     top: .5,
                                     bottom: .5
                                 }
-                            }, d.createElement(g.Xa, null, d.createElement("div", {
+                            }, d.createElement(g.Ya, null, d.createElement("div", {
                                 onClick: t.onTypeChange(n, _e.panel)
-                            }, d.createElement(g.Xa, {
+                            }, d.createElement(g.Ya, {
                                 padding: {
                                     left: 2
                                 },
                                 className: "dev-ip-address-bar__option",
-                                textAlign: g.Rb.Left
+                                textAlign: g.Sb.Left
                             }, d.createElement(g.W, {
                                 fontSize: g.Ca.Size4
                             }, Re()))), d.createElement("div", {
                                 onClick: t.onTypeChange(n, _e.videoOverlay)
-                            }, d.createElement(g.Xa, {
+                            }, d.createElement(g.Ya, {
                                 padding: {
                                     left: 2
                                 },
                                 className: "dev-ip-address-bar__option",
-                                textAlign: g.Rb.Left
+                                textAlign: g.Sb.Left
                             }, d.createElement(g.W, {
                                 fontSize: g.Ca.Size4
                             }, Be()))))))
@@ -13770,25 +13770,25 @@
                     }
                     return i.__extends(t, e), t.prototype.render = function() {
                         var e;
-                        if (this.props.ifHideChannelMock && this.props.extensionTypeSelected !== _e.videoOverlay) return d.createElement(g.Xa, {
+                        if (this.props.ifHideChannelMock && this.props.extensionTypeSelected !== _e.videoOverlay) return d.createElement(g.Ya, {
                             display: g.X.Flex,
-                            position: g.jb.Relative,
+                            position: g.kb.Relative,
                             fullWidth: !0,
                             alignItems: g.f.Center,
                             margin: {
                                 left: 3
                             }
-                        }, d.createElement(g.Xa, {
+                        }, d.createElement(g.Ya, {
                             display: g.X.Flex
-                        }, this.renderExtensionTypeSelectionDropDown(), d.createElement(g.Pa, {
+                        }, this.renderExtensionTypeSelectionDropDown(), d.createElement(g.Qa, {
                             margin: {
                                 left: 2
                             }
                         }, this.renderExtensionOnlyModeSticker())));
                         var t = J("dev-ip-address-bar__address-text-bar", ((e = {})["dev-onboarding-on-going"] = this.props.onBoardingStep === r.channelSelection, e));
-                        return d.createElement(g.Eb, {
+                        return d.createElement(g.Fb, {
                             display: g.X.Flex,
-                            position: g.jb.Relative,
+                            position: g.kb.Relative,
                             className: "dev-ip-address-bar",
                             fullWidth: !0,
                             alignItems: g.f.Center,
@@ -13799,37 +13799,37 @@
                             className: "dev-ip-address-bar__minimize-btn dev-ip-address-bar__btn"
                         }), d.createElement("div", {
                             className: "dev-ip-address-bar__maximize-btn dev-ip-address-bar__btn"
-                        }), d.createElement(g.Eb, {
+                        }), d.createElement(g.Fb, {
                             className: t,
                             display: g.X.Flex,
                             margin: 1
-                        }, d.createElement(g.Eb, {
+                        }, d.createElement(g.Fb, {
                             background: g.r.Base,
                             display: g.X.Flex,
                             alignItems: g.f.Center
-                        }, d.createElement(g.Xa, {
+                        }, d.createElement(g.Ya, {
                             padding: {
                                 left: 1,
                                 right: 1
                             }
                         }, d.createElement(g.W, {
                             color: g.O.Link
-                        }, Object(p.d)("twitch.tv/", "DevSandboxIPAddressBarMock")))), d.createElement(g.Xa, {
+                        }, Object(p.d)("twitch.tv/", "DevSandboxIPAddressBarMock")))), d.createElement(g.Ya, {
                             display: g.X.Flex,
-                            position: g.jb.Relative,
+                            position: g.kb.Relative,
                             className: "dev-ip-address-bar__input"
-                        }, d.createElement(g.Xa, {
+                        }, d.createElement(g.Ya, {
                             fullWidth: !0
-                        }, d.createElement(g.Ra, {
-                            type: g.Ta.Text,
+                        }, d.createElement(g.Sa, {
+                            type: g.Ua.Text,
                             onChange: this.onSelectedChannelChange,
                             value: this.state.channelName,
                             onKeyDown: this.onKeyDown
-                        })), d.createElement(g.Xa, {
-                            position: g.jb.Absolute,
+                        })), d.createElement(g.Ya, {
+                            position: g.kb.Absolute,
                             attachRight: !0
                         }, d.createElement(g.A, {
-                            icon: g.tb.ArrowRight,
+                            icon: g.ub.ArrowRight,
                             onClick: this.onConfirmChangeChannelBtnClick
                         })))), this.renderExtensionTypeSelectionDropDown(), this.renderExtensionOnlyModeSticker())
                     }, t
@@ -13839,18 +13839,18 @@
                         return null !== e && e.apply(this, arguments) || this
                     }
                     return i.__extends(t, e), t.prototype.render = function() {
-                        return d.createElement(g.Xa, {
+                        return d.createElement(g.Ya, {
                             className: "tw-theme--dark panel-extension-preview-container",
                             display: g.X.Flex,
                             padding: {
                                 top: 1
                             },
                             fullWidth: !0,
-                            position: g.jb.Absolute
-                        }, d.createElement(g.Xa, {
+                            position: g.kb.Absolute
+                        }, d.createElement(g.Ya, {
                             className: "panel-extension-preview-container__iframe",
                             display: g.X.Flex,
-                            justifyContent: g.Wa.Center,
+                            justifyContent: g.Xa.Center,
                             fullWidth: !0
                         }, d.createElement("div", {
                             id: "panel-extension-preview"
@@ -13870,12 +13870,12 @@
                             }, d.createElement(ce, {
                                 sandboxMode: t.props.windowType
                             })));
-                            return d.createElement(g.Eb, {
+                            return d.createElement(g.Fb, {
                                 background: g.r.Alt2,
                                 fullWidth: !0,
-                                position: g.jb.Relative
+                                position: g.kb.Relative
                             }, d.createElement(g.Ja, {
-                                justifyContent: g.Wa.Start,
+                                justifyContent: g.Xa.Start,
                                 alignItems: g.f.Start
                             }, e))
                         }, t.renderVideoPlayer = function() {
@@ -13920,47 +13920,47 @@
                                 allowFullScreen: !0
                             }) : void 0
                         }, t.renderChannelPanel = function() {
-                            var e = g.gc.Hidden;
-                            t.props.extensionType !== _e.panel && (e = g.gc.Visible);
-                            var n = d.createElement(g.Eb, {
+                            var e = g.hc.Hidden;
+                            t.props.extensionType !== _e.panel && (e = g.hc.Visible);
+                            var n = d.createElement(g.Fb, {
                                 background: g.r.Alt2,
                                 className: "channel-placeholder__panel-group",
                                 display: g.X.Flex,
                                 visibility: e,
                                 fullWidth: !0,
-                                position: g.jb.Relative
+                                position: g.kb.Relative
                             }, t.renderPanelPlaceholderGroup());
-                            return d.createElement(g.Eb, {
+                            return d.createElement(g.Fb, {
                                 display: g.X.Flex,
                                 background: g.r.Alt2,
-                                position: g.jb.Relative,
-                                justifyContent: g.Wa.Center,
+                                position: g.kb.Relative,
+                                justifyContent: g.Xa.Center,
                                 alignItems: g.f.Start,
-                                textAlign: g.Rb.Center,
+                                textAlign: g.Sb.Center,
                                 fullHeight: !0,
                                 fullWidth: !0
                             }, n, d.createElement(De, null))
                         }, t
                     }
                     return i.__extends(t, e), t.prototype.render = function() {
-                        return this.props.ifHideChannel ? d.createElement(g.Eb, {
+                        return this.props.ifHideChannel ? d.createElement(g.Fb, {
                             className: "channel-placeholder",
-                            justifyContent: g.Wa.Center,
+                            justifyContent: g.Xa.Center,
                             display: g.X.Flex,
                             alignItems: g.f.Center,
-                            textAlign: g.Rb.Center,
+                            textAlign: g.Sb.Center,
                             padding: {
                                 left: 3,
                                 right: 3,
                                 bottom: 2
                             }
-                        }, d.createElement(g.Eb, {
+                        }, d.createElement(g.Fb, {
                             margin: {
                                 top: 1
                             },
                             fullWidth: !0,
                             className: "channel-placeholder__box-shadow"
-                        }, d.createElement(g.Xa, i.__assign({
+                        }, d.createElement(g.Ya, i.__assign({
                             className: "channel-placeholder__channel-nav"
                         }, Me), d.createElement(Oe, {
                             onBoardingStep: this.props.onBoardingStep,
@@ -13970,36 +13970,36 @@
                             extensionTypeSelected: this.props.extensionType,
                             ifHideChannelMock: this.props.ifHideChannelMock,
                             onHideChannelMockClick: this.props.onHideChannelMockClick
-                        })), d.createElement(g.Xa, {
+                        })), d.createElement(g.Ya, {
                             display: g.X.Flex,
-                            position: g.jb.Relative,
+                            position: g.kb.Relative,
                             className: "channel-placeholder__frame",
                             fullWidth: !0
-                        }, d.createElement(g.Xa, {
+                        }, d.createElement(g.Ya, {
                             display: g.X.Flex,
                             flexDirection: g.Aa.Column,
                             className: "channel-placeholder__video",
                             fullWidth: !0
                         }, this.renderVideoPlayer()), d.createElement("div", {
                             id: "overlay-extension-preview"
-                        })))) : d.createElement(g.Eb, {
+                        })))) : d.createElement(g.Fb, {
                             className: "channel-placeholder",
-                            justifyContent: g.Wa.Center,
+                            justifyContent: g.Xa.Center,
                             display: g.X.Flex,
                             alignItems: g.f.Center,
-                            textAlign: g.Rb.Center,
+                            textAlign: g.Sb.Center,
                             padding: {
                                 left: 3,
                                 right: 3,
                                 bottom: 2
                             }
-                        }, d.createElement(g.Eb, {
+                        }, d.createElement(g.Fb, {
                             margin: {
                                 top: 1
                             },
                             fullWidth: !0,
                             className: "channel-placeholder__box-shadow"
-                        }, d.createElement(g.Xa, i.__assign({
+                        }, d.createElement(g.Ya, i.__assign({
                             className: "channel-placeholder__channel-nav"
                         }, Me), d.createElement(Oe, {
                             onBoardingStep: this.props.onBoardingStep,
@@ -14011,32 +14011,32 @@
                             onHideChannelMockClick: this.props.onHideChannelMockClick
                         }), d.createElement(le, {
                             windowType: this.props.windowType
-                        })), d.createElement(g.Xa, {
+                        })), d.createElement(g.Ya, {
                             display: g.X.Flex,
-                            position: g.jb.Relative,
+                            position: g.kb.Relative,
                             fullWidth: !0,
                             fullHeight: !0,
                             className: "channel-placeholder__channel-window"
-                        }, d.createElement(g.Xa, {
+                        }, d.createElement(g.Ya, {
                             display: g.X.Flex,
                             className: "channel-placeholder__side-bar",
                             alignItems: g.f.Center,
-                            position: g.jb.Relative,
-                            justifyContent: g.Wa.Center
-                        }, d.createElement(ue, null)), d.createElement(g.Xa, {
+                            position: g.kb.Relative,
+                            justifyContent: g.Xa.Center
+                        }, d.createElement(ue, null)), d.createElement(g.Ya, {
                             display: g.X.Flex,
-                            position: g.jb.Relative,
+                            position: g.kb.Relative,
                             className: "channel-placeholder__frame",
                             fullWidth: !0
-                        }, d.createElement(g.Xa, {
+                        }, d.createElement(g.Ya, {
                             display: g.X.Flex,
                             flexDirection: g.Aa.Column,
                             className: "channel-placeholder__video",
                             fullWidth: !0
-                        }, d.createElement(oe, null), d.createElement(g.Eb, {
+                        }, d.createElement(oe, null), d.createElement(g.Fb, {
                             background: g.r.Alt2,
                             display: g.X.Flex,
-                            position: g.jb.Relative,
+                            position: g.kb.Relative,
                             className: "channel-placeholder__video-player",
                             fullHeight: !0,
                             padding: {
@@ -14046,9 +14046,9 @@
                             }
                         }, this.renderVideoPlayer(), d.createElement("div", {
                             id: "overlay-extension-preview"
-                        })), d.createElement(g.Eb, {
+                        })), d.createElement(g.Fb, {
                             background: g.r.Alt2,
-                            position: g.jb.Relative,
+                            position: g.kb.Relative,
                             alignItems: g.f.Start
                         }, d.createElement(de, null)), this.renderChannelPanel())), this.renderChatBar())))
                     }, t
@@ -14064,34 +14064,34 @@
                         }, t
                     }
                     return i.__extends(t, e), t.prototype.render = function() {
-                        return d.createElement(g.Eb, {
+                        return d.createElement(g.Fb, {
                             className: "dev-sandbox-undo-modal__container dev-sandbox-undo-modal__gradient-border",
                             background: g.r.Base,
-                            position: g.jb.Relative,
-                            justifyContent: g.Wa.Center,
+                            position: g.kb.Relative,
+                            justifyContent: g.Xa.Center,
                             alignItems: g.f.Center,
-                            textAlign: g.Rb.Center
-                        }, d.createElement(g.Xa, {
+                            textAlign: g.Sb.Center
+                        }, d.createElement(g.Ya, {
                             className: "dev-sandbox-undo-modal",
                             fullHeight: !0,
                             display: g.X.Flex,
                             flexDirection: g.Aa.Column,
-                            justifyContent: g.Wa.Center,
+                            justifyContent: g.Xa.Center,
                             alignItems: g.f.Center,
-                            textAlign: g.Rb.Center
-                        }, d.createElement(g.Xa, null, d.createElement(g.sb, {
-                            asset: g.tb.VideoRerun,
+                            textAlign: g.Sb.Center
+                        }, d.createElement(g.Ya, null, d.createElement(g.tb, {
+                            asset: g.ub.VideoRerun,
                             height: 80,
                             width: 80
-                        })), d.createElement(g.Xa, {
+                        })), d.createElement(g.Ya, {
                             padding: 1
                         }, d.createElement(g.W, {
                             bold: !0,
                             fontSize: g.Ca.Size4,
                             color: g.O.Link
-                        }, Object(p.d)("Are you sure you want to undo?", "DevSandboxUndoModalPresentation"))), d.createElement(g.Xa, {
+                        }, Object(p.d)("Are you sure you want to undo?", "DevSandboxUndoModalPresentation"))), d.createElement(g.Ya, {
                             className: "dev-sandbox-undo-modal__btn-group"
-                        }, d.createElement(g.Xa, {
+                        }, d.createElement(g.Ya, {
                             fullWidth: !0,
                             padding: {
                                 top: 1,
@@ -14100,7 +14100,7 @@
                         }, d.createElement(g.z, {
                             fullWidth: !0,
                             onClick: this.onConfirmReset
-                        }, Object(p.d)("I am sure", "DevSandboxUndoModalPresentation"))), d.createElement(g.Xa, {
+                        }, Object(p.d)("I am sure", "DevSandboxUndoModalPresentation"))), d.createElement(g.Ya, {
                             fullWidth: !0
                         }, d.createElement(g.z, {
                             fullWidth: !0,
@@ -14121,7 +14121,7 @@
                             var e = J("dev-editor-tabs__run-btn", {
                                 "dev-onboarding-on-going": t.props.onBoardingStep === r.manualRun
                             });
-                            return d.createElement(g.Xa, {
+                            return d.createElement(g.Ya, {
                                 margin: {
                                     bottom: 1,
                                     top: 1
@@ -14129,18 +14129,18 @@
                                 className: e
                             }, d.createElement("button", {
                                 onClick: t.props.onRun
-                            }, d.createElement(g.Eb, {
+                            }, d.createElement(g.Fb, {
                                 color: g.O.Overlay,
                                 padding: {
                                     right: .5
                                 }
-                            }, d.createElement(g.sb, {
-                                asset: g.tb.MiniPlayerPlay,
+                            }, d.createElement(g.tb, {
+                                asset: g.ub.MiniPlayerPlay,
                                 height: 20,
                                 width: 20
                             }))))
                         }, t.renderResetButton = function() {
-                            return d.createElement(g.Xa, {
+                            return d.createElement(g.Ya, {
                                 margin: {
                                     left: 2,
                                     right: 1,
@@ -14150,31 +14150,31 @@
                             }, d.createElement("button", {
                                 className: "dev-editor-tabs__reset-btn",
                                 onClick: t.showUndoModal
-                            }, d.createElement(g.Eb, {
+                            }, d.createElement(g.Fb, {
                                 color: g.O.Overlay,
                                 padding: {
                                     right: .5
                                 }
-                            }, d.createElement(g.sb, {
-                                asset: g.tb.VideoRerun,
+                            }, d.createElement(g.tb, {
+                                asset: g.ub.VideoRerun,
                                 height: 20,
                                 width: 20
                             }))))
                         }, t.renderDownloadCodeButton = function() {
-                            return d.createElement(g.Eb, {
+                            return d.createElement(g.Fb, {
                                 margin: {
                                     right: 2
                                 },
-                                position: g.jb.Absolute,
+                                position: g.kb.Absolute,
                                 attachRight: !0,
                                 display: g.X.Flex,
                                 background: g.r.Overlay
                             }, d.createElement(g.z, {
                                 onClick: t.openDownloadModal,
                                 type: g.F.Hollow
-                            }, d.createElement(g.Xa, {
+                            }, d.createElement(g.Ya, {
                                 display: g.X.Flex,
-                                justifyContent: g.Wa.Center,
+                                justifyContent: g.Xa.Center,
                                 alignItems: g.f.Center
                             }, d.createElement(g.W, {
                                 color: g.O.Overlay
@@ -14191,71 +14191,71 @@
                             }
                         }, t.renderDropDown = function(e) {
                             var n = e.close;
-                            return d.createElement(g.Eb, {
+                            return d.createElement(g.Fb, {
                                 className: "dev-editor-tabs__dropdown",
                                 background: g.r.Base,
-                                position: g.jb.Absolute,
+                                position: g.kb.Absolute,
                                 display: g.X.Flex,
                                 alignItems: g.f.Center,
                                 flexDirection: g.Aa.Column,
-                                zIndex: g.ic.Above,
+                                zIndex: g.jc.Above,
                                 attachTop: !0,
                                 attachLeft: !0,
                                 attachRight: !0
-                            }, d.createElement(g.Eb, {
-                                position: g.jb.Relative,
+                            }, d.createElement(g.Fb, {
+                                position: g.kb.Relative,
                                 className: "dev-editor-tabs__dropdown-content",
                                 fullWidth: !0,
                                 background: g.r.Base,
-                                zIndex: g.ic.Above,
+                                zIndex: g.jc.Above,
                                 attachTop: !0,
                                 flexDirection: g.Aa.Row,
                                 flexWrap: g.Ba.Wrap
-                            }, d.createElement(g.Xa, null, t.tab("js", n), t.tab("component", n), t.tab("panel", n), t.tab("css", n, !0))))
+                            }, d.createElement(g.Ya, null, t.tab("js", n), t.tab("component", n), t.tab("panel", n), t.tab("css", n, !0))))
                         }, t.openSelectionBar = function(e) {
                             var n = e.toggle;
-                            return d.createElement(g.Xa, {
+                            return d.createElement(g.Ya, {
                                 className: "dev-editor-tabs__selection"
-                            }, d.createElement(g.Eb, {
+                            }, d.createElement(g.Fb, {
                                 className: "dev-editor-tabs__selection-content",
                                 background: g.r.Base,
                                 display: g.X.Flex,
                                 alignItems: g.f.Center,
-                                textAlign: g.Rb.Left,
-                                justifyContent: g.Wa.Start
-                            }, d.createElement(g.Ua, {
+                                textAlign: g.Sb.Left,
+                                justifyContent: g.Xa.Start
+                            }, d.createElement(g.Va, {
                                 onClick: n,
                                 blurAfterClick: !0,
-                                type: g.Va.Inverted
-                            }, d.createElement(g.Xa, {
+                                type: g.Wa.Inverted
+                            }, d.createElement(g.Ya, {
                                 display: g.X.Flex,
-                                position: g.jb.Relative,
+                                position: g.kb.Relative,
                                 fullWidth: !0,
                                 className: "dev-editor-tabs__selection-text-wrapper",
-                                justifyContent: g.Wa.Start,
+                                justifyContent: g.Xa.Start,
                                 alignItems: g.f.Center,
-                                textAlign: g.Rb.Left
-                            }, d.createElement(g.Xa, {
+                                textAlign: g.Sb.Left
+                            }, d.createElement(g.Ya, {
                                 padding: {
                                     left: 2,
                                     right: .5
                                 },
                                 className: "dev-editor-tabs__selection-text",
-                                justifyContent: g.Wa.Start,
+                                justifyContent: g.Xa.Start,
                                 alignItems: g.f.Center,
-                                textAlign: g.Rb.Left
+                                textAlign: g.Sb.Left
                             }, d.createElement(g.W, {
                                 fontSize: g.Ca.Size4
-                            }, t.filenameForType(t.props.activeTab))), d.createElement(g.Xa, {
+                            }, t.filenameForType(t.props.activeTab))), d.createElement(g.Ya, {
                                 padding: {
                                     top: .5,
                                     right: 1
                                 },
                                 className: "dev-editor-tabs__selection-arrow",
-                                position: g.jb.Absolute,
+                                position: g.kb.Absolute,
                                 attachRight: !0
-                            }, d.createElement(g.sb, {
-                                asset: g.tb.AngleDown,
+                            }, d.createElement(g.tb, {
+                                asset: g.ub.AngleDown,
                                 height: 15,
                                 width: 15
                             }))))))
@@ -14266,7 +14266,7 @@
                             };
                             return r && (i.bottom = .5), d.createElement("div", {
                                 onClick: t.onTabChange(n, e)
-                            }, d.createElement(g.Xa, {
+                            }, d.createElement(g.Ya, {
                                 padding: i,
                                 className: "dev-editor-tabs__option"
                             }, d.createElement(g.W, {
@@ -14291,22 +14291,22 @@
                         var e = J("dev-editor-tabs", {
                             "dev-onboarding-on-going": this.props.onBoardingStep === r.codeSection
                         });
-                        return d.createElement(g.Xa, {
+                        return d.createElement(g.Ya, {
                             className: e,
                             display: g.X.Flex,
-                            justifyContent: g.Wa.Start,
+                            justifyContent: g.Xa.Start,
                             alignItems: g.f.Center,
                             padding: {
                                 left: 1,
                                 top: 1,
                                 bottom: 1
                             },
-                            position: g.jb.Relative
-                        }, d.createElement(g.Xa, {
+                            position: g.kb.Relative
+                        }, d.createElement(g.Ya, {
                             flexWrap: g.Ba.NoWrap,
                             alignItems: g.f.Stretch,
-                            position: g.jb.Relative,
-                            zIndex: g.ic.Above,
+                            position: g.kb.Relative,
+                            zIndex: g.jc.Above,
                             padding: {
                                 left: 1
                             }
@@ -14338,10 +14338,10 @@
                         }, t
                     }
                     return i.__extends(t, e), t.prototype.render = function() {
-                        return d.createElement(g.Xa, {
+                        return d.createElement(g.Ya, {
                             display: g.X.Flex,
                             fullWidth: !0
-                        }, d.createElement(g.Eb, {
+                        }, d.createElement(g.Fb, {
                             display: g.X.Flex,
                             flexDirection: g.Aa.Column,
                             fullWidth: !0,
@@ -14391,7 +14391,7 @@
                     }, t
                 }(d.Component),
                 Ve = function(e) {
-                    return d.createElement(g.Xa, {
+                    return d.createElement(g.Ya, {
                         display: e.active ? g.X.Flex : g.X.Hide,
                         className: e.className,
                         "data-test-selector": e["data-test-selector"]
@@ -14406,9 +14406,9 @@
                     }))
                 },
                 Ge = '<!DOCTYPE html>\n<html>\n    <head>\n        <title>Viewer Page</title>\n    </head>\n    <body>\n        <div id="app" class="full-height"></div>\n        <script src="https://extension-files.twitch.tv/helper/v1/twitch-ext.min.js"><\/script>\n        <script\n  src="https://code.jquery.com/jquery-3.3.1.min.js"\n  integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="\n  crossorigin="anonymous"><\/script>\n        <h2>Hello, Glitch!</h2>\n        <p>Try changing the color via Glitch!</p>\n        <div>\n            <input type="button" id="cycle"  value="Change Color" />\n        </div>\n        <div id="color-container">\n            <div id="color"></div>\n        </div>\n        <div id="list"></div>\n    </body>\n</html>\n',
-                Xe = "var token = \"\";\nvar tuid = \"\";\n\nvar twitch = window.Twitch.ext;\n\nfunction setAuth(token) {\n  Object.keys(requests).forEach((req) => {\n      twitch.rig.log('Setting auth headers');\n      requests[req].headers = { 'Authorization': 'Bearer ' + token }\n  });\n}\n\ntwitch.onContext(function(context) {\n  twitch.rig.log(context);\n});\n\ntwitch.onAuthorized(function(auth) {\n  // save our credentials\n  token = auth.token;\n  tuid = auth.userId;\n\n  // enable the button\n  $('#cycle').removeAttr('disabled');\n\n  setAuth(token);\n});",
+                Ye = "var token = \"\";\nvar tuid = \"\";\n\nvar twitch = window.Twitch.ext;\n\nfunction setAuth(token) {\n  Object.keys(requests).forEach((req) => {\n      twitch.rig.log('Setting auth headers');\n      requests[req].headers = { 'Authorization': 'Bearer ' + token }\n  });\n}\n\ntwitch.onContext(function(context) {\n  twitch.rig.log(context);\n});\n\ntwitch.onAuthorized(function(auth) {\n  // save our credentials\n  token = auth.token;\n  tuid = auth.userId;\n\n  // enable the button\n  $('#cycle').removeAttr('disabled');\n\n  setAuth(token);\n});",
                 Ke = "var twitch = window.Twitch.ext;\n\nfunction updateBlock(hex) {\n    $('#color').css('background-color', hex);\n}\n\n$(function() {\n    $('#cycle').prop('disabled', false);\n\n   $('#cycle').click(function() {\n      // == Begin Glitch Code\n      // == This server side call is powered by Glitch. To see the code, visit:\n      // == https://glitch.com/edit/#!/extension-backend\n      fetch(\"https://extension-backend.glitch.me/randomcolor\")\n        .then(res => res.text())\n        .then(text => updateBlock(text))\n      // == End Glitch Code\n    });\n});\n",
-                Ye = "body {\n    background-color: white;\n    font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;\n}\n\n#color {\n    border-radius: 50px;\n    transition: background-color 0.5s ease;\n    margin-top: 30px;\n    width: 100px;\n    height: 100px;\n    background-color: #6441A4;\n    float: left;\n    position: relative;\n    left: -50%;\n}\n\n#color-container {\n    float: left;\n    position: relative;\n    left: 50%;\n}\n",
+                Xe = "body {\n    background-color: white;\n    font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;\n}\n\n#color {\n    border-radius: 50px;\n    transition: background-color 0.5s ease;\n    margin-top: 30px;\n    width: 100px;\n    height: 100px;\n    background-color: #6441A4;\n    float: left;\n    position: relative;\n    left: -50%;\n}\n\n#color-container {\n    float: left;\n    position: relative;\n    left: 50%;\n}\n",
                 Je = '# Sandbox: Hello Glitch Sample\n\nThis sample code was downloaded from the Extensions Developer Sandbox(https://dev.twitch.tv/extensions/sandbox). You can use this sample code as the basis for testing an extension, or for personal use. This code differs from the Hello World extension in that calls on viewer.js may be served by Glitch instead. See the code on this file for specific information.\n\n## Continuing sandbox development in the rig\n\nThis readme details how to use the [Developer Rig](https://github.com/twitchdev/developer-rig) to continue development on your extension. You can read about how to get started with the project [here](https://github.com/twitchdev/developer-rig#twitch-extensions-developer-rig).\n\nPrerequisites:\n- You have retrieved this sample code from the sandbox by selecting to download it within the UI.\n- Developer Rig is installed locally and is running on your machine. Within the rig folder, run `yarn start`. The rig will be hosted on https://localhost.rig.twitch.tv:3000.\n\nThese steps will assume downloaded code is at `/Users/twitch/Downloads/sandbox-extension-hello-glitch` and that the rig is located at `/Users/twitch/developer-rig`. Your paths will differ per your username and folder structures.\n\n1. In the rig running on your machine, create a new extension project.\n\n- Extension Project Name: "Sandbox" (or whatever you like).\n— Choose Extension: Create Local Extension\n— Extension Types: Video Component, Panel\n- Project Folder: /Users/twitch/Downloads/sandbox-extension-hello-glitch\n- Add Code to Project: None (Just Create Project Folder)\n\n2. Click the + button to add a new Panel view.\n\n- Extension Type: Panel\n- Viewer Type: Logged-Out Viewer\n\n> Note: you can perform this same step for other extension views, such as components.\n\n3. Navigate to Project Overview tab. Set Front-end Files Location to `.`. Click Host with Rig.\n\n4. Navigate to Extension Views tab. You should see your extension!\n\n## Differences between sandbox and rig\n\nYou may notice that the HTML and Javascript downloaded differs from what was being edited. A few things were added to help the extension runs in the rig:\n\n- A script html element referencing `viewer.js` to load your javascript.\n- A link html element referencing `style.css` to load styles.\n- A script element `<script src="https://localhost.rig.twitch.tv:3000/twitch-ext.js"><\/script>`. This is required for local extensions.\n- Two html files named `panel.html` and `video_component.html`. These are the naming conventions for these views for local extensions.\n- Javascript code was updated to contain `twitch.onAuthorized` if it wasn\'t included. This function is required by extensions to load properly.\n\n## Get extensions support from Twitch Developers and the community\n\nWe’re here to help! Start a thread in the [forums](https://discuss.dev.twitch.tv) or send us a [tweet](https://twitter.com/twitchdev).\n',
                 Ze = '<h1 id="sandboxhelloglitchsample">Sandbox: Hello Glitch Sample</h1>\n\n<p>This sample code was downloaded from the Extensions Developer Sandbox(https://dev.twitch.tv/extensions/sandbox). You can use this sample code as the basis for testing an extension, or for personal use. This code differs from the Hello World extension in that calls on viewer.js may be served by Glitch instead. See the code on this file for specific information.</p>\n\n<h2 id="continuingsandboxdevelopmentintherig">Continuing sandbox development in the rig</h2>\n\n<p>This readme details how to use the <a href="https://github.com/twitchdev/developer-rig">Developer Rig</a> to continue development on your extension. You can read about how to get started with the project <a href="https://github.com/twitchdev/developer-rig#twitch-extensions-developer-rig">here</a>.</p>\n\n<p>Prerequisites:</p>\n\n<ul>\n<li>You have retrieved this sample code from the sandbox by selecting to download it within the UI.</li>\n\n<li>Developer Rig is installed locally and is running on your machine. Within the rig folder, run <code>yarn start</code>. The rig will be hosted on https://localhost.rig.twitch.tv:3000.</li>\n</ul>\n\n<p>These steps will assume downloaded code is at <code>/Users/twitch/Downloads/sandbox-extension-hello-glitch</code> and that the rig is located at <code>/Users/twitch/developer-rig</code>. Your paths will differ per your username and folder structures.</p>\n\n<ol>\n<li>In the rig running on your machine, create a new extension project.</li>\n</ol>\n\n<ul>\n<li>Extension Project Name: "Sandbox" (or whatever you like).\n— Choose Extension: Create Local Extension\n— Extension Types: Video Component, Panel</li>\n\n<li>Project Folder: /Users/twitch/Downloads/sandbox-extension-hello-glitch</li>\n\n<li>Add Code to Project: None (Just Create Project Folder)</li>\n</ul>\n\n<ol>\n<li>Click the + button to add a new Panel view.</li>\n</ol>\n\n<ul>\n<li>Extension Type: Panel</li>\n\n<li>Viewer Type: Logged-Out Viewer</li>\n</ul>\n\n<blockquote>\n  <p>Note: you can perform this same step for other extension views, such as components.</p>\n</blockquote>\n\n<ol>\n<li><p>Navigate to Project Overview tab. Set Front-end Files Location to <code>.</code>. Click Host with Rig.</p></li>\n\n<li><p>Navigate to Extension Views tab. You should see your extension!</p></li>\n</ol>\n\n<h2 id="differencesbetweensandboxandrig">Differences between sandbox and rig</h2>\n\n<p>You may notice that the HTML and Javascript downloaded differs from what was being edited. A few things were added to help the extension runs in the rig:</p>\n\n<ul>\n<li>A script html element referencing <code>viewer.js</code> to load your javascript.</li>\n\n<li>A link html element referencing <code>style.css</code> to load styles.</li>\n\n<li>A script element <code>&lt;script src="https://localhost.rig.twitch.tv:3000/twitch-ext.js"&gt;&lt;/script&gt;</code>. This is required for local extensions.</li>\n\n<li>Two html files named <code>panel.html</code> and <code>video_component.html</code>. These are the naming conventions for these views for local extensions.</li>\n\n<li>Javascript code was updated to contain <code>twitch.onAuthorized</code> if it wasn\'t included. This function is required by extensions to load properly.</li>\n</ul>\n\n<h2 id="getextensionssupportfromtwitchdevelopersandthecommunity">Get extensions support from Twitch Developers and the community</h2>\n\n<p>We’re here to help! Start a thread in the <a href="https://discuss.dev.twitch.tv">forums</a> or send us a <a href="https://twitter.com/twitchdev">tweet</a>.</p>',
                 Qe = '<!DOCTYPE html>\n<html>\n    <head>\n        <title>Viewer Page</title>\n    </head>\n    <body>\n        <div id="app" class="full-height"></div>\n        <script src="https://extension-files.twitch.tv/helper/v1/twitch-ext.min.js"><\/script>\n        <script\n  src="https://code.jquery.com/jquery-3.3.1.min.js"\n  integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="\n  crossorigin="anonymous"><\/script>\n        <h2>Hello, World!</h2>\n        <p>Would you care to cycle a color?</p>\n        <div>\n            <input type="button" id="cycle"  value="Yes, I would" />\n        </div>\n        <div id="color-container">\n            <div id="color"></div>\n        </div>\n        <div id="list"></div>\n    </body>\n</html>\n',
@@ -14494,47 +14494,47 @@
                             step: t.state.onBoardingStep
                         })
                     }, t.renderBothWindow = function() {
-                        return d.createElement(g.Xa, {
+                        return d.createElement(g.Ya, {
                             display: g.X.Flex
-                        }, d.createElement(g.Xa, {
+                        }, d.createElement(g.Ya, {
                             className: "dev-sandbox__editor"
-                        }, d.createElement(g.Ja, null, d.createElement(g.Xa, {
+                        }, d.createElement(g.Ja, null, d.createElement(g.Ya, {
                             className: "dev-sandbox__editor-text-area"
-                        }, t.renderDevEditor()), d.createElement(g.Eb, {
+                        }, t.renderDevEditor()), d.createElement(g.Fb, {
                             display: g.X.Flex,
                             className: "dev-sandbox__editor-separator",
                             background: g.r.Accent,
-                            zIndex: g.ic.Above
-                        }))), d.createElement(g.Xa, {
+                            zIndex: g.jc.Above
+                        }))), d.createElement(g.Ya, {
                             className: "dev-sandbox__channel",
                             display: g.X.Flex,
                             flexDirection: g.Aa.Column,
-                            textAlign: g.Rb.Center,
+                            textAlign: g.Sb.Center,
                             fullHeight: !0
                         }, t.renderChannelMock()))
                     }, t.renderChannelOnlyWindow = function() {
                         var e = {
                             "dev-sandbox__channel-fullscreen-container": !t.state.ifHideChannelMock
                         };
-                        return d.createElement(g.Xa, {
+                        return d.createElement(g.Ya, {
                             display: g.X.Flex,
                             className: J(e),
-                            justifyContent: g.Wa.Center,
-                            textAlign: g.Rb.Center,
+                            justifyContent: g.Xa.Center,
+                            textAlign: g.Sb.Center,
                             alignItems: g.f.Start
-                        }, d.createElement(g.Xa, {
+                        }, d.createElement(g.Ya, {
                             className: "dev-sandbox__channel-fullscreen",
                             display: g.X.Flex,
                             flexDirection: g.Aa.Column,
-                            textAlign: g.Rb.Center,
+                            textAlign: g.Sb.Center,
                             fullHeight: !0
                         }, t.renderChannelMock()))
                     }, t.renderEditorOnlyWindow = function() {
-                        return d.createElement(g.Xa, {
+                        return d.createElement(g.Ya, {
                             display: g.X.Flex
-                        }, d.createElement(g.Xa, {
+                        }, d.createElement(g.Ya, {
                             fullWidth: !0
-                        }, d.createElement(g.Ja, null, d.createElement(g.Xa, {
+                        }, d.createElement(g.Ja, null, d.createElement(g.Ya, {
                             className: "dev-sandbox__editor-fullscreen",
                             fullWidth: !0
                         }, t.renderDevEditor()))))
@@ -14608,7 +14608,7 @@
                     }, t.downloadCode = function() {
                         Object(h.d)(h.a.SandboxDownload);
                         var e = new Q,
-                            n = t.state.js; - 1 === n.indexOf("twitch.onAuthorized") && (n = t.state.js.replace("var twitch = window.Twitch.ext;", t.state.selectedSample === ge.helloWorld ? et : Xe)), e.file("panel.html", t.exportHTML(t.state.panel)), e.file("video_component.html", t.exportHTML(t.state.overlay)), e.file("viewer.js", n), e.file("viewer.css", t.state.css), e.file("README.md", t.state.selectedSample === ge.helloWorld ? rt : Je), e.file("README.html", t.state.selectedSample === ge.helloWorld ? it : Ze), e.generateAsync({
+                            n = t.state.js; - 1 === n.indexOf("twitch.onAuthorized") && (n = t.state.js.replace("var twitch = window.Twitch.ext;", t.state.selectedSample === ge.helloWorld ? et : Ye)), e.file("panel.html", t.exportHTML(t.state.panel)), e.file("video_component.html", t.exportHTML(t.state.overlay)), e.file("viewer.js", n), e.file("viewer.css", t.state.css), e.file("README.md", t.state.selectedSample === ge.helloWorld ? rt : Je), e.file("README.html", t.state.selectedSample === ge.helloWorld ? it : Ze), e.generateAsync({
                             type: "blob"
                         }).then(function(e) {
                             Object(Z.saveAs)(e, t.state.selectedSample === ge.helloWorld ? "sandbox-extension-hello-world.zip" : "sandbox-extension-hello-glitch.zip")
@@ -14623,7 +14623,7 @@
                             js: Ke,
                             panel: Ge,
                             overlay: Ge,
-                            css: Ye
+                            css: Xe
                         })
                     }, t.onChannelChange = function(e) {
                         t.setState({
@@ -14660,7 +14660,7 @@
                             js: p.m.get("dev_extension_sandbox_glitch_js", Ke),
                             panel: p.m.get("dev_extension_sandbox_glitch_panel_html", Ge),
                             overlay: p.m.get("dev_extension_sandbox_glitch_overlay_html", Ge),
-                            css: p.m.get("dev_extension_sandbox_glitch_css", Ye),
+                            css: p.m.get("dev_extension_sandbox_glitch_css", Xe),
                             selectedSample: e
                         })
                     }, t.renderChannelMock = function() {
@@ -14671,24 +14671,24 @@
                                     "dev-sandbox__panel-extension-only-display": !0,
                                     "dev-sandbox__panel-show-channel": t.state.sandboxMode !== He.channelOnly
                                 };
-                                return d.createElement(g.Eb, {
+                                return d.createElement(g.Fb, {
                                     padding: {
                                         top: 2,
                                         bottom: 5
                                     },
-                                    justifyContent: g.Wa.Center,
+                                    justifyContent: g.Xa.Center,
                                     className: J(e),
                                     display: g.X.Flex,
                                     fullWidth: !0
-                                }, d.createElement(g.Xa, {
+                                }, d.createElement(g.Ya, {
                                     padding: {
                                         left: 3
                                     }
-                                }, d.createElement(g.Pa, {
+                                }, d.createElement(g.Qa, {
                                     display: g.X.Flex
                                 }, d.createElement("div", {
                                     id: "panel-extension-preview"
-                                }))), d.createElement(g.Xa, {
+                                }))), d.createElement(g.Ya, {
                                     alignItems: g.f.Start
                                 }, d.createElement(Oe, {
                                     onBoardingStep: t.state.onBoardingStep,
@@ -14711,18 +14711,18 @@
                 }, t.prototype.componentDidMount = function() {
                     this.shouldRedirectToLogin() || (this.openOnBoardingModal(r.welcome), this.updateExtension(this.state, !0))
                 }, t.prototype.render = function() {
-                    return this.shouldRedirectToLogin() ? (Object(re.a)(ee.a.Login), null) : d.createElement(g.Xa, {
+                    return this.shouldRedirectToLogin() ? (Object(re.a)(ee.a.Login), null) : d.createElement(g.Ya, {
                         display: g.X.Flex,
                         flexDirection: g.Aa.Column
                     }, d.createElement(ne, {
                         eventName: h.a.SandboxMobileBarClick,
                         onClick: this.bannerMailToAction,
                         message: Object(p.d)("We recommend checking this out on desktop. Tap here to send yourself an e-mail reminder.", "DevSandbox")
-                    }), d.createElement(g.Xa, {
+                    }), d.createElement(g.Ya, {
                         display: g.X.Flex,
                         flexDirection: g.Aa.Column,
                         className: "dev-sandbox",
-                        position: g.jb.Relative
+                        position: g.kb.Relative
                     }, d.createElement(Le, {
                         onBoardingStep: this.state.onBoardingStep,
                         showOnBoardingModal: this.openOnBoardingModal,
@@ -14751,7 +14751,7 @@
                 return Object(a.bindActionCreators)({
                     showOnBoardingModal: function(e) {
                         var t = i.__rest(e, []);
-                        return Object(l.d)(Y, t)
+                        return Object(l.d)(X, t)
                     },
                     onClose: l.c
                 }, e)
@@ -16586,14 +16586,14 @@
                     q = Function.prototype,
                     V = Object.prototype,
                     G = O["__core-js_shared__"],
-                    X = q.toString,
+                    Y = q.toString,
                     K = V.hasOwnProperty,
-                    Y = function() {
+                    X = function() {
                         var e = /[^.]+$/.exec(G && G.keys && G.keys.IE_PROTO || "");
                         return e ? "Symbol(src)_1." + e : ""
                     }(),
                     J = V.toString,
-                    Z = RegExp("^" + X.call(K).replace(/[\\^$.*+?()[\]{}|]/g, "\\$&").replace(/hasOwnProperty|(function).*?(?=\\\()| for .+?(?=\\\])/g, "$1.*?") + "$"),
+                    Z = RegExp("^" + Y.call(K).replace(/[\\^$.*+?()[\]{}|]/g, "\\$&").replace(/hasOwnProperty|(function).*?(?=\\\()| for .+?(?=\\\])/g, "$1.*?") + "$"),
                     Q = j ? O.Buffer : void 0,
                     ee = O.Symbol,
                     te = O.Uint8Array,
@@ -16697,11 +16697,11 @@
                 }
 
                 function Fe(e) {
-                    return Xe(e) && Te(e) == l
+                    return Ye(e) && Te(e) == l
                 }
 
                 function Le(e, t, n, r, i) {
-                    return e === t || (null == e || null == t || !Xe(e) && !Xe(t) ? e != e && t != t : function(e, t, n, r, i, s) {
+                    return e === t || (null == e || null == t || !Ye(e) && !Ye(t) ? e != e && t != t : function(e, t, n, r, i, s) {
                         var u = He(e),
                             f = He(t),
                             m = u ? c : Ne(e),
@@ -16792,7 +16792,7 @@
 
                 function Re(e) {
                     return !(!Ge(e) || function(e) {
-                        return !!Y && Y in e
+                        return !!X && X in e
                     }(e)) && (qe(e) ? Z : T).test($e(e))
                 }
 
@@ -16848,7 +16848,7 @@
                             for (var n = -1, r = t.length, i = e.length; ++n < r;) e[i + n] = t[n];
                             return e
                         }(r, n(e))
-                    }(e, Ye, Ie)
+                    }(e, Xe, Ie)
                 }
 
                 function Me(e, t) {
@@ -16961,7 +16961,7 @@
                 function $e(e) {
                     if (null != e) {
                         try {
-                            return X.call(e)
+                            return Y.call(e)
                         } catch (e) {}
                         try {
                             return e + ""
@@ -16993,7 +16993,7 @@
                 var We = Fe(function() {
                         return arguments
                     }()) ? Fe : function(e) {
-                        return Xe(e) && K.call(e, "callee") && !ne.call(e, "callee")
+                        return Ye(e) && K.call(e, "callee") && !ne.call(e, "callee")
                     },
                     He = Array.isArray;
                 var Ue = ae || function() {
@@ -17015,7 +17015,7 @@
                     return null != e && ("object" == t || "function" == t)
                 }
 
-                function Xe(e) {
+                function Ye(e) {
                     return null != e && "object" == typeof e
                 }
                 var Ke = P ? function(e) {
@@ -17023,10 +17023,10 @@
                         return e(t)
                     }
                 }(P) : function(e) {
-                    return Xe(e) && Ve(e.length) && !!L[Te(e)]
+                    return Ye(e) && Ve(e.length) && !!L[Te(e)]
                 };
 
-                function Ye(e) {
+                function Xe(e) {
                     return function(e) {
                         return null != e && Ve(e.length) && !qe(e)
                     }(e) ? Se(e) : Be(e)
@@ -17898,7 +17898,7 @@
                             toggle: this.toggle,
                             close: this.close
                         };
-                        return i.createElement(a.Pa, {
+                        return i.createElement(a.Qa, {
                             fullHeight: !0
                         }, i.createElement(o.a, {
                             onClickOut: this.close
@@ -18919,9 +18919,9 @@
                 q = 24,
                 V = 25,
                 G = 26,
-                X = 27,
+                Y = 27,
                 K = 28,
-                Y = 29,
+                X = 29,
                 J = 30,
                 Z = 31,
                 Q = 32,
@@ -19099,7 +19099,7 @@
                         if (t === h || t === p) break e;
                     case D:
                         if (n.last) {
-                            se >>>= 7 & le, le -= 7 & le, n.mode = X;
+                            se >>>= 7 & le, le -= 7 & le, n.mode = Y;
                             break
                         }
                         for (; le < 3;) {
@@ -19315,7 +19315,7 @@
                         if (0 === ae) break e;
                         te[ie++] = n.length, ae--, n.mode = W;
                         break;
-                    case X:
+                    case Y:
                         if (n.wrap) {
                             for (; le < 32;) {
                                 if (0 === oe) break e;
@@ -19340,8 +19340,8 @@
                             }
                             se = 0, le = 0
                         }
-                        n.mode = Y;
-                    case Y:
+                        n.mode = X;
+                    case X:
                         Ee = m;
                         break e;
                     case J:
@@ -19353,7 +19353,7 @@
                     default:
                         return b
                 }
-                return e.next_out = ie, e.avail_out = ae, e.next_in = ne, e.avail_in = oe, n.hold = se, n.bits = le, (n.wsize || ue !== e.avail_out && n.mode < J && (n.mode < X || t !== d)) && he(e, e.output, e.next_out, ue - e.avail_out) ? (n.mode = Z, y) : (ce -= e.avail_in, ue -= e.avail_out, e.total_in += ce, e.total_out += ue, n.total += ue, n.wrap && ue && (e.adler = n.check = n.flags ? o(n.check, te, ue, e.next_out - ue) : i(n.check, te, ue, e.next_out - ue)), e.data_type = n.bits + (n.last ? 64 : 0) + (n.mode === O ? 128 : 0) + (n.mode === z || n.mode === j ? 256 : 0), (0 === ce && 0 === ue || t === d) && Ee === f && (Ee = w), Ee)
+                return e.next_out = ie, e.avail_out = ae, e.next_in = ne, e.avail_in = oe, n.hold = se, n.bits = le, (n.wsize || ue !== e.avail_out && n.mode < J && (n.mode < Y || t !== d)) && he(e, e.output, e.next_out, ue - e.avail_out) ? (n.mode = Z, y) : (ce -= e.avail_in, ue -= e.avail_out, e.total_in += ce, e.total_out += ue, n.total += ue, n.wrap && ue && (e.adler = n.check = n.flags ? o(n.check, te, ue, e.next_out - ue) : i(n.check, te, ue, e.next_out - ue)), e.data_type = n.bits + (n.last ? 64 : 0) + (n.mode === O ? 128 : 0) + (n.mode === z || n.mode === j ? 256 : 0), (0 === ce && 0 === ue || t === d) && Ee === f && (Ee = w), Ee)
             }, t.inflateEnd = function(e) {
                 if (!e || !e.state) return b;
                 var t = e.state;
@@ -19413,9 +19413,9 @@
                 q = 666,
                 V = 1,
                 G = 2,
-                X = 3,
+                Y = 3,
                 K = 4,
-                Y = 3;
+                X = 3;
 
             function J(e, t) {
                 return e.msg = l[t], t
@@ -19515,7 +19515,7 @@
                     else r = o._tr_tally(e, 0, e.window[e.strstart]), e.lookahead--, e.strstart++;
                     if (r && (te(e, !1), 0 === e.strm.avail_out)) return V
                 }
-                return e.insert = e.strstart < M - 1 ? e.strstart : M - 1, t === h ? (te(e, !0), 0 === e.strm.avail_out ? X : K) : e.last_lit && (te(e, !1), 0 === e.strm.avail_out) ? V : G
+                return e.insert = e.strstart < M - 1 ? e.strstart : M - 1, t === h ? (te(e, !0), 0 === e.strm.avail_out ? Y : K) : e.last_lit && (te(e, !1), 0 === e.strm.avail_out) ? V : G
             }
 
             function le(e, t) {
@@ -19534,7 +19534,7 @@
                         if ((r = o._tr_tally(e, 0, e.window[e.strstart - 1])) && te(e, !1), e.strstart++, e.lookahead--, 0 === e.strm.avail_out) return V
                     } else e.match_available = 1, e.strstart++, e.lookahead--
                 }
-                return e.match_available && (r = o._tr_tally(e, 0, e.window[e.strstart - 1]), e.match_available = 0), e.insert = e.strstart < M - 1 ? e.strstart : M - 1, t === h ? (te(e, !0), 0 === e.strm.avail_out ? X : K) : e.last_lit && (te(e, !1), 0 === e.strm.avail_out) ? V : G
+                return e.match_available && (r = o._tr_tally(e, 0, e.window[e.strstart - 1]), e.match_available = 0), e.insert = e.strstart < M - 1 ? e.strstart : M - 1, t === h ? (te(e, !0), 0 === e.strm.avail_out ? Y : K) : e.last_lit && (te(e, !1), 0 === e.strm.avail_out) ? V : G
             }
 
             function ce(e, t, n, r, i) {
@@ -19575,7 +19575,7 @@
                     if ((0 === e.strstart || e.strstart >= r) && (e.lookahead = e.strstart - r, e.strstart = r, te(e, !1), 0 === e.strm.avail_out)) return V;
                     if (e.strstart - e.block_start >= e.w_size - I && (te(e, !1), 0 === e.strm.avail_out)) return V
                 }
-                return e.insert = 0, t === h ? (te(e, !0), 0 === e.strm.avail_out ? X : K) : (e.strstart > e.block_start && (te(e, !1), e.strm.avail_out), V)
+                return e.insert = 0, t === h ? (te(e, !0), 0 === e.strm.avail_out ? Y : K) : (e.strstart > e.block_start && (te(e, !1), e.strm.avail_out), V)
             }), new ce(4, 4, 8, 4, se), new ce(4, 5, 16, 8, se), new ce(4, 6, 32, 32, se), new ce(4, 4, 16, 16, le), new ce(8, 16, 32, 32, le), new ce(8, 16, 128, 128, le), new ce(8, 32, 128, 256, le), new ce(32, 128, 258, 1024, le), new ce(32, 258, 258, 4096, le)], t.deflateInit = function(e, t) {
                 return he(e, t, S, T, F, _)
             }, t.deflateInit2 = he, t.deflateReset = de, t.deflateResetKeep = ue, t.deflateSetHeader = function(e, t) {
@@ -19585,7 +19585,7 @@
                 if (!e || !e.state || t > p || t < 0) return e ? J(e, g) : g;
                 if (i = e.state, !e.output || !e.input && 0 !== e.avail_in || i.status === q && t !== h) return J(e, 0 === e.avail_out ? v : g);
                 if (i.strm = e, n = i.last_flush, i.last_flush = t, i.status === P)
-                    if (2 === i.wrap) e.adler = 0, ne(i, 31), ne(i, 139), ne(i, 8), i.gzhead ? (ne(i, (i.gzhead.text ? 1 : 0) + (i.gzhead.hcrc ? 2 : 0) + (i.gzhead.extra ? 4 : 0) + (i.gzhead.name ? 8 : 0) + (i.gzhead.comment ? 16 : 0)), ne(i, 255 & i.gzhead.time), ne(i, i.gzhead.time >> 8 & 255), ne(i, i.gzhead.time >> 16 & 255), ne(i, i.gzhead.time >> 24 & 255), ne(i, 9 === i.level ? 2 : i.strategy >= k || i.level < 2 ? 4 : 0), ne(i, 255 & i.gzhead.os), i.gzhead.extra && i.gzhead.extra.length && (ne(i, 255 & i.gzhead.extra.length), ne(i, i.gzhead.extra.length >> 8 & 255)), i.gzhead.hcrc && (e.adler = s(e.adler, i.pending_buf, i.pending, 0)), i.gzindex = 0, i.status = $) : (ne(i, 0), ne(i, 0), ne(i, 0), ne(i, 0), ne(i, 0), ne(i, 9 === i.level ? 2 : i.strategy >= k || i.level < 2 ? 4 : 0), ne(i, Y), i.status = U);
+                    if (2 === i.wrap) e.adler = 0, ne(i, 31), ne(i, 139), ne(i, 8), i.gzhead ? (ne(i, (i.gzhead.text ? 1 : 0) + (i.gzhead.hcrc ? 2 : 0) + (i.gzhead.extra ? 4 : 0) + (i.gzhead.name ? 8 : 0) + (i.gzhead.comment ? 16 : 0)), ne(i, 255 & i.gzhead.time), ne(i, i.gzhead.time >> 8 & 255), ne(i, i.gzhead.time >> 16 & 255), ne(i, i.gzhead.time >> 24 & 255), ne(i, 9 === i.level ? 2 : i.strategy >= k || i.level < 2 ? 4 : 0), ne(i, 255 & i.gzhead.os), i.gzhead.extra && i.gzhead.extra.length && (ne(i, 255 & i.gzhead.extra.length), ne(i, i.gzhead.extra.length >> 8 & 255)), i.gzhead.hcrc && (e.adler = s(e.adler, i.pending_buf, i.pending, 0)), i.gzindex = 0, i.status = $) : (ne(i, 0), ne(i, 0), ne(i, 0), ne(i, 0), ne(i, 0), ne(i, 9 === i.level ? 2 : i.strategy >= k || i.level < 2 ? 4 : 0), ne(i, X), i.status = U);
                     else {
                         var b = S + (i.w_bits - 8 << 4) << 8;
                         b |= (i.strategy >= k || i.level < 2 ? 0 : i.level < 6 ? 1 : 6 === i.level ? 2 : 3) << 6, 0 !== i.strstart && (b |= N), b += 31 - b % 31, i.status = U, re(i, b), 0 !== i.strstart && (re(i, e.adler >>> 16), re(i, 65535 & e.adler)), e.adler = 1
@@ -19632,7 +19632,7 @@
                             }
                             if (e.match_length = 0, n = o._tr_tally(e, 0, e.window[e.strstart]), e.lookahead--, e.strstart++, n && (te(e, !1), 0 === e.strm.avail_out)) return V
                         }
-                        return e.insert = 0, t === h ? (te(e, !0), 0 === e.strm.avail_out ? X : K) : e.last_lit && (te(e, !1), 0 === e.strm.avail_out) ? V : G
+                        return e.insert = 0, t === h ? (te(e, !0), 0 === e.strm.avail_out ? Y : K) : e.last_lit && (te(e, !1), 0 === e.strm.avail_out) ? V : G
                     }(i, t) : i.strategy === x ? function(e, t) {
                         for (var n, r, i, a, s = e.window;;) {
                             if (e.lookahead <= j) {
@@ -19646,9 +19646,9 @@
                             }
                             if (e.match_length >= M ? (n = o._tr_tally(e, 1, e.match_length - M), e.lookahead -= e.match_length, e.strstart += e.match_length, e.match_length = 0) : (n = o._tr_tally(e, 0, e.window[e.strstart]), e.lookahead--, e.strstart++), n && (te(e, !1), 0 === e.strm.avail_out)) return V
                         }
-                        return e.insert = 0, t === h ? (te(e, !0), 0 === e.strm.avail_out ? X : K) : e.last_lit && (te(e, !1), 0 === e.strm.avail_out) ? V : G
+                        return e.insert = 0, t === h ? (te(e, !0), 0 === e.strm.avail_out ? Y : K) : e.last_lit && (te(e, !1), 0 === e.strm.avail_out) ? V : G
                     }(i, t) : r[i.level].func(i, t);
-                    if (y !== X && y !== K || (i.status = q), y === V || y === X) return 0 === e.avail_out && (i.last_flush = -1), f;
+                    if (y !== Y && y !== K || (i.status = q), y === V || y === Y) return 0 === e.avail_out && (i.last_flush = -1), f;
                     if (y === G && (t === u ? o._tr_align(i) : t !== p && (o._tr_stored_block(i, 0, 0, !1), t === d && (Q(i.head), 0 === i.lookahead && (i.strstart = 0, i.block_start = 0, i.insert = 0))), ee(e), 0 === e.avail_out)) return i.last_flush = -1, f
                 }
                 return t !== h ? f : i.wrap <= 0 ? m : (2 === i.wrap ? (ne(i, 255 & e.adler), ne(i, e.adler >> 8 & 255), ne(i, e.adler >> 16 & 255), ne(i, e.adler >> 24 & 255), ne(i, 255 & e.total_in), ne(i, e.total_in >> 8 & 255), ne(i, e.total_in >> 16 & 255), ne(i, e.total_in >> 24 & 255)) : (re(i, e.adler >>> 16), re(i, 65535 & e.adler)), ee(e), i.wrap > 0 && (i.wrap = -i.wrap), 0 !== i.pending ? f : m)

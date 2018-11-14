@@ -17518,7 +17518,7 @@
             Object.defineProperty(t, "__esModule", {
                 value: !0
             });
-            t.APP_VERSION = "8.10.1"
+            t.APP_VERSION = "8.11.0"
         },
         "NE/w": function(e, t, n) {
             var r;
@@ -21080,7 +21080,7 @@
             Object.defineProperty(t, "__esModule", {
                 value: !0
             });
-            t.trustedSpadeURI = "//video-edge-c666c6.sjc02.hls.ttvnw.net/v1/segment/CoiQYPvfMrkEU9QO7dV_c2Khh3J4VaagpokIj0mAlqGt5MK_6OM5zFxWgiitOHAIhUKWMohl1h77Ttco_kc8Z6EgyDR57-uL--5YRw2TSgOXQl4basqMFY2uJdfUiWW0JbJyiJODEVC-DfZTofU6qcp7rNDzkixfVRgaGaETBZDCgyOAHHAKzLJLzcOGqcqMabgdc8m7ficr7jxFjcVEgirCXI5Gi7cd8dphsAibcNcjuUJjf70qukN5IOwciV-6uRDbPerFXVH-AlkKF-_PtnH6oUyeY0Y-HcXk5BS5osVMascfEaEHxWPmEmJ7Ln7oqRvR3K4BQIYztG7nsSD8ctEiODBFlWZsg6AMqgko_j3ZDE5VntHVqYFbkbt7EFwWmzZNwjttq4ma32SCn8HPWdJvmn5Ncfp4yy_NYNOj27CYC7tlUahIw9nWbk89HlRKOgaSW50NjGD8f80K3OkxN6cRdubRhgFIG1fMEkYPmA6RGeDi1GANE_dw6ICRUF6JlxcoYZ5eHko7qKcPuvqSQncBm7JXb3v5uE9ipAe8hSpVrfbajBQ9ElkbHR168DxT_0qJgDEgSubM_a95ikv2A6vQjW_StWZFjQQlMywV1EBuO7oU55voVb85RFyMIX0kcoYK1MCnYVSVHIuEHPTqvofZBVTkjDvNZvsnOIowo3r9qLpweimazcZJfbZiXWNnNj5112pWPmBjxnZ-mmuhP0dGwQ4KqDvB5Nj2n5nYGDz47lnZU4A0r0gDQ3bkofhnvu-b.ts"
+            t.trustedSpadeURI = "//video-edge-1ef124.sjc02.hls.ttvnw.net/v1/segment/CtWA0tAg8uuot04g6tLcXW5mL6SttzPzhoECOwlHBGTG5AMDtoSAbpPZ8YOdJhlal2TBxVNbOJTzo8VCjHKthFgsoPcA0bxHTMVY2-newKQfyOqc2sSrpYTHvXO0io-uFVHHGU_7f-S9WCjm_Sqf1SwnB7MwBKcG4U-t3NnO0SYdL7GS_-w9VQllH91_-7yGYLf8W_pXAZt-gx70eOVShT9mHddwRV8U3px8gPSs1G0F5SMrvA0amYEtGu-JTkRh-HvLkVgsSBc8t1lYhLM9xIxQ67Wz9lQcVVkrMrlSe8pB9LkjHev0sOISVlZpGEG5s31oV_tK6aKwNeWptP1LVPHUDWBDzUfzGmbLjDGzr-X3nhHXaY8BC5RZI8oGhzvXnMCP6YnQxKCiybvlKmFNzyR_4mkLwyLwr5mMV8GEOD67s3aHYz53W5bYbC6MoEEY2eO-BZzw5HmMndn_OG6nl--7sbTPpJwCZewBEq1USFFp_STZZNQbT6nY5_5vGiL4B_rI3WlzpKCMuH_Kly-rkPU37K2I98-8ZsjuUBHRr9qF5mdurYv0Okn2lOrAsyGn0QatPbd6RKtRh5oGMNAsZeK5vEGdGQD7u_gVYwixNuNiK1o12pVVLQZkL0PLMpscuA6MXgCMdGlqKM-qeNn3FjHQRo6AyZYzgbaL4T4IXhnfI_gF2-QQMi1XkD-R-plPLjHiJFQXUL3uqxvrXUJjoO3DD2awFofvUKMjbo1_lmm9wrgAKaoMMmSp9SrTQPBk97D3aWL-xFF19gh85w4fCQ.ts"
         },
         RhBK: function(e, t, n) {
             "use strict";
@@ -27722,6 +27722,7 @@
                                 language: a.langCode,
                                 manifest_broadcast_id: o.broadcast_id,
                                 minutes_logged: this.minutesWatchedTimer.totalMinutes,
+                                clock_drift: this.minutesWatchedTimer.lastDelay,
                                 player_size_mode: this._getPlayerDisplayMode(),
                                 quality_change_count: t.qualityChangeCount,
                                 seconds_offset: this.minutesWatchedTimer.initialDelay / 1e3,
@@ -37290,7 +37291,7 @@
             var a = t.EVENT_MINUTE = "minute";
 
             function i() {
-                this.initialDelay = Math.round(6e4 * Math.random()), this._remainingDelay = this.initialDelay, this._timeout = null, this._timeoutStart = null, this.totalMinutes = 0, this._events = new r.default
+                this.initialDelay = Math.round(6e4 * Math.random()), this._remainingDelay = this.initialDelay, this._timeout = null, this._timeoutStart = null, this.totalMinutes = 0, this.lastDelay = 0, this._events = new r.default
             }
             i.EVENT_INTERVAL = 6e4, i.MAX_DRIFT = 1e4, i.prototype.start = function() {
                 null === this._timeout && this._scheduleTick()
@@ -37306,7 +37307,7 @@
                 clearTimeout(this._timeout), this._events.removeAllListeners()
             }, i.prototype._tick = function() {
                 var e = (new Date).getTime() - this._timeoutStart;
-                for (this._remainingDelay -= e, this._remainingDelay <= -i.MAX_DRIFT && (this._remainingDelay = 0), this._remainingDelay >= i.EVENT_INTERVAL + i.MAX_DRIFT && (this._remainingDelay = 0); this._remainingDelay <= 0;) this._remainingDelay += i.EVENT_INTERVAL, this.totalMinutes += 1, setTimeout(this._events.emit.bind(this._events, a), 0)
+                for (this._remainingDelay -= e, this._remainingDelay <= -i.MAX_DRIFT && (this._remainingDelay = 0), this._remainingDelay >= i.EVENT_INTERVAL + i.MAX_DRIFT && (this._remainingDelay = 0); this._remainingDelay <= 0;) this.lastDelay = this._remainingDelay, this._remainingDelay += i.EVENT_INTERVAL, this.totalMinutes += 1, setTimeout(this._events.emit.bind(this._events, a), 0)
             }, i.prototype._scheduleTick = function() {
                 this._timeoutStart = (new Date).getTime();
                 var e = this;
@@ -40823,42 +40824,44 @@
                             var e = this.store.getState(),
                                 t = (0, o.default)(e, "streamMetadata.channel.status"),
                                 n = (0, o.default)(e, "streamMetadata.channel.id"),
-                                r = (0, o.default)(e, "streamMetadata.game"),
-                                a = (0, o.default)(e, "streamMetadata.createdAt"),
-                                i = (0, o.default)(e, "streamMetadata.video_id"),
-                                s = (0, o.default)(e, "streamMetadata.name"),
-                                u = (0, o.default)(e, "playback.duration");
+                                r = (0, o.default)(e, "streamMetadata.channelName"),
+                                a = (0, o.default)(e, "streamMetadata.game"),
+                                i = (0, o.default)(e, "streamMetadata.createdAt"),
+                                s = (0, o.default)(e, "streamMetadata.video_id"),
+                                u = (0, o.default)(e, "streamMetadata.name"),
+                                c = (0, o.default)(e, "playback.duration"),
+                                d = i.slice(0, -1);
                             if (this._isLive()) return {
                                 type: "content",
                                 assetid: n,
                                 isfullepisode: "y",
-                                program: n,
+                                program: r,
                                 title: t,
                                 length: 86400,
-                                segA: r,
+                                segA: a,
                                 segB: "",
-                                airdate: a,
+                                airdate: d,
                                 adloadtype: "2"
                             };
                             if (this._isVOD()) return {
                                 type: "content",
-                                assetid: i,
+                                assetid: s,
                                 isfullepisode: "y",
-                                program: n,
-                                title: s,
-                                length: u,
-                                segA: r,
+                                program: r,
+                                title: u,
+                                length: c,
+                                segA: a,
                                 segB: "",
-                                airdate: a,
+                                airdate: d,
                                 adloadtype: "2"
                             };
                             if (this._isAd()) {
-                                var c = (0, o.default)(e, "ads.currentMetadata.rollType"),
-                                    d = (0, o.default)(e, "ads.details.adWrapperIds"),
-                                    f = (0, o.default)(e, "ads.details.adId");
+                                var f = (0, o.default)(e, "ads.currentMetadata.rollType"),
+                                    p = (0, o.default)(e, "ads.details.adWrapperIds"),
+                                    _ = (0, o.default)(e, "ads.details.adId");
                                 return {
-                                    type: c,
-                                    assetid: (0, l.default)(d) || f,
+                                    type: f,
+                                    assetid: (0, l.default)(p) || _,
                                     title: (0, o.default)(e, "ads.details.title")
                                 }
                             }

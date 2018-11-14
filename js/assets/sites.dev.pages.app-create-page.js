@@ -24,18 +24,18 @@
                     return a.__extends(t, e), t.prototype.componentDidMount = function() {
                         this.props.latencyTracking.reportInteractive()
                     }, t.prototype.render = function() {
-                        return n.createElement(h.Xa, null, n.createElement(h.Pa, {
+                        return n.createElement(h.Ya, null, n.createElement(h.Qa, {
                             margin: {
                                 bottom: 1
                             }
-                        }, n.createElement("header", null, n.createElement(h.Pa, {
+                        }, n.createElement("header", null, n.createElement(h.Qa, {
                             margin: {
                                 bottom: 1
                             }
                         }, n.createElement(h.W, {
-                            type: h.Vb.H2
+                            type: h.Wb.H2
                         }, Object(g.d)("Register Your Application", "DevCreateApp"))), n.createElement(h.W, {
-                            type: h.Vb.P
+                            type: h.Wb.P
                         }, Object(g.d)("Register a new application that uses the Twitch API to interact with Twitch", "DevCreateApp")))), n.createElement(f.a, {
                             onSave: this.props.onSave,
                             categories: this.props.categories,
@@ -112,7 +112,7 @@
                             onSave: this.onSave,
                             errorMessage: this.state.errorMessage,
                             onFormChange: this.onFormChange
-                        }) : n.createElement(h.Za, {
+                        }) : n.createElement(h.ab, {
                             fillContent: !0
                         })
                     }, t
@@ -216,25 +216,25 @@
                         }, t
                     }
                     return a.__extends(t, e), t.prototype.render = function() {
-                        return n.createElement(c.Xa, {
+                        return n.createElement(c.Ya, {
                             margin: {
                                 bottom: 1
                             },
                             className: "dev-app-secret"
-                        }, n.createElement(c.Pa, {
+                        }, n.createElement(c.Qa, {
                             margin: {
                                 bottom: 1
                             }
                         }, n.createElement(c.W, {
-                            type: c.Vb.H5
-                        }, Object(i.d)("Client Secret", "DevAppSecret"))), n.createElement(c.Pa, {
+                            type: c.Wb.H5
+                        }, Object(i.d)("Client Secret", "DevAppSecret"))), n.createElement(c.Qa, {
                             margin: {
                                 bottom: 1
                             }
                         }, n.createElement(c.W, {
-                            type: c.Vb.P,
+                            type: c.Wb.P,
                             color: c.O.Alt2
-                        }, Object(i.d)("Passed to the token exchange endpoints to obtain a token. You must keep this confidential.", "DevAppSecret"))), this.props.showSecret && n.createElement(c.Xa, {
+                        }, Object(i.d)("Passed to the token exchange endpoints to obtain a token. You must keep this confidential.", "DevAppSecret"))), this.props.showSecret && n.createElement(c.Ya, {
                             margin: {
                                 bottom: 1
                             },
@@ -277,33 +277,33 @@
                                 type: r
                             }, e)
                         }, t.renderOtherCategoryField = function() {
-                            return n.createElement(c.Xa, {
+                            return n.createElement(c.Ya, {
                                 margin: {
                                     bottom: 1
                                 }
                             }, n.createElement(c.Ea, {
                                 label: Object(i.d)("Other Details", "AppForm"),
                                 hint: Object(i.d)("Developing something not in our list? Tell us about it!", "DevAppForm")
-                            }, n.createElement(c.Ra, {
+                            }, n.createElement(c.Sa, {
                                 value: t.state.categoryOther,
-                                type: c.Ta.Text,
+                                type: c.Ua.Text,
                                 onChange: t.setCategoryOther,
                                 "data-test-selector": u
                             })))
                         }, t.renderExistingAppDetails = function() {
-                            if (t.props.app) return n.createElement(c.Xa, {
+                            if (t.props.app) return n.createElement(c.Ya, {
                                 "data-test-selector": m
-                            }, n.createElement(c.Xa, {
+                            }, n.createElement(c.Ya, {
                                 margin: {
                                     bottom: 1
                                 }
                             }, n.createElement(c.Ea, {
                                 label: Object(i.d)("Client ID", "AppForm"),
                                 hint: Object(i.d)("Passed to authorization endpoints to identify your application. You cannot change your application's client id.", "DevAppForm")
-                            }, n.createElement(c.Ra, {
+                            }, n.createElement(c.Sa, {
                                 value: t.state.id,
                                 readOnly: !0,
-                                type: c.Ta.Text,
+                                type: c.Ua.Text,
                                 "data-test-selector": u
                             }))))
                         }, t.isClientNameInvalidError = function() {
@@ -324,14 +324,14 @@
                             if (t.state.isNotificationDismissed) return null;
                             if (t.props.errorMessage) {
                                 var e = t.props.errorMessage;
-                                return t.isClientNameInvalidError() && (e = Object(i.d)("We could not create the application due to an error with the fields below.", "DevAppForm")), n.createElement(c.Xa, {
+                                return t.isClientNameInvalidError() && (e = Object(i.d)("We could not create the application due to an error with the fields below.", "DevAppForm")), n.createElement(c.Ya, {
                                     margin: {
                                         bottom: 1
                                     },
                                     padding: 1,
                                     "data-test-selector": h
-                                }, n.createElement(c.Na, {
-                                    type: c.Oa.Error,
+                                }, n.createElement(c.Oa, {
+                                    type: c.Pa.Error,
                                     title: e || "",
                                     narrow: !0,
                                     description: Object(i.d)("Please try again", "DevAppForm"),
@@ -387,14 +387,14 @@
                         "9" === this.state.category && (t = this.renderOtherCategoryField());
                         var r = this.renderErrorMessage(),
                             a = this.renderSaveButton();
-                        return n.createElement(c.Xa, {
+                        return n.createElement(c.Ya, {
                             className: "dev-app-form"
                         }, n.createElement(c.Ja, null, n.createElement(c.P, {
                             cols: {
                                 default: 12,
                                 md: 7
                             }
-                        }, r, n.createElement("form", null, n.createElement(c.Xa, {
+                        }, r, n.createElement("form", null, n.createElement(c.Ya, {
                             margin: {
                                 bottom: 1
                             }
@@ -403,33 +403,33 @@
                             hint: Object(i.d)("Displayed to users when authorizing your application.", "DevAppForm"),
                             error: this.isClientNameInvalidError(),
                             errorMessage: this.clientNameInvalidErrorMessage()
-                        }, n.createElement(c.Ra, {
+                        }, n.createElement(c.Sa, {
                             value: this.state.name,
                             required: !0,
-                            type: c.Ta.Text,
+                            type: c.Ua.Text,
                             onChange: this.setName,
                             "data-test-selector": "app-form-name-input",
                             error: this.isClientNameInvalidError()
-                        }))), n.createElement(c.Xa, {
+                        }))), n.createElement(c.Ya, {
                             margin: {
                                 bottom: 1
                             }
                         }, n.createElement(c.Ea, {
                             label: Object(i.d)("OAuth Redirect URL", "DevAppForm"),
                             hint: Object(i.d)("Will receive the result of all client authorizations: either an access token or a failure message. This must exactly match the redirect_uri parameter passed to the authorization endpoint. When testing locally, you can set this to http://localhost.", "DevAppForm")
-                        }, n.createElement(c.Ra, {
+                        }, n.createElement(c.Sa, {
                             value: this.state.redirectUrl,
                             required: !0,
-                            type: c.Ta.Text,
+                            type: c.Ua.Text,
                             onChange: this.setRedirectUrl,
                             "data-test-selector": "app-form-redirect-input"
-                        }))), n.createElement(c.Xa, {
+                        }))), n.createElement(c.Ya, {
                             margin: {
                                 bottom: 1
                             }
                         }, n.createElement(c.Ea, {
                             label: Object(i.d)("Category", "DevAppForm")
-                        }, n.createElement(c.zb, {
+                        }, n.createElement(c.Ab, {
                             defaultValue: this.state.category,
                             onChange: this.setCategory,
                             "data-test-selector": "app-form-category-select"

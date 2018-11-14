@@ -386,21 +386,21 @@
                         this.reportInteractive()
                     }, t.prototype.render = function() {
                         var e = this.props.data.clip;
-                        if (!e || !e.curator || !e.curator.login || this.props.data.loading) return r.createElement(m.Xa, null, this.renderPlaceholders());
+                        if (!e || !e.curator || !e.curator.login || this.props.data.loading) return r.createElement(m.Ya, null, this.renderPlaceholders());
                         var t = Object(p.c)(e.curator.login, {
                             tt_medium: "clips_web",
                             tt_content: "curator_name"
                         });
-                        return r.createElement(m.Xa, {
+                        return r.createElement(m.Ya, {
                             ellipsis: this.props.ellipsis
-                        }, e.champBadge && e.champBadge.id && r.createElement(m.Xa, {
+                        }, e.champBadge && e.champBadge.id && r.createElement(m.Ya, {
                             margin: {
                                 right: .5
                             },
                             display: m.X.InlineBlock
                         }, r.createElement(u, {
                             pageType: s.PageviewLocation.ClipsViewing
-                        })), r.createElement(m.Pa, {
+                        })), r.createElement(m.Qa, {
                             display: m.X.Inline
                         }, r.createElement(m.W, {
                             fontSize: this.props.fontSize ? this.props.fontSize : m.Ca.Size5
@@ -420,7 +420,7 @@
                             enabled: !0
                         }, r.createElement(m.W, {
                             fontSize: this.props.fontSize ? this.props.fontSize : m.Ca.Size5
-                        }, r.createElement(m.ib, {
+                        }, r.createElement(m.jb, {
                             lineCount: 1,
                             width: 80
                         })))
@@ -574,7 +574,7 @@
                         }, t
                     }
                     return r.__extends(t, e), t.prototype.render = function() {
-                        return a.createElement(u.Eb, {
+                        return a.createElement(u.Fb, {
                             className: "reporting-modal__container",
                             background: u.r.Base,
                             padding: {
@@ -624,10 +624,10 @@
                     }, t.prototype.componentDidUpdate = function() {
                         this.reportInteractive()
                     }, t.prototype.render = function() {
-                        return !this.props.data.clip || this.props.data.loading ? r.createElement(s.Xa, null, this.renderPlaceholders()) : r.createElement(s.W, {
+                        return !this.props.data.clip || this.props.data.loading ? r.createElement(s.Ya, null, this.renderPlaceholders()) : r.createElement(s.W, {
                             fontSize: this.props.fontSize ? this.props.fontSize : s.Ca.Size3,
-                            type: s.Vb.Span,
-                            lineHeight: s.Ya.Heading,
+                            type: s.Wb.Span,
+                            lineHeight: s.Za.Heading,
                             ellipsis: this.props.ellipsis
                         }, this.props.data.clip.title)
                     }, t.prototype.reportInteractive = function() {
@@ -640,7 +640,7 @@
                             enabled: !0
                         }, r.createElement(s.W, {
                             fontSize: this.props.fontSize ? this.props.fontSize : s.Ca.Size3
-                        }, r.createElement(s.ib, {
+                        }, r.createElement(s.jb, {
                             lineCount: 1,
                             width: 100
                         })))
@@ -1624,11 +1624,11 @@
             }), n.d(t, "f", function() {
                 return S
             }), n.d(t, "k", function() {
-                return O
-            }), n.d(t, "u", function() {
-                return _
-            }), n.d(t, "s", function() {
                 return k
+            }), n.d(t, "u", function() {
+                return O
+            }), n.d(t, "s", function() {
+                return _
             }), n.d(t, "d", function() {
                 return N
             });
@@ -1655,9 +1655,9 @@
                 T = "SPONSORED",
                 y = "THIRD_PARTY",
                 S = "DISPLAY_ONLY",
-                O = ((i = {})[r.a.Gray] = "#979797", i[r.a.Purple] = "#9c3ee8", i[r.a.Green] = "#1db2a5", i[r.a.Blue] = "#0099fe", i[r.a.Red] = "#f43021", i[r.a.Yellow] = "#f3a71a", i),
-                _ = "bits_sponsored_cheermotes",
-                k = "bits_sponsored_cheermotes_announcement",
+                k = ((i = {})[r.a.Gray] = "#979797", i[r.a.Purple] = "#9c3ee8", i[r.a.Green] = "#1db2a5", i[r.a.Blue] = "#0099fe", i[r.a.Red] = "#f43021", i[r.a.Yellow] = "#f3a71a", i),
+                O = "bits_sponsored_cheermotes",
+                _ = "bits_sponsored_cheermotes_announcement",
                 N = "bits_charity_event"
         },
         "60o1": function(e, t, n) {
@@ -1951,28 +1951,28 @@
                         }, t
                     }
                     return o.__extends(t, e), t.prototype.render = function() {
-                        return s.createElement(s.Fragment, null, this.renderCloseButton(), s.createElement(u.Xa, {
+                        return s.createElement(s.Fragment, null, this.renderCloseButton(), s.createElement(u.Ya, {
                             padding: {
                                 y: 2,
                                 left: 2,
                                 right: 3
                             }
-                        }, s.createElement(u.Xa, {
+                        }, s.createElement(u.Ya, {
                             margin: {
                                 bottom: .5
                             }
                         }, s.createElement(u.W, {
                             fontSize: u.Ca.Size4,
                             bold: !0,
-                            lineHeight: u.Ya.Heading
-                        }, this.getHeaderText())), s.createElement(u.Xa, {
+                            lineHeight: u.Za.Heading
+                        }, this.getHeaderText())), s.createElement(u.Ya, {
                             margin: {
                                 bottom: 1
                             }
                         }, s.createElement(u.W, {
                             fontSize: u.Ca.Size5,
                             color: u.O.Alt2
-                        }, this.getBodyText())), s.createElement(u.Eb, {
+                        }, this.getBodyText())), s.createElement(u.Fb, {
                             fontSize: u.Ca.Size5
                         }, s.createElement(u.U, {
                             autoFocus: !0,
@@ -1980,13 +1980,13 @@
                         }, Object(l.d)("Log In", "AuthContextBalloon")))))
                     }, t.prototype.renderCloseButton = function() {
                         var e = null;
-                        return this.props.source === c.a.Chat && (e = s.createElement(u.Xa, {
-                            position: u.jb.Absolute,
+                        return this.props.source === c.a.Chat && (e = s.createElement(u.Ya, {
+                            position: u.kb.Absolute,
                             attachRight: !0,
                             attachTop: !0,
                             padding: .5
                         }, s.createElement(u.A, {
-                            icon: u.tb.Close,
+                            icon: u.ub.Close,
                             size: u.B.Small,
                             type: u.C.Secondary,
                             onClick: this.props.onClose
@@ -2070,12 +2070,12 @@
                                 direction: c.v.Right,
                                 show: !0
                             }, this.props.balloonProps);
-                        return o.createElement(c.Xa, {
+                        return o.createElement(c.Ya, {
                             className: a("rich-content-tooltip", t)
                         }, this.props.children, o.createElement(c.u, r.__assign({}, n), o.createElement("div", {
                             ref: this.props.refCallback,
                             className: "rich-content-tooltip__pointer-target"
-                        }, o.createElement(c.Xa, {
+                        }, o.createElement(c.Ya, {
                             padding: .5
                         }, this.props.content))))
                     }, t
@@ -2144,7 +2144,7 @@
                                 }
                             }),
                             s = null;
-                        return this.state.options ? s = o.createElement(c.Yb, {
+                        return this.state.options ? s = o.createElement(c.Zb, {
                             direction: this.state.options.direction,
                             align: this.state.options.align,
                             label: this.state.options.label,
@@ -2388,7 +2388,7 @@
                                 t.props.tooltipLayer.show({
                                     from: t.buttonContainerRef,
                                     label: e,
-                                    direction: g.ac.Right
+                                    direction: g.bc.Right
                                 })
                             }
                         }, t.onMouseLeave = function() {
@@ -2418,10 +2418,10 @@
                         return this.props.toggleType && this.props.toggleType === i.Button ? this.renderTypeButton() : this.renderTypeToggle()
                     }, t.prototype.renderTypeButton = function() {
                         var e = this.state.disableNotifications,
-                            t = e ? g.tb.NotificationBellOff : g.tb.NotificationBell,
-                            n = e ? g.tb.NotificationBell : g.tb.NotificationBellOff,
+                            t = e ? g.ub.NotificationBellOff : g.ub.NotificationBell,
+                            n = e ? g.ub.NotificationBell : g.ub.NotificationBellOff,
                             i = s("live-notifications__btn");
-                        return l.createElement(g.Eb, {
+                        return l.createElement(g.Fb, {
                             className: i,
                             refDelegate: this.setButtonContainerRef
                         }, l.createElement(m.a, {
@@ -2433,16 +2433,16 @@
                         }))
                     }, t.prototype.renderTypeToggle = function() {
                         var e, t;
-                        return this.state.isFollowing ? this.state.disableNotifications ? (t = "live-notifications-toggle__status-text--disabled", e = Object(d.d)("Opt in to notifications to receive updates on this channel's activity, including when they go live.", "LiveNotificationsToggle")) : (t = "live-notifications-toggle__status-text--enabled", e = Object(d.d)("You will be notified on this channel's activity, including when they go live.", "LiveNotificationsToggle")) : (e = Object(d.d)("Follow this channel to receive notifications when they go live.", "LiveNotificationsToggle"), t = "live-notifications-toggle__status-text--not-following"), l.createElement(g.Eb, {
+                        return this.state.isFollowing ? this.state.disableNotifications ? (t = "live-notifications-toggle__status-text--disabled", e = Object(d.d)("Opt in to notifications to receive updates on this channel's activity, including when they go live.", "LiveNotificationsToggle")) : (t = "live-notifications-toggle__status-text--enabled", e = Object(d.d)("You will be notified on this channel's activity, including when they go live.", "LiveNotificationsToggle")) : (e = Object(d.d)("Follow this channel to receive notifications when they go live.", "LiveNotificationsToggle"), t = "live-notifications-toggle__status-text--not-following"), l.createElement(g.Fb, {
                             color: g.O.Base,
                             display: g.X.Flex,
                             flexWrap: g.Ba.Wrap
-                        }, l.createElement(g.Xa, {
+                        }, l.createElement(g.Ya, {
                             display: g.X.Flex,
                             flexWrap: g.Ba.NoWrap,
                             fullWidth: !0,
-                            justifyContent: g.Wa.Between
-                        }, l.createElement(g.Xa, {
+                            justifyContent: g.Xa.Between
+                        }, l.createElement(g.Ya, {
                             display: g.X.Flex,
                             padding: {
                                 right: 2
@@ -2450,22 +2450,22 @@
                         }, l.createElement("span", null, l.createElement(g.W, {
                             fontSize: g.Ca.Size4,
                             bold: !0
-                        }, Object(d.d)("Notifications", "LiveNotificationsToggle")))), l.createElement(g.Xa, {
+                        }, Object(d.d)("Notifications", "LiveNotificationsToggle")))), l.createElement(g.Ya, {
                             display: g.X.Flex,
                             flexShrink: 0
-                        }, l.createElement(g.Xb, {
+                        }, l.createElement(g.Yb, {
                             onChange: this.toggleNotificationsEnabled,
                             checked: !this.state.disableNotifications,
                             "data-test-selector": "live-notifications-toggle__toggle",
                             "data-a-target": "notifications-toggle",
                             disabled: !this.state.isFollowing
-                        }))), l.createElement(g.Xa, {
+                        }))), l.createElement(g.Ya, {
                             display: g.X.InlineFlex,
                             padding: {
                                 bottom: 1
                             }
                         }, l.createElement(g.W, {
-                            type: g.Vb.Span,
+                            type: g.Wb.Span,
                             color: g.O.Alt2,
                             "data-test-selector": t
                         }, e)))
@@ -3042,7 +3042,7 @@
                 T = n("Jxh/"),
                 y = n("r62z"),
                 S = n("Ue10"),
-                O = (n("+T1G"), function(e) {
+                k = (n("+T1G"), function(e) {
                     function t() {
                         var t = null !== e && e.apply(this, arguments) || this;
                         return t.getUrl = function() {
@@ -3053,9 +3053,9 @@
                             t.onShareClick(), Object(T.a)(t.getUrl())
                         }, t.renderIcon = function() {
                             var e = t.getAssetFromType();
-                            return r.createElement(S.Xa, {
+                            return r.createElement(S.Ya, {
                                 className: "clips-mobile-share-sheet__share-icon clips-social-button__icon " + t.addSocialClassModifier("clips-social-button__icon")
-                            }, r.createElement(S.sb, {
+                            }, r.createElement(S.tb, {
                                 asset: e,
                                 fill: !0
                             }))
@@ -3064,16 +3064,16 @@
                         }, t.getAssetFromType = function() {
                             switch (t.props.type) {
                                 case c.b.Twitter:
-                                    return S.tb.Twitter;
+                                    return S.ub.Twitter;
                                 case c.b.Facebook:
-                                    return S.tb.Facebook;
+                                    return S.ub.Facebook;
                                 case c.b.VKontakte:
-                                    return S.tb.VKontakte;
+                                    return S.ub.VKontakte;
                                 case c.b.Reddit:
-                                    return S.tb.Reddit;
+                                    return S.ub.Reddit;
                                 case c.b.Copy:
                                 default:
-                                    return S.tb.Copy
+                                    return S.ub.Copy
                             }
                         }, t.getLabelFromType = function() {
                             switch (t.props.type) {
@@ -3126,7 +3126,7 @@
                         }, t
                     }
                     return i.__extends(t, e), t.prototype.render = function() {
-                        var e = r.createElement(S.Xa, {
+                        var e = r.createElement(S.Ya, {
                             className: "clips-mobile-share-sheet__row",
                             display: S.X.Flex,
                             alignItems: S.f.Center,
@@ -3135,12 +3135,12 @@
                                 bottom: 1,
                                 x: 2
                             }
-                        }, this.renderIcon(), r.createElement(S.Eb, {
+                        }, this.renderIcon(), r.createElement(S.Fb, {
                             margin: {
                                 left: 1
                             }
                         }, r.createElement(S.W, {
-                            type: S.Vb.Span
+                            type: S.Wb.Span
                         }, this.getLabelFromType())));
                         return this.renderLink(e)
                     }, t.prototype.renderLink = function(e) {
@@ -3155,7 +3155,7 @@
                         }, e)
                     }, t
                 }(r.Component)),
-                _ = function(e) {
+                O = function(e) {
                     function t() {
                         var t = null !== e && e.apply(this, arguments) || this;
                         return t.state = {
@@ -3191,9 +3191,9 @@
                         var e = this,
                             t = Object(o.d)("Share Clip", "ClipsSocialShare"),
                             n = Object(o.d)("Copied!", "ClipsSocialShare");
-                        return r.createElement(S.Xa, {
+                        return r.createElement(S.Ya, {
                             display: S.X.Flex,
-                            justifyContent: S.Wa.End,
+                            justifyContent: S.Xa.End,
                             alignItems: S.f.Center,
                             margin: {
                                 top: 1,
@@ -3203,40 +3203,40 @@
                             type: S.F.Hollow,
                             onClick: this.onToggleShareButton,
                             "data-test-selector": "social-share-mobile-button"
-                        }, t), this.state.isModalOpen && r.createElement(S.Eb, {
-                            position: S.jb.Fixed,
+                        }, t), this.state.isModalOpen && r.createElement(S.Fb, {
+                            position: S.kb.Fixed,
                             background: S.r.Overlay,
-                            zIndex: S.ic.Above,
+                            zIndex: S.jc.Above,
                             attachLeft: !0,
                             attachTop: !0,
                             fullHeight: !0,
                             fullWidth: !0
                         }, r.createElement(b.a, {
                             onClickOut: this.onClickOut
-                        }, r.createElement(S.Xa, {
-                            position: S.jb.Absolute,
+                        }, r.createElement(S.Ya, {
+                            position: S.kb.Absolute,
                             attachLeft: !0,
                             attachRight: !0,
                             attachBottom: !0,
                             className: "clips-mobile-share-sheet",
                             display: S.X.Flex,
                             flexDirection: S.Aa.Column,
-                            zIndex: S.ic.Above,
+                            zIndex: S.jc.Above,
                             "data-test-selector": "social-share-mobile-menu-root"
                         }, r.createElement(S.i, {
                             type: S.n.SlideInBottom,
                             enabled: this.state.isModalOpen
-                        }, r.createElement(S.Eb, {
+                        }, r.createElement(S.Fb, {
                             background: S.r.Base,
                             elevation: 3,
                             padding: {
                                 bottom: 2
                             }
-                        }, r.createElement(S.Eb, {
+                        }, r.createElement(S.Fb, {
                             className: "clips-mobile-share-sheet__title",
                             display: S.X.Flex,
                             flexDirection: S.Aa.Row,
-                            justifyContent: S.Wa.Between,
+                            justifyContent: S.Xa.Between,
                             alignItems: S.f.Center,
                             margin: {
                                 bottom: 2
@@ -3249,35 +3249,35 @@
                         }, r.createElement(S.W, {
                             bold: !0,
                             color: S.O.Alt,
-                            type: S.Vb.Span,
+                            type: S.Wb.Span,
                             fontSize: S.Ca.Size6,
                             "data-test-selector": "social-share-mobile-menu-title"
                         }, t), r.createElement(S.A, {
                             "data-test-selector": "social-share-mobile-menu-close",
-                            icon: S.tb.Close,
+                            icon: S.ub.Close,
                             ariaLabel: "Close Share",
                             size: S.B.Large,
                             onClick: this.onToggleShareButton
-                        })), r.createElement(S.Xa, null, h.b.map(function(t) {
-                            return r.createElement(O, {
+                        })), r.createElement(S.Ya, null, h.b.map(function(t) {
+                            return r.createElement(k, {
                                 key: t.type,
                                 type: t.type,
                                 text: e.props.clip.title,
                                 url: Object(m.e)(e.props.clip.url, t.params),
                                 onShareClick: e.onShareClick
                             })
-                        }))))))), this.state.isCopiedModalOpen && r.createElement(S.Xa, {
+                        }))))))), this.state.isCopiedModalOpen && r.createElement(S.Ya, {
                             fullWidth: !0,
                             attachLeft: !0,
                             attachBottom: !0,
                             className: "clips-mobile-share-sheet",
-                            position: S.jb.Fixed,
-                            zIndex: S.ic.Above
+                            position: S.kb.Fixed,
+                            zIndex: S.jc.Above
                         }, r.createElement(S.i, {
                             type: S.n.SlideInBottom,
                             duration: S.k.Short,
                             enabled: this.state.isCopiedModalOpen
-                        }, r.createElement(S.Eb, {
+                        }, r.createElement(S.Fb, {
                             padding: {
                                 x: 1,
                                 y: 1
@@ -3287,7 +3287,7 @@
                             borderTop: !0,
                             display: S.X.Flex,
                             alignItems: S.f.Center
-                        }, r.createElement(S.Xa, {
+                        }, r.createElement(S.Ya, {
                             margin: {
                                 right: .5
                             }
@@ -3296,17 +3296,17 @@
                             duration: S.k.Medium,
                             delay: S.j.Short,
                             enabled: this.state.isCopiedModalOpen
-                        }, r.createElement(S.sb, {
-                            type: S.ub.Success,
-                            asset: S.tb.Check
+                        }, r.createElement(S.tb, {
+                            type: S.vb.Success,
+                            asset: S.ub.Check
                         }))), r.createElement(S.W, {
-                            type: S.Vb.Span,
+                            type: S.Wb.Span,
                             fontSize: S.Ca.Size4,
                             bold: !0
                         }, n)))))
                     }, t
                 }(r.Component),
-                k = n("ydo7"),
+                _ = n("ydo7"),
                 N = (n("rb53"), function(e) {
                     function t() {
                         var t = null !== e && e.apply(this, arguments) || this;
@@ -3324,22 +3324,22 @@
                             t = this.props.data.clip,
                             n = Object(v.c)(window.navigator.userAgent),
                             i = !(!t || !t.id);
-                        if (!i && !n) return r.createElement(S.Xa, null, this.renderPlaceholders());
-                        if (!i && n) return r.createElement(S.Xa, null, this.renderMobilePlaceholders());
-                        if (n) return r.createElement(_, {
+                        if (!i && !n) return r.createElement(S.Ya, null, this.renderPlaceholders());
+                        if (!i && n) return r.createElement(S.Ya, null, this.renderMobilePlaceholders());
+                        if (n) return r.createElement(O, {
                             clip: t
                         });
                         var a = Object(o.d)("More", "ClipsSocialShare");
-                        return r.createElement(S.Xa, {
+                        return r.createElement(S.Ya, {
                             display: S.X.Flex,
-                            position: S.jb.Relative,
-                            zIndex: S.ic.Above,
-                            justifyContent: S.Wa.End,
+                            position: S.kb.Relative,
+                            zIndex: S.jc.Above,
+                            justifyContent: S.Xa.End,
                             alignItems: S.f.Center,
                             margin: {
                                 y: 1
                             }
-                        }, r.createElement(S.Xa, {
+                        }, r.createElement(S.Ya, {
                             display: S.X.InlineBlock,
                             margin: {
                                 right: 1
@@ -3350,7 +3350,7 @@
                             slug: this.props.slug,
                             pageType: this.props.pageType
                         })), h.b.map(function(n) {
-                            return r.createElement(S.Xa, {
+                            return r.createElement(S.Ya, {
                                 display: S.X.InlineBlock,
                                 key: n.type,
                                 margin: {
@@ -3363,9 +3363,9 @@
                                 url: Object(m.e)(t.url, n.params),
                                 onShareClick: Object(g.c)(t.id, t.game && t.game.name, t.broadcaster && t.broadcaster.id, t.broadcaster && t.broadcaster.login, e.props.pageType)
                             }))
-                        }), r.createElement(S.Xa, {
+                        }), r.createElement(S.Ya, {
                             display: S.X.InlineBlock,
-                            position: S.jb.Relative
+                            position: S.kb.Relative
                         }, r.createElement(d.a, null, r.createElement(S.z, {
                             type: S.F.Hollow,
                             ariaLabel: a,
@@ -3374,7 +3374,7 @@
                         }, a), r.createElement(S.u, {
                             direction: S.v.BottomRight,
                             noTail: !0
-                        }, r.createElement(S.Xa, {
+                        }, r.createElement(S.Ya, {
                             padding: 1
                         }, r.createElement(S.Ea, {
                             id: "social-share-link",
@@ -3384,7 +3384,7 @@
                         }, r.createElement(s.a, {
                             value: t.url,
                             onClick: this.trackLinkShare
-                        })), r.createElement(S.Xa, {
+                        })), r.createElement(S.Ya, {
                             padding: {
                                 top: 1
                             }
@@ -3404,70 +3404,70 @@
                             type: S.n.FadeIn,
                             duration: S.k.Medium,
                             enabled: !0
-                        }, r.createElement(S.Xa, {
+                        }, r.createElement(S.Ya, {
                             margin: {
                                 top: 1,
                                 bottom: 1
                             },
                             display: S.X.Flex,
-                            justifyContent: S.Wa.End
-                        }, r.createElement(S.Xa, {
+                            justifyContent: S.Xa.End
+                        }, r.createElement(S.Ya, {
                             margin: {
                                 left: 1
                             }
-                        }, r.createElement(S.ib, {
+                        }, r.createElement(S.jb, {
                             width: 30,
                             height: 30
-                        })), r.createElement(S.Xa, {
+                        })), r.createElement(S.Ya, {
                             margin: {
                                 left: 1
                             }
-                        }, r.createElement(S.ib, {
+                        }, r.createElement(S.jb, {
                             width: 30,
                             height: 30
-                        })), r.createElement(S.Xa, {
+                        })), r.createElement(S.Ya, {
                             margin: {
                                 left: 1
                             }
-                        }, r.createElement(S.ib, {
+                        }, r.createElement(S.jb, {
                             width: 30,
                             height: 30
-                        })), r.createElement(S.Xa, {
+                        })), r.createElement(S.Ya, {
                             margin: {
                                 left: 1
                             }
-                        }, r.createElement(S.ib, {
+                        }, r.createElement(S.jb, {
                             width: 30,
                             height: 30
-                        })), r.createElement(S.Xa, {
+                        })), r.createElement(S.Ya, {
                             margin: {
                                 left: 1
                             }
-                        }, r.createElement(S.ib, {
+                        }, r.createElement(S.jb, {
                             width: 46,
                             height: 30
                         }))))
                     }, t.prototype.renderMobilePlaceholders = function() {
-                        return r.createElement(S.Xa, {
+                        return r.createElement(S.Ya, {
                             margin: {
                                 y: 1
                             },
                             display: S.X.Flex,
-                            justifyContent: S.Wa.End
-                        }, r.createElement(S.Xa, null, r.createElement(S.ib, {
+                            justifyContent: S.Xa.End
+                        }, r.createElement(S.Ya, null, r.createElement(S.jb, {
                             width: 72,
                             height: 30
                         })))
                     }, t
                 }(r.Component)),
-                C = Object(a.compose)(Object(f.b)("ClipsSocialShare"), Object(u.a)(k))(N);
+                C = Object(a.compose)(Object(f.b)("ClipsSocialShare"), Object(u.a)(_))(N);
             n.d(t, "a", function() {
                 return C
             })
         },
         DMoW: function(e, t, n) {
             "use strict";
-            var i, r, a, o, s, l, c, d, u, p, m, f, h, g, E, v, b, T, y, S, O, _, k, N, C, R, I, D, A, L, w, P, M, F, U, x, B, j, V, W, G, H, z, X, Y, q, K, Q, Z, $, J, ee, te, ne, ie, re, ae, oe, se, le, ce, de, ue, pe, me, fe, he, ge, Ee, ve, be, Te, ye, Se, Oe, _e, ke, Ne, Ce, Re, Ie, De, Ae, Le, we, Pe, Me, Fe, Ue, xe, Be, je, Ve, We, Ge, He, ze, Xe, Ye, qe, Ke, Qe, Ze, $e, Je, et, tt, nt, it, rt, at, ot, st, lt, ct, dt, ut, pt, mt, ft, ht, gt, Et, vt, bt;
+            var i, r, a, o, s, l, c, d, u, p, m, f, h, g, E, v, b, T, y, S, k, O, _, N, C, R, I, D, A, L, w, P, F, M, U, x, B, j, V, W, G, H, Y, z, q, X, K, Q, Z, $, J, ee, te, ne, ie, re, ae, oe, se, le, ce, de, ue, pe, me, fe, he, ge, Ee, ve, be, Te, ye, Se, ke, Oe, _e, Ne, Ce, Re, Ie, De, Ae, Le, we, Pe, Fe, Me, Ue, xe, Be, je, Ve, We, Ge, He, Ye, ze, qe, Xe, Ke, Qe, Ze, $e, Je, et, tt, nt, it, rt, at, ot, st, lt, ct, dt, ut, pt, mt, ft, ht, gt, Et, vt, bt;
             n.d(t, "N", function() {
                     return i
                 }), n.d(t, "e", function() {
@@ -3487,11 +3487,11 @@
                 }), n.d(t, "h", function() {
                     return y
                 }), n.d(t, "Z", function() {
-                    return O
-                }), n.d(t, "n", function() {
-                    return _
-                }), n.d(t, "Ba", function() {
                     return k
+                }), n.d(t, "n", function() {
+                    return O
+                }), n.d(t, "Ba", function() {
+                    return _
                 }), n.d(t, "R", function() {
                     return N
                 }), n.d(t, "s", function() {
@@ -3517,13 +3517,13 @@
                 }), n.d(t, "G", function() {
                     return H
                 }), n.d(t, "W", function() {
-                    return z
-                }), n.d(t, "F", function() {
-                    return X
-                }), n.d(t, "E", function() {
                     return Y
-                }), n.d(t, "q", function() {
+                }), n.d(t, "F", function() {
+                    return z
+                }), n.d(t, "E", function() {
                     return q
+                }), n.d(t, "q", function() {
+                    return X
                 }), n.d(t, "U", function() {
                     return K
                 }), n.d(t, "a", function() {
@@ -3559,11 +3559,11 @@
                 }), n.d(t, "w", function() {
                     return Ge
                 }), n.d(t, "m", function() {
-                    return ze
-                }), n.d(t, "j", function() {
-                    return Xe
-                }), n.d(t, "y", function() {
                     return Ye
+                }), n.d(t, "j", function() {
+                    return ze
+                }), n.d(t, "y", function() {
+                    return qe
                 }), n.d(t, "S", function() {
                     return Ke
                 }), n.d(t, "r", function() {
@@ -3643,13 +3643,13 @@
                 }(S || (S = {})),
                 function(e) {
                     e.CHEER = "CHEER"
-                }(O || (O = {})),
+                }(k || (k = {})),
                 function(e) {
                     e.CREATED = "CREATED", e.CREATING = "CREATING", e.FAILED = "FAILED"
-                }(_ || (_ = {})),
+                }(O || (O = {})),
                 function(e) {
                     e.PRIVATE = "PRIVATE", e.PUBLIC = "PUBLIC"
-                }(k || (k = {})),
+                }(_ || (_ = {})),
                 function(e) {
                     e.ENDED = "ENDED", e.LIVE = "LIVE", e.PENDING = "PENDING", e.UNKNOWN = "UNKNOWN"
                 }(N || (N = {})),
@@ -3679,10 +3679,10 @@
                 }(P || (P = {})),
                 function(e) {
                     e.TOKEN_NOT_AVAILABLE = "TOKEN_NOT_AVAILABLE", e.TOKEN_NOT_FOUND = "TOKEN_NOT_FOUND"
-                }(M || (M = {})),
+                }(F || (F = {})),
                 function(e) {
                     e.AVAILABLE = "AVAILABLE", e.DISMISSED = "DISMISSED", e.ELIGIBLE = "ELIGIBLE", e.REDEEMED = "REDEEMED"
-                }(F || (F = {})),
+                }(M || (M = {})),
                 function(e) {
                     e.NONE = "NONE", e.READ = "READ", e.WRITE = "WRITE"
                 }(U || (U = {})),
@@ -3709,16 +3709,16 @@
                 }(H || (H = {})),
                 function(e) {
                     e.ACTIVE = "ACTIVE", e.CANCELLED = "CANCELLED", e.INACTIVE = "INACTIVE"
-                }(z || (z = {})),
-                function(e) {
-                    e.AMAZON = "AMAZON", e.CREDIT_CARD = "CREDIT_CARD", e.GOOGLE_IAB = "GOOGLE_IAB", e.PAYPAL = "PAYPAL"
-                }(X || (X = {})),
-                function(e) {
-                    e.AMERICAN_EXPRESS = "AMERICAN_EXPRESS", e.DISCOVER = "DISCOVER", e.MASTERCARD = "MASTERCARD", e.VISA = "VISA"
                 }(Y || (Y = {})),
                 function(e) {
-                    e.CATEGORY = "CATEGORY", e.CLIP = "CLIP", e.LIVE_CHANNEL = "LIVE_CHANNEL", e.VOD = "VOD"
+                    e.AMAZON = "AMAZON", e.CREDIT_CARD = "CREDIT_CARD", e.GOOGLE_IAB = "GOOGLE_IAB", e.PAYPAL = "PAYPAL"
+                }(z || (z = {})),
+                function(e) {
+                    e.AMERICAN_EXPRESS = "AMERICAN_EXPRESS", e.DISCOVER = "DISCOVER", e.MASTERCARD = "MASTERCARD", e.VISA = "VISA"
                 }(q || (q = {})),
+                function(e) {
+                    e.CATEGORY = "CATEGORY", e.CLIP = "CLIP", e.LIVE_CHANNEL = "LIVE_CHANNEL", e.VOD = "VOD"
+                }(X || (X = {})),
                 function(e) {
                     e.ANDROID = "ANDROID", e.IOS = "IOS", e.WEB = "WEB"
                 }(K || (K = {})),
@@ -3805,13 +3805,13 @@
                 }(Se || (Se = {})),
                 function(e) {
                     e.OFFERS_FAILED_TO_UPDATE = "OFFERS_FAILED_TO_UPDATE", e.UNKNOWN = "UNKNOWN"
-                }(Oe || (Oe = {})),
+                }(ke || (ke = {})),
                 function(e) {
                     e.TOO_MANY_RECENT_SPENDS = "TOO_MANY_RECENT_SPENDS", e.UNABLE_TO_SPEND = "UNABLE_TO_SPEND"
-                }(_e || (_e = {})),
+                }(Oe || (Oe = {})),
                 function(e) {
                     e.OFFER_ALREADY_CLAIMED = "OFFER_ALREADY_CLAIMED", e.UNKNOWN = "UNKNOWN"
-                }(ke || (ke = {})),
+                }(_e || (_e = {})),
                 function(e) {
                     e.DEFAULT = "DEFAULT", e.SERIES = "SERIES"
                 }(Ne || (Ne = {})),
@@ -3841,10 +3841,10 @@
                 }(Pe || (Pe = {})),
                 function(e) {
                     e.COMMUNITY = "COMMUNITY", e.GAME = "GAME"
-                }(Me || (Me = {})),
+                }(Fe || (Fe = {})),
                 function(e) {
                     e.ASC = "ASC", e.DESC = "DESC"
-                }(Fe || (Fe = {})),
+                }(Me || (Me = {})),
                 function(e) {
                     e.TIME = "TIME", e.VIEWS = "VIEWS"
                 }(Ue || (Ue = {})),
@@ -3871,16 +3871,16 @@
                 }(He || (He = {})),
                 function(e) {
                     e.BOUNTY_ALREADY_CLAIMED = "BOUNTY_ALREADY_CLAIMED", e.BOUNTY_LIMIT_REACHED = "BOUNTY_LIMIT_REACHED", e.INVALID_PARAMETER = "INVALID_PARAMETER", e.UNKNOWN_ERROR = "UNKNOWN_ERROR"
-                }(ze || (ze = {})),
-                function(e) {
-                    e.BOUNTY_NOT_LIVE = "BOUNTY_NOT_LIVE", e.INVALID_PARAMETER = "INVALID_PARAMETER", e.UNKNOWN_ERROR = "UNKNOWN_ERROR"
-                }(Xe || (Xe = {})),
-                function(e) {
-                    e.PROMPT_FOR_PERMISSIONS = "PROMPT_FOR_PERMISSIONS", e.REQUIRES_CONFIGURATION = "REQUIRES_CONFIGURATION"
                 }(Ye || (Ye = {})),
                 function(e) {
-                    e.INVALID_PARAMETER = "INVALID_PARAMETER", e.UNAUTHORIZED = "UNAUTHORIZED", e.UNKNOWN_ERROR = "UNKNOWN_ERROR"
+                    e.BOUNTY_NOT_LIVE = "BOUNTY_NOT_LIVE", e.INVALID_PARAMETER = "INVALID_PARAMETER", e.UNKNOWN_ERROR = "UNKNOWN_ERROR"
+                }(ze || (ze = {})),
+                function(e) {
+                    e.PROMPT_FOR_PERMISSIONS = "PROMPT_FOR_PERMISSIONS", e.REQUIRES_CONFIGURATION = "REQUIRES_CONFIGURATION"
                 }(qe || (qe = {})),
+                function(e) {
+                    e.INVALID_PARAMETER = "INVALID_PARAMETER", e.UNAUTHORIZED = "UNAUTHORIZED", e.UNKNOWN_ERROR = "UNKNOWN_ERROR"
+                }(Xe || (Xe = {})),
                 function(e) {
                     e.BOUNTY_NOT_LIVE = "BOUNTY_NOT_LIVE", e.INVALID_PARAMETER = "INVALID_PARAMETER", e.UNAUTHORIZED = "UNAUTHORIZED", e.UNKNOWN_ERROR = "UNKNOWN_ERROR"
                 }(Ke || (Ke = {})),
@@ -4005,9 +4005,9 @@
                         }, t
                     }
                     return i.__extends(t, e), t.prototype.render = function() {
-                        return r.createElement(a.Ra, {
+                        return r.createElement(a.Sa, {
                             readOnly: !0,
-                            type: a.Ta.Text,
+                            type: a.Ua.Text,
                             value: this.props.value,
                             onClick: this.handleClickHandler
                         })
@@ -4284,9 +4284,9 @@
                         this.state.currentText !== t.currentText && this.triggerTextTransition()
                     }, t.prototype.render = function() {
                         var e = void 0 === this.props.fullWidthButton || this.props.fullWidthButton;
-                        return r.createElement(a.Pa, {
+                        return r.createElement(a.Qa, {
                             fullWidth: e,
-                            overflow: a.cb.Hidden
+                            overflow: a.db.Hidden
                         }, r.createElement("div", {
                             onMouseEnter: this.onFocus,
                             onMouseLeave: this.onBlur,
@@ -4299,15 +4299,15 @@
                             type: this.getCurrentType(),
                             tabIndex: this.props.tabIndex,
                             ariaLabel: this.props.ariaLabel
-                        }, Object(a.jc)(this.props)), r.createElement(a.Xa, {
+                        }, Object(a.kc)(this.props)), r.createElement(a.Ya, {
                             display: a.X.Flex,
-                            justifyContent: a.Wa.Center,
+                            justifyContent: a.Xa.Center,
                             alignItems: a.f.Center
                         }, this.renderIcon(), this.renderText()))))
                     }, t.prototype.renderIcon = function() {
-                        return r.createElement(a.Pa, {
+                        return r.createElement(a.Qa, {
                             display: a.X.Flex,
-                            justifyContent: a.Wa.Center,
+                            justifyContent: a.Xa.Center,
                             alignItems: a.f.Center,
                             margin: {
                                 right: .5
@@ -4322,12 +4322,12 @@
                             onAnimationEnd: this.onIconAnimationComplete,
                             duration: a.k.Long,
                             type: a.n.BounceIn
-                        }, r.createElement(a.Xa, {
+                        }, r.createElement(a.Ya, {
                             display: a.X.Flex,
-                            justifyContent: a.Wa.Center,
+                            justifyContent: a.Xa.Center,
                             alignItems: a.f.Center
-                        }, r.createElement(a.sb, {
-                            type: a.ub.Inherit,
+                        }, r.createElement(a.tb, {
+                            type: a.vb.Inherit,
                             asset: this.getIcon()
                         })))))
                     }, t.prototype.renderText = function() {
@@ -4392,27 +4392,27 @@
                     }, t.prototype.componentDidUpdate = function() {
                         this.reportInteractive()
                     }, t.prototype.render = function() {
-                        if (!this.props.data.clip || this.props.data.loading) return r.createElement(l.Xa, null, this.renderPlaceholders());
+                        if (!this.props.data.clip || this.props.data.loading) return r.createElement(l.Ya, null, this.renderPlaceholders());
                         var e = this.props.padding && this.props.padding.bottom,
                             t = void 0 === e ? .5 : e;
-                        return r.createElement(l.Xa, {
+                        return r.createElement(l.Ya, {
                             display: l.X.Flex,
                             alignItems: l.f.Center,
                             padding: {
                                 bottom: t
                             }
-                        }, !this.props.hideSymbol && r.createElement(l.Xa, {
+                        }, !this.props.hideSymbol && r.createElement(l.Ya, {
                             margin: {
                                 right: .5
                             },
                             display: l.X.Flex,
                             alignItems: l.f.Center
-                        }, r.createElement(l.sb, {
-                            asset: l.tb.GlyphViews,
-                            type: l.ub.Brand
+                        }, r.createElement(l.tb, {
+                            asset: l.ub.GlyphViews,
+                            type: l.vb.Brand
                         })), r.createElement(l.W, {
                             bold: !0,
-                            type: l.Vb.Span,
+                            type: l.Wb.Span,
                             fontSize: this.props.fontSize ? this.props.fontSize : l.Ca.Size5
                         }, Object(a.d)("{views} views", {
                             views: Object(a.f)(this.props.data.clip.viewCount)
@@ -4426,7 +4426,7 @@
                             enabled: !0
                         }, r.createElement(l.W, {
                             fontSize: this.props.fontSize ? this.props.fontSize : l.Ca.Size5
-                        }, r.createElement(l.ib, {
+                        }, r.createElement(l.jb, {
                             lineCount: 1,
                             width: 80
                         })))
@@ -4534,7 +4534,7 @@
                 return f() || r.b.get("gdpr_consent_enabled", !1)
             }
             var S = n("ClZk"),
-                O = n("Td8r");
+                k = n("Td8r");
             n.d(t, !1, function() {
                 return s
             }), n.d(t, !1, function() {
@@ -4560,7 +4560,7 @@
             }), n.d(t, "b", function() {
                 return o.a
             }), n.d(t, "c", function() {
-                return O.a
+                return k.a
             })
         },
         L7EG: function(e, t) {
@@ -5143,14 +5143,14 @@
                                 value: e.id
                             }, e.text)
                         });
-                        return a.createElement(d.Xa, {
+                        return a.createElement(d.Ya, {
                             margin: {
                                 bottom: 2
                             }
                         }, a.createElement(d.Ea, {
                             id: "reporting-modal__select",
                             label: Object(o.d)("Select Reason (required)", "ReportUserModal")
-                        }, a.createElement(d.zb, {
+                        }, a.createElement(d.Ab, {
                             id: "reporting-modal__select",
                             "data-test-selector": "reporting-modal.select",
                             disabled: this.props.data.loading || !!this.props.data.error,
@@ -5206,33 +5206,33 @@
                     }, t
                 }
                 return i.__extends(t, e), t.prototype.render = function() {
-                    return a.createElement(d.Xa, {
+                    return a.createElement(d.Ya, {
                         display: d.X.Flex,
                         flexDirection: d.Aa.Column,
                         alignItems: d.f.Center,
-                        justifyContent: d.Wa.Center
+                        justifyContent: d.Xa.Center
                     }, this.renderStatusMessage(), this.renderBody())
                 }, t.prototype.renderBody = function() {
                     return this.props.submitStatus === f.Success ? a.createElement("div", null, a.createElement(d.z, {
                         onClick: this.props.onClose
-                    }, a.createElement(d.Xa, {
+                    }, a.createElement(d.Ya, {
                         padding: {
                             x: 2
                         }
-                    }, Object(o.d)("Close", "ReportUser")))) : a.createElement("div", null, a.createElement(d.Xa, {
+                    }, Object(o.d)("Close", "ReportUser")))) : a.createElement("div", null, a.createElement(d.Ya, {
                         "data-test-selector": "reporting.title",
                         margin: {
                             bottom: 1
                         },
                         "data-a-target": "reporting-channel-name"
                     }, a.createElement(d.W, {
-                        type: d.Vb.H4
-                    }, this.props.title), a.createElement(d.Eb, {
+                        type: d.Wb.H4
+                    }, this.props.title), a.createElement(d.Fb, {
                         color: d.O.Alt2,
                         margin: {
                             top: 1
                         }
-                    }, this.headerMessage)), a.createElement("form", null, a.createElement(d.Eb, {
+                    }, this.headerMessage)), a.createElement("form", null, a.createElement(d.Fb, {
                         borderTop: !0,
                         borderBottom: !0,
                         margin: {
@@ -5247,15 +5247,15 @@
                     }), a.createElement(d.Ea, {
                         id: "reporting__text-area",
                         label: Object(o.d)("Description (required)", "ReportUser")
-                    }, a.createElement(d.Sb, {
+                    }, a.createElement(d.Tb, {
                         defaultValue: this.props.defaultDescription,
                         onChange: this.handleTextAreaChange
-                    }))), a.createElement(d.Eb, {
+                    }))), a.createElement(d.Fb, {
                         display: d.X.Flex,
-                        justifyContent: d.Wa.Center
+                        justifyContent: d.Xa.Center
                     }, a.createElement(d.z, {
                         onClick: this.handleSubmit
-                    }, a.createElement(d.Xa, {
+                    }, a.createElement(d.Ya, {
                         padding: {
                             x: 2
                         }
@@ -5282,7 +5282,7 @@
                         "reporting__error-container": this.props.submitStatus !== f.Success,
                         "reporting__success-container": this.props.submitStatus === f.Success
                     });
-                    return a.createElement(d.Eb, {
+                    return a.createElement(d.Fb, {
                         className: t,
                         fullWidth: this.props.submitStatus !== f.Success,
                         "data-test-selector": "reporting.error",
@@ -5338,7 +5338,7 @@
                 var t, n = e.clip;
                 if (!(n.video && n.video.id && null !== n.videoOffsetSeconds && n.broadcaster && n.broadcaster.login && n.video.broadcastType === o.i.ARCHIVE)) {
                     var d = n.video ? Object(a.d)("You can only highlight past broadcasts", "ClipsFullVideoButton") : Object(a.d)("Full video not available", "ClipsFullVideoButton");
-                    return r.createElement(c.Yb, {
+                    return r.createElement(c.Zb, {
                         label: d
                     }, r.createElement(c.z, {
                         type: e.buttonType,
@@ -5881,7 +5881,7 @@
                     }, t.prototype.render = function() {
                         var e = this.state.publishState === a.Error,
                             t = this.state.publishState === a.Sending;
-                        return s.createElement(b.Xa, null, s.createElement(b.z, {
+                        return s.createElement(b.Ya, null, s.createElement(b.z, {
                             onClick: this.onPublish,
                             disabled: e,
                             state: t ? b.E.Loading : b.E.Default,
@@ -5892,9 +5892,9 @@
                         name: "publishClip"
                     })], t)
                 }(s.Component),
-                O = Object(h.a)(S),
-                _ = n("/2kD"),
-                k = {
+                k = Object(h.a)(S),
+                O = n("/2kD"),
+                _ = {
                     TITLE_INPUT: "cmgr-title-input",
                     TITLE_SAVE: "cmgr-title-save",
                     TITLE_SAVE_TOOLTIP: "cmgr-title-save-tooltip"
@@ -5907,15 +5907,15 @@
                     function t(t) {
                         var n = e.call(this, t) || this;
                         return n.renderForClipsViewing = function() {
-                            return s.createElement("div", null, s.createElement(b.Sb, {
-                                id: k.TITLE_INPUT,
-                                "data-test-selector": k.TITLE_INPUT,
+                            return s.createElement("div", null, s.createElement(b.Tb, {
+                                id: _.TITLE_INPUT,
+                                "data-test-selector": _.TITLE_INPUT,
                                 value: n.state.title,
                                 onChange: n.handleTitleEdit,
                                 onKeyDown: n.handleKeyDown
-                            }), s.createElement(b.Xa, {
+                            }), s.createElement(b.Ya, {
                                 display: b.X.Flex,
-                                justifyContent: b.Wa.Between,
+                                justifyContent: b.Xa.Between,
                                 alignItems: b.f.Center,
                                 padding: {
                                     top: 1
@@ -5924,49 +5924,49 @@
                                 color: b.O.Error
                             }, n.getErrorMessage()) : s.createElement(b.W, {
                                 color: b.O.Alt2
-                            }, n.getRemainingCharacterText()), s.createElement(b.Xa, {
+                            }, n.getRemainingCharacterText()), s.createElement(b.Ya, {
                                 display: b.X.Flex
                             }, s.createElement(b.z, {
-                                "data-test-selector": k.TITLE_SAVE,
+                                "data-test-selector": _.TITLE_SAVE,
                                 onClick: n.props.onCancel,
                                 type: b.F.Hollow
-                            }, Object(l.d)("Cancel", "ClipsTitleEdit")), s.createElement(b.Xa, {
+                            }, Object(l.d)("Cancel", "ClipsTitleEdit")), s.createElement(b.Ya, {
                                 padding: {
                                     left: 1
                                 }
                             }, n.renderSave()))))
                         }, n.renderForManager = function() {
                             return s.createElement(b.Ea, {
-                                id: k.TITLE_INPUT,
+                                id: _.TITLE_INPUT,
                                 label: Object(l.d)("Title", "ClipsTitleEdit"),
                                 hint: n.getRemainingCharacterText()
-                            }, s.createElement(b.Xa, {
+                            }, s.createElement(b.Ya, {
                                 display: b.X.Flex,
                                 flexWrap: b.Ba.NoWrap
-                            }, s.createElement(b.Xa, {
+                            }, s.createElement(b.Ya, {
                                 flexGrow: 1,
                                 margin: {
                                     right: 1
                                 }
-                            }, s.createElement(b.Ra, {
-                                id: k.TITLE_INPUT,
-                                "data-test-selector": k.TITLE_INPUT,
-                                type: b.Ta.Text,
+                            }, s.createElement(b.Sa, {
+                                id: _.TITLE_INPUT,
+                                "data-test-selector": _.TITLE_INPUT,
+                                type: b.Ua.Text,
                                 value: n.state.title,
                                 onChange: n.handleTitleEdit,
                                 onKeyDown: n.handleKeyDown
-                            })), s.createElement(b.Xa, {
+                            })), s.createElement(b.Ya, {
                                 flexShrink: 0,
                                 flexGrow: 0
-                            }, s.createElement(b.Xa, {
-                                position: b.jb.Relative
-                            }, n.renderSave(), s.createElement(b.Ua, {
+                            }, s.createElement(b.Ya, {
+                                position: b.kb.Relative
+                            }, n.renderSave(), s.createElement(b.Va, {
                                 onClick: n.dismissMessage,
-                                "data-test-selector": k.TITLE_SAVE_TOOLTIP
+                                "data-test-selector": _.TITLE_SAVE_TOOLTIP
                             }, s.createElement(b.u, {
                                 direction: b.v.TopRight,
                                 show: n.state.showError || n.state.showSuccess
-                            }, s.createElement(b.Xa, {
+                            }, s.createElement(b.Ya, {
                                 padding: 1
                             }, n.state.showSuccess ? s.createElement(b.W, {
                                 color: b.O.Link
@@ -5983,32 +5983,32 @@
                                 broadcasterName: n.props.broadcasterName
                             }, "ClipsTitleEdit")) : s.createElement(b.W, {
                                 color: b.O.Alt2
-                            }, n.getRemainingCharacterText()), s.createElement(b.Xa, null, s.createElement(b.Xa, {
+                            }, n.getRemainingCharacterText()), s.createElement(b.Ya, null, s.createElement(b.Ya, {
                                 fullWidth: !0
-                            }, s.createElement(b.Ra, {
-                                id: k.TITLE_INPUT,
-                                "data-test-selector": k.TITLE_INPUT,
-                                type: b.Ta.Text,
+                            }, s.createElement(b.Sa, {
+                                id: _.TITLE_INPUT,
+                                "data-test-selector": _.TITLE_INPUT,
+                                type: b.Ua.Text,
                                 value: n.state.title,
                                 onChange: n.handleTitleEdit,
                                 onKeyDown: n.handleKeyDown,
                                 placeholder: Object(l.d)("Add a title (required)", "ClipsTitleEdit"),
-                                size: b.Sa.Large,
+                                size: b.Ta.Large,
                                 autoFocus: !0
-                            })), s.createElement(b.Xa, {
+                            })), s.createElement(b.Ya, {
                                 display: b.X.Flex,
-                                justifyContent: b.Wa.Between,
+                                justifyContent: b.Xa.Between,
                                 alignItems: b.f.Center,
                                 padding: {
                                     top: 1
                                 }
-                            }, e, s.createElement(b.Xa, {
+                            }, e, s.createElement(b.Ya, {
                                 display: b.X.Flex
-                            }, s.createElement(b.Xa, {
+                            }, s.createElement(b.Ya, {
                                 padding: {
                                     left: 1
                                 }
-                            }, s.createElement(O, {
+                            }, s.createElement(k, {
                                 clipId: n.props.clipId,
                                 clipBroadcasterId: n.props.clipBroadcasterId,
                                 isSubmitted: n.state.showSuccess,
@@ -6020,7 +6020,7 @@
                             })))))
                         }, n.renderSave = function() {
                             return s.createElement(b.z, {
-                                "data-test-selector": k.TITLE_SAVE,
+                                "data-test-selector": _.TITLE_SAVE,
                                 disabled: !n.canSaveEditedTitle(),
                                 onClick: n.editClipTitle
                             }, Object(l.d)("Save", "ClipsTitleEdit"))
@@ -6120,11 +6120,11 @@
                         return null === e ? g.unknown : e.includes("403:") || e.toLowerCase() === i.InvalidTitle.toLowerCase() || e.toLowerCase() === r.InvalidTitle.toLowerCase() ? g.channelViolation : e === g.emptySubmission ? g.emptySubmission : g.unknown
                     }, t
                 }(s.Component),
-                R = Object(c.a)(_, {
+                R = Object(c.a)(O, {
                     name: "editTitle"
                 })(C);
             n.d(t, !1, function() {
-                return k
+                return _
             }), n.d(t, "b", function() {
                 return g
             }), n.d(t, !1, function() {
@@ -6803,10 +6803,10 @@
                         onClick: this.handleInsideBalloonClick
                     }, l)));
                     var c = o;
-                    return this.props.tooltipProps && (c = a.createElement(s.Yb, r.__assign({}, this.props.tooltipProps), o)), a.createElement(s.Xa, {
+                    return this.props.tooltipProps && (c = a.createElement(s.Zb, r.__assign({}, this.props.tooltipProps), o)), a.createElement(s.Ya, {
                         "data-toggle-balloon-id": this.toggleBalloonId,
                         display: this.props.display,
-                        position: s.jb.Relative
+                        position: s.kb.Relative
                     }, a.createElement("div", {
                         style: {
                             display: "inherit"
@@ -6860,7 +6860,7 @@
                 T = n("Ue10"),
                 y = (n("MPK0"), "report-wizard-block"),
                 S = "report-wizard-unblock",
-                O = function(e) {
+                k = function(e) {
                     function t() {
                         var t = null !== e && e.apply(this, arguments) || this;
                         return t.state = {
@@ -6870,13 +6870,13 @@
                                 hoverUnderlineNone: !0,
                                 onClick: t.handleBlock,
                                 "data-test-selector": y
-                            }, o.createElement(T.Xa, {
+                            }, o.createElement(T.Ya, {
                                 display: T.X.Flex,
                                 alignItems: T.f.Center
-                            }, o.createElement(T.sb, {
-                                type: T.ub.Brand,
-                                asset: T.tb.Ban
-                            }), o.createElement(T.Xa, {
+                            }, o.createElement(T.tb, {
+                                type: T.vb.Brand,
+                                asset: T.ub.Ban
+                            }), o.createElement(T.Ya, {
                                 margin: {
                                     left: .5
                                 }
@@ -6884,27 +6884,27 @@
                                 user: t.displayName()
                             }, "ReportWizardBlockActions"))))
                         }, t.renderUnblock = function() {
-                            return o.createElement(T.Xa, {
+                            return o.createElement(T.Ya, {
                                 className: "reporting-wizard__block-actions",
                                 display: T.X.Flex,
                                 alignItems: T.f.Center
-                            }, o.createElement(T.sb, {
-                                type: T.ub.Success,
-                                asset: T.tb.FollowCheck
-                            }), o.createElement(T.Xa, {
+                            }, o.createElement(T.tb, {
+                                type: T.vb.Success,
+                                asset: T.ub.FollowCheck
+                            }), o.createElement(T.Ya, {
                                 margin: {
                                     right: 1
                                 }
                             }, o.createElement(T.W, {
                                 className: "block-user__success",
-                                type: T.Vb.Span
+                                type: T.Wb.Span
                             }, Object(c.d)("{user} blocked", {
                                 user: t.displayName()
                             }, "ReportWizardBlockActions"))), o.createElement(T.U, {
                                 hoverUnderlineNone: !0,
                                 onClick: t.handleUnblock,
                                 "data-test-selector": S
-                            }, o.createElement(T.Xa, {
+                            }, o.createElement(T.Ya, {
                                 margin: {
                                     left: .5
                                 }
@@ -6930,7 +6930,7 @@
                     return a.__extends(t, e), t.prototype.render = function() {
                         var e = this.state.userBlocked ? this.renderUnblock() : this.renderBlock(),
                             t = Object(b.a)(this.props.targetUser.login, this.props.targetUser.displayName, !0);
-                        return o.createElement(T.Eb, {
+                        return o.createElement(T.Fb, {
                             borderTop: !0,
                             padding: {
                                 y: 1
@@ -6938,18 +6938,18 @@
                             margin: {
                                 top: 1
                             }
-                        }, o.createElement(T.Xa, null, Object(c.d)("Would you like to block {user}?", {
+                        }, o.createElement(T.Ya, null, Object(c.d)("Would you like to block {user}?", {
                             user: t
-                        }, "ReportWizardBlockActions")), o.createElement(T.Eb, {
+                        }, "ReportWizardBlockActions")), o.createElement(T.Fb, {
                             color: T.O.Alt2,
                             margin: {
                                 y: 1
                             }
-                        }, o.createElement(T.ec, {
+                        }, o.createElement(T.fc, {
                             baseFontSize: T.Ca.Size6
                         }, o.createElement("p", null, Object(c.d)("Blocking {user} will:", {
                             user: t
-                        }, "ReportWizardBlockActions")), o.createElement("ul", null, o.createElement("li", null, Object(c.d)("Prevent them from sending you whispers", "ReportWizardBlockActions")), o.createElement("li", null, Object(c.d)("Prevent them from hosting you", "ReportWizardBlockActions")), o.createElement("li", null, Object(c.d)("Prevent them from adding you as a friend", "ReportWizardBlockActions")), o.createElement("li", null, Object(c.d)("Filter their messages out of chats you don’t moderate", "ReportWizardBlockActions"))))), o.createElement(T.Xa, {
+                        }, "ReportWizardBlockActions")), o.createElement("ul", null, o.createElement("li", null, Object(c.d)("Prevent them from sending you whispers", "ReportWizardBlockActions")), o.createElement("li", null, Object(c.d)("Prevent them from hosting you", "ReportWizardBlockActions")), o.createElement("li", null, Object(c.d)("Prevent them from adding you as a friend", "ReportWizardBlockActions")), o.createElement("li", null, Object(c.d)("Filter their messages out of chats you don’t moderate", "ReportWizardBlockActions"))))), o.createElement(T.Ya, {
                             margin: {
                                 top: 1
                             }
@@ -6962,7 +6962,7 @@
             function(e) {
                 e.Link = "link", e.MultipleChoice = "multiple choice", e.Text = "text", e.Textarea = "textarea"
             }(r || (r = {}));
-            var _, k = {
+            var O, _ = {
                     generalFilter: function() {
                         return Object(c.d)("I don't think their content or behavior is allowed on Twitch", "ReportModalWizard")
                     },
@@ -7083,12 +7083,12 @@
                         type: r.Link
                     },
                     messaging_general: {
-                        getTitle: k.generalFilter,
+                        getTitle: _.generalFilter,
                         value: "general_messaging",
                         omitFromDescription: !0
                     },
                     profile_general: {
-                        getTitle: k.generalFilter,
+                        getTitle: _.generalFilter,
                         value: "general_profile",
                         omitFromDescription: !0
                     },
@@ -7228,7 +7228,7 @@
                         reportReason: i.Miscategorized
                     },
                     video_general: {
-                        getTitle: k.generalFilter,
+                        getTitle: _.generalFilter,
                         value: "general_video",
                         omitFromDescription: !0
                     },
@@ -7247,12 +7247,12 @@
                         reportReason: i.Harassment
                     },
                     abusiveViolence: {
-                        getTitle: k.abusiveViolence,
+                        getTitle: _.abusiveViolence,
                         value: "threatening violence",
                         reportReason: i.Harm
                     },
                     commitingViolence: {
-                        getTitle: k.commitingViolence,
+                        getTitle: _.commitingViolence,
                         value: "committing violence",
                         reportReason: i.Harm
                     },
@@ -7381,7 +7381,7 @@
                         reportReason: i.ChatBanEvasion
                     },
                     impersonation_me: {
-                        getTitle: k.me,
+                        getTitle: _.me,
                         value: "impersonating me",
                         reportReason: i.Impersonation
                     },
@@ -7393,7 +7393,7 @@
                         reportReason: i.Impersonation
                     },
                     impersonation_other: {
-                        getTitle: k.someoneElse,
+                        getTitle: _.someoneElse,
                         value: "impersonating someone else",
                         reportReason: i.Impersonation
                     },
@@ -7509,20 +7509,20 @@
                         value: "brigading/raids"
                     },
                     external_threatening: {
-                        getTitle: k.threatening,
+                        getTitle: _.threatening,
                         value: "threatening"
                     },
                     external_harassment: {
-                        getTitle: k.abusive,
+                        getTitle: _.abusive,
                         value: "hateful/harassing"
                     },
                     external_abusiveViolence: {
-                        getTitle: k.abusiveViolence,
+                        getTitle: _.abusiveViolence,
                         value: "external site; threatening violence",
                         reportReason: i.Harm
                     },
                     external_commitingViolence: {
-                        getTitle: k.commitingViolence,
+                        getTitle: _.commitingViolence,
                         value: "external site; committing violence",
                         reportReason: i.Harm
                     },
@@ -7576,12 +7576,12 @@
                         }, t
                     }
                     return a.__extends(t, e), t.prototype.render = function() {
-                        var e = this.props.currentCard.getDescription ? o.createElement(T.Xa, {
+                        var e = this.props.currentCard.getDescription ? o.createElement(T.Ya, {
                             padding: {
                                 bottom: 1
                             }
                         }, this.props.currentCard.getDescription()) : null;
-                        return o.createElement(T.Xa, {
+                        return o.createElement(T.Ya, {
                             className: "reporting-wizard-card"
                         }, e, o.createElement(T.Ea, {
                             label: this.props.currentCard.getLabel ? this.props.currentCard.getLabel() : ""
@@ -7595,14 +7595,14 @@
                         }).map(function(t, n) {
                             switch (t.type) {
                                 case r.Text:
-                                    return o.createElement(T.Xa, {
+                                    return o.createElement(T.Ya, {
                                         key: n,
                                         padding: {
                                             bottom: 1
                                         }
                                     }, t.getTitle());
                                 case r.Link:
-                                    return o.createElement(T.Xa, {
+                                    return o.createElement(T.Ya, {
                                         key: n,
                                         padding: {
                                             bottom: 1
@@ -7610,20 +7610,20 @@
                                     }, o.createElement(T.U, {
                                         to: t.value,
                                         targetBlank: !0
-                                    }, o.createElement(T.Xa, {
+                                    }, o.createElement(T.Ya, {
                                         display: T.X.Flex
-                                    }, o.createElement(T.Xa, {
+                                    }, o.createElement(T.Ya, {
                                         display: T.X.Inline,
                                         padding: {
                                             right: .5
                                         }
-                                    }, o.createElement(T.sb, {
-                                        asset: T.tb.Document
+                                    }, o.createElement(T.tb, {
+                                        asset: T.ub.Document
                                     })), t.getTitle())));
                                 case r.Textarea:
                                     var i = t.value ? e.props.userTextInputs[t.value] : void 0,
                                         a = t.required && (!i || !!i && 0 === i.trim().length);
-                                    return o.createElement(T.Xa, {
+                                    return o.createElement(T.Ya, {
                                         key: n,
                                         padding: {
                                             bottom: 1
@@ -7631,7 +7631,7 @@
                                     }, o.createElement(T.Ea, {
                                         label: t.getTitle(),
                                         labelOptional: t.required ? "" : Object(c.d)("Optional", "ReportModalWizardCard")
-                                    }, o.createElement(T.Sb, {
+                                    }, o.createElement(T.Tb, {
                                         onChange: e.onChange,
                                         rows: t.rows || 3,
                                         name: t.value,
@@ -7641,12 +7641,12 @@
                                     })));
                                 case r.MultipleChoice:
                                 default:
-                                    return o.createElement(T.Xa, {
+                                    return o.createElement(T.Ya, {
                                         key: n,
                                         padding: {
                                             y: .5
                                         }
-                                    }, o.createElement(T.pb, {
+                                    }, o.createElement(T.qb, {
                                         checked: !!e.props.currentSelection && e.props.currentSelection.value === t.value,
                                         onChange: e.onSelect,
                                         label: t.getTitle(e.props.targetUser.displayName),
@@ -7661,7 +7661,7 @@
                 R = n("RQ6e");
             ! function(e) {
                 e.Confirm = "Confirm", e.MultipleChoice = "MultipleChoice", e.Info = "End Card"
-            }(_ || (_ = {}));
+            }(O || (O = {}));
             var I, D, A, L = {
                     contentGeneral: function() {
                         return Object(c.d)("What would you like to report?", "ReportModalWizard")
@@ -7721,10 +7721,10 @@
                     },
                     blockPrompt: !0,
                     getTitle: w.thanks,
-                    type: _.Info,
+                    type: O.Info,
                     value: "end card"
                 },
-                M = {
+                F = {
                     socialMedia: a.__assign({}, P, {
                         items: [N.endBlurb_socialmedia]
                     }),
@@ -7737,7 +7737,7 @@
                             return Object(c.d)("To submit a claim or report a violation of this type, you will need to follow the steps listed on the relevant page below.", "ReportModalWizard")
                         },
                         items: [N.endLink_DMCA, N.endLink_trademark, N.endLink_devAgreement],
-                        type: _.Info,
+                        type: O.Info,
                         value: "ip end"
                     },
                     selfharm: {
@@ -7746,7 +7746,7 @@
                             return Object(c.d)("If you know the user personally, and you believe them to be in danger, please contact their local authorities immediately. The link below contains some general information that may be of use.", "ReportModalWizard")
                         },
                         items: [N.endLink_selfharm],
-                        type: _.Info,
+                        type: O.Info,
                         value: "selfharm end"
                     },
                     twitchEvent: {
@@ -7756,16 +7756,16 @@
                         },
                         items: [N.endLink_eventCoC],
                         value: "twitch event end",
-                        type: _.Info
+                        type: O.Info
                     }
                 },
-                F = {
+                M = {
                     getTitle: w.report,
                     getLabel: function() {
                         return Object(c.d)("Where is the problem?", "ReportModalWizard")
                     },
                     items: [N.video, N.whisper, N.chat, N.room, N.profile, N.username, N.report_other],
-                    type: _.MultipleChoice,
+                    type: O.MultipleChoice,
                     value: "content type"
                 },
                 U = {
@@ -7773,21 +7773,21 @@
                         getTitle: w.reportVideo,
                         getLabel: L.identifyUser,
                         items: [N.video_streamer, N.video_someoneElse, N.video_chatSomeone],
-                        type: _.MultipleChoice,
+                        type: O.MultipleChoice,
                         value: "video identify user"
                     },
                     content: {
                         getTitle: w.reportVideo,
                         getLabel: L.contentGeneral,
                         items: [N.revealPersonalInfo, N.video_labeling, N.video_inactive, N.video_general, N.report_ip, N.violateDevAgreement, N.selfharm],
-                        type: _.MultipleChoice,
+                        type: O.MultipleChoice,
                         value: "video report reason"
                     },
                     general: {
                         getTitle: w.reportVideo,
                         getLabel: L.content,
                         items: [N.report_username, N.violence, N.abusive, N.cheating, N.scam, N.inappropriateContent, N.evasion, N.impersonation, N.underage, N.bitsViolation],
-                        type: _.MultipleChoice,
+                        type: O.MultipleChoice,
                         value: "video general report reason"
                     }
                 },
@@ -7796,14 +7796,14 @@
                         getTitle: w.reportMessage,
                         getLabel: L.contentGeneral,
                         items: [N.revealPersonalInfo, N.evasion, N.spam, N.maliciousRaid, N.report_username, N.messaging_general, N.selfharm],
-                        type: _.MultipleChoice,
+                        type: O.MultipleChoice,
                         value: "message report reason"
                     },
                     general: {
                         getTitle: w.reportMessage,
                         getLabel: L.content,
                         items: [N.report_emotes, N.violence, N.abusive, N.inappropriateContent, N.impersonation, N.underage, N.bitsViolation],
-                        type: _.MultipleChoice,
+                        type: O.MultipleChoice,
                         value: "message general report reason"
                     }
                 },
@@ -7817,14 +7817,14 @@
                         getTitle: w.reportProfile,
                         getLabel: L.contentGeneral,
                         items: [N.revealPersonalInfo, N.inappropriateBadge, N.inappropriateExtension, N.noModeration, N.profile_general, N.report_ip, N.violateDevAgreement, N.selfharm],
-                        type: _.MultipleChoice,
+                        type: O.MultipleChoice,
                         value: "profile report reason"
                     },
                     general: {
                         getTitle: w.reportProfile,
                         getLabel: L.content,
                         items: [N.report_username, N.violence, N.abusive, N.scam, N.inappropriateContent, N.evasion, N.impersonation, N.underage, N.bitsViolation],
-                        type: _.MultipleChoice,
+                        type: O.MultipleChoice,
                         value: "profile general report reason"
                     }
                 },
@@ -7837,12 +7837,12 @@
                     getLabel: L.identifyUser,
                     items: [N.report_channelOwner, N.report_member],
                     value: "room report user",
-                    type: _.MultipleChoice
+                    type: O.MultipleChoice
                 },
                 W = {
                     getTitle: w.tellUsMore,
                     items: [N.input_description],
-                    type: _.Confirm,
+                    type: O.Confirm,
                     value: "tell us more"
                 },
                 G = {
@@ -7852,7 +7852,7 @@
                     }),
                     socialMedia: a.__assign({}, W, {
                         items: [N.input_link, N.input_connection, N.input_description],
-                        nextCard: M.socialMedia,
+                        nextCard: F.socialMedia,
                         value: "social media tell us more"
                     })
                 },
@@ -7861,7 +7861,7 @@
                         getTitle: w.reportAbusive,
                         getLabel: L.relevantStatements,
                         items: [N.hateSpeech, N.harassment, N.abusiveViolence, N.commitingViolence, N.swatting, N.personalInfo],
-                        type: _.MultipleChoice,
+                        type: O.MultipleChoice,
                         value: "abuse type"
                     },
                     violence: {
@@ -7874,11 +7874,11 @@
                             return Object(c.d)("Are the threats or actions directed at you or someone else?", "ReportModalWizard")
                         },
                         items: [N.threat_me, N.threat_person, N.threat_group, N.threat_selfharm],
-                        type: _.MultipleChoice,
+                        type: O.MultipleChoice,
                         value: "violence type"
                     }
                 },
-                z = {
+                Y = {
                     identifyLocation: {
                         getTitle: function(e) {
                             return Object(c.d)("Report {username} for something else...", {
@@ -7889,7 +7889,7 @@
                             return Object(c.d)("Where did the problem happen?", "ReportModalWizard")
                         },
                         items: [N.location_onTwitch, N.location_anotherSite, N.location_TwitchEvent],
-                        type: _.MultipleChoice,
+                        type: O.MultipleChoice,
                         value: "off-site conduct location"
                     },
                     externalSite: {
@@ -7903,7 +7903,7 @@
                             return Object(c.d)("Please note that incidents reported through this form must involve Twitch community members. If possible, please submit a report to the site or service where the incident occurred as well.", "ReportModalWizard")
                         },
                         items: [N.external_incitingRaids, N.external_threatening, N.external_harassment],
-                        type: _.MultipleChoice,
+                        type: O.MultipleChoice,
                         nextCard: G.socialMedia,
                         value: "external site conduct"
                     },
@@ -7916,7 +7916,7 @@
                         nextCard: G.socialMedia
                     })
                 },
-                X = {
+                z = {
                     getTitle: function(e) {
                         return Object(c.d)("Report {username}'s Spam or Malicious Links", {
                             username: e
@@ -7924,10 +7924,10 @@
                     },
                     getLabel: L.contentGeneral,
                     items: [N.spam_bot, N.spam_scam, N.spam_repeated],
-                    type: _.MultipleChoice,
+                    type: O.MultipleChoice,
                     value: "spam type"
                 },
-                Y = {
+                q = {
                     getTitle: function(e) {
                         return Object(c.d)("Report {username} for Inappropriate Content", {
                             username: e
@@ -7935,10 +7935,10 @@
                     },
                     getLabel: L.relevantStatements,
                     items: [N.inappropriate_game, N.gory, N.sexuallyViolent, N.childAnimal, N.pornographic, N.suggestive, N.nudity, N.other],
-                    type: _.MultipleChoice,
+                    type: O.MultipleChoice,
                     value: "inappropriate content type"
                 },
-                q = {
+                X = {
                     getTitle: function(e) {
                         return Object(c.d)("Report {username} for Evading a Ban", {
                             username: e
@@ -7949,7 +7949,7 @@
                     },
                     value: "ban type",
                     items: [N.evasion_chat, N.evasion_sitewide, N.evasion_messaging],
-                    type: _.MultipleChoice,
+                    type: O.MultipleChoice,
                     nextCard: G.banEvasion
                 },
                 K = {
@@ -7965,10 +7965,10 @@
                         return Object(c.d)("Parody, cosplay, and other portrayals without the intent to deceive or defraud are allowed under Twitch's Community Guidelines. If you would still like to submit a report, please continue.", "ReportModalWizard")
                     },
                     items: [N.impersonation_me, N.impersonation_brand, N.impersonation_other],
-                    type: _.MultipleChoice,
+                    type: O.MultipleChoice,
                     value: "impersonation type"
                 },
-                Q = F,
+                Q = M,
                 Z = W,
                 $ = P,
                 J = {
@@ -7977,7 +7977,7 @@
                     chat: x.content,
                     profile: j.content,
                     room: V,
-                    "somewhere else": z.identifyLocation,
+                    "somewhere else": Y.identifyLocation,
                     streamer: U.content,
                     "someone else in video": U.content,
                     "someone in chat": x.content,
@@ -7987,29 +7987,29 @@
                     "channel owner": j.content,
                     "community member": x.content,
                     "on twitch": j.content,
-                    "another site": z.externalSite,
-                    "twitch event": M.twitchEvent,
+                    "another site": Y.externalSite,
+                    "twitch event": F.twitchEvent,
                     "brigading/raids": G.socialMedia,
-                    threatening: z.external_violence,
-                    "hateful/harassing": z.external_abusive,
-                    "external site; threatening violence": z.external_violence,
-                    "external site; committing violence": z.external_violence,
+                    threatening: Y.external_violence,
+                    "hateful/harassing": Y.external_abusive,
+                    "external site; threatening violence": Y.external_violence,
+                    "external site; committing violence": Y.external_violence,
                     "external site; scam": G.socialMedia,
-                    "ban evasion": q,
-                    spam: X,
+                    "ban evasion": X,
+                    spam: z,
                     hateful: H.content,
                     impersonation: K,
                     "violence/threats": H.violence,
                     "threatening violence": H.violence,
                     "committing violence": H.violence,
                     abusive: H.content,
-                    "inappropriate content": Y,
-                    "intellectual property": M.legal,
-                    "violating developer agreement": M.legal
+                    "inappropriate content": q,
+                    "intellectual property": F.legal,
+                    "violating developer agreement": F.legal
                 },
                 ee = {
-                    selfharm: M.selfharm,
-                    harm: M.violence,
+                    selfharm: F.selfharm,
+                    harm: F.violence,
                     other: $
                 },
                 te = {
@@ -8044,7 +8044,7 @@
                             targetUnknown: !1,
                             reportContext: t.props.reportContentType
                         }, t.renderPrimer = function() {
-                            return o.createElement(T.Xa, {
+                            return o.createElement(T.Ya, {
                                 margin: {
                                     top: 1
                                 }
@@ -8056,23 +8056,23 @@
                                 r = !1,
                                 a = t.state.prevCards.length ? t.renderBack() : null;
                             switch (t.state.currentCard.type) {
-                                case _.MultipleChoice:
+                                case O.MultipleChoice:
                                     e = Object(c.d)("Next", "ReportModalWizard"), n = t.handleNext, i = re, r = !t.state.currentSelection;
                                     break;
-                                case _.Confirm:
+                                case O.Confirm:
                                     e = Object(c.d)("Submit Report", "ReportModalWizard"), n = t.handleSubmit, r = !t.state.userTextInput, i = ae
                             }
-                            return o.createElement(T.Xa, null, a, o.createElement(T.z, {
+                            return o.createElement(T.Ya, null, a, o.createElement(T.z, {
                                 onClick: n,
                                 disabled: r,
                                 "data-test-selector": i
-                            }, o.createElement(T.Xa, {
+                            }, o.createElement(T.Ya, {
                                 padding: {
                                     x: 1
                                 }
                             }, e)))
                         }, t.renderBack = function() {
-                            return o.createElement(T.Xa, {
+                            return o.createElement(T.Ya, {
                                 margin: {
                                     right: 1
                                 },
@@ -8081,7 +8081,7 @@
                                 type: T.F.Hollow,
                                 onClick: t.handleBack,
                                 "data-test-selector": ne
-                            }, o.createElement(T.Xa, {
+                            }, o.createElement(T.Ya, {
                                 padding: {
                                     x: 1
                                 }
@@ -8105,7 +8105,7 @@
                                     s = e.nextCard || Z;
                                 J[t.state.currentSelection.value] && (s = J[t.state.currentSelection.value]);
                                 var l = t.state.currentSelection.reportReason || t.state.reportReason,
-                                    c = s.type === _.Info;
+                                    c = s.type === O.Info;
                                 t.setState({
                                     currentCard: s,
                                     reportReason: l,
@@ -8228,13 +8228,13 @@
                     return a.__extends(t, e), t.prototype.componentWillUnmount = function() {
                         this.state.modalCloseTracked || this.props.trackClose(A.Close, this.state.currentCard.value)
                     }, t.prototype.render = function() {
-                        var e = this.state.currentCard.type === _.Info && this.state.currentCard.blockPrompt ? o.createElement(O, {
+                        var e = this.state.currentCard.type === O.Info && this.state.currentCard.blockPrompt ? o.createElement(k, {
                                 targetUser: this.props.targetUser,
                                 onBlock: this.props.onBlock,
                                 onUnblock: this.props.onUnblock,
                                 userBlocked: this.props.userBlocked
                             }) : null,
-                            t = this.state.error ? o.createElement(T.Eb, {
+                            t = this.state.error ? o.createElement(T.Fb, {
                                 fullWidth: !0,
                                 margin: {
                                     bottom: 1
@@ -8242,8 +8242,8 @@
                                 padding: 1,
                                 className: "reporting__error-container"
                             }, this.state.error) : null,
-                            n = this.state.prevCards.length || this.state.currentCard.type === _.Info ? null : this.renderPrimer();
-                        return o.createElement(T.Eb, {
+                            n = this.state.prevCards.length || this.state.currentCard.type === O.Info ? null : this.renderPrimer();
+                        return o.createElement(T.Fb, {
                             className: "reporting-wizard",
                             display: T.X.Flex,
                             margin: {
@@ -8255,7 +8255,7 @@
                         }, t, o.createElement(T.W, {
                             bold: !0,
                             fontSize: T.Ca.Size4
-                        }, this.getTitle()), n, o.createElement(T.Xa, {
+                        }, this.getTitle()), n, o.createElement(T.Ya, {
                             margin: {
                                 y: 1
                             }
@@ -8389,14 +8389,14 @@
                 }, t.prototype.componentWillUnmount = function() {
                     this.handleClose(), this.state.showWizard || this.trackClose()
                 }, t.prototype.render = function() {
-                    if (this.props.data.error) return o.createElement(T.Xa, {
+                    if (this.props.data.error) return o.createElement(T.Ya, {
                         margin: {
                             bottom: 1
                         }
                     }, o.createElement(T.W, {
                         fontSize: T.Ca.Size5
                     }, Object(c.d)("There was an unexpected error. Please refresh the page and try again", "ReportUser")));
-                    if (this.props.data.loading) return o.createElement(T.ib, {
+                    if (this.props.data.loading) return o.createElement(T.jb, {
                         lineCount: 3
                     });
                     if (this.props.data.targetUser) {
@@ -8409,7 +8409,7 @@
                             title: this.props.title,
                             defaultDescription: this.props.defaultDescription
                         };
-                        return this.state.showWizard ? this.props.data.loading ? o.createElement(T.Za, null) : o.createElement(oe, a.__assign({}, e, {
+                        return this.state.showWizard ? this.props.data.loading ? o.createElement(T.ab, null) : o.createElement(oe, a.__assign({}, e, {
                             user: this.props.sessionUser,
                             onBlock: this.onBlock,
                             onUnblock: this.onUnblock,
@@ -8421,7 +8421,7 @@
                             targetUser: this.props.data.targetUser
                         }))
                     }
-                    return o.createElement(T.Xa, {
+                    return o.createElement(T.Ya, {
                         margin: {
                             bottom: 1
                         }
@@ -8479,9 +8479,9 @@
             }(i || (i = {}));
             var b, T, y = n("2xye"),
                 S = n("9o5F"),
-                O = n("tKDy"),
-                _ = n("i4un"),
-                k = n("JcRA"),
+                k = n("tKDy"),
+                O = n("i4un"),
+                _ = n("JcRA"),
                 N = n("GnwI"),
                 C = n("Ba7Q"),
                 R = n("Ar2k"),
@@ -8503,13 +8503,13 @@
                             showDropdown: !1,
                             disableNotifications: !0
                         }, t.handleContextBalloonToggle = function(e) {
-                            e ? Object(O.n)({
-                                page: O.e.Bubble,
+                            e ? Object(k.n)({
+                                page: k.e.Bubble,
                                 source: o.a.FollowButton,
-                                target: O.d.Outside,
-                                action: O.c.Click
-                            }) : Object(O.o)({
-                                page: O.e.Bubble,
+                                target: k.d.Outside,
+                                action: k.c.Click
+                            }) : Object(k.o)({
+                                page: k.e.Bubble,
                                 source: o.a.FollowButton
                             })
                         }, t.userDataLoaded = function() {
@@ -8686,7 +8686,7 @@
                             t.buttonContainerRef && t.state.isFollowing && t.props.showTooltips && t.props.tooltipLayer.show({
                                 from: t.buttonContainerRef,
                                 label: t.getUnfollowText(),
-                                direction: I.ac.Top
+                                direction: I.bc.Top
                             })
                         }, t.onMouseLeave = function() {
                             t.hideTooltip()
@@ -8696,11 +8696,11 @@
                             t.props.onToggleAnimationComplete && t.props.onToggleAnimationComplete(t.state.isFollowing)
                         }, t.login = function() {
                             var e;
-                            t.props.useContextualModals && Object(_.b)() === _.a.TwoStep ? e = {
-                                modalType: O.e.TwoStep,
+                            t.props.useContextualModals && Object(O.b)() === O.a.TwoStep ? e = {
+                                modalType: k.e.TwoStep,
                                 targetChannel: t.props.channelName || t.props.channelLogin
-                            } : t.props.useContextualModals && Object(_.b)() === _.a.Split && (e = {
-                                modalType: O.e.Combined,
+                            } : t.props.useContextualModals && Object(O.b)() === O.a.Split && (e = {
+                                modalType: k.e.Combined,
                                 targetChannel: t.props.channelName || t.props.channelLogin
                             }), t.props.login(e)
                         }, t
@@ -8733,23 +8733,23 @@
                         if (this.props.showLoadingPlaceholder && (!this.props.data || this.props.data.loading)) return this.renderPlaceholder();
                         if (this.props.hideWhenFollowing || this.props.currentUserLogin === this.props.channelLogin || !this.props.followData && (!this.props.data || this.props.data.loading || this.props.data.error || !this.props.data.user)) return null;
                         var e = null;
-                        return e = !this.state.isFollowing || this.props.animatedButton ? this.renderFollowButton(this.toggleFollowing) : this.props.hideDropdownWhenFollowing ? this.renderUnfollowButton() : this.renderUnfollowButtonWithDropdown(), u.createElement(I.Xa, {
+                        return e = !this.state.isFollowing || this.props.animatedButton ? this.renderFollowButton(this.toggleFollowing) : this.props.hideDropdownWhenFollowing ? this.renderUnfollowButton() : this.renderUnfollowButtonWithDropdown(), u.createElement(I.Ya, {
                             refDelegate: this.setButtonContainerRef
                         }, e)
                     }, t.prototype.renderPlaceholder = function() {
                         switch (this.props.size) {
                             case I.D.Large:
-                                return u.createElement(I.ib, {
+                                return u.createElement(I.jb, {
                                     width: this.props.fullWidthButton ? void 0 : 93,
                                     height: 36
                                 });
                             case I.D.Small:
-                                return u.createElement(I.ib, {
+                                return u.createElement(I.jb, {
                                     width: this.props.fullWidthButton ? void 0 : 66,
                                     height: 24
                                 });
                             default:
-                                return u.createElement(I.ib, {
+                                return u.createElement(I.jb, {
                                     width: this.props.fullWidthButton ? void 0 : 70,
                                     height: 30
                                 })
@@ -8763,10 +8763,10 @@
                             r = null;
                         return r = this.props.animatedButton ? u.createElement("div", {
                             className: n
-                        }, u.createElement(k.a, {
+                        }, u.createElement(_.a, {
                             text: i ? void 0 : t,
-                            icon: i ? I.tb.Heart : I.tb.FollowHollow,
-                            iconOnHover: i ? I.tb.Unheart : I.tb.Heart,
+                            icon: i ? I.ub.Heart : I.ub.FollowHollow,
+                            iconOnHover: i ? I.ub.Unheart : I.ub.Heart,
                             type: i ? I.F.Text : I.F.Default,
                             typeOnHover: i ? I.F.Alert : void 0,
                             onClick: e,
@@ -8782,7 +8782,7 @@
                             tabIndex: this.props.tabIndex,
                             type: this.props.followButtonType || I.F.Default,
                             fullWidth: this.props.fullWidthButton
-                        }, Object(I.jc)(this.props)), this.props.followUIType === T.IconOnly ? null : t), this.props.useContextualModals && !this.props.isLoggedIn && Object(_.b)() === _.a.Balloon ? u.createElement(m.a, {
+                        }, Object(I.kc)(this.props)), this.props.followUIType === T.IconOnly ? null : t), this.props.useContextualModals && !this.props.isLoggedIn && Object(O.b)() === O.a.Balloon ? u.createElement(m.a, {
                             onToggle: this.handleContextBalloonToggle,
                             "data-test-selector": b.FollowButtonWithContextualModal
                         }, r, u.createElement(I.u, {
@@ -8804,7 +8804,7 @@
                             "data-test-selector": b.UnfollowButton,
                             tabIndex: this.props.tabIndex,
                             onClick: this.toggleFollowing
-                        }, Object(I.jc)(this.props)), u.createElement(I.Xa, {
+                        }, Object(I.kc)(this.props)), u.createElement(I.Ya, {
                             padding: {
                                 x: .5
                             },
@@ -8814,29 +8814,29 @@
                         }, u.createElement("span", {
                             className: "follow-btn__label",
                             "data-test-selector": b.UnfollowButtonLabel
-                        }, this.props.unfollowUIType !== T.TextOnly && u.createElement(I.sb, {
-                            asset: I.tb.Heart
-                        }), this.props.unfollowUIType !== T.IconOnly && u.createElement(I.Xa, {
+                        }, this.props.unfollowUIType !== T.TextOnly && u.createElement(I.tb, {
+                            asset: I.ub.Heart
+                        }), this.props.unfollowUIType !== T.IconOnly && u.createElement(I.Ya, {
                             padding: {
                                 x: .5
                             }
                         }, Object(p.d)("Following", "FollowButton"))), u.createElement("span", {
                             className: "follow-btn__label-hover",
                             "data-test-selector": b.UnfollowButtonLabelHover
-                        }, this.props.unfollowUIType !== T.TextOnly && u.createElement(I.sb, {
-                            asset: I.tb.Unheart
-                        }), this.props.unfollowUIType !== T.IconOnly && u.createElement(I.Xa, {
+                        }, this.props.unfollowUIType !== T.TextOnly && u.createElement(I.tb, {
+                            asset: I.ub.Unheart
+                        }), this.props.unfollowUIType !== T.IconOnly && u.createElement(I.Ya, {
                             padding: {
                                 x: .5
                             }
                         }, t))))
                     }, t.prototype.renderUnfollowButtonWithDropdown = function() {
                         var e = this.props.balloonDirection ? this.props.balloonDirection : I.v.BottomRight;
-                        return u.createElement(I.Xa, {
+                        return u.createElement(I.Ya, {
                             display: I.X.Flex,
                             className: "follow-btn",
                             "data-test-selector": b.UnfollowButtonWithDropdown
-                        }, u.createElement(I.Xa, null, this.renderUnfollowButton(!0)), u.createElement(m.a, {
+                        }, u.createElement(I.Ya, null, this.renderUnfollowButton(!0)), u.createElement(m.a, {
                             display: I.X.InlineFlex,
                             openByDefault: this.state.showDropdown
                         }, u.createElement("button", {
@@ -8844,27 +8844,27 @@
                             "aria-label": Object(p.d)("Dropdown", "FollowButton"),
                             className: "follow-btn__dropdown-toggle",
                             "data-a-target": "follow-dropdown-toggle"
-                        }, u.createElement(I.Xa, {
-                            justifyContent: I.Wa.Center,
+                        }, u.createElement(I.Ya, {
+                            justifyContent: I.Xa.Center,
                             display: I.X.Flex,
                             alignItems: I.f.Stretch,
                             fullHeight: !0
-                        }, u.createElement(I.sb, {
-                            asset: I.tb.GlyphArrDown
+                        }, u.createElement(I.tb, {
+                            asset: I.ub.GlyphArrDown
                         }))), u.createElement(I.u, {
                             size: I.w.Small,
                             direction: e,
                             "data-a-target": "follow-notifications-balloon"
-                        }, u.createElement(I.Xa, {
+                        }, u.createElement(I.Ya, {
                             padding: 1
                         }, u.createElement(C.a, {
                             channelLogin: this.props.channelLogin
                         })))))
                     }, t.prototype.getButtonIcon = function() {
-                        var e = this.props.hollowIcons && !this.state.isFollowing ? I.tb.FollowHollow : I.tb.Heart;
+                        var e = this.props.hollowIcons && !this.state.isFollowing ? I.ub.FollowHollow : I.ub.Heart;
                         return this.props.followUIType === T.TextOnly ? void 0 : e
                     }, t.prototype.reportInteractive = function() {
-                        M(this.props) ? this.props.latencyTracking.reportInteractive() : this.props.data && !this.props.data.loading && this.props.latencyTracking.reportInteractive()
+                        F(this.props) ? this.props.latencyTracking.reportInteractive() : this.props.data && !this.props.data.loading && this.props.latencyTracking.reportInteractive()
                     }, t.prototype.addEventListeners = function() {
                         this.buttonContainerRef && (this.buttonContainerRef.addEventListener("mouseover", this.onMouseEnter), this.buttonContainerRef.addEventListener("mouseleave", this.onMouseLeave))
                     }, t.prototype.removeEventListeners = function() {
@@ -8881,17 +8881,17 @@
                             }
                         }
                     },
-                    skip: M
+                    skip: F
                 }), Object(f.a)(D, {
                     name: "followUser"
                 }), Object(f.a)(A, {
                     name: "unfollowUser"
                 }), Object(R.c)(), Object(N.b)("FollowButton"))(w);
 
-            function M(e) {
+            function F(e) {
                 return !e.isLoggedIn || (!e.channelLogin || (!!e.followData || e.channelLogin === e.currentUserLogin))
             }
-            var F = Object(r.connect)(function(e) {
+            var M = Object(r.connect)(function(e) {
                 var t = Object(l.e)(e);
                 return {
                     currentUserLogin: t && t.login,
@@ -8907,7 +8907,7 @@
             n.d(t, "b", function() {
                 return T
             }), n.d(t, !1, function() {}), n.d(t, "a", function() {
-                return F
+                return M
             })
         },
         dW6f: function(e, t, n) {},
@@ -8938,9 +8938,9 @@
                 T = n("1hWM"),
                 y = n("imBb"),
                 S = n("cr+I"),
-                O = n("/7QA"),
-                _ = n("Fxe2"),
-                k = n("f00E"),
+                k = n("/7QA"),
+                O = n("Fxe2"),
+                _ = n("f00E"),
                 N = n("vRsq"),
                 C = n("2xye"),
                 R = n("kz7j"),
@@ -8953,8 +8953,8 @@
                 L = n("oKCn"),
                 w = n("lTz2"),
                 P = n("C94G"),
-                M = (n("Qqhu"), n("Addw")),
-                F = "debug",
+                F = (n("Qqhu"), n("Addw")),
+                M = "debug",
                 U = {
                     amazon: !1,
                     comscore: !1,
@@ -8975,8 +8975,8 @@
                     showInfo: !1,
                     showtheatre: !1,
                     trackingProperties: {
-                        client_build_id: O.p.config.buildID,
-                        client_app: O.p.session.clientApp
+                        client_build_id: k.p.config.buildID,
+                        client_app: k.p.session.clientApp
                     },
                     width: "100%",
                     oauth_token: "",
@@ -8985,7 +8985,7 @@
                 B = function(e) {
                     function t(t) {
                         var n = e.call(this, t) || this;
-                        return n.lastGDPR = U, n.hasInitializedOffsets = !1, n.logger = O.k.withCategory("video-player"), n.initializePlayer = function(e) {
+                        return n.lastGDPR = U, n.hasInitializedOffsets = !1, n.logger = k.k.withCategory("video-player"), n.initializePlayer = function(e) {
                             var t = o.__assign({}, x, {
                                 allowfullscreen: !n.props.disableFullscreen,
                                 autoplay: !n.props.paused,
@@ -8994,21 +8994,21 @@
                                 muted: n.props.muted,
                                 showtheatre: !n.props.disableTheatreButton,
                                 trackingProperties: o.__assign({}, x.trackingProperties, {
-                                    platform: O.o.getPlatform()
+                                    platform: k.o.getPlatform()
                                 })
                             });
                             n.playerBuffering = n.registerBufferingEvent(!!n.props.paused), n.playerPlayed = n.registerPlayedEvent(!!n.props.paused);
                             var i = n.props.playerTypeOverride;
-                            i && (t.player = i, n.playerType = i, i === L.f.ClipsEditing && (t.muted = !0)), n.props.channelLogin && (t.channel = n.props.channelLogin, n.lastSetChannel = n.props.channelLogin), n.props.collectionID && (t.collection = n.props.collectionID), n.props.clipSlug && (t.clip = n.props.clipSlug), n.props.vodID && (t.video = Object(N.p)(n.props.vodID), O.o.setVideoPlayerTrackingData({
+                            i && (t.player = i, n.playerType = i, i === L.f.ClipsEditing && (t.muted = !0)), n.props.channelLogin && (t.channel = n.props.channelLogin, n.lastSetChannel = n.props.channelLogin), n.props.collectionID && (t.collection = n.props.collectionID), n.props.clipSlug && (t.clip = n.props.clipSlug), n.props.vodID && (t.video = Object(N.p)(n.props.vodID), k.o.setVideoPlayerTrackingData({
                                 vodID: n.props.vodID
-                            })), n.props.showChannelInfoOnHover && (t.showInfo = n.props.showChannelInfoOnHover), void 0 !== n.props.persistUserPreferences && (t.persistUserPreferences = n.props.persistUserPreferences), void 0 !== n.props.nextVideoOffset && n.props.nextVideoOffset >= 0 && (t.time = Object(M.a)(n.props.nextVideoOffset)), t.oauth_token = n.props.authToken || "", t.debug = "true" === S.parse(window.location.search)[F], n.logger.debug("Initializing", t);
+                            })), n.props.showChannelInfoOnHover && (t.showInfo = n.props.showChannelInfoOnHover), void 0 !== n.props.persistUserPreferences && (t.persistUserPreferences = n.props.persistUserPreferences), void 0 !== n.props.nextVideoOffset && n.props.nextVideoOffset >= 0 && (t.time = Object(F.a)(n.props.nextVideoOffset)), t.oauth_token = n.props.authToken || "", t.debug = "true" === S.parse(window.location.search)[M], n.logger.debug("Initializing", t);
                             var r = new e(n.playerRef, t);
                             n.player = r, r.addEventListener(A.a.PlayerReady, n.onPlayerReady), r.addEventListener(A.a.CompanionAdBuffered, n.companionAdBuffered), r.addEventListener(A.a.Online, n.onStreamStatusOnline), r.addEventListener(A.a.Offline, n.onStreamStatusOffline), r.addEventListener(d.Ended, n.onStreamStatusOffline), r.addEventListener(d.Play, n.onPlayerPlay), r.addEventListener(d.Playing, n.onPlayerPlaying), r.addEventListener(d.Seeking, n.onSeeking), r.addEventListener(d.Seeked, n.onSeek), r.addEventListener(d.TimeUpdate, n.onTimeUpdate), r.addEventListener(A.a.TheatreChange, n.onTheatreChange), r.addEventListener(A.a.FullscreenChange, n.onFullScreenChange), r.addEventListener(A.a.ExternalFullscreenChange, n.onExternalFullScreenChange), r.addEventListener(A.a.ClipsModerationOpen, n.onClipsModerationOpen), r.addEventListener(A.a.TransitionToCollectionVOD, n.onTransitionToCollectionVod), r.addEventListener(A.a.TransitionToRecommendedVOD, n.onTransitionToRecommendedVod), r.addEventListener(A.a.OpenStream, n.onOpenStream), r.addEventListener(d.Pause, n.onPause), r.addEventListener(A.a.PersistenPlayerToggle, n.onPersistentPlayerToggled), r.addEventListener(d.LoadedMetadata, n.onMetadataLoaded), r.addEventListener(d.VolumeChange, n.onVolumeChange), r.addEventListener(A.a.PromptLoginModal, n.props.promptLogin), r.addEventListener(A.a.FocusPlayer, n.onFocusPlayer), r.addEventListener(A.a.FollowChannel, n.followChannel), r.addEventListener(A.a.UnfollowChannel, n.unfollowChannel), r.addEventListener(A.a.ContentRestricted, n.onContentRestricted), T.extensionService.registerPlayer(n.player), T.extensionService.setPlayerWindow(window), n.props.onInit && n.props.onInit(r), n.maybeAttachToWindow(n.props)
                         }, n.attachRef = function(e) {
                             return n.playerRef = e
                         }, n.onMetadataLoaded = function() {
                             var e = n.player && n.player.getSessionInfo();
-                            e && (n.logger.debug("Got player session info from player instance", e), O.o.setVideoPlayerTrackingData({
+                            e && (n.logger.debug("Got player session info from player instance", e), k.o.setVideoPlayerTrackingData({
                                 broadcastID: e.broadcastId,
                                 playSessionID: e.playSessionId
                             })), n.setState({
@@ -9016,11 +9016,11 @@
                             })
                         }, n.onOpenStream = function() {
                             if (n.props.playerTypeOverride === L.f.Frontpage && n.player)
-                                if (n.props.channelLogin) O.p.history.push("/" + n.props.channelLogin);
+                                if (n.props.channelLogin) k.p.history.push("/" + n.props.channelLogin);
                                 else if (n.props.vodID) {
                                 var e = Math.floor(n.player.getCurrentTime());
-                                O.p.history.push("/videos/" + n.props.vodID + "?t=" + Object(M.a)(e))
-                            } else n.props.collectionID && O.p.history.push("/collections/" + n.props.collectionID)
+                                k.p.history.push("/videos/" + n.props.vodID + "?t=" + Object(F.a)(e))
+                            } else n.props.collectionID && k.p.history.push("/collections/" + n.props.collectionID)
                         }, n.onFocusPlayer = function() {
                             n.player && n.props.onFocusPlayer && n.props.channelLogin && n.props.onFocusPlayer()
                         }, n.followChannel = function() {
@@ -9081,12 +9081,12 @@
                         }, n.onTransitionToCollectionVod = function(e) {
                             if (n.props.onNavigationRequest) {
                                 var t = {};
-                                e.vodId && (t.videoID = Object(_.a)(e.vodId)), e.collectionId && (t.collectionID = e.collectionId), n.props.onNavigationRequest(t)
+                                e.vodId && (t.videoID = Object(O.a)(e.vodId)), e.collectionId && (t.collectionID = e.collectionId), n.props.onNavigationRequest(t)
                             }
                         }, n.onTransitionToRecommendedVod = function(e) {
                             if (n.props.onNavigationRequest) {
                                 var t = {};
-                                e.vodId && (t.videoID = Object(_.a)(e.vodId)), n.props.onNavigationRequest(t)
+                                e.vodId && (t.videoID = Object(O.a)(e.vodId)), n.props.onNavigationRequest(t)
                             }
                         }, n.onPersistentPlayerToggled = function() {
                             n.props.togglePersistentPlayer && n.props.togglePersistentPlayer()
@@ -9094,7 +9094,7 @@
                             n.logger.debug("onContentRestricted - a restriction gate has prevented video playback."), n.hasRestrictedContent = !0
                         }, n.updatePlayerTrackingData = function(e) {
                             n.state.playerInitialized && n.player && n.player.setTrackingProperties(function(e, t) {
-                                var n = O.o.getLastPageview(),
+                                var n = k.o.getLastPageview(),
                                     i = {
                                         host_channel: e.hostChannel,
                                         collapse_right: !e.rightColumnExpanded,
@@ -9124,7 +9124,7 @@
                                     updates: i,
                                     locationStateTrackingProps: a
                                 })), o.__assign({}, a, n, i)
-                            }(e, O.k))
+                            }(e, k.k))
                         }, n.updatePlayerTrackingDataFromProps = function() {
                             n.updatePlayerTrackingData(n.props)
                         }, n.updatePlayerType = function(e) {
@@ -9158,12 +9158,12 @@
                             isFullScreen: !1,
                             playerPaused: !!t.paused,
                             playerMuted: t.muted,
-                            playerRefID: Object(k.a)(),
+                            playerRefID: Object(_.a)(),
                             metadataLoaded: !1
                         }, n.playerType = t.playerTypeOverride || x.player, n.lastSetChannel = t.channelLogin, n.lastPausedProp = t.paused, n.lastMutedProp = t.muted, n.lastFollowingProp = t.viewerIsFollowing, n.lastGDPR = n.createPlayerGDPROptions(t), t.fullscreen.addChangeListener(n.onTwilightFullscreenChange), t.instanceRef && t.instanceRef(n), n
                     }
                     return o.__extends(t, e), t.prototype.componentDidMount = function() {
-                        this.playerCreated && this.props.latencyTracking.reportCustomEvent(this.playerCreated), this.bindHotKeys(), this.historyUnlistener = this.props.history.listen(this.onHistoryChange), Object(P.b)(), Object(P.a)(this.initializePlayer), O.o.eventEmitter.addListener(C.SpadeEventType.Pageview, this.updatePlayerTrackingDataFromProps)
+                        this.playerCreated && this.props.latencyTracking.reportCustomEvent(this.playerCreated), this.bindHotKeys(), this.historyUnlistener = this.props.history.listen(this.onHistoryChange), Object(P.b)(), Object(P.a)(this.initializePlayer), k.o.eventEmitter.addListener(C.SpadeEventType.Pageview, this.updatePlayerTrackingDataFromProps)
                     }, t.prototype.componentWillUpdate = function(e, t) {
                         if (t.playerInitialized) {
                             if (this.updatePlayerTrackingData(e), this.updatePlayerType(e.playerTypeOverride), this.player && t.isFullScreen !== this.player.fullscreen && this.player.setFullscreen(t.isFullScreen), this.player) {
@@ -9185,14 +9185,14 @@
                             }
                             this.player && e.clipSlug && this.props.clipSlug !== e.clipSlug && this.player.setClip(e.clipSlug), this.player && e.theatreModeEnabled !== this.player.getTheatre() && this.player.setTheatre(e.theatreModeEnabled), this.player && e.miniModeEnabled !== this.props.miniModeEnabled && this.player.setMiniPlayerMode(!!e.miniModeEnabled), this.player && t.playerPaused !== this.lastPausedProp && (t.playerPaused ? this.player.pause() : t.playerPaused || this.player.play(), this.lastPausedProp = t.playerPaused), this.player && t.playerMuted !== this.lastMutedProp && (this.player.setMuted(!!t.playerMuted), this.lastMutedProp = !!t.playerMuted), this.player && e.viewerIsFollowing !== this.lastFollowingProp && (this.player.setFollowing(!!e.viewerIsFollowing), this.lastFollowingProp = !!e.viewerIsFollowing), this.updatePlayerGDPRConsent(e);
                             var l = e.channelLogin !== this.lastSetChannel;
-                            if (this.player && e.channelLogin && (l || Object(w.b)(this.props, e))) return this.player.pause(), this.resetLatencyTracking(!!e.paused), this.player.setChannel(e.channelLogin), this.lastSetChannel = e.channelLogin, void O.o.setVideoPlayerTrackingData({
+                            if (this.player && e.channelLogin && (l || Object(w.b)(this.props, e))) return this.player.pause(), this.resetLatencyTracking(!!e.paused), this.player.setChannel(e.channelLogin), this.lastSetChannel = e.channelLogin, void k.o.setVideoPlayerTrackingData({
                                 vodID: void 0
                             });
                             var c = e.collectionID && this.props.collectionID !== e.collectionID,
                                 d = e.vodID && this.props.vodID !== e.vodID;
                             if (c || d) {
                                 var u = e.vodID ? Object(N.p)(e.vodID) : "";
-                                if ("" !== u && O.o.setVideoPlayerTrackingData({
+                                if ("" !== u && k.o.setVideoPlayerTrackingData({
                                         vodID: e.vodID
                                     }), !this.player) return;
                                 return this.player.pause(), this.resetLatencyTracking(!!e.paused), void(c || e.collectionID && d ? this.player.setCollection(e.collectionID, u, e.nextVideoOffset) : this.player.setVideo(u, e.nextVideoOffset))
@@ -9229,7 +9229,7 @@
                             ref: this.attachRef
                         }))
                     }, t.prototype.componentWillUnmount = function() {
-                        this.state.playerRefID === this.props.activeVideoPlayerRefID && this.props.reportPlayerInstanceStarted && this.props.reportPlayerInstanceStarted(void 0), this.unbindHotKeys(), this.historyUnlistener && this.historyUnlistener(), this.maybeDetachFromWindow(), this.state.isFullScreen && this.exitFullscreen(), this.props.fullscreen.removeChangeListener(this.onTwilightFullscreenChange), this.props.onDestroy && this.props.onDestroy(), O.o.eventEmitter.removeListener(C.SpadeEventType.Pageview, this.updatePlayerTrackingDataFromProps), this.player && (this.player.removeEventListener(A.a.PlayerReady, this.onPlayerReady), this.player.removeEventListener(A.a.CompanionAdBuffered, this.companionAdBuffered), this.player.removeEventListener(A.a.Online, this.onStreamStatusOnline), this.player.removeEventListener(A.a.Offline, this.onStreamStatusOffline), this.player.removeEventListener(d.Ended, this.onStreamStatusOffline), this.player.removeEventListener(d.Play, this.onPlayerPlay), this.player.removeEventListener(d.Playing, this.onPlayerPlaying), this.player.removeEventListener(A.a.TheatreChange, this.onTheatreChange), this.player.removeEventListener(A.a.TransitionToCollectionVOD, this.onTransitionToCollectionVod), this.player.removeEventListener(A.a.FullscreenChange, this.onFullScreenChange), this.player.removeEventListener(A.a.ExternalFullscreenChange, this.onExternalFullScreenChange), this.player.removeEventListener(d.Seeking, this.onSeeking), this.player.removeEventListener(d.Seeked, this.onSeek), this.player.removeEventListener(d.TimeUpdate, this.onTimeUpdate), this.player.removeEventListener(A.a.OpenStream, this.onOpenStream), this.player.removeEventListener(d.Pause, this.onPause), this.player.removeEventListener(A.a.PersistenPlayerToggle, this.onPersistentPlayerToggled), this.player.removeEventListener(d.LoadedMetadata, this.onMetadataLoaded), this.player.removeEventListener(d.VolumeChange, this.onVolumeChange), this.player.removeEventListener(A.a.PromptLoginModal, this.props.promptLogin), this.player.removeEventListener(A.a.FocusPlayer, this.onFocusPlayer), this.player.removeEventListener(A.a.FollowChannel, this.followChannel), this.player.removeEventListener(A.a.UnfollowChannel, this.unfollowChannel), this.player.removeEventListener(A.a.ContentRestricted, this.onContentRestricted), T.extensionService.unregisterPlayer(), this.player.destroy()), O.o.setVideoPlayerTrackingData({
+                        this.state.playerRefID === this.props.activeVideoPlayerRefID && this.props.reportPlayerInstanceStarted && this.props.reportPlayerInstanceStarted(void 0), this.unbindHotKeys(), this.historyUnlistener && this.historyUnlistener(), this.maybeDetachFromWindow(), this.state.isFullScreen && this.exitFullscreen(), this.props.fullscreen.removeChangeListener(this.onTwilightFullscreenChange), this.props.onDestroy && this.props.onDestroy(), k.o.eventEmitter.removeListener(C.SpadeEventType.Pageview, this.updatePlayerTrackingDataFromProps), this.player && (this.player.removeEventListener(A.a.PlayerReady, this.onPlayerReady), this.player.removeEventListener(A.a.CompanionAdBuffered, this.companionAdBuffered), this.player.removeEventListener(A.a.Online, this.onStreamStatusOnline), this.player.removeEventListener(A.a.Offline, this.onStreamStatusOffline), this.player.removeEventListener(d.Ended, this.onStreamStatusOffline), this.player.removeEventListener(d.Play, this.onPlayerPlay), this.player.removeEventListener(d.Playing, this.onPlayerPlaying), this.player.removeEventListener(A.a.TheatreChange, this.onTheatreChange), this.player.removeEventListener(A.a.TransitionToCollectionVOD, this.onTransitionToCollectionVod), this.player.removeEventListener(A.a.FullscreenChange, this.onFullScreenChange), this.player.removeEventListener(A.a.ExternalFullscreenChange, this.onExternalFullScreenChange), this.player.removeEventListener(d.Seeking, this.onSeeking), this.player.removeEventListener(d.Seeked, this.onSeek), this.player.removeEventListener(d.TimeUpdate, this.onTimeUpdate), this.player.removeEventListener(A.a.OpenStream, this.onOpenStream), this.player.removeEventListener(d.Pause, this.onPause), this.player.removeEventListener(A.a.PersistenPlayerToggle, this.onPersistentPlayerToggled), this.player.removeEventListener(d.LoadedMetadata, this.onMetadataLoaded), this.player.removeEventListener(d.VolumeChange, this.onVolumeChange), this.player.removeEventListener(A.a.PromptLoginModal, this.props.promptLogin), this.player.removeEventListener(A.a.FocusPlayer, this.onFocusPlayer), this.player.removeEventListener(A.a.FollowChannel, this.followChannel), this.player.removeEventListener(A.a.UnfollowChannel, this.unfollowChannel), this.player.removeEventListener(A.a.ContentRestricted, this.onContentRestricted), T.extensionService.unregisterPlayer(), this.player.destroy()), k.o.setVideoPlayerTrackingData({
                             vodID: void 0
                         })
                     }, t.prototype.trackMiniPlayerAction = function(e, t) {
@@ -9364,7 +9364,7 @@
                     if (e.collectionID && e.videoID) {
                         if (n && n.currentVideoID && n.currentCollectionID && n.currentVideoID === e.videoID && n.currentCollectionID === e.collectionID) return;
                         t.push("/videos/" + e.videoID + "?collection=" + e.collectionID)
-                    } else !e.collectionID || e.videoID ? O.k.withCategory("video-player").error(new Error("No collection or video specified from the emitted player transition event."), "No collection or video specified from the emitted player transition event.") : t.push("/collections/" + e.collectionID);
+                    } else !e.collectionID || e.videoID ? k.k.withCategory("video-player").error(new Error("No collection or video specified from the emitted player transition event."), "No collection or video specified from the emitted player transition event.") : t.push("/collections/" + e.collectionID);
                 else t.push("/videos/" + e.videoID)
             }
             n.d(t, !1, function() {}), n.d(t, !1, function() {}), n.d(t, !1, function() {}), n.d(t, !1, function() {}), n.d(t, "b", function() {
@@ -10285,40 +10285,40 @@
                         });
                     return l.createElement("div", {
                         ref: this.handleContainerRef
-                    }, l.createElement(u.Pa, {
+                    }, l.createElement(u.Qa, {
                         flexGrow: 0,
                         flexShrink: 0
                     }, l.createElement("div", {
                         className: t,
                         "data-test-selector": i.SelectedSection,
                         style: e
-                    }, l.createElement(u.Xa, {
+                    }, l.createElement(u.Ya, {
                         className: "draggable-slider__container",
-                        position: u.jb.Relative,
+                        position: u.kb.Relative,
                         display: u.X.Flex,
-                        justifyContent: u.Wa.Center
-                    }, l.createElement(u.Xa, {
-                        position: u.jb.Absolute,
+                        justifyContent: u.Xa.Center
+                    }, l.createElement(u.Ya, {
+                        position: u.kb.Absolute,
                         attachTop: !0,
                         fullWidth: !0
-                    }, l.createElement(u.Xa, {
-                        position: u.jb.Relative,
+                    }, l.createElement(u.Ya, {
+                        position: u.kb.Relative,
                         attachTop: !0,
                         fullWidth: !0,
                         display: u.X.Flex,
-                        justifyContent: u.Wa.Center
-                    }, l.createElement(u.Xa, {
-                        position: u.jb.Absolute,
+                        justifyContent: u.Xa.Center
+                    }, l.createElement(u.Ya, {
+                        position: u.kb.Absolute,
                         attachBottom: !0,
                         margin: {
                             bottom: 1
                         },
-                        zIndex: u.ic.Above
-                    }, this.props.popover))), l.createElement(u.Eb, {
+                        zIndex: u.jc.Above
+                    }, this.props.popover))), l.createElement(u.Fb, {
                         className: n,
                         fullWidth: !0,
                         display: u.X.Flex,
-                        justifyContent: u.Wa.Between
+                        justifyContent: u.Xa.Between
                     }, l.createElement(d.a, {
                         "data-test-selector": i.LeftHandle,
                         color: this.props.color,
@@ -10348,10 +10348,10 @@
                         "draggable-slider__overlay--blue": this.props.color === a.a.Blue,
                         "draggable-slider__overlay--orange": this.props.color === a.a.Orange
                     });
-                    return l.createElement(u.Xa, {
+                    return l.createElement(u.Ya, {
                         className: t,
                         display: u.X.InlineBlock,
-                        overflow: u.cb.Hidden,
+                        overflow: u.db.Hidden,
                         "data-test-selector": i.Overlay,
                         fullWidth: !0
                     }, e)
@@ -10492,7 +10492,7 @@
                     function t() {
                         var t = null !== e && e.apply(this, arguments) || this;
                         return t.renderSuccess = function() {
-                            return t.props.successContent ? r.createElement(s.Eb, {
+                            return t.props.successContent ? r.createElement(s.Fb, {
                                 "data-test-selector": l.SUCCESS_BODY,
                                 padding: {
                                     x: 2,
@@ -10505,10 +10505,10 @@
                                 background: s.r.Alt,
                                 fullWidth: !0
                             }, r.createElement(s.W, {
-                                type: s.Vb.Strong
+                                type: s.Wb.Strong
                             }, t.props.successContent)) : null
                         }, t.renderError = function() {
-                            return t.props.errorContent ? r.createElement(s.Eb, {
+                            return t.props.errorContent ? r.createElement(s.Fb, {
                                 "data-test-selector": l.ERROR_BODY,
                                 padding: {
                                     x: 1,
@@ -10521,7 +10521,7 @@
                                 background: s.r.Alt,
                                 fullWidth: !0
                             }, r.createElement(s.W, {
-                                type: s.Vb.Strong,
+                                type: s.Wb.Strong,
                                 color: s.O.Error
                             }, t.props.errorContent)) : null
                         }, t.onSubmit = function() {
@@ -10531,14 +10531,14 @@
                     return i.__extends(t, e), t.prototype.render = function() {
                         return this.props.successContent ? r.createElement(o.a, {
                             onClickOut: this.props.onClose
-                        }, r.createElement(s.Eb, {
+                        }, r.createElement(s.Fb, {
                             padding: 2,
                             background: s.r.Base,
                             className: "clip-modal"
-                        }, this.renderSuccess(), r.createElement(s.Xa, {
+                        }, this.renderSuccess(), r.createElement(s.Ya, {
                             display: s.X.Flex,
-                            justifyContent: s.Wa.Center
-                        }, r.createElement(s.Xa, {
+                            justifyContent: s.Xa.Center
+                        }, r.createElement(s.Ya, {
                             margin: {
                                 x: 1
                             }
@@ -10547,11 +10547,11 @@
                             onClick: this.props.onClose
                         }, Object(a.d)("Close", "ClipsModal")))))) : r.createElement(o.a, {
                             onClickOut: this.props.onClose
-                        }, r.createElement(s.Eb, {
+                        }, r.createElement(s.Fb, {
                             padding: 2,
                             background: s.r.Base,
                             className: "clip-modal"
-                        }, r.createElement(s.Eb, {
+                        }, r.createElement(s.Fb, {
                             "data-test-selector": l.TITLE,
                             borderBottom: !0,
                             margin: {
@@ -10560,7 +10560,7 @@
                             padding: {
                                 bottom: 1
                             }
-                        }, this.props.title), r.createElement(s.Eb, {
+                        }, this.props.title), r.createElement(s.Fb, {
                             "data-test-selector": l.MAIN_BODY,
                             borderBottom: !0,
                             margin: {
@@ -10569,10 +10569,10 @@
                             padding: {
                                 bottom: 2
                             }
-                        }, this.renderError(), this.props.body), r.createElement(s.Xa, {
+                        }, this.renderError(), this.props.body), r.createElement(s.Ya, {
                             display: s.X.Flex,
-                            justifyContent: s.Wa.Center
-                        }, r.createElement(s.Xa, {
+                            justifyContent: s.Xa.Center
+                        }, r.createElement(s.Ya, {
                             margin: {
                                 x: 1
                             }
@@ -10580,7 +10580,7 @@
                             "data-test-selector": l.CANCEL_BUTTON,
                             type: s.F.Text,
                             onClick: this.props.onClose
-                        }, Object(a.d)("Cancel", "ClipsModal"))), r.createElement(s.Xa, {
+                        }, Object(a.d)("Cancel", "ClipsModal"))), r.createElement(s.Ya, {
                             margin: {
                                 x: 1
                             }
@@ -10589,7 +10589,7 @@
                             type: this.props.buttonType ? this.props.buttonType : s.F.Default,
                             onClick: this.onSubmit,
                             disabled: this.props.submitDisabled
-                        }, this.props.buttonContent), this.props.isLoading && r.createElement(s.Za, {
+                        }, this.props.buttonContent), this.props.isLoading && r.createElement(s.ab, {
                             delay: 0
                         })))))
                     }, t
@@ -10606,10 +10606,10 @@
                             hasSucceeded: !1
                         }, t.renderTitle = function() {
                             return t.props.isTemporary ? r.createElement(s.W, {
-                                type: s.Vb.H5,
+                                type: s.Wb.H5,
                                 ellipsis: !0
                             }, Object(a.d)("Timeout this Clip Creator for 24 hours from Your Channel", "ClipsModalBanUser")) : r.createElement(s.W, {
-                                type: s.Vb.H5,
+                                type: s.Wb.H5,
                                 ellipsis: !0
                             }, Object(a.d)("Ban this Clip Creator from Your Channel", "ClipsModalBanUser"))
                         }, t.renderBodyText = function() {
@@ -10726,14 +10726,14 @@
                     return i.__extends(t, e), t.prototype.render = function() {
                         var e = [r.createElement(s.W, {
                             key: "title",
-                            type: s.Vb.H4
-                        }, Object(a.d)("Delete This Clip", "ClipsModalDelete")), r.createElement(s.Xa, {
+                            type: s.Wb.H4
+                        }, Object(a.d)("Delete This Clip", "ClipsModalDelete")), r.createElement(s.Ya, {
                             key: "message",
                             margin: {
                                 top: 1
                             }
                         }, r.createElement(s.W, {
-                            type: s.Vb.P,
+                            type: s.Wb.P,
                             color: s.O.Alt2
                         }, Object(a.d)("This clip will be permanently deleted.", "ClipsModalDelete")))];
                         if (!this.props.data.clip) return null;
@@ -10741,10 +10741,10 @@
                         this.props.data.clip.curator && (t = r.createElement("span", null, " • ", Object(a.d)("Clipped by {curator}", {
                             curator: this.props.data.clip.curator.login
                         }, "ClipsModalDelete")));
-                        var n = r.createElement(s.Eb, {
+                        var n = r.createElement(s.Fb, {
                             display: s.X.Flex,
                             flexWrap: s.Ba.NoWrap
-                        }, r.createElement(s.Xa, {
+                        }, r.createElement(s.Ya, {
                             className: "clips-modal-delete__thumb",
                             margin: {
                                 right: 1
@@ -10753,8 +10753,8 @@
                             ratio: s.p.Aspect16x9
                         }, r.createElement("img", {
                             src: this.props.data.clip.thumbnailURL
-                        }))), r.createElement(s.Xa, null, r.createElement(s.W, {
-                            type: s.Vb.H5
+                        }))), r.createElement(s.Ya, null, r.createElement(s.W, {
+                            type: s.Wb.H5
                         }, this.props.data.clip.title), r.createElement(s.W, {
                             color: s.O.Alt2
                         }, Object(a.d)("{created, date, medium}", {
@@ -10808,13 +10808,13 @@
                     }
                 })(T)),
                 S = n("oJmH"),
-                O = n("Vsf8"),
-                _ = {
+                k = n("Vsf8"),
+                O = {
                     isLoading: !1,
                     hasErrored: !1,
                     hasSucceeded: !1
                 },
-                k = function(e) {
+                _ = function(e) {
                     function t(t) {
                         var n = e.call(this, t) || this;
                         return n.deleteAll = function() {
@@ -10848,19 +10848,19 @@
                             return n.state.hasSucceeded ? Object(a.d)("A request has been made to delete the clip. Please wait a few minutes for this to take effect.", "ClipsModalDeleteAll") : null
                         }, n.renderFailure = function() {
                             return n.state.hasErrored ? Object(a.d)("There was a problem deleting this clip.", "ClipsModalDeleteAll") : null
-                        }, n.state = _, n
+                        }, n.state = O, n
                     }
                     return i.__extends(t, e), t.prototype.componentDidMount = function() {
                         this.props.latencyTracking.reportInteractive()
                     }, t.prototype.render = function() {
                         var e = r.createElement(s.W, {
-                            type: s.Vb.P
+                            type: s.Wb.P
                         }, Object(a.d)("This clip and all other clips created from the same video will be permanently deleted.", "ClipsModalDeleteAll"));
                         return r.createElement(c, {
                             onSubmit: this.deleteAll,
                             onClose: this.props.onClose,
                             title: r.createElement(s.W, {
-                                type: s.Vb.H4
+                                type: s.Wb.H4
                             }, Object(a.d)("Delete All Clips from Related Video", "ClipsModalDeleteAll")),
                             body: e,
                             buttonContent: Object(a.d)("Delete", "ClipsModalDeleteAll"),
@@ -10914,7 +10914,7 @@
                             }
                         }
                     }
-                }), Object(h.a)(O, {
+                }), Object(h.a)(k, {
                     props: function(e) {
                         var t = e.data.clip;
                         return t ? {
@@ -10932,7 +10932,7 @@
                             }
                         }
                     }
-                }))(k),
+                }))(_),
                 C = {
                     isLoading: !1,
                     hasErrored: !1,
@@ -10976,10 +10976,10 @@
                     }
                     return i.__extends(t, e), t.prototype.render = function() {
                         var e = r.createElement(s.W, {
-                                type: s.Vb.H4
+                                type: s.Wb.H4
                             }, Object(a.d)("Delete these clips?", "ClipsModalBatchDelete")),
                             t = r.createElement(s.W, {
-                                type: s.Vb.P
+                                type: s.Wb.P
                             }, Object(a.d)("These clips will be permanently deleted. Are you sure?", "ClipsModalBatchDelete"));
                         return r.createElement(c, {
                             onSubmit: this.onDeleteClick,
@@ -11233,7 +11233,7 @@
                     "draggable-slider-handle--blue": e.color === l.a.Blue,
                     "draggable-slider-handle--orange": e.color === l.a.Orange
                 });
-                return s.createElement(c.Pa, {
+                return s.createElement(c.Qa, {
                     flexGrow: 0,
                     flexShrink: 0,
                     className: t,
@@ -11243,8 +11243,8 @@
                     "data-test-selector": r.Handle,
                     onMouseDown: e.onMouseDown,
                     ref: e.onRef
-                }, s.createElement(c.sb, {
-                    asset: c.tb.DragHandle,
+                }, s.createElement(c.tb, {
+                    asset: c.ub.DragHandle,
                     width: e.size
                 })))
             }
@@ -11588,10 +11588,10 @@
                         var t = e.broadcaster,
                             n = e.game,
                             i = t.login ? Object(E.c)(t.login) : Object(E.j)();
-                        return s.createElement(v.Xa, {
+                        return s.createElement(v.Ya, {
                             className: "watch-live-prompt",
-                            position: v.jb.Absolute,
-                            zIndex: v.ic.Above,
+                            position: v.kb.Absolute,
+                            zIndex: v.jc.Above,
                             attachRight: !0
                         }, s.createElement(v.U, {
                             to: i,
@@ -11601,23 +11601,23 @@
                             type: v.n.SlideInRight,
                             duration: v.k.Short,
                             enabled: !0
-                        }, s.createElement(v.Eb, {
+                        }, s.createElement(v.Fb, {
                             padding: 1,
                             elevation: 2,
                             background: v.r.Overlay
-                        }, s.createElement(v.Xa, {
-                            position: v.jb.Relative,
+                        }, s.createElement(v.Ya, {
+                            position: v.kb.Relative,
                             display: v.X.Flex,
                             flexDirection: v.Aa.Row,
                             alignItems: v.f.Center
-                        }, s.createElement(v.Xa, {
-                            position: v.jb.Absolute,
+                        }, s.createElement(v.Ya, {
+                            position: v.kb.Absolute,
                             attachTop: !0,
                             attachLeft: !0,
-                            zIndex: v.ic.Above
-                        }, s.createElement(v.gb, {
+                            zIndex: v.jc.Above
+                        }, s.createElement(v.hb, {
                             label: Object(l.d)("LIVE", "WatchLivePrompt"),
-                            type: v.hb.Live
+                            type: v.ib.Live
                         })), s.createElement(v.G, {
                             row: !0
                         }, s.createElement(v.I, {
@@ -11625,28 +11625,28 @@
                             alt: Object(l.d)("Clip Thumbnail", "ClipWatchLivePrompt"),
                             aspect: v.p.Aspect16x9,
                             size: v.J.Size6
-                        }), s.createElement(v.H, null, s.createElement(v.Xa, {
+                        }), s.createElement(v.H, null, s.createElement(v.Ya, {
                             className: "watch-live-prompt__copy",
                             padding: {
                                 x: 1
                             }
                         }, s.createElement(v.W, {
-                            type: v.Vb.H5,
+                            type: v.Wb.H5,
                             color: v.O.Overlay,
-                            lineHeight: v.Ya.Heading,
+                            lineHeight: v.Za.Heading,
                             ellipsis: !0
                         }, Object(l.d)("Watch {displayName} Live", {
                             displayName: t.displayName || ""
                         }, "WatchLivePrompt")), s.createElement(v.W, {
-                            type: v.Vb.H6,
+                            type: v.Wb.H6,
                             color: v.O.OverlayAlt,
-                            lineHeight: v.Ya.Heading,
+                            lineHeight: v.Za.Heading,
                             ellipsis: !0
                         }, Object(l.d)("playing {gameName}", {
                             gameName: n.displayName
                         }, "WatchLivePrompt"))))), s.createElement(v.A, {
                             ariaLabel: Object(l.d)("Dismiss watch live prompt", "WatchLivePrompt"),
-                            icon: v.tb.Close,
+                            icon: v.ub.Close,
                             onClick: this.dismissWatchLivePrompt,
                             type: v.C.Default,
                             overlay: !0,
@@ -11668,30 +11668,30 @@
                         return null !== e && e.apply(this, arguments) || this
                     }
                     return o.__extends(t, e), t.prototype.render = function() {
-                        return s.createElement(v.Pa, {
-                            position: v.jb.Absolute,
+                        return s.createElement(v.Qa, {
+                            position: v.kb.Absolute,
                             fullHeight: !0,
                             fullWidth: !0
                         }, s.createElement("div", {
                             ref: this.props.setPlayerWrapperRef
-                        }, s.createElement(v.Eb, {
+                        }, s.createElement(v.Fb, {
                             className: "clips-video-overlay",
                             fullHeight: !0,
                             fullWidth: !0,
-                            position: v.jb.Absolute,
-                            overflow: v.cb.Hidden
+                            position: v.kb.Absolute,
+                            overflow: v.db.Hidden
                         }, !Object(g.c)(window.navigator.userAgent) && this.props.playerType === f.a.ClipsViewing && s.createElement(T, {
                             slug: this.props.slug,
                             currentTime: this.props.currentTime
-                        })), s.createElement(v.Xa, {
-                            position: v.jb.Absolute,
+                        })), s.createElement(v.Ya, {
+                            position: v.kb.Absolute,
                             fullHeight: !0,
                             fullWidth: !0
                         }, this.props.children)))
                     }, t
                 }(s.Component)),
                 S = (n("ibn3"), n("OTsR")),
-                O = function(e) {
+                k = function(e) {
                     function t() {
                         var t = null !== e && e.apply(this, arguments) || this;
                         return t.state = {
@@ -11730,7 +11730,7 @@
                         var e = this.props,
                             t = e.slug,
                             n = e.playerType;
-                        return s.createElement(v.Xa, {
+                        return s.createElement(v.Ya, {
                             flexGrow: 1
                         }, s.createElement(v.o, {
                             ratio: v.p.Aspect16x9
@@ -11739,25 +11739,25 @@
                             setPlayerWrapperRef: this.setPlayerWrapperRef,
                             playerType: this.props.playerType,
                             currentTime: this.props.currentTime
-                        }, s.createElement(v.Eb, {
+                        }, s.createElement(v.Fb, {
                             className: "clips-video-wrapper",
-                            position: v.jb.Relative,
+                            position: v.kb.Relative,
                             fullWidth: !0,
                             fullHeight: !0
-                        }, s.createElement(v.Eb, {
+                        }, s.createElement(v.Fb, {
                             display: this.state.isLoaded ? v.X.Hide : v.X.Flex,
                             color: v.O.Overlay,
                             alignItems: v.f.Center,
-                            justifyContent: v.Wa.Center,
-                            position: v.jb.Absolute,
+                            justifyContent: v.Xa.Center,
+                            position: v.kb.Absolute,
                             fullHeight: !0,
                             fullWidth: !0
-                        }, s.createElement(v.Za, {
-                            size: v.Cb.Large,
+                        }, s.createElement(v.ab, {
+                            size: v.Db.Large,
                             inheritColor: !0
-                        })), s.createElement(v.Xa, {
+                        })), s.createElement(v.Ya, {
                             display: this.state.isLoaded ? v.X.Block : v.X.HideAccessible,
-                            position: v.jb.Absolute,
+                            position: v.kb.Absolute,
                             fullHeight: !0,
                             fullWidth: !0
                         }, s.createElement(f.b, {
@@ -11774,15 +11774,15 @@
                         autoReportInteractive: !0
                     })], t)
                 }(s.Component),
-                _ = Object(c.a)(S)(O);
-            var k = Object(i.connect)(null, function(e) {
+                O = Object(c.a)(S)(k);
+            var _ = Object(i.connect)(null, function(e) {
                 return Object(r.bindActionCreators)({
                     showModal: a.d,
                     closeModal: a.c
                 }, e)
-            })(_);
+            })(O);
             n.d(t, "a", function() {
-                return k
+                return _
             })
         },
         py0p: function(e, t, n) {},
@@ -11811,9 +11811,9 @@
                 T = n("D7An"),
                 y = n("DMoW"),
                 S = n("oKCn"),
-                O = n("ig/l"),
-                _ = n("mzKw"),
-                k = n("WSjS"),
+                k = n("ig/l"),
+                O = n("mzKw"),
+                _ = n("WSjS"),
                 N = n("3dkm");
 
             function C(e, t) {
@@ -11844,9 +11844,9 @@
                             })
                         }, t.renderDurationPopover = function() {
                             var e = o.createElement(R.W, {
-                                type: R.Vb.Strong
+                                type: R.Wb.Strong
                             }, t.roundedPopoverDuration() + "s");
-                            return o.createElement(R.Eb, {
+                            return o.createElement(R.Fb, {
                                 className: "clips-editor-slider-popover",
                                 background: R.r.Alt2,
                                 padding: {
@@ -11854,17 +11854,17 @@
                                     x: 2
                                 },
                                 fullWidth: !0,
-                                textAlign: R.Rb.Center,
-                                overflow: R.cb.Hidden,
+                                textAlign: R.Sb.Center,
+                                overflow: R.db.Hidden,
                                 border: !0
                             }, o.createElement(R.W, {
-                                align: R.fc.Middle,
+                                align: R.gc.Middle,
                                 fontSize: R.Ca.Size5,
                                 color: R.O.Alt2
                             }, Object(E.d)("{roundedDuration} / 60s", {
                                 roundedDuration: e
                             }, "ClipsEditor")), o.createElement(R.W, {
-                                align: R.fc.Middle,
+                                align: R.gc.Middle,
                                 color: R.O.Alt2
                             }, Object(N.a)(t.state.startOffset) + " - " + Object(N.a)(t.state.endOffset)))
                         }, t.isReady = function() {
@@ -11882,12 +11882,12 @@
                     }, t.prototype.componentDidUpdate = function() {
                         this.isReady() && this.props.latencyTracking.reportInteractive()
                     }, t.prototype.render = function() {
-                        return this.isReady() && this.props.duration ? o.createElement(R.Xa, null, o.createElement(R.Eb, {
+                        return this.isReady() && this.props.duration ? o.createElement(R.Ya, null, o.createElement(R.Fb, {
                             margin: {
                                 y: 4
                             },
                             className: "clips-editor-slider-background"
-                        }, o.createElement(O.a, {
+                        }, o.createElement(k.a, {
                             startOffset: this.state.startOffset,
                             endOffset: this.state.endOffset,
                             minOffset: 0,
@@ -11898,18 +11898,18 @@
                             onRightDrag: this.onDrag,
                             onSliderDrag: this.onDrag,
                             popover: this.renderDurationPopover(),
-                            color: O.c.Blue,
+                            color: k.c.Blue,
                             isSliderEnabled: !0,
-                            handleSize: _.c.Medium
-                        }, o.createElement(R.Xa, {
+                            handleSize: O.c.Medium
+                        }, o.createElement(R.Ya, {
                             padding: {
                                 top: 3,
                                 bottom: 2
                             },
                             fullWidth: !0,
-                            textAlign: R.Rb.Center,
-                            overflow: R.cb.Hidden
-                        }))), o.createElement(k.a, {
+                            textAlign: R.Sb.Center,
+                            overflow: R.db.Hidden
+                        }))), o.createElement(_.a, {
                             clipSlug: this.props.slug,
                             location: c.PageviewLocation.ClipsEditing,
                             broadcasterName: this.props.broadcasterName,
@@ -11917,13 +11917,13 @@
                             endOffset: this.state.endOffset
                         })) : this.renderPlaceholder()
                     }, t.prototype.renderPlaceholder = function() {
-                        return o.createElement(R.Xa, null, o.createElement(R.i, {
+                        return o.createElement(R.Ya, null, o.createElement(R.i, {
                             type: R.n.Bounce,
                             loop: !0,
                             enabled: !0,
                             duration: R.k.ExtraLong,
                             timing: R.m.EaseInOut
-                        }, o.createElement(R.Eb, {
+                        }, o.createElement(R.Fb, {
                             fullWidth: !0,
                             background: R.r.Alt2,
                             margin: {
@@ -11932,7 +11932,7 @@
                             padding: {
                                 y: 3
                             },
-                            textAlign: R.Rb.Center
+                            textAlign: R.Sb.Center
                         })), o.createElement(R.i, {
                             type: R.n.Bounce,
                             loop: !0,
@@ -11940,7 +11940,7 @@
                             duration: R.k.ExtraLong,
                             timing: R.m.EaseInOut,
                             delay: R.j.Medium
-                        }, o.createElement(R.Eb, {
+                        }, o.createElement(R.Fb, {
                             fullWidth: !0,
                             background: R.r.Alt2,
                             margin: {
@@ -11950,7 +11950,7 @@
                                 top: 2,
                                 bottom: 1
                             },
-                            textAlign: R.Rb.Center
+                            textAlign: R.Sb.Center
                         })))
                     }, t.prototype.roundedPopoverDuration = function() {
                         var e = this.state.endOffset - this.state.startOffset;
@@ -11962,17 +11962,17 @@
                 L = Object(h.compose)(Object(u.b)("ClipsEditor"))(A),
                 w = n("VwyG"),
                 P = n("SGIe"),
-                M = function(e) {
+                F = function(e) {
                     var t = e.clip;
-                    return t && t.broadcaster && t.broadcaster.login && t.video && t.videoOffsetSeconds ? o.createElement(R.Xa, {
+                    return t && t.broadcaster && t.broadcaster.login && t.video && t.videoOffsetSeconds ? o.createElement(R.Ya, {
                         display: R.X.Flex,
                         flexDirection: R.Aa.Row
-                    }, o.createElement(R.Xa, {
+                    }, o.createElement(R.Ya, {
                         flexGrow: 1,
                         flexShrink: 1
                     }, o.createElement(R.W, {
                         color: R.O.Alt2
-                    }, Object(E.d)("Is 1 minute too short? Create longer clips using the Highlighter", "HighlightCTA"))), o.createElement(R.Xa, {
+                    }, Object(E.d)("Is 1 minute too short? Create longer clips using the Highlighter", "HighlightCTA"))), o.createElement(R.Ya, {
                         flexGrow: 0,
                         flexShrink: 0
                     }, o.createElement(P.a, {
@@ -11982,7 +11982,7 @@
                         onClick: e.onClick
                     }))) : null
                 },
-                F = function(e) {
+                M = function(e) {
                     var t = e.clip;
                     return t && t.broadcaster && t.broadcaster.login ? o.createElement(w.a, {
                         ownerLogin: t.broadcaster.login,
@@ -11992,7 +11992,7 @@
                             staff: !0
                         }
                     }, function(t) {
-                        return t.permitted ? o.createElement(M, a.__assign({}, e)) : null
+                        return t.permitted ? o.createElement(F, a.__assign({}, e)) : null
                     }) : null
                 },
                 U = (n("dsEc"), function(e) {
@@ -12003,15 +12003,15 @@
                         var e = f("clips-edit-top-nav", {
                             "clips-edit-top-nav-rollup": this.props.isPostEdit
                         });
-                        return o.createElement(R.Eb, {
+                        return o.createElement(R.Fb, {
                             background: R.r.Base,
                             className: e,
-                            position: R.jb.Fixed,
+                            position: R.kb.Fixed,
                             fullWidth: !0,
                             attachTop: !0,
                             attachLeft: !0,
                             display: R.X.Flex,
-                            justifyContent: R.Wa.Center,
+                            justifyContent: R.Xa.Center,
                             alignItems: R.f.Center,
                             "data-test-selector": "clips-edit-top-nav-wrapper",
                             borderBottom: !0
@@ -12022,22 +12022,22 @@
                             fillMode: R.l.Both,
                             timing: R.m.EaseInOut,
                             type: R.n.SlideInTop
-                        }, o.createElement(R.Xa, {
+                        }, o.createElement(R.Ya, {
                             display: R.X.Flex,
-                            justifyContent: R.Wa.Center,
+                            justifyContent: R.Xa.Center,
                             alignItems: R.f.Center
                         }, o.createElement(R.W, {
                             color: R.O.Alt,
                             fontSize: R.Ca.Size5
-                        }, Object(E.d)("Title this clip to publish", "ClipsEditTopNav")), o.createElement(R.Xa, {
+                        }, Object(E.d)("Title this clip to publish", "ClipsEditTopNav")), o.createElement(R.Ya, {
                             margin: {
                                 left: .5
                             },
                             display: R.X.Flex,
                             alignItems: R.f.Center
-                        }, o.createElement(R.sb, {
-                            asset: R.tb.Lock,
-                            type: R.ub.Warn
+                        }, o.createElement(R.tb, {
+                            asset: R.ub.Lock,
+                            type: R.vb.Warn
                         })))))
                     }, t
                 }(o.Component)),
@@ -12162,31 +12162,31 @@
                     }, t.prototype.componentWillUnmount = function() {
                         this.countdownTimer.stop()
                     }, t.prototype.render = function() {
-                        return o.createElement(R.Eb, {
+                        return o.createElement(R.Fb, {
                             className: "clips-post-edit-loading",
                             padding: 4,
                             background: R.r.Base,
                             border: !0
-                        }, o.createElement(R.Xa, {
+                        }, o.createElement(R.Ya, {
                             display: R.X.Flex,
-                            justifyContent: R.Wa.Between,
+                            justifyContent: R.Xa.Between,
                             margin: {
                                 bottom: 1
                             }
                         }, o.createElement(R.W, {
-                            type: R.Vb.Span,
+                            type: R.Wb.Span,
                             fontSize: R.Ca.Size6
-                        }, Object(E.d)("Publishing Clip!", "ClipsPostEditLoading")), o.createElement(R.Xa, {
+                        }, Object(E.d)("Publishing Clip!", "ClipsPostEditLoading")), o.createElement(R.Ya, {
                             display: R.X.InlineBlock
-                        }, this.state.percent, "%")), o.createElement(R.mb, {
-                            animationDirection: R.nb.Up,
+                        }, this.state.percent, "%")), o.createElement(R.nb, {
+                            animationDirection: R.ob.Up,
                             animationDuration: 50,
                             mask: !0
-                        }), o.createElement(R.Xa, {
+                        }), o.createElement(R.Ya, {
                             margin: {
                                 top: 2
                             }
-                        }, o.createElement(R.Xa, {
+                        }, o.createElement(R.Ya, {
                             className: "clips-post-edit-loading-clappy",
                             display: R.X.InlineBlock
                         }, o.createElement(R.i, {
@@ -12198,8 +12198,8 @@
                         }, o.createElement(R.S, {
                             src: this.state.messageData.icon,
                             alt: Object(E.d)("Clappy looking good", "ClipsPostEditLoading")
-                        })), o.createElement(R.Xa, {
-                            position: R.jb.Relative
+                        })), o.createElement(R.Ya, {
+                            position: R.kb.Relative
                         }, o.createElement(R.u, {
                             direction: R.v.Right,
                             elevation: 2,
@@ -12207,7 +12207,7 @@
                             tailBackground: R.r.Alt2,
                             offsetY: "-3.8rem",
                             offsetX: "1.5rem"
-                        }, o.createElement(R.Eb, {
+                        }, o.createElement(R.Fb, {
                             padding: 1,
                             background: R.r.Alt2
                         }, o.createElement(R.W, {
@@ -12215,10 +12215,10 @@
                         }, this.state.messageData.text)))))))
                     }, t
                 }(o.Component),
-                z = n("uX80"),
-                X = n("X7Ac"),
-                Y = n("Jxh/"),
-                q = n("MLDe"),
+                Y = n("uX80"),
+                z = n("X7Ac"),
+                q = n("Jxh/"),
+                X = n("MLDe"),
                 K = n("DLy/"),
                 Q = (n("WnZM"), function(e) {
                     function t() {
@@ -12226,7 +12226,7 @@
                         return t.state = {
                             showConfirmation: !1
                         }, t.copyClipURL = function() {
-                            Object(Y.a)(Object(m.b)(t.props.slug)), t.setState({
+                            Object(q.a)(Object(m.b)(t.props.slug)), t.setState({
                                 showConfirmation: !0
                             }), setTimeout(function() {
                                 t.setState({
@@ -12238,25 +12238,25 @@
                                 i = e.gameName,
                                 r = e.broadcasterId,
                                 a = e.broadcasterLogin;
-                            Object(q.c)(n, i, r, a, c.PageviewLocation.ClipsEditing)(X.b.CopyInput)
+                            Object(X.c)(n, i, r, a, c.PageviewLocation.ClipsEditing)(z.b.CopyInput)
                         }, t
                     }
                     return a.__extends(t, e), t.prototype.render = function() {
-                        return o.createElement(R.Eb, {
+                        return o.createElement(R.Fb, {
                             className: "clips-post-edit-share",
                             padding: 3,
                             background: R.r.Base,
                             border: !0
-                        }, o.createElement(R.Xa, {
+                        }, o.createElement(R.Ya, {
                             margin: {
                                 bottom: 2
                             },
-                            position: R.jb.Relative,
+                            position: R.kb.Relative,
                             fullWidth: !0
-                        }, o.createElement(z.a, {
+                        }, o.createElement(Y.a, {
                             text: Object(m.b)(this.props.slug),
                             icon: !0,
-                            iconAsset: R.tb.Link,
+                            iconAsset: R.ub.Link,
                             onSelection: this.copyClipURL,
                             "data-a-target": "clip-share-input"
                         }), o.createElement(R.u, {
@@ -12265,18 +12265,18 @@
                             show: this.state.showConfirmation,
                             offsetY: "1rem",
                             elevation: 2
-                        }, o.createElement(R.Eb, {
+                        }, o.createElement(R.Fb, {
                             background: R.r.Alt,
-                            textAlign: R.Rb.Center,
+                            textAlign: R.Sb.Center,
                             padding: {
                                 y: 1
                             }
                         }, o.createElement(R.W, {
                             color: R.O.Alt,
                             fontSize: R.Ca.Size5
-                        }, Object(E.d)("Copied!", "ClipsPostEditShare"))))), o.createElement(R.Xa, {
+                        }, Object(E.d)("Copied!", "ClipsPostEditShare"))))), o.createElement(R.Ya, {
                             display: R.X.Flex,
-                            justifyContent: R.Wa.Center
+                            justifyContent: R.Xa.Center
                         }, o.createElement(K.a, {
                             slug: this.props.slug,
                             pageType: c.PageviewLocation.ClipsEditing
@@ -12307,9 +12307,9 @@
                             fillMode: R.l.Both,
                             timing: R.m.EaseInOut,
                             type: R.n.SlideInBottom
-                        }, o.createElement(R.Xa, {
+                        }, o.createElement(R.Ya, {
                             display: R.X.Flex,
-                            justifyContent: R.Wa.Center,
+                            justifyContent: R.Xa.Center,
                             padding: {
                                 top: 4
                             }
@@ -12343,21 +12343,21 @@
                     }
                     return a.__extends(t, e), t.prototype.render = function() {
                         var e = this.props.slug,
-                            t = o.createElement(R.Xa, {
+                            t = o.createElement(R.Ya, {
                                 alignItems: R.f.Center,
                                 display: R.X.Flex,
                                 flexDirection: R.Aa.Row,
-                                justifyContent: R.Wa.Start,
+                                justifyContent: R.Xa.Start,
                                 margin: {
                                     y: 1
                                 },
                                 ellipsis: !0
-                            }, o.createElement(R.Eb, {
+                            }, o.createElement(R.Fb, {
                                 display: R.X.Flex,
                                 fontSize: R.Ca.Size5
                             }, o.createElement(R.W, {
-                                type: R.Vb.Span
-                            }, Object(N.b)(this.props.createdAt)), o.createElement(R.Xa, {
+                                type: R.Wb.Span
+                            }, Object(N.b)(this.props.createdAt)), o.createElement(R.Ya, {
                                 margin: {
                                     x: .5
                                 }
@@ -12365,25 +12365,25 @@
                                 slug: e,
                                 ellipsis: !0
                             }));
-                        return o.createElement(R.Eb, {
+                        return o.createElement(R.Fb, {
                             className: "clips-post-edit-sidebar",
                             display: R.X.Flex,
                             flexDirection: R.Aa.Column,
                             background: R.r.Base
-                        }, o.createElement(R.Eb, {
+                        }, o.createElement(R.Fb, {
                             className: "clips-post-edit-sidebar-top",
                             borderBottom: !0
                         }, o.createElement(ee.a, {
                             slug: e
-                        })), o.createElement(R.Xa, {
+                        })), o.createElement(R.Ya, {
                             fullHeight: !0,
                             display: R.X.Flex,
                             alignItems: R.f.Center
-                        }, o.createElement(R.Xa, {
+                        }, o.createElement(R.Ya, {
                             className: "clips-sidebar-info",
                             display: R.X.Flex,
                             flexDirection: R.Aa.Column,
-                            justifyContent: R.Wa.Around,
+                            justifyContent: R.Xa.Around,
                             padding: 1
                         }, o.createElement(ie.a, {
                             slug: e
@@ -12496,7 +12496,7 @@
                             "clips-post-edit-clip-wrapper-hide": this.state.hideContent,
                             "clips-post-edit-clip-wrapper": this.props.isPostEdit
                         });
-                        return o.createElement(R.Xa, null, o.createElement(x, {
+                        return o.createElement(R.Ya, null, o.createElement(x, {
                             showMessage: r,
                             isPostEdit: this.props.isPostEdit
                         }), o.createElement(v.a, {
@@ -12504,13 +12504,13 @@
                             name: T.b.VODKirk,
                             assignments: {
                                 top: function() {
-                                    return e.props.data.clip ? o.createElement(R.Xa, {
+                                    return e.props.data.clip ? o.createElement(R.Ya, {
                                         padding: {
                                             top: 1,
                                             left: 2,
                                             right: 2
                                         }
-                                    }, o.createElement(F, {
+                                    }, o.createElement(M, {
                                         clip: e.props.data.clip
                                     })) : null
                                 },
@@ -12525,16 +12525,16 @@
                             timing: R.m.EaseInOut,
                             type: R.n.SlideInBottom,
                             onAnimationEnd: this.onAnimationEnd
-                        }, o.createElement(R.Xa, {
+                        }, o.createElement(R.Ya, {
                             className: s,
                             padding: 2
-                        }, o.createElement(R.Eb, {
+                        }, o.createElement(R.Fb, {
                             display: R.X.Flex,
                             border: this.props.isPostEdit
                         }, o.createElement(R.o, {
                             ratio: R.p.Aspect16x9
-                        }, o.createElement(R.Xa, {
-                            position: R.jb.Absolute,
+                        }, o.createElement(R.Ya, {
+                            position: R.kb.Absolute,
                             fullHeight: !0,
                             fullWidth: !0
                         }, o.createElement(ae.a, {
@@ -12550,7 +12550,7 @@
                             name: T.b.VODKirk,
                             assignments: {
                                 bottom: function() {
-                                    return e.props.data.clip ? o.createElement(R.Eb, {
+                                    return e.props.data.clip ? o.createElement(R.Fb, {
                                         borderTop: !0,
                                         padding: {
                                             top: 2
@@ -12558,7 +12558,7 @@
                                         margin: {
                                             top: 2
                                         }
-                                    }, o.createElement(F, {
+                                    }, o.createElement(M, {
                                         buttonType: R.F.Hollow,
                                         clip: e.props.data.clip
                                     })) : null
@@ -12614,7 +12614,7 @@
                         this.handleRedirect(e), this.reportInteractive()
                     }, t.prototype.render = function() {
                         var e = this.props.location.state && this.props.location.state.slug;
-                        return e ? o.createElement(R.Xa, null, o.createElement(ce, {
+                        return e ? o.createElement(R.Ya, null, o.createElement(ce, {
                             slug: e,
                             isPostEdit: !!this.props.location.state.isPostEdit,
                             userLogin: this.props.userLogin
@@ -12659,7 +12659,7 @@
                     }, t.prototype.componentDidUpdate = function() {
                         this.props.data.loading && !this.props.data.error || this.props.latencyTracking.reportInteractive()
                     }, t.prototype.render = function() {
-                        return this.props.data.clip && this.props.data.clip.broadcaster && this.props.data.clip.broadcaster.login ? r.createElement(d.Xa, {
+                        return this.props.data.clip && this.props.data.clip.broadcaster && this.props.data.clip.broadcaster.login ? r.createElement(d.Ya, {
                             className: "clips-broadcaster-info",
                             padding: 1,
                             display: d.X.Flex,
@@ -12671,7 +12671,7 @@
                             src: this.props.data.clip.broadcaster.profileImageURL,
                             alt: Object(a.d)("Broadcaster Avatar", "ClipsBroadcasterInfo"),
                             size: 30
-                        })), r.createElement(d.Xa, {
+                        })), r.createElement(d.Ya, {
                             display: d.X.Flex,
                             flexDirection: d.Aa.Column,
                             flexGrow: 1,
@@ -12683,16 +12683,16 @@
                             href: Object(c.d)(this.props.data.clip.broadcaster.login, p)
                         }, r.createElement(d.W, {
                             fontSize: d.Ca.Size4,
-                            type: d.Vb.Span
-                        }, this.props.data.clip.broadcaster.displayName), !(!this.props.data.clip.broadcaster.stream || !this.props.data.clip.broadcaster.stream.id) && r.createElement(d.Xa, {
+                            type: d.Wb.Span
+                        }, this.props.data.clip.broadcaster.displayName), !(!this.props.data.clip.broadcaster.stream || !this.props.data.clip.broadcaster.stream.id) && r.createElement(d.Ya, {
                             margin: {
                                 left: .5
                             },
                             display: d.X.InlineBlock
-                        }, r.createElement(d.gb, {
+                        }, r.createElement(d.hb, {
                             label: Object(a.d)("LIVE", "ClipsBroadcasterInfo"),
-                            type: d.hb.Live
-                        }))), r.createElement(d.Xa, null, r.createElement(d.W, {
+                            type: d.ib.Live
+                        }))), r.createElement(d.Ya, null, r.createElement(d.W, {
                             color: d.O.Alt2,
                             fontSize: d.Ca.Size5,
                             ellipsis: !0
@@ -12703,7 +12703,7 @@
                                     tt_medium: "clips_web"
                                 })
                             }, this.props.data.clip.game.displayName)
-                        }, "ClipsBroadcasterInfo")))), r.createElement(d.Xa, {
+                        }, "ClipsBroadcasterInfo")))), r.createElement(d.Ya, {
                             flexShrink: 1
                         }, r.createElement(s.a, {
                             isHostedFollow: !1,
@@ -12711,20 +12711,20 @@
                             followUIType: s.b.IconAndText,
                             unfollowUIType: s.b.IconOnly,
                             showLoadingPlaceholder: !0
-                        }))) : r.createElement(d.Xa, null, this.renderPlaceholders())
+                        }))) : r.createElement(d.Ya, null, this.renderPlaceholders())
                     }, t.prototype.renderPlaceholders = function() {
-                        return r.createElement(d.Xa, {
+                        return r.createElement(d.Ya, {
                             padding: 1,
                             display: d.X.Flex,
                             alignItems: d.f.Center
-                        }, r.createElement(d.Xa, null, r.createElement(d.i, {
+                        }, r.createElement(d.Ya, null, r.createElement(d.i, {
                             type: d.n.FadeIn,
                             duration: d.k.Long,
                             enabled: !0
-                        }, r.createElement(d.ib, {
+                        }, r.createElement(d.jb, {
                             height: 30,
                             width: 30
-                        }))), r.createElement(d.Eb, {
+                        }))), r.createElement(d.Fb, {
                             fontSize: d.Ca.Size5,
                             flexGrow: 1,
                             margin: {
@@ -12734,7 +12734,7 @@
                             type: d.n.FadeIn,
                             duration: d.k.Long,
                             enabled: !0
-                        }, r.createElement(d.ib, {
+                        }, r.createElement(d.jb, {
                             lineCount: 1,
                             width: 80
                         })), r.createElement(d.i, {
@@ -12742,14 +12742,14 @@
                             duration: d.k.Long,
                             delay: d.j.Short,
                             enabled: !0
-                        }, r.createElement(d.ib, {
+                        }, r.createElement(d.jb, {
                             lineCount: 1,
                             width: 120
-                        }))), r.createElement(d.Xa, null, r.createElement(d.i, {
+                        }))), r.createElement(d.Ya, null, r.createElement(d.i, {
                             type: d.n.FadeIn,
                             duration: d.k.Long,
                             enabled: !0
-                        }, r.createElement(d.ib, {
+                        }, r.createElement(d.jb, {
                             height: 30,
                             width: 70
                         }))))
@@ -13197,11 +13197,11 @@
                     return i.__extends(t, e), t.prototype.componentDidMount = function() {
                         this.props.latencyTracking.reportInteractive()
                     }, t.prototype.render = function() {
-                        return r.createElement(s.Xa, i.__assign({
-                            position: s.jb.Relative,
+                        return r.createElement(s.Ya, i.__assign({
+                            position: s.kb.Relative,
                             className: "selectable-input-wrapper"
-                        }, Object(s.jc)(this.props)), r.createElement(s.Ra, {
-                            type: s.Ta.Text,
+                        }, Object(s.kc)(this.props)), r.createElement(s.Sa, {
+                            type: s.Ua.Text,
                             value: this.props.text,
                             readOnly: !0,
                             onFocus: this.selectOnFocus,
@@ -13411,11 +13411,11 @@
             }), n.d(t, "p", function() {
                 return S
             }), n.d(t, "o", function() {
-                return O
-            }), n.d(t, "B", function() {
-                return _
-            }), n.d(t, "z", function() {
                 return k
+            }), n.d(t, "B", function() {
+                return O
+            }), n.d(t, "z", function() {
+                return _
             }), n.d(t, "A", function() {
                 return N
             }), n.d(t, "w", function() {
@@ -13435,7 +13435,7 @@
             }), n.d(t, "j", function() {
                 return P
             }), n.d(t, "k", function() {
-                return M
+                return F
             }), n.d(t, "s", function() {
                 return U
             }), n.d(t, "n", function() {
@@ -13504,11 +13504,11 @@
                 return "" === e ? "" : e.startsWith("v") ? e : "v" + e
             }
 
-            function O() {
+            function k() {
                 return Object(m.b)() ? "videos" : "videos/all"
             }
 
-            function _(e) {
+            function O(e) {
                 switch (e) {
                     case d.a.Archive:
                         return a.PastBroadcasts;
@@ -13525,7 +13525,7 @@
                 }
             }
 
-            function k(e) {
+            function _(e) {
                 switch (e) {
                     case a.Clips:
                         return o.Clips;
@@ -13627,7 +13627,7 @@
             }
 
             function A(e, t) {
-                var n = "" + O();
+                var n = "" + k();
                 t && t.filter && (n = t.filter);
                 var i = "";
                 return t && t.sort && (i = "?" + h + "=" + t.sort), "/" + e + "/" + n + i
@@ -13650,22 +13650,22 @@
                     o = x(t),
                     c = l.parse(t.location.search).collection;
                 if (i = r ? i.concat("/" + s.Video + "/" + r + (c ? "?collection=" + c : "")) : a ? i.concat("/" + s.Clip + "/" + a) : o && !c ? i.concat("/" + s.Collection + "/" + o) : i.concat("/videos"), n) {
-                    var d = F(n);
+                    var d = M(n);
                     if (Object.keys(d).length > 0) return c ? i + "&" + l.stringify(d) : i + "?" + l.stringify(d)
                 }
-                return M(e, n)
+                return F(e, n)
             }
 
-            function M(e, t) {
+            function F(e, t) {
                 var n = "/" + e + "/videos";
                 if (t) {
-                    var i = F(t);
+                    var i = M(t);
                     if (Object.keys(i).length > 0) return n + "?" + l.stringify(i)
                 }
                 return n
             }
 
-            function F(e) {
+            function M(e) {
                 var t = {};
                 return e.sort && (t[h] = e.sort), e.filter && (t[g] = e.filter), e.range && (t[E] = e.range), t
             }
@@ -13863,14 +13863,14 @@
                         },
                         t = {};
                     return this.props.asBalloon && (t = {
-                        justifyContent: p.Wa.Between
-                    }, e = {}), a.createElement(p.Xa, r.__assign({
+                        justifyContent: p.Xa.Between
+                    }, e = {}), a.createElement(p.Ya, r.__assign({
                         className: "clips-social-share",
                         display: p.X.Flex,
                         flexWrap: p.Ba.NoWrap
                     }, t, {
                         "data-test-selector": i.MainContainer
-                    }), a.createElement(p.Xa, r.__assign({
+                    }), a.createElement(p.Ya, r.__assign({
                         display: p.X.InlineBlock
                     }, e, {
                         "data-test-selector": i.DownloadButtonContainer
@@ -13888,7 +13888,7 @@
                     }), this.renderSocialButton(e, i.ShareButtonCopy, o.b.Copy))
                 }, t.prototype.renderSocialButton = function(e, t, n, i) {
                     var u = Object(s.e)(this.props.clip.url, i);
-                    return this.props.pageType === l.PageviewLocation.ClipsWatchPage && this.props.clip.broadcaster && this.props.clip.broadcaster.login && (u = Object(s.e)(Object(d.a)(this.props.clip.slug, this.props.clip.broadcaster.login), i)), a.createElement(p.Xa, r.__assign({
+                    return this.props.pageType === l.PageviewLocation.ClipsWatchPage && this.props.clip.broadcaster && this.props.clip.broadcaster.login && (u = Object(s.e)(Object(d.a)(this.props.clip.slug, this.props.clip.broadcaster.login), i)), a.createElement(p.Ya, r.__assign({
                         key: n
                     }, e, {
                         "data-test-selector": t
@@ -14134,18 +14134,18 @@
                             target: "_blank",
                             className: e,
                             onClick: n.onShareClickHandler
-                        }, Object(c.jc)(n.props), {
+                        }, Object(c.kc)(n.props), {
                             download: n.props.text
                         }), n.renderIcon()) : n.isLink() ? a.createElement("a", r.__assign({
                             href: n.getLinkTarget(),
                             target: "_blank",
                             className: e,
                             onClick: n.onShareClickHandler
-                        }, Object(c.jc)(n.props)), n.renderIcon()) : a.createElement("button", r.__assign({
+                        }, Object(c.kc)(n.props)), n.renderIcon()) : a.createElement("button", r.__assign({
                             onClick: n.copyPageUrl,
                             onMouseLeave: n.clearIsCopiedStatus,
                             className: e
-                        }, Object(c.jc)(n.props)), n.renderIcon())
+                        }, Object(c.kc)(n.props)), n.renderIcon())
                     }, n.onShareClickHandler = function() {
                         n.props.onShareClick && n.props.onShareClick(n.props.type)
                     }, n.clearIsCopiedStatus = function() {
@@ -14160,12 +14160,12 @@
                         })
                     }, n.renderIcon = function() {
                         var e = n.getAssetFromType();
-                        return a.createElement(c.Xa, {
+                        return a.createElement(c.Ya, {
                             className: "social-button__icon " + n.addSocialClassModifier("social-button__icon"),
                             display: c.X.Flex,
                             alignItems: c.f.Center,
-                            justifyContent: c.Wa.Center
-                        }, a.createElement(c.sb, {
+                            justifyContent: c.Xa.Center
+                        }, a.createElement(c.tb, {
                             asset: e
                         }))
                     }, n.isLink = function() {
@@ -14190,18 +14190,18 @@
                     }, n.getAssetFromType = function() {
                         switch (n.props.type) {
                             case i.Twitter:
-                                return c.tb.Twitter;
+                                return c.ub.Twitter;
                             case i.Facebook:
-                                return c.tb.Facebook;
+                                return c.ub.Facebook;
                             case i.VKontakte:
-                                return c.tb.VKontakte;
+                                return c.ub.VKontakte;
                             case i.Reddit:
-                                return c.tb.Reddit;
+                                return c.ub.Reddit;
                             case i.Download:
-                                return c.tb.Download;
+                                return c.ub.Download;
                             case i.Copy:
                             default:
-                                return c.tb.Copy
+                                return c.ub.Copy
                         }
                     }, n.addSocialClassModifier = function(e) {
                         switch (n.props.type) {
@@ -14243,11 +14243,11 @@
                     }, n
                 }
                 return r.__extends(t, e), t.prototype.render = function() {
-                    return a.createElement(c.Xa, {
+                    return a.createElement(c.Ya, {
                         className: "social-button"
-                    }, a.createElement(c.Yb, {
+                    }, a.createElement(c.Zb, {
                         label: this.getTooltipFromType(),
-                        direction: c.ac.Bottom
+                        direction: c.bc.Bottom
                     }, this.renderLink()))
                 }, t
             }(a.Component)

@@ -77,7 +77,7 @@
                         return null !== e && e.apply(this, arguments) || this
                     }
                     return r.__extends(t, e), t.prototype.render = function() {
-                        return o.createElement(m, null, o.createElement(c.a, null, o.createElement(f.Xa, {
+                        return o.createElement(m, null, o.createElement(c.a, null, o.createElement(f.Ya, {
                             className: "mods-root",
                             fullWidth: !0,
                             fullHeight: !0
@@ -110,15 +110,15 @@
                         return null !== e && e.apply(this, arguments) || this
                     }
                     return r.__extends(t, e), t.prototype.render = function() {
-                        return o.createElement(l.Eb, {
+                        return o.createElement(l.Fb, {
                             background: l.r.Base,
                             padding: 2
-                        }, o.createElement(l.Xa, {
+                        }, o.createElement(l.Ya, {
                             display: l.X.Flex,
-                            justifyContent: l.Wa.Center,
+                            justifyContent: l.Xa.Center,
                             alignItems: l.f.Center,
                             flexDirection: l.Aa.Column
-                        }, o.createElement(l.W, null, this.props.message), o.createElement(l.Xa, {
+                        }, o.createElement(l.W, null, this.props.message), o.createElement(l.Ya, {
                             margin: {
                                 top: 2
                             }

@@ -20,8 +20,8 @@
                 h = n("ZDlU"),
                 b = n("ff13"),
                 y = n("jytb"),
-                F = n("Ue10"),
-                k = function(e) {
+                k = n("Ue10"),
+                F = function(e) {
                     function t(t) {
                         var n = e.call(this, t) || this;
                         n.state = {
@@ -48,17 +48,17 @@
                             })
                         }
                     }, t.prototype.render = function() {
-                        return this.props.isLoggedIn ? i.createElement(F.Xa, {
+                        return this.props.isLoggedIn ? i.createElement(k.Ya, {
                             padding: {
                                 x: 3,
                                 y: 2
                             }
                         }, i.createElement(b.a, {
                             activeTab: b.b.Friends
-                        }), this.renderContent(), i.createElement(F.Xa, {
-                            display: F.X.Flex,
-                            justifyContent: F.Wa.Center
-                        }, this.props.loading && i.createElement(F.Za, null))) : (this.props.login(), i.createElement(h.a, {
+                        }), this.renderContent(), i.createElement(k.Ya, {
+                            display: k.X.Flex,
+                            justifyContent: k.Xa.Center
+                        }, this.props.loading && i.createElement(k.ab, null))) : (this.props.login(), i.createElement(h.a, {
                             message: Object(d.d)("You must be logged in to view this page", "FriendsPage")
                         }))
                     }, t.prototype.renderContent = function() {
@@ -66,18 +66,18 @@
                         if (this.props.error) return i.createElement(h.a, {
                             message: Object(d.d)("Failed to load friends", "FriendRequestsPage")
                         });
-                        if (0 === this.state.filteredUsers.length) return i.createElement(F.Xa, {
-                            textAlign: F.Rb.Center,
+                        if (0 === this.state.filteredUsers.length) return i.createElement(k.Ya, {
+                            textAlign: k.Sb.Center,
                             padding: {
                                 y: 5
                             }
-                        }, i.createElement(F.W, {
-                            color: F.O.Alt2,
-                            fontSize: F.Ca.Size4,
+                        }, i.createElement(k.W, {
+                            color: k.O.Alt2,
+                            fontSize: k.Ca.Size4,
                             italic: !0
                         }, Object(d.d)("You don't have any friends yet. :(", "FriendsPage")));
                         var e = this.state.filteredUsers.map(function(e) {
-                            return e.id ? i.createElement(F.Xa, {
+                            return e.id ? i.createElement(k.Ya, {
                                 key: e.id,
                                 margin: {
                                     bottom: 2
@@ -91,10 +91,10 @@
                                 }
                             })) : null
                         });
-                        return i.createElement(F.bc, {
+                        return i.createElement(k.cc, {
                             center: !0,
-                            childWidth: F.cc.Large,
-                            gutterSize: F.dc.Small,
+                            childWidth: k.dc.Large,
+                            gutterSize: k.ec.Small,
                             placeholderItems: 10
                         }, e)
                     }, t.prototype.detectUserDataChange = function(e, t) {
@@ -136,7 +136,7 @@
                                 loading: e && e.loading || !1,
                                 login: this.props.login
                             };
-                        return i.createElement(k, r.__assign({}, t))
+                        return i.createElement(F, r.__assign({}, t))
                     }, t
                 }(i.Component);
 
@@ -302,20 +302,20 @@
                 e[e.Friends = 0] = "Friends", e[e.Requests = 1] = "Requests"
             }(r || (r = {}));
             var s = function(e) {
-                return i.createElement(o.Xa, {
+                return i.createElement(o.Ya, {
                     margin: {
                         bottom: 2
                     }
                 }, i.createElement(o.W, {
-                    type: o.Vb.H2
-                }, Object(a.d)("Friends", "FriendsHeader")), i.createElement(o.Xa, {
+                    type: o.Wb.H2
+                }, Object(a.d)("Friends", "FriendsHeader")), i.createElement(o.Ya, {
                     margin: {
                         top: 1
                     }
-                }, i.createElement(o.Gb, null, i.createElement(o.Fb, {
+                }, i.createElement(o.Hb, null, i.createElement(o.Gb, {
                     active: e.activeTab === r.Friends,
                     linkTo: "/friends"
-                }, Object(a.d)("Your Friends", "FriendsHeader")), i.createElement(o.Fb, {
+                }, Object(a.d)("Your Friends", "FriendsHeader")), i.createElement(o.Gb, {
                     active: e.activeTab === r.Requests,
                     linkTo: "/friends/requests"
                 }, Object(a.d)("Friend Requests", "FriendsHeader")))))

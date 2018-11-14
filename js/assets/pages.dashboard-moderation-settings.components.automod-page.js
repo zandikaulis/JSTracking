@@ -354,7 +354,7 @@
                         return null !== e && e.apply(this, arguments) || this
                     }
                     return i.__extends(t, e), t.prototype.render = function() {
-                        return a.createElement(u.Eb, {
+                        return a.createElement(u.Fb, {
                             className: "auto-mod-wrapper",
                             padding: {
                                 y: 3
@@ -533,7 +533,7 @@
                             cols: 6
                         }, d.createElement(u.a, {
                             onClickOut: this.hideCategoryMenu
-                        }, d.createElement(m.Xa, {
+                        }, d.createElement(m.Ya, {
                             padding: {
                                 top: .5
                             }
@@ -543,19 +543,19 @@
                             onClick: this.toggleCategoryMenu
                         }, this.menuOption(this.props.categoryLevel)), this.menuItems())))
                     }, t.prototype.menuItems = function() {
-                        return this.state.menuItemsVisible ? d.createElement(m.Eb, {
+                        return this.state.menuItemsVisible ? d.createElement(m.Fb, {
                             border: !0,
                             background: m.r.Alt,
-                            position: m.jb.Absolute,
-                            zIndex: m.ic.Above
+                            position: m.kb.Absolute,
+                            zIndex: m.jc.Above
                         }, this.renderMenuItem(0), this.renderMenuItem(6), this.renderMenuItem(5), this.renderMenuItem(4), this.renderMenuItem(3)) : ""
                     }, t.prototype.renderMenuItem = function(e) {
-                        return d.createElement(m.Ua, {
-                            type: m.Va.Alpha,
+                        return d.createElement(m.Va, {
+                            type: m.Wa.Alpha,
                             selected: this.props.categoryLevel === e,
                             "data-new-level": e,
                             onClick: this.menuItemClicked
-                        }, d.createElement(m.Xa, {
+                        }, d.createElement(m.Ya, {
                             padding: {
                                 y: .5,
                                 x: 1
@@ -576,24 +576,24 @@
                                 return 0
                         }
                     }, t.prototype.menuOption = function(e) {
-                        for (var t = [Object(c.d)("No filtering", "AutoModSettings"), Object(c.d)("Less filtering", "AutoModSettings"), Object(c.d)("Some filtering", "AutoModSettings"), Object(c.d)("More filtering", "AutoModSettings"), Object(c.d)("Most filtering", "AutoModSettings")], n = this.getNumShields(e), i = [], a = 0; a < n; a++) i.push(d.createElement(m.Xa, {
+                        for (var t = [Object(c.d)("No filtering", "AutoModSettings"), Object(c.d)("Less filtering", "AutoModSettings"), Object(c.d)("Some filtering", "AutoModSettings"), Object(c.d)("More filtering", "AutoModSettings"), Object(c.d)("Most filtering", "AutoModSettings")], n = this.getNumShields(e), i = [], a = 0; a < n; a++) i.push(d.createElement(m.Ya, {
                             key: "shield" + a,
                             display: m.X.InlineFlex,
                             padding: {
                                 right: .5
                             }
-                        }, d.createElement(m.sb, {
-                            asset: m.tb.Automod,
+                        }, d.createElement(m.tb, {
+                            asset: m.ub.Automod,
                             height: 13,
                             width: 13,
-                            type: m.ub.Alt2
+                            type: m.vb.Alt2
                         })));
                         var o = t[n];
-                        return d.createElement(m.Xa, {
+                        return d.createElement(m.Ya, {
                             display: m.X.Flex,
                             padding: .5
                         }, i, d.createElement(m.W, {
-                            align: m.fc.Middle,
+                            align: m.gc.Middle,
                             color: m.O.Alt2
                         }, o))
                     }, t = l.__decorate([Object(s.b)("AutomodCategoryDisplay")], t)
@@ -605,13 +605,13 @@
                     return l.__extends(t, e), t.prototype.render = function() {
                         return d.createElement(m.P, {
                             cols: 6
-                        }, d.createElement(m.Xa, {
+                        }, d.createElement(m.Ya, {
                             padding: {
                                 bottom: 1
                             }
                         }, d.createElement("strong", null, this.props.category), d.createElement(m.W, {
                             color: m.O.Alt2,
-                            type: m.Vb.P
+                            type: m.Wb.P
                         }, this.props.description)))
                     }, t
                 }(d.Component),
@@ -637,28 +637,28 @@
                     }, t.prototype.render = function() {
                         return this.state.onboardingVisible ? d.createElement(m.Ja, null, d.createElement(m.P, {
                             cols: 8
-                        }, d.createElement(m.Eb, {
-                            position: m.jb.Relative,
+                        }, d.createElement(m.Fb, {
+                            position: m.kb.Relative,
                             border: !0,
                             color: m.O.Alt2,
                             padding: 2
                         }, d.createElement(m.W, {
-                            type: m.Vb.H4,
+                            type: m.Wb.H4,
                             color: m.O.Link,
                             bold: !0
-                        }, Object(c.d)("AutoMod Tip", "AutoModSettings")), d.createElement(m.Xa, {
+                        }, Object(c.d)("AutoMod Tip", "AutoModSettings")), d.createElement(m.Ya, {
                             padding: 1,
-                            position: m.jb.Absolute,
+                            position: m.kb.Absolute,
                             attachTop: !0,
                             attachRight: !0
                         }, d.createElement(m.z, {
                             type: m.F.Text,
-                            icon: m.tb.Close,
+                            icon: m.ub.Close,
                             onClick: this.onCloseOnboarding,
                             "data-test-selector": "automod-tip-dismiss-button"
                         })), d.createElement(m.W, {
                             color: m.O.Alt2,
-                            type: m.Vb.Span
+                            type: m.Wb.Span
                         }, Object(c.d)("Did you know AutoMod catches misspelled words and evasion? N!ce try, pe0ple wh0 t@lk lik3 th!s.", "AutoModSettings"))))) : ""
                     }, t
                 }(d.Component),
@@ -677,46 +677,46 @@
                             i = Object(c.d)("Level {lvl,number}", {
                                 lvl: t
                             }, "AutoModSettings");
-                        return d.createElement(m.Eb, {
+                        return d.createElement(m.Fb, {
                             borderLeft: !0,
                             borderRight: !0,
                             padding: {
                                 top: 1,
                                 x: 2
                             }
-                        }, d.createElement(m.Xa, {
+                        }, d.createElement(m.Ya, {
                             padding: {
                                 bottom: .5
                             }
                         }, d.createElement(m.W, {
                             color: m.O.Alt2,
-                            type: m.Vb.P
-                        }, Object(c.d)("Your AutoMod setting:", "AutoModSettingsSlider"))), d.createElement(m.qb, {
+                            type: m.Wb.P
+                        }, Object(c.d)("Your AutoMod setting:", "AutoModSettingsSlider"))), d.createElement(m.rb, {
                             min: 0,
                             max: 4,
                             step: 1,
                             value: String(t),
                             onChange: this.handleSliderMove,
                             "data-test-selector": "auto-mod-slider"
-                        }), d.createElement(m.Xa, {
+                        }), d.createElement(m.Ya, {
                             display: m.X.Flex
-                        }, d.createElement(m.Xa, {
+                        }, d.createElement(m.Ya, {
                             padding: {
                                 right: .5
                             }
                         }, i), d.createElement(m.W, {
                             color: m.O.Alt2,
-                            type: m.Vb.Strong
-                        }, n)), d.createElement(m.Eb, {
+                            type: m.Wb.Strong
+                        }, n)), d.createElement(m.Fb, {
                             background: m.r.Alt2,
                             padding: 1,
                             className: "auto-mod-wrapper__carat",
-                            position: m.jb.Relative
+                            position: m.kb.Relative
                         }))
                     }, t
                 }(d.Component),
-                y = "slider-blank-state-container",
-                k = function(e) {
+                k = "slider-blank-state-container",
+                y = function(e) {
                     function t() {
                         var t = null !== e && e.apply(this, arguments) || this;
                         return t.state = {
@@ -794,19 +794,19 @@
                                 cancelDisabled: !1
                             })
                         }, t.renderSlider = function(e) {
-                            return e ? d.createElement(m.Eb, {
+                            return e ? d.createElement(m.Fb, {
                                 borderLeft: !0,
                                 borderRight: !0,
                                 padding: 2,
-                                "data-test-selector": y
+                                "data-test-selector": k
                             }, d.createElement("img", {
                                 src: "https://s.jtvnw.net/jtv_user_pictures/hosted_images/automod_onboarding.gif"
-                            }), d.createElement(m.Eb, null, d.createElement(m.Eb, {
+                            }), d.createElement(m.Fb, null, d.createElement(m.Fb, {
                                 padding: {
                                     top: 2
                                 },
-                                textAlign: m.Rb.Center
-                            }, Object(c.d)("Your current AutoMod level: 0", "AutoModSettings")), d.createElement(m.Eb, {
+                                textAlign: m.Sb.Center
+                            }, Object(c.d)("Your current AutoMod level: 0", "AutoModSettings")), d.createElement(m.Fb, {
                                 margin: {
                                     x: 2
                                 },
@@ -814,12 +814,12 @@
                                     y: 1,
                                     x: 5
                                 },
-                                textAlign: m.Rb.Center
+                                textAlign: m.Sb.Center
                             }, d.createElement(m.z, {
                                 fullWidth: !0,
                                 onClick: t.showAutoModCategories,
                                 state: m.E.Default
-                            }, Object(c.d)("Choose level", "AutoModSettings"))))) : t.state.isCustom || void 0 === t.state.level ? d.createElement(m.Eb, {
+                            }, Object(c.d)("Choose level", "AutoModSettings"))))) : t.state.isCustom || void 0 === t.state.level ? d.createElement(m.Fb, {
                                 borderLeft: !0,
                                 borderRight: !0,
                                 padding: {
@@ -830,21 +830,21 @@
                                 gutterSize: m.Ka.Small
                             }, d.createElement(m.P, {
                                 cols: 6
-                            }, d.createElement(m.Xa, {
+                            }, d.createElement(m.Ya, {
                                 display: m.X.Flex,
                                 fullHeight: !0,
                                 alignItems: m.f.Center
                             }, d.createElement(m.W, {
                                 color: m.O.Alt2,
-                                type: m.Vb.Span
-                            }, Object(c.d)("Your AutoMod setting:", "AutoModSettings")), d.createElement(m.Xa, {
+                                type: m.Wb.Span
+                            }, Object(c.d)("Your AutoMod setting:", "AutoModSettings")), d.createElement(m.Ya, {
                                 padding: {
                                     left: .5
                                 },
                                 display: m.X.InlineFlex
                             }, d.createElement(m.W, {
                                 color: m.O.Alt2,
-                                type: m.Vb.Strong
+                                type: m.Wb.Strong
                             }, Object(c.d)("Custom", "AutoModSettingsValue"))))), d.createElement(m.P, {
                                 cols: 5
                             }, d.createElement(m.z, {
@@ -863,22 +863,22 @@
                             isDataLoaded: !0
                         })))
                     }, t.prototype.render = function() {
-                        if (!this.props.data || this.props.data.loading || this.props.data.error || null === this.props.data.user) return d.createElement(m.Eb, {
+                        if (!this.props.data || this.props.data.loading || this.props.data.error || null === this.props.data.user) return d.createElement(m.Fb, {
                             "data-test-selector": "automod-placeholder-container"
                         });
-                        if (!this.hasAutoModDashboardAccess()) return d.createElement(m.Eb, {
+                        if (!this.hasAutoModDashboardAccess()) return d.createElement(m.Fb, {
                             margin: {
                                 top: 2
                             },
                             color: m.O.Alt2,
-                            textAlign: m.Rb.Center,
+                            textAlign: m.Sb.Center,
                             "data-test-selector": "automod-placeholder-container"
                         }, d.createElement(m.W, {
-                            type: m.Vb.H3,
+                            type: m.Wb.H3,
                             italic: !0
                         }, Object(c.d)("You do not have permission to access this dashboard.", "AutoModSettings")));
                         var e = this.isBlankState();
-                        return d.createElement(m.Xa, null, d.createElement(m.Eb, {
+                        return d.createElement(m.Ya, null, d.createElement(m.Fb, {
                             margin: {
                                 bottom: 2
                             }
@@ -886,14 +886,14 @@
                             cols: 2
                         }, d.createElement(m.W, {
                             color: m.O.Alt2,
-                            type: m.Vb.Strong
+                            type: m.Wb.Strong
                         }, Object(c.d)("AutoMod Rulesets", "AutoModSettings"))), d.createElement(m.P, {
                             cols: 5
                         }, this.AutomodTableHeader(), this.renderSlider(e), this.AutomodCategories(e), this.AutomodTableFooter(e))))
                     }, t.prototype.isBlankState = function() {
                         return !this.state.categories && !this.state.level
                     }, t.prototype.AutomodTableFooter = function(e) {
-                        return e ? d.createElement(m.Eb, {
+                        return e ? d.createElement(m.Fb, {
                             border: !0,
                             padding: 2,
                             background: m.r.Alt2
@@ -901,16 +901,16 @@
                             cols: 7
                         }, Object(c.d)("You can adjust how much moderation you'd like for your channel.", "AutoModSettings")), d.createElement(m.P, {
                             cols: 5
-                        }, d.createElement(m.Xa, {
+                        }, d.createElement(m.Ya, {
                             display: m.X.Flex,
                             fullHeight: !0,
                             flexDirection: m.Aa.Column,
-                            justifyContent: m.Wa.Center,
+                            justifyContent: m.Xa.Center,
                             alignItems: m.f.End
                         }, d.createElement(m.z, {
                             onClick: this.showAutoModCategories,
                             type: m.F.Hollow
-                        }, Object(c.d)("See how rulesets work", "AutoModSettings")))))) : d.createElement(m.Xa, null, d.createElement(m.Eb, {
+                        }, Object(c.d)("See how rulesets work", "AutoModSettings")))))) : d.createElement(m.Ya, null, d.createElement(m.Fb, {
                             border: !0,
                             padding: {
                                 y: 1,
@@ -920,7 +920,7 @@
                         }, d.createElement("a", {
                             href: "https://help.twitch.tv/customer/portal/articles/2662186-how-to-use-automod",
                             target: "_blank"
-                        }, Object(c.d)("Learn more in our help page", "AutoModSettings"))), d.createElement(m.Xa, {
+                        }, Object(c.d)("Learn more in our help page", "AutoModSettings"))), d.createElement(m.Ya, {
                             display: m.X.Flex,
                             padding: {
                                 y: 1
@@ -928,7 +928,7 @@
                             margin: {
                                 top: .5
                             }
-                        }, d.createElement(m.Xa, {
+                        }, d.createElement(m.Ya, {
                             padding: {
                                 right: .5
                             }
@@ -950,7 +950,7 @@
                                 r = Object(c.d)("Hostility towards other people, often associated with bullying", "AutoModSettings"),
                                 s = Object(c.d)("Profanity", "AutoModSettings"),
                                 l = Object(c.d)("Expletives, curse words, things you wouldn’t say to grandma", "AutoModSettings");
-                            return d.createElement(m.Eb, {
+                            return d.createElement(m.Fb, {
                                 borderLeft: !0,
                                 borderRight: !0,
                                 padding: 2,
@@ -994,12 +994,12 @@
                         return d.createElement(m.G, {
                             border: !0,
                             row: !0
-                        }, d.createElement(m.Xa, {
+                        }, d.createElement(m.Ya, {
                             padding: {
                                 y: 1,
                                 x: 2
                             }
-                        }, d.createElement(m.Eb, {
+                        }, d.createElement(m.Fb, {
                             className: "auto-mod-wrapper__shield",
                             padding: {
                                 y: .5,
@@ -1007,10 +1007,10 @@
                             },
                             display: m.X.Flex,
                             color: m.O.Overlay
-                        }, d.createElement(m.sb, {
-                            asset: m.tb.Automod,
-                            type: m.ub.Inherit
-                        }))), d.createElement(m.Xa, {
+                        }, d.createElement(m.tb, {
+                            asset: m.ub.Automod,
+                            type: m.vb.Inherit
+                        }))), d.createElement(m.Ya, {
                             padding: {
                                 y: 1,
                                 right: 2
@@ -1063,7 +1063,7 @@
                 }
             }), Object(o.a)(f, {
                 name: "onUpdateAutoModProperties"
-            }), Object(s.b)("AutomodControls"))(k);
+            }), Object(s.b)("AutomodControls"))(y);
             n.d(t, "a", function() {
                 return A
             })

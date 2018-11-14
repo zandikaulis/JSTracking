@@ -19,7 +19,7 @@
                     var t = document.createElement("div");
                     return t.innerHTML = e.changelog, t.querySelectorAll("a").forEach(function(e) {
                         e.setAttribute("target", "_BLANK")
-                    }), i.createElement(h.Xa, {
+                    }), i.createElement(h.Ya, {
                         padding: {
                             x: 2
                         },
@@ -76,7 +76,7 @@
                     }, t.prototype.render = function() {
                         return this.state.initialized ? i.createElement(p, {
                             changelog: this.state.changelog
-                        }) : i.createElement(h.Za, null)
+                        }) : i.createElement(h.ab, null)
                     }, t
                 }(i.Component);
             var m = Object(o.compose)(Object(u.b)("AddonDetailsChangelogPage", {

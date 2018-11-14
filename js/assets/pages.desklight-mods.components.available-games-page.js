@@ -25,7 +25,7 @@
                     var a = p("desklight-mods-game-card", {
                         "desklight-mods-game-card--not-installed": !e.game.installed
                     });
-                    return r.createElement(g.Xa, {
+                    return r.createElement(g.Ya, {
                         className: a
                     }, r.createElement(g.y, {
                         unavailable: !e.game.installed,
@@ -52,7 +52,7 @@
                                     return e.name.localeCompare(t.name)
                                 });
                             return e.concat(n).map(function(e) {
-                                return r.createElement(g.Xa, {
+                                return r.createElement(g.Ya, {
                                     key: e.id,
                                     margin: {
                                         bottom: 2
@@ -68,13 +68,13 @@
                     }
                     return a.__extends(t, e), t.prototype.render = function() {
                         var e = this.renderGameCards();
-                        return r.createElement(g.Xa, {
+                        return r.createElement(g.Ya, {
                             margin: {
                                 x: 3,
                                 top: 1
                             }
-                        }, r.createElement(g.bc, {
-                            childWidth: g.cc.Small,
+                        }, r.createElement(g.cc, {
+                            childWidth: g.dc.Small,
                             placeholderItems: 10
                         }, e))
                     }, t

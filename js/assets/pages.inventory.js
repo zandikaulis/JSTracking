@@ -721,20 +721,20 @@
                     function t(t) {
                         var n = e.call(this, t) || this;
                         return n.renderBadge = function(e) {
-                            return l.createElement(k.Xa, {
+                            return l.createElement(k.Ya, {
                                 key: e.id,
                                 margin: {
                                     bottom: 2
                                 }
                             }, l.createElement(k.o, {
                                 ratio: k.p.Aspect1x1
-                            }, l.createElement(k.Eb, {
+                            }, l.createElement(k.Fb, {
                                 fullHeight: !0,
                                 fullWidth: !0,
                                 display: k.X.Flex,
                                 padding: 2,
                                 border: !0
-                            }, l.createElement(k.Pa, {
+                            }, l.createElement(k.Qa, {
                                 fullHeight: !0,
                                 fullWidth: !0
                             }, l.createElement("img", {
@@ -744,42 +744,42 @@
                                 alt: e.title
                             })))), l.createElement(k.W, {
                                 "data-test-selector": i.BadgeTitle,
-                                type: k.Vb.Strong
+                                type: k.Wb.Strong
                             }, e.title))
                         }, t.data.refetch && t.refetchDataRef && t.refetchDataRef(t.data.refetch), n
                     }
                     return d.__extends(t, e), t.prototype.render = function() {
-                        if (this.props.data.loading) return l.createElement(k.Za, {
+                        if (this.props.data.loading) return l.createElement(k.ab, {
                             fillContent: !0
                         });
                         if (!this.props.data.currentUser || !this.props.data.currentUser.availableBadges) return null;
                         var e = this.props.data.currentUser.availableBadges,
                             t = e.map(this.renderBadge);
-                        return l.createElement(k.Xa, {
+                        return l.createElement(k.Ya, {
                             margin: {
                                 y: 1
                             }
-                        }, l.createElement(k.Xa, {
+                        }, l.createElement(k.Ya, {
                             display: k.X.Flex,
                             margin: {
                                 bottom: 1
                             }
-                        }, l.createElement(k.Xa, {
+                        }, l.createElement(k.Ya, {
                             margin: {
                                 right: 1
                             }
                         }, l.createElement(k.W, {
-                            type: k.Vb.H3
+                            type: k.Wb.H3
                         }, Object(m.d)("Badges from Crates", "BadgesList"))), l.createElement(k.W, {
                             "data-test-selector": i.BadgeCount,
-                            type: k.Vb.H3,
+                            type: k.Wb.H3,
                             color: k.O.Alt2
-                        }, Object(m.f)(e.length))), l.createElement(k.Xa, {
+                        }, Object(m.f)(e.length))), l.createElement(k.Ya, {
                             margin: {
                                 bottom: 1
                             }
-                        }, l.createElement(k.W, null, Object(m.d)('You can find your chat badge in Chat Settings under "Edit Appearance".', "BadgesList"))), l.createElement(k.bc, {
-                            childWidth: k.cc.Small,
+                        }, l.createElement(k.W, null, Object(m.d)('You can find your chat badge in Chat Settings under "Edit Appearance".', "BadgesList"))), l.createElement(k.cc, {
+                            childWidth: k.dc.Small,
                             placeholderItems: 8
                         }, t))
                     }, t.prototype.componentDidUpdate = function(e) {
@@ -795,24 +795,24 @@
             ! function(e) {
                 e.Wrapper = "crates-list__wrapper", e.CrateImg = "crates-list__img"
             }(D || (D = {}));
-            var R, F = function(e) {
+            var F, R = function(e) {
                     function t(t) {
                         var n = e.call(this, t) || this;
                         return n.renderCrate = function(e) {
-                            return l.createElement(k.Xa, {
+                            return l.createElement(k.Ya, {
                                 key: e.id
-                            }, l.createElement(k.Ua, {
+                            }, l.createElement(k.Va, {
                                 onClick: n.handleOpenClick,
                                 "data-open-url": e.openURL
                             }, l.createElement(k.o, {
                                 ratio: k.p.Aspect1x1
-                            }, l.createElement(k.Eb, {
+                            }, l.createElement(k.Fb, {
                                 fullHeight: !0,
                                 fullWidth: !0,
                                 display: k.X.Flex,
                                 padding: 2,
                                 border: !0
-                            }, l.createElement(k.Pa, {
+                            }, l.createElement(k.Qa, {
                                 fullHeight: !0,
                                 fullWidth: !0
                             }, l.createElement("img", {
@@ -832,33 +832,33 @@
                         }, t.data.refetch && t.refetchDataRef && t.refetchDataRef(t.data.refetch), n
                     }
                     return d.__extends(t, e), t.prototype.render = function() {
-                        if (this.props.data.loading) return l.createElement(k.Za, {
+                        if (this.props.data.loading) return l.createElement(k.ab, {
                             fillContent: !0
                         });
                         if (!this.props.data.currentUser || !this.props.data.currentUser.crates) return null;
                         var e = this.props.data.currentUser.crates,
                             t = e.map(this.renderCrate);
-                        return l.createElement(k.Xa, {
+                        return l.createElement(k.Ya, {
                             "data-test-selector": D.Wrapper,
                             margin: {
                                 y: 1
                             }
-                        }, l.createElement(k.Xa, {
+                        }, l.createElement(k.Ya, {
                             display: k.X.Flex,
                             margin: {
                                 bottom: 1
                             }
-                        }, l.createElement(k.Xa, {
+                        }, l.createElement(k.Ya, {
                             margin: {
                                 right: 1
                             }
                         }, l.createElement(k.W, {
-                            type: k.Vb.H3
+                            type: k.Wb.H3
                         }, Object(m.d)("Twitch Crates", "CratesList"))), l.createElement(k.W, {
-                            type: k.Vb.H3,
+                            type: k.Wb.H3,
                             color: k.O.Alt2
-                        }, Object(m.f)(e.length))), l.createElement(k.bc, {
-                            childWidth: k.cc.Small,
+                        }, Object(m.f)(e.length))), l.createElement(k.cc, {
+                            childWidth: k.dc.Small,
                             placeholderItems: 8
                         }, t))
                     }, t.prototype.componentDidUpdate = function(e) {
@@ -867,13 +867,13 @@
                 }(l.Component),
                 C = Object(r.compose)(Object(h.b)("CratesList", {
                     autoReportInteractive: !0
-                }), Object(p.a)(O))(F),
+                }), Object(p.a)(O))(R),
                 w = n("CgqK");
             n("HWNB");
             ! function(e) {
                 e.Drop = "drops-list__drop", e.DropName = "drops-list__drop-name", e.Wrapper = "drops-list__wrapper"
-            }(R || (R = {}));
-            var L, U = function(e) {
+            }(F || (F = {}));
+            var L, j = function(e) {
                     function t() {
                         var t = null !== e && e.apply(this, arguments) || this;
                         return t.itemNamesEnabled = m.b.get("drops_itemnames_enabled", !1), t.getDropsDescription = function(e) {
@@ -889,26 +889,26 @@
                             var n = e.drop.node;
                             if (!n) return null;
                             var i = t.itemNamesEnabled ? n.name : n.game && n.game.name;
-                            return i ? l.createElement(k.Xa, {
+                            return i ? l.createElement(k.Ya, {
                                 key: i,
                                 margin: {
                                     bottom: 2
                                 },
-                                "data-test-selector": R.Drop
-                            }, l.createElement(k.Eb, {
+                                "data-test-selector": F.Drop
+                            }, l.createElement(k.Fb, {
                                 display: k.X.Flex,
                                 alignItems: k.f.Center,
-                                justifyContent: k.Wa.Center,
+                                justifyContent: k.Xa.Center,
                                 padding: 1,
                                 border: !0,
-                                position: k.jb.Relative
+                                position: k.kb.Relative
                             }, l.createElement("img", {
                                 src: n.imageURL,
                                 alt: Object(m.d)("Drop image for {gameName}", {
                                     gameName: i
                                 }, "DropsListPresentation")
-                            }), l.createElement(k.Eb, {
-                                position: k.jb.Absolute,
+                            }), l.createElement(k.Fb, {
+                                position: k.kb.Absolute,
                                 attachBottom: !0,
                                 attachRight: !0,
                                 className: "drops-list__count",
@@ -921,8 +921,8 @@
                                     gameName: i
                                 }, "DropsListPresentation")
                             }, e.count))), l.createElement(k.W, {
-                                type: k.Vb.Strong,
-                                "data-test-selector": R.DropName
+                                type: k.Wb.Strong,
+                                "data-test-selector": F.DropName
                             }, i)) : null
                         }, t
                     }
@@ -932,7 +932,7 @@
                         this.postRender()
                     }, t.prototype.render = function() {
                         var e = this;
-                        if (this.props.data.loading) return l.createElement(k.Za, {
+                        if (this.props.data.loading) return l.createElement(k.ab, {
                             fillContent: !0
                         });
                         if (!this.props.data || this.props.data.error || !this.drops || !this.drops.nodes) return null;
@@ -958,28 +958,28 @@
                             i = Object.keys(n).map(function(t) {
                                 return e.renderDrop(n[t])
                             });
-                        return l.createElement(k.Xa, {
-                            "data-test-selector": R.Wrapper,
+                        return l.createElement(k.Ya, {
+                            "data-test-selector": F.Wrapper,
                             margin: {
                                 y: 1
                             }
-                        }, l.createElement(k.Xa, {
+                        }, l.createElement(k.Ya, {
                             display: k.X.Flex
-                        }, l.createElement(k.Xa, {
+                        }, l.createElement(k.Ya, {
                             margin: {
                                 right: 1
                             }
                         }, l.createElement(k.W, {
-                            type: k.Vb.H3
+                            type: k.Wb.H3
                         }, Object(m.d)("Drops", "DropsList"))), l.createElement(k.W, {
-                            type: k.Vb.H3,
+                            type: k.Wb.H3,
                             color: k.O.Alt2
-                        }, Object(m.f)(t.length))), l.createElement(k.Xa, {
+                        }, Object(m.f)(t.length))), l.createElement(k.Ya, {
                             margin: {
                                 bottom: 1
                             }
-                        }, l.createElement(k.W, null, this.getDropsDescription(t ? t.length : 0))), l.createElement(k.bc, {
-                            childWidth: k.cc.Small,
+                        }, l.createElement(k.W, null, this.getDropsDescription(t ? t.length : 0))), l.createElement(k.cc, {
+                            childWidth: k.dc.Small,
                             noGrow: !0
                         }, i))
                     }, Object.defineProperty(t.prototype, "drops", {
@@ -992,7 +992,7 @@
                         this.props.data.loading || this.props.latencyTracking.reportInteractive()
                     }, t
                 }(l.Component),
-                j = Object(r.compose)(Object(p.a)(w, {
+                U = Object(r.compose)(Object(p.a)(w, {
                     name: "data",
                     options: function() {
                         return {
@@ -1001,17 +1001,17 @@
                             }
                         }
                     }
-                }), Object(h.b)("DropsList"))(U),
-                B = n("OpME"),
-                I = n("seyA");
+                }), Object(h.b)("DropsList"))(j),
+                W = n("OpME"),
+                B = n("seyA");
             (L || (L = {})).Emote = "emoticons-list-emote";
-            var _ = function(e) {
+            var I = function(e) {
                     function t(t) {
                         var n = e.call(this, t) || this;
                         return n.renderEmote = function(e) {
-                            var t = Object(B.b)([e])[0],
+                            var t = Object(W.b)([e])[0],
                                 n = t.srcSet.split(", ").pop().split(" ").shift();
-                            return l.createElement(k.Xa, {
+                            return l.createElement(k.Ya, {
                                 "data-test-selector": L.Emote,
                                 key: t.id,
                                 margin: {
@@ -1019,13 +1019,13 @@
                                 }
                             }, l.createElement(k.o, {
                                 ratio: k.p.Aspect1x1
-                            }, l.createElement(k.Eb, {
+                            }, l.createElement(k.Fb, {
                                 fullHeight: !0,
                                 fullWidth: !0,
                                 display: k.X.Flex,
                                 padding: 2,
                                 border: !0
-                            }, l.createElement(k.Pa, {
+                            }, l.createElement(k.Qa, {
                                 fullHeight: !0,
                                 fullWidth: !0
                             }, l.createElement("img", {
@@ -1033,12 +1033,12 @@
                                 title: t.displayName,
                                 alt: t.displayName
                             })))), l.createElement(k.W, {
-                                type: k.Vb.Strong
+                                type: k.Wb.Strong
                             }, t.displayName))
                         }, t.data.refetch && t.refetchDataRef && t.refetchDataRef(t.data.refetch), n
                     }
                     return d.__extends(t, e), t.prototype.render = function() {
-                        if (this.props.data.loading) return l.createElement(k.Za, {
+                        if (this.props.data.loading) return l.createElement(k.ab, {
                             fillContent: !0
                         });
                         if (!this.props.data.currentUser || !this.props.data.currentUser.emoteSets) return null;
@@ -1056,113 +1056,113 @@
                             e[0];
                             return e[1]
                         }).map(this.renderEmote);
-                        return l.createElement(k.Xa, {
+                        return l.createElement(k.Ya, {
                             margin: {
                                 y: 1
                             }
-                        }, l.createElement(k.Xa, {
+                        }, l.createElement(k.Ya, {
                             display: k.X.Flex,
                             margin: {
                                 bottom: 1
                             }
-                        }, l.createElement(k.Xa, {
+                        }, l.createElement(k.Ya, {
                             margin: {
                                 right: 1
                             }
                         }, l.createElement(k.W, {
-                            type: k.Vb.H3
+                            type: k.Wb.H3
                         }, Object(m.d)("Emotes from Crates", "EmoticonsList"))), l.createElement(k.W, {
-                            type: k.Vb.H3,
+                            type: k.Wb.H3,
                             color: k.O.Alt2
-                        }, Object(m.f)(t.length))), l.createElement(k.Xa, {
+                        }, Object(m.f)(t.length))), l.createElement(k.Ya, {
                             margin: {
                                 bottom: 1
                             }
-                        }, l.createElement(k.W, null, Object(m.d)("You can find your new emote in the emote selector for Chat, Pulse, Feeds, and Whispers.", "EmoticonsList"))), l.createElement(k.bc, {
-                            childWidth: k.cc.Small,
+                        }, l.createElement(k.W, null, Object(m.d)("You can find your new emote in the emote selector for Chat, Pulse, Feeds, and Whispers.", "EmoticonsList"))), l.createElement(k.cc, {
+                            childWidth: k.dc.Small,
                             placeholderItems: 8
                         }, t))
                     }, t.prototype.componentDidUpdate = function(e) {
                         this.props.refetchDataRef && this.props.data.refetch && !e.data.refetch && this.props.refetchDataRef(this.props.data.refetch)
                     }, t
                 }(l.Component),
-                x = Object(r.compose)(Object(h.b)("EmoticonsList", {
+                _ = Object(r.compose)(Object(h.b)("EmoticonsList", {
                     autoReportInteractive: !0
-                }), Object(p.a)(I))(_),
-                W = n("eJ65"),
-                X = n("VeT4"),
-                A = n("4h+t"),
+                }), Object(p.a)(B))(I),
+                x = n("eJ65"),
+                A = n("VeT4"),
+                Y = n("4h+t"),
                 T = function(e) {
                     function t() {
                         var t = null !== e && e.apply(this, arguments) || this;
-                        return t.bitsConfig = Object(A.a)(), t
+                        return t.bitsConfig = Object(Y.a)(), t
                     }
                     return d.__extends(t, e), t.prototype.render = function() {
                         if (!this.props.amazonMarketplaces) return null;
                         var e = Object(m.d)("Inventory", "InventoryTitleBar");
-                        if (this.props.loading) return l.createElement(k.Eb, {
+                        if (this.props.loading) return l.createElement(k.Fb, {
                             className: "title-bar",
                             display: k.X.Flex,
                             borderBottom: !0,
                             padding: {
                                 bottom: 1
                             }
-                        }, l.createElement(k.Xa, {
+                        }, l.createElement(k.Ya, {
                             flexGrow: 1
                         }, l.createElement(k.W, {
-                            type: k.Vb.H2
-                        }, e)), l.createElement(k.Xa, {
+                            type: k.Wb.H2
+                        }, e)), l.createElement(k.Ya, {
                             display: k.X.Flex,
                             margin: {
                                 right: 3
                             },
                             alignItems: k.f.Center
-                        }, l.createElement(k.ib, {
+                        }, l.createElement(k.jb, {
                             width: 135,
                             height: 30
-                        })), l.createElement(k.Xa, {
+                        })), l.createElement(k.Ya, {
                             alignSelf: k.g.Baseline
-                        }, l.createElement(k.ib, {
+                        }, l.createElement(k.jb, {
                             width: 180,
                             height: 30
                         })));
                         var t = this.props.amazonMarketplaces.map(function(e) {
-                                return e ? l.createElement(k.Ua, {
+                                return e ? l.createElement(k.Va, {
                                     key: e.id,
                                     linkTo: "https://" + e.orderHistoryRedirectURL,
                                     targetBlank: !0
                                 }, e.displayText) : null
                             }),
                             n = Object(m.d)("You have {bitsComponent}", {
-                                bitsComponent: l.createElement(X.a, {
+                                bitsComponent: l.createElement(A.a, {
                                     count: this.props.bitsBalance,
                                     bitsConfig: this.bitsConfig,
                                     withImage: !0,
                                     withText: !0
                                 })
                             }, "InventoryTitleBar");
-                        return l.createElement(k.Eb, {
+                        return l.createElement(k.Fb, {
                             className: "title-bar",
                             display: k.X.Flex,
                             borderBottom: !0,
                             padding: {
                                 bottom: 1
                             }
-                        }, l.createElement(k.Xa, {
+                        }, l.createElement(k.Ya, {
                             flexGrow: 1
                         }, l.createElement(k.W, {
-                            type: k.Vb.H2
-                        }, e)), l.createElement(k.Xa, {
+                            type: k.Wb.H2
+                        }, e)), l.createElement(k.Ya, {
                             display: k.X.Flex,
                             margin: {
                                 right: 3
                             },
                             alignItems: k.f.Center
-                        }, l.createElement(k.W, null, n)), l.createElement(k.Xa, {
+                        }, l.createElement(k.W, null, n)), l.createElement(k.Ya, {
                             alignSelf: k.g.Baseline
-                        }, l.createElement(W.a, null, l.createElement(k.z, {
+                        }, l.createElement(x.a, null, l.createElement(k.z, {
                             type: k.F.Hollow
-                        }, Object(m.d)("View your Twitch Order History", "InventoryTitleBar")), l.createElement(k.u, null, l.createElement(k.Xa, {
+                        }, Object(m.d)("View your Twitch Order History", "InventoryTitleBar")), l.createElement(k.u, null, l.createElement(k.Ya, {
                             padding: 1
                         }, t)))))
                     }, t
@@ -1170,8 +1170,8 @@
                 H = Object(r.compose)(Object(h.b)("TitleBar", {
                     autoReportInteractive: !0
                 }))(T),
-                V = n("wdoW"),
-                q = function(e) {
+                q = n("wdoW"),
+                P = function(e) {
                     function t(t) {
                         var n = e.call(this, t) || this;
                         return n.refetchDataRefs = [], n.setRefetchDataRef = function(e) {
@@ -1193,7 +1193,7 @@
                         var e = !0,
                             t = [],
                             n = 0;
-                        return this.props.data.loading || this.props.data.error || !this.props.data.currentUser || (e = !1, t = this.props.data.currentUser.amazonMarketplaces || [], n = this.props.data.currentUser.bitsBalance || 0), l.createElement(k.Xa, {
+                        return this.props.data.loading || this.props.data.error || !this.props.data.currentUser || (e = !1, t = this.props.data.currentUser.amazonMarketplaces || [], n = this.props.data.currentUser.bitsBalance || 0), l.createElement(k.Ya, {
                             className: "inventory",
                             padding: 3
                         }, l.createElement(H, {
@@ -1203,20 +1203,20 @@
                         }), l.createElement(C, {
                             onCrateOpened: this.onCrateOpened,
                             refetchDataRef: this.setRefetchDataRef
-                        }), l.createElement(x, {
+                        }), l.createElement(_, {
                             refetchDataRef: this.setRefetchDataRef
                         }), l.createElement(E, {
                             refetchDataRef: this.setRefetchDataRef
-                        }), l.createElement(j, null))
+                        }), l.createElement(U, null))
                     }, t
                 }(l.Component),
-                P = Object(r.compose)(Object(h.b)("InventoryPage", {
+                z = Object(r.compose)(Object(h.b)("InventoryPage", {
                     autoReportInteractive: !0,
                     destination: v.a.Inventory
                 }), Object(f.a)({
                     location: g.PageviewLocation.Inventory
-                }), Object(p.a)(V))(q);
-            var z = Object(a.connect)(function(e) {
+                }), Object(p.a)(q))(P);
+            var M = Object(a.connect)(function(e) {
                 return {
                     isLoggedIn: Object(c.f)(e)
                 }
@@ -1226,9 +1226,9 @@
                         return Object(s.e)(o.a.InventoryPage)
                     }
                 }, e)
-            })(P);
+            })(z);
             n.d(t, "InventoryPage", function() {
-                return z
+                return M
             })
         },
         cpJf: function(e, t, n) {

@@ -33,7 +33,7 @@
                         return Object(b.a)(this.props.match.params.channelLogin) ? c.createElement(c.Fragment, null, c.createElement(f.b, {
                             className: "squad-stream-page__root",
                             suppressScrollX: !0
-                        }), c.createElement(g.Eb, {
+                        }), c.createElement(g.Fb, {
                             fullWidth: !0,
                             fullHeight: !0,
                             className: "squad-stream-page",

@@ -144,8 +144,8 @@
                                         "data-test-selector": u.BrowseFolderOption
                                     })
                                 });
-                                return a.createElement(m.Pa, {
-                                    position: m.jb.Relative
+                                return a.createElement(m.Qa, {
+                                    position: m.kb.Relative
                                 }, a.createElement("div", {
                                     "data-test-selector": u.BrowseFolder,
                                     onMouseOver: t.showFolders,
@@ -188,14 +188,14 @@
                     }, t.renderDiskAction = function() {
                         return t.props.instance.hasUpdate ? a.createElement(c.a, {
                             title: Object(i.d)("Update", "InstalledContextMenu"),
-                            icon: m.tb.Download,
+                            icon: m.ub.Download,
                             borderTop: !0,
                             borderBottom: !0,
                             "data-test-selector": u.DiskActionOption,
                             onClick: t.onUpdate
                         }) : a.createElement(c.a, {
                             title: Object(i.d)("Reinstall", "InstalledContextMenu"),
-                            icon: m.tb.Download,
+                            icon: m.ub.Download,
                             borderTop: !0,
                             borderBottom: !0,
                             "data-test-selector": u.DiskActionOption,
@@ -238,24 +238,24 @@
                 return o.__extends(t, e), t.prototype.render = function() {
                     var e = this.renderDiskAction(),
                         t = this.renderBrowseFolder();
-                    return a.createElement(m.Xa, {
+                    return a.createElement(m.Ya, {
                         margin: {
                             top: 2
                         }
                     }, e, a.createElement(c.a, {
                         title: Object(i.d)("Auto Install Updates", "InstalledContextMenu"),
-                        icon: this.props.instance.preferences.preferenceAutoInstallUpdates ? m.tb.Check : void 0,
+                        icon: this.props.instance.preferences.preferenceAutoInstallUpdates ? m.ub.Check : void 0,
                         onClick: this.setAutoInstallUpdates
                     }), a.createElement(c.a, {
                         title: Object(i.d)("Install Libraries Seperately", "InstalledContextMenu"),
-                        icon: this.props.instance.preferences.preferenceAlternateFile ? m.tb.Check : void 0,
+                        icon: this.props.instance.preferences.preferenceAlternateFile ? m.ub.Check : void 0,
                         onClick: this.setInstallSeperatly
                     }), a.createElement(c.a, {
                         title: Object(i.d)("Ignored", "InstalledContextMenu"),
-                        icon: this.props.instance.preferences.preferenceIsIgnored ? m.tb.Check : void 0,
+                        icon: this.props.instance.preferences.preferenceIsIgnored ? m.ub.Check : void 0,
                         onClick: this.setIsignored
-                    }), a.createElement(m.Pa, {
-                        position: m.jb.Relative
+                    }), a.createElement(m.Qa, {
+                        position: m.kb.Relative
                     }, a.createElement("div", {
                         "data-test-selector": u.ReleaseTypeItem,
                         onMouseOver: this.showReleaseTypes,
@@ -269,44 +269,44 @@
                     }, a.createElement(c.a, {
                         "data-test-selector": u.ReleaseOption,
                         title: Object(i.d)("Release", "InstalledContextMenu"),
-                        icon: this.props.instance.preferences.preferredReleaseType === h.ModsIntegrationFileType.Release ? m.tb.Check : void 0,
+                        icon: this.props.instance.preferences.preferredReleaseType === h.ModsIntegrationFileType.Release ? m.ub.Check : void 0,
                         value: h.ModsIntegrationFileType.Release,
                         onClick: this.setFileType,
                         borderBottom: !0
                     }), a.createElement(c.a, {
                         title: Object(i.d)("Beta", "InstalledContextMenu"),
-                        icon: this.props.instance.preferences.preferredReleaseType === h.ModsIntegrationFileType.Beta ? m.tb.Check : void 0,
+                        icon: this.props.instance.preferences.preferredReleaseType === h.ModsIntegrationFileType.Beta ? m.ub.Check : void 0,
                         value: h.ModsIntegrationFileType.Beta,
                         onClick: this.setFileType
                     }), a.createElement(c.a, {
                         title: Object(i.d)("Alpha", "InstalledContextMenu"),
-                        icon: this.props.instance.preferences.preferredReleaseType === h.ModsIntegrationFileType.Alpha ? m.tb.Check : void 0,
+                        icon: this.props.instance.preferences.preferredReleaseType === h.ModsIntegrationFileType.Alpha ? m.ub.Check : void 0,
                         value: h.ModsIntegrationFileType.Alpha,
                         onClick: this.setFileType
                     })))), a.createElement(c.a, {
                         title: Object(i.d)("Report a Bug", "InstalledContextMenu"),
-                        icon: m.tb.Sword,
+                        icon: m.ub.Sword,
                         borderTop: !0,
                         onClick: this.reportABug,
                         "data-test-selector": u.ReportABugOption
                     }), a.createElement(c.a, {
                         title: Object(i.d)("View Addon Website", "InstalledContextMenu"),
-                        icon: m.tb.Popout,
+                        icon: m.ub.Popout,
                         onClick: this.visitWebsite,
                         "data-test-selector": u.VisitWebsiteOption
                     }), a.createElement(c.a, {
                         title: Object(i.d)("View Changelogs", "InstalledContextMenu"),
-                        icon: m.tb.ViewerList,
+                        icon: m.ub.ViewerList,
                         onClick: this.viewChanelogs,
                         "data-test-selector": u.ViewChangelogOption
                     }), t, a.createElement(c.a, {
                         title: Object(i.d)("Delete Settings (Saved Variables)", "InstalledContextMenu"),
-                        icon: m.tb.Close,
+                        icon: m.ub.Close,
                         borderBottom: !0
                     }), a.createElement(c.a, {
                         title: Object(i.d)("Delete", "InstalledContextMenu"),
-                        icon: m.tb.Trash,
-                        interactableType: m.Va.Alert,
+                        icon: m.ub.Trash,
+                        interactableType: m.Wa.Alert,
                         onClick: this.onUninstall
                     }))
                 }, t
@@ -331,19 +331,19 @@
                     }, t
                 }
                 return o.__extends(t, e), t.prototype.render = function() {
-                    return a.createElement(m.Xa, {
+                    return a.createElement(m.Ya, {
                         padding: {
                             top: 2
                         }
                     }, a.createElement(c.a, {
-                        icon: m.tb.Download,
+                        icon: m.ub.Download,
                         title: Object(i.d)("Install", "NotInstalledMenu"),
                         borderBottom: !0,
                         borderTop: !0,
                         "data-test-selector": g.InstallOption,
                         onClick: this.onInstall
                     }), a.createElement(c.a, {
-                        icon: m.tb.Popout,
+                        icon: m.ub.Popout,
                         title: Object(i.d)("Browse Addon Website", "NotInstalledMenu"),
                         onClick: this.openSite,
                         "data-test-selector": g.OpenSiteOption
@@ -361,7 +361,7 @@
                         var t = null !== e && e.apply(this, arguments) || this;
                         return t.renderAddonHeader = function() {
                             var e = Object(A.c)(t.props.addon);
-                            return a.createElement(m.Xa, {
+                            return a.createElement(m.Ya, {
                                 padding: {
                                     x: 1
                                 },
@@ -372,12 +372,12 @@
                                 src: t.props.addon.primaryCategoryAvatarUrl,
                                 alt: t.props.addon.name,
                                 size: 36
-                            }), a.createElement(m.Xa, {
+                            }), a.createElement(m.Ya, {
                                 margin: {
                                     left: 1
                                 }
                             }, a.createElement(m.W, {
-                                type: m.Vb.H2,
+                                type: m.Wb.H2,
                                 fontSize: m.Ca.Size4
                             }, t.props.addon.name), a.createElement(m.W, {
                                 color: m.O.Alt2
@@ -398,7 +398,7 @@
                                 addon: this.props.addon,
                                 onClose: this.props.onClose
                             });
-                        return a.createElement(m.Xa, {
+                        return a.createElement(m.Ya, {
                             padding: {
                                 top: 1
                             },
@@ -483,14 +483,14 @@
                         return null !== e && e.apply(this, arguments) || this
                     }
                     return o.__extends(t, e), t.prototype.render = function() {
-                        if (!this.props.addon) return a.createElement(h.Za, null);
+                        if (!this.props.addon) return a.createElement(h.ab, null);
                         var e = Object(m.c)(this.props.addon),
                             t = Object(m.b)(this.props.addon),
                             n = Object(m.a)(this.props.addon),
                             o = Object(p.g)(this.props.addon.downloadCount, {
                                 maximumFractionDigits: 1
                             });
-                        return a.createElement(h.Xa, {
+                        return a.createElement(h.Ya, {
                             padding: {
                                 x: 2,
                                 bottom: 2
@@ -502,48 +502,48 @@
                             className: "addon-header__logo",
                             src: this.props.addon.primaryCategoryAvatarUrl,
                             alt: this.props.addon.name
-                        }), a.createElement(h.Xa, {
+                        }), a.createElement(h.Ya, {
                             display: h.X.Flex,
                             flexDirection: h.Aa.Column,
                             margin: {
                                 left: 2
                             }
-                        }, a.createElement(h.Xa, {
+                        }, a.createElement(h.Ya, {
                             display: h.X.Flex,
                             alignItems: h.f.End
-                        }, a.createElement(h.Xa, {
+                        }, a.createElement(h.Ya, {
                             margin: {
                                 right: 1
                             }
                         }, a.createElement(h.W, {
                             fontSize: h.Ca.Size3,
-                            type: h.Vb.H2
+                            type: h.Wb.H2
                         }, this.props.addon.name)), a.createElement(h.W, {
                             color: h.O.Alt2
-                        }, e)), a.createElement(h.Xa, {
+                        }, e)), a.createElement(h.Ya, {
                             margin: {
                                 bottom: 1
                             }
-                        }, a.createElement(h.W, null, t)), a.createElement(h.Xa, {
+                        }, a.createElement(h.W, null, t)), a.createElement(h.Ya, {
                             display: h.X.Flex,
                             margin: {
                                 bottom: 1
                             }
-                        }, a.createElement(h.Xa, {
+                        }, a.createElement(h.Ya, {
                             margin: {
                                 right: 1
                             }
-                        }, a.createElement(h.Xa, {
+                        }, a.createElement(h.Ya, {
                             display: h.X.Flex,
                             alignItems: h.f.Center
-                        }, a.createElement(h.sb, {
-                            asset: h.tb.Download
-                        }), o)), a.createElement(h.Xa, {
+                        }, a.createElement(h.tb, {
+                            asset: h.ub.Download
+                        }), o)), a.createElement(h.Ya, {
                             display: h.X.Flex,
                             alignItems: h.f.Center
-                        }, a.createElement(h.sb, {
-                            asset: h.tb.NavProfile
-                        }), n)), a.createElement(h.Xa, {
+                        }, a.createElement(h.tb, {
+                            asset: h.ub.NavProfile
+                        }), n)), a.createElement(h.Ya, {
                             className: "addon-header__action"
                         }, a.createElement(u.a, {
                             addon: this.props.addon,
@@ -581,35 +581,35 @@
                     }, t
                 }
                 return o.__extends(t, e), t.prototype.render = function() {
-                    return this.props.addon ? a.createElement(h.Xa, {
+                    return this.props.addon ? a.createElement(h.Ya, {
                         display: h.X.Flex,
                         padding: {
                             x: 2,
                             y: .5
                         },
-                        justifyContent: h.Wa.Between
+                        justifyContent: h.Xa.Between
                     }, a.createElement(h.z, {
                         onClick: this.onBack,
                         type: h.F.Text,
-                        icon: h.tb.AngleLeft
-                    }, Object(p.d)("Back", "AddonDetailNavigationBar")), a.createElement(h.Xa, {
+                        icon: h.ub.AngleLeft
+                    }, Object(p.d)("Back", "AddonDetailNavigationBar")), a.createElement(h.Ya, {
                         display: h.X.Flex
-                    }, a.createElement(h.Xa, {
+                    }, a.createElement(h.Ya, {
                         margin: {
                             right: 2
                         }
                     }, a.createElement(h.z, {
-                        icon: h.tb.Popout,
+                        icon: h.ub.Popout,
                         targetBlank: !0,
                         type: h.F.Text,
                         linkTo: this.props.addon.websiteUrl
                     }, Object(p.d)("Website", "AddonDetailNavigation"))), a.createElement(I.a, {
                         onClickOut: this.closeContextMenu
-                    }, a.createElement(h.Xa, {
-                        position: h.jb.Relative
+                    }, a.createElement(h.Ya, {
+                        position: h.kb.Relative
                     }, a.createElement(h.z, {
                         "data-test-selector": g.ContextMenuButton,
-                        icon: h.tb.NavMore,
+                        icon: h.ub.NavMore,
                         type: h.F.Text,
                         onClick: this.toggleContextMenu
                     }, Object(p.d)("More", "AddonDetailNavigation")), a.createElement(h.u, {
@@ -618,7 +618,7 @@
                     }, a.createElement(C.a, {
                         addon: this.props.addon,
                         onClose: this.closeContextMenu
-                    })))))) : a.createElement(h.Za, null)
+                    })))))) : a.createElement(h.ab, null)
                 }, t
             }(a.Component);
             var v, E, O = Object(s.compose)(Object(i.b)(function(e) {
@@ -651,46 +651,46 @@
                         }, t
                     }
                     return o.__extends(t, e), t.prototype.render = function() {
-                        return a.createElement(h.Xa, {
+                        return a.createElement(h.Ya, {
                             padding: {
                                 x: 2,
                                 y: 1
                             }
-                        }, a.createElement(h.Gb, null, a.createElement(h.Fb, {
+                        }, a.createElement(h.Hb, null, a.createElement(h.Gb, {
                             active: this.isTabActive(E.Description),
                             linkTo: "/mods/games/" + this.props.match.params.gameId + "/addons/" + this.props.match.params.addonId
                         }, a.createElement(h.W, {
-                            transform: h.Ub.Uppercase
-                        }, Object(p.d)("Overview", "AddonDetailTabs"))), a.createElement(h.Fb, {
+                            transform: h.Vb.Uppercase
+                        }, Object(p.d)("Overview", "AddonDetailTabs"))), a.createElement(h.Gb, {
                             "data-test-selector": v.ChangelogTab,
                             active: this.isTabActive(E.Changelog),
                             linkTo: "/mods/games/" + this.props.match.params.gameId + "/addons/" + this.props.match.params.addonId + "/changelog"
                         }, a.createElement(h.W, {
-                            transform: h.Ub.Uppercase
-                        }, Object(p.d)("Changelog", "AddonDetailTabs"))), a.createElement(h.Fb, {
+                            transform: h.Vb.Uppercase
+                        }, Object(p.d)("Changelog", "AddonDetailTabs"))), a.createElement(h.Gb, {
                             active: this.isTabActive(E.Screenshots),
                             linkTo: "/mods/games/" + this.props.match.params.gameId + "/addons/" + this.props.match.params.addonId + "/screenshots"
                         }, a.createElement(h.W, {
-                            transform: h.Ub.Uppercase
-                        }, Object(p.d)("Screenshots", "AddonDetailTabs"))), a.createElement(h.Fb, {
+                            transform: h.Vb.Uppercase
+                        }, Object(p.d)("Screenshots", "AddonDetailTabs"))), a.createElement(h.Gb, {
                             active: this.isTabActive(E.Versions),
                             linkTo: "/mods/games/" + this.props.match.params.gameId + "/addons/" + this.props.match.params.addonId + "/versions"
                         }, a.createElement(h.W, {
-                            transform: h.Ub.Uppercase
+                            transform: h.Vb.Uppercase
                         }, Object(p.d)("Versions", "AddonDetailTabs")))))
                     }, t
                 }(a.Component),
                 x = Object(s.compose)(r.a)(y),
-                j = c.a.wrap(function() {
+                w = c.a.wrap(function() {
                     return n.e(134).then(n.bind(null, "CG/P"))
                 }, "AddonDetailsDescriptionPage"),
-                w = c.a.wrap(function() {
+                j = c.a.wrap(function() {
                     return n.e(133).then(n.bind(null, "eojJ"))
                 }, "AddonDetailsScreenshotsPage"),
-                F = c.a.wrap(function() {
+                T = c.a.wrap(function() {
                     return n.e(132).then(n.bind(null, "coCq"))
                 }, "AddonDetailsChangelogPage"),
-                T = c.a.wrap(function() {
+                F = c.a.wrap(function() {
                     return n.e(131).then(n.bind(null, "x5gZ"))
                 }, "AddonDetailsVersionPage"),
                 k = function(e) {
@@ -698,7 +698,7 @@
                         return null !== e && e.apply(this, arguments) || this
                     }
                     return o.__extends(t, e), t.prototype.render = function() {
-                        return this.props.initialized ? a.createElement(h.Xa, {
+                        return this.props.initialized ? a.createElement(h.Ya, {
                             display: h.X.Flex,
                             flexDirection: h.Aa.Column,
                             fullWidth: !0,
@@ -708,20 +708,20 @@
                         }), a.createElement(x, null), a.createElement(d.a, null, a.createElement(l.a, {
                             exact: !0,
                             path: "/mods/games/:gameId/addons/:addonId",
-                            component: j
-                        }), a.createElement(l.a, {
-                            exact: !0,
-                            path: "/mods/games/:gameId/addons/:addonId/changelog",
-                            component: F
-                        }), a.createElement(l.a, {
-                            exact: !0,
-                            path: "/mods/games/:gameId/addons/:addonId/screenshots",
                             component: w
                         }), a.createElement(l.a, {
                             exact: !0,
-                            path: "/mods/games/:gameId/addons/:addonId/versions",
+                            path: "/mods/games/:gameId/addons/:addonId/changelog",
                             component: T
-                        }))) : a.createElement(h.Za, null)
+                        }), a.createElement(l.a, {
+                            exact: !0,
+                            path: "/mods/games/:gameId/addons/:addonId/screenshots",
+                            component: j
+                        }), a.createElement(l.a, {
+                            exact: !0,
+                            path: "/mods/games/:gameId/addons/:addonId/versions",
+                            component: F
+                        }))) : a.createElement(h.ab, null)
                     }, t
                 }(a.Component);
             var M = Object(i.b)(function(e) {
@@ -743,11 +743,11 @@
                         }))
                     }, t
                 }(a.Component),
-                U = Object(s.compose)(r.a)(S);
+                B = Object(s.compose)(r.a)(S);
             n.d(t, "AddonDetailsContainer", function() {
                 return S
             }), n.d(t, "AddonDetailsPage", function() {
-                return U
+                return B
             })
         },
         gXjh: function(e, t, n) {
@@ -774,13 +774,13 @@
                 function t() {
                     var t = null !== e && e.apply(this, arguments) || this;
                     return t.renderInstallProgress = function(e) {
-                        return r.createElement(d.Xa, {
+                        return r.createElement(d.Ya, {
                             display: d.X.Flex,
                             flexDirection: d.Aa.Column,
-                            justifyContent: d.Wa.Center,
+                            justifyContent: d.Xa.Center,
                             alignItems: d.f.Center,
                             "data-test-selector": o.InstallProgress
-                        }, r.createElement(d.mb, {
+                        }, r.createElement(d.nb, {
                             value: e.progress
                         }), r.createElement(d.W, null, e.shortStatusText))
                     }, t.onUpdate = function() {
@@ -815,12 +815,12 @@
                         case c.ModsIntegrationAddonStatus.Pending:
                             return r.createElement(d.W, null, Object(i.d)("Pending", "AddonAction"));
                         case c.ModsIntegrationAddonStatus.WorkingCopy:
-                            return r.createElement(d.Xa, {
+                            return r.createElement(d.Ya, {
                                 display: d.X.Flex,
                                 "data-test-selector": o.WorkingCopy
-                            }, r.createElement(d.sb, {
-                                asset: d.tb.Wrench
-                            }), r.createElement(d.Xa, {
+                            }, r.createElement(d.tb, {
+                                asset: d.ub.Wrench
+                            }), r.createElement(d.Ya, {
                                 margin: {
                                     left: .5
                                 }

@@ -115,7 +115,7 @@
                         }, t
                     }
                     return n.__extends(t, e), t.prototype.render = function() {
-                        var e = a.createElement(o.zb, {
+                        var e = a.createElement(o.Ab, {
                             onChange: this.onChange,
                             disabled: this.props.disabled,
                             defaultValue: this.props.defaultLanguage
@@ -1155,43 +1155,43 @@
                     }
                     return o.__extends(t, e), t.prototype.render = function() {
                         var e = this.props.header;
-                        return c.createElement(y.Xa, {
+                        return c.createElement(y.Ya, {
                             alignItems: y.f.Center,
                             display: y.X.Flex,
                             flexDirection: y.Aa.Column,
                             fullWidth: !0,
-                            justifyContent: y.Wa.Start
-                        }, c.createElement(y.Xa, {
+                            justifyContent: y.Xa.Start
+                        }, c.createElement(y.Ya, {
                             alignItems: y.f.Center,
                             className: "partner-signup-exit-layout-outer-container",
                             display: y.X.Flex,
                             flexDirection: y.Aa.Column,
-                            justifyContent: y.Wa.Start
-                        }, c.createElement(y.Xa, {
+                            justifyContent: y.Xa.Start
+                        }, c.createElement(y.Ya, {
                             className: "partner-signup-exit-layout-inner-container"
-                        }, e && c.createElement(y.Xa, {
+                        }, e && c.createElement(y.Ya, {
                             "data-test-selector": n.Header,
                             fullWidth: !0,
                             margin: {
                                 bottom: 3
                             }
-                        }, e), c.createElement(y.Xa, {
+                        }, e), c.createElement(y.Ya, {
                             margin: {
                                 bottom: 3
                             }
                         }, c.createElement(y.S, {
                             alt: this.props.alt,
                             src: this.props.src
-                        })), c.createElement(y.Xa, {
-                            textAlign: y.Rb.Center
-                        }, c.createElement(y.Xa, {
+                        })), c.createElement(y.Ya, {
+                            textAlign: y.Sb.Center
+                        }, c.createElement(y.Ya, {
                             margin: {
                                 bottom: 2
                             }
                         }, c.createElement(y.W, {
                             bold: !0,
                             fontSize: y.Ca.Size3,
-                            type: y.Vb.H3
+                            type: y.Wb.H3
                         }, this.props.title)), c.createElement(y.W, {
                             fontSize: y.Ca.Size5,
                             color: y.O.Alt2
@@ -1221,10 +1221,10 @@
                 })(v),
                 E = r("fvjX"),
                 P = r("0ly3"),
-                T = r("Jgup"),
-                A = r("geRD"),
+                A = r("Jgup"),
+                T = r("geRD"),
                 k = function() {
-                    return c.createElement(y.Eb, {
+                    return c.createElement(y.Fb, {
                         background: y.r.Base,
                         padding: 2,
                         margin: {
@@ -1232,7 +1232,7 @@
                         },
                         border: !0,
                         borderRadius: y.x.Medium
-                    }, c.createElement(y.ec, null, c.createElement("h3", null, Object(u.d)("Partnership Guidelines", "PartnershipSignupGuidelines")), c.createElement("ul", null, c.createElement("li", null, Object(u.d)("Complete the <x:path-to-partner>Path to Partner Achievement</x:path-to-partner> or demonstrate large, engaged viewership/following on other services. Streamers who complete the Path to Partner achievements in your Achievements Dashboard will unlock a button to apply for Partnership, and receive priority for their application to be reviewed. Please note that these Achievements list the minimum criteria we look for in potential Partners, and completing them does not guarantee Partnership.", {
+                    }, c.createElement(y.fc, null, c.createElement("h3", null, Object(u.d)("Partnership Guidelines", "PartnershipSignupGuidelines")), c.createElement("ul", null, c.createElement("li", null, Object(u.d)("Complete the <x:path-to-partner>Path to Partner Achievement</x:path-to-partner> or demonstrate large, engaged viewership/following on other services. Streamers who complete the Path to Partner achievements in your Achievements Dashboard will unlock a button to apply for Partnership, and receive priority for their application to be reviewed. Please note that these Achievements list the minimum criteria we look for in potential Partners, and completing them does not guarantee Partnership.", {
                         "x:path-to-partner": function(e) {
                             return c.createElement(y.U, {
                                 targetBlank: !0,
@@ -1294,7 +1294,7 @@
             function(e) {
                 e.Description = "partnership-signup-main-layout-description", e.LeftColumn = "partnership-signup-main-layout-left-column", e.RightColumn = "partnership-signup-main-layout-right-column"
             }(S || (S = {}));
-            var w, _, N, M, F, I = function(e) {
+            var w, _, N, F, M, I = function(e) {
                     function t() {
                         return null !== e && e.apply(this, arguments) || this
                     }
@@ -1302,34 +1302,34 @@
                         var e = this.props.description,
                             t = this.props.flexDirection || y.Aa.Row,
                             r = t === y.Aa.Row;
-                        return c.createElement(y.Xa, {
+                        return c.createElement(y.Ya, {
                             alignItems: y.f.Center,
                             display: y.X.Flex,
                             flexDirection: y.Aa.Column,
                             fullWidth: !0,
                             padding: 4,
-                            justifyContent: y.Wa.Start
-                        }, c.createElement(y.Xa, {
+                            justifyContent: y.Xa.Start
+                        }, c.createElement(y.Ya, {
                             className: "partner-signup-main-layout"
-                        }, c.createElement(y.Xa, null, c.createElement(y.Xa, {
+                        }, c.createElement(y.Ya, null, c.createElement(y.Ya, {
                             margin: {
                                 bottom: 2
                             }
                         }, c.createElement(y.W, {
                             bold: !0,
-                            type: y.Vb.H1
-                        }, Object(u.d)("Partner Application", "PartnershipSignupApplicationTitle"))), e && c.createElement(y.Xa, {
+                            type: y.Wb.H1
+                        }, Object(u.d)("Partner Application", "PartnershipSignupApplicationTitle"))), e && c.createElement(y.Ya, {
                             "data-test-selector": S.Description,
                             margin: {
                                 bottom: 2
                             }
                         }, c.createElement(y.W, {
-                            type: y.Vb.P,
+                            type: y.Wb.P,
                             fontSize: y.Ca.Size5
-                        }, e))), c.createElement(y.Xa, {
+                        }, e))), c.createElement(y.Ya, {
                             display: y.X.Flex,
                             flexDirection: t
-                        }, c.createElement(y.Xa, {
+                        }, c.createElement(y.Ya, {
                             className: r ? j.LeftColumn : "",
                             "data-test-selector": S.LeftColumn,
                             flexOrder: r ? 1 : 2,
@@ -1337,7 +1337,7 @@
                             margin: r ? {
                                 right: 2
                             } : void 0
-                        }, this.props.children), c.createElement(y.Xa, {
+                        }, this.props.children), c.createElement(y.Ya, {
                             className: r ? j.RightColumn : "",
                             "data-test-selector": S.RightColumn,
                             flexOrder: r ? 2 : 1,
@@ -1358,15 +1358,15 @@
             }(N || (N = {})),
             function(e) {
                 e.Category = "category", e.Country = "country", e.Description = "description", e.FullName = "full-name", e.Language = "language"
-            }(M || (M = {})),
+            }(F || (F = {})),
             function(e) {
                 e.Category = "category", e.Country = "country", e.Description = "description", e.FullName = "fullName", e.Language = "language"
-            }(F || (F = {}));
+            }(M || (M = {}));
             var x = function(e) {
                     function t(t) {
                         var r, n = e.call(this, t) || this;
                         n.logger = u.k.withCategory("PartnershipApplication"), n.handleLanguageChange = function(e) {
-                            n.handleFieldChange(F.Language, e)
+                            n.handleFieldChange(M.Language, e)
                         }, n.handleFieldChange = function(e, t) {
                             n.setState(function(r) {
                                 var n;
@@ -1375,7 +1375,7 @@
                                     formErrorType: void 0
                                 }
                             }, function() {
-                                e !== F.Category && e !== F.Language || function(e, t) {
+                                e !== M.Category && e !== M.Language || function(e, t) {
                                     u.p.tracking.track(f.SpadeEventType.PartnershipApplicationInteraction, {
                                         field_name: e,
                                         field_value: t
@@ -1394,7 +1394,7 @@
                                         case 0:
                                             this.setState({
                                                 processingApplication: !0
-                                            }), e = Object(A.a)(this.state.fields), t = void 0, i.label = 1;
+                                            }), e = Object(T.a)(this.state.fields), t = void 0, i.label = 1;
                                         case 1:
                                             return i.trys.push([1, 3, , 4]), [4, this.props.createPartnershipApplication(e)];
                                         case 2:
@@ -1421,7 +1421,7 @@
                             i = a.currentUser,
                             c = a.requestInfo.countryCode;
                         return n.state = {
-                            fields: (r = {}, r[F.Country] = c || "US", r[F.Category] = _.Gaming, r[F.Description] = "", r[F.FullName] = "", r[F.Language] = i && i.broadcastSettings && i.broadcastSettings.language || "en", r),
+                            fields: (r = {}, r[M.Country] = c || "US", r[M.Category] = _.Gaming, r[M.Description] = "", r[M.FullName] = "", r[M.Language] = i && i.broadcastSettings && i.broadcastSettings.language || "en", r),
                             processingApplication: !1
                         }, n
                     }
@@ -1429,114 +1429,114 @@
                         var e = this.props,
                             t = e.data.currentUser,
                             r = e.sessionUser;
-                        return r && t && t.email && t.roles ? c.createElement(I, null, this.state.formErrorType && c.createElement(y.Xa, {
+                        return r && t && t.email && t.roles ? c.createElement(I, null, this.state.formErrorType && c.createElement(y.Ya, {
                             margin: {
                                 bottom: 2
                             }
-                        }, c.createElement(y.Na, {
+                        }, c.createElement(y.Oa, {
                             closeButtonAriaLabel: Object(u.d)("Dismiss", "PartnershipSignupForm"),
                             closeButtonOnClick: this.handleInFeatureCloseClick,
                             description: this.formErrorMessage,
                             title: Object(u.d)("Error", "PartnershipSignupForm"),
-                            type: y.Oa.Error
-                        })), c.createElement(y.Xa, {
+                            type: y.Pa.Error
+                        })), c.createElement(y.Ya, {
                             margin: {
                                 bottom: 2
                             }
                         }, c.createElement(y.Ea, {
                             label: Object(u.d)("Twitch Username", "PartnershipSignupForm")
-                        }, c.createElement(y.Ra, {
+                        }, c.createElement(y.Sa, {
                             "data-test-selector": w.ChannelLogin,
                             disabled: !0,
-                            type: y.Ta.Text,
+                            type: y.Ua.Text,
                             value: r.login
-                        }))), c.createElement(y.Xa, {
+                        }))), c.createElement(y.Ya, {
                             margin: {
                                 y: 2
                             }
                         }, c.createElement(y.Ea, {
                             label: Object(u.d)("Email", "PartnershipSignupForm")
-                        }, c.createElement(y.Ra, {
+                        }, c.createElement(y.Sa, {
                             "data-test-selector": w.Email,
                             disabled: !0,
-                            type: y.Ta.Email,
+                            type: y.Ua.Email,
                             value: t.email
-                        }))), c.createElement(y.Xa, {
+                        }))), c.createElement(y.Ya, {
                             margin: {
                                 y: 2
                             }
                         }, c.createElement(y.Ea, {
-                            id: M.Category,
+                            id: F.Category,
                             label: Object(u.d)("Category", "PartnershipSignupForm")
-                        }, c.createElement(y.zb, {
+                        }, c.createElement(y.Ab, {
                             "data-test-selector": w.Category,
-                            id: M.Category,
-                            onChange: this.registerHandleFieldChange(F.Category)
+                            id: F.Category,
+                            onChange: this.registerHandleFieldChange(M.Category)
                         }, c.createElement("option", {
                             value: _.Gaming
                         }, Object(u.d)("Gaming", "PartnershipSignupForm")), c.createElement("option", {
                             value: _.Creative
-                        }, Object(u.d)("Creative", "PartnershipSignupForm"))))), c.createElement(y.Xa, {
+                        }, Object(u.d)("Creative", "PartnershipSignupForm"))))), c.createElement(y.Ya, {
                             margin: {
                                 y: 2
                             }
                         }, c.createElement(y.Ea, {
-                            id: M.Country,
+                            id: F.Country,
                             label: Object(u.d)("Applicant Country", "PartnershipSignupForm")
-                        }, c.createElement(y.zb, {
+                        }, c.createElement(y.Ab, {
                             "data-test-selector": w.Country,
-                            id: M.Country,
+                            id: F.Country,
                             value: this.state.fields.country,
-                            onChange: this.registerHandleFieldChange(F.Country)
-                        }, T.a.map(function(e) {
+                            onChange: this.registerHandleFieldChange(M.Country)
+                        }, A.a.map(function(e) {
                             return c.createElement("option", {
                                 value: e,
                                 key: "countryCode-" + e
-                            }, Object(T.b)(e))
-                        })))), c.createElement(y.Xa, {
+                            }, Object(A.b)(e))
+                        })))), c.createElement(y.Ya, {
                             margin: {
                                 y: 2
                             }
                         }, c.createElement(y.Ea, {
-                            id: M.Language,
+                            id: F.Language,
                             label: Object(u.d)("Applicant Language", "PartnershipSignupForm")
                         }, c.createElement(P.a, {
                             onChange: this.handleLanguageChange,
                             defaultLanguage: this.state.fields.language,
                             disabled: !1,
                             "data-test-selector": w.Language
-                        }))), c.createElement(y.Xa, {
+                        }))), c.createElement(y.Ya, {
                             margin: {
                                 y: 2
                             }
                         }, c.createElement(y.Ea, {
-                            id: M.FullName,
+                            id: F.FullName,
                             "data-test-selector": w.FullName,
                             label: Object(u.d)("Full Name", "PartnershipSignupForm"),
                             hint: Object(u.d)("First and Last Name", "PartnershipSignupForm")
-                        }, c.createElement(y.Ra, {
-                            id: M.FullName,
-                            name: F.FullName,
-                            type: y.Ta.Text,
+                        }, c.createElement(y.Sa, {
+                            id: F.FullName,
+                            name: M.FullName,
+                            type: y.Ua.Text,
                             value: this.state.fields.fullName,
-                            onChange: this.registerHandleFieldChange(F.FullName)
-                        }))), c.createElement(y.Xa, {
+                            onChange: this.registerHandleFieldChange(M.FullName)
+                        }))), c.createElement(y.Ya, {
                             margin: {
                                 y: 2
                             }
                         }, c.createElement(y.Ea, {
-                            id: M.Description,
+                            id: F.Description,
                             "data-test-selector": w.Description,
                             label: Object(u.d)("Details", "PartnershipSignupForm"),
                             hint: Object(u.d)("Tell us about your stream", "PartnershipSignupForm")
-                        }, c.createElement(y.Sb, {
-                            id: M.Description,
-                            onChange: this.registerHandleFieldChange(F.Description)
+                        }, c.createElement(y.Tb, {
+                            id: F.Description,
+                            onChange: this.registerHandleFieldChange(M.Description)
                         }))), c.createElement(y.z, {
                             "data-test-selector": w.Button,
                             state: this.state.processingApplication ? y.E.Loading : y.E.Default,
                             onClick: this.handleSubmitClick,
-                            disabled: !(this.state.fields[F.FullName] && this.state.fields[F.Description] && !this.state.processingApplication && !this.state.formErrorType)
+                            disabled: !(this.state.fields[M.FullName] && this.state.fields[M.Description] && !this.state.processingApplication && !this.state.formErrorType)
                         }, Object(u.d)("Submit Application", "PartnershipSignupForm"))) : null
                     }, Object.defineProperty(t.prototype, "formErrorMessage", {
                         get: function() {
@@ -1550,17 +1550,17 @@
                         configurable: !0
                     }), t
                 }(c.Component),
-                R = Object(E.compose)(Object(d.a)(D), Object(d.a)(L, {
+                G = Object(E.compose)(Object(d.a)(D), Object(d.a)(L, {
                     name: "createPartnershipApplication"
                 }))(x);
-            var G, U, B = Object(a.connect)(function(e) {
+            var U, R, B = Object(a.connect)(function(e) {
                     return {
                         sessionUser: Object(i.e)(e)
                     }
-                })(R),
+                })(G),
                 V = r("oCrl"),
-                W = r.n(V),
-                H = function(e) {
+                Y = r.n(V),
+                W = function(e) {
                     function t() {
                         return null !== e && e.apply(this, arguments) || this
                     }
@@ -1570,13 +1570,13 @@
                             alt: e,
                             description: Object(u.d)("Thanks for applying to be a Twitch Partner! Your partnership application is currently being reviewed.", "SubmittedPage"),
                             title: e,
-                            src: W.a
+                            src: Y.a
                         })
                     }, t
                 }(c.Component),
-                X = r("Z4LW"),
-                Y = r.n(X),
-                q = function(e) {
+                H = r("Z4LW"),
+                q = r.n(H),
+                K = function(e) {
                     function t() {
                         return null !== e && e.apply(this, arguments) || this
                     }
@@ -1592,16 +1592,16 @@
                                 "x:strong": function(e) {
                                     return c.createElement(y.W, {
                                         bold: !0,
-                                        type: y.Vb.Span
+                                        type: y.Wb.Span
                                     }, e)
                                 }
                             }, "SubmittedPage"),
                             title: Object(u.d)("Review Complete", "SubmittedPage"),
-                            src: Y.a
+                            src: q.a
                         })
                     }, t
                 }(c.Component),
-                K = function(e) {
+                z = function(e) {
                     function t() {
                         var t = null !== e && e.apply(this, arguments) || this;
                         return t.state = {
@@ -1611,12 +1611,12 @@
                                 isNotificationDismissed: !0
                             })
                         }, t.getHeader = function() {
-                            return t.state.isNotificationDismissed ? null : c.createElement(y.Na, {
+                            return t.state.isNotificationDismissed ? null : c.createElement(y.Oa, {
                                 closeButtonAriaLabel: Object(u.d)("Dismiss", "PartnerSignupApplicationSubmitted"),
                                 closeButtonOnClick: t.handleNotificationCloseButtonClick,
                                 description: "",
                                 title: t.applicationSubmittedText,
-                                type: y.Oa.Success
+                                type: y.Pa.Success
                             })
                         }, t
                     }
@@ -1626,7 +1626,7 @@
                             description: Object(u.d)("Thanks for applying to be a Twitch Partner! Your partnership application is currently being reviewed!", "PartnerSignupApplicationSubmitted"),
                             header: this.getHeader(),
                             title: this.applicationSubmittedText,
-                            src: W.a
+                            src: Y.a
                         })
                     }, Object.defineProperty(t.prototype, "applicationSubmittedText", {
                         get: function() {
@@ -1636,14 +1636,14 @@
                         configurable: !0
                     }), t
                 }(c.Component),
-                z = r("5NYc"),
+                J = r("5NYc"),
                 Z = r("vYsf"),
-                J = function(e) {
+                Q = function(e) {
                     function t() {
                         return null !== e && e.apply(this, arguments) || this
                     }
                     return o.__extends(t, e), t.prototype.render = function() {
-                        return c.createElement(c.Fragment, null, c.createElement(y.Xa, {
+                        return c.createElement(c.Fragment, null, c.createElement(y.Ya, {
                             fullWidth: !0,
                             margin: {
                                 bottom: 2
@@ -1656,55 +1656,55 @@
                 }(c.Component);
             ! function(e) {
                 e.Criteria = "partner-signup-checklist-criteria", e.Value = "partner-signup-checklist-value"
-            }(G || (G = {})),
+            }(U || (U = {})),
             function(e) {
                 e[e.Complete = 0] = "Complete", e[e.Error = 1] = "Error", e[e.Incomplete = 2] = "Incomplete"
-            }(U || (U = {}));
-            var Q, $ = function(e) {
+            }(R || (R = {}));
+            var X, $ = function(e) {
                     function t() {
                         return null !== e && e.apply(this, arguments) || this
                     }
                     return o.__extends(t, e), t.prototype.render = function() {
                         var e = this.props.value;
-                        return c.createElement(y.Xa, {
+                        return c.createElement(y.Ya, {
                             alignItems: y.f.Center,
                             display: y.X.Flex,
                             flexDirection: y.Aa.Row,
                             fullWidth: !0,
-                            justifyContent: y.Wa.Between
+                            justifyContent: y.Xa.Between
                         }, c.createElement(y.W, {
-                            "data-test-selector": G.Criteria,
+                            "data-test-selector": U.Criteria,
                             bold: !0
-                        }, this.props.criteria), c.createElement(y.Xa, {
+                        }, this.props.criteria), c.createElement(y.Ya, {
                             alignItems: y.f.Center,
                             display: y.X.Flex,
                             flexDirection: y.Aa.Row
-                        }, e && c.createElement(y.Xa, {
+                        }, e && c.createElement(y.Ya, {
                             margin: {
                                 right: 1
                             }
                         }, "string" == typeof e ? c.createElement(y.W, {
                             color: y.O.Alt2,
-                            "data-test-selector": G.Value
-                        }, e) : e), c.createElement(y.sb, o.__assign({}, this.svgProps))))
+                            "data-test-selector": U.Value
+                        }, e) : e), c.createElement(y.tb, o.__assign({}, this.svgProps))))
                     }, Object.defineProperty(t.prototype, "svgProps", {
                         get: function() {
                             switch (this.props.type) {
                                 default:
-                                    case U.Complete:
+                                    case R.Complete:
                                     return {
-                                    asset: y.tb.Check,
-                                    type: y.ub.Success
+                                    asset: y.ub.Check,
+                                    type: y.vb.Success
                                 };
-                                case U.Error:
+                                case R.Error:
                                         return {
-                                        asset: y.tb.NotificationError,
-                                        type: y.ub.Alert
+                                        asset: y.ub.NotificationError,
+                                        type: y.vb.Alert
                                     };
-                                case U.Incomplete:
+                                case R.Incomplete:
                                         return {
-                                        asset: y.tb.Check,
-                                        type: y.ub.Alt2
+                                        asset: y.ub.Check,
+                                        type: y.vb.Alt2
                                     }
                             }
                         },
@@ -1720,7 +1720,7 @@
                         var e = this.props,
                             t = e.borderTop,
                             r = e.margin;
-                        return c.createElement(y.Eb, {
+                        return c.createElement(y.Fb, {
                             background: this.props.background || y.r.Base,
                             borderRadius: this.props.borderRadius || y.x.Medium,
                             borderBottom: !0,
@@ -1742,19 +1742,19 @@
                         return c.createElement(y.U, {
                             targetBlank: !0,
                             to: this.props.to
-                        }, c.createElement(y.Xa, {
+                        }, c.createElement(y.Ya, {
                             alignItems: y.f.Center,
                             display: y.X.InlineFlex
-                        }, c.createElement(y.Xa, {
+                        }, c.createElement(y.Ya, {
                             margin: {
                                 right: 1
                             }
-                        }, c.createElement(y.W, null, this.props.message)), c.createElement(y.sb, {
-                            asset: y.tb.Popout
+                        }, c.createElement(y.W, null, this.props.message)), c.createElement(y.tb, {
+                            asset: y.ub.Popout
                         })))
                     }, t
                 }(c.Component);
-            (Q || (Q = {})).Instruction = "instruction";
+            (X || (X = {})).Instruction = "instruction";
             var re, ne = function(e) {
                     function t() {
                         return null !== e && e.apply(this, arguments) || this
@@ -1768,7 +1768,7 @@
                             margin: 0
                         }, c.createElement($, {
                             criteria: this.props.criteria,
-                            type: U.Incomplete
+                            type: R.Incomplete
                         })), c.createElement(ee, {
                             background: y.r.Alt,
                             borderRadius: {
@@ -1776,13 +1776,13 @@
                                 bottomRight: y.x.Medium
                             },
                             borderTop: !1
-                        }, c.createElement(y.Xa, {
+                        }, c.createElement(y.Ya, {
                             margin: {
                                 bottom: 2
                             }
                         }, c.createElement(y.W, {
-                            "data-test-selector": Q.Instruction
-                        }, this.props.instruction)), c.createElement(y.Xa, {
+                            "data-test-selector": X.Instruction
+                        }, this.props.instruction)), c.createElement(y.Ya, {
                             margin: {
                                 bottom: 2
                             }
@@ -1857,7 +1857,7 @@
                                     margin: 0
                                 }, c.createElement($, {
                                     criteria: this.pathToPartnerCriteriaText,
-                                    type: U.Error
+                                    type: R.Error
                                 })), c.createElement(ee, {
                                     background: y.r.Alt,
                                     borderRadius: {
@@ -1865,12 +1865,12 @@
                                         bottomRight: y.x.Medium
                                     },
                                     borderTop: !1
-                                }, c.createElement(y.Na, {
+                                }, c.createElement(y.Oa, {
                                     closeButtonAriaLabel: Object(u.d)("Dismiss", "PartnerSignupVerifyAchievements"),
                                     closeButtonOnClick: this.handleCloseButtonOnClick,
                                     description: s,
                                     title: Object(u.d)("Error", "PartnerSignupVerifyAchievements"),
-                                    type: y.Oa.Error
+                                    type: y.Pa.Error
                                 })));
                             case re.StartStreaming:
                                 return c.createElement(ne, {
@@ -1891,7 +1891,7 @@
                                         "x:strong": function(e) {
                                             return c.createElement(y.W, {
                                                 bold: !0,
-                                                type: y.Vb.Span
+                                                type: y.Wb.Span
                                             }, e)
                                         }
                                     }, "PartnerSignupVerifyAchievements"),
@@ -1908,8 +1908,8 @@
                             case re.CanApplyToPartner:
                                 return c.createElement(c.Fragment, null, c.createElement(ee, null, c.createElement($, {
                                     criteria: this.pathToPartnerCriteriaText,
-                                    type: U.Complete
-                                })), c.createElement(J, {
+                                    type: R.Complete
+                                })), c.createElement(Q, {
                                     onChecklistComplete: this.props.onChecklistComplete
                                 }));
                             default:
@@ -1927,7 +1927,7 @@
                                 "x:strong": function(e) {
                                     return c.createElement(y.W, {
                                         bold: !0,
-                                        type: y.Vb.Span
+                                        type: y.Wb.Span
                                     }, e)
                                 }
                             }, "PartnerSignupVerifyAchievements")
@@ -1956,19 +1956,19 @@
                                                 i = e.key,
                                                 o = e.progress;
                                             switch (i) {
-                                                case z.b.IT_BEGINS:
+                                                case J.b.IT_BEGINS:
                                                     for (var c = 0, s = o; c < s.length; c++) {
                                                         var u = s[c];
-                                                        if (u.metric === z.a.HAS_FIRST_STREAM) {
+                                                        if (u.metric === J.a.HAS_FIRST_STREAM) {
                                                             n = Boolean(u.progress);
                                                             break
                                                         }
                                                     }
                                                     break;
-                                                case z.b.PATH_TO_AFFILIATE:
+                                                case J.b.PATH_TO_AFFILIATE:
                                                     r = a;
                                                     break;
-                                                case z.b.PATH_TO_PARTNER:
+                                                case J.b.PATH_TO_PARTNER:
                                                     t = a
                                             }
                                         }), [3, 4];
@@ -2001,19 +2001,19 @@
                     }, t
                 }(c.Component),
                 ue = function() {
-                    return c.createElement(ee, null, c.createElement(y.Za, {
+                    return c.createElement(ee, null, c.createElement(y.ab, {
                         fillContent: !0
                     }))
                 },
                 le = function() {
-                    return c.createElement(ee, null, c.createElement(y.Eb, {
+                    return c.createElement(ee, null, c.createElement(y.Fb, {
                         display: y.X.Flex,
-                        justifyContent: y.Wa.Center
-                    }, c.createElement(y.sb, {
-                        asset: y.tb.DeadGlitch,
+                        justifyContent: y.Xa.Center
+                    }, c.createElement(y.tb, {
+                        asset: y.ub.DeadGlitch,
                         height: 50,
                         width: 50,
-                        type: y.ub.Alt2
+                        type: y.vb.Alt2
                     })))
                 },
                 de = Object(d.a)(ae)(se);
@@ -2030,14 +2030,14 @@
                         return c.createElement(ee, null, this.props.isEmailVerified ? c.createElement($, {
                             criteria: Object(u.d)("Have a Verified Email", "PartnerSignupVerifyEmail"),
                             value: this.props.email,
-                            type: this.props.isEmailVerified ? U.Complete : U.Incomplete
-                        }) : c.createElement(c.Fragment, null, c.createElement(y.Xa, {
+                            type: this.props.isEmailVerified ? R.Complete : R.Incomplete
+                        }) : c.createElement(c.Fragment, null, c.createElement(y.Ya, {
                             margin: {
                                 bottom: 1
                             }
                         }, c.createElement(y.W, {
                             bold: !0
-                        }, Object(u.d)("Please verify your email", "PartnerSignupVerifyEmail"))), c.createElement(y.Xa, {
+                        }, Object(u.d)("Please verify your email", "PartnerSignupVerifyEmail"))), c.createElement(y.Ya, {
                             margin: {
                                 bottom: 2
                             }
@@ -2077,20 +2077,20 @@
                             criteria: Object(u.d)("YouTube", "PartnerSignupVerifySocialMediaConnection"),
                             "data-test-selector": me.YouTube,
                             value: a,
-                            type: U.Complete
+                            type: R.Complete
                         }), n && c.createElement($, {
                             criteria: Object(u.d)("Twitter", "PartnerSignupVerifySocialMediaConnection"),
                             "data-test-selector": me.Twitter,
                             value: n,
-                            type: U.Complete
-                        })), !i && c.createElement(c.Fragment, null, c.createElement(y.Xa, {
+                            type: R.Complete
+                        })), !i && c.createElement(c.Fragment, null, c.createElement(y.Ya, {
                             margin: {
                                 bottom: 2
                             }
                         }, c.createElement(y.W, null, Object(u.d)("Please connect your social media accounts to continue.", "PartnerSignupVerifySocialMediaConnection"))), c.createElement(te, {
                             message: Object(u.d)("Connect social media accounts", "PartnerSignupVerifySocialMediaConnectionComponent"),
                             to: "/settings/connections"
-                        }))), i && c.createElement(J, {
+                        }))), i && c.createElement(Q, {
                             onChecklistComplete: this.props.onChecklistComplete
                         }))
                     }, t
@@ -2116,21 +2116,21 @@
                                     topRight: y.x.Medium
                                 } : void 0,
                                 margin: e ? 0 : void 0
-                            }, c.createElement(y.Xa, {
+                            }, c.createElement(y.Ya, {
                                 margin: {
                                     bottom: 2
                                 }
-                            }, c.createElement(y.W, null, Object(u.d)("Do you already have an established audience on YouTube or Twitter?", "PartnerSignupVerifySocialMediaConnection"))), c.createElement(y.Xa, {
+                            }, c.createElement(y.W, null, Object(u.d)("Do you already have an established audience on YouTube or Twitter?", "PartnerSignupVerifySocialMediaConnection"))), c.createElement(y.Ya, {
                                 margin: {
                                     bottom: 1
                                 }
-                            }, c.createElement(y.pb, {
+                            }, c.createElement(y.qb, {
                                 checked: e,
                                 "data-test-selector": be.RadioYes,
                                 label: Object(u.d)("Yes", "PartnerSignupVerifySocialMedia"),
                                 onChange: t.handleRadioChange,
                                 value: he.Yes
-                            })), c.createElement(y.pb, {
+                            })), c.createElement(y.qb, {
                                 checked: !e,
                                 "data-test-selector": be.RadioNo,
                                 label: Object(u.d)("No", "PartnerSignupVerifySocialMedia"),
@@ -2152,7 +2152,7 @@
                     }, t.prototype.render = function() {
                         var e = this.props.data,
                             t = e.currentUser;
-                        if (e.loading || !this.state || !this.state.radioValue) return c.createElement(y.Za, {
+                        if (e.loading || !this.state || !this.state.radioValue) return c.createElement(y.ab, {
                             fillContent: !0
                         });
                         if (this.props.data.error || !t || !t.accountConnections || !t.email) return null;
@@ -2194,12 +2194,12 @@
                     return c.createElement(I, {
                         description: Object(u.d)("The Twitch Partnership Program is for those who are committed to streaming. Twitch Partners are creators who stream a variety of content, from games, music, talk shows, art, to just about anything else you can imagine. If you love sharing what you do with a live audience and have built up a sizeable, engaged community on Twitch or other services, we want to hear from you!", "PartnershipSignupLogin"),
                         flexDirection: y.Aa.Column
-                    }, c.createElement(y.ec, null, c.createElement("hr", null)), c.createElement(y.Xa, {
+                    }, c.createElement(y.fc, null, c.createElement("hr", null)), c.createElement(y.Ya, {
                         alignItems: y.f.Center,
                         display: y.X.Flex,
                         fullWidth: !0,
-                        justifyContent: y.Wa.Between
-                    }, c.createElement(y.Xa, {
+                        justifyContent: y.Xa.Between
+                    }, c.createElement(y.Ya, {
                         fullWidth: !0,
                         margin: {
                             right: 2
@@ -2217,7 +2217,7 @@
                     }, Object(u.d)("Sign up", "PartnershipSignupLogin"))))
                 }, t
             }(c.Component);
-            var Pe, Te = Object(s.compose)(Object(a.connect)(null, function(e) {
+            var Pe, Ae = Object(s.compose)(Object(a.connect)(null, function(e) {
                     return Object(E.bindActionCreators)({
                         showModalOnLoginTab: function() {
                             return Object(Ce.e)(Se.a.PartnershipSignupPage)
@@ -2227,7 +2227,7 @@
                         }
                     }, e)
                 }))(Ee),
-                Ae = r("qVpr");
+                Te = r("qVpr");
             ! function(e) {
                 e.ApplicationSubmitted = "application-submitted", e.Checklist = "checklist", e.Form = "form"
             }(Pe || (Pe = {}));
@@ -2245,15 +2245,15 @@
                         }, t
                     }
                     return o.__extends(t, e), t.prototype.render = function() {
-                        return this.props.sessionUser ? this.props.data.loading ? c.createElement(y.Za, {
+                        return this.props.sessionUser ? this.props.data.loading ? c.createElement(y.ab, {
                             fillContent: !0
                         }) : this.props.data.error ? c.createElement(l.a, {
                             message: Object(u.d)("Something went wrong", "PartnershipSignup")
-                        }) : c.createElement(y.Xa, {
+                        }) : c.createElement(y.Ya, {
                             fullHeight: !0,
                             fullWidth: !0,
                             padding: 2
-                        }, this.view) : c.createElement(Te, null)
+                        }, this.view) : c.createElement(Ae, null)
                     }, Object.defineProperty(t.prototype, "view", {
                         get: function() {
                             var e = this.props,
@@ -2265,11 +2265,11 @@
                                 a = t.partnershipApplication;
                             if (a && n) {
                                 var i = a.resolvedAt;
-                                if (!i) return c.createElement(H, null);
+                                if (!i) return c.createElement(W, null);
                                 var o = this.getUTCDate(),
                                     s = this.getUTCDate(new Date(i)),
                                     u = new Date(s.setDate(s.getDate() + 14));
-                                if (u >= o) return c.createElement(q, {
+                                if (u >= o) return c.createElement(K, {
                                     email: n,
                                     reviewedByDate: u
                                 })
@@ -2285,7 +2285,7 @@
                                         onApplicationSubmitted: this.setNextView(Pe.ApplicationSubmitted)
                                     });
                                 case Pe.ApplicationSubmitted:
-                                        return c.createElement(K, null)
+                                        return c.createElement(z, null)
                             }
                         },
                         enumerable: !0,
@@ -2297,7 +2297,7 @@
                 we = Object(s.compose)(Object(b.b)("PartnershipSignupPage", {
                     autoReportInteractive: !0,
                     destination: p.a.PartnershipSignupPage
-                }), Object(d.a)(Ae), Object(m.a)({
+                }), Object(d.a)(Te), Object(m.a)({
                     location: f.PageviewLocation.PartnershipSignupPage
                 }))(ke);
             var _e = Object(a.connect)(function(e) {

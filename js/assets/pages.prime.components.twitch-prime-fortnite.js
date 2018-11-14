@@ -24,97 +24,97 @@
                 P = n("osOq"),
                 k = n("Ue10"),
                 C = (n("UWXE"), function(e) {
-                    if (e) return l.createElement(k.Xa, {
+                    if (e) return l.createElement(k.Ya, {
                         display: k.X.Flex,
                         margin: {
                             y: 1
                         },
                         "data-test-selector": "twitch-prime-fortnite-offers-grid"
                     }, l.createElement(k.W, {
-                        type: k.Vb.H3,
+                        type: k.Wb.H3,
                         bold: !0,
-                        transform: k.Ub.Uppercase,
+                        transform: k.Vb.Uppercase,
                         color: k.O.Link
                     }, e))
                 }),
                 T = Object(w.b)("TwitchPrimeFortniteOffers", {
                     autoReportInteractive: !0
                 })(function() {
-                    return l.createElement(k.Xa, {
+                    return l.createElement(k.Ya, {
                         className: "twitch-prime-fortnite-offers",
                         padding: {
                             x: 2
                         }
-                    }, l.createElement(k.Xa, {
+                    }, l.createElement(k.Ya, {
                         className: "twitch-prime-fortnite-offers__announce",
                         margin: {
                             bottom: 4
                         }
-                    }, l.createElement(k.Xa, {
+                    }, l.createElement(k.Ya, {
                         className: "twitch-prime-fortnite-offers__announce__main",
-                        textAlign: k.Rb.Center,
+                        textAlign: k.Sb.Center,
                         padding: {
                             y: .5
                         },
-                        position: k.jb.Relative
+                        position: k.kb.Relative
                     }, l.createElement(k.W, {
-                        type: k.Vb.H3,
+                        type: k.Wb.H3,
                         bold: !0,
-                        transform: k.Ub.Uppercase,
+                        transform: k.Vb.Uppercase,
                         color: k.O.Link
                     }, Object(d.d)("Exclusive!", "TwitchPrimeFortniteOffers")))), C(Object(d.d)("Battle Royale Trailblazer Outfit", "TwitchPrimeFortniteOffers")), C(Object(d.d)("Battle Royale True North Back Bling", "TwitchPrimeFortniteOffers")), C(Object(d.d)("Battle Royale Tenderizer Pickaxe", "TwitchPrimeFortniteOffers")), C(Object(d.d)("Battle Royale Freestylin’ Emote", "TwitchPrimeFortniteOffers")))
                 }),
                 v = n("Ibv5"),
-                E = (n("nk94"), "twitch-prime-signup-call-to-action"),
-                A = "twitch-prime-claim-call-to-action",
-                _ = "twitch-prime-login-call-to-action",
-                F = function(e) {
+                A = (n("nk94"), "twitch-prime-signup-call-to-action"),
+                E = "twitch-prime-claim-call-to-action",
+                F = "twitch-prime-login-call-to-action",
+                _ = function(e) {
                     function t() {
                         var t = null !== e && e.apply(this, arguments) || this;
                         return t.renderDescription = function() {
-                            return l.createElement(k.Xa, null, l.createElement(k.Xa, {
+                            return l.createElement(k.Ya, null, l.createElement(k.Ya, {
                                 fullWidth: !0,
-                                textAlign: k.Rb.Center,
+                                textAlign: k.Sb.Center,
                                 breakpointMedium: {
-                                    textAlign: k.Rb.Left
+                                    textAlign: k.Sb.Left
                                 },
                                 margin: {
                                     y: 2
                                 }
-                            }, l.createElement(k.Xa, {
+                            }, l.createElement(k.Ya, {
                                 className: "twitch-prime-fortnite__header__text"
                             }, l.createElement(k.W, {
-                                type: k.Vb.H1,
+                                type: k.Wb.H1,
                                 color: k.O.Overlay,
-                                transform: k.Ub.Uppercase
-                            }, Object(d.d)("Twitch Prime Pack #2", "TwitchPrimeFortnite")))), l.createElement(k.Xa, {
+                                transform: k.Vb.Uppercase
+                            }, Object(d.d)("Twitch Prime Pack #2", "TwitchPrimeFortnite")))), l.createElement(k.Ya, {
                                 fullWidth: !0,
                                 display: k.X.Flex,
                                 alignItems: k.f.Center,
-                                justifyContent: k.Wa.Center,
+                                justifyContent: k.Xa.Center,
                                 flexWrap: k.Ba.Wrap,
-                                textAlign: k.Rb.Center,
+                                textAlign: k.Sb.Center,
                                 breakpointMedium: {
-                                    textAlign: k.Rb.Left,
-                                    justifyContent: k.Wa.Start
+                                    textAlign: k.Sb.Left,
+                                    justifyContent: k.Xa.Start
                                 }
-                            }, l.createElement(k.Xa, {
+                            }, l.createElement(k.Ya, {
                                 className: "twitch-prime-fortnite__description",
                                 margin: {
                                     bottom: 3
                                 }
                             }, l.createElement(k.W, {
-                                type: k.Vb.H3,
-                                transform: k.Ub.Uppercase,
+                                type: k.Wb.H3,
+                                transform: k.Vb.Uppercase,
                                 color: k.O.Overlay,
                                 bold: !0
                             }, Object(d.d)("Get exclusive Fortnite loot included with Twitch Prime", "TwitchPrimeFortnite")))))
                         }, t.renderCTAs = function() {
                             var e = t.getCurrentUser();
-                            return l.createElement(k.Xa, {
+                            return l.createElement(k.Ya, {
                                 display: k.X.Flex,
                                 flexDirection: k.Aa.Column,
-                                justifyContent: k.Wa.Center,
+                                justifyContent: k.Xa.Center,
                                 breakpointMedium: {
                                     flexDirection: k.Aa.Row
                                 },
@@ -129,7 +129,7 @@
                                 title: Object(d.d)("Have Twitch Prime?", "TwitchPrimeFortnite"),
                                 body: Object(d.d)("Click here to login and get started", "TwitchPrimeFortnite"),
                                 onClick: t.onLoginClick,
-                                dataTestSelector: _,
+                                dataTestSelector: F,
                                 href: "#"
                             })
                         }, t.renderSignupCTA = function() {
@@ -139,14 +139,14 @@
                                 title: Object(d.d)("Not a Twitch Prime member?", "TwitchPrimeFortnite"),
                                 body: Object(d.d)("Click here to start your free trial or link your Amazon Prime account", "TwitchPrimeFortnite"),
                                 href: e,
-                                dataTestSelector: E
+                                dataTestSelector: A
                             })
                         }, t.renderClaimCTA = function() {
                             return l.createElement(P.a, {
                                 className: "twitch-prime-call-to-action--claim",
                                 title: Object(d.d)("Click here for your loot", "TwitchPrimeFortnite"),
                                 href: "/prime/fortnite/link",
-                                dataTestSelector: A
+                                dataTestSelector: E
                             })
                         }, t.getCurrentUser = function() {
                             var e = t.props.data;
@@ -166,9 +166,9 @@
                         var e = d.b.get("twitch_prime_fortnite", !1);
                         return this.props.data.error || !e ? l.createElement(s.a, {
                             to: "/prime?ref_=sm_fortnite_redirect"
-                        }) : this.props.data.loading ? l.createElement(k.Xa, null) : l.createElement(k.Xa, {
+                        }) : this.props.data.loading ? l.createElement(k.Ya, null) : l.createElement(k.Ya, {
                             className: "twitch-prime-fortnite__container"
-                        }, l.createElement(k.Xa, {
+                        }, l.createElement(k.Ya, {
                             className: "twitch-prime-fortnite"
                         }, l.createElement(g.a, {
                             renderOfferImage: !0
@@ -184,7 +184,7 @@
                     destination: h.a.TwitchPrimeFortnitePage
                 }), Object(p.a)(v), Object(u.a)({
                     location: f.PageviewLocation.TwitchPrimeFortnitePage
-                }))(F);
+                }))(_);
             var j = Object(r.connect)(null, function(e) {
                 return Object(i.bindActionCreators)({
                     login: function() {
@@ -350,16 +350,16 @@
                         return i.createElement("div", {
                             id: "faq",
                             ref: "faq"
-                        }, i.createElement(c.Eb, {
+                        }, i.createElement(c.Fb, {
                             className: "twitch-prime-faq",
                             padding: {
                                 x: 1,
                                 y: 5
                             }
-                        }, i.createElement(c.rb, {
+                        }, i.createElement(c.sb, {
                             centered: !0
                         }, i.createElement(c.Ja, {
-                            justifyContent: c.Wa.Center
+                            justifyContent: c.Xa.Center
                         }, i.createElement(c.P, {
                             cols: {
                                 default: 12,
@@ -368,14 +368,14 @@
                                 lg: 7,
                                 xl: 6
                             }
-                        }, i.createElement(c.Xa, {
+                        }, i.createElement(c.Ya, {
                             margin: {
                                 bottom: 2
                             },
-                            textAlign: c.Rb.Center,
+                            textAlign: c.Sb.Center,
                             fullWidth: !0
                         }, i.createElement(c.W, {
-                            type: c.Vb.H2,
+                            type: c.Wb.H2,
                             bold: !0
                         }, Object(a.d)("FAQ/Help", "PrimeFAQComponent"))), this.renderQuestion(Object(a.d)("Do I need a Twitch Prime membership to get Fortnite content?", "PrimeFAQComponent"), "membership"), this.renderAnswer(Object(a.d)("Yes.", "PrimeFAQComponent")), this.renderQuestion(Object(a.d)("What exactly will I get in the Twitch Prime Pack #2?", "PrimeFAQComponent"), "loot"), this.renderAnswer(Object(a.d)("This pack includes 4 distinct items, all of which are exclusively available to Twitch Prime members:", "PrimeFAQComponent")), this.renderAnswers(Object(a.d)("Battle Royale Trailblazer Outfit: On the forefront of victory.", "PrimeFAQComponent"), Object(a.d)("Battle Royale True North Back Bling: Find your way.", "PrimeFAQComponent"), Object(a.d)("Battle Royale Tenderizer Pickaxe: Leave a good first impression.", "PrimeFAQComponent"), Object(a.d)("Battle Royale Freestylin’ Emote: Tear up the dance floor.", "PrimeFAQComponent")), this.renderAnswer(Object(a.d)("Note: All items are cosmetic only and provide no competitive advantage. All items for Twitch Prime Pack #2 are for Battle Royale only.", "PrimeFAQComponent")), this.renderQuestion(Object(a.d)("How do I get my Twitch Prime content for Fortnite?", "PrimeFAQComponent"), "content"), this.renderAnswer(Object(a.d)("If you already have an active Twitch Prime membership (either paid or free trial), log in above to begin the claim process for this content.", "PrimeFAQComponent")), this.renderQuestion(Object(a.d)("I already linked my Twitch and Epic account when I claimed the first Twitch Prime Pack. Do I need to claim again to get the current Twitch Prime content?", "PrimeFAQComponent"), "linkedaccount"), this.renderAnswer(Object(a.d)("YES. You must claim each Twitch Prime Pack individually. If you already linked your Twitch and Epic accounts for the previous Twitch Prime loot in Fortnite, log in above to begin the claim process for this content.", "PrimeFAQComponent")), this.renderQuestion(Object(a.d)("How do I become a Twitch Prime member?", "PrimeFAQComponent"), "signup"), this.renderAnswerWithLink(Object(a.d)("Twitch Prime is included with Amazon Prime in the US, Mexico, Canada, Italy, France, Germany, Belgium, Austria, Spain, Japan, Singapore, Netherlands, and the United Kingdom. Twitch Prime is included with Prime Video in over 200 other countries and territories. If you are already an Amazon Prime member, you get Twitch Prime at no additional cost by connecting your Amazon account to your Twitch account at <x:link>http://www.twitchprime.com</x:link>.", {
                             "x:link": function(e) {
@@ -395,7 +395,7 @@
                                     to: "https://www.epicgames.com/fortnite/en-US/buy-now/battle-royale"
                                 }, e)
                             }
-                        }, "PrimeFAQComponent")), i.createElement(c.Xa, {
+                        }, "PrimeFAQComponent")), i.createElement(c.Ya, {
                             margin: {
                                 y: 2
                             }
@@ -407,33 +407,33 @@
                         return i.createElement("div", {
                             id: t,
                             ref: t
-                        }, i.createElement(c.Xa, {
+                        }, i.createElement(c.Ya, {
                             margin: {
                                 top: 2
                             }
                         }, i.createElement(c.W, {
-                            type: c.Vb.H4,
+                            type: c.Wb.H4,
                             bold: !0
                         }, e)))
                     }, t.prototype.renderAnswer = function(e) {
-                        return i.createElement(c.Xa, {
+                        return i.createElement(c.Ya, {
                             margin: {
                                 bottom: 1
                             }
                         }, i.createElement(c.W, null, e))
                     }, t.prototype.renderAnswers = function() {
                         for (var e = [], t = 0; t < arguments.length; t++) e[t] = arguments[t];
-                        return i.createElement(c.Xa, {
+                        return i.createElement(c.Ya, {
                             margin: {
                                 bottom: 1
                             }
-                        }, i.createElement(c.ec, null, i.createElement("ul", null, e.map(function(e) {
+                        }, i.createElement(c.fc, null, i.createElement("ul", null, e.map(function(e) {
                             return i.createElement("li", {
                                 key: e
                             }, i.createElement(c.W, null, e))
                         }))))
                     }, t.prototype.renderAnswerWithLink = function(e) {
-                        return i.createElement(c.Xa, {
+                        return i.createElement(c.Ya, {
                             margin: {
                                 bottom: 1
                             }
@@ -461,32 +461,32 @@
                     }
                     return r.__extends(t, e), t.prototype.render = function() {
                         var e = this.props.partnerSocialLink && this.props.partnerSocialText;
-                        return i.createElement(c.Xa, {
+                        return i.createElement(c.Ya, {
                             className: "prime-footer",
-                            position: c.jb.Relative
-                        }, i.createElement(c.Eb, {
-                            position: c.jb.Absolute,
-                            justifyContent: c.Wa.Center,
+                            position: c.kb.Relative
+                        }, i.createElement(c.Fb, {
+                            position: c.kb.Absolute,
+                            justifyContent: c.Xa.Center,
                             alignItems: c.f.Center,
                             className: "twitter-container"
-                        }, i.createElement(c.sb, {
-                            asset: c.tb.Twitter,
+                        }, i.createElement(c.tb, {
+                            asset: c.ub.Twitter,
                             width: 40,
                             height: 40,
-                            type: c.ub.Prime
-                        })), i.createElement(c.Eb, {
+                            type: c.vb.Prime
+                        })), i.createElement(c.Fb, {
                             display: c.X.Flex,
-                            justifyContent: c.Wa.Center,
+                            justifyContent: c.Xa.Center,
                             attachTop: !0,
                             attachLeft: !0,
                             fullWidth: !0,
                             fullHeight: !0,
                             className: "social-twitch-prime",
                             padding: 4
-                        }, i.createElement(c.Xa, {
+                        }, i.createElement(c.Ya, {
                             className: "prime-footer__twitter-links",
                             display: c.X.Flex,
-                            justifyContent: e ? c.Wa.Between : c.Wa.Center
+                            justifyContent: e ? c.Xa.Between : c.Xa.Center
                         }, i.createElement(c.U, {
                             to: "https://twitter.com/TwitchPrime",
                             targetBlank: !0
@@ -500,9 +500,9 @@
                         }, i.createElement(c.W, {
                             bold: !0,
                             fontSize: c.Ca.Size5
-                        }, this.props.partnerSocialText)))), i.createElement(c.Eb, {
+                        }, this.props.partnerSocialText)))), i.createElement(c.Fb, {
                             display: c.X.Flex,
-                            justifyContent: c.Wa.Center,
+                            justifyContent: c.Xa.Center,
                             attachTop: !0,
                             attachLeft: !0,
                             fullWidth: !0,
@@ -511,19 +511,19 @@
                                 top: 2
                             },
                             className: "prime-footer-links"
-                        }, i.createElement(c.Eb, {
+                        }, i.createElement(c.Fb, {
                             padding: 2
                         }, i.createElement(c.U, {
                             to: "https://www.twitch.tv/p/terms-of-sale#twitchprime",
                             targetBlank: !0,
                             "data-a-target": "prime-footer-terms-link"
-                        }, Object(o.d)("Terms", "PrimeSubsiteFooter"))), i.createElement(c.Eb, {
+                        }, Object(o.d)("Terms", "PrimeSubsiteFooter"))), i.createElement(c.Fb, {
                             padding: 2
                         }, i.createElement(c.U, {
                             to: "https://www.amazon.com/twitchprivacy",
                             targetBlank: !0,
                             "data-a-target": "prime-footer-privacy-link"
-                        }, Object(o.d)("Privacy Policy", "PrimeSubsiteFooter"))), i.createElement(c.Eb, {
+                        }, Object(o.d)("Privacy Policy", "PrimeSubsiteFooter"))), i.createElement(c.Fb, {
                             padding: 2
                         }, i.createElement(c.U, {
                             to: "https://help.twitch.tv/customer/en/portal/articles/2572060-twitch-prime-guide",
@@ -546,18 +546,18 @@
                 i = n("GnwI"),
                 o = n("Ue10"),
                 a = (n("Hb/J"), function(e) {
-                    return r.createElement(o.Xa, {
+                    return r.createElement(o.Ya, {
                         display: o.X.Flex,
-                        justifyContent: o.Wa.Center
-                    }, r.createElement(o.Xa, {
+                        justifyContent: o.Xa.Center
+                    }, r.createElement(o.Ya, {
                         className: "twitch-prime-call-to-action " + e.className,
-                        textAlign: o.Rb.Center,
+                        textAlign: o.Sb.Center,
                         alignItems: o.f.Center,
                         display: o.X.Flex,
                         flexDirection: o.Aa.Column,
-                        justifyContent: o.Wa.Around,
+                        justifyContent: o.Xa.Around,
                         margin: 2
-                    }, r.createElement(o.Pa, {
+                    }, r.createElement(o.Qa, {
                         "data-test-selector": e.dataTestSelector,
                         "data-a-selector": e.dataASelector,
                         padding: {
@@ -566,27 +566,27 @@
                         alignItems: o.f.Center,
                         display: o.X.Flex,
                         flexDirection: o.Aa.Column,
-                        justifyContent: o.Wa.Center,
+                        justifyContent: o.Xa.Center,
                         fullWidth: !0,
                         fullHeight: !0
                     }, r.createElement("a", {
                         href: e.href,
                         onClick: e.onClick,
                         className: "twitch-prime-call-to-action__link"
-                    }, r.createElement(o.Xa, {
+                    }, r.createElement(o.Ya, {
                         className: "fortnite-bold"
                     }, r.createElement(o.W, {
-                        type: o.Vb.H2,
-                        transform: o.Ub.Uppercase,
+                        type: o.Wb.H2,
+                        transform: o.Vb.Uppercase,
                         bold: !0
-                    }, e.title)), e.body && r.createElement(o.Xa, {
+                    }, e.title)), e.body && r.createElement(o.Ya, {
                         margin: {
                             y: 1
                         },
                         className: "twitch-prime-call-to-action__body"
                     }, r.createElement(o.W, {
-                        type: o.Vb.P,
-                        transform: o.Ub.Uppercase
+                        type: o.Wb.P,
+                        transform: o.Vb.Uppercase
                     }, e.body))))))
                 }),
                 c = Object(i.b)("TwitchPrimeCallToAction", {
@@ -610,10 +610,10 @@
                     function t() {
                         var t = null !== e && e.apply(this, arguments) || this;
                         return t.renderOfferImage = function() {
-                            return o.createElement(l.Xa, {
-                                textAlign: l.Rb.Center,
+                            return o.createElement(l.Ya, {
+                                textAlign: l.Sb.Center,
                                 breakpointMedium: {
-                                    textAlign: l.Rb.Right
+                                    textAlign: l.Sb.Right
                                 },
                                 className: "twitch-prime-fortnite__offer-image twitch-prime-fortnite__offer-image--desktop"
                             }, o.createElement(l.S, {
@@ -631,21 +631,21 @@
                                 "twitch-prime-fortnite__header__logo": !0,
                                 "twitch-prime-fortnite__header__logo--centered": this.props.alwaysCentered
                             });
-                        return o.createElement(l.Xa, {
+                        return o.createElement(l.Ya, {
                             className: "twitch-prime-fortnite__header__container",
                             padding: {
                                 x: 1,
                                 top: 1
                             }
-                        }, o.createElement(l.Xa, {
+                        }, o.createElement(l.Ya, {
                             className: e
-                        }, o.createElement(l.Xa, {
+                        }, o.createElement(l.Ya, {
                             className: "twitch-prime-fortnite__header",
                             display: l.X.Flex,
                             alignItems: l.f.End,
-                            justifyContent: l.Wa.Center,
+                            justifyContent: l.Xa.Center,
                             flexWrap: l.Ba.Wrap,
-                            textAlign: l.Rb.Left,
+                            textAlign: l.Sb.Left,
                             "data-test-selector": "twitch-prime-fortnite-header",
                             margin: {
                                 y: 0,
@@ -654,10 +654,10 @@
                             padding: {
                                 x: 1
                             }
-                        }, o.createElement(l.Xa, {
-                            textAlign: l.Rb.Center,
+                        }, o.createElement(l.Ya, {
+                            textAlign: l.Sb.Center,
                             breakpointMedium: {
-                                textAlign: l.Rb.Left
+                                textAlign: l.Sb.Left
                             },
                             breakpointLarge: {
                                 margin: {
@@ -669,7 +669,7 @@
                             },
                             alignSelf: l.g.Center,
                             className: "twitch-prime-fortnite__header__section"
-                        }, o.createElement(l.Xa, {
+                        }, o.createElement(l.Ya, {
                             className: t,
                             margin: {
                                 y: 2

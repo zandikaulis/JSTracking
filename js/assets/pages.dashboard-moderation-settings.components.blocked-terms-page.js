@@ -216,7 +216,7 @@
                             a = [];
                         return this.props.oppositeTerms.forEach(function(e) {
                             a.push(e)
-                        }), i.createElement(l.Xa, {
+                        }), i.createElement(l.Ya, {
                             margin: {
                                 bottom: 2
                             }
@@ -251,12 +251,12 @@
                     return a.__extends(t, e), t.prototype.componentDidMount = function() {
                         this.props.latencyTracking.reportInteractive()
                     }, t.prototype.render = function() {
-                        if (!this.props.data || this.props.data.loading || this.props.data.error || !this.props.data.user || !this.props.data.user.id || !this.props.data.currentUser || !this.props.data.currentUser.id) return i.createElement(l.Xa, null);
+                        if (!this.props.data || this.props.data.loading || this.props.data.error || !this.props.data.user || !this.props.data.user.id || !this.props.data.currentUser || !this.props.data.currentUser.id) return i.createElement(l.Ya, null);
                         var e = new Array,
                             t = new Array,
                             n = "",
                             a = "";
-                        return this.props.termCategory === d.a.Banned ? (e = this.props.data.user.blockedTerms, t = this.props.data.user.permittedTerms, n = Object(r.d)("Blocked Terms And Phrases", "StandaloneChatTerms"), a = Object(r.d)("Messages containing these terms or phrases will be blocked from chat. Terms are automatically added when a mod denies a caught message.", "StandaloneChatTerms")) : this.props.termCategory === d.a.Permitted && (e = this.props.data.user.permittedTerms, t = this.props.data.user.blockedTerms, n = Object(r.d)("Permitted Terms And Phrases", "StandaloneChatTerms"), a = Object(r.d)("Messages containing these terms or phrases will be allowed in chat. Terms are automatically added when a mod approves a caught message.", "StandaloneChatTerms")), i.createElement(h.a, null, i.createElement(l.Eb, {
+                        return this.props.termCategory === d.a.Banned ? (e = this.props.data.user.blockedTerms, t = this.props.data.user.permittedTerms, n = Object(r.d)("Blocked Terms And Phrases", "StandaloneChatTerms"), a = Object(r.d)("Messages containing these terms or phrases will be blocked from chat. Terms are automatically added when a mod denies a caught message.", "StandaloneChatTerms")) : this.props.termCategory === d.a.Permitted && (e = this.props.data.user.permittedTerms, t = this.props.data.user.blockedTerms, n = Object(r.d)("Permitted Terms And Phrases", "StandaloneChatTerms"), a = Object(r.d)("Messages containing these terms or phrases will be allowed in chat. Terms are automatically added when a mod approves a caught message.", "StandaloneChatTerms")), i.createElement(h.a, null, i.createElement(l.Fb, {
                             background: l.r.Base,
                             border: !0,
                             padding: {
@@ -265,11 +265,11 @@
                                 bottom: 2,
                                 top: 2
                             }
-                        }, i.createElement(l.Xa, {
+                        }, i.createElement(l.Ya, {
                             display: l.X.Flex
-                        }, i.createElement(l.sb, {
-                            asset: l.tb.AngleLeft
-                        }), i.createElement(l.Xa, {
+                        }, i.createElement(l.tb, {
+                            asset: l.ub.AngleLeft
+                        }), i.createElement(l.Ya, {
                             padding: {
                                 left: 3
                             }
@@ -279,7 +279,7 @@
                         }, n), i.createElement(l.W, {
                             fontSize: l.Ca.Size7,
                             color: l.O.Alt2
-                        }, a)))), i.createElement(l.Eb, {
+                        }, a)))), i.createElement(l.Fb, {
                             background: l.r.Base,
                             borderLeft: !0,
                             borderRight: !0,
@@ -490,8 +490,8 @@
                     if (this.state.isEditing) return this.renderEditTermRow();
                     var e = this.renderExpirationAndPrivacy(),
                         t = null;
-                    this.state.justSaved && (t = i.createElement(c.Pa, {
-                        position: c.jb.Absolute,
+                    this.state.justSaved && (t = i.createElement(c.Qa, {
+                        position: c.kb.Absolute,
                         padding: {
                             left: 2,
                             top: .5
@@ -507,20 +507,20 @@
                         type: c.n.FadeOut,
                         enabled: !0,
                         onAnimationEnd: this.props.clearLabels
-                    }, i.createElement(c.Xa, {
-                        position: c.jb.Absolute,
+                    }, i.createElement(c.Ya, {
+                        position: c.kb.Absolute,
                         attachRight: !0
                     }, Object(r.d)("Saved", "StandaloneChatTerms"))))));
                     var n = Object(r.d)("Edit", "StandaloneChatTerms"),
                         a = Object(r.d)("Delete", "StandaloneChatTerms");
-                    return i.createElement(c.Mb, {
+                    return i.createElement(c.Nb, {
                         key: this.props.index,
                         "data-index": this.props.index,
                         "data-term-type": this.props.termType
-                    }, i.createElement(c.Jb, {
+                    }, i.createElement(c.Kb, {
                         "data-selectable": this.props.index,
                         "data-test-selector": m.EditTermArea
-                    }, i.createElement(c.Xa, {
+                    }, i.createElement(c.Ya, {
                         className: "chat-term",
                         "data-test-selector": m.DisplayedTerm,
                         margin: {
@@ -528,27 +528,27 @@
                         },
                         display: c.X.Flex,
                         alignItems: c.f.Center,
-                        justifyContent: c.Wa.Between,
+                        justifyContent: c.Xa.Between,
                         fullHeight: !0
                     }, i.createElement(c.W, {
                         ellipsis: !0
-                    }, this.props.term.phrases.join(" ")))), e, i.createElement(c.Jb, {
-                        textAlign: c.Rb.Center
-                    }, i.createElement(c.Yb, {
+                    }, this.props.term.phrases.join(" ")))), e, i.createElement(c.Kb, {
+                        textAlign: c.Sb.Center
+                    }, i.createElement(c.Zb, {
                         label: n
                     }, i.createElement(c.A, {
                         "data-a-target": "edit-term",
                         "data-test-selector": m.EditTermButton,
-                        icon: c.tb.Edit,
+                        icon: c.ub.Edit,
                         ariaLabel: n,
                         onClick: this.handleEdit,
                         type: c.C.Secondary
-                    })), i.createElement(c.Yb, {
+                    })), i.createElement(c.Zb, {
                         label: a
                     }, i.createElement(c.A, {
                         "data-a-target": "delete-term",
                         "data-test-selector": m.DelTermButton,
-                        icon: c.tb.Trash,
+                        icon: c.ub.Trash,
                         ariaLabel: a,
                         onClick: this.props.handleDelete,
                         type: c.C.Secondary
@@ -557,83 +557,83 @@
                     var e = Object(r.d)("Save", "StandaloneChatTerms"),
                         t = Object(r.d)("Cancel", "StandaloneChatTerms"),
                         n = this.renderExpirationAndPrivacy();
-                    return i.createElement(c.Mb, {
+                    return i.createElement(c.Nb, {
                         key: "line-item-" + this.props.index
-                    }, i.createElement(c.Jb, {
+                    }, i.createElement(c.Kb, {
                         key: this.props.index,
                         "data-index": this.props.index,
                         "data-term-type": this.props.termType
-                    }, i.createElement(c.Ra, {
+                    }, i.createElement(c.Sa, {
                         autoFocus: !0,
                         ariaLabel: Object(r.d)("Edit term", "StandaloneChatTerms"),
                         "data-a-target": "edit-term-input",
                         "data-test-selector": m.EditTermInput,
                         refDelegate: this.props.saveEditInputRef,
-                        type: c.Ta.Text,
+                        type: c.Ua.Text,
                         defaultValue: this.props.term.phrases.join(" "),
                         onKeyDown: this.handleEditKeyDown,
                         onClick: this.props.onEditInputClick
-                    })), n, i.createElement(c.Jb, {
-                        textAlign: c.Rb.Center
-                    }, i.createElement(c.Yb, {
+                    })), n, i.createElement(c.Kb, {
+                        textAlign: c.Sb.Center
+                    }, i.createElement(c.Zb, {
                         label: e
                     }, i.createElement(c.A, {
                         "data-a-target": "save-term-edit",
                         "data-test-selector": m.EditConfirmButton,
-                        icon: c.tb.Check,
+                        icon: c.ub.Check,
                         ariaLabel: e,
                         onClick: this.confirmEdit
-                    })), i.createElement(c.Yb, {
+                    })), i.createElement(c.Zb, {
                         label: t
                     }, i.createElement(c.A, {
                         "data-a-target": "cancel-term-edit",
                         "data-test-selector": m.EditCancelButton,
-                        icon: c.tb.Close,
+                        icon: c.ub.Close,
                         ariaLabel: t,
                         onClick: this.cancelEdit
                     }))))
                 }, t.prototype.renderTermExpiration = function() {
-                    if (!this.props.term.expiresAt) return i.createElement(c.Jb, null);
+                    if (!this.props.term.expiresAt) return i.createElement(c.Kb, null);
                     var e = Object(r.i)(new Date(this.props.term.expiresAt), {
                         style: "numeric"
                     });
-                    return i.createElement(c.Jb, null, i.createElement(c.W, {
+                    return i.createElement(c.Kb, null, i.createElement(c.W, {
                         ellipsis: !0,
                         color: c.O.Alt2
                     }, " ", Object(r.d)("Expires {relativeTime}", {
                         relativeTime: e
                     }, "StandaloneChatTerms"), " "))
                 }, t.prototype.renderExpirationAndPrivacy = function() {
-                    return this.props.termType === u.Permanent ? this.state.isEditing && this.props.isChannelOwner ? i.createElement(c.Jb, null, i.createElement(d.a, {
+                    return this.props.termType === u.Permanent ? this.state.isEditing && this.props.isChannelOwner ? i.createElement(c.Kb, null, i.createElement(d.a, {
                         hideBalloonOnInsideClick: !0
                     }, i.createElement(c.z, {
                         dropdown: !0,
                         type: c.F.Hollow
                     }, this.props.term.isModEditable ? o() : l()), i.createElement(c.u, {
                         direction: c.v.BottomLeft
-                    }, i.createElement(c.Xa, {
+                    }, i.createElement(c.Ya, {
                         padding: .5
-                    }, i.createElement(c.Ua, {
+                    }, i.createElement(c.Va, {
                         "data-row-index": this.props.index,
                         "data-visibility": o(),
                         onClick: this.props.onClickModEditableChange,
                         selected: this.props.term.isModEditable
-                    }, i.createElement(c.Xa, {
+                    }, i.createElement(c.Ya, {
                         padding: {
                             x: 1,
                             y: .5
                         }
-                    }, o())), i.createElement(c.Ua, {
+                    }, o())), i.createElement(c.Va, {
                         "data-row-index": this.props.index,
                         "data-visibility": l(),
                         onClick: this.props.onClickModEditableChange,
                         selected: !this.props.term.isModEditable
-                    }, i.createElement(c.Xa, {
+                    }, i.createElement(c.Ya, {
                         padding: {
                             x: 1,
                             y: .5
                         }
-                    }, l())))))) : i.createElement(c.Jb, null, i.createElement(c.W, {
+                    }, l())))))) : i.createElement(c.Kb, null, i.createElement(c.W, {
                         "data-index": this.props.index
                     }, this.props.term.isModEditable ? o() : l())) : this.renderTermExpiration()
                 }, t
@@ -826,39 +826,39 @@
                 }, t.prototype.render = function() {
                     var e = "",
                         t = "";
-                    return this.props.type === h.Banned ? (e = Object(r.d)("Enter a term to block", "StandaloneChatTerms"), t = Object(r.d)("Add new blocked term or phrase", "StandaloneChatTerms")) : this.props.type === h.Permitted && (e = Object(r.d)("Enter a term to add", "StandaloneChatTerms"), t = Object(r.d)("Add new permitted term or phrase", "StandaloneChatTerms")), i.createElement(c.Pa, {
+                    return this.props.type === h.Banned ? (e = Object(r.d)("Enter a term to block", "StandaloneChatTerms"), t = Object(r.d)("Add new blocked term or phrase", "StandaloneChatTerms")) : this.props.type === h.Permitted && (e = Object(r.d)("Enter a term to add", "StandaloneChatTerms"), t = Object(r.d)("Add new permitted term or phrase", "StandaloneChatTerms")), i.createElement(c.Qa, {
                         fullWidth: !0
                     }, i.createElement("div", {
                         className: "chat-terms-control",
                         "data-a-target": "chat-terms-control"
-                    }, i.createElement(c.Xa, {
+                    }, i.createElement(c.Ya, {
                         margin: {
                             bottom: 2
                         }
-                    }, i.createElement(c.Xa, {
+                    }, i.createElement(c.Ya, {
                         display: c.X.Flex,
                         flexDirection: c.Aa.Row,
                         alignItems: c.f.Stretch,
                         fullWidth: !0,
                         flexWrap: c.Ba.NoWrap
-                    }, i.createElement(c.Xa, {
+                    }, i.createElement(c.Ya, {
                         flexGrow: 1
                     }, i.createElement(c.Ea, {
                         label: t,
                         error: this.state.errorAddingTerm,
                         errorMessage: this.state.errorAddingLabel || ""
-                    }, i.createElement(c.Ra, {
+                    }, i.createElement(c.Sa, {
                         "data-a-target": "add-term-input",
                         "data-test-selector": p.AddTermInput,
                         ariaLabel: Object(r.d)("Add term", "StandaloneChatTerms"),
                         refDelegate: this.saveAddInputRef,
-                        type: c.Ta.Search,
+                        type: c.Ua.Search,
                         placeholder: e,
                         onKeyDown: this.handleAddKeyDown,
                         onChange: this.handleAddChange,
                         error: this.state.errorAddingTerm,
                         value: this.state.termToAdd
-                    }))), 0 !== this.state.termToAdd.length && i.createElement(c.Xa, {
+                    }))), 0 !== this.state.termToAdd.length && i.createElement(c.Ya, {
                         display: c.X.Flex,
                         margin: {
                             left: .5
@@ -868,17 +868,17 @@
                         onClick: this.handleAdd,
                         "data-a-target": "add-term",
                         "data-test-selector": p.AddTermButton
-                    }, Object(r.d)("Add", "StandaloneChatTerms")))), this.state.termSwitchedLists && i.createElement(c.Xa, {
-                        position: c.jb.Absolute
-                    }, i.createElement(c.Na, {
+                    }, Object(r.d)("Add", "StandaloneChatTerms")))), this.state.termSwitchedLists && i.createElement(c.Ya, {
+                        position: c.kb.Absolute
+                    }, i.createElement(c.Oa, {
                         title: "",
-                        type: c.Oa.Neutral,
+                        type: c.Pa.Neutral,
                         background: c.r.Alt2,
                         description: Object(r.d)("We removed this term from your permitted list and will now block it instead.", "StandaloneChatTerms"),
                         closeButtonAriaLabel: "close",
                         closeButtonOnClick: this.closeTermSwitchedListsNotif
-                    })), 0 !== this.state.termToAdd.length && this.props.channelID === this.props.userID && i.createElement(c.Xa, {
-                        position: c.jb.Relative,
+                    })), 0 !== this.state.termToAdd.length && this.props.channelID === this.props.userID && i.createElement(c.Ya, {
+                        position: c.kb.Relative,
                         margin: {
                             top: .5
                         }
@@ -886,25 +886,25 @@
                         show: !0,
                         direction: c.v.BottomRight,
                         size: c.w.Small
-                    }, i.createElement(c.Xa, {
+                    }, i.createElement(c.Ya, {
                         padding: 1
-                    }, i.createElement(c.Xa, {
+                    }, i.createElement(c.Ya, {
                         display: c.X.Flex
                     }, i.createElement(c.W, {
-                        type: c.Vb.Span,
+                        type: c.Wb.Span,
                         bold: !0
                     }, Object(r.d)("Add term to {type} terms", {
                         type: this.props.type
-                    }, "StandaloneChatTerms"))), i.createElement(c.Xa, {
+                    }, "StandaloneChatTerms"))), i.createElement(c.Ya, {
                         display: c.X.Flex
                     }, i.createElement(c.W, {
-                        type: c.Vb.Span,
+                        type: c.Wb.Span,
                         ellipsis: !0,
                         italic: !0,
                         color: c.O.Alt2
                     }, Object(r.d)("{term}", {
                         term: this.state.termToAdd
-                    }, "StandaloneChatTerms"))), i.createElement(c.Xa, {
+                    }, "StandaloneChatTerms"))), i.createElement(c.Ya, {
                         display: c.X.Flex,
                         flexDirection: c.Aa.Row,
                         alignItems: c.f.Stretch,
@@ -914,12 +914,12 @@
                             top: 1,
                             bottom: .5
                         }
-                    }, i.createElement(c.Xa, {
+                    }, i.createElement(c.Ya, {
                         display: c.X.Flex,
                         alignItems: c.f.Center
                     }, i.createElement(c.W, {
-                        align: c.fc.Middle
-                    }, Object(r.d)("Privacy:", "StandaloneChatTerms"))), i.createElement(c.Xa, {
+                        align: c.gc.Middle
+                    }, Object(r.d)("Privacy:", "StandaloneChatTerms"))), i.createElement(c.Ya, {
                         flexGrow: 1,
                         padding: {
                             left: .5
@@ -931,34 +931,34 @@
                         type: c.F.Hollow
                     }, this.state.termToAddPrivacy), i.createElement(c.u, {
                         direction: c.v.BottomLeft
-                    }, i.createElement(c.Xa, {
+                    }, i.createElement(c.Ya, {
                         padding: .5
-                    }, i.createElement(c.Ua, {
+                    }, i.createElement(c.Va, {
                         selected: this.state.termToAddPrivacy === o(),
                         "data-visibility": o(),
                         onClick: this.onClickAddTermPrivacyChange
-                    }, i.createElement(c.Xa, {
+                    }, i.createElement(c.Ya, {
                         padding: {
                             x: 1,
                             y: .5
                         }
-                    }, o())), i.createElement(c.Ua, {
+                    }, o())), i.createElement(c.Va, {
                         selected: this.state.termToAddPrivacy === l(),
                         "data-visibility": l(),
                         onClick: this.onClickAddTermPrivacyChange
-                    }, i.createElement(c.Xa, {
+                    }, i.createElement(c.Ya, {
                         padding: {
                             x: 1,
                             y: .5
                         }
-                    }, l())))))))))), this.props.type === h.Banned && i.createElement(c.Xa, {
+                    }, l())))))))))), this.props.type === h.Banned && i.createElement(c.Ya, {
                         margin: {
                             top: .5
                         }
                     }, i.createElement(c.W, {
                         color: c.O.Alt2,
                         fontSize: c.Ca.Size7
-                    }, Object(r.d)("Tip: Some terms may be marked as Private and only visible to the channel owner.", "StandaloneChatTerms")))), i.createElement(c.Xa, {
+                    }, Object(r.d)("Tip: Some terms may be marked as Private and only visible to the channel owner.", "StandaloneChatTerms")))), i.createElement(c.Ya, {
                         padding: {
                             top: 1,
                             left: 0,
@@ -973,30 +973,30 @@
                     }, "StandaloneChatTerms"))), this.renderTerms(this.state.temporaryTerms, u.Temporary), this.renderTerms(this.state.permanentTerms, u.Permanent)))
                 }, t.prototype.renderTerms = function(e, t) {
                     for (var n = [], a = 0; a < e.length; a++) n.push(this.renderTerm(e[a], a, t));
-                    return 0 === n.length ? i.createElement(c.Xa, {
+                    return 0 === n.length ? i.createElement(c.Ya, {
                         className: "chat-terms"
-                    }) : i.createElement(c.Xa, {
+                    }) : i.createElement(c.Ya, {
                         padding: {
                             bottom: 3
                         }
-                    }, i.createElement(c.Xa, {
+                    }, i.createElement(c.Ya, {
                         padding: {
                             top: 0,
                             left: 0,
                             right: 0,
                             bottom: .5
                         }
-                    }, this.renderTableSubTitle(t)), i.createElement(c.Eb, {
+                    }, this.renderTableSubTitle(t)), i.createElement(c.Fb, {
                         className: "chat-terms",
                         elevation: 1
-                    }, i.createElement(c.Hb, null, i.createElement(c.Kb, null, i.createElement(c.Lb, {
+                    }, i.createElement(c.Ib, null, i.createElement(c.Lb, null, i.createElement(c.Mb, {
                         label: Object(r.d)("Terms and phrases", "StandaloneChatTerms")
-                    }), i.createElement(c.Lb, {
+                    }), i.createElement(c.Mb, {
                         label: t === u.Temporary ? Object(r.d)("Expires", "StandaloneChatTerms") : Object(r.d)("Privacy", "StandaloneChatTerms")
-                    }), i.createElement(c.Lb, {
-                        textAlign: c.Rb.Center,
+                    }), i.createElement(c.Mb, {
+                        textAlign: c.Sb.Center,
                         label: Object(r.d)("Actions", "StandaloneChatTerms")
-                    })), i.createElement(c.Ib, null, n))))
+                    })), i.createElement(c.Jb, null, n))))
                 }, t.prototype.renderTableSubTitle = function(e) {
                     return e === u.Permanent ? i.createElement(c.W, {
                         fontSize: c.Ca.Size6

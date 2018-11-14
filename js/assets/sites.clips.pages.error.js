@@ -648,7 +648,7 @@
                                 }
                         }
                     }(this.props.match.params.error);
-                    return i.createElement(p.Eb, {
+                    return i.createElement(p.Fb, {
                         className: "clips-error-page",
                         background: p.r.Base,
                         margin: {
@@ -656,12 +656,12 @@
                         },
                         elevation: 3,
                         color: p.O.Base,
-                        textAlign: p.Rb.Center
+                        textAlign: p.Sb.Center
                     }, i.createElement(p.o, {
                         ratio: p.p.Aspect16x9
-                    }, i.createElement(p.Xa, {
+                    }, i.createElement(p.Ya, {
                         display: p.X.Flex,
-                        justifyContent: p.Wa.Center,
+                        justifyContent: p.Xa.Center,
                         alignItems: p.f.Center,
                         flexDirection: p.Aa.Column,
                         padding: 1

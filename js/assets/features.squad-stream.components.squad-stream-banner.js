@@ -140,7 +140,7 @@
                                 return e && e.displayName ? r.createElement(v.W, {
                                     bold: !0,
                                     noWrap: !0,
-                                    type: v.Vb.Span,
+                                    type: v.Wb.Span,
                                     color: v.O.Base
                                 }, e.displayName) : ""
                             };
@@ -185,7 +185,7 @@
                                 return n.id !== e
                             }),
                             i = [a].concat(t).map(function(e) {
-                                return e && e.id && e.profileImageURL ? r.createElement(v.Xa, {
+                                return e && e.id && e.profileImageURL ? r.createElement(v.Ya, {
                                     key: e.id,
                                     margin: {
                                         right: 1
@@ -203,7 +203,7 @@
                             delay: v.j.Medium,
                             duration: v.k.Medium,
                             enabled: !0
-                        }, r.createElement(v.Eb, {
+                        }, r.createElement(v.Fb, {
                             display: v.X.Flex,
                             background: v.r.Base,
                             alignItems: v.f.Center,
@@ -213,19 +213,19 @@
                             },
                             borderRadius: v.x.Large,
                             elevation: 2
-                        }, r.createElement(v.Eb, {
+                        }, r.createElement(v.Fb, {
                             display: v.X.Flex,
                             color: v.O.Overlay
-                        }, i), r.createElement(v.Xa, null, r.createElement(v.W, {
+                        }, i), r.createElement(v.Ya, null, r.createElement(v.W, {
                             noWrap: !0,
-                            type: v.Vb.Span,
+                            type: v.Wb.Span,
                             color: v.O.Alt2,
                             fontSize: v.Ca.Size5
-                        }, this.makeBannerText(a, t))), r.createElement(v.Xa, {
+                        }, this.makeBannerText(a, t))), r.createElement(v.Ya, {
                             display: v.X.Flex,
                             alignItems: v.f.Start,
                             flexGrow: 1
-                        }), r.createElement(v.Xa, {
+                        }), r.createElement(v.Ya, {
                             margin: {
                                 left: 1
                             }

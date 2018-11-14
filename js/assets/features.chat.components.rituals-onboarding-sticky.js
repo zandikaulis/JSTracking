@@ -265,33 +265,33 @@
                         return null !== e && e.apply(this, arguments) || this
                     }
                     return i.__extends(n, e), n.prototype.render = function() {
-                        return a.createElement(g.Eb, {
+                        return a.createElement(g.Fb, {
                             background: g.r.Base,
                             color: g.O.Alt
-                        }, a.createElement(g.Xa, {
+                        }, a.createElement(g.Ya, {
                             padding: {
                                 bottom: .5,
                                 top: 1,
                                 x: 1
                             }
-                        }, a.createElement(g.Xa, {
+                        }, a.createElement(g.Ya, {
                             margin: {
                                 bottom: .5
                             }
                         }, a.createElement(g.W, {
                             bold: !0,
-                            type: g.Vb.H5
-                        }, Object(o.d)("Introducing: New Chatter Announcements!", "RitualsOnboardingSticky"))), a.createElement(g.Xa, {
+                            type: g.Wb.H5
+                        }, Object(o.d)("Introducing: New Chatter Announcements!", "RitualsOnboardingSticky"))), a.createElement(g.Ya, {
                             margin: {
                                 bottom: .5
                             }
                         }, a.createElement(g.W, {
-                            type: g.Vb.Span
+                            type: g.Wb.Span
                         }, Object(o.d)("New chatter announcements are now active in your channel, making it easier to welcome new people.", "RitualsOnboardingSticky")), a.createElement(g.W, null, a.createElement(g.U, {
                             onClick: this.props.onClick,
                             to: "/" + this.props.channelLogin + "/dashboard/settings",
                             "data-test-selector": "rituals-sticky-link"
-                        }, Object(o.d)("Manage in Dashboard", "RitualsOnboardingSticky"))))), a.createElement(g.Eb, {
+                        }, Object(o.d)("Manage in Dashboard", "RitualsOnboardingSticky"))))), a.createElement(g.Fb, {
                             alignItems: g.f.Center,
                             background: g.r.Alt2,
                             borderBottom: !0,
@@ -301,29 +301,29 @@
                                 x: 1,
                                 y: .5
                             }
-                        }, a.createElement(g.sb, {
-                            asset: g.tb.Lock,
+                        }, a.createElement(g.tb, {
+                            asset: g.ub.Lock,
                             height: 12,
                             width: 12
-                        }), a.createElement(g.Xa, {
+                        }), a.createElement(g.Ya, {
                             display: g.X.Inline,
                             margin: {
                                 left: .5
                             }
                         }, a.createElement(g.W, {
                             fontSize: g.Ca.Size8,
-                            type: g.Vb.Span
-                        }, Object(o.d)("You see this because you own this channel", "RitualsOnboardingSticky")))), a.createElement(g.Eb, {
+                            type: g.Wb.Span
+                        }, Object(o.d)("You see this because you own this channel", "RitualsOnboardingSticky")))), a.createElement(g.Fb, {
                             attachRight: !0,
                             attachTop: !0,
                             padding: {
                                 x: .5,
                                 top: 1
                             },
-                            position: g.jb.Absolute
+                            position: g.kb.Absolute
                         }, a.createElement(g.A, {
                             ariaLabel: Object(o.d)("Close", "RitualsOnboardingSticky"),
-                            icon: g.tb.Close,
+                            icon: g.ub.Close,
                             onClick: this.props.onDismiss,
                             size: g.B.Small,
                             type: g.C.Secondary,

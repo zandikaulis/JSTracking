@@ -365,44 +365,44 @@
                             a = Object(c.d)("Close", "ChatResubNotification"),
                             i = Object(c.d)("Add a message to the streamer", "ChatResubNotification"),
                             o = this.state.sharing ? k.E.Loading : k.E.Default;
-                        return r.createElement(k.Xa, {
+                        return r.createElement(k.Ya, {
                             className: e,
                             padding: 1,
                             attachTop: !0,
                             attachLeft: !0,
                             attachRight: !0,
-                            position: k.jb.Absolute
-                        }, r.createElement(k.Eb, {
+                            position: k.kb.Absolute
+                        }, r.createElement(k.Fb, {
                             className: "share-input__container",
-                            position: k.jb.Relative,
+                            position: k.kb.Relative,
                             border: !0,
                             background: k.r.Base,
                             padding: 1
-                        }, r.createElement(k.Xa, {
-                            position: k.jb.Absolute,
+                        }, r.createElement(k.Ya, {
+                            position: k.kb.Absolute,
                             attachTop: !0,
                             attachRight: !0
                         }, r.createElement(k.A, {
                             ariaLabel: a,
                             onClick: this.props.onClose,
                             type: k.C.Secondary,
-                            icon: k.tb.Close,
+                            icon: k.ub.Close,
                             "data-a-target": "resub-notification-close-form-btn",
                             "data-test-selector": "share-input__close-form-btn"
-                        })), r.createElement(k.Xa, {
-                            textAlign: k.Rb.Center,
+                        })), r.createElement(k.Ya, {
+                            textAlign: k.Sb.Center,
                             padding: {
                                 top: 1,
                                 bottom: 2
                             }
-                        }, this.props.children), r.createElement(k.Xa, {
+                        }, this.props.children), r.createElement(k.Ya, {
                             display: k.X.Flex,
                             flexWrap: k.Ba.NoWrap
-                        }, r.createElement(k.Xa, {
+                        }, r.createElement(k.Ya, {
                             fullWidth: !0
-                        }, r.createElement(k.Ra, {
+                        }, r.createElement(k.Sa, {
                             autoFocus: !0,
-                            type: k.Ta.Text,
+                            type: k.Ua.Text,
                             value: this.state.formInputValue,
                             onChange: this.onInputChange,
                             placeholder: i,
@@ -423,24 +423,24 @@
                         a = s("chat-share-prompt", {
                             "chat-share-prompt--hidden": e.hide || !e.children
                         });
-                    return r.createElement(k.Xa, {
-                        position: k.jb.Absolute,
+                    return r.createElement(k.Ya, {
+                        position: k.kb.Absolute,
                         fullWidth: !0,
                         className: a,
                         padding: {
                             y: .5,
                             left: .5
                         }
-                    }, r.createElement(k.Xa, {
+                    }, r.createElement(k.Ya, {
                         display: k.X.Flex,
                         padding: 1,
-                        justifyContent: k.Wa.Between,
+                        justifyContent: k.Xa.Between,
                         alignItems: k.f.Center,
                         flexWrap: k.Ba.NoWrap
                     }, r.createElement(k.W, {
                         "data-a-target": "resub-notification-months-subbed-text",
                         "data-test-selector": "share-prompt__text"
-                    }, e.children), r.createElement(k.Xa, {
+                    }, e.children), r.createElement(k.Ya, {
                         display: k.X.Flex,
                         flexWrap: k.Ba.NoWrap,
                         alignItems: k.f.Center,
@@ -448,7 +448,7 @@
                         padding: {
                             left: .5
                         }
-                    }, r.createElement(k.Xa, {
+                    }, r.createElement(k.Ya, {
                         display: k.X.Inline,
                         padding: {
                             right: .5
@@ -459,13 +459,13 @@
                         size: k.D.Small,
                         "data-a-target": "resub-notification-share-notification-btn",
                         "data-test-selector": "share-prompt__share-btn"
-                    }, t)), r.createElement(k.Xa, {
+                    }, t)), r.createElement(k.Ya, {
                         flexShrink: 0
                     }, r.createElement(k.A, {
                         ariaLabel: n,
                         onClick: e.onClickClose,
                         type: k.C.Secondary,
-                        icon: k.tb.Close,
+                        icon: k.ub.Close,
                         "data-a-target": "resub-notification-close-notification-btn",
                         "data-test-selector": "share-prompt__close-btn"
                     })))))
@@ -599,23 +599,23 @@
                             i = e.badges.map(this.renderLootBadge),
                             s = e.emoteSets.map(this.renderLootEmoteSet),
                             o = e.bits.map(this.renderLootBits, this);
-                        return (a.length || i.length || s.length || o.length) && (n = r.createElement(k.Xa, {
+                        return (a.length || i.length || s.length || o.length) && (n = r.createElement(k.Ya, {
                             "data-test-selector": "share-purchase__loot",
                             padding: {
                                 bottom: 1
                             },
                             display: k.X.Flex,
-                            justifyContent: k.Wa.Center
+                            justifyContent: k.Xa.Center
                         }, a, i, s, o), t = Object(c.d)("You bought {product} and opened a Twitch Crate! Let {channelName} know you shared the love.", {
                             product: r.createElement("strong", null, e.title),
                             channelName: r.createElement("strong", null, this.props.channelDisplayName)
-                        }, "ShareToChat")), r.createElement(k.Xa, {
+                        }, "ShareToChat")), r.createElement(k.Ya, {
                             className: "chat-resub-notification",
                             padding: 0,
                             attachTop: !0,
                             attachLeft: !0,
                             attachRight: !0,
-                            position: k.jb.Absolute
+                            position: k.kb.Absolute
                         }, r.createElement(b, {
                             hide: this.state.showMessageInput,
                             onClickShare: this.toggleContentShown,
@@ -624,7 +624,7 @@
                             hide: !this.state.showMessageInput,
                             onShare: this.sharePurchase,
                             onClose: this.toggleContentShown
-                        }, r.createElement(k.Xa, {
+                        }, r.createElement(k.Ya, {
                             padding: {
                                 bottom: 1
                             }
@@ -636,7 +636,7 @@
                             channelName: r.createElement("strong", null, this.props.channelDisplayName)
                         }, "ShareToChat"))))
                     }, t.prototype.renderLootInGameContent = function(e) {
-                        return r.createElement(k.Xa, {
+                        return r.createElement(k.Ya, {
                             key: e.id,
                             margin: {
                                 top: .5,
@@ -649,7 +649,7 @@
                         }))
                     }, t.prototype.renderLootEmoteSet = function(e) {
                         return Object(v.b)(e.emoteSet.emotes).map(function(e) {
-                            return r.createElement(k.Xa, {
+                            return r.createElement(k.Ya, {
                                 key: e.id,
                                 margin: {
                                     top: .5,
@@ -663,7 +663,7 @@
                             }))
                         })
                     }, t.prototype.renderLootBadge = function(e) {
-                        return r.createElement(k.Xa, {
+                        return r.createElement(k.Ya, {
                             key: e.id,
                             margin: {
                                 top: .5,
@@ -675,7 +675,7 @@
                             src: e.badge.image2x
                         }))
                     }, t.prototype.renderLootBits = function(e) {
-                        if (this.props.bitsConfig) return r.createElement(k.Xa, {
+                        if (this.props.bitsConfig) return r.createElement(k.Ya, {
                             key: e.id,
                             margin: {
                                 top: .5,
@@ -725,29 +725,29 @@
                         n = s("rare-emote__neck", {
                             "rare-emote__neck--animate": !!e.animate
                         });
-                    return r.createElement(k.Xa, {
-                        overflow: k.cb.Hidden,
+                    return r.createElement(k.Ya, {
+                        overflow: k.db.Hidden,
                         className: "rare-emote"
-                    }, r.createElement(k.Pa, {
-                        zIndex: k.ic.Above,
-                        position: k.jb.Relative
+                    }, r.createElement(k.Qa, {
+                        zIndex: k.jc.Above,
+                        position: k.kb.Relative
                     }, r.createElement("img", {
                         className: t,
                         src: "https://static-cdn.jtvnw.net/emoticons/v1/" + e.emoteID + "/2.0"
-                    })), r.createElement(k.Xa, {
-                        position: k.jb.Relative,
-                        zIndex: k.ic.Default,
+                    })), r.createElement(k.Ya, {
+                        position: k.kb.Relative,
+                        zIndex: k.jc.Default,
                         className: n
-                    }, r.createElement(k.sb, {
+                    }, r.createElement(k.tb, {
                         width: 28,
                         height: 28,
-                        asset: k.tb.Neck
+                        asset: k.ub.Neck
                     })))
                 }),
                 D = 3;
             var P = n("cpJf"),
                 F = n("EnXQ"),
-                j = function(e) {
+                O = function(e) {
                     function t() {
                         var t = null !== e && e.apply(this, arguments) || this;
                         return t.state = {
@@ -854,13 +854,13 @@
                     }, t.prototype.render = function() {
                         return this.dataIsReady(this.props) && this.resubExists(this.props, this.state) && this.props.data.user && this.props.data.user.self && this.props.data.user.self.resubNotification ? this.renderResubToken(this.props.data.user.self.resubNotification) : null
                     }, t.prototype.renderResubToken = function(e) {
-                        return r.createElement(k.Xa, {
+                        return r.createElement(k.Ya, {
                             className: "chat-resub-notification",
                             padding: 0,
                             attachTop: !0,
                             attachLeft: !0,
                             attachRight: !0,
-                            position: k.jb.Absolute
+                            position: k.kb.Absolute
                         }, r.createElement(b, {
                             hide: this.state.showMessageInput,
                             onClickShare: this.toggleContentShown,
@@ -883,7 +883,7 @@
                         return P.c[e]
                     }, t
                 }(r.Component),
-                O = Object(w.compose)(Object(u.a)(F, {
+                j = Object(w.compose)(Object(u.a)(F, {
                     options: function(e) {
                         return {
                             variables: {
@@ -904,13 +904,13 @@
                     skip: function(e) {
                         return !e.currentUserId
                     }
-                }]))(j);
+                }]))(O);
             var x, M = Object(o.connect)(function(e) {
                 var t = Object(R.e)(e);
                 return {
                     currentUserId: t ? t.id : null
                 }
-            })(O);
+            })(j);
             n("z5b3");
             ! function(e) {
                 e[e.Resub = 1] = "Resub", e[e.Purchase = 2] = "Purchase"
@@ -953,7 +953,7 @@
                         n = s({
                             "share-to-chat__space--hidden": e !== x.Purchase
                         });
-                    return r.createElement(k.Xa, null, r.createElement(k.Xa, {
+                    return r.createElement(k.Ya, null, r.createElement(k.Ya, {
                         className: t
                     }, r.createElement(M, {
                         authToken: this.props.authToken,
@@ -961,7 +961,7 @@
                         channelLogin: this.props.channelLogin,
                         requestSpace: this.requestResubSpace,
                         dismissSpace: this.dismissResubSpace
-                    })), r.createElement(k.Xa, {
+                    })), r.createElement(k.Ya, {
                         className: n
                     }, r.createElement(T, {
                         channelDisplayName: this.props.channelDisplayName,

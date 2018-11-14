@@ -71,17 +71,17 @@
                     return o.__extends(t, e), t.prototype.componentDidMount = function() {
                         this.props.latencyTracking.reportInteractive()
                     }, t.prototype.render = function() {
-                        return this.props.isLoggedIn ? i.createElement(f.Xa, {
+                        return this.props.isLoggedIn ? i.createElement(f.Ya, {
                             margin: {
                                 x: 1,
                                 bottom: 2
                             },
                             className: "dev-dashboard"
-                        }, i.createElement(f.rb, {
+                        }, i.createElement(f.sb, {
                             centered: !0
                         }, i.createElement("header", {
                             className: "dev-dashboard__header"
-                        }, i.createElement(f.Eb, {
+                        }, i.createElement(f.Fb, {
                             padding: {
                                 bottom: 2
                             },
@@ -90,36 +90,36 @@
                             },
                             borderBottom: !0
                         }, i.createElement(f.W, {
-                            type: f.Vb.H2
-                        }, Object(u.d)("Dashboard", "DevDashboard"))), i.createElement(f.Xa, {
+                            type: f.Wb.H2
+                        }, Object(u.d)("Dashboard", "DevDashboard"))), i.createElement(f.Ya, {
                             margin: {
                                 bottom: 2
                             }
-                        }, i.createElement(f.Gb, null, i.createElement(f.Fb, {
+                        }, i.createElement(f.Hb, null, i.createElement(f.Gb, {
                             linkTo: "https://dev.twitch.tv/dashboard",
                             active: this.isActive("", !0)
-                        }, Object(u.d)("Overview", "DevDashboard")), i.createElement(f.Fb, {
+                        }, Object(u.d)("Overview", "DevDashboard")), i.createElement(f.Gb, {
                             onClick: Object(v.c)(v.a.ViewExtensions),
                             linkTo: "https://dev.twitch.tv/dashboard/extensions",
                             active: this.isActive("extensions")
-                        }, Object(u.d)("Extensions", "DevDashboard")), i.createElement(f.Fb, {
+                        }, Object(u.d)("Extensions", "DevDashboard")), i.createElement(f.Gb, {
                             onClick: Object(v.c)(v.a.ViewApps),
                             linkTo: "/console/apps",
                             active: this.isActive("apps")
-                        }, Object(u.d)("Apps", "DevDashboard")), i.createElement(f.Fb, {
+                        }, Object(u.d)("Apps", "DevDashboard")), i.createElement(f.Gb, {
                             onClick: Object(v.c)(v.a.ViewGames),
                             linkTo: "/console/games",
                             active: this.isActive("games")
-                        }, Object(u.d)("Games", "DevDashboard")), i.createElement(f.Fb, {
+                        }, Object(u.d)("Games", "DevDashboard")), i.createElement(f.Gb, {
                             onClick: Object(v.c)(v.a.ViewDrops),
                             linkTo: "/console/drops",
                             active: this.isActive("drops")
                         }, Object(u.d)("Drops", "DevDashboard")), i.createElement(b.a, {
                             name: "bounty_board_brand_portal_enabled"
-                        }, i.createElement(h.a, null, i.createElement(f.Fb, {
+                        }, i.createElement(h.a, null, i.createElement(f.Gb, {
                             linkTo: "/console/bounty-board",
                             active: this.isActive("bounty-board")
-                        }, Object(u.d)("Bounty Board", "DevDashboard"))))))), i.createElement(f.Xa, {
+                        }, Object(u.d)("Bounty Board", "DevDashboard"))))))), i.createElement(f.Ya, {
                             display: f.X.Block
                         }, i.createElement(l.a, null, i.createElement(s.a, {
                             exact: !0,

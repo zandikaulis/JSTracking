@@ -17,7 +17,7 @@
                         var t = null !== e && e.apply(this, arguments) || this;
                         return t.renderScreenshots = function() {
                             return t.props.addon ? t.props.addon.attachments.map(function(e, t) {
-                                return o.createElement(u.Xa, {
+                                return o.createElement(u.Ya, {
                                     margin: {
                                         bottom: 1
                                     },
@@ -30,15 +30,15 @@
                         }, t
                     }
                     return r.__extends(t, e), t.prototype.render = function() {
-                        if (!this.props.initialized || !this.props.addon) return o.createElement(u.Xa, {
+                        if (!this.props.initialized || !this.props.addon) return o.createElement(u.Ya, {
                             display: u.X.Flex,
-                            justifyContent: u.Wa.Center,
+                            justifyContent: u.Xa.Center,
                             alignItems: u.f.Center,
                             fullWidth: !0,
                             fullHeight: !0
-                        }, o.createElement(u.Za, null));
+                        }, o.createElement(u.ab, null));
                         var e = this.renderScreenshots();
-                        return o.createElement(u.Xa, {
+                        return o.createElement(u.Ya, {
                             padding: {
                                 x: 2
                             }

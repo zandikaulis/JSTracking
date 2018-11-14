@@ -17,7 +17,7 @@
                             }
                         },
                         tooltip: Object(a.d)("Game", "GameLink"),
-                        svgAsset: s.tb.NavGames,
+                        svgAsset: s.ub.NavGames,
                         title: e.name,
                         "data-a-target": "stream-game-link"
                     })
@@ -49,10 +49,10 @@
                 l = function(e) {
                     return a.createElement(o.a, i.__assign({
                         linkTo: "/team/" + e.name,
-                        svgAsset: s.tb.Team,
+                        svgAsset: s.ub.Team,
                         title: e.displayName,
                         tooltip: Object(r.d)("Team", "TeamLink")
-                    }, Object(s.jc)(e)))
+                    }, Object(s.kc)(e)))
                 };
             t.d(n, "a", function() {
                 return l
@@ -408,9 +408,9 @@
                         }, n
                     }
                     return i.__extends(n, e), n.prototype.render = function() {
-                        return a.createElement(r.Ra, {
+                        return a.createElement(r.Sa, {
                             readOnly: !0,
-                            type: r.Ta.Text,
+                            type: r.Ua.Text,
                             value: this.props.value,
                             onClick: this.handleClickHandler
                         })
@@ -445,7 +445,7 @@
             t.d(n, "g", function() {
                 return r
             }), t.d(n, "d", function() {
-                return u
+                return c
             }), t.d(n, "f", function() {
                 return o
             }), t.d(n, "e", function() {
@@ -455,7 +455,7 @@
             }), t.d(n, "a", function() {
                 return d
             }), t.d(n, "c", function() {
-                return c
+                return u
             });
             var i = t("/7QA"),
                 a = t("2xye");
@@ -473,11 +473,12 @@
                     ticket_price: e.ticketPrice,
                     currency: e.currency,
                     saved_payment: e.savedPayment,
+                    is_anonymous: e.isAnonymous,
                     checkout_source: e.trackingContext.source
                 };
                 e.trackingContext.detail && (n.checkout_source_detail = e.trackingContext.detail), i.o.track(a.SpadeEventType.PaymentFormInteraction, n)
             }
-            var o, s, l, d, c, u = function() {
+            var o, s, l, d, u, c = function() {
                 function e(e) {
                     this.store = {
                         savedPaymentAvailable: null,
@@ -514,7 +515,7 @@
             }(d || (d = {})),
             function(e) {
                 e.ChannelSubscribeButton = "channel_subscribe_button_click", e.Direct = "direct_url_link", e.EmotePicker = "emote_picker_click", e.Extension = "extension_click", e.TurboSubscribeButton = "turbo_subscribe_button_click", e.ViewerCard = "viewer_card_click"
-            }(c || (c = {}))
+            }(u || (u = {}))
         },
         QjI3: function(e, n, t) {
             "use strict";
@@ -525,8 +526,8 @@
                 s = t("ZS2+"),
                 l = t("UUve"),
                 d = t("1/iK"),
-                c = t("aCAx"),
-                u = t("kRBY"),
+                u = t("aCAx"),
+                c = t("kRBY"),
                 m = t("GnwI"),
                 p = t("oJmH"),
                 v = t("/7QA"),
@@ -541,13 +542,13 @@
                 N = t("/aPz"),
                 C = t("KriR"),
                 w = t("D7An"),
-                E = t("4rCz");
-            var F, I = t("br9A"),
+                F = t("4rCz");
+            var E, I = t("br9A"),
                 T = t("Ue10"),
                 L = (t("a7aT"), t("z+dA"));
             ! function(e) {
                 e.SubButton = "subscribe-button__dropdown", e.BalloonLayerButton = "subscribe-button__balloon-layer-btn", e.DefaultButton = "subscribe-button__default-btn", e.SubscribeBalloon = "subscribe-button__subscribe-balloon"
-            }(F || (F = {}));
+            }(E || (E = {}));
             var B = s.a.wrap(function() {
                     return Promise.all([t.e(0), t.e(200)]).then(t.bind(null, "f+qK"))
                 }, "SubscribeBalloon"),
@@ -559,7 +560,7 @@
                         }, n.modalLevel = "top_page", n.renderBalloonContentForBalloonLayer = function() {
                             return a.createElement(b.a, {
                                 onClickOut: n.handleBalloonClickOut
-                            }, a.createElement(T.Xa, {
+                            }, a.createElement(T.Ya, {
                                 "data-a-target": "sub-balloon",
                                 refDelegate: n.setBalloonContentRefDelegate
                             }, n.balloonWrapperContent))
@@ -640,28 +641,28 @@
                         r.some(function(e) {
                             return !e.emoteSetID
                         }) && (d = !0);
-                        var c = null;
-                        t && t.subscriptionBenefit && (c = t.subscriptionBenefit.purchasedWithPrime ? y.a.Prime : t.subscriptionBenefit.tier, this.modalLevel = "");
-                        var u = function(e) {
+                        var u = null;
+                        t && t.subscriptionBenefit && (u = t.subscriptionBenefit.purchasedWithPrime ? y.a.Prime : t.subscriptionBenefit.tier, this.modalLevel = "");
+                        var c = function(e) {
                             if (e.isSubscribed) {
-                                if (e.hasInsiderPass) return Object(E.d)("All-Access Pass", "SubscribeButton");
-                                if (e.isNonStandardSub) return Object(E.d)("Subscribed", "SubscribeButton");
-                                if (e.hostedDisplayName) return Object(E.d)("Subscribed to {username}", {
+                                if (e.hasInsiderPass) return Object(F.d)("All-Access Pass", "SubscribeButton");
+                                if (e.isNonStandardSub) return Object(F.d)("Subscribed", "SubscribeButton");
+                                if (e.hostedDisplayName) return Object(F.d)("Subscribed to {username}", {
                                     username: e.hostedDisplayName
                                 }, "SubscribeButton");
-                                if ("control" !== E.q.experiments.getAssignment(w.b.SubsReanimator) && e.benefitIsDNRd && e.benefitEndsAt) {
+                                if ("control" !== F.q.experiments.getAssignment(w.b.SubsReanimator) && e.benefitIsDNRd && e.benefitEndsAt) {
                                     var n = new Date(e.benefitEndsAt),
                                         t = Math.round((n.getTime() - Date.now()) / 864e5);
-                                    if (t <= 15 && t > 7) return Object(E.d)("Continue Sub", "SubscribeButton");
-                                    if (t <= 7) return Object(E.d)("Continue Sub - {daysRemaining} Days Remaining", {
+                                    if (t <= 15 && t > 7) return Object(F.d)("Continue Sub", "SubscribeButton");
+                                    if (t <= 7) return Object(F.d)("Continue Sub - {daysRemaining} Days Remaining", {
                                         daysRemaining: t
                                     }, "SubscribeButton")
                                 }
-                                return Object(E.d)("Gift A Sub", "SubscribeButton")
+                                return Object(F.d)("Gift A Sub", "SubscribeButton")
                             }
-                            return e.hasInsiderPass ? Object(E.d)("Get the All-Access Pass", "SubscribeButton") : e.hostedDisplayName ? Object(E.d)("Subscribe to {username}", {
+                            return e.hasInsiderPass ? Object(F.d)("Get the All-Access Pass", "SubscribeButton") : e.hostedDisplayName ? Object(F.d)("Subscribe to {username}", {
                                 username: e.hostedDisplayName
-                            }, "SubscribeButton") : Object(E.d)("Subscribe", "SubscribeButton")
+                            }, "SubscribeButton") : Object(F.d)("Subscribe", "SubscribeButton")
                         }({
                             isSubscribed: s,
                             isNonStandardSub: d,
@@ -672,24 +673,24 @@
                         });
                         if (s && d && !l) return a.createElement(T.z, {
                             disabled: !0,
-                            ariaLabel: u,
-                            icon: T.tb.Star
-                        }, u);
+                            ariaLabel: c,
+                            icon: T.ub.Star
+                        }, c);
                         var m = a.createElement(T.z, {
-                                ariaLabel: u,
+                                ariaLabel: c,
                                 "data-a-target": s ? "subscribed-button" : "subscribe-button",
-                                "data-test-selector": F.SubButton,
+                                "data-test-selector": E.SubButton,
                                 dropdown: !this.props.hideDropdownArrow,
                                 fullWidth: !0,
-                                icon: this.getButtonIcon(s, c),
+                                icon: this.getButtonIcon(s, u),
                                 onClick: this.props.renderBalloonInBalloonLayer ? this.handleButtonClick : void 0,
                                 type: this.getButtonType(s)
-                            }, u),
+                            }, c),
                             p = r[0];
                         return this.setBalloonWrapperContent(a.createElement(B, {
                             authToken: this.props.authToken,
                             channelLogin: this.props.channelLogin || "",
-                            "data-test-selector": F.SubscribeBalloon,
+                            "data-test-selector": E.SubscribeBalloon,
                             handleSubMenuAction: this.handleSubMenuAction,
                             inPrimeRegion: o,
                             isEsportChannel: l,
@@ -697,13 +698,13 @@
                             isStaff: !(!this.props.sessionUser || !this.props.sessionUser.roles) && this.props.sessionUser.roles.isStaff,
                             isSubscribed: s,
                             productId: p ? p.id : "",
-                            subbedTier: c || y.a.Prime,
+                            subbedTier: u || y.a.Prime,
                             userHasPrime: !1
-                        })), this.props.renderBalloonInBalloonLayer ? a.createElement(T.Xa, {
-                            "data-test-selector": F.BalloonLayerButton,
+                        })), this.props.renderBalloonInBalloonLayer ? a.createElement(T.Ya, {
+                            "data-test-selector": E.BalloonLayerButton,
                             refDelegate: this.setContainerRefDelegate
-                        }, m) : a.createElement(T.Xa, null, a.createElement(k.a, {
-                            "data-test-selector": F.DefaultButton,
+                        }, m) : a.createElement(T.Ya, null, a.createElement(k.a, {
+                            "data-test-selector": E.DefaultButton,
                             onToggle: this.handleMenuToggle
                         }, m, a.createElement(T.u, {
                             "data-a-target": "sub-balloon",
@@ -715,7 +716,7 @@
                         return e && void 0 !== this.props.subscribedButtonType ? this.props.subscribedButtonType : e ? T.F.Success : this.props.unsubscribedButtonType || T.F.Default
                     }, n.prototype.getButtonIcon = function(e, n) {
                         var t = void 0;
-                        return e ? t = n === y.a.Prime ? T.tb.Crown : T.tb.Star : this.props.forceIcon && (t = T.tb.StarHollow), t
+                        return e ? t = n === y.a.Prime ? T.ub.Crown : T.ub.Star : this.props.forceIcon && (t = T.ub.StarHollow), t
                     }, n.prototype.isUserDataReady = function(e) {
                         return e.data && e.data.user && !e.data.loading && !e.data.error
                     }, n.prototype.checkAndDisplaySubscriptionCheckout = function() {
@@ -790,15 +791,15 @@
                 }(a.Component);
             var x = Object(r.connect)(function(e) {
                 return {
-                    authToken: Object(u.a)(e),
-                    sessionUser: Object(u.e)(e)
+                    authToken: Object(c.a)(e),
+                    sessionUser: Object(c.e)(e)
                 }
             }, function(e) {
                 return Object(o.bindActionCreators)({
                     showLoginModal: Object(l.f)(d.a.ChannelSubscriptionButton),
                     showSubscriptionCheckoutModal: function(e) {
                         var n = i.__rest(e, []);
-                        return Object(c.d)(s.a, {
+                        return Object(u.d)(s.a, {
                             component: "CheckoutModal",
                             loader: function() {
                                 return Promise.all([t.e(0), t.e(212)]).then(t.bind(null, "KJv/"))
@@ -813,7 +814,7 @@
             }), t.d(n, "a", function() {
                 return x
             }), t.d(n, !1, function() {
-                return F
+                return E
             }), t.d(n, !1, function() {
                 return D
             }), t.d(n, !1, function() {
@@ -1574,9 +1575,9 @@
             }), t.d(n, "a", function() {
                 return l
             }), t.d(n, "e", function() {
-                return c
-            }), t.d(n, "f", function() {
                 return u
+            }), t.d(n, "f", function() {
+                return c
             });
             var i = t("/7QA"),
                 a = t("y5D0"),
@@ -1586,16 +1587,16 @@
                 l = "SUB_CHECKOUT__GIFTING_ANONYMOUSLY",
                 d = [r, o, s, l];
 
-            function c() {
+            function u() {
                 d.forEach(function(e) {
                     return i.n.remove(e)
                 })
             }
 
-            function u(e) {
+            function c(e) {
                 return function() {
                     return Object(a.e)(e, {
-                        onClose: c
+                        onClose: u
                     })
                 }
             }
@@ -1618,8 +1619,8 @@
                 s = t("eJ65"),
                 l = t("EdhP"),
                 d = t("+GjP"),
-                c = t("Ue10"),
-                u = function(e) {
+                u = t("Ue10"),
+                c = function(e) {
                     var n = Object(d.e)("https://www.twitch.tv/" + e.login, {
                             tt_medium: "live_embed",
                             tt_content: "text_link"
@@ -1627,7 +1628,7 @@
                         t = Object(a.d)("Watch live video from {displayName} on www.twitch.tv", {
                             displayName: e.displayName || e.login
                         }, "ChannelShareButton"),
-                        u = Object(l.b)({
+                        c = Object(l.b)({
                             channel: e.login
                         }, {
                             textLink: {
@@ -1644,23 +1645,23 @@
                             allowFullscreen: !1,
                             allowScrolling: !1
                         });
-                    return i.createElement(s.a, null, i.createElement(c.z, {
-                        type: c.F.Hollow,
+                    return i.createElement(s.a, null, i.createElement(u.z, {
+                        type: u.F.Hollow,
                         "data-a-target": "share-button",
-                        icon: c.tb.Share
-                    }, Object(a.d)("Share", "ChannelShareButton")), i.createElement(c.u, {
-                        direction: c.v.TopRight,
-                        size: c.w.Small,
+                        icon: u.ub.Share
+                    }, Object(a.d)("Share", "ChannelShareButton")), i.createElement(u.u, {
+                        direction: u.v.TopRight,
+                        size: u.w.Small,
                         "data-a-target": "share-balloon"
-                    }, i.createElement(c.Xa, {
+                    }, i.createElement(u.Ya, {
                         padding: 1
-                    }, i.createElement(c.Xa, {
+                    }, i.createElement(u.Ya, {
                         padding: {
                             top: 1,
                             bottom: 1
                         },
-                        display: c.X.Flex,
-                        justifyContent: c.Wa.Between
+                        display: u.X.Flex,
+                        justifyContent: u.Xa.Between
                     }, i.createElement(o.a, {
                         type: o.b.Twitter,
                         text: e.title,
@@ -1678,22 +1679,22 @@
                     }), i.createElement(o.a, {
                         type: o.b.Copy,
                         "data-a-target": "copy-link-share-button"
-                    })), i.createElement(c.Xa, null, i.createElement(c.Xa, {
+                    })), i.createElement(u.Ya, null, i.createElement(u.Ya, {
                         padding: {
                             top: 1
                         }
-                    }, i.createElement(c.W, null, Object(a.d)("Embed Channel", "ChannelShareButton")), i.createElement(r.a, {
-                        value: u
-                    })), i.createElement(c.Xa, {
+                    }, i.createElement(u.W, null, Object(a.d)("Embed Channel", "ChannelShareButton")), i.createElement(r.a, {
+                        value: c
+                    })), i.createElement(u.Ya, {
                         padding: {
                             top: 1
                         }
-                    }, i.createElement(c.W, null, Object(a.d)("Embed Chat", "ChannelShareButton")), i.createElement(r.a, {
+                    }, i.createElement(u.W, null, Object(a.d)("Embed Chat", "ChannelShareButton")), i.createElement(r.a, {
                         value: p
                     }))))))
                 };
             t.d(n, "a", function() {
-                return u
+                return c
             })
         },
         a7aT: function(e, n, t) {},
@@ -1730,7 +1731,7 @@
 
             function d(e) {
                 return i.__awaiter(this, void 0, void 0, function() {
-                    var n, t, l, d, c, u, m, p, v, g, b, k, h;
+                    var n, t, l, d, u, c, m, p, v, g, b, k, h;
                     return i.__generator(this, function(i) {
                         switch (i.label) {
                             case 0:
@@ -1746,15 +1747,15 @@
                             case 2:
                                 return d = i.sent(), [3, 4];
                             case 3:
-                                return c = i.sent(), a.k.error(c, "Failed to make query for channel info in FollowEvent reporting.", {
+                                return u = i.sent(), a.k.error(u, "Failed to make query for channel info in FollowEvent reporting.", {
                                     channelID: e.channelID
                                 }), [3, 4];
                             case 4:
-                                return u = d && d.data && d.data.user || null, d && !u && a.k.error(new Error("GraphQL empty response"), "Query for channel info in SubEvent reporting returned no data.", {
+                                return c = d && d.data && d.data.user || null, d && !c && a.k.error(new Error("GraphQL empty response"), "Query for channel info in SubEvent reporting returned no data.", {
                                     channelID: e.channelID
                                 }), m = null, d && t && ((p = d && d.data && d.data.video) ? m = Object(o.a)(p.broadcastType) : a.k.error(new Error("GraphQL empty response"), "Query for video info in SubEvent reporting returned no data.", {
                                     currentVideoID: n
-                                })), v = u && u.self, g = v ? !!v.subscriptionBenefit : null, b = v && v.subscriptionBenefit && v.subscriptionBenefit.purchasedWithPrime || !1, k = v ? v.canPrimeSubscribe : null, h = {
+                                })), v = c && c.self, g = v ? !!v.subscriptionBenefit : null, b = v && v.subscriptionBenefit && v.subscriptionBenefit.purchasedWithPrime || !1, k = v ? v.canPrimeSubscribe : null, h = {
                                     action: e.action,
                                     can_subscribe: k,
                                     channel: e.channelLogin,
@@ -1772,7 +1773,7 @@
                                     modal: e.modal,
                                     modal_level: e.modalLevel || "",
                                     show_prime_content: e.showPrimeContent,
-                                    show_resub: u ? k && b : null,
+                                    show_resub: c ? k && b : null,
                                     vod_id: n,
                                     vod_type: m,
                                     viewport_height: window.innerHeight,
@@ -1789,11 +1790,11 @@
                 a = t("kduP"),
                 r = t("Ue10"),
                 o = function(e) {
-                    return i.createElement(r.Pa, {
+                    return i.createElement(r.Qa, {
                         margin: {
                             right: 1
                         },
-                        overflow: r.cb.Hidden,
+                        overflow: r.db.Hidden,
                         flexShrink: 0
                     }, i.createElement(r.U, {
                         to: {
@@ -1825,8 +1826,8 @@
                 s = t("2xye"),
                 l = t("GnwI"),
                 d = t("mrSG"),
-                c = t("9C/b"),
-                u = t("/7QA"),
+                u = t("9C/b"),
+                c = t("/7QA"),
                 m = t("ZDlU"),
                 p = t("LA8z"),
                 v = t("4VQm"),
@@ -1836,7 +1837,7 @@
                 h = function(e) {
                     var n = e.member,
                         t = null;
-                    n.live && (t = i.createElement(k.Xa, {
+                    n.live && (t = i.createElement(k.Ya, {
                         margin: {
                             right: .5
                         }
@@ -1844,11 +1845,11 @@
                         status: k.M.Live
                     })));
                     var a = null;
-                    n.live && (a = i.createElement(k.Xa, null, i.createElement(k.W, {
+                    n.live && (a = i.createElement(k.Ya, null, i.createElement(k.W, {
                         color: k.O.Alt2
-                    }, Object(u.f)(n.viewersCount))));
-                    return i.createElement(k.Ua, {
-                        type: k.Va.Alpha,
+                    }, Object(c.f)(n.viewersCount))));
+                    return i.createElement(k.Va, {
+                        type: k.Wa.Alpha,
                         onClick: function() {
                             e.onClick({
                                 userID: n.userID,
@@ -1857,7 +1858,7 @@
                             })
                         },
                         selected: e.isSelected
-                    }, i.createElement(k.Eb, {
+                    }, i.createElement(k.Fb, {
                         display: k.X.Flex,
                         alignItems: k.f.Center,
                         padding: {
@@ -1868,17 +1869,17 @@
                         alt: n.displayName,
                         size: 30,
                         src: n.profileImageURL
-                    }), i.createElement(k.Xa, {
+                    }), i.createElement(k.Ya, {
                         flexGrow: 1,
                         flexShrink: 1,
-                        overflow: k.cb.Hidden,
+                        overflow: k.db.Hidden,
                         margin: {
                             left: 1
                         }
                     }, i.createElement(k.W, {
                         ellipsis: !0,
                         fontSize: k.Ca.Size5
-                    }, n.displayName)), i.createElement(k.Xa, {
+                    }, n.displayName)), i.createElement(k.Ya, {
                         display: k.X.Flex
                     }, t, a)))
                 },
@@ -1924,14 +1925,14 @@
                                     l = r.login,
                                     d = r.stream;
                                 if (o && s && l && d) {
-                                    var c = d.viewersCount || 0,
-                                        u = r.profileImageURL || "";
+                                    var u = d.viewersCount || 0,
+                                        c = r.profileImageURL || "";
                                     e.has(o) || (e.add(o), n.push({
                                         userID: o,
                                         displayName: s,
                                         live: !0,
-                                        viewersCount: c,
-                                        profileImageURL: u,
+                                        viewersCount: u,
+                                        profileImageURL: c,
                                         login: l
                                     }))
                                 }
@@ -2001,8 +2002,8 @@
                     }
                 },
                 w = t("xU3t"),
-                E = (t("J/U3"), ["scroll", "wheel", "mousewheel", "DOMMouseScroll", "keyup", "mousedown"]),
-                F = 10,
+                F = (t("J/U3"), ["scroll", "wheel", "mousewheel", "DOMMouseScroll", "keyup", "mousedown"]),
+                E = 10,
                 I = function(e) {
                     function n() {
                         var n = null !== e && e.apply(this, arguments) || this;
@@ -2018,7 +2019,7 @@
                                 showBackToTop: !1
                             }))
                         }, n.handleScrollEvent = function(e) {
-                            n.scroll && n.scroll.scrollContent && (e.which > 0 || "mousedown" === e.type || "mousewheel" === e.type || "wheel" === e.type) && (n.scroll.scrollContent.scrollHeight - n.scroll.scrollContent.scrollTop <= n.scroll.scrollContent.scrollHeight - F ? n.setState({
+                            n.scroll && n.scroll.scrollContent && (e.which > 0 || "mousedown" === e.type || "mousewheel" === e.type || "wheel" === e.type) && (n.scroll.scrollContent.scrollHeight - n.scroll.scrollContent.scrollTop <= n.scroll.scrollContent.scrollHeight - E ? n.setState({
                                 showBackToTop: !0
                             }) : n.setState({
                                 showBackToTop: !1
@@ -2029,17 +2030,17 @@
                     }
                     return d.__extends(n, e), n.prototype.componentDidMount = function() {
                         var e = this;
-                        E.forEach(function(n) {
+                        F.forEach(function(n) {
                             e.scroll && e.scroll.scrollContent && e.scroll.scrollContent.addEventListener(n, e.handleScrollEvent)
                         }), this.props.latencyTracking.reportInteractive()
                     }, n.prototype.componentWillUnmount = function() {
                         var e = this;
-                        E.forEach(function(n) {
+                        F.forEach(function(n) {
                             e.scroll && e.scroll.scrollContent && e.scroll.scrollContent.removeEventListener(n, e.handleScrollEvent)
                         })
                     }, n.prototype.componentDidUpdate = function() {
                         var e = this;
-                        E.forEach(function(n) {
+                        F.forEach(function(n) {
                             e.scroll && e.scroll.scrollContent && e.scroll.scrollContent.addEventListener(n, e.handleScrollEvent)
                         })
                     }, n.prototype.render = function() {
@@ -2054,7 +2055,7 @@
                                     key: n.userID
                                 })
                             }),
-                            t = i.createElement(k.Eb, {
+                            t = i.createElement(k.Fb, {
                                 className: "member-list__scrollable-container",
                                 display: k.X.Flex,
                                 flexDirection: k.Aa.Column,
@@ -2062,7 +2063,7 @@
                                 elevation: 1
                             }, i.createElement(v.b, {
                                 scrollRef: this.saveScrollRef
-                            }, i.createElement(k.Xa, null, n, i.createElement("div", {
+                            }, i.createElement(k.Ya, null, n, i.createElement("div", {
                                 style: {
                                     height: "2em "
                                 }
@@ -2070,59 +2071,59 @@
                                 loadMore: this.props.loadMore,
                                 enabled: this.props.data.infiniteScrollEnabled,
                                 contentLength: this.props.data.numLoaded
-                            }))), i.createElement(k.Xa, {
+                            }))), i.createElement(k.Ya, {
                                 className: "member-list__back-to-top-placeholder",
-                                position: k.jb.Relative
+                                position: k.kb.Relative
                             }, this.backToTop()));
-                        return 0 === this.props.data.total && (t = i.createElement(k.Eb, {
+                        return 0 === this.props.data.total && (t = i.createElement(k.Fb, {
                             className: "member-list__scrollable-container",
                             display: k.X.Flex,
                             flexDirection: k.Aa.Column,
                             background: k.r.Base,
                             elevation: 1,
-                            justifyContent: k.Wa.Center,
+                            justifyContent: k.Xa.Center,
                             alignItems: k.f.Center
                         }, i.createElement(k.S, {
                             src: "https://static-cdn.jtvnw.net/emoticons/v1/112291/2.0",
-                            alt: Object(u.d)("No team members", "TeamLandingPage_MemberList")
+                            alt: Object(c.d)("No team members", "TeamLandingPage_MemberList")
                         }), i.createElement(k.W, {
                             color: k.O.Alt2,
                             fontSize: k.Ca.Size6
-                        }, Object(u.d)("No team members to display", "TeamLandingPage_MemberList")))), i.createElement(k.Xa, {
+                        }, Object(c.d)("No team members to display", "TeamLandingPage_MemberList")))), i.createElement(k.Ya, {
                             display: k.X.Flex,
                             flexDirection: k.Aa.Column
-                        }, i.createElement(k.Xa, {
+                        }, i.createElement(k.Ya, {
                             display: k.X.Flex,
                             flexShrink: 0,
                             alignItems: k.f.Center,
                             margin: {
                                 bottom: 1
                             }
-                        }, i.createElement(k.Xa, {
+                        }, i.createElement(k.Ya, {
                             flexGrow: 1,
                             flexShrink: 1
                         }, i.createElement(k.W, {
                             bold: !0,
                             fontSize: k.Ca.Size4
-                        }, Object(u.d)("Team Members", "TeamLandingPage_MemberList"))), i.createElement(k.W, {
+                        }, Object(c.d)("Team Members", "TeamLandingPage_MemberList"))), i.createElement(k.W, {
                             color: k.O.Alt2
-                        }, Object(u.f)(this.props.data.total))), t)
+                        }, Object(c.f)(this.props.data.total))), t)
                     }, n.prototype.backToTop = function() {
                         return this.state.showBackToTop ? i.createElement(k.i, {
                             type: k.n.FadeIn,
                             enabled: !0
-                        }, i.createElement(k.Pa, {
+                        }, i.createElement(k.Qa, {
                             display: k.X.Flex,
-                            justifyContent: k.Wa.Center,
+                            justifyContent: k.Xa.Center,
                             alignItems: k.f.Center,
-                            position: k.jb.Absolute,
+                            position: k.kb.Absolute,
                             padding: .5,
                             attachBottom: !0,
                             fullWidth: !0
                         }, i.createElement("div", {
                             className: "member-list__back-to-top",
                             onClick: this.scrollToTop
-                        }, Object(u.d)("Back to Top", "TeamLandingPage_MemberList")))) : null
+                        }, Object(c.d)("Back to Top", "TeamLandingPage_MemberList")))) : null
                     }, n
                 }(i.Component),
                 T = Object(a.compose)(Object(l.b)("MemberList"), Object(g.a)(w, {
@@ -2194,19 +2195,19 @@
                 B = Object(a.compose)(Object(l.b)("TeamsDescription", {
                     autoReportInteractive: !0
                 }))(function(e) {
-                    return e.description ? i.createElement(k.Xa, {
+                    return e.description ? i.createElement(k.Ya, {
                         margin: {
                             top: 2
                         }
                     }, i.createElement(k.W, {
                         bold: !0,
                         fontSize: k.Ca.Size4
-                    }, e.displayName), i.createElement(k.Eb, {
+                    }, e.displayName), i.createElement(k.Fb, {
                         color: k.O.Alt2,
                         margin: {
                             top: 1
                         }
-                    }, i.createElement(k.ec, null, i.createElement(L, {
+                    }, i.createElement(k.fc, null, i.createElement(L, {
                         source: e.description
                     })))) : null
                 }),
@@ -2216,12 +2217,12 @@
                 x = t("/aPz"),
                 P = t("ZLqn"),
                 U = t("eAAt"),
-                j = t("0EKw"),
-                A = t("5goO"),
+                A = t("0EKw"),
+                j = t("5goO"),
                 R = t("QjI3"),
                 V = t("eFQ3"),
-                X = t("6J1Z"),
-                G = function(e) {
+                G = t("6J1Z"),
+                W = function(e) {
                     function n() {
                         var n = null !== e && e.apply(this, arguments) || this;
                         return n.getGame = function() {
@@ -2231,7 +2232,7 @@
                             if (e && e.broadcastSettings && e.broadcastSettings.title) return e.broadcastSettings.title
                         }, n.renderGame = function() {
                             var e = n.getGame();
-                            return e && e.name ? i.createElement(j.a, {
+                            return e && e.name ? i.createElement(A.a, {
                                 name: e.name
                             }) : null
                         }, n.renderGameBoxArt = function() {
@@ -2245,17 +2246,17 @@
                             }) : null
                         }, n.renderTeam = function() {
                             var e = n.props.data.user;
-                            return e && e.primaryTeam ? i.createElement(A.a, {
+                            return e && e.primaryTeam ? i.createElement(j.a, {
                                 name: e.primaryTeam.name,
                                 displayName: e.primaryTeam.displayName
                             }) : null
                         }, n.renderUserIcon = function() {
                             var e = n.props.data.user;
-                            return e ? i.createElement(k.Xa, {
+                            return e ? i.createElement(k.Ya, {
                                 margin: {
                                     right: 1
                                 },
-                                overflow: k.cb.Hidden,
+                                overflow: k.db.Hidden,
                                 flexShrink: 0
                             }, i.createElement(k.I, {
                                 src: e.profileImageURL || "",
@@ -2268,7 +2269,7 @@
                     return d.__extends(n, e), n.prototype.componentDidMount = function() {
                         this.props.latencyTracking.reportInteractive()
                     }, n.prototype.render = function() {
-                        return i.createElement(k.Eb, {
+                        return i.createElement(k.Fb, {
                             className: "teams-player",
                             background: k.r.Base,
                             elevation: 1,
@@ -2284,17 +2285,17 @@
                     }, n.prototype.renderTopBar = function() {
                         var e = this.props.data.user;
                         if (!e || !e.id) return null;
-                        var n = Object(u.f)(e.stream && e.stream.viewersCount ? e.stream.viewersCount : 0);
-                        return i.createElement(k.Eb, {
+                        var n = Object(c.f)(e.stream && e.stream.viewersCount ? e.stream.viewersCount : 0);
+                        return i.createElement(k.Fb, {
                             display: k.X.Flex,
                             flexWrap: k.Ba.Wrap,
-                            justifyContent: k.Wa.Between,
+                            justifyContent: k.Xa.Between,
                             padding: 1
                         }, i.createElement(k.G, {
                             row: !0
                         }, this.renderUserIcon(), i.createElement(k.H, {
-                            overflow: k.cb.Hidden
-                        }, e.displayName && i.createElement(k.Xa, {
+                            overflow: k.db.Hidden
+                        }, e.displayName && i.createElement(k.Ya, {
                             margin: {
                                 bottom: .5
                             },
@@ -2302,59 +2303,59 @@
                         }, i.createElement(k.U, {
                             to: "/" + this.props.channelLogin
                         }, i.createElement(k.W, {
-                            type: k.Vb.Span,
+                            type: k.Wb.Span,
                             fontSize: k.Ca.Size4,
                             title: e.displayName
-                        }, e.displayName))), i.createElement(k.Eb, {
+                        }, e.displayName))), i.createElement(k.Fb, {
                             display: k.X.Flex,
                             flexWrap: k.Ba.Wrap,
                             color: k.O.Alt2
-                        }, e.stream && e.stream.id && i.createElement(k.Eb, {
+                        }, e.stream && e.stream.id && i.createElement(k.Fb, {
                             color: k.O.Live,
                             display: k.X.InlineFlex,
                             margin: {
                                 right: 1
                             }
-                        }, i.createElement(k.Db, {
+                        }, i.createElement(k.Eb, {
                             value: n,
-                            label: Object(u.d)("Watching Now", "TeamPlayer"),
-                            icon: k.tb.GlyphLive,
+                            label: Object(c.d)("Watching Now", "TeamPlayer"),
+                            icon: k.ub.GlyphLive,
                             "data-a-target": "channel-viewers-count"
-                        })), i.createElement(k.Xa, {
+                        })), i.createElement(k.Ya, {
                             margin: {
                                 right: 1
                             },
                             display: k.X.Flex
-                        }, i.createElement(k.Db, {
-                            value: Object(u.d)("{followerCount, number}", {
+                        }, i.createElement(k.Eb, {
+                            value: Object(c.d)("{followerCount, number}", {
                                 followerCount: e.followers && e.followers.totalCount ? e.followers.totalCount : 0
                             }, "TeamPlayer"),
-                            label: Object(u.d)("Followers", "TeamPlayer"),
-                            icon: k.tb.GlyphFollowers
-                        })), i.createElement(k.Xa, {
+                            label: Object(c.d)("Followers", "TeamPlayer"),
+                            icon: k.ub.GlyphFollowers
+                        })), i.createElement(k.Ya, {
                             display: k.X.Flex
-                        }, i.createElement(k.Db, {
-                            value: Object(u.d)("{channelCount, number}", {
+                        }, i.createElement(k.Eb, {
+                            value: Object(c.d)("{channelCount, number}", {
                                 channelCount: e.profileViewCount || 0
                             }, "TeamPlayer"),
-                            label: Object(u.d)("Total Views", "TeamPlayer"),
-                            icon: k.tb.GlyphViews
-                        }))))), i.createElement(k.Xa, {
+                            label: Object(c.d)("Total Views", "TeamPlayer"),
+                            icon: k.ub.GlyphViews
+                        }))))), i.createElement(k.Ya, {
                             display: k.X.Flex,
                             alignItems: k.f.Center
                         }, e.description && i.createElement(D.a, null, i.createElement(k.z, {
                             type: k.F.Hollow
-                        }, Object(u.d)("Info", "Team Player")), i.createElement(k.u, {
+                        }, Object(c.d)("Info", "Team Player")), i.createElement(k.u, {
                             size: k.w.Medium,
                             direction: k.v.BottomRight
-                        }, i.createElement(k.Xa, {
-                            zIndex: k.ic.Above,
+                        }, i.createElement(k.Ya, {
+                            zIndex: k.jc.Above,
                             padding: 1
                         }, i.createElement(k.W, {
-                            type: k.Vb.Span,
+                            type: k.Wb.Span,
                             fontSize: k.Ca.Size6,
                             color: k.O.Alt2
-                        }, e.description)))), i.createElement(k.Xa, {
+                        }, e.description)))), i.createElement(k.Ya, {
                             padding: {
                                 left: 1
                             }
@@ -2363,36 +2364,36 @@
                         }))))
                     }, n.prototype.renderBottomBar = function() {
                         var e = this.getTitle();
-                        return i.createElement(k.Eb, {
+                        return i.createElement(k.Fb, {
                             alignItems: k.f.Center,
                             display: k.X.Flex,
                             flexWrap: k.Ba.NoWrap,
-                            justifyContent: k.Wa.Between,
+                            justifyContent: k.Xa.Between,
                             padding: 1
-                        }, i.createElement(k.Xa, {
-                            overflow: k.cb.Hidden
+                        }, i.createElement(k.Ya, {
+                            overflow: k.db.Hidden
                         }, i.createElement(k.G, {
                             row: !0
                         }, this.renderGameBoxArt(), i.createElement(k.H, {
-                            overflow: k.cb.Hidden
-                        }, i.createElement(k.Xa, {
+                            overflow: k.db.Hidden
+                        }, i.createElement(k.Ya, {
                             margin: {
                                 bottom: .5
                             },
                             ellipsis: !0
                         }, i.createElement(k.W, {
-                            type: k.Vb.Span,
+                            type: k.Wb.Span,
                             fontSize: k.Ca.Size4,
                             title: e
-                        }, e)), i.createElement(k.Xa, {
+                        }, e)), i.createElement(k.Ya, {
                             display: k.X.Flex,
                             flexWrap: k.Ba.Wrap
-                        }, this.renderGame(), this.renderTeam())))), i.createElement(k.Xa, {
+                        }, this.renderGame(), this.renderTeam())))), i.createElement(k.Ya, {
                             className: "teams-player__action-container",
                             display: k.X.Flex,
                             alignItems: k.f.Center,
-                            justifyContent: k.Wa.End
-                        }, i.createElement(k.Xa, {
+                            justifyContent: k.Xa.End
+                        }, i.createElement(k.Ya, {
                             display: k.X.Flex,
                             margin: {
                                 x: 1
@@ -2404,7 +2405,7 @@
                         }))))
                     }, n
                 }(i.Component),
-                W = Object(a.compose)(Object(l.b)("TeamsPlayer"), Object(g.a)(X, {
+                z = Object(a.compose)(Object(l.b)("TeamsPlayer"), Object(g.a)(G, {
                     options: function(e) {
                         return {
                             variables: {
@@ -2414,7 +2415,7 @@
                     }
                 }), Object(M.a)(function(e) {
                     return {
-                        query: X,
+                        query: G,
                         topic: e.data.user && e.data.user.id ? Object(x.e)(e.data.user.id) : "",
                         skip: !(!e.data.loading && !e.data.error && e.data.user),
                         variables: {
@@ -2425,13 +2426,13 @@
                             return n.user && n.user.broadcastSettings && n.user.broadcastSettings.id && (n.user.broadcastSettings.title = e.status || e.old_status), n
                         }
                     }
-                }))(G),
-                z = t("ST9J");
+                }))(W),
+                q = t("ST9J");
             t("GTf2");
             ! function(e) {
                 e.LogoImage = "teamspagebody-logo", e.BannerImage = "teamspagebody-banner", e.BackgroundImage = "teamspagebody-background"
             }(S || (S = {}));
-            var q = function(e) {
+            var Y = function(e) {
                     function n() {
                         var n = null !== e && e.apply(this, arguments) || this;
                         return n.state = {}, n.changeSelectedMember = function(e) {
@@ -2447,7 +2448,7 @@
                     }, n.prototype.render = function() {
                         if (!this.props.data.loading) {
                             if (this.props.data.error) return i.createElement(m.a, {
-                                message: Object(u.d)("An error occurred on this page", "TeamsPageBody")
+                                message: Object(c.d)("An error occurred on this page", "TeamsPageBody")
                             });
                             if (!this.props.data.team || !this.props.data.team.id) return i.createElement(p.a, null)
                         }
@@ -2455,21 +2456,21 @@
                             className: "teams-page-body__outer-container teams-page-body__team-asset",
                             style: this.getBackgroundStyle(),
                             "data-test-selector": S.BackgroundImage
-                        }, i.createElement(v.b, null, i.createElement(k.Xa, {
+                        }, i.createElement(v.b, null, i.createElement(k.Ya, {
                             display: k.X.Flex,
-                            justifyContent: k.Wa.Center,
+                            justifyContent: k.Xa.Center,
                             padding: {
                                 top: 3,
                                 left: 3,
                                 right: 3
                             }
-                        }, i.createElement(k.Eb, {
+                        }, i.createElement(k.Fb, {
                             className: "teams-page-body__inner-container",
                             background: k.r.Alt2,
                             display: k.X.Flex,
                             padding: 2,
                             fullHeight: !0
-                        }, i.createElement(k.Xa, {
+                        }, i.createElement(k.Ya, {
                             className: "teams-page-body__column--left",
                             display: k.X.Flex,
                             flexDirection: k.Aa.Column,
@@ -2479,7 +2480,7 @@
                         }, this.renderLogo(), i.createElement(T, {
                             teamName: this.props.teamName,
                             onMemberItemClick: this.changeSelectedMember
-                        })), i.createElement(k.Xa, {
+                        })), i.createElement(k.Ya, {
                             className: "teams-page-body__column--right"
                         }, this.renderBanner(), this.renderPlayer(), this.renderTeamDescription())))))
                     }, n.prototype.getBackgroundStyle = function() {
@@ -2518,7 +2519,7 @@
                         })
                     }, n.prototype.renderPlayer = function() {
                         var e = this.getPlayerLogin();
-                        return e ? i.createElement(W, {
+                        return e ? i.createElement(z, {
                             channelLogin: e
                         }) : null
                     }, n.prototype.getPlayerLogin = function() {
@@ -2537,7 +2538,7 @@
                         }(e) : ""
                     }, n
                 }(i.Component),
-                H = Object(a.compose)(c.a, Object(l.b)("TeamsPageBody"), Object(g.a)(z, {
+                X = Object(a.compose)(u.a, Object(l.b)("TeamsPageBody"), Object(g.a)(q, {
                     options: function(e) {
                         return {
                             variables: {
@@ -2545,32 +2546,32 @@
                             }
                         }
                     }
-                }))(q),
-                Q = t("Gw3k"),
-                K = function(e) {
-                    return i.createElement(k.Xa, {
+                }))(Y),
+                H = t("Gw3k"),
+                Q = function(e) {
+                    return i.createElement(k.Ya, {
                         display: k.X.Flex,
                         flexDirection: k.Aa.Column,
                         flexWrap: k.Ba.NoWrap,
                         fullHeight: !0
-                    }, i.createElement(Q.a, null), i.createElement(k.Xa, {
+                    }, i.createElement(H.a, null), i.createElement(k.Ya, {
                         flexGrow: 1,
                         display: k.X.Flex,
                         fullHeight: !0
                     }, e.children))
                 },
-                $ = Object(a.compose)(Object(l.b)("TeamsLandingPage", {
+                K = Object(a.compose)(Object(l.b)("TeamsLandingPage", {
                     destination: o.a.TeamsLandingPage,
                     autoReportInteractive: !0
                 }), Object(r.a)({
                     location: s.PageviewLocation.TeamsLandingPage
                 }))(function(e) {
-                    return i.createElement(K, null, i.createElement(H, {
+                    return i.createElement(Q, null, i.createElement(X, {
                         teamName: e.match.params.teamName
                     }))
                 });
             t.d(n, "TeamsLandingPage", function() {
-                return $
+                return K
             })
         },
         jeZI: function(e, n, t) {},
@@ -2581,9 +2582,9 @@
             }), t.d(n, "c", function() {
                 return d
             }), t.d(n, "b", function() {
-                return c
-            }), t.d(n, "d", function() {
                 return u
+            }), t.d(n, "d", function() {
+                return c
             });
             var i = t("+GjP"),
                 a = "https://www.facebook.com/sharer/sharer.php",
@@ -2604,14 +2605,14 @@
                 })
             }
 
-            function c(e, n) {
+            function u(e, n) {
                 return Object(i.e)(o, {
                     url: e,
                     title: n
                 })
             }
 
-            function u(e) {
+            function c(e) {
                 return Object(i.e)(s, {
                     url: e
                 })
@@ -2648,7 +2649,7 @@
             t.d(n, "b", function() {
                 return i
             }), t.d(n, "a", function() {
-                return c
+                return u
             });
             var i, a = t("mrSG"),
                 r = t("q1tI"),
@@ -2660,7 +2661,7 @@
             ! function(e) {
                 e[e.Twitter = 0] = "Twitter", e[e.Reddit = 1] = "Reddit", e[e.VKontakte = 2] = "VKontakte", e[e.Facebook = 3] = "Facebook", e[e.Copy = 4] = "Copy", e[e.CopyInput = 5] = "CopyInput", e[e.Download = 6] = "Download"
             }(i || (i = {}));
-            var c = function(e) {
+            var u = function(e) {
                 function n(n) {
                     var t = e.call(this, n) || this;
                     return t.renderLink = function() {
@@ -2670,18 +2671,18 @@
                             target: "_blank",
                             className: e,
                             onClick: t.onShareClickHandler
-                        }, Object(d.jc)(t.props), {
+                        }, Object(d.kc)(t.props), {
                             download: t.props.text
                         }), t.renderIcon()) : t.isLink() ? r.createElement("a", a.__assign({
                             href: t.getLinkTarget(),
                             target: "_blank",
                             className: e,
                             onClick: t.onShareClickHandler
-                        }, Object(d.jc)(t.props)), t.renderIcon()) : r.createElement("button", a.__assign({
+                        }, Object(d.kc)(t.props)), t.renderIcon()) : r.createElement("button", a.__assign({
                             onClick: t.copyPageUrl,
                             onMouseLeave: t.clearIsCopiedStatus,
                             className: e
-                        }, Object(d.jc)(t.props)), t.renderIcon())
+                        }, Object(d.kc)(t.props)), t.renderIcon())
                     }, t.onShareClickHandler = function() {
                         t.props.onShareClick && t.props.onShareClick(t.props.type)
                     }, t.clearIsCopiedStatus = function() {
@@ -2696,12 +2697,12 @@
                         })
                     }, t.renderIcon = function() {
                         var e = t.getAssetFromType();
-                        return r.createElement(d.Xa, {
+                        return r.createElement(d.Ya, {
                             className: "social-button__icon " + t.addSocialClassModifier("social-button__icon"),
                             display: d.X.Flex,
                             alignItems: d.f.Center,
-                            justifyContent: d.Wa.Center
-                        }, r.createElement(d.sb, {
+                            justifyContent: d.Xa.Center
+                        }, r.createElement(d.tb, {
                             asset: e
                         }))
                     }, t.isLink = function() {
@@ -2726,18 +2727,18 @@
                     }, t.getAssetFromType = function() {
                         switch (t.props.type) {
                             case i.Twitter:
-                                return d.tb.Twitter;
+                                return d.ub.Twitter;
                             case i.Facebook:
-                                return d.tb.Facebook;
+                                return d.ub.Facebook;
                             case i.VKontakte:
-                                return d.tb.VKontakte;
+                                return d.ub.VKontakte;
                             case i.Reddit:
-                                return d.tb.Reddit;
+                                return d.ub.Reddit;
                             case i.Download:
-                                return d.tb.Download;
+                                return d.ub.Download;
                             case i.Copy:
                             default:
-                                return d.tb.Copy
+                                return d.ub.Copy
                         }
                     }, t.addSocialClassModifier = function(e) {
                         switch (t.props.type) {
@@ -2779,11 +2780,11 @@
                     }, t
                 }
                 return a.__extends(n, e), n.prototype.render = function() {
-                    return r.createElement(d.Xa, {
+                    return r.createElement(d.Ya, {
                         className: "social-button"
-                    }, r.createElement(d.Yb, {
+                    }, r.createElement(d.Zb, {
                         label: this.getTooltipFromType(),
-                        direction: d.ac.Bottom
+                        direction: d.bc.Bottom
                     }, this.renderLink()))
                 }, n
             }(r.Component)
@@ -3682,32 +3683,32 @@
                 a = t("q1tI"),
                 r = t("Ue10"),
                 o = function(e) {
-                    return a.createElement(r.Xa, {
+                    return a.createElement(r.Ya, {
                         margin: {
                             right: 1
                         },
                         display: r.X.Flex,
                         alignItems: r.f.Center
-                    }, a.createElement(r.Yb, {
-                        align: r.Zb.Left,
+                    }, a.createElement(r.Zb, {
+                        align: r.ac.Left,
                         label: e.tooltip,
-                        direction: r.ac.Bottom
-                    }, a.createElement(r.Xa, {
+                        direction: r.bc.Bottom
+                    }, a.createElement(r.Ya, {
                         margin: {
                             right: .5
                         }
-                    }, a.createElement(r.Eb, {
+                    }, a.createElement(r.Fb, {
                         display: r.X.Flex,
                         alignItems: r.f.Center,
                         color: r.O.Alt2
-                    }, a.createElement(r.sb, {
+                    }, a.createElement(r.tb, {
                         asset: e.svgAsset
                     }))), a.createElement(r.W, {
                         fontSize: r.Ca.Size5,
                         ellipsis: !0
                     }, a.createElement(r.U, i.__assign({
                         to: e.linkTo
-                    }, Object(r.jc)(e), {
+                    }, Object(r.kc)(e), {
                         targetBlank: e.targetBlank
                     }), e.title))))
                 };

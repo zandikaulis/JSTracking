@@ -60,9 +60,9 @@
                             className: "modal__content",
                             isOpen: this.props.isOpen,
                             ariaHideApp: !1
-                        }, n.createElement(s.Xa, {
+                        }, n.createElement(s.Ya, {
                             className: "multiview-modal"
-                        }, n.createElement(s.Eb, {
+                        }, n.createElement(s.Fb, {
                             className: "multiview-modal__content",
                             padding: 4,
                             margin: {
@@ -99,10 +99,10 @@
                             triggerModal: t.renderDeleteModal
                         }, t.renderBaseDeleteButton) : t.renderBaseDeleteButton(t.props.onDelete)
                     }, t.renderBaseDeleteButton = function(e) {
-                        return l.createElement(d.Ua, {
+                        return l.createElement(d.Va, {
                             onClick: e,
                             "data-test-selector": r.Delete
-                        }, l.createElement(d.Xa, {
+                        }, l.createElement(d.Ya, {
                             className: "more-balloon__balloon-item",
                             padding: {
                                 x: 1,
@@ -110,40 +110,40 @@
                             },
                             display: d.X.Flex,
                             alignItems: d.f.Center
-                        }, l.createElement(d.sb, {
-                            asset: d.tb.Trash,
-                            type: d.ub.Brand
-                        }), l.createElement(d.Xa, {
+                        }, l.createElement(d.tb, {
+                            asset: d.ub.Trash,
+                            type: d.vb.Brand
+                        }), l.createElement(d.Ya, {
                             margin: {
                                 left: 1
                             }
                         }, Object(o.e)("Delete", "MultiviewMoreBalloon"))))
                     }, t.renderDeleteModal = function(e) {
-                        if (t.props.deleteModalMessage) return l.createElement(d.Eb, {
+                        if (t.props.deleteModalMessage) return l.createElement(d.Fb, {
                             background: d.r.Base,
                             className: "multiview-more-balloon__delete-prompt",
                             elevation: 3
-                        }, l.createElement(d.Eb, {
+                        }, l.createElement(d.Fb, {
                             borderBottom: !0,
                             display: d.X.Flex,
-                            justifyContent: d.Wa.Center,
+                            justifyContent: d.Xa.Center,
                             padding: 2
                         }, l.createElement(d.W, {
                             bold: !0,
                             fontSize: d.Ca.Size4
-                        }, t.props.deleteModalMessage)), l.createElement(d.Eb, {
+                        }, t.props.deleteModalMessage)), l.createElement(d.Fb, {
                             background: d.r.Alt,
                             display: d.X.Flex,
-                            justifyContent: d.Wa.Center,
+                            justifyContent: d.Xa.Center,
                             padding: 2
-                        }, l.createElement(d.Xa, {
+                        }, l.createElement(d.Ya, {
                             margin: {
                                 right: .5
                             }
                         }, l.createElement(d.z, {
                             onClick: e,
                             type: d.F.Hollow
-                        }, Object(o.e)("Cancel", "MultiviewMoreBalloon"))), l.createElement(d.Xa, {
+                        }, Object(o.e)("Cancel", "MultiviewMoreBalloon"))), l.createElement(d.Ya, {
                             margin: {
                                 left: 1
                             }
@@ -158,20 +158,20 @@
                     }, t
                 }
                 return n.__extends(t, e), t.prototype.render = function() {
-                    return l.createElement(d.Xa, {
+                    return l.createElement(d.Ya, {
                         margin: {
                             right: .5
                         }
                     }, l.createElement(s.a, null, l.createElement(d.z, {
-                        icon: d.tb.More,
+                        icon: d.ub.More,
                         type: d.F.Text
                     }), l.createElement(d.u, {
                         direction: this.props.last ? d.v.TopRight : d.v.BottomRight,
                         tailOffset: 8
-                    }, this.props.onEdit && l.createElement(d.Ua, {
+                    }, this.props.onEdit && l.createElement(d.Va, {
                         onClick: this.props.onEdit,
                         "data-test-selector": r.Edit
-                    }, l.createElement(d.Xa, {
+                    }, l.createElement(d.Ya, {
                         className: "more-balloon__balloon-item",
                         padding: {
                             x: 1,
@@ -179,10 +179,10 @@
                         },
                         display: d.X.Flex,
                         alignItems: d.f.Center
-                    }, l.createElement(d.sb, {
-                        asset: d.tb.Edit,
-                        type: d.ub.Brand
-                    }), l.createElement(d.Xa, {
+                    }, l.createElement(d.tb, {
+                        asset: d.ub.Edit,
+                        type: d.vb.Brand
+                    }), l.createElement(d.Ya, {
                         margin: {
                             left: 1
                         }
@@ -289,7 +289,7 @@
                         var e = this.state.player;
                         return l.createElement(u.a, {
                             isOpen: !0
-                        }, l.createElement(m.Eb, {
+                        }, l.createElement(m.Fb, {
                             display: m.X.Flex,
                             padding: {
                                 bottom: 2
@@ -297,21 +297,21 @@
                             margin: {
                                 bottom: 2
                             },
-                            justifyContent: m.Wa.Between,
+                            justifyContent: m.Xa.Between,
                             borderBottom: !0
-                        }, l.createElement(m.Xa, {
+                        }, l.createElement(m.Ya, {
                             flexGrow: 0,
                             flexShrink: 1
                         }, l.createElement(m.W, {
-                            type: m.Vb.H3
-                        }, Object(i.e)("Edit Player", "EditPlayerModal"))), l.createElement(m.Xa, {
+                            type: m.Wb.H3
+                        }, Object(i.e)("Edit Player", "EditPlayerModal"))), l.createElement(m.Ya, {
                             flexGrow: 0,
                             flexShrink: 0
                         }, l.createElement(m.z, {
                             onClick: this.props.onClose,
                             "data-test-selector": r.Cancel,
                             type: m.F.Text
-                        }, Object(i.e)("Cancel", "EditPlayerModal")), l.createElement(m.Xa, {
+                        }, Object(i.e)("Cancel", "EditPlayerModal")), l.createElement(m.Ya, {
                             margin: {
                                 left: 1
                             },
@@ -320,13 +320,13 @@
                             onClick: this.updatePlayer,
                             "data-test-selector": r.Update,
                             disabled: !this.canSave()
-                        }, Object(i.e)("Update", "EditPlayerModal"))))), l.createElement(m.Xa, {
+                        }, Object(i.e)("Update", "EditPlayerModal"))))), l.createElement(m.Ya, {
                             margin: {
                                 y: 1
                             }
                         }, this.state.errorMessage && l.createElement(m.Da, {
                             errorMessage: this.state.errorMessage
-                        })), l.createElement(d.b, null, l.createElement(m.Xa, {
+                        })), l.createElement(d.b, null, l.createElement(m.Ya, {
                             padding: {
                                 right: 2
                             }
@@ -336,8 +336,8 @@
                             label: Object(i.e)("Player Name", "EditPlayerModal"),
                             error: !this.validPlayerName(),
                             errorMessage: Object(i.e)("Invalid Player Name", "EditPlayerModal")
-                        }, l.createElement(m.Ra, {
-                            type: m.Ta.Text,
+                        }, l.createElement(m.Sa, {
+                            type: m.Ua.Text,
                             "data-test-selector": r.Value,
                             onChange: this.onPlayerNameChange,
                             value: e.value
@@ -458,9 +458,9 @@
                     }, t.prototype.render = function() {
                         var e = this,
                             t = this.filteredPlayerContentAttributes();
-                        return l.createElement(c.a, null, l.createElement(m.Eb, {
+                        return l.createElement(c.a, null, l.createElement(m.Fb, {
                             display: m.X.Flex,
-                            justifyContent: m.Wa.Between,
+                            justifyContent: m.Xa.Between,
                             padding: {
                                 bottom: 1
                             },
@@ -469,14 +469,14 @@
                             },
                             borderBottom: !0
                         }, l.createElement(m.W, {
-                            type: m.Vb.H4,
+                            type: m.Wb.H4,
                             bold: !0
-                        }, Object(i.e)("Players", "PlayersTab")), l.createElement(m.Xa, null, l.createElement(m.z, {
+                        }, Object(i.e)("Players", "PlayersTab")), l.createElement(m.Ya, null, l.createElement(m.z, {
                             "data-test-selector": y.AddButton,
-                            icon: m.tb.Plus,
+                            icon: m.ub.Plus,
                             type: m.F.Hollow,
                             onClick: this.startAddingNewPlayer
-                        }, Object(i.e)("Add Player", "PlayersTab")))), l.createElement(m.Xa, {
+                        }, Object(i.e)("Add Player", "PlayersTab")))), l.createElement(m.Ya, {
                             margin: {
                                 y: 1
                             }
@@ -485,31 +485,31 @@
                         })), !t.length && l.createElement(m.W, {
                             "data-test-selector": y.EmptyList,
                             italic: !0
-                        }, Object(i.e)("No Players", "PlayersTab")), this.state.isAddingPlayer && l.createElement(m.Eb, {
+                        }, Object(i.e)("No Players", "PlayersTab")), this.state.isAddingPlayer && l.createElement(m.Fb, {
                             "data-test-selector": y.AddRow,
                             background: m.r.Base,
                             elevation: 1,
                             alignItems: m.f.Center,
-                            justifyContent: m.Wa.Between,
+                            justifyContent: m.Xa.Between,
                             display: m.X.Flex,
                             flexDirection: m.Aa.Row,
                             margin: {
                                 bottom: 1
                             }
-                        }, l.createElement(m.Xa, {
+                        }, l.createElement(m.Ya, {
                             flexDirection: m.Aa.Column,
                             padding: 2,
                             flexGrow: 1
-                        }, l.createElement(m.Ra, {
+                        }, l.createElement(m.Sa, {
                             autoFocus: !0,
                             placeholder: Object(i.e)("Add Player Name", "PlayersTab"),
                             onChange: this.onPlayerNameChange,
-                            type: m.Ta.Text,
+                            type: m.Ua.Text,
                             value: this.state.addingPlayerName
                         })), l.createElement(m.z, {
                             type: m.F.Hollow,
                             onClick: this.cancelAddingPlayer
-                        }, Object(i.e)("Cancel", "PlayersTab")), l.createElement(m.Xa, {
+                        }, Object(i.e)("Cancel", "PlayersTab")), l.createElement(m.Ya, {
                             margin: {
                                 x: 1
                             },
@@ -518,18 +518,18 @@
                             disabled: !this.validPlayerName() || this.state.isSaving,
                             onClick: this.createPlayer
                         }, Object(i.e)("Save", "PlayersTab")))), t.map(function(t, a) {
-                            return l.createElement(m.Eb, {
+                            return l.createElement(m.Fb, {
                                 background: m.r.Base,
                                 elevation: 1,
                                 alignItems: m.f.Center,
-                                justifyContent: m.Wa.Between,
+                                justifyContent: m.Xa.Between,
                                 display: m.X.Flex,
                                 flexDirection: m.Aa.Row,
                                 margin: {
                                     bottom: 1
                                 },
                                 key: a
-                            }, l.createElement(m.Xa, {
+                            }, l.createElement(m.Ya, {
                                 flexDirection: m.Aa.Column,
                                 padding: 2,
                                 flexGrow: 1

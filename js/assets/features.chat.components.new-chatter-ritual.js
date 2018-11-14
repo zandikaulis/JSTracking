@@ -439,27 +439,27 @@
                             n = this.getAvailableToken();
                         if (this.renderedTokenID = n ? n.id : null, !n) return null;
                         var t = u.map(function(n) {
-                            return a.createElement(o.Xa, {
+                            return a.createElement(o.Ya, {
                                 key: n.id,
                                 flexShrink: 0,
                                 margin: {
                                     right: .5
                                 }
-                            }, a.createElement(o.Yb, {
+                            }, a.createElement(o.Zb, {
                                 label: n.alt
-                            }, a.createElement(o.Ua, {
-                                type: o.Va.Alpha,
+                            }, a.createElement(o.Va, {
+                                type: o.Wa.Alpha,
                                 onClick: e.onEmoteClick,
                                 "data-emote-string": n.alt,
                                 "data-test-selector": "emote-button"
-                            }, a.createElement(o.Xa, {
+                            }, a.createElement(o.Ya, {
                                 padding: .5
                             }, a.createElement("img", {
                                 className: "new-chatter-ritual__emote",
                                 src: Object(s.d)(n.id, 3)
                             })))))
                         });
-                        return a.createElement(o.Eb, {
+                        return a.createElement(o.Fb, {
                             background: o.r.Base,
                             border: !0,
                             className: "new-chatter-ritual",
@@ -471,21 +471,21 @@
                                 left: .5,
                                 y: .5
                             }
-                        }, a.createElement(o.Xa, {
+                        }, a.createElement(o.Ya, {
                             alignItems: o.f.Center,
                             display: o.X.Flex,
                             flexWrap: o.Ba.NoWrap
-                        }, a.createElement(o.Xa, {
+                        }, a.createElement(o.Ya, {
                             flexShrink: 1,
                             margin: {
                                 right: .5
                             }
-                        }, this.props.bannerMessage), t, a.createElement(o.Eb, {
+                        }, this.props.bannerMessage), t, a.createElement(o.Fb, {
                             borderLeft: !0,
                             flexShrink: 0
                         }, a.createElement(o.A, {
                             ariaLabel: "close",
-                            icon: o.tb.Close,
+                            icon: o.ub.Close,
                             onClick: this.onCloseButtonClick,
                             size: o.B.Large,
                             "data-test-selector": "dismiss-button"

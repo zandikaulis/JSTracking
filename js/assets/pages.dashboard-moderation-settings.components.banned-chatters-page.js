@@ -228,35 +228,35 @@
                         return i.createElement(o.b, {
                             className: "banned-chatters__list",
                             autoHide: !0
-                        }, i.createElement(m.Eb, {
+                        }, i.createElement(m.Fb, {
                             background: m.r.Base,
                             elevation: 1,
                             padding: {
                                 bottom: .5
                             }
-                        }, this.state.error && this.renderError(), i.createElement(m.Xa, {
+                        }, this.state.error && this.renderError(), i.createElement(m.Ya, {
                             padding: .5
                         }, Object(d.d)("<x:bold>Currently Banned </x:bold>({countBannedUsers})", {
                             countBannedUsers: r,
                             "x:bold": function(e) {
                                 return i.createElement(m.W, {
                                     bold: !0,
-                                    type: m.Vb.Span
+                                    type: m.Wb.Span
                                 }, e)
                             }
-                        }, "BannedChatters")), i.createElement(m.Hb, null, i.createElement(m.Kb, null, i.createElement(m.Lb, {
+                        }, "BannedChatters")), i.createElement(m.Ib, null, i.createElement(m.Lb, null, i.createElement(m.Mb, {
                             label: Object(d.d)("Username", "BannedChatters")
-                        }), i.createElement(m.Lb, {
+                        }), i.createElement(m.Mb, {
                             label: Object(d.d)("Added By", "BannedChatters")
-                        }), i.createElement(m.Lb, {
+                        }), i.createElement(m.Mb, {
                             label: Object(d.d)("Time Banned", "BannedChatters")
-                        }), i.createElement(m.Lb, {
-                            textAlign: m.Rb.Center,
+                        }), i.createElement(m.Mb, {
+                            textAlign: m.Sb.Center,
                             label: Object(d.d)("Actions", "BannedChatters")
-                        })), i.createElement(m.Ib, null, t.map(function(n) {
-                            return i.createElement(m.Mb, {
+                        })), i.createElement(m.Jb, null, t.map(function(n) {
+                            return i.createElement(m.Nb, {
                                 key: n.bannedUser.id
-                            }, i.createElement(m.Jb, null, i.createElement(m.Pa, {
+                            }, i.createElement(m.Kb, null, i.createElement(m.Qa, {
                                 padding: {
                                     right: 4,
                                     bottom: .5
@@ -265,25 +265,25 @@
                                 ellipsis: !0,
                                 bold: !0,
                                 "data-test-selector": a.BannedUserName
-                            }, n.bannedUser && n.bannedUser.login))), i.createElement(m.Jb, null, i.createElement(m.W, {
+                            }, n.bannedUser && n.bannedUser.login))), i.createElement(m.Kb, null, i.createElement(m.W, {
                                 "data-test-selector": a.BannedByUserName
-                            }, n.modUser && n.modUser.displayName || Object(d.d)("an unknown user", "BannedChatters"))), i.createElement(m.Jb, null, i.createElement(m.W, {
+                            }, n.modUser && n.modUser.displayName || Object(d.d)("an unknown user", "BannedChatters"))), i.createElement(m.Kb, null, i.createElement(m.W, {
                                 "data-test-selector": a.BannedDate
-                            }, Object(d.c)(new Date(n.bannedAt)))), i.createElement(m.Jb, {
-                                textAlign: m.Rb.Center
-                            }, i.createElement(m.Yb, {
+                            }, Object(d.c)(new Date(n.bannedAt)))), i.createElement(m.Kb, {
+                                textAlign: m.Sb.Center
+                            }, i.createElement(m.Zb, {
                                 label: Object(d.d)("Unban", "BannedChatters")
                             }, i.createElement(m.A, {
                                 "data-chatter-login": n.bannedUser ? n.bannedUser.login : "",
                                 "data-chatter-id": n.bannedUser ? n.bannedUser.id : "",
-                                icon: m.tb.Trash,
+                                icon: m.ub.Trash,
                                 type: m.C.Secondary,
                                 onClick: e.handleDeleteBannedChatterClick,
                                 disabled: !!e.state.working
                             }))))
                         })))))
                     }, n.prototype.renderError = function() {
-                        return i.createElement(m.Xa, {
+                        return i.createElement(m.Ya, {
                             padding: .5
                         }, i.createElement(m.W, {
                             bold: !0,
@@ -621,7 +621,7 @@
                     return r.__extends(n, e), n.prototype.render = function() {
                         var e = "" === this.state.userToBan,
                             n = this.state.working ? b.E.Loading : b.E.Default;
-                        return i.createElement(b.Xa, {
+                        return i.createElement(b.Ya, {
                             className: "add-banned-chatter",
                             margin: {
                                 bottom: 3
@@ -630,19 +630,19 @@
                             label: Object(d.d)("Add a user to your ban list", "AddBannedChatter"),
                             error: this.state.error,
                             errorMessage: this.getErrorMessage(this.state.errorCode)
-                        }, i.createElement(b.Xa, {
+                        }, i.createElement(b.Ya, {
                             display: b.X.Flex,
                             margin: {
                                 top: .5
                             }
-                        }, i.createElement(b.Xa, {
+                        }, i.createElement(b.Ya, {
                             flexGrow: 1,
                             padding: {
                                 right: .5
                             }
-                        }, i.createElement(b.Ra, {
+                        }, i.createElement(b.Sa, {
                             placeholder: Object(d.d)("Enter a username", "AddBannedChatter"),
-                            type: b.Ta.Text,
+                            type: b.Ua.Text,
                             onChange: this.updateUserToBan,
                             value: this.state.userToBan,
                             "data-test-selector": a.BanUsernameField
@@ -688,7 +688,7 @@
                         return null !== e && e.apply(this, arguments) || this
                     }
                     return c.__extends(n, e), n.prototype.render = function() {
-                        return this.props.sessionUser ? u.createElement(b.a, null, u.createElement(k.Eb, {
+                        return this.props.sessionUser ? u.createElement(b.a, null, u.createElement(k.Fb, {
                             background: k.r.Base,
                             border: !0,
                             padding: {
@@ -697,11 +697,11 @@
                                 bottom: 2,
                                 top: 2
                             }
-                        }, u.createElement(k.Xa, {
+                        }, u.createElement(k.Ya, {
                             display: k.X.Flex
-                        }, u.createElement(k.sb, {
-                            asset: k.tb.AngleLeft
-                        }), u.createElement(k.Xa, {
+                        }, u.createElement(k.tb, {
+                            asset: k.ub.AngleLeft
+                        }), u.createElement(k.Ya, {
                             padding: {
                                 left: 3
                             }
@@ -711,7 +711,7 @@
                         }, Object(m.d)("Banned Users", "BannedChattersPage")), u.createElement(k.W, {
                             fontSize: k.Ca.Size7,
                             color: k.O.Alt2
-                        }, Object(m.d)("View and modify your banned users list", "BannedChattersPage"))))), u.createElement(k.Eb, {
+                        }, Object(m.d)("View and modify your banned users list", "BannedChattersPage"))))), u.createElement(k.Fb, {
                             background: k.r.Base,
                             borderBottom: !0,
                             borderLeft: !0,

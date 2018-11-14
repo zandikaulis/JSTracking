@@ -26,22 +26,22 @@
                     return i.__extends(t, e), t.prototype.componentWillMount = function() {
                         this.verifyEmail().then(function() {})
                     }, t.prototype.render = function() {
-                        return n.createElement(d.Xa, {
+                        return n.createElement(d.Ya, {
                             padding: 3
                         }, n.createElement(d.W, {
                             className: "title",
-                            type: d.Vb.H2
+                            type: d.Wb.H2
                         }, Object(o.d)("Email Verification", "EmailVerification")), this.renderVerificationStatus())
                     }, t.prototype.renderVerificationStatus = function() {
-                        if (this.state.isLoading) return n.createElement(d.Xa, {
+                        if (this.state.isLoading) return n.createElement(d.Ya, {
                             margin: {
                                 top: 1
                             },
                             "data-test-selector": "verify-loading"
                         }, n.createElement(d.W, {
-                            type: d.Vb.Strong
+                            type: d.Wb.Strong
                         }, Object(o.d)("Verifying Email...", "EmailVerification")));
-                        if (this.state.isEmailVerified) return n.createElement(d.Xa, {
+                        if (this.state.isEmailVerified) return n.createElement(d.Ya, {
                             margin: {
                                 top: 1
                             },
@@ -50,14 +50,14 @@
                         var e = Object(o.d)("Couldn't validate your email: {errorMessage}", {
                             errorMessage: this.maybeGetLocalizedErrorMessage(this.state.errorMessage)
                         }, "EmailVerification");
-                        return n.createElement(d.Xa, {
+                        return n.createElement(d.Ya, {
                             margin: {
                                 top: 1
                             },
                             "data-test-selector": "verify-error"
                         }, n.createElement(d.W, {
                             color: d.O.Error,
-                            type: d.Vb.Strong
+                            type: d.Wb.Strong
                         }, e))
                     }, t.prototype.maybeGetLocalizedErrorMessage = function(e) {
                         return e ? "Not Found" === e ? Object(o.d)("Not Found", "EmailVerification") : e : Object(o.d)("Unknown Error", "EmailVerification")

@@ -23,7 +23,7 @@
                             stopPropagation: !0,
                             onToggle: this.onToggle
                         }, r.createElement(i.A, {
-                            icon: i.tb.More,
+                            icon: i.ub.More,
                             size: i.B.Small
                         }), r.createElement(i.Y, {
                             direction: i.v.TopRight,
@@ -32,7 +32,7 @@
                                 title: Object(a.d)("I am not interested in this recommendation", "RecFeedbackButton"),
                                 onClick: this.onClick,
                                 figure: {
-                                    icon: i.tb.VisibilityHidden
+                                    icon: i.ub.VisibilityHidden
                                 }
                             }]
                         }))
@@ -145,13 +145,13 @@
                     }
                     return o.__extends(t, e), t.prototype.render = function() {
                         var e = this;
-                        return r.createElement(i.ab, {
+                        return r.createElement(i.bb, {
                             headerProps: {
                                 title: Object(a.d)("Not interested? Tell us more...", "RecFeedbackModal"),
                                 onCloseButtonClick: this.closeModal,
                                 closeButtonAriaLabel: Object(a.d)("Close", "RecFeedbackModal")
                             },
-                            size: i.bb.Medium,
+                            size: i.cb.Medium,
                             footerProps: {
                                 primaryButtonProps: {
                                     children: Object(a.d)("Done", "RecFeedbackModal"),
@@ -159,33 +159,33 @@
                                     onClick: this.submitFeedback
                                 }
                             }
-                        }, r.createElement(i.Eb, {
+                        }, r.createElement(i.Fb, {
                             borderBottom: !0,
                             padding: {
                                 top: 2,
                                 x: 2
                             }
                         }, r.createElement(i.W, {
-                            type: i.Vb.Span,
+                            type: i.Wb.Span,
                             fontSize: i.Ca.Size4
                         }, this.props.feedbackReasons.map(function(t, n) {
-                            return r.createElement(i.Xa, {
+                            return r.createElement(i.Ya, {
                                 key: t.text,
                                 margin: {
                                     bottom: .5
                                 }
-                            }, r.createElement(i.pb, {
+                            }, r.createElement(i.qb, {
                                 label: t.text,
                                 checked: e.state.selectedReasonIndex === n,
                                 onChange: e.onRadioChange,
                                 value: n.toString(),
                                 error: e.state.showError
                             }))
-                        })), r.createElement(i.Xa, {
+                        })), r.createElement(i.Ya, {
                             margin: {
                                 y: .5
                             },
-                            visibility: this.state.showError ? i.gc.Visible : i.gc.Hidden,
+                            visibility: this.state.showError ? i.hc.Visible : i.hc.Hidden,
                             "data-test-selector": "rec-feedback-modal-error"
                         }, r.createElement(i.W, {
                             color: i.O.Error

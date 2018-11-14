@@ -24,7 +24,7 @@
                     }
                     return r.__extends(t, e), t.prototype.render = function() {
                         var e = this.getPresetText();
-                        return this.props.isLoggedIn && 0 !== e.length ? o.createElement(c.Eb, {
+                        return this.props.isLoggedIn && 0 !== e.length ? o.createElement(c.Fb, {
                             className: "orbis",
                             display: c.X.Flex,
                             flexDirection: c.Aa.Column,
@@ -37,37 +37,37 @@
                         }, o.createElement("div", {
                             className: "orbis__dropdown-container",
                             "data-test-selector": "orbis-dropdown-container"
-                        }, o.createElement(c.Xa, {
+                        }, o.createElement(c.Ya, {
                             padding: {
                                 y: 1,
                                 x: 2
                             },
                             display: c.X.Flex,
-                            justifyContent: c.Wa.Between,
+                            justifyContent: c.Xa.Between,
                             flexWrap: c.Ba.NoWrap
-                        }, o.createElement(c.Xa, {
+                        }, o.createElement(c.Ya, {
                             ellipsis: !0,
                             padding: {
                                 right: 1
                             }
                         }, o.createElement(c.W, {
-                            type: c.Vb.Span
-                        }, Object(s.d)("Interactions Available", "Orbis"))), o.createElement(c.Xa, {
+                            type: c.Wb.Span
+                        }, Object(s.d)("Interactions Available", "Orbis"))), o.createElement(c.Ya, {
                             display: c.X.Flex,
-                            justifyContent: c.Wa.Between,
+                            justifyContent: c.Xa.Between,
                             alignItems: c.f.Center,
                             flexShrink: 0
-                        }, o.createElement(c.Xa, {
+                        }, o.createElement(c.Ya, {
                             className: "orbis__dropdown-icon",
                             display: c.X.Flex,
-                            justifyContent: c.Wa.Between,
+                            justifyContent: c.Xa.Between,
                             alignItems: c.f.Center
-                        }, o.createElement(c.sb, {
-                            asset: c.tb.AngleRight
+                        }, o.createElement(c.tb, {
+                            asset: c.ub.AngleRight
                         }))))), o.createElement(c.u, {
                             offsetY: "1px",
                             noTail: !0
-                        }, o.createElement(c.Xa, {
+                        }, o.createElement(c.Ya, {
                             className: "orbis__dropdown-content",
                             padding: 1
                         }, this.renderInteractions(e))))) : null
@@ -78,12 +78,12 @@
                         }
                         return t
                     }, t.prototype.renderInteraction = function(e) {
-                        return e ? o.createElement(c.Ua, {
+                        return e ? o.createElement(c.Va, {
                             onClick: this.onClickInteraction,
                             key: e,
                             "data-action": e,
                             "data-test-selector": "orbis-interaction"
-                        }, o.createElement(c.Pa, {
+                        }, o.createElement(c.Qa, {
                             padding: {
                                 y: .5,
                                 x: 1

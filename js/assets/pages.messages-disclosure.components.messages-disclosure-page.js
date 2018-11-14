@@ -59,24 +59,24 @@
                             message: Object(h.d)("You must be logged in to view this page", "MessagesDisclosurePage")
                         })) : this.state.errorLoadingMessagesDisclosure ? u.createElement(g.a, {
                             message: Object(h.d)("Oops, something went wrong.", "MessagesDisclosurePage")
-                        }) : u.createElement(b.Xa, {
+                        }) : u.createElement(b.Ya, {
                             className: "messages-disclosure-page",
                             alignItems: b.f.Center,
                             display: b.X.Flex,
                             fullWidth: !0,
                             fullHeight: !0,
-                            justifyContent: b.Wa.Center,
-                            position: b.jb.Absolute
-                        }, u.createElement(b.Xa, {
+                            justifyContent: b.Xa.Center,
+                            position: b.kb.Absolute
+                        }, u.createElement(b.Ya, {
                             alignItems: b.f.Center,
                             className: "messages-disclosure-page__body",
                             display: b.X.Flex,
                             flexDirection: b.Aa.Column
                         }, !this.state.hasLoadedMessagesDisclosure && this.renderPlaceholder(), this.state.hasLoadedMessagesDisclosure && this.renderLoadedBody())) : u.createElement(f.a, null)
                     }, t.prototype.renderPlaceholder = function() {
-                        return u.createElement(b.Xa, {
-                            justifyContent: b.Wa.Center
-                        }, u.createElement(b.ib, {
+                        return u.createElement(b.Ya, {
+                            justifyContent: b.Xa.Center
+                        }, u.createElement(b.jb, {
                             height: 130,
                             width: 180
                         }))
@@ -84,7 +84,7 @@
                         return u.createElement(u.Fragment, null, u.createElement(b.S, {
                             src: l.a,
                             alt: Object(h.d)("Envelope fading into smoke", "MessagesDisclosurePage")
-                        }), this.state.fileURL && this.renderDownloadIFrame() || u.createElement(b.Xa, {
+                        }), this.state.fileURL && this.renderDownloadIFrame() || u.createElement(b.Ya, {
                             margin: {
                                 y: 2
                             }

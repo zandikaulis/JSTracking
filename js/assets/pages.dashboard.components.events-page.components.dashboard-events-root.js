@@ -17,9 +17,9 @@
                     }
                     return i.__extends(t, e), t.prototype.render = function() {
                         var e = this.optionElement();
-                        return this.props.disabled && this.props.disabledMessage ? o.createElement(m.Yb, {
-                            direction: m.ac.Bottom,
-                            align: m.Zb.Left,
+                        return this.props.disabled && this.props.disabledMessage ? o.createElement(m.Zb, {
+                            direction: m.bc.Bottom,
+                            align: m.ac.Left,
                             width: 130,
                             display: m.X.Flex,
                             label: this.props.disabledMessage
@@ -31,14 +31,14 @@
                             a = e.value,
                             i = e.onClick,
                             r = e.disabled;
-                        return o.createElement(m.Ua, {
+                        return o.createElement(m.Va, {
                             hover: n,
                             "data-value": a,
                             "data-display-value": t,
                             onClick: i,
                             disabled: r,
-                            type: m.Va.Alpha
-                        }, o.createElement(m.Xa, {
+                            type: m.Wa.Alpha
+                        }, o.createElement(m.Ya, {
                             refDelegate: this.props.refDelegate,
                             padding: .5
                         }, t || a))
@@ -96,28 +96,28 @@
                                     refDelegate: t.value === e.state.value ? e.setSelectedTimeRef : void 0
                                 }))
                             });
-                        return o.createElement(m.Xa, {
-                            position: m.jb.Relative,
+                        return o.createElement(m.Ya, {
+                            position: m.kb.Relative,
                             "data-a-target": "time-pick-field",
                             className: "time-picker"
                         }, o.createElement(d.a, {
                             onClickOut: this.closeDropdown
-                        }, o.createElement(m.Ra, {
-                            type: m.Ta.Text,
+                        }, o.createElement(m.Sa, {
+                            type: m.Ua.Text,
                             onFocus: this.onFocus,
                             onChange: this.onInputChange,
                             onBlur: this.onBlur,
                             onKeyDown: this.onKeyDown,
                             refDelegate: this.setInputRef,
                             value: this.state.displayValue
-                        }), o.createElement(m.Xa, {
+                        }), o.createElement(m.Ya, {
                             className: "time-picker__balloon",
-                            position: m.jb.Absolute
+                            position: m.kb.Absolute
                         }, o.createElement(m.u, {
                             noTail: !0,
                             show: this.state.isOpen,
                             "data-a-target": "time-selector-balloon"
-                        }, o.createElement(m.Eb, {
+                        }, o.createElement(m.Fb, {
                             className: "time-picker__dropdown"
                         }, t)))))
                     }, t.prototype.getTime = function(e) {
@@ -187,13 +187,13 @@
                         }, n
                     }
                     return i.__extends(t, e), t.prototype.render = function() {
-                        return o.createElement(m.Xa, {
+                        return o.createElement(m.Ya, {
                             display: m.X.Flex,
                             flexDirection: m.Aa.Row,
                             margin: {
                                 bottom: 2
                             }
-                        }, o.createElement(m.Xa, {
+                        }, o.createElement(m.Ya, {
                             padding: {
                                 right: 2
                             },
@@ -312,13 +312,13 @@
                         return i.createElement(r.Z, {
                             dragOver: this.state.isDraggingOver,
                             error: this.props.error
-                        }, i.createElement(r.Pa, {
-                            position: r.jb.Absolute,
+                        }, i.createElement(r.Qa, {
+                            position: r.kb.Absolute,
                             attachTop: !0,
                             attachLeft: !0,
                             fullWidth: !0,
                             fullHeight: !0,
-                            zIndex: r.ic.Above
+                            zIndex: r.jc.Above
                         }, i.createElement("input", {
                             "data-a-target": "file-picker-input",
                             "data-test-selector": "file-picker-input",
@@ -1750,7 +1750,7 @@
                         return i.createElement(o.Ea, {
                             id: "event-language",
                             label: Object(r.d)("Event Language", "EventModal")
-                        }, i.createElement(o.zb, {
+                        }, i.createElement(o.Ab, {
                             name: "event-language",
                             onChange: this.onChange,
                             disabled: this.props.disabled,
@@ -2000,11 +2000,11 @@
                     }
                     return a.__extends(t, e), t.prototype.render = function() {
                         var e = null;
-                        this.props.serviceError && (e = r.createElement(h.Xa, null, r.createElement(h.W, {
+                        this.props.serviceError && (e = r.createElement(h.Ya, null, r.createElement(h.W, {
                             fontSize: h.Ca.Size4,
                             color: h.O.Error
                         }, this.props.serviceError)));
-                        var t = this.props.parent ? r.createElement(h.Xa, {
+                        var t = this.props.parent ? r.createElement(h.Ya, {
                                 margin: {
                                     bottom: 2
                                 }
@@ -2016,7 +2016,7 @@
                                 label: "",
                                 error: !!this.state.fieldErrors.language,
                                 errorMessage: E(this.state.fieldErrors.language)
-                            }, r.createElement(h.Xa, {
+                            }, r.createElement(h.Ya, {
                                 display: h.X.Flex,
                                 margin: {
                                     bottom: 2
@@ -2029,16 +2029,16 @@
                             a = this.state.fieldErrors.endTime ? r.createElement(h.W, {
                                 color: h.O.Error
                             }, E(this.state.fieldErrors.endTime)) : null;
-                        return r.createElement(h.Xa, {
+                        return r.createElement(h.Ya, {
                             className: "event-modal"
-                        }, r.createElement(h.Eb, {
+                        }, r.createElement(h.Fb, {
                             className: "event-modal__content",
                             padding: 4,
                             margin: {
                                 top: 5
                             },
                             background: h.r.Base
-                        }, r.createElement(h.Eb, {
+                        }, r.createElement(h.Fb, {
                             display: h.X.Flex,
                             padding: {
                                 bottom: 2
@@ -2046,14 +2046,14 @@
                             margin: {
                                 bottom: 2
                             },
-                            justifyContent: h.Wa.Between,
+                            justifyContent: h.Xa.Between,
                             borderBottom: !0
-                        }, r.createElement(h.Xa, {
+                        }, r.createElement(h.Ya, {
                             flexGrow: 0,
                             flexShrink: 1
                         }, r.createElement(h.W, {
-                            type: h.Vb.H3
-                        }, Object(o.d)("Create an Event", "EventsModal"))), r.createElement(h.Xa, {
+                            type: h.Wb.H3
+                        }, Object(o.d)("Create an Event", "EventsModal"))), r.createElement(h.Ya, {
                             flexGrow: 0,
                             flexShrink: 0
                         }, r.createElement(h.z, {
@@ -2079,7 +2079,7 @@
                                 md: 6,
                                 lg: 7
                             }
-                        }, t, r.createElement(h.Xa, {
+                        }, t, r.createElement(h.Ya, {
                             margin: {
                                 bottom: 2
                             }
@@ -2088,15 +2088,15 @@
                             label: Object(o.d)("Event Title", "EventsModal"),
                             error: !!this.state.fieldErrors.title,
                             errorMessage: E(this.state.fieldErrors.title || [])
-                        }, r.createElement(h.Ra, {
+                        }, r.createElement(h.Sa, {
                             onChange: this.onTitleChange,
                             value: this.state.edits.title,
-                            type: h.Ta.Text,
+                            type: h.Ua.Text,
                             maxLength: 140,
                             placeholder: Object(o.d)("Your title is also used in reminders and social media posts. ({limit} character limit)", {
                                 limit: 140
                             }, "EventsModal")
-                        }))), r.createElement(h.Xa, {
+                        }))), r.createElement(h.Ya, {
                             margin: {
                                 bottom: 2
                             }
@@ -2104,7 +2104,7 @@
                             label: Object(o.d)("Event Description", "EventsModal"),
                             error: !!this.state.fieldErrors.description,
                             errorMessage: E(this.state.fieldErrors.description)
-                        }, r.createElement(h.Sb, {
+                        }, r.createElement(h.Tb, {
                             placeholder: Object(o.d)("Tell viewers why they should watch your event", "EventsModal"),
                             onChange: this.onDescriptionChange,
                             value: this.state.edits.description || "",
@@ -2131,7 +2131,7 @@
                             defaultDate: this.state.edits.endTime || k(),
                             allowPast: !0,
                             removeNow: !0
-                        }), n, r.createElement(h.Xa, {
+                        }), n, r.createElement(h.Ya, {
                             margin: {
                                 bottom: 2
                             }
@@ -2246,28 +2246,28 @@
                         }, t
                     }
                     return a.__extends(t, e), t.prototype.render = function() {
-                        return i.createElement(r.Eb, {
+                        return i.createElement(r.Fb, {
                             className: "vm-edit-cancel-modal",
                             background: r.r.Base,
                             padding: 2
-                        }, i.createElement(r.Xa, null, i.createElement(r.W, {
-                            type: r.Vb.H3
-                        }, this.props.title), i.createElement(r.Xa, {
+                        }, i.createElement(r.Ya, null, i.createElement(r.W, {
+                            type: r.Wb.H3
+                        }, this.props.title), i.createElement(r.Ya, {
                             padding: {
                                 y: 1
                             }
-                        }, this.props.body), i.createElement(r.Xa, {
+                        }, this.props.body), i.createElement(r.Ya, {
                             padding: 1,
                             display: r.X.Flex,
-                            justifyContent: r.Wa.End,
+                            justifyContent: r.Xa.End,
                             alignItems: r.f.End,
                             alignContent: r.e.End
-                        }, i.createElement(r.Xa, null, i.createElement(r.z, {
+                        }, i.createElement(r.Ya, null, i.createElement(r.z, {
                             type: r.F.Default,
                             onClick: this.onConfirm,
                             "data-test-selector": o.onConfirm,
                             "data-a-target": "on-confirm"
-                        }, this.props.okText)), i.createElement(r.Xa, {
+                        }, this.props.okText)), i.createElement(r.Ya, {
                             margin: {
                                 left: 1
                             }
@@ -2301,7 +2301,7 @@
                     return {
                         kind: o.DOCUMENT,
                         definitions: n,
-                        loc: q(e, t)
+                        loc: X(e, t)
                     }
                 }((0, r.createLexer)(n, t || {}))
             }, t.parseValue = function(e, t) {
@@ -2328,12 +2328,12 @@
                 return {
                     kind: o.NAME,
                     value: t.value,
-                    loc: q(e, t)
+                    loc: X(e, t)
                 }
             }
 
             function d(e) {
-                if (W(e, r.TokenKind.NAME)) switch (e.token.value) {
+                if (z(e, r.TokenKind.NAME)) switch (e.token.value) {
                     case "query":
                     case "mutation":
                     case "subscription":
@@ -2350,14 +2350,14 @@
                     case "directive":
                         return F(e)
                 } else {
-                    if (W(e, r.TokenKind.BRACE_L)) return c(e);
-                    if (j(e)) return F(e)
+                    if (z(e, r.TokenKind.BRACE_L)) return c(e);
+                    if (w(e)) return F(e)
                 }
                 throw Q(e)
             }
 
             function c(e) {
-                if (W(e, r.TokenKind.NAME)) switch (e.token.value) {
+                if (z(e, r.TokenKind.NAME)) switch (e.token.value) {
                     case "query":
                     case "mutation":
                     case "subscription":
@@ -2365,49 +2365,49 @@
                     case "fragment":
                         return function(e) {
                             var t = e.token;
-                            if (Y(e, "fragment"), e.options.experimentalFragmentVariables) return {
+                            if (W(e, "fragment"), e.options.experimentalFragmentVariables) return {
                                 kind: o.FRAGMENT_DEFINITION,
                                 name: N(e),
                                 variableDefinitions: p(e),
-                                typeCondition: (Y(e, "on"), L(e)),
+                                typeCondition: (W(e, "on"), L(e)),
                                 directives: C(e, !1),
                                 selectionSet: f(e),
-                                loc: q(e, t)
+                                loc: X(e, t)
                             };
                             return {
                                 kind: o.FRAGMENT_DEFINITION,
                                 name: N(e),
-                                typeCondition: (Y(e, "on"), L(e)),
+                                typeCondition: (W(e, "on"), L(e)),
                                 directives: C(e, !1),
                                 selectionSet: f(e),
-                                loc: q(e, t)
+                                loc: X(e, t)
                             }
                         }(e)
-                } else if (W(e, r.TokenKind.BRACE_L)) return u(e);
+                } else if (z(e, r.TokenKind.BRACE_L)) return u(e);
                 throw Q(e)
             }
 
             function u(e) {
                 var t = e.token;
-                if (W(e, r.TokenKind.BRACE_L)) return {
+                if (z(e, r.TokenKind.BRACE_L)) return {
                     kind: o.OPERATION_DEFINITION,
                     operation: "query",
                     name: void 0,
                     variableDefinitions: [],
                     directives: [],
                     selectionSet: f(e),
-                    loc: q(e, t)
+                    loc: X(e, t)
                 };
                 var n = m(e),
                     a = void 0;
-                return W(e, r.TokenKind.NAME) && (a = l(e)), {
+                return z(e, r.TokenKind.NAME) && (a = l(e)), {
                     kind: o.OPERATION_DEFINITION,
                     operation: n,
                     name: a,
                     variableDefinitions: p(e),
                     directives: C(e, !1),
                     selectionSet: f(e),
-                    loc: q(e, t)
+                    loc: X(e, t)
                 }
             }
 
@@ -2425,7 +2425,7 @@
             }
 
             function p(e) {
-                return W(e, r.TokenKind.PAREN_L) ? Z(e, r.TokenKind.PAREN_L, v, r.TokenKind.PAREN_R) : []
+                return z(e, r.TokenKind.PAREN_L) ? Z(e, r.TokenKind.PAREN_L, v, r.TokenKind.PAREN_R) : []
             }
 
             function v(e) {
@@ -2435,7 +2435,7 @@
                     variable: g(e),
                     type: (H(e, r.TokenKind.COLON), O(e)),
                     defaultValue: $(e, r.TokenKind.EQUALS) ? y(e, !0) : void 0,
-                    loc: q(e, t)
+                    loc: X(e, t)
                 }
             }
 
@@ -2444,7 +2444,7 @@
                 return H(e, r.TokenKind.DOLLAR), {
                     kind: o.VARIABLE,
                     name: l(e),
-                    loc: q(e, t)
+                    loc: X(e, t)
                 }
             }
 
@@ -2453,18 +2453,18 @@
                 return {
                     kind: o.SELECTION_SET,
                     selections: Z(e, r.TokenKind.BRACE_L, h, r.TokenKind.BRACE_R),
-                    loc: q(e, t)
+                    loc: X(e, t)
                 }
             }
 
             function h(e) {
-                return W(e, r.TokenKind.SPREAD) ? function(e) {
+                return z(e, r.TokenKind.SPREAD) ? function(e) {
                     var t = e.token;
-                    if (H(e, r.TokenKind.SPREAD), W(e, r.TokenKind.NAME) && "on" !== e.token.value) return {
+                    if (H(e, r.TokenKind.SPREAD), z(e, r.TokenKind.NAME) && "on" !== e.token.value) return {
                         kind: o.FRAGMENT_SPREAD,
                         name: N(e),
                         directives: C(e, !1),
-                        loc: q(e, t)
+                        loc: X(e, t)
                     };
                     var n = void 0;
                     "on" === e.token.value && (e.advance(), n = L(e));
@@ -2473,7 +2473,7 @@
                         typeCondition: n,
                         directives: C(e, !1),
                         selectionSet: f(e),
-                        loc: q(e, t)
+                        loc: X(e, t)
                     }
                 }(e) : function(e) {
                     var t = e.token,
@@ -2487,15 +2487,15 @@
                         name: i,
                         arguments: k(e, !1),
                         directives: C(e, !1),
-                        selectionSet: W(e, r.TokenKind.BRACE_L) ? f(e) : void 0,
-                        loc: q(e, t)
+                        selectionSet: z(e, r.TokenKind.BRACE_L) ? f(e) : void 0,
+                        loc: X(e, t)
                     }
                 }(e)
             }
 
             function k(e, t) {
                 var n = t ? b : E;
-                return W(e, r.TokenKind.PAREN_L) ? Z(e, r.TokenKind.PAREN_L, n, r.TokenKind.PAREN_R) : []
+                return z(e, r.TokenKind.PAREN_L) ? Z(e, r.TokenKind.PAREN_L, n, r.TokenKind.PAREN_R) : []
             }
 
             function E(e) {
@@ -2504,7 +2504,7 @@
                     kind: o.ARGUMENT,
                     name: l(e),
                     value: (H(e, r.TokenKind.COLON), y(e, !1)),
-                    loc: q(e, t)
+                    loc: X(e, t)
                 }
             }
 
@@ -2514,7 +2514,7 @@
                     kind: o.ARGUMENT,
                     name: l(e),
                     value: (H(e, r.TokenKind.COLON), _(e)),
-                    loc: q(e, t)
+                    loc: X(e, t)
                 }
             }
 
@@ -2538,7 +2538,7 @@
                                     for (; !$(e, a);) i.push(n(e));
                                     return i
                                 }(e, r.TokenKind.BRACKET_L, a, r.TokenKind.BRACKET_R),
-                                loc: q(e, n)
+                                loc: X(e, n)
                             }
                         }(e, t);
                     case r.TokenKind.BRACE_L:
@@ -2550,20 +2550,20 @@
                             return {
                                 kind: o.OBJECT,
                                 fields: a,
-                                loc: q(e, n)
+                                loc: X(e, n)
                             }
                         }(e, t);
                     case r.TokenKind.INT:
                         return e.advance(), {
                             kind: o.INT,
                             value: n.value,
-                            loc: q(e, n)
+                            loc: X(e, n)
                         };
                     case r.TokenKind.FLOAT:
                         return e.advance(), {
                             kind: o.FLOAT,
                             value: n.value,
-                            loc: q(e, n)
+                            loc: X(e, n)
                         };
                     case r.TokenKind.STRING:
                     case r.TokenKind.BLOCK_STRING:
@@ -2572,14 +2572,14 @@
                         return "true" === n.value || "false" === n.value ? (e.advance(), {
                             kind: o.BOOLEAN,
                             value: "true" === n.value,
-                            loc: q(e, n)
+                            loc: X(e, n)
                         }) : "null" === n.value ? (e.advance(), {
                             kind: o.NULL,
-                            loc: q(e, n)
+                            loc: X(e, n)
                         }) : (e.advance(), {
                             kind: o.ENUM,
                             value: n.value,
-                            loc: q(e, n)
+                            loc: X(e, n)
                         });
                     case r.TokenKind.DOLLAR:
                         if (!t) return g(e)
@@ -2593,7 +2593,7 @@
                     kind: o.STRING,
                     value: t.value,
                     block: t.kind === r.TokenKind.BLOCK_STRING,
-                    loc: q(e, t)
+                    loc: X(e, t)
                 }
             }
 
@@ -2611,12 +2611,12 @@
                     kind: o.OBJECT_FIELD,
                     name: l(e),
                     value: (H(e, r.TokenKind.COLON), y(e, t)),
-                    loc: q(e, n)
+                    loc: X(e, n)
                 }
             }
 
             function C(e, t) {
-                for (var n = []; W(e, r.TokenKind.AT);) n.push(I(e, t));
+                for (var n = []; z(e, r.TokenKind.AT);) n.push(I(e, t));
                 return n
             }
 
@@ -2626,7 +2626,7 @@
                     kind: o.DIRECTIVE,
                     name: l(e),
                     arguments: k(e, t),
-                    loc: q(e, n)
+                    loc: X(e, n)
                 }
             }
 
@@ -2636,11 +2636,11 @@
                 return $(e, r.TokenKind.BRACKET_L) ? (n = O(e), H(e, r.TokenKind.BRACKET_R), n = {
                     kind: o.LIST_TYPE,
                     type: n,
-                    loc: q(e, t)
+                    loc: X(e, t)
                 }) : n = L(e), $(e, r.TokenKind.BANG) ? {
                     kind: o.NON_NULL_TYPE,
                     type: n,
-                    loc: q(e, t)
+                    loc: X(e, t)
                 } : n
             }
 
@@ -2649,31 +2649,31 @@
                 return {
                     kind: o.NAMED_TYPE,
                     name: l(e),
-                    loc: q(e, t)
+                    loc: X(e, t)
                 }
             }
 
             function F(e) {
-                var t = j(e) ? e.lookahead() : e.token;
+                var t = w(e) ? e.lookahead() : e.token;
                 if (t.kind === r.TokenKind.NAME) switch (t.value) {
                     case "schema":
                         return function(e) {
                             var t = e.token;
-                            Y(e, "schema");
+                            W(e, "schema");
                             var n = C(e, !0),
                                 a = Z(e, r.TokenKind.BRACE_L, A, r.TokenKind.BRACE_R);
                             return {
                                 kind: o.SCHEMA_DEFINITION,
                                 directives: n,
                                 operationTypes: a,
-                                loc: q(e, t)
+                                loc: X(e, t)
                             }
                         }(e);
                     case "scalar":
                         return function(e) {
                             var t = e.token,
-                                n = w(e);
-                            Y(e, "scalar");
+                                n = j(e);
+                            W(e, "scalar");
                             var a = l(e),
                                 i = C(e, !0);
                             return {
@@ -2681,14 +2681,14 @@
                                 description: n,
                                 name: a,
                                 directives: i,
-                                loc: q(e, t)
+                                loc: X(e, t)
                             }
                         }(e);
                     case "type":
                         return function(e) {
                             var t = e.token,
-                                n = w(e);
-                            Y(e, "type");
+                                n = j(e);
+                            W(e, "type");
                             var a = l(e),
                                 i = M(e),
                                 r = C(e, !0),
@@ -2700,14 +2700,14 @@
                                 interfaces: i,
                                 directives: r,
                                 fields: s,
-                                loc: q(e, t)
+                                loc: X(e, t)
                             }
                         }(e);
                     case "interface":
                         return function(e) {
                             var t = e.token,
-                                n = w(e);
-                            Y(e, "interface");
+                                n = j(e);
+                            W(e, "interface");
                             var a = l(e),
                                 i = C(e, !0),
                                 r = x(e);
@@ -2717,14 +2717,14 @@
                                 name: a,
                                 directives: i,
                                 fields: r,
-                                loc: q(e, t)
+                                loc: X(e, t)
                             }
                         }(e);
                     case "union":
                         return function(e) {
                             var t = e.token,
-                                n = w(e);
-                            Y(e, "union");
+                                n = j(e);
+                            W(e, "union");
                             var a = l(e),
                                 i = C(e, !0),
                                 r = U(e);
@@ -2734,31 +2734,31 @@
                                 name: a,
                                 directives: i,
                                 types: r,
-                                loc: q(e, t)
+                                loc: X(e, t)
                             }
                         }(e);
                     case "enum":
                         return function(e) {
                             var t = e.token,
-                                n = w(e);
-                            Y(e, "enum");
+                                n = j(e);
+                            W(e, "enum");
                             var a = l(e),
                                 i = C(e, !0),
-                                r = X(e);
+                                r = G(e);
                             return {
                                 kind: o.ENUM_TYPE_DEFINITION,
                                 description: n,
                                 name: a,
                                 directives: i,
                                 values: r,
-                                loc: q(e, t)
+                                loc: X(e, t)
                             }
                         }(e);
                     case "input":
                         return function(e) {
                             var t = e.token,
-                                n = w(e);
-                            Y(e, "input");
+                                n = j(e);
+                            W(e, "input");
                             var a = l(e),
                                 i = C(e, !0),
                                 r = B(e);
@@ -2768,7 +2768,7 @@
                                 name: a,
                                 directives: i,
                                 fields: r,
-                                loc: q(e, t)
+                                loc: X(e, t)
                             }
                         }(e);
                     case "extend":
@@ -2778,7 +2778,7 @@
                                 case "scalar":
                                     return function(e) {
                                         var t = e.token;
-                                        Y(e, "extend"), Y(e, "scalar");
+                                        W(e, "extend"), W(e, "scalar");
                                         var n = l(e),
                                             a = C(e, !0);
                                         if (0 === a.length) throw Q(e);
@@ -2786,13 +2786,13 @@
                                             kind: o.SCALAR_TYPE_EXTENSION,
                                             name: n,
                                             directives: a,
-                                            loc: q(e, t)
+                                            loc: X(e, t)
                                         }
                                     }(e);
                                 case "type":
                                     return function(e) {
                                         var t = e.token;
-                                        Y(e, "extend"), Y(e, "type");
+                                        W(e, "extend"), W(e, "type");
                                         var n = l(e),
                                             a = M(e),
                                             i = C(e, !0),
@@ -2804,13 +2804,13 @@
                                             interfaces: a,
                                             directives: i,
                                             fields: r,
-                                            loc: q(e, t)
+                                            loc: X(e, t)
                                         }
                                     }(e);
                                 case "interface":
                                     return function(e) {
                                         var t = e.token;
-                                        Y(e, "extend"), Y(e, "interface");
+                                        W(e, "extend"), W(e, "interface");
                                         var n = l(e),
                                             a = C(e, !0),
                                             i = x(e);
@@ -2820,13 +2820,13 @@
                                             name: n,
                                             directives: a,
                                             fields: i,
-                                            loc: q(e, t)
+                                            loc: X(e, t)
                                         }
                                     }(e);
                                 case "union":
                                     return function(e) {
                                         var t = e.token;
-                                        Y(e, "extend"), Y(e, "union");
+                                        W(e, "extend"), W(e, "union");
                                         var n = l(e),
                                             a = C(e, !0),
                                             i = U(e);
@@ -2836,29 +2836,29 @@
                                             name: n,
                                             directives: a,
                                             types: i,
-                                            loc: q(e, t)
+                                            loc: X(e, t)
                                         }
                                     }(e);
                                 case "enum":
                                     return function(e) {
                                         var t = e.token;
-                                        Y(e, "extend"), Y(e, "enum");
+                                        W(e, "extend"), W(e, "enum");
                                         var n = l(e),
                                             a = C(e, !0),
-                                            i = X(e);
+                                            i = G(e);
                                         if (0 === a.length && 0 === i.length) throw Q(e);
                                         return {
                                             kind: o.ENUM_TYPE_EXTENSION,
                                             name: n,
                                             directives: a,
                                             values: i,
-                                            loc: q(e, t)
+                                            loc: X(e, t)
                                         }
                                     }(e);
                                 case "input":
                                     return function(e) {
                                         var t = e.token;
-                                        Y(e, "extend"), Y(e, "input");
+                                        W(e, "extend"), W(e, "input");
                                         var n = l(e),
                                             a = C(e, !0),
                                             i = B(e);
@@ -2868,7 +2868,7 @@
                                             name: n,
                                             directives: a,
                                             fields: i,
-                                            loc: q(e, t)
+                                            loc: X(e, t)
                                         }
                                     }(e)
                             }
@@ -2877,11 +2877,11 @@
                     case "directive":
                         return function(e) {
                             var t = e.token,
-                                n = w(e);
-                            Y(e, "directive"), H(e, r.TokenKind.AT);
+                                n = j(e);
+                            W(e, "directive"), H(e, r.TokenKind.AT);
                             var a = l(e),
                                 i = V(e);
-                            Y(e, "on");
+                            W(e, "on");
                             var s = function(e) {
                                 $(e, r.TokenKind.PIPE);
                                 var t = [];
@@ -2896,19 +2896,19 @@
                                 name: a,
                                 arguments: i,
                                 locations: s,
-                                loc: q(e, t)
+                                loc: X(e, t)
                             }
                         }(e)
                 }
                 throw Q(e, t)
             }
 
-            function j(e) {
-                return W(e, r.TokenKind.STRING) || W(e, r.TokenKind.BLOCK_STRING)
+            function w(e) {
+                return z(e, r.TokenKind.STRING) || z(e, r.TokenKind.BLOCK_STRING)
             }
 
-            function w(e) {
-                if (j(e)) return D(e)
+            function j(e) {
+                if (w(e)) return D(e)
             }
 
             function A(e) {
@@ -2920,7 +2920,7 @@
                     kind: o.OPERATION_TYPE_DEFINITION,
                     operation: n,
                     type: a,
-                    loc: q(e, t)
+                    loc: X(e, t)
                 }
             }
 
@@ -2930,18 +2930,18 @@
                     e.advance();
                     do {
                         t.push(L(e))
-                    } while (W(e, r.TokenKind.NAME))
+                    } while (z(e, r.TokenKind.NAME))
                 }
                 return t
             }
 
             function x(e) {
-                return W(e, r.TokenKind.BRACE_L) ? Z(e, r.TokenKind.BRACE_L, R, r.TokenKind.BRACE_R) : []
+                return z(e, r.TokenKind.BRACE_L) ? Z(e, r.TokenKind.BRACE_L, R, r.TokenKind.BRACE_R) : []
             }
 
             function R(e) {
                 var t = e.token,
-                    n = w(e),
+                    n = j(e),
                     a = l(e),
                     i = V(e);
                 H(e, r.TokenKind.COLON);
@@ -2954,17 +2954,17 @@
                     arguments: i,
                     type: s,
                     directives: d,
-                    loc: q(e, t)
+                    loc: X(e, t)
                 }
             }
 
             function V(e) {
-                return W(e, r.TokenKind.PAREN_L) ? Z(e, r.TokenKind.PAREN_L, P, r.TokenKind.PAREN_R) : []
+                return z(e, r.TokenKind.PAREN_L) ? Z(e, r.TokenKind.PAREN_L, P, r.TokenKind.PAREN_R) : []
             }
 
             function P(e) {
                 var t = e.token,
-                    n = w(e),
+                    n = j(e),
                     a = l(e);
                 H(e, r.TokenKind.COLON);
                 var i = O(e),
@@ -2978,7 +2978,7 @@
                     type: i,
                     defaultValue: s,
                     directives: d,
-                    loc: q(e, t)
+                    loc: X(e, t)
                 }
             }
 
@@ -2993,13 +2993,13 @@
                 return t
             }
 
-            function X(e) {
-                return W(e, r.TokenKind.BRACE_L) ? Z(e, r.TokenKind.BRACE_L, G, r.TokenKind.BRACE_R) : []
+            function G(e) {
+                return z(e, r.TokenKind.BRACE_L) ? Z(e, r.TokenKind.BRACE_L, Y, r.TokenKind.BRACE_R) : []
             }
 
-            function G(e) {
+            function Y(e) {
                 var t = e.token,
-                    n = w(e),
+                    n = j(e),
                     a = l(e),
                     i = C(e, !0);
                 return {
@@ -3007,12 +3007,12 @@
                     description: n,
                     name: a,
                     directives: i,
-                    loc: q(e, t)
+                    loc: X(e, t)
                 }
             }
 
             function B(e) {
-                return W(e, r.TokenKind.BRACE_L) ? Z(e, r.TokenKind.BRACE_L, P, r.TokenKind.BRACE_R) : []
+                return z(e, r.TokenKind.BRACE_L) ? Z(e, r.TokenKind.BRACE_L, P, r.TokenKind.BRACE_R) : []
             }
 
             function K(e) {
@@ -3022,15 +3022,15 @@
                 throw Q(e, t)
             }
 
-            function q(e, t) {
-                if (!e.options.noLocation) return new z(t, e.lastToken, e.source)
+            function X(e, t) {
+                if (!e.options.noLocation) return new q(t, e.lastToken, e.source)
             }
 
-            function z(e, t, n) {
+            function q(e, t, n) {
                 this.start = e.start, this.end = t.end, this.startToken = e, this.endToken = t, this.source = n
             }
 
-            function W(e, t) {
+            function z(e, t) {
                 return e.token.kind === t
             }
 
@@ -3045,7 +3045,7 @@
                 throw (0, i.syntaxError)(e.source, n.start, "Expected " + t + ", found " + (0, r.getTokenDesc)(n))
             }
 
-            function Y(e, t) {
+            function W(e, t) {
                 var n = e.token;
                 if (n.kind === r.TokenKind.NAME && n.value === t) return e.advance(), n;
                 throw (0, i.syntaxError)(e.source, n.start, 'Expected "' + t + '", found ' + (0, r.getTokenDesc)(n))
@@ -3061,7 +3061,7 @@
                 for (var i = [n(e)]; !$(e, a);) i.push(n(e));
                 return i
             }
-            z.prototype.toJSON = z.prototype.inspect = function() {
+            q.prototype.toJSON = q.prototype.inspect = function() {
                 return {
                     start: this.start,
                     end: this.end
@@ -3112,11 +3112,11 @@
                         (this.dateDidChange(e.minDate, this.props.minDate) || this.dateDidChange(e.maxDate, this.props.maxDate)) && this.setDateRangeIfPresent(this.props.minDate, this.props.maxDate), this.dateDidChange(e.defaultDate, this.props.defaultDate) && this.setDate(this.props.defaultDate)
                     }, t.prototype.render = function() {
                         var e = this.props.inputProps;
-                        return o.createElement(s.Xa, {
+                        return o.createElement(s.Ya, {
                             className: "date-picker",
                             "data-a-target": "date-picker"
-                        }, o.createElement(s.Ra, a.__assign({
-                            type: s.Ta.Text,
+                        }, o.createElement(s.Sa, a.__assign({
+                            type: s.Ua.Text,
                             refDelegate: this.setInputRef
                         }, e)), o.createElement("div", {
                             className: "date-picker__container",
@@ -3233,13 +3233,13 @@
                             type: d.F.Hollow
                         }, Object(r.d)("Share", "ShareEvent"))), i.createElement(s.a, null, t, i.createElement(d.u, {
                             direction: this.props.balloonDirection
-                        }, i.createElement(d.Xa, {
+                        }, i.createElement(d.Ya, {
                             padding: 1
-                        }, i.createElement(d.Xa, {
+                        }, i.createElement(d.Ya, {
                             display: d.X.Flex,
                             flexDirection: d.Aa.Row,
                             flexWrap: d.Ba.NoWrap,
-                            justifyContent: d.Wa.Center
+                            justifyContent: d.Xa.Center
                         }, i.createElement(o.a, {
                             type: o.b.Twitter,
                             text: this.props.title,
@@ -3443,48 +3443,48 @@
                             allowedFileTypes: this.props.allowedFileTypes,
                             onFilesSubmitted: this.props.processFiles,
                             error: !!this.props.errorMessage
-                        }, i.createElement(s.Xa, {
+                        }, i.createElement(s.Ya, {
                             className: "image-uploader",
-                            textAlign: s.Rb.Center,
+                            textAlign: s.Sb.Center,
                             display: s.X.Flex,
                             flexDirection: s.Aa.Column,
                             alignItems: s.f.Center,
-                            justifyContent: s.Wa.Center,
-                            position: s.jb.Relative,
+                            justifyContent: s.Xa.Center,
+                            position: s.kb.Relative,
                             fullHeight: !0,
                             fullWidth: !0
-                        }, this.renderErrorMessage(), i.createElement(s.Xa, {
-                            position: s.jb.Relative
-                        }, i.createElement(s.Xa, {
+                        }, this.renderErrorMessage(), i.createElement(s.Ya, {
+                            position: s.kb.Relative
+                        }, i.createElement(s.Ya, {
                             className: "image-uploader__upload-svg--anim-backfill"
-                        }, i.createElement(s.sb, {
-                            asset: s.tb.Upload,
-                            type: s.ub.Alt2,
+                        }, i.createElement(s.tb, {
+                            asset: s.ub.Upload,
+                            type: s.vb.Alt2,
                             width: this.props.iconWidth || 99,
                             height: this.props.iconWidth || 76
-                        })), i.createElement(s.Xa, {
+                        })), i.createElement(s.Ya, {
                             className: "image-uploader__upload-svg--anim-fill",
-                            position: s.jb.Absolute,
+                            position: s.kb.Absolute,
                             display: this.props.isLoading ? s.X.Block : s.X.Hide,
                             attachTop: !0
-                        }, i.createElement(s.sb, {
-                            asset: s.tb.Upload,
-                            type: s.ub.Brand,
+                        }, i.createElement(s.tb, {
+                            asset: s.ub.Upload,
+                            type: s.vb.Brand,
                             width: this.props.iconWidth || 99,
                             height: this.props.iconHeight || 76
                         }))), this.props.isLoading ? this.renderLoadingState() : this.renderNormalState()))
                     }, t.prototype.renderLoadingState = function() {
-                        return i.createElement(s.Xa, {
+                        return i.createElement(s.Ya, {
                             margin: 1,
                             "data-test-selector": "image-uploader-loading"
                         }, i.createElement(s.W, {
-                            type: s.Vb.H4
+                            type: s.Wb.H4
                         }, Object(r.d)("Uploading", "ImageUploader")))
                     }, t.prototype.renderNormalState = function() {
                         var e = Object(r.d)("Browse", "ImageUploader");
-                        return i.createElement(s.Xa, null, i.createElement(s.Xa, null, i.createElement(s.W, {
-                            type: s.Vb.H4
-                        }, Object(r.d)("Drag and drop your image here", "ImageUploader"))), i.createElement(s.Xa, {
+                        return i.createElement(s.Ya, null, i.createElement(s.Ya, null, i.createElement(s.W, {
+                            type: s.Wb.H4
+                        }, Object(r.d)("Drag and drop your image here", "ImageUploader"))), i.createElement(s.Ya, {
                             margin: {
                                 bottom: 2
                             },
@@ -3495,21 +3495,21 @@
                             fullWidth: !0,
                             "data-test-selector": "image-uploader-hint"
                         }, i.createElement(s.W, {
-                            type: s.Vb.P,
+                            type: s.Wb.P,
                             fontSize: s.Ca.Size7,
                             color: s.O.Alt2
-                        }, this.props.hintMessage)), i.createElement(s.Xa, null, i.createElement(s.z, {
+                        }, this.props.hintMessage)), i.createElement(s.Ya, null, i.createElement(s.z, {
                             ariaLabel: e,
                             type: s.F.Hollow
                         }, e)))
                     }, t.prototype.renderErrorMessage = function() {
-                        if (this.props.errorMessage) return i.createElement(s.Xa, {
+                        if (this.props.errorMessage) return i.createElement(s.Ya, {
                             margin: {
                                 bottom: 1
                             },
                             "data-test-selector": "image-uploader-error"
                         }, i.createElement(s.W, {
-                            type: s.Vb.H5,
+                            type: s.Wb.H5,
                             color: s.O.Error,
                             bold: !0
                         }, this.props.errorMessage))
@@ -5593,8 +5593,8 @@
                 O = n("U0Nx"),
                 L = n("293+"),
                 F = n("Ue10"),
-                j = "https://static-cdn.jtvnw.net/twitch-event-images-v2/default/town-320x180",
-                w = function(e) {
+                w = "https://static-cdn.jtvnw.net/twitch-event-images-v2/default/town-320x180",
+                j = function(e) {
                     function t() {
                         var t = null !== e && e.apply(this, arguments) || this;
                         return t.state = {
@@ -5639,7 +5639,7 @@
                                                                 __typename: "User"
                                                             },
                                                             parent: e.parent || this.props.parent || null,
-                                                            imageURL: j,
+                                                            imageURL: w,
                                                             stats: {
                                                                 followingCount: 0,
                                                                 __typename: "EventStats"
@@ -5698,7 +5698,7 @@
                                                                 displayName: this.props.user.displayName || this.props.user.login,
                                                                 __typename: "User"
                                                             },
-                                                            imageURL: j,
+                                                            imageURL: w,
                                                             stats: {
                                                                 followingCount: 0,
                                                                 __typename: "EventStats"
@@ -5786,17 +5786,17 @@
                     }
                     return i.__extends(t, e), t.prototype.render = function() {
                         if (!this.props.user) return null;
-                        if (this.props.data && this.props.data.loading) return r.createElement(F.Xa, {
+                        if (this.props.data && this.props.data.loading) return r.createElement(F.Ya, {
                             fullWidth: !0,
                             fullHeight: !0
-                        }, r.createElement(F.Za, null));
+                        }, r.createElement(F.ab, null));
                         var e = void 0;
                         this.props.data && this.props.data.event && this.props.data.event.game && (e = {
                             __typename: "EventModel",
                             eventID: this.props.data.event.id,
                             parent: this.props.data.event.parent || this.props.parent || void 0,
                             title: this.props.data.event.title,
-                            imageUrl: this.props.eventID ? this.props.data.event.imageURL : this.props.data.event.parent && this.props.data.event.parent.imageURL || this.props.parent && this.props.parent.imageURL || j,
+                            imageUrl: this.props.eventID ? this.props.data.event.imageURL : this.props.data.event.parent && this.props.data.event.parent.imageURL || this.props.parent && this.props.parent.imageURL || w,
                             description: this.props.data.event.description,
                             ownerID: this.props.data.event.owner && this.props.data.event.owner.id || "",
                             imageID: null,
@@ -6014,10 +6014,10 @@
                     }
                     return i.__extends(t, e), t.prototype.render = function() {
                         if (!this.props.user) return null;
-                        if (this.props.data && this.props.data.loading) return r.createElement(F.Xa, {
+                        if (this.props.data && this.props.data.loading) return r.createElement(F.Ya, {
                             fullWidth: !0,
                             fullHeight: !0
-                        }, r.createElement(F.Za, null));
+                        }, r.createElement(F.ab, null));
                         var e = void 0;
                         this.props.data && this.props.data.event && this.props.data.event.game && (e = {
                             __typename: "EventModel",
@@ -6073,7 +6073,7 @@
                 U = (n("IejX"), function(e) {
                     return e ? e.join(",") : ""
                 }),
-                X = function(e) {
+                G = function(e) {
                     function t(t) {
                         var n = e.call(this, t) || this;
                         return n.onCancel = function() {
@@ -6134,19 +6134,19 @@
                     }
                     return i.__extends(t, e), t.prototype.render = function() {
                         var e = null;
-                        return this.props.serviceError && (e = r.createElement(F.Xa, null, r.createElement(F.W, {
+                        return this.props.serviceError && (e = r.createElement(F.Ya, null, r.createElement(F.W, {
                             fontSize: F.Ca.Size4,
                             color: F.O.Error
-                        }, this.props.serviceError))), r.createElement(F.Xa, {
+                        }, this.props.serviceError))), r.createElement(F.Ya, {
                             className: "event-modal"
-                        }, r.createElement(F.Eb, {
+                        }, r.createElement(F.Fb, {
                             className: "event-modal__content",
                             padding: 4,
                             margin: {
                                 top: 5
                             },
                             background: F.r.Base
-                        }, r.createElement(F.Eb, {
+                        }, r.createElement(F.Fb, {
                             display: F.X.Flex,
                             padding: {
                                 bottom: 2
@@ -6154,14 +6154,14 @@
                             margin: {
                                 bottom: 2
                             },
-                            justifyContent: F.Wa.Between,
+                            justifyContent: F.Xa.Between,
                             borderBottom: !0
-                        }, r.createElement(F.Xa, {
+                        }, r.createElement(F.Ya, {
                             flexGrow: 0,
                             flexShrink: 1
                         }, r.createElement(F.W, {
-                            type: F.Vb.H3
-                        }, Object(l.d)("Create a Series", "CollectionModal"))), r.createElement(F.Xa, {
+                            type: F.Wb.H3
+                        }, Object(l.d)("Create a Series", "CollectionModal"))), r.createElement(F.Ya, {
                             flexGrow: 0,
                             flexShrink: 0
                         }, r.createElement(F.z, {
@@ -6187,7 +6187,7 @@
                                 md: 6,
                                 lg: 7
                             }
-                        }, r.createElement(F.Xa, {
+                        }, r.createElement(F.Ya, {
                             margin: {
                                 bottom: 2
                             }
@@ -6196,15 +6196,15 @@
                             label: Object(l.d)("Event Title", "CollectionModal"),
                             error: !!this.state.fieldErrors.title,
                             errorMessage: U(this.state.fieldErrors.title)
-                        }, r.createElement(F.Ra, {
+                        }, r.createElement(F.Sa, {
                             onChange: this.onTitleChange,
                             value: this.state.fieldValues.title,
-                            type: F.Ta.Text,
+                            type: F.Ua.Text,
                             maxLength: 140,
                             placeholder: Object(l.d)("Your title is also used in reminders and social media posts. ({limit} character limit)", {
                                 limit: 140
                             }, "CollectionModal")
-                        }))), r.createElement(F.Xa, {
+                        }))), r.createElement(F.Ya, {
                             margin: {
                                 bottom: 2
                             }
@@ -6212,7 +6212,7 @@
                             label: Object(l.d)("Event Description", "CollectionModal"),
                             error: !!this.state.fieldErrors.description,
                             errorMessage: U(this.state.fieldErrors.description)
-                        }, r.createElement(F.Sb, {
+                        }, r.createElement(F.Tb, {
                             placeholder: Object(l.d)("Tell viewers why they should watch your series", "CollectionModal"),
                             onChange: this.onDescriptionChange,
                             value: this.state.fieldValues.description,
@@ -6221,7 +6221,7 @@
                             label: "",
                             error: !!this.state.fieldErrors.language,
                             errorMessage: U(this.state.fieldErrors.language)
-                        }, r.createElement(F.Xa, {
+                        }, r.createElement(F.Ya, {
                             display: F.X.Flex,
                             margin: {
                                 bottom: 2
@@ -6233,12 +6233,12 @@
                         })))))))))
                     }, t
                 }(r.Component),
-                G = n("4Q4g"),
+                Y = n("4Q4g"),
                 B = n("pM79"),
                 K = n("fQJ0"),
-                q = n("Wwq8"),
-                z = n("JNgr"),
-                W = n("mvg9"),
+                X = n("Wwq8"),
+                q = n("JNgr"),
+                z = n("mvg9"),
                 $ = "https://static-cdn.jtvnw.net/twitch-event-images-v2/default/town-320x180",
                 H = function(e) {
                     function t() {
@@ -6254,7 +6254,7 @@
                                             if (t = Object(l.d)("An unexpected error occurred creating your event", "TimetableEventModal"), !(this.props.user && this.props.user.id && this.props.user.login && e)) return this.setState({
                                                 error: t
                                             }), [2];
-                                            if (n = e.imageID ? e.imageID : null, r = Object(q.a)(), o = this.props.user.login, s = this.props.user.id, d = a.CreateEventDone, c = !0, !this.props.eventID) return [3, 5];
+                                            if (n = e.imageID ? e.imageID : null, r = Object(X.a)(), o = this.props.user.login, s = this.props.user.id, d = a.CreateEventDone, c = !0, !this.props.eventID) return [3, 5];
                                             v.label = 1;
                                         case 1:
                                             return v.trys.push([1, 3, , 4]), d = a.EditEventDone, m = this.props.eventID, [4, this.props.updateTimetableEvent(i.__assign({}, Object(p.a)({
@@ -6325,7 +6325,7 @@
                                                     var n = t.data;
                                                     if (n.createTimetableEvent.event) {
                                                         var a = e.readQuery({
-                                                            query: W,
+                                                            query: z,
                                                             variables: {
                                                                 channelLogin: o
                                                             }
@@ -6363,7 +6363,7 @@
                                                                     })
                                                                 });
                                                             e.writeQuery({
-                                                                query: W,
+                                                                query: z,
                                                                 variables: {
                                                                     channelLogin: o
                                                                 },
@@ -6400,10 +6400,10 @@
                     }
                     return i.__extends(t, e), t.prototype.render = function() {
                         if (!this.props.user) return null;
-                        if (this.props.data && this.props.data.loading) return r.createElement(F.Xa, {
+                        if (this.props.data && this.props.data.loading) return r.createElement(F.Ya, {
                             fullWidth: !0,
                             fullHeight: !0
-                        }, r.createElement(F.Za, null));
+                        }, r.createElement(F.ab, null));
                         var e, t = void 0;
                         this.props.data && this.props.data.event && function(e) {
                             return !(!e || "EventCollection" !== e.__typename)
@@ -6414,7 +6414,7 @@
                         }, t = this.props.data.event.imageURL) : e = {
                             title: "",
                             description: "",
-                            language: Object(z.a)()
+                            language: Object(q.a)()
                         };
                         var n = {
                                 id: this.props.user.id || "",
@@ -6423,7 +6423,7 @@
                                 __typename: "User"
                             },
                             a = "" !== this.state.error;
-                        return r.createElement(X, {
+                        return r.createElement(G, {
                             closeModal: this.props.closeModal,
                             onCommit: this.onCommit,
                             eventFieldValues: e,
@@ -6453,11 +6453,11 @@
                         }
                     }), Object(u.a)(K, {
                         name: "updateTimetableEvent"
-                    }), Object(u.a)(G, {
+                    }), Object(u.a)(Y, {
                         name: "createTimetableEvent"
                     })], t)
                 }(r.Component),
-                Y = n("/MKj"),
+                W = n("/MKj"),
                 Q = n("aCAx"),
                 Z = n("CcE2"),
                 J = n("Jhye"),
@@ -6469,22 +6469,22 @@
                         return t.renderTitle = function() {
                             var e = Object(l.d)("Events", "DashboardEventsHeader"),
                                 n = r.createElement(F.W, {
-                                    type: F.Vb.H4,
+                                    type: F.Wb.H4,
                                     bold: !0
                                 }, e),
                                 a = null,
                                 i = null,
                                 o = null;
-                            return t.props.navigatedCollection && (a = r.createElement(F.Xa, {
+                            return t.props.navigatedCollection && (a = r.createElement(F.Ya, {
                                 display: F.X.Flex
-                            }, r.createElement(F.Xa, {
+                            }, r.createElement(F.Ya, {
                                 margin: {
                                     left: .5
                                 }
                             }, r.createElement(F.W, {
-                                type: F.Vb.H4,
+                                type: F.Wb.H4,
                                 bold: !0
-                            }, "/ ", t.props.navigatedCollection.title))), i = r.createElement(F.Xa, {
+                            }, "/ ", t.props.navigatedCollection.title))), i = r.createElement(F.Ya, {
                                 margin: {
                                     right: 1
                                 }
@@ -6496,19 +6496,19 @@
                             })), n = r.createElement(F.U, {
                                 to: "/" + t.props.channelName + "/dashboard/events"
                             }, r.createElement(F.W, {
-                                type: F.Vb.H4,
+                                type: F.Wb.H4,
                                 bold: !0
-                            }, e)), t.props.navigatedCollection.stats && (o = r.createElement(F.W, null, t.props.navigatedCollection.stats.followingCount, " ", Object(l.d)("Reminders Set", "DashboardEventsHeader")))), r.createElement(r.Fragment, null, r.createElement(F.Xa, {
+                            }, e)), t.props.navigatedCollection.stats && (o = r.createElement(F.W, null, t.props.navigatedCollection.stats.followingCount, " ", Object(l.d)("Reminders Set", "DashboardEventsHeader")))), r.createElement(r.Fragment, null, r.createElement(F.Ya, {
                                 display: F.X.Flex
-                            }, i, r.createElement(F.Xa, {
+                            }, i, r.createElement(F.Ya, {
                                 display: F.X.Flex,
                                 flexDirection: F.Aa.Column
-                            }, r.createElement(F.Xa, {
+                            }, r.createElement(F.Ya, {
                                 display: F.X.Flex,
                                 flexDirection: F.Aa.Row
                             }, n, a), o)))
                         }, t.renderButtonRow = function() {
-                            var e = t.props.navigatedCollection && r.createElement(F.Xa, {
+                            var e = t.props.navigatedCollection && r.createElement(F.Ya, {
                                 display: F.X.Flex
                             }, r.createElement(J.a, {
                                 id: t.props.navigatedCollection.id,
@@ -6516,31 +6516,31 @@
                                 eventLocation: ee.a.DashboardEvents
                             }, r.createElement(F.z, {
                                 type: F.F.Hollow,
-                                icon: F.tb.Share
-                            }, Object(l.d)("Share", "DashboardEventsHeader"))), r.createElement(F.Xa, {
+                                icon: F.ub.Share
+                            }, Object(l.d)("Share", "DashboardEventsHeader"))), r.createElement(F.Ya, {
                                 margin: {
                                     x: 1
                                 }
                             }, r.createElement(F.z, {
                                 type: F.F.Hollow,
-                                icon: F.tb.Edit,
+                                icon: F.ub.Edit,
                                 onClick: t.handleEditEvent
                             }, Object(l.d)("Edit", "DashboardEventsHeader"))), r.createElement(F.z, {
                                 "data-a-target": te,
                                 type: F.F.Hollow,
                                 onClick: t.deleteEventCollection,
-                                icon: F.tb.Trash
+                                icon: F.ub.Trash
                             }, Object(l.d)("Delete", "DashboardEventsHeader")));
-                            return r.createElement(F.Xa, {
+                            return r.createElement(F.Ya, {
                                 display: F.X.Flex,
                                 flexDirection: F.Aa.Row,
                                 alignItems: F.f.Center
-                            }, e, r.createElement(F.Xa, {
+                            }, e, r.createElement(F.Ya, {
                                 margin: {
                                     left: 1
                                 }
                             }, r.createElement(F.z, {
-                                icon: F.tb.Plus,
+                                icon: F.ub.Plus,
                                 onClick: t.props.openEventCreator
                             }, Object(l.d)("Add Event", "DashboardEventsHeader"))))
                         }, t.deleteEventCollection = function() {
@@ -6569,24 +6569,24 @@
                         }, t
                     }
                     return i.__extends(t, e), t.prototype.render = function() {
-                        return r.createElement(F.Eb, {
+                        return r.createElement(F.Fb, {
                             className: "dashboard-events-header",
                             alignItems: F.f.Center,
                             borderBottom: !0,
                             background: F.r.Base,
                             display: F.X.Flex,
                             flexDirection: F.Aa.Row,
-                            justifyContent: F.Wa.Center,
-                            position: F.jb.Relative,
-                            zIndex: F.ic.Default,
+                            justifyContent: F.Xa.Center,
+                            position: F.kb.Relative,
+                            zIndex: F.jc.Default,
                             fullWidth: !0
-                        }, r.createElement(F.Xa, {
+                        }, r.createElement(F.Ya, {
                             margin: {
                                 x: 3
                             },
                             className: "dashboard-events-header__content",
                             display: F.X.Flex,
-                            justifyContent: F.Wa.Between,
+                            justifyContent: F.Xa.Between,
                             fullWidth: !0
                         }, this.renderTitle(), this.renderButtonRow()))
                     }, t
@@ -6594,7 +6594,7 @@
                 ae = Object(f.b)("DashboardEventsHeaderComponent", {
                     autoReportInteractive: !0
                 })(ne);
-            var ie = Object(Y.connect)(function(e) {
+            var ie = Object(W.connect)(function(e) {
                     return {
                         firstPageLoaded: e.session.firstPageLoaded
                     }
@@ -6648,7 +6648,7 @@
                         var e = Object(l.j)(new Date(this.props.startAt), {
                             timeZoneName: "short"
                         });
-                        return r.createElement(F.Xa, null, r.createElement(F.Eb, {
+                        return r.createElement(F.Ya, null, r.createElement(F.Fb, {
                             className: "dashboard-events-leaf-card__row",
                             margin: {
                                 y: 1
@@ -6659,36 +6659,36 @@
                             background: F.r.Base,
                             elevation: 1,
                             borderRadius: F.x.Small
-                        }, r.createElement(F.Xa, {
+                        }, r.createElement(F.Ya, {
                             fullWidth: !0,
                             display: F.X.Flex,
-                            justifyContent: F.Wa.Between,
+                            justifyContent: F.Xa.Between,
                             flexDirection: F.Aa.Row
-                        }, r.createElement(F.Xa, {
+                        }, r.createElement(F.Ya, {
                             display: F.X.Flex,
                             flexDirection: F.Aa.Row
-                        }, r.createElement(F.Xa, {
+                        }, r.createElement(F.Ya, {
                             className: "dashboard-events-leaf-card__image",
-                            overflow: F.cb.Hidden,
+                            overflow: F.db.Hidden,
                             flexShrink: 0
                         }, r.createElement(F.I, {
                             size: F.J.Size16,
                             aspect: F.p.Aspect16x9,
                             src: this.props.imageURL,
                             alt: "" !== this.props.imageURL ? this.props.title : ""
-                        })), r.createElement(F.Xa, {
+                        })), r.createElement(F.Ya, {
                             margin: {
                                 left: 1
                             },
                             display: F.X.Flex,
                             flexDirection: F.Aa.Column,
-                            justifyContent: F.Wa.Center
-                        }, r.createElement(F.Xa, null, this.props.parentTitle), r.createElement(F.Xa, null, r.createElement(F.U, {
+                            justifyContent: F.Xa.Center
+                        }, r.createElement(F.Ya, null, this.props.parentTitle), r.createElement(F.Ya, null, r.createElement(F.U, {
                             to: "/events/" + this.props.id
                         }, r.createElement(F.W, {
                             bold: !0,
-                            type: F.Vb.H5
-                        }, this.props.title))), r.createElement(F.Xa, null, this.renderInfoBar(e)))), r.createElement(F.Xa, {
+                            type: F.Wb.H5
+                        }, this.props.title))), r.createElement(F.Ya, null, this.renderInfoBar(e)))), r.createElement(F.Ya, {
                             margin: {
                                 left: 1,
                                 right: 1
@@ -6696,7 +6696,7 @@
                             display: F.X.Flex,
                             flexShrink: 0,
                             alignItems: F.f.Center
-                        }, r.createElement(F.Xa, {
+                        }, r.createElement(F.Ya, {
                             margin: {
                                 right: 1
                             }
@@ -6709,20 +6709,20 @@
                             balloonDirection: F.v.BottomRight
                         }, r.createElement(F.z, {
                             type: F.F.Hollow,
-                            icon: F.tb.Share
-                        }, Object(l.d)("Share", "DashboardEventsLeafCard")))), r.createElement(F.Xa, {
+                            icon: F.ub.Share
+                        }, Object(l.d)("Share", "DashboardEventsLeafCard")))), r.createElement(F.Ya, {
                             margin: {
                                 right: .5
                             }
                         }, r.createElement(oe.a, null, r.createElement(F.z, {
-                            icon: F.tb.More,
+                            icon: F.ub.More,
                             type: F.F.Text
                         }), r.createElement(F.u, {
                             direction: F.v.BottomRight,
                             tailOffset: 8
-                        }, r.createElement(F.Ua, {
+                        }, r.createElement(F.Va, {
                             onClick: this.editEventLeaf
-                        }, r.createElement(F.Xa, {
+                        }, r.createElement(F.Ya, {
                             className: "dashboard-events-leaf-card__balloon-item",
                             padding: {
                                 x: 1,
@@ -6730,17 +6730,17 @@
                             },
                             display: F.X.Flex,
                             alignItems: F.f.Center
-                        }, r.createElement(F.sb, {
-                            asset: F.tb.Edit,
-                            type: F.ub.Brand
-                        }), r.createElement(F.Xa, {
+                        }, r.createElement(F.tb, {
+                            asset: F.ub.Edit,
+                            type: F.vb.Brand
+                        }), r.createElement(F.Ya, {
                             margin: {
                                 left: 1
                             }
-                        }, Object(l.d)("Edit", "DashboardEventsLeafCard")))), r.createElement(F.Ua, {
+                        }, Object(l.d)("Edit", "DashboardEventsLeafCard")))), r.createElement(F.Va, {
                             "data-a-target": "delete-button",
                             onClick: this.deleteEventLeaf
-                        }, r.createElement(F.Xa, {
+                        }, r.createElement(F.Ya, {
                             className: "dashboard-events-leaf-card__balloon-item",
                             padding: {
                                 x: 1,
@@ -6748,10 +6748,10 @@
                             },
                             display: F.X.Flex,
                             alignItems: F.f.Center
-                        }, r.createElement(F.sb, {
-                            asset: F.tb.Trash,
-                            type: F.ub.Brand
-                        }), r.createElement(F.Xa, {
+                        }, r.createElement(F.tb, {
+                            asset: F.ub.Trash,
+                            type: F.vb.Brand
+                        }), r.createElement(F.Ya, {
                             margin: {
                                 left: 1
                             }
@@ -6761,7 +6761,7 @@
                 le = Object(f.b)("DashboardEventsLeafCardComponent", {
                     autoReportInteractive: !0
                 })(se);
-            var de = Object(Y.connect)(function(e) {
+            var de = Object(W.connect)(function(e) {
                     return {
                         firstPageLoaded: e.session.firstPageLoaded
                     }
@@ -6799,20 +6799,20 @@
                                     deleteEventLeaf: e.props.deleteEventLeaf
                                 })
                             });
-                        return r.createElement(F.Xa, {
+                        return r.createElement(F.Ya, {
                             margin: {
                                 bottom: 3
                             }
-                        }, r.createElement(F.Eb, {
+                        }, r.createElement(F.Fb, {
                             display: F.X.Flex,
-                            justifyContent: F.Wa.Between,
+                            justifyContent: F.Xa.Between,
                             padding: {
                                 bottom: .5
                             },
                             borderBottom: !0
                         }, r.createElement(F.W, {
                             color: F.O.Alt2,
-                            type: F.Vb.H5
+                            type: F.Wb.H5
                         }, this.props.dateString)), t)
                     }, t
                 }(r.Component),
@@ -6862,8 +6862,8 @@
                             }
                             return o
                         }(this.props.eventLeaves, this.props.editEventLeaf, this.props.editSegmentEventLeaf, this.props.deleteEventLeaf);
-                        return r.createElement(F.Xa, {
-                            position: F.jb.Relative
+                        return r.createElement(F.Ya, {
+                            position: F.kb.Relative
                         }, e, r.createElement(b.a, {
                             enabled: this.props.hasNextPage,
                             loadMore: this.props.loadNextPage
@@ -6880,7 +6880,7 @@
                     return i.__extends(t, e), t.prototype.render = function() {
                         return r.createElement(r.Fragment, null, r.createElement(F.U, {
                             to: "/" + this.props.channelName + "/dashboard/events/" + this.props.collection.id
-                        }, r.createElement(F.Xa, {
+                        }, r.createElement(F.Ya, {
                             margin: {
                                 bottom: 1
                             }
@@ -6902,29 +6902,29 @@
                                     collection: t
                                 })
                             }),
-                            n = this.props.hasMoreSeries && r.createElement(F.Xa, {
+                            n = this.props.hasMoreSeries && r.createElement(F.Ya, {
                                 display: F.X.Flex,
-                                justifyContent: F.Wa.Center
+                                justifyContent: F.Xa.Center
                             }, r.createElement(F.z, {
                                 "data-a-target": "load-more",
                                 type: F.F.Text,
-                                icon: F.tb.GlyphArrDown,
+                                icon: F.ub.GlyphArrDown,
                                 onClick: this.props.loadNextSeriesPage
                             }, Object(l.d)("Load More", "DashboardEventsSidenav")));
-                        return r.createElement(F.Xa, null, r.createElement(F.Xa, {
+                        return r.createElement(F.Ya, null, r.createElement(F.Ya, {
                             margin: {
                                 bottom: 1
                             }
                         }, r.createElement(F.W, {
-                            transform: F.Ub.Uppercase,
+                            transform: F.Vb.Uppercase,
                             color: F.O.Alt2,
-                            type: F.Vb.H5
-                        }, Object(l.d)("Series", "DashboardEventsSidenav"))), r.createElement(F.Xa, {
+                            type: F.Wb.H5
+                        }, Object(l.d)("Series", "DashboardEventsSidenav"))), r.createElement(F.Ya, {
                             margin: {
                                 bottom: 1
                             }
                         }, r.createElement(F.z, {
-                            icon: F.tb.Plus,
+                            icon: F.ub.Plus,
                             onClick: this.props.openEventCreator
                         }, Object(l.d)("Add Series", "DashboardEventsSidenav"))), t, n)
                     }, t
@@ -6934,13 +6934,13 @@
                         return null !== e && e.apply(this, arguments) || this
                     }
                     return i.__extends(t, e), t.prototype.render = function() {
-                        return r.createElement(F.wb, null, r.createElement(F.xb, {
+                        return r.createElement(F.xb, null, r.createElement(F.yb, {
                             name: "events-toggle",
                             label: Object(l.d)("Future Events", "DashboardEventsToggle"),
                             defaultChecked: this.props.filter === h.a.Future,
                             onChange: this.props.handleToggleChange,
                             value: h.a.Future
-                        }), r.createElement(F.xb, {
+                        }), r.createElement(F.yb, {
                             name: "events-toggle",
                             label: Object(l.d)("Past Events", "DashboardEventsToggle"),
                             defaultChecked: this.props.filter === h.a.Past,
@@ -7041,13 +7041,13 @@
                                 }
                             var o = null,
                                 s = Object(l.d)("Add Event", "DashboardEventsLayout");
-                            (!this.props.eventLeaves || 0 === n.length && this.props.filter === h.a.Future) && (o = this.props.navigatedCollection ? r.createElement(F.Xa, {
+                            (!this.props.eventLeaves || 0 === n.length && this.props.filter === h.a.Future) && (o = this.props.navigatedCollection ? r.createElement(F.Ya, {
                                 display: F.X.Flex,
-                                justifyContent: F.Wa.Center
-                            }, r.createElement(F.Xa, {
+                                justifyContent: F.Xa.Center
+                            }, r.createElement(F.Ya, {
                                 display: F.X.Flex,
                                 flexDirection: F.Aa.Column,
-                                justifyContent: F.Wa.Center,
+                                justifyContent: F.Xa.Center,
                                 margin: {
                                     top: 5
                                 }
@@ -7060,32 +7060,32 @@
                                     "3x": "https://static-cdn.jtvnw.net/emoticons/v1/86/3.0"
                                 },
                                 alt: Object(l.d)("No Events in this Series", "DashboardEventsLayout")
-                            }), r.createElement(F.Xa, {
+                            }), r.createElement(F.Ya, {
                                 display: F.X.Flex,
-                                textAlign: F.Rb.Center,
+                                textAlign: F.Sb.Center,
                                 flexDirection: F.Aa.Column,
-                                justifyContent: F.Wa.Center,
+                                justifyContent: F.Xa.Center,
                                 margin: {
                                     top: 1
                                 }
                             }, r.createElement(F.W, {
                                 color: F.O.Alt2
-                            }, Object(l.d)("Yikes! Empty Series are invisible.", "DashboardEventsLayout"), r.createElement("br", null), Object(l.d)("To make your series visible, add an event.", "DashboardEventsLayout"))), r.createElement(F.Xa, {
+                            }, Object(l.d)("Yikes! Empty Series are invisible.", "DashboardEventsLayout"), r.createElement("br", null), Object(l.d)("To make your series visible, add an event.", "DashboardEventsLayout"))), r.createElement(F.Ya, {
                                 display: F.X.Flex,
-                                justifyContent: F.Wa.Center,
+                                justifyContent: F.Xa.Center,
                                 margin: {
                                     top: 2
                                 }
                             }, r.createElement(F.z, {
-                                icon: F.tb.Plus,
+                                icon: F.ub.Plus,
                                 onClick: this.openSegmentEventCreation
-                            }, s)))) : r.createElement(F.Xa, {
+                            }, s)))) : r.createElement(F.Ya, {
                                 display: F.X.Flex,
-                                justifyContent: F.Wa.Center
-                            }, r.createElement(F.Xa, {
+                                justifyContent: F.Xa.Center
+                            }, r.createElement(F.Ya, {
                                 display: F.X.Flex,
                                 flexDirection: F.Aa.Column,
-                                justifyContent: F.Wa.Center,
+                                justifyContent: F.Xa.Center,
                                 margin: {
                                     top: 5
                                 }
@@ -7098,24 +7098,24 @@
                                     "3x": "https://static-cdn.jtvnw.net/emoticons/v1/86/3.0"
                                 },
                                 alt: Object(l.d)("No Events Created", "DashboardEventsLayout")
-                            }), r.createElement(F.Xa, {
+                            }), r.createElement(F.Ya, {
                                 display: F.X.Flex,
-                                textAlign: F.Rb.Center,
+                                textAlign: F.Sb.Center,
                                 flexDirection: F.Aa.Column,
-                                justifyContent: F.Wa.Center,
+                                justifyContent: F.Xa.Center,
                                 margin: {
                                     top: 1
                                 }
                             }, r.createElement(F.W, {
                                 color: F.O.Alt2
-                            }, Object(l.d)("Aw, you have no events.", "DashboardEventsLayout"), r.createElement("br", null), Object(l.d)("Let's make some!", "DashboardEventsLayout"))), r.createElement(F.Xa, {
+                            }, Object(l.d)("Aw, you have no events.", "DashboardEventsLayout"), r.createElement("br", null), Object(l.d)("Let's make some!", "DashboardEventsLayout"))), r.createElement(F.Ya, {
                                 display: F.X.Flex,
-                                justifyContent: F.Wa.Center,
+                                justifyContent: F.Xa.Center,
                                 margin: {
                                     top: 2
                                 }
                             }, r.createElement(F.z, {
-                                icon: F.tb.Plus,
+                                icon: F.ub.Plus,
                                 onClick: this.openSingleEventCreation
                             }, s)))));
                             var d = null;
@@ -7124,7 +7124,7 @@
                                     var p;
                                     (p = m[u]) && p.node && !p.node.isDeleted && c.push(p.node)
                                 }
-                                d = r.createElement(F.Xa, {
+                                d = r.createElement(F.Ya, {
                                     display: F.X.Flex,
                                     margin: {
                                         right: 3
@@ -7141,17 +7141,17 @@
                                     openEventCreator: this.openTimetableEventCreation
                                 })))
                             }
-                            t = r.createElement(F.Xa, {
+                            t = r.createElement(F.Ya, {
                                 margin: {
                                     x: 3
                                 },
                                 display: F.X.Flex,
                                 flexDirection: F.Aa.Row,
                                 flexGrow: 1
-                            }, d, r.createElement(F.Xa, {
+                            }, d, r.createElement(F.Ya, {
                                 className: "dashboard-events-layout__right-col",
                                 flexGrow: 1
-                            }, r.createElement(F.Xa, {
+                            }, r.createElement(F.Ya, {
                                 margin: {
                                     bottom: 2
                                 },
@@ -7178,7 +7178,7 @@
                                 });
                                 break;
                             case me.Segment:
-                                e = r.createElement(w, {
+                                e = r.createElement(j, {
                                     user: this.props.user,
                                     closeModal: this.closeModal,
                                     eventID: this.state.editableEventID,
@@ -7192,13 +7192,13 @@
                                     eventID: this.state.editableEventID
                                 })
                         }
-                        return r.createElement(F.Xa, {
+                        return r.createElement(F.Ya, {
                             className: "dashboard-events-layout",
                             fullHeight: !0,
                             display: F.X.Flex,
-                            justifyContent: F.Wa.Center,
+                            justifyContent: F.Xa.Center,
                             flexDirection: F.Aa.Column
-                        }, r.createElement(F.Xa, null, r.createElement(ie, {
+                        }, r.createElement(F.Ya, null, r.createElement(ie, {
                             channelName: this.props.user && this.props.user.login || "",
                             navigatedCollection: this.props.navigatedCollection || null,
                             openEventCreator: this.props.navigatedCollection ? this.openSegmentEventCreation : this.openSingleEventCreation,
@@ -7207,16 +7207,16 @@
                         })), r.createElement(b.b, {
                             className: "dashboard-events-layout__scroll-container",
                             disableDebounce: !0
-                        }, r.createElement(F.Xa, {
+                        }, r.createElement(F.Ya, {
                             display: F.X.Flex,
-                            justifyContent: F.Wa.Center
-                        }, r.createElement(F.Xa, {
+                            justifyContent: F.Xa.Center
+                        }, r.createElement(F.Ya, {
                             className: "dashboard-events-layout__main-content",
                             margin: {
                                 top: 3
                             },
                             flexGrow: 1
-                        }, r.createElement(F.Xa, {
+                        }, r.createElement(F.Ya, {
                             display: F.X.Flex,
                             flexDirection: F.Aa.Row
                         }, t)))), r.createElement(k, {
@@ -7230,9 +7230,9 @@
                             message: Object(l.d)("Error loading data.", "DashboardEventsLayout")
                         })
                     }, t.prototype.renderLoadingSpinner = function() {
-                        return r.createElement(F.Xa, {
+                        return r.createElement(F.Ya, {
                             flexGrow: 1
-                        }, r.createElement(F.Za, {
+                        }, r.createElement(F.ab, {
                             fillContent: !0
                         }))
                     }, t
@@ -7385,7 +7385,7 @@
                                     var t = e.data.user.managedEventCollections.edges[Math.max(e.data.user.managedEventCollections.edges.length - 1, 0)],
                                         n = t && t.cursor || "";
                                     return e.data.fetchMore({
-                                        query: W,
+                                        query: z,
                                         variables: {
                                             channelLogin: e.data.variables.channelLogin,
                                             collectionsCursor: n,
@@ -7438,8 +7438,8 @@
                         }
                     }
                 }))(Le),
-                je = Se()(_e || (_e = i.__makeTemplateObject(["fragment deletedEventCollection on EventCollection {\n  isDeleted\n  __typename\n}"], ["fragment deletedEventCollection on EventCollection {\n  isDeleted\n  __typename\n}"]))),
-                we = n("4jyH"),
+                we = Se()(_e || (_e = i.__makeTemplateObject(["fragment deletedEventCollection on EventCollection {\n  isDeleted\n  __typename\n}"], ["fragment deletedEventCollection on EventCollection {\n  isDeleted\n  __typename\n}"]))),
+                je = n("4jyH"),
                 Ae = function(e) {
                     function t() {
                         var t = null !== e && e.apply(this, arguments) || this;
@@ -7604,7 +7604,7 @@
                             }
                         }
                     }
-                }), Object(u.a)(we, {
+                }), Object(u.a)(je, {
                     props: function(e) {
                         return {
                             deleteEventCollection: function(t, n) {
@@ -7624,7 +7624,7 @@
                                     update: function(e) {
                                         e.writeFragment({
                                             id: "EventCollection:" + t,
-                                            fragment: je,
+                                            fragment: we,
                                             data: {
                                                 isDeleted: !0,
                                                 __typename: "EventCollection"
@@ -7901,7 +7901,7 @@
                 m = n("8Ad5"),
                 p = n("fk61"),
                 v = (n("V/+G"), function(e) {
-                    return r.createElement(s.Xa, {
+                    return r.createElement(s.Ya, {
                         attachTop: !0,
                         attachRight: !0,
                         attachLeft: !0,
@@ -7910,29 +7910,29 @@
                         fullWidth: !0,
                         display: s.X.Flex,
                         flexDirection: s.Aa.Column,
-                        justifyContent: s.Wa.Center,
+                        justifyContent: s.Xa.Center,
                         alignItems: s.f.Center,
-                        position: s.jb.Absolute
-                    }, r.createElement(s.Xa, {
-                        textAlign: s.Rb.Center,
+                        position: s.kb.Absolute
+                    }, r.createElement(s.Ya, {
+                        textAlign: s.Sb.Center,
                         flexShrink: 1
-                    }, r.createElement(s.sb, {
+                    }, r.createElement(s.tb, {
                         asset: e.icon,
                         width: 46,
                         height: 48,
-                        type: s.ub.Alt2
-                    })), r.createElement(s.Xa, {
+                        type: s.vb.Alt2
+                    })), r.createElement(s.Ya, {
                         margin: {
                             top: 1
                         },
-                        textAlign: s.Rb.Center
+                        textAlign: s.Sb.Center
                     }, r.createElement(s.W, {
-                        type: s.Vb.H4,
+                        type: s.Wb.H4,
                         color: s.O.Alt2
-                    }, e.titleText)), r.createElement(s.Xa, {
-                        textAlign: s.Rb.Center
+                    }, e.titleText)), r.createElement(s.Ya, {
+                        textAlign: s.Sb.Center
                     }, r.createElement(s.W, {
-                        type: s.Vb.P,
+                        type: s.Wb.P,
                         color: s.O.Alt2
                     }, e.subText)))
                 });
@@ -8003,10 +8003,10 @@
                             onKeyDown: this.onKeyDown
                         }, r.createElement(c.a, {
                             onClickOut: this.onClickOut
-                        }, r.createElement(s.Ra, {
+                        }, r.createElement(s.Sa, {
                             key: this.props.initialGameTitle + "-" + this.props.redrawKey,
-                            type: s.Ta.Text,
-                            icon: s.tb.NavGames,
+                            type: s.Ua.Text,
+                            icon: s.ub.NavGames,
                             name: "game",
                             onChange: this.onChange,
                             onFocus: this.onFocus,
@@ -8024,32 +8024,32 @@
                                 "game-selector__search-panel--closed": !this.state.isOpen
                             }),
                             t = null;
-                        return 0 === this.props.searchTerm.length || (t = this.props.gameResults ? this.props.gameResults.length > 0 ? this.renderGameResults(this.props.gameResults, this.state.highlightedGameIndex) : this.props.isSearchPending ? r.createElement(s.Za, {
+                        return 0 === this.props.searchTerm.length || (t = this.props.gameResults ? this.props.gameResults.length > 0 ? this.renderGameResults(this.props.gameResults, this.state.highlightedGameIndex) : this.props.isSearchPending ? r.createElement(s.ab, {
                             fillContent: !0
                         }) : r.createElement(v, {
-                            icon: s.tb.SearchNoResults,
+                            icon: s.ub.SearchNoResults,
                             titleText: Object(d.d)("No results found", "EventGameSelector"),
                             subText: Object(d.d)("They're probably in another castle", "EventGameSelector")
                         }) : r.createElement(v, {
-                            icon: s.tb.DeadGlitch,
+                            icon: s.ub.DeadGlitch,
                             titleText: Object(d.d)("Search is not available at this time", "EventGameSelector"),
                             subText: Object(d.d)("Please try again later", "EventGameSelector")
                         })), r.createElement("div", {
                             className: e,
                             tabIndex: 0
-                        }, r.createElement(s.Eb, {
+                        }, r.createElement(s.Fb, {
                             attachTop: !0,
                             attachRight: !0,
                             attachLeft: !0,
                             attachBottom: !0,
                             background: s.r.Base,
-                            position: s.jb.Absolute,
-                            overflow: s.cb.Hidden,
+                            position: s.kb.Absolute,
+                            overflow: s.db.Hidden,
                             display: s.X.Block
                         }, r.createElement(u.b, {
                             suppressScrollX: !0,
                             "data-a-target": "search-scroller"
-                        }, r.createElement(s.Xa, {
+                        }, r.createElement(s.Ya, {
                             margin: {
                                 top: .5,
                                 bottom: .5
@@ -8196,10 +8196,10 @@
                     }, t.prototype.render = function() {
                         return this.props.disabled ? r.createElement("div", {
                             className: "game-selector__search-container"
-                        }, r.createElement(s.Ra, {
+                        }, r.createElement(s.Sa, {
                             value: this.props.currentGameTitle,
-                            type: s.Ta.Text,
-                            icon: s.tb.NavGames,
+                            type: s.Ua.Text,
+                            icon: s.ub.NavGames,
                             disabled: !0
                         })) : r.createElement(f, {
                             redrawKey: this.state.redrawKey,
@@ -8883,18 +8883,18 @@
                             target: "_blank",
                             className: e,
                             onClick: n.onShareClickHandler
-                        }, Object(d.jc)(n.props), {
+                        }, Object(d.kc)(n.props), {
                             download: n.props.text
                         }), n.renderIcon()) : n.isLink() ? r.createElement("a", i.__assign({
                             href: n.getLinkTarget(),
                             target: "_blank",
                             className: e,
                             onClick: n.onShareClickHandler
-                        }, Object(d.jc)(n.props)), n.renderIcon()) : r.createElement("button", i.__assign({
+                        }, Object(d.kc)(n.props)), n.renderIcon()) : r.createElement("button", i.__assign({
                             onClick: n.copyPageUrl,
                             onMouseLeave: n.clearIsCopiedStatus,
                             className: e
-                        }, Object(d.jc)(n.props)), n.renderIcon())
+                        }, Object(d.kc)(n.props)), n.renderIcon())
                     }, n.onShareClickHandler = function() {
                         n.props.onShareClick && n.props.onShareClick(n.props.type)
                     }, n.clearIsCopiedStatus = function() {
@@ -8909,12 +8909,12 @@
                         })
                     }, n.renderIcon = function() {
                         var e = n.getAssetFromType();
-                        return r.createElement(d.Xa, {
+                        return r.createElement(d.Ya, {
                             className: "social-button__icon " + n.addSocialClassModifier("social-button__icon"),
                             display: d.X.Flex,
                             alignItems: d.f.Center,
-                            justifyContent: d.Wa.Center
-                        }, r.createElement(d.sb, {
+                            justifyContent: d.Xa.Center
+                        }, r.createElement(d.tb, {
                             asset: e
                         }))
                     }, n.isLink = function() {
@@ -8939,18 +8939,18 @@
                     }, n.getAssetFromType = function() {
                         switch (n.props.type) {
                             case a.Twitter:
-                                return d.tb.Twitter;
+                                return d.ub.Twitter;
                             case a.Facebook:
-                                return d.tb.Facebook;
+                                return d.ub.Facebook;
                             case a.VKontakte:
-                                return d.tb.VKontakte;
+                                return d.ub.VKontakte;
                             case a.Reddit:
-                                return d.tb.Reddit;
+                                return d.ub.Reddit;
                             case a.Download:
-                                return d.tb.Download;
+                                return d.ub.Download;
                             case a.Copy:
                             default:
-                                return d.tb.Copy
+                                return d.ub.Copy
                         }
                     }, n.addSocialClassModifier = function(e) {
                         switch (n.props.type) {
@@ -8992,11 +8992,11 @@
                     }, n
                 }
                 return i.__extends(t, e), t.prototype.render = function() {
-                    return r.createElement(d.Xa, {
+                    return r.createElement(d.Ya, {
                         className: "social-button"
-                    }, r.createElement(d.Yb, {
+                    }, r.createElement(d.Zb, {
                         label: this.getTooltipFromType(),
-                        direction: d.ac.Bottom
+                        direction: d.bc.Bottom
                     }, this.renderLink()))
                 }, t
             }(r.Component)
@@ -9036,7 +9036,7 @@
                 var e = this.token;
                 if (e.kind !== l)
                     do {
-                        e = e.next || (e.next = j(this, e))
+                        e = e.next || (e.next = w(this, e))
                     } while (e.kind === C);
                 return e
             }
@@ -9095,7 +9095,7 @@
                 return isNaN(e) ? l : e < 127 ? JSON.stringify(String.fromCharCode(e)) : '"\\u' + ("00" + e.toString(16).toUpperCase()).slice(-4) + '"'
             }
 
-            function j(e, t) {
+            function w(e, t) {
                 var n = e.source,
                     r = n.body,
                     o = r.length,
@@ -9113,14 +9113,14 @@
                         }
                         return i
                     }(r, t.end, e),
-                    j = e.line,
+                    w = e.line,
                     M = 1 + s - e.lineStart;
-                if (s >= o) return new L(l, o, o, j, M, t);
+                if (s >= o) return new L(l, o, o, w, M, t);
                 var x = I.call(r, s);
                 if (x < 32 && 9 !== x && 10 !== x && 13 !== x) throw (0, a.syntaxError)(n, s, "Cannot contain the invalid character " + F(x) + ".");
                 switch (x) {
                     case 33:
-                        return new L(d, s, s + 1, j, M, t);
+                        return new L(d, s, s + 1, w, M, t);
                     case 35:
                         return function(e, t, n, a, i) {
                             var r = e.body,
@@ -9130,32 +9130,32 @@
                                 o = I.call(r, ++s)
                             } while (null !== o && (o > 31 || 9 === o));
                             return new L(C, t, s, n, a, i, O.call(r, t + 1, s))
-                        }(n, s, j, M, t);
+                        }(n, s, w, M, t);
                     case 36:
-                        return new L(c, s, s + 1, j, M, t);
+                        return new L(c, s, s + 1, w, M, t);
                     case 40:
-                        return new L(u, s, s + 1, j, M, t);
+                        return new L(u, s, s + 1, w, M, t);
                     case 41:
-                        return new L(m, s, s + 1, j, M, t);
+                        return new L(m, s, s + 1, w, M, t);
                     case 46:
-                        if (46 === I.call(r, s + 1) && 46 === I.call(r, s + 2)) return new L(p, s, s + 3, j, M, t);
+                        if (46 === I.call(r, s + 1) && 46 === I.call(r, s + 2)) return new L(p, s, s + 3, w, M, t);
                         break;
                     case 58:
-                        return new L(v, s, s + 1, j, M, t);
+                        return new L(v, s, s + 1, w, M, t);
                     case 61:
-                        return new L(g, s, s + 1, j, M, t);
+                        return new L(g, s, s + 1, w, M, t);
                     case 64:
-                        return new L(f, s, s + 1, j, M, t);
+                        return new L(f, s, s + 1, w, M, t);
                     case 91:
-                        return new L(h, s, s + 1, j, M, t);
+                        return new L(h, s, s + 1, w, M, t);
                     case 93:
-                        return new L(k, s, s + 1, j, M, t);
+                        return new L(k, s, s + 1, w, M, t);
                     case 123:
-                        return new L(E, s, s + 1, j, M, t);
+                        return new L(E, s, s + 1, w, M, t);
                     case 124:
-                        return new L(b, s, s + 1, j, M, t);
+                        return new L(b, s, s + 1, w, M, t);
                     case 125:
-                        return new L(N, s, s + 1, j, M, t);
+                        return new L(N, s, s + 1, w, M, t);
                     case 65:
                     case 66:
                     case 67:
@@ -9216,7 +9216,7 @@
                                 l = 0;
                             for (; s !== o && null !== (l = I.call(r, s)) && (95 === l || l >= 48 && l <= 57 || l >= 65 && l <= 90 || l >= 97 && l <= 122);) ++s;
                             return new L(y, t, s, n, a, i, O.call(r, t, s))
-                        }(n, s, j, M, t);
+                        }(n, s, w, M, t);
                     case 45:
                     case 48:
                     case 49:
@@ -9236,11 +9236,11 @@
                             45 === l && (l = I.call(s, ++d));
                             if (48 === l) {
                                 if ((l = I.call(s, ++d)) >= 48 && l <= 57) throw (0, a.syntaxError)(e, d, "Invalid number, unexpected digit after 0: " + F(l) + ".")
-                            } else d = w(e, d, l), l = I.call(s, d);
-                            46 === l && (c = !0, l = I.call(s, ++d), d = w(e, d, l), l = I.call(s, d));
-                            69 !== l && 101 !== l || (c = !0, 43 !== (l = I.call(s, ++d)) && 45 !== l || (l = I.call(s, ++d)), d = w(e, d, l));
+                            } else d = j(e, d, l), l = I.call(s, d);
+                            46 === l && (c = !0, l = I.call(s, ++d), d = j(e, d, l), l = I.call(s, d));
+                            69 !== l && 101 !== l || (c = !0, 43 !== (l = I.call(s, ++d)) && 45 !== l || (l = I.call(s, ++d)), d = j(e, d, l));
                             return new L(c ? _ : D, t, d, i, r, o, O.call(s, t, d))
-                        }(n, s, x, j, M, t);
+                        }(n, s, x, w, M, t);
                     case 34:
                         return 34 === I.call(r, s + 1) && 34 === I.call(r, s + 2) ? function(e, t, n, r, o) {
                             var s = e.body,
@@ -9254,7 +9254,7 @@
                                 92 === c && 34 === I.call(s, l + 1) && 34 === I.call(s, l + 2) && 34 === I.call(s, l + 3) ? (u += O.call(s, d, l) + '"""', d = l += 4) : ++l
                             }
                             throw (0, a.syntaxError)(e, l, "Unterminated string.")
-                        }(n, s, j, M, t) : function(e, t, n, i, r) {
+                        }(n, s, w, M, t) : function(e, t, n, i, r) {
                             var o = e.body,
                                 s = t + 1,
                                 l = s,
@@ -9301,7 +9301,7 @@
                                 }
                             }
                             throw (0, a.syntaxError)(e, s, "Unterminated string.")
-                        }(n, s, j, M, t)
+                        }(n, s, w, M, t)
                 }
                 throw (0, a.syntaxError)(n, s, function(e) {
                     if (39 === e) return "Unexpected single quote character ('), did you mean to use a double quote (\")?";
@@ -9309,7 +9309,7 @@
                 }(x))
             }
 
-            function w(e, t, n) {
+            function j(e, t, n) {
                 var i = e.body,
                     r = t,
                     o = n;
@@ -9449,12 +9449,12 @@
                                 "event-modal-image-uploader__preview-image": !0,
                                 "event-modal-image-uploader__preview-image--preview-mode": !1 === this.state.isDraggingOver
                             });
-                            e = o.createElement(f.Eb, {
+                            e = o.createElement(f.Fb, {
                                 display: f.X.Flex,
-                                justifyContent: f.Wa.Center,
+                                justifyContent: f.Xa.Center,
                                 alignItems: f.f.Center,
                                 background: f.r.Alt,
-                                position: f.jb.Absolute,
+                                position: f.kb.Absolute,
                                 attachBottom: !0,
                                 attachLeft: !0,
                                 attachRight: !0,
@@ -9463,8 +9463,8 @@
                                 "data-test-selector": m.ImagePreview,
                                 className: n,
                                 src: this.state.srcString
-                            })), t = o.createElement(f.Xa, {
-                                justifyContent: f.Wa.Center,
+                            })), t = o.createElement(f.Ya, {
+                                justifyContent: f.Xa.Center,
                                 display: f.X.Flex,
                                 margin: {
                                     y: 1
@@ -9474,7 +9474,7 @@
                                 "data-test-selector": m.RemoveButton,
                                 type: f.F.Hollow,
                                 onClick: this.removeImage,
-                                icon: f.tb.RemoveTag
+                                icon: f.ub.RemoveTag
                             }, Object(s.d)("Remove", "EventModalImageUploader")))
                         }
                         var i = r({
@@ -9482,7 +9482,7 @@
                                 "event-modal-image-uploader__uploader--preview-mode": null !== e && !1 === this.state.isDraggingOver
                             }),
                             d = new p("https://api.twitch.tv/v5/channels/" + this.props.user.id + "/event_cover_images", !0, a.EventCoverImage, this.onFinishUploading);
-                        return o.createElement(f.Xa, {
+                        return o.createElement(f.Ya, {
                             className: "event-modal-image-uploader",
                             margin: {
                                 bottom: 2
@@ -9491,15 +9491,15 @@
                             id: "event-image",
                             label: Object(s.d)("Event Image", "EventModal"),
                             labelOptional: Object(s.d)("optional", "EventModal")
-                        }, o.createElement(f.Xa, {
+                        }, o.createElement(f.Ya, {
                             className: "event-modal-image-uploader__container"
-                        }, o.createElement(f.Xa, {
+                        }, o.createElement(f.Ya, {
                             className: "event-modal-image-uploader__uploader"
                         }, o.createElement(f.o, {
                             ratio: f.p.Aspect16x9
-                        }, o.createElement(f.Pa, {
+                        }, o.createElement(f.Qa, {
                             className: i,
-                            position: f.jb.Absolute,
+                            position: f.kb.Absolute,
                             fullWidth: !0,
                             fullHeight: !0
                         }, o.createElement("div", {

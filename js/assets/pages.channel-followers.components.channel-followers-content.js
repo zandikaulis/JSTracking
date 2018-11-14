@@ -365,7 +365,7 @@
                     return null !== e && e.apply(this, arguments) || this
                 }
                 return t.__extends(n, e), n.prototype.render = function() {
-                    return o.createElement(c.Xa, {
+                    return o.createElement(c.Ya, {
                         fullWidth: !0,
                         padding: {
                             x: 3,
@@ -375,7 +375,7 @@
                         loadMore: this.props.loadMore,
                         enabled: this.props.hasNextPage && !this.props.loading,
                         pixelThreshold: 100
-                    }), this.props.loading && o.createElement(c.Za, {
+                    }), this.props.loading && o.createElement(c.ab, {
                         fillContent: !0
                     }))
                 }, n.prototype.getFollowCards = function() {
@@ -388,7 +388,7 @@
                     if (this.props.loading && !this.props.followEdge) return o.createElement(d.a, null);
                     var e = !0,
                         n = this.props.followEdge && this.props.followEdge.map(function(n) {
-                            return n && n.node && n.node.id ? (e = !1, o.createElement(c.Xa, {
+                            return n && n.node && n.node.id ? (e = !1, o.createElement(c.Ya, {
                                 key: n.node.id,
                                 margin: {
                                     bottom: 2
@@ -402,25 +402,25 @@
                                 }
                             }))) : null
                         });
-                    return n && n.length && !e ? o.createElement(c.Xa, {
+                    return n && n.length && !e ? o.createElement(c.Ya, {
                         display: c.X.Flex,
                         flexGrow: 1,
                         fullHeight: !0
-                    }, o.createElement(c.bc, {
+                    }, o.createElement(c.cc, {
                         placeholderItems: 10,
                         center: !0,
-                        gutterSize: c.dc.Small,
-                        childWidth: c.cc.Large
-                    }, n)) : o.createElement(c.Xa, {
+                        gutterSize: c.ec.Small,
+                        childWidth: c.dc.Large
+                    }, n)) : o.createElement(c.Ya, {
                         "data-test-selector": "no-follow-users",
                         margin: {
                             top: 5
                         },
                         display: c.X.Flex,
                         flexDirection: c.Aa.Row,
-                        justifyContent: c.Wa.Center
+                        justifyContent: c.Xa.Center
                     }, o.createElement(c.W, {
-                        type: c.Vb.H4,
+                        type: c.Wb.H4,
                         color: c.O.Alt2,
                         italic: !0
                     }, Object(a.d)("No Users Found", "ChannelFollowListing")))

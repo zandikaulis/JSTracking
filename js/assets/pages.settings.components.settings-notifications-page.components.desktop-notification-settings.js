@@ -104,8 +104,8 @@
                 r = i("7PeK"),
                 l = i("c0Zc"),
                 c = i("Ww25"),
-                u = i("EpBn"),
-                d = i("Ue10"),
+                d = i("EpBn"),
+                u = i("Ue10"),
                 p = function(t) {
                     function e() {
                         var e = null !== t && t.apply(this, arguments) || this;
@@ -130,7 +130,7 @@
                             })
                         }, e.renderToastDisplayOptions = function(t) {
                             return t.map(function(t) {
-                                var e = Object(a.e)("{displayName} (Primary)", {
+                                var e = Object(a.d)("{displayName} (Primary)", {
                                         displayName: t.name
                                     }, "DesktopNotificationSettingsDisplaySelect"),
                                     i = t.isPrimary ? e : t.name;
@@ -171,15 +171,15 @@
                     }
                     return n.__extends(e, t), e.prototype.render = function() {
                         return this.state.error ? s.createElement(o.a, {
-                            message: Object(a.e)("There was an error setting the toast display setting.", "DesktopNotificationSettingsDisplaySelect")
-                        }) : s.createElement(u.a, {
-                            label: Object(a.e)("Toast Display", "DesktopNotificationSettingsDisplaySelect")
-                        }, s.createElement(d.zb, {
+                            message: Object(a.d)("There was an error setting the toast display setting.", "DesktopNotificationSettingsDisplaySelect")
+                        }) : s.createElement(d.a, {
+                            label: Object(a.d)("Toast Display", "DesktopNotificationSettingsDisplaySelect")
+                        }, s.createElement(u.Ab, {
                             value: this.getDisplayValue(),
                             disabled: this.state.disabled,
                             onChange: this.onChangeToastDisplaySetting
                         }, this.renderToastDisplayOptions(this.props.displays)), s.createElement(c.a, {
-                            text: Object(a.e)("Choose which monitor should display toasts.", "DesktopNotificationSettingsDisplaySelect")
+                            text: Object(a.d)("Choose which monitor should display toasts.", "DesktopNotificationSettingsDisplaySelect")
                         }))
                     }, e
                 }(s.Component),
@@ -225,7 +225,7 @@
                         }, e.onClickShowTestToast = function() {
                             var t = e.props.data && e.props.data.user && e.props.data.user.profileImageURL ? e.props.data.user.profileImageURL : "https://static-cdn.jtvnw.net/emoticons/v1/425618/3.0";
                             a.p.integrations.notifications && a.p.integrations.notifications.send({
-                                body_md: Object(a.e)("This is a test.", "DesktopNotificationSettingsEnabledToggle"),
+                                body_md: Object(a.d)("This is a test.", "DesktopNotificationSettingsEnabledToggle"),
                                 thumbnail_url: t,
                                 actions: [],
                                 id: "test-toast",
@@ -238,23 +238,23 @@
                     }
                     return n.__extends(e, t), e.prototype.render = function() {
                         return this.state.error ? s.createElement(o.a, {
-                            message: Object(a.e)("There was an error setting the toast enabled setting.", "DesktopNotificationSettingsEnabledToggle")
-                        }) : s.createElement(s.Fragment, null, s.createElement(u.a, {
-                            label: Object(a.e)("Toasts", "DesktopNotificationSettingsEnabledToggle")
-                        }, s.createElement(d.Xa, null, s.createElement(d.Xb, {
+                            message: Object(a.d)("There was an error setting the toast enabled setting.", "DesktopNotificationSettingsEnabledToggle")
+                        }) : s.createElement(s.Fragment, null, s.createElement(d.a, {
+                            label: Object(a.d)("Toasts", "DesktopNotificationSettingsEnabledToggle")
+                        }, s.createElement(u.Ya, null, s.createElement(u.Yb, {
                             checked: this.state.checked,
                             disabled: this.state.disabled,
                             onChange: this.onChangeShowToastSetting
                         }), s.createElement(c.a, {
-                            text: Object(a.e)("When I receive a notification, display an on-screen desktop alert.", "DesktopNotificationSettingsEnabledToggle")
-                        }), s.createElement(d.Xa, {
+                            text: Object(a.d)("When I receive a notification, display an on-screen desktop alert.", "DesktopNotificationSettingsEnabledToggle")
+                        }), s.createElement(u.Ya, {
                             margin: {
                                 top: 1
                             }
-                        }, s.createElement(d.z, {
+                        }, s.createElement(u.z, {
                             onClick: this.onClickShowTestToast,
                             disabled: !this.state.checked || this.state.disabled
-                        }, Object(a.e)("See Example", "DesktopNotificationSettingsEnabledToggle"))))))
+                        }, Object(a.d)("See Example", "DesktopNotificationSettingsEnabledToggle"))))))
                     }, e
                 }(s.Component),
                 v = Object(f.compose)(Object(m.a)(b, {
@@ -310,14 +310,14 @@
                     }
                     return n.__extends(e, t), e.prototype.render = function() {
                         return this.state.error ? s.createElement(o.a, {
-                            message: Object(a.e)("There was an error setting the hide-in-game setting.", "DesktopNotificationSettingsHideInGameToggle")
+                            message: Object(a.d)("There was an error setting the hide-in-game setting.", "DesktopNotificationSettingsHideInGameToggle")
                         }) : s.createElement(y.a, {
                             id: "desktop-notifications-hide-in-game-toggle",
-                            label: Object(a.e)("Hide in Game", "DesktopNotificationSettingsHideInGameToggle"),
+                            label: Object(a.d)("Hide in Game", "DesktopNotificationSettingsHideInGameToggle"),
                             checked: this.state.checked,
                             disabled: this.state.disabled,
                             onChange: this.onChangeShowInGameSetting,
-                            description: Object(a.e)("Hide toast notifications when I'm playing a game.", "DesktopNotificationSettingsHideInGameToggle")
+                            description: Object(a.d)("Hide toast notifications when I'm playing a game.", "DesktopNotificationSettingsHideInGameToggle")
                         })
                     }, e
                 }(s.Component),
@@ -359,23 +359,23 @@
                     }
                     return n.__extends(e, t), e.prototype.render = function() {
                         return this.state.error ? s.createElement(o.a, {
-                            message: Object(a.e)("There was an error setting the toast position setting.", "DesktopNotificationSettingsPositionSelect")
-                        }) : s.createElement(u.a, {
-                            label: Object(a.e)("Toast Position", "DesktopNotificationSettingsPositionSelect")
-                        }, s.createElement(d.zb, {
+                            message: Object(a.d)("There was an error setting the toast position setting.", "DesktopNotificationSettingsPositionSelect")
+                        }) : s.createElement(d.a, {
+                            label: Object(a.d)("Toast Position", "DesktopNotificationSettingsPositionSelect")
+                        }, s.createElement(u.Ab, {
                             value: this.state.value,
                             disabled: this.state.disabled,
                             onChange: this.onChangeToastPositionSetting
                         }, s.createElement("option", {
                             value: "bottom-right"
-                        }, Object(a.e)("Bottom Right", "DesktopNotificationSettingsPositionSelect")), s.createElement("option", {
+                        }, Object(a.d)("Bottom Right", "DesktopNotificationSettingsPositionSelect")), s.createElement("option", {
                             value: "bottom-left"
-                        }, Object(a.e)("Bottom Left", "DesktopNotificationSettingsPositionSelect")), s.createElement("option", {
+                        }, Object(a.d)("Bottom Left", "DesktopNotificationSettingsPositionSelect")), s.createElement("option", {
                             value: "top-right"
-                        }, Object(a.e)("Top Right", "DesktopNotificationSettingsPositionSelect")), s.createElement("option", {
+                        }, Object(a.d)("Top Right", "DesktopNotificationSettingsPositionSelect")), s.createElement("option", {
                             value: "top-left"
-                        }, Object(a.e)("Top Left", "DesktopNotificationSettingsPositionSelect"))), s.createElement(c.a, {
-                            text: Object(a.e)("Choose which corner should display toasts.", "DesktopNotificationSettingsPositionSelect")
+                        }, Object(a.d)("Top Left", "DesktopNotificationSettingsPositionSelect"))), s.createElement(c.a, {
+                            text: Object(a.d)("Choose which corner should display toasts.", "DesktopNotificationSettingsPositionSelect")
                         }))
                     }, e
                 }(s.Component),
@@ -434,19 +434,19 @@
                         this.getSettings(), this.getDisplays()
                     }, e.prototype.render = function() {
                         if (this.state.error) return s.createElement(o.a, {
-                            message: Object(a.e)("There was an error retrieving Desktop Notification Settings.", "DesktopNotificationSettings")
+                            message: Object(a.d)("There was an error retrieving Desktop Notification Settings.", "DesktopNotificationSettings")
                         });
                         if (!this.state.settings) return null;
                         var t = this.state,
                             e = t.settings,
                             i = t.displays;
-                        return s.createElement(d.Xa, {
+                        return s.createElement(u.Ya, {
                             margin: {
                                 top: 2
                             }
                         }, s.createElement(l.a, {
-                            title: Object(a.e)("Desktop Settings", "DesktopNotificationSettings"),
-                            description: Object(a.e)("Choose how you would like notifications to display on desktop.", "DesktopNotificationSettings")
+                            title: Object(a.d)("Desktop Settings", "DesktopNotificationSettings"),
+                            description: Object(a.d)("Choose how you would like notifications to display on desktop.", "DesktopNotificationSettings")
                         }), s.createElement(r.a, null, e.isEnabled && s.createElement(k, {
                             initialValue: e.isEnabled.value
                         }), e.hideInGame && s.createElement(D, {

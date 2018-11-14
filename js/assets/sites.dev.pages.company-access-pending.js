@@ -91,28 +91,28 @@
                 }), Object(p.a)({
                     location: m.PageviewLocation.DevSiteCompanyApplicationSubmitted
                 }))(function(e) {
-                    return e.isLoggedIn ? o.createElement(l.Xa, {
+                    return e.isLoggedIn ? o.createElement(l.Ya, {
                         className: "dev-company-access-pending",
                         fullWidth: !0,
                         margin: {
                             top: 3
                         }
-                    }, o.createElement(l.rb, {
+                    }, o.createElement(l.sb, {
                         centered: !0
-                    }, o.createElement(l.Xa, {
-                        textAlign: l.Rb.Center,
+                    }, o.createElement(l.Ya, {
+                        textAlign: l.Sb.Center,
                         margin: {
                             bottom: 2
                         }
                     }, o.createElement(l.W, {
-                        type: l.Vb.H2
-                    }, Object(s.d)("Your request is in progress!", "DevCompanyRequestPending"))), o.createElement(l.Xa, {
-                        textAlign: l.Rb.Center,
+                        type: l.Wb.H2
+                    }, Object(s.d)("Your request is in progress!", "DevCompanyRequestPending"))), o.createElement(l.Ya, {
+                        textAlign: l.Sb.Center,
                         margin: {
                             bottom: 2
                         }
-                    }, o.createElement(l.W, null, Object(s.d)("Please expect your access in 2-3 business days while we confirm your authorization to manage the game titles of the company you specified. We will send you a confirmation email using the address you provided. Be sure to check your spam filter if you haven't received a response in that timeframe.", "DevCompanyRequestPending"))), o.createElement(l.Xa, {
-                        textAlign: l.Rb.Center
+                    }, o.createElement(l.W, null, Object(s.d)("Please expect your access in 2-3 business days while we confirm your authorization to manage the game titles of the company you specified. We will send you a confirmation email using the address you provided. Be sure to check your spam filter if you haven't received a response in that timeframe.", "DevCompanyRequestPending"))), o.createElement(l.Ya, {
+                        textAlign: l.Sb.Center
                     }, o.createElement(l.U, {
                         to: "/console"
                     }, Object(s.d)("Click here to return to your dashboard!", "DevCompanyRequestPending"))))) : o.createElement(r.a, {
