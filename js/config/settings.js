@@ -155,7 +155,7 @@ window.__twilightSettings = {
     "update_manager_interval": 300000,
     "viewer_card_mod_logs": false,
     "viewer_milestones_enabled": true,
-    "vip_badge_gate": "off",
+    "vip_badge_gate": "on",
     "vod_archives_vira_grand": "on",
     "vod_premieres_sunset": "on",
     "vodcast_deprecation_announcement_enabled": true,
@@ -1189,13 +1189,13 @@ window.__twilightSettings = {
         },
         "8d1b300f-f50d-4a7c-941a-29943cd1ed18": {
             "name": "TWILIGHT_EMOTE_PICKER_V2",
-            "v": 4692,
+            "v": 5142,
             "t": 1,
             "groups": [{
-                "weight": 100,
+                "weight": 90,
                 "value": "off"
             }, {
-                "weight": 0,
+                "weight": 10,
                 "value": "on"
             }]
         },
