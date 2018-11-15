@@ -1,5 +1,5 @@
 (window.webpackJsonp = window.webpackJsonp || []).push([
-    [82, 74], {
+    [80, 72], {
         "+pBb": function(e, t, n) {
             "use strict";
             n.d(t, "d", function() {
@@ -51,9 +51,9 @@
             }), n.d(t, "J", function() {
                 return D
             }), n.d(t, "E", function() {
-                return N
-            }), n.d(t, "K", function() {
                 return T
+            }), n.d(t, "K", function() {
+                return N
             }), n.d(t, "F", function() {
                 return w
             }), n.d(t, "O", function() {
@@ -123,13 +123,13 @@
                 }
             }
 
-            function N() {
+            function T() {
                 return {
                     type: k
                 }
             }
 
-            function T() {
+            function N() {
                 return {
                     type: y
                 }
@@ -1770,8 +1770,8 @@
                 C = n("yR8l"),
                 O = n("eDVu"),
                 D = n("0Log"),
-                N = n("geRD"),
-                T = n("/aPz"),
+                T = n("geRD"),
+                N = n("/aPz"),
                 w = n("u5aL"),
                 I = n("8/mp"),
                 j = n("eJ65"),
@@ -1889,7 +1889,7 @@
                     function t(t) {
                         var n = e.call(this, t) || this;
                         return n.markAllWhispersAsRead = function() {
-                            var e = Object(N.a)({
+                            var e = Object(T.a)({
                                 markAllAsRead: !0
                             });
                             n.props.markAllWhispersAsRead && (Object(G.i)(), n.props.markAllWhispersAsRead(e)), n.props.onMarkAllMessagesRead && n.props.onMarkAllMessagesRead()
@@ -2322,7 +2322,7 @@
                 Ce = n("Gu45"),
                 Oe = n("dr/4"),
                 De = "whispers-report-user-button",
-                Ne = function(e) {
+                Te = function(e) {
                     function t() {
                         var t = null !== e && e.apply(this, arguments) || this;
                         return t.renderReportButton = function() {
@@ -2344,7 +2344,7 @@
                             t.props.collapseThread && t.props.collapseThread()
                         }, t.toggleMutethread = function() {
                             var e = !t.props.isMuted,
-                                n = i.__assign({}, Object(N.a)({
+                                n = i.__assign({}, Object(T.a)({
                                     threadID: t.props.threadID,
                                     isMuted: !t.props.isMuted
                                 }), {
@@ -2366,7 +2366,7 @@
                                 return i.__generator(this, function(t) {
                                     switch (t.label) {
                                         case 0:
-                                            e = i.__assign({}, Object(N.a)({
+                                            e = i.__assign({}, Object(T.a)({
                                                 threadID: this.props.threadID,
                                                 removeWhitelist: !0
                                             })), t.label = 1;
@@ -2486,7 +2486,7 @@
                         configurable: !0
                     }), t
                 }(_.Component);
-            var Te = Object(be.compose)(Object(k.connect)(null, function(e) {
+            var Ne = Object(be.compose)(Object(k.connect)(null, function(e) {
                     return {
                         onCloseThread: function(t) {
                             return e(Object(s.h)(t, Object(S.a)()))
@@ -2496,7 +2496,7 @@
                     name: "revokeWhisperAccess"
                 }), Object(C.a)(Oe, {
                     name: "setMuteThread"
-                }), ye.a, Object(ke.a)())(Ne),
+                }), ye.a, Object(ke.a)())(Te),
                 we = n("pORx");
             var Ie = n("NKxy");
             var je, Me = n("vGFN"),
@@ -2733,7 +2733,7 @@
                             direction: B.v.BottomRight,
                             offsetX: "0.5rem",
                             size: B.w.Small
-                        }, _.createElement(Te, {
+                        }, _.createElement(Ne, {
                             login: this.interlocutor.login,
                             displayName: this.interlocutor.displayName,
                             currentUser: this.props.currentUser,
@@ -3213,7 +3213,7 @@
                 var r = setTimeout(function() {
                     var t = i.__assign({
                         mutation: He
-                    }, Object(N.a)({
+                    }, Object(T.a)({
                         threadID: e.threadID,
                         lastReadMessageID: e.lastReadMessageID
                     }), {
@@ -3543,7 +3543,7 @@
                                             currentUser: e.currentUser
                                         };
                                         var r = i.__assign({}, n.whisperThread.messages, {
-                                            edges: Object(N.c)(e.whisperThread.messages.edges, n.whisperThread.messages.edges)
+                                            edges: Object(T.c)(e.whisperThread.messages.edges, n.whisperThread.messages.edges)
                                         });
                                         return {
                                             whisperThread: i.__assign({}, n.whisperThread, {
@@ -3558,7 +3558,7 @@
                     }
                 }), Object(ne.a)([{
                     topic: function(e) {
-                        return Object(T.M)(e.currentUserID)
+                        return Object(N.M)(e.currentUserID)
                     },
                     mapMessageTypesToProps: (Ze = {}, Ze[D.PubsubMessageType.WhisperReceived] = "whisperReceived", Ze[D.PubsubMessageType.WhisperSent] = "whisperSent", Ze),
                     skipMessage: function(e, t) {
@@ -3706,7 +3706,7 @@
                         var n = e.call(this, t) || this;
                         n.erroredLoadingMore = !1, n.logger = a.k.withCategory("whispers"), n.archiveThread = function(e) {
                             if (n.state.threadsByID[e]) {
-                                var t = i.__assign({}, Object(N.a)({
+                                var t = i.__assign({}, Object(T.a)({
                                     threadID: e,
                                     isArchived: !0
                                 }), {
@@ -3757,7 +3757,7 @@
                             })
                         }, n.handleThreadDataReport = function(e, t) {
                             var r;
-                            n.state.threadsByID[e] || Object(N.e)(pt, {
+                            n.state.threadsByID[e] || Object(T.e)(pt, {
                                 cursor: null
                             }, function(e) {
                                 return e.currentUser && e.currentUser.whisperThreads && e.currentUser.whisperThreads.edges.unshift({
@@ -3862,7 +3862,7 @@
                                             return n.currentUser ? e.currentUser && e.currentUser.whisperThreads ? n.currentUser.whisperThreads ? {
                                                 currentUser: i.__assign({}, n.currentUser, {
                                                     whisperThreads: i.__assign({}, n.currentUser.whisperThreads, {
-                                                        edges: Object(N.c)(e.currentUser.whisperThreads.edges, n.currentUser.whisperThreads.edges)
+                                                        edges: Object(T.c)(e.currentUser.whisperThreads.edges, n.currentUser.whisperThreads.edges)
                                                     })
                                                 })
                                             } : {
@@ -3887,7 +3887,7 @@
                             types: [D.PubsubMessageType.WhisperDeleted, D.PubsubMessageType.WhisperEdited, D.PubsubMessageType.WhisperSent, D.PubsubMessageType.WhisperAllThreadsUpdate, D.PubsubMessageType.WhisperReceived, D.PubsubMessageType.WhisperThreadUpdate],
                             variables: i.__assign({}, e.data.variables),
                             skip: !e.data.currentUser || void 0 === e.data.currentUser.id,
-                            topic: Object(T.M)(e.data.currentUser && e.data.currentUser.id || ""),
+                            topic: Object(N.M)(e.data.currentUser && e.data.currentUser.id || ""),
                             mutator: function(t, n) {
                                 if (!n.currentUser || !n.currentUser.whisperThreads) return n;
                                 if (Qe(t) || Ke(t)) {
@@ -10802,6 +10802,7 @@
                     BuyMysteryGift: "buy_mystery_gift",
                     BuyPaidUpgrade: "buy_paid_upgrade",
                     ChangeTier: "change_tier",
+                    ClickAnonymousGiftCheckbox: "anonymous_gift_click",
                     ClickCheckout: "click_checkout_button",
                     ClickMoreSubOptions: "more_options_click",
                     ClickGiftSubOptions: "gift_options_click",
@@ -10849,6 +10850,7 @@
                                     has_sub_credit: e.hasSubCredit,
                                     host_channel: e.hostChannelLogin,
                                     host_channel_id: e.hostChannelID,
+                                    is_anonymous: e.isAnonymous,
                                     is_menu_open: e.isMenuOpen,
                                     is_subscribed: f,
                                     is_subscribed_current_tier: h && h.subscriptionBenefit && h.subscriptionBenefit.tier,
@@ -11441,7 +11443,7 @@
                 D = {
                     isTimedOut: !1
                 },
-                N = function(e) {
+                T = function(e) {
                     function t() {
                         var t = null !== e && e.apply(this, arguments) || this;
                         return t.state = D, t.timeoutID = null, t
@@ -11481,7 +11483,7 @@
                         })
                     }, t
                 }(r.Component),
-                T = Object(v.a)(O, {
+                N = Object(v.a)(O, {
                     options: function(e) {
                         return {
                             variables: {
@@ -11491,7 +11493,7 @@
                             fetchPolicy: e.forceNetworkRequest ? "cache-first" : "cache-only"
                         }
                     }
-                })(N),
+                })(T),
                 w = n("gTu3"),
                 I = (n("lpj/"), (u = {})[w.a.Default] = "", u[w.a.Recipient] = "mention-fragment--recipient", u[w.a.Sender] = "mention-fragment--sender", u),
                 j = function(e) {
@@ -11604,7 +11606,7 @@
                             case h.a.ClipLink:
                                 n || (n = r.createElement(i.a, {
                                     key: s
-                                }, r.createElement(T, {
+                                }, r.createElement(N, {
                                     slug: o.content.slug,
                                     forceNetworkRequest: t.forceClipsNetworkRequest
                                 }))), c.push(U(s, o, t.disableLinks));
@@ -12526,7 +12528,7 @@
                         value: "repeat messages"
                     }
                 },
-                N = function(e) {
+                T = function(e) {
                     function t() {
                         var t = null !== e && e.apply(this, arguments) || this;
                         return t.onChange = function(e) {
@@ -12625,7 +12627,7 @@
                         })), n
                     }, t
                 }(o.Component),
-                T = n("RQ6e");
+                N = n("RQ6e");
             ! function(e) {
                 e.Confirm = "Confirm", e.MultipleChoice = "MultipleChoice", e.Info = "End Card"
             }(C || (C = {}));
@@ -13110,12 +13112,12 @@
                                             return e = Object(l.d)("Additional information is required.", "ReportModalWizard"), this.requiredInputsNonEmpty() ? (t = this.state.reportReason || "other", n = this.createReportDescription(), [4, this.props.onSubmit(t, n, this.state.reportContext)]) : [3, 2];
                                         case 1:
                                             switch (i.sent(), this.props.submitStatus) {
-                                                case T.a.FormError:
+                                                case N.a.FormError:
                                                     this.setState({
                                                         error: e
                                                     });
                                                     break;
-                                                case T.a.Success:
+                                                case N.a.Success:
                                                     r = $, ee[t] && (r = ee[t]), this.state.currentCard.nextCard && (r = this.state.currentCard.nextCard), this.setState({
                                                         currentCard: r,
                                                         prevCards: [],
@@ -13128,12 +13130,12 @@
                                                         return a.trackNavigation(I.Submit)
                                                     });
                                                     break;
-                                                case T.a.UserError:
+                                                case N.a.UserError:
                                                     this.setState({
                                                         error: Object(l.d)("This account could not be reported. It may have already been suspended, or the owner may have deleted it.", "ReportModalWizard")
                                                     });
                                                     break;
-                                                case T.a.MutationError:
+                                                case N.a.MutationError:
                                                 default:
                                                     this.setState({
                                                         error: Object(l.d)("Sorry, a network error occurred when submitting your report. Please try again later.", "ReportModalWizard")
@@ -13141,7 +13143,7 @@
                                             }
                                             return [3, 3];
                                         case 2:
-                                            this.props.onError(T.a.FormError), this.setState({
+                                            this.props.onError(N.a.FormError), this.setState({
                                                 error: e
                                             }), i.label = 3;
                                         case 3:
@@ -13226,7 +13228,7 @@
                             margin: {
                                 y: 1
                             }
-                        }, o.createElement(N, {
+                        }, o.createElement(T, {
                             currentCard: this.state.currentCard,
                             currentSelection: this.state.currentSelection,
                             targetUser: this.props.targetUser,
@@ -13234,7 +13236,7 @@
                             onChangeRadio: this.handleSelection,
                             onChangeText: this.handleTextInput,
                             userTextInputs: this.state.userTextInput,
-                            error: this.props.submitStatus === T.a.FormError && !!this.state.error
+                            error: this.props.submitStatus === N.a.FormError && !!this.state.error
                         }), e), this.renderButtons())
                     }, t
                 }(o.Component),
@@ -13273,20 +13275,20 @@
                                                 extra: this.props.reportContext.extra,
                                                 targetID: this.props.data.targetUser.id
                                             }).targetID) return this.setState({
-                                            submitStatus: T.a.UserError
+                                            submitStatus: N.a.UserError
                                         }), [2];
                                         i.label = 1;
                                     case 1:
                                         return i.trys.push([1, 3, , 4]), [4, this.props.reportUser(Object(p.a)(o))];
                                     case 2:
                                         return i.sent(), this.setState({
-                                            submitStatus: T.a.Success
+                                            submitStatus: N.a.Success
                                         }, function() {
                                             c.state.showWizard || c.trackAction(w.Submit)
                                         }), [3, 4];
                                     case 3:
                                         return s = i.sent(), l.k.error(s, "ReportUser Mutation failed."), this.setState({
-                                            submitStatus: T.a.MutationError
+                                            submitStatus: N.a.MutationError
                                         }), [3, 4];
                                     case 4:
                                         return [2]
@@ -13323,7 +13325,7 @@
                         l.p.tracking.track(v.SpadeEventType.ReportWizardFlowAction, {
                             ui_context: n.props.reportContext.contentType,
                             target_user_id: n.props.reportContext.targetUserID,
-                            report_sent: n.state.submitStatus === T.a.Success,
+                            report_sent: n.state.submitStatus === N.a.Success,
                             modal_type: "wizard_v1",
                             extra_user_id: n.props.reportContext.additionalTrackingID,
                             action: e,
@@ -13336,7 +13338,7 @@
                         l.p.tracking.track(v.SpadeEventType.ReportFlowAction, {
                             ui_context: n.props.reportContext.contentType,
                             target_user_id: n.props.reportContext.targetUserID,
-                            report_sent: n.state.submitStatus === T.a.Success,
+                            report_sent: n.state.submitStatus === N.a.Success,
                             extra_user_id: n.props.reportContext.additionalTrackingID,
                             action: e,
                             report_session_id: n.reportID
@@ -13344,7 +13346,7 @@
                     }, n.reportID = Object(h.a)();
                     var r = l.p.experiments.getAssignment(f.b.NewReportingWizard);
                     return n.state = {
-                        submitStatus: T.a.Unsubmitted,
+                        submitStatus: N.a.Unsubmitted,
                         showWizard: "yes" === r,
                         openEventSent: !1,
                         closeEventSent: !1,
@@ -13384,7 +13386,7 @@
                             trackAction: this.trackWizardAction,
                             trackClose: this.trackClose,
                             userBlocked: this.userBlocked
-                        })) : o.createElement(T.b, i.__assign({}, e, {
+                        })) : o.createElement(N.b, i.__assign({}, e, {
                             targetUser: this.props.data.targetUser
                         }))
                     }
@@ -14068,7 +14070,6 @@
                 i = n("Ue10"),
                 o = (n("8dXP"), function(e) {
                     return r.createElement(i.Ra, {
-                        background: i.r.Alt,
                         borderRight: !0,
                         flexShrink: 0,
                         flexGrow: 0,
@@ -14207,7 +14208,16 @@
                     }, e.prototype.finalize = function() {
                         this.isCompleteByRole = this.getIsCompletedByRole(), this.isComplete = this.isCompleteByRole || this.isComplete
                     }, e.prototype.getIsCompletedByRole = function() {
-                        return this.role !== a.d.None && (this.role !== a.d.Affiliate || (this.key === r.b.IT_BEGINS || this.key === r.b.PATH_TO_AFFILIATE))
+                        switch (this.role) {
+                            case a.d.None:
+                                return !1;
+                            case a.d.Affiliate:
+                                return this.key === r.b.IT_BEGINS || this.key === r.b.PATH_TO_AFFILIATE;
+                            case a.d.Partner:
+                                return this.key === r.b.IT_BEGINS || this.key === r.b.PATH_TO_AFFILIATE || this.key === r.b.PATH_TO_PARTNER;
+                            default:
+                                return !0
+                        }
                     }, e
                 }()
         },
@@ -14877,8 +14887,8 @@
                 C = n("nTF4"),
                 O = n("EOHf"),
                 D = n("gq0V"),
-                N = n("m9vr"),
-                T = n("6D3P"),
+                T = n("m9vr"),
+                N = n("6D3P"),
                 w = n("9C/b"),
                 I = n("DMoW"),
                 j = n("idPT"),
@@ -15179,17 +15189,32 @@
                     return a.createElement(j.a, null, a.createElement(ie.Ya, {
                         display: ie.X.Flex,
                         flexDirection: ie.Aa.Column,
-                        justifyContent: ie.Xa.Between
+                        justifyContent: ie.Xa.Between,
+                        fullWidth: !0
                     }, a.createElement(ie.Ya, {
                         margin: 1
                     }, t), a.createElement(ie.Fb, {
                         borderTop: !0,
-                        padding: 2
-                    }, a.createElement(ie.U, {
-                        to: "https://www.twitch.tv/creatorcamp?tt_medium=owned_onsite_twitch&tt_content=creator_camp_creators_all_all_Dashboard&ttid=cd402988e1"
+                        padding: 1
+                    }, a.createElement(ie.Va, {
+                        borderRadius: ie.x.Medium,
+                        linkTo: "https://www.twitch.tv/creatorcamp?tt_medium=owned_onsite_twitch&tt_content=creator_camp_creators_all_all_Dashboard&ttid=cd402988e1",
+                        targetBlank: !0
+                    }, a.createElement(ie.Ya, {
+                        alignItems: ie.f.Center,
+                        padding: {
+                            x: 1,
+                            y: .5
+                        },
+                        display: ie.X.Flex,
+                        justifyContent: ie.Xa.Between
                     }, a.createElement(ie.W, {
                         fontSize: ie.Ca.Size5
-                    }, Object(v.d)("Creator Camp", "DashboardSideNav"))))))
+                    }, Object(v.d)("Creator Camp", "DashboardSideNav")), a.createElement(ie.tb, {
+                        asset: ie.ub.Popout,
+                        height: 16,
+                        width: 16
+                    }))))))
                 };
             var de, ue = Object(s.compose)(w.a, Object(o.connect)(function(e) {
                     return {
@@ -15255,91 +15280,91 @@
                 }))(Ee),
                 Ce = n("CFgy"),
                 Oe = k.a.wrap(function() {
-                    return n.e(183).then(n.bind(null, "5aAj"))
+                    return n.e(181).then(n.bind(null, "5aAj"))
                 }, "AchievementsPage"),
                 De = k.a.wrap(function() {
-                    return n.e(182).then(n.bind(null, "ffwK"))
+                    return n.e(180).then(n.bind(null, "ffwK"))
                 }, "ActivityPage"),
-                Ne = k.a.wrap(function() {
-                    return n.e(181).then(n.bind(null, "U5Uu"))
-                }, "AutoModPage"),
                 Te = k.a.wrap(function() {
-                    return n.e(180).then(n.bind(null, "h4KP"))
+                    return n.e(179).then(n.bind(null, "U5Uu"))
+                }, "AutoModPage"),
+                Ne = k.a.wrap(function() {
+                    return n.e(178).then(n.bind(null, "h4KP"))
                 }, "BountiesPage"),
                 we = k.a.wrap(function() {
-                    return Promise.all([n.e(31), n.e(33), n.e(0), n.e(179)]).then(n.bind(null, "HURE"))
+                    return Promise.all([n.e(31), n.e(33), n.e(0), n.e(177)]).then(n.bind(null, "HURE"))
                 }, "ChannelAnalyticsRoot"),
                 Ie = k.a.wrap(function() {
-                    return n.e(178).then(n.bind(null, "pC3c"))
+                    return n.e(176).then(n.bind(null, "pC3c"))
                 }, "ChannelClipsManagerPage"),
                 je = k.a.wrap(function() {
-                    return Promise.all([n.e(0), n.e(177)]).then(n.bind(null, "RYh/"))
+                    return Promise.all([n.e(0), n.e(175)]).then(n.bind(null, "RYh/"))
                 }, "CollectionEditorPage"),
                 Me = k.a.wrap(function() {
-                    return n.e(176).then(n.bind(null, "/nn1"))
+                    return n.e(174).then(n.bind(null, "/nn1"))
                 }, "CollectionManagerPage"),
                 Re = k.a.wrap(function() {
-                    return Promise.all([n.e(0), n.e(175)]).then(n.bind(null, "nLDR"))
+                    return Promise.all([n.e(0), n.e(173)]).then(n.bind(null, "nLDR"))
                 }, "CommentModeratorPage"),
                 Fe = k.a.wrap(function() {
-                    return n.e(174).then(n.bind(null, "7yAc"))
+                    return n.e(172).then(n.bind(null, "7yAc"))
                 }, "DashboardBroadcastPage"),
                 Ae = k.a.wrap(function() {
-                    return Promise.all([n.e(31), n.e(0), n.e(173)]).then(n.bind(null, "ZvSv"))
+                    return Promise.all([n.e(31), n.e(0), n.e(171)]).then(n.bind(null, "ZvSv"))
                 }, "DashboardEventsRoot"),
                 xe = k.a.wrap(function() {
-                    return n.e(172).then(n.bind(null, "66IC"))
+                    return n.e(170).then(n.bind(null, "66IC"))
                 }, "DashboardRevenueSettingsRoot"),
                 Ue = k.a.wrap(function() {
-                    return n.e(171).then(n.bind(null, "Le/2"))
+                    return n.e(169).then(n.bind(null, "Le/2"))
                 }, "DashboardModerationSettingsPage"),
                 Pe = k.a.wrap(function() {
-                    return n.e(170).then(n.bind(null, "hfrd"))
+                    return n.e(168).then(n.bind(null, "hfrd"))
                 }, "AutomodPage"),
                 Le = k.a.wrap(function() {
-                    return n.e(169).then(n.bind(null, "DUGL"))
+                    return n.e(167).then(n.bind(null, "DUGL"))
                 }, "BlockedTermsPage"),
                 We = k.a.wrap(function() {
-                    return n.e(168).then(n.bind(null, "G695"))
+                    return n.e(166).then(n.bind(null, "G695"))
                 }, "PermittedTermsPage"),
                 Be = k.a.wrap(function() {
-                    return n.e(167).then(n.bind(null, "m/zG"))
+                    return n.e(165).then(n.bind(null, "m/zG"))
                 }, "BannedChattersPage"),
                 Ve = k.a.wrap(function() {
-                    return Promise.all([n.e(0), n.e(166)]).then(n.bind(null, "qNlw"))
+                    return Promise.all([n.e(0), n.e(164)]).then(n.bind(null, "qNlw"))
                 }, "DashboardSettingsRoot"),
                 ze = k.a.wrap(function() {
-                    return n.e(165).then(n.bind(null, "1Wpl"))
+                    return n.e(163).then(n.bind(null, "1Wpl"))
                 }, "ExtensionDashboardRoot"),
                 Ge = k.a.wrap(function() {
-                    return n.e(164).then(n.bind(null, "mcoV"))
+                    return n.e(162).then(n.bind(null, "mcoV"))
                 }, "MultiviewPage"),
                 He = k.a.wrap(function() {
-                    return Promise.all([n.e(0), n.e(163)]).then(n.bind(null, "gt/l"))
+                    return Promise.all([n.e(0), n.e(161)]).then(n.bind(null, "gt/l"))
                 }, "HighlighterPage"),
                 Ye = k.a.wrap(function() {
-                    return Promise.all([n.e(0), n.e(162)]).then(n.bind(null, "5MA6"))
+                    return Promise.all([n.e(0), n.e(160)]).then(n.bind(null, "5MA6"))
                 }, "HighlighterPage"),
                 qe = k.a.wrap(function() {
-                    return Promise.all([n.e(31), n.e(33), n.e(0), n.e(161)]).then(n.bind(null, "QyLA"))
+                    return Promise.all([n.e(31), n.e(33), n.e(0), n.e(159)]).then(n.bind(null, "QyLA"))
                 }, "LivePage"),
                 Xe = k.a.wrap(function() {
-                    return n.e(178).then(n.bind(null, "pC3c"))
+                    return n.e(176).then(n.bind(null, "pC3c"))
                 }, "MyClipsManagerPage"),
                 Qe = k.a.wrap(function() {
-                    return n.e(160).then(n.bind(null, "Nly3"))
+                    return n.e(158).then(n.bind(null, "Nly3"))
                 }, "PermissionsPage"),
                 Ke = k.a.wrap(function() {
-                    return n.e(159).then(n.bind(null, "qcBk"))
+                    return n.e(157).then(n.bind(null, "qcBk"))
                 }, "RolesPage"),
                 Ze = k.a.wrap(function() {
-                    return n.e(158).then(n.bind(null, "djq7"))
+                    return n.e(156).then(n.bind(null, "djq7"))
                 }, "RedirectToLatestArchiveHighlighter"),
                 $e = k.a.wrap(function() {
-                    return Promise.all([n.e(31), n.e(33), n.e(0), n.e(157)]).then(n.bind(null, "D5nk"))
+                    return Promise.all([n.e(31), n.e(33), n.e(0), n.e(155)]).then(n.bind(null, "D5nk"))
                 }, "StreamSummaryPage"),
                 Je = k.a.wrap(function() {
-                    return Promise.all([n.e(31), n.e(0), n.e(156)]).then(n.bind(null, "+AN2"))
+                    return Promise.all([n.e(31), n.e(0), n.e(154)]).then(n.bind(null, "+AN2"))
                 }, "VideoManagerPage");
             ! function(e) {
                 e.TopNav = "top-nav", e.SideNav = "side-nav"
@@ -15373,7 +15398,7 @@
                     var n = t.user;
                     if (!n || !n.id) return a.createElement(S.a, null);
                     var i = this.props.isExpandedView;
-                    return a.createElement(T.a, {
+                    return a.createElement(N.a, {
                         interval: Object(Ce.g)(30),
                         channelName: this.props.match.params.channelLogin
                     }, function(t) {
@@ -15413,11 +15438,11 @@
                         }), a.createElement(h.a, {
                             exact: !0,
                             path: "/:channelName/dashboard/bounties/:selectedID",
-                            component: Te
+                            component: Ne
                         }), a.createElement(h.a, {
                             exact: !0,
                             path: "/:channelName/dashboard/bounties",
-                            component: Te
+                            component: Ne
                         }), a.createElement(h.a, {
                             exact: !0,
                             path: "/:channelName/dashboard/broadcast",
@@ -15454,7 +15479,7 @@
                             exact: !0,
                             path: "/:channelLogin/dashboard/roles",
                             render: function(t) {
-                                return t.match.params.channelLogin === e.props.userLogin ? a.createElement(Ke, null) : a.createElement(N.a, null)
+                                return t.match.params.channelLogin === e.props.userLogin ? a.createElement(Ke, null) : a.createElement(T.a, null)
                             }
                         }) : a.createElement(h.a, {
                             exact: !0,
@@ -15494,7 +15519,7 @@
                         }), a.createElement(h.a, {
                             exact: !0,
                             path: "/:channelName/dashboard/settings/automod",
-                            component: Ne
+                            component: Te
                         }), a.createElement(h.a, {
                             path: "/:channelName/dashboard/settings/revenue",
                             component: xe
@@ -15649,8 +15674,8 @@
                 C = n("GzyO"),
                 O = n("OpME"),
                 D = n("cpJf"),
-                N = n("W8Fi"),
-                T = n("0WFu"),
+                T = n("W8Fi"),
+                N = n("0WFu"),
                 w = function(e, t) {
                     return t.map(function(t) {
                         return t.emotes && t.emoteSetID && !e.has(parseInt(t.emoteSetID, 10)) ? a.__assign({}, t, {
@@ -15757,7 +15782,7 @@
                             },
                             a = {};
                         if (this.props.plan.tier) {
-                            var o = Object(T.a)(this.props.plan.tier);
+                            var o = Object(N.a)(this.props.plan.tier);
                             null === o && (o = 1), a.purchase = Object(s.d)("Tier { tierNum }", {
                                 tierNum: o
                             }, "assembleSubscribeTexts")
@@ -16050,7 +16075,8 @@
                         position: c.kb.Relative
                     }, i.createElement(c.Va, {
                         "data-a-target": e.label,
-                        onClick: e.onClick
+                        onClick: e.onClick,
+                        blurAfterClick: !0
                     }, i.createElement(c.Ya, {
                         padding: 1,
                         display: c.X.InlineFlex
@@ -16321,8 +16347,9 @@
                                 })
                             });
                             var r = Object(C.d)(),
-                                a = 0 === Object.keys(r).length ? void 0 : r;
-                            return Object(O.f)(n, t, a)
+                                a = 0 === Object.keys(r).length ? void 0 : r,
+                                i = Object(O.f)(n, t, a);
+                            return Object(O.d)(i)
                         }, n.updateChannelEmotes = function(e) {
                             var t = e.channelSubscriptionProducts.reduce(function(e, t) {
                                 return e.concat(t.emotes)
@@ -16375,11 +16402,10 @@
                                 top: 2,
                                 x: 2
                             }
-                        }, i.createElement(c.Sa, {
+                        }, i.createElement(c.wb, {
                             autoFocus: !0,
                             onChange: this.handleFilterChange,
                             placeholder: Object(s.d)("Search for Emotes", "EmotePickerCard"),
-                            type: c.Ua.Text,
                             value: this.state.inputValue
                         })), this.renderTabContent())), i.createElement(i.Fragment, null, i.createElement(J, {
                             channelDisplayName: this.props.channelDisplayName,
@@ -16674,7 +16700,7 @@
                                 var r = [];
                                 return !n || n !== D.b.IOS && n !== D.b.Android ? (t.forEach(function(n, i) {
                                     var o = n.price;
-                                    0 === i && Object(N.g)(t) && (o = Object(N.c)(t[0])), n.emotes && n.emotes.length && n.emoteSetID && !e.has(parseInt(n.emoteSetID, 10)) && r.push(a.__assign({}, n, {
+                                    0 === i && Object(T.g)(t) && (o = Object(T.c)(t[0])), n.emotes && n.emotes.length && n.emoteSetID && !e.has(parseInt(n.emoteSetID, 10)) && r.push(a.__assign({}, n, {
                                         emotes: Object(O.e)(n.emotes, n.emoteSetID),
                                         level: i,
                                         price: o
@@ -16692,7 +16718,7 @@
                             }(n.ownedSetIDs, e.channelData.user.subscriptionProducts), n.subscribeTexts = function(e) {
                                 for (var t = [], n = 0; n < e.length; n++) {
                                     var r = e[n],
-                                        a = Object(T.a)(r.tier);
+                                        a = Object(N.a)(r.tier);
                                     null === a && (a = 1), 0 === n && r.emotes && r.emotes.length > 1 ? t[n] = Object(s.d)("Unlock {numEmotes, number} Sub Emotes", {
                                         numEmotes: r.emotes.length
                                     }, "assembleSubscribeTexts") : 0 === n ? t[n] = Object(s.d)("Unlock 1 Sub Emote", "assembleSubscribeTexts") : r.emotes && r.emotes.length > 1 ? t[n] = Object(s.d)("{numEmotes, number} Extra Tier {tier} Sub Emotes", {
@@ -16742,7 +16768,7 @@
                             return Object(k.d)(p.a, {
                                 component: "CheckoutModal",
                                 loader: function() {
-                                    return Promise.all([n.e(0), n.e(212)]).then(n.bind(null, "KJv/"))
+                                    return Promise.all([n.e(0), n.e(210)]).then(n.bind(null, "KJv/"))
                                 },
                                 componentProps: t
                             })
@@ -18002,9 +18028,9 @@
             }), n.d(t, "e", function() {
                 return D
             }), n.d(t, "d", function() {
-                return N
-            }), n.d(t, "b", function() {
                 return T
+            }), n.d(t, "b", function() {
+                return N
             }), n.d(t, "f", function() {
                 return w
             }), n.d(t, "c", function() {
@@ -18127,14 +18153,14 @@
                 })
             }
 
-            function N(e) {
+            function T(e) {
                 p({
                     threadID: e,
                     action: i.Close
                 })
             }
 
-            function T(e) {
+            function N(e) {
                 p({
                     threadID: e,
                     action: i.Archive

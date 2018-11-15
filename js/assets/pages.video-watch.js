@@ -1,5 +1,5 @@
 (window.webpackJsonp = window.webpackJsonp || []).push([
-    [39, 146], {
+    [39, 144], {
         "+Vfn": function(e, t, n) {
             var i = {
                 kind: "Document",
@@ -7136,7 +7136,7 @@
                 e.SubButton = "subscribe-button__dropdown", e.BalloonLayerButton = "subscribe-button__balloon-layer-btn", e.DefaultButton = "subscribe-button__default-btn", e.SubscribeBalloon = "subscribe-button__subscribe-balloon"
             }(T || (T = {}));
             var x = s.a.wrap(function() {
-                    return Promise.all([n.e(0), n.e(200)]).then(n.bind(null, "f+qK"))
+                    return Promise.all([n.e(0), n.e(198)]).then(n.bind(null, "f+qK"))
                 }, "SubscribeBalloon"),
                 R = function(e) {
                     function t() {
@@ -7178,6 +7178,7 @@
                                 hasSubCredit: i && i.self && i.self.canPrimeSubscribe,
                                 hostChannelID: t.props.hostChannelID,
                                 hostChannelLogin: t.props.hostChannelLogin,
+                                isAnonymous: e.isAnonymous,
                                 isMenuOpen: e.action !== D.a.OpenSubMenu,
                                 mysteryGiftCount: e.mysteryGiftCount,
                                 sub_location: "channel_page",
@@ -7388,7 +7389,7 @@
                         return Object(d.d)(s.a, {
                             component: "CheckoutModal",
                             loader: function() {
-                                return Promise.all([n.e(0), n.e(212)]).then(n.bind(null, "KJv/"))
+                                return Promise.all([n.e(0), n.e(210)]).then(n.bind(null, "KJv/"))
                             },
                             componentProps: t
                         })
@@ -11070,6 +11071,7 @@
                     BuyMysteryGift: "buy_mystery_gift",
                     BuyPaidUpgrade: "buy_paid_upgrade",
                     ChangeTier: "change_tier",
+                    ClickAnonymousGiftCheckbox: "anonymous_gift_click",
                     ClickCheckout: "click_checkout_button",
                     ClickMoreSubOptions: "more_options_click",
                     ClickGiftSubOptions: "gift_options_click",
@@ -11117,6 +11119,7 @@
                                     has_sub_credit: e.hasSubCredit,
                                     host_channel: e.hostChannelLogin,
                                     host_channel_id: e.hostChannelID,
+                                    is_anonymous: e.isAnonymous,
                                     is_menu_open: e.isMenuOpen,
                                     is_subscribed: f,
                                     is_subscribed_current_tier: h && h.subscriptionBenefit && h.subscriptionBenefit.tier,
@@ -16614,7 +16617,7 @@
                 w = n("Ue10"),
                 O = (n("/nm5"), n("41XU")),
                 T = l.a.wrap(function() {
-                    return n.e(144).then(n.bind(null, "7lJP"))
+                    return n.e(142).then(n.bind(null, "7lJP"))
                 }, "UserImageUploader"),
                 D = function(e) {
                     function t() {
@@ -16739,7 +16742,7 @@
                 return X
             });
             var A, P = l.a.wrap(function() {
-                return n.e(145).then(n.bind(null, "g9Rq"))
+                return n.e(143).then(n.bind(null, "g9Rq"))
             }, "EditProfileOverlay");
             ! function(e) {
                 e.SocialButtonsDefault = "channel-header__social-buttons-default", e.SocialButtonsVariantB = "channel-header__social-buttons-variant-b"
@@ -17881,7 +17884,8 @@
                         position: l.kb.Relative
                     }, o.createElement(l.Va, {
                         "data-a-target": e.label,
-                        onClick: e.onClick
+                        onClick: e.onClick,
+                        blurAfterClick: !0
                     }, o.createElement(l.Ya, {
                         padding: 1,
                         display: l.X.InlineFlex
@@ -18152,8 +18156,9 @@
                                 })
                             });
                             var i = Object(_.d)(),
-                                r = 0 === Object.keys(i).length ? void 0 : i;
-                            return Object(w.f)(n, t, r)
+                                r = 0 === Object.keys(i).length ? void 0 : i,
+                                o = Object(w.f)(n, t, r);
+                            return Object(w.d)(o)
                         }, n.updateChannelEmotes = function(e) {
                             var t = e.channelSubscriptionProducts.reduce(function(e, t) {
                                 return e.concat(t.emotes)
@@ -18206,11 +18211,10 @@
                                 top: 2,
                                 x: 2
                             }
-                        }, o.createElement(l.Sa, {
+                        }, o.createElement(l.wb, {
                             autoFocus: !0,
                             onChange: this.handleFilterChange,
                             placeholder: Object(s.d)("Search for Emotes", "EmotePickerCard"),
-                            type: l.Ua.Text,
                             value: this.state.inputValue
                         })), this.renderTabContent())), o.createElement(o.Fragment, null, o.createElement(J, {
                             channelDisplayName: this.props.channelDisplayName,
@@ -18573,7 +18577,7 @@
                             return Object(k.d)(m.a, {
                                 component: "CheckoutModal",
                                 loader: function() {
-                                    return Promise.all([n.e(0), n.e(212)]).then(n.bind(null, "KJv/"))
+                                    return Promise.all([n.e(0), n.e(210)]).then(n.bind(null, "KJv/"))
                                 },
                                 componentProps: t
                             })
@@ -21799,7 +21803,7 @@
                 C = n("F6GT"),
                 S = n("x0gr"),
                 E = l.a.wrap(function() {
-                    return n.e(199).then(n.bind(null, "8MX0"))
+                    return n.e(197).then(n.bind(null, "8MX0"))
                 }, "ChatSettingsComponent"),
                 _ = function(e) {
                     function t() {

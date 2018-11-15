@@ -1,5 +1,5 @@
 (window.webpackJsonp = window.webpackJsonp || []).push([
-    [66], {
+    [64], {
         "0INk": function(e, t, n) {
             "use strict";
             n.d(t, "b", function() {
@@ -6844,13 +6844,12 @@
                                 },
                                 "data-test-selector": "directory-header-new-drops"
                             }, d.createElement(L.W, {
-                                color: L.O.Overlay
+                                color: L.O.Alt
                             }, Object(u.d)("Offers in-game Drops. <x:link>Learn More.</x:link>", {
                                 "x:link": function(e) {
-                                    return d.createElement("a", {
-                                        href: "https://help.twitch.tv/customer/en/portal/articles/2754380-how-to-earn-drops",
-                                        className: "directory-header__link",
-                                        target: "_blank"
+                                    return d.createElement(L.U, {
+                                        linkTo: "https://help.twitch.tv/customer/en/portal/articles/2754380-how-to-earn-drops",
+                                        targetBlank: !0
                                     }, e)
                                 }
                             }, "drops")))
@@ -6900,7 +6899,11 @@
                             fullHeight: !0,
                             fullWidth: !0,
                             position: L.kb.Absolute,
-                            zIndex: L.jc.Below
+                            zIndex: L.jc.Below,
+                            attachTop: !0,
+                            attachBottom: !0,
+                            attachLeft: !0,
+                            attachRight: !0
                         }), d.createElement(L.Ya, {
                             margin: {
                                 top: 3,
@@ -6921,7 +6924,8 @@
                                 flexShrink: 0
                             }
                         }, o ? d.createElement(L.Ra, {
-                            elevation: 3
+                            elevation: 3,
+                            borderRadius: L.x.Medium
                         }, d.createElement(L.S, {
                             className: "directory-header-new__box-image",
                             src: o,
@@ -7020,13 +7024,13 @@
                 ze = n("mHR/"),
                 Xe = n("kJyr"),
                 Qe = ve.a.wrap(function() {
-                    return n.e(143).then(n.bind(null, "3f6U"))
+                    return n.e(141).then(n.bind(null, "3f6U"))
                 }, "DirectoryGameClipsPage"),
                 $e = ve.a.wrap(function() {
-                    return n.e(142).then(n.bind(null, "N7a1"))
+                    return n.e(140).then(n.bind(null, "N7a1"))
                 }, "DirectoryGameDetailsPage"),
                 Ke = ve.a.wrap(function() {
-                    return n.e(141).then(n.bind(null, "TH8Y"))
+                    return n.e(139).then(n.bind(null, "TH8Y"))
                 }, "DirectoryGameVideosPage"),
                 Je = ve.a.wrap(function() {
                     return Promise.resolve().then(n.bind(null, "mpcK"))
@@ -7071,10 +7075,10 @@
                                 t.props.history[n ? "replace" : "push"]({
                                     pathname: e.location.pathname,
                                     search: a > 0 ? "?tl=" + a : void 0,
-                                    state: {
+                                    state: l.__assign({}, e.location.state, {
                                         languageTagFilters: e.languageTagFilters,
                                         tagFilters: e.tagFilters
-                                    }
+                                    })
                                 })
                             }
                         }, t

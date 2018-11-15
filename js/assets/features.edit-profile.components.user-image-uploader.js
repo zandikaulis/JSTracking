@@ -1,5 +1,5 @@
 (window.webpackJsonp = window.webpackJsonp || []).push([
-    [144], {
+    [142], {
         "/ZC1": function(e, t, a) {
             "use strict";
             a.d(t, "a", function() {
@@ -71,102 +71,81 @@
                 d = a("/ZC1"),
                 p = a("cZKs"),
                 m = a("yR8l"),
-                g = a("/aPz"),
-                f = a("94Uw"),
-                b = a("Sejb"),
-                h = a("kMGJ"),
-                v = a("vpah"),
-                S = a("GnwI"),
-                I = a("Ue10"),
+                g = a("94Uw"),
+                f = a("Sejb"),
+                b = a("vpah"),
+                h = a("eaSl"),
+                v = a("GnwI"),
+                S = a("Ue10"),
                 E = (a("DGtd"), a("MTto")),
-                y = ["image/*"],
-                k = function(e) {
+                I = ["image/*"],
+                U = function(e) {
                     function t() {
                         var t = null !== e && e.apply(this, arguments) || this;
                         return t.state = {
                             statusMessage: null,
                             imageUpdated: !1,
                             loading: !1
-                        }, t.currentImage = null, t.logger = c.k.withCategory("UserImageUploader"), t.onImageInputChange = function(e) {
+                        }, t.currentImage = null, t.onImageInputChange = function(e) {
                             var a;
                             if (null !== e) {
                                 t.setState({
                                     loading: !0,
                                     statusMessage: null
                                 }), a = e[0];
-                                var n = Object(b.a)(a),
+                                var n = Object(f.a)(a),
                                     r = (a.size / 1024 / 1024).toFixed(4);
                                 parseInt(r, 10) > 10 ? t.setState({
                                     loading: !1,
-                                    statusMessage: v.b.BadSizeError
-                                }) : Object(b.b)(a, function(e) {
+                                    statusMessage: b.b.BadSizeError
+                                }) : Object(f.b)(a, function(e) {
                                     return s.__awaiter(t, void 0, void 0, function() {
-                                        var t, a, r, i, o = this;
-                                        return s.__generator(this, function(s) {
-                                            switch (s.label) {
+                                        var t, a = this;
+                                        return s.__generator(this, function(r) {
+                                            switch (r.label) {
                                                 case 0:
-                                                    this.currentImage = e, s.label = 1;
-                                                case 1:
-                                                    return s.trys.push([1, 3, , 4]), [4, Object(h.a)(this.props.userID, this.props.authToken, this.props.imageType, n)];
-                                                case 2:
-                                                    return t = s.sent(), a = t.upload_url, r = t.upload_id, [3, 4];
-                                                case 3:
-                                                    return i = s.sent(), this.logger.error(i, "Request for upload ID failed to get expected response from server."), this.setState({
-                                                        loading: !1,
-                                                        statusMessage: v.b.UnexpectedError
-                                                    }), [2];
-                                                case 4:
-                                                    return this.unsubscribe = c.l.subscribe({
-                                                        topic: Object(g.o)(this.props.userID),
-                                                        success: function() {
-                                                            try {
-                                                                Object(h.c)(a, o.currentImage)
-                                                            } catch (e) {
-                                                                o.logger.error(e, "Image upload failed."), o.unsubscribe(), o.setState({
-                                                                    loading: !1,
-                                                                    statusMessage: v.b.UnexpectedError
-                                                                })
-                                                            }
-                                                            o.timeoutHandle = setTimeout(function() {
-                                                                return o.handlePubSubTimeout()
-                                                            }, 1e4)
-                                                        },
-                                                        failure: function() {
-                                                            o.setState({
-                                                                loading: !1,
-                                                                statusMessage: v.b.UnexpectedError
+                                                    return this.currentImage = e, t = this, [4, Object(h.a)({
+                                                        userID: this.props.userID,
+                                                        authToken: this.props.authToken,
+                                                        imageType: this.props.imageType,
+                                                        format: n,
+                                                        image: this.currentImage,
+                                                        onUploadCompletion: function(e) {
+                                                            var t = e === b.b.Success;
+                                                            t || (a.currentImage = null), a.setState({
+                                                                statusMessage: e,
+                                                                imageUpdated: t,
+                                                                loading: !1
                                                             })
                                                         },
-                                                        onMessage: function(e) {
-                                                            if (e.upload_id === r) {
-                                                                clearTimeout(o.timeoutHandle);
-                                                                var t = null;
-                                                                e.status === v.a.Success ? t = v.b.Success : e.status === v.a.BadSize ? (t = v.b.BadSizeError, o.currentImage = null) : e.status === v.a.NonImage ? (t = v.b.NonImageError, o.currentImage = null) : e.status === v.a.WrongFormat ? (t = v.b.WrongFormatError, o.currentImage = null) : (t = v.b.UnexpectedError, o.currentImage = null), o.unsubscribe && o.unsubscribe(), o.setState({
-                                                                    statusMessage: t,
-                                                                    imageUpdated: e.status === v.a.Success,
-                                                                    loading: !1
-                                                                })
-                                                            }
+                                                        onUploadError: function() {
+                                                            a.setState({
+                                                                loading: !1,
+                                                                statusMessage: b.b.UnexpectedError
+                                                            })
+                                                        },
+                                                        onUploadTimeout: function() {
+                                                            a.setState({
+                                                                loading: !1,
+                                                                statusMessage: b.b.TimeoutError
+                                                            })
                                                         }
-                                                    }), [2]
+                                                    })];
+                                                case 1:
+                                                    return t.cancelUpload = r.sent(), [2]
                                             }
                                         })
                                     })
                                 })
                             } else t.setState({
-                                statusMessage: v.b.ImageNotSelected
-                            })
-                        }, t.handlePubSubTimeout = function() {
-                            t.unsubscribe(), t.setState({
-                                loading: !1,
-                                statusMessage: v.b.TimeoutError
+                                statusMessage: b.b.ImageNotSelected
                             })
                         }, t
                     }
                     return s.__extends(t, e), t.prototype.componentDidMount = function() {
                         this.props.latencyTracking.reportInteractive()
                     }, t.prototype.componentWillUnmount = function() {
-                        void 0 !== this.unsubscribe && this.unsubscribe(), this.timeoutHandle && clearTimeout(this.timeoutHandle)
+                        this.cancelUpload && this.cancelUpload(), this.timeoutHandle && clearTimeout(this.timeoutHandle)
                     }, t.prototype.componentDidUpdate = function() {
                         var e = this;
                         this.state.imageUpdated && setTimeout(function() {
@@ -180,108 +159,108 @@
                         var t = Object(c.d)("Editing profile banner for {userName}", {
                             userName: e
                         }, "UserImageUploader");
-                        this.props.imageType === f.a.ChannelOfflineImage && (t = Object(c.d)("Editing video banner for {userName}", {
+                        this.props.imageType === g.a.ChannelOfflineImage && (t = Object(c.d)("Editing video banner for {userName}", {
                             userName: e
                         }, "UserImageUploader"));
                         var a = null;
-                        if (this.state.loading) a = l.createElement(I.Ya, {
+                        if (this.state.loading) a = l.createElement(S.Ya, {
                             className: "user-image-uploader__upload-svg--anim-fill",
-                            position: I.kb.Relative,
+                            position: S.kb.Relative,
                             "data-test-selector": "loading-status"
-                        }, l.createElement(I.tb, {
-                            asset: I.ub.Upload,
-                            type: I.vb.Brand,
+                        }, l.createElement(S.tb, {
+                            asset: S.ub.Upload,
+                            type: S.vb.Brand,
                             width: 99,
                             height: 76
                         }));
                         else {
-                            var n = Object(c.d)("Recommended image size: 1200x380 and less than 10MB.", "UserImageUploader");
-                            this.props.imageType === f.a.ChannelOfflineImage && (n = Object(c.d)("Recommended image size: 1920x1080 and less than 10MB.", "UserImageUploader")), a = l.createElement(I.Ya, null, l.createElement(I.Ya, {
+                            var n = Object(c.d)("Recommended image size: 1200x480 and less than 10MB.", "UserImageUploader");
+                            this.props.imageType === g.a.ChannelOfflineImage && (n = Object(c.d)("Recommended image size: 1920x1080 and less than 10MB.", "UserImageUploader")), a = l.createElement(S.Ya, null, l.createElement(S.Ya, {
                                 className: "user-image-uploader__upload-info"
-                            }, l.createElement(I.Ya, null, l.createElement(I.tb, {
-                                asset: I.ub.Plus,
-                                type: I.vb.Alt2,
+                            }, l.createElement(S.Ya, null, l.createElement(S.tb, {
+                                asset: S.ub.Plus,
+                                type: S.vb.Alt2,
                                 height: 20,
                                 width: 20
-                            })), l.createElement(I.W, {
-                                type: I.Wb.H3,
-                                color: I.O.Alt2,
-                                fontSize: I.Ca.Size4
-                            }, Object(c.d)("Upload a Photo", "User Image Uploader"))), l.createElement(I.Ya, {
+                            })), l.createElement(S.W, {
+                                type: S.Wb.H3,
+                                color: S.O.Alt2,
+                                fontSize: S.Ca.Size4
+                            }, Object(c.d)("Upload a Photo", "User Image Uploader"))), l.createElement(S.Ya, {
                                 className: "user-image-uploader__upload-recommendation",
-                                position: I.kb.Absolute,
-                                textAlign: I.Sb.Left,
+                                position: S.kb.Absolute,
+                                textAlign: S.Sb.Left,
                                 attachLeft: !0,
                                 attachBottom: !0,
                                 margin: {
                                     left: 3,
                                     bottom: 1
                                 }
-                            }, l.createElement(I.W, {
-                                type: I.Wb.H6,
-                                color: I.O.Alt2,
-                                fontSize: I.Ca.Size8,
-                                align: I.gc.TextBottom
+                            }, l.createElement(S.W, {
+                                type: S.Wb.H6,
+                                color: S.O.Alt2,
+                                fontSize: S.Ca.Size8,
+                                align: S.gc.TextBottom
                             }, n)))
                         }
                         var r = null;
                         this.props.showCloser && (r = l.createElement(p.a, null));
                         var i = null;
                         if (null !== this.state.statusMessage) {
-                            var o = Object(v.c)(this.state.statusMessage);
-                            i = l.createElement(I.hb, {
+                            var o = Object(b.c)(this.state.statusMessage);
+                            i = l.createElement(S.hb, {
                                 label: o.message,
                                 type: o.type
                             })
                         }
-                        return l.createElement(I.Ya, {
+                        return l.createElement(S.Ya, {
                             className: "user-image-uploader",
-                            position: I.kb.Relative,
+                            position: S.kb.Relative,
                             fullHeight: !0
-                        }, l.createElement(I.Fb, {
+                        }, l.createElement(S.Fb, {
                             className: "user-image-uploader__background-container",
-                            background: I.r.Base,
+                            background: S.r.Base,
                             fullWidth: !0
-                        }, l.createElement(I.Ya, {
+                        }, l.createElement(S.Ya, {
                             padding: 2,
-                            display: I.X.InlineBlock,
-                            position: I.kb.Relative,
-                            textAlign: I.Sb.Center,
+                            display: S.X.InlineBlock,
+                            position: S.kb.Relative,
+                            textAlign: S.Sb.Center,
                             fullWidth: !0
-                        }, l.createElement(I.Fb, {
+                        }, l.createElement(S.Fb, {
                             borderBottom: !0,
                             margin: {
                                 bottom: 2
                             }
-                        }, l.createElement(I.W, {
-                            type: I.Wb.H3,
-                            fontSize: I.Ca.Size4
-                        }, t)), l.createElement(I.Ya, {
+                        }, l.createElement(S.W, {
+                            type: S.Wb.H3,
+                            fontSize: S.Ca.Size4
+                        }, t)), l.createElement(S.Ya, {
                             className: "user-image-uploader__upload-container",
-                            display: I.X.InlineBlock,
-                            position: I.kb.Relative,
-                            textAlign: I.Sb.Center,
+                            display: S.X.InlineBlock,
+                            position: S.kb.Relative,
+                            textAlign: S.Sb.Center,
                             margin: {
                                 bottom: 1
                             }
-                        }, l.createElement(I.Ya, {
+                        }, l.createElement(S.Ya, {
                             className: "user-image-uploader__upload",
-                            display: I.X.InlineBlock,
-                            position: I.kb.Relative,
-                            textAlign: I.Sb.Center
+                            display: S.X.InlineBlock,
+                            position: S.kb.Relative,
+                            textAlign: S.Sb.Center
                         }, l.createElement(d.a, {
-                            allowedFileTypes: y,
+                            allowedFileTypes: I,
                             onFilesSubmitted: this.onImageInputChange
-                        }, a))), l.createElement(I.Fb, {
+                        }, a))), l.createElement(S.Fb, {
                             "data-test-selector": "status-message",
-                            fontSize: I.Ca.Size4,
-                            position: I.kb.Relative,
-                            textAlign: I.Sb.Center,
+                            fontSize: S.Ca.Size4,
+                            position: S.kb.Relative,
+                            textAlign: S.Sb.Center,
                             className: "user-image-uploader__status-message"
                         }, i))), r)
                     }, t
                 }(l.Component),
-                U = Object(u.compose)(Object(S.b)("User Image Upload"), Object(m.a)(E, {
+                y = Object(u.compose)(Object(v.b)("User Image Upload"), Object(m.a)(E, {
                     options: function(e) {
                         return {
                             variables: {
@@ -289,8 +268,8 @@
                             }
                         }
                     }
-                }))(k);
-            var O = Object(n.connect)(function(e) {
+                }))(U);
+            var k = Object(n.connect)(function(e) {
                 return {
                     authToken: Object(o.a)(e)
                 }
@@ -300,9 +279,9 @@
                         return t.successCallback && t.successCallback(), Object(i.c)()
                     }
                 }, e)
-            })(U);
+            })(y);
             a.d(t, "UserImageUploader", function() {
-                return O
+                return k
             }), a.d(t, "PublicProps", function() {})
         },
         DGtd: function(e, t, a) {},
@@ -441,6 +420,75 @@
             }), a.d(t, "a", function() {
                 return r
             })
+        },
+        eaSl: function(e, t, a) {
+            "use strict";
+            a.d(t, "a", function() {
+                return u
+            });
+            var n = a("mrSG"),
+                r = a("/7QA"),
+                i = a("/aPz"),
+                o = a("kMGJ"),
+                s = a("vpah"),
+                l = 1e4;
+
+            function u(e) {
+                return n.__awaiter(this, void 0, void 0, function() {
+                    var t, a, u, c, d, p, m, g, f, b, h, v, S, E, I, U, y;
+                    return n.__generator(this, function(n) {
+                        switch (n.label) {
+                            case 0:
+                                t = e.authToken, a = e.userID, u = e.format, c = e.image, d = e.imageType, p = e.onUploadCompletion, m = e.onUploadError, g = e.onUploadTimeout, f = e.timeout, b = void 0 === f ? l : f, h = r.k.withCategory("Upload image"), n.label = 1;
+                            case 1:
+                                return n.trys.push([1, 3, , 4]), [4, Object(o.a)(a, t, d, u)];
+                            case 2:
+                                return E = n.sent(), v = E.upload_url, S = E.upload_id, [3, 4];
+                            case 3:
+                                return I = n.sent(), h.error(I, "Request for upload ID failed to get expected response from server"), m(), [2];
+                            case 4:
+                                return y = r.l.subscribe({
+                                    topic: Object(i.o)(a),
+                                    success: function() {
+                                        try {
+                                            Object(o.c)(v, c)
+                                        } catch (e) {
+                                            return h.error(e, "Image Upload Failed"), y(), void m()
+                                        }
+                                        U = setTimeout(function() {
+                                            y(), g()
+                                        }, b)
+                                    },
+                                    failure: function() {
+                                        m()
+                                    },
+                                    onMessage: function(e) {
+                                        if (e.upload_id === S) {
+                                            clearTimeout(U);
+                                            var t = function(e) {
+                                                switch (e) {
+                                                    case s.a.Success:
+                                                        return s.b.Success;
+                                                    case s.a.BadSize:
+                                                        return s.b.BadSizeError;
+                                                    case s.a.NonImage:
+                                                        return s.b.NonImageError;
+                                                    case s.a.WrongFormat:
+                                                        return s.b.WrongFormatError;
+                                                    default:
+                                                        return s.b.UnexpectedError
+                                                }
+                                            }(e.status);
+                                            p(t)
+                                        }
+                                    }
+                                }), [2, function() {
+                                    clearTimeout(U), y()
+                                }]
+                        }
+                    })
+                })
+            }
         },
         kMGJ: function(e, t, a) {
             "use strict";

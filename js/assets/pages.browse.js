@@ -1,5 +1,5 @@
 (window.webpackJsonp = window.webpackJsonp || []).push([
-    [69], {
+    [67], {
         "0egc": function(e, t, n) {
             var a = {
                 kind: "Document",
@@ -791,7 +791,7 @@
                     return Promise.resolve().then(n.bind(null, "SKDF"))
                 }, "BrowseGamesPage"),
                 B = y.a.wrap(function() {
-                    return n.e(130).then(n.bind(null, "JTXL"))
+                    return n.e(128).then(n.bind(null, "JTXL"))
                 }, "DirectoryPopularPage"),
                 G = function(e) {
                     function t() {
@@ -839,20 +839,20 @@
                         }, t.updateHistory = function(e, n) {
                             if (void 0 === n && (n = !1), R(e.match.path) && 1 === e.tagFilters.length) t.props.history.replace({
                                 pathname: e.location.pathname,
-                                state: {
+                                state: a.__assign({}, e.location.state, {
                                     languageTagFilters: e.languageTagFilters,
                                     tagFilters: e.tagFilters
-                                }
+                                })
                             });
                             else if (Object(A.b)(e.tagFilters, t.getLocationStateTagFilters(e)) || Object(A.a)(e.languageTagFilters, t.getLocationStateLanguageTags(e))) {
-                                var a = e.tagFilters.length + e.languageTagFilters.length;
+                                var r = e.tagFilters.length + e.languageTagFilters.length;
                                 t.props.history[n ? "replace" : "push"]({
                                     pathname: e.location.pathname,
-                                    search: a > 0 ? "?tl=" + a : void 0,
-                                    state: {
+                                    search: r > 0 ? "?tl=" + r : void 0,
+                                    state: a.__assign({}, e.location.state, {
                                         languageTagFilters: e.languageTagFilters,
                                         tagFilters: e.tagFilters
-                                    }
+                                    })
                                 })
                             }
                         }, t

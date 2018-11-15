@@ -1,5 +1,5 @@
 (window.webpackJsonp = window.webpackJsonp || []).push([
-    [61], {
+    [59], {
         "+U0Y": function(e, t, n) {
             "use strict";
             n.d(t, "a", function() {
@@ -4231,7 +4231,7 @@
                 se = n("ZS2+"),
                 de = n("D7An"),
                 ce = se.a.wrap(function() {
-                    return n.e(146).then(n.bind(null, "YBPT"))
+                    return n.e(144).then(n.bind(null, "YBPT"))
                 }, "LatestVideosFromFollowedCarousel"),
                 ue = function(e) {
                     var t = {

@@ -1,5 +1,5 @@
 (window.webpackJsonp = window.webpackJsonp || []).push([
-    [166, 144], {
+    [164, 142], {
         "+XQV": function(e, t, n) {
             "use strict";
             var r = n("tJV7");
@@ -391,102 +391,81 @@
                 u = n("/ZC1"),
                 p = n("cZKs"),
                 h = n("yR8l"),
-                m = n("/aPz"),
-                g = n("94Uw"),
-                f = n("Sejb"),
-                b = n("kMGJ"),
-                v = n("vpah"),
-                y = n("GnwI"),
-                S = n("Ue10"),
-                E = (n("DGtd"), n("MTto")),
-                C = ["image/*"],
-                _ = function(e) {
+                m = n("94Uw"),
+                g = n("Sejb"),
+                f = n("vpah"),
+                b = n("eaSl"),
+                v = n("GnwI"),
+                y = n("Ue10"),
+                S = (n("DGtd"), n("MTto")),
+                E = ["image/*"],
+                C = function(e) {
                     function t() {
                         var t = null !== e && e.apply(this, arguments) || this;
                         return t.state = {
                             statusMessage: null,
                             imageUpdated: !1,
                             loading: !1
-                        }, t.currentImage = null, t.logger = d.k.withCategory("UserImageUploader"), t.onImageInputChange = function(e) {
+                        }, t.currentImage = null, t.onImageInputChange = function(e) {
                             var n;
                             if (null !== e) {
                                 t.setState({
                                     loading: !0,
                                     statusMessage: null
                                 }), n = e[0];
-                                var r = Object(f.a)(n),
+                                var r = Object(g.a)(n),
                                     a = (n.size / 1024 / 1024).toFixed(4);
                                 parseInt(a, 10) > 10 ? t.setState({
                                     loading: !1,
-                                    statusMessage: v.b.BadSizeError
-                                }) : Object(f.b)(n, function(e) {
+                                    statusMessage: f.b.BadSizeError
+                                }) : Object(g.b)(n, function(e) {
                                     return s.__awaiter(t, void 0, void 0, function() {
-                                        var t, n, a, i, o = this;
-                                        return s.__generator(this, function(s) {
-                                            switch (s.label) {
+                                        var t, n = this;
+                                        return s.__generator(this, function(a) {
+                                            switch (a.label) {
                                                 case 0:
-                                                    this.currentImage = e, s.label = 1;
-                                                case 1:
-                                                    return s.trys.push([1, 3, , 4]), [4, Object(b.a)(this.props.userID, this.props.authToken, this.props.imageType, r)];
-                                                case 2:
-                                                    return t = s.sent(), n = t.upload_url, a = t.upload_id, [3, 4];
-                                                case 3:
-                                                    return i = s.sent(), this.logger.error(i, "Request for upload ID failed to get expected response from server."), this.setState({
-                                                        loading: !1,
-                                                        statusMessage: v.b.UnexpectedError
-                                                    }), [2];
-                                                case 4:
-                                                    return this.unsubscribe = d.l.subscribe({
-                                                        topic: Object(m.o)(this.props.userID),
-                                                        success: function() {
-                                                            try {
-                                                                Object(b.c)(n, o.currentImage)
-                                                            } catch (e) {
-                                                                o.logger.error(e, "Image upload failed."), o.unsubscribe(), o.setState({
-                                                                    loading: !1,
-                                                                    statusMessage: v.b.UnexpectedError
-                                                                })
-                                                            }
-                                                            o.timeoutHandle = setTimeout(function() {
-                                                                return o.handlePubSubTimeout()
-                                                            }, 1e4)
-                                                        },
-                                                        failure: function() {
-                                                            o.setState({
-                                                                loading: !1,
-                                                                statusMessage: v.b.UnexpectedError
+                                                    return this.currentImage = e, t = this, [4, Object(b.a)({
+                                                        userID: this.props.userID,
+                                                        authToken: this.props.authToken,
+                                                        imageType: this.props.imageType,
+                                                        format: r,
+                                                        image: this.currentImage,
+                                                        onUploadCompletion: function(e) {
+                                                            var t = e === f.b.Success;
+                                                            t || (n.currentImage = null), n.setState({
+                                                                statusMessage: e,
+                                                                imageUpdated: t,
+                                                                loading: !1
                                                             })
                                                         },
-                                                        onMessage: function(e) {
-                                                            if (e.upload_id === a) {
-                                                                clearTimeout(o.timeoutHandle);
-                                                                var t = null;
-                                                                e.status === v.a.Success ? t = v.b.Success : e.status === v.a.BadSize ? (t = v.b.BadSizeError, o.currentImage = null) : e.status === v.a.NonImage ? (t = v.b.NonImageError, o.currentImage = null) : e.status === v.a.WrongFormat ? (t = v.b.WrongFormatError, o.currentImage = null) : (t = v.b.UnexpectedError, o.currentImage = null), o.unsubscribe && o.unsubscribe(), o.setState({
-                                                                    statusMessage: t,
-                                                                    imageUpdated: e.status === v.a.Success,
-                                                                    loading: !1
-                                                                })
-                                                            }
+                                                        onUploadError: function() {
+                                                            n.setState({
+                                                                loading: !1,
+                                                                statusMessage: f.b.UnexpectedError
+                                                            })
+                                                        },
+                                                        onUploadTimeout: function() {
+                                                            n.setState({
+                                                                loading: !1,
+                                                                statusMessage: f.b.TimeoutError
+                                                            })
                                                         }
-                                                    }), [2]
+                                                    })];
+                                                case 1:
+                                                    return t.cancelUpload = a.sent(), [2]
                                             }
                                         })
                                     })
                                 })
                             } else t.setState({
-                                statusMessage: v.b.ImageNotSelected
-                            })
-                        }, t.handlePubSubTimeout = function() {
-                            t.unsubscribe(), t.setState({
-                                loading: !1,
-                                statusMessage: v.b.TimeoutError
+                                statusMessage: f.b.ImageNotSelected
                             })
                         }, t
                     }
                     return s.__extends(t, e), t.prototype.componentDidMount = function() {
                         this.props.latencyTracking.reportInteractive()
                     }, t.prototype.componentWillUnmount = function() {
-                        void 0 !== this.unsubscribe && this.unsubscribe(), this.timeoutHandle && clearTimeout(this.timeoutHandle)
+                        this.cancelUpload && this.cancelUpload(), this.timeoutHandle && clearTimeout(this.timeoutHandle)
                     }, t.prototype.componentDidUpdate = function() {
                         var e = this;
                         this.state.imageUpdated && setTimeout(function() {
@@ -500,108 +479,108 @@
                         var t = Object(d.d)("Editing profile banner for {userName}", {
                             userName: e
                         }, "UserImageUploader");
-                        this.props.imageType === g.a.ChannelOfflineImage && (t = Object(d.d)("Editing video banner for {userName}", {
+                        this.props.imageType === m.a.ChannelOfflineImage && (t = Object(d.d)("Editing video banner for {userName}", {
                             userName: e
                         }, "UserImageUploader"));
                         var n = null;
-                        if (this.state.loading) n = l.createElement(S.Ya, {
+                        if (this.state.loading) n = l.createElement(y.Ya, {
                             className: "user-image-uploader__upload-svg--anim-fill",
-                            position: S.kb.Relative,
+                            position: y.kb.Relative,
                             "data-test-selector": "loading-status"
-                        }, l.createElement(S.tb, {
-                            asset: S.ub.Upload,
-                            type: S.vb.Brand,
+                        }, l.createElement(y.tb, {
+                            asset: y.ub.Upload,
+                            type: y.vb.Brand,
                             width: 99,
                             height: 76
                         }));
                         else {
-                            var r = Object(d.d)("Recommended image size: 1200x380 and less than 10MB.", "UserImageUploader");
-                            this.props.imageType === g.a.ChannelOfflineImage && (r = Object(d.d)("Recommended image size: 1920x1080 and less than 10MB.", "UserImageUploader")), n = l.createElement(S.Ya, null, l.createElement(S.Ya, {
+                            var r = Object(d.d)("Recommended image size: 1200x480 and less than 10MB.", "UserImageUploader");
+                            this.props.imageType === m.a.ChannelOfflineImage && (r = Object(d.d)("Recommended image size: 1920x1080 and less than 10MB.", "UserImageUploader")), n = l.createElement(y.Ya, null, l.createElement(y.Ya, {
                                 className: "user-image-uploader__upload-info"
-                            }, l.createElement(S.Ya, null, l.createElement(S.tb, {
-                                asset: S.ub.Plus,
-                                type: S.vb.Alt2,
+                            }, l.createElement(y.Ya, null, l.createElement(y.tb, {
+                                asset: y.ub.Plus,
+                                type: y.vb.Alt2,
                                 height: 20,
                                 width: 20
-                            })), l.createElement(S.W, {
-                                type: S.Wb.H3,
-                                color: S.O.Alt2,
-                                fontSize: S.Ca.Size4
-                            }, Object(d.d)("Upload a Photo", "User Image Uploader"))), l.createElement(S.Ya, {
+                            })), l.createElement(y.W, {
+                                type: y.Wb.H3,
+                                color: y.O.Alt2,
+                                fontSize: y.Ca.Size4
+                            }, Object(d.d)("Upload a Photo", "User Image Uploader"))), l.createElement(y.Ya, {
                                 className: "user-image-uploader__upload-recommendation",
-                                position: S.kb.Absolute,
-                                textAlign: S.Sb.Left,
+                                position: y.kb.Absolute,
+                                textAlign: y.Sb.Left,
                                 attachLeft: !0,
                                 attachBottom: !0,
                                 margin: {
                                     left: 3,
                                     bottom: 1
                                 }
-                            }, l.createElement(S.W, {
-                                type: S.Wb.H6,
-                                color: S.O.Alt2,
-                                fontSize: S.Ca.Size8,
-                                align: S.gc.TextBottom
+                            }, l.createElement(y.W, {
+                                type: y.Wb.H6,
+                                color: y.O.Alt2,
+                                fontSize: y.Ca.Size8,
+                                align: y.gc.TextBottom
                             }, r)))
                         }
                         var a = null;
                         this.props.showCloser && (a = l.createElement(p.a, null));
                         var i = null;
                         if (null !== this.state.statusMessage) {
-                            var o = Object(v.c)(this.state.statusMessage);
-                            i = l.createElement(S.hb, {
+                            var o = Object(f.c)(this.state.statusMessage);
+                            i = l.createElement(y.hb, {
                                 label: o.message,
                                 type: o.type
                             })
                         }
-                        return l.createElement(S.Ya, {
+                        return l.createElement(y.Ya, {
                             className: "user-image-uploader",
-                            position: S.kb.Relative,
+                            position: y.kb.Relative,
                             fullHeight: !0
-                        }, l.createElement(S.Fb, {
+                        }, l.createElement(y.Fb, {
                             className: "user-image-uploader__background-container",
-                            background: S.r.Base,
+                            background: y.r.Base,
                             fullWidth: !0
-                        }, l.createElement(S.Ya, {
+                        }, l.createElement(y.Ya, {
                             padding: 2,
-                            display: S.X.InlineBlock,
-                            position: S.kb.Relative,
-                            textAlign: S.Sb.Center,
+                            display: y.X.InlineBlock,
+                            position: y.kb.Relative,
+                            textAlign: y.Sb.Center,
                             fullWidth: !0
-                        }, l.createElement(S.Fb, {
+                        }, l.createElement(y.Fb, {
                             borderBottom: !0,
                             margin: {
                                 bottom: 2
                             }
-                        }, l.createElement(S.W, {
-                            type: S.Wb.H3,
-                            fontSize: S.Ca.Size4
-                        }, t)), l.createElement(S.Ya, {
+                        }, l.createElement(y.W, {
+                            type: y.Wb.H3,
+                            fontSize: y.Ca.Size4
+                        }, t)), l.createElement(y.Ya, {
                             className: "user-image-uploader__upload-container",
-                            display: S.X.InlineBlock,
-                            position: S.kb.Relative,
-                            textAlign: S.Sb.Center,
+                            display: y.X.InlineBlock,
+                            position: y.kb.Relative,
+                            textAlign: y.Sb.Center,
                             margin: {
                                 bottom: 1
                             }
-                        }, l.createElement(S.Ya, {
+                        }, l.createElement(y.Ya, {
                             className: "user-image-uploader__upload",
-                            display: S.X.InlineBlock,
-                            position: S.kb.Relative,
-                            textAlign: S.Sb.Center
+                            display: y.X.InlineBlock,
+                            position: y.kb.Relative,
+                            textAlign: y.Sb.Center
                         }, l.createElement(u.a, {
-                            allowedFileTypes: C,
+                            allowedFileTypes: E,
                             onFilesSubmitted: this.onImageInputChange
-                        }, n))), l.createElement(S.Fb, {
+                        }, n))), l.createElement(y.Fb, {
                             "data-test-selector": "status-message",
-                            fontSize: S.Ca.Size4,
-                            position: S.kb.Relative,
-                            textAlign: S.Sb.Center,
+                            fontSize: y.Ca.Size4,
+                            position: y.kb.Relative,
+                            textAlign: y.Sb.Center,
                             className: "user-image-uploader__status-message"
                         }, i))), a)
                     }, t
                 }(l.Component),
-                k = Object(c.compose)(Object(y.b)("User Image Upload"), Object(h.a)(E, {
+                _ = Object(c.compose)(Object(v.b)("User Image Upload"), Object(h.a)(S, {
                     options: function(e) {
                         return {
                             variables: {
@@ -609,8 +588,8 @@
                             }
                         }
                     }
-                }))(_);
-            var w = Object(r.connect)(function(e) {
+                }))(C);
+            var k = Object(r.connect)(function(e) {
                 return {
                     authToken: Object(o.a)(e)
                 }
@@ -620,9 +599,9 @@
                         return t.successCallback && t.successCallback(), Object(i.c)()
                     }
                 }, e)
-            })(k);
+            })(_);
             n.d(t, "UserImageUploader", function() {
-                return w
+                return k
             }), n.d(t, "PublicProps", function() {})
         },
         "8ENv": function(e, t, n) {
@@ -2344,13 +2323,79 @@
                 return a
             }), n.d(t, "c", function() {
                 return i
-            }), n.d(t, "d", function() {
-                return o
             });
-            var r = "https://help.twitch.tv/customer/en/portal/articles/659115-twitch-chat-badges-guide",
-                a = "https://link.twitch.tv/ManagingRoles",
-                i = "https://static-cdn.jtvnw.net/badges/v1/3267646d-33f0-4b17-b3df-f923a41db1d0/2",
-                o = "https://static-cdn.jtvnw.net/badges/v1/b817aba4-fad8-49e2-b88a-7cc744dfa6ec/2"
+            var r = "https://link.twitch.tv/ManagingRoles",
+                a = "https://static-cdn.jtvnw.net/badges/v1/3267646d-33f0-4b17-b3df-f923a41db1d0/2",
+                i = "https://static-cdn.jtvnw.net/badges/v1/b817aba4-fad8-49e2-b88a-7cc744dfa6ec/2"
+        },
+        eaSl: function(e, t, n) {
+            "use strict";
+            n.d(t, "a", function() {
+                return c
+            });
+            var r = n("mrSG"),
+                a = n("/7QA"),
+                i = n("/aPz"),
+                o = n("kMGJ"),
+                s = n("vpah"),
+                l = 1e4;
+
+            function c(e) {
+                return r.__awaiter(this, void 0, void 0, function() {
+                    var t, n, c, d, u, p, h, m, g, f, b, v, y, S, E, C, _;
+                    return r.__generator(this, function(r) {
+                        switch (r.label) {
+                            case 0:
+                                t = e.authToken, n = e.userID, c = e.format, d = e.image, u = e.imageType, p = e.onUploadCompletion, h = e.onUploadError, m = e.onUploadTimeout, g = e.timeout, f = void 0 === g ? l : g, b = a.k.withCategory("Upload image"), r.label = 1;
+                            case 1:
+                                return r.trys.push([1, 3, , 4]), [4, Object(o.a)(n, t, u, c)];
+                            case 2:
+                                return S = r.sent(), v = S.upload_url, y = S.upload_id, [3, 4];
+                            case 3:
+                                return E = r.sent(), b.error(E, "Request for upload ID failed to get expected response from server"), h(), [2];
+                            case 4:
+                                return _ = a.l.subscribe({
+                                    topic: Object(i.o)(n),
+                                    success: function() {
+                                        try {
+                                            Object(o.c)(v, d)
+                                        } catch (e) {
+                                            return b.error(e, "Image Upload Failed"), _(), void h()
+                                        }
+                                        C = setTimeout(function() {
+                                            _(), m()
+                                        }, f)
+                                    },
+                                    failure: function() {
+                                        h()
+                                    },
+                                    onMessage: function(e) {
+                                        if (e.upload_id === y) {
+                                            clearTimeout(C);
+                                            var t = function(e) {
+                                                switch (e) {
+                                                    case s.a.Success:
+                                                        return s.b.Success;
+                                                    case s.a.BadSize:
+                                                        return s.b.BadSizeError;
+                                                    case s.a.NonImage:
+                                                        return s.b.NonImageError;
+                                                    case s.a.WrongFormat:
+                                                        return s.b.WrongFormatError;
+                                                    default:
+                                                        return s.b.UnexpectedError
+                                                }
+                                            }(e.status);
+                                            p(t)
+                                        }
+                                    }
+                                }), [2, function() {
+                                    clearTimeout(C), _()
+                                }]
+                        }
+                    })
+                })
+            }
         },
         ezMb: function(e, t, n) {
             "use strict";
@@ -3686,13 +3731,13 @@
                 D = {
                     "data-test-selector": "close-button"
                 },
-                P = {
+                R = {
                     "data-test-selector": "remove-button"
                 };
             ! function(e) {
                 e[e.Pending = 0] = "Pending", e[e.InFlight = 1] = "InFlight", e[e.Failed = 2] = "Failed", e[e.Success = 3] = "Success"
             }(r || (r = {}));
-            var R, j, F = function(e) {
+            var P, j, F = function(e) {
                     function t(t) {
                         var n = e.call(this, t) || this;
                         return n.onClickRemove = function() {
@@ -3763,7 +3808,7 @@
                                 margin: {
                                     x: 1
                                 }
-                            }, s.createElement(x.z, o.__assign({}, P, {
+                            }, s.createElement(x.z, o.__assign({}, R, {
                                 disabled: this.state.requestState === r.InFlight,
                                 onClick: this.onClickRemove
                             }), Object(u.d)("Yes, Remove Them", "ChannelSettingsAuthorizedStreamersPage")))));
@@ -3807,7 +3852,7 @@
                 };
             ! function(e) {
                 e.Waiting = "waiting", e.Error = "error", e.NotFound = "notFound", e.Success = "success"
-            }(R || (R = {})),
+            }(P || (P = {})),
             function(e) {
                 e.Loading = "loading", e.Success = "success", e.Error = "error"
             }(j || (j = {}));
@@ -3817,7 +3862,7 @@
                         return t.state = {
                             authorizedStreamers: [],
                             emailAddress: "",
-                            inviteState: R.Waiting,
+                            inviteState: P.Waiting,
                             requestState: j.Loading
                         }, t.updateAuthorizedStreamers = function(e) {
                             t.setState({
@@ -3836,17 +3881,17 @@
                                     switch (r.label) {
                                         case 0:
                                             return (t = this.props.data.user) && t.id ? (this.setState({
-                                                inviteState: R.Waiting
+                                                inviteState: P.Waiting
                                             }), e.length > 0 ? [4, O(t.id, e)] : [3, 2]) : [2];
                                         case 1:
                                             (n = r.sent()).isNotFound ? this.setState({
-                                                inviteState: R.NotFound
+                                                inviteState: P.NotFound
                                             }) : n.isError ? this.setState({
-                                                inviteState: R.Error
+                                                inviteState: P.Error
                                             }) : this.setState({
                                                 authorizedStreamers: n.authorizedStreamers,
                                                 emailAddress: "",
-                                                inviteState: R.Success
+                                                inviteState: P.Success
                                             }), r.label = 2;
                                         case 2:
                                             return [2]
@@ -3870,7 +3915,7 @@
                         }, t.renderSuccess = function() {
                             var e = t.props.data.user;
                             if (!e || !e.id) return null;
-                            var n = t.state.inviteState === R.Error || t.state.inviteState === R.NotFound,
+                            var n = t.state.inviteState === P.Error || t.state.inviteState === P.NotFound,
                                 r = s.createElement(x.Ya, {
                                     margin: {
                                         bottom: 2
@@ -3897,7 +3942,7 @@
                                     margin: {
                                         top: 1
                                     }
-                                }, t.state.inviteState === R.NotFound && s.createElement(x.W, o.__assign({}, z, {
+                                }, t.state.inviteState === P.NotFound && s.createElement(x.W, o.__assign({}, z, {
                                     color: x.O.Error,
                                     fontSize: x.Ca.Size6
                                 }), Object(u.d)("That email address isn't linked to a Twitch account. Make sure the email is linked to a Twitch account.", "ChannelSettingsAuthorizedStreamersPage")))), s.createElement(x.Ya, null, s.createElement(x.z, o.__assign({}, U, {
@@ -4107,8 +4152,8 @@
                 }), Object(b.a)({
                     location: S.PageviewLocation.AuthorizedStreamers
                 }))(Y),
-                H = n("BK8n"),
-                V = n("G1cX"),
+                V = n("BK8n"),
+                H = n("G1cX"),
                 G = n("Nxrd"),
                 X = n("f00E"),
                 Q = n("b6Yk"),
@@ -4632,7 +4677,7 @@
                                     return t === e.id
                                 }) : -1,
                                 a = e;
-                            return e && r >= 0 && (a = V(e, function(e) {
+                            return e && r >= 0 && (a = H(e, function(e) {
                                 return e[r]
                             }, function(e) {
                                 return e.added = n, e
@@ -4792,7 +4837,7 @@
                         });
                         return s.createElement(M.a, null, s.createElement(_.a, {
                             header: e
-                        }, s.createElement(H.a, {
+                        }, s.createElement(V.a, {
                             error: !!this.state.autohostError,
                             errorMessage: this.state.autohostError
                         }, s.createElement(x.Ya, {
@@ -4844,7 +4889,7 @@
                     return o.__extends(t, e), t.prototype.render = function() {
                         var e = !this.props.saving && this.props.requestState === Te.a.Loading,
                             t = this.props.saving;
-                        return s.createElement(_.a, null, this.props.requestState === Te.a.Error && s.createElement(H.a, null, s.createElement(x.W, {
+                        return s.createElement(_.a, null, this.props.requestState === Te.a.Error && s.createElement(V.a, null, s.createElement(x.W, {
                             color: x.O.Error
                         }, Object(u.d)("Something went wrong. Give it another try later.", "AutohostSettings"))), s.createElement(xe.a, {
                             label: Object(u.d)("Auto host channels", "AutohostSettings"),
@@ -4902,7 +4947,7 @@
                         }))
                     }, t
                 }(s.Component),
-                Pe = function(e) {
+                Re = function(e) {
                     function t() {
                         var t = null !== e && e.apply(this, arguments) || this;
                         return t.handleSetRaidPreference = function(e) {
@@ -4918,7 +4963,7 @@
                     return o.__extends(t, e), t.prototype.componentDidMount = function() {
                         this.props.latencyTracking.reportInteractive()
                     }, t.prototype.render = function() {
-                        return s.createElement(_.a, null, this.props.requestState === Te.a.Error && s.createElement(H.a, null, s.createElement(x.W, {
+                        return s.createElement(_.a, null, this.props.requestState === Te.a.Error && s.createElement(V.a, null, s.createElement(x.W, {
                             color: x.O.Error
                         }, Object(u.d)("Something went wrong. Give it another try later.", "RaidSettingsForm"))), s.createElement(Oe.a, {
                             orientation: x.Fa.Horizontal,
@@ -4959,7 +5004,7 @@
                         }))))
                     }, t
                 }(s.Component),
-                Re = Object(E.b)("RaidSettingsForm")(Pe),
+                Pe = Object(E.b)("RaidSettingsForm")(Re),
                 je = function(e) {
                     return s.createElement(s.Fragment, null, s.createElement(we.a, {
                         title: Object(u.d)("Auto Hosting", "DashboardSettings")
@@ -4971,7 +5016,7 @@
                         saveSettings: e.saveSettings
                     }), s.createElement(we.a, {
                         title: Object(u.d)("Raids", "DashboardSettings")
-                    }), s.createElement(Re, {
+                    }), s.createElement(Pe, {
                         raidPreference: e.autohostSettings.raidPreference,
                         requestState: e.requestState,
                         saveSettings: e.saveSettings
@@ -5205,7 +5250,7 @@
             ! function(e) {
                 e.ChannelPropertiesError = "channel-properties-settings-form-channel-properties-error", e.CopyButton = "channel-properties-settings-form-copy-button", e.ResetButton = "channel-properties-settings-form-reset-buton", e.ToggleIdIngestResilience = "toggle-id-ingest-resilience"
             }(Ee || (Ee = {}));
-            var He, Ve, Ge = function(e) {
+            var Ve, He, Ge = function(e) {
                     function t() {
                         var t = null !== e && e.apply(this, arguments) || this;
                         return t.state = {
@@ -5215,7 +5260,7 @@
                             return t.props.channelProperties && 0 === t.props.channelProperties.numBackupStreamsAllowed && 0 === t.props.channelProperties.disconnectSlateDuration || !1
                         }, t.onToggleResilentIngest = function(e) {
                             var n;
-                            n = t.isResilienceIngestTurnedOff() && e ? Ve.BackupSlate : Ve.Off, t.props.handleResilientIngestPreference(n)
+                            n = t.isResilienceIngestTurnedOff() && e ? He.BackupSlate : He.Off, t.props.handleResilientIngestPreference(n)
                         }, t.renderStorePastBroadcasts = function() {
                             return s.createElement(xe.a, {
                                 id: Ye,
@@ -5242,18 +5287,18 @@
                                 }
                             }, s.createElement(x.qb, {
                                 disabled: t.props.latencyPrefState === Te.a.Loading,
-                                checked: !(!t.props.channelProperties || t.props.channelProperties.latencyPreference !== He.Normal),
+                                checked: !(!t.props.channelProperties || t.props.channelProperties.latencyPreference !== Ve.Normal),
                                 onChange: t.handleSetLatencyPreference,
                                 label: Object(u.d)("Normal latency: Best for highest video quality, highest resolution, and to reduce video buffering", "StreamKeySettingsForm"),
                                 name: "optPreference",
-                                value: He.Normal
+                                value: Ve.Normal
                             })), s.createElement(x.qb, {
                                 disabled: t.props.latencyPrefState === Te.a.Loading,
-                                checked: !(!t.props.channelProperties || t.props.channelProperties.latencyPreference !== He.Low),
+                                checked: !(!t.props.channelProperties || t.props.channelProperties.latencyPreference !== Ve.Low),
                                 onChange: t.handleSetLatencyPreference,
                                 label: Object(u.d)("Low latency: Best for near real-time interactions with viewers", "StreamKeySettingsForm"),
                                 name: "optPreference",
-                                value: He.Low
+                                value: Ve.Low
                             }))
                         }, t.hideStreamKeyLink = function() {
                             return s.createElement(x.U, {
@@ -5314,7 +5359,7 @@
                     }, t.prototype.render = function() {
                         if (this.props.channelPropertiesError) return s.createElement(_.a, {
                             "data-test-selector": Ee.ChannelPropertiesError
-                        }, s.createElement(H.a, null, s.createElement(x.W, {
+                        }, s.createElement(V.a, null, s.createElement(x.W, {
                             color: x.O.Error
                         }, this.props.channelPropertiesError)));
                         var e = this.props.channelProperties && (this.props.channelProperties.backupControlsEnabled || this.props.channelProperties.disconnectSlateControlsEnabled) || !1;
@@ -5406,7 +5451,7 @@
                                 }
                             }, "ResilienceStreamKeySettingsForm"),
                             name: "optResiliencePreference",
-                            value: Ve.BackupSlate
+                            value: He.BackupSlate
                         })), this.props.channelProperties && this.props.channelProperties.backupControlsEnabled && s.createElement(x.Ya, {
                             padding: {
                                 bottom: .5
@@ -5424,7 +5469,7 @@
                                 }
                             }, "ResilienceStreamKeySettingsForm"),
                             name: "optResiliencePreference",
-                            value: Ve.BackupIngest
+                            value: He.BackupIngest
                         }), t && this.renderFallbackKeyOption())))
                     }, t.prototype.renderStreamKey = function() {
                         var e = x.E.Default,
@@ -5476,10 +5521,10 @@
                 Ze = 90;
             ! function(e) {
                 e.Normal = "normal", e.Low = "low"
-            }(He || (He = {})),
+            }(Ve || (Ve = {})),
             function(e) {
                 e.BackupSlate = "backup_slate", e.BackupIngest = "backup_ingest", e.Off = "off"
-            }(Ve || (Ve = {}));
+            }(He || (He = {}));
             var Je = function(e) {
                 function t() {
                     var t = null !== e && e.apply(this, arguments) || this;
@@ -5637,7 +5682,7 @@
                                 switch (o.label) {
                                     case 0:
                                         if (!this.props.user || !this.state.channelProperties) return [2];
-                                        e === Ve.BackupSlate ? (t = 0, n = Ze) : e === Ve.BackupIngest ? (t = Qe, n = 0) : e === Ve.Off && (t = 0, n = 0), this.setState({
+                                        e === He.BackupSlate ? (t = 0, n = Ze) : e === He.BackupIngest ? (t = Qe, n = 0) : e === He.Off && (t = 0, n = 0), this.setState({
                                             resilientIngestState: Te.a.Loading
                                         }), s = "/v5/channels/" + this.props.user.id + "/channel_properties", o.label = 1;
                                     case 1:
@@ -5713,7 +5758,7 @@
                     return o.__extends(t, e), t.prototype.componentDidMount = function() {
                         this.props.latencyTracking.reportInteractive()
                     }, t.prototype.render = function() {
-                        if (this.props.dropsSettingsError) return s.createElement(_.a, null, s.createElement(H.a, null, s.createElement(x.W, {
+                        if (this.props.dropsSettingsError) return s.createElement(_.a, null, s.createElement(V.a, null, s.createElement(x.W, {
                             color: x.O.Error
                         }, this.props.dropsSettingsError)));
                         var e = s.createElement(x.U, {
@@ -6262,7 +6307,7 @@
                                                 var n = s.state.memberships.findIndex(function(e) {
                                                         return e.primary
                                                     }),
-                                                    r = V(t.memberships, function(t) {
+                                                    r = H(t.memberships, function(t) {
                                                         return t[e]
                                                     }, function(e) {
                                                         return e.primary = !0, e
@@ -6298,7 +6343,7 @@
                                                 updatingToggles: !1
                                             }), [2]) : (this.setState(function(t) {
                                                 return {
-                                                    memberships: V(t.memberships, function(t) {
+                                                    memberships: H(t.memberships, function(t) {
                                                         return t[e]
                                                     }, function(e) {
                                                         return e.revenueRevealed = !e.revenueRevealed, e
@@ -6332,7 +6377,7 @@
                                                 updatingToggles: !1
                                             }), [2]) : (this.setState(function(t) {
                                                 return {
-                                                    memberships: V(t.memberships, function(t) {
+                                                    memberships: H(t.memberships, function(t) {
                                                         return t[e]
                                                     }, function(e) {
                                                         return e.statsRevealed = !e.statsRevealed, e
@@ -6551,12 +6596,12 @@
                         return this.state.invitations.length > 0 || this.state.managedTeams.length > 0 || this.state.memberships.length > 0
                     }, t
                 }(s.Component);
-            var Dt, Pt = Object(a.connect)(function(e) {
+            var Dt, Rt = Object(a.connect)(function(e) {
                     return {
                         user: Object(i.e)(e)
                     }
                 })(Tt),
-                Rt = n("4rCz"),
+                Pt = n("4rCz"),
                 jt = n("7lJP"),
                 Ft = n("94Uw"),
                 Mt = n("Ww25"),
@@ -6626,7 +6671,7 @@
                                 width: 160,
                                 src: this.props.data.user.offlineImageURL
                             });
-                            var n = Object(Rt.d)("Remove my Video Player Banner Image", "UploadVideoPlayerBanner");
+                            var n = Object(Pt.d)("Remove my Video Player Banner Image", "UploadVideoPlayerBanner");
                             t = s.createElement(x.Ya, {
                                 margin: {
                                     x: 2
@@ -6644,9 +6689,9 @@
                             width: 160
                         });
                         return s.createElement(x.Ya, null, s.createElement(we.a, {
-                            title: Object(Rt.d)("Video Player Banner", "UploadVideoPlayerBanner"),
-                            description: Object(Rt.d)("This is displayed on the player when your channel is offline.", "UploadVideoPlayerBanner")
-                        }), s.createElement(_.a, null, s.createElement(H.a, null, s.createElement(x.Ya, {
+                            title: Object(Pt.d)("Video Player Banner", "UploadVideoPlayerBanner"),
+                            description: Object(Pt.d)("This is displayed on the player when your channel is offline.", "UploadVideoPlayerBanner")
+                        }), s.createElement(_.a, null, s.createElement(V.a, null, s.createElement(x.Ya, {
                             display: x.X.Flex
                         }, s.createElement(x.Fb, {
                             borderRadius: x.x.Medium,
@@ -6666,12 +6711,12 @@
                             padding: {
                                 x: 1
                             }
-                        }, Object(Rt.d)("Update", "UploadVideoPlayerBanner"))), t), s.createElement(Mt.a, {
-                            text: Object(Rt.d)("Max 10mb GIF, JPG, or PNG", "UploadVideoPlayerBanner")
+                        }, Object(Pt.d)("Update", "UploadVideoPlayerBanner"))), t), s.createElement(Mt.a, {
+                            text: Object(Pt.d)("Max 10mb GIF, JPG, or PNG", "UploadVideoPlayerBanner")
                         }), this.state.deletionError && s.createElement(x.W, {
                             color: x.O.Error,
                             "data-test-selector": Dt.ErrorMessage
-                        }, Object(Rt.d)("Sorry, something went wrong. Please try again later.", "UploadVideoPlayerBanner")))))))
+                        }, Object(Pt.d)("Sorry, something went wrong. Please try again later.", "UploadVideoPlayerBanner")))))))
                     }, t
                 }(s.Component),
                 Nt = Object(f.a)(Lt, {
@@ -6790,7 +6835,7 @@
                     }, t.prototype.render = function() {
                         return s.createElement(x.Ya, null, s.createElement(we.a, {
                             title: Object(u.d)("Video Moderation", "DashboardSettingsModPref")
-                        }), s.createElement(_.a, null, this.props.requestState === Te.a.Error && s.createElement(H.a, null, s.createElement(x.W, {
+                        }), s.createElement(_.a, null, this.props.requestState === Te.a.Error && s.createElement(V.a, null, s.createElement(x.W, {
                             color: x.O.Error
                         }, Object(u.d)("Something went wrong. Give it another try later.", "DashboardSettingsModPrefMessagesError"))), s.createElement(Wt, {
                             onSetPublishingMode: this.handleSetPublishingMode,
@@ -6899,8 +6944,8 @@
                         })
                     }, t
                 }(s.Component),
-                Ht = n("wo8Z"),
-                Vt = n("bDCY"),
+                Vt = n("wo8Z"),
+                Ht = n("bDCY"),
                 Gt = n("HOmj"),
                 Xt = function(e) {
                     function t() {
@@ -6970,13 +7015,13 @@
                         })))
                     }, Object.defineProperty(t.prototype, "show", {
                         get: function() {
-                            return Object(Ht.a)() && this.props.data && !this.props.data.error && this.props.data.channel && this.props.data.channel.settings && this.props.data.channel.settings.isRitualsWhitelisted
+                            return Object(Vt.a)() && this.props.data && !this.props.data.error && this.props.data.channel && this.props.data.channel.settings && this.props.data.channel.settings.isRitualsWhitelisted
                         },
                         enumerable: !0,
                         configurable: !0
                     }), t
                 }(s.Component),
-                Qt = Object(tt.compose)(Object(f.a)(Vt, {
+                Qt = Object(tt.compose)(Object(f.a)(Ht, {
                     options: function(e) {
                         return {
                             variables: {
@@ -6985,7 +7030,7 @@
                         }
                     },
                     skip: function(e) {
-                        return !e.channelID || !Object(Ht.a)()
+                        return !e.channelID || !Object(Vt.a)()
                     }
                 }), Object(f.a)(Gt, {
                     name: "toggleRitualsEnabled"
@@ -7005,7 +7050,7 @@
                             channelLogin: n
                         }), s.createElement(Bt, null), s.createElement(Fe, {
                             channelName: n
-                        }), s.createElement(Pt, null), s.createElement(we.a, {
+                        }), s.createElement(Rt, null), s.createElement(we.a, {
                             title: Object(u.d)("Drops", "DashboardSettings")
                         }), s.createElement(ot, {
                             channelName: n
@@ -7062,7 +7107,7 @@
                             link: this.shouldShowLink ? {
                                 children: Object(u.d)("Learn more", "DashboardSettingsEditableChannelsPage"),
                                 targetBlank: !0,
-                                to: nn.b
+                                to: nn.a
                             } : void 0,
                             narrow: !0,
                             title: Object(u.d)("Editor Role", "DashboardSettingsEditableChannelsPage"),
@@ -7983,8 +8028,8 @@
                         isExpandedView: e.isExpandedView
                     }
                 })(T),
-                P = n("eJ65"),
-                R = n("N0BP"),
+                R = n("eJ65"),
+                P = n("N0BP"),
                 j = function(e) {
                     function t() {
                         return null !== e && e.apply(this, arguments) || this
@@ -7995,10 +8040,10 @@
                                 left: 1
                             },
                             position: g.kb.Relative
-                        }, p.createElement(P.a, null, p.createElement(g.A, u.__assign({
+                        }, p.createElement(R.a, null, p.createElement(g.A, u.__assign({
                             ariaLabel: this.props.ariaIconLabel,
                             icon: this.props.icon
-                        }, Object(R.a)(this.props))), p.createElement(g.u, {
+                        }, Object(P.a)(this.props))), p.createElement(g.u, {
                             offsetY: "0",
                             offsetX: "1rem",
                             direction: g.v.Left,

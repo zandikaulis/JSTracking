@@ -1,5 +1,5 @@
 (window.webpackJsonp = window.webpackJsonp || []).push([
-    [64], {
+    [62], {
         VkGE: function(e, t, r) {
             "use strict";
             r.r(t);

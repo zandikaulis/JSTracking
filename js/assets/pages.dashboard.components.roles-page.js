@@ -1,5 +1,5 @@
 (window.webpackJsonp = window.webpackJsonp || []).push([
-    [159], {
+    [157], {
         "4HoE": function(e, t) {
             var n = {
                 kind: "Document",
@@ -1424,13 +1424,10 @@
                 return r
             }), n.d(t, "c", function() {
                 return a
-            }), n.d(t, "d", function() {
-                return o
             });
-            var i = "https://help.twitch.tv/customer/en/portal/articles/659115-twitch-chat-badges-guide",
-                r = "https://link.twitch.tv/ManagingRoles",
-                a = "https://static-cdn.jtvnw.net/badges/v1/3267646d-33f0-4b17-b3df-f923a41db1d0/2",
-                o = "https://static-cdn.jtvnw.net/badges/v1/b817aba4-fad8-49e2-b88a-7cc744dfa6ec/2"
+            var i = "https://link.twitch.tv/ManagingRoles",
+                r = "https://static-cdn.jtvnw.net/badges/v1/3267646d-33f0-4b17-b3df-f923a41db1d0/2",
+                a = "https://static-cdn.jtvnw.net/badges/v1/b817aba4-fad8-49e2-b88a-7cc744dfa6ec/2"
         },
         eqbG: function(e, t, n) {},
         fKMw: function(e, t, n) {
@@ -1544,14 +1541,14 @@
                     userCache: {}
                 })).InnerProvider,
                 M = E.withContext,
-                w = function(e) {
+                F = function(e) {
                     return e
                 };
 
-            function F(e) {
-                return M(w)(e)
+            function T(e) {
+                return M(F)(e)
             }
-            var T, L = 1,
+            var w, L = 1,
                 R = function(e) {
                     function t(t) {
                         var n = e.call(this, t) || this;
@@ -1721,12 +1718,12 @@
                         }
                     }
                 }))(R),
-                V = (T = Object(h.a)("ChannelVIPContext", {
+                V = (w = Object(h.a)("ChannelVIPContext", {
                     maxVIPUserLimit: 0,
                     isAtMaxVIPUserLimit: !1,
                     isVIPUnlocked: !1
                 })).InnerProvider,
-                x = T.withContext,
+                x = w.withContext,
                 B = function(e) {
                     return e
                 };
@@ -1734,7 +1731,7 @@
             function j(e) {
                 return x(B)(e)
             }
-            var Y, G, W = F(function(e) {
+            var Y, G, W = T(function(e) {
                     function t(t) {
                         var n = e.call(this, t) || this;
                         return n.state = {
@@ -1780,17 +1777,17 @@
                     }, t
                 }(o.Component)),
                 X = n("GIFg"),
-                H = n("kYmV"),
-                q = n("cuu2"),
+                q = n("kYmV"),
+                H = n("cuu2"),
                 $ = n("d0JU"),
                 z = function(e) {
                     function t() {
                         return null !== e && e.apply(this, arguments) || this
                     }
                     return a.__extends(t, e), t.prototype.render = function() {
-                        return o.createElement(X.a, null, o.createElement(q.a, {
+                        return o.createElement(X.a, null, o.createElement(H.a, {
                             learnMoreUrl: $.a,
-                            page: H.b.Roles
+                            page: q.b.Roles
                         }))
                     }, t
                 }(o.Component);
@@ -1970,7 +1967,7 @@
                     channelID: e.channelID || ""
                 }
             }
-            var ge = Object(s.compose)(j, F, function() {
+            var ge = Object(s.compose)(j, T, function() {
                     var e = this;
                     return Object(d.a)(he, {
                         props: function(t) {
@@ -2127,7 +2124,7 @@
                             return Object(re.d)(ke, e)
                         }
                     }, e)
-                }), le, Z, F)(Ee),
+                }), le, Z, T)(Ee),
                 Ie = n("9C/b"),
                 ye = (n("vsHg"), function(e) {
                     function t() {
@@ -2378,14 +2375,14 @@
                 return Object(S.d)("Editor", "FilterUsersComponent")
             }
 
-            function we() {
+            function Fe() {
                 return Object(S.d)("Moderator", "FilterUsersComponent")
             }
 
-            function Fe() {
+            function Te() {
                 return Object(S.d)("VIP", "FilterUsersComponent")
             }
-            var Te, Le = 28.5,
+            var we, Le = 28.5,
                 Re = j(function(e) {
                     function t() {
                         var t = null !== e && e.apply(this, arguments) || this;
@@ -2428,24 +2425,24 @@
                         }, o.createElement(Ae, {
                             checked: n,
                             disabled: i,
-                            label: we(),
+                            label: Fe(),
                             onCheckBoxChange: r,
                             margin: {
                                 x: 1,
                                 y: 2
                             },
-                            src: $.c,
+                            src: $.b,
                             value: b.IS_MOD
                         }), this.props.isVIPUnlocked && o.createElement(Ae, {
                             checked: i,
                             disabled: n || this.props.isAtMaxVIPUserLimit && !i,
-                            label: Fe(),
+                            label: Te(),
                             onCheckBoxChange: r,
                             margin: {
                                 x: 1,
                                 bottom: 2
                             },
-                            src: $.d,
+                            src: $.c,
                             value: b.IS_VIP
                         }), o.createElement(Ae, {
                             checked: t,
@@ -2458,7 +2455,7 @@
                             },
                             value: b.IS_EDITOR
                         }), o.createElement(y.Va, {
-                            linkTo: $.b,
+                            linkTo: $.a,
                             targetBlank: !0
                         }, o.createElement(y.Fb, {
                             alignItems: y.f.Center,
@@ -2505,8 +2502,8 @@
                             i = e.user,
                             r = this.state.isBalloonOpen,
                             a = Me(),
-                            s = we(),
-                            l = Fe(),
+                            s = Fe(),
+                            l = Te(),
                             d = i.isEditor,
                             c = i.isMod,
                             u = i.isVIP,
@@ -2515,11 +2512,11 @@
                                 title: a
                             }), c && o.createElement(Ue, {
                                 onRolePillDismissed: t.bind(null, b.IS_MOD),
-                                src: $.c,
+                                src: $.b,
                                 title: s
                             }), this.props.isVIPUnlocked && u && o.createElement(Ue, {
                                 onRolePillDismissed: t.bind(null, b.IS_VIP),
-                                src: $.d,
+                                src: $.c,
                                 title: l
                             }));
                         return o.createElement(y.Ya, {
@@ -2571,7 +2568,7 @@
                 }(o.Component);
             ! function(e) {
                 e.CJK_NAME = "cjk_name"
-            }(Te || (Te = {}));
+            }(we || (we = {}));
             var xe, Be, je, Ye = function(e) {
                     function t() {
                         var t = null !== e && e.apply(this, arguments) || this;
@@ -2624,8 +2621,7 @@
                             t = e.channelLogin,
                             n = e.displayName,
                             i = e.lastModified,
-                            r = new Date,
-                            a = t.toLowerCase() !== n.toLowerCase();
+                            r = t.toLowerCase() !== n.toLowerCase();
                         return o.createElement(Ve, {
                             margin: {
                                 top: .5
@@ -2656,16 +2652,16 @@
                             alignItems: y.f.Center
                         }, o.createElement(y.W, {
                             bold: !0,
-                            ellipsis: !a,
+                            ellipsis: !r,
                             type: y.Wb.P
-                        }, t), a && o.createElement(y.Ya, {
+                        }, t), r && o.createElement(y.Ya, {
                             margin: {
                                 left: 1
                             }
                         }, o.createElement(y.W, {
                             bold: !0,
                             color: y.O.Alt2,
-                            "data-test-selector": Te.CJK_NAME,
+                            "data-test-selector": we.CJK_NAME,
                             ellipsis: !0,
                             type: y.Wb.P
                         }, n))))))), o.createElement(y.P, {
@@ -2693,12 +2689,10 @@
                                 minute: "2-digit",
                                 hour12: !0
                             })
-                        }, Object(S.h)(i, {
-                            now: new Date(Date.UTC(r.getFullYear(), r.getMonth(), r.getDate(), r.getHours(), r.getMinutes(), r.getSeconds()))
-                        }))))
+                        }, Object(S.h)(i))))
                     }, t
                 }(o.Component),
-                Ge = Object(s.compose)(Z, F, le)(Ye),
+                Ge = Object(s.compose)(Z, T, le)(Ye),
                 We = (n("tC/j"), function(e) {
                     function t() {
                         var t = null !== e && e.apply(this, arguments) || this;
@@ -2756,7 +2750,7 @@
                         }, n), 0 === n.length && o.createElement(_e, null))
                     }, t
                 }(o.Component)),
-                Xe = Object(s.compose)(k, F)(We);
+                Xe = Object(s.compose)(k, T)(We);
             ! function(e) {
                 e[e.FIRST_COLUMN = 3] = "FIRST_COLUMN", e[e.SECOND_COLUMN = 6] = "SECOND_COLUMN", e[e.THIRD_COLUMN = 3] = "THIRD_COLUMN"
             }(xe || (xe = {})),
@@ -2766,7 +2760,7 @@
             function(e) {
                 e.ASCENDING = "ascending", e.DESCENDING = "descending"
             }(je || (je = {}));
-            var He, qe = function(e) {
+            var qe, He = function(e) {
                     function t() {
                         var t = null !== e && e.apply(this, arguments) || this;
                         return t.state = {
@@ -2979,10 +2973,10 @@
                         })))))
                     }, t
                 }(o.Component),
-                nt = Object(s.compose)(F, Ie.a)(tt);
+                nt = Object(s.compose)(T, Ie.a)(tt);
             ! function(e) {
                 e.CANCEL_BUTTON = "roles-page-add-user-cancel-button", e.SAVE_BUTTON = "roles-page-add-user-save-button"
-            }(He || (He = {}));
+            }(qe || (qe = {}));
             var it, rt = function(e) {
                     function t() {
                         var t = null !== e && e.apply(this, arguments) || this;
@@ -3107,18 +3101,18 @@
                                 right: 1
                             }
                         }, o.createElement(y.z, {
-                            "data-test-selector": He.CANCEL_BUTTON,
+                            "data-test-selector": qe.CANCEL_BUTTON,
                             onClick: this.handleCancelClick,
                             type: y.F.Hollow
                         }, Object(S.d)("Cancel", "AddUserComponent"))), o.createElement(y.z, {
-                            "data-test-selector": He.SAVE_BUTTON,
+                            "data-test-selector": qe.SAVE_BUTTON,
                             disabled: !e || !e.isEditor && !e.isMod && !e.isVIP,
                             onClick: this.handleSaveClick,
                             type: y.F.Success
                         }, Object(S.d)("Save", "AddUserComponent")))))))
                     }, t
                 }(o.Component),
-                at = Object(s.compose)(F, le, Z, k)(rt);
+                at = Object(s.compose)(T, le, Z, k)(rt);
             ! function(e) {
                 e.ALL_MUTATIONS_SUCCEEDED = "all-mutations-succeeded", e.SOME_MUTATIONS_FAILED = "some-mutations-failed"
             }(it || (it = {}));
@@ -3182,7 +3176,7 @@
                                     description: Object(S.d)("You have reached the maximum amount of VIP roles. <x:link>Read more about Roles.</x:link>", {
                                         "x:link": function(e) {
                                             return o.createElement(y.U, {
-                                                linkTo: $.b,
+                                                linkTo: $.a,
                                                 targetBlank: !0
                                             }, e)
                                         }
@@ -3267,7 +3261,7 @@
                                 disabled: e === C.MODERATOR,
                                 figure: {
                                     alt: this.getFilterText(C.MODERATOR),
-                                    src: $.c
+                                    src: $.b
                                 },
                                 figureRight: !0,
                                 onClick: this.handleOptionClick.bind(this, C.MODERATOR),
@@ -3276,7 +3270,7 @@
                                 disabled: e === C.VIP,
                                 figure: {
                                     alt: this.getFilterText(C.VIP),
-                                    src: $.d
+                                    src: $.c
                                 },
                                 figureRight: !0,
                                 onClick: this.handleOptionClick.bind(this, C.VIP),
@@ -3296,13 +3290,13 @@
                             case C.EDITOR:
                                     return Me();
                             case C.MODERATOR:
-                                    return we();
+                                    return Fe();
                             case C.VIP:
-                                    return Fe()
+                                    return Te()
                         }
                     }, t
                 }(o.Component)),
-                dt = Object(s.compose)(j, F)(lt),
+                dt = Object(s.compose)(j, T)(lt),
                 ct = function(e) {
                     function t() {
                         var t = null !== e && e.apply(this, arguments) || this;
@@ -3345,7 +3339,7 @@
                             channelID: e
                         }, o.createElement(ne, null, o.createElement(ge, {
                             channelID: e
-                        }, this.props.view === r.NO_USERS ? o.createElement(De, null) : o.createElement(D.a, null, o.createElement(ut, null), o.createElement(qe, null), o.createElement(be, null)), o.createElement(z, null)))))
+                        }, this.props.view === r.NO_USERS ? o.createElement(De, null) : o.createElement(D.a, null, o.createElement(ut, null), o.createElement(He, null), o.createElement(be, null)), o.createElement(z, null)))))
                     }, t
                 }(o.Component)),
                 pt = n("LQi+"),

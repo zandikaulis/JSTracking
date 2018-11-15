@@ -1,5 +1,5 @@
 (window.webpackJsonp = window.webpackJsonp || []).push([
-    [200], {
+    [198], {
         "+naV": function(e, t, n) {
             e.exports = n.p + "assets/10-gifts-2x-cf78830dc8b3e0039af8.png"
         },
@@ -450,7 +450,7 @@
                 _ = n("ZS2+"),
                 D = n("cZKs"),
                 x = _.a.wrap(function() {
-                    return Promise.all([n.e(0), n.e(85)]).then(n.bind(null, "+Zk8"))
+                    return Promise.all([n.e(0), n.e(83)]).then(n.bind(null, "+Zk8"))
                 }, "GiftForm"),
                 G = function(e) {
                     function t(t) {
@@ -509,7 +509,7 @@
                 w = Object(o.compose)(Object(l.b)("PrimeGiftButton", {
                     autoReportInteractive: !0
                 }))(F);
-            var j = Object(i.connect)(function(e) {
+            var A = Object(i.connect)(function(e) {
                     return {
                         isLoggedIn: Object(T.f)(e)
                     }
@@ -525,7 +525,7 @@
                         }
                     }, e)
                 })(w),
-                A = n("9pSj"),
+                j = n("9pSj"),
                 R = n("j3KY"),
                 B = function(e) {
                     function t() {
@@ -563,7 +563,7 @@
                         }, Object(s.d)("Start Your Free Trial", "PrimeUpsellButton"))))
                     }, t.prototype.getLink = function() {
                         if (this.props.externalURL) return this.props.externalURL;
-                        var e = (this.props.orientation || A.b.Default) === A.b.Vertical ? R.d : R.b,
+                        var e = (this.props.orientation || j.b.Default) === j.b.Vertical ? R.d : R.b,
                             t = this.props.externalReftag || e,
                             n = window.location.pathname.substring(1);
                         return Object(R.e)(t, n)
@@ -607,7 +607,7 @@
                             margin: {
                                 left: 1
                             }
-                        }, a.createElement(j, {
+                        }, a.createElement(A, {
                             offerID: this.props.offerID,
                             offer: this.props.offer,
                             toggleCrownMenu: this.props.toggleCrownMenu
@@ -870,7 +870,7 @@
                                 left: .5,
                                 bottom: n
                             }
-                        }, a.createElement(j, {
+                        }, a.createElement(A, {
                             offerID: this.props.offerID,
                             offer: this.props.offer,
                             toggleCrownMenu: this.props.toggleCrownMenu
@@ -2315,13 +2315,13 @@
                         }
                     }
                 }), Object(b.b)("BlueBarComponent"))(F),
-                j = n("z8lI");
+                A = n("z8lI");
             n.d(t, "d", function() {
                 return _
             }), n.d(t, "a", function() {
                 return w
             }), n.d(t, "c", function() {
-                return j.a
+                return A.a
             }), n.d(t, "f", function() {
                 return O.i
             }), n.d(t, "b", function() {
@@ -6450,7 +6450,8 @@
                             t.props.handleSubMenuAction({
                                 action: I.a.BuyGiftSub,
                                 checkoutButtonTier: t.props.selectedProductPrice,
-                                giftRecipient: t.state.selectedUser ? t.state.selectedUser.login : null
+                                giftRecipient: t.state.selectedUser ? t.state.selectedUser.login : null,
+                                isAnonymous: t.props.giftingAnonymously
                             })
                         }, t.onUserClick = function(e) {
                             for (var n = e.target; n.parentElement && !n.dataset.user_id;) n = n.parentElement;
@@ -6587,7 +6588,7 @@
             ! function(e) {
                 e.Prime = "prime", e.Tier1 = "1000", e.Tier2 = "2000", e.Tier3 = "3000"
             }(v || (v = {}));
-            var j, A = {
+            var A, j = {
                     prime: 0,
                     1000: 0,
                     2000: 1,
@@ -6606,7 +6607,11 @@
                                         activeTab: n.getAttribute("data-tier") || e.activeTab
                                     }
                                 }, function() {
-                                    t.props.onTierSelect(t.props.subscriptionProducts[A[t.state.activeTab]])
+                                    var e = t.props.subscriptionProducts[j[t.state.activeTab]];
+                                    t.props.handleSubMenuAction({
+                                        action: I.a.ChangeTier,
+                                        checkoutButtonTier: e.price
+                                    }), t.props.onTierSelect(e)
                                 })
                             }
                         }, t
@@ -6619,7 +6624,7 @@
                         }).map(function(t) {
                             var n = t.tier;
                             return e.renderTab(n, Object(s.d)("Tier {tierNumber}", {
-                                tierNumber: A[n] + 1
+                                tierNumber: j[n] + 1
                             }, "TierTabsWrapper"))
                         });
                         return a.createElement(d.Ya, {
@@ -6727,8 +6732,9 @@
                             bold: !0,
                             fontSize: d.Ca.Size4
                         }, Object(s.d)("Choose a Gift Recipient", "GiftRecipientSearch"))))), a.createElement(R, {
-                            subscriptionProducts: this.props.subscriptionProducts,
-                            onTierSelect: this.onTierSelect
+                            handleSubMenuAction: this.props.handleSubMenuAction,
+                            onTierSelect: this.onTierSelect,
+                            subscriptionProducts: this.props.subscriptionProducts
                         }, a.createElement(a.Fragment, null, a.createElement(d.Ya, {
                             padding: {
                                 y: 1
@@ -6917,19 +6923,19 @@
                 }(a.Component);
             ! function(e) {
                 e[e.Top = 0] = "Top", e[e.SubOptions = 1] = "SubOptions", e[e.GiftOptions = 2] = "GiftOptions", e[e.RecipientSelect = 3] = "RecipientSelect", e[e.MysteryGiftSelect = 4] = "MysteryGiftSelect", e[e.Esports = 5] = "Esports"
-            }(j || (j = {}));
+            }(A || (A = {}));
             var Y, H = function(e) {
                     function t() {
                         var t = null !== e && e.apply(this, arguments) || this;
                         return t.goToPreviousPage = function() {
                             t.props.handleSubMenuAction({
                                 action: I.a.ClickBack,
-                                modalLevel: t.props.currentPage === j.SubOptions || t.props.currentPage === j.GiftOptions ? "top_page" : "second_page"
-                            }), t.props.currentPage !== j.RecipientSelect || t.props.showTop()
+                                modalLevel: t.props.currentPage === A.SubOptions || t.props.currentPage === A.GiftOptions ? "top_page" : "second_page"
+                            }), t.props.currentPage !== A.RecipientSelect || t.props.showTop()
                         }, t
                     }
                     return r.__extends(t, e), t.prototype.render = function() {
-                        return this.props.currentPage === j.RecipientSelect ? this.getGiftRecipientSearchPage() : this.props.isSubscribed ? this.getSubbedTopPage() : this.getUnsubbedTopPage()
+                        return this.props.currentPage === A.RecipientSelect ? this.getGiftRecipientSearchPage() : this.props.isSubscribed ? this.getSubbedTopPage() : this.getUnsubbedTopPage()
                     }, t.prototype.getSubbedTopPage = function() {
                         return a.createElement(S, {
                             showRecipientSelect: this.props.showRecipientSelect
@@ -7277,7 +7283,8 @@
                             s.n.set(me.c, t.props.subscriptionProduct.name), s.n.set(me.b, t.state.giftCount), s.n.set(me.a, t.props.giftingAnonymously), t.props.handleSubMenuAction({
                                 action: I.a.BuyCustomMysteryGift,
                                 checkoutButtonTier: t.props.subscriptionProduct.tier,
-                                mysteryGiftCount: t.state.giftCount
+                                mysteryGiftCount: t.state.giftCount,
+                                isAnonymous: t.props.giftingAnonymously
                             })
                         }, t
                     }
@@ -7342,9 +7349,9 @@
                 Ie = n("rhZM"),
                 Fe = n.n(Ie),
                 we = n("D+xR"),
-                je = n.n(we),
-                Ae = n("CCnc"),
-                Re = n.n(Ae),
+                Ae = n.n(we),
+                je = n("CCnc"),
+                Re = n.n(je),
                 Be = n("u3Ph"),
                 Le = n.n(Be),
                 Ue = n("GJys"),
@@ -7370,7 +7377,8 @@
                             s.n.set(me.c, t.props.subscriptionProduct.name), s.n.set(me.b, String(t.props.mysteryGiftCount)), s.n.set(me.a, t.props.giftingAnonymously), t.props.handleSubMenuAction({
                                 action: I.a.BuyMysteryGift,
                                 checkoutButtonTier: t.props.subscriptionProduct.tier,
-                                mysteryGiftCount: t.props.mysteryGiftCount
+                                mysteryGiftCount: t.props.mysteryGiftCount,
+                                isAnonymous: t.props.giftingAnonymously
                             })
                         }, t
                     }
@@ -7378,7 +7386,7 @@
                         var e = function(e) {
                             return e >= 100 ? {
                                 "1x": Fe.a,
-                                "2x": je.a,
+                                "2x": Ae.a,
                                 "4x": Re.a
                             } : e >= 50 ? {
                                 "1x": $e.a,
@@ -7502,6 +7510,7 @@
                             bold: !0,
                             fontSize: d.Ca.Size4
                         }, Object(s.d)("Gift to the Community", "MysteryGiftBundleSelection")))))), a.createElement(R, {
+                            handleSubMenuAction: this.props.handleSubMenuAction,
                             onTierSelect: this.setActiveTab,
                             subscriptionProducts: e.subscriptionProducts
                         }, a.createElement(d.Qa, {
@@ -8178,7 +8187,7 @@
                     function t() {
                         var t = null !== e && e.apply(this, arguments) || this;
                         return t.state = {
-                            currentPage: t.props.isEsportChannel ? j.Esports : j.Top,
+                            currentPage: t.props.isEsportChannel ? A.Esports : A.Top,
                             giftingAnonymously: !1,
                             previousPage: null
                         }, t.getLoadingContent = function() {
@@ -8210,7 +8219,7 @@
                         }, t.showTop = function() {
                             t.setState(function(e) {
                                 return {
-                                    currentPage: j.Top,
+                                    currentPage: A.Top,
                                     previousPage: e.currentPage
                                 }
                             })
@@ -8220,7 +8229,7 @@
                                 modalLevel: "second_page"
                             }), t.setState(function(e) {
                                 return {
-                                    currentPage: j.SubOptions,
+                                    currentPage: A.SubOptions,
                                     previousPage: e.currentPage
                                 }
                             })
@@ -8230,36 +8239,36 @@
                                 modalLevel: "second_page"
                             }), t.setState(function(e) {
                                 return {
-                                    currentPage: j.GiftOptions,
+                                    currentPage: A.GiftOptions,
                                     previousPage: e.currentPage
                                 }
                             })
                         }, t.showRecipientSelect = function() {
                             t.setState(function(e) {
                                 return {
-                                    currentPage: j.RecipientSelect,
+                                    currentPage: A.RecipientSelect,
                                     previousPage: e.currentPage
                                 }
                             })
                         }, t.showMysteryGiftBundleSelect = function() {
                             t.setState(function(e) {
                                 return {
-                                    currentPage: j.MysteryGiftSelect,
+                                    currentPage: A.MysteryGiftSelect,
                                     previousPage: e.currentPage
                                 }
                             })
                         }, t.showEsports = function() {
                             t.setState(function(e) {
                                 return {
-                                    currentPage: j.Esports,
+                                    currentPage: A.Esports,
                                     previousPage: e.currentPage
                                 }
                             })
                         }, t.goToPreviousPage = function() {
                             t.props.handleSubMenuAction({
                                 action: I.a.ClickBack,
-                                modalLevel: t.state.currentPage === j.SubOptions || t.state.currentPage === j.GiftOptions ? "top_page" : "second_page"
-                            }), t.state.currentPage !== j.GiftOptions && t.state.currentPage !== j.SubOptions ? t.state.currentPage !== j.RecipientSelect && t.state.currentPage !== j.MysteryGiftSelect || t.showGiftOptions() : t.showTop()
+                                modalLevel: t.state.currentPage === A.SubOptions || t.state.currentPage === A.GiftOptions ? "top_page" : "second_page"
+                            }), t.state.currentPage !== A.GiftOptions && t.state.currentPage !== A.SubOptions ? t.state.currentPage !== A.RecipientSelect && t.state.currentPage !== A.MysteryGiftSelect || t.showGiftOptions() : t.showTop()
                         }, t.onGiftSelect = function() {
                             var e = t.props.data.user;
                             if (!e || !e.subscriptionProducts) return null;
@@ -8267,7 +8276,8 @@
                             if (!n) return null;
                             t.props.handleSubMenuAction({
                                 action: I.a.GiftASub,
-                                checkoutButtonTier: n.price
+                                checkoutButtonTier: n.price,
+                                isAnonymous: t.state.giftingAnonymously
                             }), t.showRecipientSelect()
                         }, t.canSendGift = function() {
                             var e = t.props.data.user;
@@ -8282,7 +8292,10 @@
                                 checkoutButtonTier: n.price
                             })
                         }, t.onAnonymousGiftingSelect = function(e) {
-                            t.setState({
+                            t.props.handleSubMenuAction({
+                                action: I.a.ClickAnonymousGiftCheckbox,
+                                isAnonymous: e.target.checked
+                            }), t.setState({
                                 giftingAnonymously: e.target.checked
                             })
                         }, t
@@ -8291,7 +8304,7 @@
                         this.props.latencyTracking.reportInteractive()
                     }, t.prototype.componentWillReceiveProps = function(e) {
                         e.channelLogin !== this.props.channelLogin && this.setState({
-                            currentPage: this.props.isEsportChannel ? j.Esports : j.Top,
+                            currentPage: this.props.isEsportChannel ? A.Esports : A.Top,
                             previousPage: null
                         })
                     }, t.prototype.render = function() {
@@ -8311,7 +8324,7 @@
                             }),
                             r = !(!e.currentUser || !e.currentUser.hasPrime);
                         switch (this.state.currentPage) {
-                            case j.Top:
+                            case A.Top:
                                 var o = !!n && !!n.subscriptionBenefit && n.subscriptionBenefit.gift;
                                 return this.props.isSubscribed ? n && n.subscriptionBenefit && a.createElement(Nt, {
                                     authToken: this.props.authToken,
@@ -8350,7 +8363,7 @@
                                     subscriptionProducts: i,
                                     userHasPrime: r
                                 });
-                            case j.SubOptions:
+                            case A.SubOptions:
                                 return a.createElement(dt, {
                                     channelDisplayName: t.displayName || "",
                                     channelLogin: this.props.channelLogin,
@@ -8361,7 +8374,7 @@
                                     onBack: this.goToPreviousPage,
                                     subscriptionProducts: i
                                 });
-                            case j.GiftOptions:
+                            case A.GiftOptions:
                                 return a.createElement(pe, {
                                     channelDisplayName: t.displayName || "",
                                     currentUserCanGift: this.canSendGift(),
@@ -8374,7 +8387,7 @@
                                     onGiftSelect: this.onGiftSelect,
                                     onMysteryGiftSelect: this.showMysteryGiftBundleSelect
                                 });
-                            case j.RecipientSelect:
+                            case A.RecipientSelect:
                                 return a.createElement(W, {
                                     "data-test-selector": Ct.GiftRecipientSearch,
                                     giftingAnonymously: this.state.giftingAnonymously,
@@ -8382,10 +8395,10 @@
                                     isEsportChannel: this.props.isEsportChannel,
                                     isStaff: this.props.isStaff,
                                     onAnonymousGiftingSelect: this.onAnonymousGiftingSelect,
-                                    onBack: this.state.previousPage === j.Esports ? this.showEsports : this.goToPreviousPage,
+                                    onBack: this.state.previousPage === A.Esports ? this.showEsports : this.goToPreviousPage,
                                     subscriptionProducts: i
                                 });
-                            case j.MysteryGiftSelect:
+                            case A.MysteryGiftSelect:
                                 return a.createElement(rt, {
                                     customMysteryGiftBundleLimit: 100,
                                     "data-test-selector": Ct.MysteryGiftBundleSelection,
@@ -8397,7 +8410,7 @@
                                     onBack: this.goToPreviousPage,
                                     subscriptionProducts: i
                                 });
-                            case j.Esports:
+                            case A.Esports:
                                 return a.createElement(H, {
                                     channelLogin: this.props.channelLogin,
                                     currentPage: this.state.currentPage,

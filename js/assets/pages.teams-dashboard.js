@@ -1,5 +1,5 @@
 (window.webpackJsonp = window.webpackJsonp || []).push([
-    [80], {
+    [78], {
         "/ZC1": function(e, t, r) {
             "use strict";
             r.d(t, "a", function() {
@@ -5446,7 +5446,6 @@
                 o = r("Ue10"),
                 i = (r("8dXP"), function(e) {
                     return n.createElement(o.Ra, {
-                        background: o.r.Alt,
                         borderRight: !0,
                         flexShrink: 0,
                         flexGrow: 0,

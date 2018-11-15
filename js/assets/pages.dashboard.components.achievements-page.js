@@ -1,5 +1,5 @@
 (window.webpackJsonp = window.webpackJsonp || []).push([
-    [183], {
+    [181], {
         "0eTn": function(e, t, n) {},
         "4eyL": function(e, t, n) {
             "use strict";
@@ -235,9 +235,10 @@
                     }(e, t)
                 }))
             }
-            var h, p = n("5NYc");
+            var h, p = n("5NYc"),
+                b = n("d0JU");
 
-            function b(e) {
+            function f(e) {
                 return function() {
                     var e;
                     if (h) return h;
@@ -291,7 +292,8 @@
                         },
                         hasTimedCompletionWindow: !1,
                         position: 1,
-                        ccuTooltipLabel: ""
+                        ccuTooltipLabel: "",
+                        learnMoreURL: b.a
                     }, h = e
                 }()[e] || {
                     title: e,
@@ -307,10 +309,10 @@
                 }
             }
 
-            function f(e, t) {
+            function g(e, t) {
                 var n = e.map(function(e) {
                     var n = function(e, t) {
-                        var n = b(e.key);
+                        var n = f(e.key);
                         return new o.e({
                             key: e.key,
                             completedAt: e.completed_at ? new Date(e.completed_at) : null,
@@ -334,7 +336,7 @@
                 });
                 return o.e.sort(n)
             }
-            var g = function(e) {
+            var v = function(e) {
                 function t() {
                     var t = null !== e && e.apply(this, arguments) || this;
                     return t.state = {
@@ -381,7 +383,7 @@
                                         })
                                     }(e.id), Object(r.a)(e.id)])];
                                 case 2:
-                                    return a = m.sent(), l = a[0], s = a[1], t = d(l, e.name), n = f(s, e.role), [3, 4];
+                                    return a = m.sent(), l = a[0], s = a[1], t = d(l, e.name), n = g(s, e.role), [3, 4];
                                 case 3:
                                     return m.sent(), t = new o.b, n = [], [3, 4];
                                 case 4:
@@ -396,7 +398,7 @@
                 }, t
             }(a.Component);
             n.d(t, "a", function() {
-                return g
+                return v
             })
         },
         "5aAj": function(e, t, n) {
@@ -802,9 +804,9 @@
                         direction: g.bc.Left
                     }, n()) : n()
                 },
-                z = n("y/W1"),
-                H = n("qe41"),
-                M = n("9+Lo"),
+                M = n("y/W1"),
+                z = n("qe41"),
+                H = n("9+Lo"),
                 V = (n("qCmY"), function(e) {
                     var t = Object(E.b)(),
                         n = e.quest.completedRequirementsCount,
@@ -816,7 +818,7 @@
                             "quest-header": !0
                         }),
                         l = !1,
-                        s = Object(z.c)(e.quest.requirements),
+                        s = Object(M.c)(e.quest.requirements),
                         m = e.quest.getInstructions(),
                         u = e.quest.getQuestReqStrings(),
                         h = Boolean(e.quest.isComplete),
@@ -895,7 +897,7 @@
                     }, f, {
                         fontSize: g.Ca.Size4
                     }), e.quest.title)), !h && a.createElement(g.Zb, {
-                        label: Object(z.b)(n, r),
+                        label: Object(M.b)(n, r),
                         direction: g.bc.Left
                     }, a.createElement(g.Fb, {
                         display: g.X.Flex,
@@ -910,7 +912,7 @@
                             className: "ach-q-item__label",
                             color: g.O.Alt2,
                             fontSize: g.Ca.Size5
-                        }, Object(z.b)(e, n));
+                        }, Object(M.b)(e, n));
                         for (var r = 0; r < e; r++) i.push(a.createElement(g.Fb, {
                             key: "completeReqBar-" + r,
                             className: "quest-progress-bars quest-progress-bars__complete",
@@ -950,16 +952,16 @@
                         return a.createElement(g.Ya, {
                             key: t.metric
                         }, function(t) {
-                            if (!e.quest.isComplete && t.time_based && !l) return l = !0, a.createElement(M.a, {
+                            if (!e.quest.isComplete && t.time_based && !l) return l = !0, a.createElement(H.a, {
                                 channelLogin: p,
                                 questKey: e.quest.key,
                                 disableTabSelectable: !e.isActive
                             })
-                        }(t), a.createElement(H.a, {
+                        }(t), a.createElement(z.a, {
                             requirement: t,
                             requirementInstructionString: u,
                             isComplete: e.quest.isComplete,
-                            subtext: t.metric === j.a.AVERAGE_CCU ? Object(z.a)(e.quest.requirements) : void 0,
+                            subtext: t.metric === j.a.AVERAGE_CCU ? Object(M.a)(e.quest.requirements) : void 0,
                             ccuTooltipLabel: e.quest.ccuTooltipLabel
                         }))
                     })), a.createElement(g.Fb, {
@@ -1044,10 +1046,10 @@
                 K = {
                     "data-test-selector": "title"
                 },
-                Z = {
+                J = {
                     "data-test-selector": "subtitle"
                 },
-                J = {
+                Z = {
                     "data-test-selector": "dismiss"
                 },
                 $ = n("FuXV"),
@@ -1072,7 +1074,7 @@
                         fontSize: g.Ca.Size4,
                         bold: !0,
                         ellipsis: !0
-                    }), t), a.createElement(g.W, i.__assign({}, Z, {
+                    }), t), a.createElement(g.W, i.__assign({}, J, {
                         fontSize: g.Ca.Size5,
                         color: g.O.Alt2,
                         ellipsis: !0
@@ -1104,7 +1106,7 @@
                         position: g.kb.Absolute,
                         attachRight: !0,
                         attachTop: !0
-                    }, a.createElement(g.A, i.__assign({}, J, {
+                    }, a.createElement(g.A, i.__assign({}, Z, {
                         ariaLabel: Object(o.d)("Close", "AchievementSpotlightDismiss"),
                         type: g.C.Default,
                         size: g.B.Large,
@@ -1147,7 +1149,7 @@
                         fontSize: g.Ca.Size4,
                         bold: !0,
                         ellipsis: !0
-                    }), Object(o.d)("Welcome to Achievements", "AchievementsSpotlight")), a.createElement(g.W, i.__assign({}, Z, {
+                    }), Object(o.d)("Welcome to Achievements", "AchievementsSpotlight")), a.createElement(g.W, i.__assign({}, J, {
                         fontSize: g.Ca.Size5,
                         color: g.O.Alt2,
                         ellipsis: !0
@@ -1725,6 +1727,19 @@
                     direction: o.bc.Left
                 }, s) : s
             }
+        },
+        d0JU: function(e, t, n) {
+            "use strict";
+            n.d(t, "a", function() {
+                return i
+            }), n.d(t, "b", function() {
+                return a
+            }), n.d(t, "c", function() {
+                return r
+            });
+            var i = "https://link.twitch.tv/ManagingRoles",
+                a = "https://static-cdn.jtvnw.net/badges/v1/3267646d-33f0-4b17-b3df-f923a41db1d0/2",
+                r = "https://static-cdn.jtvnw.net/badges/v1/b817aba4-fad8-49e2-b88a-7cc744dfa6ec/2"
         },
         gi7w: function(e, t, n) {
             "use strict";

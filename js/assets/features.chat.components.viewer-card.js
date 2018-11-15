@@ -1,5 +1,5 @@
 (window.webpackJsonp = window.webpackJsonp || []).push([
-    [204], {
+    [202], {
         "/HY+": function(e, t, n) {
             "use strict";
             var r = n("dAHa"),
@@ -873,7 +873,7 @@
                 R = n("ZS2+"),
                 D = n("cZKs"),
                 I = R.a.wrap(function() {
-                    return Promise.all([n.e(0), n.e(85)]).then(n.bind(null, "+Zk8"))
+                    return Promise.all([n.e(0), n.e(83)]).then(n.bind(null, "+Zk8"))
                 }, "GiftForm"),
                 j = function(e) {
                     function t(t) {
@@ -1064,8 +1064,8 @@
                         })
                     }, t
                 }(a.Component),
-                G = Object(o.compose)(Object(l.a)(L), Object(d.b)("PrimeInstructions"))(W),
-                z = n("z8lI"),
+                z = Object(o.compose)(Object(l.a)(L), Object(d.b)("PrimeInstructions"))(W),
+                G = n("z8lI"),
                 V = (n("25vm"), function(e) {
                     function t(t) {
                         var n = e.call(this, t) || this;
@@ -1486,7 +1486,7 @@
                                 };
                             if (t.state.error) {
                                 var o = t.getErrorType();
-                                return a.createElement(z.a, {
+                                return a.createElement(G.a, {
                                     fontSize: u.Ca.Size6,
                                     testTarget: "prime-offer-error",
                                     errorType: o
@@ -1505,7 +1505,7 @@
                                     toggleCrownMenu: t.props.toggleCrownMenu
                                 })
                             }
-                            return a.createElement(G, {
+                            return a.createElement(z, {
                                 offerID: e.id,
                                 offer: e,
                                 offerDescription: e.description,
@@ -7894,18 +7894,18 @@
                     value: "room report user",
                     type: E.MultipleChoice
                 },
-                G = {
+                z = {
                     getTitle: U.tellUsMore,
                     items: [_.input_description],
                     type: E.Confirm,
                     value: "tell us more"
                 },
-                z = {
-                    banEvasion: a.__assign({}, G, {
+                G = {
+                    banEvasion: a.__assign({}, z, {
                         items: [_.input_usernames, _.input_description],
                         value: "ban evasion tell us more"
                     }),
-                    socialMedia: a.__assign({}, G, {
+                    socialMedia: a.__assign({}, z, {
                         items: [_.input_link, _.input_connection, _.input_description],
                         nextCard: x.socialMedia,
                         value: "social media tell us more"
@@ -7959,16 +7959,16 @@
                         },
                         items: [_.external_incitingRaids, _.external_threatening, _.external_harassment],
                         type: E.MultipleChoice,
-                        nextCard: z.socialMedia,
+                        nextCard: G.socialMedia,
                         value: "external site conduct"
                     },
                     external_violence: a.__assign({}, V.violence, {
                         items: [_.threat_me, _.threat_person, _.threat_group],
-                        nextCard: z.socialMedia
+                        nextCard: G.socialMedia
                     }),
                     external_abusive: a.__assign({}, V.content, {
                         items: [_.hateSpeech, _.harassment, _.external_abusiveViolence, _.external_commitingViolence, _.swatting, _.personalInfo],
-                        nextCard: z.socialMedia
+                        nextCard: G.socialMedia
                     })
                 },
                 Y = {
@@ -8005,7 +8005,7 @@
                     value: "ban type",
                     items: [_.evasion_chat, _.evasion_sitewide, _.evasion_messaging],
                     type: E.MultipleChoice,
-                    nextCard: z.banEvasion
+                    nextCard: G.banEvasion
                 },
                 Q = {
                     getTitle: function(e) {
@@ -8024,7 +8024,7 @@
                     value: "impersonation type"
                 },
                 $ = P,
-                K = G,
+                K = z,
                 Z = w,
                 J = {
                     video: M.identifyUser,
@@ -8044,12 +8044,12 @@
                     "on twitch": L.content,
                     "another site": q.externalSite,
                     "twitch event": x.twitchEvent,
-                    "brigading/raids": z.socialMedia,
+                    "brigading/raids": G.socialMedia,
                     threatening: q.external_violence,
                     "hateful/harassing": q.external_abusive,
                     "external site; threatening violence": q.external_violence,
                     "external site; committing violence": q.external_violence,
-                    "external site; scam": z.socialMedia,
+                    "external site; scam": G.socialMedia,
                     "ban evasion": X,
                     spam: Y,
                     hateful: V.content,
@@ -9369,8 +9369,8 @@
                     }
                 }))(B),
                 W = n("eJ65"),
-                G = n("iS14"),
-                z = n("TvOw"),
+                z = n("iS14"),
+                G = n("TvOw"),
                 V = n("lZZ2"),
                 q = function(e) {
                     function t() {
@@ -9388,7 +9388,7 @@
                                         isIgnored: !0
                                     })
                                 },
-                                reason: z.a.Other,
+                                reason: G.a.Other,
                                 userID: t.props.targetUserID
                             })
                         }, t.unblockUser = function() {
@@ -9456,7 +9456,7 @@
                         }, t))
                     }, t
                 }(f.Component),
-                Y = Object(o.compose)(V.a, Object(G.a)(), Object(I.b)("ViewerCardMoreOptions"))(q),
+                Y = Object(o.compose)(V.a, Object(z.a)(), Object(I.b)("ViewerCardMoreOptions"))(q),
                 H = n("WytW"),
                 X = function(e) {
                     function t(t) {
@@ -9587,9 +9587,14 @@
                         }, t.onGiftSelect = function() {
                             t.props.onGiftSelect && t.props.onGiftSelect()
                         }, t.handleSubMenuAction = function(e) {
-                            t.props.handleSubMenuAction && t.props.handleSubMenuAction(e)
+                            t.props.handleSubMenuAction && t.props.handleSubMenuAction(i.__assign({
+                                isAnonymous: t.state.giftingAnonymously
+                            }, e))
                         }, t.onAnonymousGiftingSelect = function(e) {
-                            t.setState({
+                            t.props.handleSubMenuAction && t.props.handleSubMenuAction({
+                                action: ee.a.ClickAnonymousGiftCheckbox,
+                                isAnonymous: e.target.checked
+                            }), t.setState({
                                 giftingAnonymously: e.target.checked
                             })
                         }, t
@@ -9728,9 +9733,8 @@
                                     channelDisplayName: t.props.data.targetUser.displayName
                                 }, "ReportUserModalTitle")
                             })
-                        }, t.handleBuyGiftSubEvent = function(e) {
-                            e.action === ee.a.BuyGiftSub && t.displaySubscriptionCheckout(), Object(ee.b)(i.__assign({}, e, {
-                                action: ee.a.BuyGiftSub,
+                        }, t.handleSubMenuAction = function(e) {
+                            e.action === ee.a.BuyGiftSub && t.displaySubscriptionCheckout(), Object(ee.b)(i.__assign({
                                 channelID: t.props.channelID || "",
                                 channelLogin: t.props.data.channelUser.login || "",
                                 isMenuOpen: null,
@@ -9739,7 +9743,7 @@
                                 modal: !1,
                                 showPrimeContent: !0,
                                 giftRecipient: t.props.data.targetUser.login
-                            }))
+                            }, e))
                         }, t.trackGiftEvent = function() {
                             Object(ee.b)({
                                 action: ee.a.GiftASub,
@@ -9874,7 +9878,7 @@
                             channelDisplayName: this.props.data.channelUser.displayName,
                             subscriptionProducts: this.props.data.channelUser.subscriptionProducts,
                             giftRecipient: this.props.data.targetUser.login,
-                            handleSubMenuAction: this.handleBuyGiftSubEvent,
+                            handleSubMenuAction: this.handleSubMenuAction,
                             isStaff: !!this.props.data.currentUser && this.props.data.currentUser.roles.isStaff,
                             isEsportChannel: Object(y.a)(this.props.data.channelUser.id, this.props.sessionUser)
                         })))
@@ -9972,7 +9976,7 @@
                         return Object(d.d)(s.a, {
                             component: "CheckoutModal",
                             loader: function() {
-                                return Promise.all([n.e(0), n.e(212)]).then(n.bind(null, "KJv/"))
+                                return Promise.all([n.e(0), n.e(210)]).then(n.bind(null, "KJv/"))
                             },
                             componentProps: t
                         })

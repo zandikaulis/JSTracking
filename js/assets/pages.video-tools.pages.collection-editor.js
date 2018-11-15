@@ -1,5 +1,5 @@
 (window.webpackJsonp = window.webpackJsonp || []).push([
-    [177], {
+    [175], {
         "+AC8": function(e, t, n) {
             "use strict";
             n.d(t, "a", function() {
@@ -130,17 +130,21 @@
             });
             var i = n("q1tI"),
                 o = n("Ue10"),
-                r = (n("I4Mg"), function(e) {
-                    return i.createElement(o.Ya, {
-                        className: "manager-card__stats-container",
+                r = function(e) {
+                    return i.createElement(o.Fb, {
+                        color: o.O.Alt2,
+                        fontSize: o.Ca.Size6,
                         display: o.X.Flex,
-                        flexGrow: 0,
-                        flexShrink: 0,
-                        flexWrap: o.Ba.NoWrap,
                         flexDirection: o.Aa.Row,
-                        alignItems: o.f.Center
+                        flexWrap: o.Ba.NoWrap,
+                        alignItems: o.f.Center,
+                        margin: {
+                            top: .5
+                        },
+                        flexShrink: 0,
+                        flexGrow: 0
                     }, e.children)
-                })
+                }
         },
         "0/Iv": function(e, t) {
             var n = {
@@ -1194,7 +1198,7 @@
                 d = n("MxAq"),
                 u = n("JVvM"),
                 p = n("GnwI"),
-                m = n("I9oz"),
+                m = (n("HEef"), n("I9oz")),
                 f = n("LoeD"),
                 h = n("9afg"),
                 v = n("0+qQ"),
@@ -1227,7 +1231,7 @@
                         }, a.createElement(d.a, {
                             alt: t.title,
                             sizes: [{
-                                size: "160px"
+                                size: "150px"
                             }],
                             src: t.thumbnailURL,
                             srcSet: e,
@@ -1236,15 +1240,18 @@
                         })), a.createElement(g.a, {
                             onClick: this.navigateToEdit
                         }, a.createElement(k.W, {
-                            bold: !0,
-                            type: k.Wb.H4,
+                            type: k.Wb.H5,
                             color: k.O.Alt
-                        }, t.title), a.createElement(k.Zb, {
+                        }, t.title), a.createElement(v.a, null, a.createElement(k.Ya, {
+                            margin: {
+                                right: 1
+                            }
+                        }, a.createElement(k.Zb, {
                             direction: k.bc.Bottom,
                             label: Object(l.d)("Last Updated", "CollectionManagerCard")
                         }, a.createElement(k.W, {
                             color: k.O.Alt2
-                        }, Object(l.c)(new Date(t.updatedAt), "long")))), a.createElement(v.a, null, this.collectionStats(t)), this.renderCardMenu())
+                        }, Object(l.c)(new Date(t.updatedAt), "long")))), this.collectionStats(t))), this.renderCardMenu())
                     }, t.prototype.renderCardMenu = function() {
                         if (this.props.hideOptionsMenu || !this.props.collection.owner) return null;
                         var e = [{
@@ -1426,7 +1433,9 @@
                                 display: a.X.Flex,
                                 fullHeight: !0,
                                 justifyContent: a.Xa.Center,
-                                padding: 2
+                                margin: {
+                                    right: 1
+                                }
                             }, o.createElement(a.Eb, {
                                 icon: this.props.icon,
                                 label: this.props.label,
@@ -1789,7 +1798,8 @@
                 o = n("Ue10"),
                 r = function(e) {
                     return i.createElement(o.Va, {
-                        onClick: e.onClick
+                        onClick: e.onClick,
+                        type: o.Wa.Alpha
                     }, i.createElement(o.Ya, {
                         alignItems: o.f.Start,
                         display: o.X.Flex,
@@ -1914,6 +1924,7 @@
             }
             i.definitions = i.definitions.concat(r(n("0/Iv").definitions)), i.definitions = i.definitions.concat(r(n("dc0Q").definitions)), e.exports = i
         },
+        HEef: function(e, t, n) {},
         HNnW: function(e, t, n) {
             e.exports = n.p + "assets/missing-video-thumb-320x180-101fcbc1ff8445933141.png"
         },
@@ -2080,7 +2091,6 @@
                 }
             })(b)
         },
-        I4Mg: function(e, t, n) {},
         I9oz: function(e, t, n) {
             "use strict";
             var i = n("mrSG"),
@@ -2091,13 +2101,19 @@
                         return null !== e && e.apply(this, arguments) || this
                     }
                     return i.__extends(t, e), t.prototype.render = function() {
-                        return o.createElement(r.Fb, {
-                            background: r.r.Base,
+                        return o.createElement(r.Ya, {
+                            margin: {
+                                bottom: 1
+                            }
+                        }, o.createElement(r.Fb, {
+                            className: "video-card",
+                            "data-target": "video-card",
                             elevation: 1,
                             display: r.X.Flex,
+                            flexWrap: r.Ba.NoWrap,
                             flexDirection: r.Aa.Row,
                             alignItems: r.f.Stretch
-                        }, this.props.children)
+                        }, this.props.children))
                     }, t
                 }(o.Component);
             n.d(t, "a", function() {
@@ -2455,12 +2471,17 @@
                         fullHeight: !0,
                         display: a.X.Flex,
                         alignItems: a.f.Stretch
-                    }, o.createElement(a.z, {
+                    }, o.createElement(a.Va, {
                         disabled: 0 === this.props.options.length,
-                        icon: a.ub.More,
-                        onClick: this.menuButtonClickHandler,
-                        type: a.F.Text
-                    })), e)))
+                        type: a.Wa.Alpha,
+                        onClick: this.menuButtonClickHandler
+                    }, o.createElement(a.Ya, {
+                        padding: {
+                            x: 1
+                        }
+                    }, o.createElement(a.tb, {
+                        asset: a.ub.More
+                    })))), e)))
                 }, t.prototype.dropMenu = function() {
                     var e = this.props.options.map(function(e, t) {
                         return o.createElement(l, i.__assign({

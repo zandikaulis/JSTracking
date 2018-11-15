@@ -1,5 +1,5 @@
 (window.webpackJsonp = window.webpackJsonp || []).push([
-    [108], {
+    [106], {
         "5g1g": function(e, t, n) {
             "use strict";
             var a = n("mrSG"),
@@ -39,25 +39,25 @@
                 h = n("Ints"),
                 f = n("Ue10"),
                 D = p.a.wrap(function() {
-                    return n.e(226).then(n.bind(null, "RkBb"))
+                    return n.e(224).then(n.bind(null, "RkBb"))
                 }, "DevOverviewPage"),
                 g = p.a.wrap(function() {
-                    return Promise.all([n.e(0), n.e(225)]).then(n.bind(null, "dE6c"))
+                    return Promise.all([n.e(0), n.e(223)]).then(n.bind(null, "dE6c"))
                 }, "DevAppsPage"),
                 E = p.a.wrap(function() {
-                    return n.e(224).then(n.bind(null, "OfRZ"))
+                    return n.e(222).then(n.bind(null, "OfRZ"))
                 }, "DevAppCreatePage"),
                 k = p.a.wrap(function() {
-                    return n.e(223).then(n.bind(null, "AhYx"))
+                    return n.e(221).then(n.bind(null, "AhYx"))
                 }, "DevAppEditPage"),
                 O = p.a.wrap(function() {
-                    return n.e(222).then(n.bind(null, "635G"))
+                    return n.e(220).then(n.bind(null, "635G"))
                 }, "DevGamesPage"),
                 j = p.a.wrap(function() {
-                    return Promise.all([n.e(31), n.e(0), n.e(221)]).then(n.bind(null, "QH5d"))
+                    return Promise.all([n.e(31), n.e(0), n.e(219)]).then(n.bind(null, "QH5d"))
                 }, "DevDropsDashboardRoot"),
                 y = p.a.wrap(function() {
-                    return n.e(220).then(n.bind(null, "DrWK"))
+                    return n.e(218).then(n.bind(null, "DrWK"))
                 }, "DevExtensionsEnableMonetizationPage"),
                 w = function(e) {
                     function t() {

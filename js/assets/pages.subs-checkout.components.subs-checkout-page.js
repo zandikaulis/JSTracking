@@ -1,5 +1,5 @@
 (window.webpackJsonp = window.webpackJsonp || []).push([
-    [89], {
+    [87], {
         KriR: function(e, t, n) {
             "use strict";
             n.d(t, "g", function() {
@@ -176,7 +176,7 @@
                 N = n("Ue10"),
                 E = n("wqBG"),
                 S = (n("WpF+"), h.a.wrap(function() {
-                    return Promise.all([n.e(0), n.e(208)]).then(n.bind(null, "IeKJ"))
+                    return Promise.all([n.e(0), n.e(206)]).then(n.bind(null, "IeKJ"))
                 }, "CheckoutPayments"));
             ! function(e) {
                 e.CheckoutPayments = "checkout-payments_test_selector"

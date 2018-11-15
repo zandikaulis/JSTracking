@@ -1,5 +1,5 @@
 (window.webpackJsonp = window.webpackJsonp || []).push([
-    [76, 74], {
+    [74, 72], {
         "+pBb": function(e, t, n) {
             "use strict";
             n.d(t, "d", function() {
@@ -8759,6 +8759,7 @@
                     BuyMysteryGift: "buy_mystery_gift",
                     BuyPaidUpgrade: "buy_paid_upgrade",
                     ChangeTier: "change_tier",
+                    ClickAnonymousGiftCheckbox: "anonymous_gift_click",
                     ClickCheckout: "click_checkout_button",
                     ClickMoreSubOptions: "more_options_click",
                     ClickGiftSubOptions: "gift_options_click",
@@ -8806,6 +8807,7 @@
                                     has_sub_credit: e.hasSubCredit,
                                     host_channel: e.hostChannelLogin,
                                     host_channel_id: e.hostChannelID,
+                                    is_anonymous: e.isAnonymous,
                                     is_menu_open: e.isMenuOpen,
                                     is_subscribed: f,
                                     is_subscribed_current_tier: h && h.subscriptionBenefit && h.subscriptionBenefit.tier,
@@ -12296,7 +12298,8 @@
                         position: l.kb.Relative
                     }, a.createElement(l.Va, {
                         "data-a-target": e.label,
-                        onClick: e.onClick
+                        onClick: e.onClick,
+                        blurAfterClick: !0
                     }, a.createElement(l.Ya, {
                         padding: 1,
                         display: l.X.InlineFlex
@@ -12567,8 +12570,9 @@
                                 })
                             });
                             var r = Object(C.d)(),
-                                i = 0 === Object.keys(r).length ? void 0 : r;
-                            return Object(T.f)(n, t, i)
+                                i = 0 === Object.keys(r).length ? void 0 : r,
+                                a = Object(T.f)(n, t, i);
+                            return Object(T.d)(a)
                         }, n.updateChannelEmotes = function(e) {
                             var t = e.channelSubscriptionProducts.reduce(function(e, t) {
                                 return e.concat(t.emotes)
@@ -12621,11 +12625,10 @@
                                 top: 2,
                                 x: 2
                             }
-                        }, a.createElement(l.Sa, {
+                        }, a.createElement(l.wb, {
                             autoFocus: !0,
                             onChange: this.handleFilterChange,
                             placeholder: Object(s.d)("Search for Emotes", "EmotePickerCard"),
-                            type: l.Ua.Text,
                             value: this.state.inputValue
                         })), this.renderTabContent())), a.createElement(a.Fragment, null, a.createElement(J, {
                             channelDisplayName: this.props.channelDisplayName,
@@ -12988,7 +12991,7 @@
                             return Object(b.d)(m.a, {
                                 component: "CheckoutModal",
                                 loader: function() {
-                                    return Promise.all([n.e(0), n.e(212)]).then(n.bind(null, "KJv/"))
+                                    return Promise.all([n.e(0), n.e(210)]).then(n.bind(null, "KJv/"))
                                 },
                                 componentProps: t
                             })
@@ -13971,7 +13974,7 @@
                 l = n("3iFw"),
                 c = n("Ue10"),
                 d = i.a.wrap(function() {
-                    return n.e(185).then(n.bind(null, "bsVm"))
+                    return n.e(183).then(n.bind(null, "bsVm"))
                 }, "PartnershipSignupPage"),
                 u = function() {
                     return r.createElement(c.Ya, {

@@ -1,5 +1,5 @@
 (window.webpackJsonp = window.webpackJsonp || []).push([
-    [79], {
+    [77], {
         "0EKw": function(e, n, t) {
             "use strict";
             var i = t("q1tI"),
@@ -550,7 +550,7 @@
                 e.SubButton = "subscribe-button__dropdown", e.BalloonLayerButton = "subscribe-button__balloon-layer-btn", e.DefaultButton = "subscribe-button__default-btn", e.SubscribeBalloon = "subscribe-button__subscribe-balloon"
             }(E || (E = {}));
             var B = s.a.wrap(function() {
-                    return Promise.all([t.e(0), t.e(200)]).then(t.bind(null, "f+qK"))
+                    return Promise.all([t.e(0), t.e(198)]).then(t.bind(null, "f+qK"))
                 }, "SubscribeBalloon"),
                 D = function(e) {
                     function n() {
@@ -592,6 +592,7 @@
                                 hasSubCredit: i && i.self && i.self.canPrimeSubscribe,
                                 hostChannelID: n.props.hostChannelID,
                                 hostChannelLogin: n.props.hostChannelLogin,
+                                isAnonymous: e.isAnonymous,
                                 isMenuOpen: e.action !== I.a.OpenSubMenu,
                                 mysteryGiftCount: e.mysteryGiftCount,
                                 sub_location: "channel_page",
@@ -802,7 +803,7 @@
                         return Object(u.d)(s.a, {
                             component: "CheckoutModal",
                             loader: function() {
-                                return Promise.all([t.e(0), t.e(212)]).then(t.bind(null, "KJv/"))
+                                return Promise.all([t.e(0), t.e(210)]).then(t.bind(null, "KJv/"))
                             },
                             componentProps: n
                         })
@@ -1717,6 +1718,7 @@
                     BuyMysteryGift: "buy_mystery_gift",
                     BuyPaidUpgrade: "buy_paid_upgrade",
                     ChangeTier: "change_tier",
+                    ClickAnonymousGiftCheckbox: "anonymous_gift_click",
                     ClickCheckout: "click_checkout_button",
                     ClickMoreSubOptions: "more_options_click",
                     ClickGiftSubOptions: "gift_options_click",
@@ -1764,6 +1766,7 @@
                                     has_sub_credit: e.hasSubCredit,
                                     host_channel: e.hostChannelLogin,
                                     host_channel_id: e.hostChannelID,
+                                    is_anonymous: e.isAnonymous,
                                     is_menu_open: e.isMenuOpen,
                                     is_subscribed: g,
                                     is_subscribed_current_tier: v && v.subscriptionBenefit && v.subscriptionBenefit.tier,
@@ -2216,8 +2219,8 @@
                 O = t("0Log"),
                 x = t("/aPz"),
                 P = t("ZLqn"),
-                U = t("eAAt"),
-                A = t("0EKw"),
+                A = t("eAAt"),
+                U = t("0EKw"),
                 j = t("5goO"),
                 R = t("QjI3"),
                 V = t("eFQ3"),
@@ -2232,14 +2235,14 @@
                             if (e && e.broadcastSettings && e.broadcastSettings.title) return e.broadcastSettings.title
                         }, n.renderGame = function() {
                             var e = n.getGame();
-                            return e && e.name ? i.createElement(A.a, {
+                            return e && e.name ? i.createElement(U.a, {
                                 name: e.name
                             }) : null
                         }, n.renderGameBoxArt = function() {
                             var e = n.getGame(),
                                 t = e && e.name ? e.name : "",
                                 a = e && e.boxArtURL ? e.boxArtURL : "";
-                            return e && t && a ? i.createElement(U.a, {
+                            return e && t && a ? i.createElement(A.a, {
                                 name: t,
                                 boxArtURL: a,
                                 size: k.J.Size4

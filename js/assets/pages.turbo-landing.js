@@ -1,5 +1,5 @@
 (window.webpackJsonp = window.webpackJsonp || []).push([
-    [86], {
+    [84], {
         "+Mtq": function(e, t, n) {},
         "/aPz": function(e, t, n) {
             "use strict";
@@ -1601,7 +1601,7 @@
                 I = n("ZS2+"),
                 A = n("cZKs"),
                 R = I.a.wrap(function() {
-                    return Promise.all([n.e(0), n.e(85)]).then(n.bind(null, "+Zk8"))
+                    return Promise.all([n.e(0), n.e(83)]).then(n.bind(null, "+Zk8"))
                 }, "GiftForm"),
                 D = function(e) {
                     function t(t) {
@@ -7195,7 +7195,7 @@
                             };
                             Object(w.h)(i)
                         }, t.onClose = function() {
-                            Object(B.d)(t.props.bitsUserState, t.props.bitsUserSettings) && t.trackBitsCardInteraction(w.a.NewUserCloseTutorial)
+                            Object(B.c)(t.props.bitsUserState, t.props.bitsUserSettings) && t.trackBitsCardInteraction(w.a.NewUserCloseTutorial)
                         }, t.onPromoBuyClose = function(e) {
                             Object(N.a)(e, function() {
                                 t.props.data && t.props.data.refetch()
@@ -7210,7 +7210,7 @@
                                 y: 5
                             },
                             "data-a-target": "get-bits-button-content-loading"
-                        }, d.createElement(O.a, null)) : Object(B.d)(this.props.bitsUserState, this.props.bitsUserSettings) ? d.createElement(L.Ya, {
+                        }, d.createElement(O.a, null)) : Object(B.c)(this.props.bitsUserState, this.props.bitsUserSettings) ? d.createElement(L.Ya, {
                             padding: 2
                         }, d.createElement(S.a, {
                             trackBitsCardInteraction: this.trackBitsCardInteraction,
@@ -7227,7 +7227,7 @@
                             onClose: this.onClose,
                             trackBitsCardInteraction: this.trackBitsCardInteraction,
                             onPromoBuyClose: this.onPromoBuyClose,
-                            shouldShowNewUserCheerUX: Object(B.c)(this.props.bitsUserState, this.props.bitsUserSettings)
+                            shouldShowNewUserCheerUX: Object(B.b)(this.props.bitsUserState, this.props.bitsUserSettings)
                         })
                     }, t
                 }(d.Component),
@@ -8512,25 +8512,24 @@
             }(Te || (Te = {}));
             var ot, st, ct = n("DMoW"),
                 lt = n("dUi4"),
-                ut = n("H4kz"),
-                dt = (n("zhJx"), {
+                ut = (n("zhJx"), {
                     x: 2,
                     y: .5
                 }),
-                pt = {
+                dt = {
                     height: 20,
                     width: 20
                 },
-                mt = {
+                pt = {
                     right: 1
                 };
             ! function(e) {
-                e.ChannelLink = "user-menu__channel-link", e.DarkModeToggle = "user-menu__dark-mode-toggle", e.DashboardLink = "user-menu__dashboard-link", e.DropdownDown = "user-menu__dropdown-down", e.DropdownUp = "user-menu__dropdown-up", e.FriendsLink = "user-menu__friends-link", e.InboxLink = "user-menu__inbox-link", e.InventoryLink = "user-menu__inventory-link", e.InvisibleAvailability = "user-menu__invisible-availability", e.LogoutButton = "user-menu__logout-button", e.OnlineAvailability = "user-menu__online-availability", e.PaymentsLink = "user-menu__payments-link", e.SettingsLink = "user-menu__settings-link", e.ShareActivityToggle = "user-menu__share-activity-toggle", e.SubscriptionsLink = "user-menu__subscriptions-link", e.VideoManagerLink = "user-menu__video-manager-link"
+                e.ChannelLink = "user-menu__channel-link", e.DarkModeToggle = "user-menu__dark-mode-toggle", e.DashboardLink = "user-menu__dashboard-link", e.DropdownDown = "user-menu__dropdown-down", e.DropdownUp = "user-menu__dropdown-up", e.FriendsLink = "user-menu__friends-link", e.InventoryLink = "user-menu__inventory-link", e.InvisibleAvailability = "user-menu__invisible-availability", e.LogoutButton = "user-menu__logout-button", e.OnlineAvailability = "user-menu__online-availability", e.PaymentsLink = "user-menu__payments-link", e.SettingsLink = "user-menu__settings-link", e.ShareActivityToggle = "user-menu__share-activity-toggle", e.SubscriptionsLink = "user-menu__subscriptions-link", e.VideoManagerLink = "user-menu__video-manager-link"
             }(ot || (ot = {})),
             function(e) {
                 e.DropdownDown = "dropdown-down", e.DropdownUp = "dropdown-up"
             }(st || (st = {}));
-            var ft = function(e) {
+            var mt = function(e) {
                     function t() {
                         var t = null !== e && e.apply(this, arguments) || this;
                         return t.renderAppExit = function() {
@@ -8541,15 +8540,15 @@
                                 color: L.O.Alt,
                                 display: L.X.Flex,
                                 alignItems: L.f.Center,
-                                padding: dt
+                                padding: ut
                             }, d.createElement(L.Ya, {
                                 display: L.X.Flex,
                                 alignItems: L.f.Center,
-                                margin: mt
+                                margin: pt
                             }, d.createElement(L.tb, {
                                 asset: L.ub.Close,
-                                height: pt.height,
-                                width: pt.width
+                                height: dt.height,
+                                width: dt.width
                             })), d.createElement(L.W, null, Object(h.d)("Exit", "UserMenuDropdown")))) : null
                         }, t.onLogoutClick = function(e) {
                             e.preventDefault(), t.props.logout()
@@ -8591,26 +8590,8 @@
                                 medium: y.PageviewMedium.TopNav
                             }
                         }, p = "/" + this.props.user.login + "/manager", m = "/" + this.props.user.login + "/dashboard/live"), this.props.data && !this.props.data.error && this.props.data.currentUser && (i = !0, r = this.props.data.currentUser.availability === ct.b.OFFLINE ? L.O.Base : L.O.Alt2, a = this.props.data.currentUser.availability === ct.b.ONLINE ? L.O.Base : L.O.Alt2, o = !!this.props.data.currentUser.settings && this.props.data.currentUser.settings.isSharingActivity, s = this.props.data.currentUser.availability === ct.b.OFFLINE, c = this.props.data.currentUser.availability === ct.b.ONLINE, l = this.props.data.currentUser.availability === ct.b.OFFLINE);
-                        var f = !i || this.props.visibilityWorking,
-                            g = null;
-                        return Object(ut.a)() && (g = d.createElement(L.Va, {
-                            linkTo: "/messages/inbox",
-                            "data-a-target": "inbox-dropdown-link",
-                            "data-test-selector": ot.InboxLink
-                        }, d.createElement(L.Fb, {
-                            color: L.O.Alt,
-                            display: L.X.Flex,
-                            alignItems: L.f.Center,
-                            padding: dt
-                        }, d.createElement(L.Ya, {
-                            display: L.X.Flex,
-                            alignItems: L.f.Center,
-                            margin: mt
-                        }, d.createElement(L.tb, {
-                            asset: L.ub.NavMessages,
-                            height: pt.height,
-                            width: pt.width
-                        })), d.createElement(L.W, null, Object(h.d)("Messages", "UserMenuDropdown"))))), d.createElement(L.Fb, {
+                        var f = !i || this.props.visibilityWorking;
+                        return d.createElement(L.Fb, {
                             overflow: L.db.Hidden,
                             position: L.kb.Absolute,
                             className: e,
@@ -8636,11 +8617,11 @@
                         }, d.createElement(L.Fb, {
                             color: L.O.Alt2,
                             display: L.X.Flex,
-                            padding: dt
+                            padding: ut
                         }, d.createElement(L.Ya, {
                             alignItems: L.f.Center,
                             display: L.X.InlineFlex,
-                            margin: mt
+                            margin: pt
                         }, d.createElement(L.lb, {
                             status: L.mb.Online
                         })), d.createElement(L.W, {
@@ -8654,11 +8635,11 @@
                         }, d.createElement(L.Fb, {
                             color: L.O.Base,
                             display: L.X.Flex,
-                            padding: dt
+                            padding: ut
                         }, d.createElement(L.Ya, {
                             alignItems: L.f.Center,
                             display: L.X.InlineFlex,
-                            margin: mt
+                            margin: pt
                         }, d.createElement(L.lb, {
                             status: L.mb.Invisible
                         })), d.createElement(L.W, {
@@ -8714,15 +8695,15 @@
                             color: L.O.Alt,
                             display: L.X.Flex,
                             alignItems: L.f.Center,
-                            padding: dt
+                            padding: ut
                         }, d.createElement(L.Ya, {
                             display: L.X.Flex,
                             alignItems: L.f.Center,
-                            margin: mt
+                            margin: pt
                         }, d.createElement(L.tb, {
                             asset: L.ub.NavMyChannel,
-                            height: pt.height,
-                            width: pt.width
+                            height: dt.height,
+                            width: dt.width
                         })), d.createElement(L.W, null, Object(h.d)("Channel", "UserMenuDropdown")))), d.createElement(L.Va, {
                             linkTo: p,
                             "data-a-target": "video-manager-dropdown-link",
@@ -8731,15 +8712,15 @@
                             color: L.O.Alt,
                             display: L.X.Flex,
                             alignItems: L.f.Center,
-                            padding: dt
+                            padding: ut
                         }, d.createElement(L.Ya, {
                             display: L.X.Flex,
                             alignItems: L.f.Center,
-                            margin: mt
+                            margin: pt
                         }, d.createElement(L.tb, {
                             asset: L.ub.NavManager,
-                            height: pt.height,
-                            width: pt.width
+                            height: dt.height,
+                            width: dt.width
                         })), d.createElement(L.W, null, Object(h.d)("Video Producer", "UserMenuDropdown")))), d.createElement(L.Va, {
                             linkTo: m,
                             "data-a-target": "dashboard-dropdown-link",
@@ -8748,15 +8729,15 @@
                             color: L.O.Alt,
                             display: L.X.Flex,
                             alignItems: L.f.Center,
-                            padding: dt
+                            padding: ut
                         }, d.createElement(L.Ya, {
                             display: L.X.Flex,
                             alignItems: L.f.Center,
-                            margin: mt
+                            margin: pt
                         }, d.createElement(L.tb, {
                             asset: L.ub.NavDashboard,
-                            height: pt.height,
-                            width: pt.width
+                            height: dt.height,
+                            width: dt.width
                         })), d.createElement(L.W, null, Object(h.d)("Dashboard", "UserMenuDropdown")))), d.createElement(L.Fb, {
                             borderBottom: !0,
                             margin: {
@@ -8771,16 +8752,16 @@
                             color: L.O.Alt,
                             display: L.X.Flex,
                             alignItems: L.f.Center,
-                            padding: dt
+                            padding: ut
                         }, d.createElement(L.Ya, {
                             display: L.X.Flex,
                             alignItems: L.f.Center,
-                            margin: mt
+                            margin: pt
                         }, d.createElement(L.tb, {
                             asset: L.ub.Friends,
-                            height: pt.height,
-                            width: pt.width
-                        })), d.createElement(L.W, null, Object(h.d)("Friends", "UserMenuDropdown")))), g, d.createElement(L.Va, {
+                            height: dt.height,
+                            width: dt.width
+                        })), d.createElement(L.W, null, Object(h.d)("Friends", "UserMenuDropdown")))), d.createElement(L.Va, {
                             linkTo: "/subscriptions",
                             "data-a-target": "subscriptions-dropdown-link",
                             "data-test-selector": ot.SubscriptionsLink
@@ -8788,15 +8769,15 @@
                             color: L.O.Alt,
                             display: L.X.Flex,
                             alignItems: L.f.Center,
-                            padding: dt
+                            padding: ut
                         }, d.createElement(L.Ya, {
                             display: L.X.Flex,
                             alignItems: L.f.Center,
-                            margin: mt
+                            margin: pt
                         }, d.createElement(L.tb, {
                             asset: L.ub.Star,
-                            height: pt.height,
-                            width: pt.width
+                            height: dt.height,
+                            width: dt.width
                         })), d.createElement(L.W, null, Object(h.d)("Subscriptions", "UserMenuDropdown")))), d.createElement(L.Va, {
                             linkTo: "/inventory",
                             "data-a-target": "inventory-dropdown-link",
@@ -8805,15 +8786,15 @@
                             color: L.O.Alt,
                             display: L.X.Flex,
                             alignItems: L.f.Center,
-                            padding: dt
+                            padding: ut
                         }, d.createElement(L.Ya, {
                             display: L.X.Flex,
                             alignItems: L.f.Center,
-                            margin: mt
+                            margin: pt
                         }, d.createElement(L.tb, {
                             asset: L.ub.Crate,
-                            height: pt.height,
-                            width: pt.width
+                            height: dt.height,
+                            width: dt.width
                         })), d.createElement(L.W, null, Object(h.d)("Inventory", "UserMenuDropdown")))), d.createElement(L.Va, {
                             linkTo: "/payments",
                             "data-a-target": "payments-dropdown-link",
@@ -8822,15 +8803,15 @@
                             color: L.O.Alt,
                             display: L.X.Flex,
                             alignItems: L.f.Center,
-                            padding: dt
+                            padding: ut
                         }, d.createElement(L.Ya, {
                             display: L.X.Flex,
                             alignItems: L.f.Center,
-                            margin: mt
+                            margin: pt
                         }, d.createElement(L.tb, {
                             asset: L.ub.NavBackpack,
-                            height: pt.height,
-                            width: pt.width
+                            height: dt.height,
+                            width: dt.width
                         })), d.createElement(L.W, null, Object(h.d)("Payments", "UserMenuDropdown")))), d.createElement(L.Fb, {
                             borderBottom: !0,
                             margin: {
@@ -8845,15 +8826,15 @@
                             color: L.O.Alt,
                             display: L.X.Flex,
                             alignItems: L.f.Center,
-                            padding: dt
+                            padding: ut
                         }, d.createElement(L.Ya, {
                             display: L.X.Flex,
                             alignItems: L.f.Center,
-                            margin: mt
+                            margin: pt
                         }, d.createElement(L.tb, {
                             asset: L.ub.NavSettings,
-                            height: pt.height,
-                            width: pt.width
+                            height: dt.height,
+                            width: dt.width
                         })), d.createElement(L.W, null, Object(h.d)("Settings", "UserMenuDropdown")))), d.createElement(L.Va, {
                             onClick: this.onLogoutClick,
                             "data-a-target": "dropdown-logout",
@@ -8862,21 +8843,21 @@
                             color: L.O.Alt,
                             display: L.X.Flex,
                             alignItems: L.f.Center,
-                            padding: dt
+                            padding: ut
                         }, d.createElement(L.Ya, {
                             display: L.X.Flex,
                             alignItems: L.f.Center,
-                            margin: mt
+                            margin: pt
                         }, d.createElement(L.tb, {
                             asset: L.ub.NavLogout,
-                            height: pt.height,
-                            width: pt.width
+                            height: dt.height,
+                            width: dt.width
                         })), d.createElement(L.W, null, Object(h.d)("Log Out", "UserMenuDropdown")))), h.p.integrations.process && this.renderAppExit()))))
                     }, t
                 }(d.Component),
-                ht = Object(j.b)("UserMenuDropdown")(ft),
-                gt = n("3KNA"),
-                bt = function(e) {
+                ft = Object(j.b)("UserMenuDropdown")(mt),
+                ht = n("3KNA"),
+                gt = function(e) {
                     function t() {
                         var t = null !== e && e.apply(this, arguments) || this;
                         return t.state = {
@@ -8964,7 +8945,7 @@
                         }, t
                     }
                     return u.__extends(t, e), t.prototype.render = function() {
-                        return d.createElement(ht, {
+                        return d.createElement(ft, {
                             user: this.props.user,
                             data: this.props.data,
                             dropdownOpen: this.props.dropdownOpen,
@@ -8975,11 +8956,11 @@
                             logout: this.props.logout,
                             theme: this.props.theme
                         })
-                    }, t = u.__decorate([Object(v.a)(gt, {
+                    }, t = u.__decorate([Object(v.a)(ht, {
                         name: "updateIsSharingActivity"
                     })], t)
                 }(d.Component);
-            var vt, Et = Object(r.connect)(function(e) {
+            var bt, vt = Object(r.connect)(function(e) {
                 return {
                     theme: Object(at.a)(e)
                 }
@@ -8988,10 +8969,10 @@
                     changeTheme: rt.b,
                     logout: c.f
                 }, e)
-            })(bt);
+            })(gt);
             n("wG9U");
-            (vt || (vt = {})).Toggle = "user-menu-placeholder__toggle";
-            var yt, _t = function(e) {
+            (bt || (bt = {})).Toggle = "user-menu-placeholder__toggle";
+            var Et, yt = function(e) {
                     return d.createElement(L.Ya, {
                         position: L.kb.Relative,
                         display: L.X.Flex,
@@ -9007,7 +8988,7 @@
                     }, d.createElement(L.Va, {
                         onClick: e.onMenuCardClick,
                         "data-a-target": "user-menu-toggle",
-                        "data-test-selector": vt.Toggle
+                        "data-test-selector": bt.Toggle
                     }, d.createElement(L.Ya, {
                         display: L.X.Flex,
                         flexGrow: 1,
@@ -9071,13 +9052,13 @@
                         asset: L.ub.GlyphArrDown
                     })))))))
                 },
-                kt = n("p7E/"),
-                Nt = n("m98o");
+                _t = n("p7E/"),
+                kt = n("m98o");
             n("oOol");
             ! function(e) {
                 e.Toggle = "user-menu__toggle", e.DisplayName = "user-menu__display-name"
-            }(yt || (yt = {}));
-            var St, Ot = function(e) {
+            }(Et || (Et = {}));
+            var Nt, St = function(e) {
                     function t() {
                         var t = null !== e && e.apply(this, arguments) || this;
                         return t.onCardClick = function() {
@@ -9127,7 +9108,7 @@
                                 noWrap: !0,
                                 "data-a-target": "online-status",
                                 lineHeight: L.Za.Heading
-                            }, d.createElement(Nt.a, {
+                            }, d.createElement(kt.a, {
                                 activity: this.props.data.currentUser.activity,
                                 availability: t === Je.a.Offline ? Je.a.Invisible : t
                             })))) : d.createElement(L.Ya, null, d.createElement(L.Ya, {
@@ -9173,7 +9154,7 @@
                             blurAfterClick: !0,
                             onClick: this.onCardClick,
                             "data-a-target": "user-menu-toggle",
-                            "data-test-selector": yt.Toggle
+                            "data-test-selector": Et.Toggle
                         }, d.createElement(L.Ya, {
                             display: L.X.Flex,
                             flexWrap: L.Ba.NoWrap,
@@ -9204,7 +9185,7 @@
                             fontSize: L.Ca.Size5,
                             className: "top-nav-user-menu__username",
                             "data-a-target": "user-display-name",
-                            "data-test-selector": yt.DisplayName
+                            "data-test-selector": Et.DisplayName
                         }, d.createElement(L.W, {
                             lineHeight: L.Za.Heading
                         }, this.props.user.displayName)), n), d.createElement(L.Fb, {
@@ -9218,12 +9199,12 @@
                         }))))))
                     }, t
                 }(d.Component),
-                Ct = n("jeWT"),
-                Tt = function(e) {
+                Ot = n("jeWT"),
+                Ct = function(e) {
                     function t(t) {
                         var n = e.call(this, t) || this;
                         return n.isSettingNewSession = !1, n.onMenuCardClick = function() {
-                            n.props.user && (Object(kt.b)(kt.a.AvatarDropdown)(), n.setState({
+                            n.props.user && (Object(_t.b)(_t.a.AvatarDropdown)(), n.setState({
                                 dropdownOpen: !n.state.dropdownOpen
                             }))
                         }, n.onClickOut = function() {
@@ -9279,12 +9260,12 @@
                                 "top-nav-user-menu--dropdown-open": this.state.dropdownOpen
                             }),
                             t = null;
-                        return t = this.props.user ? d.createElement(Ot, {
+                        return t = this.props.user ? d.createElement(St, {
                             user: this.props.user,
                             data: this.props.data,
                             onMenuCardClick: this.onMenuCardClick,
                             theme: this.props.theme
-                        }) : d.createElement(_t, {
+                        }) : d.createElement(yt, {
                             onMenuCardClick: this.onMenuCardClick
                         }), d.createElement(L.Ya, {
                             position: L.kb.Relative,
@@ -9295,20 +9276,20 @@
                         }, d.createElement(ue.a, {
                             onClickOut: this.onClickOut,
                             className: e
-                        }, t, d.createElement(Et, {
+                        }, t, d.createElement(vt, {
                             dropdownOpen: this.state.dropdownOpen,
                             user: this.props.user,
                             data: this.props.data
                         })))
                     }, t.prototype.reportInteractive = function() {
                         this.props.user && this.props.latencyTracking.reportInteractive()
-                    }, t = u.__decorate([Object(v.a)(Ct, {
+                    }, t = u.__decorate([Object(v.a)(Ot, {
                         skip: function(e) {
                             return !e.user
                         }
                     }), Object(Ke.a)(function(e) {
                         return {
-                            query: Ct,
+                            query: Ot,
                             topic: e.user ? Object(et.u)(e.user.id) : "",
                             skip: !(e.data && !e.data.loading && !e.data.error && e.data.currentUser),
                             type: Ze.PubsubMessageType.PresenceSettings,
@@ -9320,13 +9301,13 @@
                         topic: function(e) {
                             return e.user ? Object(et.u)(e.user.id) : ""
                         },
-                        mapMessageTypesToProps: (St = {}, St[Ze.PubsubMessageType.Presence] = "presence", St),
+                        mapMessageTypesToProps: (Nt = {}, Nt[Ze.PubsubMessageType.Presence] = "presence", Nt),
                         skip: function(e) {
                             return !(e.data && !e.data.loading && !e.data.error && e.data.currentUser)
                         }
                     }]), Object(j.b)("User")], t)
                 }(d.Component);
-            var It, At = Object(r.connect)(function(e) {
+            var Tt, It = Object(r.connect)(function(e) {
                     return {
                         theme: Object(at.a)(e),
                         firstPageLoaded: e.session.firstPageLoaded,
@@ -9338,15 +9319,15 @@
                         changeTheme: rt.b,
                         initialUserAvailabilitySet: it.g
                     }, e)
-                })(Object(a.a)(Tt)),
-                Rt = n("9pSj"),
-                Dt = n("j3KY"),
-                wt = n("DS6v");
+                })(Object(a.a)(Ct)),
+                At = n("9pSj"),
+                Rt = n("j3KY"),
+                Dt = n("DS6v");
             n("tUtL");
             ! function(e) {
                 e.BrowseLink = "top-nav__browse-link", e.StoreLink = "top-nav__store-link", e.TryPrimeLink = "top-nav__try-prime-link", e.GoTurboLink = "top-nav__go-turbo-link", e.DropdownStoreLink = "top-nav__dropdown-store-link", e.FollowingLink = "top-nav__following-link", e.LanguageBalloonWrapper = "top-nav__language-balloon-Wrapper", e.LanguageMenuItem = "top-nav__language-menu-item"
-            }(It || (It = {}));
-            var Lt = function(e) {
+            }(Tt || (Tt = {}));
+            var wt = function(e) {
                     function t(t) {
                         var n = e.call(this, t) || this;
                         return n.logger = h.p.logger.withCategory("top-nav"), n.renderFollowLink = function() {
@@ -9363,9 +9344,9 @@
                                     },
                                     className: "top-nav__nav-link",
                                     "data-a-target": "following-link",
-                                    "data-test-selector": It.FollowingLink,
+                                    "data-test-selector": Tt.FollowingLink,
                                     title: e,
-                                    onClick: Object(kt.b)(kt.a.Following)
+                                    onClick: Object(_t.b)(_t.a.Following)
                                 }, e)
                             }
                             return null
@@ -9376,7 +9357,7 @@
                             return d.createElement(m.a, {
                                 className: "top-nav__nav-link" + (n ? " active" : ""),
                                 "data-a-target": "browse-link",
-                                "data-test-selector": It.BrowseLink,
+                                "data-test-selector": Tt.BrowseLink,
                                 title: i,
                                 to: {
                                     pathname: "/directory",
@@ -9385,7 +9366,7 @@
                                         content: y.PageviewContent.Games
                                     }
                                 },
-                                onClick: Object(kt.b)(kt.a.Browse)
+                                onClick: Object(_t.b)(_t.a.Browse)
                             }, i)
                         }, n.renderStoreLink = function() {
                             if (h.p.integrations.app || n.props.data.loading || n.props.data.error) return null;
@@ -9393,24 +9374,24 @@
                             return !n.props.isLoggedIn || e ? d.createElement("a", {
                                 href: X.a,
                                 target: "_blank",
-                                onClick: Object(kt.b)(kt.a.Store),
+                                onClick: Object(_t.b)(_t.a.Store),
                                 className: "top-nav__nav-link",
                                 "data-a-target": "store-link",
-                                "data-test-selector": It.StoreLink
+                                "data-test-selector": Tt.StoreLink
                             }, Object(h.d)("Store", "TopNavStore")) : null
                         }, n.renderTryPrimeLink = function() {
                             if (n.props.data.loading || n.props.data.error) return null;
                             var e = n.props.data.requestInfo && !Object(E.a)(n.props.data.requestInfo.countryCode),
                                 t = !n.props.data.currentUser || !n.props.data.currentUser.hasPrime;
                             if (!e && t) {
-                                var i = Object(Dt.e)(Dt.c, window.location.pathname.substring(1));
+                                var i = Object(Rt.e)(Rt.c, window.location.pathname.substring(1));
                                 return d.createElement("a", {
                                     href: i,
                                     target: "_blank",
-                                    onClick: Object(kt.b)(kt.a.TryPrime),
+                                    onClick: Object(_t.b)(_t.a.TryPrime),
                                     className: "top-nav__nav-link",
                                     "data-a-target": "try-prime-link",
-                                    "data-test-selector": It.TryPrimeLink
+                                    "data-test-selector": Tt.TryPrimeLink
                                 }, Object(h.d)("Try Prime", "TopNavUpsell"))
                             }
                             return null
@@ -9429,7 +9410,7 @@
                                 title: e
                             }, e)
                         }, n.onThreeDotToggled = function(e) {
-                            e || Object(kt.b)(kt.a.ThreeDot)()
+                            e || Object(_t.b)(_t.a.ThreeDot)()
                         }, n.renderEllipsisMenuStoreLink = function() {
                             var e = !1;
                             if (n.props.data) {
@@ -9440,9 +9421,9 @@
                                 targetBlank: !0,
                                 linkTo: X.a,
                                 "data-a-target": "store-link-dropdown",
-                                "data-test-selector": It.DropdownStoreLink,
+                                "data-test-selector": Tt.DropdownStoreLink,
                                 title: Object(h.d)("Store", "TopNav"),
-                                onClick: Object(kt.b)(kt.a.Store2)
+                                onClick: Object(_t.b)(_t.a.Store2)
                             }) : null
                         }, n.renderTwitchPrimeCrown = function(e) {
                             return d.createElement(L.Ya, {
@@ -9454,7 +9435,7 @@
                                 },
                                 alignSelf: L.g.Center,
                                 flexWrap: L.Ba.NoWrap
-                            }, !e && d.createElement(Rt.d, null))
+                            }, !e && d.createElement(At.d, null))
                         }, n.renderBitsButton = function() {
                             return d.createElement(L.Ya, {
                                 flexGrow: 0,
@@ -9519,7 +9500,7 @@
                                     content: y.PageviewContent.Logo
                                 }
                             },
-                            onClick: Object(kt.b)(kt.a.HomeIcon),
+                            onClick: Object(_t.b)(_t.a.HomeIcon),
                             "data-a-target": "home-link"
                         }, d.createElement("div", {
                             className: "top-nav__home-link-logo"
@@ -9551,7 +9532,7 @@
                             href: "https://app.twitch.tv/download",
                             "data-a-target": "get-desktop-link",
                             className: "top-nav__nav-link",
-                            onClick: Object(kt.b)(kt.a.GetDesktop)
+                            onClick: Object(_t.b)(_t.a.GetDesktop)
                         }, Object(h.d)("Get Desktop", "TopNav"))), h.p.integrations.mods && this.renderModsLink(), d.createElement(L.Ya, {
                             display: L.X.Hide,
                             breakpointSmall: {
@@ -9580,61 +9561,61 @@
                             linkTo: "https://www.twitch.tv/p/about",
                             "data-a-target": "about-link",
                             title: Object(h.d)("About", "TopNav"),
-                            onClick: Object(kt.b)(kt.a.About)
+                            onClick: Object(_t.b)(_t.a.About)
                         }), d.createElement(J, {
                             targetBlank: !0,
                             linkTo: "https://www.twitch.tv/p/legal/ad-choices",
                             "data-a-target": "ad-choices-link",
                             title: Object(h.d)("Ad Choices", "TopNav"),
-                            onClick: Object(kt.b)(kt.a.AdChoices)
+                            onClick: Object(_t.b)(_t.a.AdChoices)
                         }), d.createElement(J, {
                             targetBlank: !0,
                             linkTo: "http://twitchadvertising.tv/",
                             "data-a-target": "advertisers-link",
                             title: Object(h.d)("Advertisers", "TopNav"),
-                            onClick: Object(kt.b)(kt.a.Advertisers)
+                            onClick: Object(_t.b)(_t.a.Advertisers)
                         }), d.createElement(J, {
                             targetBlank: !0,
                             linkTo: "https://blog.twitch.tv/",
                             "data-a-target": "blog-link",
                             title: Object(h.d)("Blog", "TopNav"),
-                            onClick: Object(kt.b)(kt.a.Blog)
+                            onClick: Object(_t.b)(_t.a.Blog)
                         }), d.createElement(J, {
                             targetBlank: !0,
                             linkTo: "https://www.twitch.tv/p/legal/community-guidelines",
                             "data-a-target": "community-guidelines-link",
                             title: Object(h.d)("Community Guidelines", "TopNav"),
-                            onClick: Object(kt.b)(kt.a.CommunityGuidelines)
+                            onClick: Object(_t.b)(_t.a.CommunityGuidelines)
                         }), d.createElement($, null), d.createElement(J, {
                             targetBlank: !0,
                             linkTo: "https://www.twitch.tv/p/cookie-policy",
                             "data-a-target": "cookie-policy-link",
                             title: Object(h.d)("Cookie Policy", "TopNav"),
-                            onClick: Object(kt.b)(kt.a.CookiePolicy)
+                            onClick: Object(_t.b)(_t.a.CookiePolicy)
                         }), d.createElement(J, {
                             targetBlank: !0,
                             linkTo: "https://dev.twitch.tv/",
                             "data-a-target": "developers-link",
                             title: Object(h.d)("Developers", "TopNav"),
-                            onClick: Object(kt.b)(kt.a.Developers)
+                            onClick: Object(_t.b)(_t.a.Developers)
                         }), d.createElement(J, {
                             targetBlank: !0,
                             linkTo: "https://help.twitch.tv/",
                             "data-a-target": "help-link",
                             title: Object(h.d)("Help", "TopNav"),
-                            onClick: Object(kt.b)(kt.a.Help)
+                            onClick: Object(_t.b)(_t.a.Help)
                         }), d.createElement(J, {
                             targetBlank: !0,
                             linkTo: "https://www.twitch.tv/jobs",
                             "data-a-target": "jobs-link",
                             title: Object(h.d)("Jobs", "TopNav"),
-                            onClick: Object(kt.b)(kt.a.Jobs)
+                            onClick: Object(_t.b)(_t.a.Jobs)
                         }), d.createElement(b.a, {
                             display: L.X.Block,
-                            onToggle: Object(kt.b)(kt.a.Language),
-                            "data-test-selector": It.LanguageBalloonWrapper
+                            onToggle: Object(_t.b)(_t.a.Language),
+                            "data-test-selector": Tt.LanguageBalloonWrapper
                         }, d.createElement(J, {
-                            "data-test-selector": It.LanguageMenuItem,
+                            "data-test-selector": Tt.LanguageMenuItem,
                             "data-a-target": "language-selector",
                             title: Object(h.d)("Language", "TopNav")
                         }), d.createElement(L.u, {
@@ -9649,43 +9630,43 @@
                             linkTo: "https://music.twitch.tv/",
                             "data-a-target": "music-link",
                             title: Object(h.d)("Music", "TopNav"),
-                            onClick: Object(kt.b)(kt.a.Music)
+                            onClick: Object(_t.b)(_t.a.Music)
                         }), this.renderEllipsisMenuStoreLink(), d.createElement(J, {
                             targetBlank: !0,
                             linkTo: "https://www.twitch.tv/p/partners",
                             "data-a-target": "partners-link",
                             title: Object(h.d)("Partners", "TopNav"),
-                            onClick: Object(kt.b)(kt.a.Partners)
+                            onClick: Object(_t.b)(_t.a.Partners)
                         }), d.createElement(J, {
                             targetBlank: !0,
                             linkTo: "https://www.twitch.tv/p/press",
                             "data-a-target": "press-link",
                             title: Object(h.d)("Press", "TopNav"),
-                            onClick: Object(kt.b)(kt.a.Press)
+                            onClick: Object(_t.b)(_t.a.Press)
                         }), d.createElement(J, {
                             targetBlank: !0,
                             linkTo: "https://www.twitch.tv/p/legal/privacy-policy",
                             "data-a-target": "privacy-policy-link",
                             title: Object(h.d)("Privacy Policy", "TopNav"),
-                            onClick: Object(kt.b)(kt.a.PrivacyPolicy)
+                            onClick: Object(_t.b)(_t.a.PrivacyPolicy)
                         }), d.createElement(J, {
                             targetBlank: !0,
                             linkTo: "https://www.twitch.tv/p/security",
                             "data-a-target": "security-link",
                             title: Object(h.d)("Security", "TopNav"),
-                            onClick: Object(kt.b)(kt.a.Security)
+                            onClick: Object(_t.b)(_t.a.Security)
                         }), d.createElement(J, {
                             targetBlank: !0,
                             linkTo: "https://www.twitch.tv/p/terms-of-service",
                             "data-a-target": "terms-link",
                             title: Object(h.d)("Terms", "TopNav"),
-                            onClick: Object(kt.b)(kt.a.Terms)
+                            onClick: Object(_t.b)(_t.a.Terms)
                         }), d.createElement(J, {
                             targetBlank: !0,
                             linkTo: "https://www.twitch.tv/turbo",
                             "data-a-target": "turbo-link",
                             title: Object(h.d)("Turbo", "TopNav"),
-                            onClick: Object(kt.b)(kt.a.Turbo)
+                            onClick: Object(_t.b)(_t.a.Turbo)
                         }))))), d.createElement(L.Ya, {
                             className: "top-nav__search",
                             display: L.X.Hide,
@@ -9714,16 +9695,16 @@
                             flexWrap: L.Ba.NoWrap,
                             flexGrow: 0,
                             flexShrink: 0
-                        }, this.props.isLoggedIn ? d.createElement(At, null) : d.createElement(ze.a, {
+                        }, this.props.isLoggedIn ? d.createElement(It, null) : d.createElement(ze.a, {
                             login: this.props.login,
                             signup: this.props.signup
                         })))))
                     }, t
                 }(d.Component),
-                Ut = Object(o.compose)(Object(v.a)(wt), Object(j.b)("TopNav", {
+                Lt = Object(o.compose)(Object(v.a)(Dt), Object(j.b)("TopNav", {
                     autoReportInteractive: !0
-                }))(Lt);
-            var Ft = Object(a.a)(Object(r.connect)(function(e) {
+                }))(wt);
+            var Ut = Object(a.a)(Object(r.connect)(function(e) {
                 return {
                     isLoggedIn: Object(l.f)(e)
                 }
@@ -9737,13 +9718,13 @@
                         return Object(c.g)(s.a.TopNavSignupButton)
                     }
                 }, e)
-            })(Ut));
+            })(Lt));
             n.d(t, !1, function() {
                 return "5rem"
             }), n.d(t, !1, function() {
                 return "9.5rem"
             }), n.d(t, "a", function() {
-                return Ft
+                return Ut
             })
         },
         Gw6o: function(e, t, n) {
@@ -10054,18 +10035,6 @@
                 function(e) {
                     e.Games = "game", e.Videos = "vod", e.Users = "user", e.Channels = "live_channel", e.StreamTags = "stream_tag", e.Tags = "tag"
                 }(i || (i = {}))
-        },
-        H4kz: function(e, t, n) {
-            "use strict";
-            n.d(t, "a", function() {
-                return a
-            });
-            var i = n("/7QA"),
-                r = "deprecated_messages_download_enabled";
-
-            function a() {
-                return i.b.get(r, !1)
-            }
         },
         "HAa/": function(e, t, n) {
             "use strict";
@@ -14137,12 +14106,10 @@
         ao1a: function(e, t, n) {
             "use strict";
             n.d(t, "a", function() {
-                return s
-            }), n.d(t, "b", function() {
                 return c
-            }), n.d(t, "c", function() {
+            }), n.d(t, "b", function() {
                 return l
-            }), n.d(t, "d", function() {
+            }), n.d(t, "c", function() {
                 return u
             });
             var i = n("wUQP"),
@@ -14150,16 +14117,16 @@
                 a = n("DMoW"),
                 o = n("4rCz"),
                 s = function() {
-                    return o.q.experiments.getAssignment(r.b.BitsNewUserCheer) === i.a.On
+                    return o.q.experiments.getAssignment(r.b.BitsNewUserCheerV1) === i.a.On
                 },
                 c = function(e) {
-                    return s() && e === a.d.NEW_USER
+                    return e === a.d.NEW_USER && s()
                 },
                 l = function(e, t) {
-                    return !(!(c(e) && t && t.firstCheerTutorial) || t.firstCheerTutorial.hasSkipped)
+                    return !(!t || !t.firstCheerTutorial || t.firstCheerTutorial.hasSkipped || !c(e))
                 },
                 u = function(e, t) {
-                    return !(!(c(e) && t && t.firstCheerTutorial) || t.firstCheerTutorial.hasAbandoned || t.firstCheerTutorial.hasSkipped)
+                    return !(!t || !t.firstCheerTutorial || t.firstCheerTutorial.hasAbandoned || t.firstCheerTutorial.hasSkipped || !c(e))
                 }
         },
         bYOw: function(e, t, n) {
@@ -16315,7 +16282,7 @@
                         return Object(u.d)(s.a, {
                             component: "CheckoutModal",
                             loader: function() {
-                                return Promise.all([n.e(0), n.e(212)]).then(n.bind(null, "KJv/"))
+                                return Promise.all([n.e(0), n.e(210)]).then(n.bind(null, "KJv/"))
                             },
                             componentProps: t
                         })
@@ -17387,7 +17354,7 @@
             }
             n("iLa+");
             var J, Z = H.a.wrap(function() {
-                    return n.e(83).then(n.bind(null, "Gm8u"))
+                    return n.e(81).then(n.bind(null, "Gm8u"))
                 }, "DesktopToastManager"),
                 $ = o.k.withCategory("toast-manager"),
                 ee = function(e) {
@@ -17435,7 +17402,7 @@
                             return i.__generator(this, function(i) {
                                 switch (i.label) {
                                     case 0:
-                                        return o.a.buildType !== u.a.Production && r.parse(window.location.search).onsite_test_data ? [4, n.e(84).then(n.bind(null, "Pm5e"))] : [3, 2];
+                                        return o.a.buildType !== u.a.Production && r.parse(window.location.search).onsite_test_data ? [4, n.e(82).then(n.bind(null, "Pm5e"))] : [3, 2];
                                     case 1:
                                         e = i.sent().MockOnsiteNotifications, t = e.getMockOnsiteNotificationModels(3), this.setState({
                                             notifications: t
@@ -17567,7 +17534,7 @@
                                 return i.__generator(this, function(t) {
                                     switch (t.label) {
                                         case 0:
-                                            return this.listDataLoaded() && !this.hasInsertedListNotificationsData && o.a.buildType !== u.a.Production && r.parse(window.location.search).onsite_test_data ? (this.hasInsertedListNotificationsData = !0, [4, n.e(84).then(n.bind(null, "Pm5e"))]) : [3, 2];
+                                            return this.listDataLoaded() && !this.hasInsertedListNotificationsData && o.a.buildType !== u.a.Production && r.parse(window.location.search).onsite_test_data ? (this.hasInsertedListNotificationsData = !0, [4, n.e(82).then(n.bind(null, "Pm5e"))]) : [3, 2];
                                         case 1:
                                             e = t.sent().MockOnsiteNotifications, Object(p.e)(se, i.__assign({}, this.props.listData.variables), function(t) {
                                                 return t.currentUser.notifications.edges = e.getMockOnsiteNotificationEdges(r.parse(window.location.search).onsite_test_data), t

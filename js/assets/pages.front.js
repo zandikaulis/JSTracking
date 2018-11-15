@@ -1,5 +1,5 @@
 (window.webpackJsonp = window.webpackJsonp || []).push([
-    [58], {
+    [56], {
         "+qcr": function(e, t, n) {
             "use strict";
             n.d(t, "c", function() {
@@ -958,10 +958,10 @@
                             fontSize: this.props.size === q.Large ? _.Ca.Size4 : _.Ca.Size6
                         }, t))), this.props.shouldRemoveContent && o.createElement(_.nb, {
                             animationDuration: 5,
-                            animationDirection: this.state.countdownState === Y.Running ? _.ob.Down : void 0,
+                            animationDirection: _.ob.Down,
                             onAnimationEnd: this.props.onExpiration,
                             size: _.pb.ExtraSmall,
-                            value: this.state.countdownState === Y.Running ? void 0 : 100,
+                            paused: this.state.countdownState !== Y.Running,
                             mask: !0
                         }))))
                     }, t
@@ -1137,7 +1137,7 @@
                 xe = n("A65o"),
                 Me = (n("ReKM"), Object(Re.a)()),
                 Pe = ne.a.wrap(function() {
-                    return n.e(147).then(n.bind(null, "GyBV"))
+                    return n.e(145).then(n.bind(null, "GyBV"))
                 }, "RecFeedbackButton", {
                     placeholder: null
                 }),
@@ -1559,7 +1559,7 @@
                 })(je)),
                 Ue = Object(Re.a)(),
                 Ae = ne.a.wrap(function() {
-                    return n.e(147).then(n.bind(null, "GyBV"))
+                    return n.e(145).then(n.bind(null, "GyBV"))
                 }, "RecFeedbackButton", {
                     placeholder: null
                 }),
@@ -3113,10 +3113,6 @@
                     contentType: a.b.Live,
                     feedbackType: r.L.NOT_INTERESTED
                 }, o(), {
-                    text: Object(i.d)("I have already watched this video", "FeedbackReason"),
-                    contentType: a.b.Vod,
-                    feedbackType: r.L.ALREADY_WATCHED
-                }, {
                     text: s(),
                     contentType: a.b.Vod,
                     feedbackType: r.L.OTHER

@@ -1,5 +1,5 @@
 (window.webpackJsonp = window.webpackJsonp || []).push([
-    [150], {
+    [148], {
         "+HZ4": function(e, t, n) {},
         "+TUL": function(e, t, n) {},
         "+oVX": function(e, t, n) {
@@ -957,7 +957,7 @@
                     name: "setNotificationSetting"
                 }))($),
                 J = (n("NkC9"), l.a.wrap(function() {
-                    return n.e(148).then(n.bind(null, "ZaEz"))
+                    return n.e(146).then(n.bind(null, "ZaEz"))
                 }, "DesktopNotificationSettings")),
                 ee = function(e) {
                     function t() {
@@ -2767,10 +2767,6 @@
                     contentType: a.b.Live,
                     feedbackType: r.L.NOT_INTERESTED
                 }, o(), {
-                    text: Object(i.d)("I have already watched this video", "FeedbackReason"),
-                    contentType: a.b.Vod,
-                    feedbackType: r.L.ALREADY_WATCHED
-                }, {
                     text: s(),
                     contentType: a.b.Vod,
                     feedbackType: r.L.OTHER

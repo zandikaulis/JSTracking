@@ -1,5 +1,5 @@
 (window.webpackJsonp = window.webpackJsonp || []).push([
-    [117], {
+    [115], {
         EJeP: function(e, n, r) {
             "use strict";
             r.r(n);
@@ -387,7 +387,9 @@
                     });
                     if (this.props.loading && !this.props.followEdge) return o.createElement(d.a, null);
                     var e = !0,
-                        n = this.props.followEdge && this.props.followEdge.map(function(n) {
+                        n = this.props.followEdge && this.props.followEdge.filter(function(e) {
+                            return e && e.node && e.node.id
+                        }).map(function(n) {
                             return n && n.node && n.node.id ? (e = !1, o.createElement(c.Ya, {
                                 key: n.node.id,
                                 margin: {

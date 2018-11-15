@@ -1,5 +1,5 @@
 (window.webpackJsonp = window.webpackJsonp || []).push([
-    [157], {
+    [155], {
         "0eTn": function(e, t, r) {},
         "16Gl": function(e, t, r) {
             "use strict";
@@ -248,8 +248,8 @@
                         }
                     }, t
                 }(l.Component),
-                v = Object(p.b)("EmbedOverlay")(b);
-            var g = Object(a.connect)(function(e) {
+                g = Object(p.b)("EmbedOverlay")(b);
+            var v = Object(a.connect)(function(e) {
                 return {
                     activeVideoPlayerRefID: Object(o.a)(e)
                 }
@@ -257,9 +257,9 @@
                 return Object(i.bindActionCreators)({
                     reportPlayerInstanceStarted: s.b
                 }, e)
-            })(v);
+            })(g);
             r.d(t, "a", function() {
-                return g
+                return v
             }), r.d(t, !1, function() {
                 return n
             }), r.d(t, !1, function() {
@@ -271,7 +271,7 @@
             }), r.d(t, !1, function() {
                 return b
             }), r.d(t, !1, function() {
-                return v
+                return g
             })
         },
         "4eyL": function(e, t, r) {
@@ -508,9 +508,10 @@
                     }(e, t)
                 }))
             }
-            var p, h = r("5NYc");
+            var p, h = r("5NYc"),
+                f = r("d0JU");
 
-            function f(e) {
+            function b(e) {
                 return function() {
                     var e;
                     if (p) return p;
@@ -564,7 +565,8 @@
                         },
                         hasTimedCompletionWindow: !1,
                         position: 1,
-                        ccuTooltipLabel: ""
+                        ccuTooltipLabel: "",
+                        learnMoreURL: f.a
                     }, p = e
                 }()[e] || {
                     title: e,
@@ -580,10 +582,10 @@
                 }
             }
 
-            function b(e, t) {
+            function g(e, t) {
                 var r = e.map(function(e) {
                     var r = function(e, t) {
-                        var r = f(e.key);
+                        var r = b(e.key);
                         return new s.e({
                             key: e.key,
                             completedAt: e.completed_at ? new Date(e.completed_at) : null,
@@ -654,7 +656,7 @@
                                         })
                                     }(e.id), Object(i.a)(e.id)])];
                                 case 2:
-                                    return a = u.sent(), c = a[0], l = a[1], t = d(c, e.name), r = b(l, e.role), [3, 4];
+                                    return a = u.sent(), c = a[0], l = a[1], t = d(c, e.name), r = g(l, e.role), [3, 4];
                                 case 3:
                                     return u.sent(), t = new s.b, r = [], [3, 4];
                                 case 4:
@@ -761,8 +763,8 @@
                 h = r("m9vr"),
                 f = r("IFXb"),
                 b = r("0us7"),
-                v = r("VxtK"),
-                g = r("S3iq"),
+                g = r("VxtK"),
+                v = r("S3iq"),
                 y = r("xMok"),
                 S = r("gq0V"),
                 E = r("6E8S"),
@@ -796,7 +798,7 @@
                         } : 2,
                         borderBottom: !0
                     }, r.map(function(e) {
-                        return a.createElement(g.a, {
+                        return a.createElement(v.a, {
                             key: e.id,
                             achievement: e
                         }, Object(y.b)(e))
@@ -846,8 +848,8 @@
                         }, this.props.children)
                     }, t
                 }(a.Component)),
-                T = r("u2gS"),
-                x = (r("UK3/"), {
+                x = r("u2gS"),
+                T = (r("UK3/"), {
                     "data-test-selector": "live-dashboard-link"
                 }),
                 D = {
@@ -865,8 +867,8 @@
                 if (!t.isLoading && !t.streamSummaries.length && t.channel && !r) {
                     var i = a.createElement(C.z, n.__assign({
                         linkTo: "/" + t.channel.name + "/dashboard/live"
-                    }, x), Object(o.d)("Go to Live Dashboard", "StreamSummaryNoAvailableStreamSummariesNotice"));
-                    return t.channel.role === T.d.None && (i = a.createElement(C.z, n.__assign({
+                    }, T), Object(o.d)("Go to Live Dashboard", "StreamSummaryNoAvailableStreamSummariesNotice"));
+                    return t.channel.role === x.d.None && (i = a.createElement(C.z, n.__assign({
                         linkTo: "/" + t.channel.name + "/dashboard/broadcast"
                     }, D), Object(o.d)("Go to Streaming Tools", "StreamSummaryNoAvailableStreamSummariesNotice"))), a.createElement(C.Ya, {
                         position: C.kb.Absolute,
@@ -924,8 +926,8 @@
                 return a.createElement("div", null)
             }
             var L = r("5NYc"),
-                N = (r("wQAB"), r("y/W1")),
-                F = r("qe41"),
+                F = (r("wQAB"), r("y/W1")),
+                N = r("qe41"),
                 V = r("9+Lo"),
                 M = (r("Dm0L"), function(e, t) {
                     return Object(o.d)("{numCompleted, number} of {numTotal, number} requirements met", {
@@ -938,7 +940,7 @@
                         r = e.quest,
                         i = !1;
                     if (r && !r.isComplete) {
-                        var s = Object(N.c)(r.requirements),
+                        var s = Object(F.c)(r.requirements),
                             c = r.getQuestReqStrings(),
                             l = t && {
                                 alignItems: C.f.Center,
@@ -1028,11 +1030,11 @@
                                     channelLogin: e.channelName,
                                     questKey: r.key
                                 })
-                            }(t), a.createElement(F.a, {
+                            }(t), a.createElement(N.a, {
                                 requirement: t,
                                 requirementInstructionString: c,
                                 isComplete: r.isComplete,
-                                subtext: t.metric === L.a.AVERAGE_CCU ? Object(N.a)(r.requirements) : void 0,
+                                subtext: t.metric === L.a.AVERAGE_CCU ? Object(F.a)(r.requirements) : void 0,
                                 ccuTooltipLabel: r.ccuTooltipLabel
                             }))
                         }))
@@ -1240,7 +1242,7 @@
                                 t = this.props.query.quests.filter(function(t) {
                                     return t.completedAt && Object(W.isWithinRange)(t.completedAt, e.start, e.end)
                                 });
-                            return T.e.topCelebratable(t)
+                            return x.e.topCelebratable(t)
                         },
                         enumerable: !0,
                         configurable: !0
@@ -1304,7 +1306,7 @@
                             bottom: 2
                         },
                         padding: 2,
-                        borderRadius: C.x.Small
+                        borderRadius: C.x.Medium
                     }, a.createElement(C.Fb, {
                         className: "sm-sb-flourish-emotes__emotes-layer",
                         position: C.kb.Absolute,
@@ -1313,7 +1315,7 @@
                         attachRight: !0,
                         attachBottom: !0,
                         attachLeft: !0,
-                        borderRadius: C.x.Small
+                        borderRadius: C.x.Medium
                     }, e.flourish), a.createElement(C.Fb, {
                         className: "sm-sb-flourish-emotes__text",
                         position: C.kb.Relative,
@@ -1352,8 +1354,7 @@
                             bottom: 2
                         },
                         elevation: 1,
-                        border: !0,
-                        borderRadius: C.x.Small
+                        borderRadius: C.x.Medium
                     }, a.createElement(de, n.__assign({}, e)), a.createElement(C.Ya, {
                         className: "sm-sb-flourish-confetti__dismiss",
                         position: C.kb.Absolute,
@@ -1390,7 +1391,7 @@
                         textAlign: C.Sb.Center,
                         padding: 2,
                         fullWidth: !0,
-                        borderRadius: C.x.Small
+                        borderRadius: C.x.Medium
                     }, a.createElement(C.W, n.__assign({}, re, {
                         type: C.Wb.Span,
                         fontSize: C.Ca.Size4,
@@ -1413,7 +1414,7 @@
                 be = {
                     "data-test-selector": "increase"
                 },
-                ve = function(e) {
+                ge = function(e) {
                     return a.createElement(C.Ya, n.__assign({
                         display: C.X.Flex,
                         flexDirection: C.Aa.Column
@@ -1426,7 +1427,8 @@
                         },
                         elevation: 1,
                         padding: 2,
-                        background: C.r.Base
+                        background: C.r.Base,
+                        borderRadius: C.x.Medium
                     }, a.createElement(C.Fb, {
                         display: C.X.Flex,
                         flexDirection: C.Aa.Column
@@ -1448,10 +1450,10 @@
                         fontSize: C.Ca.Size2,
                         bold: !0,
                         color: C.O.Link
-                    }, fe), e.value, e.isIncrease && a.createElement(ge, null)))))
+                    }, fe), e.value, e.isIncrease && a.createElement(ve, null)))))
                 };
 
-            function ge() {
+            function ve() {
                 return a.createElement(C.tb, n.__assign({
                     asset: C.ub.GlyphArrUp,
                     type: C.vb.Success
@@ -1462,7 +1464,7 @@
                 var t = Math.floor(e.currentValue),
                     r = e.previousValue && Math.floor(e.previousValue),
                     i = "number" == typeof r && t - r;
-                return a.createElement(ve, n.__assign({
+                return a.createElement(ge, n.__assign({
                     title: e.title,
                     subtitle: function(e) {
                         if ("number" != typeof e) return "";
@@ -1484,7 +1486,7 @@
             function we(e) {
                 var t = e.currentStreamSummary,
                     r = e.previousStreamSummary;
-                return a.createElement(ve, n.__assign({
+                return a.createElement(ge, n.__assign({
                     title: Object(o.d)("Stream Duration", "StreamSummaryDuration"),
                     subtitle: function(e, t) {
                         if (!t) return "";
@@ -1513,10 +1515,10 @@
                 Ae = {
                     "data-test-selector": "stream-summary-clips-created-stat-card"
                 },
-                Te = {
+                xe = {
                     "data-test-selector": "stream-summary-unique-viewers-stat-card"
                 },
-                xe = {
+                Te = {
                     "data-test-selector": "stream-summary-live-views-stat-card"
                 },
                 De = {
@@ -1566,7 +1568,7 @@
                             title: Object(o.d)("Unique Viewers", "StreamSummaryStatCard"),
                             currentValue: t.uniqueViewers,
                             previousValue: r && r.uniqueViewers
-                        }, Te)), a.createElement(ye, n.__assign({
+                        }, xe)), a.createElement(ye, n.__assign({
                             key: "unique-chatters",
                             title: Object(o.d)("Unique Chatters", "StreamSummaryStatCard"),
                             currentValue: t.uniqueChatters,
@@ -1576,7 +1578,7 @@
                             title: Object(o.d)("Live Views", "StreamSummaryStatCard"),
                             currentValue: t.totalViewers,
                             previousValue: r && r.totalViewers
-                        }, xe)), a.createElement(ye, n.__assign({
+                        }, Te)), a.createElement(ye, n.__assign({
                             key: "new-followers",
                             title: Object(o.d)("New Followers", "StreamSummaryStatCard"),
                             currentValue: t.followersChange,
@@ -1606,8 +1608,8 @@
                 })(Re),
                 Ie = r("KYAw"),
                 Le = r("WyAD"),
-                Ne = r("OGSR"),
-                Fe = C.R.Purple12,
+                Fe = r("OGSR"),
+                Ne = C.R.Purple12,
                 Ve = function(e) {
                     function t() {
                         var t = null !== e && e.apply(this, arguments) || this;
@@ -1622,7 +1624,7 @@
                                                 maxRotation: 0,
                                                 minRotation: 0,
                                                 maxTicksLimit: 4,
-                                                fontColor: Fe,
+                                                fontColor: Ne,
                                                 fontSize: 10,
                                                 padding: 5
                                             },
@@ -1637,7 +1639,7 @@
                                             ticks: {
                                                 min: 0,
                                                 maxTicksLimit: 6,
-                                                fontColor: Fe,
+                                                fontColor: Ne,
                                                 fontSize: 10,
                                                 padding: 5
                                             },
@@ -1675,7 +1677,7 @@
                         }, t
                     }
                     return n.__extends(t, e), t.prototype.render = function() {
-                        return a.createElement(Ne.a, {
+                        return a.createElement(Fe.a, {
                             onCanvasReady: this.handleCanvasReady
                         })
                     }, t.prototype.componentDidUpdate = function() {
@@ -2036,7 +2038,6 @@
                         return a.createElement(C.Fb, {
                             className: "timeseries-panel__btn",
                             display: C.X.Flex,
-                            flexGrow: 1,
                             flexWrap: C.Ba.NoWrap
                         }, a.createElement(C.z, {
                             type: C.F.Text,
@@ -2114,12 +2115,17 @@
                         return this.props.streamSummary ? a.createElement(C.Fb, {
                             className: "timeseries-panel",
                             background: C.r.Accent,
-                            borderRadius: C.x.Small,
+                            borderRadius: C.x.Medium,
+                            display: C.X.Flex,
+                            flexDirection: C.Aa.Column,
                             margin: {
                                 bottom: 4
                             },
                             elevation: 1
                         }, a.createElement(C.Ya, {
+                            display: C.X.Flex,
+                            flexDirection: C.Aa.Column,
+                            flexGrow: 1,
                             padding: 2
                         }, a.createElement(C.Fb, {
                             margin: {
@@ -2132,8 +2138,9 @@
                             color: C.O.Overlay,
                             justifyContent: C.Xa.Between,
                             alignItems: C.f.Center
-                        }, a.createElement("div", null, a.createElement("div", {
-                            className: "timeseries-panel__select-wrap"
+                        }, a.createElement("div", null, a.createElement(C.Fb, {
+                            className: "timeseries-panel__select-wrap",
+                            borderRadius: C.x.Large
                         }, a.createElement(tt, {
                             onChange: this.handleStatChange
                         }, this.props.timeseriesStats.map(function(e, t) {
@@ -2168,6 +2175,7 @@
                             flexDirection: C.Aa.Column,
                             alignItems: C.f.Center,
                             alignContent: C.e.Center,
+                            flexGrow: 1,
                             justifyContent: C.Xa.Center,
                             fullHeight: !0
                         }, a.createElement(C.Ya, {
@@ -2504,18 +2512,21 @@
                         },
                         elevation: 1,
                         padding: 2,
+                        borderRadius: C.x.Large,
                         background: C.r.Base
                     }, a.createElement(C.Ya, {
                         display: C.X.Flex,
-                        alignItems: C.f.Center,
+                        alignItems: C.f.Center
+                    }, a.createElement(C.Fb, {
                         margin: {
-                            bottom: 1
-                        }
+                            right: 1
+                        },
+                        flexShrink: 0
                     }, a.createElement(C.q, {
                         src: mt,
                         alt: dt,
                         size: 30
-                    }), a.createElement(C.Ya, {
+                    })), a.createElement(C.Ya, {
                         margin: {
                             left: .5
                         }
@@ -2570,7 +2581,7 @@
                     }, t
                 }(a.Component),
                 bt = r("FXHi"),
-                vt = function(e) {
+                gt = function(e) {
                     var t = e.streamSummary,
                         r = e.topClips;
                     if (r.isLoading) return a.createElement(yt, null);
@@ -2578,7 +2589,7 @@
                     var n = Object(o.d)("View more clips", "StreamSummaryTopClipsPanelCTA");
                     return a.createElement(E.a, {
                         title: Object(o.d)("What were my top clips?", "StreamSummaryTopClipsPanel")
-                    }, a.createElement(gt, {
+                    }, a.createElement(vt, {
                         clipsAttrs: r
                     }), t ? a.createElement(w.a, {
                         message: n,
@@ -2587,7 +2598,7 @@
                         targetBlank: !0
                     }) : a.createElement("p", null, n))
                 },
-                gt = function(e) {
+                vt = function(e) {
                     if (e.clipsAttrs.isLoading)
                         for (var t = [], r = 0; r < 5; r++) t.push(a.createElement(C.Fb, {
                             padding: {
@@ -2653,7 +2664,7 @@
                         return null !== e && e.apply(this, arguments) || this
                     }
                     return n.__extends(t, e), t.prototype.render = function() {
-                        var e = this.props.channel.role === T.d.Affiliate || this.props.channel.role === T.d.Partner,
+                        var e = this.props.channel.role === x.d.Affiliate || this.props.channel.role === x.d.Partner,
                             t = this.props.sessionCursor.current ? [this.props.sessionCursor.current] : [];
                         return a.createElement(a.Fragment, null, this.props.sessionCursor.isLast && a.createElement(te, {
                             query: this.props.achievementProgressions,
@@ -2669,7 +2680,7 @@
                         }), a.createElement(A, null, a.createElement(k, null, a.createElement(at, {
                             streamSummary: this.props.sessionCursor.current,
                             timeseriesStats: st
-                        }), a.createElement(vt, {
+                        }), a.createElement(gt, {
                             streamSummary: this.props.sessionCursor.current,
                             topClips: this.props.topClips
                         }), a.createElement(jt, {
@@ -2682,7 +2693,7 @@
                         }), a.createElement(O, {
                             query: this.props.achievementProgressions,
                             streamSummaryCursor: this.props.sessionCursor
-                        }), a.createElement(v.a, {
+                        }), a.createElement(g.a, {
                             streamSessionsQuery: {
                                 isLoading: 0 === t.length,
                                 sessions: t
@@ -2748,8 +2759,8 @@
                         })
                     }, t
                 }(a.Component),
-                Tt = r("Map9"),
-                xt = r("YNx3"),
+                xt = r("Map9"),
+                Tt = r("YNx3"),
                 Dt = function(e) {
                     function t() {
                         return null !== e && e.apply(this, arguments) || this
@@ -2758,14 +2769,14 @@
                         o.p.setPageTitle(Object(o.d)("Stream Summary", "DashboardStreamSummaryPage"))
                     }, t.prototype.render = function() {
                         var e = this,
-                            t = T.c.fromChannelData(this.props.data);
+                            t = x.c.fromChannelData(this.props.data);
                         if (!t) return null;
                         if (!this.props.data.loading && this.props.data.channel) {
                             var r = this.props.userID === this.props.data.channel.id,
                                 n = this.props.data.channel.self && this.props.data.channel.self.isEditor;
                             if (!this.props.isStaff && !r && !n) return a.createElement(h.a, null)
                         }
-                        return a.createElement(a.Fragment, null, a.createElement(f.a, null, a.createElement(Tt.a, {
+                        return a.createElement(a.Fragment, null, a.createElement(f.a, null, a.createElement(xt.a, {
                             query: this.props.streamSummaryQuery,
                             summaryID: this.props.streamSummaryID,
                             getURLForStreamSummary: Y.d
@@ -2791,7 +2802,7 @@
                 autoReportInteractive: !0
             }), Object(l.a)({
                 location: m.PageviewLocation.DashboardStreamSummary
-            }), Object(c.a)(xt, {
+            }), Object(c.a)(Tt, {
                 options: function(e) {
                     return {
                         variables: {
@@ -3531,14 +3542,14 @@
                         b = Object(l.a)(h.map(function(e) {
                             return e.videoPlayInternalTwitchReferrers
                         })),
-                        v = Object(l.a)(h.map(function(e) {
+                        g = Object(l.a)(h.map(function(e) {
                             return e.videoPlayInternalChannelsReferrers
                         })),
-                        g = Object(l.a)(h.map(function(e) {
+                        v = Object(l.a)(h.map(function(e) {
                             return e.videoPlayExternalReferrers
                         })),
                         y = n.createElement(s.a, null);
-                    return (b.total || v.total || g.total) && (y = n.createElement(n.Fragment, null, n.createElement(m.Fb, {
+                    return (b.total || g.total || v.total) && (y = n.createElement(n.Fragment, null, n.createElement(m.Fb, {
                         borderBottom: !0,
                         padding: {
                             bottom: 1
@@ -3549,13 +3560,13 @@
                         translationFunc: i.b,
                         title: Object(a.d)("Twitch", "DashboardReferralPanel")
                     }), n.createElement(u.a, {
-                        referrals: v.items.slice(0, 3),
-                        total: v.total,
+                        referrals: g.items.slice(0, 3),
+                        total: g.total,
                         translationFunc: p,
                         title: Object(a.d)("Channels", "DashboardReferralPanel")
                     }), n.createElement(u.a, {
-                        referrals: g.items.slice(0, 3),
-                        total: g.total,
+                        referrals: v.items.slice(0, 3),
+                        total: v.total,
                         translationFunc: i.a,
                         title: Object(a.d)("External", "DashboardReferralPanel")
                     })), n.createElement(c.a, {
@@ -3832,6 +3843,19 @@
                     direction: s.bc.Left
                 }, l) : l
             }
+        },
+        d0JU: function(e, t, r) {
+            "use strict";
+            r.d(t, "a", function() {
+                return n
+            }), r.d(t, "b", function() {
+                return a
+            }), r.d(t, "c", function() {
+                return i
+            });
+            var n = "https://link.twitch.tv/ManagingRoles",
+                a = "https://static-cdn.jtvnw.net/badges/v1/3267646d-33f0-4b17-b3df-f923a41db1d0/2",
+                i = "https://static-cdn.jtvnw.net/badges/v1/b817aba4-fad8-49e2-b88a-7cc744dfa6ec/2"
         },
         eqL5: function(e, t, r) {},
         gi7w: function(e, t, r) {
@@ -4300,7 +4324,7 @@
                         refDelegate: e.refDelegate
                     }), a.createElement(d.a, {
                         achievement: e.achievement
-                    }, t ? void 0 : a.createElement(v, {
+                    }, t ? void 0 : a.createElement(g, {
                         achievement: e.achievement
                     })), a.createElement(l.Ya, {
                         position: l.kb.Absolute,
@@ -4333,7 +4357,7 @@
                         }
                     }, a.createElement("p", null, e.achievement.longDescription))))))
                 },
-                v = function(e) {
+                g = function(e) {
                     return 0 === e.achievement.progress ? a.createElement("span", null) : e.achievement.completedAt ? a.createElement(c.a, {
                         date: e.achievement.completedAt
                     }) : a.createElement(l.Fb, {
@@ -4343,7 +4367,7 @@
                         label: Object(s.f)(e.achievement.progressRatio, "percent")
                     }))
                 },
-                g = r("bF3S"),
+                v = r("bF3S"),
                 y = r("FuXV"),
                 S = r("eAwD"),
                 E = {
@@ -4480,7 +4504,7 @@
                     })
                 },
                 k = function(e) {
-                    return Object(p.b)() ? a.createElement(g.a, {
+                    return Object(p.b)() ? a.createElement(v.a, {
                         progress: e.progress,
                         progressCap: e.progressCap,
                         completedAt: e.completedAt

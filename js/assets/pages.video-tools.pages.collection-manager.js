@@ -1,5 +1,5 @@
 (window.webpackJsonp = window.webpackJsonp || []).push([
-    [176], {
+    [174], {
         "/+vS": function(e, t, n) {
             "use strict";
             n.d(t, "a", function() {
@@ -135,10 +135,10 @@
                 }(r.PureComponent),
                 E = n("9C/b"),
                 S = n("yR8l"),
-                I = n("8n0m"),
-                D = n("/+vS"),
+                D = n("8n0m"),
+                I = n("/+vS"),
                 O = n("lBKM"),
-                _ = function(e) {
+                w = function(e) {
                     function t() {
                         var t = null !== e && e.apply(this, arguments) || this;
                         return t.state = {
@@ -162,7 +162,7 @@
                                             case 1:
                                                 return o.trys.push([1, 3, , 4]), [4, this.props.createCollection(l)];
                                             case 2:
-                                                return c = o.sent().data, s = c.createCollection.collection, Object(I.b)({
+                                                return c = o.sent().data, s = c.createCollection.collection, Object(D.b)({
                                                     channelID: n,
                                                     playlistID: s.id,
                                                     userID: r,
@@ -188,7 +188,7 @@
                     return o.__extends(t, e), t.prototype.render = function() {
                         return r.createElement(k.Ja, null, r.createElement(k.P, {
                             cols: 4
-                        }, r.createElement(D.a, {
+                        }, r.createElement(I.a, {
                             disabled: !this.props.context,
                             onSubmit: this.onCreateButtonClickHandler,
                             callToAction: Object(a.d)("Create Collection", "CollectionCreator"),
@@ -196,9 +196,9 @@
                         })))
                     }, t
                 }(r.Component),
-                w = Object(s.compose)(Object(S.a)(O, {
+                _ = Object(s.compose)(Object(S.a)(O, {
                     name: "createCollection"
-                }))(Object(E.a)(_)),
+                }))(Object(E.a)(w)),
                 N = n("7BY1"),
                 x = n("3udf");
             ! function(e) {
@@ -228,7 +228,7 @@
                             margin: {
                                 bottom: 5
                             }
-                        }, r.createElement(w, {
+                        }, r.createElement(_, {
                             context: this.props.data.user && this.props.data.currentUser ? {
                                 ownerID: this.props.data.user.id,
                                 ownerLogin: this.props.match.params.creatorLogin,
@@ -347,7 +347,7 @@
                         return e.data.loading
                     }
                 }))(j),
-                M = function(e) {
+                F = function(e) {
                     return r.createElement(c.a, {
                         ownerLogin: e.match.params.creatorLogin,
                         permittedRoles: {
@@ -363,7 +363,7 @@
                     })
                 };
             n.d(t, "CollectionManagerPage", function() {
-                return M
+                return F
             })
         },
         "0+qQ": function(e, t, n) {
@@ -373,17 +373,21 @@
             });
             var i = n("q1tI"),
                 o = n("Ue10"),
-                r = (n("I4Mg"), function(e) {
-                    return i.createElement(o.Ya, {
-                        className: "manager-card__stats-container",
+                r = function(e) {
+                    return i.createElement(o.Fb, {
+                        color: o.O.Alt2,
+                        fontSize: o.Ca.Size6,
                         display: o.X.Flex,
-                        flexGrow: 0,
-                        flexShrink: 0,
-                        flexWrap: o.Ba.NoWrap,
                         flexDirection: o.Aa.Row,
-                        alignItems: o.f.Center
+                        flexWrap: o.Ba.NoWrap,
+                        alignItems: o.f.Center,
+                        margin: {
+                            top: .5
+                        },
+                        flexShrink: 0,
+                        flexGrow: 0
                     }, e.children)
-                })
+                }
         },
         "3udf": function(e, t) {
             var n = {
@@ -748,7 +752,7 @@
                 u = n("MxAq"),
                 d = n("JVvM"),
                 p = n("GnwI"),
-                m = n("I9oz"),
+                m = (n("HEef"), n("I9oz")),
                 f = n("LoeD"),
                 h = n("9afg"),
                 g = n("0+qQ"),
@@ -781,7 +785,7 @@
                         }, a.createElement(u.a, {
                             alt: t.title,
                             sizes: [{
-                                size: "160px"
+                                size: "150px"
                             }],
                             src: t.thumbnailURL,
                             srcSet: e,
@@ -790,15 +794,18 @@
                         })), a.createElement(v.a, {
                             onClick: this.navigateToEdit
                         }, a.createElement(C.W, {
-                            bold: !0,
-                            type: C.Wb.H4,
+                            type: C.Wb.H5,
                             color: C.O.Alt
-                        }, t.title), a.createElement(C.Zb, {
+                        }, t.title), a.createElement(g.a, null, a.createElement(C.Ya, {
+                            margin: {
+                                right: 1
+                            }
+                        }, a.createElement(C.Zb, {
                             direction: C.bc.Bottom,
                             label: Object(l.d)("Last Updated", "CollectionManagerCard")
                         }, a.createElement(C.W, {
                             color: C.O.Alt2
-                        }, Object(l.c)(new Date(t.updatedAt), "long")))), a.createElement(g.a, null, this.collectionStats(t)), this.renderCardMenu())
+                        }, Object(l.c)(new Date(t.updatedAt), "long")))), this.collectionStats(t))), this.renderCardMenu())
                     }, t.prototype.renderCardMenu = function() {
                         if (this.props.hideOptionsMenu || !this.props.collection.owner) return null;
                         var e = [{
@@ -910,7 +917,9 @@
                                 display: a.X.Flex,
                                 fullHeight: !0,
                                 justifyContent: a.Xa.Center,
-                                padding: 2
+                                margin: {
+                                    right: 1
+                                }
                             }, o.createElement(a.Eb, {
                                 icon: this.props.icon,
                                 label: this.props.label,
@@ -1035,7 +1044,8 @@
                 o = n("Ue10"),
                 r = function(e) {
                     return i.createElement(o.Va, {
-                        onClick: e.onClick
+                        onClick: e.onClick,
+                        type: o.Wa.Alpha
                     }, i.createElement(o.Ya, {
                         alignItems: o.f.Start,
                         display: o.X.Flex,
@@ -1049,6 +1059,7 @@
                     }, e.children))
                 }
         },
+        HEef: function(e, t, n) {},
         HNnW: function(e, t, n) {
             e.exports = n.p + "assets/missing-video-thumb-320x180-101fcbc1ff8445933141.png"
         },
@@ -1215,7 +1226,6 @@
                 }
             })(b)
         },
-        I4Mg: function(e, t, n) {},
         I9oz: function(e, t, n) {
             "use strict";
             var i = n("mrSG"),
@@ -1226,13 +1236,19 @@
                         return null !== e && e.apply(this, arguments) || this
                     }
                     return i.__extends(t, e), t.prototype.render = function() {
-                        return o.createElement(r.Fb, {
-                            background: r.r.Base,
+                        return o.createElement(r.Ya, {
+                            margin: {
+                                bottom: 1
+                            }
+                        }, o.createElement(r.Fb, {
+                            className: "video-card",
+                            "data-target": "video-card",
                             elevation: 1,
                             display: r.X.Flex,
+                            flexWrap: r.Ba.NoWrap,
                             flexDirection: r.Aa.Row,
                             alignItems: r.f.Stretch
-                        }, this.props.children)
+                        }, this.props.children))
                     }, t
                 }(o.Component);
             n.d(t, "a", function() {
@@ -1381,12 +1397,17 @@
                         fullHeight: !0,
                         display: a.X.Flex,
                         alignItems: a.f.Stretch
-                    }, o.createElement(a.z, {
+                    }, o.createElement(a.Va, {
                         disabled: 0 === this.props.options.length,
-                        icon: a.ub.More,
-                        onClick: this.menuButtonClickHandler,
-                        type: a.F.Text
-                    })), e)))
+                        type: a.Wa.Alpha,
+                        onClick: this.menuButtonClickHandler
+                    }, o.createElement(a.Ya, {
+                        padding: {
+                            x: 1
+                        }
+                    }, o.createElement(a.tb, {
+                        asset: a.ub.More
+                    })))), e)))
                 }, t.prototype.dropMenu = function() {
                     var e = this.props.options.map(function(e, t) {
                         return o.createElement(l, i.__assign({

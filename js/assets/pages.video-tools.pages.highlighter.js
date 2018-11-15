@@ -1,5 +1,5 @@
 (window.webpackJsonp = window.webpackJsonp || []).push([
-    [163], {
+    [161], {
         "0vlg": function(e, t) {
             var n = {
                 kind: "Document",
@@ -2603,7 +2603,7 @@
                     return i.__extends(t, e), t.prototype.componentDidMount = function() {
                         this.setUserIDs()
                     }, t.prototype.componentDidUpdate = function(e) {
-                        this.props.channelID !== e.channelID && this.setUserIDs()
+                        (this.props.channelID !== e.channelID || e.data.loading && !this.props.data.loading || e.selectedMarkerCreators !== this.props.selectedMarkerCreators || e.selectedClipCreators !== this.props.selectedClipCreators) && this.setUserIDs()
                     }, t.prototype.render = function() {
                         return r.createElement(F.Ya, {
                             className: "highlighter-pins"

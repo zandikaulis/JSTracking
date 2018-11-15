@@ -1,5 +1,5 @@
 (window.webpackJsonp = window.webpackJsonp || []).push([
-    [92], {
+    [90], {
         "+6S+": function(e, t, n) {},
         "+Mtq": function(e, t, n) {},
         "25vm": function(e, t, n) {},
@@ -429,7 +429,7 @@
                 I = n("ZS2+"),
                 w = n("cZKs"),
                 x = I.a.wrap(function() {
-                    return Promise.all([n.e(0), n.e(85)]).then(n.bind(null, "+Zk8"))
+                    return Promise.all([n.e(0), n.e(83)]).then(n.bind(null, "+Zk8"))
                 }, "GiftForm"),
                 P = function(e) {
                     function t(t) {
@@ -2099,16 +2099,16 @@
                     autoReportInteractive: !0
                 })(T),
                 L = c.a.wrap(function() {
-                    return n.e(190).then(n.bind(null, "eAh4"))
+                    return n.e(188).then(n.bind(null, "eAh4"))
                 }, "TwitchPrimeOffersPage"),
                 F = c.a.wrap(function() {
-                    return n.e(189).then(n.bind(null, "di4w"))
+                    return n.e(187).then(n.bind(null, "di4w"))
                 }, "TwitchPrimeFortniteSuccessPage"),
                 U = c.a.wrap(function() {
-                    return n.e(188).then(n.bind(null, "IyqF"))
+                    return n.e(186).then(n.bind(null, "IyqF"))
                 }, "TwitchPrimeFortniteLinkingPage"),
                 j = c.a.wrap(function() {
-                    return n.e(187).then(n.bind(null, "CinY"))
+                    return n.e(185).then(n.bind(null, "CinY"))
                 }, "TwitchPrimeFortnitePage"),
                 B = function(e) {
                     function t() {

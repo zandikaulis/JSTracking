@@ -19,7 +19,7 @@
                 S = t("EOHf"),
                 g = t("Ue10"),
                 h = (t("cvcW"), i.a.wrap(function() {
-                    return Promise.all([t.e(0), t.e(129)]).then(t.bind(null, "nRp3"))
+                    return Promise.all([t.e(0), t.e(127)]).then(t.bind(null, "nRp3"))
                 }, "SquadStream")),
                 q = function(e) {
                     function n() {

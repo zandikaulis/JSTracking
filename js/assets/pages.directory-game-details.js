@@ -1,5 +1,5 @@
 (window.webpackJsonp = window.webpackJsonp || []).push([
-    [142], {
+    [140], {
         "2rRr": function(e, t, n) {
             "use strict";
             var i, a = n("/MKj"),
@@ -1184,6 +1184,7 @@
                     }, t.prototype.render = function() {
                         return r.createElement(y.Ya, {
                             margin: {
+                                top: 2,
                                 bottom: 1
                             }
                         }, r.createElement(y.W, {
@@ -1440,7 +1441,11 @@
                             }),
                             d = this.renderSystemRequirements(a),
                             u = this.renderSystemRequirements(o);
-                        return r.createElement(S, null, r.createElement(y.Ja, {
+                        return r.createElement(S, null, r.createElement(y.Ya, {
+                            padding: {
+                                bottom: 4
+                            }
+                        }, r.createElement(y.Ja, {
                             gutterSize: y.Ka.Large
                         }, r.createElement(y.P, {
                             cols: {
@@ -1450,7 +1455,7 @@
                             }
                         }, r.createElement(y.Ya, {
                             margin: {
-                                top: 4
+                                top: 2
                             }
                         }, r.createElement(F, {
                             title: Object(l.d)("Description", "DirectoryGameDetailsPage")
@@ -1458,13 +1463,13 @@
                             source: t.description
                         }))), r.createElement(y.Ya, {
                             margin: {
-                                top: 4
+                                top: 2
                             }
                         }, r.createElement(F, {
                             title: Object(l.d)("Features", "DirectoryGameDetailsPage")
                         }), r.createElement(y.fc, null, r.createElement("ul", null, s))), r.createElement(y.Fb, {
                             margin: {
-                                top: 4
+                                top: 2
                             },
                             fontSize: y.Ca.Size6
                         }, r.createElement(F, {
@@ -1477,7 +1482,7 @@
                             }
                         }, r.createElement(y.Ya, {
                             margin: {
-                                top: 4
+                                top: 2
                             }
                         }, r.createElement(F, {
                             title: Object(l.d)("Hardware Requirements", "DirectoryGameDetailsPage")
@@ -1498,7 +1503,7 @@
                             bold: !0
                         }, Object(l.d)("Recommended", "DirectoryGameDetailsPage"))), u), r.createElement(y.Ya, {
                             margin: {
-                                top: 4
+                                top: 2
                             }
                         }, r.createElement(F, {
                             title: Object(l.d)("Language Support", "DirectoryGameDetailsPage")
@@ -1529,7 +1534,7 @@
                                 top: .5,
                                 bottom: .5
                             }
-                        })), c)))))
+                        })), c))))))
                     }, t.prototype.renderSystemRequirements = function(e) {
                         return e ? r.createElement(y.Ya, null, this.renderRow(Object(l.d)("OS:", "DirectoryGameDetailsPage"), e.osVersion), this.renderRow(Object(l.d)("Processor:", "DirectoryGameDetailsPage"), e.processor), this.renderRow(Object(l.d)("Memory:", "DirectoryGameDetailsPage"), e.ram), this.renderRow(Object(l.d)("Graphics Card:", "DirectoryGameDetailsPage"), e.videoCard), this.renderRow(Object(l.d)("DirectX:", "DirectoryGameDetailsPage"), e.directXVersion), this.renderRow(Object(l.d)("Hard Drive Space:", "DirectoryGameDetailsPage"), e.hardDriveSpace), this.renderRow(Object(l.d)("Other:", "DirectoryGameDetailsPage"), e.other)) : null
                     }, t.prototype.renderRow = function(e, t) {
