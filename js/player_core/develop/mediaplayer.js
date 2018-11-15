@@ -2852,6 +2852,25 @@ var ErrorType = exports.ErrorType = __webpack_require__(/*! ./error/type */ "./p
 var ErrorSource = exports.ErrorSource = __webpack_require__(/*! ./error/source */ "./platforms/web/js/error/source.js");
 var ProfileEvent = exports.Profile = exports.ProfileEvent = __webpack_require__(/*! ./event/profile */ "./platforms/web/js/event/profile.js");
 
+exports.isWasmSupported = typeof window.WebAssembly === 'object'
+&& typeof window.WebAssembly.instantiate === 'function';
+
+exports.canPlay = typeof MediaSource !== 'undefined'
+    && MediaSource.isTypeSupported('video/mp4; codecs="avc1.42E01E,mp4a.40.2"') 
+    && (navigator.appVersion || '').toLowerCase().indexOf('rv:11') === -1; // Can't play on IE11
+
+exports.createWorker = function (workerUrl, wasmUrl, wasmCache) {
+    // Resolve relative urls in worker based on worker url
+    var importFunction = `
+        var Module = {
+            WASM_BINARY_URL: '${wasmUrl}',
+            WASM_CACHE_MODE: ${wasmCache}
+        }
+        importScripts('${workerUrl}');
+    `;
+    return new Worker(URL.createObjectURL(new Blob([importFunction])));
+};
+
 // Chrome 63 and Opera have an issue (crbug.com/779962) that heavily throttle video in a
 // background tab while silent. So, we need to stop playback in that circumstance.
 var PAUSE_HIDDEN_SILENT_TAB = (Browser.chrome && Browser.major === 63) || Browser.opera;
@@ -2924,17 +2943,7 @@ var MediaPlayer = exports.MediaPlayer = function MediaPlayer(config, worker) {
 
 // Public interface
 
-MediaPlayer.createWorker = function (workerUrl, wasmUrl, wasmCache) {
-    // Resolve relative urls in worker based on worker url
-    var importFunction = `
-        var Module = {
-            WASM_BINARY_URL: '${wasmUrl}',
-            WASM_CACHE_MODE: ${wasmCache}
-        }
-        importScripts('${workerUrl}');
-    `;
-    return new Worker(URL.createObjectURL(new Blob([importFunction])));
-}
+MediaPlayer.createWorker = exports.createWorker;
 
 MediaPlayer.prototype.delete = function () {
     this._postMessage(WorkerMessage.DELETE);
@@ -3044,7 +3053,7 @@ MediaPlayer.prototype.getVideoBitRate = function () {
 }
 
 MediaPlayer.prototype.getVersion = function () {
-    return "2.6.33-8bd65ee9";
+    return "2.6.33-ad369c9f";
 }
 
 MediaPlayer.prototype.isLooping = function () {
@@ -4861,6 +4870,7 @@ Queue.prototype.empty = function () {
 /***/ (function(module, exports, __webpack_require__) {
 
 var map = {
+	"./abrall.json": "./settings/abrall.json",
 	"./abrdisp.json": "./settings/abrdisp.json",
 	"./abrlower.json": "./settings/abrlower.json",
 	"./abrprobe.json": "./settings/abrprobe.json",
@@ -4888,6 +4898,17 @@ webpackContext.keys = function webpackContextKeys() {
 webpackContext.resolve = webpackContextResolve;
 module.exports = webpackContext;
 webpackContext.id = "./settings sync recursive ^\\.\\/.*\\.json$";
+
+/***/ }),
+
+/***/ "./settings/abrall.json":
+/*!******************************!*\
+  !*** ./settings/abrall.json ***!
+  \******************************/
+/*! exports provided: abr, default */
+/***/ (function(module) {
+
+module.exports = {"abr":{"enableLowLatency":true}};
 
 /***/ }),
 
