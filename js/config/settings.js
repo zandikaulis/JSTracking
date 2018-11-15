@@ -1820,13 +1820,13 @@ window.__twilightSettings = {
         },
         "f52e0abb-ac6e-41d9-8a2b-71eb6941a3f2": {
             "name": "vod_mr_potato_head",
-            "v": 5147,
+            "v": 5152,
             "t": 1,
             "groups": [{
-                "weight": 20,
+                "weight": 0,
                 "value": "control"
             }, {
-                "weight": 80,
+                "weight": 100,
                 "value": "on"
             }]
         },
