@@ -602,11 +602,11 @@ window.__twilightSettings = {
         },
         "3c3a5d48-117f-43ac-8b35-091f13b2d479": {
             "name": "MediaPlayer Staff Version",
-            "v": 5134,
+            "v": 5157,
             "t": 1,
             "groups": [{
                 "weight": 100,
-                "value": "2.6.34+abrprobe"
+                "value": "2.7.0+abrall"
             }]
         },
         "3f03eebb-3cbb-4f7c-b64b-e1ed0115a773": {
@@ -1303,13 +1303,13 @@ window.__twilightSettings = {
         },
         "9f4dd7bf-2df6-4c26-834f-58b153f61329": {
             "name": "bits_new_user_cheer_v1.1",
-            "v": 5149,
+            "v": 5156,
             "t": 2,
             "groups": [{
-                "weight": 0,
+                "weight": 50,
                 "value": "on"
             }, {
-                "weight": 100,
+                "weight": 50,
                 "value": "off"
             }]
         },
