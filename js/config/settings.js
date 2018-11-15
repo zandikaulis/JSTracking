@@ -415,13 +415,13 @@ window.__twilightSettings = {
         },
         "20432910-585e-428d-be53-f5de0d93e2de": {
             "name": "french_vanilla",
-            "v": 5127,
+            "v": 5153,
             "t": 1,
             "groups": [{
-                "weight": 80,
+                "weight": 50,
                 "value": "control"
             }, {
-                "weight": 20,
+                "weight": 50,
                 "value": "variant_a"
             }]
         },

@@ -3044,7 +3044,7 @@ MediaPlayer.prototype.getVideoBitRate = function () {
 }
 
 MediaPlayer.prototype.getVersion = function () {
-    return "2.6.33-5b60199b";
+    return "2.6.33-8bd65ee9";
 }
 
 MediaPlayer.prototype.isLooping = function () {
@@ -3656,10 +3656,12 @@ var Promise = global.Promise || __webpack_require__(/*! promise-polyfill */ "./n
 // constants
 var UNKNOWN = -1;
 var NOT_SUPPORTED = 4; // HTMLMediaElement error code
+var ERR_BUFFERING_TIMEOUT = 101;
 
 // configurations
 var MIN_PLAYABLE_BUFFER = 0.1; // consider buffers smaller than this as empty
 var HEARTBEAT_INTERVAL = 2000; // Interval to check for stalled
+var BUFFERING_TIMEOUT = 120000;
 
 /**
  * MediaSink implements the "MediaSink" interface in javascript
@@ -4298,6 +4300,7 @@ function PlaybackMonitor(video, config) {
     this._fps = 0;
     this._lastDecodedFrames = 0;
     this._lastTimeUpdate = performance.now();
+    this._idleTimeout = -1;
 
     var addListener = function (type, handler) {
         this._video.addEventListener(type, handler);
@@ -4349,6 +4352,8 @@ PlaybackMonitor.prototype.endOfStream = function () {
     // We need to guarantee a final 'idle' is emitted, so we
     // don't buffer forever at the end of the stream
     this._idle = false;
+    clearTimeout(this._idleTimeout);
+    this._idleTimeout = -1;
 };
 
 /**
@@ -4370,6 +4375,9 @@ PlaybackMonitor.prototype._onVideoPause = function () {
 };
 
 PlaybackMonitor.prototype._onVideoTimeUpdate = function () {
+    clearTimeout(this._idleTimeout);
+    this._idleTimeout = -1;
+
     // Update framerate
     var decoded = getDecodedFrames(this._video);
     var now = performance.now();
@@ -4449,10 +4457,25 @@ PlaybackMonitor.prototype._updateIdle = function (buffered) {
         var ended = this._video.ended || this._video.duration -  this._video.currentTime < MIN_PLAYABLE_BUFFER;
         var idle = !ended && (remaining < MIN_PLAYABLE_BUFFER);
         if (idle && !this._idle) {
+            this._idleTimeout = setTimeout(this._onBufferingTimeout.bind(this), BUFFERING_TIMEOUT);
             this._onidle();
         }
         this._idle = idle;
     }
+};
+
+/**
+ * Buffering timeout handler. Emit onError with error codes for buffering timeout
+ */
+PlaybackMonitor.prototype._onBufferingTimeout = function () {
+    clearTimeout(this._idleTimeout);
+    this._idleTimeout = -1;
+
+    this._onerror({
+        value: ERR_BUFFERING_TIMEOUT,
+        code: ERR_BUFFERING_TIMEOUT,
+        message: 'Buffering timeout',
+    });
 };
 
 /**
