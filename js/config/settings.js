@@ -1301,6 +1301,18 @@ window.__twilightSettings = {
                 "value": "on"
             }]
         },
+        "9f4dd7bf-2df6-4c26-834f-58b153f61329": {
+            "name": "bits_new_user_cheer_v1.1",
+            "v": 5149,
+            "t": 2,
+            "groups": [{
+                "weight": 0,
+                "value": "on"
+            }, {
+                "weight": 100,
+                "value": "off"
+            }]
+        },
         "a451e1bd-07af-443f-ade7-9e7dcdf8e9a8": {
             "name": "pushy_device_token_pruning",
             "v": 4022,
