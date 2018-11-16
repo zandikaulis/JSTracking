@@ -1624,16 +1624,16 @@ window.__twilightSettings = {
         },
         "de013c6f-a800-45ee-9ab4-7965c405e3eb": {
             "name": "TWILIGHT_ARCHER",
-            "v": 5115,
+            "v": 5170,
             "t": 1,
             "groups": [{
                 "weight": 0,
                 "value": "moments"
             }, {
-                "weight": 50,
+                "weight": 100,
                 "value": "control"
             }, {
-                "weight": 50,
+                "weight": 0,
                 "value": "moments_with_images"
             }, {
                 "weight": 0,
