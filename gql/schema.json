@@ -46015,6 +46015,53 @@
             {
               "args": [
                 {
+                  "defaultValue": "5", 
+                  "description": null, 
+                  "name": "first", 
+                  "type": {
+                    "kind": "SCALAR", 
+                    "name": "Int", 
+                    "ofType": null
+                  }
+                }, 
+                {
+                  "defaultValue": null, 
+                  "description": null, 
+                  "name": "after", 
+                  "type": {
+                    "kind": "SCALAR", 
+                    "name": "Cursor", 
+                    "ofType": null
+                  }
+                }, 
+                {
+                  "defaultValue": null, 
+                  "description": null, 
+                  "name": "tagScope", 
+                  "type": {
+                    "kind": "NON_NULL", 
+                    "name": null, 
+                    "ofType": {
+                      "kind": "ENUM", 
+                      "name": "TagScope", 
+                      "ofType": null
+                    }
+                  }
+                }
+              ], 
+              "deprecationReason": null, 
+              "description": "Get all tags.", 
+              "isDeprecated": false, 
+              "name": "allTags", 
+              "type": {
+                "kind": "OBJECT", 
+                "name": "TagConnection", 
+                "ofType": null
+              }
+            }, 
+            {
+              "args": [
+                {
                   "defaultValue": null, 
                   "description": null, 
                   "name": "text", 
@@ -47038,7 +47085,7 @@
                 }
               ], 
               "deprecationReason": null, 
-              "description": "Fetch games in order of descending popularity.\nBy default returns 10.\nTags are an array of tag ID as optional filters for games.", 
+              "description": "Fetch games in order of descending popularity.\nBy default returns 10.\nTags are an array of ID as optional filters for games.", 
               "isDeprecated": false, 
               "name": "games", 
               "type": {
@@ -60855,6 +60902,115 @@
           "interfaces": [], 
           "kind": "OBJECT", 
           "name": "Tag", 
+          "possibleTypes": null
+        }, 
+        {
+          "description": "A paginated list of tags, and its metadata.", 
+          "enumValues": null, 
+          "fields": [
+            {
+              "args": [], 
+              "deprecationReason": null, 
+              "description": "The list of tags in this page.", 
+              "isDeprecated": false, 
+              "name": "edges", 
+              "type": {
+                "kind": "LIST", 
+                "name": null, 
+                "ofType": {
+                  "kind": "NON_NULL", 
+                  "name": null, 
+                  "ofType": {
+                    "kind": "OBJECT", 
+                    "name": "TagEdge", 
+                    "ofType": null
+                  }
+                }
+              }
+            }, 
+            {
+              "args": [], 
+              "deprecationReason": null, 
+              "description": "Information about this page of tags.", 
+              "isDeprecated": false, 
+              "name": "pageInfo", 
+              "type": {
+                "kind": "NON_NULL", 
+                "name": null, 
+                "ofType": {
+                  "kind": "OBJECT", 
+                  "name": "PageInfo", 
+                  "ofType": null
+                }
+              }
+            }
+          ], 
+          "inputFields": null, 
+          "interfaces": [], 
+          "kind": "OBJECT", 
+          "name": "TagConnection", 
+          "possibleTypes": null
+        }, 
+        {
+          "description": "An element in a paginated tags, and its metadata.", 
+          "enumValues": null, 
+          "fields": [
+            {
+              "args": [], 
+              "deprecationReason": null, 
+              "description": "Cursor represents the position of the current edge/node.", 
+              "isDeprecated": false, 
+              "name": "cursor", 
+              "type": {
+                "kind": "NON_NULL", 
+                "name": null, 
+                "ofType": {
+                  "kind": "SCALAR", 
+                  "name": "Cursor", 
+                  "ofType": null
+                }
+              }
+            }, 
+            {
+              "args": [], 
+              "deprecationReason": null, 
+              "description": "Node represents the extension for the current edge.", 
+              "isDeprecated": false, 
+              "name": "node", 
+              "type": {
+                "kind": "OBJECT", 
+                "name": "Tag", 
+                "ofType": null
+              }
+            }
+          ], 
+          "inputFields": null, 
+          "interfaces": [], 
+          "kind": "OBJECT", 
+          "name": "TagEdge", 
+          "possibleTypes": null
+        }, 
+        {
+          "description": "An enumeration on the different scope of a tag.", 
+          "enumValues": [
+            {
+              "deprecationReason": null, 
+              "description": "Tags that can be applied to all content types.", 
+              "isDeprecated": false, 
+              "name": "ALL"
+            }, 
+            {
+              "deprecationReason": null, 
+              "description": "Tags that can only be applied to the CATEGORY content type.", 
+              "isDeprecated": false, 
+              "name": "CATEGORY"
+            }
+          ], 
+          "fields": null, 
+          "inputFields": null, 
+          "interfaces": null, 
+          "kind": "ENUM", 
+          "name": "TagScope", 
           "possibleTypes": null
         }, 
         {
