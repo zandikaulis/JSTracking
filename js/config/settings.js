@@ -602,11 +602,11 @@ window.__twilightSettings = {
         },
         "3c3a5d48-117f-43ac-8b35-091f13b2d479": {
             "name": "MediaPlayer Staff Version",
-            "v": 5157,
+            "v": 5161,
             "t": 1,
             "groups": [{
                 "weight": 100,
-                "value": "2.7.0+abrall"
+                "value": "2.7.1+abrall"
             }]
         },
         "3f03eebb-3cbb-4f7c-b64b-e1ed0115a773": {
@@ -698,13 +698,13 @@ window.__twilightSettings = {
         },
         "47597570-dd4e-4996-85eb-86db164cae9c": {
             "name": "TWILIGHT_AML_RANKING_FOLLOWS",
-            "v": 5159,
+            "v": 5164,
             "t": 2,
             "groups": [{
-                "weight": 20,
+                "weight": 85,
                 "value": "control"
             }, {
-                "weight": 80,
+                "weight": 15,
                 "value": "treatment"
             }]
         },
@@ -1754,14 +1754,17 @@ window.__twilightSettings = {
         },
         "ec70bd08-dbc8-4f48-9f60-d035fec3eb20": {
             "name": "CVP Player Core 2.0 Mediaplayer Experiment Aug 2017",
-            "v": 5141,
+            "v": 5163,
             "t": 1,
             "groups": [{
                 "weight": 70,
                 "value": "2.6.33"
             }, {
-                "weight": 25,
+                "weight": 20,
                 "value": "2.6.33+abrprobe"
+            }, {
+                "weight": 5,
+                "value": "2.7.1+abrall"
             }, {
                 "weight": 5,
                 "value": "2.6.29"
