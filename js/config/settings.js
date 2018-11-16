@@ -1130,14 +1130,14 @@ window.__twilightSettings = {
         },
         "7ff6a29e-5681-45ed-ad66-46d35a9549bc": {
             "name": "Player Core NPM Experiment",
-            "v": 5171,
+            "v": 5172,
             "t": 1,
             "groups": [{
                 "weight": 50,
-                "value": "2.7.1"
+                "value": "player-core-base"
             }, {
                 "weight": 50,
-                "value": "2.7.101"
+                "value": "player-core-variant-a"
             }]
         },
         "842f8360-8948-42f2-a088-92e266724cc8": {
