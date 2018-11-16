@@ -1,5 +1,5 @@
 (window.webpackJsonp = window.webpackJsonp || []).push([
-    [220], {
+    [219], {
         "/ZC1": function(e, t, n) {
             "use strict";
             n.d(t, "a", function() {
@@ -80,55 +80,55 @@
             }), n.d(t, "t", function() {
                 return f
             }), n.d(t, "u", function() {
-                return b
-            }), n.d(t, "p", function() {
                 return h
+            }), n.d(t, "p", function() {
+                return b
             }), n.d(t, "w", function() {
                 return v
             }), n.d(t, "y", function() {
-                return _
+                return S
             }), n.d(t, "m", function() {
                 return E
             }), n.d(t, "d", function() {
-                return S
+                return _
             }), n.d(t, "c", function() {
                 return A
             }), n.d(t, "E", function() {
-                return C
-            }), n.d(t, "b", function() {
                 return y
-            }), n.d(t, "a", function() {
+            }), n.d(t, "b", function() {
                 return T
+            }), n.d(t, "a", function() {
+                return C
             }), n.d(t, "H", function() {
-                return I
-            }), n.d(t, "I", function() {
-                return P
-            }), n.d(t, "l", function() {
                 return O
+            }), n.d(t, "I", function() {
+                return I
+            }), n.d(t, "l", function() {
+                return P
             }), n.d(t, "n", function() {
                 return w
             }), n.d(t, "F", function() {
                 return D
             }), n.d(t, "G", function() {
-                return M
-            }), n.d(t, "M", function() {
                 return R
-            }), n.d(t, "s", function() {
+            }), n.d(t, "M", function() {
                 return U
+            }), n.d(t, "s", function() {
+                return M
             }), n.d(t, "z", function() {
                 return k
             }), n.d(t, "f", function() {
-                return x
-            }), n.d(t, "g", function() {
                 return G
+            }), n.d(t, "g", function() {
+                return x
             }), n.d(t, "A", function() {
                 return L
             }), n.d(t, "k", function() {
                 return B
             }), n.d(t, "r", function() {
-                return F
-            }), n.d(t, "x", function() {
                 return j
+            }), n.d(t, "x", function() {
+                return F
             }), n.d(t, "v", function() {
                 return N
             }), n.d(t, "q", function() {
@@ -136,7 +136,7 @@
             }), n.d(t, "C", function() {
                 return W
             }), n.d(t, "B", function() {
-                return z
+                return Y
             });
             var r = n("/7QA"),
                 a = n("0Log"),
@@ -182,11 +182,11 @@
                 return a.PubsubTopic.PayoutOnboardingEvents + "." + e
             }
 
-            function b(e) {
+            function h(e) {
                 return a.PubsubTopic.Presence + "." + e
             }
 
-            function h(e, t) {
+            function b(e, t) {
                 return a.PubsubTopic.ModerationActionsByUserAndChannel + "." + e + "." + t
             }
 
@@ -194,7 +194,7 @@
                 return a.PubsubTopic.Raid + "." + e
             }
 
-            function _(e) {
+            function S(e) {
                 return a.PubsubTopic.StreamChange + "." + e
             }
 
@@ -202,7 +202,7 @@
                 return a.PubsubTopic.Friendship + "." + e
             }
 
-            function S(e) {
+            function _(e) {
                 return a.PubsubTopic.ChannelBitsPinEvents + "." + e
             }
 
@@ -210,27 +210,27 @@
                 return a.PubsubTopic.BitsLeaderboardEvents + "." + e.id
             }
 
-            function C(e) {
+            function y(e) {
                 return a.PubsubTopic.UserBitsUpdates + "." + e
             }
 
-            function y() {
+            function T() {
                 return a.PubsubTopic.BitsCampaignEvents + ".updates"
             }
 
-            function T(e) {
+            function C(e) {
                 return a.PubsubTopic.ChannelBitsPinEvents + "." + e
             }
 
-            function I(e) {
+            function O(e) {
                 return a.PubsubTopic.UserPropertiesUpdates + "." + e
             }
 
-            function P(e) {
+            function I(e) {
                 return a.PubsubTopic.UserSubscribeEvents + "." + e
             }
 
-            function O(e) {
+            function P(e) {
                 return "follows." + e
             }
 
@@ -242,15 +242,15 @@
                 return a.PubsubTopic.CampaignUserEvents + "." + e
             }
 
-            function M(e) {
+            function R(e) {
                 return a.PubsubTopic.UserCommerceEvents + "." + e
             }
 
-            function R(e) {
+            function U(e) {
                 return a.PubsubTopic.Whispers + "." + e
             }
 
-            function U(e) {
+            function M(e) {
                 return a.PubsubTopic.OnsiteNotifications + "." + e
             }
 
@@ -258,11 +258,11 @@
                 return a.PubsubTopic.StreamChatRoom + "." + e
             }
 
-            function x(e) {
+            function G(e) {
                 return a.PubsubTopic.ChannelEventUpdates + "." + e
             }
 
-            function G(e) {
+            function x(e) {
                 return a.PubsubTopic.ChannelSquadUpdates + "." + e
             }
 
@@ -274,11 +274,11 @@
                 return a.PubsubTopic.CheerbombEventsTopic + "." + e
             }
 
-            function F(e) {
+            function j(e) {
                 return a.PubsubTopic.MysteryGift + "." + e
             }
 
-            function j(e) {
+            function F(e) {
                 return a.PubsubTopic.SquadUpdates + "." + e
             }
 
@@ -303,7 +303,7 @@
                 })
             }
 
-            function z(e) {
+            function Y(e) {
                 return r.l.subscribe({
                     topic: e.topic,
                     onMessage: function(t) {
@@ -384,56 +384,45 @@
                 m = n("GnwI"),
                 g = n("1mFg"),
                 f = n("coZW"),
-                b = n("dEJ+"),
-                h = n("/7QA"),
+                h = n("dEJ+"),
+                b = n("/7QA"),
                 v = n("cZKs"),
-                _ = n("GD6M"),
-                E = n("Ue10");
-            ! function(e) {
-                e[e.Success = 0] = "Success", e[e.PermissionsError = 1] = "PermissionsError", e[e.UnexpectedError = 2] = "UnexpectedError"
-            }(r || (r = {}));
-            var S = function(e) {
+                S = n("GD6M"),
+                E = n("Ue10"),
+                _ = function(e) {
                     function t() {
                         var t = null !== e && e.apply(this, arguments) || this;
                         return t.state = {
-                            game: null
+                            game: null,
+                            sendingRequest: !1
                         }, t.onGameSelect = function(e) {
                             var n = e[0];
-                            t.setState({
+                            n ? t.setState({
                                 game: {
                                     id: n._id,
                                     name: n.name,
                                     giantbomb_id: n.giantbomb_id
                                 }
+                            }) : t.setState({
+                                game: null
                             })
                         }, t.onSubmitClick = function() {
-                            null !== t.state.game && t.props.onSubmit(t.state.game)
+                            t.state.game && (t.setState({
+                                sendingRequest: !0
+                            }), t.props.onSubmit(t.state.game))
                         }, t
                     }
                     return a.__extends(t, e), t.prototype.render = function() {
-                        var e = Object(h.d)("If your game does not appear please go <x:link>here</x:link> to add your game", {
-                            "x:link": function(e) {
-                                return o.createElement("a", {
-                                    key: e,
-                                    href: "https://www.giantbomb.com/game/create/"
-                                }, e)
-                            }
-                        }, "DevAddGameModal");
                         return o.createElement(E.Ya, {
                             className: "dev-add-game-modal",
                             position: E.kb.Relative,
                             fullHeight: !0
                         }, o.createElement(E.Fb, {
                             background: E.r.Base,
-                            fullWidth: !0
-                        }, o.createElement(E.Ya, {
                             padding: 2,
-                            display: E.X.InlineBlock,
-                            position: E.kb.Relative,
-                            textAlign: E.Sb.Center,
+                            textAlign: E.Sb.Left,
                             fullWidth: !0
                         }, o.createElement(E.Fb, {
-                            textAlign: E.Sb.Left,
                             borderBottom: !0,
                             padding: {
                                 bottom: 1
@@ -445,81 +434,128 @@
                             type: E.Wb.H3,
                             color: E.O.Alt2,
                             fontSize: E.Ca.Size4
-                        }, Object(h.d)("Add Game", "DevAddGameModal"), " ")), o.createElement(E.Ya, {
+                        }, Object(b.d)("Find Game in Giantbomb", "DevAddGameModal"))), null === this.props.addGameStatus ? this.renderGameSearch() : this.renderResponseStatus()), o.createElement(v.a, null))
+                    }, t.prototype.renderGameSearch = function() {
+                        var e = Object(b.d)("If your game does not appear, please register it first in <x:link>www.giantbomb.com</x:link>.", {
+                            "x:link": function(e) {
+                                return o.createElement("a", {
+                                    key: e,
+                                    href: "https://www.giantbomb.com/game/create/"
+                                }, e)
+                            }
+                        }, "DevAddGameModal");
+                        return o.createElement(E.Ya, null, o.createElement(E.Ya, {
                             display: E.X.InlineBlock,
                             position: E.kb.Relative,
                             textAlign: E.Sb.Left
-                        }, o.createElement(E.W, null, Object(h.d)("Games", "DevAddGameModal")), o.createElement(E.W, {
+                        }, o.createElement(E.W, {
                             color: E.O.Alt2,
                             fontSize: E.Ca.Size7
                         }, e)), o.createElement(E.Fb, {
                             margin: {
                                 bottom: 1
                             }
-                        }, o.createElement(_.b, {
+                        }, o.createElement(S.b, {
                             limit: 10,
                             onGameSelect: this.onGameSelect
-                        })), null !== this.props.errorMessage && o.createElement(E.hb, a.__assign({}, function(e) {
-                            switch (e) {
-                                case r.Success:
-                                    return {
-                                        label: Object(h.d)("Success! Your game request will be approved within 48 hours.", "DevAddGameModal"),
-                                        type: E.ib.Success
-                                    };
-                                case r.PermissionsError:
-                                    return {
-                                        label: Object(h.d)("You lack permissions.", "DevAddGameModal"),
-                                        type: E.ib.Alert
-                                    };
-                                case r.UnexpectedError:
-                                    return {
-                                        label: Object(h.d)("Unexpected error, please try again.", "DevAddGameModal"),
-                                        type: E.ib.Alert
-                                    };
-                                default:
-                                    return {
-                                        label: Object(h.d)("Please try again.", "DevAddGameModal"),
-                                        type: E.ib.Alert
-                                    }
+                        })), o.createElement(E.Ya, null, o.createElement(E.z, {
+                            onClick: this.onSubmitClick,
+                            disabled: !this.state.game,
+                            state: this.state.sendingRequest ? E.E.Loading : E.E.Default
+                        }, Object(b.d)("Submit", "DevAddGameModal"))))
+                    }, t.prototype.renderResponseStatus = function() {
+                        var e = !1,
+                            t = "";
+                        switch (this.props.addGameStatus) {
+                            case r.Success:
+                                e = !0, t = Object(b.d)("Your game request will be approved within 48 hours.", "DevAddGameModal");
+                                break;
+                            case r.AlreadyOwnedByThisCompany:
+                                t = Object(b.d)("You already own this game.", "DevAddGameModal");
+                                break;
+                            case r.AlreadyOwnedByAnotherCompany:
+                                t = Object(b.d)("This game is already owned by another company. If you are the owner, please reach out to Twitch Support to claim ownership.", "DevAddGameModal");
+                                break;
+                            case r.PermissionsError:
+                                t = Object(b.d)("You lack permissions.", "DevAddGameModal");
+                                break;
+                            case r.UnexpectedError:
+                                t = Object(b.d)("Unexpected error, please try again.", "DevAddGameModal");
+                                break;
+                            default:
+                                t = Object(b.d)("Unknown response status.", "DevAddGameModal")
+                        }
+                        return o.createElement(E.Ya, {
+                            display: E.X.Flex,
+                            fullWidth: !0
+                        }, o.createElement(E.tb, {
+                            type: e ? E.vb.Success : E.vb.Warn,
+                            asset: e ? E.ub.NotificationSuccess : E.ub.NotificationError
+                        }), o.createElement(E.Ya, {
+                            fullWidth: !0,
+                            padding: {
+                                left: 1
                             }
-                        }(this.props.errorMessage))), o.createElement(E.Fb, {
-                            textAlign: E.Sb.Center
-                        }, o.createElement(E.z, {
-                            onClick: this.onSubmitClick
-                        }, Object(h.d)("Submit", "DevAddGameModal"))))), o.createElement(v.a, null))
+                        }, o.createElement(E.W, {
+                            type: E.Wb.Strong
+                        }, e ? Object(b.d)("Success", "DevAddGameModal") : Object(b.d)("Error", "DevAddGameModal")), o.createElement(E.W, null, t)))
                     }, t
                 }(o.Component),
                 A = Object(s.compose)(Object(m.b)("DevAddGameModal", {
                     autoReportInteractive: !0
-                }))(S);
-            var C, y = function(e) {
+                }))(_);
+            ! function(e) {
+                e[e.Success = 0] = "Success", e[e.AlreadyOwnedByThisCompany = 1] = "AlreadyOwnedByThisCompany", e[e.AlreadyOwnedByAnotherCompany = 2] = "AlreadyOwnedByAnotherCompany", e[e.PermissionsError = 3] = "PermissionsError", e[e.UnexpectedError = 4] = "UnexpectedError"
+            }(r || (r = {}));
+            var y, T = function(e) {
                     function t() {
                         var t = null !== e && e.apply(this, arguments) || this;
                         return t.state = {
-                            errorMessage: null
+                            addGameStatus: null
                         }, t.onAddGame = function(e) {
                             return a.__awaiter(t, void 0, void 0, function() {
-                                var t, n, o;
+                                var t, n;
                                 return a.__generator(this, function(a) {
                                     switch (a.label) {
                                         case 0:
                                             if (!this.props.company) return [2];
-                                            t = {
-                                                game_id: e.id
-                                            }, n = null, a.label = 1;
+                                            if (t = this.props.company.id, this.alreadyOwnsGameID(e.id)) return this.setState({
+                                                addGameStatus: r.AlreadyOwnedByThisCompany
+                                            }), [2];
+                                            a.label = 1;
                                         case 1:
-                                            return a.trys.push([1, 3, , 4]), [4, Object(g.a)(c.a + "/v5/rbac/companies/" + this.props.company.id + "/game-application", {
+                                            return a.trys.push([1, 3, , 4]), n = c.a + "/v5/rbac/companies/" + t + "/game-application", [4, Object(g.a)(n, {
                                                 method: "POST",
-                                                body: JSON.stringify(t)
+                                                body: JSON.stringify({
+                                                    game_id: e.id
+                                                })
                                             })];
                                         case 2:
-                                            return 200 === (o = a.sent()).status ? (n = r.Success, Object(f.d)(f.a.RegisteredGame, e.id.toString())) : n = 403 === o.status ? r.PermissionsError : r.UnexpectedError, [3, 4];
+                                            switch (a.sent().status) {
+                                                case 200:
+                                                    return Object(f.d)(f.a.RegisteredGame, e.id.toString()), this.setState({
+                                                        addGameStatus: r.Success
+                                                    }), [2];
+                                                case 409:
+                                                    return this.setState({
+                                                        addGameStatus: r.AlreadyOwnedByAnotherCompany
+                                                    }), [2];
+                                                case 403:
+                                                    return this.setState({
+                                                        addGameStatus: r.PermissionsError
+                                                    }), [2];
+                                                default:
+                                                    return this.setState({
+                                                        addGameStatus: r.UnexpectedError
+                                                    }), [2]
+                                            }
+                                            return [3, 4];
                                         case 3:
-                                            return a.sent(), n = r.UnexpectedError, [3, 4];
+                                            return a.sent(), this.setState({
+                                                addGameStatus: r.UnexpectedError
+                                            }), [2];
                                         case 4:
-                                            return this.setState({
-                                                errorMessage: n
-                                            }), [2]
+                                            return [2]
                                     }
                                 })
                             })
@@ -528,29 +564,33 @@
                     return a.__extends(t, e), t.prototype.render = function() {
                         return o.createElement(A, {
                             onSubmit: this.onAddGame,
-                            errorMessage: this.state.errorMessage
+                            addGameStatus: this.state.addGameStatus
+                        })
+                    }, t.prototype.alreadyOwnsGameID = function(e) {
+                        return !!this.props.alreadyOwnedGameIDs.find(function(t) {
+                            return t === e
                         })
                     }, t
                 }(o.Component),
-                T = Object(i.connect)(function(e) {
+                C = Object(i.connect)(function(e) {
                     return {
-                        company: Object(b.c)(e)
+                        company: Object(h.c)(e)
                     }
-                })(y),
-                I = n("uLRL"),
-                P = n("PZVp"),
-                O = n("/aPz"),
+                })(T),
+                O = n("uLRL"),
+                I = n("PZVp"),
+                P = n("/aPz"),
                 w = n("kRBY"),
                 D = n("Sejb");
             ! function(e) {
                 e[e.Success = 0] = "Success", e[e.UnexpectedError = 1] = "UnexpectedError", e[e.BadSizeError = 2] = "BadSizeError", e[e.NonImageError = 3] = "NonImageError", e[e.WrongFormatError = 4] = "WrongFormatError", e[e.TimeoutError = 5] = "TimeoutError", e[e.Uploading = 6] = "Uploading", e[e.ImageNotSelected = 7] = "ImageNotSelected"
-            }(C || (C = {}));
-            var M, R = n("/ZC1");
+            }(y || (y = {}));
+            var R, U = n("/ZC1");
             n("iYk3");
             ! function(e) {
                 e.Submit = "SUBMIT_SELECTOR", e.Status = "STATUS_MESSAGE", e.Instructions = "INSTRUCTIONS_MESSAGE", e.PreviewImage = "PreviewImage", e.UploadInfo = "UploadInfo"
-            }(M || (M = {}));
-            var U = ["image/jpeg", "image/jpg"],
+            }(R || (R = {}));
+            var M = ["image/jpeg", "image/jpg"],
                 k = function(e) {
                     function t() {
                         var t = null !== e && e.apply(this, arguments) || this;
@@ -563,8 +603,8 @@
                         }, t
                     }
                     return a.__extends(t, e), t.prototype.render = function() {
-                        var e = Object(h.d)("Submit", "DevEditBoxArtModal"),
-                            t = Object(h.d)("The image must be a 600px by 800px, JPEG format, without developer, platform, or rating logos.", "DevEditBoxArtModal");
+                        var e = Object(b.d)("Submit", "DevEditBoxArtModal"),
+                            t = Object(b.d)("The image must be a 600px by 800px, JPEG format, without developer, platform, or rating logos.", "DevEditBoxArtModal");
                         return o.createElement(E.Ya, {
                             className: "dev-edit-box-art-modal",
                             position: E.kb.Relative,
@@ -592,7 +632,7 @@
                             type: E.Wb.H3,
                             color: E.O.Alt2,
                             fontSize: E.Ca.Size4
-                        }, Object(h.d)("Edit Boxart for {gameName}", {
+                        }, Object(b.d)("Edit Boxart for {gameName}", {
                             gameName: this.props.gameName
                         }, "DevEditBoxArtModal"), " ")), o.createElement(E.Ya, {
                             className: "dev-edit-box-art-modal__upload-container",
@@ -607,86 +647,86 @@
                             display: E.X.InlineBlock,
                             position: E.kb.Relative,
                             textAlign: E.Sb.Center
-                        }, o.createElement(R.a, {
-                            allowedFileTypes: U,
+                        }, o.createElement(U.a, {
+                            allowedFileTypes: M,
                             onFilesSubmitted: this.props.onImageInputChange
-                        }, "" === this.props.imagePreviewURL && G()), "" !== this.props.imagePreviewURL && x(this.props.imagePreviewURL))), o.createElement(E.Fb, {
-                            "data-test-selector": M.Instructions,
+                        }, "" === this.props.imagePreviewURL && x()), "" !== this.props.imagePreviewURL && G(this.props.imagePreviewURL))), o.createElement(E.Fb, {
+                            "data-test-selector": R.Instructions,
                             fontSize: E.Ca.Size6,
                             position: E.kb.Relative,
                             textAlign: E.Sb.Center,
                             className: "profile-edit__status-message"
                         }, t), o.createElement(E.Fb, {
-                            "data-test-selector": M.Status,
+                            "data-test-selector": R.Status,
                             fontSize: E.Ca.Size4,
                             position: E.kb.Relative,
                             textAlign: E.Sb.Center,
                             className: "profile-edit__status-message"
                         }, null !== this.props.statusMessage && o.createElement(E.hb, a.__assign({}, function(e) {
                             switch (e) {
-                                case C.Success:
+                                case y.Success:
                                     return {
-                                        label: Object(h.d)("Success! It will take time for boxart to update across site.", "DevEditBoxArt"),
+                                        label: Object(b.d)("Success! It will take time for boxart to update across site.", "DevEditBoxArt"),
                                         type: E.ib.Success
                                     };
-                                case C.UnexpectedError:
+                                case y.UnexpectedError:
                                     return {
-                                        label: Object(h.d)("Unexpected error, please try again.", "DevEditBoxArt"),
+                                        label: Object(b.d)("Unexpected error, please try again.", "DevEditBoxArt"),
                                         type: E.ib.Alert
                                     };
-                                case C.BadSizeError:
+                                case y.BadSizeError:
                                     return {
-                                        label: Object(h.d)("Image must be 600px by 800px.", "DevEditBoxArt"),
+                                        label: Object(b.d)("Image must be 600px by 800px.", "DevEditBoxArt"),
                                         type: E.ib.Alert
                                     };
-                                case C.NonImageError:
+                                case y.NonImageError:
                                     return {
-                                        label: Object(h.d)("You must upload an image.", "DevEditBoxArt"),
+                                        label: Object(b.d)("You must upload an image.", "DevEditBoxArt"),
                                         type: E.ib.Alert
                                     };
-                                case C.WrongFormatError:
+                                case y.WrongFormatError:
                                     return {
-                                        label: Object(h.d)("You must select a valid image type.", "DevEditBoxArt"),
+                                        label: Object(b.d)("You must select a valid image type.", "DevEditBoxArt"),
                                         type: E.ib.Alert
                                     };
-                                case C.TimeoutError:
+                                case y.TimeoutError:
                                     return {
-                                        label: Object(h.d)("Upload timed-out. Please try again.", "DevEditBoxArt"),
+                                        label: Object(b.d)("Upload timed-out. Please try again.", "DevEditBoxArt"),
                                         type: E.ib.Alert
                                     };
-                                case C.Uploading:
+                                case y.Uploading:
                                     return {
-                                        label: Object(h.d)("Uploading...", "DevEditBoxArt"),
+                                        label: Object(b.d)("Uploading...", "DevEditBoxArt"),
                                         type: E.ib.Brand
                                     };
-                                case C.ImageNotSelected:
+                                case y.ImageNotSelected:
                                     return {
-                                        label: Object(h.d)("Select a image first.", "DevEditBoxArt"),
+                                        label: Object(b.d)("Select a image first.", "DevEditBoxArt"),
                                         type: E.ib.Alert
                                     };
                                 default:
                                     return {
-                                        label: Object(h.d)("Please try again.", "DevEditBoxArt"),
+                                        label: Object(b.d)("Please try again.", "DevEditBoxArt"),
                                         type: E.ib.Alert
                                     }
                             }
                         }(this.props.statusMessage)))), o.createElement(E.z, {
-                            "data-test-selector": M.Submit,
+                            "data-test-selector": R.Submit,
                             onClick: this.submitForm
                         }, e))), o.createElement(v.a, null))
                     }, t
                 }(o.Component),
-                x = function(e) {
+                G = function(e) {
                     return o.createElement(E.Ya, {
-                        "data-test-selector": M.PreviewImage,
+                        "data-test-selector": R.PreviewImage,
                         className: "dev-edit-box-art-modal__image-preview"
                     }, o.createElement("img", {
                         src: "" + e
                     }))
                 },
-                G = function() {
+                x = function() {
                     return o.createElement(E.Ya, {
-                        "data-test-selector": M.UploadInfo,
+                        "data-test-selector": R.UploadInfo,
                         className: "dev-edit-box-art-modal__upload-info"
                     }, o.createElement(E.Ya, null, o.createElement(E.tb, {
                         asset: E.ub.Plus,
@@ -697,7 +737,7 @@
                         type: E.Wb.H3,
                         color: E.O.Alt2,
                         fontSize: E.Ca.Size4
-                    }, Object(h.d)("Upload Boxart", "DevEditBoxArtModal")))
+                    }, Object(b.d)("Upload Boxart", "DevEditBoxArtModal")))
                 };
             var L, B = function(e) {
                     function t() {
@@ -708,10 +748,10 @@
                             statusMessage: null,
                             imageUploaded: !1,
                             currentImage: null
-                        }, t.logger = h.k.withCategory("DevEditBoxArtModal"), t.onImageInputChange = function(e) {
+                        }, t.logger = b.k.withCategory("DevEditBoxArtModal"), t.onImageInputChange = function(e) {
                             var n;
                             if (null === e || e.length < 1) t.setState({
-                                statusMessage: C.ImageNotSelected
+                                statusMessage: y.ImageNotSelected
                             });
                             else {
                                 n = e[0];
@@ -724,7 +764,7 @@
                                     var n = null,
                                         a = new Image;
                                     a.onload = function() {
-                                        800 === a.height && 600 === a.width || (n = C.BadSizeError), t.setState({
+                                        800 === a.height && 600 === a.width || (n = y.BadSizeError), t.setState({
                                             statusMessage: n
                                         })
                                     }, a.src = e, t.setState({
@@ -740,10 +780,10 @@
                                     switch (i.label) {
                                         case 0:
                                             if (!this.state.currentImage) return this.setState({
-                                                statusMessage: C.ImageNotSelected
+                                                statusMessage: y.ImageNotSelected
                                             }), [2];
                                             this.setState({
-                                                statusMessage: C.Uploading
+                                                statusMessage: y.Uploading
                                             }), i.label = 1;
                                         case 1:
                                             return i.trys.push([1, 3, , 4]), [4, function(e, t, n) {
@@ -751,7 +791,7 @@
                                                     return a.__generator(this, function(r) {
                                                         switch (r.label) {
                                                             case 0:
-                                                                return [4, fetch(h.a.apiBaseURL + "/v5/piper/boxart/upload/" + e + "?client_id=" + h.a.authSettings.clientID + "&api_version=" + h.a.defaultAPIVersion + "&format=" + n, {
+                                                                return [4, fetch(b.a.apiBaseURL + "/v5/piper/boxart/upload/" + e + "?client_id=" + b.a.authSettings.clientID + "&api_version=" + b.a.defaultAPIVersion + "&format=" + n, {
                                                                     method: "GET",
                                                                     headers: {
                                                                         Authorization: "OAuth " + t
@@ -767,11 +807,11 @@
                                             return e = i.sent(), t = e.upload.url, n = e.upload.upload_id, [3, 4];
                                         case 3:
                                             return r = i.sent(), this.logger.error(r, "Request for upload ID failed to get expected response from server."), this.setState({
-                                                statusMessage: C.UnexpectedError
+                                                statusMessage: y.UnexpectedError
                                             }), [2];
                                         case 4:
-                                            return this.unsubscribe = h.l.subscribe({
-                                                topic: Object(O.D)(n),
+                                            return this.unsubscribe = b.l.subscribe({
+                                                topic: Object(P.D)(n),
                                                 success: function() {
                                                     try {
                                                         ! function(e, t) {
@@ -784,7 +824,7 @@
                                                         }(t, o.state.currentImage)
                                                     } catch (e) {
                                                         o.logger.error(e, "Dev Box Art Upload failed."), o.unsubscribe(), o.setState({
-                                                            statusMessage: C.UnexpectedError,
+                                                            statusMessage: y.UnexpectedError,
                                                             imagePreviewURL: "",
                                                             imageFormat: ""
                                                         })
@@ -795,7 +835,7 @@
                                                 },
                                                 failure: function() {
                                                     o.setState({
-                                                        statusMessage: C.UnexpectedError,
+                                                        statusMessage: y.UnexpectedError,
                                                         imagePreviewURL: ""
                                                     })
                                                 },
@@ -804,28 +844,28 @@
                                                         clearTimeout(o.timeoutHandle);
                                                         var t = null;
                                                         switch (e.status) {
-                                                            case P.a.POSTPROCESS_COMPLETE:
-                                                            case P.a.COMPLETE:
-                                                                t = C.Success;
+                                                            case I.a.POSTPROCESS_COMPLETE:
+                                                            case I.a.COMPLETE:
+                                                                t = y.Success;
                                                                 break;
-                                                            case P.a.WIDTH_VALIDATION_FAILED:
-                                                            case P.a.HEIGHT_VALIDATION_FAILED:
-                                                                t = C.BadSizeError;
+                                                            case I.a.WIDTH_VALIDATION_FAILED:
+                                                            case I.a.HEIGHT_VALIDATION_FAILED:
+                                                                t = y.BadSizeError;
                                                                 break;
-                                                            case P.a.IS_IMAGE_VALIDATION_FAILED:
-                                                                t = C.NonImageError;
+                                                            case I.a.IS_IMAGE_VALIDATION_FAILED:
+                                                                t = y.NonImageError;
                                                                 break;
-                                                            case P.a.IMAGE_FORMAT_VALIDATION_FAILED:
-                                                                t = C.WrongFormatError;
+                                                            case I.a.IMAGE_FORMAT_VALIDATION_FAILED:
+                                                                t = y.WrongFormatError;
                                                                 break;
                                                             default:
-                                                                t = C.UnexpectedError
+                                                                t = y.UnexpectedError
                                                         }
                                                         o.unsubscribe && o.unsubscribe();
                                                         var r = "";
                                                         if (o.props.game.id && (r = o.props.game.id.toString()), o.setState({
                                                                 statusMessage: t
-                                                            }), t === C.Success) return Object(f.d)(f.a.UploadedBoxArt, r), void o.setState({
+                                                            }), t === y.Success) return Object(f.d)(f.a.UploadedBoxArt, r), void o.setState({
                                                             imageUploaded: !0
                                                         });
                                                         Object(f.d)(f.a.BoxArtUploadFailed, r), o.setState({
@@ -842,7 +882,7 @@
                             })
                         }, t.handlePubSubTimeout = function() {
                             t.unsubscribe(), t.setState({
-                                statusMessage: C.TimeoutError
+                                statusMessage: y.TimeoutError
                             })
                         }, t
                     }
@@ -858,12 +898,12 @@
                         })
                     }, t
                 }(o.Component),
-                F = Object(i.connect)(function(e) {
+                j = Object(i.connect)(function(e) {
                     return {
                         authToken: Object(w.a)(e)
                     }
                 })(B),
-                j = (n("Owpq"), {
+                F = (n("Owpq"), {
                     QuarterlyInsightsButton: "QUARTERLY_INSIGHTS_BUTTON",
                     LatestReportButton: "LATEST_REPORT_BUTTON",
                     BoxArtButton: "BOX_ART_BUTTON"
@@ -881,11 +921,11 @@
                                     bottom: 1
                                 }
                             }, o.createElement(E.z, {
-                                "data-test-selector": j.LatestReportButton,
+                                "data-test-selector": F.LatestReportButton,
                                 onClick: Object(f.c)(f.a.GameCSVExport, t.props.game.id.toString()),
                                 linkTo: t.props.report,
                                 fullWidth: !0
-                            }, Object(h.d)("Export Daily CSV", "DevGameCard"))) : null
+                            }, Object(b.d)("Export Daily CSV", "DevGameCard"))) : null
                         }, t.onImageLoadError = function(e) {
                             e.preventDefault(), t.setState({
                                 imageLoadError: !0
@@ -897,7 +937,7 @@
                     return a.__extends(t, e), t.prototype.componentDidMount = function() {
                         this.props.latencyTracking.reportInteractive()
                     }, t.prototype.render = function() {
-                        var e = Object(h.d)("{gameName} Box Art", {
+                        var e = Object(b.d)("{gameName} Box Art", {
                             gameName: this.props.game.name
                         }, "DevGameCard");
                         return o.createElement(E.Ya, {
@@ -927,7 +967,7 @@
                             attachTop: !0,
                             attachRight: !0
                         }, o.createElement(E.A, {
-                            "data-test-selector": j.BoxArtButton,
+                            "data-test-selector": F.BoxArtButton,
                             overlay: !0,
                             icon: E.ub.Edit,
                             onClick: this.onEditBoxArtClick
@@ -943,11 +983,11 @@
                                 bottom: 1
                             }
                         }, o.createElement(E.z, {
-                            "data-test-selector": j.QuarterlyInsightsButton,
+                            "data-test-selector": F.QuarterlyInsightsButton,
                             onClick: Object(f.c)(f.a.ViewQuarterlyInsights, this.props.game.id.toString()),
                             linkTo: "/insights/games/" + this.props.game.id,
                             fullWidth: !0
-                        }, Object(h.d)("View Quarterly Insights", "DevGameCard")))))
+                        }, Object(b.d)("View Quarterly Insights", "DevGameCard")))))
                     }, t.prototype.imageSrc = function() {
                         return this.state.imageLoadError ? "https://static-cdn.jtvnw.net/ttv-boxart/404_boxart.jpg" : "https://twitch-gds-boxart-aws.s3-us-west-2.amazonaws.com/" + encodeURI(this.props.game.name) + ".jpg"
                     }, t
@@ -971,7 +1011,13 @@
                                 game: e
                             })
                         }, t.onAddGameClick = function() {
-                            Object(f.d)(f.a.AddGameStarted), t.props.showAddGameModal({})
+                            Object(f.d)(f.a.AddGameStarted);
+                            var e = t.props.games.map(function(e) {
+                                return e.id
+                            });
+                            t.props.showAddGameModal({
+                                alreadyOwnedGameIDs: e
+                            })
                         }, t
                     }
                     return a.__extends(t, e), t.prototype.render = function() {
@@ -990,7 +1036,7 @@
                         }, o.createElement(E.Ya, null, o.createElement(E.W, {
                             type: E.Wb.P,
                             fontSize: E.Ca.Size5
-                        }, Object(h.d)("<x:bold>Developer Analytics:</x:bold> CSV data includes select viewer and broadcast data by day for each game across Twitch. The <x:link>Twitch API</x:link> also provides you access to this data.", {
+                        }, Object(b.d)("<x:bold>Developer Analytics:</x:bold> CSV data includes select viewer and broadcast data by day for each game across Twitch. The <x:link>Twitch API</x:link> also provides you access to this data.", {
                             "x:bold": function(e) {
                                 return o.createElement("strong", {
                                     key: "devSiteDeveloperAnalytics"
@@ -1006,7 +1052,7 @@
                         }, "DevApps")), o.createElement(E.W, {
                             type: E.Wb.P,
                             fontSize: E.Ca.Size5
-                        }, Object(h.d)("If the Export CSV Data button does not appear, the game does not meet the minutes-watched threshold for report generation. <x:link>Learn more</x:link>.", {
+                        }, Object(b.d)("If the Export CSV Data button does not appear, the game does not meet the minutes-watched threshold for report generation. <x:link>Learn more</x:link>.", {
                             "x:link": function(e) {
                                 return o.createElement("a", {
                                     key: "devSiteLearnMore",
@@ -1022,17 +1068,17 @@
                             "data-test-selector": L.AddGame,
                             icon: E.ub.Plus,
                             onClick: this.onAddGameClick
-                        }, Object(h.d)("Add game", "DevApps")))))), o.createElement(E.Ya, null, o.createElement(E.cc, {
+                        }, Object(b.d)("Add game", "DevApps")))))), o.createElement(E.Ya, null, o.createElement(E.cc, {
                             gutterSize: E.ec.Large,
                             childWidth: E.dc.Medium,
                             placeholderItems: 5
                         }, this.renderGameCards()))))
                     }, t
                 }(o.Component),
-                z = Object(m.b)("DevGamesComponent", {
+                Y = Object(m.b)("DevGamesComponent", {
                     autoReportInteractive: !0
                 })(W);
-            var Y = function(e) {
+            var z = function(e) {
                     function t() {
                         var t = null !== e && e.apply(this, arguments) || this;
                         return t.state = {
@@ -1134,7 +1180,7 @@
                             })
                         })
                     }, t.prototype.render = function() {
-                        return o.createElement(z, {
+                        return o.createElement(Y, {
                             games: this.state.games,
                             reportsByGame: this.state.reportsByGame,
                             showEditBoxArtModal: this.props.showEditBoxArtModal,
@@ -1142,7 +1188,7 @@
                         })
                     }, t
                 }(o.Component),
-                q = Object(s.compose)(Object(I.a)(), Object(m.b)("DevGamesPage", {
+                q = Object(s.compose)(Object(O.a)(), Object(m.b)("DevGamesPage", {
                     autoReportInteractive: !0,
                     destination: l.a.DevSiteGames
                 }), Object(u.a)({
@@ -1151,14 +1197,14 @@
                     return Object(s.bindActionCreators)({
                         showEditBoxArtModal: function(e) {
                             var t = a.__rest(e, []);
-                            return Object(d.d)(F, t)
+                            return Object(d.d)(j, t)
                         },
                         showAddGameModal: function(e) {
                             var t = a.__rest(e, []);
-                            return Object(d.d)(T, t)
+                            return Object(d.d)(C, t)
                         }
                     }, e)
-                }))(Y);
+                }))(z);
             n.d(t, "DevGamesPage", function() {
                 return q
             })
@@ -1207,31 +1253,31 @@
                 p = 100,
                 m = "GAME_SEARCH_INPUT_SELECTOR",
                 g = function(e) {
-                    function t(t) {
-                        var n = e.call(this, t) || this;
-                        return n.state = {
+                    function t() {
+                        var t = null !== e && e.apply(this, arguments) || this;
+                        return t.state = {
                             searchTerm: "",
                             showSuggestions: !1,
                             games: []
-                        }, n.onGameSearch = function(e) {
-                            e.preventDefault(), n.setState({
+                        }, t.onGameSearch = function(e) {
+                            e.preventDefault(), t.setState({
                                 searchTerm: e.target.value,
                                 showSuggestions: e.target.value.length > 0
                             }, function() {
-                                n.inputTimer && (clearTimeout(n.inputTimer), n.inputTimer = 0), n.inputTimer = setTimeout(function() {
-                                    return n.props.onInputChange(n.state.searchTerm)
+                                t.inputTimer && (clearTimeout(t.inputTimer), t.inputTimer = 0), t.inputTimer = setTimeout(function() {
+                                    return t.props.onInputChange(t.state.searchTerm)
                                 }, p)
                             })
-                        }, n.onClickOut = function() {
-                            n.setState({
+                        }, t.onClickOut = function() {
+                            t.setState({
                                 showSuggestions: !1
                             })
-                        }, n.onFocus = function(e) {
-                            e.preventDefault(), n.props.gameSuggestions.length && n.setState({
+                        }, t.onFocus = function(e) {
+                            e.preventDefault(), t.props.gameSuggestions.length && t.setState({
                                 showSuggestions: !0
                             })
-                        }, n.onLabelClick = function(e) {
-                            n.setState(function(t) {
+                        }, t.onLabelClick = function(e) {
+                            t.setState(function(t) {
                                 var n = t.games.findIndex(function(t) {
                                     return t._id === e._id
                                 });
@@ -1240,30 +1286,30 @@
                                 } : {
                                     games: t.games
                                 }
-                            }, n.reportGames)
-                        }, n.renderSuggestions = function() {
-                            return n.props.gameSuggestions.map(function(e, t) {
+                            }, t.reportGames)
+                        }, t.renderSuggestions = function() {
+                            return t.props.gameSuggestions.map(function(e, n) {
                                 return a.createElement(d, {
-                                    key: t,
+                                    key: n,
                                     game: e,
-                                    onClick: n.onSuggestionClick
+                                    onClick: t.onSuggestionClick
                                 })
                             })
-                        }, n.renderSelections = function() {
-                            return n.state.games.map(function(e, t) {
+                        }, t.renderSelections = function() {
+                            return t.state.games.map(function(e) {
                                 return a.createElement(u.Ya, {
+                                    key: e._id,
                                     display: u.X.InlineBlock,
                                     padding: {
                                         right: .5
                                     }
                                 }, a.createElement(l, {
                                     game: e,
-                                    key: t,
-                                    onLabelRemove: n.onLabelClick
+                                    onLabelRemove: t.onLabelClick
                                 }))
                             })
-                        }, n.onSuggestionClick = function(e) {
-                            n.props.multi ? n.setState(function(t) {
+                        }, t.onSuggestionClick = function(e) {
+                            t.props.multi ? t.setState(function(t) {
                                 return t.games.some(function(t) {
                                     return t._id === e._id
                                 }) ? {
@@ -1275,14 +1321,14 @@
                                     showSuggestions: !1,
                                     searchTerm: ""
                                 }
-                            }, n.reportGames) : n.setState({
+                            }, t.reportGames) : t.setState({
                                 games: [e],
                                 showSuggestions: !1,
                                 searchTerm: ""
-                            }, n.reportGames)
-                        }, n.reportGames = function() {
-                            n.props.onGameSelect(n.state.games)
-                        }, n.state.games = t.defaultGames || [], n
+                            }, t.reportGames)
+                        }, t.reportGames = function() {
+                            t.props.onGameSelect(t.state.games)
+                        }, t
                     }
                     return r.__extends(t, e), t.prototype.componentWillReceiveProps = function(e) {
                         var t = e.gameSuggestions.length !== this.props.gameSuggestions.length;
@@ -1294,9 +1340,7 @@
                             }
                         })
                     }, t.prototype.render = function() {
-                        var e = this.renderSuggestions(),
-                            t = this.renderSelections(),
-                            n = !this.props.multi && this.state.games.length > 0;
+                        var e = 0 === this.state.games.length || this.props.multi;
                         return a.createElement(u.Ya, null, a.createElement(i.a, {
                             onClickOut: this.onClickOut
                         }, a.createElement(u.Ya, {
@@ -1304,73 +1348,70 @@
                             padding: {
                                 bottom: 1
                             }
-                        }, a.createElement(u.Sa, {
+                        }, e && a.createElement(u.Sa, {
                             "data-test-selector": m,
                             value: this.state.searchTerm,
                             onChange: this.onGameSearch,
                             type: u.Ua.Text,
-                            onFocus: this.onFocus,
-                            disabled: n
+                            onFocus: this.onFocus
                         }), a.createElement(u.u, {
                             show: this.state.showSuggestions
-                        }, e)), a.createElement(u.Ya, {
+                        }, this.renderSuggestions())), a.createElement(u.Ya, {
                             padding: {
                                 bottom: .5
                             }
-                        }, t)))
+                        }, this.renderSelections())))
                     }, t
                 }(a.Component),
                 f = Object(o.compose)(Object(s.b)("DevGameSearch", {
                     autoReportInteractive: !0
                 }))(g),
-                b = function(e) {
+                h = function(e) {
                     function t() {
                         var t = null !== e && e.apply(this, arguments) || this;
                         return t.state = {
-                            games: t.props.games || []
+                            gameSuggestions: t.props.gameSuggestions || []
                         }, t.findGames = function(e) {
                             return r.__awaiter(t, void 0, void 0, function() {
-                                var t;
-                                return r.__generator(this, function(n) {
-                                    return e.length ? (t = this.props.games.filter(function(t) {
-                                        return t.name.toLowerCase().includes(e.toLowerCase())
-                                    }), this.setState({
-                                        games: t
+                                return r.__generator(this, function(t) {
+                                    return e.length ? (this.setState({
+                                        gameSuggestions: this.props.gameSuggestions.filter(function(t) {
+                                            return t.name.toLowerCase().includes(e.toLowerCase())
+                                        })
                                     }), [2]) : (this.setState({
-                                        games: this.props.games
+                                        gameSuggestions: this.props.gameSuggestions
                                     }), [2])
                                 })
                             })
                         }, t.onGameSelect = function(e) {
                             t.setState({
-                                games: []
+                                gameSuggestions: []
                             }), e.length || t.setState({
-                                games: t.props.games
+                                gameSuggestions: t.props.gameSuggestions
                             }), t.props.onGameSelect(e)
                         }, t
                     }
                     return r.__extends(t, e), t.prototype.render = function() {
                         return a.createElement(f, {
+                            gameSuggestions: this.state.gameSuggestions,
                             onGameSelect: this.onGameSelect,
-                            gameSuggestions: this.state.games,
                             onInputChange: this.findGames,
-                            multi: this.props.multi,
-                            defaultGames: this.props.defaultGames
+                            multi: this.props.multi
                         })
                     }, t
                 }(a.Component),
-                h = n("Svt6"),
+                b = n("Svt6"),
                 v = n("+GjP"),
-                _ = n("1mFg"),
-                E = h.a + "/kraken/search/games",
-                S = 7,
+                S = n("1mFg"),
+                E = b.a + "/kraken/search/games",
+                _ = 7,
                 A = function(e) {
-                    function t(t) {
-                        var n = e.call(this, t) || this;
-                        return n.state = {
+                    function t() {
+                        var t = null !== e && e.apply(this, arguments) || this;
+                        return t.state = {
                             games: []
-                        }, n.findGames = function(e) {
-                            return r.__awaiter(n, void 0, void 0, function() {
+                        }, t.findGames = function(e) {
+                            return r.__awaiter(t, void 0, void 0, function() {
                                 var t, n, a, o;
                                 return r.__generator(this, function(r) {
                                     switch (r.label) {
@@ -1378,7 +1419,7 @@
                                             return r.trys.push([0, 4, , 5]), e.length ? (t = Object(v.e)(E, {
                                                 query: e.trim(),
                                                 type: "suggest"
-                                            }), [4, Object(_.a)(t)]) : (this.setState({
+                                            }), [4, Object(S.a)(t)]) : (this.setState({
                                                 games: []
                                             }), [2]);
                                         case 1:
@@ -1386,7 +1427,7 @@
                                         case 2:
                                             o = r.sent(), a = o.games, r.label = 3;
                                         case 3:
-                                            return a = a.slice(0, this.props.limit || S), this.setState({
+                                            return a = a.slice(0, this.props.limit || _), this.setState({
                                                 games: a
                                             }), [3, 5];
                                         case 4:
@@ -1398,23 +1439,23 @@
                                     }
                                 })
                             })
-                        }, n.onGameSelect = function(e) {
-                            n.setState({
+                        }, t.onGameSelect = function(e) {
+                            t.setState({
                                 games: []
-                            }), n.props.onGameSelect(e)
-                        }, n.state.games = t.defaultGames || [], n
+                            }), t.props.onGameSelect(e)
+                        }, t
                     }
                     return r.__extends(t, e), t.prototype.render = function() {
                         return a.createElement(f, {
-                            onGameSelect: this.onGameSelect,
                             gameSuggestions: this.state.games,
+                            onGameSelect: this.onGameSelect,
                             onInputChange: this.findGames,
                             multi: this.props.multi
                         })
                     }, t
                 }(a.Component);
             n.d(t, "a", function() {
-                return b
+                return h
             }), n.d(t, "b", function() {
                 return A
             })
@@ -1716,21 +1757,36 @@
                             return null !== t && t.apply(this, arguments) || this
                         }
                         return r.__extends(n, t), n.prototype.render = function() {
-                            if (this.props.loaded && this.props.company) {
-                                var t = {
-                                    company: this.props.company
-                                };
-                                return a.createElement(e, r.__assign({}, this.props, t))
+                            switch (this.props.loadState) {
+                                case u.a.NOT_LOADED:
+                                    return a.createElement(c.ab, null);
+                                case u.a.LOADED_BUT_PENDING_REVIEW:
+                                    return a.createElement(i.a, {
+                                        to: "/access-pending"
+                                    });
+                                case u.a.LOADED_BUT_NOT_FOUND:
+                                    return a.createElement(i.a, {
+                                        to: "/request-access"
+                                    });
+                                case u.a.LOADED:
+                                    var t = {
+                                        company: this.props.company
+                                    };
+                                    return a.createElement(e, r.__assign({}, this.props, t));
+                                case u.a.LOADED_WITH_INTERNAL_ERROR:
+                                default:
+                                    return a.createElement(i.a, {
+                                        to: "/access-pending"
+                                    })
                             }
-                            return this.props.loaded && !this.props.company ? a.createElement(i.a, {
-                                to: "/request-access"
-                            }) : a.createElement(c.ab, null)
                         }, n.displayName = Object(s.a)(n.name, e), n
                     }(a.Component);
                     return Object(o.connect)(function(e) {
                         return {
-                            loaded: Object(u.b)(e),
-                            company: Object(u.c)(e)
+                            loadState: Object(u.e)(e),
+                            company: Object(u.c)(e),
+                            pendingApplication: Object(u.f)(e),
+                            errorMsg: Object(u.d)(e)
                         }
                     })(t)
                 }

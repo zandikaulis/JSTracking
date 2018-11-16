@@ -1014,17 +1014,20 @@
                                 className: "prime-offer__publisher"
                             }, a.createElement(d.W, {
                                 type: d.Wb.P,
-                                color: d.O.OverlayAlt,
+                                color: d.O.Alt2,
                                 fontSize: d.Ca.Size7,
                                 transform: d.Vb.Uppercase
                             }, o)), a.createElement(d.Ya, {
                                 className: "prime-offer__title",
                                 alignItems: d.f.Start,
                                 padding: {
-                                    y: .5
+                                    bottom: .5
                                 }
                             }, t.renderTitle(e)), a.createElement(d.Ya, {
-                                className: "prime-offer__description"
+                                className: "prime-offer__description",
+                                padding: {
+                                    bottom: .5
+                                }
                             }, a.createElement(d.W, {
                                 type: d.Wb.P,
                                 color: d.O.Alt2
@@ -1185,7 +1188,8 @@
                             alignItems: d.f.Start,
                             display: d.X.Flex
                         }, t, a.createElement(f, {
-                            className: "prime-offer__title__markdown",
+                            unwrapDisallowed: !0,
+                            disallowedTypes: ["Paragraph"],
                             containerTagName: "h4",
                             source: e.title || ""
                         }))

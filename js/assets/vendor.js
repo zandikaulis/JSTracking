@@ -17982,6 +17982,8 @@
                         this.raise("reconnected", e)
                     }, e.prototype.chat = function(e) {
                         this.raise("chat", e)
+                    }, e.prototype.firstcheer = function(e) {
+                        this.raise("firstcheer", e)
                     }, e.prototype.joined = function(e) {
                         this.raise("joined", e)
                     }, e.prototype.parted = function(e) {
@@ -18066,7 +18068,7 @@
                 e[e.Badge = 0] = "Badge", e[e.Bits = 1] = "Bits", e[e.Emote = 2] = "Emote", e[e.InGameContent = 3] = "InGameContent"
             }(c || (c = {})),
             function(e) {
-                e[e.Message = 0] = "Message", e[e.Notice = 1] = "Notice", e[e.Action = 2] = "Action", e[e.Purchase = 3] = "Purchase", e[e.UserNotice = 4] = "UserNotice", e[e.Crate = 5] = "Crate", e[e.RewardGift = 6] = "RewardGift"
+                e[e.Message = 0] = "Message", e[e.Notice = 1] = "Notice", e[e.Action = 2] = "Action", e[e.Purchase = 3] = "Purchase", e[e.UserNotice = 4] = "UserNotice", e[e.Crate = 5] = "Crate", e[e.RewardGift = 6] = "RewardGift", e[e.FirstCheer = 7] = "FirstCheer"
             }(l || (l = {}));
             var h = function() {
                     function e(e, t, n, r) {
@@ -18678,6 +18680,9 @@
                                                 type: U,
                                                 message: A
                                             })
+                                        } else if ("firstcheer" === s) {
+                                            A = this.createChatMessage(e, i);
+                                            this.events.firstcheer(this.createChatMessageEvent(l.FirstCheer, "", o, A, !1))
                                         } else {
                                             A = this.createChatMessage(e, i);
                                             this.events.usernotice(this.createChatMessageEvent(l.UserNotice, s || "", o, A, !1))
@@ -19195,7 +19200,7 @@
                     }, t.prototype.isAction = function(e) {
                         return this.isCommand(e) && "me " === e.substr(1, 3)
                     }, t.prototype.isCommand = function(e) {
-                        return e.startsWith(".") && !e.startsWith("..") || e.startsWith("/") || e.startsWith("\\")
+                        return e.startsWith(".") && !e.startsWith("..") || e.startsWith("/")
                     }, t
                 }(m),
                 j = function(e) {
@@ -19539,6 +19544,8 @@
                         this.add("disconnected", e)
                     }, e.prototype.emoteonlymode = function(e) {
                         this.add("emoteonlymode", e)
+                    }, e.prototype.firstcheer = function(e) {
+                        this.add("firstcheer", e)
                     }, e.prototype.followersonly = function(e) {
                         this.add("followersonly", e)
                     }, e.prototype.hosted = function(e) {

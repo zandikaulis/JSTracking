@@ -3030,7 +3030,7 @@
                         }, Object(r.d)("This clip will be permanently deleted.", "ClipsModalDelete")))];
                         if (!this.props.data.clip) return null;
                         var t = null;
-                        this.props.data.clip.curator && (t = i.createElement("span", null, " • ", Object(r.d)("Clipped by {curator}", {
+                        this.props.data.clip.curator && this.props.data.clip.curator.login && (t = i.createElement("span", null, " • ", Object(r.d)("Clipped by {curator}", {
                             curator: this.props.data.clip.curator.login
                         }, "ClipsModalDelete")));
                         var n = i.createElement(s.Fb, {
@@ -3195,7 +3195,7 @@
                                             case 4:
                                                 throw new Error("Invalid broadcastID specified for deleteAllClips");
                                             case 5:
-                                                return e.ownProps.onDeleteAll && e.ownProps.onDeleteAll(i.deleteClips.clips), [3, 7];
+                                                return e.ownProps.onDeleteAll && i.deleteClips && i.deleteClips.clips && e.ownProps.onDeleteAll(i.deleteClips.clips), [3, 7];
                                             case 6:
                                                 throw s = a.sent(), r.k.error(s, "Failed to delete clips from VOD"), s;
                                             case 7:
@@ -3211,7 +3211,7 @@
                         var t = e.data.clip;
                         return t ? {
                             videoID: t.video ? t.video.id : null,
-                            broadcastID: t.broadcast.id
+                            broadcastID: t.broadcast && t.broadcast.id || ""
                         } : {
                             videoID: null,
                             broadcastID: ""

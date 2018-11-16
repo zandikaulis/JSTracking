@@ -298,7 +298,7 @@
                 g = n("kRBY"),
                 k = n("GnwI"),
                 f = n("suAp");
-            var E = Object(v.compose)(Object(b.connect)(function(e) {
+            var y = Object(v.compose)(Object(b.connect)(function(e) {
                 return {
                     isLoggedIn: Object(g.f)(e)
                 }
@@ -315,7 +315,7 @@
             n.d(t, !1, function() {
                 return T
             }), n.d(t, "a", function() {
-                return E
+                return y
             })
         },
         DUGL: function(e, t, n) {
@@ -765,9 +765,15 @@
                         e.keyCode === s.a.Enter && t.handleAdd(), t.state.errorAddingTerm && t.setState({
                             errorAddingTerm: !1
                         })
+                    }, t.handleAddChangeDelayed = function(e) {
+                        clearTimeout(t.termAddDelayID), t.termAddDelayID = setTimeout(function() {
+                            t.setState({
+                                termToAdd: t.addInput.value
+                            })
+                        }, 250)
                     }, t.handleAddChange = function(e) {
-                        t.setState({
-                            termToAdd: e.currentTarget.value
+                        clearTimeout(t.termAddDelayID), t.setState({
+                            termToAdd: t.addInput.value
                         })
                     }, t.cancelEdit = function() {
                         t.setState({
@@ -855,9 +861,9 @@
                         type: c.Ua.Search,
                         placeholder: e,
                         onKeyDown: this.handleAddKeyDown,
-                        onChange: this.handleAddChange,
-                        error: this.state.errorAddingTerm,
-                        value: this.state.termToAdd
+                        onChange: this.handleAddChangeDelayed,
+                        onBlur: this.handleAddChange,
+                        error: this.state.errorAddingTerm
                     }))), 0 !== this.state.termToAdd.length && i.createElement(c.Ya, {
                         display: c.X.Flex,
                         margin: {
@@ -972,7 +978,7 @@
                         numTerms: this.state.permanentTerms.length + this.state.temporaryTerms.length
                     }, "StandaloneChatTerms"))), this.renderTerms(this.state.temporaryTerms, u.Temporary), this.renderTerms(this.state.permanentTerms, u.Permanent)))
                 }, t.prototype.renderTerms = function(e, t) {
-                    for (var n = [], a = 0; a < e.length; a++) n.push(this.renderTerm(e[a], a, t));
+                    for (var n = [], a = 0; a < e.length; a++) e[a].phrases.join(" ").toLowerCase().includes(this.state.termToAdd.toLowerCase()) && n.push(this.renderTerm(e[a], a, t));
                     return 0 === n.length ? i.createElement(c.Ya, {
                         className: "chat-terms"
                     }) : i.createElement(c.Ya, {

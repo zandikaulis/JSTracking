@@ -1309,7 +1309,7 @@
                                     achievements: t.achievements,
                                     isLoading: t.isLoading
                                 }))
-                            })) : a.createElement(oe, i.__assign({}, t, {
+                            }), a.createElement(f, null)) : a.createElement(oe, i.__assign({}, t, {
                                 channelName: e.name
                             }), function(n) {
                                 return a.createElement(A, {

@@ -14593,10 +14593,10 @@
                         t && t.remove()
                     }, t.createPanelExtension = function() {
                         var e = document.createElement("iframe");
-                        return e.setAttribute("id", "panel-ext"), e.setAttribute("height", "500px"), e.setAttribute("width", "320px"), e.setAttribute("sandbox", "allow-forms allow-scripts allow-same-origin allow-popups allow-popups-to-escape-sandbox"), e
+                        return e.setAttribute("id", "panel-ext"), e.setAttribute("height", "500px"), e.setAttribute("width", "320px"), e.setAttribute("sandbox", "allow-forms allow-scripts allow-popups allow-popups-to-escape-sandbox"), e
                     }, t.createOverlayExtension = function() {
                         var e = document.createElement("iframe");
-                        return e.setAttribute("id", "overlay-ext"), e.setAttribute("height", "300px"), e.setAttribute("width", "300px"), e.setAttribute("sandbox", "allow-forms allow-scripts allow-same-origin allow-popups allow-popups-to-escape-sandbox"), t.state.sandboxMode === He.both ? e.setAttribute("style", "position:absolute;width: 50%;height: 60%;top: 20%;right:10%;max-width:320px") : e.setAttribute("style", "position:absolute;width: 30%;height: 60%;top: 20%;right:10%;max-width:320px"), e
+                        return e.setAttribute("id", "overlay-ext"), e.setAttribute("height", "300px"), e.setAttribute("width", "300px"), e.setAttribute("sandbox", "allow-forms allow-scripts allow-popups allow-popups-to-escape-sandbox"), t.state.sandboxMode === He.both ? e.setAttribute("style", "position:absolute;width: 50%;height: 60%;top: 20%;right:10%;max-width:320px") : e.setAttribute("style", "position:absolute;width: 30%;height: 60%;top: 20%;right:10%;max-width:320px"), e
                     }, t.exportHTML = function(e) {
                         var n = t.addJSAndCSSToHTML(e, '<script src="viewer.js"><\/script>', '<link rel="stylesheet" href="viewer.css" type="text/css">'),
                             r = n.indexOf('<script src="https://extension-files.twitch.tv/helper/v1/twitch-ext.min.js"><\/script>');

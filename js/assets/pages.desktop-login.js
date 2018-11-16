@@ -1066,9 +1066,9 @@
                                 isFocused: !0
                             })
                         }, t.toggleVisibility = function(e) {
-                            e.preventDefault(), t.setState({
+                            e.nativeEvent.detail && (e.preventDefault(), t.setState({
                                 isPasswordVisible: !t.state.isPasswordVisible
-                            }), t.inputRef && t.inputRef.focus()
+                            }), t.inputRef && t.inputRef.focus())
                         }, t.getInputRef = function(e) {
                             t.inputRef = e
                         }, t
@@ -1109,7 +1109,7 @@
                             asset: k.ub.CapsLock,
                             type: k.vb.Inherit
                         }), a.createElement(k.A, {
-                            icon: this.state.isPasswordVisible ? k.ub.VisibilityHidden : k.ub.GlyphViews,
+                            icon: this.state.isPasswordVisible ? k.ub.VisibilityHidden : k.ub.VisibilityShown,
                             onClick: this.toggleVisibility,
                             type: k.C.Secondary,
                             size: k.B.Small,
@@ -1702,7 +1702,7 @@
                     function t() {
                         var t = null !== e && e.apply(this, arguments) || this;
                         return t.onSubmit = function(e) {
-                            e.preventDefault(), t.captchaInstance ? t.captchaInstance.execute() : t.submit()
+                            e.preventDefault(), t.canSignup && (t.captchaInstance ? t.captchaInstance.execute() : t.submit())
                         }, t.onBirthdayDateChanged = function(e) {
                             t.props.onSignupFormValuesChanged({
                                 birthdayDate: e

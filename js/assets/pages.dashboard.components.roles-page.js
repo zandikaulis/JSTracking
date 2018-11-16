@@ -1545,10 +1545,10 @@
                     return e
                 };
 
-            function T(e) {
+            function w(e) {
                 return M(F)(e)
             }
-            var w, L = 1,
+            var T, L = 1,
                 R = function(e) {
                     function t(t) {
                         var n = e.call(this, t) || this;
@@ -1718,12 +1718,12 @@
                         }
                     }
                 }))(R),
-                V = (w = Object(h.a)("ChannelVIPContext", {
+                V = (T = Object(h.a)("ChannelVIPContext", {
                     maxVIPUserLimit: 0,
                     isAtMaxVIPUserLimit: !1,
                     isVIPUnlocked: !1
                 })).InnerProvider,
-                x = w.withContext,
+                x = T.withContext,
                 B = function(e) {
                     return e
                 };
@@ -1731,7 +1731,7 @@
             function j(e) {
                 return x(B)(e)
             }
-            var Y, G, W = T(function(e) {
+            var Y, G, W = w(function(e) {
                     function t(t) {
                         var n = e.call(this, t) || this;
                         return n.state = {
@@ -1967,7 +1967,7 @@
                     channelID: e.channelID || ""
                 }
             }
-            var ge = Object(s.compose)(j, T, function() {
+            var ge = Object(s.compose)(j, w, function() {
                     var e = this;
                     return Object(d.a)(he, {
                         props: function(t) {
@@ -2124,7 +2124,7 @@
                             return Object(re.d)(ke, e)
                         }
                     }, e)
-                }), le, Z, T)(Ee),
+                }), le, Z, w)(Ee),
                 Ie = n("9C/b"),
                 ye = (n("vsHg"), function(e) {
                     function t() {
@@ -2187,7 +2187,7 @@
                     function t() {
                         var t = null !== e && e.apply(this, arguments) || this;
                         return t.handleAddARoleClick = function() {
-                            t.props.setView(r.DEFAULT)
+                            t.props.setView(r.ADD_USER)
                         }, t
                     }
                     return a.__extends(t, e), t.prototype.render = function() {
@@ -2379,10 +2379,10 @@
                 return Object(S.d)("Moderator", "FilterUsersComponent")
             }
 
-            function Te() {
+            function we() {
                 return Object(S.d)("VIP", "FilterUsersComponent")
             }
-            var we, Le = 28.5,
+            var Te, Le = 28.5,
                 Re = j(function(e) {
                     function t() {
                         var t = null !== e && e.apply(this, arguments) || this;
@@ -2436,7 +2436,7 @@
                         }), this.props.isVIPUnlocked && o.createElement(Ae, {
                             checked: i,
                             disabled: n || this.props.isAtMaxVIPUserLimit && !i,
-                            label: Te(),
+                            label: we(),
                             onCheckBoxChange: r,
                             margin: {
                                 x: 1,
@@ -2503,7 +2503,7 @@
                             r = this.state.isBalloonOpen,
                             a = Me(),
                             s = Fe(),
-                            l = Te(),
+                            l = we(),
                             d = i.isEditor,
                             c = i.isMod,
                             u = i.isVIP,
@@ -2568,7 +2568,7 @@
                 }(o.Component);
             ! function(e) {
                 e.CJK_NAME = "cjk_name"
-            }(we || (we = {}));
+            }(Te || (Te = {}));
             var xe, Be, je, Ye = function(e) {
                     function t() {
                         var t = null !== e && e.apply(this, arguments) || this;
@@ -2661,7 +2661,7 @@
                         }, o.createElement(y.W, {
                             bold: !0,
                             color: y.O.Alt2,
-                            "data-test-selector": we.CJK_NAME,
+                            "data-test-selector": Te.CJK_NAME,
                             ellipsis: !0,
                             type: y.Wb.P
                         }, n))))))), o.createElement(y.P, {
@@ -2692,7 +2692,7 @@
                         }, Object(S.h)(i))))
                     }, t
                 }(o.Component),
-                Ge = Object(s.compose)(Z, T, le)(Ye),
+                Ge = Object(s.compose)(Z, w, le)(Ye),
                 We = (n("tC/j"), function(e) {
                     function t() {
                         var t = null !== e && e.apply(this, arguments) || this;
@@ -2750,7 +2750,7 @@
                         }, n), 0 === n.length && o.createElement(_e, null))
                     }, t
                 }(o.Component)),
-                Xe = Object(s.compose)(k, T)(We);
+                Xe = Object(s.compose)(k, w)(We);
             ! function(e) {
                 e[e.FIRST_COLUMN = 3] = "FIRST_COLUMN", e[e.SECOND_COLUMN = 6] = "SECOND_COLUMN", e[e.THIRD_COLUMN = 3] = "THIRD_COLUMN"
             }(xe || (xe = {})),
@@ -2973,7 +2973,7 @@
                         })))))
                     }, t
                 }(o.Component),
-                nt = Object(s.compose)(T, Ie.a)(tt);
+                nt = Object(s.compose)(w, Ie.a)(tt);
             ! function(e) {
                 e.CANCEL_BUTTON = "roles-page-add-user-cancel-button", e.SAVE_BUTTON = "roles-page-add-user-save-button"
             }(qe || (qe = {}));
@@ -3112,7 +3112,7 @@
                         }, Object(S.d)("Save", "AddUserComponent")))))))
                     }, t
                 }(o.Component),
-                at = Object(s.compose)(T, le, Z, k)(rt);
+                at = Object(s.compose)(w, le, Z, k)(rt);
             ! function(e) {
                 e.ALL_MUTATIONS_SUCCEEDED = "all-mutations-succeeded", e.SOME_MUTATIONS_FAILED = "some-mutations-failed"
             }(it || (it = {}));
@@ -3292,11 +3292,11 @@
                             case C.MODERATOR:
                                     return Fe();
                             case C.VIP:
-                                    return Te()
+                                    return we()
                         }
                     }, t
                 }(o.Component)),
-                dt = Object(s.compose)(j, T)(lt),
+                dt = Object(s.compose)(j, w)(lt),
                 ct = function(e) {
                     function t() {
                         var t = null !== e && e.apply(this, arguments) || this;

@@ -184,7 +184,7 @@
                     autoReportInteractive: !0
                 }))(_),
                 k = 100,
-                C = function(e) {
+                E = function(e) {
                     function t(t) {
                         var r = e.call(this, t) || this;
                         return r.state = {
@@ -283,17 +283,17 @@
                         })
                     }, t
                 }(a.Component);
-            var E = Object(s.connect)(function(e) {
+            var O = Object(s.connect)(function(e) {
                 return {
                     user: Object(c.e)(e)
                 }
-            })(C);
+            })(E);
             r.d(t, !1, function() {
                 return k
             }), r.d(t, !1, function() {
-                return C
-            }), r.d(t, "a", function() {
                 return E
+            }), r.d(t, "a", function() {
+                return O
             })
         },
         N3I0: function(e, t, r) {
@@ -616,14 +616,14 @@
                 _ = r("V+GM"),
                 S = r("Svt6"),
                 k = r("NvVO"),
-                C = r("2xye"),
-                E = r("1mFg"),
-                w = r("uLRL"),
-                O = r("Dtp2"),
+                E = r("2xye"),
+                O = r("1mFg"),
+                C = r("uLRL"),
+                w = r("Dtp2"),
                 N = r("+GjP"),
                 F = r("tl6o");
 
-            function R(e, t) {
+            function D(e, t) {
                 return n.__awaiter(this, void 0, void 0, function() {
                     var r;
                     return n.__generator(this, function(n) {
@@ -635,7 +635,7 @@
                                     resource: e
                                 }), n.label = 1;
                             case 1:
-                                return n.trys.push([1, 3, , 4]), [4, Object(E.a)(r)];
+                                return n.trys.push([1, 3, , 4]), [4, Object(O.a)(r)];
                             case 2:
                                 return [2, 200 === n.sent().status];
                             case 3:
@@ -646,8 +646,8 @@
                     })
                 })
             }
-            var D = r("yR8l"),
-                U = function(e) {
+            var R = r("yR8l"),
+                T = function(e) {
                     function t() {
                         var t = null !== e && e.apply(this, arguments) || this;
                         return t.renderRemoveButton = function() {
@@ -682,10 +682,10 @@
                         }, o.createElement(h.W, null, e)), t)
                     }, t
                 }(o.Component),
-                T = Object(s.compose)(Object(l.b)("DevMemberItem", {
+                U = Object(s.compose)(Object(l.b)("DevMemberItem", {
                     autoReportInteractive: !0
-                }))(U);
-            var I = function(e) {
+                }))(T);
+            var A = function(e) {
                     function t() {
                         var t = null !== e && e.apply(this, arguments) || this;
                         return t.renderMembers = function() {
@@ -705,7 +705,7 @@
                                     padding: {
                                         x: 1
                                     }
-                                }, o.createElement(T, {
+                                }, o.createElement(U, {
                                     member: e,
                                     canRemoveUser: t.props.canRemoveUser,
                                     onRemoveClick: t.onRemoveClick
@@ -761,11 +761,11 @@
                         }, e)), r)), o.createElement(h.Ya, null, o.createElement(h.Ja, null, t)))
                     }, t
                 }(o.Component),
-                j = Object(s.compose)(Object(l.b)("DevMemberGroup", {
+                I = Object(s.compose)(Object(l.b)("DevMemberGroup", {
                     autoReportInteractive: !0
-                }))(I),
-                x = r("t04z"),
-                A = function(e) {
+                }))(A),
+                j = r("t04z"),
+                x = function(e) {
                     function t() {
                         var t = null !== e && e.apply(this, arguments) || this;
                         return t.state = {
@@ -783,7 +783,7 @@
                         }, t.renderGroups = function() {
                             return Object.keys(t.state.members).map(function(e) {
                                 var r = t.state.members[e];
-                                return o.createElement(j, {
+                                return o.createElement(I, {
                                     title: e,
                                     members: r,
                                     key: e,
@@ -826,7 +826,7 @@
                         return o.createElement(h.Ya, null, e)
                     }, t
                 }(o.Component),
-                M = Object(s.compose)(Object(l.b)("DevCompanyMember"), Object(D.a)(x, {
+                M = Object(s.compose)(Object(l.b)("DevCompanyMember"), Object(R.a)(j, {
                     options: function(e) {
                         return {
                             variables: {
@@ -842,7 +842,7 @@
                             }
                         }
                     }
-                }))(A),
+                }))(x),
                 P = S.a + "/v5/rbac/users",
                 q = function(e) {
                     function t() {
@@ -863,23 +863,23 @@
                                 return n.__generator(this, function(n) {
                                     switch (n.label) {
                                         case 0:
-                                            return n.trys.push([0, 5, , 6]), [4, Object(E.a)(S.a + "/v5/rbac/companies/" + e.id + "/members")];
+                                            return n.trys.push([0, 5, , 6]), [4, Object(O.a)(S.a + "/v5/rbac/companies/" + e.id + "/members")];
                                         case 1:
                                             return 200 !== (t = n.sent()).status ? [3, 3] : [4, t.json()];
                                         case 2:
                                             return r = n.sent(), this.setState({
                                                 members: {
                                                     administrator: r.administrator.map(function(e) {
-                                                        return Object(O.c)(e)
+                                                        return Object(w.c)(e)
                                                     }),
                                                     manager: r.manager.map(function(e) {
-                                                        return Object(O.c)(e)
+                                                        return Object(w.c)(e)
                                                     }),
                                                     marketer: r.marketer.map(function(e) {
-                                                        return Object(O.c)(e)
+                                                        return Object(w.c)(e)
                                                     }),
                                                     developer: r.developer.map(function(e) {
-                                                        return Object(O.c)(e)
+                                                        return Object(w.c)(e)
                                                     })
                                                 }
                                             }), [3, 4];
@@ -904,7 +904,7 @@
                                 return n.__generator(this, function(n) {
                                     switch (n.label) {
                                         case 0:
-                                            return t = e.identifier + "::addUser", [4, R(e.identifier + "::user::*", t)];
+                                            return t = e.identifier + "::addUser", [4, D(e.identifier + "::user::*", t)];
                                         case 1:
                                             return r = n.sent(), this.setState({
                                                 canAddUser: r
@@ -918,7 +918,7 @@
                                 return n.__generator(this, function(n) {
                                     switch (n.label) {
                                         case 0:
-                                            return t = e.identifier + "::removeUser", [4, R(e.identifier + "::user::*", t)];
+                                            return t = e.identifier + "::removeUser", [4, D(e.identifier + "::user::*", t)];
                                         case 1:
                                             return r = n.sent(), this.setState({
                                                 canRemoveUser: r
@@ -936,7 +936,7 @@
                                             if ("administrator" === r && this.state.members.administrator.length < 2) return [2];
                                             n.label = 1;
                                         case 1:
-                                            return n.trys.push([1, 5, , 6]), "administrator" === r && (r = "admin"), t = S.a + "/v5/rbac/companies/" + this.props.company.id + "/members/" + e + "/roles/" + this.props.company.identifier + "::" + r, [4, Object(E.a)(t, {
+                                            return n.trys.push([1, 5, , 6]), "administrator" === r && (r = "admin"), t = S.a + "/v5/rbac/companies/" + this.props.company.id + "/members/" + e + "/roles/" + this.props.company.identifier + "::" + r, [4, Object(O.a)(t, {
                                                 method: "DELETE"
                                             })];
                                         case 2:
@@ -972,12 +972,12 @@
                                                 title: i
                                             }, u = Object(c.d)("Unexpected Failure", "DevCompanyOverview"), n.label = 1;
                                         case 1:
-                                            return n.trys.push([1, 7, , 8]), [4, Object(E.a)(P, {
+                                            return n.trys.push([1, 7, , 8]), [4, Object(O.a)(P, {
                                                 method: "POST",
                                                 body: JSON.stringify(t)
                                             })];
                                         case 2:
-                                            return n.sent(), "administrator" === r && (r = "admin"), l = S.a + "/v5/rbac/companies/" + this.props.company.id + "/members/" + e + "/roles/" + this.props.company.identifier + "::" + r, [4, Object(E.a)(l, {
+                                            return n.sent(), "administrator" === r && (r = "admin"), l = S.a + "/v5/rbac/companies/" + this.props.company.id + "/members/" + e + "/roles/" + this.props.company.identifier + "::" + r, [4, Object(O.a)(l, {
                                                 method: "POST"
                                             })];
                                         case 3:
@@ -1049,8 +1049,8 @@
                 L = Object(s.compose)(Object(l.b)("DevCompanyOverview", {
                     destination: k.a.DevSiteCompanyOverview
                 }), Object(_.a)({
-                    location: C.PageviewLocation.DevSiteCompanyOverview
-                }), Object(w.a)())(q);
+                    location: E.PageviewLocation.DevSiteCompanyOverview
+                }), Object(C.a)())(q);
             var G = Object(a.connect)(null, function(e) {
                 return Object(s.bindActionCreators)({
                     showAddUserModal: function(e) {
@@ -1729,21 +1729,36 @@
                             return null !== t && t.apply(this, arguments) || this
                         }
                         return n.__extends(r, t), r.prototype.render = function() {
-                            if (this.props.loaded && this.props.company) {
-                                var t = {
-                                    company: this.props.company
-                                };
-                                return a.createElement(e, n.__assign({}, this.props, t))
+                            switch (this.props.loadState) {
+                                case c.a.NOT_LOADED:
+                                    return a.createElement(u.ab, null);
+                                case c.a.LOADED_BUT_PENDING_REVIEW:
+                                    return a.createElement(i.a, {
+                                        to: "/access-pending"
+                                    });
+                                case c.a.LOADED_BUT_NOT_FOUND:
+                                    return a.createElement(i.a, {
+                                        to: "/request-access"
+                                    });
+                                case c.a.LOADED:
+                                    var t = {
+                                        company: this.props.company
+                                    };
+                                    return a.createElement(e, n.__assign({}, this.props, t));
+                                case c.a.LOADED_WITH_INTERNAL_ERROR:
+                                default:
+                                    return a.createElement(i.a, {
+                                        to: "/access-pending"
+                                    })
                             }
-                            return this.props.loaded && !this.props.company ? a.createElement(i.a, {
-                                to: "/request-access"
-                            }) : a.createElement(u.ab, null)
                         }, r.displayName = Object(o.a)(r.name, e), r
                     }(a.Component);
                     return Object(s.connect)(function(e) {
                         return {
-                            loaded: Object(c.b)(e),
-                            company: Object(c.c)(e)
+                            loadState: Object(c.e)(e),
+                            company: Object(c.c)(e),
+                            pendingApplication: Object(c.f)(e),
+                            errorMsg: Object(c.d)(e)
                         }
                     })(t)
                 }

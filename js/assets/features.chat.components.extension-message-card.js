@@ -268,6 +268,26 @@
             })
         },
         MPK0: function(e, t, r) {},
+        O3Y9: function(e, t, r) {
+            "use strict";
+            r.d(t, "a", function() {
+                return n
+            }), r.d(t, "b", function() {
+                return i
+            });
+            var n, o = r("/7QA"),
+                a = r("2xye");
+
+            function i(e) {
+                o.p.tracking.track(a.SpadeEventType.WhisperIgnoreUser, {
+                    ui_context: e.context,
+                    from_login: e.currentUserLogin,
+                    ignored_login: e.targetUserLogin
+                })
+            }! function(e) {
+                e.ViewerCard = "chat_card", e.ReportWizard = "report_wizard"
+            }(n || (n = {}))
+        },
         Oy4H: function(e, t, r) {},
         RQ6e: function(e, t, r) {
             "use strict";
@@ -465,32 +485,33 @@
                 u = r("BhFH"),
                 p = r("iS14"),
                 m = r("geRD"),
-                h = r("f00E"),
-                g = r("D7An"),
-                v = r("DMoW"),
-                f = r("2xye"),
-                b = r("GnwI"),
-                y = r("QVaV"),
-                k = r("Ue10"),
-                R = (r("MPK0"), "report-wizard-block"),
-                T = "report-wizard-unblock",
-                _ = function(e) {
+                h = r("O3Y9"),
+                g = r("f00E"),
+                v = r("D7An"),
+                f = r("DMoW"),
+                b = r("2xye"),
+                y = r("GnwI"),
+                k = r("QVaV"),
+                R = r("Ue10"),
+                T = (r("MPK0"), "report-wizard-block"),
+                _ = "report-wizard-unblock",
+                C = function(e) {
                     function t() {
                         var t = null !== e && e.apply(this, arguments) || this;
                         return t.state = {
                             userBlocked: t.props.userBlocked || !1
                         }, t.renderBlock = function() {
-                            return i.createElement(k.U, {
+                            return i.createElement(R.U, {
                                 hoverUnderlineNone: !0,
                                 onClick: t.handleBlock,
-                                "data-test-selector": R
-                            }, i.createElement(k.Ya, {
-                                display: k.X.Flex,
-                                alignItems: k.f.Center
-                            }, i.createElement(k.tb, {
-                                type: k.vb.Brand,
-                                asset: k.ub.Ban
-                            }), i.createElement(k.Ya, {
+                                "data-test-selector": T
+                            }, i.createElement(R.Ya, {
+                                display: R.X.Flex,
+                                alignItems: R.f.Center
+                            }, i.createElement(R.tb, {
+                                type: R.vb.Brand,
+                                asset: R.ub.Ban
+                            }), i.createElement(R.Ya, {
                                 margin: {
                                     left: .5
                                 }
@@ -498,27 +519,27 @@
                                 user: t.displayName()
                             }, "ReportWizardBlockActions"))))
                         }, t.renderUnblock = function() {
-                            return i.createElement(k.Ya, {
+                            return i.createElement(R.Ya, {
                                 className: "reporting-wizard__block-actions",
-                                display: k.X.Flex,
-                                alignItems: k.f.Center
-                            }, i.createElement(k.tb, {
-                                type: k.vb.Success,
-                                asset: k.ub.FollowCheck
-                            }), i.createElement(k.Ya, {
+                                display: R.X.Flex,
+                                alignItems: R.f.Center
+                            }, i.createElement(R.tb, {
+                                type: R.vb.Success,
+                                asset: R.ub.FollowCheck
+                            }), i.createElement(R.Ya, {
                                 margin: {
                                     right: 1
                                 }
-                            }, i.createElement(k.W, {
+                            }, i.createElement(R.W, {
                                 className: "block-user__success",
-                                type: k.Wb.Span
+                                type: R.Wb.Span
                             }, Object(c.d)("{user} blocked", {
                                 user: t.displayName()
-                            }, "ReportWizardBlockActions"))), i.createElement(k.U, {
+                            }, "ReportWizardBlockActions"))), i.createElement(R.U, {
                                 hoverUnderlineNone: !0,
                                 onClick: t.handleUnblock,
-                                "data-test-selector": T
-                            }, i.createElement(k.Ya, {
+                                "data-test-selector": _
+                            }, i.createElement(R.Ya, {
                                 margin: {
                                     left: .5
                                 }
@@ -543,8 +564,8 @@
                     }
                     return a.__extends(t, e), t.prototype.render = function() {
                         var e = this.state.userBlocked ? this.renderUnblock() : this.renderBlock(),
-                            t = Object(y.a)(this.props.targetUser.login, this.props.targetUser.displayName, !0);
-                        return i.createElement(k.Fb, {
+                            t = Object(k.a)(this.props.targetUser.login, this.props.targetUser.displayName, !0);
+                        return i.createElement(R.Fb, {
                             borderTop: !0,
                             padding: {
                                 y: 1
@@ -552,18 +573,18 @@
                             margin: {
                                 top: 1
                             }
-                        }, i.createElement(k.Ya, null, Object(c.d)("Would you like to block {user}?", {
+                        }, i.createElement(R.Ya, null, Object(c.d)("Would you like to block {user}?", {
                             user: t
-                        }, "ReportWizardBlockActions")), i.createElement(k.Fb, {
-                            color: k.O.Alt2,
+                        }, "ReportWizardBlockActions")), i.createElement(R.Fb, {
+                            color: R.O.Alt2,
                             margin: {
                                 y: 1
                             }
-                        }, i.createElement(k.fc, {
-                            baseFontSize: k.Ca.Size6
+                        }, i.createElement(R.fc, {
+                            baseFontSize: R.Ca.Size6
                         }, i.createElement("p", null, Object(c.d)("Blocking {user} will:", {
                             user: t
-                        }, "ReportWizardBlockActions")), i.createElement("ul", null, i.createElement("li", null, Object(c.d)("Prevent them from sending you whispers", "ReportWizardBlockActions")), i.createElement("li", null, Object(c.d)("Prevent them from hosting you", "ReportWizardBlockActions")), i.createElement("li", null, Object(c.d)("Prevent them from adding you as a friend", "ReportWizardBlockActions")), i.createElement("li", null, Object(c.d)("Filter their messages out of chats you don’t moderate", "ReportWizardBlockActions"))))), i.createElement(k.Ya, {
+                        }, "ReportWizardBlockActions")), i.createElement("ul", null, i.createElement("li", null, Object(c.d)("Prevent them from sending you whispers", "ReportWizardBlockActions")), i.createElement("li", null, Object(c.d)("Prevent them from hosting you", "ReportWizardBlockActions")), i.createElement("li", null, Object(c.d)("Prevent them from adding you as a friend", "ReportWizardBlockActions")), i.createElement("li", null, Object(c.d)("Filter their messages out of chats you don’t moderate", "ReportWizardBlockActions"))))), i.createElement(R.Ya, {
                             margin: {
                                 top: 1
                             }
@@ -576,7 +597,7 @@
             function(e) {
                 e.Link = "link", e.MultipleChoice = "multiple choice", e.Text = "text", e.Textarea = "textarea"
             }(o || (o = {}));
-            var C, O = {
+            var O, x = {
                     generalFilter: function() {
                         return Object(c.d)("I don't think their content or behavior is allowed on Twitch", "ReportModalWizard")
                     },
@@ -602,7 +623,7 @@
                         return Object(c.d)("being hateful, harassing, or abusive", "ReportModalWizard")
                     }
                 },
-                x = {
+                S = {
                     input_description: {
                         getTitle: function() {
                             return Object(c.d)("Could you provide more detail about this issue? You may include links to videos, clips, and content outside Twitch.", "ReportModalWizard")
@@ -697,12 +718,12 @@
                         type: o.Link
                     },
                     messaging_general: {
-                        getTitle: O.generalFilter,
+                        getTitle: x.generalFilter,
                         value: "general_messaging",
                         omitFromDescription: !0
                     },
                     profile_general: {
-                        getTitle: O.generalFilter,
+                        getTitle: x.generalFilter,
                         value: "general_profile",
                         omitFromDescription: !0
                     },
@@ -842,7 +863,7 @@
                         reportReason: n.Miscategorized
                     },
                     video_general: {
-                        getTitle: O.generalFilter,
+                        getTitle: x.generalFilter,
                         value: "general_video",
                         omitFromDescription: !0
                     },
@@ -861,12 +882,12 @@
                         reportReason: n.Harassment
                     },
                     abusiveViolence: {
-                        getTitle: O.abusiveViolence,
+                        getTitle: x.abusiveViolence,
                         value: "threatening violence",
                         reportReason: n.Harm
                     },
                     commitingViolence: {
-                        getTitle: O.commitingViolence,
+                        getTitle: x.commitingViolence,
                         value: "committing violence",
                         reportReason: n.Harm
                     },
@@ -995,7 +1016,7 @@
                         reportReason: n.ChatBanEvasion
                     },
                     impersonation_me: {
-                        getTitle: O.me,
+                        getTitle: x.me,
                         value: "impersonating me",
                         reportReason: n.Impersonation
                     },
@@ -1007,7 +1028,7 @@
                         reportReason: n.Impersonation
                     },
                     impersonation_other: {
-                        getTitle: O.someoneElse,
+                        getTitle: x.someoneElse,
                         value: "impersonating someone else",
                         reportReason: n.Impersonation
                     },
@@ -1049,7 +1070,7 @@
                             return Object(c.d)("In a whisper (private message)", "ReportModalWizard")
                         },
                         value: "whisper",
-                        reportContext: v.N.WHISPER_REPORT
+                        reportContext: f.N.WHISPER_REPORT
                     },
                     username: {
                         getTitle: function() {
@@ -1123,20 +1144,20 @@
                         value: "brigading/raids"
                     },
                     external_threatening: {
-                        getTitle: O.threatening,
+                        getTitle: x.threatening,
                         value: "threatening"
                     },
                     external_harassment: {
-                        getTitle: O.abusive,
+                        getTitle: x.abusive,
                         value: "hateful/harassing"
                     },
                     external_abusiveViolence: {
-                        getTitle: O.abusiveViolence,
+                        getTitle: x.abusiveViolence,
                         value: "external site; threatening violence",
                         reportReason: n.Harm
                     },
                     external_commitingViolence: {
-                        getTitle: O.commitingViolence,
+                        getTitle: x.commitingViolence,
                         value: "external site; committing violence",
                         reportReason: n.Harm
                     },
@@ -1173,7 +1194,7 @@
                         value: "repeat messages"
                     }
                 },
-                S = function(e) {
+                M = function(e) {
                     function t() {
                         var t = null !== e && e.apply(this, arguments) || this;
                         return t.onChange = function(e) {
@@ -1190,14 +1211,14 @@
                         }, t
                     }
                     return a.__extends(t, e), t.prototype.render = function() {
-                        var e = this.props.currentCard.getDescription ? i.createElement(k.Ya, {
+                        var e = this.props.currentCard.getDescription ? i.createElement(R.Ya, {
                             padding: {
                                 bottom: 1
                             }
                         }, this.props.currentCard.getDescription()) : null;
-                        return i.createElement(k.Ya, {
+                        return i.createElement(R.Ya, {
                             className: "reporting-wizard-card"
-                        }, e, i.createElement(k.Ea, {
+                        }, e, i.createElement(R.Ea, {
                             label: this.props.currentCard.getLabel ? this.props.currentCard.getLabel() : ""
                         }, this.renderCardItems()))
                     }, t.prototype.renderCardItems = function() {
@@ -1209,43 +1230,43 @@
                         }).map(function(t, r) {
                             switch (t.type) {
                                 case o.Text:
-                                    return i.createElement(k.Ya, {
+                                    return i.createElement(R.Ya, {
                                         key: r,
                                         padding: {
                                             bottom: 1
                                         }
                                     }, t.getTitle());
                                 case o.Link:
-                                    return i.createElement(k.Ya, {
+                                    return i.createElement(R.Ya, {
                                         key: r,
                                         padding: {
                                             bottom: 1
                                         }
-                                    }, i.createElement(k.U, {
+                                    }, i.createElement(R.U, {
                                         to: t.value,
                                         targetBlank: !0
-                                    }, i.createElement(k.Ya, {
-                                        display: k.X.Flex
-                                    }, i.createElement(k.Ya, {
-                                        display: k.X.Inline,
+                                    }, i.createElement(R.Ya, {
+                                        display: R.X.Flex
+                                    }, i.createElement(R.Ya, {
+                                        display: R.X.Inline,
                                         padding: {
                                             right: .5
                                         }
-                                    }, i.createElement(k.tb, {
-                                        asset: k.ub.Document
+                                    }, i.createElement(R.tb, {
+                                        asset: R.ub.Document
                                     })), t.getTitle())));
                                 case o.Textarea:
                                     var n = t.value ? e.props.userTextInputs[t.value] : void 0,
                                         a = t.required && (!n || !!n && 0 === n.trim().length);
-                                    return i.createElement(k.Ya, {
+                                    return i.createElement(R.Ya, {
                                         key: r,
                                         padding: {
                                             bottom: 1
                                         }
-                                    }, i.createElement(k.Ea, {
+                                    }, i.createElement(R.Ea, {
                                         label: t.getTitle(),
                                         labelOptional: t.required ? "" : Object(c.d)("Optional", "ReportModalWizardCard")
-                                    }, i.createElement(k.Tb, {
+                                    }, i.createElement(R.Tb, {
                                         onChange: e.onChange,
                                         rows: t.rows || 3,
                                         name: t.value,
@@ -1255,12 +1276,12 @@
                                     })));
                                 case o.MultipleChoice:
                                 default:
-                                    return i.createElement(k.Ya, {
+                                    return i.createElement(R.Ya, {
                                         key: r,
                                         padding: {
                                             y: .5
                                         }
-                                    }, i.createElement(k.qb, {
+                                    }, i.createElement(R.qb, {
                                         checked: !!e.props.currentSelection && e.props.currentSelection.value === t.value,
                                         onChange: e.onSelect,
                                         label: t.getTitle(e.props.targetUser.displayName),
@@ -1272,11 +1293,11 @@
                         })), r
                     }, t
                 }(i.Component),
-                M = r("RQ6e");
+                E = r("RQ6e");
             ! function(e) {
                 e.Confirm = "Confirm", e.MultipleChoice = "MultipleChoice", e.Info = "End Card"
-            }(C || (C = {}));
-            var E, w, j, W = {
+            }(O || (O = {}));
+            var w, j, W, z = {
                     contentGeneral: function() {
                         return Object(c.d)("What would you like to report?", "ReportModalWizard")
                     },
@@ -1293,7 +1314,7 @@
                         return Object(c.d)("What would you like to report? (Please choose the most relevant statement that applies.)", "ReportModalWizard")
                     }
                 },
-                z = {
+                U = {
                     report: function(e) {
                         return Object(c.d)("Report {username}", {
                             username: e
@@ -1334,148 +1355,148 @@
                         return Object(c.d)("Reports are reviewed by Twitch Staff 24 hours a day. We will issue penalties, such as account suspension and/or content removal, once we verify that a violation of our policies has occurred.", "ReportModalWizard")
                     },
                     blockPrompt: !0,
-                    getTitle: z.thanks,
-                    type: C.Info,
+                    getTitle: U.thanks,
+                    type: O.Info,
                     value: "end card"
                 },
-                U = {
+                N = {
                     socialMedia: a.__assign({}, I, {
-                        items: [x.endBlurb_socialmedia]
+                        items: [S.endBlurb_socialmedia]
                     }),
                     violence: a.__assign({}, I, {
-                        items: [x.endBlurb_threat]
+                        items: [S.endBlurb_threat]
                     }),
                     legal: {
-                        getTitle: z.thanksConcern,
+                        getTitle: U.thanksConcern,
                         getDescription: function() {
                             return Object(c.d)("To submit a claim or report a violation of this type, you will need to follow the steps listed on the relevant page below.", "ReportModalWizard")
                         },
-                        items: [x.endLink_DMCA, x.endLink_trademark, x.endLink_devAgreement],
-                        type: C.Info,
+                        items: [S.endLink_DMCA, S.endLink_trademark, S.endLink_devAgreement],
+                        type: O.Info,
                         value: "ip end"
                     },
                     selfharm: {
-                        getTitle: z.thanksConcern,
+                        getTitle: U.thanksConcern,
                         getDescription: function() {
                             return Object(c.d)("If you know the user personally, and you believe them to be in danger, please contact their local authorities immediately. The link below contains some general information that may be of use.", "ReportModalWizard")
                         },
-                        items: [x.endLink_selfharm],
-                        type: C.Info,
+                        items: [S.endLink_selfharm],
+                        type: O.Info,
                         value: "selfharm end"
                     },
                     twitchEvent: {
-                        getTitle: z.thanksConcern,
+                        getTitle: U.thanksConcern,
                         getDescription: function() {
                             return Object(c.d)("Please bring this concern to the attention of staff or security at the event if you have not already done so. More information is available at the link below.", "ReportModalWizard")
                         },
-                        items: [x.endLink_eventCoC],
+                        items: [S.endLink_eventCoC],
                         value: "twitch event end",
-                        type: C.Info
+                        type: O.Info
                     }
                 },
-                N = {
-                    getTitle: z.report,
+                D = {
+                    getTitle: U.report,
                     getLabel: function() {
                         return Object(c.d)("Where is the problem?", "ReportModalWizard")
                     },
-                    items: [x.video, x.whisper, x.chat, x.room, x.profile, x.username, x.report_other],
-                    type: C.MultipleChoice,
+                    items: [S.video, S.whisper, S.chat, S.room, S.profile, S.username, S.report_other],
+                    type: O.MultipleChoice,
                     value: "content type"
                 },
-                D = {
+                A = {
                     identifyUser: {
-                        getTitle: z.reportVideo,
-                        getLabel: W.identifyUser,
-                        items: [x.video_streamer, x.video_someoneElse, x.video_chatSomeone],
-                        type: C.MultipleChoice,
+                        getTitle: U.reportVideo,
+                        getLabel: z.identifyUser,
+                        items: [S.video_streamer, S.video_someoneElse, S.video_chatSomeone],
+                        type: O.MultipleChoice,
                         value: "video identify user"
                     },
                     content: {
-                        getTitle: z.reportVideo,
-                        getLabel: W.contentGeneral,
-                        items: [x.revealPersonalInfo, x.video_labeling, x.video_inactive, x.video_general, x.report_ip, x.violateDevAgreement, x.selfharm],
-                        type: C.MultipleChoice,
+                        getTitle: U.reportVideo,
+                        getLabel: z.contentGeneral,
+                        items: [S.revealPersonalInfo, S.video_labeling, S.video_inactive, S.video_general, S.report_ip, S.violateDevAgreement, S.selfharm],
+                        type: O.MultipleChoice,
                         value: "video report reason"
                     },
                     general: {
-                        getTitle: z.reportVideo,
-                        getLabel: W.content,
-                        items: [x.report_username, x.violence, x.abusive, x.cheating, x.scam, x.inappropriateContent, x.evasion, x.impersonation, x.underage, x.bitsViolation],
-                        type: C.MultipleChoice,
+                        getTitle: U.reportVideo,
+                        getLabel: z.content,
+                        items: [S.report_username, S.violence, S.abusive, S.cheating, S.scam, S.inappropriateContent, S.evasion, S.impersonation, S.underage, S.bitsViolation],
+                        type: O.MultipleChoice,
                         value: "video general report reason"
                     }
                 },
-                A = {
+                B = {
                     content: {
-                        getTitle: z.reportMessage,
-                        getLabel: W.contentGeneral,
-                        items: [x.revealPersonalInfo, x.evasion, x.spam, x.maliciousRaid, x.report_username, x.messaging_general, x.selfharm],
-                        type: C.MultipleChoice,
+                        getTitle: U.reportMessage,
+                        getLabel: z.contentGeneral,
+                        items: [S.revealPersonalInfo, S.evasion, S.spam, S.maliciousRaid, S.report_username, S.messaging_general, S.selfharm],
+                        type: O.MultipleChoice,
                         value: "message report reason"
                     },
                     general: {
-                        getTitle: z.reportMessage,
-                        getLabel: W.content,
-                        items: [x.report_emotes, x.violence, x.abusive, x.inappropriateContent, x.impersonation, x.underage, x.bitsViolation],
-                        type: C.MultipleChoice,
+                        getTitle: U.reportMessage,
+                        getLabel: z.content,
+                        items: [S.report_emotes, S.violence, S.abusive, S.inappropriateContent, S.impersonation, S.underage, S.bitsViolation],
+                        type: O.MultipleChoice,
                         value: "message general report reason"
                     }
                 },
-                B = a.__assign({}, A.content, {
+                F = a.__assign({}, B.content, {
                     getDescription: function() {
                         return Object(c.d)("Please note that we may review additional messages in this conversation to determine the context of your report.", "ReportModalWizard")
                     }
                 }),
-                F = {
+                V = {
                     content: {
-                        getTitle: z.reportProfile,
-                        getLabel: W.contentGeneral,
-                        items: [x.revealPersonalInfo, x.inappropriateBadge, x.inappropriateExtension, x.noModeration, x.profile_general, x.report_ip, x.violateDevAgreement, x.selfharm],
-                        type: C.MultipleChoice,
+                        getTitle: U.reportProfile,
+                        getLabel: z.contentGeneral,
+                        items: [S.revealPersonalInfo, S.inappropriateBadge, S.inappropriateExtension, S.noModeration, S.profile_general, S.report_ip, S.violateDevAgreement, S.selfharm],
+                        type: O.MultipleChoice,
                         value: "profile report reason"
                     },
                     general: {
-                        getTitle: z.reportProfile,
-                        getLabel: W.content,
-                        items: [x.report_username, x.violence, x.abusive, x.scam, x.inappropriateContent, x.evasion, x.impersonation, x.underage, x.bitsViolation],
-                        type: C.MultipleChoice,
+                        getTitle: U.reportProfile,
+                        getLabel: z.content,
+                        items: [S.report_username, S.violence, S.abusive, S.scam, S.inappropriateContent, S.evasion, S.impersonation, S.underage, S.bitsViolation],
+                        type: O.MultipleChoice,
                         value: "profile general report reason"
                     }
                 },
-                V = {
+                L = {
                     getTitle: function(e) {
                         return Object(c.d)("Report {username}'s Room", {
                             username: e
                         }, "ReportModalWizard")
                     },
-                    getLabel: W.identifyUser,
-                    items: [x.report_channelOwner, x.report_member],
+                    getLabel: z.identifyUser,
+                    items: [S.report_channelOwner, S.report_member],
                     value: "room report user",
-                    type: C.MultipleChoice
-                },
-                L = {
-                    getTitle: z.tellUsMore,
-                    items: [x.input_description],
-                    type: C.Confirm,
-                    value: "tell us more"
+                    type: O.MultipleChoice
                 },
                 P = {
-                    banEvasion: a.__assign({}, L, {
-                        items: [x.input_usernames, x.input_description],
+                    getTitle: U.tellUsMore,
+                    items: [S.input_description],
+                    type: O.Confirm,
+                    value: "tell us more"
+                },
+                Y = {
+                    banEvasion: a.__assign({}, P, {
+                        items: [S.input_usernames, S.input_description],
                         value: "ban evasion tell us more"
                     }),
-                    socialMedia: a.__assign({}, L, {
-                        items: [x.input_link, x.input_connection, x.input_description],
-                        nextCard: U.socialMedia,
+                    socialMedia: a.__assign({}, P, {
+                        items: [S.input_link, S.input_connection, S.input_description],
+                        nextCard: N.socialMedia,
                         value: "social media tell us more"
                     })
                 },
-                Y = {
+                H = {
                     content: {
-                        getTitle: z.reportAbusive,
-                        getLabel: W.relevantStatements,
-                        items: [x.hateSpeech, x.harassment, x.abusiveViolence, x.commitingViolence, x.swatting, x.personalInfo],
-                        type: C.MultipleChoice,
+                        getTitle: U.reportAbusive,
+                        getLabel: z.relevantStatements,
+                        items: [S.hateSpeech, S.harassment, S.abusiveViolence, S.commitingViolence, S.swatting, S.personalInfo],
+                        type: O.MultipleChoice,
                         value: "abuse type"
                     },
                     violence: {
@@ -1487,12 +1508,12 @@
                         getLabel: function() {
                             return Object(c.d)("Are the threats or actions directed at you or someone else?", "ReportModalWizard")
                         },
-                        items: [x.threat_me, x.threat_person, x.threat_group, x.threat_selfharm],
-                        type: C.MultipleChoice,
+                        items: [S.threat_me, S.threat_person, S.threat_group, S.threat_selfharm],
+                        type: O.MultipleChoice,
                         value: "violence type"
                     }
                 },
-                H = {
+                q = {
                     identifyLocation: {
                         getTitle: function(e) {
                             return Object(c.d)("Report {username} for something else...", {
@@ -1502,8 +1523,8 @@
                         getLabel: function() {
                             return Object(c.d)("Where did the problem happen?", "ReportModalWizard")
                         },
-                        items: [x.location_onTwitch, x.location_anotherSite, x.location_TwitchEvent],
-                        type: C.MultipleChoice,
+                        items: [S.location_onTwitch, S.location_anotherSite, S.location_TwitchEvent],
+                        type: O.MultipleChoice,
                         value: "off-site conduct location"
                     },
                     externalSite: {
@@ -1512,47 +1533,47 @@
                                 username: e
                             }, "ReportModalWizard")
                         },
-                        getLabel: W.thisPersonIs,
+                        getLabel: z.thisPersonIs,
                         getDescription: function() {
                             return Object(c.d)("Please note that incidents reported through this form must involve Twitch community members. If possible, please submit a report to the site or service where the incident occurred as well.", "ReportModalWizard")
                         },
-                        items: [x.external_incitingRaids, x.external_threatening, x.external_harassment],
-                        type: C.MultipleChoice,
-                        nextCard: P.socialMedia,
+                        items: [S.external_incitingRaids, S.external_threatening, S.external_harassment],
+                        type: O.MultipleChoice,
+                        nextCard: Y.socialMedia,
                         value: "external site conduct"
                     },
-                    external_violence: a.__assign({}, Y.violence, {
-                        items: [x.threat_me, x.threat_person, x.threat_group],
-                        nextCard: P.socialMedia
+                    external_violence: a.__assign({}, H.violence, {
+                        items: [S.threat_me, S.threat_person, S.threat_group],
+                        nextCard: Y.socialMedia
                     }),
-                    external_abusive: a.__assign({}, Y.content, {
-                        items: [x.hateSpeech, x.harassment, x.external_abusiveViolence, x.external_commitingViolence, x.swatting, x.personalInfo],
-                        nextCard: P.socialMedia
+                    external_abusive: a.__assign({}, H.content, {
+                        items: [S.hateSpeech, S.harassment, S.external_abusiveViolence, S.external_commitingViolence, S.swatting, S.personalInfo],
+                        nextCard: Y.socialMedia
                     })
                 },
-                q = {
+                X = {
                     getTitle: function(e) {
                         return Object(c.d)("Report {username}'s Spam or Malicious Links", {
                             username: e
                         }, "ReportModalWizard")
                     },
-                    getLabel: W.contentGeneral,
-                    items: [x.spam_bot, x.spam_scam, x.spam_repeated],
-                    type: C.MultipleChoice,
+                    getLabel: z.contentGeneral,
+                    items: [S.spam_bot, S.spam_scam, S.spam_repeated],
+                    type: O.MultipleChoice,
                     value: "spam type"
                 },
-                X = {
+                G = {
                     getTitle: function(e) {
                         return Object(c.d)("Report {username} for Inappropriate Content", {
                             username: e
                         }, "ReportModalWizard")
                     },
-                    getLabel: W.relevantStatements,
-                    items: [x.inappropriate_game, x.gory, x.sexuallyViolent, x.childAnimal, x.pornographic, x.suggestive, x.nudity, x.other],
-                    type: C.MultipleChoice,
+                    getLabel: z.relevantStatements,
+                    items: [S.inappropriate_game, S.gory, S.sexuallyViolent, S.childAnimal, S.pornographic, S.suggestive, S.nudity, S.other],
+                    type: O.MultipleChoice,
                     value: "inappropriate content type"
                 },
-                G = {
+                Q = {
                     getTitle: function(e) {
                         return Object(c.d)("Report {username} for Evading a Ban", {
                             username: e
@@ -1562,11 +1583,11 @@
                         return Object(c.d)("What kind of ban are they evading?", "ReportModalWizard")
                     },
                     value: "ban type",
-                    items: [x.evasion_chat, x.evasion_sitewide, x.evasion_messaging],
-                    type: C.MultipleChoice,
-                    nextCard: P.banEvasion
+                    items: [S.evasion_chat, S.evasion_sitewide, S.evasion_messaging],
+                    type: O.MultipleChoice,
+                    nextCard: Y.banEvasion
                 },
-                Q = {
+                $ = {
                     getTitle: function(e) {
                         return Object(c.d)("Report {username} for Impersonation", {
                             username: e
@@ -1578,75 +1599,75 @@
                     getDescription: function() {
                         return Object(c.d)("Parody, cosplay, and other portrayals without the intent to deceive or defraud are allowed under Twitch's Community Guidelines. If you would still like to submit a report, please continue.", "ReportModalWizard")
                     },
-                    items: [x.impersonation_me, x.impersonation_brand, x.impersonation_other],
-                    type: C.MultipleChoice,
+                    items: [S.impersonation_me, S.impersonation_brand, S.impersonation_other],
+                    type: O.MultipleChoice,
                     value: "impersonation type"
                 },
-                $ = N,
-                K = L,
-                J = I,
-                Z = {
-                    video: D.identifyUser,
-                    whisper: B,
-                    chat: A.content,
-                    profile: F.content,
-                    room: V,
-                    "somewhere else": H.identifyLocation,
-                    streamer: D.content,
-                    "someone else in video": D.content,
-                    "someone in chat": A.content,
-                    general_video: D.general,
-                    general_messaging: A.general,
-                    general_profile: F.general,
-                    "channel owner": F.content,
-                    "community member": A.content,
-                    "on twitch": F.content,
-                    "another site": H.externalSite,
-                    "twitch event": U.twitchEvent,
-                    "brigading/raids": P.socialMedia,
-                    threatening: H.external_violence,
-                    "hateful/harassing": H.external_abusive,
-                    "external site; threatening violence": H.external_violence,
-                    "external site; committing violence": H.external_violence,
-                    "external site; scam": P.socialMedia,
-                    "ban evasion": G,
-                    spam: q,
-                    hateful: Y.content,
-                    impersonation: Q,
-                    "violence/threats": Y.violence,
-                    "threatening violence": Y.violence,
-                    "committing violence": Y.violence,
-                    abusive: Y.content,
-                    "inappropriate content": X,
-                    "intellectual property": U.legal,
-                    "violating developer agreement": U.legal
-                },
+                K = D,
+                J = P,
+                Z = I,
                 ee = {
-                    selfharm: U.selfharm,
-                    harm: U.violence,
-                    other: J
+                    video: A.identifyUser,
+                    whisper: F,
+                    chat: B.content,
+                    profile: V.content,
+                    room: L,
+                    "somewhere else": q.identifyLocation,
+                    streamer: A.content,
+                    "someone else in video": A.content,
+                    "someone in chat": B.content,
+                    general_video: A.general,
+                    general_messaging: B.general,
+                    general_profile: V.general,
+                    "channel owner": V.content,
+                    "community member": B.content,
+                    "on twitch": V.content,
+                    "another site": q.externalSite,
+                    "twitch event": N.twitchEvent,
+                    "brigading/raids": Y.socialMedia,
+                    threatening: q.external_violence,
+                    "hateful/harassing": q.external_abusive,
+                    "external site; threatening violence": q.external_violence,
+                    "external site; committing violence": q.external_violence,
+                    "external site; scam": Y.socialMedia,
+                    "ban evasion": Q,
+                    spam: X,
+                    hateful: H.content,
+                    impersonation: $,
+                    "violence/threats": H.violence,
+                    "threatening violence": H.violence,
+                    "committing violence": H.violence,
+                    abusive: H.content,
+                    "inappropriate content": G,
+                    "intellectual property": N.legal,
+                    "violating developer agreement": N.legal
                 },
                 te = {
-                    CHANNEL_FEED_POST_REPORT: F.content,
-                    COMMUNITY_REPORT: F.content,
-                    CHAT_REPORT: A.content,
-                    CLIP_REPORT: D.content,
-                    EVENT_REPORT: F.content,
-                    EXTENSION_REPORT: F.content,
-                    LIVE_UP_REPORT: F.content,
-                    ROOM_REPORT: V,
-                    WHISPER_REPORT: B,
-                    VOD_COMMENT_REPORT: A.content
+                    selfharm: N.selfharm,
+                    harm: N.violence,
+                    other: Z
                 },
-                re = "report-wizard-back",
-                ne = "report-wizard-close",
-                oe = "report-wizard-next",
-                ae = "report-wizard-submit",
-                ie = function(e) {
+                re = {
+                    CHANNEL_FEED_POST_REPORT: V.content,
+                    COMMUNITY_REPORT: V.content,
+                    CHAT_REPORT: B.content,
+                    CLIP_REPORT: A.content,
+                    EVENT_REPORT: V.content,
+                    EXTENSION_REPORT: V.content,
+                    LIVE_UP_REPORT: V.content,
+                    ROOM_REPORT: L,
+                    WHISPER_REPORT: F,
+                    VOD_COMMENT_REPORT: B.content
+                },
+                ne = "report-wizard-back",
+                oe = "report-wizard-close",
+                ae = "report-wizard-next",
+                ie = "report-wizard-submit",
+                se = function(e) {
                     function t() {
                         var t = null !== e && e.apply(this, arguments) || this;
                         return t.state = {
-                            currentCard: t.props.currentCard || te[t.props.reportContentType] || $,
+                            currentCard: t.props.currentCard || re[t.props.reportContentType] || K,
                             prevCards: [],
                             currentSelection: null,
                             prevSelections: [],
@@ -1658,44 +1679,44 @@
                             targetUnknown: !1,
                             reportContext: t.props.reportContentType
                         }, t.renderPrimer = function() {
-                            return i.createElement(k.Ya, {
+                            return i.createElement(R.Ya, {
                                 margin: {
                                     top: 1
                                 }
-                            }, i.createElement(k.W, null, Object(c.d)("We are going to ask you a few questions to help us investigate your report quickly and accurately.", "ReportModalWizard")))
+                            }, i.createElement(R.W, null, Object(c.d)("We are going to ask you a few questions to help us investigate your report quickly and accurately.", "ReportModalWizard")))
                         }, t.renderButtons = function() {
                             var e = Object(c.d)("Close", "ReportModalWizard"),
                                 r = t.handleClose,
-                                n = ne,
+                                n = oe,
                                 o = !1,
                                 a = t.state.prevCards.length ? t.renderBack() : null;
                             switch (t.state.currentCard.type) {
-                                case C.MultipleChoice:
-                                    e = Object(c.d)("Next", "ReportModalWizard"), r = t.handleNext, n = oe, o = !t.state.currentSelection;
+                                case O.MultipleChoice:
+                                    e = Object(c.d)("Next", "ReportModalWizard"), r = t.handleNext, n = ae, o = !t.state.currentSelection;
                                     break;
-                                case C.Confirm:
-                                    e = Object(c.d)("Submit Report", "ReportModalWizard"), r = t.handleSubmit, o = !t.state.userTextInput, n = ae
+                                case O.Confirm:
+                                    e = Object(c.d)("Submit Report", "ReportModalWizard"), r = t.handleSubmit, o = !t.state.userTextInput, n = ie
                             }
-                            return i.createElement(k.Ya, null, a, i.createElement(k.z, {
+                            return i.createElement(R.Ya, null, a, i.createElement(R.z, {
                                 onClick: r,
                                 disabled: o,
                                 "data-test-selector": n
-                            }, i.createElement(k.Ya, {
+                            }, i.createElement(R.Ya, {
                                 padding: {
                                     x: 1
                                 }
                             }, e)))
                         }, t.renderBack = function() {
-                            return i.createElement(k.Ya, {
+                            return i.createElement(R.Ya, {
                                 margin: {
                                     right: 1
                                 },
-                                display: k.X.InlineBlock
-                            }, i.createElement(k.z, {
-                                type: k.F.Hollow,
+                                display: R.X.InlineBlock
+                            }, i.createElement(R.z, {
+                                type: R.F.Hollow,
                                 onClick: t.handleBack,
-                                "data-test-selector": re
-                            }, i.createElement(k.Ya, {
+                                "data-test-selector": ne
+                            }, i.createElement(R.Ya, {
                                 padding: {
                                     x: 1
                                 }
@@ -1706,7 +1727,7 @@
                             t.setState({
                                 modalCloseTracked: !0
                             }, function() {
-                                return t.props.trackClose(j.Finish, t.state.currentCard.value)
+                                return t.props.trackClose(W.Finish, t.state.currentCard.value)
                             }), t.props.onClose()
                         }, t.handleNext = function() {
                             if (t.state.currentSelection && t.state.currentSelection.value) {
@@ -1716,10 +1737,10 @@
                                     o = t.state.displacedSelections[t.state.displacedSelections.length - 1],
                                     a = t.state.currentSelection.differentTarget || t.state.targetUnknown,
                                     i = t.state.currentSelection.reportContext || t.state.reportContext,
-                                    s = e.nextCard || K;
-                                Z[t.state.currentSelection.value] && (s = Z[t.state.currentSelection.value]);
+                                    s = e.nextCard || J;
+                                ee[t.state.currentSelection.value] && (s = ee[t.state.currentSelection.value]);
                                 var l = t.state.currentSelection.reportReason || t.state.reportReason,
-                                    c = s.type === C.Info;
+                                    c = s.type === O.Info;
                                 t.setState({
                                     currentCard: s,
                                     reportReason: l,
@@ -1730,7 +1751,7 @@
                                     displacedSelections: t.state.displacedSelections.slice(0, -1),
                                     reportContext: i
                                 }, function() {
-                                    return t.trackNavigation(w.Next, e.value)
+                                    return t.trackNavigation(j.Next, e.value)
                                 })
                             }
                         }, t.createReportDescription = function() {
@@ -1757,13 +1778,13 @@
                                             return e = Object(c.d)("Additional information is required.", "ReportModalWizard"), this.requiredInputsNonEmpty() ? (t = this.state.reportReason || "other", r = this.createReportDescription(), [4, this.props.onSubmit(t, r, this.state.reportContext)]) : [3, 2];
                                         case 1:
                                             switch (a.sent(), this.props.submitStatus) {
-                                                case M.a.FormError:
+                                                case E.a.FormError:
                                                     this.setState({
                                                         error: e
                                                     });
                                                     break;
-                                                case M.a.Success:
-                                                    n = J, ee[t] && (n = ee[t]), this.state.currentCard.nextCard && (n = this.state.currentCard.nextCard), this.setState({
+                                                case E.a.Success:
+                                                    n = Z, te[t] && (n = te[t]), this.state.currentCard.nextCard && (n = this.state.currentCard.nextCard), this.setState({
                                                         currentCard: n,
                                                         prevCards: [],
                                                         prevSelections: [],
@@ -1772,15 +1793,15 @@
                                                         userTextInput: {},
                                                         error: ""
                                                     }, function() {
-                                                        return o.trackNavigation(w.Submit)
+                                                        return o.trackNavigation(j.Submit)
                                                     });
                                                     break;
-                                                case M.a.UserError:
+                                                case E.a.UserError:
                                                     this.setState({
                                                         error: Object(c.d)("This account could not be reported. It may have already been suspended, or the owner may have deleted it.", "ReportModalWizard")
                                                     });
                                                     break;
-                                                case M.a.MutationError:
+                                                case E.a.MutationError:
                                                 default:
                                                     this.setState({
                                                         error: Object(c.d)("Sorry, a network error occurred when submitting your report. Please try again later.", "ReportModalWizard")
@@ -1788,7 +1809,7 @@
                                             }
                                             return [3, 3];
                                         case 2:
-                                            this.props.onError(M.a.FormError), this.setState({
+                                            this.props.onError(E.a.FormError), this.setState({
                                                 error: e
                                             }), a.label = 3;
                                         case 3:
@@ -1809,7 +1830,7 @@
                                         error: "",
                                         targetUnknown: n
                                     }, function() {
-                                        return i.trackNavigation(w.Back, e.value)
+                                        return i.trackNavigation(j.Back, e.value)
                                     }), [2]
                                 })
                             })
@@ -1840,15 +1861,15 @@
                         }, t
                     }
                     return a.__extends(t, e), t.prototype.componentWillUnmount = function() {
-                        this.state.modalCloseTracked || this.props.trackClose(j.Close, this.state.currentCard.value)
+                        this.state.modalCloseTracked || this.props.trackClose(W.Close, this.state.currentCard.value)
                     }, t.prototype.render = function() {
-                        var e = this.state.currentCard.type === C.Info && this.state.currentCard.blockPrompt ? i.createElement(_, {
+                        var e = this.state.currentCard.type === O.Info && this.state.currentCard.blockPrompt ? i.createElement(C, {
                                 targetUser: this.props.targetUser,
                                 onBlock: this.props.onBlock,
                                 onUnblock: this.props.onUnblock,
                                 userBlocked: this.props.userBlocked
                             }) : null,
-                            t = this.state.error ? i.createElement(k.Fb, {
+                            t = this.state.error ? i.createElement(R.Fb, {
                                 fullWidth: !0,
                                 margin: {
                                     bottom: 1
@@ -1856,24 +1877,24 @@
                                 padding: 1,
                                 className: "reporting__error-container"
                             }, this.state.error) : null,
-                            r = this.state.prevCards.length || this.state.currentCard.type === C.Info ? null : this.renderPrimer();
-                        return i.createElement(k.Fb, {
+                            r = this.state.prevCards.length || this.state.currentCard.type === O.Info ? null : this.renderPrimer();
+                        return i.createElement(R.Fb, {
                             className: "reporting-wizard",
-                            display: k.X.Flex,
+                            display: R.X.Flex,
                             margin: {
                                 x: 1
                             },
-                            flexDirection: k.Aa.Column,
+                            flexDirection: R.Aa.Column,
                             fullHeight: !0,
                             "data-test-card-value": this.state.currentCard.value
-                        }, t, i.createElement(k.W, {
+                        }, t, i.createElement(R.W, {
                             bold: !0,
-                            fontSize: k.Ca.Size4
-                        }, this.getTitle()), r, i.createElement(k.Ya, {
+                            fontSize: R.Ca.Size4
+                        }, this.getTitle()), r, i.createElement(R.Ya, {
                             margin: {
                                 y: 1
                             }
-                        }, i.createElement(S, {
+                        }, i.createElement(M, {
                             currentCard: this.state.currentCard,
                             currentSelection: this.state.currentSelection,
                             targetUser: this.props.targetUser,
@@ -1881,29 +1902,29 @@
                             onChangeRadio: this.handleSelection,
                             onChangeText: this.handleTextInput,
                             userTextInputs: this.state.userTextInput,
-                            error: this.props.submitStatus === M.a.FormError && !!this.state.error
+                            error: this.props.submitStatus === E.a.FormError && !!this.state.error
                         }), e), this.renderButtons())
                     }, t
                 }(i.Component),
-                se = r("s8Ou"),
-                le = r("0hI/");
+                le = r("s8Ou"),
+                ce = r("0hI/");
             r.d(t, "c", function() {
-                    return w
-                }), r.d(t, "a", function() {
                     return j
+                }), r.d(t, "a", function() {
+                    return W
                 }), r.d(t, "b", function() {
-                    return de
+                    return ue
                 }),
                 function(e) {
                     e.Close = "close", e.Open = "open", e.Submit = "submit_report", e.ToggleSettings = "modal_settings"
-                }(E || (E = {})),
-                function(e) {
-                    e.Back = "back", e.Close = "close", e.Open = "open", e.Next = "next", e.Submit = "submit_report", e.ToggleSettings = "modal_settings"
                 }(w || (w = {})),
                 function(e) {
+                    e.Back = "back", e.Close = "close", e.Open = "open", e.Next = "next", e.Submit = "submit_report", e.ToggleSettings = "modal_settings"
+                }(j || (j = {})),
+                function(e) {
                     e.Close = "close", e.Finish = "finish"
-                }(j || (j = {}));
-            var ce = function(e) {
+                }(W || (W = {}));
+            var de = function(e) {
                 function t(t) {
                     var r = e.call(this, t) || this;
                     r.handleSubmit = function(e, t, n) {
@@ -1912,7 +1933,7 @@
                             return a.__generator(this, function(a) {
                                 switch (a.label) {
                                     case 0:
-                                        if (r = n === v.N.WHISPER_REPORT ? n : this.props.reportContext.contentType, o = v.N[r], null === (i = {
+                                        if (r = n === f.N.WHISPER_REPORT ? n : this.props.reportContext.contentType, o = f.N[r], null === (i = {
                                                 description: t,
                                                 reason: e,
                                                 content: o,
@@ -1920,20 +1941,20 @@
                                                 extra: this.props.reportContext.extra,
                                                 targetID: this.props.data.targetUser.id
                                             }).targetID) return this.setState({
-                                            submitStatus: M.a.UserError
+                                            submitStatus: E.a.UserError
                                         }), [2];
                                         a.label = 1;
                                     case 1:
                                         return a.trys.push([1, 3, , 4]), [4, this.props.reportUser(Object(m.a)(i))];
                                     case 2:
                                         return a.sent(), this.setState({
-                                            submitStatus: M.a.Success
+                                            submitStatus: E.a.Success
                                         }, function() {
-                                            l.state.showWizard || l.trackAction(E.Submit)
+                                            l.state.showWizard || l.trackAction(w.Submit)
                                         }), [3, 4];
                                     case 3:
                                         return s = a.sent(), c.k.error(s, "ReportUser Mutation failed."), this.setState({
-                                            submitStatus: M.a.MutationError
+                                            submitStatus: E.a.MutationError
                                         }), [3, 4];
                                     case 4:
                                         return [2]
@@ -1951,6 +1972,10 @@
                             __typename: "User"
                         })), r.setState({
                             userBlocked: !0
+                        }), r.props.sessionUser && r.props.sessionUser.login && r.props.data.targetUser && r.props.data.targetUser.login && Object(h.b)({
+                            context: h.a.ReportWizard,
+                            targetUserLogin: r.props.data.targetUser.login,
+                            currentUserLogin: r.props.sessionUser.login
                         })
                     }, r.onUnblock = function() {
                         r.props.unblockUserMutation(r.props.data.targetUser.id, a.__assign({}, r.props.sessionUser, {
@@ -1959,18 +1984,18 @@
                             userBlocked: !1
                         })
                     }, r.trackOpen = function(e) {
-                        r.state.openEventSent || (r.state.showWizard ? r.trackWizardAction(w.Open, void 0, e) : r.trackAction(E.Open), r.setState({
+                        r.state.openEventSent || (r.state.showWizard ? r.trackWizardAction(j.Open, void 0, e) : r.trackAction(w.Open), r.setState({
                             openEventSent: !0
                         }))
                     }, r.trackClose = function(e, t) {
-                        r.state.closeEventSent || (r.state.showWizard ? r.trackWizardAction(w.Close, t, void 0, e) : r.trackAction(E.Close), r.setState({
+                        r.state.closeEventSent || (r.state.showWizard ? r.trackWizardAction(j.Close, t, void 0, e) : r.trackAction(w.Close), r.setState({
                             closeEventSent: !0
                         }))
                     }, r.trackWizardAction = function(e, t, n, o) {
-                        c.p.tracking.track(f.SpadeEventType.ReportWizardFlowAction, {
+                        c.p.tracking.track(b.SpadeEventType.ReportWizardFlowAction, {
                             ui_context: r.props.reportContext.contentType,
                             target_user_id: r.props.reportContext.targetUserID,
-                            report_sent: r.state.submitStatus === M.a.Success,
+                            report_sent: r.state.submitStatus === E.a.Success,
                             modal_type: "wizard_v1",
                             extra_user_id: r.props.reportContext.additionalTrackingID,
                             action: e,
@@ -1980,18 +2005,18 @@
                             navigated_to: n
                         })
                     }, r.trackAction = function(e) {
-                        c.p.tracking.track(f.SpadeEventType.ReportFlowAction, {
+                        c.p.tracking.track(b.SpadeEventType.ReportFlowAction, {
                             ui_context: r.props.reportContext.contentType,
                             target_user_id: r.props.reportContext.targetUserID,
-                            report_sent: r.state.submitStatus === M.a.Success,
+                            report_sent: r.state.submitStatus === E.a.Success,
                             extra_user_id: r.props.reportContext.additionalTrackingID,
                             action: e,
                             report_session_id: r.reportID
                         })
-                    }, r.reportID = Object(h.a)();
-                    var n = c.p.experiments.getAssignment(g.b.NewReportingWizard);
+                    }, r.reportID = Object(g.a)();
+                    var n = c.p.experiments.getAssignment(v.b.NewReportingWizard);
                     return r.state = {
-                        submitStatus: M.a.Unsubmitted,
+                        submitStatus: E.a.Unsubmitted,
                         showWizard: "yes" === n,
                         openEventSent: !1,
                         closeEventSent: !1,
@@ -2003,14 +2028,14 @@
                 }, t.prototype.componentWillUnmount = function() {
                     this.handleClose(), this.state.showWizard || this.trackClose()
                 }, t.prototype.render = function() {
-                    if (this.props.data.error) return i.createElement(k.Ya, {
+                    if (this.props.data.error) return i.createElement(R.Ya, {
                         margin: {
                             bottom: 1
                         }
-                    }, i.createElement(k.W, {
-                        fontSize: k.Ca.Size5
+                    }, i.createElement(R.W, {
+                        fontSize: R.Ca.Size5
                     }, Object(c.d)("There was an unexpected error. Please refresh the page and try again", "ReportUser")));
-                    if (this.props.data.loading) return i.createElement(k.jb, {
+                    if (this.props.data.loading) return i.createElement(R.jb, {
                         lineCount: 3
                     });
                     if (this.props.data.targetUser) {
@@ -2023,7 +2048,7 @@
                             title: this.props.title,
                             defaultDescription: this.props.defaultDescription
                         };
-                        return this.state.showWizard ? this.props.data.loading ? i.createElement(k.ab, null) : i.createElement(ie, a.__assign({}, e, {
+                        return this.state.showWizard ? this.props.data.loading ? i.createElement(R.ab, null) : i.createElement(se, a.__assign({}, e, {
                             user: this.props.sessionUser,
                             onBlock: this.onBlock,
                             onUnblock: this.onUnblock,
@@ -2031,16 +2056,16 @@
                             trackAction: this.trackWizardAction,
                             trackClose: this.trackClose,
                             userBlocked: this.userBlocked
-                        })) : i.createElement(M.b, a.__assign({}, e, {
+                        })) : i.createElement(E.b, a.__assign({}, e, {
                             targetUser: this.props.data.targetUser
                         }))
                     }
-                    return i.createElement(k.Ya, {
+                    return i.createElement(R.Ya, {
                         margin: {
                             bottom: 1
                         }
-                    }, i.createElement(k.W, {
-                        fontSize: k.Ca.Size5
+                    }, i.createElement(R.W, {
+                        fontSize: R.Ca.Size5
                     }, Object(c.d)("The user you are trying to report does not exist", "ReportUser")))
                 }, Object.defineProperty(t.prototype, "userBlocked", {
                     get: function() {
@@ -2053,9 +2078,9 @@
                     configurable: !0
                 }), t
             }(i.Component);
-            var de = Object(l.compose)(Object(d.a)(se, {
+            var ue = Object(l.compose)(Object(d.a)(le, {
                 name: "reportUser"
-            }), Object(d.a)(le, {
+            }), Object(d.a)(ce, {
                 options: function(e) {
                     return {
                         variables: {
@@ -2063,13 +2088,13 @@
                         }
                     }
                 }
-            }), Object(b.b)("ReportUser", {
+            }), Object(y.b)("ReportUser", {
                 autoReportInteractive: !0
             }), Object(u.a)(), Object(p.a)(), Object(s.connect)(function(e) {
                 return {
                     sessionUser: e.session.user
                 }
-            }, null))(ce)
+            }, null))(de)
         },
         gIsd: function(e, t) {
             var r = {
