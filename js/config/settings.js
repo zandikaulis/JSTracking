@@ -52,7 +52,7 @@ window.__twilightSettings = {
     "drops_itemnames_enabled": true,
     "earth_wind_fire_end": "2018-11-02T59:59:59Z",
     "earth_wind_fire_start": "2018-09-10T00:00:00Z",
-    "emote_card": "off",
+    "emote_card": "whitelist",
     "emote_card_whitelist": ["184009112"],
     "env_test": "This is a test in Production.",
     "esport_channel_page_whitelist": ["137512364", "188863650", "188864445", "27697171", "191316249", "104874624", "139075904", "180833069", "48937001", "170846405", "189906299", "166458814", "189905698", "203316457"],
