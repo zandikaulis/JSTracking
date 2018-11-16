@@ -124,7 +124,7 @@ window.__twilightSettings = {
     "sizmek_versatag_events": ["YeUmkUI9R5GKR5WGtg046A", "f4aK8duASJKiAYAiETsUvw", "WN1Ly4NxRgOrSNWOSG40PQ", "YFCU_dppR6Oor32XLPrU2w", "2HsLVRMUTnqChbVy5YSsfg", "f4aK8duASJKiAYAiETsUvw"],
     "sizmek_versatag_games": ["496712", "Call of Duty: WWII", "497571", "Wrestling"],
     "sizmek_versatag_teams": ["wrestling"],
-    "spade_url": "https://video-edge-4fe57a.sjc02.hls.ttvnw.net/v1/segment/CrKU4WkBX_eDXY1kGUFmNOLkFGFzNYz7KpzkJN5z7JgMko6kWyQ-h8hZbsX8tbbxFJY5_jqypSMYIe8ZVUr7evcCAa6KoJD0ozegOacFNdNWv8b2Q6O4DvSaeRgjy5zeLUz2RK_WReNo4ppM4Km9ZRQsa1edVNY9zT-vBKoGNCt4tcMOaAX1NV4QpcLL4B2YBDziLIfSAEs186a0-fhuNKfx4dO238jAbMBgCZb_FCGR-vMqfFsD4tmRVbeWBS6VRDW3FGE8vD2i-ENMe1yrX-cAvR2Mb3rLRDmOGOPLUls-wzBsGYptIDmX5H5UfjTdnht07galMBamZ9esJGfe9420B7kkw6UD5W6DEjHDUvA_r7z0tXTqyDwZubNIQgls16GXRiX1gGivL5s32qUhApJI72SUK1LhQ6Qshdt3FoB3VvQdMJaFwUii6LFyTIbFjxo7o_wziUPMGMYqhJTr_ykRyXnsjIaHFXIFLsqy5_czzaQjAKB7Y230H640jQbZffYGjIbzXWuT_j7h57e6YTnLI8sEfyAlEKb6I9akpYD94-lQxvClsNK1n_KIh9-xR1cKiqMCkqYzgyZVrx-t0fnsP18Xqf0OeR3lrsh4ckYMWnL5V4R5OMBFCKbBDqzBFBSNkclGMbyqKmLvd-SmgJ_NiT1pxPxDSphlKnlf0uhZfwifd7_Y5ftqYCqwgg7TMHysXpteznpKj_WVQ-beM-th67OBWw6hP6FsueVrH4LF9Kp4ZhDsukDx-NsTP3r-xtup40CdyWhxnBMbKpc.ts",
+    "spade_url": "https://video-edge-b6b5b4.sjc02.hls.ttvnw.net/v1/segment/ClKbB5B8sQtluOSk-_rTxrE2vKPHKuAjTXIH5ah8dRkuslx2Wb54eJO42kI-Ya1E84enJ0ZW4G3r7hLVL-229OZbZFvz6qhsXSBi4lF2kK75CmzO4fg1Ix09MKItbrX0i57YekU5skiKdhMeAzJbpVbEaskQTlne-zhZtTZlnaIgIILewBzVt8NHAxMgSClToBSn6Bq5PdRWvjEya2HNwIx7CEfpkD0YLit-ncmEga-eI6RNnOY-0pIFUDS309_KDKLAF8K7KvsN4MXI7oXjkJp0PP5SQNarU9bn6IimQwr9XG5Gnb2GCLix8xbQmmFwy-4JG3MlTziBZOhSzhiegQfmZEGCW5luT1dMr6ywzYuMR4cS1DmtjMqJhLsJUY-acSim70awdEhAskhZ6ddJPkU6q2vLhsCiZosOeWMqIt8z4591TyV2IOSxf6UmfalCSLQ7eYvAAZK8JDBZz4IAwkR78CCUUpDT8FX6qpFXD9NaKtmgxJ7XI_w1QY1J3a25fzbtdawAyB9qcI1RnadgUzfBW-M6ClDQfIUdT0RC82KCANYOIHRAYpfKixFIFU8MR5-NBNqJLK_I6Deo5tdyw8e0tYgfjo_j_xV3MtHOwn_VK-5-qwnNwoAasXQ8Z7B78A0wL9_rPvl8-Bq9FylS6g4SEADbwObKLzkg4LMrYK6_J5MB83a4Z6aLNWK4ldPsaBSskG2r479QEJkunYLntOsTmHIOx44gExwJ-1godNEGGrRZI8T3CaMFXXG.ts",
     "squad_stream_dashboard": "off",
     "squad_stream_feature": "on",
     "squad_stream_survey_url": "https://twitchtv.az1.qualtrics.com/jfe/form/SV_4HZtpVZBKOr6Yv3?PPT={SESSION_ID}",
@@ -1151,18 +1151,6 @@ window.__twilightSettings = {
                 "value": "treatment"
             }]
         },
-        "86332d5a-1141-4aa6-8fb7-7bcb0c5690d7": {
-            "name": "STREAMER_TRAILERS",
-            "v": 2165,
-            "t": 2,
-            "groups": [{
-                "weight": 100,
-                "value": "control"
-            }, {
-                "weight": 0,
-                "value": "variant1"
-            }]
-        },
         "8b4fa811-1db1-4347-8f26-5ff4141317e8": {
             "name": "bits_new_user_cheer",
             "v": 5131,
@@ -1780,21 +1768,6 @@ window.__twilightSettings = {
             }, {
                 "weight": 0,
                 "value": "name"
-            }]
-        },
-        "ef25ca44-13bd-4e89-99d2-f9939c013fec": {
-            "name": "twilight_streamer_trailers",
-            "v": 2273,
-            "t": 2,
-            "groups": [{
-                "weight": 0,
-                "value": "control"
-            }, {
-                "weight": 0,
-                "value": "on"
-            }, {
-                "weight": 100,
-                "value": "off"
             }]
         },
         "f1825646-3eac-4bac-8be3-ab9f736b7dd8": {
