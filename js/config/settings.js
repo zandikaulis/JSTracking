@@ -1127,6 +1127,18 @@ window.__twilightSettings = {
                 "value": "enabled"
             }]
         },
+        "7ff6a29e-5681-45ed-ad66-46d35a9549bc": {
+            "name": "Player Core NPM Experiment",
+            "v": 5171,
+            "t": 1,
+            "groups": [{
+                "weight": 50,
+                "value": "2.7.1"
+            }, {
+                "weight": 50,
+                "value": "2.7.101"
+            }]
+        },
         "842f8360-8948-42f2-a088-92e266724cc8": {
             "name": "twilight_vp_preview_sharing",
             "v": 3372,
