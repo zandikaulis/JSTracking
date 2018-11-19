@@ -1,28 +1,12 @@
 (window.webpackJsonp = window.webpackJsonp || []).push([
     [129], {
-        "3lt/": function(e, t, n) {
-            "use strict";
-            n("mrSG"), n("uhBA");
-            var i = n("L9xt");
-            n.o(i, "PageviewContent") && n.d(t, "PageviewContent", function() {
-                return i.PageviewContent
-            }), n.o(i, "PageviewLocation") && n.d(t, "PageviewLocation", function() {
-                return i.PageviewLocation
-            }), n.o(i, "PageviewMedium") && n.d(t, "PageviewMedium", function() {
-                return i.PageviewMedium
-            }), n.o(i, "SpadeEventType") && n.d(t, "SpadeEventType", function() {
-                return i.SpadeEventType
-            }), n.o(i, "TwitchDataType") && n.d(t, "TwitchDataType", function() {
-                return i.TwitchDataType
-            })
-        },
         x5gZ: function(e, t, n) {
             "use strict";
             n.r(t);
             var i, a = n("mrSG"),
                 o = n("q1tI"),
-                r = n("fvjX"),
-                l = n("V+GM"),
+                l = n("fvjX"),
+                r = n("V+GM"),
                 s = n("NvVO"),
                 d = n("Ar/j"),
                 c = n("gXjh"),
@@ -49,7 +33,7 @@
             ! function(e) {
                 e.SortingHeader = "sorting-header"
             }(i || (i = {}));
-            var g = function(e) {
+            var D = function(e) {
                     function t() {
                         var t = null !== e && e.apply(this, arguments) || this;
                         return t.state = {
@@ -93,8 +77,8 @@
                         })), o.createElement(h.Jb, null, e)))
                     }, t
                 }(o.Component),
-                w = n("3lt/"),
-                D = function(e) {
+                g = n("3lt/"),
+                w = function(e) {
                     function t() {
                         var t = null !== e && e.apply(this, arguments) || this;
                         return t.state = {
@@ -136,7 +120,7 @@
                     return a.__extends(t, e), t.prototype.componentDidMount = function() {
                         this.fetchFiles()
                     }, t.prototype.render = function() {
-                        return this.state.initialized && this.props.addon ? o.createElement(g, {
+                        return this.state.initialized && this.props.addon ? o.createElement(D, {
                             files: this.state.files,
                             installedFile: this.props.addonInstance && this.props.addonInstance.installedFile.fileName,
                             onDownload: this.onDownload
@@ -149,10 +133,10 @@
                         }, o.createElement(h.ab, null))
                     }, t
                 }(o.Component);
-            var v = Object(r.compose)(Object(p.b)("AddonDetailsVersionPage", {
+            var E = Object(l.compose)(Object(p.b)("AddonDetailsVersionPage", {
                 destination: s.a.DesklightModsGamesAvailable
-            }), Object(l.a)({
-                location: w.PageviewLocation.DesklightModsGamesAvailable
+            }), Object(r.a)({
+                location: g.PageviewLocation.DesklightModsGamesAvailable
             }), Object(d.b)(function(e) {
                 return {
                     addon: e.addon,
@@ -163,11 +147,11 @@
                 return {
                     installAddon: e.installAddon
                 }
-            }))(D);
+            }))(w);
             n.d(t, "AddonDetailsVersionComponent", function() {
-                return D
+                return w
             }), n.d(t, "AddonDetailsVersionPage", function() {
-                return v
+                return E
             })
         }
     }

@@ -7416,6 +7416,8 @@
                         var e = d.b.get("vodcast_deprecation_announcement_enabled", !1),
                             t = null;
                         return t = !this.isAffiliatePlus() && e ? tn.createElement(Xr, null) : tn.createElement(Mn, null), tn.createElement(an.b, null, tn.createElement(fe.Ya, {
+                            className: "dashboard-centered-page"
+                        }, tn.createElement(fe.Ya, {
                             padding: 3,
                             className: "video-manager",
                             fullWidth: !0
@@ -7646,7 +7648,7 @@
                             limit: 3
                         }, tn.createElement(vn.b, {
                             expiresAt: ao
-                        }, t))))
+                        }, t)))))
                     }, t.prototype.renderSuccessfullyProcessedVideos = function() {
                         var e = this;
                         if (null === this.props.apiData.videos.data && this.props.apiData.videos.loading) return this.renderLoadingState();
@@ -9596,13 +9598,16 @@
                 I = n("AZIu"),
                 V = n("4HIT");
             n("97MP");
-            ! function(e) {
+
+            function x(e, t) {
+                return (e && e.localizations && e.localizations[t] || e && e.tag_name || "").toLowerCase()
+            }! function(e) {
                 e[e.TagAll = 0] = "TagAll", e[e.TagAllMinusAutomation = 1] = "TagAllMinusAutomation", e[e.TagCategory = 2] = "TagCategory", e[e.StreamTag = 3] = "StreamTag"
             }(C || (C = {})),
             function(e) {
                 e.SearchContent = "tag-search-search-content", e.SearchDropdown = "search-dropdown-selector"
             }(_ || (_ = {}));
-            var x = function(e) {
+            var A = function(e) {
                     function t(t) {
                         var n = e.call(this, t) || this;
                         return n.state = {
@@ -9641,7 +9646,7 @@
                         }, n.setTagSearchRef = function(e) {
                             n.tagSearch = e
                         }, n.onTagResultSelected = function(e, t) {
-                            if (n.toggleTagSearch(!1), n.clearSearchTerm(), n.props.type === C.TagCategory && t === D.b.All ? l.p.history.push(V.a.Popular) : n.props.type === C.TagAll && t === D.b.Category && l.p.history.push(V.a.Games), n.props.onTagClick && (n.props.onTagClick(e, t), n.props.section && n.props.numSelectedTags)) {
+                            if (n.toggleTagSearch(!1), n.clearSearchTerm(), n.props.type === C.TagCategory && t === D.b.All ? l.p.history.push(V.a.Popular) : n.props.type === C.TagAll && t === D.b.Category && l.p.history.push(V.a.Games), n.props.onTagClick && (n.props.onTagClick(e, t), n.props.section && void 0 !== n.props.numSelectedTags)) {
                                 var a = {
                                     section: n.props.section,
                                     tagPosition: n.props.numSelectedTags,
@@ -9724,7 +9729,7 @@
                         }))
                     }, t.prototype.search = function(e) {
                         return i.__awaiter(this, void 0, void 0, function() {
-                            var t, n, a;
+                            var t, n, a, r, o = this;
                             return i.__generator(this, function(i) {
                                 switch (i.label) {
                                     case 0:
@@ -9733,7 +9738,9 @@
                                             restrictSearchableAttributes: ["localizations." + this.languageCode, "tag_name"]
                                         }, n = p.a.Tags, this.props.type === C.TagAllMinusAutomation ? (t.facetFilters = '["automated:false", "tag_scope:' + D.b.All + '"]', this.props.showAllDashboardTags && (t.hitsPerPage = 300)) : this.props.type === C.TagAll ? this.props.selectedTags && this.props.selectedTags.length ? t.facetFilters = "tag_scope:" + D.b.All : t.facetFilters = '[["tag_scope:' + D.b.All + '", "tag_scope:' + D.b.Category + '"]]' : this.props.type === C.TagCategory ? "" === e || this.props.selectedTags && this.props.selectedTags.length ? t.facetFilters = "tag_scope:" + D.b.Category : t.facetFilters = '[["tag_scope:' + D.b.All + '", "tag_scope:' + D.b.Category + '"]]' : this.props.type === C.StreamTag && (n = p.a.StreamTags, t.facetFilters = "category_id:" + this.props.categoryID), [4, this.searchClient.queryForType(n, e, u.a(), t)];
                                     case 1:
-                                        return a = i.sent(), this.setState({
+                                        return (a = i.sent()) && a.tags && a.tags.hits && (r = a.tags.hits.sort(function(e, t) {
+                                            return x(e, o.languageCode).localeCompare(x(t, o.languageCode), l.p.intl.getLanguageCode() || "en")
+                                        }), a.tags.hits = r), this.setState({
                                             searchResults: a,
                                             searching: !1
                                         }), [2]
@@ -9742,15 +9749,15 @@
                         })
                     }, t
                 }(r.Component),
-                A = Object(s.compose)(o.a)(x);
+                F = Object(s.compose)(o.a)(A);
             n.d(t, "b", function() {
                 return C
             }), n.d(t, !1, function() {
                 return _
             }), n.d(t, !1, function() {
-                return x
-            }), n.d(t, "a", function() {
                 return A
+            }), n.d(t, "a", function() {
+                return F
             })
         },
         CbMu: function(e, t, n) {

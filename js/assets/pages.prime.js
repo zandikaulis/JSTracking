@@ -504,8 +504,8 @@
                         }
                     }, e)
                 })(L),
-                U = n("9pSj"),
-                j = n("j3KY"),
+                j = n("9pSj"),
+                U = n("j3KY"),
                 B = function(e) {
                     function t() {
                         var t = null !== e && e.apply(this, arguments) || this;
@@ -542,10 +542,10 @@
                         }, Object(s.d)("Start Your Free Trial", "PrimeUpsellButton"))))
                     }, t.prototype.getLink = function() {
                         if (this.props.externalURL) return this.props.externalURL;
-                        var e = (this.props.orientation || U.b.Default) === U.b.Vertical ? j.d : j.b,
+                        var e = (this.props.orientation || j.b.Default) === j.b.Vertical ? U.d : U.b,
                             t = this.props.externalReftag || e,
                             n = window.location.pathname.substring(1);
-                        return Object(j.e)(t, n)
+                        return Object(U.e)(t, n)
                     }, t
                 }(o.Component),
                 W = Object(u.b)("PrimeUpsellButton", {
@@ -1858,8 +1858,9 @@
                         if (this.props.data.loading) return this.renderPlaceholders();
                         if (this.props.isLoggedIn) {
                             var e = E({
-                                "twitch-prime-top-nav-user__dropdown--open": this.state.dropdownOpen
-                            });
+                                    "twitch-prime-top-nav-user__dropdown--open": this.state.dropdownOpen
+                                }),
+                                t = this.props.data.currentUser;
                             return i.createElement(D.Qa, {
                                 className: "twitch-prime-top-nav-user__wrapper",
                                 margin: {
@@ -1899,7 +1900,7 @@
                                 enabled: !0
                             }, i.createElement(D.q, {
                                 size: 30,
-                                src: this.props.data.currentUser.profileImageURL,
+                                src: t && t.profileImageURL,
                                 alt: Object(f.d)("Your Avatar", "PrimeUser")
                             }))), i.createElement(D.Ya, {
                                 flexGrow: 1,
@@ -1908,7 +1909,7 @@
                                 ellipsis: !0
                             }, i.createElement(D.Fb, {
                                 className: "twitch-prime-top-nav-user__username"
-                            }, this.props.data.currentUser.displayName)), i.createElement(D.Fb, {
+                            }, t && t.displayName)), i.createElement(D.Fb, {
                                 display: D.X.Flex,
                                 flexShrink: 0,
                                 className: "twitch-prime-top-nav-user__expand"
@@ -2108,10 +2109,10 @@
                 F = c.a.wrap(function() {
                     return n.e(187).then(n.bind(null, "di4w"))
                 }, "TwitchPrimeFortniteSuccessPage"),
-                U = c.a.wrap(function() {
+                j = c.a.wrap(function() {
                     return n.e(186).then(n.bind(null, "IyqF"))
                 }, "TwitchPrimeFortniteLinkingPage"),
-                j = c.a.wrap(function() {
+                U = c.a.wrap(function() {
                     return n.e(185).then(n.bind(null, "CinY"))
                 }, "TwitchPrimeFortnitePage"),
                 B = function(e) {
@@ -2138,13 +2139,13 @@
                             fullHeight: !0
                         }, i.createElement(a.a, null, i.createElement(s.a, {
                             path: "/prime/fortnite/link",
-                            component: U
+                            component: j
                         }), i.createElement(s.a, {
                             path: "/prime/fortnite/success",
                             component: F
                         }), i.createElement(s.a, {
                             path: "/prime/fortnite",
-                            component: j
+                            component: U
                         }), i.createElement(s.a, {
                             path: "/prime",
                             component: L

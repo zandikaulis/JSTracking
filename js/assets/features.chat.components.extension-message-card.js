@@ -494,8 +494,8 @@
                 k = r("QVaV"),
                 R = r("Ue10"),
                 T = (r("MPK0"), "report-wizard-block"),
-                _ = "report-wizard-unblock",
-                C = function(e) {
+                C = "report-wizard-unblock",
+                _ = function(e) {
                     function t() {
                         var t = null !== e && e.apply(this, arguments) || this;
                         return t.state = {
@@ -538,7 +538,7 @@
                             }, "ReportWizardBlockActions"))), i.createElement(R.U, {
                                 hoverUnderlineNone: !0,
                                 onClick: t.handleUnblock,
-                                "data-test-selector": _
+                                "data-test-selector": C
                             }, i.createElement(R.Ya, {
                                 margin: {
                                     left: .5
@@ -1314,7 +1314,7 @@
                         return Object(c.d)("What would you like to report? (Please choose the most relevant statement that applies.)", "ReportModalWizard")
                     }
                 },
-                U = {
+                I = {
                     report: function(e) {
                         return Object(c.d)("Report {username}", {
                             username: e
@@ -1350,24 +1350,24 @@
                         return Object(c.d)("Thank you for your concern", "ReportModalWizard")
                     }
                 },
-                I = {
+                U = {
                     getDescription: function() {
                         return Object(c.d)("Reports are reviewed by Twitch Staff 24 hours a day. We will issue penalties, such as account suspension and/or content removal, once we verify that a violation of our policies has occurred.", "ReportModalWizard")
                     },
                     blockPrompt: !0,
-                    getTitle: U.thanks,
+                    getTitle: I.thanks,
                     type: O.Info,
                     value: "end card"
                 },
                 N = {
-                    socialMedia: a.__assign({}, I, {
+                    socialMedia: a.__assign({}, U, {
                         items: [S.endBlurb_socialmedia]
                     }),
-                    violence: a.__assign({}, I, {
+                    violence: a.__assign({}, U, {
                         items: [S.endBlurb_threat]
                     }),
                     legal: {
-                        getTitle: U.thanksConcern,
+                        getTitle: I.thanksConcern,
                         getDescription: function() {
                             return Object(c.d)("To submit a claim or report a violation of this type, you will need to follow the steps listed on the relevant page below.", "ReportModalWizard")
                         },
@@ -1376,7 +1376,7 @@
                         value: "ip end"
                     },
                     selfharm: {
-                        getTitle: U.thanksConcern,
+                        getTitle: I.thanksConcern,
                         getDescription: function() {
                             return Object(c.d)("If you know the user personally, and you believe them to be in danger, please contact their local authorities immediately. The link below contains some general information that may be of use.", "ReportModalWizard")
                         },
@@ -1385,7 +1385,7 @@
                         value: "selfharm end"
                     },
                     twitchEvent: {
-                        getTitle: U.thanksConcern,
+                        getTitle: I.thanksConcern,
                         getDescription: function() {
                             return Object(c.d)("Please bring this concern to the attention of staff or security at the event if you have not already done so. More information is available at the link below.", "ReportModalWizard")
                         },
@@ -1395,7 +1395,7 @@
                     }
                 },
                 D = {
-                    getTitle: U.report,
+                    getTitle: I.report,
                     getLabel: function() {
                         return Object(c.d)("Where is the problem?", "ReportModalWizard")
                     },
@@ -1405,21 +1405,21 @@
                 },
                 A = {
                     identifyUser: {
-                        getTitle: U.reportVideo,
+                        getTitle: I.reportVideo,
                         getLabel: z.identifyUser,
                         items: [S.video_streamer, S.video_someoneElse, S.video_chatSomeone],
                         type: O.MultipleChoice,
                         value: "video identify user"
                     },
                     content: {
-                        getTitle: U.reportVideo,
+                        getTitle: I.reportVideo,
                         getLabel: z.contentGeneral,
                         items: [S.revealPersonalInfo, S.video_labeling, S.video_inactive, S.video_general, S.report_ip, S.violateDevAgreement, S.selfharm],
                         type: O.MultipleChoice,
                         value: "video report reason"
                     },
                     general: {
-                        getTitle: U.reportVideo,
+                        getTitle: I.reportVideo,
                         getLabel: z.content,
                         items: [S.report_username, S.violence, S.abusive, S.cheating, S.scam, S.inappropriateContent, S.evasion, S.impersonation, S.underage, S.bitsViolation],
                         type: O.MultipleChoice,
@@ -1428,14 +1428,14 @@
                 },
                 B = {
                     content: {
-                        getTitle: U.reportMessage,
+                        getTitle: I.reportMessage,
                         getLabel: z.contentGeneral,
                         items: [S.revealPersonalInfo, S.evasion, S.spam, S.maliciousRaid, S.report_username, S.messaging_general, S.selfharm],
                         type: O.MultipleChoice,
                         value: "message report reason"
                     },
                     general: {
-                        getTitle: U.reportMessage,
+                        getTitle: I.reportMessage,
                         getLabel: z.content,
                         items: [S.report_emotes, S.violence, S.abusive, S.inappropriateContent, S.impersonation, S.underage, S.bitsViolation],
                         type: O.MultipleChoice,
@@ -1449,14 +1449,14 @@
                 }),
                 V = {
                     content: {
-                        getTitle: U.reportProfile,
+                        getTitle: I.reportProfile,
                         getLabel: z.contentGeneral,
                         items: [S.revealPersonalInfo, S.inappropriateBadge, S.inappropriateExtension, S.noModeration, S.profile_general, S.report_ip, S.violateDevAgreement, S.selfharm],
                         type: O.MultipleChoice,
                         value: "profile report reason"
                     },
                     general: {
-                        getTitle: U.reportProfile,
+                        getTitle: I.reportProfile,
                         getLabel: z.content,
                         items: [S.report_username, S.violence, S.abusive, S.scam, S.inappropriateContent, S.evasion, S.impersonation, S.underage, S.bitsViolation],
                         type: O.MultipleChoice,
@@ -1475,7 +1475,7 @@
                     type: O.MultipleChoice
                 },
                 P = {
-                    getTitle: U.tellUsMore,
+                    getTitle: I.tellUsMore,
                     items: [S.input_description],
                     type: O.Confirm,
                     value: "tell us more"
@@ -1493,7 +1493,7 @@
                 },
                 H = {
                     content: {
-                        getTitle: U.reportAbusive,
+                        getTitle: I.reportAbusive,
                         getLabel: z.relevantStatements,
                         items: [S.hateSpeech, S.harassment, S.abusiveViolence, S.commitingViolence, S.swatting, S.personalInfo],
                         type: O.MultipleChoice,
@@ -1605,7 +1605,7 @@
                 },
                 K = D,
                 J = P,
-                Z = I,
+                Z = U,
                 ee = {
                     video: A.identifyUser,
                     whisper: F,
@@ -1727,8 +1727,13 @@
                             t.setState({
                                 modalCloseTracked: !0
                             }, function() {
-                                return t.props.trackClose(W.Finish, t.state.currentCard.value)
+                                return t.props.trackClose(W.Finish, t.state.currentCard.value, t.getChoiceIndex())
                             }), t.props.onClose()
+                        }, t.getChoiceIndex = function() {
+                            var e = 0;
+                            return t.state.currentCard && t.state.currentCard.items && (e = t.state.currentCard.items.findIndex(function(e) {
+                                return t.state.currentSelection === e
+                            }) + 1), e >= 1 ? e : void 0
                         }, t.handleNext = function() {
                             if (t.state.currentSelection && t.state.currentSelection.value) {
                                 var e = t.state.currentCard,
@@ -1737,21 +1742,22 @@
                                     o = t.state.displacedSelections[t.state.displacedSelections.length - 1],
                                     a = t.state.currentSelection.differentTarget || t.state.targetUnknown,
                                     i = t.state.currentSelection.reportContext || t.state.reportContext,
-                                    s = e.nextCard || J;
-                                ee[t.state.currentSelection.value] && (s = ee[t.state.currentSelection.value]);
-                                var l = t.state.currentSelection.reportReason || t.state.reportReason,
-                                    c = s.type === O.Info;
+                                    s = t.getChoiceIndex(),
+                                    l = e.nextCard || J;
+                                ee[t.state.currentSelection.value] && (l = ee[t.state.currentSelection.value]);
+                                var c = t.state.currentSelection.reportReason || t.state.reportReason,
+                                    d = l.type === O.Info;
                                 t.setState({
-                                    currentCard: s,
-                                    reportReason: l,
-                                    prevCards: c ? [] : r,
+                                    currentCard: l,
+                                    reportReason: c,
+                                    prevCards: d ? [] : r,
                                     prevSelections: n,
                                     targetUnknown: a,
                                     currentSelection: o || null,
                                     displacedSelections: t.state.displacedSelections.slice(0, -1),
                                     reportContext: i
                                 }, function() {
-                                    return t.trackNavigation(j.Next, e.value)
+                                    return t.trackNavigation(j.Next, e.value, s)
                                 })
                             }
                         }, t.createReportDescription = function() {
@@ -1771,7 +1777,7 @@
                             }).length
                         }, t.handleSubmit = function() {
                             return a.__awaiter(t, void 0, void 0, function() {
-                                var e, t, r, n, o = this;
+                                var e, t, r, n, o, i = this;
                                 return a.__generator(this, function(a) {
                                     switch (a.label) {
                                         case 0:
@@ -1784,7 +1790,7 @@
                                                     });
                                                     break;
                                                 case E.a.Success:
-                                                    n = Z, te[t] && (n = te[t]), this.state.currentCard.nextCard && (n = this.state.currentCard.nextCard), this.setState({
+                                                    n = Z, te[t] && (n = te[t]), this.state.currentCard.nextCard && (n = this.state.currentCard.nextCard), o = this.getChoiceIndex(), this.setState({
                                                         currentCard: n,
                                                         prevCards: [],
                                                         prevSelections: [],
@@ -1793,7 +1799,7 @@
                                                         userTextInput: {},
                                                         error: ""
                                                     }, function() {
-                                                        return o.trackNavigation(j.Submit)
+                                                        return i.trackNavigation(j.Submit, void 0, o)
                                                     });
                                                     break;
                                                 case E.a.UserError:
@@ -1819,18 +1825,18 @@
                             })
                         }, t.handleBack = function() {
                             return a.__awaiter(t, void 0, void 0, function() {
-                                var e, t, r, n, o, i = this;
+                                var e, t, r, n, o, i, s = this;
                                 return a.__generator(this, function(a) {
-                                    return e = this.state.currentCard, t = this.state.prevCards[this.state.prevCards.length - 1], r = this.state.prevSelections[this.state.prevSelections.length - 1], n = !r.differentTarget && this.state.targetUnknown, o = this.state.displacedSelections, this.state.currentSelection && (o = o.concat(this.state.currentSelection)), t && r && this.setState({
+                                    return e = this.state.currentCard, t = this.state.prevCards[this.state.prevCards.length - 1], r = this.state.prevSelections[this.state.prevSelections.length - 1], n = !r.differentTarget && this.state.targetUnknown, o = this.getChoiceIndex(), i = this.state.displacedSelections, this.state.currentSelection && (i = i.concat(this.state.currentSelection)), t && r && this.setState({
                                         currentCard: t,
                                         currentSelection: r,
-                                        displacedSelections: o,
+                                        displacedSelections: i,
                                         prevCards: this.state.prevCards.slice(0, -1),
                                         prevSelections: this.state.prevSelections.slice(0, -1),
                                         error: "",
                                         targetUnknown: n
                                     }, function() {
-                                        return i.trackNavigation(j.Back, e.value)
+                                        return s.trackNavigation(j.Back, e.value, o)
                                     }), [2]
                                 })
                             })
@@ -1856,14 +1862,14 @@
                                     reportContext: n
                                 })
                             }
-                        }, t.trackNavigation = function(e, r) {
-                            t.props.trackAction(e, r, t.state.currentCard.value)
+                        }, t.trackNavigation = function(e, r, n) {
+                            t.props.trackAction(e, r, t.state.currentCard.value, n)
                         }, t
                     }
                     return a.__extends(t, e), t.prototype.componentWillUnmount = function() {
-                        this.state.modalCloseTracked || this.props.trackClose(W.Close, this.state.currentCard.value)
+                        this.state.modalCloseTracked || this.props.trackClose(W.Close, this.state.currentCard.value, this.getChoiceIndex())
                     }, t.prototype.render = function() {
-                        var e = this.state.currentCard.type === O.Info && this.state.currentCard.blockPrompt ? i.createElement(C, {
+                        var e = this.state.currentCard.type === O.Info && this.state.currentCard.blockPrompt ? i.createElement(_, {
                                 targetUser: this.props.targetUser,
                                 onBlock: this.props.onBlock,
                                 onUnblock: this.props.onUnblock,
@@ -1987,11 +1993,11 @@
                         r.state.openEventSent || (r.state.showWizard ? r.trackWizardAction(j.Open, void 0, e) : r.trackAction(w.Open), r.setState({
                             openEventSent: !0
                         }))
-                    }, r.trackClose = function(e, t) {
-                        r.state.closeEventSent || (r.state.showWizard ? r.trackWizardAction(j.Close, t, void 0, e) : r.trackAction(w.Close), r.setState({
+                    }, r.trackClose = function(e, t, n) {
+                        r.state.closeEventSent || (r.state.showWizard ? r.trackWizardAction(j.Close, t, void 0, n, e) : r.trackAction(w.Close), r.setState({
                             closeEventSent: !0
                         }))
-                    }, r.trackWizardAction = function(e, t, n, o) {
+                    }, r.trackWizardAction = function(e, t, n, o, a) {
                         c.p.tracking.track(b.SpadeEventType.ReportWizardFlowAction, {
                             ui_context: r.props.reportContext.contentType,
                             target_user_id: r.props.reportContext.targetUserID,
@@ -1999,10 +2005,11 @@
                             modal_type: "wizard_v1",
                             extra_user_id: r.props.reportContext.additionalTrackingID,
                             action: e,
-                            close_type: o,
+                            close_type: a,
                             report_session_id: r.reportID,
                             current_step: t,
-                            navigated_to: n
+                            navigated_to: n,
+                            choice_index: o
                         })
                     }, r.trackAction = function(e) {
                         c.p.tracking.track(b.SpadeEventType.ReportFlowAction, {

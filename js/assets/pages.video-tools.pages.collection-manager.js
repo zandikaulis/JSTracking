@@ -220,6 +220,8 @@
                     }, t.prototype.render = function() {
                         var e, t = !1;
                         return this.props.data.loading ? e = this.collectionCardPlaceholders() : !this.props.data.error && this.props.data.user && this.props.data.user.collections ? this.props.data.user.collections.edges.length > 0 ? (e = this.renderCollections(this.props.data.user.collections.edges), t = this.props.data.user.collections.pageInfo.hasNextPage || !1) : e = this.noCollectionsCTA() : e = this.contentUnavaibleError(), r.createElement(d.b, null, r.createElement(k.Ya, {
+                            className: "dashboard-centered-page"
+                        }, r.createElement(k.Ya, {
                             fullHeight: !0,
                             padding: {
                                 top: 2,
@@ -246,7 +248,7 @@
                         }, e, r.createElement(d.a, {
                             enabled: t,
                             loadMore: this.props.loadMore
-                        }))))
+                        })))))
                     }, t.prototype.renderCollections = function(e) {
                         var t = this;
                         return e.map(function(e, n) {

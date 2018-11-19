@@ -5,23 +5,21 @@
             r.r(t);
             var i = r("mrSG"),
                 a = r("q1tI"),
-                n = r("/MKj"),
-                s = r("fvjX"),
-                o = r("/7QA"),
-                l = r("kz7j"),
-                c = r("tY8L"),
-                h = 3;
-            var d, u = r("GnwI"),
-                w = r("8/mp"),
-                p = r("8Ad5"),
-                v = r("oK83"),
-                m = r("Ue10"),
-                f = (r("ETVK"), function(e) {
+                n = r("/7QA"),
+                s = r("kz7j"),
+                o = r("fezU"),
+                l = 3;
+            var c, h = r("GnwI"),
+                d = r("8/mp"),
+                u = r("8Ad5"),
+                w = r("oK83"),
+                p = r("Ue10"),
+                v = (r("ETVK"), function(e) {
                     function t() {
                         var t = null !== e && e.apply(this, arguments) || this;
                         return t.usernameClickHandler = function(e) {
                             var r = e.currentTarget.getAttribute("data-username"),
-                                i = t.props.isModList ? v.a.viewer_list_mod_section : v.a.viewer_list;
+                                i = t.props.isModList ? w.a.viewer_list_mod_section : w.a.viewer_list;
                             r && t.props.onUsernameClick(r, i, "", e.currentTarget.getBoundingClientRect().bottom)
                         }, t
                     }
@@ -40,12 +38,12 @@
                                     className: "chat-viewers-list__button",
                                     "data-username": t,
                                     onClick: e.usernameClickHandler
-                                }, a.createElement(m.W, {
-                                    transform: m.Vb.Capitalize
+                                }, a.createElement(p.W, {
+                                    transform: p.Vb.Capitalize
                                 }, t)))
                             }),
                             s = "chat-viewers-list-header-" + i;
-                        return a.createElement(m.Ya, {
+                        return a.createElement(p.Ya, {
                             className: "chat-viewers-list",
                             padding: {
                                 bottom: 2
@@ -58,12 +56,12 @@
                         }, n))
                     }, t
                 }(a.Component)),
-                g = r("gq0V");
+                m = r("gq0V");
             r("h1Iv");
             ! function(e) {
                 e.ViewerList = "chat-viewers-list__viewers", e.VIPBadge = "chat-viewers-list__vip-badge"
-            }(d || (d = {}));
-            var C = function(e) {
+            }(c || (c = {}));
+            var f = function(e) {
                     function t() {
                         var t = null !== e && e.apply(this, arguments) || this;
                         return t.state = {
@@ -127,97 +125,97 @@
                                 t.handleFilter(i, t.props.viewers)
                             }, 350)
                         }, t.onKeyDown = function(e) {
-                            e.keyCode === p.a.Esc && t.props.closeViewersList()
+                            e.keyCode === u.a.Esc && t.props.closeViewersList()
                         }, t
                     }
                     return i.__extends(t, e), t.prototype.componentWillReceiveProps = function(e) {
                         this.handleFilter(this.state.filter, e.viewers)
                     }, t.prototype.render = function() {
                         var e = this.props.isLoading || this.state.isLoading,
-                            t = e && a.createElement(m.Ya, {
+                            t = e && a.createElement(p.Ya, {
                                 className: "chat-viewers__loading",
-                                display: m.X.Flex,
-                                alignItems: m.f.Center,
-                                justifyContent: m.Xa.Center,
-                                zIndex: m.jc.Above,
-                                position: m.kb.Absolute,
+                                display: p.X.Flex,
+                                alignItems: p.f.Center,
+                                justifyContent: p.Xa.Center,
+                                zIndex: p.jc.Above,
+                                position: p.kb.Absolute,
                                 attachTop: !0,
                                 attachBottom: !0,
                                 attachLeft: !0,
                                 attachRight: !0
-                            }, a.createElement(m.ab, null));
-                        return a.createElement(m.Qa, {
+                            }, a.createElement(p.ab, null));
+                        return a.createElement(p.Qa, {
                             className: "chat-viewers__container",
                             fullWidth: !0,
                             fullHeight: !0,
                             flexShrink: 0,
-                            zIndex: m.jc.Default
+                            zIndex: p.jc.Default
                         }, a.createElement("section", {
                             "aria-labelledby": "chat-viewers__header"
-                        }, a.createElement(m.Ya, {
+                        }, a.createElement(p.Ya, {
                             className: "chat-viewers__pane",
-                            display: m.X.Flex,
-                            flexDirection: m.Aa.Column,
-                            flexWrap: m.Ba.NoWrap,
-                            position: m.kb.Absolute,
+                            display: p.X.Flex,
+                            flexDirection: p.Aa.Column,
+                            flexWrap: p.Ba.NoWrap,
+                            position: p.kb.Absolute,
                             attachBottom: !0,
                             attachLeft: !0,
                             attachRight: !0
-                        }, a.createElement(m.Fb, {
+                        }, a.createElement(p.Fb, {
                             className: "chat-viewers__header",
-                            background: m.r.Alt2,
+                            background: p.r.Alt2,
                             borderBottom: !0,
-                            display: m.X.Flex,
-                            justifyContent: m.Xa.Center,
-                            alignItems: m.f.Center,
+                            display: p.X.Flex,
+                            justifyContent: p.Xa.Center,
+                            alignItems: p.f.Center,
                             padding: {
                                 y: 1
                             },
                             flexShrink: 0
-                        }, a.createElement(m.Ya, {
-                            position: m.kb.Absolute,
+                        }, a.createElement(p.Ya, {
+                            position: p.kb.Absolute,
                             attachLeft: !0,
                             margin: {
                                 left: 1
                             }
-                        }, a.createElement(m.A, {
-                            icon: m.ub.Close,
-                            ariaLabel: Object(o.d)("Close", "ChatViewers"),
+                        }, a.createElement(p.A, {
+                            icon: p.ub.Close,
+                            ariaLabel: Object(n.d)("Close", "ChatViewers"),
                             "data-a-target": "chat-viewer-list",
                             onClick: this.props.closeViewersList
                         })), a.createElement("p", {
                             "data-a-target": "chat-viewers_header-channel-name",
                             id: "chat-viewers__header"
-                        }, Object(o.d)("Users in Chat", "ChatViewers"))), a.createElement(m.Ya, {
-                            display: m.X.Flex,
-                            flexDirection: m.Aa.Column,
-                            flexWrap: m.Ba.NoWrap,
+                        }, Object(n.d)("Users in Chat", "ChatViewers"))), a.createElement(p.Ya, {
+                            display: p.X.Flex,
+                            flexDirection: p.Aa.Column,
+                            flexWrap: p.Ba.NoWrap,
                             fullHeight: !0
-                        }, a.createElement(m.Ya, {
+                        }, a.createElement(p.Ya, {
                             className: "chat-viewers__filter",
                             margin: {
                                 x: 2,
                                 y: 1
                             }
-                        }, a.createElement(m.Sa, {
-                            type: m.Ua.Search,
+                        }, a.createElement(p.Sa, {
+                            type: p.Ua.Search,
                             name: "viewers-filter",
-                            placeholder: Object(o.d)("Filter", "ChatViewers"),
+                            placeholder: Object(n.d)("Filter", "ChatViewers"),
                             readOnly: this.props.isLoading,
                             onChange: this.handleFilterChange,
                             value: this.state.inputValue,
                             autoFocus: !0,
                             onKeyDown: this.onKeyDown
-                        })), a.createElement(w.b, {
+                        })), a.createElement(d.b, {
                             className: "chat-viewers__list",
                             scrollRef: this.saveScrollRef,
                             suppressScrollX: !0,
                             scrollContentClassName: "chat-viewers__scroll-container"
-                        }, a.createElement(m.Ya, {
+                        }, a.createElement(p.Ya, {
                             padding: {
                                 x: 2
                             }
-                        }, this.viewersList, a.createElement(w.a, {
+                        }, this.viewersList, a.createElement(d.a, {
                             key: this.state.filter,
                             enabled: !e,
                             loadMore: this.loadMore
@@ -228,59 +226,59 @@
                                 t = e.admins,
                                 r = e.global_mods,
                                 i = e.moderators,
-                                n = e.staff,
-                                s = e.viewers,
+                                s = e.staff,
+                                o = e.viewers,
                                 l = e.vips,
-                                c = this.props.onShowViewerCard;
-                            return a.createElement(a.Fragment, null, n && n.length > 0 && a.createElement(f, {
+                                h = this.props.onShowViewerCard;
+                            return a.createElement(a.Fragment, null, s && s.length > 0 && a.createElement(v, {
                                 key: "chat-viewers-list-staff",
-                                header: Object(o.d)("Staff", "ChatViewers"),
-                                viewers: n,
-                                onUsernameClick: c
-                            }), t && t.length > 0 && a.createElement(f, {
+                                header: Object(n.d)("Staff", "ChatViewers"),
+                                viewers: s,
+                                onUsernameClick: h
+                            }), t && t.length > 0 && a.createElement(v, {
                                 key: "chat-viewers-list-admins",
-                                header: Object(o.d)("Admins", "ChatViewers"),
+                                header: Object(n.d)("Admins", "ChatViewers"),
                                 viewers: t,
-                                onUsernameClick: c,
+                                onUsernameClick: h,
                                 isModList: !0
-                            }), r && r.length > 0 && a.createElement(f, {
+                            }), r && r.length > 0 && a.createElement(v, {
                                 key: "chat-viewers-list-global-mods",
-                                header: Object(o.d)("Global Moderators", "ChatViewers"),
+                                header: Object(n.d)("Global Moderators", "ChatViewers"),
                                 viewers: r,
-                                onUsernameClick: c,
+                                onUsernameClick: h,
                                 isModList: !0
-                            }), i && i.length > 0 && a.createElement(f, {
+                            }), i && i.length > 0 && a.createElement(v, {
                                 key: "chat-viewers-list-moderators",
-                                header: Object(o.d)("Moderators", "ChatViewers"),
+                                header: Object(n.d)("Moderators", "ChatViewers"),
                                 viewers: i,
-                                onUsernameClick: c,
+                                onUsernameClick: h,
                                 isModList: !0
-                            }), l && l.length > 0 && a.createElement(g.a, null, a.createElement(f, {
-                                "data-test-selector": d.VIPBadge,
+                            }), l && l.length > 0 && a.createElement(m.a, null, a.createElement(v, {
+                                "data-test-selector": c.VIPBadge,
                                 key: "chat-viewers-list-vips",
-                                header: Object(o.d)("VIPs", "ChatViewers"),
+                                header: Object(n.d)("VIPs", "ChatViewers"),
                                 viewers: l,
-                                onUsernameClick: c
-                            })), s && s.length > 0 && !this.props.isCurrentUserBanned && a.createElement(f, {
+                                onUsernameClick: h
+                            })), o && o.length > 0 && !this.props.isCurrentUserBanned && a.createElement(v, {
                                 key: "chat-viewers-list-viewers",
-                                "data-test-selector": d.ViewerList,
-                                header: Object(o.d)("Users", "ChatViewers"),
+                                "data-test-selector": c.ViewerList,
+                                header: Object(n.d)("Users", "ChatViewers"),
                                 viewers: this.state.renderedViewers,
-                                onUsernameClick: c
+                                onUsernameClick: h
                             }))
                         },
                         enumerable: !0,
                         configurable: !0
                     }), t
                 }(a.Component),
-                b = function(e) {
+                g = function(e) {
                     function t(t) {
                         var r = e.call(this, t) || this;
                         return r.state = {
                             viewers: {},
                             viewerCount: 0,
                             isLoading: !1
-                        }, r.logger = o.k.withCategory("chat-viewers"), r
+                        }, r.logger = n.k.withCategory("chat-viewers"), r
                     }
                     return i.__extends(t, e), t.prototype.componentWillReceiveProps = function(e) {
                         this.props.channelLogin !== e.channelLogin && this.updateViewers(e.channelLogin)
@@ -291,7 +289,7 @@
                             })
                         })
                     }, t.prototype.render = function() {
-                        return a.createElement(C, {
+                        return a.createElement(f, {
                             channelLogin: this.props.channelLogin,
                             closeViewersList: this.props.closeViewersList,
                             viewers: this.state.viewers,
@@ -302,27 +300,27 @@
                         })
                     }, t.prototype.updateViewers = function(e) {
                         return i.__awaiter(this, void 0, void 0, function() {
-                            var t, r, a, n;
-                            return i.__generator(this, function(s) {
-                                switch (s.label) {
+                            var t, r, a, o;
+                            return i.__generator(this, function(c) {
+                                switch (c.label) {
                                     case 0:
-                                        return this.props.latencyTracking.resetCustomEvents(l.a.ViewersList), t = this.props.latencyTracking.registerCustomEvent({
+                                        return this.props.latencyTracking.resetCustomEvents(s.a.ViewersList), t = this.props.latencyTracking.registerCustomEvent({
                                             benchmark: 3e3,
-                                            group: l.a.ViewersList,
-                                            key: l.b.ViewersListUpdated,
-                                            label: l.c.Updated,
-                                            start: l.d.Registration
+                                            group: s.a.ViewersList,
+                                            key: s.b.ViewersListUpdated,
+                                            label: s.c.Updated,
+                                            start: s.d.Registration
                                         }), this.setState({
                                             isLoading: !0
                                         }), [4, function(e) {
                                             return i.__awaiter(this, void 0, void 0, function() {
-                                                var t, r, a, n;
+                                                var t, r, a, s;
                                                 return i.__generator(this, function(i) {
                                                     switch (i.label) {
                                                         case 0:
                                                             t = "https://tmi.twitch.tv/group/user/" + e.toLowerCase() + "/chatters", r = 1, i.label = 1;
                                                         case 1:
-                                                            if (!(r <= h)) return [3, 7];
+                                                            if (!(r <= l)) return [3, 7];
                                                             i.label = 2;
                                                         case 2:
                                                             return i.trys.push([2, 5, , 6]), [4, fetch(t, {
@@ -335,9 +333,9 @@
                                                         case 3:
                                                             return [4, i.sent().json()];
                                                         case 4:
-                                                            return a = i.sent(), o.k.debug("[update] getViewers done."), [2, a];
+                                                            return a = i.sent(), n.k.debug("[update] getViewers done."), [2, a];
                                                         case 5:
-                                                            if (n = i.sent(), r === h) throw n;
+                                                            if (s = i.sent(), r === l) throw s;
                                                             return [3, 6];
                                                         case 6:
                                                             return ++r, [3, 1];
@@ -348,25 +346,25 @@
                                             })
                                         }(e)];
                                     case 1:
-                                        return r = s.sent(), a = r ? r.chatters : {}, n = r ? r.chatter_count : 0, this.logger.debug("Updated viewers list with " + n + " viewers"), this.setState({
+                                        return r = c.sent(), a = r ? r.chatters : {}, o = r ? r.chatter_count : 0, this.logger.debug("Updated viewers list with " + o + " viewers"), this.setState({
                                             viewers: a,
-                                            viewerCount: n,
+                                            viewerCount: o,
                                             isLoading: !1
                                         }), this.props.latencyTracking.reportCustomEvent(t), [2]
                                 }
                             })
                         })
-                    }, t = i.__decorate([Object(u.b)("ViewersList", {
+                    }, t = i.__decorate([Object(h.b)("ViewersList", {
                         autoReportInteractive: !0
                     })], t)
                 }(a.Component);
-            var _ = Object(n.connect)(null, function(e) {
-                return Object(s.bindActionCreators)({
-                    onShowViewerCard: c.e
-                }, e)
-            })(b);
+            var C = Object(o.b)(function(e) {
+                return {
+                    onShowViewerCard: e.onShowViewerCard
+                }
+            })(g);
             r.d(t, "ChatViewers", function() {
-                return _
+                return C
             })
         },
         ETVK: function(e, t, r) {},

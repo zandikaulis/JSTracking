@@ -972,12 +972,12 @@
                     }, t
                 }(a.Component));
 
-            function j(e) {
+            function I(e) {
                 return {
                     channelID: e.channelID
                 }
             }
-            var I = Object(f.compose)(Object(s.a)(U, {
+            var j = Object(f.compose)(Object(s.a)(U, {
                     options: function(e) {
                         return {
                             variables: {
@@ -987,7 +987,7 @@
                             fetchPolicy: "cache-and-network"
                         }
                     }
-                }), Object(O.a)(j), Object(M.a)(j))(x),
+                }), Object(O.a)(I), Object(M.a)(I))(x),
                 D = n("b6Yk"),
                 N = function(e) {
                     function t() {
@@ -1073,7 +1073,7 @@
                                 }, Object(o.d)("You have no recent raids", "RecentRaids"))), this.state.raidChannels)
                                 if (r.hasOwnProperty) {
                                     var i = this.state.raidChannels[r];
-                                    this.state.raidChannels.hasOwnProperty(r) && void 0 === n[i.userID] && (t.push(a.createElement(I, {
+                                    this.state.raidChannels.hasOwnProperty(r) && void 0 === n[i.userID] && (t.push(a.createElement(j, {
                                         key: "recent-raids-item-" + i.userID,
                                         channelID: this.props.targetChannelID,
                                         onReportButtonClick: this.onReportButtonClick,
@@ -3459,7 +3459,7 @@
             ! function(e) {
                 e.Confirm = "Confirm", e.MultipleChoice = "MultipleChoice", e.Info = "End Card"
             }(T || (T = {}));
-            var U, x, j, I = {
+            var U, x, I, j = {
                     contentGeneral: function() {
                         return Object(c.d)("What would you like to report?", "ReportModalWizard")
                     },
@@ -3568,21 +3568,21 @@
                 F = {
                     identifyUser: {
                         getTitle: D.reportVideo,
-                        getLabel: I.identifyUser,
+                        getLabel: j.identifyUser,
                         items: [E.video_streamer, E.video_someoneElse, E.video_chatSomeone],
                         type: T.MultipleChoice,
                         value: "video identify user"
                     },
                     content: {
                         getTitle: D.reportVideo,
-                        getLabel: I.contentGeneral,
+                        getLabel: j.contentGeneral,
                         items: [E.revealPersonalInfo, E.video_labeling, E.video_inactive, E.video_general, E.report_ip, E.violateDevAgreement, E.selfharm],
                         type: T.MultipleChoice,
                         value: "video report reason"
                     },
                     general: {
                         getTitle: D.reportVideo,
-                        getLabel: I.content,
+                        getLabel: j.content,
                         items: [E.report_username, E.violence, E.abusive, E.cheating, E.scam, E.inappropriateContent, E.evasion, E.impersonation, E.underage, E.bitsViolation],
                         type: T.MultipleChoice,
                         value: "video general report reason"
@@ -3591,14 +3591,14 @@
                 A = {
                     content: {
                         getTitle: D.reportMessage,
-                        getLabel: I.contentGeneral,
+                        getLabel: j.contentGeneral,
                         items: [E.revealPersonalInfo, E.evasion, E.spam, E.maliciousRaid, E.report_username, E.messaging_general, E.selfharm],
                         type: T.MultipleChoice,
                         value: "message report reason"
                     },
                     general: {
                         getTitle: D.reportMessage,
-                        getLabel: I.content,
+                        getLabel: j.content,
                         items: [E.report_emotes, E.violence, E.abusive, E.inappropriateContent, E.impersonation, E.underage, E.bitsViolation],
                         type: T.MultipleChoice,
                         value: "message general report reason"
@@ -3612,14 +3612,14 @@
                 L = {
                     content: {
                         getTitle: D.reportProfile,
-                        getLabel: I.contentGeneral,
+                        getLabel: j.contentGeneral,
                         items: [E.revealPersonalInfo, E.inappropriateBadge, E.inappropriateExtension, E.noModeration, E.profile_general, E.report_ip, E.violateDevAgreement, E.selfharm],
                         type: T.MultipleChoice,
                         value: "profile report reason"
                     },
                     general: {
                         getTitle: D.reportProfile,
-                        getLabel: I.content,
+                        getLabel: j.content,
                         items: [E.report_username, E.violence, E.abusive, E.scam, E.inappropriateContent, E.evasion, E.impersonation, E.underage, E.bitsViolation],
                         type: T.MultipleChoice,
                         value: "profile general report reason"
@@ -3631,7 +3631,7 @@
                             username: e
                         }, "ReportModalWizard")
                     },
-                    getLabel: I.identifyUser,
+                    getLabel: j.identifyUser,
                     items: [E.report_channelOwner, E.report_member],
                     value: "room report user",
                     type: T.MultipleChoice
@@ -3656,7 +3656,7 @@
                 Y = {
                     content: {
                         getTitle: D.reportAbusive,
-                        getLabel: I.relevantStatements,
+                        getLabel: j.relevantStatements,
                         items: [E.hateSpeech, E.harassment, E.abusiveViolence, E.commitingViolence, E.swatting, E.personalInfo],
                         type: T.MultipleChoice,
                         value: "abuse type"
@@ -3695,7 +3695,7 @@
                                 username: e
                             }, "ReportModalWizard")
                         },
-                        getLabel: I.thisPersonIs,
+                        getLabel: j.thisPersonIs,
                         getDescription: function() {
                             return Object(c.d)("Please note that incidents reported through this form must involve Twitch community members. If possible, please submit a report to the site or service where the incident occurred as well.", "ReportModalWizard")
                         },
@@ -3719,7 +3719,7 @@
                             username: e
                         }, "ReportModalWizard")
                     },
-                    getLabel: I.contentGeneral,
+                    getLabel: j.contentGeneral,
                     items: [E.spam_bot, E.spam_scam, E.spam_repeated],
                     type: T.MultipleChoice,
                     value: "spam type"
@@ -3730,7 +3730,7 @@
                             username: e
                         }, "ReportModalWizard")
                     },
-                    getLabel: I.relevantStatements,
+                    getLabel: j.relevantStatements,
                     items: [E.inappropriate_game, E.gory, E.sexuallyViolent, E.childAnimal, E.pornographic, E.suggestive, E.nudity, E.other],
                     type: T.MultipleChoice,
                     value: "inappropriate content type"
@@ -3889,8 +3889,13 @@
                             t.setState({
                                 modalCloseTracked: !0
                             }, function() {
-                                return t.props.trackClose(j.Finish, t.state.currentCard.value)
+                                return t.props.trackClose(I.Finish, t.state.currentCard.value, t.getChoiceIndex())
                             }), t.props.onClose()
+                        }, t.getChoiceIndex = function() {
+                            var e = 0;
+                            return t.state.currentCard && t.state.currentCard.items && (e = t.state.currentCard.items.findIndex(function(e) {
+                                return t.state.currentSelection === e
+                            }) + 1), e >= 1 ? e : void 0
                         }, t.handleNext = function() {
                             if (t.state.currentSelection && t.state.currentSelection.value) {
                                 var e = t.state.currentCard,
@@ -3899,21 +3904,22 @@
                                     a = t.state.displacedSelections[t.state.displacedSelections.length - 1],
                                     o = t.state.currentSelection.differentTarget || t.state.targetUnknown,
                                     i = t.state.currentSelection.reportContext || t.state.reportContext,
-                                    s = e.nextCard || Z;
-                                ee[t.state.currentSelection.value] && (s = ee[t.state.currentSelection.value]);
-                                var l = t.state.currentSelection.reportReason || t.state.reportReason,
-                                    c = s.type === T.Info;
+                                    s = t.getChoiceIndex(),
+                                    l = e.nextCard || Z;
+                                ee[t.state.currentSelection.value] && (l = ee[t.state.currentSelection.value]);
+                                var c = t.state.currentSelection.reportReason || t.state.reportReason,
+                                    d = l.type === T.Info;
                                 t.setState({
-                                    currentCard: s,
-                                    reportReason: l,
-                                    prevCards: c ? [] : n,
+                                    currentCard: l,
+                                    reportReason: c,
+                                    prevCards: d ? [] : n,
                                     prevSelections: r,
                                     targetUnknown: o,
                                     currentSelection: a || null,
                                     displacedSelections: t.state.displacedSelections.slice(0, -1),
                                     reportContext: i
                                 }, function() {
-                                    return t.trackNavigation(x.Next, e.value)
+                                    return t.trackNavigation(x.Next, e.value, s)
                                 })
                             }
                         }, t.createReportDescription = function() {
@@ -3933,7 +3939,7 @@
                             }).length
                         }, t.handleSubmit = function() {
                             return o.__awaiter(t, void 0, void 0, function() {
-                                var e, t, n, r, a = this;
+                                var e, t, n, r, a, i = this;
                                 return o.__generator(this, function(o) {
                                     switch (o.label) {
                                         case 0:
@@ -3946,7 +3952,7 @@
                                                     });
                                                     break;
                                                 case M.a.Success:
-                                                    r = J, te[t] && (r = te[t]), this.state.currentCard.nextCard && (r = this.state.currentCard.nextCard), this.setState({
+                                                    r = J, te[t] && (r = te[t]), this.state.currentCard.nextCard && (r = this.state.currentCard.nextCard), a = this.getChoiceIndex(), this.setState({
                                                         currentCard: r,
                                                         prevCards: [],
                                                         prevSelections: [],
@@ -3955,7 +3961,7 @@
                                                         userTextInput: {},
                                                         error: ""
                                                     }, function() {
-                                                        return a.trackNavigation(x.Submit)
+                                                        return i.trackNavigation(x.Submit, void 0, a)
                                                     });
                                                     break;
                                                 case M.a.UserError:
@@ -3981,18 +3987,18 @@
                             })
                         }, t.handleBack = function() {
                             return o.__awaiter(t, void 0, void 0, function() {
-                                var e, t, n, r, a, i = this;
+                                var e, t, n, r, a, i, s = this;
                                 return o.__generator(this, function(o) {
-                                    return e = this.state.currentCard, t = this.state.prevCards[this.state.prevCards.length - 1], n = this.state.prevSelections[this.state.prevSelections.length - 1], r = !n.differentTarget && this.state.targetUnknown, a = this.state.displacedSelections, this.state.currentSelection && (a = a.concat(this.state.currentSelection)), t && n && this.setState({
+                                    return e = this.state.currentCard, t = this.state.prevCards[this.state.prevCards.length - 1], n = this.state.prevSelections[this.state.prevSelections.length - 1], r = !n.differentTarget && this.state.targetUnknown, a = this.getChoiceIndex(), i = this.state.displacedSelections, this.state.currentSelection && (i = i.concat(this.state.currentSelection)), t && n && this.setState({
                                         currentCard: t,
                                         currentSelection: n,
-                                        displacedSelections: a,
+                                        displacedSelections: i,
                                         prevCards: this.state.prevCards.slice(0, -1),
                                         prevSelections: this.state.prevSelections.slice(0, -1),
                                         error: "",
                                         targetUnknown: r
                                     }, function() {
-                                        return i.trackNavigation(x.Back, e.value)
+                                        return s.trackNavigation(x.Back, e.value, a)
                                     }), [2]
                                 })
                             })
@@ -4018,12 +4024,12 @@
                                     reportContext: r
                                 })
                             }
-                        }, t.trackNavigation = function(e, n) {
-                            t.props.trackAction(e, n, t.state.currentCard.value)
+                        }, t.trackNavigation = function(e, n, r) {
+                            t.props.trackAction(e, n, t.state.currentCard.value, r)
                         }, t
                     }
                     return o.__extends(t, e), t.prototype.componentWillUnmount = function() {
-                        this.state.modalCloseTracked || this.props.trackClose(j.Close, this.state.currentCard.value)
+                        this.state.modalCloseTracked || this.props.trackClose(I.Close, this.state.currentCard.value, this.getChoiceIndex())
                     }, t.prototype.render = function() {
                         var e = this.state.currentCard.type === T.Info && this.state.currentCard.blockPrompt ? i.createElement(R, {
                                 targetUser: this.props.targetUser,
@@ -4073,7 +4079,7 @@
             n.d(t, "c", function() {
                     return x
                 }), n.d(t, "a", function() {
-                    return j
+                    return I
                 }), n.d(t, "b", function() {
                     return ue
                 }),
@@ -4085,7 +4091,7 @@
                 }(x || (x = {})),
                 function(e) {
                     e.Close = "close", e.Finish = "finish"
-                }(j || (j = {}));
+                }(I || (I = {}));
             var de = function(e) {
                 function t(t) {
                     var n = e.call(this, t) || this;
@@ -4149,11 +4155,11 @@
                         n.state.openEventSent || (n.state.showWizard ? n.trackWizardAction(x.Open, void 0, e) : n.trackAction(U.Open), n.setState({
                             openEventSent: !0
                         }))
-                    }, n.trackClose = function(e, t) {
-                        n.state.closeEventSent || (n.state.showWizard ? n.trackWizardAction(x.Close, t, void 0, e) : n.trackAction(U.Close), n.setState({
+                    }, n.trackClose = function(e, t, r) {
+                        n.state.closeEventSent || (n.state.showWizard ? n.trackWizardAction(x.Close, t, void 0, r, e) : n.trackAction(U.Close), n.setState({
                             closeEventSent: !0
                         }))
-                    }, n.trackWizardAction = function(e, t, r, a) {
+                    }, n.trackWizardAction = function(e, t, r, a, o) {
                         c.p.tracking.track(v.SpadeEventType.ReportWizardFlowAction, {
                             ui_context: n.props.reportContext.contentType,
                             target_user_id: n.props.reportContext.targetUserID,
@@ -4161,10 +4167,11 @@
                             modal_type: "wizard_v1",
                             extra_user_id: n.props.reportContext.additionalTrackingID,
                             action: e,
-                            close_type: a,
+                            close_type: o,
                             report_session_id: n.reportID,
                             current_step: t,
-                            navigated_to: r
+                            navigated_to: r,
+                            choice_index: a
                         })
                     }, n.trackAction = function(e) {
                         c.p.tracking.track(v.SpadeEventType.ReportFlowAction, {

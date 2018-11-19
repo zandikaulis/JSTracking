@@ -1,28 +1,12 @@
 (window.webpackJsonp = window.webpackJsonp || []).push([
     [58], {
-        "3lt/": function(e, n, t) {
-            "use strict";
-            t("mrSG"), t("uhBA");
-            var r = t("L9xt");
-            t.o(r, "PageviewContent") && t.d(n, "PageviewContent", function() {
-                return r.PageviewContent
-            }), t.o(r, "PageviewLocation") && t.d(n, "PageviewLocation", function() {
-                return r.PageviewLocation
-            }), t.o(r, "PageviewMedium") && t.d(n, "PageviewMedium", function() {
-                return r.PageviewMedium
-            }), t.o(r, "SpadeEventType") && t.d(n, "SpadeEventType", function() {
-                return r.SpadeEventType
-            }), t.o(r, "TwitchDataType") && t.d(n, "TwitchDataType", function() {
-                return r.TwitchDataType
-            })
-        },
         "O0y+": function(e, n, t) {
             "use strict";
             t.r(n);
             var r = t("mrSG"),
                 i = t("q1tI"),
-                a = t("/MKj"),
-                s = t("fvjX"),
+                s = t("/MKj"),
+                a = t("fvjX"),
                 o = t("/7QA"),
                 d = t("yR8l"),
                 u = t("V+GM"),
@@ -35,11 +19,11 @@
                 v = t("GnwI"),
                 k = t("3lt/"),
                 F = t("ZDlU"),
-                h = t("8/mp"),
-                b = t("ff13"),
+                b = t("8/mp"),
+                h = t("ff13"),
                 q = t("jytb"),
                 R = t("Ue10"),
-                y = function(e) {
+                U = function(e) {
                     function n() {
                         return null !== e && e.apply(this, arguments) || this
                     }
@@ -49,8 +33,8 @@
                                 x: 3,
                                 y: 2
                             }
-                        }, i.createElement(b.a, {
-                            activeTab: b.b.Requests
+                        }, i.createElement(h.a, {
+                            activeTab: h.b.Requests
                         }), this.renderContent(), i.createElement(R.Ya, {
                             display: R.X.Flex,
                             justifyContent: R.Xa.Center
@@ -93,14 +77,14 @@
                             childWidth: R.dc.Large,
                             gutterSize: R.ec.Small,
                             placeholderItems: 10
-                        }, e, i.createElement(h.a, {
+                        }, e, i.createElement(b.a, {
                             enabled: this.props.canLoadMore,
                             loadMore: this.props.onLoadMore,
                             pixelThreshold: 100
                         }))
                     }, n
                 }(i.Component),
-                U = t("nFAG"),
+                y = t("nFAG"),
                 S = function(e) {
                     function n() {
                         var n = null !== e && e.apply(this, arguments) || this;
@@ -111,23 +95,23 @@
                                     switch (t.label) {
                                         case 0:
                                             return (e = this.props.data) && e.currentUser && e.currentUser.incomingFriendRequests ? (n = e.currentUser.incomingFriendRequests.edges, [4, e.fetchMore({
-                                                query: U,
+                                                query: y,
                                                 variables: r.__assign({}, e.variables, {
                                                     cursor: n[n.length - 1].cursor
                                                 }),
                                                 updateQuery: function(n, t) {
                                                     var i = t.fetchMoreResult;
                                                     if (!i.currentUser || !i.currentUser.incomingFriendRequests) return n;
-                                                    var a = (e.currentUser && e.currentUser.incomingFriendRequests && e.currentUser.incomingFriendRequests.edges || []).filter(function(e) {
+                                                    var s = (e.currentUser && e.currentUser.incomingFriendRequests && e.currentUser.incomingFriendRequests.edges || []).filter(function(e) {
                                                             return e.node && e.node.id
                                                         }),
-                                                        s = i.currentUser.incomingFriendRequests.edges.filter(function(e) {
+                                                        a = i.currentUser.incomingFriendRequests.edges.filter(function(e) {
                                                             return e.node && e.node.id
                                                         });
                                                     return {
                                                         currentUser: r.__assign({}, i.currentUser, {
                                                             incomingFriendRequests: r.__assign({}, i.currentUser && i.currentUser.incomingFriendRequests, {
-                                                                edges: Object(c.c)(a, s)
+                                                                edges: Object(c.c)(s, a)
                                                             })
                                                         })
                                                     }
@@ -141,7 +125,7 @@
                         }, n
                     }
                     return r.__extends(n, e), n.prototype.componentDidMount = function() {
-                        o.p.setPageTitle(Object(o.d)("Friend Requests", "FriendsPage")), w(this.props) && this.props.latencyTracking.reportInteractive()
+                        o.p.setPageTitle(Object(o.d)("Friend Requests", "FriendsPage")), N(this.props) && this.props.latencyTracking.reportInteractive()
                     }, n.prototype.componentWillReceiveProps = function(e) {
                         this.props.data && 1 === this.props.data.networkStatus && e.data && 1 !== e.data.networkStatus && (this.props.latencyTracking.reportInteractive(), e.data.currentUser && e.data.currentUser.incomingFriendRequests && this.props.clearUnreadFriendRequests())
                     }, n.prototype.render = function() {
@@ -156,25 +140,25 @@
                                 login: this.props.login,
                                 onLoadMore: this.loadMore
                             };
-                        return i.createElement(y, r.__assign({}, n))
+                        return i.createElement(U, r.__assign({}, n))
                     }, n
                 }(i.Component);
 
-            function w(e) {
+            function N(e) {
                 return !e.isLoggedIn
             }
-            var N = Object(s.compose)(Object(a.connect)(function(e) {
+            var O = Object(a.compose)(Object(s.connect)(function(e) {
                 return {
                     isLoggedIn: Object(p.f)(e)
                 }
             }, function(e) {
-                return Object(s.bindActionCreators)({
+                return Object(a.bindActionCreators)({
                     login: function() {
                         return Object(m.e)(l.a.FriendsPage)
                     }
                 }, e)
-            }), Object(d.a)(U, {
-                skip: w,
+            }), Object(d.a)(y, {
+                skip: N,
                 options: function() {
                     return {
                         notifyOnNetworkStatusChange: !0,
@@ -191,35 +175,35 @@
                 location: k.PageviewLocation.FriendRequests
             }))(S);
             t.d(n, "FriendRequestsPage", function() {
-                return N
+                return O
             })
         },
         ff13: function(e, n, t) {
             "use strict";
             var r, i = t("q1tI"),
-                a = t("/7QA"),
-                s = t("Ue10");
+                s = t("/7QA"),
+                a = t("Ue10");
             ! function(e) {
                 e[e.Friends = 0] = "Friends", e[e.Requests = 1] = "Requests"
             }(r || (r = {}));
             var o = function(e) {
-                return i.createElement(s.Ya, {
+                return i.createElement(a.Ya, {
                     margin: {
                         bottom: 2
                     }
-                }, i.createElement(s.W, {
-                    type: s.Wb.H2
-                }, Object(a.d)("Friends", "FriendsHeader")), i.createElement(s.Ya, {
+                }, i.createElement(a.W, {
+                    type: a.Wb.H2
+                }, Object(s.d)("Friends", "FriendsHeader")), i.createElement(a.Ya, {
                     margin: {
                         top: 1
                     }
-                }, i.createElement(s.Hb, null, i.createElement(s.Gb, {
+                }, i.createElement(a.Hb, null, i.createElement(a.Gb, {
                     active: e.activeTab === r.Friends,
                     linkTo: "/friends"
-                }, Object(a.d)("Your Friends", "FriendsHeader")), i.createElement(s.Gb, {
+                }, Object(s.d)("Your Friends", "FriendsHeader")), i.createElement(a.Gb, {
                     active: e.activeTab === r.Requests,
                     linkTo: "/friends/requests"
-                }, Object(a.d)("Friend Requests", "FriendsHeader")))))
+                }, Object(s.d)("Friend Requests", "FriendsHeader")))))
             };
             t.d(n, "b", function() {
                 return r

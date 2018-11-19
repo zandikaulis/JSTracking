@@ -163,7 +163,7 @@
                 w = r("kRBY"),
                 C = r("TSYQ"),
                 T = r("tKDy"),
-                O = function(e) {
+                O = (r("g/Ny"), function(e) {
                     function t() {
                         var t = null !== e && e.apply(this, arguments) || this;
                         return t.state = {
@@ -190,13 +190,17 @@
                     }, t.prototype.componentWillUnmount = function() {
                         window.onRecaptchaLoad = function() {}
                     }, t.prototype.render = function() {
-                        var e = C({
-                            "g-recaptcha": this.props.invisible
-                        });
-                        return a.createElement("div", {
+                        var e = this.props.showLoader && null === this.state.widgetId,
+                            t = C({
+                                "g-recaptcha": this.props.invisible,
+                                "recaptcha--loading": e
+                            });
+                        return a.createElement(a.Fragment, null, e && a.createElement(k.ab, {
+                            size: k.Db.Large
+                        }), a.createElement("div", {
                             id: "recaptcha-element-container",
-                            className: e
-                        })
+                            className: t
+                        }))
                     }, t.prototype.reset = function() {
                         null !== this.state.widgetId && window.grecaptcha && window.grecaptcha.reset(this.state.widgetId)
                     }, t.prototype.execute = function() {
@@ -219,7 +223,7 @@
                             })
                         }
                     }, t
-                }(a.PureComponent);
+                }(a.PureComponent));
             var M = Object(E.connect)(function(e) {
                     return {
                         languageCode: Object(w.b)(e)
@@ -284,6 +288,7 @@
                             justifyContent: k.Xa.Center,
                             className: "captcha-form__captcha"
                         }, a.createElement(M, {
+                            showLoader: !0,
                             screen: T.f.Captcha,
                             refDelegate: this.onCaptchaRefDelegate,
                             onChange: this.props.onCaptchaChanged
@@ -297,8 +302,8 @@
                         }, Object(s.d)("Continue", "CaptchaForm")))
                     }, t
                 }(a.PureComponent)),
-                P = r("CojT"),
-                L = r.n(P),
+                L = r("CojT"),
+                P = r.n(L),
                 _ = (r("sC5l"), function(e) {
                     function t() {
                         var t = null !== e && e.apply(this, arguments) || this;
@@ -346,7 +351,7 @@
                             color: k.O.Overlay,
                             fontSize: k.Ca.Size6,
                             "data-a-target": "facebook-button-div"
-                        }, a.createElement(L.a, {
+                        }, a.createElement(P.a, {
                             containerStyle: {
                                 display: "block"
                             },
@@ -1547,7 +1552,7 @@
                         locale: Object(w.d)(e)
                     }
                 })(je),
-                Pe = {
+                Le = {
                     1: 31,
                     2: 28,
                     3: 31,
@@ -1561,7 +1566,7 @@
                     11: 30,
                     12: 31
                 },
-                Le = 864e5;
+                Pe = 864e5;
 
             function _e(e) {
                 return !!e && (e.monthInvalid || e.dayInvalid || e.yearInvalid)
@@ -1721,13 +1726,13 @@
                                             monthInvalid: !1,
                                             yearInvalid: !1
                                         },
-                                        o = Pe[e.toString()];
+                                        o = Le[e.toString()];
                                     2 === e && function(e) {
                                         return e % 4 == 0 && e % 100 != 0 || e % 400 == 0
                                     }(r) && (o = 29);
                                     var a = new Date,
                                         s = new Date(r, e - 1, t);
-                                    return (!o || t > o) && (n.monthInvalid = t <= 31, n.dayInvalid = !0), r < a.getFullYear() - 150 && (n.yearInvalid = !0), s.getTime() - a.getTime() >= -Le && (n.yearInvalid = !0), n
+                                    return (!o || t > o) && (n.monthInvalid = t <= 31, n.dayInvalid = !0), r < a.getFullYear() - 150 && (n.yearInvalid = !0), s.getTime() - a.getTime() >= -Pe && (n.yearInvalid = !0), n
                                 }(e.month, e.day, e.year)
                             })
                         }, t.onUsernameInputChanged = function(e) {
@@ -3282,6 +3287,7 @@
                                 y: 3
                             },
                             display: k.X.Flex,
+                            borderRadius: k.x.Medium,
                             flexDirection: k.Aa.Column,
                             background: k.r.Base
                         }, this.renderBackButton(), this.renderHeader(), this.renderNavigation(), this.renderServerMessage(), this.renderForm(), this.renderFooter())
@@ -4059,6 +4065,7 @@
             }
         },
         c8uT: function(e, t, r) {},
+        "g/Ny": function(e, t, r) {},
         lP32: function(e, t, r) {},
         pKR5: function(e, t, r) {},
         qV8A: function(e, t, r) {},

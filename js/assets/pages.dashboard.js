@@ -2082,27 +2082,31 @@
                             var t = this.props.unreadCount > 99 ? "99+" : this.props.unreadCount.toString();
                             e = _.createElement(B.Ya, {
                                 className: "whispers-threads-box__unread",
-                                margin: {
-                                    y: .5
-                                }
-                            }, _.createElement("span", {
-                                className: "whispers-threads-box__unread--count",
-                                "data-a-target": "whisper-unreads"
-                            }, t))
+                                position: B.kb.Absolute
+                            }, _.createElement(B.hb, {
+                                "data-a-target": "whisper-unreads",
+                                label: t,
+                                type: B.ib.Notification
+                            }))
                         }
                         return _.createElement(B.Fb, {
-                            className: "whispers-threads-box__open-close",
                             position: B.kb.Relative,
                             background: B.r.Alt,
                             display: B.X.Flex,
                             alignItems: B.f.Center,
                             justifyContent: B.Xa.Center
-                        }, e, _.createElement(B.A, {
+                        }, e, _.createElement(B.Va, {
                             ariaLabel: Object(a.d)("Close Threads", "WhisperThreadsBox"),
-                            icon: B.ub.Conversations,
                             onClick: this.handleConversationsClick,
+                            type: B.Wa.Alt,
                             "data-a-target": "whisper-box-button"
-                        }))
+                        }, _.createElement(B.Fb, {
+                            display: B.X.Flex,
+                            padding: 1,
+                            color: B.O.Link
+                        }, _.createElement(B.tb, {
+                            asset: B.ub.Conversations
+                        }))))
                     }, t.prototype.renderList = function() {
                         var e, t = this;
                         if (!this.state.open) return null;
@@ -4038,22 +4042,6 @@
             })(ht);
             n.d(t, "Whispers", function() {
                 return ft
-            })
-        },
-        "3lt/": function(e, t, n) {
-            "use strict";
-            n("mrSG"), n("uhBA");
-            var r = n("L9xt");
-            n.o(r, "PageviewContent") && n.d(t, "PageviewContent", function() {
-                return r.PageviewContent
-            }), n.o(r, "PageviewLocation") && n.d(t, "PageviewLocation", function() {
-                return r.PageviewLocation
-            }), n.o(r, "PageviewMedium") && n.d(t, "PageviewMedium", function() {
-                return r.PageviewMedium
-            }), n.o(r, "SpadeEventType") && n.d(t, "SpadeEventType", function() {
-                return r.SpadeEventType
-            }), n.o(r, "TwitchDataType") && n.d(t, "TwitchDataType", function() {
-                return r.TwitchDataType
             })
         },
         "4VGW": function(e, t, n) {
@@ -11238,15 +11226,14 @@
                         onToggle: this.handleToggle,
                         tooltipProps: {
                             direction: u.bc.Left,
+                            offsetY: "0.4rem",
                             label: Object(o.d)("Help & Feedback", "DashboardHelpButton")
                         }
                     }, i.createElement(l.a, {
                         ariaLabel: Object(o.d)("Feedback", "DashboardHelpButton"),
                         "data-a-target": "help-button"
-                    }, i.createElement(u.tb, {
-                        asset: u.ub.QuestionMark,
-                        height: 16,
-                        type: u.vb.Inherit
+                    }, i.createElement(u.La, {
+                        asset: u.ub.QuestionMark
                     })), i.createElement(u.u, {
                         direction: u.v.TopRight,
                         size: e ? u.w.Large : u.w.Small,
@@ -13088,8 +13075,13 @@
                             t.setState({
                                 modalCloseTracked: !0
                             }, function() {
-                                return t.props.trackClose(M.Finish, t.state.currentCard.value)
+                                return t.props.trackClose(M.Finish, t.state.currentCard.value, t.getChoiceIndex())
                             }), t.props.onClose()
+                        }, t.getChoiceIndex = function() {
+                            var e = 0;
+                            return t.state.currentCard && t.state.currentCard.items && (e = t.state.currentCard.items.findIndex(function(e) {
+                                return t.state.currentSelection === e
+                            }) + 1), e >= 1 ? e : void 0
                         }, t.handleNext = function() {
                             if (t.state.currentSelection && t.state.currentSelection.value) {
                                 var e = t.state.currentCard,
@@ -13098,21 +13090,22 @@
                                     a = t.state.displacedSelections[t.state.displacedSelections.length - 1],
                                     i = t.state.currentSelection.differentTarget || t.state.targetUnknown,
                                     o = t.state.currentSelection.reportContext || t.state.reportContext,
-                                    s = e.nextCard || $;
-                                ee[t.state.currentSelection.value] && (s = ee[t.state.currentSelection.value]);
-                                var c = t.state.currentSelection.reportReason || t.state.reportReason,
-                                    l = s.type === O.Info;
+                                    s = t.getChoiceIndex(),
+                                    c = e.nextCard || $;
+                                ee[t.state.currentSelection.value] && (c = ee[t.state.currentSelection.value]);
+                                var l = t.state.currentSelection.reportReason || t.state.reportReason,
+                                    d = c.type === O.Info;
                                 t.setState({
-                                    currentCard: s,
-                                    reportReason: c,
-                                    prevCards: l ? [] : n,
+                                    currentCard: c,
+                                    reportReason: l,
+                                    prevCards: d ? [] : n,
                                     prevSelections: r,
                                     targetUnknown: i,
                                     currentSelection: a || null,
                                     displacedSelections: t.state.displacedSelections.slice(0, -1),
                                     reportContext: o
                                 }, function() {
-                                    return t.trackNavigation(j.Next, e.value)
+                                    return t.trackNavigation(j.Next, e.value, s)
                                 })
                             }
                         }, t.createReportDescription = function() {
@@ -13132,7 +13125,7 @@
                             }).length
                         }, t.handleSubmit = function() {
                             return i.__awaiter(t, void 0, void 0, function() {
-                                var e, t, n, r, a = this;
+                                var e, t, n, r, a, o = this;
                                 return i.__generator(this, function(i) {
                                     switch (i.label) {
                                         case 0:
@@ -13145,7 +13138,7 @@
                                                     });
                                                     break;
                                                 case w.a.Success:
-                                                    r = J, te[t] && (r = te[t]), this.state.currentCard.nextCard && (r = this.state.currentCard.nextCard), this.setState({
+                                                    r = J, te[t] && (r = te[t]), this.state.currentCard.nextCard && (r = this.state.currentCard.nextCard), a = this.getChoiceIndex(), this.setState({
                                                         currentCard: r,
                                                         prevCards: [],
                                                         prevSelections: [],
@@ -13154,7 +13147,7 @@
                                                         userTextInput: {},
                                                         error: ""
                                                     }, function() {
-                                                        return a.trackNavigation(j.Submit)
+                                                        return o.trackNavigation(j.Submit, void 0, a)
                                                     });
                                                     break;
                                                 case w.a.UserError:
@@ -13180,18 +13173,18 @@
                             })
                         }, t.handleBack = function() {
                             return i.__awaiter(t, void 0, void 0, function() {
-                                var e, t, n, r, a, o = this;
+                                var e, t, n, r, a, o, s = this;
                                 return i.__generator(this, function(i) {
-                                    return e = this.state.currentCard, t = this.state.prevCards[this.state.prevCards.length - 1], n = this.state.prevSelections[this.state.prevSelections.length - 1], r = !n.differentTarget && this.state.targetUnknown, a = this.state.displacedSelections, this.state.currentSelection && (a = a.concat(this.state.currentSelection)), t && n && this.setState({
+                                    return e = this.state.currentCard, t = this.state.prevCards[this.state.prevCards.length - 1], n = this.state.prevSelections[this.state.prevSelections.length - 1], r = !n.differentTarget && this.state.targetUnknown, a = this.getChoiceIndex(), o = this.state.displacedSelections, this.state.currentSelection && (o = o.concat(this.state.currentSelection)), t && n && this.setState({
                                         currentCard: t,
                                         currentSelection: n,
-                                        displacedSelections: a,
+                                        displacedSelections: o,
                                         prevCards: this.state.prevCards.slice(0, -1),
                                         prevSelections: this.state.prevSelections.slice(0, -1),
                                         error: "",
                                         targetUnknown: r
                                     }, function() {
-                                        return o.trackNavigation(j.Back, e.value)
+                                        return s.trackNavigation(j.Back, e.value, a)
                                     }), [2]
                                 })
                             })
@@ -13217,12 +13210,12 @@
                                     reportContext: r
                                 })
                             }
-                        }, t.trackNavigation = function(e, n) {
-                            t.props.trackAction(e, n, t.state.currentCard.value)
+                        }, t.trackNavigation = function(e, n, r) {
+                            t.props.trackAction(e, n, t.state.currentCard.value, r)
                         }, t
                     }
                     return i.__extends(t, e), t.prototype.componentWillUnmount = function() {
-                        this.state.modalCloseTracked || this.props.trackClose(M.Close, this.state.currentCard.value)
+                        this.state.modalCloseTracked || this.props.trackClose(M.Close, this.state.currentCard.value, this.getChoiceIndex())
                     }, t.prototype.render = function() {
                         var e = this.state.currentCard.type === O.Info && this.state.currentCard.blockPrompt ? o.createElement(C, {
                                 targetUser: this.props.targetUser,
@@ -13348,11 +13341,11 @@
                         n.state.openEventSent || (n.state.showWizard ? n.trackWizardAction(j.Open, void 0, e) : n.trackAction(I.Open), n.setState({
                             openEventSent: !0
                         }))
-                    }, n.trackClose = function(e, t) {
-                        n.state.closeEventSent || (n.state.showWizard ? n.trackWizardAction(j.Close, t, void 0, e) : n.trackAction(I.Close), n.setState({
+                    }, n.trackClose = function(e, t, r) {
+                        n.state.closeEventSent || (n.state.showWizard ? n.trackWizardAction(j.Close, t, void 0, r, e) : n.trackAction(I.Close), n.setState({
                             closeEventSent: !0
                         }))
-                    }, n.trackWizardAction = function(e, t, r, a) {
+                    }, n.trackWizardAction = function(e, t, r, a, i) {
                         l.p.tracking.track(b.SpadeEventType.ReportWizardFlowAction, {
                             ui_context: n.props.reportContext.contentType,
                             target_user_id: n.props.reportContext.targetUserID,
@@ -13360,10 +13353,11 @@
                             modal_type: "wizard_v1",
                             extra_user_id: n.props.reportContext.additionalTrackingID,
                             action: e,
-                            close_type: a,
+                            close_type: i,
                             report_session_id: n.reportID,
                             current_step: t,
-                            navigated_to: r
+                            navigated_to: r,
+                            choice_index: a
                         })
                     }, n.trackAction = function(e) {
                         l.p.tracking.track(b.SpadeEventType.ReportFlowAction, {
@@ -16404,7 +16398,9 @@
                             subUpsellClickedEmote: null
                         }, n
                     }
-                    return a.__extends(t, e), t.prototype.componentDidMount = function() {
+                    return a.__extends(t, e), t.prototype.shouldComponentUpdate = function(e) {
+                        return null !== this.props.emotePickerSessionID || null === e.emotePickerSessionID
+                    }, t.prototype.componentDidMount = function() {
                         if (this.props.channelID && this.updateChannelEmotes(this.props), this.props.emotePickerSessionID && this.props.channelID) {
                             var e = {
                                 channel_id: this.props.channelID,

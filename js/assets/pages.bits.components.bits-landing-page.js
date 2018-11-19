@@ -1842,14 +1842,14 @@
                             })
                         }
                         var t = null;
-                        if (Object(b.c)(this.props.offer)) t = i.createElement(p.Ya, {
+                        if (Object(b.d)(this.props.offer)) t = i.createElement(p.Ya, {
                             className: "bits-buy-card-offer-row__bonus-text bits-buy-card-offer-row__bonus-text-headline",
                             "data-test-selector": "first-time-promo-form"
                         }, i.createElement(p.W, {
                             type: p.Wb.Strong,
                             fontSize: p.Ca.Size6
                         }, Object(s.d)("Special Offer: 1st Time Buyers", "Bits--BuyCard")));
-                        else if (Object(b.d)(this.props.offer) && null !== this.props.offer.promotion) switch (this.props.offer.promotion.id) {
+                        else if (Object(b.e)(this.props.offer) && null !== this.props.offer.promotion) switch (this.props.offer.promotion.id) {
                             case g.c:
                                 var n = "";
                                 n = this.props.email && this.props.isEmailVerified ? Object(s.d)("200 Bits code will be sent to {email}", {
@@ -1881,7 +1881,7 @@
                             percentOff: this.props.offer.discount
                         }, "Bits--BuyCard")));
                         var a = null;
-                        (Object(b.c)(this.props.offer) || Object(b.e)(this.props.offer)) && (a = i.createElement("div", {
+                        (Object(b.d)(this.props.offer) || Object(b.f)(this.props.offer)) && (a = i.createElement("div", {
                             className: "bits-buy-card-offer-row__sub-text",
                             "data-test-selector": "one-per-account-form"
                         }, Object(s.d)("one per account", "Bits--BuyCard")));
@@ -1960,8 +1960,8 @@
                             email: e.email,
                             isEmailVerified: e.isEmailVerified
                         }),
-                        c = Object(b.d)(r),
-                        l = Object(b.c)(r),
+                        c = Object(b.e)(r),
+                        l = Object(b.d)(r) || Object(b.c)(r),
                         d = r.type === g.a;
                     l && !e.hidePromos ? t.push(s) : c && !l ? t.push(s) : d && !e.hideWateb ? o = s : d || c || n.push(s)
                 }), e.size) {
@@ -2002,18 +2002,20 @@
         byRF: function(e, t, n) {},
         ebRM: function(e, t, n) {
             "use strict";
-            n.d(t, "c", function() {
+            n.d(t, "d", function() {
                 return l
-            }), n.d(t, "e", function() {
+            }), n.d(t, "c", function() {
                 return d
-            }), n.d(t, "d", function() {
-                return u
-            }), n.d(t, "a", function() {
-                return p
             }), n.d(t, "f", function() {
+                return u
+            }), n.d(t, "e", function() {
+                return p
+            }), n.d(t, "a", function() {
                 return m
-            }), n.d(t, "b", function() {
+            }), n.d(t, "g", function() {
                 return h
+            }), n.d(t, "b", function() {
+                return f
             });
             var r = n("mrSG"),
                 i = n("SDEh"),
@@ -2023,18 +2025,22 @@
                 c = n("RiD7");
 
             function l(e) {
-                return e.type !== a.a && (u(e) && null !== e.promotion && e.promotion.type === a.e)
+                return e.type !== a.a && (p(e) && null !== e.promotion && e.promotion.type === a.e)
             }
 
             function d(e) {
-                return e.type !== a.a && (u(e) && null !== e.promotion && (e.promotion.type === a.g || e.promotion.type === a.f))
+                return e.type !== a.a && (p(e) && null !== e.promotion && e.promotion.type === a.c)
             }
 
             function u(e) {
-                return e.type === a.b && null !== e.promotion && !!e.promotion
+                return e.type !== a.a && (p(e) && null !== e.promotion && (e.promotion.type === a.g || e.promotion.type === a.f))
             }
 
             function p(e) {
+                return e.type === a.b && null !== e.promotion && !!e.promotion
+            }
+
+            function m(e) {
                 var t = 0,
                     n = 0,
                     r = 0,
@@ -2049,7 +2055,7 @@
                 }
             }
 
-            function m(e) {
+            function h(e) {
                 var t = e.messageBits,
                     n = t.total,
                     i = t.largestCheermote,
@@ -2075,7 +2081,7 @@
                 }
             }
 
-            function h(e) {
+            function f(e) {
                 var t = e.purchaseUrl;
                 if (t) {
                     e.trackBitsCardInteraction(Object(c.d)(e.bitsAmount), {

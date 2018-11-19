@@ -207,7 +207,7 @@
                     e.Group = "group", e.Team = "team", e.Player = "player", e.Role = "role"
                 }(a || (a = {})),
                 function(e) {
-                    e.Group = "Group", e.Team = "team", e.Player = "Player", e.Role = "Role"
+                    e.Group = "Group", e.Team = "Team", e.Player = "Player", e.Role = "Role"
                 }(o || (o = {}))
         },
         tgcK: function(e, t, n) {
@@ -241,7 +241,9 @@
                                 parentKey: null,
                                 value: "",
                                 valueShortName: "",
-                                imageURL: ""
+                                imageURL: "",
+                                createdAt: "",
+                                updatedAt: ""
                             }
                         }, t.onRoleNameChange = function(e) {
                             var n = e.target.value,

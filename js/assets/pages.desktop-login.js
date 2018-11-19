@@ -163,7 +163,7 @@
                 w = r("kRBY"),
                 C = r("TSYQ"),
                 T = r("tKDy"),
-                O = function(e) {
+                O = (r("g/Ny"), function(e) {
                     function t() {
                         var t = null !== e && e.apply(this, arguments) || this;
                         return t.state = {
@@ -190,13 +190,17 @@
                     }, t.prototype.componentWillUnmount = function() {
                         window.onRecaptchaLoad = function() {}
                     }, t.prototype.render = function() {
-                        var e = C({
-                            "g-recaptcha": this.props.invisible
-                        });
-                        return a.createElement("div", {
+                        var e = this.props.showLoader && null === this.state.widgetId,
+                            t = C({
+                                "g-recaptcha": this.props.invisible,
+                                "recaptcha--loading": e
+                            });
+                        return a.createElement(a.Fragment, null, e && a.createElement(k.ab, {
+                            size: k.Db.Large
+                        }), a.createElement("div", {
                             id: "recaptcha-element-container",
-                            className: e
-                        })
+                            className: t
+                        }))
                     }, t.prototype.reset = function() {
                         null !== this.state.widgetId && window.grecaptcha && window.grecaptcha.reset(this.state.widgetId)
                     }, t.prototype.execute = function() {
@@ -219,7 +223,7 @@
                             })
                         }
                     }, t
-                }(a.PureComponent);
+                }(a.PureComponent));
             var j = Object(E.connect)(function(e) {
                     return {
                         languageCode: Object(w.b)(e)
@@ -284,6 +288,7 @@
                             justifyContent: k.Xa.Center,
                             className: "captcha-form__captcha"
                         }, a.createElement(j, {
+                            showLoader: !0,
                             screen: T.f.Captcha,
                             refDelegate: this.onCaptchaRefDelegate,
                             onChange: this.props.onCaptchaChanged
@@ -299,7 +304,7 @@
                 }(a.PureComponent)),
                 I = r("CojT"),
                 P = r.n(I),
-                _ = (r("sC5l"), function(e) {
+                x = (r("sC5l"), function(e) {
                     function t() {
                         var t = null !== e && e.apply(this, arguments) || this;
                         return t.onFacebookLoginClicked = function() {
@@ -367,11 +372,11 @@
                         })))
                     }, t
                 }(a.PureComponent));
-            var x, D = Object(E.connect)(function(e) {
+            var _, D = Object(E.connect)(function(e) {
                     return {
                         facebookLocale: Object(w.d)(e).replace("-", "_")
                     }
-                })(_),
+                })(x),
                 A = r("fvjX"),
                 V = r("ZIMp"),
                 U = (r("QRgD"), function(e) {
@@ -634,7 +639,7 @@
                 }(a.Component);
             ! function(e) {
                 e.Valid = "Valid", e.Invalid = "Invalid"
-            }(x || (x = {}));
+            }(_ || (_ = {}));
             var H, G = function(e) {
                 function t() {
                     var t = null !== e && e.apply(this, arguments) || this;
@@ -697,15 +702,15 @@
                     var e = {
                         shouldShowLoading: this.state.isTyping,
                         shouldShowNone: !this.props.validationState,
-                        shouldShowError: this.props.validationState === x.Invalid,
-                        shouldShowValid: this.props.validationState === x.Valid
+                        shouldShowError: this.props.validationState === _.Invalid,
+                        shouldShowValid: this.props.validationState === _.Valid
                     };
                     return a.createElement(Y, {
                         options: e
                     })
                 }, Object.defineProperty(t.prototype, "isInvalid", {
                     get: function() {
-                        return this.props.validationState === x.Invalid
+                        return this.props.validationState === _.Invalid
                     },
                     enumerable: !0,
                     configurable: !0
@@ -770,7 +775,7 @@
             }
 
             function ae(e, t) {
-                return !t.passwordError && !t.usernameError && (!!e.username && (!!e.password && (e.usernameValidationState !== x.Invalid && (!!Z(e.username) && !e.isPasswordInvalid))))
+                return !t.passwordError && !t.usernameError && (!!e.username && (!!e.password && (e.usernameValidationState !== _.Invalid && (!!Z(e.username) && !e.isPasswordInvalid))))
             }
             var se = r("2Ygb");
 
@@ -1151,7 +1156,7 @@
                                         case 0:
                                             return [4, te(e = this.props.values.username)];
                                         case 1:
-                                            return t = o.sent(), r = re(e, t), n = r ? x.Invalid : x.Valid, this.props.onFacebookSignupFormValuesChanged({
+                                            return t = o.sent(), r = re(e, t), n = r ? _.Invalid : _.Valid, this.props.onFacebookSignupFormValuesChanged({
                                                 usernameValidationState: n,
                                                 usernameErrorMessage: r
                                             }), [2]
@@ -1209,7 +1214,7 @@
                             onValidationRequested: this.onUsernameValidationRequested,
                             value: this.props.values.username,
                             errorMessage: this.props.values.usernameErrorMessage,
-                            validationState: this.props.serverErrors.usernameError ? x.Invalid : this.props.values.usernameValidationState,
+                            validationState: this.props.serverErrors.usernameError ? _.Invalid : this.props.values.usernameValidationState,
                             autoFocus: !0,
                             refDelegate: this.props.refDelegate
                         }))
@@ -1563,10 +1568,10 @@
                 },
                 Pe = 864e5;
 
-            function _e(e) {
+            function xe(e) {
                 return !!e && (e.monthInvalid || e.dayInvalid || e.yearInvalid)
             }
-            var xe, De = function(e) {
+            var _e, De = function(e) {
                 function t() {
                     var t = null !== e && e.apply(this, arguments) || this;
                     return t.state = {
@@ -1601,7 +1606,7 @@
                 return o.__extends(t, e), t.prototype.render = function() {
                     return a.createElement(R, {
                         label: Object(s.d)("Date of Birth", "BirthdayFormGroup"),
-                        error: _e(this.props.dateValidation) || this.props.serverError,
+                        error: xe(this.props.dateValidation) || this.props.serverError,
                         errorMessage: Object(s.d)("Please enter a valid date.", "BirthdayFormGroup"),
                         validationComponent: this.renderValidIndicator(),
                         hint: !1
@@ -1615,7 +1620,7 @@
                 }, t.prototype.componentWillUnmount = function() {
                     this.inputTimer && clearTimeout(this.inputTimer)
                 }, t.prototype.renderValidIndicator = function() {
-                    var e = _e(this.props.dateValidation),
+                    var e = xe(this.props.dateValidation),
                         t = {
                             showShowLoading: this.state.isTyping,
                             shouldShowNone: void 0 === this.props.dateValidation,
@@ -1629,7 +1634,7 @@
             }(a.Component);
             ! function(e) {
                 e[e.Valid = 1] = "Valid", e[e.Invalid = 2] = "Invalid"
-            }(xe || (xe = {}));
+            }(_e || (_e = {}));
             var Ae = function(e) {
                     function t() {
                         var t = null !== e && e.apply(this, arguments) || this;
@@ -1679,15 +1684,15 @@
                         var e = {
                             shouldShowLoading: this.state.isTyping,
                             shouldShowNone: !this.props.validationState,
-                            shouldShowError: this.props.validationState === xe.Invalid,
-                            shouldShowValid: this.props.validationState === xe.Valid
+                            shouldShowError: this.props.validationState === _e.Invalid,
+                            shouldShowValid: this.props.validationState === _e.Valid
                         };
                         return a.createElement(Y, {
                             options: e
                         })
                     }, Object.defineProperty(t.prototype, "isInvalid", {
                         get: function() {
-                            return this.props.validationState === xe.Invalid
+                            return this.props.validationState === _e.Invalid
                         },
                         enumerable: !0,
                         configurable: !0
@@ -1696,7 +1701,7 @@
                 Ve = r("rACw");
 
             function Ue(e, t) {
-                return !(t.passwordError || t.usernameError || t.birthdayError || t.emailError) && (!!e.username && (!!e.password && (!!e.email && (!!e.birthdayDate && (!!e.birthdayDate.day && (!!e.birthdayDate.month && (!!e.birthdayDate.year && (e.usernameValidationState !== x.Invalid && (!!Z(e.username) && (!e.isPasswordInvalid && (e.emailValidationState === xe.Valid && !(!e.birthdayValidation || _e(e.birthdayValidation)))))))))))))
+                return !(t.passwordError || t.usernameError || t.birthdayError || t.emailError) && (!!e.username && (!!e.password && (!!e.email && (!!e.birthdayDate && (!!e.birthdayDate.day && (!!e.birthdayDate.month && (!!e.birthdayDate.year && (e.usernameValidationState !== _.Invalid && (!!Z(e.username) && (!e.isPasswordInvalid && (e.emailValidationState === _e.Valid && !(!e.birthdayValidation || xe(e.birthdayValidation)))))))))))))
             }
             var Be, Re = function(e) {
                     function t() {
@@ -1742,7 +1747,7 @@
                                         case 0:
                                             return [4, te(e = this.props.values.username)];
                                         case 1:
-                                            return t = o.sent(), r = re(e, t), n = r ? x.Invalid : x.Valid, this.props.onSignupFormValuesChanged({
+                                            return t = o.sent(), r = re(e, t), n = r ? _.Invalid : _.Valid, this.props.onSignupFormValuesChanged({
                                                 usernameValidationState: n,
                                                 usernameErrorMessage: r
                                             }), [2]
@@ -1765,7 +1770,7 @@
                         }, t.onEmailValidationRequested = function() {
                             var e = t.props.values.email,
                                 r = Object(Ve.a)(e),
-                                n = r ? xe.Invalid : xe.Valid;
+                                n = r ? _e.Invalid : _e.Valid;
                             t.props.onSignupFormValuesChanged({
                                 emailErrorMessage: r,
                                 emailValidationState: n
@@ -1801,7 +1806,7 @@
                             onValidationRequested: this.onUsernameValidationRequested,
                             value: this.props.values.username,
                             errorMessage: this.props.values.usernameErrorMessage,
-                            validationState: this.props.serverErrors.usernameError ? x.Invalid : this.props.values.usernameValidationState,
+                            validationState: this.props.serverErrors.usernameError ? _.Invalid : this.props.values.usernameValidationState,
                             autoFocus: !0,
                             refDelegate: this.props.refDelegate,
                             "data-a-target": "signup-username-input"
@@ -1841,7 +1846,7 @@
                             onEmailChanged: this.onEmailInputChanged,
                             onValidationRequested: this.onEmailValidationRequested,
                             value: this.props.values.email,
-                            validationState: this.props.serverErrors.emailError ? xe.Invalid : this.props.values.emailValidationState,
+                            validationState: this.props.serverErrors.emailError ? _e.Invalid : this.props.values.emailValidationState,
                             errorMessage: this.props.values.emailErrorMessage
                         }))
                     }, t.prototype.renderCaptcha = function() {
@@ -3282,6 +3287,7 @@
                                 y: 3
                             },
                             display: k.X.Flex,
+                            borderRadius: k.x.Medium,
                             flexDirection: k.Aa.Column,
                             background: k.r.Base
                         }, this.renderBackButton(), this.renderHeader(), this.renderNavigation(), this.renderServerMessage(), this.renderForm(), this.renderFooter())
@@ -4059,6 +4065,7 @@
             }
         },
         c8uT: function(e, t, r) {},
+        "g/Ny": function(e, t, r) {},
         lP32: function(e, t, r) {},
         mGa3: function(e, t, r) {},
         obJ3: function(e, t) {

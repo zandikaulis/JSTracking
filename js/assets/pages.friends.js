@@ -6,22 +6,22 @@
             var r = n("mrSG"),
                 i = n("q1tI"),
                 a = n("oJmH"),
-                o = n("/MKj"),
-                s = n("fvjX"),
+                s = n("/MKj"),
+                o = n("fvjX"),
                 d = n("/7QA"),
                 c = n("yR8l"),
                 u = n("V+GM"),
                 l = n("1/iK"),
-                p = n("y5D0"),
-                f = n("NvVO"),
-                g = n("kRBY"),
-                m = n("GnwI"),
+                f = n("y5D0"),
+                p = n("NvVO"),
+                m = n("kRBY"),
+                g = n("GnwI"),
                 v = n("3lt/"),
                 h = n("ZDlU"),
                 b = n("ff13"),
-                y = n("jytb"),
-                k = n("Ue10"),
-                F = function(e) {
+                k = n("jytb"),
+                F = n("Ue10"),
+                y = function(e) {
                     function t(t) {
                         var n = e.call(this, t) || this;
                         n.state = {
@@ -48,17 +48,17 @@
                             })
                         }
                     }, t.prototype.render = function() {
-                        return this.props.isLoggedIn ? i.createElement(k.Ya, {
+                        return this.props.isLoggedIn ? i.createElement(F.Ya, {
                             padding: {
                                 x: 3,
                                 y: 2
                             }
                         }, i.createElement(b.a, {
                             activeTab: b.b.Friends
-                        }), this.renderContent(), i.createElement(k.Ya, {
-                            display: k.X.Flex,
-                            justifyContent: k.Xa.Center
-                        }, this.props.loading && i.createElement(k.ab, null))) : (this.props.login(), i.createElement(h.a, {
+                        }), this.renderContent(), i.createElement(F.Ya, {
+                            display: F.X.Flex,
+                            justifyContent: F.Xa.Center
+                        }, this.props.loading && i.createElement(F.ab, null))) : (this.props.login(), i.createElement(h.a, {
                             message: Object(d.d)("You must be logged in to view this page", "FriendsPage")
                         }))
                     }, t.prototype.renderContent = function() {
@@ -66,35 +66,35 @@
                         if (this.props.error) return i.createElement(h.a, {
                             message: Object(d.d)("Failed to load friends", "FriendRequestsPage")
                         });
-                        if (0 === this.state.filteredUsers.length) return i.createElement(k.Ya, {
-                            textAlign: k.Sb.Center,
+                        if (0 === this.state.filteredUsers.length) return i.createElement(F.Ya, {
+                            textAlign: F.Sb.Center,
                             padding: {
                                 y: 5
                             }
-                        }, i.createElement(k.W, {
-                            color: k.O.Alt2,
-                            fontSize: k.Ca.Size4,
+                        }, i.createElement(F.W, {
+                            color: F.O.Alt2,
+                            fontSize: F.Ca.Size4,
                             italic: !0
                         }, Object(d.d)("You don't have any friends yet. :(", "FriendsPage")));
                         var e = this.state.filteredUsers.map(function(e) {
-                            return e.id ? i.createElement(k.Ya, {
+                            return e.id ? i.createElement(F.Ya, {
                                 key: e.id,
                                 margin: {
                                     bottom: 2
                                 }
-                            }, i.createElement(y.b, {
+                            }, i.createElement(k.b, {
                                 id: e.id,
-                                bodyType: y.c.Presence,
+                                bodyType: k.c.Presence,
                                 showButtonsOnHover: !0,
                                 userData: {
                                     user: e
                                 }
                             })) : null
                         });
-                        return i.createElement(k.cc, {
+                        return i.createElement(F.cc, {
                             center: !0,
-                            childWidth: k.dc.Large,
-                            gutterSize: k.ec.Small,
+                            childWidth: F.dc.Large,
+                            gutterSize: F.ec.Small,
                             placeholderItems: 10
                         }, e)
                     }, t.prototype.detectUserDataChange = function(e, t) {
@@ -119,12 +119,12 @@
                     }, t
                 }(i.Component),
                 S = n("IPTG"),
-                w = function(e) {
+                O = function(e) {
                     function t() {
                         return null !== e && e.apply(this, arguments) || this
                     }
                     return r.__extends(t, e), t.prototype.componentDidMount = function() {
-                        d.p.setPageTitle(Object(d.d)("Friends", "FriendsPage")), D(this.props) && this.props.latencyTracking.reportInteractive()
+                        d.p.setPageTitle(Object(d.d)("Friends", "FriendsPage")), U(this.props) && this.props.latencyTracking.reportInteractive()
                     }, t.prototype.componentWillReceiveProps = function(e) {
                         this.props.data && 1 === this.props.data.networkStatus && e.data && 1 !== e.data.networkStatus && this.props.latencyTracking.reportInteractive()
                     }, t.prototype.render = function() {
@@ -136,51 +136,35 @@
                                 loading: e && e.loading || !1,
                                 login: this.props.login
                             };
-                        return i.createElement(F, r.__assign({}, t))
+                        return i.createElement(y, r.__assign({}, t))
                     }, t
                 }(i.Component);
 
-            function D(e) {
+            function U(e) {
                 return !e.isLoggedIn
             }
-            var P = Object(a.compose)(Object(o.connect)(function(e) {
+            var D = Object(a.compose)(Object(s.connect)(function(e) {
                 return {
-                    isLoggedIn: Object(g.f)(e)
+                    isLoggedIn: Object(m.f)(e)
                 }
             }, function(e) {
-                return Object(s.bindActionCreators)({
+                return Object(o.bindActionCreators)({
                     login: function() {
-                        return Object(p.e)(l.a.FriendsPage)
+                        return Object(f.e)(l.a.FriendsPage)
                     }
                 }, e)
             }), Object(c.a)(S, {
-                skip: D,
+                skip: U,
                 options: {
                     notifyOnNetworkStatusChange: !0
                 }
-            }), Object(m.b)("FriendsPage", {
-                destination: f.a.Friends
+            }), Object(g.b)("FriendsPage", {
+                destination: p.a.Friends
             }), Object(u.a)({
                 location: v.PageviewLocation.Friends
-            }))(w);
+            }))(O);
             n.d(t, "FriendsPage", function() {
-                return P
-            })
-        },
-        "3lt/": function(e, t, n) {
-            "use strict";
-            n("mrSG"), n("uhBA");
-            var r = n("L9xt");
-            n.o(r, "PageviewContent") && n.d(t, "PageviewContent", function() {
-                return r.PageviewContent
-            }), n.o(r, "PageviewLocation") && n.d(t, "PageviewLocation", function() {
-                return r.PageviewLocation
-            }), n.o(r, "PageviewMedium") && n.d(t, "PageviewMedium", function() {
-                return r.PageviewMedium
-            }), n.o(r, "SpadeEventType") && n.d(t, "SpadeEventType", function() {
-                return r.SpadeEventType
-            }), n.o(r, "TwitchDataType") && n.d(t, "TwitchDataType", function() {
-                return r.TwitchDataType
+                return D
             })
         },
         IPTG: function(e, t, n) {
@@ -297,25 +281,25 @@
             "use strict";
             var r, i = n("q1tI"),
                 a = n("/7QA"),
-                o = n("Ue10");
+                s = n("Ue10");
             ! function(e) {
                 e[e.Friends = 0] = "Friends", e[e.Requests = 1] = "Requests"
             }(r || (r = {}));
-            var s = function(e) {
-                return i.createElement(o.Ya, {
+            var o = function(e) {
+                return i.createElement(s.Ya, {
                     margin: {
                         bottom: 2
                     }
-                }, i.createElement(o.W, {
-                    type: o.Wb.H2
-                }, Object(a.d)("Friends", "FriendsHeader")), i.createElement(o.Ya, {
+                }, i.createElement(s.W, {
+                    type: s.Wb.H2
+                }, Object(a.d)("Friends", "FriendsHeader")), i.createElement(s.Ya, {
                     margin: {
                         top: 1
                     }
-                }, i.createElement(o.Hb, null, i.createElement(o.Gb, {
+                }, i.createElement(s.Hb, null, i.createElement(s.Gb, {
                     active: e.activeTab === r.Friends,
                     linkTo: "/friends"
-                }, Object(a.d)("Your Friends", "FriendsHeader")), i.createElement(o.Gb, {
+                }, Object(a.d)("Your Friends", "FriendsHeader")), i.createElement(s.Gb, {
                     active: e.activeTab === r.Requests,
                     linkTo: "/friends/requests"
                 }, Object(a.d)("Friend Requests", "FriendsHeader")))))
@@ -323,7 +307,7 @@
             n.d(t, "b", function() {
                 return r
             }), n.d(t, "a", function() {
-                return s
+                return o
             })
         }
     }

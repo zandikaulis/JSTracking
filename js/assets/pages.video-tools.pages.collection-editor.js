@@ -4017,6 +4017,8 @@
                         }), t = this.noCollectionItemsCTA()) : (e = this.collectionUnavailableError(), t = this.collectionItemsUnavaibleError()), this.props.data.collection && this.props.data.collection.owner && this.props.data.collection.owner.login !== this.props.match.params.creatorLogin ? r.createElement(M.a, {
                             to: "/" + this.props.match.params.creatorLogin + "/manager/collections"
                         }) : r.createElement(f.b, null, r.createElement(N.Ya, {
+                            className: "dashboard-centered-page"
+                        }, r.createElement(N.Ya, {
                             padding: 3,
                             margin: {
                                 bottom: 3
@@ -4068,7 +4070,7 @@
                         }, Object(a.d)("All collections", "CollectionEditorPagePresentation"))))), e, t, r.createElement(f.a, {
                             enabled: n,
                             loadMore: this.props.loadMore
-                        }))))
+                        })))))
                     }, t.prototype.collectionCardPlaceholders = function() {
                         return [r.createElement(W.a, {
                             key: 1

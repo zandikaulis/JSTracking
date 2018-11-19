@@ -630,7 +630,7 @@
                         switch (n.label) {
                             case 0:
                                 r = Object(N.e)(S.a + "/v5/rbac/validate", {
-                                    domain_id: F.c,
+                                    domain_id: F.b,
                                     permission_name: t,
                                     resource: e
                                 }), n.label = 1;
@@ -1698,16 +1698,13 @@
         },
         tl6o: function(e, t, r) {
             "use strict";
-            r.d(t, "c", function() {
+            r.d(t, "b", function() {
                 return n
-            }), r.d(t, "b", function() {
-                return a
             }), r.d(t, "a", function() {
-                return s
+                return a
             });
             var n = "d3b9f0d8-68e2-4557-8f73-dd0ea151eef3",
-                a = 20,
-                s = "https://gds-vhs-drops-campaign-images.twitch.tv"
+                a = 20
         },
         uLRL: function(e, t, r) {
             "use strict";

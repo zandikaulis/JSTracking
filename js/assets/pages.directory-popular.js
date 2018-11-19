@@ -107,6 +107,44 @@
                 return Math.floor(e / (t * i)) * n
             }
         },
+        "0Rl0": function(e, t, n) {
+            "use strict";
+            n.d(t, "a", function() {
+                return i
+            });
+            var a = n("q1tI"),
+                r = n("Ue10"),
+                i = function() {
+                    return a.createElement(r.G, null, a.createElement(r.o, {
+                        ratio: r.p.Aspect16x9
+                    }, a.createElement(r.jb, null)), a.createElement(r.H, null, a.createElement(r.Ya, {
+                        display: r.X.Flex,
+                        margin: {
+                            bottom: 1
+                        }
+                    }, a.createElement(r.Ya, {
+                        display: r.X.InlineBlock,
+                        margin: {
+                            top: 1,
+                            right: 1
+                        }
+                    }, a.createElement(r.jb, {
+                        width: 40,
+                        height: 56
+                    })), a.createElement(r.Ya, {
+                        display: r.X.InlineBlock,
+                        margin: {
+                            top: 1
+                        }
+                    }, a.createElement(r.W, null, a.createElement(r.jb, {
+                        width: 150
+                    })), a.createElement(r.W, {
+                        fontSize: r.Ca.Size7
+                    }, a.createElement(r.jb, {
+                        width: 100
+                    }))))))
+                }
+        },
         "4KoZ": function(e, t, n) {
             "use strict";
             n.d(t, "a", function() {
@@ -232,16 +270,16 @@
                     case "lt":
                         p = !0
                 }
-                var h = d.seconds || 0,
-                    g = d.minutes || 0,
+                var g = d.seconds || 0,
+                    h = d.minutes || 0,
                     v = d.hours || 0;
                 switch (t) {
                     case r.ClockHM:
                     case r.ClockHMS:
-                        var b = (p ? c(v, 2) : v) + m + c(g, 2);
-                        return t === r.ClockHMS && (b += m + c(h, 2)), b;
+                        var b = (p ? c(v, 2) : v) + m + c(h, 2);
+                        return t === r.ClockHMS && (b += m + c(g, 2)), b;
                     case r.ClockMS:
-                        return (p ? c(g, 2) : g) + m + c(h, 2)
+                        return (p ? c(h, 2) : h) + m + c(g, 2)
                 }
             }
 
@@ -256,6 +294,390 @@
             }(r || (r = {}))
         },
         "80G/": function(e, t, n) {},
+        "924X": function(e, t, n) {
+            "use strict";
+            var a = n("mrSG"),
+                r = n("q1tI"),
+                i = n("oJmH"),
+                o = n("GFmA"),
+                s = n("yR8l"),
+                l = n("Bk78"),
+                c = n("0JAG"),
+                d = n("GnwI"),
+                u = n("0Rl0"),
+                m = n("/7QA");
+
+            function p(e) {
+                switch (e) {
+                    case "ar":
+                        return "73cc486a-e56b-41ed-a1df-7afedbc84f6f";
+                    case "asl":
+                        return "5ad4b978-495f-4093-9461-c194f58201ab";
+                    case "bg":
+                        return "21d85c73-701f-4259-8c4e-4321265847b5";
+                    case "cs":
+                        return "a6cddaba-f0ce-4526-9087-6de2f603a24d";
+                    case "da":
+                        return "43e598cc-918b-4247-b02c-b13543a1eac9";
+                    case "de":
+                        return "9166ad14-41f1-4b04-a3b8-c8eb838c6be6";
+                    case "el":
+                        return "902f6815-a655-4918-99e7-48c74a71feac";
+                    case "en":
+                        return "6ea6bca4-4712-4ab9-a906-e3336a9d8039";
+                    case "es":
+                        return "d4bb9c58-2141-4881-bcdc-3fe0505457d1";
+                    case "fi":
+                        return "220eb274-ab25-425b-8a9b-826103404997";
+                    case "fr":
+                        return "6f655045-9989-4ef7-8f85-1edcec42d648";
+                    case "hu":
+                        return "a298cca5-d408-47c7-a1e7-0c76ca878bc6";
+                    case "it":
+                        return "5b9935eb-1e9a-4217-98ad-62bda5cff0d1";
+                    case "ja":
+                        return "6ba1d230-e52f-4d81-b1e0-41f25a8a9f5d";
+                    case "ko":
+                        return "ab2975e3-b9ca-4b1a-a93e-fb61a5d5c3a4";
+                    case "nl":
+                        return "e13e6734-37ae-4d85-897b-3015f0168355";
+                    case "no":
+                        return "5647bf35-f99e-49aa-8578-0e07d936188c";
+                    case "other":
+                        return "fd76c790-0505-4c4c-865a-d6bd139c0901";
+                    case "pl":
+                        return "f9d04efa-6e25-49bf-bf0a-da3e2addaf1b";
+                    case "pt":
+                        return "39ee8140-901a-4762-bfca-8260dea1310f";
+                    case "ro":
+                        return "75a99c80-0f15-4159-b1fd-3812c25b4aca";
+                    case "ru":
+                        return "0569b171-2a2b-476e-a596-5bdfb45a1327";
+                    case "sk":
+                        return "9b773670-05f8-4c06-ac99-e6649f906171";
+                    case "sv":
+                        return "145b073b-cb70-4e91-b170-f5fab2ebba05";
+                    case "th":
+                        return "f19c7524-c18d-41af-9f39-034c8d0b0fee";
+                    case "tr":
+                        return "f08d5873-f0c7-4912-94ba-a41933b4c141";
+                    case "vi":
+                        return "ba3b69fe-899c-4518-ac46-707275e3eba1";
+                    case "zh":
+                        return "74c92063-a389-4fd2-8460-b1bb82b04ec7";
+                    case "zh-hk":
+                        return "0c8c6543-4019-47d0-9b8a-57a81ee6ace5";
+                    default:
+                        return null
+                }
+            }
+            var g = function(e) {
+                    return e
+                },
+                h = n("pN5T"),
+                v = n("LvZ9"),
+                b = n("x/sq"),
+                f = n("vuN2"),
+                k = n("yI6f"),
+                y = n("T2RZ"),
+                C = n("Ue10"),
+                w = n("jufN"),
+                S = n("MS/A"),
+                x = n("/MKj"),
+                N = n("fvjX"),
+                T = n("Igt5"),
+                E = n("X7a7"),
+                I = n("moLQ"),
+                P = n("eGvk"),
+                L = function(e) {
+                    function t() {
+                        var t = null !== e && e.apply(this, arguments) || this;
+                        return t.wrapText = function(e) {
+                            var n = t.props,
+                                a = n.addTagFilter,
+                                i = n.data,
+                                o = n.directoryName,
+                                s = n.updateLanguageTags,
+                                l = i && i.contentTag;
+                            if (!l) return e;
+                            var c = function() {
+                                return a(l, o || I.a.LiveChannels)
+                            };
+                            return l.isLanguageTag && (c = function() {
+                                s(l.id, !0)
+                            }), r.createElement(C.U, {
+                                onClick: c,
+                                "data-test-selector": "international-section-header-link"
+                            }, r.createElement("strong", null, e))
+                        }, t
+                    }
+                    return a.__extends(t, e), t.prototype.render = function() {
+                        if (this.props.data && this.props.data.loading && !this.props.data.contentTag && !this.props.data.error) return r.createElement(C.Ya, {
+                            margin: {
+                                bottom: 2
+                            }
+                        }, r.createElement(C.jb, {
+                            width: 150,
+                            height: 30
+                        }));
+                        var e = this.props.languageCode;
+                        return r.createElement(C.Ya, {
+                            margin: {
+                                bottom: 2
+                            }
+                        }, r.createElement(C.W, {
+                            type: C.Wb.H4,
+                            color: C.O.Base,
+                            "data-a-target": "international-section-header",
+                            "data-test-selector": "international-section-header-tags"
+                        }, function(e, t) {
+                            switch (void 0 === t && (t = g), e) {
+                                case "ar":
+                                    return Object(m.d)("Channels in <x:bold>Arabic</x:bold>", {
+                                        "x:bold": t
+                                    }, "DirectoryInternationalSectionHeader");
+                                case "asl":
+                                    return Object(m.d)("Channels in <x:bold>American Sign Language</x:bold>", {
+                                        "x:bold": t
+                                    }, "DirectoryInternationalSectionHeader");
+                                case "bg":
+                                    return Object(m.d)("Channels in <x:bold>Bulgarian</x:bold>", {
+                                        "x:bold": t
+                                    }, "DirectoryInternationalSectionHeader");
+                                case "cs":
+                                    return Object(m.d)("Channels in <x:bold>Czech</x:bold>", {
+                                        "x:bold": t
+                                    }, "DirectoryInternationalSectionHeader");
+                                case "da":
+                                    return Object(m.d)("Channels in <x:bold>Danish</x:bold>", {
+                                        "x:bold": t
+                                    }, "DirectoryInternationalSectionHeader");
+                                case "de":
+                                    return Object(m.d)("Channels in <x:bold>German</x:bold>", {
+                                        "x:bold": t
+                                    }, "DirectoryInternationalSectionHeader");
+                                case "el":
+                                    return Object(m.d)("Channels in <x:bold>Greek</x:bold>", {
+                                        "x:bold": t
+                                    }, "DirectoryInternationalSectionHeader");
+                                case "es":
+                                    return Object(m.d)("Channels in <x:bold>Spanish</x:bold>", {
+                                        "x:bold": t
+                                    }, "DirectoryInternationalSectionHeader");
+                                case "fi":
+                                    return Object(m.d)("Channels in <x:bold>Finnish</x:bold>", {
+                                        "x:bold": t
+                                    }, "DirectoryInternationalSectionHeader");
+                                case "fr":
+                                    return Object(m.d)("Channels in <x:bold>French</x:bold>", {
+                                        "x:bold": t
+                                    }, "DirectoryInternationalSectionHeader");
+                                case "hu":
+                                    return Object(m.d)("Channels in <x:bold>Hungarian</x:bold>", {
+                                        "x:bold": t
+                                    }, "DirectoryInternationalSectionHeader");
+                                case "it":
+                                    return Object(m.d)("Channels in <x:bold>Italian</x:bold>", {
+                                        "x:bold": t
+                                    }, "DirectoryInternationalSectionHeader");
+                                case "ja":
+                                    return Object(m.d)("Channels in <x:bold>Japanese</x:bold>", {
+                                        "x:bold": t
+                                    }, "DirectoryInternationalSectionHeader");
+                                case "ko":
+                                    return Object(m.d)("Channels in <x:bold>Korean</x:bold>", {
+                                        "x:bold": t
+                                    }, "DirectoryInternationalSectionHeader");
+                                case "nl":
+                                    return Object(m.d)("Channels in <x:bold>Dutch</x:bold>", {
+                                        "x:bold": t
+                                    }, "DirectoryInternationalSectionHeader");
+                                case "no":
+                                    return Object(m.d)("Channels in <x:bold>Norwegian</x:bold>", {
+                                        "x:bold": t
+                                    }, "DirectoryInternationalSectionHeader");
+                                case "pl":
+                                    return Object(m.d)("Channels in <x:bold>Polish</x:bold>", {
+                                        "x:bold": t
+                                    }, "DirectoryInternationalSectionHeader");
+                                case "pt":
+                                    return Object(m.d)("Channels in <x:bold>Portuguese</x:bold>", {
+                                        "x:bold": t
+                                    }, "DirectoryInternationalSectionHeader");
+                                case "ru":
+                                    return Object(m.d)("Channels in <x:bold>Russian</x:bold>", {
+                                        "x:bold": t
+                                    }, "DirectoryInternationalSectionHeader");
+                                case "sk":
+                                    return Object(m.d)("Channels in <x:bold>Slovak</x:bold>", {
+                                        "x:bold": t
+                                    }, "DirectoryInternationalSectionHeader");
+                                case "sv":
+                                    return Object(m.d)("Channels in <x:bold>Swedish</x:bold>", {
+                                        "x:bold": t
+                                    }, "DirectoryInternationalSectionHeader");
+                                case "th":
+                                    return Object(m.d)("Channels in <x:bold>Thai</x:bold>", {
+                                        "x:bold": t
+                                    }, "DirectoryInternationalSectionHeaer");
+                                case "tr":
+                                    return Object(m.d)("Channels in <x:bold>Turkish</x:bold>", {
+                                        "x:bold": t
+                                    }, "DirectoryInternationalSectionHeader");
+                                case "vi":
+                                    return Object(m.d)("Channels in <x:bold>Vietnamese</x:bold>", {
+                                        "x:bold": t
+                                    }, "DirectoryInternationalSectionHeader");
+                                case "zh":
+                                    return Object(m.d)("Channels in <x:bold>Chinese</x:bold>", {
+                                        "x:bold": t
+                                    }, "DirectoryInternationalSectionHeader");
+                                default:
+                                    return Object(m.d)("Channels in <x:bold>English</x:bold>", {
+                                        "x:bold": t
+                                    }, "DirectoryInternationalSectionHeader")
+                            }
+                        }(e, this.wrapText)))
+                    }, t
+                }(r.Component),
+                D = Object(s.a)(P, {
+                    options: function(e) {
+                        var t = p(e.languageCode);
+                        return {
+                            skip: !t,
+                            variables: {
+                                id: t
+                            }
+                        }
+                    }
+                })(L);
+            var O, _ = Object(x.connect)(null, function(e) {
+                return Object(N.bindActionCreators)({
+                    addTagFilter: T.e,
+                    updateLanguageTags: E.c
+                }, e)
+            })(D);
+            ! function(e) {
+                e[e.BROWSE = 0] = "BROWSE", e[e.DIRECTORY = 1] = "DIRECTORY"
+            }(O || (O = {}));
+            var j = Object(l.a)(3e5),
+                F = Object(f.a)();
+
+            function A() {
+                return F() ? j() : "network-only"
+            }
+            var R = function(e) {
+                    function t() {
+                        var t = null !== e && e.apply(this, arguments) || this;
+                        return t.renderPlaceholders = function(e) {
+                            for (var t = [], n = 0; n < e; n++) t.push(r.createElement(u.a, {
+                                key: n
+                            }));
+                            return t
+                        }, t
+                    }
+                    return a.__extends(t, e), t.prototype.render = function() {
+                        var e = this,
+                            t = this.props,
+                            n = t.directoryWidth,
+                            i = t.trackingProps,
+                            s = Object(c.a)(n, 300, 1),
+                            l = this.props.browseData ? this.props.browseData : this.props.directoryData;
+                        if (l && l.loading) return r.createElement(C.Ya, null, r.createElement(_, {
+                            directoryName: this.props.directoryName,
+                            languageCode: this.props.languageCode
+                        }), r.createElement(C.cc, {
+                            childWidth: C.dc.Large,
+                            gutterSize: C.ec.Small,
+                            placeholderItems: 20
+                        }, this.renderPlaceholders(s)));
+                        if (l && !l.loading && (this.props.browseData && !this.props.browseData.streams || this.props.directoryData && !this.props.directoryData.game) || l && l.error) return null;
+                        var d = [];
+                        this.props.directoryName && this.props.directoryData && this.props.directoryData.game && this.props.directoryData.game.streams && this.props.directoryData.game.streams.edges ? d = this.props.directoryData.game.streams.edges.filter(function(e) {
+                            return e
+                        }) : !this.props.directoryName && this.props.browseData && this.props.browseData.streams && this.props.browseData.streams.edges && (d = this.props.browseData.streams.edges.filter(function(e) {
+                            return e
+                        })), n > 0 && s - 1 < d.length && (d = d.slice(0, s));
+                        var u = d.filter(function(e) {
+                            return e && e.node && e.node.broadcaster && e.node.broadcaster.login && e.node.broadcaster.id
+                        }).map(function(t, n) {
+                            if (!t || !t.node) return null;
+                            var s = Object(y.a)(i.medium, k.b.Live, i.sectionType)(o.a),
+                                l = t.node,
+                                c = Object(b.a)({
+                                    onClickTag: e.props.addTagFilter,
+                                    scrollToTop: e.props.scrollToTop,
+                                    section: i.tagSection,
+                                    tags: l.tags,
+                                    tagFilters: e.props.tagFilters
+                                }),
+                                d = Object(h.a)(t);
+                            if (!d || !t.node || !t.node.broadcaster) return null;
+                            var u = Object(v.a)({
+                                directoryName: decodeURIComponent(e.props.directoryName || ""),
+                                shouldShowGame: !!e.props.showGameName,
+                                streamIndex: n,
+                                streamNode: d,
+                                tagListProps: c
+                            });
+                            return r.createElement(C.Ya, {
+                                key: l.id
+                            }, r.createElement(s, a.__assign({}, u)))
+                        });
+                        return r.createElement(C.Ya, {
+                            margin: {
+                                bottom: 2
+                            }
+                        }, r.createElement(_, {
+                            directoryName: this.props.directoryName,
+                            languageCode: this.props.languageCode
+                        }), r.createElement(C.cc, {
+                            childWidth: C.dc.Large,
+                            gutterSize: C.ec.Small,
+                            placeholderItems: 20
+                        }, u))
+                    }, t
+                }(r.Component),
+                B = Object(i.compose)(Object(s.a)(w, {
+                    name: "browseData",
+                    options: function(e) {
+                        return {
+                            fetchPolicy: A(),
+                            variables: {
+                                limit: 10,
+                                tags: [p(e.languageCode)]
+                            }
+                        }
+                    },
+                    skip: function(e) {
+                        return !(e.query === O.BROWSE)
+                    }
+                }), Object(s.a)(S, {
+                    name: "directoryData",
+                    options: function(e) {
+                        return {
+                            fetchPolicy: A(),
+                            variables: {
+                                limit: 10,
+                                name: e.directoryName,
+                                tags: [p(e.languageCode)]
+                            }
+                        }
+                    },
+                    skip: function(e) {
+                        return !(e.query === O.DIRECTORY)
+                    }
+                }), Object(d.b)("InternationalSection", {
+                    autoReportInteractive: !0
+                }))(R);
+            n.d(t, "b", function() {
+                return O
+            }), n.d(t, !1, function() {
+                return R
+            }), n.d(t, "a", function() {
+                return B
+            })
+        },
         B3R5: function(e, t, n) {},
         Fj9y: function(e, t, n) {},
         GFmA: function(e, t, n) {
@@ -411,8 +833,8 @@
                     }, t
                 }(r.Component)),
                 p = n("kduP"),
-                h = n("2xye"),
-                g = function(e) {
+                g = n("2xye"),
+                h = function(e) {
                     return r.createElement(s.Ya, null, r.createElement(s.W, {
                         color: s.O.Alt,
                         ellipsis: !0
@@ -423,7 +845,7 @@
                             to: {
                                 pathname: Object(p.c)(t.label),
                                 state: {
-                                    content: h.PageviewContent.TextLink,
+                                    content: g.PageviewContent.TextLink,
                                     medium: e.trackingContext && e.trackingContext.medium
                                 }
                             },
@@ -543,7 +965,7 @@
                         "data-test-selector": "bottom-right-selector"
                     }, e.bottomRight))
                 }),
-                x = (n("kF1+"), function(e) {
+                S = (n("kF1+"), function(e) {
                     var t = e.icon && r.createElement(s.Ya, {
                         display: s.X.Flex,
                         margin: {
@@ -572,8 +994,8 @@
                         }
                     }, t, r.createElement(s.W, null, e.value))
                 }),
-                S = n("GnwI"),
-                T = (n("B3R5"), function(e) {
+                x = n("GnwI"),
+                N = (n("B3R5"), function(e) {
                     function t() {
                         var t = null !== e && e.apply(this, arguments) || this;
                         return t.state = {
@@ -637,8 +1059,8 @@
                         })))
                     }, t
                 }(r.Component)),
-                I = Object(S.b)("PreviewCardThumbnail")(T),
-                L = (n("80G/"), function(e) {
+                T = Object(x.b)("PreviewCardThumbnail")(N),
+                E = (n("80G/"), function(e) {
                     var t = null;
                     return e.subtitles && e.subtitles.length > 0 && (t = e.subtitles.map(function(e, t) {
                         return r.createElement(s.Ya, {
@@ -668,16 +1090,16 @@
                         className: "preview-card-titles__subtitle-wrapper"
                     }, t))
                 }),
-                E = n("H1ft"),
+                I = n("H1ft"),
                 P = n("ZbA5"),
-                N = n("QVaV"),
-                O = n("hyVY"),
-                D = n("MXoD"),
+                L = n("QVaV"),
+                D = n("hyVY"),
+                O = n("MXoD"),
                 _ = n("0LAi");
             ! function(e) {
                 e.LockSelector = "video-lock", e.UpsellSelector = "upsell"
             }(k || (k = {}));
-            var j, A, F = function(e) {
+            var j, F, A = function(e) {
                 function t() {
                     return null !== e && e.apply(this, arguments) || this
                 }
@@ -750,18 +1172,18 @@
             }(r.PureComponent);
             n("5NSO");
 
-            function B(e) {
+            function R(e) {
                 return void 0 !== e.watchedProgressPercent
             }
 
-            function R(e) {
+            function B(e) {
                 return void 0 !== e.clipCreatedByChannelLogin
             }! function(e) {
                 e.Avatar = "preview-card-avatar", e.BoxArt = "preview-card-box-art"
             }(j || (j = {})),
             function(e) {
                 e[e.SingleGameList = 1] = "SingleGameList", e[e.SingleChannelList = 2] = "SingleChannelList", e[e.MixedGameAndChannelList = 3] = "MixedGameAndChannelList"
-            }(A || (A = {}));
+            }(F || (F = {}));
             var G = function(e) {
                     function t() {
                         var t = null !== e && e.apply(this, arguments) || this;
@@ -781,12 +1203,12 @@
                             borderRadius: s.x.Medium,
                             overflow: s.db.Hidden
                         }, this.renderVODRestrictionOverlay(), r.createElement(s.U, {
-                            to: Object(D.a)(this.getTrackingContext(h.PageviewContent.VideoThumbnail), this.props.linkTo),
+                            to: Object(O.a)(this.getTrackingContext(g.PageviewContent.VideoThumbnail), this.props.linkTo),
                             onClick: this.props.onThumbnailClick || this.props.onClick,
                             "data-a-target": "preview-card-image-link"
-                        }, this.props.thumbnailImageProps && r.createElement(I, {
+                        }, this.props.thumbnailImageProps && r.createElement(T, {
                             staticImageProps: this.props.thumbnailImageProps,
-                            animatedImageProps: B(this.props) && this.props.animatedImageProps || void 0,
+                            animatedImageProps: R(this.props) && this.props.animatedImageProps || void 0,
                             trackImageLatency: this.props.trackImageLatency
                         }), this.renderOverlay())), r.createElement(s.Ya, {
                             display: s.X.Flex,
@@ -815,72 +1237,72 @@
                                 hosting: !!this.props.hostedByChannelLogin
                             }),
                             topRight: void 0,
-                            bottomLeft: r.createElement(x, {
+                            bottomLeft: r.createElement(S, {
                                 value: Object(i.d)("{viewerCount, plural, one {# viewer} other {# viewers}}", {
                                     viewerCount: this.props.currentViewerCount
                                 }, "VideoPreviewCard")
                             }),
                             bottomRight: void 0
-                        }) : B(this.props) ? r.createElement(w, {
-                            topLeft: void 0 !== this.props.durationInSeconds && r.createElement(x, {
-                                value: Object(O.b)(this.props.durationInSeconds),
+                        }) : R(this.props) ? r.createElement(w, {
+                            topLeft: void 0 !== this.props.durationInSeconds && r.createElement(S, {
+                                value: Object(D.b)(this.props.durationInSeconds),
                                 icon: s.ub.Play,
                                 withBackground: !0
                             }),
-                            topRight: this.props.listPosition && r.createElement(x, {
+                            topRight: this.props.listPosition && r.createElement(S, {
                                 withBackground: !0,
                                 value: this.getListPositionLabel()
                             }),
-                            bottomLeft: r.createElement(x, {
+                            bottomLeft: r.createElement(S, {
                                 value: this.getViewCountLabel()
                             }),
-                            bottomRight: this.props.datePublished ? r.createElement(x, {
+                            bottomRight: this.props.datePublished ? r.createElement(S, {
                                 value: Object(i.c)(new Date(this.props.datePublished), "medium")
                             }) : null,
                             progressBarPercent: this.props.watchedProgressPercent,
                             topBar: this.props.topBar
-                        }) : R(this.props) ? r.createElement(w, {
-                            topLeft: r.createElement(x, {
-                                value: Object(O.b)(this.props.durationInSeconds),
+                        }) : B(this.props) ? r.createElement(w, {
+                            topLeft: r.createElement(S, {
+                                value: Object(D.b)(this.props.durationInSeconds),
                                 icon: s.ub.Clip,
                                 withBackground: !0
                             }),
                             topRight: void 0,
-                            bottomLeft: r.createElement(x, {
+                            bottomLeft: r.createElement(S, {
                                 value: this.getViewCountLabel()
                             }),
-                            bottomRight: this.props.datePublished ? r.createElement(x, {
+                            bottomRight: this.props.datePublished ? r.createElement(S, {
                                 value: Object(i.c)(new Date(this.props.datePublished), "medium")
                             }) : null
                         }) : void 0
                     }, t.prototype.getListPositionLabel = function() {
-                        return B(this.props) && this.props.listPosition ? Object(i.d)("{totalVideos, plural, one {{position} / # video} other {{position} / # videos}}", {
+                        return R(this.props) && this.props.listPosition ? Object(i.d)("{totalVideos, plural, one {{position} / # video} other {{position} / # videos}}", {
                             position: this.props.listPosition.position,
                             totalVideos: this.props.listPosition.totalVideos
                         }, "VideoPreviewCard") : ""
                     }, t.prototype.getViewCountLabel = function() {
-                        return B(this.props) || R(this.props) ? Object(i.d)("{viewerCount, plural, one {# view} other {# views}}", {
+                        return R(this.props) || B(this.props) ? Object(i.d)("{viewerCount, plural, one {# view} other {# views}}", {
                             viewerCount: this.props.viewCount
                         }, "VideoPreviewCard") : ""
                     }, t.prototype.renderIconicImage = function() {
-                        return this.props.context === A.SingleChannelList && this.props.gameBoxArtImageProps && this.props.gameBoxArtImageProps.src && this.props.gameTitleLinkTo ? r.createElement(s.Ya, {
+                        return this.props.context === F.SingleChannelList && this.props.gameBoxArtImageProps && this.props.gameBoxArtImageProps.src && this.props.gameTitleLinkTo ? r.createElement(s.Ya, {
                             margin: {
                                 right: 1
                             }
                         }, r.createElement(f, {
                             imageProps: this.props.gameBoxArtImageProps,
-                            linkTo: Object(D.a)(this.getTrackingContext(h.PageviewContent.GameBoxart), this.props.gameTitleLinkTo),
+                            linkTo: Object(O.a)(this.getTrackingContext(g.PageviewContent.GameBoxart), this.props.gameTitleLinkTo),
                             onClick: this.props.onGameTitleClick,
                             aspect: s.p.BoxArt,
                             "data-test-selector": j.BoxArt,
                             "data-a-target": "preview-card-boxart-link"
-                        })) : (this.props.context === A.SingleGameList || this.props.context === A.MixedGameAndChannelList) && this.props.channelImageProps && this.props.channelImageProps.src ? r.createElement(s.Ya, {
+                        })) : (this.props.context === F.SingleGameList || this.props.context === F.MixedGameAndChannelList) && this.props.channelImageProps && this.props.channelImageProps.src ? r.createElement(s.Ya, {
                             margin: {
                                 right: 1
                             }
                         }, r.createElement(f, {
                             imageProps: this.props.channelImageProps,
-                            linkTo: Object(D.a)(this.getTrackingContext(h.PageviewContent.UserThumbnail), this.props.channelLinkTo),
+                            linkTo: Object(O.a)(this.getTrackingContext(g.PageviewContent.UserThumbnail), this.props.channelLinkTo),
                             onClick: this.props.onChannelImageClick || this.props.onChannelLoginClick,
                             aspect: s.p.Aspect1x1,
                             "data-test-selector": j.Avatar
@@ -889,26 +1311,26 @@
                         var e = null,
                             t = [];
                         return this.shouldShowGameBalloon(this.props) || t.push({
-                            text: Object(N.a)(this.props.channelLogin, this.props.channelDisplayName, !0),
-                            linkTo: Object(D.a)(this.getTrackingContext(h.PageviewContent.ChannelMetadata), this.props.channelLinkTo),
+                            text: Object(L.a)(this.props.channelLogin, this.props.channelDisplayName, !0),
+                            linkTo: Object(O.a)(this.getTrackingContext(g.PageviewContent.ChannelMetadata), this.props.channelLinkTo),
                             onClick: this.props.onChannelLoginClick,
                             automationSelector: "preview-card-channel-link"
-                        }), R(this.props) && this.props.clipCreatedByChannelLoginLinkTo ? t.push({
+                        }), B(this.props) && this.props.clipCreatedByChannelLoginLinkTo ? t.push({
                             text: Object(i.d)("Clipped by {userName}", {
                                 userName: this.props.clipCreatedByChannelLogin || ""
                             }, "VideoPreviewCard"),
                             linkTo: this.props.clipCreatedByChannelLoginLinkTo,
                             onClick: this.props.onClipCreatedByChannelLoginClick,
                             automationSelector: "preview-card-clip-curator-link"
-                        }) : B(this.props) && this.props.multipleVideoGameMarkersType && this.props.videoGameChanges && this.props.videoGameChanges.length > 0 ? e = this.renderPreviewCardGameInfo(this.props.multipleVideoGameMarkersType, this.props.videoGameChanges, this.props.onVideoGameBalloonClick, this.props.onVideoGameBalloonItemClick) : this.props.context !== A.SingleGameList && this.props.gameTitle && this.props.gameTitleLinkTo && t.push({
+                        }) : R(this.props) && this.props.multipleVideoGameMarkersType && this.props.videoGameChanges && this.props.videoGameChanges.length > 0 ? e = this.renderPreviewCardGameInfo(this.props.multipleVideoGameMarkersType, this.props.videoGameChanges, this.props.onVideoGameBalloonClick, this.props.onVideoGameBalloonItemClick) : this.props.context !== F.SingleGameList && this.props.gameTitle && this.props.gameTitleLinkTo && t.push({
                             text: this.props.gameTitle,
-                            linkTo: Object(D.a)(this.getTrackingContext(h.PageviewContent.GameMetadata), this.props.gameTitleLinkTo),
+                            linkTo: Object(O.a)(this.getTrackingContext(g.PageviewContent.GameMetadata), this.props.gameTitleLinkTo),
                             onClick: this.props.onGameTitleClick,
                             automationSelector: "preview-card-game-link"
-                        }), r.createElement(r.Fragment, null, r.createElement(L, {
+                        }), r.createElement(r.Fragment, null, r.createElement(E, {
                             title: this.props.title,
                             onClick: this.props.onVideoTitleClick || this.props.onClick,
-                            linkTo: Object(D.a)(this.getTrackingContext(h.PageviewContent.VideoTitle), this.props.linkTo),
+                            linkTo: Object(O.a)(this.getTrackingContext(g.PageviewContent.VideoTitle), this.props.linkTo),
                             subtitles: t,
                             "data-a-target": "preview-card-title-link"
                         }), e)
@@ -921,40 +1343,40 @@
                             tagNumberLimit: 3
                         }))) : null
                     }, t.prototype.renderVODRestrictionOverlay = function() {
-                        return B(this.props) && this.props.restriction && this.props.restriction.productName && this.props.restriction.title ? r.createElement(F, {
+                        return R(this.props) && this.props.restriction && this.props.restriction.productName && this.props.restriction.title ? r.createElement(A, {
                             restriction: this.props.restriction,
                             attachTop: !0
                         }) : null
                     }, t.prototype.shouldShowGameBalloon = function(e) {
-                        return !!B(e) && (!!(e.videoGameChanges && e.videoGameChanges.length > 0) && e.multipleVideoGameMarkersType === E.a.Balloon)
+                        return !!R(e) && (!!(e.videoGameChanges && e.videoGameChanges.length > 0) && e.multipleVideoGameMarkersType === I.a.Balloon)
                     }, t.prototype.renderPreviewCardGameInfo = function(e, t, n, a) {
                         switch (e) {
-                            case E.a.Balloon:
+                            case I.a.Balloon:
                                 return r.createElement(m, {
                                     videoGameChanges: t,
                                     videoID: t[0].videoID,
                                     onBalloonClick: n,
                                     onBalloonItemClick: a
                                 });
-                            case E.a.Inline:
-                                return r.createElement(g, {
+                            case I.a.Inline:
+                                return r.createElement(h, {
                                     videoGameChanges: t,
                                     trackingContext: this.props.trackingContext
                                 });
-                            case E.a.None:
+                            case I.a.None:
                                 return null;
                             default:
                                 return e
                         }
                     }, t
                 }(r.Component),
-                V = Object(S.b)("PreviewCard", {
+                V = Object(x.b)("PreviewCard", {
                     autoReportInteractive: !0
                 })(G);
             n.d(t, !1, function() {
                 return j
             }), n.d(t, "b", function() {
-                return A
+                return F
             }), n.d(t, !1, function() {
                 return G
             }), n.d(t, "a", function() {
@@ -999,8 +1421,8 @@
                 u = n("q1tI"),
                 m = n("oJmH"),
                 p = n("/7QA"),
-                h = n("ZDlU"),
-                g = n("GFmA"),
+                g = n("ZDlU"),
+                h = n("GFmA"),
                 v = n("MJbm"),
                 b = n("8/mp"),
                 f = n("yR8l"),
@@ -1008,143 +1430,53 @@
                 y = n("oB8h"),
                 C = n("Bk78"),
                 w = n("geRD"),
-                x = n("kduP"),
-                S = n("NvVO"),
-                T = n("MPw5"),
-                I = n("2xye"),
-                L = n("Uive"),
-                E = n("cTNz"),
+                S = n("kduP"),
+                x = n("NvVO"),
+                N = n("MPw5"),
+                T = n("2xye"),
+                E = n("Uive"),
+                I = n("cTNz"),
                 P = n("GnwI"),
-                N = n("Bh3T"),
-                O = n("bUox"),
-                D = n("TCeE"),
+                L = n("Bh3T"),
+                D = n("bUox"),
+                O = n("TCeE"),
                 _ = n("AZIu"),
-                j = n("x/sq"),
+                j = n("924X"),
+                F = n("x/sq"),
                 A = n("vuN2"),
-                F = n("0JAG"),
-                B = n("VW9G"),
-                R = n("hX9f"),
-                G = n("coeN"),
-                V = n("QV0j"),
-                M = n("Ue10"),
-                H = n("YGU1"),
-                W = Object(C.a)(3e5),
-                U = Object(A.a)();
-            var z = function(e) {
-                    function t() {
-                        return null !== e && e.apply(this, arguments) || this
-                    }
-                    return c.__extends(t, e), t.prototype.render = function() {
-                        var e = this;
-                        if (this.props.data.loading && !this.props.data.streams || this.props.data.error || !this.props.data.streams) return null;
-                        var t = this.props.directoryWidth,
-                            n = I.PageviewMedium.Browse,
-                            a = I.PageviewContent.LocalPopularChannel,
-                            r = this.props.data.streams.edges || [];
-                        if (t && t > 0) {
-                            var i = Object(F.a)(t, 300, 1);
-                            if (i - 1 < r.length) {
-                                r = r.slice(0, i - 0)
-                            }
-                        }
-                        var o = r.filter(function(e) {
-                            return e && e.node && e.node.broadcaster && e.node.broadcaster.login && e.node.broadcaster.id
-                        }).map(function(t, r) {
-                            if (!t || !t.node) return null;
-                            var i = t.node,
-                                o = Object(j.a)({
-                                    tags: i.tags,
-                                    section: _.a.LiveChannels,
-                                    onClickTag: e.props.addTagFilter,
-                                    tagFilters: e.props.tagFilters,
-                                    scrollToTop: e.props.scrollToTop
-                                });
-                            return u.createElement(R.b, {
-                                shouldShowGame: !0,
-                                streamIndex: r,
-                                streamNode: {
-                                    __typename: "Stream",
-                                    id: i.id,
-                                    title: i.title || "",
-                                    viewersCount: i.viewersCount || 0,
-                                    previewImageURL: i.previewImageURL || p.a.defaultStreamPreviewURL,
-                                    broadcaster: i.broadcaster ? {
-                                        __typename: "User",
-                                        id: i.broadcaster.id,
-                                        login: i.broadcaster.login,
-                                        displayName: i.broadcaster.displayName,
-                                        roles: null,
-                                        profileImageURL: i.broadcaster.profileImageURL || p.a.defaultAvatarURL
-                                    } : null,
-                                    game: i.game ? {
-                                        __typename: "Game",
-                                        id: i.game.id,
-                                        boxArtURL: i.game.boxArtURL || p.a.defaultBoxArtURL,
-                                        name: i.game.name
-                                    } : null,
-                                    tags: null,
-                                    type: Object(V.a)(i.type) || y.a.Live
-                                },
-                                key: i.id,
-                                trackingMedium: n,
-                                trackingContent: a,
-                                tagListProps: o
-                            })
-                        });
-                        return o.length > 0 ? u.createElement("div", null, u.createElement(B.a, {
-                            languageCode: this.props.languageCode
-                        }), u.createElement(M.cc, {
-                            gutterSize: M.ec.Small,
-                            childWidth: M.dc.Large,
-                            placeholderItems: 20
-                        }, o)) : null
-                    }, t
-                }(u.Component),
-                Y = Object(m.compose)(Object(f.a)(H, {
-                    options: function(e) {
-                        return {
-                            fetchPolicy: U() ? W() : "network-only",
-                            variables: {
-                                limit: 10,
-                                platformType: e.platformType,
-                                tags: [Object(G.b)(e.languageCode)]
-                            }
-                        }
-                    }
-                }), Object(P.b)("PopularInternationalSection", {
-                    autoReportInteractive: !0
-                }))(z),
-                X = {
+                R = {
                     "/directory/all": "all",
                     "/directory/all/:encodedLanguage": "all",
                     "/directory/all/xbox": "xbox",
                     "/directory/all/xb1": "xbox",
                     "/directory/all/ps4": "ps4"
                 },
-                q = n("yI6f"),
-                Q = n("T2RZ"),
-                $ = n("V6sb"),
-                J = "directory-first-item",
-                K = "directory-container",
-                Z = Object(Q.a)(I.PageviewMedium.Browse, q.b.Live, q.c.BrowseLiveChannels)(g.a),
-                ee = 0;
+                B = n("QV0j"),
+                G = n("yI6f"),
+                V = n("T2RZ"),
+                H = n("Ue10"),
+                M = n("V6sb"),
+                W = "directory-first-item",
+                Y = "directory-container",
+                z = Object(V.a)(T.PageviewMedium.Browse, G.b.Live, G.c.BrowseLiveChannels)(h.a),
+                U = 0;
 
-            function te(e) {
+            function q(e) {
                 var t = e.streams && e.streams.edges;
                 return t ? t.filter(function(e) {
                     return e && e.node && e.node.id
                 }) : []
             }
-            var ne = Object(C.a)(3e5),
-                ae = Object(A.a)();
-            var re = function(e) {
+            var X = Object(C.a)(3e5),
+                Q = Object(A.a)();
+            var $ = function(e) {
                     function t() {
                         var t = null !== e && e.apply(this, arguments) || this;
                         return t.state = {
                             numSlotsAdded: 0,
                             directoryWidth: -1
                         }, t.onResize = function(e) {
-                            e !== t.state.directoryWidth && (clearTimeout(ee), ee = setTimeout(function() {
+                            e !== t.state.directoryWidth && (clearTimeout(U), U = setTimeout(function() {
                                 t.setState({
                                     directoryWidth: e
                                 })
@@ -1152,9 +1484,9 @@
                         }, t.onWindowResize = function() {
                             return requestAnimationFrame(t.updateDisplayAdOrder)
                         }, t.updateDisplayAdOrder = function() {
-                            var e = document.querySelector('[data-target="' + K + '"]'),
-                                t = document.querySelector('[data-target="' + J + '"]'),
-                                n = document.querySelector("#" + E.b.directory.rectangle);
+                            var e = document.querySelector('[data-target="' + Y + '"]'),
+                                t = document.querySelector('[data-target="' + W + '"]'),
+                                n = document.querySelector("#" + I.b.directory.rectangle);
                             if (t && e && n) {
                                 var a = Math.round((e.clientWidth - 300) / t.clientWidth).toString();
                                 n.style.order !== a && "0" !== a && (n.style.order = a)
@@ -1175,34 +1507,34 @@
                         }, t.onSlotAdded = function() {
                             t.setState(function(e) {
                                 var t = e.numSlotsAdded + 1;
-                                return t === Object.keys(E.b.directory).length && T.a.display(E.b.directory.banner), {
+                                return t === Object.keys(I.b.directory).length && N.a.display(I.b.directory.banner), {
                                     numSlotsAdded: t
                                 }
                             })
                         }, t
                     }
                     return c.__extends(t, e), t.prototype.componentWillMount = function() {
-                        E.g.addListener(E.e, this.onSlotAdded)
+                        I.g.addListener(I.e, this.onSlotAdded)
                     }, t.prototype.componentDidMount = function() {
                         p.p.setPageTitle(Object(p.d)("Top Channels", "DirectoryPopularPage")), window.addEventListener("resize", this.onWindowResize), this.onRender()
                     }, t.prototype.componentDidUpdate = function() {
                         this.onRender()
                     }, t.prototype.componentWillUnmount = function() {
-                        window.removeEventListener("resize", this.onWindowResize), E.g.removeListener(E.e, this.onSlotAdded)
+                        window.removeEventListener("resize", this.onWindowResize), I.g.removeListener(I.e, this.onSlotAdded)
                     }, t.prototype.componentWillReceiveProps = function(e) {
                         this.props.sideNavExpanded !== e.sideNavExpanded && this.onWindowResize(), this.props.lastBrowsePath !== e.location.pathname && this.props.changeLastBrowsePath(decodeURIComponent(e.location.pathname))
                     }, t.prototype.render = function() {
                         var e = this;
-                        if (this.props.tagFilters.length > D.a) return u.createElement(O.a, {
-                            errorType: O.b.TooManyTags,
+                        if (this.props.tagFilters.length > O.a) return u.createElement(D.a, {
+                            errorType: D.b.TooManyTags,
                             onClickRemoveLastTag: this.removeLastTag,
                             tagFilters: this.props.tagFilters
                         });
-                        if (!this.props.data.loading && !this.props.data.streams || this.props.data.error) return u.createElement(h.a, {
+                        if (!this.props.data.loading && !this.props.data.streams || this.props.data.error) return u.createElement(g.a, {
                             message: Object(p.d)("Error loading data.", "DirectoryPopularPage")
                         });
-                        if (this.props.data.streams && this.props.data.streams.edges && 0 === this.props.data.streams.edges.length) return u.createElement(O.a, {
-                            errorType: O.b.NoResults,
+                        if (this.props.data.streams && this.props.data.streams.edges && 0 === this.props.data.streams.edges.length) return u.createElement(D.a, {
+                            errorType: D.b.NoResults,
                             onClickRemoveLastTag: this.removeLastTag,
                             tagFilters: this.props.tagFilters
                         });
@@ -1211,44 +1543,51 @@
                             a = this.props.languageCode.split("-")[0];
                         if ("en" !== a) {
                             var r = {
-                                color: M.O.Base
+                                color: H.O.Base
                             };
-                            n = u.createElement(M.Ya, {
+                            n = u.createElement(H.Ya, {
                                 margin: {
                                     bottom: 2
                                 }
-                            }, u.createElement(M.W, c.__assign({
-                                type: M.Wb.H4
-                            }, r), Object(p.d)("All Channels", "PopularInternationalSection"))), this.props.tagFilters.length || this.props.languageTagFilters.length || (t = u.createElement(Y, {
+                            }, u.createElement(H.W, c.__assign({
+                                type: H.Wb.H4
+                            }, r), Object(p.d)("All Channels", "PopularInternationalSection"))), this.props.tagFilters.length || this.props.languageTagFilters.length || (t = u.createElement(j.a, {
+                                addTagFilter: this.addTagFilter,
                                 directoryWidth: this.state.directoryWidth,
                                 languageCode: a,
-                                platformType: X[decodeURIComponent(this.props.match.path)] || "all",
-                                addTagFilter: this.addTagFilter,
+                                query: j.b.BROWSE,
+                                scrollToTop: this.context.scrollToTop,
+                                showGameName: !0,
                                 tagFilters: this.props.tagFilters,
-                                scrollToTop: this.context.scrollToTop
+                                trackingProps: {
+                                    content: T.PageviewContent.Live,
+                                    medium: T.PageviewMedium.Game,
+                                    sectionType: G.c.BrowseLiveChannels,
+                                    tagSection: _.a.LiveChannels
+                                }
                             }))
                         }
-                        var i = I.PageviewMedium.Browse,
-                            o = te(this.props.data).map(function(t, n) {
+                        var i = T.PageviewMedium.Browse,
+                            o = q(this.props.data).map(function(t, n) {
                                 var a = t && t.node;
                                 return a && a.broadcaster && a.broadcaster.id ? u.createElement("div", {
                                     key: a.id,
-                                    "data-target": n ? "" : J,
+                                    "data-target": n ? "" : W,
                                     style: {
                                         order: n
                                     }
-                                }, u.createElement(M.Ya, {
+                                }, u.createElement(H.Ya, {
                                     margin: {
                                         bottom: 2
                                     },
                                     "data-target": "directory-game__card_container"
-                                }, u.createElement(Z, {
-                                    context: g.b.MixedGameAndChannelList,
+                                }, u.createElement(z, {
+                                    context: h.b.MixedGameAndChannelList,
                                     title: a.title || Object(p.d)("Untitled Broadcast", "DirectoryGamePage"),
                                     linkTo: {
                                         pathname: "/" + a.broadcaster.login,
                                         state: {
-                                            content: I.PageviewContent.Live,
+                                            content: T.PageviewContent.Live,
                                             content_index: n,
                                             medium: i
                                         }
@@ -1265,17 +1604,17 @@
                                         pathname: "/" + a.broadcaster.login + "/videos",
                                         state: {
                                             medium: i,
-                                            content: I.PageviewContent.Live,
+                                            content: T.PageviewContent.Live,
                                             content_index: n
                                         }
                                     },
                                     channelLogin: a.broadcaster.login || "",
                                     gameTitle: a.game && a.game.name || "",
                                     gameTitleLinkTo: {
-                                        pathname: Object(x.c)(a.game && a.game.name || ""),
+                                        pathname: Object(S.c)(a.game && a.game.name || ""),
                                         state: {
                                             medium: i,
-                                            content: I.PageviewContent.Live,
+                                            content: T.PageviewContent.Live,
                                             content_index: n
                                         }
                                     },
@@ -1285,12 +1624,12 @@
                                     },
                                     "data-a-target": "card-" + n,
                                     "data-a-id": "card-" + (a.broadcaster.login || "").replace(/ /g, ""),
-                                    streamType: Object(V.a)(a.type) || y.a.Live,
+                                    streamType: Object(B.a)(a.type) || y.a.Live,
                                     channelImageProps: {
                                         src: a.broadcaster.profileImageURL || "",
                                         alt: a.broadcaster.displayName || ""
                                     },
-                                    tagListProps: Object(j.a)({
+                                    tagListProps: Object(F.a)({
                                         tags: t && t.node && t.node.tags,
                                         onClickTag: e.addTagFilter,
                                         tagFilters: e.props.tagFilters,
@@ -1307,16 +1646,16 @@
                                 }))) : null
                             }),
                             s = !(this.props.data.loading || this.props.data.error || !this.props.data.streams || !this.props.data.streams.pageInfo || !this.props.data.streams.pageInfo.hasNextPage);
-                        return u.createElement(M.Ya, {
+                        return u.createElement(H.Ya, {
                             flexShrink: 0,
-                            "data-target": K
-                        }, u.createElement(N.b, {
+                            "data-target": Y
+                        }, u.createElement(L.b, {
                             addPaddingWhenPlayerIsPersisting: !0
-                        }), t, n, u.createElement(M.cc, {
-                            gutterSize: M.ec.Small,
-                            childWidth: M.dc.Large,
+                        }), t, n, u.createElement(H.cc, {
+                            gutterSize: H.ec.Small,
+                            childWidth: H.dc.Large,
                             placeholderItems: 20
-                        }, u.createElement(L.a, {
+                        }, u.createElement(E.a, {
                             key: -1,
                             injectStyles: {
                                 textAlign: "center",
@@ -1325,11 +1664,11 @@
                                 width: 300,
                                 height: 250
                             },
-                            adUnit: E.d.directory,
-                            slotID: E.b.directory.rectangle,
-                            adSize: E.c.directory.rectangle,
+                            adUnit: I.d.directory,
+                            slotID: I.b.directory.rectangle,
+                            adSize: I.c.directory.rectangle,
                             targeting: {
-                                pagetype: E.a.games
+                                pagetype: I.a.games
                             },
                             slotRendered: this.updateDisplayAdOrder,
                             autoEnable: !1
@@ -1346,13 +1685,13 @@
                         scrollToTop: d.func
                     }, t
                 }(u.Component),
-                ie = Object(m.compose)(Object(f.a)($, {
+                J = Object(m.compose)(Object(f.a)(M, {
                     options: function(e) {
                         return {
-                            fetchPolicy: ae() ? ne() : "network-only",
+                            fetchPolicy: Q() ? X() : "network-only",
                             variables: {
                                 limit: 30,
-                                platformType: X[decodeURIComponent(e.match.path)] || "all",
+                                platformType: R[decodeURIComponent(e.match.path)] || "all",
                                 tags: e.languageTagFilters.concat(e.tagFilters.map(function(e) {
                                     return e.id
                                 }))
@@ -1368,7 +1707,7 @@
                                     r = t.streams,
                                     i = r && r.edges && r.edges[r.edges.length - 5];
                                 return n({
-                                    query: $,
+                                    query: M,
                                     variables: c.__assign({}, a, {
                                         cursor: i ? i.cursor : null
                                     }),
@@ -1376,7 +1715,7 @@
                                         var n = t.fetchMoreResult;
                                         return {
                                             streams: c.__assign({}, n.streams, {
-                                                edges: Object(w.c)(te(e), te(n))
+                                                edges: Object(w.c)(q(e), q(n))
                                             })
                                         }
                                     }
@@ -1385,11 +1724,11 @@
                         })
                     }
                 }), Object(P.b)("DirectoryPopularPage", {
-                    destination: S.a.DirectoryPopular
+                    destination: x.a.DirectoryPopular
                 }), Object(k.a)({
-                    location: I.PageviewLocation.DirectoryPopular
-                }))(re);
-            var oe = Object(a.connect)(function(e) {
+                    location: T.PageviewLocation.DirectoryPopular
+                }))($);
+            var Z = Object(a.connect)(function(e) {
                 return {
                     languageCode: Object(i.b)(e),
                     languageTagFilters: Object(l.c)(e),
@@ -1403,10 +1742,86 @@
                     changeLastBrowsePath: o.d,
                     removeTagFilter: s.h
                 }, e)
-            })(ie);
+            })(J);
             n.d(t, "DirectoryPopularPage", function() {
-                return oe
+                return Z
             })
+        },
+        LvZ9: function(e, t, n) {
+            "use strict";
+            n.d(t, "a", function() {
+                return u
+            });
+            var a = n("mrSG"),
+                r = n("/7QA"),
+                i = n("GFmA"),
+                o = n("oB8h"),
+                s = n("kduP"),
+                l = n("2xye"),
+                c = n("4KoZ"),
+                d = n("QV0j");
+
+            function u(e) {
+                var t = e.streamNode,
+                    n = e.streamIndex,
+                    a = t.broadcaster && t.broadcaster.login || "";
+                return {
+                    context: i.b.SingleGameList,
+                    title: t.title || Object(c.a)(),
+                    linkTo: m("/" + a || "", n, e),
+                    thumbnailImageProps: {
+                        src: t.previewImageURL || r.a.defaultStreamPreviewURL,
+                        alt: "" + a
+                    },
+                    channelDisplayName: t.broadcaster && t.broadcaster.displayName || "",
+                    channelLogin: a,
+                    channelLinkTo: m("/" + a + "/videos", n, e),
+                    channelImageProps: {
+                        src: t.broadcaster && t.broadcaster.profileImageURL || "",
+                        alt: "" + a
+                    },
+                    gameTitle: p("name", e),
+                    gameTitleLinkTo: m(Object(s.c)(p("name", e)), n, e),
+                    gameBoxArtImageProps: {
+                        src: p("boxArtURL", e) || r.a.defaultBoxArtURL,
+                        alt: p("name", e)
+                    },
+                    streamType: Object(d.a)(t.type) || o.a.Live,
+                    currentViewerCount: t.viewersCount || 0,
+                    trackImageLatency: e.trackImageLatency,
+                    tagListProps: e.tagListProps,
+                    trackingProps: {
+                        category: t.game ? t.game.id : void 0,
+                        categoryName: t.game ? t.game.name : void 0,
+                        itemPosition: n,
+                        rowPosition: 0,
+                        channelID: t.broadcaster && t.broadcaster.id || void 0
+                    }
+                }
+            }
+
+            function m(e, t, n) {
+                var r = n.trackingContent ? n.trackingContent : l.PageviewContent.Live,
+                    i = l.PageviewMedium.Game;
+                n.trackingMedium && (i = n.trackingMedium);
+                var o = n.history && n.history.location && n.history.location.state || {};
+                return {
+                    pathname: e,
+                    state: a.__assign({}, o, {
+                        medium: i,
+                        content: r,
+                        content_index: t
+                    })
+                }
+            }
+
+            function p(e, t) {
+                if (t.shouldShowGame && t.streamNode.game) {
+                    var n = t.streamNode.game[e];
+                    if (n) return n
+                }
+                return ""
+            }
         },
         MJbm: function(e, t, n) {
             "use strict";
@@ -1468,6 +1883,220 @@
             n.d(t, "a", function() {
                 return o
             })
+        },
+        "MS/A": function(e, t, n) {
+            var a = {
+                kind: "Document",
+                definitions: [{
+                    kind: "OperationDefinition",
+                    operation: "query",
+                    name: {
+                        kind: "Name",
+                        value: "DirectoryPage_InternationalSection"
+                    },
+                    variableDefinitions: [{
+                        kind: "VariableDefinition",
+                        variable: {
+                            kind: "Variable",
+                            name: {
+                                kind: "Name",
+                                value: "name"
+                            }
+                        },
+                        type: {
+                            kind: "NonNullType",
+                            type: {
+                                kind: "NamedType",
+                                name: {
+                                    kind: "Name",
+                                    value: "String"
+                                }
+                            }
+                        }
+                    }, {
+                        kind: "VariableDefinition",
+                        variable: {
+                            kind: "Variable",
+                            name: {
+                                kind: "Name",
+                                value: "limit"
+                            }
+                        },
+                        type: {
+                            kind: "NamedType",
+                            name: {
+                                kind: "Name",
+                                value: "Int"
+                            }
+                        }
+                    }, {
+                        kind: "VariableDefinition",
+                        variable: {
+                            kind: "Variable",
+                            name: {
+                                kind: "Name",
+                                value: "tags"
+                            }
+                        },
+                        type: {
+                            kind: "ListType",
+                            type: {
+                                kind: "NonNullType",
+                                type: {
+                                    kind: "NamedType",
+                                    name: {
+                                        kind: "Name",
+                                        value: "String"
+                                    }
+                                }
+                            }
+                        }
+                    }],
+                    directives: [],
+                    selectionSet: {
+                        kind: "SelectionSet",
+                        selections: [{
+                            kind: "Field",
+                            name: {
+                                kind: "Name",
+                                value: "game"
+                            },
+                            arguments: [{
+                                kind: "Argument",
+                                name: {
+                                    kind: "Name",
+                                    value: "name"
+                                },
+                                value: {
+                                    kind: "Variable",
+                                    name: {
+                                        kind: "Name",
+                                        value: "name"
+                                    }
+                                }
+                            }],
+                            directives: [],
+                            selectionSet: {
+                                kind: "SelectionSet",
+                                selections: [{
+                                    kind: "Field",
+                                    name: {
+                                        kind: "Name",
+                                        value: "id"
+                                    },
+                                    arguments: [],
+                                    directives: []
+                                }, {
+                                    kind: "Field",
+                                    name: {
+                                        kind: "Name",
+                                        value: "displayName"
+                                    },
+                                    arguments: [],
+                                    directives: []
+                                }, {
+                                    kind: "Field",
+                                    name: {
+                                        kind: "Name",
+                                        value: "streams"
+                                    },
+                                    arguments: [{
+                                        kind: "Argument",
+                                        name: {
+                                            kind: "Name",
+                                            value: "first"
+                                        },
+                                        value: {
+                                            kind: "Variable",
+                                            name: {
+                                                kind: "Name",
+                                                value: "limit"
+                                            }
+                                        }
+                                    }, {
+                                        kind: "Argument",
+                                        name: {
+                                            kind: "Name",
+                                            value: "tags"
+                                        },
+                                        value: {
+                                            kind: "Variable",
+                                            name: {
+                                                kind: "Name",
+                                                value: "tags"
+                                            }
+                                        }
+                                    }],
+                                    directives: [],
+                                    selectionSet: {
+                                        kind: "SelectionSet",
+                                        selections: [{
+                                            kind: "Field",
+                                            name: {
+                                                kind: "Name",
+                                                value: "edges"
+                                            },
+                                            arguments: [],
+                                            directives: [],
+                                            selectionSet: {
+                                                kind: "SelectionSet",
+                                                selections: [{
+                                                    kind: "FragmentSpread",
+                                                    name: {
+                                                        kind: "Name",
+                                                        value: "browsePagePopularStreamsWithTagsEdge"
+                                                    },
+                                                    directives: []
+                                                }]
+                                            }
+                                        }, {
+                                            kind: "Field",
+                                            name: {
+                                                kind: "Name",
+                                                value: "pageInfo"
+                                            },
+                                            arguments: [],
+                                            directives: [],
+                                            selectionSet: {
+                                                kind: "SelectionSet",
+                                                selections: [{
+                                                    kind: "Field",
+                                                    name: {
+                                                        kind: "Name",
+                                                        value: "hasNextPage"
+                                                    },
+                                                    arguments: [],
+                                                    directives: []
+                                                }]
+                                            }
+                                        }]
+                                    }
+                                }]
+                            }
+                        }]
+                    }
+                }],
+                loc: {
+                    start: 0,
+                    end: 316
+                }
+            };
+            a.loc.source = {
+                body: '#import "twilight/pages/directory-popular/queries/popular-streams-edge.gql"\nquery DirectoryPage_InternationalSection($name: String! $limit: Int $tags: [String!]) {\ngame(name: $name) {\nid\ndisplayName\nstreams(first: $limit tags: $tags) {\nedges {\n...browsePagePopularStreamsWithTagsEdge\n}\npageInfo {\nhasNextPage\n}\n}\n}\n}',
+                name: "GraphQL request",
+                locationOffset: {
+                    line: 1,
+                    column: 1
+                }
+            };
+            var r = {};
+            a.definitions = a.definitions.concat(function(e) {
+                return e.filter(function(e) {
+                    if ("FragmentDefinition" !== e.kind) return !0;
+                    var t = e.name.value;
+                    return !r[t] && (r[t] = !0, !0)
+                })
+            }(n("hKEm").definitions)), e.exports = a
         },
         V6sb: function(e, t, n) {
             var a = {
@@ -1681,240 +2310,7 @@
                 })
             }(n("hKEm").definitions)), e.exports = a
         },
-        VW9G: function(e, t, n) {
-            "use strict";
-            var a = n("/MKj"),
-                r = n("fvjX"),
-                i = n("Igt5"),
-                o = n("X7a7"),
-                s = n("mrSG"),
-                l = n("q1tI"),
-                c = n("yR8l"),
-                d = n("moLQ"),
-                u = n("coeN"),
-                m = n("Ue10"),
-                p = n("fbOE"),
-                h = function(e) {
-                    function t() {
-                        var t = null !== e && e.apply(this, arguments) || this;
-                        return t.wrapText = function(e) {
-                            var n = t.props,
-                                a = n.addTagFilter,
-                                r = n.data,
-                                i = n.directoryName,
-                                o = n.updateLanguageTags,
-                                s = r && r.contentTag;
-                            if (!s) return e;
-                            var c = function() {
-                                return a(s, i || d.a.LiveChannels)
-                            };
-                            return s.isLanguageTag && (c = function() {
-                                o(s.id, !0)
-                            }), l.createElement(m.U, {
-                                onClick: c,
-                                "data-test-selector": "international-section-header-link"
-                            }, l.createElement("strong", null, e))
-                        }, t
-                    }
-                    return s.__extends(t, e), t.prototype.render = function() {
-                        var e = this.props.languageCode;
-                        return l.createElement(m.Ya, {
-                            margin: {
-                                bottom: 2
-                            }
-                        }, l.createElement(m.W, {
-                            type: m.Wb.H4,
-                            color: m.O.Base,
-                            "data-a-target": "international-section-header",
-                            "data-test-selector": "international-section-header-tags"
-                        }, Object(u.a)(e, this.wrapText)))
-                    }, t
-                }(l.Component),
-                g = Object(c.a)(p, {
-                    options: function(e) {
-                        var t = Object(u.b)(e.languageCode);
-                        return {
-                            skip: !t,
-                            variables: {
-                                id: t
-                            }
-                        }
-                    }
-                })(h);
-            var v = Object(a.connect)(null, function(e) {
-                return Object(r.bindActionCreators)({
-                    addTagFilter: i.e,
-                    updateLanguageTags: o.c
-                }, e)
-            })(g);
-            n.d(t, "a", function() {
-                return v
-            })
-        },
         XA5B: function(e, t, n) {},
-        YGU1: function(e, t, n) {
-            var a = {
-                kind: "Document",
-                definitions: [{
-                    kind: "OperationDefinition",
-                    operation: "query",
-                    name: {
-                        kind: "Name",
-                        value: "BrowsePopular_InternationalStreams"
-                    },
-                    variableDefinitions: [{
-                        kind: "VariableDefinition",
-                        variable: {
-                            kind: "Variable",
-                            name: {
-                                kind: "Name",
-                                value: "platformType"
-                            }
-                        },
-                        type: {
-                            kind: "NamedType",
-                            name: {
-                                kind: "Name",
-                                value: "PlatformType"
-                            }
-                        }
-                    }, {
-                        kind: "VariableDefinition",
-                        variable: {
-                            kind: "Variable",
-                            name: {
-                                kind: "Name",
-                                value: "limit"
-                            }
-                        },
-                        type: {
-                            kind: "NamedType",
-                            name: {
-                                kind: "Name",
-                                value: "Int"
-                            }
-                        }
-                    }, {
-                        kind: "VariableDefinition",
-                        variable: {
-                            kind: "Variable",
-                            name: {
-                                kind: "Name",
-                                value: "tags"
-                            }
-                        },
-                        type: {
-                            kind: "ListType",
-                            type: {
-                                kind: "NonNullType",
-                                type: {
-                                    kind: "NamedType",
-                                    name: {
-                                        kind: "Name",
-                                        value: "String"
-                                    }
-                                }
-                            }
-                        }
-                    }],
-                    directives: [],
-                    selectionSet: {
-                        kind: "SelectionSet",
-                        selections: [{
-                            kind: "Field",
-                            name: {
-                                kind: "Name",
-                                value: "streams"
-                            },
-                            arguments: [{
-                                kind: "Argument",
-                                name: {
-                                    kind: "Name",
-                                    value: "platformType"
-                                },
-                                value: {
-                                    kind: "Variable",
-                                    name: {
-                                        kind: "Name",
-                                        value: "platformType"
-                                    }
-                                }
-                            }, {
-                                kind: "Argument",
-                                name: {
-                                    kind: "Name",
-                                    value: "first"
-                                },
-                                value: {
-                                    kind: "Variable",
-                                    name: {
-                                        kind: "Name",
-                                        value: "limit"
-                                    }
-                                }
-                            }, {
-                                kind: "Argument",
-                                name: {
-                                    kind: "Name",
-                                    value: "tags"
-                                },
-                                value: {
-                                    kind: "Variable",
-                                    name: {
-                                        kind: "Name",
-                                        value: "tags"
-                                    }
-                                }
-                            }],
-                            directives: [],
-                            selectionSet: {
-                                kind: "SelectionSet",
-                                selections: [{
-                                    kind: "Field",
-                                    name: {
-                                        kind: "Name",
-                                        value: "edges"
-                                    },
-                                    arguments: [],
-                                    directives: [],
-                                    selectionSet: {
-                                        kind: "SelectionSet",
-                                        selections: [{
-                                            kind: "FragmentSpread",
-                                            name: {
-                                                kind: "Name",
-                                                value: "browsePagePopularStreamsWithTagsEdge"
-                                            },
-                                            directives: []
-                                        }]
-                                    }
-                                }]
-                            }
-                        }]
-                    }
-                }],
-                loc: {
-                    start: 0,
-                    end: 295
-                }
-            };
-            a.loc.source = {
-                body: '#import "twilight/pages/directory-popular/queries/popular-streams-edge.gql"\nquery BrowsePopular_InternationalStreams($platformType: PlatformType $limit: Int $tags: [String!]) {\nstreams(platformType: $platformType first: $limit tags: $tags) {\nedges {\n...browsePagePopularStreamsWithTagsEdge\n}\n}\n}',
-                name: "GraphQL request",
-                locationOffset: {
-                    line: 1,
-                    column: 1
-                }
-            };
-            var r = {};
-            a.definitions = a.definitions.concat(function(e) {
-                return e.filter(function(e) {
-                    if ("FragmentDefinition" !== e.kind) return !0;
-                    var t = e.name.value;
-                    return !r[t] && (r[t] = !0, !0)
-                })
-            }(n("hKEm").definitions)), e.exports = a
-        },
         ZbA5: function(e, t, n) {
             "use strict";
             var a, r, i, o, s = n("mrSG"),
@@ -1928,8 +2324,8 @@
                 e.HostingDot = "stream-type-indicator__hosting-dot"
             }(o || (o = {}));
             var p = ((a = {})[u.a.Live] = "stream-type-indicator--live", a[u.a.Premiere] = "stream-type-indicator--premiere", a[u.a.Rerun] = "stream-type-indicator--rerun", a[u.a.WatchParty] = "stream-type-indicator--rerun", a),
-                h = ((r = {})[u.a.Premiere] = m.ub.VideoPremiere, r[u.a.Rerun] = m.ub.VideoRerun, r[u.a.WatchParty] = m.ub.VideoRerun, r),
-                g = ((i = {})[u.a.Premiere] = m.vb.Live, i[u.a.Rerun] = m.vb.Inherit, i[u.a.WatchParty] = m.vb.Inherit, i),
+                g = ((r = {})[u.a.Premiere] = m.ub.VideoPremiere, r[u.a.Rerun] = m.ub.VideoRerun, r[u.a.WatchParty] = m.ub.VideoRerun, r),
+                h = ((i = {})[u.a.Premiere] = m.vb.Live, i[u.a.Rerun] = m.vb.Inherit, i[u.a.WatchParty] = m.vb.Inherit, i),
                 v = function(e) {
                     function t() {
                         return null !== e && e.apply(this, arguments) || this
@@ -1971,8 +2367,8 @@
                             status: m.M.Live,
                             size: m.L.Small
                         })) : c.createElement(m.tb, {
-                            asset: h[this.props.type],
-                            type: g[this.props.type],
+                            asset: g[this.props.type],
+                            type: h[this.props.type],
                             width: 14,
                             height: 14
                         })
@@ -1998,193 +2394,7 @@
             })
         },
         cRsL: function(e, t, n) {},
-        coeN: function(e, t, n) {
-            "use strict";
-            n.d(t, "b", function() {
-                return r
-            }), n.d(t, "a", function() {
-                return o
-            });
-            var a = n("/7QA");
-
-            function r(e) {
-                switch (e) {
-                    case "ar":
-                        return "73cc486a-e56b-41ed-a1df-7afedbc84f6f";
-                    case "asl":
-                        return "5ad4b978-495f-4093-9461-c194f58201ab";
-                    case "bg":
-                        return "21d85c73-701f-4259-8c4e-4321265847b5";
-                    case "cs":
-                        return "a6cddaba-f0ce-4526-9087-6de2f603a24d";
-                    case "da":
-                        return "43e598cc-918b-4247-b02c-b13543a1eac9";
-                    case "de":
-                        return "9166ad14-41f1-4b04-a3b8-c8eb838c6be6";
-                    case "el":
-                        return "902f6815-a655-4918-99e7-48c74a71feac";
-                    case "en":
-                        return "6ea6bca4-4712-4ab9-a906-e3336a9d8039";
-                    case "es":
-                        return "d4bb9c58-2141-4881-bcdc-3fe0505457d1";
-                    case "fi":
-                        return "220eb274-ab25-425b-8a9b-826103404997";
-                    case "fr":
-                        return "6f655045-9989-4ef7-8f85-1edcec42d648";
-                    case "hu":
-                        return "a298cca5-d408-47c7-a1e7-0c76ca878bc6";
-                    case "it":
-                        return "5b9935eb-1e9a-4217-98ad-62bda5cff0d1";
-                    case "ja":
-                        return "6ba1d230-e52f-4d81-b1e0-41f25a8a9f5d";
-                    case "ko":
-                        return "ab2975e3-b9ca-4b1a-a93e-fb61a5d5c3a4";
-                    case "nl":
-                        return "e13e6734-37ae-4d85-897b-3015f0168355";
-                    case "no":
-                        return "5647bf35-f99e-49aa-8578-0e07d936188c";
-                    case "other":
-                        return "fd76c790-0505-4c4c-865a-d6bd139c0901";
-                    case "pl":
-                        return "f9d04efa-6e25-49bf-bf0a-da3e2addaf1b";
-                    case "pt":
-                        return "39ee8140-901a-4762-bfca-8260dea1310f";
-                    case "ro":
-                        return "75a99c80-0f15-4159-b1fd-3812c25b4aca";
-                    case "ru":
-                        return "0569b171-2a2b-476e-a596-5bdfb45a1327";
-                    case "sk":
-                        return "9b773670-05f8-4c06-ac99-e6649f906171";
-                    case "sv":
-                        return "145b073b-cb70-4e91-b170-f5fab2ebba05";
-                    case "th":
-                        return "f19c7524-c18d-41af-9f39-034c8d0b0fee";
-                    case "tr":
-                        return "f08d5873-f0c7-4912-94ba-a41933b4c141";
-                    case "vi":
-                        return "ba3b69fe-899c-4518-ac46-707275e3eba1";
-                    case "zh":
-                        return "74c92063-a389-4fd2-8460-b1bb82b04ec7";
-                    case "zh-hk":
-                        return "0c8c6543-4019-47d0-9b8a-57a81ee6ace5";
-                    default:
-                        return null
-                }
-            }
-            var i = function(e) {
-                    return e
-                },
-                o = function(e, t) {
-                    switch (void 0 === t && (t = i), e) {
-                        case "ar":
-                            return Object(a.d)("Channels in <x:bold>Arabic</x:bold>", {
-                                "x:bold": t
-                            }, "DirectoryInternationalSectionHeader");
-                        case "asl":
-                            return Object(a.d)("Channels in <x:bold>American Sign Language</x:bold>", {
-                                "x:bold": t
-                            }, "DirectoryInternationalSectionHeader");
-                        case "bg":
-                            return Object(a.d)("Channels in <x:bold>Bulgarian</x:bold>", {
-                                "x:bold": t
-                            }, "DirectoryInternationalSectionHeader");
-                        case "cs":
-                            return Object(a.d)("Channels in <x:bold>Czech</x:bold>", {
-                                "x:bold": t
-                            }, "DirectoryInternationalSectionHeader");
-                        case "da":
-                            return Object(a.d)("Channels in <x:bold>Danish</x:bold>", {
-                                "x:bold": t
-                            }, "DirectoryInternationalSectionHeader");
-                        case "de":
-                            return Object(a.d)("Channels in <x:bold>German</x:bold>", {
-                                "x:bold": t
-                            }, "DirectoryInternationalSectionHeader");
-                        case "el":
-                            return Object(a.d)("Channels in <x:bold>Greek</x:bold>", {
-                                "x:bold": t
-                            }, "DirectoryInternationalSectionHeader");
-                        case "es":
-                            return Object(a.d)("Channels in <x:bold>Spanish</x:bold>", {
-                                "x:bold": t
-                            }, "DirectoryInternationalSectionHeader");
-                        case "fi":
-                            return Object(a.d)("Channels in <x:bold>Finnish</x:bold>", {
-                                "x:bold": t
-                            }, "DirectoryInternationalSectionHeader");
-                        case "fr":
-                            return Object(a.d)("Channels in <x:bold>French</x:bold>", {
-                                "x:bold": t
-                            }, "DirectoryInternationalSectionHeader");
-                        case "hu":
-                            return Object(a.d)("Channels in <x:bold>Hungarian</x:bold>", {
-                                "x:bold": t
-                            }, "DirectoryInternationalSectionHeader");
-                        case "it":
-                            return Object(a.d)("Channels in <x:bold>Italian</x:bold>", {
-                                "x:bold": t
-                            }, "DirectoryInternationalSectionHeader");
-                        case "ja":
-                            return Object(a.d)("Channels in <x:bold>Japanese</x:bold>", {
-                                "x:bold": t
-                            }, "DirectoryInternationalSectionHeader");
-                        case "ko":
-                            return Object(a.d)("Channels in <x:bold>Korean</x:bold>", {
-                                "x:bold": t
-                            }, "DirectoryInternationalSectionHeader");
-                        case "nl":
-                            return Object(a.d)("Channels in <x:bold>Dutch</x:bold>", {
-                                "x:bold": t
-                            }, "DirectoryInternationalSectionHeader");
-                        case "no":
-                            return Object(a.d)("Channels in <x:bold>Norwegian</x:bold>", {
-                                "x:bold": t
-                            }, "DirectoryInternationalSectionHeader");
-                        case "pl":
-                            return Object(a.d)("Channels in <x:bold>Polish</x:bold>", {
-                                "x:bold": t
-                            }, "DirectoryInternationalSectionHeader");
-                        case "pt":
-                            return Object(a.d)("Channels in <x:bold>Portuguese</x:bold>", {
-                                "x:bold": t
-                            }, "DirectoryInternationalSectionHeader");
-                        case "ru":
-                            return Object(a.d)("Channels in <x:bold>Russian</x:bold>", {
-                                "x:bold": t
-                            }, "DirectoryInternationalSectionHeader");
-                        case "sk":
-                            return Object(a.d)("Channels in <x:bold>Slovak</x:bold>", {
-                                "x:bold": t
-                            }, "DirectoryInternationalSectionHeader");
-                        case "sv":
-                            return Object(a.d)("Channels in <x:bold>Swedish</x:bold>", {
-                                "x:bold": t
-                            }, "DirectoryInternationalSectionHeader");
-                        case "th":
-                            return Object(a.d)("Channels in <x:bold>Thai</x:bold>", {
-                                "x:bold": t
-                            }, "DirectoryInternationalSectionHeaer");
-                        case "tr":
-                            return Object(a.d)("Channels in <x:bold>Turkish</x:bold>", {
-                                "x:bold": t
-                            }, "DirectoryInternationalSectionHeader");
-                        case "vi":
-                            return Object(a.d)("Channels in <x:bold>Vietnamese</x:bold>", {
-                                "x:bold": t
-                            }, "DirectoryInternationalSectionHeader");
-                        case "zh":
-                            return Object(a.d)("Channels in <x:bold>Chinese</x:bold>", {
-                                "x:bold": t
-                            }, "DirectoryInternationalSectionHeader");
-                        default:
-                            return Object(a.d)("Channels in <x:bold>English</x:bold>", {
-                                "x:bold": t
-                            }, "DirectoryInternationalSectionHeader")
-                    }
-                }
-        },
-        efEE: function(e, t, n) {},
-        fbOE: function(e, t, n) {
+        eGvk: function(e, t, n) {
             var a = {
                 kind: "Document",
                 definitions: [{
@@ -2274,6 +2484,7 @@
                 })
             }(n("iiOx").definitions)), e.exports = a
         },
+        efEE: function(e, t, n) {},
         gAd6: function(e, t) {
             var n = {
                 kind: "Document",
@@ -2619,118 +2830,179 @@
                 })
             }(n("iiOx").definitions)), e.exports = a
         },
-        hX9f: function(e, t, n) {
-            "use strict";
-            var a = n("mrSG"),
-                r = n("q1tI"),
-                i = n("9C/b"),
-                o = n("fvjX"),
-                s = n("/7QA"),
-                l = n("GFmA"),
-                c = n("oB8h"),
-                d = n("kduP"),
-                u = n("2xye"),
-                m = n("4KoZ"),
-                p = n("QV0j"),
-                h = n("yI6f"),
-                g = n("T2RZ"),
-                v = n("Ue10"),
-                b = (n("zrz1"), Object(g.a)(u.PageviewMedium.Game, h.b.Live, h.c.BrowseInCategoryChannels)(l.a)),
-                f = function(e) {
-                    function t() {
-                        var t = null !== e && e.apply(this, arguments) || this;
-                        return t.getLinkTo = function(e, n) {
-                            var r = t.props.trackingContent ? t.props.trackingContent : u.PageviewContent.Live,
-                                i = u.PageviewMedium.Game;
-                            t.props.trackingMedium && (i = t.props.trackingMedium);
-                            var o = t.props.history.location && t.props.history.location.state || {};
-                            return {
-                                pathname: e,
-                                state: a.__assign({}, o, {
-                                    medium: i,
-                                    content: r,
-                                    content_index: n
-                                })
+        jufN: function(e, t, n) {
+            var a = {
+                kind: "Document",
+                definitions: [{
+                    kind: "OperationDefinition",
+                    operation: "query",
+                    name: {
+                        kind: "Name",
+                        value: "BrowsePopular_InternationalStreams"
+                    },
+                    variableDefinitions: [{
+                        kind: "VariableDefinition",
+                        variable: {
+                            kind: "Variable",
+                            name: {
+                                kind: "Name",
+                                value: "limit"
                             }
-                        }, t.shouldShowGame = function(e) {
-                            if (t.props.shouldShowGame && t.props.streamNode.game) {
-                                var n = t.props.streamNode.game[e];
-                                if (n) return n
+                        },
+                        type: {
+                            kind: "NamedType",
+                            name: {
+                                kind: "Name",
+                                value: "Int"
                             }
-                            return ""
-                        }, t
+                        }
+                    }, {
+                        kind: "VariableDefinition",
+                        variable: {
+                            kind: "Variable",
+                            name: {
+                                kind: "Name",
+                                value: "tags"
+                            }
+                        },
+                        type: {
+                            kind: "ListType",
+                            type: {
+                                kind: "NonNullType",
+                                type: {
+                                    kind: "NamedType",
+                                    name: {
+                                        kind: "Name",
+                                        value: "String"
+                                    }
+                                }
+                            }
+                        }
+                    }],
+                    directives: [],
+                    selectionSet: {
+                        kind: "SelectionSet",
+                        selections: [{
+                            kind: "Field",
+                            name: {
+                                kind: "Name",
+                                value: "streams"
+                            },
+                            arguments: [{
+                                kind: "Argument",
+                                name: {
+                                    kind: "Name",
+                                    value: "first"
+                                },
+                                value: {
+                                    kind: "Variable",
+                                    name: {
+                                        kind: "Name",
+                                        value: "limit"
+                                    }
+                                }
+                            }, {
+                                kind: "Argument",
+                                name: {
+                                    kind: "Name",
+                                    value: "tags"
+                                },
+                                value: {
+                                    kind: "Variable",
+                                    name: {
+                                        kind: "Name",
+                                        value: "tags"
+                                    }
+                                }
+                            }],
+                            directives: [],
+                            selectionSet: {
+                                kind: "SelectionSet",
+                                selections: [{
+                                    kind: "Field",
+                                    name: {
+                                        kind: "Name",
+                                        value: "edges"
+                                    },
+                                    arguments: [],
+                                    directives: [],
+                                    selectionSet: {
+                                        kind: "SelectionSet",
+                                        selections: [{
+                                            kind: "FragmentSpread",
+                                            name: {
+                                                kind: "Name",
+                                                value: "browsePagePopularStreamsWithTagsEdge"
+                                            },
+                                            directives: []
+                                        }]
+                                    }
+                                }]
+                            }
+                        }]
                     }
-                    return a.__extends(t, e), t.prototype.render = function() {
-                        var e = this.props.streamNode,
-                            t = this.props.streamIndex;
-                        if (!e.broadcaster) return null;
-                        var n = {
-                            context: this.props.shouldShowGame ? l.b.MixedGameAndChannelList : l.b.SingleGameList,
-                            title: e.title || Object(m.a)(),
-                            linkTo: this.getLinkTo("/" + e.broadcaster.login, t),
-                            thumbnailImageProps: {
-                                src: e.previewImageURL || s.a.defaultStreamPreviewURL,
-                                alt: "" + e.broadcaster.login
-                            },
-                            channelDisplayName: e.broadcaster.displayName || "",
-                            channelLogin: e.broadcaster.login || "",
-                            channelLinkTo: this.getLinkTo("/" + e.broadcaster.login + "/videos", t),
-                            channelImageProps: {
-                                src: e.broadcaster.profileImageURL || "",
-                                alt: "" + e.broadcaster.login
-                            },
-                            gameTitle: this.shouldShowGame("name"),
-                            gameTitleLinkTo: this.getLinkTo(Object(d.c)(this.shouldShowGame("name")), t),
-                            gameBoxArtImageProps: {
-                                src: this.shouldShowGame("boxArtURL") || s.a.defaultBoxArtURL,
-                                alt: this.shouldShowGame("name")
-                            },
-                            streamType: Object(p.a)(e.type) || c.a.Live,
-                            currentViewerCount: e.viewersCount || 0,
-                            trackImageLatency: this.props.trackImageLatency,
-                            tagListProps: this.props.tagListProps
-                        };
-                        return r.createElement("div", {
-                            className: "stream-thumbnail",
-                            "data-target": t ? "" : "directory-first-item",
-                            style: {
-                                order: t
-                            }
-                        }, r.createElement(v.Ya, {
-                            className: "stream-thumbnail__card",
-                            position: v.kb.Relative,
-                            margin: {
-                                bottom: 2
-                            },
-                            "data-target": "directory-game__card_container"
-                        }, r.createElement(b, a.__assign({}, n, {
-                            "data-a-target": "card-" + t,
-                            "data-a-id": "card-" + (e.broadcaster.login || "").replace(/ /g, ""),
-                            trackingProps: {
-                                category: e.game ? e.game.id : void 0,
-                                categoryName: e.game ? e.game.name : void 0,
-                                itemPosition: t,
-                                rowPosition: 0,
-                                channelID: e.broadcaster.id || void 0
-                            }
-                        }))))
-                    }, t
-                }(r.Component),
-                k = Object(o.compose)(i.a)(f);
-            n.d(t, "a", function() {
-                return "directory-first-item"
-            }), n.d(t, !1, function() {
-                return "directory-game__card_container"
-            }), n.d(t, !1, function() {
-                return f
-            }), n.d(t, "b", function() {
-                return k
-            })
+                }],
+                loc: {
+                    start: 0,
+                    end: 239
+                }
+            };
+            a.loc.source = {
+                body: '#import "twilight/pages/directory-popular/queries/popular-streams-edge.gql"\nquery BrowsePopular_InternationalStreams($limit: Int $tags: [String!]) {\nstreams(first: $limit tags: $tags) {\nedges {\n...browsePagePopularStreamsWithTagsEdge\n}\n}\n}',
+                name: "GraphQL request",
+                locationOffset: {
+                    line: 1,
+                    column: 1
+                }
+            };
+            var r = {};
+            a.definitions = a.definitions.concat(function(e) {
+                return e.filter(function(e) {
+                    if ("FragmentDefinition" !== e.kind) return !0;
+                    var t = e.name.value;
+                    return !r[t] && (r[t] = !0, !0)
+                })
+            }(n("hKEm").definitions)), e.exports = a
         },
         "kF1+": function(e, t, n) {},
         kVMo: function(e, t, n) {},
         m493: function(e, t, n) {},
-        vDRX: function(e, t, n) {},
-        zrz1: function(e, t, n) {}
+        pN5T: function(e, t, n) {
+            "use strict";
+            n.d(t, "a", function() {
+                return o
+            });
+            var a = n("/7QA"),
+                r = n("oB8h"),
+                i = n("QV0j"),
+                o = function(e) {
+                    var t = null,
+                        n = e.node;
+                    return n && (t = {
+                        __typename: "Stream",
+                        id: n.id,
+                        title: n.title || "",
+                        viewersCount: n.viewersCount || 0,
+                        previewImageURL: n.previewImageURL || a.a.defaultStreamPreviewURL,
+                        broadcaster: n.broadcaster ? {
+                            __typename: "User",
+                            id: n.broadcaster.id,
+                            login: n.broadcaster.login,
+                            displayName: n.broadcaster.displayName,
+                            roles: null,
+                            profileImageURL: n.broadcaster.profileImageURL
+                        } : null,
+                        game: n.game ? {
+                            __typename: "Game",
+                            id: n.game.id,
+                            boxArtURL: n.game.boxArtURL || a.a.defaultBoxArtURL,
+                            name: n.game.name
+                        } : null,
+                        tags: null,
+                        type: Object(i.a)(n.type) || r.a.Live
+                    }), t
+                }
+        },
+        vDRX: function(e, t, n) {}
     }
 ]);

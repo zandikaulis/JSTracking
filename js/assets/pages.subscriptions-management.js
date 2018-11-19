@@ -147,22 +147,6 @@
                 Custom: "Custom"
             }
         },
-        "3lt/": function(e, t, n) {
-            "use strict";
-            n("mrSG"), n("uhBA");
-            var r = n("L9xt");
-            n.o(r, "PageviewContent") && n.d(t, "PageviewContent", function() {
-                return r.PageviewContent
-            }), n.o(r, "PageviewLocation") && n.d(t, "PageviewLocation", function() {
-                return r.PageviewLocation
-            }), n.o(r, "PageviewMedium") && n.d(t, "PageviewMedium", function() {
-                return r.PageviewMedium
-            }), n.o(r, "SpadeEventType") && n.d(t, "SpadeEventType", function() {
-                return r.SpadeEventType
-            }), n.o(r, "TwitchDataType") && n.d(t, "TwitchDataType", function() {
-                return r.TwitchDataType
-            })
-        },
         "58bG": function(e, t) {
             var n = {
                 kind: "Document",
@@ -1475,7 +1459,7 @@
                 y = n("oJmH"),
                 E = n("CDqf"),
                 B = n("Ue10"),
-                C = (n("BLKr"), function() {
+                _ = (n("BLKr"), function() {
                     return d.createElement(B.Fb, {
                         className: "available-prime-sub-card",
                         "data-a-target": "available-prime-sub-card",
@@ -1513,13 +1497,13 @@
                         }
                     }, d.createElement(B.W, null, Object(l.d)('To use your free subscription, go to a channel of your choice and select "Subscribe Free"', "AvailablePrimeSubCard"))))
                 }),
-                _ = n("/jfp"),
-                O = n.n(_),
+                O = n("/jfp"),
+                C = n.n(O),
                 N = n("yLwq"),
-                w = n("QVaV"),
-                T = n("cMjZ"),
-                P = n("DMoW"),
-                F = n("fQWD"),
+                T = n("QVaV"),
+                w = n("cMjZ"),
+                F = n("DMoW"),
+                P = n("fQWD"),
                 U = n("aCAx"),
                 D = n("cZKs"),
                 I = n("b6Yk");
@@ -1699,7 +1683,7 @@
                             t.props.currentUserID && e.user && e.product && e.originID && t.props.showDisableGiftModal({
                                 onCancel: t.props.closeModal,
                                 onSuccess: t.props.onDisableGiftSuccess,
-                                formattedChannelDisplayName: Object(w.a)(e.user.login, e.user.displayName),
+                                formattedChannelDisplayName: Object(T.a)(e.user.login, e.user.displayName),
                                 currentUserID: t.props.currentUserID,
                                 originID: e.originID,
                                 subscriptionProductID: e.product.id
@@ -1728,7 +1712,7 @@
                     return u.__extends(t, e), t.prototype.render = function() {
                         var e = Object(l.d)("Edit Subscription", "SubscriptionCard"),
                             t = null;
-                        if (this.props.subscriptionBenefit.platform === P.U.WEB) {
+                        if (this.props.subscriptionBenefit.platform === F.U.WEB) {
                             var n = this.renderInteractables();
                             if (n.length < 1) return null;
                             t = n
@@ -1786,13 +1770,13 @@
                             textAlign: B.Sb.Center
                         }, d.createElement(B.W, null, t)))
                     }, t.prototype.renderMobileMessage = function() {
-                        return this.props.subscriptionBenefit.platform === P.U.ANDROID ? d.createElement(B.W, null, Object(l.d)("To edit this subscription, please go to the Twitch Subscription Manager on your Android device.              <x:link>               Click here for more information.             </x:link>", {
+                        return this.props.subscriptionBenefit.platform === F.U.ANDROID ? d.createElement(B.W, null, Object(l.d)("To edit this subscription, please go to the Twitch Subscription Manager on your Android device.              <x:link>               Click here for more information.             </x:link>", {
                             "x:link": function(e) {
                                 return d.createElement(B.U, {
                                     to: "https://help.twitch.tv/customer/portal/articles/2935963-how-to-purchase-and-manage-subscriptions-on-android#Manage"
                                 }, e)
                             }
-                        }, "EditSubscriptionBalloon")) : this.props.subscriptionBenefit.platform === P.U.IOS ? d.createElement(B.W, null, Object(l.d)("To edit this subscription, please go to your Subscription Manager on your iOS device.              <x:link>               Click here for more information.             </x:link>", {
+                        }, "EditSubscriptionBalloon")) : this.props.subscriptionBenefit.platform === F.U.IOS ? d.createElement(B.W, null, Object(l.d)("To edit this subscription, please go to your Subscription Manager on your iOS device.              <x:link>               Click here for more information.             </x:link>", {
                             "x:link": function(e) {
                                 return d.createElement(B.U, {
                                     to: "https://help.twitch.tv/customer/portal/articles/2935963-how-to-purchase-and-manage-subscriptions-on-ios#Manage"
@@ -1906,7 +1890,7 @@
                         }).sort(this.compareBadgeVersion).forEach(function(t) {
                             if (t) {
                                 var n = z(t);
-                                e.push(d.createElement(F.a, {
+                                e.push(d.createElement(P.a, {
                                     key: "subscription-benefit-badge-" + t.id,
                                     badge: n
                                 }))
@@ -2032,10 +2016,10 @@
                             Object(S.d)({
                                 fragment: ne,
                                 fragmentName: "subscriptionBenefit",
-                                id: Object(T.a)(t.props.subBenefit),
+                                id: Object(w.a)(t.props.subBenefit),
                                 mutator: function(e) {
                                     return u.__assign({}, e, {
-                                        platform: P.U.WEB,
+                                        platform: F.U.WEB,
                                         originID: null,
                                         isRefundable: !1,
                                         endsAt: null,
@@ -2053,7 +2037,7 @@
                             Object(S.d)({
                                 fragment: ne,
                                 fragmentName: "subscriptionBenefit",
-                                id: Object(T.a)(t.props.subBenefit),
+                                id: Object(w.a)(t.props.subBenefit),
                                 mutator: function(e) {
                                     return u.__assign({}, e, {
                                         paidUpgrade: null
@@ -2068,8 +2052,8 @@
                             i = null,
                             a = "",
                             s = void 0;
-                        if (this.props.subBenefit.user && this.props.subBenefit.user.displayName && this.props.subBenefit.user.login) i = this.props.subBenefit.user.bannerImageURL, e = Object(w.a)(this.props.subBenefit.user.login, this.props.subBenefit.user.displayName), a = this.props.subBenefit.user.displayName, s = "/" + this.props.subBenefit.user.login, t = this.props.subBenefit.user.profileImageURL;
-                        else if (this.isTurbo) a = e = Object(l.d)("Twitch Turbo", "SubscriptionCard"), s = "/settings/turbo", t = O.a;
+                        if (this.props.subBenefit.user && this.props.subBenefit.user.displayName && this.props.subBenefit.user.login) i = this.props.subBenefit.user.bannerImageURL, e = Object(T.a)(this.props.subBenefit.user.login, this.props.subBenefit.user.displayName), a = this.props.subBenefit.user.displayName, s = "/" + this.props.subBenefit.user.login, t = this.props.subBenefit.user.profileImageURL;
+                        else if (this.isTurbo) a = e = Object(l.d)("Twitch Turbo", "SubscriptionCard"), s = "/settings/turbo", t = C.a;
                         else {
                             if (this.props.subBenefit.user && this.props.subBenefit.user.displayName) return null;
                             a = e = Object(l.d)("Suspended/Deactivated Broadcaster", "SubscriptionCard"), t = Object(N.a)(N.b[0], 50), s = "/"
@@ -2217,7 +2201,7 @@
                             }
                         }, d.createElement(B.Ya, {
                             className: "subscription-card__badge"
-                        }, d.createElement(F.a, {
+                        }, d.createElement(P.a, {
                             badge: z(t)
                         })), d.createElement(B.Qa, {
                             margin: {
@@ -2240,7 +2224,7 @@
                                 left: .5
                             }
                         }, d.createElement(B.W, null, e.gifter ? Object(l.d)("Gift Subscription from {sender}", {
-                            sender: Object(w.a)(e.gifter.login, e.gifter.displayName)
+                            sender: Object(T.a)(e.gifter.login, e.gifter.displayName)
                         }, "SubscriptionCard") : Object(l.d)("Gift Subscription", "SubscriptionCard")))) : null
                     }, t.prototype.renderPaidUpgradeButton = function() {
                         var e = this.props.subBenefit;
@@ -2369,7 +2353,7 @@
                                 i.purchasedWithPrime ? (t = !0, e.unshift(a)) : e.push(a)
                             }
                         }
-                        return this.props.type === se.Paid && this.props.hasPrime && !t && e.unshift(d.createElement(C, {
+                        return this.props.type === se.Paid && this.props.hasPrime && !t && e.unshift(d.createElement(_, {
                             key: "prime-subscription-available"
                         })), e
                     }, t.prototype.filterSubType = function(e) {

@@ -547,7 +547,9 @@
                                 parentKey: null,
                                 value: "",
                                 valueShortName: "",
-                                imageURL: ""
+                                imageURL: "",
+                                createdAt: "",
+                                updatedAt: ""
                             }
                         }, t.metadataSearchDropdowns = {}, t.renderChanletItem = function(e) {
                             return l.createElement(h.Fb, {
@@ -1722,7 +1724,7 @@
                     e.Group = "group", e.Team = "team", e.Player = "player", e.Role = "role"
                 }(a || (a = {})),
                 function(e) {
-                    e.Group = "Group", e.Team = "team", e.Player = "Player", e.Role = "Role"
+                    e.Group = "Group", e.Team = "Team", e.Player = "Player", e.Role = "Role"
                 }(r || (r = {}))
         },
         "oz3/": function(e, t, n) {},

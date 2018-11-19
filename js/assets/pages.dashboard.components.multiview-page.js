@@ -873,10 +873,10 @@
                 D = m.a.wrap(function() {
                     return n.e(153).then(n.bind(null, "Jtig"))
                 }, "ChanletsTab"),
-                T = m.a.wrap(function() {
+                F = m.a.wrap(function() {
                     return n.e(152).then(n.bind(null, "iw5t"))
                 }, "PlayersTab"),
-                F = m.a.wrap(function() {
+                T = m.a.wrap(function() {
                     return n.e(151).then(n.bind(null, "tgcK"))
                 }, "RolesTab"),
                 O = m.a.wrap(function() {
@@ -922,7 +922,7 @@
                                 fillContent: !0
                             });
                             var e = t.props.data.user.channel;
-                            return s.createElement(T, {
+                            return s.createElement(F, {
                                 "data-test-selector": i.PlayersTab,
                                 channelID: t.props.data.user.id,
                                 availableContentAttributes: e.availableContentAttributes || [],
@@ -935,7 +935,7 @@
                                 fillContent: !0
                             });
                             var e = t.props.data.user.channel;
-                            return s.createElement(F, {
+                            return s.createElement(T, {
                                 "data-test-selector": i.RolesTab,
                                 channelID: t.props.data.user.id,
                                 availableContentAttributes: e.availableContentAttributes || [],
@@ -1258,16 +1258,32 @@
                             },
                             arguments: [],
                             directives: []
+                        }, {
+                            kind: "Field",
+                            name: {
+                                kind: "Name",
+                                value: "createdAt"
+                            },
+                            arguments: [],
+                            directives: []
+                        }, {
+                            kind: "Field",
+                            name: {
+                                kind: "Name",
+                                value: "updatedAt"
+                            },
+                            arguments: [],
+                            directives: []
                         }]
                     }
                 }],
                 loc: {
                     start: 0,
-                    end: 128
+                    end: 148
                 }
             };
             n.loc.source = {
-                body: "fragment multiviewContentAttribute on MultiviewContentAttribute {\nid\nkey\nname\nparentID\nparentKey\nvalue\nvalueShortName\nimageURL\n}",
+                body: "fragment multiviewContentAttribute on MultiviewContentAttribute {\nid\nkey\nname\nparentID\nparentKey\nvalue\nvalueShortName\nimageURL\ncreatedAt\nupdatedAt\n}",
                 name: "GraphQL request",
                 locationOffset: {
                     line: 1,

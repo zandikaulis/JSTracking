@@ -519,72 +519,269 @@
         },
         QjI3: function(e, n, t) {
             "use strict";
-            var i = t("mrSG"),
-                a = t("q1tI"),
-                r = t("/MKj"),
-                o = t("fvjX"),
-                s = t("ZS2+"),
-                l = t("UUve"),
-                d = t("1/iK"),
-                u = t("aCAx"),
-                c = t("kRBY"),
-                m = t("GnwI"),
-                p = t("oJmH"),
-                v = t("/7QA"),
-                g = t("2+sX"),
-                b = t("u5aL"),
-                k = t("eJ65"),
-                h = t("yR8l"),
-                f = t("x7UT"),
-                y = t("3Bft"),
-                S = t("tIid"),
-                _ = t("ht6z"),
-                N = t("/aPz"),
-                C = t("KriR"),
-                w = t("D7An"),
-                F = t("4rCz");
-            var E, I = t("br9A"),
-                T = t("Ue10"),
-                L = (t("a7aT"), t("z+dA"));
+            var i, a = t("mrSG"),
+                r = t("q1tI"),
+                o = t("/MKj"),
+                s = t("fvjX"),
+                l = t("ZS2+"),
+                d = t("UUve"),
+                u = t("1/iK"),
+                c = t("aCAx"),
+                m = t("kRBY"),
+                p = t("GnwI"),
+                b = t("cZKs"),
+                v = t("Ue10"),
+                g = t("/7QA"),
+                k = t("yR8l"),
+                h = t("3Bft"),
+                f = t("/0dD"),
+                y = t("tIid"),
+                S = t("ht6z"),
+                N = t("76Lv"),
+                _ = t("KriR"),
+                C = t("br9A"),
+                w = (t("y2dA"), t("eaNi"));
             ! function(e) {
                 e.SubButton = "subscribe-button__dropdown", e.BalloonLayerButton = "subscribe-button__balloon-layer-btn", e.DefaultButton = "subscribe-button__default-btn", e.SubscribeBalloon = "subscribe-button__subscribe-balloon"
-            }(E || (E = {}));
-            var B = s.a.wrap(function() {
+            }(i || (i = {}));
+            var F = l.a.wrap(function() {
                     return Promise.all([t.e(0), t.e(198)]).then(t.bind(null, "f+qK"))
                 }, "SubscribeBalloon"),
-                D = function(e) {
+                E = function(e) {
+                    function n() {
+                        var n = null !== e && e.apply(this, arguments) || this;
+                        return n.modalLevel = "top_page", n.handleSubMenuAction = function(e) {
+                            new Set([C.a.ClickCheckout, C.a.BuyGiftSub, C.a.BuyMysteryGift, C.a.BuyCustomMysteryGift, C.a.BuyGiftToPaidUpgrade, C.a.BuyPaidUpgrade]).has(e.action) && n.checkAndDisplaySubscriptionCheckout();
+                            var t = n.props.data,
+                                i = t.user,
+                                a = !!(i && i.self && i.self.subscriptionBenefit),
+                                r = t.requestInfo && Object(S.a)(t.requestInfo.countryCode);
+                            Object(C.b)({
+                                action: e.action || "",
+                                channelLogin: n.props.channelLogin || "",
+                                channelID: i && i.id || "",
+                                checkoutButtonTier: e.checkoutButtonTier,
+                                hasSubCredit: i && i.self && i.self.canPrimeSubscribe,
+                                hostChannelID: n.props.data.user && n.props.data.user.id || "",
+                                hostChannelLogin: n.props.channelLogin,
+                                isMenuOpen: e.action !== C.a.OpenSubMenu,
+                                mysteryGiftCount: e.mysteryGiftCount,
+                                sub_location: "squad_page",
+                                modal: !a,
+                                modalLevel: a ? "" : n.modalLevel.slice(),
+                                showPrimeContent: r,
+                                giftRecipient: e.giftRecipient || null
+                            }), !e.modalLevel || e.action !== C.a.ClickMoreSubOptions && e.action !== C.a.ClickBack || (n.modalLevel = e.modalLevel)
+                        }, n
+                    }
+                    return a.__extends(n, e), n.prototype.componentDidMount = function() {
+                        this.checkAndDisplaySubscriptionCheckout()
+                    }, n.prototype.componentDidUpdate = function(e) {
+                        !this.isUserDataReady(e) && this.isUserDataReady(this.props) && this.checkAndDisplaySubscriptionCheckout()
+                    }, n.prototype.render = function() {
+                        if (!(this.props.data && this.props.data.user && this.props.data.user.id && this.props.data.user.subscriptionProducts && this.props.data.requestInfo)) return null;
+                        var e = this.props.data.user,
+                            n = e.self,
+                            t = e.subscriptionProducts.filter(function(e) {
+                                return e
+                            });
+                        if (0 === t.length) return null;
+                        if (this.props.hideEsportsSubscription && Object(y.a)(this.props.data.user.id || "", this.props.sessionUser)) return null;
+                        var i = Object(S.a)(this.props.data.requestInfo.countryCode),
+                            a = !(!n || !n.subscriptionBenefit),
+                            o = Object(y.a)(this.props.data.user.id || "", this.props.sessionUser),
+                            s = 1 === t.length;
+                        t.some(function(e) {
+                            return !e.emoteSetID
+                        }) && (s = !0);
+                        var l = null;
+                        n && n.subscriptionBenefit && (l = n.subscriptionBenefit.purchasedWithPrime ? h.a.Prime : n.subscriptionBenefit.tier, this.modalLevel = "");
+                        var d = this.props.data.user.displayName || this.props.channelLogin,
+                            u = t[0];
+                        return r.createElement(v.Fb, {
+                            className: Object(N.b)(f.a.Light)
+                        }, r.createElement(v.Fb, {
+                            overflow: v.db.Hidden,
+                            fullWidth: !0,
+                            className: "subscribe-modal__banner"
+                        }, this.props.data.user.bannerImageURL && r.createElement(v.S, {
+                            src: this.props.data.user.bannerImageURL,
+                            alt: Object(g.d)("{channelName}'s banner image", {
+                                channelName: d
+                            }, "SubscribeModal")
+                        })), this.props.data.user.profileImageURL && r.createElement(v.Fb, {
+                            className: "subscribe-modal__avatar",
+                            background: v.r.Alt,
+                            position: v.kb.Absolute,
+                            borderRadius: v.x.Small,
+                            overflow: v.db.Hidden
+                        }, r.createElement(v.q, {
+                            size: 80,
+                            src: this.props.data.user.profileImageURL,
+                            alt: Object(g.d)("{channelName}'s profile image", {
+                                channelName: d
+                            }, "SubscribeModal")
+                        })), r.createElement(v.Ya, {
+                            padding: {
+                                x: 2
+                            },
+                            margin: {
+                                top: 3
+                            }
+                        }, r.createElement(v.W, {
+                            fontSize: v.Ca.Size3
+                        }, Object(g.d)("Subscribe to {channelName}", {
+                            channelName: d
+                        }, "SubscribeModal"))), r.createElement(F, {
+                            authToken: this.props.authToken,
+                            channelLogin: this.props.channelLogin,
+                            inPrimeRegion: i,
+                            isEsportChannel: o,
+                            isNonStandardSub: s,
+                            isStaff: !(!this.props.sessionUser || !this.props.sessionUser.roles) && this.props.sessionUser.roles.isStaff,
+                            isSubscribed: a,
+                            userHasPrime: !1,
+                            productId: u ? u.id : "",
+                            subbedTier: l || h.a.Prime,
+                            handleSubMenuAction: this.handleSubMenuAction
+                        }))
+                    }, n.prototype.isUserDataReady = function(e) {
+                        return e.data && e.data.user && !e.data.loading && !e.data.error
+                    }, n.prototype.checkAndDisplaySubscriptionCheckout = function() {
+                        var e = g.n.get(d.c, "");
+                        if (e) {
+                            var n = this.props.data.user;
+                            if (n && n.subscriptionProducts)
+                                if (this.props.showSubscriptionCheckoutModal && this.props.showLoginModal) n.subscriptionProducts.filter(function(e) {
+                                    return e
+                                }).map(function(e) {
+                                    return e.name
+                                }).includes(e) ? this.props.sessionUser ? this.props.showSubscriptionCheckoutModal({
+                                    isAnonymous: g.n.get(d.a, !1),
+                                    mysteryGiftCount: Number(g.n.get(d.b, "")),
+                                    productName: e,
+                                    recipientLogin: g.n.get(d.d, ""),
+                                    trackingContext: {
+                                        source: _.c.ChannelSubscribeButton
+                                    }
+                                }) : (g.n.set("subscription-target-login", this.props.channelLogin), this.props.showLoginModal()) : Object(d.e)()
+                        }
+                    }, n
+                }(r.Component),
+                I = Object(k.a)(w, {
+                    options: function(e) {
+                        return {
+                            variables: {
+                                login: e.channelLogin
+                            }
+                        }
+                    }
+                })(E);
+            var L = function(e) {
+                function n() {
+                    var n = null !== e && e.apply(this, arguments) || this;
+                    return n.handleClose = function() {
+                        n.props.closeModal()
+                    }, n
+                }
+                return a.__extends(n, e), n.prototype.componentWillUnmount = function() {
+                    this.props.onClose && this.props.onClose()
+                }, n.prototype.render = function() {
+                    return r.createElement(v.Fb, {
+                        className: "subscribe-modal",
+                        background: v.r.Base
+                    }, r.createElement(I, {
+                        authToken: this.props.authToken,
+                        sessionUser: this.props.sessionUser,
+                        onClose: this.handleClose,
+                        channelLogin: this.props.channelLogin,
+                        showLoginModal: this.props.showLoginModal,
+                        showSubscriptionCheckoutModal: this.props.showSubscriptionCheckoutModal
+                    }), r.createElement(b.a, {
+                        closeOnBackdropClick: !0,
+                        closeOnPageNavigation: !0
+                    }))
+                }, n
+            }(r.Component);
+            var T = Object(o.connect)(function(e) {
+                    return {
+                        authToken: Object(m.a)(e),
+                        sessionUser: Object(m.e)(e)
+                    }
+                }, function(e) {
+                    return Object(s.bindActionCreators)({
+                        closeModal: c.c,
+                        showLoginModal: Object(d.f)(u.a.ChannelSubscriptionButton),
+                        showSubscriptionCheckoutModal: function(e) {
+                            var n = a.__rest(e, []);
+                            return Object(c.d)(l.a, {
+                                component: "CheckoutModal",
+                                loader: function() {
+                                    return Promise.all([t.e(0), t.e(209)]).then(t.bind(null, "KJv/"))
+                                },
+                                componentProps: n
+                            })
+                        }
+                    }, e)
+                })(L),
+                B = t("oJmH"),
+                M = t("2+sX"),
+                D = t("u5aL"),
+                O = t("eJ65"),
+                P = t("x7UT"),
+                U = t("/aPz"),
+                A = t("D7An"),
+                x = t("4rCz");
+            t("a7aT");
+            var j, R = t("z+dA");
+            ! function(e) {
+                e.SubButton = "subscribe-button__dropdown", e.BalloonLayerButton = "subscribe-button__balloon-layer-btn", e.DefaultButton = "subscribe-button__default-btn", e.SubscribeBalloon = "subscribe-button__subscribe-balloon"
+            }(j || (j = {}));
+            var V = l.a.wrap(function() {
+                    return Promise.all([t.e(0), t.e(198)]).then(t.bind(null, "f+qK"))
+                }, "SubscribeBalloon"),
+                G = function(e) {
                     function n() {
                         var n = null !== e && e.apply(this, arguments) || this;
                         return n.state = {
                             inPrimeRegion: !1
                         }, n.modalLevel = "top_page", n.renderBalloonContentForBalloonLayer = function() {
-                            return a.createElement(b.a, {
+                            return r.createElement(D.a, {
                                 onClickOut: n.handleBalloonClickOut
-                            }, a.createElement(T.Ya, {
+                            }, r.createElement(v.Ya, {
                                 "data-a-target": "sub-balloon",
                                 refDelegate: n.setBalloonContentRefDelegate
                             }, n.balloonWrapperContent))
                         }, n.handleButtonClick = function() {
-                            n.balloonContentRef || (n.props.balloonLayer.show({
+                            n.balloonContentRef || (n.props.useModal && n.props.channelLogin ? (n.props.showSubscriptionModal({
+                                channelLogin: n.props.channelLogin,
+                                onClose: n.handleModalClose
+                            }), n.handleSubMenuAction({
+                                action: C.a.OpenSubMenu
+                            })) : (n.props.balloonLayer.show({
                                 direction: n.getBalloonDirection(),
                                 ref: n.containerRef,
                                 content: n.renderBalloonContentForBalloonLayer(),
                                 contentHeight: 0,
                                 closeOnScroll: !0
-                            }), n.handleMenuToggle(!1))
+                            }), n.handleMenuToggle(!1)))
                         }, n.handleBalloonClickOut = function() {
                             n.handleMenuToggle(!0), n.props.balloonLayer.hide({
                                 force: !0
                             })
+                        }, n.handleModalClose = function() {
+                            n.handleSubMenuAction({
+                                action: C.a.CloseSubMenu
+                            })
                         }, n.setBalloonWrapperContent = function(e) {
                             n.balloonWrapperContent = e
                         }, n.handleSubMenuAction = function(e) {
-                            new Set([I.a.ClickCheckout, I.a.BuyGiftSub, I.a.BuyMysteryGift, I.a.BuyCustomMysteryGift, I.a.BuyGiftToPaidUpgrade, I.a.BuyPaidUpgrade]).has(e.action) && n.checkAndDisplaySubscriptionCheckout();
+                            new Set([C.a.ClickCheckout, C.a.BuyGiftSub, C.a.BuyMysteryGift, C.a.BuyCustomMysteryGift, C.a.BuyGiftToPaidUpgrade, C.a.BuyPaidUpgrade]).has(e.action) && n.checkAndDisplaySubscriptionCheckout();
                             var t = n.props.data,
                                 i = t.user,
                                 a = !!(i && i.self && i.self.subscriptionBenefit),
-                                r = t.requestInfo && Object(_.a)(t.requestInfo.countryCode);
-                            Object(I.b)({
+                                r = t.requestInfo && Object(S.a)(t.requestInfo.countryCode);
+                            Object(C.b)({
                                 action: e.action || "",
                                 channelLogin: n.props.channelLogin || "",
                                 channelID: i && i.id || "",
@@ -593,35 +790,35 @@
                                 hostChannelID: n.props.hostChannelID,
                                 hostChannelLogin: n.props.hostChannelLogin,
                                 isAnonymous: e.isAnonymous,
-                                isMenuOpen: e.action !== I.a.OpenSubMenu,
+                                isMenuOpen: e.action !== C.a.OpenSubMenu,
                                 mysteryGiftCount: e.mysteryGiftCount,
                                 sub_location: "channel_page",
                                 modal: !a,
                                 modalLevel: a ? "" : n.modalLevel.slice(),
                                 showPrimeContent: r,
                                 giftRecipient: e.giftRecipient || null
-                            }), !e.modalLevel || e.action !== I.a.ClickMoreSubOptions && e.action !== I.a.ClickBack || (n.modalLevel = e.modalLevel)
+                            }), !e.modalLevel || e.action !== C.a.ClickMoreSubOptions && e.action !== C.a.ClickBack || (n.modalLevel = e.modalLevel)
                         }, n.handleMenuToggle = function(e) {
                             n.handleSubMenuAction({
-                                action: e ? I.a.CloseSubMenu : I.a.OpenSubMenu
+                                action: e ? C.a.CloseSubMenu : C.a.OpenSubMenu
                             })
                         }, n.getBalloonDirection = function() {
-                            var e = n.props.balloonDirection || T.v.BottomRight;
-                            return n.props.hostChannelID && (e = T.v.TopLeft), e
+                            var e = n.props.balloonDirection || v.v.BottomRight;
+                            return n.props.hostChannelID && (e = v.v.TopLeft), e
                         }, n.setContainerRefDelegate = function(e) {
                             n.containerRef = e
                         }, n.setBalloonContentRefDelegate = function(e) {
                             n.balloonContentRef = e
                         }, n
                     }
-                    return i.__extends(n, e), n.prototype.componentDidMount = function() {
+                    return a.__extends(n, e), n.prototype.componentDidMount = function() {
                         this.props.reportInteractive && this.isUserDataReady(this.props) && this.props.reportInteractive(), this.checkAndDisplaySubscriptionCheckout()
                     }, n.prototype.componentDidUpdate = function(e) {
                         this.props.channelLogin && !this.isUserDataReady(this.props) || !this.props.updateContainerWidth || this.props.updateContainerWidth(), this.props.reportInteractive && this.props.data && !this.props.data.loading && this.props.reportInteractive(), !this.isUserDataReady(e) && this.isUserDataReady(this.props) && this.checkAndDisplaySubscriptionCheckout()
                     }, n.prototype.componentWillReceiveProps = function(e) {
                         this.isUserDataReady(e) && e.pubsub.messages.subscriptionInfo !== this.props.pubsub.messages.subscriptionInfo && this.props.data.refetch()
                     }, n.prototype.componentWillUnmount = function() {
-                        Object(l.e)()
+                        Object(d.e)()
                     }, n.prototype.render = function() {
                         var e = this.props.data;
                         if (!e || e.loading || e.error) return null;
@@ -630,40 +827,40 @@
                         var t = n.self,
                             i = n.subscriptionProducts;
                         if (!i) return null;
-                        var r = i.filter(function(e) {
+                        var a = i.filter(function(e) {
                             return e
                         });
-                        if (0 === r.length) return null;
-                        if (this.props.hideEsportsSubscription && Object(S.a)(n.id || "", this.props.sessionUser)) return null;
-                        var o = e.requestInfo && Object(_.a)(e.requestInfo.countryCode),
+                        if (0 === a.length) return null;
+                        if (this.props.hideEsportsSubscription && Object(y.a)(n.id || "", this.props.sessionUser)) return null;
+                        var o = e.requestInfo && Object(S.a)(e.requestInfo.countryCode),
                             s = !(!t || !t.subscriptionBenefit),
-                            l = Object(S.a)(n.id || "", this.props.sessionUser),
-                            d = 1 === r.length;
-                        r.some(function(e) {
+                            l = Object(y.a)(n.id || "", this.props.sessionUser),
+                            d = 1 === a.length;
+                        a.some(function(e) {
                             return !e.emoteSetID
                         }) && (d = !0);
                         var u = null;
-                        t && t.subscriptionBenefit && (u = t.subscriptionBenefit.purchasedWithPrime ? y.a.Prime : t.subscriptionBenefit.tier, this.modalLevel = "");
+                        t && t.subscriptionBenefit && (u = t.subscriptionBenefit.purchasedWithPrime ? h.a.Prime : t.subscriptionBenefit.tier, this.modalLevel = "");
                         var c = function(e) {
                             if (e.isSubscribed) {
-                                if (e.hasInsiderPass) return Object(F.d)("All-Access Pass", "SubscribeButton");
-                                if (e.isNonStandardSub) return Object(F.d)("Subscribed", "SubscribeButton");
-                                if (e.hostedDisplayName) return Object(F.d)("Subscribed to {username}", {
+                                if (e.hasInsiderPass) return Object(x.d)("All-Access Pass", "SubscribeButton");
+                                if (e.isNonStandardSub) return Object(x.d)("Subscribed", "SubscribeButton");
+                                if (e.hostedDisplayName) return Object(x.d)("Subscribed to {username}", {
                                     username: e.hostedDisplayName
                                 }, "SubscribeButton");
-                                if ("control" !== F.q.experiments.getAssignment(w.b.SubsReanimator) && e.benefitIsDNRd && e.benefitEndsAt) {
+                                if ("control" !== x.q.experiments.getAssignment(A.b.SubsReanimator) && e.benefitIsDNRd && e.benefitEndsAt) {
                                     var n = new Date(e.benefitEndsAt),
                                         t = Math.round((n.getTime() - Date.now()) / 864e5);
-                                    if (t <= 15 && t > 7) return Object(F.d)("Continue Sub", "SubscribeButton");
-                                    if (t <= 7) return Object(F.d)("Continue Sub - {daysRemaining} Days Remaining", {
+                                    if (t <= 15 && t > 7) return Object(x.d)("Continue Sub", "SubscribeButton");
+                                    if (t <= 7) return Object(x.d)("Continue Sub - {daysRemaining} Days Remaining", {
                                         daysRemaining: t
                                     }, "SubscribeButton")
                                 }
-                                return Object(F.d)("Gift A Sub", "SubscribeButton")
+                                return Object(x.d)("Gift A Sub", "SubscribeButton")
                             }
-                            return e.hasInsiderPass ? Object(F.d)("Get the All-Access Pass", "SubscribeButton") : e.hostedDisplayName ? Object(F.d)("Subscribe to {username}", {
+                            return e.hasInsiderPass ? Object(x.d)("Get the All-Access Pass", "SubscribeButton") : e.hostedDisplayName ? Object(x.d)("Subscribe to {username}", {
                                 username: e.hostedDisplayName
-                            }, "SubscribeButton") : Object(F.d)("Subscribe", "SubscribeButton")
+                            }, "SubscribeButton") : Object(x.d)("Subscribe", "SubscribeButton")
                         }({
                             isSubscribed: s,
                             isNonStandardSub: d,
@@ -672,26 +869,27 @@
                             benefitEndsAt: t && t.subscriptionBenefit && t.subscriptionBenefit.endsAt,
                             hostedDisplayName: this.props.hostChannelID ? n.displayName || "" : void 0
                         });
-                        if (s && d && !l) return a.createElement(T.z, {
+                        if (s && d && !l) return r.createElement(v.z, {
                             disabled: !0,
                             ariaLabel: c,
-                            icon: T.ub.Star
+                            icon: v.ub.Star
                         }, c);
-                        var m = a.createElement(T.z, {
-                                ariaLabel: c,
-                                "data-a-target": s ? "subscribed-button" : "subscribe-button",
-                                "data-test-selector": E.SubButton,
-                                dropdown: !this.props.hideDropdownArrow,
-                                fullWidth: !0,
-                                icon: this.getButtonIcon(s, u),
-                                onClick: this.props.renderBalloonInBalloonLayer ? this.handleButtonClick : void 0,
-                                type: this.getButtonType(s)
-                            }, c),
-                            p = r[0];
-                        return this.setBalloonWrapperContent(a.createElement(B, {
+                        var m = r.createElement(v.z, {
+                            ariaLabel: c,
+                            "data-a-target": s ? "subscribed-button" : "subscribe-button",
+                            "data-test-selector": j.SubButton,
+                            dropdown: !this.props.hideDropdownArrow,
+                            fullWidth: !0,
+                            icon: this.getButtonIcon(s, u),
+                            onClick: this.props.renderBalloonInBalloonLayer || this.props.useModal ? this.handleButtonClick : void 0,
+                            type: this.getButtonType(s)
+                        }, c);
+                        if (this.props.useModal) return m;
+                        var p = a[0];
+                        return this.setBalloonWrapperContent(r.createElement(V, {
                             authToken: this.props.authToken,
                             channelLogin: this.props.channelLogin || "",
-                            "data-test-selector": E.SubscribeBalloon,
+                            "data-test-selector": j.SubscribeBalloon,
                             handleSubMenuAction: this.handleSubMenuAction,
                             inPrimeRegion: o,
                             isEsportChannel: l,
@@ -699,29 +897,29 @@
                             isStaff: !(!this.props.sessionUser || !this.props.sessionUser.roles) && this.props.sessionUser.roles.isStaff,
                             isSubscribed: s,
                             productId: p ? p.id : "",
-                            subbedTier: u || y.a.Prime,
+                            subbedTier: u || h.a.Prime,
                             userHasPrime: !1
-                        })), this.props.renderBalloonInBalloonLayer ? a.createElement(T.Ya, {
-                            "data-test-selector": E.BalloonLayerButton,
+                        })), this.props.renderBalloonInBalloonLayer ? r.createElement(v.Ya, {
+                            "data-test-selector": j.BalloonLayerButton,
                             refDelegate: this.setContainerRefDelegate
-                        }, m) : a.createElement(T.Ya, null, a.createElement(k.a, {
-                            "data-test-selector": E.DefaultButton,
+                        }, m) : r.createElement(v.Ya, null, r.createElement(O.a, {
+                            "data-test-selector": j.DefaultButton,
                             onToggle: this.handleMenuToggle
-                        }, m, a.createElement(T.u, {
+                        }, m, r.createElement(v.u, {
                             "data-a-target": "sub-balloon",
                             direction: this.getBalloonDirection(),
-                            size: T.w.Large
+                            size: v.w.Large
                         }, this.balloonWrapperContent)))
                     }, n.prototype.getButtonType = function(e) {
-                        T.F.Default;
-                        return e && void 0 !== this.props.subscribedButtonType ? this.props.subscribedButtonType : e ? T.F.Success : this.props.unsubscribedButtonType || T.F.Default
+                        v.F.Default;
+                        return e && void 0 !== this.props.subscribedButtonType ? this.props.subscribedButtonType : e ? v.F.Success : this.props.unsubscribedButtonType || v.F.Default
                     }, n.prototype.getButtonIcon = function(e, n) {
                         var t = void 0;
-                        return e ? t = n === y.a.Prime ? T.ub.Crown : T.ub.Star : this.props.forceIcon && (t = T.ub.StarHollow), t
+                        return e ? t = n === h.a.Prime ? v.ub.Crown : v.ub.Star : this.props.forceIcon && (t = v.ub.StarHollow), t
                     }, n.prototype.isUserDataReady = function(e) {
                         return e.data && e.data.user && !e.data.loading && !e.data.error
                     }, n.prototype.checkAndDisplaySubscriptionCheckout = function() {
-                        var e = v.n.get(l.c, "");
+                        var e = g.n.get(d.c, "");
                         if (e) {
                             var n = this.props.data.user;
                             if (n && n.subscriptionProducts) n.subscriptionProducts.filter(function(e) {
@@ -729,18 +927,18 @@
                             }).map(function(e) {
                                 return e.name
                             }).includes(e) ? this.props.sessionUser ? this.props.showSubscriptionCheckoutModal({
-                                isAnonymous: v.n.get(l.a, !1),
-                                mysteryGiftCount: Number(v.n.get(l.b, "")),
+                                isAnonymous: g.n.get(d.a, !1),
+                                mysteryGiftCount: Number(g.n.get(d.b, "")),
                                 productName: e,
-                                recipientLogin: v.n.get(l.d, ""),
+                                recipientLogin: g.n.get(d.d, ""),
                                 trackingContext: {
-                                    source: C.c.ChannelSubscribeButton
+                                    source: _.c.ChannelSubscribeButton
                                 }
-                            }) : this.props.showLoginModal() : Object(l.e)()
+                            }) : this.props.showLoginModal() : Object(d.e)()
                         }
                     }, n
-                }(a.Component),
-                M = Object(p.compose)(Object(h.a)(L, {
+                }(r.Component),
+                q = Object(B.compose)(Object(k.a)(R, {
                     options: function(e) {
                         return {
                             variables: {
@@ -751,9 +949,9 @@
                     skip: function(e) {
                         return !e.channelLogin
                     }
-                }), Object(f.a)([{
+                }), Object(P.a)([{
                     topic: function(e) {
-                        return Object(N.I)(e.data.currentUser && e.data.currentUser.id || "")
+                        return Object(U.I)(e.data.currentUser && e.data.currentUser.id || "")
                     },
                     mapMessageTypesToProps: {
                         "*": "subscriptionInfo"
@@ -761,16 +959,16 @@
                     skip: function(e) {
                         return !(e.data && !e.data.loading && !e.data.error && e.data.currentUser)
                     }
-                }]), Object(g.e)())(D),
-                O = function(e) {
+                }]), Object(M.e)())(G),
+                W = function(e) {
                     function n() {
                         var n = null !== e && e.apply(this, arguments) || this;
                         return n.reportInteractive = function() {
                             n.props.latencyTracking.reportInteractive()
                         }, n
                     }
-                    return i.__extends(n, e), n.prototype.render = function() {
-                        return a.createElement(M, {
+                    return a.__extends(n, e), n.prototype.render = function() {
+                        return r.createElement(q, {
                             authToken: this.props.authToken,
                             balloonDirection: this.props.balloonDirection,
                             channelLogin: this.props.channelLogin,
@@ -784,23 +982,29 @@
                             sessionUser: this.props.sessionUser,
                             showLoginModal: this.props.showLoginModal,
                             showSubscriptionCheckoutModal: this.props.showSubscriptionCheckoutModal,
+                            showSubscriptionModal: this.props.showSubscriptionModal,
                             subscribedButtonType: this.props.subscribedButtonType,
                             unsubscribedButtonType: this.props.unsubscribedButtonType,
-                            updateContainerWidth: this.props.updateContainerWidth
+                            updateContainerWidth: this.props.updateContainerWidth,
+                            useModal: this.props.useModal
                         })
-                    }, n = i.__decorate([Object(m.b)("SubscribeButton")], n)
-                }(a.Component);
-            var x = Object(r.connect)(function(e) {
+                    }, n = a.__decorate([Object(p.b)("SubscribeButton")], n)
+                }(r.Component);
+            var z = Object(o.connect)(function(e) {
                 return {
-                    authToken: Object(c.a)(e),
-                    sessionUser: Object(c.e)(e)
+                    authToken: Object(m.a)(e),
+                    sessionUser: Object(m.e)(e)
                 }
             }, function(e) {
-                return Object(o.bindActionCreators)({
-                    showLoginModal: Object(l.f)(d.a.ChannelSubscriptionButton),
+                return Object(s.bindActionCreators)({
+                    showLoginModal: Object(d.f)(u.a.ChannelSubscriptionButton),
+                    showSubscriptionModal: function(e) {
+                        var n = a.__rest(e, []);
+                        return Object(c.d)(T, n)
+                    },
                     showSubscriptionCheckoutModal: function(e) {
-                        var n = i.__rest(e, []);
-                        return Object(u.d)(s.a, {
+                        var n = a.__rest(e, []);
+                        return Object(c.d)(l.a, {
                             component: "CheckoutModal",
                             loader: function() {
                                 return Promise.all([t.e(0), t.e(209)]).then(t.bind(null, "KJv/"))
@@ -809,17 +1013,17 @@
                         })
                     }
                 }, e)
-            })(O);
+            })(W);
             t.d(n, !1, function() {
-                return O
+                return W
             }), t.d(n, "a", function() {
-                return x
+                return z
             }), t.d(n, !1, function() {
-                return E
+                return j
             }), t.d(n, !1, function() {
-                return D
+                return G
             }), t.d(n, !1, function() {
-                return M
+                return q
             })
         },
         RuiO: function(e, n) {
@@ -1647,7 +1851,7 @@
                             allowScrolling: !1
                         });
                     return i.createElement(s.a, null, i.createElement(u.z, {
-                        type: u.F.Hollow,
+                        type: u.F.Text,
                         "data-a-target": "share-button",
                         icon: u.ub.Share
                     }, Object(a.d)("Share", "ChannelShareButton")), i.createElement(u.u, {
@@ -1733,7 +1937,7 @@
 
             function d(e) {
                 return i.__awaiter(this, void 0, void 0, function() {
-                    var n, t, l, d, u, c, m, p, v, g, b, k, h;
+                    var n, t, l, d, u, c, m, p, b, v, g, k, h;
                     return i.__generator(this, function(i) {
                         switch (i.label) {
                             case 0:
@@ -1757,7 +1961,7 @@
                                     channelID: e.channelID
                                 }), m = null, d && t && ((p = d && d.data && d.data.video) ? m = Object(o.a)(p.broadcastType) : a.k.error(new Error("GraphQL empty response"), "Query for video info in SubEvent reporting returned no data.", {
                                     currentVideoID: n
-                                })), v = c && c.self, g = v ? !!v.subscriptionBenefit : null, b = v && v.subscriptionBenefit && v.subscriptionBenefit.purchasedWithPrime || !1, k = v ? v.canPrimeSubscribe : null, h = {
+                                })), b = c && c.self, v = b ? !!b.subscriptionBenefit : null, g = b && b.subscriptionBenefit && b.subscriptionBenefit.purchasedWithPrime || !1, k = b ? b.canPrimeSubscribe : null, h = {
                                     action: e.action,
                                     can_subscribe: k,
                                     channel: e.channelLogin,
@@ -1768,15 +1972,15 @@
                                     host_channel_id: e.hostChannelID,
                                     is_anonymous: e.isAnonymous,
                                     is_menu_open: e.isMenuOpen,
-                                    is_subscribed: g,
-                                    is_subscribed_current_tier: v && v.subscriptionBenefit && v.subscriptionBenefit.tier,
+                                    is_subscribed: v,
+                                    is_subscribed_current_tier: b && b.subscriptionBenefit && b.subscriptionBenefit.tier,
                                     mystery_gift_count: e.mysteryGiftCount || null,
                                     sub_location: e.sub_location,
                                     sub_recipient: e.giftRecipient,
                                     modal: e.modal,
                                     modal_level: e.modalLevel || "",
                                     show_prime_content: e.showPrimeContent,
-                                    show_resub: c ? k && b : null,
+                                    show_resub: c ? k && g : null,
                                     vod_id: n,
                                     vod_type: m,
                                     viewport_height: window.innerHeight,
@@ -1819,6 +2023,348 @@
                 return o
             })
         },
+        eaNi: function(e, n) {
+            var t = {
+                kind: "Document",
+                definitions: [{
+                    kind: "OperationDefinition",
+                    operation: "query",
+                    name: {
+                        kind: "Name",
+                        value: "MultiStream_SubscribeModal_User"
+                    },
+                    variableDefinitions: [{
+                        kind: "VariableDefinition",
+                        variable: {
+                            kind: "Variable",
+                            name: {
+                                kind: "Name",
+                                value: "login"
+                            }
+                        },
+                        type: {
+                            kind: "NonNullType",
+                            type: {
+                                kind: "NamedType",
+                                name: {
+                                    kind: "Name",
+                                    value: "String"
+                                }
+                            }
+                        }
+                    }],
+                    directives: [],
+                    selectionSet: {
+                        kind: "SelectionSet",
+                        selections: [{
+                            kind: "Field",
+                            name: {
+                                kind: "Name",
+                                value: "user"
+                            },
+                            arguments: [{
+                                kind: "Argument",
+                                name: {
+                                    kind: "Name",
+                                    value: "login"
+                                },
+                                value: {
+                                    kind: "Variable",
+                                    name: {
+                                        kind: "Name",
+                                        value: "login"
+                                    }
+                                }
+                            }],
+                            directives: [],
+                            selectionSet: {
+                                kind: "SelectionSet",
+                                selections: [{
+                                    kind: "Field",
+                                    name: {
+                                        kind: "Name",
+                                        value: "id"
+                                    },
+                                    arguments: [],
+                                    directives: []
+                                }, {
+                                    kind: "Field",
+                                    name: {
+                                        kind: "Name",
+                                        value: "displayName"
+                                    },
+                                    arguments: [],
+                                    directives: []
+                                }, {
+                                    kind: "Field",
+                                    name: {
+                                        kind: "Name",
+                                        value: "bannerImageURL"
+                                    },
+                                    arguments: [],
+                                    directives: []
+                                }, {
+                                    kind: "Field",
+                                    name: {
+                                        kind: "Name",
+                                        value: "profileImageURL"
+                                    },
+                                    arguments: [{
+                                        kind: "Argument",
+                                        name: {
+                                            kind: "Name",
+                                            value: "width"
+                                        },
+                                        value: {
+                                            kind: "IntValue",
+                                            value: "300"
+                                        }
+                                    }],
+                                    directives: []
+                                }, {
+                                    kind: "Field",
+                                    name: {
+                                        kind: "Name",
+                                        value: "subscriptionProducts"
+                                    },
+                                    arguments: [],
+                                    directives: [],
+                                    selectionSet: {
+                                        kind: "SelectionSet",
+                                        selections: [{
+                                            kind: "Field",
+                                            name: {
+                                                kind: "Name",
+                                                value: "id"
+                                            },
+                                            arguments: [],
+                                            directives: []
+                                        }, {
+                                            kind: "Field",
+                                            name: {
+                                                kind: "Name",
+                                                value: "emoteSetID"
+                                            },
+                                            arguments: [],
+                                            directives: []
+                                        }, {
+                                            kind: "Field",
+                                            name: {
+                                                kind: "Name",
+                                                value: "name"
+                                            },
+                                            arguments: [],
+                                            directives: []
+                                        }, {
+                                            kind: "Field",
+                                            name: {
+                                                kind: "Name",
+                                                value: "self"
+                                            },
+                                            arguments: [],
+                                            directives: [],
+                                            selectionSet: {
+                                                kind: "SelectionSet",
+                                                selections: [{
+                                                    kind: "Field",
+                                                    name: {
+                                                        kind: "Name",
+                                                        value: "paidUpgradePromotion"
+                                                    },
+                                                    arguments: [],
+                                                    directives: [],
+                                                    selectionSet: {
+                                                        kind: "SelectionSet",
+                                                        selections: [{
+                                                            kind: "Field",
+                                                            name: {
+                                                                kind: "Name",
+                                                                value: "newPrice"
+                                                            },
+                                                            arguments: [],
+                                                            directives: []
+                                                        }]
+                                                    }
+                                                }]
+                                            }
+                                        }]
+                                    }
+                                }, {
+                                    kind: "Field",
+                                    name: {
+                                        kind: "Name",
+                                        value: "self"
+                                    },
+                                    arguments: [],
+                                    directives: [],
+                                    selectionSet: {
+                                        kind: "SelectionSet",
+                                        selections: [{
+                                            kind: "Field",
+                                            name: {
+                                                kind: "Name",
+                                                value: "canPrimeSubscribe"
+                                            },
+                                            arguments: [],
+                                            directives: []
+                                        }, {
+                                            kind: "Field",
+                                            name: {
+                                                kind: "Name",
+                                                value: "subscriptionBenefit"
+                                            },
+                                            arguments: [],
+                                            directives: [],
+                                            selectionSet: {
+                                                kind: "SelectionSet",
+                                                selections: [{
+                                                    kind: "Field",
+                                                    name: {
+                                                        kind: "Name",
+                                                        value: "id"
+                                                    },
+                                                    arguments: [],
+                                                    directives: []
+                                                }, {
+                                                    kind: "Field",
+                                                    name: {
+                                                        kind: "Name",
+                                                        value: "purchasedWithPrime"
+                                                    },
+                                                    arguments: [],
+                                                    directives: []
+                                                }, {
+                                                    kind: "Field",
+                                                    name: {
+                                                        kind: "Name",
+                                                        value: "tier"
+                                                    },
+                                                    arguments: [],
+                                                    directives: []
+                                                }, {
+                                                    kind: "Field",
+                                                    name: {
+                                                        kind: "Name",
+                                                        value: "paidUpgrade"
+                                                    },
+                                                    arguments: [],
+                                                    directives: [],
+                                                    selectionSet: {
+                                                        kind: "SelectionSet",
+                                                        selections: [{
+                                                            kind: "Field",
+                                                            name: {
+                                                                kind: "Name",
+                                                                value: "startsAt"
+                                                            },
+                                                            arguments: [],
+                                                            directives: []
+                                                        }]
+                                                    }
+                                                }, {
+                                                    kind: "Field",
+                                                    name: {
+                                                        kind: "Name",
+                                                        value: "gift"
+                                                    },
+                                                    arguments: [],
+                                                    directives: [],
+                                                    selectionSet: {
+                                                        kind: "SelectionSet",
+                                                        selections: [{
+                                                            kind: "Field",
+                                                            name: {
+                                                                kind: "Name",
+                                                                value: "isGift"
+                                                            },
+                                                            arguments: [],
+                                                            directives: []
+                                                        }]
+                                                    }
+                                                }]
+                                            }
+                                        }]
+                                    }
+                                }]
+                            }
+                        }, {
+                            kind: "Field",
+                            name: {
+                                kind: "Name",
+                                value: "currentUser"
+                            },
+                            arguments: [],
+                            directives: [],
+                            selectionSet: {
+                                kind: "SelectionSet",
+                                selections: [{
+                                    kind: "Field",
+                                    name: {
+                                        kind: "Name",
+                                        value: "id"
+                                    },
+                                    arguments: [],
+                                    directives: []
+                                }, {
+                                    kind: "Field",
+                                    name: {
+                                        kind: "Name",
+                                        value: "roles"
+                                    },
+                                    arguments: [],
+                                    directives: [],
+                                    selectionSet: {
+                                        kind: "SelectionSet",
+                                        selections: [{
+                                            kind: "Field",
+                                            name: {
+                                                kind: "Name",
+                                                value: "isStaff"
+                                            },
+                                            arguments: [],
+                                            directives: []
+                                        }]
+                                    }
+                                }]
+                            }
+                        }, {
+                            kind: "Field",
+                            name: {
+                                kind: "Name",
+                                value: "requestInfo"
+                            },
+                            arguments: [],
+                            directives: [],
+                            selectionSet: {
+                                kind: "SelectionSet",
+                                selections: [{
+                                    kind: "Field",
+                                    name: {
+                                        kind: "Name",
+                                        value: "countryCode"
+                                    },
+                                    arguments: [],
+                                    directives: []
+                                }]
+                            }
+                        }]
+                    }
+                }],
+                loc: {
+                    start: 0,
+                    end: 410
+                }
+            };
+            t.loc.source = {
+                body: "query MultiStream_SubscribeModal_User($login: String!) {\nuser(login: $login) {\nid\ndisplayName\nbannerImageURL\nprofileImageURL(width:300)\nsubscriptionProducts {\nid\nemoteSetID\nname\nself {\npaidUpgradePromotion {\nnewPrice\n}\n}\n}\nself {\ncanPrimeSubscribe\nsubscriptionBenefit {\nid\npurchasedWithPrime\ntier\npaidUpgrade {\nstartsAt\n}\ngift {\nisGift\n}\n}\n}\n}\ncurrentUser {\nid\nroles {\nisStaff\n}\n}\nrequestInfo {\ncountryCode\n}\n}",
+                name: "GraphQL request",
+                locationOffset: {
+                    line: 1,
+                    column: 1
+                }
+            };
+            e.exports = t
+        },
         hy6r: function(e, n, t) {
             "use strict";
             t.r(n);
@@ -1833,9 +2379,9 @@
                 c = t("/7QA"),
                 m = t("ZDlU"),
                 p = t("LA8z"),
-                v = t("4VQm"),
-                g = t("yR8l"),
-                b = t("8/mp"),
+                b = t("4VQm"),
+                v = t("yR8l"),
+                g = t("8/mp"),
                 k = t("Ue10"),
                 h = function(e) {
                     var n = e.member,
@@ -1969,14 +2515,14 @@
             function y(e, n) {
                 return e.concat(n)
             }
-            var S, _ = function(e) {
+            var S, N = function(e) {
                     for (var n = e.length - 1; n >= 0; n--) {
                         var t = e[n] && e[n].cursor;
                         if (t) return t
                     }
                     return null
                 },
-                N = function(e, n) {
+                _ = function(e, n) {
                     return n || e || {
                         __typename: "PageInfo",
                         hasNextPage: !1
@@ -1984,14 +2530,14 @@
                 },
                 C = function(e) {
                     var n = new f(e),
-                        t = _(n.getLiveMemberEdges());
+                        t = N(n.getLiveMemberEdges());
                     if (n.hasNextLiveMembersPage() && t) return {
                         liveMembersCursor: t,
                         withLiveMembers: !0,
                         membersCursor: null,
                         withMembers: !1
                     };
-                    var i = _(n.getMemberEdges());
+                    var i = N(n.getMemberEdges());
                     return n.hasNextMembersPage() && i ? {
                         liveMembersCursor: null,
                         withLiveMembers: !1,
@@ -2064,13 +2610,13 @@
                                 flexDirection: k.Aa.Column,
                                 background: k.r.Base,
                                 elevation: 1
-                            }, i.createElement(v.b, {
+                            }, i.createElement(b.b, {
                                 scrollRef: this.saveScrollRef
                             }, i.createElement(k.Ya, null, n, i.createElement("div", {
                                 style: {
                                     height: "2em "
                                 }
-                            }), i.createElement(b.a, {
+                            }), i.createElement(g.a, {
                                 loadMore: this.props.loadMore,
                                 enabled: this.props.data.infiniteScrollEnabled,
                                 contentLength: this.props.data.numLoaded
@@ -2129,7 +2675,7 @@
                         }, Object(c.d)("Back to Top", "TeamLandingPage_MemberList")))) : null
                     }, n
                 }(i.Component),
-                T = Object(a.compose)(Object(l.b)("MemberList"), Object(g.a)(w, {
+                L = Object(a.compose)(Object(l.b)("MemberList"), Object(v.a)(w, {
                     options: function(e) {
                         return {
                             variables: {
@@ -2164,9 +2710,9 @@
                                             var t = new f(e),
                                                 i = new f(n),
                                                 a = y(t.getLiveMemberEdges(), i.getLiveMemberEdges()),
-                                                r = N(t.getLiveMemberPageInfo(), i.getLiveMemberPageInfo()),
+                                                r = _(t.getLiveMemberPageInfo(), i.getLiveMemberPageInfo()),
                                                 o = y(t.getMemberEdges(), i.getMemberEdges()),
-                                                s = N(t.getMemberPageInfo(), i.getMemberPageInfo());
+                                                s = _(t.getMemberPageInfo(), i.getMemberPageInfo());
                                             return {
                                                 team: {
                                                     __typename: "Team",
@@ -2194,7 +2740,7 @@
                         }
                     }
                 }))(I),
-                L = t("6x+I"),
+                T = t("6x+I"),
                 B = Object(a.compose)(Object(l.b)("TeamsDescription", {
                     autoReportInteractive: !0
                 }))(function(e) {
@@ -2210,22 +2756,22 @@
                         margin: {
                             top: 1
                         }
-                    }, i.createElement(k.fc, null, i.createElement(L, {
+                    }, i.createElement(k.fc, null, i.createElement(T, {
                         source: e.description
                     })))) : null
                 }),
-                D = t("eJ65"),
-                M = t("eDVu"),
+                M = t("eJ65"),
+                D = t("eDVu"),
                 O = t("0Log"),
-                x = t("/aPz"),
-                P = t("ZLqn"),
+                P = t("/aPz"),
+                U = t("ZLqn"),
                 A = t("eAAt"),
-                U = t("0EKw"),
+                x = t("0EKw"),
                 j = t("5goO"),
                 R = t("QjI3"),
                 V = t("eFQ3"),
                 G = t("6J1Z"),
-                W = function(e) {
+                q = function(e) {
                     function n() {
                         var n = null !== e && e.apply(this, arguments) || this;
                         return n.getGame = function() {
@@ -2235,7 +2781,7 @@
                             if (e && e.broadcastSettings && e.broadcastSettings.title) return e.broadcastSettings.title
                         }, n.renderGame = function() {
                             var e = n.getGame();
-                            return e && e.name ? i.createElement(U.a, {
+                            return e && e.name ? i.createElement(x.a, {
                                 name: e.name
                             }) : null
                         }, n.renderGameBoxArt = function() {
@@ -2346,7 +2892,7 @@
                         }))))), i.createElement(k.Ya, {
                             display: k.X.Flex,
                             alignItems: k.f.Center
-                        }, e.description && i.createElement(D.a, null, i.createElement(k.z, {
+                        }, e.description && i.createElement(M.a, null, i.createElement(k.z, {
                             type: k.F.Hollow
                         }, Object(c.d)("Info", "Team Player")), i.createElement(k.u, {
                             size: k.w.Medium,
@@ -2401,14 +2947,14 @@
                             margin: {
                                 x: 1
                             }
-                        }, this.props.data.user && i.createElement(P.a, {
+                        }, this.props.data.user && i.createElement(U.a, {
                             login: this.props.channelLogin,
                             displayName: this.props.data.user.displayName || "",
                             title: e || ""
                         }))))
                     }, n
                 }(i.Component),
-                z = Object(a.compose)(Object(l.b)("TeamsPlayer"), Object(g.a)(G, {
+                W = Object(a.compose)(Object(l.b)("TeamsPlayer"), Object(v.a)(G, {
                     options: function(e) {
                         return {
                             variables: {
@@ -2416,10 +2962,10 @@
                             }
                         }
                     }
-                }), Object(M.a)(function(e) {
+                }), Object(D.a)(function(e) {
                     return {
                         query: G,
-                        topic: e.data.user && e.data.user.id ? Object(x.e)(e.data.user.id) : "",
+                        topic: e.data.user && e.data.user.id ? Object(P.e)(e.data.user.id) : "",
                         skip: !(!e.data.loading && !e.data.error && e.data.user),
                         variables: {
                             login: e.channelLogin
@@ -2429,8 +2975,8 @@
                             return n.user && n.user.broadcastSettings && n.user.broadcastSettings.id && (n.user.broadcastSettings.title = e.status || e.old_status), n
                         }
                     }
-                }))(W),
-                q = t("ST9J");
+                }))(q),
+                z = t("ST9J");
             t("GTf2");
             ! function(e) {
                 e.LogoImage = "teamspagebody-logo", e.BannerImage = "teamspagebody-banner", e.BackgroundImage = "teamspagebody-background"
@@ -2459,7 +3005,7 @@
                             className: "teams-page-body__outer-container teams-page-body__team-asset",
                             style: this.getBackgroundStyle(),
                             "data-test-selector": S.BackgroundImage
-                        }, i.createElement(v.b, null, i.createElement(k.Ya, {
+                        }, i.createElement(b.b, null, i.createElement(k.Ya, {
                             display: k.X.Flex,
                             justifyContent: k.Xa.Center,
                             padding: {
@@ -2480,7 +3026,7 @@
                             margin: {
                                 right: 2
                             }
-                        }, this.renderLogo(), i.createElement(T, {
+                        }, this.renderLogo(), i.createElement(L, {
                             teamName: this.props.teamName,
                             onMemberItemClick: this.changeSelectedMember
                         })), i.createElement(k.Ya, {
@@ -2522,7 +3068,7 @@
                         })
                     }, n.prototype.renderPlayer = function() {
                         var e = this.getPlayerLogin();
-                        return e ? i.createElement(z, {
+                        return e ? i.createElement(W, {
                             channelLogin: e
                         }) : null
                     }, n.prototype.getPlayerLogin = function() {
@@ -2541,7 +3087,7 @@
                         }(e) : ""
                     }, n
                 }(i.Component),
-                X = Object(a.compose)(u.a, Object(l.b)("TeamsPageBody"), Object(g.a)(q, {
+                X = Object(a.compose)(u.a, Object(l.b)("TeamsPageBody"), Object(v.a)(z, {
                     options: function(e) {
                         return {
                             variables: {
@@ -3368,6 +3914,7 @@
             };
             e.exports = t
         },
+        y2dA: function(e, n, t) {},
         "z+dA": function(e, n) {
             var t = {
                 kind: "Document",

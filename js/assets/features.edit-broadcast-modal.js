@@ -477,13 +477,16 @@
                 I = a("AZIu"),
                 A = a("4HIT");
             a("97MP");
-            ! function(e) {
+
+            function D(e, t) {
+                return (e && e.localizations && e.localizations[t] || e && e.tag_name || "").toLowerCase()
+            }! function(e) {
                 e[e.TagAll = 0] = "TagAll", e[e.TagAllMinusAutomation = 1] = "TagAllMinusAutomation", e[e.TagCategory = 2] = "TagCategory", e[e.StreamTag = 3] = "StreamTag"
             }(k || (k = {})),
             function(e) {
                 e.SearchContent = "tag-search-search-content", e.SearchDropdown = "search-dropdown-selector"
             }(S || (S = {}));
-            var D = function(e) {
+            var L = function(e) {
                     function t(t) {
                         var a = e.call(this, t) || this;
                         return a.state = {
@@ -522,7 +525,7 @@
                         }, a.setTagSearchRef = function(e) {
                             a.tagSearch = e
                         }, a.onTagResultSelected = function(e, t) {
-                            if (a.toggleTagSearch(!1), a.clearSearchTerm(), a.props.type === k.TagCategory && t === E.b.All ? l.p.history.push(A.a.Popular) : a.props.type === k.TagAll && t === E.b.Category && l.p.history.push(A.a.Games), a.props.onTagClick && (a.props.onTagClick(e, t), a.props.section && a.props.numSelectedTags)) {
+                            if (a.toggleTagSearch(!1), a.clearSearchTerm(), a.props.type === k.TagCategory && t === E.b.All ? l.p.history.push(A.a.Popular) : a.props.type === k.TagAll && t === E.b.Category && l.p.history.push(A.a.Games), a.props.onTagClick && (a.props.onTagClick(e, t), a.props.section && void 0 !== a.props.numSelectedTags)) {
                                 var n = {
                                     section: a.props.section,
                                     tagPosition: a.props.numSelectedTags,
@@ -605,7 +608,7 @@
                         }))
                     }, t.prototype.search = function(e) {
                         return i.__awaiter(this, void 0, void 0, function() {
-                            var t, a, n;
+                            var t, a, n, r, s = this;
                             return i.__generator(this, function(i) {
                                 switch (i.label) {
                                     case 0:
@@ -614,7 +617,9 @@
                                             restrictSearchableAttributes: ["localizations." + this.languageCode, "tag_name"]
                                         }, a = g.a.Tags, this.props.type === k.TagAllMinusAutomation ? (t.facetFilters = '["automated:false", "tag_scope:' + E.b.All + '"]', this.props.showAllDashboardTags && (t.hitsPerPage = 300)) : this.props.type === k.TagAll ? this.props.selectedTags && this.props.selectedTags.length ? t.facetFilters = "tag_scope:" + E.b.All : t.facetFilters = '[["tag_scope:' + E.b.All + '", "tag_scope:' + E.b.Category + '"]]' : this.props.type === k.TagCategory ? "" === e || this.props.selectedTags && this.props.selectedTags.length ? t.facetFilters = "tag_scope:" + E.b.Category : t.facetFilters = '[["tag_scope:' + E.b.All + '", "tag_scope:' + E.b.Category + '"]]' : this.props.type === k.StreamTag && (a = g.a.StreamTags, t.facetFilters = "category_id:" + this.props.categoryID), [4, this.searchClient.queryForType(a, e, u.a(), t)];
                                     case 1:
-                                        return n = i.sent(), this.setState({
+                                        return (n = i.sent()) && n.tags && n.tags.hits && (r = n.tags.hits.sort(function(e, t) {
+                                            return D(e, s.languageCode).localeCompare(D(t, s.languageCode), l.p.intl.getLanguageCode() || "en")
+                                        }), n.tags.hits = r), this.setState({
                                             searchResults: n,
                                             searching: !1
                                         }), [2]
@@ -623,15 +628,15 @@
                         })
                     }, t
                 }(r.Component),
-                L = Object(o.compose)(s.a)(D);
+                R = Object(o.compose)(s.a)(L);
             a.d(t, "b", function() {
                 return k
             }), a.d(t, !1, function() {
                 return S
             }), a.d(t, !1, function() {
-                return D
-            }), a.d(t, "a", function() {
                 return L
+            }), a.d(t, "a", function() {
+                return R
             })
         },
         FsIG: function(e, t, a) {

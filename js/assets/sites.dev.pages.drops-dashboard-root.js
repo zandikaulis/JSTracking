@@ -3,12 +3,12 @@
         "/ZC1": function(e, t, n) {
             "use strict";
             n.d(t, "a", function() {
-                return i
+                return s
             });
             var a = n("mrSG"),
                 r = n("q1tI"),
-                s = n("Ue10"),
-                i = (n("sL9O"), function(e) {
+                i = n("Ue10"),
+                s = (n("sL9O"), function(e) {
                     function t() {
                         var t = null !== e && e.apply(this, arguments) || this;
                         return t.state = {
@@ -30,16 +30,16 @@
                         }, t
                     }
                     return a.__extends(t, e), t.prototype.render = function() {
-                        return r.createElement(s.Z, {
+                        return r.createElement(i.Z, {
                             dragOver: this.state.isDraggingOver,
                             error: this.props.error
-                        }, r.createElement(s.Qa, {
-                            position: s.kb.Absolute,
+                        }, r.createElement(i.Qa, {
+                            position: i.kb.Absolute,
                             attachTop: !0,
                             attachLeft: !0,
                             fullWidth: !0,
                             fullHeight: !0,
-                            zIndex: s.jc.Above
+                            zIndex: i.jc.Above
                         }, r.createElement("input", {
                             "data-a-target": "file-picker-input",
                             "data-test-selector": "file-picker-input",
@@ -60,7 +60,7 @@
         "/aPz": function(e, t, n) {
             "use strict";
             n.d(t, "e", function() {
-                return i
+                return s
             }), n.d(t, "h", function() {
                 return o
             }), n.d(t, "i", function() {
@@ -140,9 +140,9 @@
             });
             var a = n("/7QA"),
                 r = n("0Log"),
-                s = n("geRD");
+                i = n("geRD");
 
-            function i(e) {
+            function s(e) {
                 return r.PubsubTopic.BroadcastSettingsUpdate + "." + e
             }
 
@@ -294,7 +294,7 @@
                 return a.l.subscribe({
                     topic: e.topic,
                     onMessage: function(t) {
-                        t.type && !e.type && !e.types || t.type && e.type && t.type !== e.type || t.type && e.types && !e.types.includes(t.type) || Object(s.e)(e.query, e.variables, function(n) {
+                        t.type && !e.type && !e.types || t.type && e.type && t.type !== e.type || t.type && e.types && !e.types.includes(t.type) || Object(i.e)(e.query, e.variables, function(n) {
                             return e.mutator(t, n)
                         }, function(n) {
                             return !!e.skipMessage && e.skipMessage(t, n)
@@ -307,7 +307,7 @@
                 return a.l.subscribe({
                     topic: e.topic,
                     onMessage: function(t) {
-                        t.type && t.type !== e.type || Object(s.d)({
+                        t.type && t.type !== e.type || Object(i.d)({
                             fragment: e.fragment,
                             id: e.id,
                             mutator: function(n) {
@@ -352,21 +352,21 @@
             }), n.o(r, "TargetedModerationActions") && n.d(t, "TargetedModerationActions", function() {
                 return r.TargetedModerationActions
             });
-            var s = n("WQCf");
+            var i = n("WQCf");
             n.d(t, "FrienshipChangeType", function() {
-                return s.a
+                return i.a
             }), n.d(t, "ModerationActions", function() {
-                return s.b
+                return i.b
             }), n.d(t, "PubsubMessageType", function() {
-                return s.c
+                return i.c
             }), n.d(t, "PubsubTopic", function() {
-                return s.d
+                return i.d
             }), n.d(t, "PurchaseFulfillmentStatus", function() {
-                return s.e
+                return i.e
             }), n.d(t, "SquadStatus", function() {
-                return s.f
+                return i.f
             }), n.d(t, "TargetedModerationActions", function() {
-                return s.g
+                return i.g
             })
         },
         "0xbx": function(e, t, n) {
@@ -376,8 +376,8 @@
             });
             var a = n("mrSG"),
                 r = n("Svt6"),
-                s = n("+GjP"),
-                i = n("1mFg");
+                i = n("+GjP"),
+                s = n("1mFg");
 
             function o(e) {
                 return a.__awaiter(this, void 0, void 0, function() {
@@ -385,11 +385,11 @@
                     return a.__generator(this, function(a) {
                         switch (a.label) {
                             case 0:
-                                t = Object(s.e)(r.a + "/v5/rbac/drops/jwt", {
+                                t = Object(i.e)(r.a + "/v5/rbac/drops/jwt", {
                                     operation: e
                                 }), a.label = 1;
                             case 1:
-                                return a.trys.push([1, 6, , 7]), [4, Object(i.a)(t)];
+                                return a.trys.push([1, 6, , 7]), [4, Object(s.a)(t)];
                             case 2:
                                 return 200 !== (n = a.sent()).status ? [3, 4] : [4, n.json()];
                             case 3:
@@ -473,9 +473,83 @@
             e.exports = n
         },
         By5U: function(e, t) {},
+        CDtL: function(e, t, n) {
+            "use strict";
+            n.d(t, "a", function() {
+                return l
+            });
+            var a = n("mrSG"),
+                r = n("/7QA"),
+                i = n("PZVp"),
+                s = n("/aPz"),
+                o = n("2/NB"),
+                c = n("Lxz1"),
+                u = 1e4,
+                l = function() {
+                    return function(e, t) {
+                        var n = this;
+                        this.getUploadURL = e, this.onFinishUploading = t, this.uploadFile = function(e) {
+                            return new Promise(function(t, l) {
+                                return a.__awaiter(n, void 0, void 0, function() {
+                                    var n, p, E, d, m, _ = this;
+                                    return a.__generator(this, function(a) {
+                                        switch (a.label) {
+                                            case 0:
+                                                return a.trys.push([0, 3, , 4]), [4, this.getUploadURL(e)];
+                                            case 1:
+                                                return n = a.sent(), p = n.url, E = n.uploadID, [4, fetch(p, {
+                                                    body: e,
+                                                    method: "PUT"
+                                                })];
+                                            case 2:
+                                                return (d = a.sent()).status > 300 && l(new Error(Object(c.e)(d.status))), this.unsubscribe = r.l.subscribe({
+                                                    topic: Object(s.D)(E),
+                                                    success: function() {
+                                                        _.timeoutID = setTimeout(function() {
+                                                            _.unsubscribe(), l(new Error(Object(c.d)()))
+                                                        }, u)
+                                                    },
+                                                    failure: function() {
+                                                        clearTimeout(_.timeoutID), l(new Error(Object(c.d)()))
+                                                    },
+                                                    onMessage: function(e) {
+                                                        if (e.upload_id === E) {
+                                                            switch (clearTimeout(_.timeoutID), e.status) {
+                                                                case i.a.POSTPROCESS_COMPLETE:
+                                                                    _.onFinishUploading && _.onFinishUploading(), t();
+                                                                    break;
+                                                                case i.a.WIDTH_VALIDATION_FAILED:
+                                                                case i.a.HEIGHT_VALIDATION_FAILED:
+                                                                    l(new Error(Object(c.c)()));
+                                                                    break;
+                                                                case i.a.FILE_SIZE_VALIDATION_FAILED:
+                                                                    l(new Error(Object(c.a)()));
+                                                                    break;
+                                                                case i.a.IS_IMAGE_VALIDATION_FAILED:
+                                                                    l(new Error(Object(c.b)(o.b)));
+                                                                    break;
+                                                                default:
+                                                                    l(new Error(Object(c.d)()))
+                                                            }
+                                                            _.unsubscribe && _.unsubscribe()
+                                                        }
+                                                    }
+                                                }), [3, 4];
+                                            case 3:
+                                                return m = a.sent(), r.k.error(m, "unable to upload image"), l(new Error(Object(c.d)())), [3, 4];
+                                            case 4:
+                                                return [2]
+                                        }
+                                    })
+                                })
+                            })
+                        }
+                    }
+                }()
+        },
         DMoW: function(e, t, n) {
             "use strict";
-            var a, r, s, i, o, c, u, l, p, E, d, m, _, h, g, T, f, I, D, N, O, S, R, A, C, b, v, L, U, P, F, y, M, j, k, w, G, V, B, H, Y, x, W, K, X, z, q, Q, Z, J, $, ee, te, ne, ae, re, se, ie, oe, ce, ue, le, pe, Ee, de, me, _e, he, ge, Te, fe, Ie, De, Ne, Oe, Se, Re, Ae, Ce, be, ve, Le, Ue, Pe, Fe, ye, Me, je, ke, we, Ge, Ve, Be, He, Ye, xe, We, Ke, Xe, ze, qe, Qe, Ze, Je, $e, et, tt, nt, at, rt, st, it, ot, ct, ut, lt, pt, Et, dt, mt, _t, ht, gt, Tt, ft;
+            var a, r, i, s, o, c, u, l, p, E, d, m, _, h, g, T, f, I, D, N, O, S, R, A, C, b, v, L, U, P, F, y, M, j, k, w, G, V, B, H, Y, x, W, K, X, z, q, Q, Z, J, $, ee, te, ne, ae, re, ie, se, oe, ce, ue, le, pe, Ee, de, me, _e, he, ge, Te, fe, Ie, De, Ne, Oe, Se, Re, Ae, Ce, be, ve, Le, Ue, Pe, Fe, ye, Me, je, ke, we, Ge, Ve, Be, He, Ye, xe, We, Ke, Xe, ze, qe, Qe, Ze, Je, $e, et, tt, nt, at, rt, it, st, ot, ct, ut, lt, pt, Et, dt, mt, _t, ht, gt, Tt, ft;
             n.d(t, "N", function() {
                     return a
                 }), n.d(t, "e", function() {
@@ -597,10 +671,10 @@
                 }(r || (r = {})),
                 function(e) {
                     e.CHANNEL_NOT_FOUND = "CHANNEL_NOT_FOUND", e.FORBIDDEN = "FORBIDDEN", e.TARGET_ALREADY_MOD = "TARGET_ALREADY_MOD", e.TARGET_IS_CHAT_BANNED = "TARGET_IS_CHAT_BANNED", e.TARGET_NOT_FOUND = "TARGET_NOT_FOUND"
-                }(s || (s = {})),
+                }(i || (i = {})),
                 function(e) {
                     e.CHANNEL_NOT_FOUND = "CHANNEL_NOT_FOUND", e.FORBIDDEN = "FORBIDDEN", e.TARGET_NOT_FOUND = "TARGET_NOT_FOUND", e.TARGET_NOT_MOD = "TARGET_NOT_MOD"
-                }(i || (i = {})),
+                }(s || (s = {})),
                 function(e) {
                     e.CHANNEL_NOT_FOUND = "CHANNEL_NOT_FOUND", e.FORBIDDEN = "FORBIDDEN", e.REVOKEE_NOT_FOUND = "REVOKEE_NOT_FOUND", e.REVOKEE_NOT_VIP = "REVOKEE_NOT_VIP"
                 }(o || (o = {})),
@@ -759,10 +833,10 @@
                 }(re || (re = {})),
                 function(e) {
                     e.FORBIDDEN = "FORBIDDEN", e.INTERNAL_ERROR = "INTERNAL_ERROR", e.INVALID_FORMAT = "INVALID_FORMAT", e.UNAUTHENTICATED = "UNAUTHENTICATED"
-                }(se || (se = {})),
+                }(ie || (ie = {})),
                 function(e) {
                     e.BIRTHDATE = "BIRTHDATE", e.CITY = "CITY", e.COMPANY_NAME = "COMPANY_NAME", e.COUNTRY_CODE = "COUNTRY_CODE", e.EMAIL = "EMAIL", e.FIRST_NAME = "FIRST_NAME", e.LAST_NAME = "LAST_NAME", e.MIDDLE_NAME = "MIDDLE_NAME", e.PARENT_EMAIL = "PARENT_EMAIL", e.PARENT_NAME = "PARENT_NAME", e.POSTAL = "POSTAL", e.STATE_CODE = "STATE_CODE", e.STREET_ADDRESS = "STREET_ADDRESS", e.STREET_ADDRESS_2 = "STREET_ADDRESS_2"
-                }(ie || (ie = {})),
+                }(se || (se = {})),
                 function(e) {
                     e.CITY = "CITY", e.COUNTRY = "COUNTRY", e.EMAIL = "EMAIL", e.NAME = "NAME", e.POSTAL = "POSTAL", e.STATE = "STATE", e.STREET_ADDRESS = "STREET_ADDRESS", e.STREET_ADDRESS_2 = "STREET_ADDRESS_2"
                 }(oe || (oe = {})),
@@ -921,10 +995,10 @@
                 }(rt || (rt = {})),
                 function(e) {
                     e.PREMIERE = "PREMIERE", e.SEGMENT = "SEGMENT", e.SINGLE = "SINGLE", e.TIMETABLE = "TIMETABLE"
-                }(st || (st = {})),
+                }(it || (it = {})),
                 function(e) {
                     e.CANCELLED = "CANCELLED", e.FAILED = "FAILED", e.SCHEDULED = "SCHEDULED", e.STARTED = "STARTED", e.SUCCESS = "SUCCESS", e.UNKNOWN = "UNKNOWN", e.UNSCHEDULED = "UNSCHEDULED"
-                }(it || (it = {})),
+                }(st || (st = {})),
                 function(e) {
                     e.ALL = "ALL", e.LIVE = "LIVE"
                 }(ot || (ot = {})),
@@ -969,8 +1043,8 @@
             "use strict";
             var a = n("mrSG"),
                 r = n("q1tI"),
-                s = n("fvjX"),
-                i = n("u5aL"),
+                i = n("fvjX"),
+                s = n("u5aL"),
                 o = n("GnwI"),
                 c = n("Ue10"),
                 u = function(e) {
@@ -988,7 +1062,7 @@
                         }, r.createElement(c.W, null, this.props.game.name)))
                     }, t
                 }(r.Component),
-                l = Object(s.compose)(Object(o.b)("DevGameSuggestion", {
+                l = Object(i.compose)(Object(o.b)("DevGameSuggestion", {
                     autoReportInteractive: !0
                 }))(u),
                 p = function(e) {
@@ -1096,7 +1170,7 @@
                         })
                     }, t.prototype.render = function() {
                         var e = 0 === this.state.games.length || this.props.multi;
-                        return r.createElement(c.Ya, null, r.createElement(i.a, {
+                        return r.createElement(c.Ya, null, r.createElement(s.a, {
                             onClickOut: this.onClickOut
                         }, r.createElement(c.Ya, {
                             position: c.kb.Relative,
@@ -1118,7 +1192,7 @@
                         }, this.renderSelections())))
                     }, t
                 }(r.Component),
-                _ = Object(s.compose)(Object(o.b)("DevGameSearch", {
+                _ = Object(i.compose)(Object(o.b)("DevGameSearch", {
                     autoReportInteractive: !0
                 }))(m),
                 h = function(e) {
@@ -1167,7 +1241,7 @@
                             games: []
                         }, t.findGames = function(e) {
                             return a.__awaiter(t, void 0, void 0, function() {
-                                var t, n, r, s;
+                                var t, n, r, i;
                                 return a.__generator(this, function(a) {
                                     switch (a.label) {
                                         case 0:
@@ -1180,7 +1254,7 @@
                                         case 1:
                                             return n = a.sent(), r = [], 200 !== n.status ? [3, 3] : [4, n.json()];
                                         case 2:
-                                            s = a.sent(), r = s.games, a.label = 3;
+                                            i = a.sent(), r = i.games, a.label = 3;
                                         case 3:
                                             return r = r.slice(0, this.props.limit || D), this.setState({
                                                 games: r
@@ -1243,8 +1317,8 @@
             "use strict";
             var a = n("mrSG"),
                 r = n("NAv5"),
-                s = n("FOa4"),
-                i = n("q1tI"),
+                i = n("FOa4"),
+                s = n("q1tI"),
                 o = n("Ue10"),
                 c = (n("WHSC"), function(e) {
                     function t() {
@@ -1256,7 +1330,7 @@
                         }, t
                     }
                     return a.__extends(t, e), t.prototype.componentDidMount = function() {
-                        this._picker = new s({
+                        this._picker = new i({
                             field: this.textInput,
                             onSelect: this.props.onChange,
                             theme: "inline",
@@ -1274,13 +1348,13 @@
                         (this.dateDidChange(e.minDate, this.props.minDate) || this.dateDidChange(e.maxDate, this.props.maxDate)) && this.setDateRangeIfPresent(this.props.minDate, this.props.maxDate), this.dateDidChange(e.defaultDate, this.props.defaultDate) && this.setDate(this.props.defaultDate)
                     }, t.prototype.render = function() {
                         var e = this.props.inputProps;
-                        return i.createElement(o.Ya, {
+                        return s.createElement(o.Ya, {
                             className: "date-picker",
                             "data-a-target": "date-picker"
-                        }, i.createElement(o.Sa, a.__assign({
+                        }, s.createElement(o.Sa, a.__assign({
                             type: o.Ua.Text,
                             refDelegate: this.setInputRef
-                        }, e)), i.createElement("div", {
+                        }, e)), s.createElement("div", {
                             className: "date-picker__container",
                             ref: this.setContainerRef
                         }))
@@ -1291,7 +1365,7 @@
                     }, t.prototype.dateDidChange = function(e, t) {
                         return (e ? e.getTime() : null) !== (t ? t.getTime() : null)
                     }, t
-                }(i.Component));
+                }(s.Component));
             n.d(t, "a", function() {
                 return c
             })
@@ -1301,9 +1375,9 @@
             n.d(t, "a", function() {
                 return r
             }), n.d(t, "b", function() {
-                return s
-            }), n.d(t, "c", function() {
                 return i
+            }), n.d(t, "c", function() {
+                return s
             }), n.d(t, "d", function() {
                 return o
             });
@@ -1313,11 +1387,11 @@
                     timeString: "h:mma"
                 };
 
-            function s(e, t) {
+            function i(e, t) {
                 return Object(a.format)(e, t)
             }
 
-            function i(e) {
+            function s(e) {
                 return Object(a.parse)(e)
             }
 
@@ -1326,10 +1400,10 @@
                 if (2 !== n.length) throw new Error("invalid time string: " + e);
                 var a = parseInt(n[0], 10),
                     r = parseInt(n[1].substring(0, 2), 10),
-                    s = n[1].substring(n[1].length - 2);
-                if (12 === a && "am" === s && (a = 0), "pm" === s && a < 12 && (a += 12), isNaN(a) || a < 0 || a > 23 || isNaN(r) || r < 0 || r > 59) throw new Error("invalid time string: " + e);
-                var i = t || new Date;
-                return i.setHours(a, r), i
+                    i = n[1].substring(n[1].length - 2);
+                if (12 === a && "am" === i && (a = 0), "pm" === i && a < 12 && (a += 12), isNaN(a) || a < 0 || a > 23 || isNaN(r) || r < 0 || r > 59) throw new Error("invalid time string: " + e);
+                var s = t || new Date;
+                return s.setHours(a, r), s
             }
         },
         JQ82: function(e, t, n) {
@@ -1467,8 +1541,8 @@
             "use strict";
             var a = n("mrSG"),
                 r = n("q1tI"),
-                s = n("/MKj"),
-                i = n("/7QA"),
+                i = n("/MKj"),
+                s = n("/7QA"),
                 o = n("f00E"),
                 c = n("kRBY"),
                 u = n("H/lO"),
@@ -1549,7 +1623,7 @@
                             onChange: this.props.onInputChange,
                             onFocusInput: this.props.onFocusInput,
                             ref: this.setUserSearchRef,
-                            placeholder: Object(i.d)("Search Users", "DevUserSearch"),
+                            placeholder: Object(s.d)("Search Users", "DevUserSearch"),
                             balloonProps: {
                                 show: this.props.open,
                                 direction: T.v.Bottom,
@@ -1593,7 +1667,7 @@
                             })
                         }, n.doUserSearch = function(e) {
                             return a.__awaiter(n, void 0, void 0, function() {
-                                var t, n, r, s;
+                                var t, n, r, i;
                                 return a.__generator(this, function(a) {
                                     switch (a.label) {
                                         case 0:
@@ -1603,13 +1677,13 @@
                                         case 2:
                                             return n = a.sent(), [3, 4];
                                         case 3:
-                                            return r = a.sent(), i.p.logger.error(r, "Algolia User Search failed"), this.setState({
+                                            return r = a.sent(), s.p.logger.error(r, "Algolia User Search failed"), this.setState({
                                                 waiting: !1,
                                                 searchOpen: !1
                                             }), [2];
                                         case 4:
-                                            return n && n.users ? (s = this.deserializeUserResults(n), this.props.limit && (s = s.splice(0, this.props.limit)), this.setState({
-                                                userResult: s,
+                                            return n && n.users ? (i = this.deserializeUserResults(n), this.props.limit && (i = i.splice(0, this.props.limit)), this.setState({
+                                                userResult: i,
                                                 searchOpen: !0,
                                                 waiting: !1
                                             }), [2]) : [2]
@@ -1648,12 +1722,12 @@
                                 selected: !0
                             })
                         }, n.searchClient = new l.a({
-                            appId: i.p.config.algoliaApplicationID,
-                            apiKey: i.p.config.algoliaAPIKey,
-                            apolloClient: i.p.apollo.client,
-                            logger: i.p.logger,
-                            config: i.p.config,
-                            stats: i.p.stats
+                            appId: s.p.config.algoliaApplicationID,
+                            apiKey: s.p.config.algoliaAPIKey,
+                            apolloClient: s.p.apollo.client,
+                            logger: s.p.logger,
+                            config: s.p.config,
+                            stats: s.p.stats
                         }), n
                     }
                     return a.__extends(t, e), t.prototype.render = function() {
@@ -1669,7 +1743,7 @@
                         })
                     }, t
                 }(r.Component);
-            var S = Object(s.connect)(function(e) {
+            var S = Object(i.connect)(function(e) {
                 return {
                     user: Object(c.e)(e)
                 }
@@ -1685,7 +1759,7 @@
         Lxz1: function(e, t, n) {
             "use strict";
             n.d(t, "f", function() {
-                return i
+                return s
             }), n.d(t, "g", function() {
                 return o
             }), n.d(t, "e", function() {
@@ -1700,8 +1774,8 @@
                 return d
             });
             var a, r = n("/7QA"),
-                s = n("2/NB"),
-                i = function(e, t) {
+                i = n("2/NB"),
+                s = function(e, t) {
                     return Object(r.d)("Recommended image size: {imageDimensions} and less than {imageFileMegabytes, number}MB", {
                         imageDimensions: e,
                         imageFileMegabytes: t
@@ -1727,7 +1801,7 @@
                 p = function() {
                     return Object(r.d)("Unexpected error while uploading your image. Please try again later", "ImageUploader")
                 },
-                E = ((a = {})[s.a.JPEG] = "JPG", a[s.a.PNG] = "PNG", a[s.a.GIF] = "GIF", a),
+                E = ((a = {})[i.a.JPEG] = "JPG", a[i.a.PNG] = "PNG", a[i.a.GIF] = "GIF", a),
                 d = function(e) {
                     var t = e.map(function(e) {
                         return E[e]
@@ -1741,8 +1815,8 @@
             "use strict";
             var a = n("mrSG"),
                 r = n("q1tI"),
-                s = n("u5aL"),
-                i = n("/7QA"),
+                i = n("u5aL"),
+                s = n("/7QA"),
                 o = n("Ue10"),
                 c = function() {
                     return r.createElement(o.Ya, {
@@ -1772,9 +1846,9 @@
                     }, r.createElement(o.W, {
                         type: o.Wb.H4,
                         "data-test-selector": "search-error-message"
-                    }, Object(i.d)("Search is not available at this time", "DropdownSearchError"))), r.createElement(o.W, {
+                    }, Object(s.d)("Search is not available at this time", "DropdownSearchError"))), r.createElement(o.W, {
                         type: o.Wb.P
-                    }, Object(i.d)("Please try again later", "DropdownSearchError")))
+                    }, Object(s.d)("Please try again later", "DropdownSearchError")))
                 },
                 u = n("8Ad5"),
                 l = function(e) {
@@ -1830,7 +1904,7 @@
                                 size: this.props.inputSize,
                                 autoFocus: this.props.autoFocus
                             });
-                        return this.props.inline ? r.createElement(s.a, {
+                        return this.props.inline ? r.createElement(i.a, {
                             onClickOut: this.onClickOut
                         }, r.createElement(o.Fb, {
                             background: this.state.isInputFocused || this.state.isOpen ? o.r.Base : void 0,
@@ -1854,7 +1928,7 @@
                             tabIndex: 0,
                             onKeyDown: this.onKeyDown,
                             onMouseOver: this.props.enableMouseEvents ? this.onMouseOver : void 0
-                        }, t)))) : r.createElement(s.a, {
+                        }, t)))) : r.createElement(i.a, {
                             onClickOut: this.onClickOut
                         }, n, e && r.createElement(o.u, a.__assign({
                             noTail: !0
@@ -1876,10 +1950,10 @@
                             a = document.activeElement,
                             r = Array.prototype.indexOf.call(n, a);
                         if ((t = r < 0 ? e > 0 ? 0 : n.length - 1 : r + e) < 0 && (t = 0), !(t >= n.length)) {
-                            var s = n.item(t);
-                            s.focus(), s.tabIndex = 0, this.state.currentFocus && (this.state.currentFocus.tabIndex = -1), this.setState({
-                                currentFocus: s
-                            }), this.props.onFocusChange && this.props.onFocusChange(s)
+                            var i = n.item(t);
+                            i.focus(), i.tabIndex = 0, this.state.currentFocus && (this.state.currentFocus.tabIndex = -1), this.setState({
+                                currentFocus: i
+                            }), this.props.onFocusChange && this.props.onFocusChange(i)
                         }
                     }, t
                 }(r.Component);
@@ -1891,15 +1965,15 @@
             "use strict";
             var a = n("mrSG"),
                 r = n("q1tI"),
-                s = n("/7QA"),
-                i = n("/ZC1"),
+                i = n("/7QA"),
+                s = n("/ZC1"),
                 o = n("Ue10"),
                 c = (n("aDUZ"), function(e) {
                     function t() {
                         return null !== e && e.apply(this, arguments) || this
                     }
                     return a.__extends(t, e), t.prototype.render = function() {
-                        return r.createElement(i.a, {
+                        return r.createElement(s.a, {
                             allowedFileTypes: this.props.allowedFileTypes,
                             onFilesSubmitted: this.props.processFiles,
                             error: !!this.props.errorMessage
@@ -1939,12 +2013,12 @@
                             "data-test-selector": "image-uploader-loading"
                         }, r.createElement(o.W, {
                             type: o.Wb.H4
-                        }, Object(s.d)("Uploading", "ImageUploader")))
+                        }, Object(i.d)("Uploading", "ImageUploader")))
                     }, t.prototype.renderNormalState = function() {
-                        var e = Object(s.d)("Browse", "ImageUploader");
+                        var e = Object(i.d)("Browse", "ImageUploader");
                         return r.createElement(o.Ya, null, r.createElement(o.Ya, null, r.createElement(o.W, {
                             type: o.Wb.H4
-                        }, Object(s.d)("Drag and drop your image here", "ImageUploader"))), r.createElement(o.Ya, {
+                        }, Object(i.d)("Drag and drop your image here", "ImageUploader"))), r.createElement(o.Ya, {
                             margin: {
                                 bottom: 2
                             },
@@ -2052,8 +2126,8 @@
             });
             var a = n("mrSG"),
                 r = n("hnrd"),
-                s = n("/7QA"),
-                i = n("D7An"),
+                i = n("/7QA"),
+                s = n("D7An"),
                 o = n("H/lO"),
                 c = n("vR4/"),
                 u = n("BSTw"),
@@ -2113,33 +2187,33 @@
                 },
                 E = function() {
                     function e(e) {
-                        this.apolloClient = e.apolloClient, this.client = r(e.appId, e.apiKey), this.stats = e.stats, this.logger = e.logger.withCategory("search-client"), this.sendSearchRequestToForage = "variant" === s.p.experiments.getAssignment(i.b.NewSearchBackend), this.getCountryCode()
+                        this.apolloClient = e.apolloClient, this.client = r(e.appId, e.apiKey), this.stats = e.stats, this.logger = e.logger.withCategory("search-client"), this.sendSearchRequestToForage = "variant" === i.p.experiments.getAssignment(s.b.NewSearchBackend), this.getCountryCode()
                     }
                     return e.prototype.queryTopResults = function(e, t) {
                         return a.__awaiter(this, void 0, void 0, function() {
-                            var n, r, s, i;
+                            var n, r, i, s;
                             return a.__generator(this, function(a) {
                                 switch (a.label) {
                                     case 0:
                                         return r = [], (n = []).push(this.getTopResult(p.games, e)), n.push(this.getTopResult(p.videos, e)), n.push(this.getTopResult(p.users, e)), n.push(this.getTopResult(p.channels, e)), r.push(this.getTotalResult(p.games, e)), r.push(this.getTotalResult(p.videos, e)), r.push(this.getTotalResult(p.users, e)), r.push(this.getTotalResult(p.channels, e)), [4, this.query(n.concat(r))];
                                     case 1:
-                                        return (s = a.sent()) ? (i = s.results, [2, {
+                                        return (i = a.sent()) ? (s = i.results, [2, {
                                             id: t,
                                             games: {
-                                                totalHits: i[4].nbHits,
-                                                hits: i[0].hits
+                                                totalHits: s[4].nbHits,
+                                                hits: s[0].hits
                                             },
                                             videos: {
-                                                totalHits: i[5].nbHits,
-                                                hits: i[1].hits
+                                                totalHits: s[5].nbHits,
+                                                hits: s[1].hits
                                             },
                                             users: {
-                                                totalHits: i[6].nbHits,
-                                                hits: i[2].hits
+                                                totalHits: s[6].nbHits,
+                                                hits: s[2].hits
                                             },
                                             channels: {
-                                                totalHits: i[7].nbHits,
-                                                hits: i[3].hits
+                                                totalHits: s[7].nbHits,
+                                                hits: s[3].hits
                                             }
                                         }]) : [2, function(e) {
                                             return {
@@ -2166,27 +2240,27 @@
                             })
                         })
                     }, e.prototype.queryForType = function(e, t, n, r) {
-                        var s = void 0 === r ? {} : r,
-                            i = s.page,
-                            c = void 0 === i ? 0 : i,
-                            u = s.hitsPerPage,
+                        var i = void 0 === r ? {} : r,
+                            s = i.page,
+                            c = void 0 === s ? 0 : s,
+                            u = i.hitsPerPage,
                             l = void 0 === u ? 50 : u,
-                            E = s.facetFilters,
+                            E = i.facetFilters,
                             d = void 0 === E ? "" : E,
-                            m = s.numericFilters,
-                            _ = s.restrictSearchableAttributes,
+                            m = i.numericFilters,
+                            _ = i.restrictSearchableAttributes,
                             h = void 0 === _ ? [] : _;
                         return a.__awaiter(this, void 0, void 0, function() {
-                            var r, s, i, u, E, _, g, T, f = this;
+                            var r, i, s, u, E, _, g, T, f = this;
                             return a.__generator(this, function(I) {
                                 switch (I.label) {
                                     case 0:
                                         switch (r = {
                                             id: n,
                                             currentPage: c
-                                        }, s = function(e) {
+                                        }, i = function(e) {
                                             return a.__awaiter(f, void 0, void 0, function() {
-                                                var n, s;
+                                                var n, i;
                                                 return a.__generator(this, function(a) {
                                                     switch (a.label) {
                                                         case 0:
@@ -2203,9 +2277,9 @@
                                                                 }
                                                             }, [4, this.query([n])];
                                                         case 1:
-                                                            return (s = a.sent()) ? (r.exhaustedHits = !s.results[0].nbHits || s.results[0].hits.length < l, [2, {
-                                                                totalHits: s.results[0].nbHits,
-                                                                hits: s.results[0].hits
+                                                            return (i = a.sent()) ? (r.exhaustedHits = !i.results[0].nbHits || i.results[0].hits.length < l, [2, {
+                                                                totalHits: i.results[0].nbHits,
+                                                                hits: i.results[0].hits
                                                             }]) : (r.exhaustedHits = !0, [2, {
                                                                 totalHits: 0,
                                                                 hits: []
@@ -2229,27 +2303,27 @@
                                         }
                                         return [3, 13];
                                     case 1:
-                                        return i = r, [4, s(p.games)];
+                                        return s = r, [4, i(p.games)];
                                     case 2:
-                                        return i.games = I.sent(), [3, 14];
+                                        return s.games = I.sent(), [3, 14];
                                     case 3:
-                                        return u = r, [4, s(p.users)];
+                                        return u = r, [4, i(p.users)];
                                     case 4:
                                         return u.users = I.sent(), [3, 14];
                                     case 5:
-                                        return E = r, [4, s(p.channels)];
+                                        return E = r, [4, i(p.channels)];
                                     case 6:
                                         return E.channels = I.sent(), [3, 14];
                                     case 7:
-                                        return _ = r, [4, s(p.videos)];
+                                        return _ = r, [4, i(p.videos)];
                                     case 8:
                                         return _.videos = I.sent(), [3, 14];
                                     case 9:
-                                        return g = r, [4, s(p.streamTags)];
+                                        return g = r, [4, i(p.streamTags)];
                                     case 10:
                                         return g.streamTags = I.sent(), [3, 14];
                                     case 11:
-                                        return T = r, [4, s(p.tags)];
+                                        return T = r, [4, i(p.tags)];
                                     case 12:
                                         return T.tags = I.sent(), [3, 14];
                                     case 13:
@@ -2261,38 +2335,38 @@
                         })
                     }, e.prototype.queryVideos = function(e, t, n) {
                         return a.__awaiter(this, void 0, void 0, function() {
-                            var r, s, i, u;
+                            var r, i, s, u;
                             return a.__generator(this, function(a) {
                                 switch (a.label) {
                                     case 0:
-                                        switch (r = o.a.Videos, s = [], n.length) {
+                                        switch (r = o.a.Videos, i = [], n.length) {
                                             case c.a.Short:
-                                                s.push("length<=900");
+                                                i.push("length<=900");
                                                 break;
                                             case c.a.Long:
-                                                s.push("length>900")
+                                                i.push("length>900")
                                         }
-                                        switch (i = {
+                                        switch (s = {
                                             indexName: r,
                                             query: e,
                                             params: {
                                                 page: 0,
                                                 hitsPerPage: 50,
-                                                numericFilters: s,
+                                                numericFilters: i,
                                                 facets: "*",
                                                 facetFilters: ""
                                             }
                                         }, n.type) {
                                             case c.b.PastBroadcasts:
-                                                i.params.facetFilters = "broadcast_type:archive";
+                                                s.params.facetFilters = "broadcast_type:archive";
                                                 break;
                                             case c.b.Uploads:
-                                                i.params.facetFilters = "broadcast_type:upload";
+                                                s.params.facetFilters = "broadcast_type:upload";
                                                 break;
                                             case c.b.Highlights:
-                                                i.params.facetFilters = "broadcast_type:highlight"
+                                                s.params.facetFilters = "broadcast_type:highlight"
                                         }
-                                        return [4, this.query([i])];
+                                        return [4, this.query([s])];
                                     case 1:
                                         return (u = a.sent()) ? [2, {
                                             id: t,
@@ -2353,13 +2427,13 @@
                         }
                     }, e.prototype.query = function(e) {
                         return a.__awaiter(this, void 0, void 0, function() {
-                            var t, n, r, s, i;
+                            var t, n, r, i, s;
                             return a.__generator(this, function(a) {
                                 switch (a.label) {
                                     case 0:
-                                        n = Date.now(), s = !1, a.label = 1;
+                                        n = Date.now(), i = !1, a.label = 1;
                                     case 1:
-                                        return a.trys.push([1, 6, , 7]), this.sendSearchRequestToForage && e.length > 7 ? (i = e[0].query, [4, this.getSearchResults(i)]) : [3, 3];
+                                        return a.trys.push([1, 6, , 7]), this.sendSearchRequestToForage && e.length > 7 ? (s = e[0].query, [4, this.getSearchResults(s)]) : [3, 3];
                                     case 2:
                                         return t = a.sent(), [3, 5];
                                     case 3:
@@ -2369,9 +2443,9 @@
                                     case 5:
                                         return [3, 7];
                                     case 6:
-                                        return a.sent(), s = !0, t = null, [3, 7];
+                                        return a.sent(), i = !0, t = null, [3, 7];
                                     case 7:
-                                        return r = Date.now(), this.countryCode && (s ? this.stats.recordSearchError(this.countryCode, r - n) : this.stats.recordSearchSuccess(this.countryCode, r - n)), [2, t]
+                                        return r = Date.now(), this.countryCode && (i ? this.stats.recordSearchError(this.countryCode, r - n) : this.stats.recordSearchSuccess(this.countryCode, r - n)), [2, t]
                                 }
                             })
                         })
@@ -2401,8 +2475,8 @@
             n.r(t);
             var a = n("mrSG"),
                 r = n("q1tI"),
-                s = n("2INN"),
-                i = n("jKe7"),
+                i = n("2INN"),
+                s = n("jKe7"),
                 o = n("/7QA"),
                 c = n("coZW"),
                 u = n("uLRL"),
@@ -2555,7 +2629,7 @@
                             campaigns: []
                         }, t.getCampaigns = function() {
                             return a.__awaiter(t, void 0, void 0, function() {
-                                var e, t, n, r, s, i;
+                                var e, t, n, r, i, s;
                                 return a.__generator(this, function(a) {
                                     switch (a.label) {
                                         case 0:
@@ -2569,7 +2643,7 @@
                                         case 2:
                                             return 200 !== (r = a.sent()).status ? [3, 4] : [4, r.json()];
                                         case 3:
-                                            s = a.sent(), i = s.campaigns.map(function(e) {
+                                            i = a.sent(), s = i.campaigns.map(function(e) {
                                                 return function(e) {
                                                     return {
                                                         name: e.item_name,
@@ -2583,7 +2657,7 @@
                                             }).sort(function(e, t) {
                                                 return e.name.localeCompare(t.name)
                                             }), this.setState({
-                                                campaigns: i
+                                                campaigns: s
                                             }), a.label = 4;
                                         case 4:
                                             return [2]
@@ -2686,81 +2760,16 @@
                 }), Object(u.a)())(v),
                 U = n("9C/b"),
                 P = n("DMoW"),
-                F = n("PZVp"),
-                y = n("/aPz"),
-                M = n("2/NB"),
-                j = n("Lxz1"),
-                k = 1e4,
-                w = function() {
-                    return function(e, t) {
-                        var n = this;
-                        this.getUploadURL = e, this.onFinishUploading = t, this.uploadFile = function(e) {
-                            return new Promise(function(t, r) {
-                                return a.__awaiter(n, void 0, void 0, function() {
-                                    var n, s, i, c, u, l = this;
-                                    return a.__generator(this, function(a) {
-                                        switch (a.label) {
-                                            case 0:
-                                                return a.trys.push([0, 3, , 4]), [4, this.getUploadURL(e)];
-                                            case 1:
-                                                return n = a.sent(), s = n.url, i = n.uploadID, [4, fetch(s, {
-                                                    body: e,
-                                                    method: "PUT"
-                                                })];
-                                            case 2:
-                                                return (c = a.sent()).status > 300 && r(new Error(Object(j.e)(c.status))), this.unsubscribe = o.l.subscribe({
-                                                    topic: Object(y.D)(i),
-                                                    success: function() {
-                                                        l.timeoutID = setTimeout(function() {
-                                                            l.unsubscribe(), r(new Error(Object(j.d)()))
-                                                        }, k)
-                                                    },
-                                                    failure: function() {
-                                                        clearTimeout(l.timeoutID), r(new Error(Object(j.d)()))
-                                                    },
-                                                    onMessage: function(e) {
-                                                        if (e.upload_id === i) {
-                                                            switch (clearTimeout(l.timeoutID), e.status) {
-                                                                case F.a.POSTPROCESS_COMPLETE:
-                                                                    l.onFinishUploading && l.onFinishUploading(), t();
-                                                                    break;
-                                                                case F.a.WIDTH_VALIDATION_FAILED:
-                                                                case F.a.HEIGHT_VALIDATION_FAILED:
-                                                                    r(new Error(Object(j.c)()));
-                                                                    break;
-                                                                case F.a.FILE_SIZE_VALIDATION_FAILED:
-                                                                    r(new Error(Object(j.a)()));
-                                                                    break;
-                                                                case F.a.IS_IMAGE_VALIDATION_FAILED:
-                                                                    r(new Error(Object(j.b)(M.b)));
-                                                                    break;
-                                                                default:
-                                                                    r(new Error(Object(j.d)()))
-                                                            }
-                                                            l.unsubscribe && l.unsubscribe()
-                                                        }
-                                                    }
-                                                }), [3, 4];
-                                            case 3:
-                                                return u = a.sent(), o.k.error(u, "unable to upload image"), r(new Error(Object(j.d)())), [3, 4];
-                                            case 4:
-                                                return [2]
-                                        }
-                                    })
-                                })
-                            })
-                        }
-                    }
-                }();
-            var G = E.a + "/v5/rbac/current-games";
+                F = n("CDtL");
+            var y = E.a + "/v5/rbac/current-games";
 
-            function V() {
+            function M() {
                 return a.__awaiter(this, void 0, void 0, function() {
                     var e, t, n;
                     return a.__generator(this, function(a) {
                         switch (a.label) {
                             case 0:
-                                return e = [], [4, Object(h.a)(G)];
+                                return e = [], [4, Object(h.a)(y)];
                             case 1:
                                 return 200 !== (t = a.sent()).status ? [3, 3] : [4, t.json()];
                             case 2:
@@ -2782,21 +2791,21 @@
                     })
                 })
             }
-            var B = n("cr+I");
+            var j = n("cr+I");
 
-            function H(e) {
+            function k(e) {
                 return a.__awaiter(this, void 0, Promise, function() {
-                    var t, n, r, s, i, o, c, u, l, p;
+                    var t, n, r, i, s, o, c, u, l, p;
                     return a.__generator(this, function(a) {
                         switch (a.label) {
                             case 0:
-                                return t = e.activeOnly, n = e.companyId, r = e.prevCursor, s = e.nextCursor, i = e.limit, [4, Object(N.a)(T.a.GetItemsByCompany)];
+                                return t = e.activeOnly, n = e.companyId, r = e.prevCursor, i = e.nextCursor, s = e.limit, [4, Object(N.a)(T.a.GetItemsByCompany)];
                             case 1:
-                                return (o = a.sent()) ? (c = E.a + "/kraken/accounts/" + n + "/items", (u = B.stringify({
+                                return (o = a.sent()) ? (c = E.a + "/kraken/accounts/" + n + "/items", (u = j.stringify({
                                     active_only: t,
-                                    after: s,
+                                    after: i,
                                     before: r,
-                                    limit: i
+                                    limit: s
                                 })) && (c += "?" + u), [4, Object(h.a)(c, {
                                     headers: {
                                         "X-Twitch-VHSCF": o
@@ -2829,12 +2838,12 @@
                     })
                 })
             }
-            var Y = n("/MKj"),
-                x = n("aCAx"),
-                W = n("HEnu"),
-                K = n("cZKs"),
-                X = n("NLLf"),
-                z = (n("TofP"), function(e) {
+            var w = n("/MKj"),
+                G = n("aCAx"),
+                V = n("HEnu"),
+                B = n("cZKs"),
+                H = n("NLLf"),
+                Y = (n("TofP"), function(e) {
                     function t() {
                         return null !== e && e.apply(this, arguments) || this
                     }
@@ -2842,19 +2851,20 @@
                         return r.createElement(O.Fb, {
                             className: "image-uploader-modal",
                             background: O.r.Base
-                        }, r.createElement(X.a, a.__assign({}, this.props)), r.createElement(K.a, {
+                        }, r.createElement(H.a, a.__assign({}, this.props)), r.createElement(B.a, {
                             closeOnBackdropClick: !0
                         }))
                     }, t
                 }(r.Component));
-            var q = Object(Y.connect)(null, function(e) {
+            var x = Object(w.connect)(null, function(e) {
                     return Object(l.bindActionCreators)({
-                        onClose: x.c
+                        onClose: G.c
                     }, e)
-                })(z),
-                Q = n("u5aL");
+                })(Y),
+                W = n("2/NB"),
+                K = n("u5aL");
             n("ev0B");
-            var Z, J = function(e) {
+            var X, z = function(e) {
                     function t(t) {
                         var n = e.call(this, t) || this;
                         return n.onFocus = function() {
@@ -2893,7 +2903,7 @@
                         return r.createElement(O.Ya, {
                             position: O.kb.Relative,
                             className: "time-picker"
-                        }, r.createElement(Q.a, {
+                        }, r.createElement(K.a, {
                             onClickOut: this.onClickOut
                         }, r.createElement(O.Sa, {
                             type: O.Ua.Text,
@@ -2916,17 +2926,17 @@
                         return Object(S.b)(e, S.a.timeString)
                     }, t.timeOptions = function() {
                         for (var e = [], t = ["00", "30"], n = 0, a = ["am", "pm"]; n < a.length; n++)
-                            for (var r = a[n], s = 0; s < 12; ++s)
-                                for (var i = 0, o = t; i < o.length; i++) {
-                                    var c = o[i];
-                                    e.push((0 === s ? 12 : s) + ":" + c + r)
+                            for (var r = a[n], i = 0; i < 12; ++i)
+                                for (var s = 0, o = t; s < o.length; s++) {
+                                    var c = o[s];
+                                    e.push((0 === i ? 12 : i) + ":" + c + r)
                                 }
                         return e
                     }(), t
                 }(r.Component),
-                $ = n("tl6o"),
-                ee = n("yR8l"),
-                te = function(e) {
+                q = n("tl6o"),
+                Q = n("yR8l"),
+                Z = function(e) {
                     function t() {
                         var t = null !== e && e.apply(this, arguments) || this;
                         return t.onClick = function(e) {
@@ -2939,6 +2949,7 @@
                         }, r.createElement(O.Ya, {
                             display: O.X.Flex,
                             alignItems: O.f.Center,
+                            padding: .5,
                             fullHeight: !0
                         }, r.createElement(O.Ya, {
                             margin: {
@@ -2951,16 +2962,16 @@
                         })), r.createElement(O.Ya, null, r.createElement(O.W, null, this.props.name))))
                     }, t
                 }(r.Component),
-                ne = n("Ji7V");
+                J = n("Ji7V");
             ! function(e) {
                 e.Error = "dev-channel-list-error"
-            }(Z || (Z = {}));
-            var ae, re = function(e) {
+            }(X || (X = {}));
+            var $, ee = function(e) {
                     function t() {
                         var t = null !== e && e.apply(this, arguments) || this;
                         return t.renderChannels = function() {
                             return t.props.data && t.props.data.users ? t.props.data.users.map(function(e) {
-                                return e && r.createElement(te, {
+                                return e && r.createElement(Z, {
                                     name: e.displayName || "",
                                     avatarURL: e.profileImageURL || "",
                                     id: e.id || "",
@@ -2973,13 +2984,13 @@
                     return a.__extends(t, e), t.prototype.render = function() {
                         if (this.props.data && this.props.data.loading && !this.props.data.users && !this.props.data.error) return r.createElement(O.ab, null);
                         if (this.props.data && this.props.data.error) return r.createElement(O.Ya, {
-                            "data-test-selector": Z.Error
+                            "data-test-selector": X.Error
                         });
                         var e = this.renderChannels();
                         return r.createElement(O.Ya, null, e)
                     }, t
                 }(r.Component),
-                se = Object(ee.a)(ne, {
+                te = Object(Q.a)(J, {
                     options: function(e) {
                         return {
                             variables: {
@@ -2990,699 +3001,27 @@
                     skip: function(e) {
                         return !e.channels.length
                     }
-                })(re),
-                ie = function(e) {
-                    function t() {
-                        var t = null !== e && e.apply(this, arguments) || this;
-                        return t.state = {
-                            loadError: !1
-                        }, t.preventRender = function() {
-                            t.setState({
-                                loadError: !0
-                            })
-                        }, t
-                    }
-                    return a.__extends(t, e), t.prototype.render = function() {
-                        if (this.state.loadError) return null;
-                        var e = "https://twitch-ds-vhs-drops-campaign-images-us-west-2-prod.s3-us-west-2.amazonaws.com/" + this.props.id + "/account_link_notification_image_" + this.props.size + "x" + this.props.size + ".jpg";
-                        return r.createElement(O.S, {
-                            src: e,
-                            alt: this.props.name,
-                            onError: this.preventRender
-                        })
-                    }, t
-                }(r.Component),
-                oe = n("GD6M"),
-                ce = n("LFRE");
-            n("xYlS");
-            ! function(e) {
-                e.ConnectionURL = "dev-drops-campaign-form-connection-url", e.Error = "dev-drops-campaign-form-error", e.FileButton = "dev-drops-campaign-form-file-button", e.NameField = "dev-drops-campaign-form-name-field", e.SubmitButton = "dev-drops-campaign-form-submit-button"
-            }(ae || (ae = {}));
-            var ue = function(e) {
-                function t(t) {
-                    var n = e.call(this, t) || this;
-                    if (n.renderDropsLinkImage = function() {
-                            return n.props.campaign ? r.createElement(ie, {
-                                id: n.props.campaign.id,
-                                name: n.props.campaign.item_name,
-                                size: 80
-                            }) : null
-                        }, n.renderErrorMessage = function() {
-                            if (n.props.errorMessage) return r.createElement(O.Fb, {
-                                className: "dev-drops-campaign-form__error",
-                                color: O.O.Overlay,
-                                "data-test-selector": ae.Error,
-                                margin: {
-                                    top: 1
-                                },
-                                padding: 1
-                            }, n.props.errorMessage)
-                        }, n.onClickCancel = function() {
-                            var e = n.props.onCancel;
-                            e && e()
-                        }, n.findGamesForCampaign = function() {
-                            var e = n.props,
-                                t = e.campaign,
-                                a = e.games;
-                            return t && t.games && t.games.map(function(e) {
-                                return a.find(function(t) {
-                                    return t._id === parseInt(e, 10)
-                                })
-                            }).filter(function(e) {
-                                return !!e
-                            }) || []
-                        }, n.onItemChange = function(e) {
-                            var t = e.target,
-                                a = t.checked,
-                                r = t.value;
-                            n.setState(function(e) {
-                                var t;
-                                return a && e.itemIds.size < $.b ? ((t = new Set(e.itemIds)).add(r), {
-                                    itemIds: t
-                                }) : a ? null : ((t = new Set(e.itemIds)).delete(r), {
-                                    itemIds: t
-                                })
-                            }, n.handleFormChange)
-                        }, n.onStartDate = function(e) {
-                            n.setState({
-                                startDate: e
-                            }, n.handleFormChange)
-                        }, n.onStartTime = function(e) {
-                            n.setState({
-                                startTime: e
-                            }, n.handleFormChange)
-                        }, n.onEndDate = function(e) {
-                            n.setState({
-                                endDate: e
-                            }, n.handleFormChange)
-                        }, n.onEndTime = function(e) {
-                            n.setState({
-                                endTime: e
-                            }, n.handleFormChange)
-                        }, n.onGameSelect = function(e) {
-                            n.setState({
-                                games: e
-                            }, n.handleFormChange)
-                        }, n.onUserSelect = function(e) {
-                            n.setState(function(t) {
-                                return {
-                                    channels: t.channels.concat([e.id])
-                                }
-                            }, n.handleFormChange)
-                        }, n.setEnabled = function(e) {
-                            n.setState({
-                                enabled: e.target.checked
-                            }, n.handleFormChange)
-                        }, n.setItemName = function(e) {
-                            n.setState({
-                                itemName: e.target.value
-                            }, n.handleFormChange)
-                        }, n.setConnectURL = function(e) {
-                            n.setState({
-                                connectionURL: e.target.value
-                            }, n.handleFormChange)
-                        }, n.onChannelClick = function(e) {
-                            n.setState(function(t) {
-                                var n = t.channels.findIndex(function(t) {
-                                    return t === e
-                                });
-                                return {
-                                    channels: t.channels.slice(0, n).concat(t.channels.slice(n + 1))
-                                }
-                            }, n.handleFormChange)
-                        }, n.onUploadButtonClick = function(e) {
-                            e.preventDefault();
-                            var t = {
-                                imageDimensions: "120x120",
-                                isRequiredImageDimensions: !0,
-                                maxFileSizeMegabytes: 1,
-                                provider: {
-                                    uploadFile: n.setFile
-                                },
-                                allowedFileTypes: [M.a.JPEG]
-                            };
-                            n.props.showModal(q, t)
-                        }, n.setFile = function(e) {
-                            return n.setState({
-                                image: e
-                            }, n.handleFormChange), Promise.resolve()
-                        }, n.validate = function() {
-                            n.setState(function(e) {
-                                var t = !0;
-                                return null !== e.startDate && null !== e.startTime || (t = !1), null !== e.endDate && null !== e.endTime || (t = !1), e.games.length || (t = !1), e.itemIds.size || (t = !1), e.connectionURL || (t = !1), e.itemName.length || (t = !1), {
-                                    valid: t
-                                }
-                            })
-                        }, n.handleFormChange = function() {
-                            n.props.onFormChange && n.props.onFormChange(), n.validate()
-                        }, n.onSubmit = function(e) {
-                            return a.__awaiter(n, void 0, void 0, function() {
-                                var t, n, r;
-                                return a.__generator(this, function(a) {
-                                    switch (a.label) {
-                                        case 0:
-                                            return e.preventDefault(), t = this.campaignDate(this.state.startDate, this.state.startTime), n = this.campaignDate(this.state.endDate, this.state.endTime), r = {
-                                                connectionURL: this.state.connectionURL,
-                                                enabled: this.state.enabled,
-                                                endTime: n,
-                                                games: this.state.games.map(function(e) {
-                                                    return String(e._id)
-                                                }),
-                                                image: this.state.image,
-                                                itemIds: Array.from(this.state.itemIds),
-                                                itemName: this.state.itemName,
-                                                startTime: t,
-                                                whitelistedChannels: this.state.channels
-                                            }, this.props.campaign && (r.id = this.props.campaign.id), this.setState({
-                                                isSubmitting: !0
-                                            }), [4, this.props.onSubmit(r)];
-                                        case 1:
-                                            return a.sent(), this.setState({
-                                                isSubmitting: !1
-                                            }), [2]
-                                    }
-                                })
-                            })
-                        }, t.campaign) {
-                        var s = n.findGamesForCampaign(),
-                            i = new Date(t.campaign.start_date / 1e6),
-                            o = new Date(t.campaign.end_date / 1e6);
-                        n.state = {
-                            campaignId: t.campaign.id,
-                            startDate: Object(R.b)(i),
-                            startTime: Object(R.b)(i),
-                            endDate: Object(R.b)(o),
-                            endTime: Object(R.b)(o),
-                            games: s,
-                            isSubmitting: !1,
-                            itemIds: new Set(t.campaign.item_ids),
-                            enabled: t.campaign.enabled,
-                            connectionURL: t.campaign.click_thru_url,
-                            channels: t.campaign.whitelisted_channel_ids && t.campaign.whitelisted_channel_ids.filter(function(e) {
-                                return e.length
-                            }) || [],
-                            itemName: t.campaign.item_name,
-                            valid: !1
-                        }
-                    } else n.state = {
-                        channels: [],
-                        connectionURL: "",
-                        enabled: !1,
-                        endDate: Object(R.a)(),
-                        endTime: Object(R.a)(),
-                        games: [],
-                        isSubmitting: !1,
-                        itemIds: new Set,
-                        itemName: "",
-                        startDate: Object(R.a)(),
-                        startTime: Object(R.a)(),
-                        valid: !1
-                    };
-                    return n
-                }
-                return a.__extends(t, e), t.prototype.render = function() {
-                    var e = this,
-                        t = Object(o.d)("This is to whitelist channels to notify about this drop campaign. Leaving  this empty will enable for everyone who broadcasts the game.", "DevDropsCampaignForm");
-                    this.state.games.length && (t = Object(o.d)("{games, plural, one { This is to whitelist channels to notify about this drop campaign. Leaving this empty will enable for everyone who broadcasts the game. } other { This is to whitelist channels to notify about this drop campaign. Leaving this empty will enable for everyone who broadcasts the games. } }", {
-                        games: this.state.games.length
-                    }, "DevDropsCampaignForm"));
-                    var n = O.E.Default;
-                    this.state.isSubmitting ? n = O.E.Loading : this.props.updateSuccess && (n = O.E.Success);
-                    var a = this.renderDropsLinkImage();
-                    return r.createElement(O.Ya, {
-                        className: "dev-drops-campaign-form"
-                    }, this.renderErrorMessage(), r.createElement(O.Ya, {
-                        padding: {
-                            top: 2
-                        }
-                    }, r.createElement(O.N, {
-                        checked: this.state.enabled,
-                        label: Object(o.d)("Enabled", "DevDropsCampaignForm"),
-                        onChange: this.setEnabled
-                    })), r.createElement(O.Ya, {
-                        padding: {
-                            top: 2
-                        }
-                    }, r.createElement(O.Ea, {
-                        label: Object(o.d)("Campaign Name", "DevDropsCampaignForm")
-                    }, r.createElement(O.Sa, {
-                        type: O.Ua.Text,
-                        value: this.state.itemName,
-                        onChange: this.setItemName,
-                        "data-test-selector": ae.NameField
-                    }))), this.state.campaignId && r.createElement(O.Ya, {
-                        padding: {
-                            top: 1
-                        }
-                    }, r.createElement(O.Ea, {
-                        label: Object(o.d)("Campaign ID", "DevDropsCampaignForm")
-                    }, r.createElement(O.Sa, {
-                        type: O.Ua.Text,
-                        value: this.state.campaignId
-                    }))), r.createElement(O.Ya, {
-                        padding: {
-                            top: 1
-                        }
-                    }, r.createElement(O.Ja, null, r.createElement(O.P, {
-                        cols: {
-                            default: 12,
-                            md: 6
-                        }
-                    }, r.createElement(O.Ea, {
-                        label: Object(o.d)("Start Date/Time (UTC)", "DevDropsCampaignForm")
-                    }, r.createElement(W.a, {
-                        onChange: this.onStartDate,
-                        defaultDate: this.state.startDate
-                    }), r.createElement(J, {
-                        onChange: this.onStartTime,
-                        defaultDate: this.state.startTime
-                    }))), r.createElement(O.P, {
-                        cols: {
-                            default: 12,
-                            md: 6
-                        }
-                    }, r.createElement(O.Ea, {
-                        label: Object(o.d)("End Date/Time (UTC)", "DevDropsCampaignForm")
-                    }, r.createElement(W.a, {
-                        onChange: this.onEndDate,
-                        defaultDate: this.state.endDate
-                    }), r.createElement(J, {
-                        onChange: this.onEndTime,
-                        defaultDate: this.state.endTime
-                    }))))), r.createElement(O.Ya, {
-                        padding: {
-                            top: 1
-                        }
-                    }, r.createElement(O.Ea, {
-                        label: Object(o.d)("Games", "DevDropsCampaignForm")
-                    }, r.createElement(oe.a, {
-                        onGameSelect: this.onGameSelect,
-                        multi: !0,
-                        gameSuggestions: this.props.games
-                    }), r.createElement(O.W, {
-                        color: O.O.Alt2
-                    }, Object(o.d)("If your game does not appear in this list, please add it to your company <x:link>here</x:link>.", {
-                        "x:link": function(e) {
-                            return r.createElement(O.U, {
-                                key: e,
-                                to: "/console/games"
-                            }, e)
-                        }
-                    }, "DevDropsCampaignForm")))), r.createElement(O.Ya, {
-                        padding: {
-                            top: 1
-                        }
-                    }, r.createElement(O.Ea, {
-                        label: Object(o.d)("Drops Connection URL", "DevDropsCampaignForm"),
-                        hint: Object(o.d)("The URL users go to connect their account.", "DevDropsCampaignForm")
-                    }, r.createElement(O.Sa, {
-                        "data-test-selector": ae.ConnectionURL,
-                        type: O.Ua.Text,
-                        value: this.state.connectionURL,
-                        onChange: this.setConnectURL
-                    }))), r.createElement(O.Ya, {
-                        padding: {
-                            top: 1
-                        }
-                    }, r.createElement(O.Ea, {
-                        label: Object(o.d)("Whitelisted Channels", "DevDropsCampaignForm"),
-                        hint: t
-                    }, r.createElement(ce.a, {
-                        onUserSelect: this.onUserSelect,
-                        includeCurrentUser: !0
-                    }))), r.createElement(O.Ya, {
-                        padding: {
-                            top: 1
-                        }
-                    }, r.createElement(se, {
-                        channels: this.state.channels,
-                        onChannelClick: this.onChannelClick
-                    })), r.createElement(O.Ya, null, r.createElement(O.Ea, {
-                        label: Object(o.d)("Campaign Image", "DevDropsCampaignForm"),
-                        hint: Object(o.d)("This is the image for Drops Campaign Notifications. Required image size is 120x120. Please note that it may take up to 15 minutes for image changes to take effect.", "DevDropsCampaignForm")
-                    }, a, r.createElement(O.Ya, {
-                        padding: {
-                            top: 1
-                        },
-                        display: O.X.Flex,
-                        alignItems: O.f.Center
-                    }, r.createElement(O.z, {
-                        "data-test-selector": ae.FileButton,
-                        onClick: this.onUploadButtonClick
-                    }, Object(o.d)("Upload Image", "DevDropsCampaignForm")), this.state.image && r.createElement(O.Ya, {
-                        margin: {
-                            x: 1
-                        }
-                    }, r.createElement(O.W, {
-                        color: O.O.Alt
-                    }, this.state.image.name))))), r.createElement(O.Ya, {
-                        padding: {
-                            top: 1
-                        }
-                    }, r.createElement(O.Ya, {
-                        padding: {
-                            top: 1
-                        }
-                    }, r.createElement(O.W, {
-                        type: O.Wb.H3
-                    }, Object(o.d)("Items", "DevDropsCampaignForm"))), r.createElement("fieldset", null, r.createElement(O.Qa, {
-                        padding: {
-                            y: 1
-                        }
-                    }, r.createElement("legend", null, r.createElement(O.W, null, Object(o.d)("Select up to {MAX_DROPS_ITEMS_PER_CAMPAIGN} of your currently active items", {
-                        MAX_DROPS_ITEMS_PER_CAMPAIGN: $.b
-                    }, "DevDropsCampaignForm")))), r.createElement(O.cc, {
-                        childWidth: O.dc.ExtraSmall,
-                        gutterSize: O.ec.Small,
-                        placeholderItems: 20
-                    }, this.props.availableItems.map(function(t, n) {
-                        var a = t.translations[t.defaultLanguage],
-                            s = e.state.itemIds.has(t.id);
-                        return r.createElement(O.Ya, {
-                            key: n,
-                            position: O.kb.Relative,
-                            className: "drops-item-selector-container",
-                            margin: {
-                                bottom: 2
-                            }
-                        }, r.createElement(O.o, {
-                            ratio: O.p.Aspect1x1
-                        }, r.createElement(O.Ma, {
-                            alt: a,
-                            checked: s,
-                            label: a,
-                            name: "item-selector-checkbox",
-                            onChange: e.onItemChange,
-                            src: $.a + "/items/" + e.props.companyId + "/" + t.id + "-120x120.jpg",
-                            type: O.Na.Checkbox,
-                            value: t.id
-                        })), s && r.createElement(O.Fb, {
-                            display: O.X.InlineFlex,
-                            alignItems: O.f.Center,
-                            justifyContent: O.Xa.Center,
-                            background: O.r.Accent,
-                            position: O.kb.Absolute,
-                            color: O.O.Overlay,
-                            attachTop: !0
-                        }, r.createElement(O.tb, {
-                            asset: O.ub.Check
-                        })), r.createElement(O.W, {
-                            bold: s,
-                            ellipsis: !0
-                        }, a))
-                    })))), r.createElement(O.Ya, {
-                        padding: {
-                            top: 1
-                        }
-                    }, r.createElement(O.Ya, {
-                        display: O.X.InlineBlock,
-                        padding: {
-                            right: 1
-                        }
-                    }, r.createElement(O.z, {
-                        type: O.F.Hollow,
-                        onClick: this.onClickCancel
-                    }, Object(o.d)("Cancel", "DevDropsCampaignForm"))), r.createElement(O.z, {
-                        disabled: !this.state.valid,
-                        "data-test-selector": ae.SubmitButton,
-                        onClick: this.onSubmit,
-                        state: n
-                    }, Object(o.d)("Submit", "DevDropsCampaignForm"))))
-                }, t.prototype.campaignDate = function(e, t) {
-                    return new Date(Date.UTC(e.getFullYear(), e.getMonth(), e.getDate(), t.getHours(), t.getMinutes()))
-                }, t
-            }(r.Component);
-            var le = Object(Y.connect)(null, function(e) {
-                    return Object(l.bindActionCreators)({
-                        showModal: x.d
-                    }, e)
-                })(ue),
-                pe = n("QKmf");
-
-            function Ee() {
-                var e = this;
-                return Object(ee.a)(pe, {
-                    props: function(t) {
-                        return {
-                            createUploadURLMutation: function(n) {
-                                return a.__awaiter(e, void 0, void 0, function() {
-                                    var e;
-                                    return a.__generator(this, function(a) {
-                                        switch (a.label) {
-                                            case 0:
-                                                return t.mutate ? [4, t.mutate({
-                                                    variables: {
-                                                        input: n
-                                                    }
-                                                })] : [3, 2];
-                                            case 1:
-                                                if ((e = a.sent()).data.createDropImageUploadURL && !e.data.createDropImageUploadURL.error) return [2, {
-                                                    url: e.data.createDropImageUploadURL.url,
-                                                    uploadID: e.data.createDropImageUploadURL.uploadID
-                                                }];
-                                                throw new Error("Upload failed");
-                                            case 2:
-                                                throw new Error("Unable to upload image");
-                                            case 3:
-                                                return [2]
-                                        }
-                                    })
-                                })
-                            }
-                        }
-                    }
-                })
-            }
-            var de, me = function(e) {
-                    function t() {
-                        var t = null !== e && e.apply(this, arguments) || this;
-                        return t.state = {
-                            games: [],
-                            gamesLoaded: !1,
-                            items: []
-                        }, t.fetchGames = function() {
-                            return a.__awaiter(t, void 0, void 0, function() {
-                                var e;
-                                return a.__generator(this, function(t) {
-                                    switch (t.label) {
-                                        case 0:
-                                            return t.trys.push([0, 2, , 3]), [4, V()];
-                                        case 1:
-                                            return e = t.sent(), this.setState({
-                                                games: e,
-                                                gamesLoaded: !0
-                                            }), [3, 3];
-                                        case 2:
-                                            return t.sent(), this.setState({
-                                                gamesLoaded: !0
-                                            }), [3, 3];
-                                        case 3:
-                                            return [2]
-                                    }
-                                })
-                            })
-                        }, t.fetchItems = function() {
-                            return a.__awaiter(t, void 0, void 0, function() {
-                                var e, t;
-                                return a.__generator(this, function(n) {
-                                    switch (n.label) {
-                                        case 0:
-                                            e = g(this.props.company), n.label = 1;
-                                        case 1:
-                                            return n.trys.push([1, 3, , 4]), [4, H({
-                                                activeOnly: !0,
-                                                companyId: e,
-                                                limit: 100
-                                            })];
-                                        case 2:
-                                            return (t = n.sent()) && this.setState({
-                                                items: t.items
-                                            }), [3, 4];
-                                        case 3:
-                                            return n.sent(), [3, 4];
-                                        case 4:
-                                            return [2]
-                                    }
-                                })
-                            })
-                        }, t.onCancel = function() {
-                            t.props.history.push("/console/drops")
-                        }, t.onSubmit = function(e) {
-                            return a.__awaiter(t, void 0, void 0, function() {
-                                var t, n, r, s, i, u, l, p;
-                                return a.__generator(this, function(a) {
-                                    switch (a.label) {
-                                        case 0:
-                                            return a.trys.push([0, 12, , 13]), t = g(this.props.company), n = f(e, t), [4, Object(N.a)(T.a.PostCampaign)];
-                                        case 1:
-                                            return (r = a.sent()) ? (s = E.a + "/kraken/accounts/" + t + "/campaigns", [4, Object(h.a)(s, {
-                                                method: "POST",
-                                                body: JSON.stringify(n),
-                                                headers: {
-                                                    "X-Twitch-VHSCF": r
-                                                }
-                                            })]) : [3, 10];
-                                        case 2:
-                                            return 200 !== (i = a.sent()).status ? [3, 7] : (Object(c.d)(c.a.CreateDropsProcessComplete, n.id || ""), e.image ? [4, i.json()] : [3, 5]);
-                                        case 3:
-                                            return u = a.sent(), [4, this.uploadFile(e.image, u.id)];
-                                        case 4:
-                                            return a.sent(), [3, 6];
-                                        case 5:
-                                            this.props.history.push("/console/drops"), a.label = 6;
-                                        case 6:
-                                            return [3, 9];
-                                        case 7:
-                                            return 400 !== i.status ? [3, 9] : [4, i.json()];
-                                        case 8:
-                                            l = a.sent(), this.setState({
-                                                errorMessage: l.message
-                                            }), a.label = 9;
-                                        case 9:
-                                            return [3, 11];
-                                        case 10:
-                                            this.setState({
-                                                errorMessage: Object(o.d)("You are not allowed to perform this action", "DevDropsCreateCampaign")
-                                            }), a.label = 11;
-                                        case 11:
-                                            return [3, 13];
-                                        case 12:
-                                            return p = a.sent(), this.setState({
-                                                errorMessage: p.message
-                                            }), [3, 13];
-                                        case 13:
-                                            return [2]
-                                    }
-                                })
-                            })
-                        }, t.uploadFile = function(e, n) {
-                            return a.__awaiter(t, void 0, void 0, function() {
-                                var t;
-                                return a.__generator(this, function(a) {
-                                    switch (a.label) {
-                                        case 0:
-                                            t = new w(this.generateUploadURL(n), this.onFinishUpload), a.label = 1;
-                                        case 1:
-                                            return a.trys.push([1, 3, , 4]), [4, t.uploadFile(e)];
-                                        case 2:
-                                            return a.sent(), [3, 4];
-                                        case 3:
-                                            return a.sent(), this.props.history.push("/console/drops"), [3, 4];
-                                        case 4:
-                                            return [2]
-                                    }
-                                })
-                            })
-                        }, t.generateUploadURL = function(e) {
-                            if (!t.props.company) throw new Error("Failed to upload");
-                            return function(n) {
-                                return a.__awaiter(t, void 0, void 0, function() {
-                                    var t, n;
-                                    return a.__generator(this, function(a) {
-                                        switch (a.label) {
-                                            case 0:
-                                                return [4, Object(N.a)(T.a.PostCampaignImageUrl)];
-                                            case 1:
-                                                if (t = a.sent()) return n = {
-                                                    campaignID: e,
-                                                    imageType: P.v.LINK_NOTIFICATION,
-                                                    serviceID: g(this.props.company),
-                                                    token: t
-                                                }, [2, this.props.createUploadURLMutation(n)];
-                                                throw new Error("Failed to upload")
-                                        }
-                                    })
-                                })
-                            }
-                        }, t.onFinishUpload = function() {
-                            t.props.history.push("/console/drops")
-                        }, t
-                    }
-                    return a.__extends(t, e), t.prototype.componentDidMount = function() {
-                        return a.__awaiter(this, void 0, void 0, function() {
-                            return a.__generator(this, function(e) {
-                                switch (e.label) {
-                                    case 0:
-                                        return [4, Promise.all([this.fetchGames(), this.fetchItems()])];
-                                    case 1:
-                                        return e.sent(), this.props.latencyTracking.reportInteractive(), [2]
-                                }
-                            })
-                        })
-                    }, t.prototype.render = function() {
-                        return this.state.gamesLoaded ? r.createElement(O.Ya, {
-                            padding: {
-                                top: 1
-                            }
-                        }, r.createElement(O.Ya, {
-                            display: O.X.Flex,
-                            justifyContent: O.Xa.Between
-                        }, r.createElement(O.W, {
-                            type: O.Wb.H2
-                        }, Object(o.d)("Drops Campaign", "DevDropsCreateCampaign")), r.createElement(O.z, {
-                            targetBlank: !0,
-                            linkTo: "https://dev.twitch.tv/docs/drops",
-                            type: O.F.Hollow
-                        }, Object(o.d)("Need Help?", "DevDropsCreateCampaign"))), r.createElement(O.Ja, null, r.createElement(O.P, {
-                            cols: {
-                                default: 12,
-                                md: 5
-                            }
-                        }, r.createElement(le, {
-                            companyId: this.props.company.id,
-                            games: this.state.games,
-                            availableItems: this.state.items,
-                            onCancel: this.onCancel,
-                            onSubmit: this.onSubmit,
-                            errorMessage: this.state.errorMessage
-                        })))) : r.createElement(O.ab, null)
-                    }, t
-                }(r.Component),
-                _e = Object(l.compose)(Object(_.b)("DevDropsCreateCampaignPage", {
-                    destination: d.a.DevSiteDropsCreateCampaign
-                }), Object(p.a)({
-                    location: m.PageviewLocation.DevSiteDropsCreateCampaign
-                }), Ee(), Object(u.a)(), U.a)(me),
-                he = function(e) {
-                    function t() {
-                        var t = null !== e && e.apply(this, arguments) || this;
-                        return t.state = {
-                            loadError: !1
-                        }, t.preventRender = function() {
-                            t.setState({
-                                loadError: !0
-                            })
-                        }, t
-                    }
-                    return a.__extends(t, e), t.prototype.render = function() {
-                        if (this.state.loadError) return null;
-                        var e = $.a + "/items/" + this.props.companyId + "/" + this.props.id + "-" + this.props.size + "x" + this.props.size + ".jpg";
-                        return r.createElement(O.S, {
-                            src: e,
-                            alt: this.props.name,
-                            onError: this.preventRender
-                        })
-                    }, t
-                }(r.Component);
+                })(ee);
             n("WM9t");
             ! function(e) {
                 e.DefaultLocaleSelect = "dev-drops-item-form-language-field", e.Error = "dev-drops-item-form-error", e.FileButton = "dev-drops-item-form-file-button", e.SubmitButton = "dev-drops-item-form-submit-button"
-            }(de || (de = {}));
-            var ge = function(e) {
+            }($ || ($ = {}));
+            var ne = function(e) {
                 function t(t) {
                     var n = e.call(this, t) || this;
                     return n.renderDropsItemImage = function() {
-                        return n.props.item ? r.createElement(he, {
-                            id: n.props.item.ItemID,
-                            companyId: n.props.companyId,
-                            name: n.props.item.Translations[n.props.item.DefaultLanguage],
-                            size: 120
-                        }) : null
+                        if (!n.props.item) return null;
+                        var e = n.props.item.Translations[n.props.item.DefaultLanguage],
+                            t = ae(n.props.companyId, n.props.item.ItemID, 120);
+                        return r.createElement(O.S, {
+                            src: t,
+                            alt: e
+                        })
                     }, n.renderErrorMessage = function() {
                         if (n.props.errorMessage) return r.createElement(O.Fb, {
                             className: "dev-drops-item-form__error",
                             color: O.O.Overlay,
-                            "data-test-selector": de.Error,
+                            "data-test-selector": $.Error,
                             margin: {
                                 top: 1
                             },
@@ -3727,9 +3066,9 @@
                             provider: {
                                 uploadFile: n.setFile
                             },
-                            allowedFileTypes: [M.a.JPEG]
+                            allowedFileTypes: [W.a.JPEG]
                         };
-                        n.props.showModal(q, t)
+                        n.props.showModal(x, t)
                     }, n.setFile = function(e) {
                         return n.setState({
                             image: e
@@ -3812,7 +3151,7 @@
                         display: O.X.Flex,
                         alignItems: O.f.Center
                     }, r.createElement(O.z, {
-                        "data-test-selector": de.FileButton,
+                        "data-test-selector": $.FileButton,
                         onClick: this.onUploadButtonClick
                     }, Object(o.d)("Upload Image", "DevDropsItemForm")), this.state.image && r.createElement(O.Ya, {
                         padding: {
@@ -3904,7 +3243,7 @@
                     }, r.createElement(O.Ab, {
                         value: this.state.defaultLocale,
                         onChange: this.setDefaultLocale,
-                        "data-test-selector": de.DefaultLocaleSelect
+                        "data-test-selector": $.DefaultLocaleSelect
                     }, o.a.locales.map(function(e) {
                         return r.createElement("option", {
                             key: e.locale,
@@ -3923,32 +3262,682 @@
                         type: O.F.Hollow,
                         onClick: this.onClickCancel
                     }, Object(o.d)("Cancel", "DevDropsItemForm"))), r.createElement(O.z, {
-                        "data-test-selector": de.SubmitButton,
+                        "data-test-selector": $.SubmitButton,
                         disabled: !this.state.valid,
                         onClick: this.onSubmit,
                         state: t
                     }, Object(o.d)("Submit", "DevDropsItemForm"))))
                 }, t
             }(r.Component);
-            var Te, fe, Ie = Object(Y.connect)(null, function(e) {
+
+            function ae(e, t, n) {
+                return "https://gds-vhs-drops-campaign-images.twitch.tv/items/" + e + "/" + t + "-" + n + "x" + n + ".jpg"
+            }
+            var re, ie = n("GD6M"),
+                se = n("LFRE");
+            n("xYlS");
+            ! function(e) {
+                e.ConnectionURL = "dev-drops-campaign-form-connection-url", e.Error = "dev-drops-campaign-form-error", e.FileButton = "dev-drops-campaign-form-file-button", e.NameField = "dev-drops-campaign-form-name-field", e.SubmitButton = "dev-drops-campaign-form-submit-button"
+            }(re || (re = {}));
+            var oe = function(e) {
+                function t(t) {
+                    var n = e.call(this, t) || this;
+                    if (n.renderDropsImage = function() {
+                            if (n.state.imageDataURL) {
+                                return r.createElement(O.S, {
+                                    src: n.state.imageDataURL,
+                                    alt: "drops_link_image_preview"
+                                })
+                            }
+                            if (n.props.campaign) {
+                                var e = function(e, t) {
+                                    return "https://twitch-ds-vhs-drops-campaign-images-us-west-2-prod.s3-us-west-2.amazonaws.com/" + e + "/account_link_notification_image_" + t + "x" + t + ".jpg"
+                                }(n.props.campaign.id, 80);
+                                return r.createElement(O.S, {
+                                    src: e,
+                                    alt: n.props.campaign.item_name
+                                })
+                            }
+                            return null
+                        }, n.renderErrorMessage = function() {
+                            if (n.props.errorMessage) return r.createElement(O.Fb, {
+                                className: "dev-drops-campaign-form__error",
+                                color: O.O.Overlay,
+                                "data-test-selector": re.Error,
+                                margin: {
+                                    top: 1
+                                },
+                                padding: 1
+                            }, n.props.errorMessage)
+                        }, n.onClickCancel = function() {
+                            var e = n.props.onCancel;
+                            e && e()
+                        }, n.findGamesForCampaign = function() {
+                            var e = n.props,
+                                t = e.campaign,
+                                a = e.games;
+                            return t && t.games && t.games.map(function(e) {
+                                return a.find(function(t) {
+                                    return t._id === parseInt(e, 10)
+                                })
+                            }).filter(function(e) {
+                                return !!e
+                            }) || []
+                        }, n.onItemChange = function(e) {
+                            var t = e.target,
+                                a = t.checked,
+                                r = t.value;
+                            n.setState(function(e) {
+                                var t;
+                                return a && e.itemIds.size < q.a ? ((t = new Set(e.itemIds)).add(r), {
+                                    itemIds: t
+                                }) : a ? null : ((t = new Set(e.itemIds)).delete(r), {
+                                    itemIds: t
+                                })
+                            }, n.handleFormChange)
+                        }, n.onStartDate = function(e) {
+                            n.setState({
+                                startDate: e
+                            }, n.handleFormChange)
+                        }, n.onStartTime = function(e) {
+                            n.setState({
+                                startTime: e
+                            }, n.handleFormChange)
+                        }, n.onEndDate = function(e) {
+                            n.setState({
+                                endDate: e
+                            }, n.handleFormChange)
+                        }, n.onEndTime = function(e) {
+                            n.setState({
+                                endTime: e
+                            }, n.handleFormChange)
+                        }, n.onGameSelect = function(e) {
+                            n.setState({
+                                games: e
+                            }, n.handleFormChange)
+                        }, n.onUserSelect = function(e) {
+                            n.setState(function(t) {
+                                return {
+                                    channels: t.channels.concat([e.id])
+                                }
+                            }, n.handleFormChange)
+                        }, n.setEnabled = function(e) {
+                            n.setState({
+                                enabled: e.target.checked
+                            }, n.handleFormChange)
+                        }, n.setItemName = function(e) {
+                            n.setState({
+                                itemName: e.target.value
+                            }, n.handleFormChange)
+                        }, n.setConnectURL = function(e) {
+                            n.setState({
+                                connectionURL: e.target.value
+                            }, n.handleFormChange)
+                        }, n.onChannelClick = function(e) {
+                            n.setState(function(t) {
+                                var n = t.channels.findIndex(function(t) {
+                                    return t === e
+                                });
+                                return {
+                                    channels: t.channels.slice(0, n).concat(t.channels.slice(n + 1))
+                                }
+                            }, n.handleFormChange)
+                        }, n.onUploadButtonClick = function(e) {
+                            e.preventDefault();
+                            var t = {
+                                imageDimensions: "120x120",
+                                isRequiredImageDimensions: !0,
+                                maxFileSizeMegabytes: 1,
+                                provider: {
+                                    uploadFile: n.setImageFile
+                                },
+                                allowedFileTypes: [W.a.JPEG]
+                            };
+                            n.props.showModal(x, t)
+                        }, n.setImageFile = function(e) {
+                            var t = new FileReader;
+                            return t.onloadend = function() {
+                                var e = t.result;
+                                n.setState({
+                                    imageDataURL: e
+                                }, n.handleFormChange)
+                            }, t.readAsDataURL(e), n.setState({
+                                imageFile: e
+                            }, n.handleFormChange), Promise.resolve()
+                        }, n.validate = function() {
+                            n.setState(function(e) {
+                                var t = !0;
+                                return null !== e.startDate && null !== e.startTime || (t = !1), null !== e.endDate && null !== e.endTime || (t = !1), e.games.length || (t = !1), e.itemIds.size || (t = !1), e.connectionURL || (t = !1), e.itemName.length || (t = !1), {
+                                    valid: t
+                                }
+                            })
+                        }, n.handleFormChange = function() {
+                            n.props.onFormChange && n.props.onFormChange(), n.validate()
+                        }, n.onSubmit = function(e) {
+                            return a.__awaiter(n, void 0, void 0, function() {
+                                var t, n, r;
+                                return a.__generator(this, function(a) {
+                                    switch (a.label) {
+                                        case 0:
+                                            return e.preventDefault(), t = this.campaignDate(this.state.startDate, this.state.startTime), n = this.campaignDate(this.state.endDate, this.state.endTime), r = {
+                                                connectionURL: this.state.connectionURL,
+                                                enabled: this.state.enabled,
+                                                endTime: n,
+                                                games: this.state.games.map(function(e) {
+                                                    return String(e._id)
+                                                }),
+                                                image: this.state.imageFile,
+                                                itemIds: Array.from(this.state.itemIds),
+                                                itemName: this.state.itemName,
+                                                startTime: t,
+                                                whitelistedChannels: this.state.channels
+                                            }, this.props.campaign && (r.id = this.props.campaign.id), this.setState({
+                                                isSubmitting: !0
+                                            }), [4, this.props.onSubmit(r)];
+                                        case 1:
+                                            return a.sent(), this.setState({
+                                                isSubmitting: !1
+                                            }), [2]
+                                    }
+                                })
+                            })
+                        }, t.campaign) {
+                        var i = n.findGamesForCampaign(),
+                            s = new Date(t.campaign.start_date / 1e6),
+                            o = new Date(t.campaign.end_date / 1e6);
+                        n.state = {
+                            campaignId: t.campaign.id,
+                            startDate: Object(R.b)(s),
+                            startTime: Object(R.b)(s),
+                            endDate: Object(R.b)(o),
+                            endTime: Object(R.b)(o),
+                            games: i,
+                            isSubmitting: !1,
+                            itemIds: new Set(t.campaign.item_ids),
+                            enabled: t.campaign.enabled,
+                            connectionURL: t.campaign.click_thru_url,
+                            channels: t.campaign.whitelisted_channel_ids && t.campaign.whitelisted_channel_ids.filter(function(e) {
+                                return e.length
+                            }) || [],
+                            itemName: t.campaign.item_name,
+                            valid: !1
+                        }
+                    } else n.state = {
+                        channels: [],
+                        connectionURL: "",
+                        enabled: !1,
+                        endDate: Object(R.a)(),
+                        endTime: Object(R.a)(),
+                        games: [],
+                        isSubmitting: !1,
+                        itemIds: new Set,
+                        itemName: "",
+                        startDate: Object(R.a)(),
+                        startTime: Object(R.a)(),
+                        valid: !1
+                    };
+                    return n
+                }
+                return a.__extends(t, e), t.prototype.render = function() {
+                    var e = this,
+                        t = Object(o.d)("This is to whitelist channels to notify about this drop campaign. Leaving  this empty will enable for everyone who broadcasts the game.", "DevDropsCampaignForm");
+                    this.state.games.length && (t = Object(o.d)("{games, plural, one { This is to whitelist channels to notify about this drop campaign. Leaving this empty will enable for everyone who broadcasts the game. } other { This is to whitelist channels to notify about this drop campaign. Leaving this empty will enable for everyone who broadcasts the games. } }", {
+                        games: this.state.games.length
+                    }, "DevDropsCampaignForm"));
+                    var n = Object(o.d)("Image for Drops Campaign Notifications. The image must be squared, up-to 120x120 pixels. For example: <x:link>account_link_notification_image_80x80.jpg</x:link>. It may take up to 15 minutes for image changes to take effect.", {
+                            "x:link": function(e) {
+                                return r.createElement(O.U, {
+                                    key: e,
+                                    to: "https://gds-vhs-drops-campaign-images.twitch.tv/default/account_link_notification_image_80x80.jpg",
+                                    download: e,
+                                    targetBlank: !0
+                                }, e)
+                            }
+                        }, "DevDropsCampaignForm"),
+                        a = this.renderDropsImage();
+                    return r.createElement(O.Ya, {
+                        className: "dev-drops-campaign-form"
+                    }, r.createElement(O.Ya, {
+                        padding: {
+                            top: 2
+                        }
+                    }, r.createElement(O.N, {
+                        checked: this.state.enabled,
+                        label: Object(o.d)("Enabled", "DevDropsCampaignForm"),
+                        onChange: this.setEnabled
+                    })), r.createElement(O.Ya, {
+                        padding: {
+                            top: 2
+                        }
+                    }, r.createElement(O.Ea, {
+                        label: Object(o.d)("Campaign Name", "DevDropsCampaignForm")
+                    }, r.createElement(O.Sa, {
+                        type: O.Ua.Text,
+                        value: this.state.itemName,
+                        onChange: this.setItemName,
+                        "data-test-selector": re.NameField
+                    }))), this.state.campaignId && r.createElement(O.Ya, {
+                        padding: {
+                            top: 1
+                        }
+                    }, r.createElement(O.Ea, {
+                        label: Object(o.d)("Campaign ID", "DevDropsCampaignForm")
+                    }, r.createElement(O.Sa, {
+                        type: O.Ua.Text,
+                        value: this.state.campaignId
+                    }))), r.createElement(O.Ya, {
+                        padding: {
+                            top: 1
+                        }
+                    }, r.createElement(O.Ja, null, r.createElement(O.P, {
+                        cols: {
+                            default: 12,
+                            md: 6
+                        }
+                    }, r.createElement(O.Ea, {
+                        label: Object(o.d)("Start Date/Time (UTC)", "DevDropsCampaignForm")
+                    }, r.createElement(V.a, {
+                        onChange: this.onStartDate,
+                        defaultDate: this.state.startDate
+                    }), r.createElement(z, {
+                        onChange: this.onStartTime,
+                        defaultDate: this.state.startTime
+                    }))), r.createElement(O.P, {
+                        cols: {
+                            default: 12,
+                            md: 6
+                        }
+                    }, r.createElement(O.Ea, {
+                        label: Object(o.d)("End Date/Time (UTC)", "DevDropsCampaignForm")
+                    }, r.createElement(V.a, {
+                        onChange: this.onEndDate,
+                        defaultDate: this.state.endDate
+                    }), r.createElement(z, {
+                        onChange: this.onEndTime,
+                        defaultDate: this.state.endTime
+                    }))))), r.createElement(O.Ya, {
+                        padding: {
+                            top: 1
+                        }
+                    }, r.createElement(O.Ea, {
+                        label: Object(o.d)("Games", "DevDropsCampaignForm")
+                    }, r.createElement(ie.a, {
+                        onGameSelect: this.onGameSelect,
+                        multi: !0,
+                        gameSuggestions: this.props.games
+                    }), r.createElement(O.W, {
+                        color: O.O.Alt2
+                    }, Object(o.d)("If your game does not appear in this list, please add it to your company <x:link>here</x:link>.", {
+                        "x:link": function(e) {
+                            return r.createElement(O.U, {
+                                key: e,
+                                to: "/console/games"
+                            }, e)
+                        }
+                    }, "DevDropsCampaignForm")))), r.createElement(O.Ya, {
+                        padding: {
+                            top: 1
+                        }
+                    }, r.createElement(O.Ea, {
+                        label: Object(o.d)("Drops Connection URL", "DevDropsCampaignForm"),
+                        hint: Object(o.d)("The URL users go to connect their account.", "DevDropsCampaignForm")
+                    }, r.createElement(O.Sa, {
+                        "data-test-selector": re.ConnectionURL,
+                        type: O.Ua.Text,
+                        value: this.state.connectionURL,
+                        onChange: this.setConnectURL
+                    }))), r.createElement(O.Ya, {
+                        padding: {
+                            top: 1
+                        }
+                    }, r.createElement(O.Ea, {
+                        label: Object(o.d)("Whitelisted Channels", "DevDropsCampaignForm")
+                    }, r.createElement(se.a, {
+                        onUserSelect: this.onUserSelect,
+                        includeCurrentUser: !0
+                    })), r.createElement(te, {
+                        channels: this.state.channels,
+                        onChannelClick: this.onChannelClick
+                    }), r.createElement(O.W, {
+                        color: O.O.Alt2
+                    }, t)), r.createElement(O.Ya, {
+                        padding: {
+                            top: 1
+                        }
+                    }, r.createElement(O.Ea, {
+                        label: Object(o.d)("Campaign Image", "DevDropsCampaignForm")
+                    }, r.createElement(O.W, {
+                        color: O.O.Alt2
+                    }, n), a && r.createElement(O.U, {
+                        onClick: this.onUploadButtonClick,
+                        children: a
+                    }), r.createElement(O.Ya, {
+                        padding: {
+                            top: 1
+                        }
+                    }, r.createElement(O.z, {
+                        "data-test-selector": re.FileButton,
+                        onClick: this.onUploadButtonClick
+                    }, Object(o.d)("Upload Image", "DevDropsCampaignForm"))))), r.createElement(O.Ya, {
+                        padding: {
+                            top: 1
+                        }
+                    }, r.createElement(O.Ya, {
+                        padding: {
+                            top: 1
+                        }
+                    }, r.createElement(O.W, {
+                        type: O.Wb.H3
+                    }, Object(o.d)("Items", "DevDropsCampaignForm"))), r.createElement("fieldset", null, r.createElement(O.Qa, {
+                        padding: {
+                            y: 1
+                        }
+                    }, r.createElement("legend", null, r.createElement(O.W, null, Object(o.d)("Select up to {MAX_DROPS_ITEMS_PER_CAMPAIGN} of your currently active items", {
+                        MAX_DROPS_ITEMS_PER_CAMPAIGN: q.a
+                    }, "DevDropsCampaignForm")))), r.createElement(O.cc, {
+                        childWidth: O.dc.ExtraSmall,
+                        gutterSize: O.ec.Small,
+                        placeholderItems: 20
+                    }, this.props.availableItems.map(function(t, n) {
+                        var a = t.translations[t.defaultLanguage],
+                            i = e.state.itemIds.has(t.id);
+                        return r.createElement(O.Ya, {
+                            key: n,
+                            position: O.kb.Relative,
+                            className: "drops-item-selector-container",
+                            margin: {
+                                bottom: 2
+                            }
+                        }, r.createElement(O.o, {
+                            ratio: O.p.Aspect1x1
+                        }, r.createElement(O.Ma, {
+                            alt: a,
+                            checked: i,
+                            label: a,
+                            name: "item-selector-checkbox",
+                            onChange: e.onItemChange,
+                            src: ae(e.props.companyId, t.id, 120),
+                            type: O.Na.Checkbox,
+                            value: t.id
+                        })), i && r.createElement(O.Fb, {
+                            display: O.X.InlineFlex,
+                            alignItems: O.f.Center,
+                            justifyContent: O.Xa.Center,
+                            background: O.r.Accent,
+                            position: O.kb.Absolute,
+                            color: O.O.Overlay,
+                            attachTop: !0
+                        }, r.createElement(O.tb, {
+                            asset: O.ub.Check
+                        })), r.createElement(O.W, {
+                            bold: i,
+                            ellipsis: !0
+                        }, a))
+                    })))), this.renderErrorMessage(), r.createElement(O.Ya, {
+                        padding: {
+                            top: 1
+                        }
+                    }, r.createElement(O.Ya, {
+                        display: O.X.InlineBlock,
+                        padding: {
+                            right: 1
+                        }
+                    }, r.createElement(O.z, {
+                        type: O.F.Hollow,
+                        onClick: this.onClickCancel
+                    }, Object(o.d)("Cancel", "DevDropsCampaignForm"))), r.createElement(O.z, {
+                        disabled: !this.state.valid,
+                        "data-test-selector": re.SubmitButton,
+                        onClick: this.onSubmit,
+                        state: this.submitButtonState()
+                    }, Object(o.d)("Submit", "DevDropsCampaignForm"))))
+                }, t.prototype.submitButtonState = function() {
+                    return this.state.isSubmitting ? O.E.Loading : this.props.updateSuccess ? O.E.Success : O.E.Default
+                }, t.prototype.campaignDate = function(e, t) {
+                    return new Date(Date.UTC(e.getFullYear(), e.getMonth(), e.getDate(), t.getHours(), t.getMinutes()))
+                }, t
+            }(r.Component);
+            var ce = Object(w.connect)(null, function(e) {
                     return Object(l.bindActionCreators)({
-                        showModal: x.d
+                        showModal: G.d
                     }, e)
-                })(ge),
-                De = function(e) {
+                })(oe),
+                ue = n("QKmf");
+
+            function le() {
+                var e = this;
+                return Object(Q.a)(ue, {
+                    props: function(t) {
+                        return {
+                            createUploadURLMutation: function(n) {
+                                return a.__awaiter(e, void 0, void 0, function() {
+                                    var e;
+                                    return a.__generator(this, function(a) {
+                                        switch (a.label) {
+                                            case 0:
+                                                return t.mutate ? [4, t.mutate({
+                                                    variables: {
+                                                        input: n
+                                                    }
+                                                })] : [3, 2];
+                                            case 1:
+                                                if ((e = a.sent()).data.createDropImageUploadURL && !e.data.createDropImageUploadURL.error) return [2, {
+                                                    url: e.data.createDropImageUploadURL.url,
+                                                    uploadID: e.data.createDropImageUploadURL.uploadID
+                                                }];
+                                                throw new Error("Upload failed");
+                                            case 2:
+                                                throw new Error("Unable to upload image");
+                                            case 3:
+                                                return [2]
+                                        }
+                                    })
+                                })
+                            }
+                        }
+                    }
+                })
+            }
+            var pe = function(e) {
+                    function t() {
+                        var t = null !== e && e.apply(this, arguments) || this;
+                        return t.state = {
+                            games: [],
+                            gamesLoaded: !1,
+                            items: []
+                        }, t.fetchGames = function() {
+                            return a.__awaiter(t, void 0, void 0, function() {
+                                var e;
+                                return a.__generator(this, function(t) {
+                                    switch (t.label) {
+                                        case 0:
+                                            return t.trys.push([0, 2, , 3]), [4, M()];
+                                        case 1:
+                                            return e = t.sent(), this.setState({
+                                                games: e,
+                                                gamesLoaded: !0
+                                            }), [3, 3];
+                                        case 2:
+                                            return t.sent(), this.setState({
+                                                gamesLoaded: !0
+                                            }), [3, 3];
+                                        case 3:
+                                            return [2]
+                                    }
+                                })
+                            })
+                        }, t.fetchItems = function() {
+                            return a.__awaiter(t, void 0, void 0, function() {
+                                var e, t;
+                                return a.__generator(this, function(n) {
+                                    switch (n.label) {
+                                        case 0:
+                                            e = g(this.props.company), n.label = 1;
+                                        case 1:
+                                            return n.trys.push([1, 3, , 4]), [4, k({
+                                                activeOnly: !0,
+                                                companyId: e,
+                                                limit: 100
+                                            })];
+                                        case 2:
+                                            return (t = n.sent()) && this.setState({
+                                                items: t.items
+                                            }), [3, 4];
+                                        case 3:
+                                            return n.sent(), [3, 4];
+                                        case 4:
+                                            return [2]
+                                    }
+                                })
+                            })
+                        }, t.onCancel = function() {
+                            t.historyBackToDropsIndex()
+                        }, t.onSubmit = function(e) {
+                            return a.__awaiter(t, void 0, void 0, function() {
+                                var t, n, r, i, s, u, l, p;
+                                return a.__generator(this, function(a) {
+                                    switch (a.label) {
+                                        case 0:
+                                            return a.trys.push([0, 7, , 8]), [4, Object(N.a)(T.a.PostCampaign)];
+                                        case 1:
+                                            return (t = a.sent()) ? e.image ? (n = g(this.props.company), r = f(e, n), i = E.a + "/kraken/accounts/" + n + "/campaigns", [4, Object(h.a)(i, {
+                                                method: "POST",
+                                                body: JSON.stringify(r),
+                                                headers: {
+                                                    "X-Twitch-VHSCF": t
+                                                }
+                                            })]) : (this.setState({
+                                                errorMessage: Object(o.d)("Campaign image is mandatory. If you don't have a valid image, consider using the example provided in the hint text of the upload button.", "DevDropsCreateCampaign")
+                                            }), [2]) : (this.setState({
+                                                errorMessage: Object(o.d)("You are not allowed to perform this action", "DevDropsCreateCampaign")
+                                            }), [2]);
+                                        case 2:
+                                            return 400 !== (s = a.sent()).status ? [3, 4] : [4, s.json()];
+                                        case 3:
+                                            return u = a.sent(), this.setState({
+                                                errorMessage: u.message
+                                            }), [2];
+                                        case 4:
+                                            return 200 !== s.status ? (this.setState({
+                                                errorMessage: "Invalid response status code: {result.status}"
+                                            }), [2]) : (Object(c.d)(c.a.CreateDropsProcessComplete, r.id || ""), [4, s.json()]);
+                                        case 5:
+                                            return l = a.sent(), [4, this.uploadFile(e.image, l.id, this.historyBackToDropsIndex)];
+                                        case 6:
+                                            return a.sent(), [3, 8];
+                                        case 7:
+                                            return p = a.sent(), this.setState({
+                                                errorMessage: p.message
+                                            }), [3, 8];
+                                        case 8:
+                                            return [2]
+                                    }
+                                })
+                            })
+                        }, t.uploadFile = function(e, n, r) {
+                            return a.__awaiter(t, void 0, void 0, function() {
+                                return a.__generator(this, function(t) {
+                                    switch (t.label) {
+                                        case 0:
+                                            return t.trys.push([0, 2, , 3]), [4, new F.a(this.generateUploadURL(n), r).uploadFile(e)];
+                                        case 1:
+                                            return t.sent(), [3, 3];
+                                        case 2:
+                                            return t.sent(), r(), [3, 3];
+                                        case 3:
+                                            return [2]
+                                    }
+                                })
+                            })
+                        }, t.generateUploadURL = function(e) {
+                            if (!t.props.company) throw new Error("Failed to upload");
+                            return function(n) {
+                                return a.__awaiter(t, void 0, void 0, function() {
+                                    var t, n;
+                                    return a.__generator(this, function(a) {
+                                        switch (a.label) {
+                                            case 0:
+                                                return [4, Object(N.a)(T.a.PostCampaignImageUrl)];
+                                            case 1:
+                                                if (t = a.sent()) return n = {
+                                                    campaignID: e,
+                                                    imageType: P.v.LINK_NOTIFICATION,
+                                                    serviceID: g(this.props.company),
+                                                    token: t
+                                                }, [2, this.props.createUploadURLMutation(n)];
+                                                throw new Error("Failed to upload")
+                                        }
+                                    })
+                                })
+                            }
+                        }, t.historyBackToDropsIndex = function() {
+                            t.props.history.push("/console/drops")
+                        }, t
+                    }
+                    return a.__extends(t, e), t.prototype.componentDidMount = function() {
+                        return a.__awaiter(this, void 0, void 0, function() {
+                            return a.__generator(this, function(e) {
+                                switch (e.label) {
+                                    case 0:
+                                        return [4, Promise.all([this.fetchGames(), this.fetchItems()])];
+                                    case 1:
+                                        return e.sent(), this.props.latencyTracking.reportInteractive(), [2]
+                                }
+                            })
+                        })
+                    }, t.prototype.render = function() {
+                        return this.state.gamesLoaded ? r.createElement(O.Ya, {
+                            padding: {
+                                top: 1
+                            }
+                        }, r.createElement(O.Ya, {
+                            display: O.X.Flex,
+                            justifyContent: O.Xa.Between
+                        }, r.createElement(O.W, {
+                            type: O.Wb.H2
+                        }, Object(o.d)("Drops Campaign", "DevDropsCreateCampaign")), r.createElement(O.z, {
+                            targetBlank: !0,
+                            linkTo: "https://dev.twitch.tv/docs/drops",
+                            type: O.F.Hollow
+                        }, Object(o.d)("Need Help?", "DevDropsCreateCampaign"))), r.createElement(O.Ja, null, r.createElement(O.P, {
+                            cols: {
+                                default: 12,
+                                md: 5
+                            }
+                        }, r.createElement(ce, {
+                            companyId: this.props.company.id,
+                            games: this.state.games,
+                            availableItems: this.state.items,
+                            onCancel: this.onCancel,
+                            onSubmit: this.onSubmit,
+                            errorMessage: this.state.errorMessage
+                        })))) : r.createElement(O.ab, null)
+                    }, t
+                }(r.Component),
+                Ee = Object(l.compose)(Object(_.b)("DevDropsCreateCampaignPage", {
+                    destination: d.a.DevSiteDropsCreateCampaign
+                }), Object(p.a)({
+                    location: m.PageviewLocation.DevSiteDropsCreateCampaign
+                }), le(), Object(u.a)(), U.a)(pe);
+            var de, me, _e = Object(w.connect)(null, function(e) {
+                    return Object(l.bindActionCreators)({
+                        showModal: G.d
+                    }, e)
+                })(ne),
+                he = function(e) {
                     function t() {
                         var t = null !== e && e.apply(this, arguments) || this;
                         return t.state = {}, t.onCancel = function() {
                             t.props.history.push("/console/drops/items")
                         }, t.onSubmit = function(e) {
                             return a.__awaiter(t, void 0, void 0, function() {
-                                var t, n, r, s, i, u, l, p;
+                                var t, n, r, i, s, u, l, p;
                                 return a.__generator(this, function(a) {
                                     switch (a.label) {
                                         case 0:
                                             return a.trys.push([0, 13, , 14]), t = g(this.props.company), [4, Object(N.a)(T.a.CreateItem)];
                                         case 1:
-                                            return (n = a.sent()) ? (r = I(e, t, n), s = E.a + "/kraken/accounts/" + t + "/items", [4, Object(h.a)(s, {
+                                            return (n = a.sent()) ? (r = I(e, t, n), i = E.a + "/kraken/accounts/" + t + "/items", [4, Object(h.a)(i, {
                                                 method: "POST",
                                                 body: JSON.stringify(r),
                                                 headers: {
@@ -3956,7 +3945,7 @@
                                                 }
                                             })]) : [3, 11];
                                         case 2:
-                                            return 200 !== (i = a.sent()).status ? [3, 7] : (Object(c.d)(c.a.CreateDropsItemProcessComplete, e.item_id), e.image ? [4, i.json()] : [3, 5]);
+                                            return 200 !== (s = a.sent()).status ? [3, 7] : (Object(c.d)(c.a.CreateDropsItemProcessComplete, e.item_id), e.image ? [4, s.json()] : [3, 5]);
                                         case 3:
                                             return u = a.sent(), [4, this.uploadFile(e.image, u.ItemID)];
                                         case 4:
@@ -3966,7 +3955,7 @@
                                         case 6:
                                             return [3, 10];
                                         case 7:
-                                            return 400 !== i.status ? [3, 9] : [4, i.json()];
+                                            return 400 !== s.status ? [3, 9] : [4, s.json()];
                                         case 8:
                                             return l = a.sent(), this.setState({
                                                 errorMessage: l.message
@@ -3998,7 +3987,7 @@
                                 return a.__generator(this, function(a) {
                                     switch (a.label) {
                                         case 0:
-                                            t = new w(this.generateUploadURL(n), this.onFinishUpload), a.label = 1;
+                                            t = new F.a(this.generateUploadURL(n), this.onFinishUpload), a.label = 1;
                                         case 1:
                                             return a.trys.push([1, 3, , 4]), [4, t.uploadFile(e)];
                                         case 2:
@@ -4054,7 +4043,7 @@
                                 default: 12,
                                 md: 5
                             }
-                        }, r.createElement(Ie, {
+                        }, r.createElement(_e, {
                             companyId: g(this.props.company),
                             onCancel: this.onCancel,
                             onSubmit: this.onSubmit,
@@ -4062,13 +4051,13 @@
                         }))))
                     }, t
                 }(r.Component),
-                Ne = Object(l.compose)(Object(_.b)("DevDropsCreateItemPage", {
+                ge = Object(l.compose)(Object(_.b)("DevDropsCreateItemPage", {
                     autoReportInteractive: !0,
                     destination: d.a.DevSiteDropsCreateItem
                 }), Object(p.a)({
                     location: m.PageviewLocation.DevSiteDropsCreateItem
-                }), Ee(), Object(u.a)(), U.a)(De),
-                Oe = function(e) {
+                }), le(), Object(u.a)(), U.a)(he),
+                Te = function(e) {
                     function t() {
                         var t = null !== e && e.apply(this, arguments) || this;
                         return t.state = {
@@ -4084,7 +4073,7 @@
                                 return a.__generator(this, function(t) {
                                     switch (t.label) {
                                         case 0:
-                                            return t.trys.push([0, 2, , 3]), [4, V()];
+                                            return t.trys.push([0, 2, , 3]), [4, M()];
                                         case 1:
                                             return e = t.sent(), this.setState({
                                                 games: e,
@@ -4107,7 +4096,7 @@
                                         case 0:
                                             e = g(this.props.company), n.label = 1;
                                         case 1:
-                                            return n.trys.push([1, 3, , 4]), [4, H({
+                                            return n.trys.push([1, 3, , 4]), [4, k({
                                                 activeOnly: !0,
                                                 companyId: e,
                                                 limit: 100
@@ -4155,46 +4144,40 @@
                             })
                         }, t.onSubmit = function(e) {
                             return a.__awaiter(t, void 0, void 0, function() {
-                                var t, n, r, s, i, u, l;
+                                var t, n, r, i, s, u, l;
                                 return a.__generator(this, function(a) {
                                     switch (a.label) {
                                         case 0:
-                                            return a.trys.push([0, 10, , 11]), t = g(this.props.company), n = f(e, String(t)), [4, Object(N.a)(T.a.PutCampaign)];
+                                            return a.trys.push([0, 7, , 8]), [4, Object(N.a)(T.a.PutCampaign)];
                                         case 1:
-                                            return (r = a.sent()) ? (s = E.a + "/kraken/accounts/" + t + "/campaigns/" + e.id, [4, Object(h.a)(s, {
+                                            return (t = a.sent()) ? (n = g(this.props.company), r = f(e, String(n)), i = E.a + "/kraken/accounts/" + n + "/campaigns/" + e.id, [4, Object(h.a)(i, {
                                                 method: "PUT",
-                                                body: JSON.stringify(n),
+                                                body: JSON.stringify(r),
                                                 headers: {
-                                                    "X-Twitch-VHSCF": r
+                                                    "X-Twitch-VHSCF": t
                                                 }
-                                            })]) : [3, 9];
+                                            })]) : [2];
                                         case 2:
-                                            return 204 !== (i = a.sent()).status ? [3, 6] : (Object(c.d)(c.a.DropUpdated, n.id || ""), e.image ? [4, this.uploadFile(e.image)] : [3, 4]);
+                                            return 400 !== (s = a.sent()).status ? [3, 4] : [4, s.json()];
                                         case 3:
-                                            return a.sent(), [3, 5];
-                                        case 4:
-                                            this.setState({
-                                                updateSuccess: !0
-                                            }), a.label = 5;
-                                        case 5:
-                                            return [3, 9];
-                                        case 6:
-                                            return 400 !== i.status ? [3, 8] : [4, i.json()];
-                                        case 7:
                                             return u = a.sent(), this.setState({
                                                 errorMessage: u.message
-                                            }), [3, 9];
-                                        case 8:
-                                            Object(c.d)(c.a.DropNotFilledCorrectly, n.id || ""), this.setState({
+                                            }), [2];
+                                        case 4:
+                                            return 204 !== s.status ? (Object(c.d)(c.a.DropNotFilledCorrectly, r.id || ""), this.setState({
                                                 errorMessage: Object(o.d)("An error occurred while updating your campaign, please try again", "DevDropsEditCampaign")
-                                            }), a.label = 9;
-                                        case 9:
-                                            return [3, 11];
-                                        case 10:
+                                            }), [2]) : (Object(c.d)(c.a.DropUpdated, r.id || ""), e.image ? [4, this.uploadFile(e.image)] : [3, 6]);
+                                        case 5:
+                                            return a.sent(), [2];
+                                        case 6:
+                                            return this.setState({
+                                                updateSuccess: !0
+                                            }), [3, 8];
+                                        case 7:
                                             return l = a.sent(), this.setState({
                                                 errorMessage: l.message
-                                            }), [3, 11];
-                                        case 11:
+                                            }), [3, 8];
+                                        case 8:
                                             return [2]
                                     }
                                 })
@@ -4222,30 +4205,28 @@
                                     }
                                 })
                             })
-                        }, t.onFinishUpload = function() {
-                            t.setState({
-                                updateSuccess: !0
-                            })
                         }, t.uploadFile = function(e) {
                             return a.__awaiter(t, void 0, void 0, function() {
-                                var t, n;
-                                return a.__generator(this, function(a) {
-                                    switch (a.label) {
+                                var t;
+                                return a.__generator(this, function(n) {
+                                    switch (n.label) {
                                         case 0:
-                                            t = new w(this.getUploadURL, this.onFinishUpload), a.label = 1;
+                                            return n.trys.push([0, 2, , 3]), [4, new F.a(this.getUploadURL, this.onFinishUpload).uploadFile(e)];
                                         case 1:
-                                            return a.trys.push([1, 3, , 4]), [4, t.uploadFile(e)];
+                                            return n.sent(), [3, 3];
                                         case 2:
-                                            return a.sent(), [3, 4];
-                                        case 3:
-                                            return n = a.sent(), this.setState({
-                                                errorMessage: n.message,
+                                            return t = n.sent(), this.setState({
+                                                errorMessage: t.message,
                                                 updateSuccess: !1
-                                            }), [3, 4];
-                                        case 4:
+                                            }), [3, 3];
+                                        case 3:
                                             return [2]
                                     }
                                 })
+                            })
+                        }, t.onFinishUpload = function() {
+                            t.setState({
+                                updateSuccess: !0
                             })
                         }, t
                     }
@@ -4281,7 +4262,7 @@
                                 default: 12,
                                 md: 5
                             }
-                        }, r.createElement(le, {
+                        }, r.createElement(ce, {
                             campaign: this.state.campaign,
                             companyId: this.props.company.id,
                             games: this.state.games,
@@ -4294,25 +4275,25 @@
                         })))) : r.createElement(O.ab, null)
                     }, t
                 }(r.Component),
-                Se = Object(l.compose)(Object(_.b)("DevDropsEditCampaignPage", {
+                fe = Object(l.compose)(Object(_.b)("DevDropsEditCampaignPage", {
                     destination: d.a.DevSiteDropsEditCampaign
                 }), Object(p.a)({
                     location: m.PageviewLocation.DevSiteDropsEditCampaign
-                }), Ee(), Object(u.a)(), U.a)(Oe);
+                }), le(), Object(u.a)(), U.a)(Te);
             ! function(e) {
                 e.ITEM = "ITEM", e.LINK_NOTIFICATION = "LINK_NOTIFICATION"
-            }(Te || (Te = {})),
+            }(de || (de = {})),
             function(e) {
                 e.SERVICE_DEPENDENCY_FAILURE = "SERVICE_DEPENDENCY_FAILURE", e.UNKNOWN = "UNKNOWN", e.USER_UNAUTHORIZED = "USER_UNAUTHORIZED"
-            }(fe || (fe = {}));
-            var Re, Ae = function(e) {
+            }(me || (me = {}));
+            var Ie, De = function(e) {
                     function t() {
                         var t = null !== e && e.apply(this, arguments) || this;
                         return t.state = {
                             updateSuccess: !1
                         }, t.fetchItem = function() {
                             return a.__awaiter(t, void 0, void 0, function() {
-                                var e, t, n, r, s;
+                                var e, t, n, r, i;
                                 return a.__generator(this, function(a) {
                                     switch (a.label) {
                                         case 0:
@@ -4326,8 +4307,8 @@
                                         case 2:
                                             return 200 !== (r = a.sent()).status ? [3, 4] : [4, r.json()];
                                         case 3:
-                                            return s = a.sent(), this.setState({
-                                                item: s
+                                            return i = a.sent(), this.setState({
+                                                item: i
                                             }), [3, 5];
                                         case 4:
                                             this.props.history.push("/console/drops/items"), a.label = 5;
@@ -4344,13 +4325,13 @@
                             t.props.history.push("/console/drops/items")
                         }, t.onSubmit = function(e) {
                             return a.__awaiter(t, void 0, void 0, function() {
-                                var t, n, r, s, i, u, l;
+                                var t, n, r, i, s, u, l;
                                 return a.__generator(this, function(a) {
                                     switch (a.label) {
                                         case 0:
                                             return a.trys.push([0, 10, , 11]), t = g(this.props.company), [4, Object(N.a)(T.a.UpdateItem)];
                                         case 1:
-                                            return (n = a.sent()) ? (r = I(e, String(t), n), s = E.a + "/kraken/accounts/" + t + "/items/" + e.item_id, [4, Object(h.a)(s, {
+                                            return (n = a.sent()) ? (r = I(e, String(t), n), i = E.a + "/kraken/accounts/" + t + "/items/" + e.item_id, [4, Object(h.a)(i, {
                                                 method: "PUT",
                                                 body: JSON.stringify(r),
                                                 headers: {
@@ -4358,7 +4339,7 @@
                                                 }
                                             })]) : [3, 9];
                                         case 2:
-                                            return 200 !== (i = a.sent()).status ? [3, 6] : (Object(c.d)(c.a.DropItemUpdated), e.image ? [4, this.uploadFile(e.image)] : [3, 4]);
+                                            return 200 !== (s = a.sent()).status ? [3, 6] : (Object(c.d)(c.a.DropItemUpdated), e.image ? [4, this.uploadFile(e.image)] : [3, 4]);
                                         case 3:
                                             return a.sent(), this.setState({
                                                 updateSuccess: !0
@@ -4370,7 +4351,7 @@
                                         case 5:
                                             return [3, 9];
                                         case 6:
-                                            return 400 !== i.status ? [3, 8] : [4, i.json()];
+                                            return 400 !== s.status ? [3, 8] : [4, s.json()];
                                         case 7:
                                             return u = a.sent(), this.setState({
                                                 errorMessage: u.message
@@ -4404,7 +4385,7 @@
                                             return [4, Object(N.a)(T.a.PostItemImageUrl)];
                                         case 1:
                                             if (e = a.sent()) return t = g(this.props.company), n = {
-                                                imageType: Te.ITEM,
+                                                imageType: de.ITEM,
                                                 itemID: this.state.item.ItemID,
                                                 serviceID: t,
                                                 token: e
@@ -4423,7 +4404,7 @@
                                 return a.__generator(this, function(a) {
                                     switch (a.label) {
                                         case 0:
-                                            t = new w(this.getUploadURL, this.onFinishUpload), a.label = 1;
+                                            t = new F.a(this.getUploadURL, this.onFinishUpload), a.label = 1;
                                         case 1:
                                             return a.trys.push([1, 3, , 4]), [4, t.uploadFile(e)];
                                         case 2:
@@ -4472,7 +4453,7 @@
                                 default: 12,
                                 md: 5
                             }
-                        }, r.createElement(Ie, {
+                        }, r.createElement(_e, {
                             onSubmit: this.onSubmit,
                             companyId: g(this.props.company),
                             item: this.state.item,
@@ -4483,12 +4464,12 @@
                         })))) : r.createElement(O.ab, null)
                     }, t
                 }(r.Component),
-                Ce = Object(l.compose)(Object(_.b)("DevDropsEditItemPage", {
+                Ne = Object(l.compose)(Object(_.b)("DevDropsEditItemPage", {
                     destination: d.a.DevSiteDropsEditItem
                 }), Object(p.a)({
                     location: m.PageviewLocation.DevSiteDropsEditItems
-                }), Ee(), Object(u.a)(), U.a)(Ae),
-                be = function(e) {
+                }), le(), Object(u.a)(), U.a)(De),
+                Oe = function(e) {
                     var t = Object(S.b)(Object(R.b)(e.item.createdAt), "MM/DD/YYYY, hh:mm a"),
                         n = Object(S.b)(Object(R.b)(e.item.updatedAt), "MM/DD/YYYY, hh:mm a"),
                         a = "/console/drops/items/" + e.item.id;
@@ -4498,8 +4479,8 @@
                 };
             ! function(e) {
                 e[e.Enabled = 0] = "Enabled", e[e.CreationDate = 1] = "CreationDate", e[e.UpdatedDate = 2] = "UpdatedDate", e[e.Name = 3] = "Name"
-            }(Re || (Re = {}));
-            var ve, Le = function(e) {
+            }(Ie || (Ie = {}));
+            var Se, Re = function(e) {
                     function t(t) {
                         var n = e.call(this, t) || this;
                         return n.handleClickNext = function() {
@@ -4518,12 +4499,12 @@
                                 var t = n.props,
                                     a = t.currentPage,
                                     r = t.nextCursor,
-                                    s = t.prevCursor;
-                                e.goToPage > a ? n.props.onClickPagination(e.goToPage, "", r) : n.props.onClickPagination(e.goToPage, s, "")
+                                    i = t.prevCursor;
+                                e.goToPage > a ? n.props.onClickPagination(e.goToPage, "", r) : n.props.onClickPagination(e.goToPage, i, "")
                             }
                         }, n.renderCampaignItems = function() {
                             return n.props.items.map(function(e) {
-                                return r.createElement(be, {
+                                return r.createElement(Oe, {
                                     item: e,
                                     key: e.id
                                 })
@@ -4534,7 +4515,7 @@
                                     sortingName: n.toggleSorting(e.sortingName)
                                 }
                             }, function() {
-                                n.props.onSort(Re.Name, n.state.sortingName)
+                                n.props.onSort(Ie.Name, n.state.sortingName)
                             })
                         }, n.sortEnabled = function() {
                             n.setState(function(e) {
@@ -4542,7 +4523,7 @@
                                     sortingEnabled: n.toggleSorting(e.sortingEnabled)
                                 }
                             }, function() {
-                                n.props.onSort(Re.Enabled, n.state.sortingEnabled)
+                                n.props.onSort(Ie.Enabled, n.state.sortingEnabled)
                             })
                         }, n.sortCreationDate = function() {
                             n.setState(function(e) {
@@ -4550,7 +4531,7 @@
                                     sortingCreationDate: n.toggleSorting(e.sortingCreationDate)
                                 }
                             }, function() {
-                                n.props.onSort(Re.CreationDate, n.state.sortingCreationDate)
+                                n.props.onSort(Ie.CreationDate, n.state.sortingCreationDate)
                             })
                         }, n.sortUpdatedDate = function() {
                             n.setState(function(e) {
@@ -4558,7 +4539,7 @@
                                     sortingUpdatedDate: n.toggleSorting(e.sortingUpdatedDate)
                                 }
                             }, function() {
-                                n.props.onSort(Re.UpdatedDate, n.state.sortingUpdatedDate)
+                                n.props.onSort(Ie.UpdatedDate, n.state.sortingUpdatedDate)
                             })
                         }, n.toggleSorting = function(e) {
                             return e === O.Cb.Default || e === O.Cb.Ascending ? O.Cb.Descending : O.Cb.Ascending
@@ -4610,7 +4591,7 @@
                         })), r.createElement(O.Jb, null, e)))
                     }, t
                 }(r.Component),
-                Ue = function(e) {
+                Ae = function(e) {
                     function t() {
                         var t = null !== e && e.apply(this, arguments) || this;
                         return t.state = {
@@ -4619,7 +4600,7 @@
                             seenAllPages: !1
                         }, t.getItems = function(e, n, r) {
                             return a.__awaiter(t, void 0, void 0, function() {
-                                var t, s, i, o;
+                                var t, i, s, o;
                                 return a.__generator(this, function(a) {
                                     switch (a.label) {
                                         case 0:
@@ -4628,20 +4609,20 @@
                                             }), [2];
                                             t = g(this.props.company), a.label = 1;
                                         case 1:
-                                            return a.trys.push([1, 3, , 4]), [4, H({
+                                            return a.trys.push([1, 3, , 4]), [4, k({
                                                 companyId: t,
                                                 prevCursor: n,
                                                 nextCursor: r
                                             })];
                                         case 2:
-                                            return (s = a.sent()) && (i = {
-                                                items: s.items,
-                                                prevCursor: s.prevCursor,
-                                                nextCursor: s.nextCursor
-                                            }, (o = this.state.pageCursors)[e] = i, this.setState({
+                                            return (i = a.sent()) && (s = {
+                                                items: i.items,
+                                                prevCursor: i.prevCursor,
+                                                nextCursor: i.nextCursor
+                                            }, (o = this.state.pageCursors)[e] = s, this.setState({
                                                 currentPage: e,
                                                 pageCursors: o,
-                                                seenAllPages: !s.nextCursor
+                                                seenAllPages: !i.nextCursor
                                             })), [3, 4];
                                         case 3:
                                             return a.sent(), [3, 4];
@@ -4653,28 +4634,28 @@
                         }, t.onSort = function(e, n) {
                             var a = t.state.pageCursors[t.state.currentPage].items;
                             switch (e) {
-                                case Re.Name:
+                                case Ie.Name:
                                     a = n === O.Cb.Ascending ? a.sort(function(e, t) {
                                         return e.translations[e.defaultLanguage].localeCompare(t.translations[t.defaultLanguage])
                                     }) : a.sort(function(e, t) {
                                         return t.translations[t.defaultLanguage].localeCompare(e.translations[e.defaultLanguage])
                                     });
                                     break;
-                                case Re.Enabled:
+                                case Ie.Enabled:
                                     a = n === O.Cb.Ascending ? a.sort(function(e, t) {
                                         return Number(e.active) - Number(t.active)
                                     }) : a.sort(function(e, t) {
                                         return Number(t.active) - Number(e.active)
                                     });
                                     break;
-                                case Re.CreationDate:
+                                case Ie.CreationDate:
                                     a = n === O.Cb.Ascending ? a.sort(function(e, t) {
                                         return e.createdAt.getTime() - t.createdAt.getTime()
                                     }) : a.sort(function(e, t) {
                                         return t.createdAt.getTime() - e.createdAt.getTime()
                                     });
                                     break;
-                                case Re.UpdatedDate:
+                                case Ie.UpdatedDate:
                                     a = n === O.Cb.Ascending ? a.sort(function(e, t) {
                                         return e.updatedAt.getTime() - t.updatedAt.getTime()
                                     }) : a.sort(function(e, t) {
@@ -4689,7 +4670,7 @@
                     }
                     return a.__extends(t, e), t.prototype.render = function() {
                         var e = this.state.pageCursors[this.state.currentPage];
-                        return e ? r.createElement(Le, {
+                        return e ? r.createElement(Re, {
                             items: e.items,
                             onSort: this.onSort,
                             onClickPagination: this.getItems,
@@ -4711,14 +4692,14 @@
                         })
                     }, t
                 }(r.Component),
-                Pe = Object(l.compose)(Object(_.b)("DevDropsItemsPage", {
+                Ce = Object(l.compose)(Object(_.b)("DevDropsItemsPage", {
                     destination: d.a.DevSiteDropsItems
                 }), Object(p.a)({
                     location: m.PageviewLocation.DevSiteDropsItems
-                }), Object(u.a)())(Ue),
-                Fe = n("mLw1");
-            (ve || (ve = {})).SubmitButton = "dev-drops-settings-submit";
-            var ye = function(e) {
+                }), Object(u.a)())(Ae),
+                be = n("mLw1");
+            (Se || (Se = {})).SubmitButton = "dev-drops-settings-submit";
+            var ve = function(e) {
                     function t() {
                         var t = null !== e && e.apply(this, arguments) || this;
                         return t.state = {
@@ -4765,7 +4746,7 @@
                         }, t.renderSubmitButton = function() {
                             var e = O.E.Default;
                             return t.state.isSubmitting ? e = O.E.Loading : t.state.submitSuccess && (e = O.E.Success), r.createElement(O.z, {
-                                "data-test-selector": ve.SubmitButton,
+                                "data-test-selector": Se.SubmitButton,
                                 disabled: t.state.submitSuccess,
                                 onClick: t.saveChanges,
                                 state: e
@@ -4844,8 +4825,8 @@
                         }))), e)))
                     }, t
                 }(r.Component),
-                Me = Object(l.compose)(Object(_.b)("DevDropsSettingsComponent"))(ye),
-                je = function(e) {
+                Le = Object(l.compose)(Object(_.b)("DevDropsSettingsComponent"))(ve),
+                Ue = function(e) {
                     function t() {
                         var t = null !== e && e.apply(this, arguments) || this;
                         return t.state = {
@@ -4857,7 +4838,7 @@
                             submitSuccess: !1
                         }, t.onUpdate = function(e) {
                             return a.__awaiter(t, void 0, void 0, function() {
-                                var t, n, r, s;
+                                var t, n, r, i;
                                 return a.__generator(this, function(a) {
                                     switch (a.label) {
                                         case 0:
@@ -4866,14 +4847,14 @@
                                             if (!(t = a.sent())) return [3, 5];
                                             a.label = 2;
                                         case 2:
-                                            return a.trys.push([2, 4, , 5]), n = g(this.props.company), r = E.a + "/kraken/service/" + n, s = {
+                                            return a.trys.push([2, 4, , 5]), n = g(this.props.company), r = E.a + "/kraken/service/" + n, i = {
                                                 client_id: e.clientId,
                                                 enabled: e.sendReport,
                                                 endpoint: e.endpoint,
                                                 readable_name: this.props.company.companyName,
                                                 sign_request: !1
                                             }, [4, Object(h.a)(r, {
-                                                body: JSON.stringify(s),
+                                                body: JSON.stringify(i),
                                                 method: "PUT",
                                                 headers: {
                                                     "X-Twitch-VHSCF": t
@@ -4893,7 +4874,7 @@
                             })
                         }, t.loadSettings = function() {
                             return a.__awaiter(t, void 0, void 0, function() {
-                                var e, t, n, r, s, i;
+                                var e, t, n, r, i, s;
                                 return a.__generator(this, function(a) {
                                     switch (a.label) {
                                         case 0:
@@ -4910,12 +4891,12 @@
                                         case 3:
                                             return 200 !== (r = a.sent()).status ? [3, 5] : [4, r.json()];
                                         case 4:
-                                            s = a.sent(), i = {
-                                                clientId: s.client_id,
-                                                endpoint: s.endpoint,
-                                                sendReport: s.enabled
+                                            i = a.sent(), s = {
+                                                clientId: i.client_id,
+                                                endpoint: i.endpoint,
+                                                sendReport: i.enabled
                                             }, this.setState({
-                                                settings: i
+                                                settings: s
                                             }), a.label = 5;
                                         case 5:
                                             return [3, 7];
@@ -4931,22 +4912,22 @@
                     return a.__extends(t, e), t.prototype.componentDidMount = function() {
                         this.loadSettings()
                     }, t.prototype.render = function() {
-                        return this.props.company ? r.createElement(Me, {
+                        return this.props.company ? r.createElement(Le, {
                             onUpdate: this.onUpdate,
                             currentSettings: this.state.settings,
                             submitSuccess: this.state.submitSuccess
-                        }) : r.createElement(Fe.a, {
+                        }) : r.createElement(be.a, {
                             to: "/request-access"
                         })
                     }, t
                 }(r.Component),
-                ke = Object(l.compose)(Object(_.b)("DevDropsSettingsPage", {
+                Pe = Object(l.compose)(Object(_.b)("DevDropsSettingsPage", {
                     autoReportInteractive: !0,
                     destination: d.a.DevSiteDropsSettings
                 }), Object(p.a)({
                     location: m.PageviewLocation.DevSiteDropsSettings
-                }), Object(u.a)())(je),
-                we = function(e) {
+                }), Object(u.a)())(Ue),
+                Fe = function(e) {
                     function t() {
                         return null !== e && e.apply(this, arguments) || this
                     }
@@ -4956,7 +4937,7 @@
                             padding: {
                                 bottom: 1
                             }
-                        }, r.createElement(O.Hb, null, r.createElement(s.a, {
+                        }, r.createElement(O.Hb, null, r.createElement(i.a, {
                             path: "/console/drops",
                             exact: !0
                         }, function(e) {
@@ -4965,7 +4946,7 @@
                                 linkTo: "/console/drops",
                                 active: Boolean(t)
                             }, Object(o.d)("Campaign Manager", "DevDropsDashboardRoot"))
-                        }), r.createElement(s.a, {
+                        }), r.createElement(i.a, {
                             path: e,
                             exact: !0
                         }, function(t) {
@@ -4974,7 +4955,7 @@
                                 linkTo: e,
                                 active: Boolean(n)
                             }, Object(o.d)("Item Manager", "DevDropsDashboardRoot"))
-                        }), r.createElement(s.a, {
+                        }), r.createElement(i.a, {
                             path: "/console/drops/settings",
                             exact: !0
                         }, function(e) {
@@ -4984,40 +4965,40 @@
                                 linkTo: "/console/drops/settings",
                                 active: Boolean(t)
                             }, Object(o.d)("Settings", "DevDropsDashboardRoot"))
-                        }))), r.createElement(i.a, null, r.createElement(s.a, {
+                        }))), r.createElement(s.a, null, r.createElement(i.a, {
                             exact: !0,
                             path: "/console/drops",
                             component: L
-                        }), r.createElement(s.a, {
+                        }), r.createElement(i.a, {
                             exact: !0,
                             path: e,
-                            component: Pe
-                        }), r.createElement(s.a, {
+                            component: Ce
+                        }), r.createElement(i.a, {
                             exact: !0,
                             path: "/console/drops/settings",
-                            component: ke
-                        }), r.createElement(s.a, {
+                            component: Pe
+                        }), r.createElement(i.a, {
                             exact: !0,
                             path: "/console/drops/items/create",
-                            component: Ne
-                        }), r.createElement(s.a, {
+                            component: ge
+                        }), r.createElement(i.a, {
                             exact: !0,
                             path: "/console/drops/items/:itemId",
-                            component: Ce
-                        }), r.createElement(s.a, {
+                            component: Ne
+                        }), r.createElement(i.a, {
                             exact: !0,
                             path: "/console/drops/create",
-                            component: _e
-                        }), r.createElement(s.a, {
+                            component: Ee
+                        }), r.createElement(i.a, {
                             exact: !0,
                             path: "/console/drops/:campaignId",
-                            component: Se
+                            component: fe
                         })))
                     }, t
                 }(r.Component),
-                Ge = Object(u.a)()(we);
+                ye = Object(u.a)()(Fe);
             n.d(t, "DevDropsDashboardRoot", function() {
-                return Ge
+                return ye
             })
         },
         QKmf: function(e, t) {
@@ -5355,11 +5336,11 @@
             };
 
             function r(e) {
-                var t = s(e);
+                var t = i(e);
                 return n(t)
             }
 
-            function s(e) {
+            function i(e) {
                 var t = a[e];
                 if (!(t + 1)) {
                     var n = new Error("Cannot find module '" + e + "'");
@@ -5369,21 +5350,21 @@
             }
             r.keys = function() {
                 return Object.keys(a)
-            }, r.resolve = s, e.exports = r, r.id = "RnhZ"
+            }, r.resolve = i, e.exports = r, r.id = "RnhZ"
         },
         TofP: function(e, t, n) {},
         "V+GM": function(e, t, n) {
             "use strict";
             var a = n("mrSG"),
                 r = n("cr+I"),
-                s = n("q1tI"),
-                i = n("wIs1"),
+                i = n("q1tI"),
+                s = n("wIs1"),
                 o = n("/7QA");
 
             function c(e) {
                 return function(t) {
                     var n = function(n) {
-                        function i(t) {
+                        function s(t) {
                             var r = n.call(this, t) || this;
                             return r.tracked = !1, r.referenceTracking = {}, r.trackPageview = function() {
                                 if (!(r.tracked || e.skip && e.skip(r.props))) {
@@ -5392,13 +5373,13 @@
                                     "function" == typeof e.properties ? t = e.properties(r.props) : e.properties && (t = a.__assign({}, e.properties));
                                     var n = a.__assign({}, r.props);
                                     n.location && n.location.state && (t.medium = n.location.state.medium, t.content = n.location.state.content, t.content_index = n.location.state.content_index, t.email_id = n.location.state.email_id);
-                                    var s = r.referenceTracking,
-                                        i = s.content,
-                                        c = s.medium,
-                                        u = s.content_index,
-                                        l = s.email_id;
+                                    var i = r.referenceTracking,
+                                        s = i.content,
+                                        c = i.medium,
+                                        u = i.content_index,
+                                        l = i.email_id;
                                     o.p.tracking.trackPageview(a.__assign({
-                                        content: i,
+                                        content: s,
                                         medium: c,
                                         content_index: u,
                                         email_id: l,
@@ -5407,16 +5388,16 @@
                                 }
                             }, o.k.debug("pageViewTracking", e), t.rootLatencyTracker ? t.rootLatencyTracker.setLocation(e.location) : o.k.warn("No latency tracker exists! This means no data will be sent to Spade.", e), r
                         }
-                        return a.__extends(i, n), i.prototype.componentDidMount = function() {
+                        return a.__extends(s, n), s.prototype.componentDidMount = function() {
                             var e = this;
                             this.referenceTracking = this.stripTTParams(this.props.history.location), this.trackPageview(), this.props.history.listen(function(t, n) {
                                 "REPLACE" !== n && (e.tracked = !1, e.referenceTracking = {})
                             })
-                        }, i.prototype.componentDidUpdate = function() {
+                        }, s.prototype.componentDidUpdate = function() {
                             this.trackPageview()
-                        }, i.prototype.render = function() {
-                            return s.createElement(t, a.__assign({}, this.props))
-                        }, i.prototype.stripTTParams = function(e) {
+                        }, s.prototype.render = function() {
+                            return i.createElement(t, a.__assign({}, this.props))
+                        }, s.prototype.stripTTParams = function(e) {
                             var t = "" !== e.search ? r.parse(e.search) : {},
                                 n = {
                                     content: t.tt_content,
@@ -5426,17 +5407,17 @@
                                 };
                             if (delete t.tt_content, delete t.tt_content_index, delete t.tt_medium, delete t.tt_email_id, n.medium || n.content || n.email_id) {
                                 var a = "",
-                                    s = r.stringify(t);
-                                s.length > 0 && (a = "?" + s), this.props.history.replace({
+                                    i = r.stringify(t);
+                                i.length > 0 && (a = "?" + i), this.props.history.replace({
                                     pathname: e.pathname,
                                     hash: e.hash,
                                     search: a
                                 })
                             }
                             return n
-                        }, i
-                    }(s.Component);
-                    return Object(i.a)(n)
+                        }, s
+                    }(i.Component);
+                    return Object(s.a)(n)
                 }
             }
             n.d(t, "a", function() {
@@ -5463,7 +5444,7 @@
             }), n.d(t, "e", function() {
                 return c
             });
-            var a, r, s, i, o, c, u, l = {
+            var a, r, i, s, o, c, u, l = {
                     BitsLeaderboardEvents: "leaderboard-events-v1",
                     BitsCampaignEvents: "bits-campaigns-v1",
                     CampaignGlobalEvents: "campaign-events",
@@ -5596,10 +5577,10 @@
             }(r || (r = {})),
             function(e) {
                 e.Archive = "archive", e.Highlight = "highlight", e.Upload = "upload", e.Premiere = "premiere", e.Rerun = "rerun", e.WatchPartyPremiere = "watch_party_premiere", e.WatchPartyRerun = "watch_party_rerun"
-            }(s || (s = {})),
+            }(i || (i = {})),
             function(e) {
                 e.Private = "private", e.Public = "public"
-            }(i || (i = {})),
+            }(s || (s = {})),
             function(e) {
                 e.Pending = "PENDING", e.Live = "LIVE", e.Ended = "ENDED"
             }(o || (o = {})),
@@ -5741,16 +5722,13 @@
         sL9O: function(e, t, n) {},
         tl6o: function(e, t, n) {
             "use strict";
-            n.d(t, "c", function() {
+            n.d(t, "b", function() {
                 return a
-            }), n.d(t, "b", function() {
-                return r
             }), n.d(t, "a", function() {
-                return s
+                return r
             });
             var a = "d3b9f0d8-68e2-4557-8f73-dd0ea151eef3",
-                r = 20,
-                s = "https://gds-vhs-drops-campaign-images.twitch.tv"
+                r = 20
         },
         uLRL: function(e, t, n) {
             "use strict";
@@ -5759,8 +5737,8 @@
             });
             var a = n("mrSG"),
                 r = n("q1tI"),
-                s = n("/MKj"),
-                i = n("mLw1"),
+                i = n("/MKj"),
+                s = n("mLw1"),
                 o = n("2Ygb"),
                 c = n("dEJ+"),
                 u = n("Ue10");
@@ -5776,11 +5754,11 @@
                                 case c.a.NOT_LOADED:
                                     return r.createElement(u.ab, null);
                                 case c.a.LOADED_BUT_PENDING_REVIEW:
-                                    return r.createElement(i.a, {
+                                    return r.createElement(s.a, {
                                         to: "/access-pending"
                                     });
                                 case c.a.LOADED_BUT_NOT_FOUND:
-                                    return r.createElement(i.a, {
+                                    return r.createElement(s.a, {
                                         to: "/request-access"
                                     });
                                 case c.a.LOADED:
@@ -5790,13 +5768,13 @@
                                     return r.createElement(e, a.__assign({}, this.props, t));
                                 case c.a.LOADED_WITH_INTERNAL_ERROR:
                                 default:
-                                    return r.createElement(i.a, {
+                                    return r.createElement(s.a, {
                                         to: "/access-pending"
                                     })
                             }
                         }, n.displayName = Object(o.a)(n.name, e), n
                     }(r.Component);
-                    return Object(s.connect)(function(e) {
+                    return Object(i.connect)(function(e) {
                         return {
                             loadState: Object(c.e)(e),
                             company: Object(c.c)(e),
@@ -5830,7 +5808,7 @@
             }), n.d(t, "a", function() {
                 return r
             }), n.d(t, "c", function() {
-                return s
+                return i
             });
             var a = [{
                 id: "profile_image_001",
@@ -5860,7 +5838,7 @@
                 return 300 === t ? n = 300 : 96 !== t && 80 !== t || (n = 150), "https://static-cdn.jtvnw.net/user-default-pictures/" + e.urlSlug + "-profile_image-" + n + "x" + n + ".jpg"
             }
 
-            function s(e, t) {
+            function i(e, t) {
                 var n = parseInt(e, 10) % a.length;
                 return r(a[n], t)
             }
