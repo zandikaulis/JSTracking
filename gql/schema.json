@@ -14269,16 +14269,6 @@
             }, 
             {
               "defaultValue": null, 
-              "description": "How long the broadcaster needs to stream the sponsored content to complete the bounty.", 
-              "name": "streamLengthMinutes", 
-              "type": {
-                "kind": "SCALAR", 
-                "name": "Int", 
-                "ofType": null
-              }
-            }, 
-            {
-              "defaultValue": null, 
               "description": "Flag to target all broadcaters for the campaign.", 
               "name": "targetAllBroadcasters", 
               "type": {
@@ -14327,16 +14317,6 @@
                   "name": "String", 
                   "ofType": null
                 }
-              }
-            }, 
-            {
-              "defaultValue": null, 
-              "description": "The type of the campaign.", 
-              "name": "type", 
-              "type": {
-                "kind": "ENUM", 
-                "name": "BountyCampaignType", 
-                "ofType": null
               }
             }
           ], 
@@ -32852,33 +32832,6 @@
                 {
                   "defaultValue": null, 
                   "description": null, 
-                  "name": "targetID", 
-                  "type": {
-                    "kind": "NON_NULL", 
-                    "name": null, 
-                    "ofType": {
-                      "kind": "SCALAR", 
-                      "name": "ID", 
-                      "ofType": null
-                    }
-                  }
-                }
-              ], 
-              "deprecationReason": null, 
-              "description": "The comments left by moderators on a specified user on the given channel.", 
-              "isDeprecated": false, 
-              "name": "comments", 
-              "type": {
-                "kind": "OBJECT", 
-                "name": "ModLogsCommentConnection", 
-                "ofType": null
-              }
-            }, 
-            {
-              "args": [
-                {
-                  "defaultValue": null, 
-                  "description": null, 
                   "name": "senderID", 
                   "type": {
                     "kind": "NON_NULL", 
@@ -33130,206 +33083,6 @@
           "interfaces": null, 
           "kind": "ENUM", 
           "name": "ModLogsAction", 
-          "possibleTypes": null
-        }, 
-        {
-          "description": "ModLogsCommentsEntry defines an entry of a user's moderation history on a channel.", 
-          "enumValues": null, 
-          "fields": [
-            {
-              "args": [], 
-              "deprecationReason": null, 
-              "description": "Author is the moderator that created the comment.", 
-              "isDeprecated": false, 
-              "name": "author", 
-              "type": {
-                "kind": "OBJECT", 
-                "name": "User", 
-                "ofType": null
-              }
-            }, 
-            {
-              "args": [], 
-              "deprecationReason": null, 
-              "description": "Channel is where the moderator comment was created.", 
-              "isDeprecated": false, 
-              "name": "channel", 
-              "type": {
-                "kind": "OBJECT", 
-                "name": "User", 
-                "ofType": null
-              }
-            }, 
-            {
-              "args": [], 
-              "deprecationReason": null, 
-              "description": "Details about the moderator comment.", 
-              "isDeprecated": false, 
-              "name": "details", 
-              "type": {
-                "kind": "OBJECT", 
-                "name": "ModLogsCommentDetails", 
-                "ofType": null
-              }
-            }, 
-            {
-              "args": [], 
-              "deprecationReason": null, 
-              "description": "UUID of the moderator comment.", 
-              "isDeprecated": false, 
-              "name": "id", 
-              "type": {
-                "kind": "NON_NULL", 
-                "name": null, 
-                "ofType": {
-                  "kind": "SCALAR", 
-                  "name": "ID", 
-                  "ofType": null
-                }
-              }
-            }, 
-            {
-              "args": [], 
-              "deprecationReason": null, 
-              "description": "Target is the target user of the moderator comment.", 
-              "isDeprecated": false, 
-              "name": "target", 
-              "type": {
-                "kind": "OBJECT", 
-                "name": "User", 
-                "ofType": null
-              }
-            }, 
-            {
-              "args": [], 
-              "deprecationReason": null, 
-              "description": "Timestamp when comment was created.", 
-              "isDeprecated": false, 
-              "name": "timestamp", 
-              "type": {
-                "kind": "NON_NULL", 
-                "name": null, 
-                "ofType": {
-                  "kind": "SCALAR", 
-                  "name": "Time", 
-                  "ofType": null
-                }
-              }
-            }
-          ], 
-          "inputFields": null, 
-          "interfaces": [], 
-          "kind": "OBJECT", 
-          "name": "ModLogsComment", 
-          "possibleTypes": null
-        }, 
-        {
-          "description": "Paginated list of moderator comments on a user in a channel.", 
-          "enumValues": null, 
-          "fields": [
-            {
-              "args": [], 
-              "deprecationReason": null, 
-              "description": "The elements of the list.", 
-              "isDeprecated": false, 
-              "name": "edges", 
-              "type": {
-                "kind": "LIST", 
-                "name": null, 
-                "ofType": {
-                  "kind": "NON_NULL", 
-                  "name": null, 
-                  "ofType": {
-                    "kind": "OBJECT", 
-                    "name": "ModLogsCommentEdge", 
-                    "ofType": null
-                  }
-                }
-              }
-            }, 
-            {
-              "args": [], 
-              "deprecationReason": null, 
-              "description": "Information about this page of mod logs.", 
-              "isDeprecated": false, 
-              "name": "pageInfo", 
-              "type": {
-                "kind": "NON_NULL", 
-                "name": null, 
-                "ofType": {
-                  "kind": "OBJECT", 
-                  "name": "PageInfo", 
-                  "ofType": null
-                }
-              }
-            }
-          ], 
-          "inputFields": null, 
-          "interfaces": [], 
-          "kind": "OBJECT", 
-          "name": "ModLogsCommentConnection", 
-          "possibleTypes": null
-        }, 
-        {
-          "description": "ModLogsCommentDetails contains the details of a moderator comment.", 
-          "enumValues": null, 
-          "fields": [
-            {
-              "args": [], 
-              "deprecationReason": null, 
-              "description": "Body of the comment.", 
-              "isDeprecated": false, 
-              "name": "text", 
-              "type": {
-                "kind": "SCALAR", 
-                "name": "String", 
-                "ofType": null
-              }
-            }
-          ], 
-          "inputFields": null, 
-          "interfaces": [], 
-          "kind": "OBJECT", 
-          "name": "ModLogsCommentDetails", 
-          "possibleTypes": null
-        }, 
-        {
-          "description": "Element in a list of moderator comments on a user in a channel.", 
-          "enumValues": null, 
-          "fields": [
-            {
-              "args": [], 
-              "deprecationReason": null, 
-              "description": "Opaque cursor describing this edge's position in the paginated list.", 
-              "isDeprecated": false, 
-              "name": "cursor", 
-              "type": {
-                "kind": "NON_NULL", 
-                "name": null, 
-                "ofType": {
-                  "kind": "SCALAR", 
-                  "name": "Cursor", 
-                  "ofType": null
-                }
-              }
-            }, 
-            {
-              "args": [], 
-              "deprecationReason": null, 
-              "description": "A moderator comment on a user in a channel.", 
-              "isDeprecated": false, 
-              "name": "node", 
-              "type": {
-                "kind": "OBJECT", 
-                "name": "ModLogsComment", 
-                "ofType": null
-              }
-            }
-          ], 
-          "inputFields": null, 
-          "interfaces": [], 
-          "kind": "OBJECT", 
-          "name": "ModLogsCommentEdge", 
           "possibleTypes": null
         }, 
         {
