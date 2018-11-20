@@ -216,8 +216,8 @@ window.__twilightSettings = {
             }]
         },
         "05577e96-5b1e-4656-b430-a42df69bc910": {
-            "name": "SQUAD_STREAM_REDIRECT",
-            "v": 5183,
+            "name": "TWILIGHT_SQUAD_STREAM_REDIRECT",
+            "v": 5184,
             "t": 1,
             "groups": [{
                 "weight": 50,
