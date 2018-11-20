@@ -561,7 +561,7 @@
                         },
                         getQuestReqStrings: function() {
                             var e;
-                            return (e = {})[h.a.UNIQUE_CHATTERS] = Object(l.d)("Reach 5 unique chatters in a stream", "VIPBadge"), e[h.a.FOLLOW_COUNT] = Object(l.d)("Reach 50 followers", "VIPBadge"), e
+                            return (e = {})[h.a.UNIQUE_CHATTERS] = Object(l.d)("Get 5 people chatting at the same time", "VIPBadge"), e[h.a.FOLLOW_COUNT] = Object(l.d)("Reach 50 followers", "VIPBadge"), e
                         },
                         hasTimedCompletionWindow: !1,
                         position: 1,

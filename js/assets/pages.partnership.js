@@ -59,9 +59,9 @@
             }), n.d(t, "O", function() {
                 return O
             }), n.d(t, "L", function() {
-                return M
-            }), n.d(t, "H", function() {
                 return R
+            }), n.d(t, "H", function() {
+                return M
             }), n.d(t, "C", function() {
                 return U
             }), n.d(t, "I", function() {
@@ -147,13 +147,13 @@
                 }
             }
 
-            function M() {
+            function R() {
                 return {
                     type: r
                 }
             }
 
-            function R() {
+            function M() {
                 return {
                     type: l
                 }
@@ -397,6 +397,7 @@
             n.d(t, "a", function() {
                 return i
             });
+            n("/7QA");
             var r = n("3Bft");
 
             function i(e) {
@@ -1492,8 +1493,8 @@
                 w = n("/aPz"),
                 I = n("u5aL"),
                 O = n("8/mp"),
-                M = n("eJ65"),
-                R = n("yLwq"),
+                R = n("eJ65"),
+                M = n("yLwq"),
                 U = n("f00E"),
                 F = n("kz7j"),
                 j = n("GnwI"),
@@ -1666,7 +1667,7 @@
                             var r = Object(i.d)("{username}'s avatar", {
                                     username: e.name
                                 }, "ThreadsBox"),
-                                a = e.profile_image || Object(R.c)(e.objectID, 30);
+                                a = e.profile_image || Object(M.c)(e.objectID, 30);
                             return E.createElement("div", {
                                 key: "searchResult:" + e.objectID,
                                 onClick: n.handleUserSearchResultClick(e, t)
@@ -1918,7 +1919,7 @@
                         }, E.createElement(B.W, {
                             type: B.Wb.Span,
                             bold: !0
-                        }, Object(i.d)("Whispers", "WhisperThreadsBox")))), E.createElement(M.a, {
+                        }, Object(i.d)("Whispers", "WhisperThreadsBox")))), E.createElement(R.a, {
                             ref: this.saveSettingsMenuRef
                         }, E.createElement(B.A, {
                             ariaLabel: Object(i.d)("Settings", "WhisperThreadsBox"),
@@ -2221,7 +2222,7 @@
                 }), ye.a, Object(be.a)())(Ne),
                 Ie = n("pORx");
             var Oe = n("NKxy");
-            var Me, Re = n("vGFN"),
+            var Re, Me = n("vGFN"),
                 Ue = (n("hRS0"), "report-as-spam-button"),
                 Fe = "mark-not-spam-button",
                 je = "dismiss-prompt-button",
@@ -2303,15 +2304,15 @@
                             }
                             return null
                         }, n.reportSpam = function() {
-                            n.props.reportUserMutation(n.interlocutor.id, fe.b.Spam, n.props.threadID), n.props.blockUserMutation(n.interlocutor.id, fe.a.Other, ae.e.WHISPER, n.props.currentUser), n.props.setThreadSpamStatusMutation(n.props.threadID, !0), Object(Re.l)(n.interlocutor.login, Re.a.SpamPropmt), n.setState({
+                            n.props.reportUserMutation(n.interlocutor.id, fe.b.Spam, n.props.threadID), n.props.blockUserMutation(n.interlocutor.id, fe.a.Other, ae.e.WHISPER, n.props.currentUser), n.props.setThreadSpamStatusMutation(n.props.threadID, !0), Object(Me.l)(n.interlocutor.login, Me.a.SpamPropmt), n.setState({
                                 potentialSpamResolution: "reported"
                             })
                         }, n.markNotSpam = function() {
-                            n.props.setThreadSpamStatusMutation(n.props.threadID, !1), Object(Re.o)(n.props.threadID), n.setState({
+                            n.props.setThreadSpamStatusMutation(n.props.threadID, !1), Object(Me.o)(n.props.threadID), n.setState({
                                 potentialSpamResolution: "dismissed"
                             })
                         }, n.dismissSpamPrompt = function() {
-                            n.props.onBlock && n.props.onBlock(n.props.threadID), Object(Re.n)(n.props.threadID), n.setState({
+                            n.props.onBlock && n.props.onBlock(n.props.threadID), Object(Me.n)(n.props.threadID), n.setState({
                                 potentialSpamResolution: "dismissed"
                             })
                         }, n.onSettingsClick = function(e) {
@@ -2447,7 +2448,7 @@
                                 })))
                             }
                         }
-                        this.props.isCollapsed || !this.props.currentUser || this.props.interactionsDisabled || (s = E.createElement(M.a, null, E.createElement(B.A, {
+                        this.props.isCollapsed || !this.props.currentUser || this.props.interactionsDisabled || (s = E.createElement(R.a, null, E.createElement(B.A, {
                             ariaLabel: o,
                             icon: B.ub.Gear,
                             overlay: e
@@ -2632,7 +2633,7 @@
                 Be = n("HAa/");
             ! function(e) {
                 e[e.Timestamp = 0] = "Timestamp", e[e.Whisper = 1] = "Whisper", e[e.Warning = 2] = "Warning", e[e.InactiveUserNotice = 3] = "InactiveUserNotice", e[e.NewMessages = 4] = "NewMessages", e[e.Notification = 5] = "Notification"
-            }(Me || (Me = {}));
+            }(Re || (Re = {}));
             n("0JUI");
             var ze = function(e) {
                     function t() {
@@ -2641,7 +2642,7 @@
                     return a.__extends(t, e), t.prototype.render = function() {
                         var e = this.props.message;
                         switch (e.type) {
-                            case Me.Timestamp:
+                            case Re.Timestamp:
                                 return E.createElement(B.Fb, {
                                     className: "thread-message__timestamp",
                                     color: B.O.Alt2,
@@ -2678,7 +2679,7 @@
                                         title: l
                                     }, "" + r))
                                 }(e));
-                            case Me.Warning:
+                            case Re.Warning:
                                 return E.createElement(B.Fb, {
                                     className: "thread-message__warning",
                                     color: B.O.Alt2
@@ -2688,7 +2689,7 @@
                                         x: 1
                                     }
                                 }, Object(i.d)("Please don't share passwords or personal information.", "whispers")));
-                            case Me.InactiveUserNotice:
+                            case Re.InactiveUserNotice:
                                 return E.createElement(B.Fb, {
                                     className: "thread-message__inactive-user",
                                     color: B.O.Alt2
@@ -2698,7 +2699,7 @@
                                         x: 1
                                     }
                                 }, Object(i.d)("This account is no longer active.", "whispers")));
-                            case Me.Whisper:
+                            case Re.Whisper:
                                 return this.props.reportOutgoingWhisperRendered && this.props.reportOutgoingWhisperRendered(e.content), E.createElement(B.Ya, {
                                     className: "thread-message__message",
                                     "data-a-target": "whisper-message"
@@ -2754,7 +2755,7 @@
                                         }
                                     }, n))
                                 }(e));
-                            case Me.NewMessages:
+                            case Re.NewMessages:
                                 return E.createElement(B.Fb, {
                                     className: "thread-message__new-messages",
                                     color: B.O.OverlayAlt,
@@ -2765,7 +2766,7 @@
                                         y: .5
                                     }
                                 }, Object(i.d)("New Whispers", "whispers")));
-                            case Me.Notification:
+                            case Re.Notification:
                                 return E.createElement(B.Ya, {
                                     className: "thread-message__notification"
                                 }, function(e) {
@@ -2810,7 +2811,7 @@
                                 n = [t.createWarningMessage()];
                             return n = (n = n.concat(t.notificationsFor())).concat(t.props.thread.messages.edges.map(function(e) {
                                 return {
-                                    type: Me.Whisper,
+                                    type: Re.Whisper,
                                     content: e.node.content.content,
                                     from: e.node.from && t.props.participantsByID[+e.node.from.id],
                                     emotes: e.node.content.emotes,
@@ -2833,7 +2834,7 @@
                             return e.sentAt.valueOf() - t.sentAt.valueOf() > 6e5 || e.sentAt.toDateString() !== t.sentAt.toDateString()
                         }, t.createTimestampMessage = function(e) {
                             return {
-                                type: Me.Timestamp,
+                                type: Re.Timestamp,
                                 timestamp: new Date(e.sentAt)
                             }
                         }, t.notificationsFor = function(e) {
@@ -2842,20 +2843,20 @@
                             }).map(t.createNotificationLine)
                         }, t.createNotificationLine = function(e) {
                             return {
-                                type: Me.Notification,
+                                type: Re.Notification,
                                 content: e.content
                             }
                         }, t.createNewMessagesIndicator = function() {
                             return {
-                                type: Me.NewMessages
+                                type: Re.NewMessages
                             }
                         }, t.createWarningMessage = function() {
                             return {
-                                type: Me.Warning
+                                type: Re.Warning
                             }
                         }, t.createInactiveUserMessage = function() {
                             return {
-                                type: Me.InactiveUserNotice
+                                type: Re.InactiveUserNotice
                             }
                         }, t.saveScrollRef = function(e) {
                             return t.scroll = e
@@ -2901,15 +2902,15 @@
                         }), this.renderMessages(e))))
                     }, t.prototype.generateMessageKey = function(e, t) {
                         switch (e.type) {
-                            case Me.NewMessages:
-                            case Me.Warning:
-                            case Me.InactiveUserNotice:
+                            case Re.NewMessages:
+                            case Re.Warning:
+                            case Re.InactiveUserNotice:
                                 return "" + e.type;
-                            case Me.Timestamp:
+                            case Re.Timestamp:
                                 return e.type + "-" + e.timestamp.getTime();
-                            case Me.Whisper:
+                            case Re.Whisper:
                                 return e.type + "-" + e.id;
-                            case Me.Notification:
+                            case Re.Notification:
                                 return e.type + "-" + t;
                             default:
                                 return i.k.warn("[ThreadMessages] Encountered an unknown message type."), t
@@ -9197,7 +9198,7 @@
                 })(N),
                 I = n("gTu3"),
                 O = (n("lpj/"), (u = {})[I.a.Default] = "", u[I.a.Recipient] = "mention-fragment--recipient", u[I.a.Sender] = "mention-fragment--sender", u),
-                M = function(e) {
+                R = function(e) {
                     var t = e.isAtMention ? "@" : "",
                         n = m("mention-fragment", O[e.currentUserMentionRelation]);
                     return r.createElement("span", {
@@ -9205,8 +9206,8 @@
                         "data-a-target": "chat-message-mention"
                     }, "" + t + e.recipient)
                 };
-            M.displayName = "MentionFragment";
-            var R = n("QVaV"),
+            R.displayName = "MentionFragment";
+            var M = n("QVaV"),
                 U = n("sU0Q"),
                 F = function(e) {
                     function t() {
@@ -9224,7 +9225,7 @@
                             }
                         });
                         if (a || !t) return r.createElement(C, null);
-                        var o = r.createElement(y.W, null, Object(i.c)(new Date(t.publishedAt), "medium"), r.createElement("span", null, " · "), Object(R.a)(t.owner.login, t.owner.displayName));
+                        var o = r.createElement(y.W, null, Object(i.c)(new Date(t.publishedAt), "medium"), r.createElement("span", null, " · "), Object(M.a)(t.owner.login, t.owner.displayName));
                         return r.createElement(C, {
                             data: {
                                 title: t.title,
@@ -9280,7 +9281,7 @@
                                 }));
                                 break;
                             case h.a.CurrentUserHighlight:
-                                l.push(r.createElement(M, {
+                                l.push(r.createElement(R, {
                                     isAtMention: !1,
                                     currentUserMentionRelation: I.a.Recipient,
                                     recipient: o.content,
@@ -9288,7 +9289,7 @@
                                 }));
                                 break;
                             case h.a.Mention:
-                                l.push(r.createElement(M, {
+                                l.push(r.createElement(R, {
                                     isAtMention: !0,
                                     currentUserMentionRelation: o.content.currentUserMentionRelation,
                                     recipient: o.content.recipient,
@@ -9643,20 +9644,26 @@
                     someoneElse: function() {
                         return Object(c.d)("Someone else", "ReportModalWizard")
                     },
-                    sexuallyCoercive: function() {
-                        return Object(c.d)("acting in a sexually coercive or inappropriate way", "ReportModalWizard")
-                    },
                     abusiveViolence: function() {
-                        return Object(c.d)("They're threatening violence or physical harm", "ReportModalWizard")
+                        return Object(c.d)("Threatening violence or physical harm", "ReportModalWizard")
                     },
                     commitingViolence: function() {
-                        return Object(c.d)("They're committing acts of violence or physical harm", "ReportModalWizard")
+                        return Object(c.d)("Committing acts of violence or physical harm", "ReportModalWizard")
                     },
                     threatening: function() {
-                        return Object(c.d)("threatening, harming, or endangering someone", "ReportModalWizard")
+                        return Object(c.d)("Threatening, harming, or endangering someone", "ReportModalWizard")
                     },
                     abusive: function() {
-                        return Object(c.d)("being hateful, harassing, or abusive", "ReportModalWizard")
+                        return Object(c.d)("Being hateful, harassing, or abusive", "ReportModalWizard")
+                    },
+                    harassment: function() {
+                        return Object(c.d)("Hate speech, harassment, or abuse", "ReportModalWizard")
+                    },
+                    moreOptions: function() {
+                        return Object(c.d)("Give me more options...", "ReportModalWizard")
+                    },
+                    scam: function() {
+                        return Object(c.d)("Attempts to scam other community members", "ReportModalWizard")
                     }
                 },
                 N = {
@@ -9708,13 +9715,13 @@
                     },
                     endBlurb_socialmedia: {
                         getTitle: function() {
-                            return Object(c.d)("Please submit a report to the site or service where the incident occurred as well if you have not already done so.", "ReportModalWizard")
+                            return Object(c.d)("Please submit a report on the site or service where the incident occurred as well if you have not already done so.", "ReportModalWizard")
                         },
                         type: i.Text
                     },
                     endBlurb_threat: {
                         getTitle: function() {
-                            return Object(c.d)("If you feel you are in immediate danger, please contact your local law enforcement.", "ReportModalWizard")
+                            return Object(c.d)("If you feel you are in immediate danger, please contact your local law enforcement. To protect yourself on Twitch, you may also block the user.", "ReportModalWizard")
                         },
                         type: i.Text
                     },
@@ -9765,42 +9772,52 @@
                     },
                     maliciousRaid: {
                         getTitle: function() {
-                            return Object(c.d)("They're participating in a malicious raid", "ReportModalWizard")
+                            return Object(c.d)("Participating in a malicious raid", "ReportModalWizard")
                         },
                         value: "malicious raid",
                         reportReason: r.Harassment
                     },
+                    automod: {
+                        getTitle: function() {
+                            return Object(c.d)("It's being used to bypass AutoMod", "ReportModalWizard")
+                        },
+                        value: "bypass automod",
+                        reportReason: r.Other
+                    },
                     violence: {
                         getTitle: function() {
-                            return Object(c.d)("It contains threats, harm, or endangerment of someone", "ReportModalWizard")
+                            return Object(c.d)("Threats, harm, or endangerment of someone", "ReportModalWizard")
                         },
                         value: "violence/threats",
                         reportReason: r.Harm
                     },
                     report_username: {
                         getTitle: function() {
-                            return Object(c.d)("They're using an inappropriate or offensive username", "ReportModalWizard")
+                            return Object(c.d)("The username is inappropriate", "ReportModalWizard")
                         },
                         value: "inappropriate username",
                         reportReason: r.OffensiveUsername
                     },
                     report_emotes: {
                         getTitle: function() {
-                            return Object(c.d)("The emotes are inappropriate or offensive", "ReportModalWizard")
+                            return Object(c.d)("The emotes or badges", "ReportModalWizard")
                         },
                         value: "inappropriate emotes",
                         reportReason: r.Other
                     },
-                    abusive: {
+                    emotes_break_guidelines: {
                         getTitle: function() {
-                            return Object(c.d)("It's hateful, harassing, or abusive", "ReportModalWizard")
+                            return Object(c.d)("The emotes break Twitch's guidelines", "ReportModalWizard")
                         },
+                        value: "emotes break guidelines",
+                        reportReason: r.Other
+                    },
+                    abusive: {
+                        getTitle: D.harassment,
                         value: "abusive"
                     },
                     scam: {
-                        getTitle: function() {
-                            return Object(c.d)("It contains attempts to scam other community members", "ReportModalWizard")
-                        },
+                        getTitle: D.scam,
                         value: "scam",
                         reportReason: r.Spam
                     },
@@ -9813,6 +9830,13 @@
                     impersonation: {
                         getTitle: function() {
                             return Object(c.d)("They're impersonating someone", "ReportModalWizard")
+                        },
+                        value: "impersonation",
+                        reportReason: r.Impersonation
+                    },
+                    impersonating: {
+                        getTitle: function() {
+                            return Object(c.d)("Impersonating someone", "ReportModalWizard")
                         },
                         value: "impersonation",
                         reportReason: r.Impersonation
@@ -9830,21 +9854,27 @@
                         },
                         value: "intellectual property"
                     },
-                    inappropriateContent: {
+                    itsInappropriateContent: {
                         getTitle: function() {
                             return Object(c.d)("It's inappropriate or obscene", "ReportModalWizard")
                         },
                         value: "inappropriate content"
                     },
+                    inappropriateContent: {
+                        getTitle: function() {
+                            return Object(c.d)("Inappropriate or obscene content", "ReportModalWizard")
+                        },
+                        value: "inappropriate content"
+                    },
                     violateDevAgreement: {
                         getTitle: function() {
-                            return Object(c.d)("I think they're violating Twitch's Developer Agreement", "ReportModalWizard")
+                            return Object(c.d)("They're breaking Twitch's Developer Agreement", "ReportModalWizard")
                         },
                         value: "violating developer agreement"
                     },
                     revealPersonalInfo: {
                         getTitle: function() {
-                            return Object(c.d)("They might have revealed someone's personal information", "ReportModalWizard")
+                            return Object(c.d)("Revealing someone's personal information", "ReportModalWizard")
                         },
                         value: "revealing personal info",
                         reportReason: r.Other
@@ -9865,35 +9895,42 @@
                     },
                     inappropriateExtension: {
                         getTitle: function() {
-                            return Object(c.d)("Their extension contains malicious or inappropriate content", "ReportModalWizard")
+                            return Object(c.d)("The extensions are inappropriate or malicious", "ReportModalWizard")
                         },
                         value: "inappropriate extension",
                         reportReason: r.Other
                     },
                     cheating: {
                         getTitle: function() {
-                            return Object(c.d)("They're cheating in an online game", "ReportModalWizard")
+                            return Object(c.d)("Cheating in an online game", "ReportModalWizard")
                         },
                         value: "cheating",
                         reportReason: r.Cheating
                     },
                     bitsViolation: {
                         getTitle: function() {
-                            return Object(c.d)("Their use of Bits goes against Twitch's Policy", "ReportModalWizard")
+                            return Object(c.d)("They're breaking Twitch's Bits Policy", "ReportModalWizard")
                         },
                         value: "bits violation",
                         reportReason: r.BitsViolation
                     },
+                    compromisedAccount: {
+                        getTitle: function() {
+                            return Object(c.d)("The account is stolen or compromised", "ReportModalWizard")
+                        },
+                        value: "account compromised",
+                        reportReason: r.Other
+                    },
                     video_labeling: {
                         getTitle: function() {
-                            return Object(c.d)("Their content is labeled incorrectly", "ReportModalWizard")
+                            return Object(c.d)("Their content is misclassified (wrong category or tags)", "ReportModalWizard")
                         },
                         value: "incorrect label",
                         reportReason: r.Miscategorized
                     },
                     video_inactive: {
                         getTitle: function() {
-                            return Object(c.d)("The stream is inactive (sleeping/AFK)", "ReportModalWizard")
+                            return Object(c.d)("There's no streamer, or the streamer is inactive", "ReportModalWizard")
                         },
                         value: "inactive stream",
                         reportReason: r.Miscategorized
@@ -9903,16 +9940,30 @@
                         value: "general_video",
                         omitFromDescription: !0
                     },
+                    hateSpeechSymbols: {
+                        getTitle: function() {
+                            return Object(c.d)("It contains hate speech or hate symbols", "ReportModalWizard")
+                        },
+                        value: "hate speech symbols",
+                        reportReason: r.HatefulConduct
+                    },
                     hateSpeech: {
                         getTitle: function() {
-                            return Object(c.d)("They're using hate speech, hateful symbols, or hateful media", "ReportModalWizard")
+                            return Object(c.d)("Hate speech, hateful symbols, or other hateful conduct", "ReportModalWizard")
                         },
                         value: "hate speech",
                         reportReason: r.HatefulConduct
                     },
+                    harassing: {
+                        getTitle: function() {
+                            return Object(c.d)("It's harassing or bullying someone", "ReportModalWizard")
+                        },
+                        value: "harassment",
+                        reportReason: r.Harassment
+                    },
                     harassment: {
                         getTitle: function() {
-                            return Object(c.d)("They're harassing or bullying someone", "ReportModalWizard")
+                            return Object(c.d)("Harassing or bullying someone", "ReportModalWizard")
                         },
                         value: "harassment",
                         reportReason: r.Harassment
@@ -9929,14 +9980,14 @@
                     },
                     swatting: {
                         getTitle: function() {
-                            return Object(c.d)("They're inciting or committing swatting or a DDOS attack", "ReportModalWizard")
+                            return Object(c.d)("Involvement in swatting or DDOS attacks", "ReportModalWizard")
                         },
                         value: "swatting/ddosing",
                         reportReason: r.Harassment
                     },
                     personalInfo: {
                         getTitle: function() {
-                            return Object(c.d)("They're purposely revealing personal information", "ReportModalWizard")
+                            return Object(c.d)("Doxxing (purposely revealing personal information)", "ReportModalWizard")
                         },
                         value: "revealing personal info",
                         reportReason: r.Harassment
@@ -9975,18 +10026,11 @@
                         value: "prohibited game",
                         reportReason: r.Prohibited
                     },
-                    sexuallyViolent: {
+                    sexuallyViolentChildAnimal: {
                         getTitle: function() {
-                            return Object(c.d)("Violent sexual conduct", "ReportModalWizard")
+                            return Object(c.d)("Sexual conduct involving violence, children, or animals", "ReportModalWizard")
                         },
-                        value: "sexually violent",
-                        reportReason: r.SexualViolence
-                    },
-                    childAnimal: {
-                        getTitle: function() {
-                            return Object(c.d)("Sexual conduct involving a child or animal", "ReportModalWizard")
-                        },
-                        value: "sexual conduct; child or animal",
+                        value: "sexual conduct: violent, child, or animal",
                         reportReason: r.SexualViolence
                     },
                     pornographic: {
@@ -10026,7 +10070,7 @@
                     },
                     evasion: {
                         getTitle: function() {
-                            return Object(c.d)("They were banned or suspended and are trying to get around it (ban evasion)", "ReportModalWizard")
+                            return Object(c.d)("Evading a block, ban, or suspension", "ReportModalWizard")
                         },
                         value: "ban evasion"
                     },
@@ -10058,14 +10102,14 @@
                     },
                     impersonation_brand: {
                         getTitle: function() {
-                            return Object(c.d)("Someone I represent, or a brand/company I work for", "ReportModalWizard")
+                            return Object(c.d)("Someone I represent, or a company I work for", "ReportModalWizard")
                         },
                         value: "impersonating brand",
                         reportReason: r.Impersonation
                     },
                     impersonation_other: {
                         getTitle: D.someoneElse,
-                        value: "impersonating someone else",
+                        value: "Impersonating someone else",
                         reportReason: r.Impersonation
                     },
                     selfharm: {
@@ -10075,31 +10119,15 @@
                         value: "selfharm",
                         reportReason: r.SelfHarm
                     },
-                    chat: {
-                        getTitle: function() {
-                            return Object(c.d)("In a stream chat message", "ReportModalWizard")
-                        },
-                        value: "chat"
-                    },
-                    profile: {
-                        getTitle: function() {
-                            return Object(c.d)("In the profile content, extensions, or emotes", "ReportModalWizard")
-                        },
-                        value: "profile"
-                    },
                     video: {
                         getTitle: function() {
                             return Object(c.d)("In a live stream, video, or clip", "ReportModalWizard")
                         },
                         value: "video"
                     },
-                    room: {
-                        getTitle: function(e) {
-                            return Object(c.d)("In one of {username}'s rooms", {
-                                username: e
-                            }, "ReportModalWizard")
-                        },
-                        value: "room"
+                    video_more_options: {
+                        getTitle: D.moreOptions,
+                        value: "video more options"
                     },
                     whisper: {
                         getTitle: function() {
@@ -10108,12 +10136,46 @@
                         value: "whisper",
                         reportContext: v.N.WHISPER_REPORT
                     },
-                    username: {
+                    whisper_more_options: {
+                        getTitle: D.moreOptions,
+                        value: "whisper more options"
+                    },
+                    chat: {
                         getTitle: function() {
-                            return Object(c.d)("In the username", "ReportModalWizard")
+                            return Object(c.d)("In a chat message or room", "ReportModalWizard")
                         },
-                        value: "username",
-                        reportReason: r.OffensiveUsername
+                        value: "chat"
+                    },
+                    chat_more_options: {
+                        getTitle: D.moreOptions,
+                        value: "chat more options"
+                    },
+                    moderating: {
+                        getTitle: function(e) {
+                            return Object(c.d)("{username} isn't moderating their chat", {
+                                username: e
+                            }, "ReportModalWizard")
+                        },
+                        value: "moderating",
+                        reportReason: r.Other
+                    },
+                    otherContent: {
+                        getTitle: function(e) {
+                            return Object(c.d)("In {username}'s other content (profile, emotes, etc.)", {
+                                username: e
+                            }, "ReportModalWizard")
+                        },
+                        value: "other content"
+                    },
+                    profile: {
+                        getTitle: function() {
+                            return Object(c.d)("The profile content (avatar, panels, etc.)", "ReportModalWizard")
+                        },
+                        value: "profile"
+                    },
+                    profile_more_options: {
+                        getTitle: D.moreOptions,
+                        value: "profile more options"
                     },
                     report_other: {
                         getTitle: function() {
@@ -10174,7 +10236,7 @@
                     },
                     external_incitingRaids: {
                         getTitle: function() {
-                            return Object(c.d)("inciting brigading or malicious raids", "ReportModalWizard")
+                            return Object(c.d)("Inciting brigading or malicious raids", "ReportModalWizard")
                         },
                         reportReason: r.Harassment,
                         value: "brigading/raids"
@@ -10184,7 +10246,7 @@
                         value: "threatening"
                     },
                     external_harassment: {
-                        getTitle: D.abusive,
+                        getTitle: D.harassment,
                         value: "hateful/harassing"
                     },
                     external_abusiveViolence: {
@@ -10206,7 +10268,7 @@
                     },
                     spam: {
                         getTitle: function() {
-                            return Object(c.d)("They're spamming or spreading malicious links", "ReportModalWizard")
+                            return Object(c.d)("Spam, malicious links, or bot accounts", "ReportModalWizard")
                         },
                         value: "spam",
                         reportReason: r.Spam
@@ -10217,15 +10279,19 @@
                         },
                         value: "bot"
                     },
-                    spam_scam: {
+                    spam_links: {
                         getTitle: function() {
-                            return Object(c.d)("They're trying to scam other community members or sending malicious links", "ReportModalWizard")
+                            return Object(c.d)("Sending malicious links", "ReportModalWizard")
                         },
-                        value: "scam or malicious links"
+                        value: "malicious links"
+                    },
+                    spam_scam: {
+                        getTitle: D.scam,
+                        value: "scam"
                     },
                     spam_repeated: {
                         getTitle: function() {
-                            return Object(c.d)("They're sending repeated messages (spam)", "ReportModalWizard")
+                            return Object(c.d)("Sending repeated messages (spam)", "ReportModalWizard")
                         },
                         value: "repeat messages"
                     }
@@ -10333,7 +10399,7 @@
             ! function(e) {
                 e.Confirm = "Confirm", e.MultipleChoice = "MultipleChoice", e.Info = "End Card"
             }(T || (T = {}));
-            var O, M, R, U = {
+            var O, R, M, U = {
                     contentGeneral: function() {
                         return Object(c.d)("What would you like to report?", "ReportModalWizard")
                     },
@@ -10366,8 +10432,23 @@
                             username: e
                         }, "ReportModalWizard")
                     },
-                    reportProfile: function(e) {
+                    reportWhisper: function(e) {
+                        return Object(c.d)("Report {username}'s Whisper", {
+                            username: e
+                        }, "ReportModalWizard")
+                    },
+                    reportProfileOrOtherContent: function(e) {
                         return Object(c.d)("Report {username}'s Profile Or Other Content", {
+                            username: e
+                        }, "ReportModalWizard")
+                    },
+                    reportProfile: function(e) {
+                        return Object(c.d)("Report {username}'s Profile Content", {
+                            username: e
+                        }, "ReportModalWizard")
+                    },
+                    reportEmotesBadges: function(e) {
+                        return Object(c.d)("Report {username}'s Emotes or Badges", {
                             username: e
                         }, "ReportModalWizard")
                     },
@@ -10435,7 +10516,7 @@
                     getLabel: function() {
                         return Object(c.d)("Where is the problem?", "ReportModalWizard")
                     },
-                    items: [N.video, N.whisper, N.chat, N.room, N.profile, N.username, N.report_other],
+                    items: [N.video, N.whisper, N.chat, N.moderating, N.otherContent, N.report_username, N.report_other],
                     type: T.MultipleChoice,
                     value: "content type"
                 },
@@ -10450,14 +10531,14 @@
                     content: {
                         getTitle: F.reportVideo,
                         getLabel: U.contentGeneral,
-                        items: [N.revealPersonalInfo, N.video_labeling, N.video_inactive, N.video_general, N.report_ip, N.violateDevAgreement, N.selfharm],
+                        items: [N.violence, N.abusive, N.video_inactive, N.video_labeling, N.inappropriateContent, N.selfharm, N.video_more_options],
                         type: T.MultipleChoice,
                         value: "video report reason"
                     },
-                    general: {
+                    moreOptions: {
                         getTitle: F.reportVideo,
-                        getLabel: U.content,
-                        items: [N.report_username, N.violence, N.abusive, N.cheating, N.scam, N.inappropriateContent, N.evasion, N.impersonation, N.underage, N.bitsViolation],
+                        getLabel: U.contentGeneral,
+                        items: [N.revealPersonalInfo, N.cheating, N.impersonating, N.underage, N.bitsViolation, N.report_ip, N.other],
                         type: T.MultipleChoice,
                         value: "video general report reason"
                     }
@@ -10466,37 +10547,65 @@
                     content: {
                         getTitle: F.reportMessage,
                         getLabel: U.contentGeneral,
-                        items: [N.revealPersonalInfo, N.evasion, N.spam, N.maliciousRaid, N.report_username, N.messaging_general, N.selfharm],
+                        items: [N.report_username, N.violence, N.abusive, N.evasion, N.spam, N.selfharm, N.chat_more_options],
                         type: T.MultipleChoice,
                         value: "message report reason"
                     },
-                    general: {
+                    moreOptions: {
                         getTitle: F.reportMessage,
-                        getLabel: U.content,
-                        items: [N.report_emotes, N.violence, N.abusive, N.inappropriateContent, N.impersonation, N.underage, N.bitsViolation],
+                        getLabel: U.contentGeneral,
+                        items: [N.emotes_break_guidelines, N.inappropriateContent, N.revealPersonalInfo, N.maliciousRaid, N.underage, N.bitsViolation, N.other],
                         type: T.MultipleChoice,
                         value: "message general report reason"
                     }
                 },
-                L = a.__assign({}, P.content, {
-                    getDescription: function() {
-                        return Object(c.d)("Please note that we may review additional messages in this conversation to determine the context of your report.", "ReportModalWizard")
+                L = {
+                    general: {
+                        getTitle: F.reportWhisper,
+                        getLabel: U.contentGeneral,
+                        items: [N.report_username, N.violence, N.abusive, N.spam, N.selfharm, N.whisper_more_options],
+                        type: T.MultipleChoice,
+                        value: "whisper report reason",
+                        getDescription: function() {
+                            return Object(c.d)("Please note that we may review additional messages in this conversation to determine the context of your report.", "ReportModalWizard")
+                        }
+                    },
+                    moreOptions: {
+                        getTitle: F.reportWhisper,
+                        getLabel: U.contentGeneral,
+                        items: [N.emotes_break_guidelines, N.evasion, N.inappropriateContent, N.revealPersonalInfo, N.underage, N.other],
+                        type: T.MultipleChoice,
+                        value: "whisper general report reason"
                     }
-                }),
+                },
                 B = {
-                    content: {
+                    profile: {
                         getTitle: F.reportProfile,
                         getLabel: U.contentGeneral,
-                        items: [N.revealPersonalInfo, N.inappropriateBadge, N.inappropriateExtension, N.noModeration, N.profile_general, N.report_ip, N.violateDevAgreement, N.selfharm],
+                        items: [N.revealPersonalInfo, N.violence, N.abusive, N.inappropriateContent, N.selfharm, N.profile_more_options],
                         type: T.MultipleChoice,
                         value: "profile report reason"
                     },
-                    general: {
+                    profileMoreOptions: {
                         getTitle: F.reportProfile,
-                        getLabel: U.content,
-                        items: [N.report_username, N.violence, N.abusive, N.scam, N.inappropriateContent, N.evasion, N.impersonation, N.underage, N.bitsViolation],
+                        getLabel: U.contentGeneral,
+                        items: [N.scam, N.evasion, N.impersonation, N.underage, N.report_ip, N.other],
                         type: T.MultipleChoice,
                         value: "profile general report reason"
+                    },
+                    emotes: {
+                        getTitle: F.reportEmotesBadges,
+                        getLabel: U.content,
+                        items: [N.hateSpeechSymbols, N.harassing, N.itsInappropriateContent, N.automod, N.report_ip, N.other],
+                        type: T.MultipleChoice,
+                        value: "emote report reason"
+                    },
+                    general: {
+                        getTitle: F.reportProfileOrOtherContent,
+                        getLabel: U.content,
+                        items: [N.report_username, N.profile, N.report_emotes, N.inappropriateExtension, N.compromisedAccount, N.violateDevAgreement],
+                        type: T.MultipleChoice,
+                        value: "profile content location"
                     }
                 },
                 z = {
@@ -10534,19 +10643,6 @@
                         items: [N.hateSpeech, N.harassment, N.abusiveViolence, N.commitingViolence, N.swatting, N.personalInfo],
                         type: T.MultipleChoice,
                         value: "abuse type"
-                    },
-                    violence: {
-                        getTitle: function(e) {
-                            return Object(c.d)("Report {username} for Violence or Threats", {
-                                username: e
-                            }, "ReportModalWizard")
-                        },
-                        getLabel: function() {
-                            return Object(c.d)("Are the threats or actions directed at you or someone else?", "ReportModalWizard")
-                        },
-                        items: [N.threat_me, N.threat_person, N.threat_group, N.threat_selfharm],
-                        type: T.MultipleChoice,
-                        value: "violence type"
                     }
                 },
                 Y = {
@@ -10569,7 +10665,7 @@
                                 username: e
                             }, "ReportModalWizard")
                         },
-                        getLabel: U.thisPersonIs,
+                        getLabel: U.contentGeneral,
                         getDescription: function() {
                             return Object(c.d)("Please note that incidents reported through this form must involve Twitch community members. If possible, please submit a report to the site or service where the incident occurred as well.", "ReportModalWizard")
                         },
@@ -10578,10 +10674,6 @@
                         nextCard: H.socialMedia,
                         value: "external site conduct"
                     },
-                    external_violence: a.__assign({}, G.violence, {
-                        items: [N.threat_me, N.threat_person, N.threat_group],
-                        nextCard: H.socialMedia
-                    }),
                     external_abusive: a.__assign({}, G.content, {
                         items: [N.hateSpeech, N.harassment, N.external_abusiveViolence, N.external_commitingViolence, N.swatting, N.personalInfo],
                         nextCard: H.socialMedia
@@ -10594,7 +10686,7 @@
                         }, "ReportModalWizard")
                     },
                     getLabel: U.contentGeneral,
-                    items: [N.spam_bot, N.spam_scam, N.spam_repeated],
+                    items: [N.spam_bot, N.spam_scam, N.spam_links, N.spam_repeated],
                     type: T.MultipleChoice,
                     value: "spam type"
                 },
@@ -10605,7 +10697,7 @@
                         }, "ReportModalWizard")
                     },
                     getLabel: U.relevantStatements,
-                    items: [N.inappropriate_game, N.gory, N.sexuallyViolent, N.childAnimal, N.pornographic, N.suggestive, N.nudity, N.other],
+                    items: [N.inappropriate_game, N.gory, N.sexuallyViolentChildAnimal, N.pornographic, N.suggestive, N.nudity, N.other],
                     type: T.MultipleChoice,
                     value: "inappropriate content type"
                 },
@@ -10633,7 +10725,7 @@
                         return Object(c.d)("Who is being impersonated?", "ReportModalWizard")
                     },
                     getDescription: function() {
-                        return Object(c.d)("Parody, cosplay, and other portrayals without the intent to deceive or defraud are allowed under Twitch's Community Guidelines. If you would still like to submit a report, please continue.", "ReportModalWizard")
+                        return Object(c.d)("Please note that parody, cosplay, and other portrayals without the intent to deceive or defraud are allowed under Twitch's Community Guidelines. If you would still like to submit a report, please continue.", "ReportModalWizard")
                     },
                     items: [N.impersonation_me, N.impersonation_brand, N.impersonation_other],
                     type: T.MultipleChoice,
@@ -10643,38 +10735,38 @@
                 Z = V,
                 J = j,
                 ee = {
-                    video: W.identifyUser,
-                    whisper: L,
+                    video: W.content,
+                    "video more options": W.moreOptions,
+                    whisper: L.general,
+                    "whisper more options": L.moreOptions,
                     chat: P.content,
-                    profile: B.content,
+                    "chat more options": P.moreOptions,
+                    "other content": B.general,
+                    profile: B.profile,
+                    "profile more options": B.profileMoreOptions,
                     room: z,
                     "somewhere else": Y.identifyLocation,
                     streamer: W.content,
                     "someone else in video": W.content,
                     "someone in chat": P.content,
-                    general_video: W.general,
-                    general_messaging: P.general,
-                    general_profile: B.general,
-                    "channel owner": B.content,
+                    general_video: W.moreOptions,
+                    general_messaging: P.content,
+                    general_profile: B.profile,
+                    "channel owner": B.general,
                     "community member": P.content,
-                    "on twitch": B.content,
+                    "on twitch": B.general,
                     "another site": Y.externalSite,
                     "twitch event": x.twitchEvent,
                     "brigading/raids": H.socialMedia,
-                    threatening: Y.external_violence,
                     "hateful/harassing": Y.external_abusive,
-                    "external site; threatening violence": Y.external_violence,
-                    "external site; committing violence": Y.external_violence,
                     "external site; scam": H.socialMedia,
                     "ban evasion": Q,
                     spam: q,
                     hateful: G.content,
                     impersonation: K,
-                    "violence/threats": G.violence,
-                    "threatening violence": G.violence,
-                    "committing violence": G.violence,
                     abusive: G.content,
                     "inappropriate content": X,
+                    "inappropriate emotes": B.emotes,
                     "intellectual property": x.legal,
                     "violating developer agreement": x.legal
                 },
@@ -10684,15 +10776,15 @@
                     other: J
                 },
                 ne = {
-                    CHANNEL_FEED_POST_REPORT: B.content,
-                    COMMUNITY_REPORT: B.content,
+                    CHANNEL_FEED_POST_REPORT: B.general,
+                    COMMUNITY_REPORT: B.general,
                     CHAT_REPORT: P.content,
                     CLIP_REPORT: W.content,
-                    EVENT_REPORT: B.content,
-                    EXTENSION_REPORT: B.content,
-                    LIVE_UP_REPORT: B.content,
+                    EVENT_REPORT: B.general,
+                    EXTENSION_REPORT: B.general,
+                    LIVE_UP_REPORT: B.general,
                     ROOM_REPORT: z,
-                    WHISPER_REPORT: L,
+                    WHISPER_REPORT: L.general,
                     VOD_COMMENT_REPORT: P.content
                 },
                 re = "report-wizard-back",
@@ -10763,7 +10855,7 @@
                             t.setState({
                                 modalCloseTracked: !0
                             }, function() {
-                                return t.props.trackClose(R.Finish, t.state.currentCard.value, t.getChoiceIndex())
+                                return t.props.trackClose(M.Finish, t.state.currentCard.value, t.getChoiceIndex())
                             }), t.props.onClose()
                         }, t.getChoiceIndex = function() {
                             var e = 0;
@@ -10793,7 +10885,7 @@
                                     displacedSelections: t.state.displacedSelections.slice(0, -1),
                                     reportContext: o
                                 }, function() {
-                                    return t.trackNavigation(M.Next, e.value, s)
+                                    return t.trackNavigation(R.Next, e.value, s)
                                 })
                             }
                         }, t.createReportDescription = function() {
@@ -10835,7 +10927,7 @@
                                                         userTextInput: {},
                                                         error: ""
                                                     }, function() {
-                                                        return o.trackNavigation(M.Submit, void 0, i)
+                                                        return o.trackNavigation(R.Submit, void 0, i)
                                                     });
                                                     break;
                                                 case I.a.UserError:
@@ -10872,7 +10964,7 @@
                                         error: "",
                                         targetUnknown: r
                                     }, function() {
-                                        return s.trackNavigation(M.Back, e.value, i)
+                                        return s.trackNavigation(R.Back, e.value, i)
                                     }), [2]
                                 })
                             })
@@ -10903,7 +10995,7 @@
                         }, t
                     }
                     return a.__extends(t, e), t.prototype.componentWillUnmount = function() {
-                        this.state.modalCloseTracked || this.props.trackClose(R.Close, this.state.currentCard.value, this.getChoiceIndex())
+                        this.state.modalCloseTracked || this.props.trackClose(M.Close, this.state.currentCard.value, this.getChoiceIndex())
                     }, t.prototype.render = function() {
                         var e = this.state.currentCard.type === T.Info && this.state.currentCard.blockPrompt ? o.createElement(C, {
                                 targetUser: this.props.targetUser,
@@ -10951,9 +11043,9 @@
                 le = n("s8Ou"),
                 ce = n("0hI/");
             n.d(t, "c", function() {
-                    return M
-                }), n.d(t, "a", function() {
                     return R
+                }), n.d(t, "a", function() {
+                    return M
                 }), n.d(t, "b", function() {
                     return ue
                 }),
@@ -10962,10 +11054,10 @@
                 }(O || (O = {})),
                 function(e) {
                     e.Back = "back", e.Close = "close", e.Open = "open", e.Next = "next", e.Submit = "submit_report", e.ToggleSettings = "modal_settings"
-                }(M || (M = {})),
+                }(R || (R = {})),
                 function(e) {
                     e.Close = "close", e.Finish = "finish"
-                }(R || (R = {}));
+                }(M || (M = {}));
             var de = function(e) {
                 function t(t) {
                     var n = e.call(this, t) || this;
@@ -11026,11 +11118,11 @@
                             userBlocked: !1
                         })
                     }, n.trackOpen = function(e) {
-                        n.state.openEventSent || (n.state.showWizard ? n.trackWizardAction(M.Open, void 0, e) : n.trackAction(O.Open), n.setState({
+                        n.state.openEventSent || (n.state.showWizard ? n.trackWizardAction(R.Open, void 0, e) : n.trackAction(O.Open), n.setState({
                             openEventSent: !0
                         }))
                     }, n.trackClose = function(e, t, r) {
-                        n.state.closeEventSent || (n.state.showWizard ? n.trackWizardAction(M.Close, t, void 0, r, e) : n.trackAction(O.Close), n.setState({
+                        n.state.closeEventSent || (n.state.showWizard ? n.trackWizardAction(R.Close, t, void 0, r, e) : n.trackAction(O.Close), n.setState({
                             closeEventSent: !0
                         }))
                     }, n.trackWizardAction = function(e, t, r, i, a) {
@@ -11038,7 +11130,7 @@
                             ui_context: n.props.reportContext.contentType,
                             target_user_id: n.props.reportContext.targetUserID,
                             report_sent: n.state.submitStatus === I.a.Success,
-                            modal_type: "wizard_v1",
+                            modal_type: "wizard_v2",
                             extra_user_id: n.props.reportContext.additionalTrackingID,
                             action: e,
                             close_type: a,
@@ -11959,8 +12051,8 @@
                 O = function(e) {
                     return e.tier && !isNaN(parseInt(e.tier, 10)) ? parseInt(e.tier, 10) / 1e3 : 1
                 },
-                M = n("GnwI"),
-                R = n("br9A"),
+                R = n("GnwI"),
+                M = n("br9A"),
                 U = n("TSYQ"),
                 F = n("8/mp"),
                 j = n("8Ad5");
@@ -12280,7 +12372,7 @@
                             }
                         }
                         return n
-                    }, t = i.__decorate([Object(M.b)("EmotePickerMenu", {
+                    }, t = i.__decorate([Object(R.b)("EmotePickerMenu", {
                         autoReportInteractive: !0
                     })], t)
                 }(a.Component)),
@@ -12526,7 +12618,7 @@
                     skip: function(e) {
                         return !e.channelID
                     }
-                }), Object(M.b)("EmoteSubUpsell"))(Z);
+                }), Object(R.b)("EmoteSubUpsell"))(Z);
             ! function(e) {
                 e.FrequentlyUsed = "frequently_used", e.CurrentChannel = "current_channel", e.OtherChannel = "other_subbed_channel", e.Unlocked = "unlocked", e.Global = "global"
             }(A || (A = {}));
@@ -12826,8 +12918,8 @@
                     function t(t) {
                         var n = e.call(this, t) || this;
                         n.handleSubEvent = function(e) {
-                            e.action === R.a.ClickCheckout && n.checkAndDisplaySubscriptionCheckout(), Object(R.b)(i.__assign({}, e, {
-                                action: R.a.ClickCheckout,
+                            e.action === M.a.ClickCheckout && n.checkAndDisplaySubscriptionCheckout(), Object(M.b)(i.__assign({}, e, {
+                                action: M.a.ClickCheckout,
                                 channelID: n.props.channelData && n.props.channelData.user && n.props.channelData.user.id || "",
                                 channelLogin: n.props.channelData && n.props.channelData.user && n.props.channelData.user.displayName || "",
                                 isMenuOpen: null,
@@ -13071,7 +13163,7 @@
                     skip: function(e) {
                         return !e.currentUserID
                     }
-                }]), Object(M.b)("EmotePicker"), Object(g.a)())(re),
+                }]), Object(R.b)("EmotePicker"), Object(g.a)())(re),
                 ae = function(e) {
                     function t() {
                         var t = null !== e && e.apply(this, arguments) || this;
@@ -13148,7 +13240,7 @@
                         configurable: !0
                     }), t
                 }(a.Component),
-                oe = Object(M.b)("EmotePicker")(ae);
+                oe = Object(R.b)("EmotePicker")(ae);
             var se = Object(r.connect)(function(e) {
                 return {
                     firstPageLoaded: e.session.firstPageLoaded
@@ -14089,7 +14181,7 @@
             }), n.d(t, "c", function() {
                 return O
             }), n.d(t, "q", function() {
-                return R
+                return M
             }), n.d(t, "p", function() {
                 return U
             });
@@ -14111,7 +14203,7 @@
                     return c.__generator(this, function(n) {
                         switch (n.label) {
                             case 0:
-                                return [4, M()];
+                                return [4, R()];
                             case 1:
                                 return t = n.sent(), d.p.tracking.track(u.SpadeEventType.WhisperIgnoreUser, {
                                     ui_context: e.context,
@@ -14131,7 +14223,7 @@
                     return c.__generator(this, function(r) {
                         switch (r.label) {
                             case 0:
-                                return [4, M()];
+                                return [4, R()];
                             case 1:
                                 return n = r.sent(), d.p.tracking.track(u.SpadeEventType.WhisperThreadMod, {
                                     conversation_id: e,
@@ -14238,7 +14330,7 @@
                 })
             }
 
-            function M() {
+            function R() {
                 var e = this;
                 return new Promise(function(t) {
                     setTimeout(function() {
@@ -14265,13 +14357,13 @@
                 })
             }
 
-            function R(e) {
+            function M(e) {
                 return c.__awaiter(this, void 0, void 0, function() {
                     var t;
                     return c.__generator(this, function(n) {
                         switch (n.label) {
                             case 0:
-                                return [4, M()];
+                                return [4, R()];
                             case 1:
                                 return t = n.sent(), d.p.tracking.track(u.SpadeEventType.WhisperSent, {
                                     to: e.targetUserLogin,
@@ -14293,7 +14385,7 @@
                     return c.__generator(this, function(n) {
                         switch (n.label) {
                             case 0:
-                                return [4, M()];
+                                return [4, R()];
                             case 1:
                                 return t = n.sent(), d.p.tracking.track(u.SpadeEventType.WhisperReceived, {
                                     to: t && t.login,

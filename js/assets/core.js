@@ -1612,6 +1612,7 @@
                             action: this.props.action,
                             initialStep: this.props.initialStep,
                             loadedLatencyEvent: this.loadedLatencyEvent,
+                            postLoginAction: this.props.postLoginAction,
                             nextURL: this.props.nextURL
                         }), r.createElement(d.Ya, {
                             className: "auth-modal",
@@ -21990,46 +21991,50 @@
                     return i.__generator(this, function(m) {
                         switch (m.label) {
                             case 0:
-                                return [4, function(e, t) {
-                                    var n = t.config,
-                                        r = t.logger;
+                                return [4, function(e, t, n) {
+                                    var r = t.config,
+                                        l = t.logger;
                                     return i.__awaiter(this, void 0, void 0, function() {
-                                        var t, l, c, u;
+                                        var t, c, u, d;
                                         return i.__generator(this, function(i) {
                                             switch (i.label) {
                                                 case 0:
-                                                    r.debug("Getting user data from GraphQL with new token"), t = o.p.apollo.authToken, i.label = 1;
+                                                    l.debug("Getting user data from GraphQL with new token"), t = o.p.apollo.authToken, i.label = 1;
                                                 case 1:
-                                                    return i.trys.push([1, 3, 4, 5]), o.p.apollo.authToken = e, [4, o.p.apollo.client.query({
+                                                    return i.trys.push([1, 5, 6, 7]), o.p.apollo.authToken = e, [4, o.p.apollo.client.query({
                                                         fetchPolicy: "network-only",
                                                         query: s
                                                     })];
                                                 case 2:
-                                                    return (l = i.sent()).data.currentUser ? (c = {
+                                                    return (c = i.sent()).data.currentUser ? (u = {
                                                         authToken: e,
-                                                        displayName: l.data.currentUser.displayName,
-                                                        id: l.data.currentUser.id,
-                                                        login: l.data.currentUser.login,
+                                                        displayName: c.data.currentUser.displayName,
+                                                        id: c.data.currentUser.id,
+                                                        login: c.data.currentUser.login,
                                                         roles: {
-                                                            isStaff: !!l.data.currentUser.roles && !!l.data.currentUser.roles.isStaff
+                                                            isStaff: !!c.data.currentUser.roles && !!c.data.currentUser.roles.isStaff
                                                         }
-                                                    }, Object(a.n)(c, {
-                                                        config: n,
-                                                        logger: r
-                                                    }), [3, 5]) : (r.error(new Error("Failed to get user data from GraphQL, but there was no client error."), "Failed to get user data from GraphQL, but there was no client error."), [2]);
+                                                    }, Object(a.n)(u, {
+                                                        config: r,
+                                                        logger: l
+                                                    }), n ? [4, n()] : [3, 4]) : (l.error(new Error("Failed to get user data from GraphQL, but there was no client error."), "Failed to get user data from GraphQL, but there was no client error."), [2]);
                                                 case 3:
-                                                    return u = i.sent(), r.error(u, "Failed to get user data from GraphQL."), [3, 5];
+                                                    i.sent(), i.label = 4;
                                                 case 4:
-                                                    return o.p.apollo.authToken = t, [7];
+                                                    return [3, 7];
                                                 case 5:
-                                                    return [2]
+                                                    return d = i.sent(), l.error(d, "Failed to get user data from GraphQL."), [3, 7];
+                                                case 6:
+                                                    return o.p.apollo.authToken = t, [7];
+                                                case 7:
+                                                    return [2, t]
                                             }
                                         })
                                     })
                                 }(e, {
                                     config: r,
                                     logger: l
-                                })];
+                                }, t.onComplete)];
                             case 1:
                                 return m.sent(), t && t.next ? (l.debug("Navigating to " + t.next), n = d(t.next, {
                                     config: r,
@@ -31994,25 +31999,28 @@
             ! function(e) {
                 e.Channel = "channel"
             }(i || (i = {}));
-            var y, k, E = n("2xye"),
-                _ = n("9o5F"),
-                C = n("tKDy"),
-                S = n("i4un"),
-                w = n("JcRA"),
-                N = n("GnwI"),
-                T = n("Ba7Q"),
-                I = n("Ar2k"),
-                D = n("Ue10"),
-                O = n("ZBeb"),
-                R = (n("Kcwz"), n("CZEr")),
-                A = n("Qdxp");
+            var y, k = n("2xye"),
+                E = n("9o5F");
+            ! function(e) {
+                e.Follow = "follow"
+            }(y || (y = {}));
+            var _, C, S = n("tKDy"),
+                w = n("i4un"),
+                N = n("JcRA"),
+                T = n("GnwI"),
+                I = n("Ba7Q"),
+                D = n("Ar2k"),
+                O = n("Ue10"),
+                R = n("ZBeb"),
+                A = (n("Kcwz"), n("CZEr")),
+                L = n("Qdxp");
             ! function(e) {
                 e.UnfollowButton = "unfollow-button", e.UnfollowButtonLabel = "unfollow-button-label", e.UnfollowButtonLabelHover = "unfollow-button-label-hover", e.UnfollowButtonWithDropdown = "unfollow-button__dropdown", e.FollowButton = "follow-button", e.FollowButtonWithContextualModal = "follow-button-contextual"
-            }(y || (y = {})),
+            }(_ || (_ = {})),
             function(e) {
                 e[e.IconOnly = 0] = "IconOnly", e[e.TextOnly = 1] = "TextOnly", e[e.IconAndText = 2] = "IconAndText"
-            }(k || (k = {}));
-            var L = function(e) {
+            }(C || (C = {}));
+            var x = function(e) {
                     function t() {
                         var t = null !== e && e.apply(this, arguments) || this;
                         return t.state = {
@@ -32020,20 +32028,20 @@
                             showDropdown: !1,
                             disableNotifications: !0
                         }, t.handleContextBalloonToggle = function(e) {
-                            e ? Object(C.n)({
-                                page: C.e.Bubble,
+                            e ? Object(S.n)({
+                                page: S.e.Bubble,
                                 source: o.a.FollowButton,
-                                target: C.d.Outside,
-                                action: C.c.Click
-                            }) : Object(C.o)({
-                                page: C.e.Bubble,
+                                target: S.d.Outside,
+                                action: S.c.Click
+                            }) : Object(S.o)({
+                                page: S.e.Bubble,
                                 source: o.a.FollowButton
                             })
                         }, t.userDataLoaded = function() {
                             return t.props.data && !t.props.data.loading && !t.props.data.error && t.props.data.user
                         }, t.toggleFollowing = function() {
                             var e;
-                            t.state.isFollowing ? (t.unfollowUser(), e = E.SpadeEventType.Unfollow) : (t.followUser(), e = E.SpadeEventType.Follow);
+                            t.state.isFollowing ? (t.unfollowUser(), e = k.SpadeEventType.Unfollow) : (t.followUser(), e = k.SpadeEventType.Follow);
                             var n = t.getFollowData();
                             n && function(e, t) {
                                 c.__awaiter(this, void 0, void 0, function() {
@@ -32140,7 +32148,7 @@
                                                 targetID: e.user && e.user.id || ""
                                             }, t), [4, this.props.followUser(n)]) : [2];
                                         case 1:
-                                            return (i = a.sent()).data.followUser && i.data.followUser.follow && (r = i.data.followUser.follow, Object(f.e)(A, {
+                                            return (i = a.sent()).data.followUser && i.data.followUser.follow && (r = i.data.followUser.follow, Object(f.e)(L, {
                                                 login: this.props.channelLogin
                                             }, function(e) {
                                                 var t = e.user;
@@ -32183,7 +32191,7 @@
                                                 targetID: e.user && e.user.id || ""
                                             }, t), [4, this.props.unfollowUser(n)]) : [2];
                                         case 1:
-                                            return i.sent(), Object(f.e)(A, {
+                                            return i.sent(), Object(f.e)(L, {
                                                 login: this.props.channelLogin
                                             }, function(e) {
                                                 var t = e.user;
@@ -32203,7 +32211,7 @@
                             t.buttonContainerRef && t.state.isFollowing && t.props.showTooltips && t.props.tooltipLayer.show({
                                 from: t.buttonContainerRef,
                                 label: t.getUnfollowText(),
-                                direction: D.bc.Top
+                                direction: O.bc.Top
                             })
                         }, t.onMouseLeave = function() {
                             t.hideTooltip()
@@ -32212,14 +32220,15 @@
                         }, t.onAnimatedButtonComplete = function() {
                             t.props.onToggleAnimationComplete && t.props.onToggleAnimationComplete(t.state.isFollowing)
                         }, t.login = function() {
-                            var e;
-                            t.props.useContextualModals && Object(S.b)() === S.a.TwoStep ? e = {
-                                modalType: C.e.TwoStep,
-                                targetChannel: t.props.channelName || t.props.channelLogin
-                            } : t.props.useContextualModals && Object(S.b)() === S.a.Split && (e = {
-                                modalType: C.e.Combined,
-                                targetChannel: t.props.channelName || t.props.channelLogin
-                            }), t.props.login(e)
+                            var e = {},
+                                n = t.props.channelName || t.props.channelLogin,
+                                i = t.getFollowData();
+                            n && i && (e.postLoginAction = {
+                                action: y.Follow,
+                                data: {
+                                    followData: i
+                                }
+                            }), t.props.useContextualModals && Object(w.b)() === w.a.TwoStep ? (e.modalType = S.e.TwoStep, e.targetChannel = t.props.channelName || t.props.channelLogin) : t.props.useContextualModals && Object(w.b)() === w.a.Split && (e.modalType = S.e.Combined, e.targetChannel = t.props.channelName || t.props.channelLogin), t.props.login(e)
                         }, t
                     }
                     return c.__extends(t, e), t.prototype.componentDidMount = function() {
@@ -32250,23 +32259,23 @@
                         if (this.props.showLoadingPlaceholder && (!this.props.data || this.props.data.loading)) return this.renderPlaceholder();
                         if (this.props.hideWhenFollowing || this.props.currentUserLogin === this.props.channelLogin || !this.props.followData && (!this.props.data || this.props.data.loading || this.props.data.error || !this.props.data.user)) return null;
                         var e = null;
-                        return e = !this.state.isFollowing || this.props.animatedButton ? this.renderFollowButton(this.toggleFollowing) : this.props.hideDropdownWhenFollowing ? this.renderUnfollowButton() : this.renderUnfollowButtonWithDropdown(), d.createElement(D.Ya, {
+                        return e = !this.state.isFollowing || this.props.animatedButton ? this.renderFollowButton(this.toggleFollowing) : this.props.hideDropdownWhenFollowing ? this.renderUnfollowButton() : this.renderUnfollowButtonWithDropdown(), d.createElement(O.Ya, {
                             refDelegate: this.setButtonContainerRef
                         }, e)
                     }, t.prototype.renderPlaceholder = function() {
                         switch (this.props.size) {
-                            case D.D.Large:
-                                return d.createElement(D.jb, {
+                            case O.D.Large:
+                                return d.createElement(O.jb, {
                                     width: this.props.fullWidthButton ? void 0 : 93,
                                     height: 36
                                 });
-                            case D.D.Small:
-                                return d.createElement(D.jb, {
+                            case O.D.Small:
+                                return d.createElement(O.jb, {
                                     width: this.props.fullWidthButton ? void 0 : 66,
                                     height: 24
                                 });
                             default:
-                                return d.createElement(D.jb, {
+                                return d.createElement(O.jb, {
                                     width: this.props.fullWidthButton ? void 0 : 70,
                                     height: 30
                                 })
@@ -32280,32 +32289,32 @@
                             r = null;
                         return r = this.props.animatedButton ? d.createElement("div", {
                             className: n
-                        }, d.createElement(w.a, {
+                        }, d.createElement(N.a, {
                             text: i ? void 0 : t,
-                            icon: i ? D.ub.Heart : D.ub.FollowHollow,
-                            iconOnHover: i ? D.ub.Unheart : D.ub.Heart,
-                            type: i ? D.F.Text : D.F.Default,
-                            typeOnHover: i ? D.F.Alert : void 0,
+                            icon: i ? O.ub.Heart : O.ub.FollowHollow,
+                            iconOnHover: i ? O.ub.Unheart : O.ub.Heart,
+                            type: i ? O.F.Text : O.F.Default,
+                            typeOnHover: i ? O.F.Alert : void 0,
                             onClick: e,
                             onClickAnimationEnd: this.onAnimatedButtonComplete
-                        })) : d.createElement(D.z, c.__assign({
+                        })) : d.createElement(O.z, c.__assign({
                             ariaLabel: t,
                             blurAfterClick: this.props.blurAfterClick,
-                            "data-a-target": y.FollowButton,
-                            "data-test-selector": y.FollowButton,
+                            "data-a-target": _.FollowButton,
+                            "data-test-selector": _.FollowButton,
                             icon: this.getButtonIcon(),
                             onClick: e,
                             size: this.props.size,
                             tabIndex: this.props.tabIndex,
-                            type: this.props.followButtonType || D.F.Default,
+                            type: this.props.followButtonType || O.F.Default,
                             fullWidth: this.props.fullWidthButton
-                        }, Object(D.kc)(this.props)), this.props.followUIType === k.IconOnly ? null : t), this.props.useContextualModals && !this.props.isLoggedIn && Object(S.b)() === S.a.Balloon ? d.createElement(m.a, {
+                        }, Object(O.kc)(this.props)), this.props.followUIType === C.IconOnly ? null : t), this.props.useContextualModals && !this.props.isLoggedIn && Object(w.b)() === w.a.Balloon ? d.createElement(m.a, {
                             onToggle: this.handleContextBalloonToggle,
-                            "data-test-selector": y.FollowButtonWithContextualModal
-                        }, r, d.createElement(D.u, {
-                            direction: this.props.balloonDirection ? this.props.balloonDirection : D.v.BottomRight,
-                            size: D.w.Medium
-                        }, d.createElement(_.a, {
+                            "data-test-selector": _.FollowButtonWithContextualModal
+                        }, r, d.createElement(O.u, {
+                            direction: this.props.balloonDirection ? this.props.balloonDirection : O.v.BottomRight,
+                            size: O.w.Medium
+                        }, d.createElement(E.a, {
                             targetUserDisplayName: this.props.channelName || this.props.channelLogin,
                             source: o.a.FollowButton
                         }))) : r
@@ -32317,11 +32326,11 @@
                         return d.createElement("button", c.__assign({
                             className: n,
                             "aria-label": t,
-                            "data-a-target": y.UnfollowButton,
-                            "data-test-selector": y.UnfollowButton,
+                            "data-a-target": _.UnfollowButton,
+                            "data-test-selector": _.UnfollowButton,
                             tabIndex: this.props.tabIndex,
                             onClick: this.toggleFollowing
-                        }, Object(D.kc)(this.props)), d.createElement(D.Ya, {
+                        }, Object(O.kc)(this.props)), d.createElement(O.Ya, {
                             padding: {
                                 x: .5
                             },
@@ -32330,58 +32339,58 @@
                             fullHeight: !0
                         }, d.createElement("span", {
                             className: "follow-btn__label",
-                            "data-test-selector": y.UnfollowButtonLabel
-                        }, this.props.unfollowUIType !== k.TextOnly && d.createElement(D.tb, {
-                            asset: D.ub.Heart
-                        }), this.props.unfollowUIType !== k.IconOnly && d.createElement(D.Ya, {
+                            "data-test-selector": _.UnfollowButtonLabel
+                        }, this.props.unfollowUIType !== C.TextOnly && d.createElement(O.tb, {
+                            asset: O.ub.Heart
+                        }), this.props.unfollowUIType !== C.IconOnly && d.createElement(O.Ya, {
                             padding: {
                                 x: .5
                             }
                         }, Object(p.d)("Following", "FollowButton"))), d.createElement("span", {
                             className: "follow-btn__label-hover",
-                            "data-test-selector": y.UnfollowButtonLabelHover
-                        }, this.props.unfollowUIType !== k.TextOnly && d.createElement(D.tb, {
-                            asset: D.ub.Unheart
-                        }), this.props.unfollowUIType !== k.IconOnly && d.createElement(D.Ya, {
+                            "data-test-selector": _.UnfollowButtonLabelHover
+                        }, this.props.unfollowUIType !== C.TextOnly && d.createElement(O.tb, {
+                            asset: O.ub.Unheart
+                        }), this.props.unfollowUIType !== C.IconOnly && d.createElement(O.Ya, {
                             padding: {
                                 x: .5
                             }
                         }, t))))
                     }, t.prototype.renderUnfollowButtonWithDropdown = function() {
-                        var e = this.props.balloonDirection ? this.props.balloonDirection : D.v.BottomRight;
-                        return d.createElement(D.Ya, {
-                            display: D.X.Flex,
+                        var e = this.props.balloonDirection ? this.props.balloonDirection : O.v.BottomRight;
+                        return d.createElement(O.Ya, {
+                            display: O.X.Flex,
                             className: "follow-btn",
-                            "data-test-selector": y.UnfollowButtonWithDropdown
-                        }, d.createElement(D.Ya, null, this.renderUnfollowButton(!0)), d.createElement(m.a, {
-                            display: D.X.InlineFlex,
+                            "data-test-selector": _.UnfollowButtonWithDropdown
+                        }, d.createElement(O.Ya, null, this.renderUnfollowButton(!0)), d.createElement(m.a, {
+                            display: O.X.InlineFlex,
                             openByDefault: this.state.showDropdown
                         }, d.createElement("button", {
                             tabIndex: this.props.tabIndex,
                             "aria-label": Object(p.d)("Dropdown", "FollowButton"),
                             className: "follow-btn__dropdown-toggle",
                             "data-a-target": "follow-dropdown-toggle"
-                        }, d.createElement(D.Ya, {
-                            justifyContent: D.Xa.Center,
-                            display: D.X.Flex,
-                            alignItems: D.f.Stretch,
+                        }, d.createElement(O.Ya, {
+                            justifyContent: O.Xa.Center,
+                            display: O.X.Flex,
+                            alignItems: O.f.Stretch,
                             fullHeight: !0
-                        }, d.createElement(D.tb, {
-                            asset: D.ub.GlyphArrDown
-                        }))), d.createElement(D.u, {
-                            size: D.w.Small,
+                        }, d.createElement(O.tb, {
+                            asset: O.ub.GlyphArrDown
+                        }))), d.createElement(O.u, {
+                            size: O.w.Small,
                             direction: e,
                             "data-a-target": "follow-notifications-balloon"
-                        }, d.createElement(D.Ya, {
+                        }, d.createElement(O.Ya, {
                             padding: 1
-                        }, d.createElement(T.a, {
+                        }, d.createElement(I.a, {
                             channelLogin: this.props.channelLogin
                         })))))
                     }, t.prototype.getButtonIcon = function() {
-                        var e = this.props.hollowIcons && !this.state.isFollowing ? D.ub.FollowHollow : D.ub.Heart;
-                        return this.props.followUIType === k.TextOnly ? void 0 : e
+                        var e = this.props.hollowIcons && !this.state.isFollowing ? O.ub.FollowHollow : O.ub.Heart;
+                        return this.props.followUIType === C.TextOnly ? void 0 : e
                     }, t.prototype.reportInteractive = function() {
-                        P(this.props) ? this.props.latencyTracking.reportInteractive() : this.props.data && !this.props.data.loading && this.props.latencyTracking.reportInteractive()
+                        F(this.props) ? this.props.latencyTracking.reportInteractive() : this.props.data && !this.props.data.loading && this.props.latencyTracking.reportInteractive()
                     }, t.prototype.addEventListeners = function() {
                         this.buttonContainerRef && (this.buttonContainerRef.addEventListener("mouseover", this.onMouseEnter), this.buttonContainerRef.addEventListener("mouseleave", this.onMouseLeave))
                     }, t.prototype.removeEventListeners = function() {
@@ -32390,7 +32399,7 @@
                         return Object(p.d)("Unfollow", "FollowButton")
                     }, t
                 }(d.Component),
-                x = Object(a.compose)(Object(h.a)(A, {
+                P = Object(a.compose)(Object(h.a)(L, {
                     options: function(e) {
                         return {
                             variables: {
@@ -32398,17 +32407,17 @@
                             }
                         }
                     },
-                    skip: P
-                }), Object(h.a)(O, {
-                    name: "followUser"
+                    skip: F
                 }), Object(h.a)(R, {
+                    name: "followUser"
+                }), Object(h.a)(A, {
                     name: "unfollowUser"
-                }), Object(I.c)(), Object(N.b)("FollowButton"))(L);
+                }), Object(D.c)(), Object(T.b)("FollowButton"))(x);
 
-            function P(e) {
-                return !e.isLoggedIn || (!e.channelLogin || (!!e.followData || e.channelLogin === e.currentUserLogin))
+            function F(e) {
+                return !e.channelLogin || (!!e.followData || e.channelLogin === e.currentUserLogin)
             }
-            var F = Object(r.connect)(function(e) {
+            var M = Object(r.connect)(function(e) {
                 var t = Object(l.e)(e);
                 return {
                     currentUserLogin: t && t.login,
@@ -32420,11 +32429,11 @@
                         return Object(s.e)(o.a.FollowButton, e)
                     }
                 }, e)
-            })(x);
+            })(P);
             n.d(t, "b", function() {
-                return k
+                return C
             }), n.d(t, !1, function() {}), n.d(t, "a", function() {
-                return F
+                return M
             })
         },
         dPg0: function(e, t, n) {},
@@ -39824,7 +39833,7 @@
                     return i
                 }),
                 function(e) {
-                    e.AdSlotRenderEnded = "ad_slot_render_ended", e.AdImpressionViewableEvent = "ad_impression_viewable", e.AchievementSpotlightImpression = "achievement_spotlight_impression", e.AchievementQuestBannerClick = "achievement_quest_banner_click", e.APIQuery = "benchmark_api_query", e.AppBooted = "benchmark_app_booted", e.AutoHostChannelUpdate = "autohost_channel_update", e.BitsAdsAvailability = "bits_ads_availability", e.BitsAdsImpression = "bits_ads_impression", e.BitsAdsRequest = "bits_ads_request", e.BitsCardInteraction = "bits_card_interaction", e.BitsCheerBombOptOut = "bits_cheer_bomb_opt_out", e.BitsCheerBombHideNotifications = "bits_cheer_bomb_hide_notifications", e.BroadcastPageClick = "broadcast_page_link", e.BrowseClick = "browse_click", e.BrowseFilter = "browse_filter", e.BrowseForYou = "browse_for_you", e.BrowserPushNotificationPrompt = "browser_notification_prompt", e.BrowserPushNotificationDisable = "browser_notification_disable", e.BountyBoardActions = "bounty_board_actions", e.BountyBoardImpressions = "bounty_board_impressions", e.BTTV = "bttv_check", e.CampaignTabSwitch = "campaign_tab_switch", e.CaptchaFormLoad = "captcha_form_load", e.ChannelAnalyticsInteraction = "channel_analytics_interaction", e.ChannelAnalyticsTopStatsView = "channel_analytics_topstats_view", e.Chat = "chat", e.ChatBadgeClick = "chat_badge_click", e.ChatInputRestrictedAction = "used_chatbox_interaction", e.ChatInputRestrictedImpression = "viewed_chatbox_interaction", e.ChatMentionUsed = "chat_mention_used", e.ChatRoomJoined = "chat_room_join", e.ChatRoomWatched = "chatroom-watched", e.ChatSettingsChanged = "chat_client_setting_changed", e.ChatSettingsOpened = "chat_client_settings_open", e.ChatSuggestion = "chat-suggestions", e.ChatSuggestionComplete = "chat-completed-suggestion", e.ChommentCreated = "chomment_create", e.ChommentDeleted = "chomment_delete", e.ChommentUIAction = "chomment_ui_action", e.ClipEdit = "clip_edit", e.ClipChampHelpClick = "clip_champ_help_click", e.ClipsUpsellClick = "clips_upsell_click", e.CollectionCreate = "collection_create", e.CollectionAddItem = "collection_add_item_frontend", e.CollectionRemoveItem = "collection_remove_item", e.CommunityEdit = "community_client_edit", e.CommunityModeration = "community_client_channel_moderation", e.CommunityReport = "community_client_report", e.CommunityRoleEdit = "community_client_role_edit", e.CompleteTransition = "benchmark_complete_transition", e.ComponentInitializing = "benchmark_component_initializing", e.ComponentInteractive = "benchmark_component_interactive", e.CustomEvent = "benchmark_custom_event", e.CrateNotificationAction = "crate_notification_action", e.DashboardSettingsInteraction = "dashboard_settings_interaction", e.DevButtonClick = "devsite_button_click", e.DevInsightsButtonClick = "insights_games_api_usage", e.DisplayAdAuction = "display_ad_auction", e.DisplayAdAuctionResponse = "display_ad_auction_response", e.CollaborationWidgetImpression = "collaboration_widget_impression", e.CollaborationWidgetInteraction = "collaboration_widget_interaction", e.CrownMenuToggle = "crown_menu_toggle", e.CrownMouseEnter = "crown_mouseenter", e.CrownInteraction = "crown_interaction", e.DashboardHelpInteraction = "dashboard_help_interaction", e.DeprioritizeVodcastToggle = "autohost_deprioritize_vodcast_toggle", e.EmotePickerClickthrough = "emote_picker_clickthrough", e.EventFollowing = "oracle_user_notification_client", e.EventManager = "oracle_event_manager", e.EventShare = "oracle_event_share", e.ExperimentBranch = "experiment_branch", e.ExperimentBranchThrottled = "experiment_branch_throttled", e.ExtensionConfigureView = "extension_configure_view", e.ExtensionInstall = "extension_install_button_click", e.ExtensionPopoutClicked = "extension_popout_clicked", e.ExtensionPopinClicked = "extension_popin_clicked", e.ExtensionStreamerComponentSettings = "extension_streamer_component_settings", e.ExtensionSubscribeToChannelActionInit = "extension_subs_init", e.FacebookConnect = "login_facebook_connect", e.FacebookLogin = "login_facebook_login", e.FacebookSignup = "signup_facebook_signup", e.FeaturedEventPresentation = "event_suggestions_shown", e.FeedCardImpression = "feed_client_card_impression", e.FeedCardEmbedImpression = "feed_client_card_embed_impression", e.FeedCardEmbedPlay = "feed_client_card_embed_play", e.FeedPost = "feed_client_post", e.FeedReaction = "feed_client_reaction", e.FetchStart = "benchmark_fetch_start", e.FilterClick = "filter_click", e.FFZ = "ffz_check", e.FocusSearch = "search_input_focus", e.Follow = "follow", e.FrontPageCarouselClick = "frontpage_carousel_click", e.FrontPageCarouselDisplay = "carousel_display", e.FrontPageCarouselPromotionCardClick = "promotion_card_click", e.FrontPageCarouselPromotionCardView = "promotion_card_view", e.FrontPageCarouselNavButtonClick = "carousel_nav_button_click", e.FuelBuyButton = "fuel_buy_button", e.FuelGetGameClick = "fuel_get_game_click", e.FuelOfferView = "offer_view", e.FuelOfferInteraction = "offer_interaction", e.FuelSocialShare = "fuel_social_share", e.GameFollow = "follow-game", e.GameUnfollow = "unfollow-game", e.GDPRConsentBannerDisplayed = "consent_dialog_served", e.GDPRConsentSet = "consent_set", e.HearthstoneFilterAction = "hearthstone_filter_action", e.HighlighterCurationStart = "highlighter_curation_start", e.HighlighterCurationFinish = "highlighter_curation_finish", e.HighlighterInteraction = "highlighter_interaction", e.HostModeDebug = "host_mode_debug", e.ItemClick = "item_click", e.ItemDisplay = "item_display", e.ItemSectionClick = "item_section_click", e.ItemSectionLoad = "item_section_load", e.LanguageFilterChange = "language_filter_change", e.LeaderboardExpandClick = "bits_leaderboard_expand_click", e.LiveDashboardInteraction = "live_dashboard_interaction", e.LoginFormInteraction = "login_form_interaction", e.LoginFormLoad = "login_form_load", e.LoginShow = "login_show", e.LoginStep = "login_step", e.LoginSuccess = "login_success", e.LiveDashboardBannerInteraction = "live_dashboard_banner_interaction", e.LiveDashboardStreamHealthEvent = "live_dashboard_stream_health", e.LiveDashboardStreamStats = "live_dashboard_stream_stats", e.LiveDashboardWidgetView = "live_dashboard_widget_view", e.ModalContextInteraction = "modal_context_interaction", e.ModalContextView = "modal_context_view", e.OnboardingEvent = "onboarding_web", e.OnboardingSurfAction = "onboarding_surf_action", e.OverwatchFilterAction = "overwatch_filter_action", e.NetworkRequest = "network_request", e.NewChatterTokenStatus = "nca_client_token_status", e.NewChatterOnboardingInteraction = "nca_onboarding_chatbox_interaction", e.NotificationCenterInteraction = "notification_center_interaction", e.NotificationImpression = "notification_impression", e.NotificationInteraction = "notification_interaction", e.Pageview = "pageview", e.PanelClick = "panel_click", e.PanelImpression = "panel_display", e.PartnerAffiliateSettings = "partner_affiliate_settings", e.PartnershipApplicationInteraction = "partnership_application_interaction", e.PassportShow = "auth_show", e.PassportHide = "auth_exit", e.PaymentFormDisplay = "payment_form_display", e.PaymentFormInteraction = "payment_form_interaction", e.PlayerRecShow = "player_rec_show", e.PlayerShowFeatured = "player_show_featured", e.PlayerRecSelect = "player_rec_select", e.PlayerRecAutoplay = "player_rec_autoplay", e.PresenceClick = "friend_presence_click", e.PresenceToggle = "rich_presence_toggle", e.PrimeBlueBarInteraction = "prime_blue_bar_interaction", e.PrimeLootPagePageview = "prime_loot_page_pageview", e.PrimeLootPageTryPrimeClick = "prime_loot_page_try_prime_click", e.PrimeOfferInteraction = "prime_offer_interaction", e.RaidPromptJoin = "raid_prompt_join", e.RaidPromptLeave = "raid_prompt_leave", e.RaidPromptCancel = "raid_prompt_cancel", e.RaidPromptNow = "raid_prompt_now", e.RaidPromptImpression = "raid_prompt_impression", e.RaidUpsellClick = "raid_upsell_click", e.RaidUpsellImpression = "raid_upsell_impression", e.RecFeedbackClick = "rec_feedback_click", e.RecRequestClient = "rec_request_client", e.ReportFlowAction = "report_oldmodal_interaction", e.ReportWizardFlowAction = "report_flow_action", e.ReportModalChange = "report_modal_change", e.SearchBegin = "search_session_begin", e.SearchReset = "search_session_reset", e.SearchQuerySubmit = "search_query_submit", e.SearchQueryResult = "search_query_result", e.SearchResultImpression = "search_result_impression", e.SearchResultClick = "search_result_click", e.SearchUIImpression = "search_ui_impression", e.SearchUIClick = "search_ui_click", e.ShareItem = "share_item", e.SideNavChannelClick = "sidenav_channel_click", e.SideNavDetails = "sidenav_details", e.SideNavLoadMore = "sidenav_load_more", e.SimilarHostToggle = "autohost_similar_channels_toggle", e.SignupFormInteraction = "signup_form_interaction", e.SignupFormLoad = "signup_form_load", e.SignupShow = "signup_show", e.SignupStep = "signup_step", e.SignupSuccess = "signup_success", e.SiteLayoutMod = "site_layout_mod", e.SiteToggle = "twilight_site_toggle", e.SquadStreamBannerAction = "squad_stream_banner_action", e.SquadStreamPresentation = "squad_stream_presentation", e.SquadStreamViewerAction = "squad_stream_viewer_action", e.StreamBookmarkListDownload = "stream_bookmark_list_download", e.StreamBookmarkClick = "stream_bookmark_click", e.StreamSummaryBannerClick = "summary_banner_click", e.StreamSummaryChartView = "stream_summary_chart_view", e.StreamSummaryInteraction = "stream_summary_interaction", e.StreamSummarySpotlightImpression = "summary_spotlight_impression", e.StreamSummarySpotlightClick = "summary_spotlight_click", e.StoreMerchClick = "store_item_select", e.StoreMerchView = "store_item_view", e.Subscription = "subscribe_button", e.SubsLandingStreamerClick = "subs_landing_streamer_click", e.SubscribedSideNavChannelClick = "subscribed_sidenav_channel_click", e.TeamHostToggle = "autohost_team_toggle", e.ThemeChange = "dark_mode_toggle", e.TopNavClick = "top_nav_click", e.TwoFactorFormLoad = "two_factor_form_load", e.Unfollow = "unfollow", e.UserLongtask = "user_longtask", e.VerifyEmailBar = "verify_email_bar", e.ViewedEmotePicker = "viewed_emote_picker", e.VideoChatSettingChanged = "video_chat_setting_changed", e.VideoManagerInteraction = "video_manager_interaction", e.VideoManagerSectionLoad = "video_manager_section_load", e.VideoShare = "video_share", e.VODDownloadClick = "vod_download_click", e.VODExportClick = "vod_export_click", e.VODPageviewMetadata = "vod_pageview_metadata", e.VODProcessingInteraction = "vod_processing_interaction", e.WatchPartyAddVOD = "watch_party_add_vod", e.WatchPartyEnd = "watch_party_end", e.WatchPartyOtherVOD = "watch_party_other_vod", e.WatchPartyReorder = "watch_party_reorder", e.WatchPartyRemoveVOD = "watch_party_remove_vod", e.WatchPartyStart = "watch_party_start", e.WhisperAllThreadsMod = "chat_convo_mod_global", e.WhisperIgnoreUser = "chat_ignore_client", e.WhisperReceived = "whisper_received", e.WhisperSearchClick = "search_click", e.WhisperSent = "whisper", e.WhisperStrangerWarningImpression = "whisper_stranger_prompt", e.WhisperThreadCreate = "chat_convo_create", e.WhisperThreadMod = "chat_convo_mod"
+                    e.AdSlotRenderEnded = "ad_slot_render_ended", e.AdImpressionViewableEvent = "ad_impression_viewable", e.AchievementSpotlightImpression = "achievement_spotlight_impression", e.AchievementQuestBannerClick = "achievement_quest_banner_click", e.APIQuery = "benchmark_api_query", e.AppBooted = "benchmark_app_booted", e.AutoHostChannelUpdate = "autohost_channel_update", e.BitsAdsAvailability = "bits_ads_availability", e.BitsAdsImpression = "bits_ads_impression", e.BitsAdsRequest = "bits_ads_request", e.BitsCardInteraction = "bits_card_interaction", e.BitsCheerBombOptOut = "bits_cheer_bomb_opt_out", e.BitsCheerBombHideNotifications = "bits_cheer_bomb_hide_notifications", e.BroadcastPageClick = "broadcast_page_link", e.BrowseClick = "browse_click", e.BrowseFilter = "browse_filter", e.BrowseForYou = "browse_for_you", e.BrowserPushNotificationPrompt = "browser_notification_prompt", e.BrowserPushNotificationDisable = "browser_notification_disable", e.BountyBoardActions = "bounty_board_actions", e.BountyBoardImpressions = "bounty_board_impressions", e.BTTV = "bttv_check", e.CampaignTabSwitch = "campaign_tab_switch", e.CaptchaFormLoad = "captcha_form_load", e.ChannelAnalyticsInteraction = "channel_analytics_interaction", e.ChannelAnalyticsTopStatsView = "channel_analytics_topstats_view", e.Chat = "chat", e.ChatBadgeClick = "chat_badge_click", e.ChatInputRestrictedAction = "used_chatbox_interaction", e.ChatInputRestrictedImpression = "viewed_chatbox_interaction", e.ChatMentionUsed = "chat_mention_used", e.ChatRoomJoined = "chat_room_join", e.ChatRoomWatched = "chatroom-watched", e.ChatSettingsChanged = "chat_client_setting_changed", e.ChatSettingsOpened = "chat_client_settings_open", e.ChatSuggestion = "chat-suggestions", e.ChatSuggestionComplete = "chat-completed-suggestion", e.ChommentCreated = "chomment_create", e.ChommentDeleted = "chomment_delete", e.ChommentUIAction = "chomment_ui_action", e.ClipEdit = "clip_edit", e.ClipChampHelpClick = "clip_champ_help_click", e.ClipsUpsellClick = "clips_upsell_click", e.CollectionCreate = "collection_create", e.CollectionAddItem = "collection_add_item_frontend", e.CollectionRemoveItem = "collection_remove_item", e.CommunityEdit = "community_client_edit", e.CommunityModeration = "community_client_channel_moderation", e.CommunityReport = "community_client_report", e.CommunityRoleEdit = "community_client_role_edit", e.CompleteTransition = "benchmark_complete_transition", e.ComponentInitializing = "benchmark_component_initializing", e.ComponentInteractive = "benchmark_component_interactive", e.CustomEvent = "benchmark_custom_event", e.CrateNotificationAction = "crate_notification_action", e.DashboardSettingsInteraction = "dashboard_settings_interaction", e.DevButtonClick = "devsite_button_click", e.DevInsightsButtonClick = "insights_games_api_usage", e.DisplayAdAuction = "display_ad_auction", e.DisplayAdAuctionResponse = "display_ad_auction_response", e.CollaborationWidgetImpression = "collaboration_widget_impression", e.CollaborationWidgetInteraction = "collaboration_widget_interaction", e.CrownMenuToggle = "crown_menu_toggle", e.CrownMouseEnter = "crown_mouseenter", e.CrownInteraction = "crown_interaction", e.DashboardHelpInteraction = "dashboard_help_interaction", e.DeprioritizeVodcastToggle = "autohost_deprioritize_vodcast_toggle", e.EmotePickerClickthrough = "emote_picker_clickthrough", e.EventFollowing = "oracle_user_notification_client", e.EventManager = "oracle_event_manager", e.EventShare = "oracle_event_share", e.ExperimentBranch = "experiment_branch", e.ExperimentBranchThrottled = "experiment_branch_throttled", e.ExtensionConfigureView = "extension_configure_view", e.ExtensionInstall = "extension_install_button_click", e.ExtensionPopoutClicked = "extension_popout_clicked", e.ExtensionPopinClicked = "extension_popin_clicked", e.ExtensionStreamerComponentSettings = "extension_streamer_component_settings", e.ExtensionSubscribeToChannelActionInit = "extension_subs_init", e.FacebookConnect = "login_facebook_connect", e.FacebookLogin = "login_facebook_login", e.FacebookSignup = "signup_facebook_signup", e.FeaturedEventPresentation = "event_suggestions_shown", e.FeedCardImpression = "feed_client_card_impression", e.FeedCardEmbedImpression = "feed_client_card_embed_impression", e.FeedCardEmbedPlay = "feed_client_card_embed_play", e.FeedPost = "feed_client_post", e.FeedReaction = "feed_client_reaction", e.FetchStart = "benchmark_fetch_start", e.FilterClick = "filter_click", e.FFZ = "ffz_check", e.FocusSearch = "search_input_focus", e.Follow = "follow", e.FrontPageCarouselClick = "frontpage_carousel_click", e.FrontPageCarouselDisplay = "carousel_display", e.FrontPageCarouselPromotionCardClick = "promotion_card_click", e.FrontPageCarouselPromotionCardView = "promotion_card_view", e.FrontPageCarouselNavButtonClick = "carousel_nav_button_click", e.FuelBuyButton = "fuel_buy_button", e.FuelGetGameClick = "fuel_get_game_click", e.FuelOfferView = "offer_view", e.FuelOfferInteraction = "offer_interaction", e.FuelSocialShare = "fuel_social_share", e.GameFollow = "follow-game", e.GameUnfollow = "unfollow-game", e.GDPRConsentBannerDisplayed = "consent_dialog_served", e.GDPRConsentSet = "consent_set", e.HearthstoneFilterAction = "hearthstone_filter_action", e.HighlighterCurationStart = "highlighter_curation_start", e.HighlighterCurationFinish = "highlighter_curation_finish", e.HighlighterInteraction = "highlighter_interaction", e.HostModeDebug = "host_mode_debug", e.ItemClick = "item_click", e.ItemDisplay = "item_display", e.ItemSectionClick = "item_section_click", e.ItemSectionLoad = "item_section_load", e.LanguageFilterChange = "language_filter_change", e.LeaderboardExpandClick = "bits_leaderboard_expand_click", e.LiveDashboardInteraction = "live_dashboard_interaction", e.LoginFormInteraction = "login_form_interaction", e.LoginFormLoad = "login_form_load", e.LoginShow = "login_show", e.LoginStep = "login_step", e.LoginSuccess = "login_success", e.LiveDashboardBannerInteraction = "live_dashboard_banner_interaction", e.LiveDashboardStreamHealthEvent = "live_dashboard_stream_health", e.LiveDashboardStreamStats = "live_dashboard_stream_stats", e.LiveDashboardWidgetView = "live_dashboard_widget_view", e.ModalContextInteraction = "modal_context_interaction", e.ModalContextView = "modal_context_view", e.MultiviewPresentation = "multiview_presentation", e.MultiviewStreamDirectorySelection = "multiview_stream_directory_selection", e.MultiviewStreamDirectoryImpression = "multiview_stream_directory_impression", e.OnboardingEvent = "onboarding_web", e.OnboardingSurfAction = "onboarding_surf_action", e.OverwatchFilterAction = "overwatch_filter_action", e.NetworkRequest = "network_request", e.NewChatterTokenStatus = "nca_client_token_status", e.NewChatterOnboardingInteraction = "nca_onboarding_chatbox_interaction", e.NotificationCenterInteraction = "notification_center_interaction", e.NotificationImpression = "notification_impression", e.NotificationInteraction = "notification_interaction", e.Pageview = "pageview", e.PanelClick = "panel_click", e.PanelImpression = "panel_display", e.PartnerAffiliateSettings = "partner_affiliate_settings", e.PartnershipApplicationInteraction = "partnership_application_interaction", e.PassportShow = "auth_show", e.PassportHide = "auth_exit", e.PaymentFormDisplay = "payment_form_display", e.PaymentFormInteraction = "payment_form_interaction", e.PlayerRecShow = "player_rec_show", e.PlayerShowFeatured = "player_show_featured", e.PlayerRecSelect = "player_rec_select", e.PlayerRecAutoplay = "player_rec_autoplay", e.PresenceClick = "friend_presence_click", e.PresenceToggle = "rich_presence_toggle", e.PrimeBlueBarInteraction = "prime_blue_bar_interaction", e.PrimeLootPagePageview = "prime_loot_page_pageview", e.PrimeLootPageTryPrimeClick = "prime_loot_page_try_prime_click", e.PrimeOfferInteraction = "prime_offer_interaction", e.RaidPromptJoin = "raid_prompt_join", e.RaidPromptLeave = "raid_prompt_leave", e.RaidPromptCancel = "raid_prompt_cancel", e.RaidPromptNow = "raid_prompt_now", e.RaidPromptImpression = "raid_prompt_impression", e.RaidUpsellClick = "raid_upsell_click", e.RaidUpsellImpression = "raid_upsell_impression", e.RecFeedbackClick = "rec_feedback_click", e.RecRequestClient = "rec_request_client", e.ReportFlowAction = "report_oldmodal_interaction", e.ReportWizardFlowAction = "report_flow_action", e.ReportModalChange = "report_modal_change", e.SearchBegin = "search_session_begin", e.SearchReset = "search_session_reset", e.SearchQuerySubmit = "search_query_submit", e.SearchQueryResult = "search_query_result", e.SearchResultImpression = "search_result_impression", e.SearchResultClick = "search_result_click", e.SearchUIImpression = "search_ui_impression", e.SearchUIClick = "search_ui_click", e.ShareItem = "share_item", e.SideNavChannelClick = "sidenav_channel_click", e.SideNavDetails = "sidenav_details", e.SideNavLoadMore = "sidenav_load_more", e.SimilarHostToggle = "autohost_similar_channels_toggle", e.SignupFormInteraction = "signup_form_interaction", e.SignupFormLoad = "signup_form_load", e.SignupShow = "signup_show", e.SignupStep = "signup_step", e.SignupSuccess = "signup_success", e.SiteLayoutMod = "site_layout_mod", e.SiteToggle = "twilight_site_toggle", e.SquadStreamBannerAction = "squad_stream_banner_action", e.SquadStreamPresentation = "squad_stream_presentation", e.SquadStreamViewerAction = "squad_stream_viewer_action", e.StreamBookmarkListDownload = "stream_bookmark_list_download", e.StreamBookmarkClick = "stream_bookmark_click", e.StreamSummaryBannerClick = "summary_banner_click", e.StreamSummaryChartView = "stream_summary_chart_view", e.StreamSummaryInteraction = "stream_summary_interaction", e.StreamSummarySpotlightImpression = "summary_spotlight_impression", e.StreamSummarySpotlightClick = "summary_spotlight_click", e.StoreMerchClick = "store_item_select", e.StoreMerchView = "store_item_view", e.Subscription = "subscribe_button", e.SubsLandingStreamerClick = "subs_landing_streamer_click", e.SubscribedSideNavChannelClick = "subscribed_sidenav_channel_click", e.TeamHostToggle = "autohost_team_toggle", e.ThemeChange = "dark_mode_toggle", e.TopNavClick = "top_nav_click", e.TwoFactorFormLoad = "two_factor_form_load", e.Unfollow = "unfollow", e.UserLongtask = "user_longtask", e.VerifyEmailBar = "verify_email_bar", e.ViewedEmotePicker = "viewed_emote_picker", e.VideoChatSettingChanged = "video_chat_setting_changed", e.VideoManagerInteraction = "video_manager_interaction", e.VideoManagerSectionLoad = "video_manager_section_load", e.VideoShare = "video_share", e.VODDownloadClick = "vod_download_click", e.VODExportClick = "vod_export_click", e.VODPageviewMetadata = "vod_pageview_metadata", e.VODProcessingInteraction = "vod_processing_interaction", e.WatchPartyAddVOD = "watch_party_add_vod", e.WatchPartyEnd = "watch_party_end", e.WatchPartyOtherVOD = "watch_party_other_vod", e.WatchPartyReorder = "watch_party_reorder", e.WatchPartyRemoveVOD = "watch_party_remove_vod", e.WatchPartyStart = "watch_party_start", e.WhisperAllThreadsMod = "chat_convo_mod_global", e.WhisperIgnoreUser = "chat_ignore_client", e.WhisperReceived = "whisper_received", e.WhisperSearchClick = "search_click", e.WhisperSent = "whisper", e.WhisperStrangerWarningImpression = "whisper_stranger_prompt", e.WhisperThreadCreate = "chat_convo_create", e.WhisperThreadMod = "chat_convo_mod"
                 }(i || (i = {}))
         },
         rqzT: function(e, t, n) {
@@ -45999,7 +46008,8 @@
                     return Object(h.bindActionCreators)({
                         login: function() {
                             return w(t.action, {
-                                nextURL: t.nextURL
+                                nextURL: t.nextURL,
+                                postLoginAction: t.postLoginAction
                             })
                         },
                         signup: function() {
@@ -46032,7 +46042,8 @@
                     action: t,
                     onClose: n && n.onClose,
                     nextURL: n && n.nextURL,
-                    targetChannelDisplayName: n && n.targetChannel
+                    targetChannelDisplayName: n && n.targetChannel,
+                    postLoginAction: n && n.postLoginAction
                 }
             };
 
@@ -46044,7 +46055,8 @@
                         options: r
                     });
                 return r && r.modalType === b.e.TwoStep ? Object(a.d)(E, i.__assign({}, o)) : Object(a.d)(p.AuthModal, i.__assign({}, o, {
-                    initialStep: e
+                    initialStep: e,
+                    modalType: r && r.modalType
                 }))
             }
 

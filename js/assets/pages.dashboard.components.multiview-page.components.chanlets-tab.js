@@ -234,7 +234,6 @@
                         return t.state = {}, t
                     }
                     return o.__extends(t, e), t.prototype.render = function() {
-                        var e = this.props.imageURL || s.a.defaultAvatarURL;
                         return l.createElement(h.Fb, {
                             className: "content-attribute-chip",
                             display: h.X.InlineFlex,
@@ -246,10 +245,10 @@
                             },
                             padding: .5,
                             background: h.r.Alt2
-                        }, l.createElement("img", {
+                        }, this.props.imageURL && l.createElement("img", {
                             "data-test-selector": r.Image,
                             className: "content-attribute-chip__icon",
-                            src: e,
+                            src: this.props.imageURL,
                             alt: this.props.value
                         }), l.createElement(h.Ya, {
                             "data-test-selector": r.Value,
@@ -388,11 +387,11 @@
                         return !this.state.isSaving && this.validChanletGroupValue()
                     }, t
                 }(l.Component),
-                v = n("cZKs");
+                E = n("cZKs");
             ! function(e) {
                 e.Cancel = "create-chanlet-modal__cancel", e.Confirm = "create-chanlet-modal__confirm"
             }(g || (g = {}));
-            var E, S = function(e) {
+            var v, S = function(e) {
                     function t() {
                         var t = null !== e && e.apply(this, arguments) || this;
                         return t.state = {
@@ -460,7 +459,7 @@
                             disabled: this.state.isSaving,
                             "data-test-selector": g.Confirm,
                             onClick: this.onConfirmClick
-                        }, Object(s.d)("Create Chanlet", "CreateChanletModal")))), l.createElement(v.a, {
+                        }, Object(s.d)("Create Chanlet", "CreateChanletModal")))), l.createElement(E.a, {
                             closeOnBackdropClick: !0
                         }))
                     }, t
@@ -526,7 +525,7 @@
             n("0vXd");
             ! function(e) {
                 e.Cancel = "edit-chanlet-group-modal__cancel", e.Update = "edit-chanlet-group-modal__update", e.Value = "edit-chanlet-group-modal__value", e.ValueForm = "edit-chanlet-group-modal__value-form"
-            }(E || (E = {}));
+            }(v || (v = {}));
             var x, A = function(e) {
                     function t() {
                         var t = null !== e && e.apply(this, arguments) || this;
@@ -631,6 +630,7 @@
                                 return l.createElement(m, {
                                     key: a,
                                     value: n.value,
+                                    imageURL: n.imageURL,
                                     onClick: t.removeChanletContentAttribute.bind(t, e, n)
                                 })
                             })
@@ -683,6 +683,7 @@
                             if (r) return l.createElement(m, {
                                 key: r.key,
                                 value: r.value,
+                                imageURL: r.imageURL,
                                 onClick: t.removeChanletGroupTeam
                             })
                         }, t.removeChanletGroupTeam = function() {
@@ -821,7 +822,7 @@
                             flexShrink: 0
                         }, l.createElement(h.z, {
                             onClick: this.props.onClose,
-                            "data-test-selector": E.Cancel,
+                            "data-test-selector": v.Cancel,
                             type: h.F.Text
                         }, Object(s.d)("Cancel", "EditChanletGroupModal")), l.createElement(h.Ya, {
                             margin: {
@@ -830,7 +831,7 @@
                             display: h.X.InlineBlock
                         }, l.createElement(h.z, {
                             onClick: this.updateChanletGroup,
-                            "data-test-selector": E.Update,
+                            "data-test-selector": v.Update,
                             disabled: !this.canSave()
                         }, Object(s.d)("Update", "EditChanletGroupModal"))))), l.createElement(h.Ya, {
                             margin: {
@@ -897,13 +898,13 @@
                             }
                         }, l.createElement(h.Ea, {
                             id: "group-name",
-                            "data-test-selector": E.ValueForm,
+                            "data-test-selector": v.ValueForm,
                             label: Object(s.e)("Group Name", "EditChanletGroupModal"),
                             error: !this.validChanletGroupValue(),
                             errorMessage: Object(s.e)("Invalid Chanlet Group Name", "EditChanletGroupModal")
                         }, l.createElement(h.Sa, {
                             type: h.Ua.Text,
-                            "data-test-selector": E.Value,
+                            "data-test-selector": v.Value,
                             onChange: this.onChanletGroupValueChange,
                             value: t.value
                         }))))))
@@ -953,6 +954,7 @@
                             return l.createElement(m, {
                                 key: n,
                                 value: e.value,
+                                imageURL: e.imageURL,
                                 onClick: t.removeChanletContentAttribute.bind(t, e)
                             })
                         })
@@ -1256,7 +1258,8 @@
                             }).map(function(e) {
                                 return l.createElement(m, {
                                     key: e.key,
-                                    value: e.value
+                                    value: e.value,
+                                    imageURL: e.imageURL
                                 })
                             });
                             return l.createElement(h.Fb, {

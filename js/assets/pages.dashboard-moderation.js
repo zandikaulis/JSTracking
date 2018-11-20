@@ -7109,7 +7109,9 @@
                             return v = !0, [2, Object(s.g)(t).then(function(n) {
                                 v = !1, Object(s.f)(t) && t.offset === g ? e.dispatch(Object(a.A)(n)) : e.dispatch(Object(a.z)(n))
                             }, function(t) {
-                                v = !1, o.k.error(t, "VideoChat: unable to fetch messages"), e.dispatch(Object(a.B)())
+                                v = !1, o.k.warn("VideoChat: unable to fetch messages", {
+                                    error: t
+                                }), e.dispatch(Object(a.B)())
                             })]
                         })
                     })

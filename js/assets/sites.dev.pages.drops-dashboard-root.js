@@ -84,9 +84,9 @@
             }), n.d(t, "p", function() {
                 return g
             }), n.d(t, "w", function() {
-                return T
-            }), n.d(t, "y", function() {
                 return f
+            }), n.d(t, "y", function() {
+                return T
             }), n.d(t, "m", function() {
                 return I
             }), n.d(t, "d", function() {
@@ -120,9 +120,9 @@
             }), n.d(t, "f", function() {
                 return M
             }), n.d(t, "g", function() {
-                return j
-            }), n.d(t, "A", function() {
                 return k
+            }), n.d(t, "A", function() {
+                return j
             }), n.d(t, "k", function() {
                 return w
             }), n.d(t, "r", function() {
@@ -190,11 +190,11 @@
                 return r.PubsubTopic.ModerationActionsByUserAndChannel + "." + e + "." + t
             }
 
-            function T(e) {
+            function f(e) {
                 return r.PubsubTopic.Raid + "." + e
             }
 
-            function f(e) {
+            function T(e) {
                 return r.PubsubTopic.StreamChange + "." + e
             }
 
@@ -262,11 +262,11 @@
                 return r.PubsubTopic.ChannelEventUpdates + "." + e
             }
 
-            function j(e) {
+            function k(e) {
                 return r.PubsubTopic.ChannelSquadUpdates + "." + e
             }
 
-            function k(e) {
+            function j(e) {
                 return r.PubsubTopic.SubscribersCSV + "." + e
             }
 
@@ -549,7 +549,7 @@
         },
         DMoW: function(e, t, n) {
             "use strict";
-            var a, r, i, s, o, c, u, l, p, E, d, m, _, h, g, T, f, I, D, N, O, S, R, A, C, b, v, L, U, P, F, y, M, j, k, w, G, V, B, H, Y, x, W, K, X, z, q, Q, Z, J, $, ee, te, ne, ae, re, ie, se, oe, ce, ue, le, pe, Ee, de, me, _e, he, ge, Te, fe, Ie, De, Ne, Oe, Se, Re, Ae, Ce, be, ve, Le, Ue, Pe, Fe, ye, Me, je, ke, we, Ge, Ve, Be, He, Ye, xe, We, Ke, Xe, ze, qe, Qe, Ze, Je, $e, et, tt, nt, at, rt, it, st, ot, ct, ut, lt, pt, Et, dt, mt, _t, ht, gt, Tt, ft;
+            var a, r, i, s, o, c, u, l, p, E, d, m, _, h, g, f, T, I, D, N, O, S, R, A, C, b, v, L, U, P, F, y, M, k, j, w, G, V, B, H, Y, x, W, K, X, z, q, Q, Z, J, $, ee, te, ne, ae, re, ie, se, oe, ce, ue, le, pe, Ee, de, me, _e, he, ge, fe, Te, Ie, De, Ne, Oe, Se, Re, Ae, Ce, be, ve, Le, Ue, Pe, Fe, ye, Me, ke, je, we, Ge, Ve, Be, He, Ye, xe, We, Ke, Xe, ze, qe, Qe, Ze, Je, $e, et, tt, nt, at, rt, it, st, ot, ct, ut, lt, pt, Et, dt, mt, _t, ht, gt, ft, Tt;
             n.d(t, "N", function() {
                     return a
                 }), n.d(t, "e", function() {
@@ -583,7 +583,7 @@
                 }), n.d(t, "P", function() {
                     return U
                 }), n.d(t, "C", function() {
-                    return k
+                    return j
                 }), n.d(t, "c", function() {
                     return w
                 }), n.d(t, "u", function() {
@@ -633,7 +633,7 @@
                 }), n.d(t, "Da", function() {
                     return Le
                 }), n.d(t, "D", function() {
-                    return ke
+                    return je
                 }), n.d(t, "Ca", function() {
                     return we
                 }), n.d(t, "k", function() {
@@ -661,7 +661,7 @@
                 }), n.d(t, "f", function() {
                     return gt
                 }), n.d(t, "v", function() {
-                    return Tt
+                    return ft
                 }),
                 function(e) {
                     e.CHANNEL_FEED_COMMENT_REPORT = "CHANNEL_FEED_COMMENT_REPORT", e.CHANNEL_FEED_POST_REPORT = "CHANNEL_FEED_POST_REPORT", e.CHAT_REPORT = "CHAT_REPORT", e.CLIP_REPORT = "CLIP_REPORT", e.COLLECTION_REPORT = "COLLECTION_REPORT", e.CURSE_PRIVATE_GROUP = "CURSE_PRIVATE_GROUP", e.CURSE_PUBLIC_GROUP = "CURSE_PUBLIC_GROUP", e.CURSE_WHISPER = "CURSE_WHISPER", e.EVENT_REPORT = "EVENT_REPORT", e.EXTENSION_REPORT = "EXTENSION_REPORT", e.LIVE_UP_REPORT = "LIVE_UP_REPORT", e.RAID_REPORT = "RAID_REPORT", e.ROOM_REPORT = "ROOM_REPORT", e.SINGS_DUET_SEED_REPORT = "SINGS_DUET_SEED_REPORT", e.SINGS_GROUP_BIO_REPORT = "SINGS_GROUP_BIO_REPORT", e.SINGS_GROUP_CHAT_REPORT = "SINGS_GROUP_CHAT_REPORT", e.SINGS_GROUP_NAME_REPORT = "SINGS_GROUP_NAME_REPORT", e.SINGS_VOD_COMMENT_REPORT = "SINGS_VOD_COMMENT_REPORT", e.USER_REPORT = "USER_REPORT", e.VOD_COMMENT_REPORT = "VOD_COMMENT_REPORT", e.VOD_REPORT = "VOD_REPORT", e.WHISPER_REPORT = "WHISPER_REPORT"
@@ -710,10 +710,10 @@
                 }(g || (g = {})),
                 function(e) {
                     e.ALLTIME = "ALLTIME", e.MONTH = "MONTH", e.WEEK = "WEEK"
-                }(T || (T = {})),
+                }(f || (f = {})),
                 function(e) {
                     e.AD = "AD", e.BUNDLE = "BUNDLE"
-                }(f || (f = {})),
+                }(T || (T = {})),
                 function(e) {
                     e.GAME_TRAILER = "GAME_TRAILER", e.MISC_TRAILER = "MISC_TRAILER", e.PAY_TO_STREAM = "PAY_TO_STREAM"
                 }(I || (I = {})),
@@ -764,10 +764,10 @@
                 }(M || (M = {})),
                 function(e) {
                     e.AVAILABLE = "AVAILABLE", e.DISMISSED = "DISMISSED", e.ELIGIBLE = "ELIGIBLE", e.REDEEMED = "REDEEMED"
-                }(j || (j = {})),
+                }(k || (k = {})),
                 function(e) {
                     e.NONE = "NONE", e.READ = "READ", e.WRITE = "WRITE"
-                }(k || (k = {})),
+                }(j || (j = {})),
                 function(e) {
                     e.DURATION_INVALID = "DURATION_INVALID", e.FORBIDDEN = "FORBIDDEN", e.TARGET_ALREADY_BANNED = "TARGET_ALREADY_BANNED", e.TARGET_IS_ADMIN = "TARGET_IS_ADMIN", e.TARGET_IS_ANONYMOUS = "TARGET_IS_ANONYMOUS", e.TARGET_IS_BROADCASTER = "TARGET_IS_BROADCASTER", e.TARGET_IS_GLOBAL_MOD = "TARGET_IS_GLOBAL_MOD", e.TARGET_IS_MOD = "TARGET_IS_MOD", e.TARGET_IS_SELF = "TARGET_IS_SELF", e.TARGET_IS_STAFF = "TARGET_IS_STAFF", e.TARGET_IS_VIP = "TARGET_IS_VIP", e.TARGET_NOT_FOUND = "TARGET_NOT_FOUND"
                 }(w || (w = {})),
@@ -872,10 +872,10 @@
                 }(ge || (ge = {})),
                 function(e) {
                     e.CLAIMABLE_GIFT_CREATION_ERROR = "CLAIMABLE_GIFT_CREATION_ERROR", e.GIFT_CREATION_ERROR = "GIFT_CREATION_ERROR", e.MAX_GIFTS_FOR_OFFER_EXCEEDED = "MAX_GIFTS_FOR_OFFER_EXCEEDED", e.UNKNOWN_ERROR = "UNKNOWN_ERROR"
-                }(Te || (Te = {})),
+                }(fe || (fe = {})),
                 function(e) {
                     e.CLAIM_CODE = "CLAIM_CODE", e.DIRECT_ENTITLEMENT = "DIRECT_ENTITLEMENT", e.EXTERNAL = "EXTERNAL"
-                }(fe || (fe = {})),
+                }(Te || (Te = {})),
                 function(e) {
                     e.ERROR_STATUS = "ERROR_STATUS", e.GIFT_CLAIMED = "GIFT_CLAIMED", e.GIFT_CLAIM_PENDING = "GIFT_CLAIM_PENDING"
                 }(Ie || (Ie = {})),
@@ -926,10 +926,10 @@
                 }(Me || (Me = {})),
                 function(e) {
                     e.TIME = "TIME", e.VIEWS = "VIEWS"
-                }(je || (je = {})),
+                }(ke || (ke = {})),
                 function(e) {
                     e.DEFAULT = "DEFAULT", e.EXTENSION = "EXTENSION"
-                }(ke || (ke = {})),
+                }(je || (je = {})),
                 function(e) {
                     e.ALL_VIDEOS = "ALL_VIDEOS", e.COLLECTION = "COLLECTION", e.GAME_VIDEOS = "GAME_VIDEOS", e.LATEST_BROADCASTS = "LATEST_BROADCASTS", e.LONG_VIDEOS = "LONG_VIDEOS", e.SHORT_VIDEOS = "SHORT_VIDEOS", e.TOP_CLIPS = "TOP_CLIPS"
                 }(we || (we = {})),
@@ -1034,10 +1034,10 @@
                 }(gt || (gt = {})),
                 function(e) {
                     e.ITEM = "ITEM", e.LINK_NOTIFICATION = "LINK_NOTIFICATION"
-                }(Tt || (Tt = {})),
+                }(ft || (ft = {})),
                 function(e) {
                     e.SERVICE_DEPENDENCY_FAILURE = "SERVICE_DEPENDENCY_FAILURE", e.UNKNOWN = "UNKNOWN", e.USER_UNAUTHORIZED = "USER_UNAUTHORIZED"
-                }(ft || (ft = {}))
+                }(Tt || (Tt = {}))
         },
         GD6M: function(e, t, n) {
             "use strict";
@@ -1230,8 +1230,8 @@
                     }, t
                 }(r.Component),
                 g = n("Svt6"),
-                T = n("+GjP"),
-                f = n("1mFg"),
+                f = n("+GjP"),
+                T = n("1mFg"),
                 I = g.a + "/kraken/search/games",
                 D = 7,
                 N = function(e) {
@@ -1245,10 +1245,10 @@
                                 return a.__generator(this, function(a) {
                                     switch (a.label) {
                                         case 0:
-                                            return a.trys.push([0, 4, , 5]), e.length ? (t = Object(T.e)(I, {
+                                            return a.trys.push([0, 4, , 5]), e.length ? (t = Object(f.e)(I, {
                                                 query: e.trim(),
                                                 type: "suggest"
-                                            }), [4, Object(f.a)(t)]) : (this.setState({
+                                            }), [4, Object(T.a)(t)]) : (this.setState({
                                                 games: []
                                             }), [2]);
                                         case 1:
@@ -1554,8 +1554,8 @@
                 _ = n("GnwI"),
                 h = n("N0BP"),
                 g = n("yLwq"),
-                T = n("Ue10"),
-                f = function(e) {
+                f = n("Ue10"),
+                T = function(e) {
                     function t() {
                         var t = null !== e && e.apply(this, arguments) || this;
                         return t.onSelect = function(e) {
@@ -1564,31 +1564,31 @@
                     }
                     return a.__extends(t, e), t.prototype.render = function() {
                         var e = this.props.user.avatar || Object(g.c)(this.props.user.id, 64);
-                        return r.createElement(T.Ya, a.__assign({
+                        return r.createElement(f.Ya, a.__assign({
                             padding: {
                                 y: .5,
                                 x: 1
                             }
-                        }, Object(h.a)(this.props)), r.createElement(T.Va, {
+                        }, Object(h.a)(this.props)), r.createElement(f.Va, {
                             onClick: this.onSelect
-                        }, r.createElement(T.G, {
+                        }, r.createElement(f.G, {
                             row: !0
-                        }, r.createElement(T.I, {
+                        }, r.createElement(f.I, {
                             alt: this.props.user.name,
                             src: e,
-                            size: T.J.Size4,
-                            aspect: T.p.Aspect1x1
-                        }), r.createElement(T.Ya, {
+                            size: f.J.Size4,
+                            aspect: f.p.Aspect1x1
+                        }), r.createElement(f.Ya, {
                             flexGrow: 1,
-                            display: T.X.Flex,
-                            position: T.kb.Relative
-                        }, r.createElement(T.Qa, {
+                            display: f.X.Flex,
+                            position: f.kb.Relative
+                        }, r.createElement(f.Qa, {
                             padding: {
                                 x: 1
                             },
                             flexGrow: 1
-                        }, r.createElement(T.W, {
-                            type: T.Wb.Span,
+                        }, r.createElement(f.W, {
+                            type: f.Wb.Span,
                             ellipsis: !0
                         }, this.props.user.name))))))
                     }, t
@@ -1598,12 +1598,12 @@
                         var t = null !== e && e.apply(this, arguments) || this;
                         return t.userSearch = null, t.renderSearchContent = function() {
                             var e = null;
-                            return t.props.waiting ? e = r.createElement(T.ab, {
+                            return t.props.waiting ? e = r.createElement(f.ab, {
                                 fillContent: !0
                             }) : t.props.userResults && (e = t.props.userResults.map(function(e) {
                                 return r.createElement(d.a, {
                                     key: e.id
-                                }, r.createElement(f, {
+                                }, r.createElement(T, {
                                     user: e,
                                     onSelect: t.onSelect
                                 }))
@@ -1619,23 +1619,23 @@
                         this.userSearch && e.open !== this.props.open && this.userSearch.toggle(e.open)
                     }, t.prototype.render = function() {
                         var e = this.renderSearchContent();
-                        return r.createElement(T.Ya, null, r.createElement(E.a, {
+                        return r.createElement(f.Ya, null, r.createElement(E.a, {
                             onChange: this.props.onInputChange,
                             onFocusInput: this.props.onFocusInput,
                             ref: this.setUserSearchRef,
                             placeholder: Object(s.d)("Search Users", "DevUserSearch"),
                             balloonProps: {
                                 show: this.props.open,
-                                direction: T.v.Bottom,
-                                size: T.w.Large
+                                direction: f.v.Bottom,
+                                size: f.w.Large
                             },
                             onClose: this.props.onSearchClose
-                        }, r.createElement(T.Ya, {
+                        }, r.createElement(f.Ya, {
                             className: "user-search__user-search"
                         }, r.createElement(m.b, {
                             contentClassName: "user-search__user-search-content",
                             suppressScrollX: !0
-                        }, r.createElement(T.Ya, {
+                        }, r.createElement(f.Ya, {
                             fullWidth: !0
                         }, e)))))
                     }, t
@@ -2251,7 +2251,7 @@
                             _ = i.restrictSearchableAttributes,
                             h = void 0 === _ ? [] : _;
                         return a.__awaiter(this, void 0, void 0, function() {
-                            var r, i, s, u, E, _, g, T, f = this;
+                            var r, i, s, u, E, _, g, f, T = this;
                             return a.__generator(this, function(I) {
                                 switch (I.label) {
                                     case 0:
@@ -2259,7 +2259,7 @@
                                             id: n,
                                             currentPage: c
                                         }, i = function(e) {
-                                            return a.__awaiter(f, void 0, void 0, function() {
+                                            return a.__awaiter(T, void 0, void 0, function() {
                                                 var n, i;
                                                 return a.__generator(this, function(a) {
                                                     switch (a.label) {
@@ -2323,9 +2323,9 @@
                                     case 10:
                                         return g.streamTags = I.sent(), [3, 14];
                                     case 11:
-                                        return T = r, [4, i(p.tags)];
+                                        return f = r, [4, i(p.tags)];
                                     case 12:
-                                        return T.tags = I.sent(), [3, 14];
+                                        return f.tags = I.sent(), [3, 14];
                                     case 13:
                                         return [2, null];
                                     case 14:
@@ -2491,9 +2491,9 @@
             function g(e) {
                 return !e.legacy && e.curseCompanyId && -1 !== e.curseCompanyId ? e.curseCompanyId.toString() : e.id
             }
-            var T = n("fy8Z");
+            var f = n("fy8Z");
 
-            function f(e, t) {
+            function T(e, t) {
                 return {
                     id: e.id ? e.id : void 0,
                     account_id: t,
@@ -2633,7 +2633,7 @@
                                 return a.__generator(this, function(a) {
                                     switch (a.label) {
                                         case 0:
-                                            return [4, Object(N.a)(T.a.GetCampaignsByCompany)];
+                                            return [4, Object(N.a)(f.a.GetCampaignsByCompany)];
                                         case 1:
                                             return (e = a.sent()) ? (t = g(this.props.company), n = E.a + "/kraken/accounts/" + t + "/campaigns", [4, Object(h.a)(n, {
                                                 headers: {
@@ -2791,17 +2791,17 @@
                     })
                 })
             }
-            var j = n("cr+I");
+            var k = n("cr+I");
 
-            function k(e) {
+            function j(e) {
                 return a.__awaiter(this, void 0, Promise, function() {
                     var t, n, r, i, s, o, c, u, l, p;
                     return a.__generator(this, function(a) {
                         switch (a.label) {
                             case 0:
-                                return t = e.activeOnly, n = e.companyId, r = e.prevCursor, i = e.nextCursor, s = e.limit, [4, Object(N.a)(T.a.GetItemsByCompany)];
+                                return t = e.activeOnly, n = e.companyId, r = e.prevCursor, i = e.nextCursor, s = e.limit, [4, Object(N.a)(f.a.GetItemsByCompany)];
                             case 1:
-                                return (o = a.sent()) ? (c = E.a + "/kraken/accounts/" + n + "/items", (u = j.stringify({
+                                return (o = a.sent()) ? (c = E.a + "/kraken/accounts/" + n + "/items", (u = k.stringify({
                                     active_only: t,
                                     after: i,
                                     before: r,
@@ -3010,15 +3010,24 @@
                 function t(t) {
                     var n = e.call(this, t) || this;
                     return n.renderDropsItemImage = function() {
-                        if (!n.props.item) return null;
-                        var e = n.props.item.Translations[n.props.item.DefaultLanguage],
-                            t = ae(n.props.companyId, n.props.item.ItemID, 120);
-                        return r.createElement(O.S, {
-                            src: t,
-                            alt: e
-                        })
+                        if (n.state.imageDataURL) {
+                            var e = "drops_itm_image_preview";
+                            return r.createElement(O.S, {
+                                src: n.state.imageDataURL,
+                                alt: e
+                            })
+                        }
+                        if (n.props.item) {
+                            e = n.props.item.Translations[n.props.item.DefaultLanguage];
+                            var t = ae(n.props.companyId, n.props.item.ItemID, 120);
+                            return r.createElement(O.S, {
+                                src: t,
+                                alt: e
+                            })
+                        }
+                        return null
                     }, n.renderErrorMessage = function() {
-                        if (n.props.errorMessage) return r.createElement(O.Fb, {
+                        if (n.props.errorMessage && !n.props.updateSuccess) return r.createElement(O.Fb, {
                             className: "dev-drops-item-form__error",
                             color: O.O.Overlay,
                             "data-test-selector": $.Error,
@@ -3064,14 +3073,20 @@
                             isRequiredImageDimensions: !0,
                             maxFileSizeMegabytes: 1,
                             provider: {
-                                uploadFile: n.setFile
+                                uploadFile: n.setImageFile
                             },
                             allowedFileTypes: [W.a.JPEG]
                         };
                         n.props.showModal(x, t)
-                    }, n.setFile = function(e) {
-                        return n.setState({
-                            image: e
+                    }, n.setImageFile = function(e) {
+                        var t = new FileReader;
+                        return t.onloadend = function() {
+                            var e = t.result;
+                            n.setState({
+                                imageDataURL: e
+                            }, n.handleFormChange)
+                        }, t.readAsDataURL(e), n.setState({
+                            imageFile: e
                         }, n.handleFormChange), Promise.resolve()
                     }, n.setLocaleSelectorRef = function(e) {
                         n.localeSelectRef = e
@@ -3094,7 +3109,7 @@
                                             default_language: this.state.defaultLocale,
                                             active: this.state.active,
                                             translations: this.state.translations,
-                                            image: this.state.image
+                                            image: this.state.imageFile
                                         }, this.props.item && (t.item_id = this.props.item.ItemID), this.setState({
                                             isSubmitting: !0
                                         }), [4, this.props.onSubmit(t)];
@@ -3124,12 +3139,20 @@
                 }
                 return a.__extends(t, e), t.prototype.render = function() {
                     var e = this,
-                        t = O.E.Default;
-                    this.state.isSubmitting ? t = O.E.Loading : this.props.updateSuccess && (t = O.E.Success);
-                    var n = this.renderDropsItemImage();
+                        t = Object(o.d)("The image must be squared, up-to 120x120 pixels. For example: <x:link>item-default-120x120.jpg</x:link>. It may take up to 15 minutes for image changes to take effect.", {
+                            "x:link": function(e) {
+                                return r.createElement(O.U, {
+                                    key: e,
+                                    to: "https://gds-vhs-drops-campaign-images.twitch.tv/items/default/default-120x120.jpg",
+                                    download: e,
+                                    targetBlank: !0
+                                }, e)
+                            }
+                        }, "DevDropsItemForm"),
+                        n = this.renderDropsItemImage();
                     return r.createElement(O.Ya, {
                         className: "dev-drops-item-form"
-                    }, this.renderErrorMessage(), r.createElement(O.Ya, {
+                    }, r.createElement(O.Ya, {
                         padding: {
                             top: 2
                         }
@@ -3137,38 +3160,32 @@
                         checked: this.state.active,
                         label: Object(o.d)("Enabled", "DevDropsItemForm"),
                         onChange: this.setActive
+                    })), this.state.itemId && r.createElement(O.Ya, {
+                        padding: {
+                            top: 2
+                        }
+                    }, r.createElement(O.Ea, {
+                        label: Object(o.d)("Item ID", "DevDropsItemForm"),
+                        hint: this.state.itemId
                     })), r.createElement(O.Ya, {
                         padding: {
                             top: 2
                         }
                     }, r.createElement(O.Ea, {
-                        label: Object(o.d)("Item Image", "DevDropsItemForm"),
-                        hint: Object(o.d)("Required image size is 120x120. Please note that it may take up to 15 minutes for image changes to take effect.", "DevDropsItemForm")
-                    }, n, r.createElement(O.Ya, {
+                        label: Object(o.d)("Item Image", "DevDropsItemForm")
+                    }, r.createElement(O.W, {
+                        color: O.O.Alt2
+                    }, t), n && r.createElement(O.U, {
+                        onClick: this.onUploadButtonClick,
+                        children: n
+                    }), r.createElement(O.Ya, {
                         padding: {
                             top: 1
-                        },
-                        display: O.X.Flex,
-                        alignItems: O.f.Center
+                        }
                     }, r.createElement(O.z, {
                         "data-test-selector": $.FileButton,
                         onClick: this.onUploadButtonClick
-                    }, Object(o.d)("Upload Image", "DevDropsItemForm")), this.state.image && r.createElement(O.Ya, {
-                        padding: {
-                            x: 1
-                        }
-                    }, r.createElement(O.W, {
-                        color: O.O.Alt
-                    }, this.state.image.name))))), this.state.itemId && r.createElement(O.Ya, {
-                        padding: {
-                            top: 2
-                        }
-                    }, r.createElement(O.Ea, {
-                        label: Object(o.d)("Item ID", "DevDropsItemForm")
-                    }, r.createElement(O.Sa, {
-                        type: O.Ua.Text,
-                        value: this.state.itemId
-                    }))), r.createElement(O.Ya, {
+                    }, Object(o.d)("Upload Image", "DevDropsItemForm"))))), r.createElement(O.Ya, {
                         padding: {
                             top: 2
                         }
@@ -3249,7 +3266,7 @@
                             key: e.locale,
                             value: e.locale
                         }, e.name)
-                    })))), r.createElement(O.Ya, {
+                    })))), this.renderErrorMessage(), r.createElement(O.Ya, {
                         padding: {
                             top: 2
                         }
@@ -3265,8 +3282,10 @@
                         "data-test-selector": $.SubmitButton,
                         disabled: !this.state.valid,
                         onClick: this.onSubmit,
-                        state: t
+                        state: this.submitButtonState()
                     }, Object(o.d)("Submit", "DevDropsItemForm"))))
+                }, t.prototype.submitButtonState = function() {
+                    return this.state.isSubmitting ? O.E.Loading : this.props.updateSuccess ? O.E.Success : O.E.Default
                 }, t
             }(r.Component);
 
@@ -3300,7 +3319,7 @@
                             }
                             return null
                         }, n.renderErrorMessage = function() {
-                            if (n.props.errorMessage) return r.createElement(O.Fb, {
+                            if (n.props.errorMessage && !n.props.updateSuccess) return r.createElement(O.Fb, {
                                 className: "dev-drops-campaign-form__error",
                                 color: O.O.Overlay,
                                 "data-test-selector": re.Error,
@@ -3774,7 +3793,7 @@
                                         case 0:
                                             e = g(this.props.company), n.label = 1;
                                         case 1:
-                                            return n.trys.push([1, 3, , 4]), [4, k({
+                                            return n.trys.push([1, 3, , 4]), [4, j({
                                                 activeOnly: !0,
                                                 companyId: e,
                                                 limit: 100
@@ -3798,17 +3817,17 @@
                                 return a.__generator(this, function(a) {
                                     switch (a.label) {
                                         case 0:
-                                            return a.trys.push([0, 7, , 8]), [4, Object(N.a)(T.a.PostCampaign)];
+                                            return a.trys.push([0, 7, , 8]), e.image ? [4, Object(N.a)(f.a.PostCampaign)] : (this.setState({
+                                                errorMessage: Object(o.d)("Campaign image is mandatory. If you don't have a valid image, consider using the example provided in the hint text of the upload button.", "DevDropsCreateCampaign")
+                                            }), [2]);
                                         case 1:
-                                            return (t = a.sent()) ? e.image ? (n = g(this.props.company), r = f(e, n), i = E.a + "/kraken/accounts/" + n + "/campaigns", [4, Object(h.a)(i, {
+                                            return (t = a.sent()) ? (n = g(this.props.company), r = T(e, n), i = E.a + "/kraken/accounts/" + n + "/campaigns", [4, Object(h.a)(i, {
                                                 method: "POST",
                                                 body: JSON.stringify(r),
                                                 headers: {
                                                     "X-Twitch-VHSCF": t
                                                 }
                                             })]) : (this.setState({
-                                                errorMessage: Object(o.d)("Campaign image is mandatory. If you don't have a valid image, consider using the example provided in the hint text of the upload button.", "DevDropsCreateCampaign")
-                                            }), [2]) : (this.setState({
                                                 errorMessage: Object(o.d)("You are not allowed to perform this action", "DevDropsCreateCampaign")
                                             }), [2]);
                                         case 2:
@@ -3857,7 +3876,7 @@
                                     return a.__generator(this, function(a) {
                                         switch (a.label) {
                                             case 0:
-                                                return [4, Object(N.a)(T.a.PostCampaignImageUrl)];
+                                                return [4, Object(N.a)(f.a.PostCampaignImageUrl)];
                                             case 1:
                                                 if (t = a.sent()) return n = {
                                                     campaignID: e,
@@ -3928,86 +3947,77 @@
                     function t() {
                         var t = null !== e && e.apply(this, arguments) || this;
                         return t.state = {}, t.onCancel = function() {
-                            t.props.history.push("/console/drops/items")
+                            t.historyBackToDropsItemsIndex()
                         }, t.onSubmit = function(e) {
                             return a.__awaiter(t, void 0, void 0, function() {
                                 var t, n, r, i, s, u, l, p;
                                 return a.__generator(this, function(a) {
                                     switch (a.label) {
                                         case 0:
-                                            return a.trys.push([0, 13, , 14]), t = g(this.props.company), [4, Object(N.a)(T.a.CreateItem)];
+                                            return a.trys.push([0, 9, , 10]), e.image ? [4, Object(N.a)(f.a.CreateItem)] : (this.setState({
+                                                errorMessage: Object(o.d)("Item image is mandatory. If you don't have a valid image, consider using the example provided in the hint text of the upload button.", "DevDropsCreateItem")
+                                            }), [2]);
                                         case 1:
-                                            return (n = a.sent()) ? (r = I(e, t, n), i = E.a + "/kraken/accounts/" + t + "/items", [4, Object(h.a)(i, {
+                                            return (t = a.sent()) ? (n = g(this.props.company), r = I(e, n, t), i = E.a + "/kraken/accounts/" + n + "/items", [4, Object(h.a)(i, {
                                                 method: "POST",
                                                 body: JSON.stringify(r),
                                                 headers: {
-                                                    "X-Twitch-VHSCF": n
+                                                    "X-Twitch-VHSCF": t
                                                 }
-                                            })]) : [3, 11];
+                                            })]) : (this.setState({
+                                                errorMessage: Object(o.d)("You are not allowed to perform this action", "DevDropsCreateItem")
+                                            }), [2]);
                                         case 2:
-                                            return 200 !== (s = a.sent()).status ? [3, 7] : (Object(c.d)(c.a.CreateDropsItemProcessComplete, e.item_id), e.image ? [4, s.json()] : [3, 5]);
+                                            return 200 !== (s = a.sent()).status ? [3, 5] : (Object(c.d)(c.a.CreateDropsItemProcessComplete, e.item_id), [4, s.json()]);
                                         case 3:
-                                            return u = a.sent(), [4, this.uploadFile(e.image, u.ItemID)];
+                                            return u = a.sent(), [4, this.uploadFile(e.image, u.ItemID, this.historyBackToDropsItemsIndex)];
                                         case 4:
-                                            return a.sent(), [3, 6];
+                                            return a.sent(), [3, 8];
                                         case 5:
-                                            this.props.history.push("/console/drops/items"), a.label = 6;
+                                            return 400 !== s.status ? [3, 7] : [4, s.json()];
                                         case 6:
-                                            return [3, 10];
-                                        case 7:
-                                            return 400 !== s.status ? [3, 9] : [4, s.json()];
-                                        case 8:
                                             return l = a.sent(), this.setState({
                                                 errorMessage: l.message
-                                            }), [3, 10];
-                                        case 9:
+                                            }), [3, 8];
+                                        case 7:
                                             this.setState({
                                                 errorMessage: Object(o.d)("Unexpected error", "DevDropsCreateItem")
-                                            }), a.label = 10;
-                                        case 10:
-                                            return [3, 12];
-                                        case 11:
-                                            this.setState({
-                                                errorMessage: Object(o.d)("You are not allowed to perform this action", "DevDropsCreateItem")
-                                            }), a.label = 12;
-                                        case 12:
-                                            return [3, 14];
-                                        case 13:
+                                            }), a.label = 8;
+                                        case 8:
+                                            return [3, 10];
+                                        case 9:
                                             return p = a.sent(), this.setState({
                                                 errorMessage: p.message
-                                            }), [3, 14];
-                                        case 14:
+                                            }), [3, 10];
+                                        case 10:
                                             return [2]
                                     }
                                 })
                             })
-                        }, t.uploadFile = function(e, n) {
+                        }, t.uploadFile = function(e, n, r) {
                             return a.__awaiter(t, void 0, void 0, function() {
-                                var t;
-                                return a.__generator(this, function(a) {
-                                    switch (a.label) {
+                                return a.__generator(this, function(t) {
+                                    switch (t.label) {
                                         case 0:
-                                            t = new F.a(this.generateUploadURL(n), this.onFinishUpload), a.label = 1;
+                                            return t.trys.push([0, 2, , 3]), [4, new F.a(this.generateUploadURL(n), r).uploadFile(e)];
                                         case 1:
-                                            return a.trys.push([1, 3, , 4]), [4, t.uploadFile(e)];
+                                            return t.sent(), [3, 3];
                                         case 2:
-                                            return a.sent(), [3, 4];
+                                            return t.sent(), r(), [3, 3];
                                         case 3:
-                                            return a.sent(), this.props.history.push("/console/drops/items"), [3, 4];
-                                        case 4:
                                             return [2]
                                     }
                                 })
                             })
                         }, t.generateUploadURL = function(e) {
-                            if (!t.props.company) throw new Error("Failed to upload");
+                            if (!t.props.company) throw new Error("Failed to upload because there is no company");
                             return function(n) {
                                 return a.__awaiter(t, void 0, void 0, function() {
                                     var t, n;
                                     return a.__generator(this, function(a) {
                                         switch (a.label) {
                                             case 0:
-                                                return [4, Object(N.a)(T.a.PostItemImageUrl)];
+                                                return [4, Object(N.a)(f.a.PostItemImageUrl)];
                                             case 1:
                                                 if (t = a.sent()) return n = {
                                                     imageType: P.v.ITEM,
@@ -4020,7 +4030,7 @@
                                     })
                                 })
                             }
-                        }, t.onFinishUpload = function() {
+                        }, t.historyBackToDropsItemsIndex = function() {
                             t.props.history.push("/console/drops/items")
                         }, t
                     }
@@ -4057,7 +4067,7 @@
                 }), Object(p.a)({
                     location: m.PageviewLocation.DevSiteDropsCreateItem
                 }), le(), Object(u.a)(), U.a)(he),
-                Te = function(e) {
+                fe = function(e) {
                     function t() {
                         var t = null !== e && e.apply(this, arguments) || this;
                         return t.state = {
@@ -4096,7 +4106,7 @@
                                         case 0:
                                             e = g(this.props.company), n.label = 1;
                                         case 1:
-                                            return n.trys.push([1, 3, , 4]), [4, k({
+                                            return n.trys.push([1, 3, , 4]), [4, j({
                                                 activeOnly: !0,
                                                 companyId: e,
                                                 limit: 100
@@ -4118,7 +4128,7 @@
                                 return a.__generator(this, function(a) {
                                     switch (a.label) {
                                         case 0:
-                                            return a.trys.push([0, 6, , 7]), e = E.a + "/kraken/campaigns/" + this.props.match.params.campaignId, [4, Object(N.a)(T.a.GetCampaignById)];
+                                            return a.trys.push([0, 6, , 7]), e = E.a + "/kraken/campaigns/" + this.props.match.params.campaignId, [4, Object(N.a)(f.a.GetCampaignById)];
                                         case 1:
                                             return (t = a.sent()) ? [4, Object(h.a)(e, {
                                                 headers: {
@@ -4148,9 +4158,9 @@
                                 return a.__generator(this, function(a) {
                                     switch (a.label) {
                                         case 0:
-                                            return a.trys.push([0, 7, , 8]), [4, Object(N.a)(T.a.PutCampaign)];
+                                            return a.trys.push([0, 7, , 8]), [4, Object(N.a)(f.a.PutCampaign)];
                                         case 1:
-                                            return (t = a.sent()) ? (n = g(this.props.company), r = f(e, String(n)), i = E.a + "/kraken/accounts/" + n + "/campaigns/" + e.id, [4, Object(h.a)(i, {
+                                            return (t = a.sent()) ? (n = g(this.props.company), r = T(e, String(n)), i = E.a + "/kraken/accounts/" + n + "/campaigns/" + e.id, [4, Object(h.a)(i, {
                                                 method: "PUT",
                                                 body: JSON.stringify(r),
                                                 headers: {
@@ -4193,7 +4203,7 @@
                                     switch (a.label) {
                                         case 0:
                                             if (!this.state.campaign) throw new Error("Failed to upload");
-                                            return [4, Object(N.a)(T.a.PostCampaignImageUrl)];
+                                            return [4, Object(N.a)(f.a.PostCampaignImageUrl)];
                                         case 1:
                                             if (e = a.sent()) return t = g(this.props.company), n = {
                                                 campaignID: this.state.campaign.id,
@@ -4275,11 +4285,11 @@
                         })))) : r.createElement(O.ab, null)
                     }, t
                 }(r.Component),
-                fe = Object(l.compose)(Object(_.b)("DevDropsEditCampaignPage", {
+                Te = Object(l.compose)(Object(_.b)("DevDropsEditCampaignPage", {
                     destination: d.a.DevSiteDropsEditCampaign
                 }), Object(p.a)({
                     location: m.PageviewLocation.DevSiteDropsEditCampaign
-                }), le(), Object(u.a)(), U.a)(Te);
+                }), le(), Object(u.a)(), U.a)(fe);
             ! function(e) {
                 e.ITEM = "ITEM", e.LINK_NOTIFICATION = "LINK_NOTIFICATION"
             }(de || (de = {})),
@@ -4297,7 +4307,7 @@
                                 return a.__generator(this, function(a) {
                                     switch (a.label) {
                                         case 0:
-                                            return a.trys.push([0, 6, , 7]), e = g(this.props.company), t = E.a + "/kraken/accounts/" + e + "/items/" + this.props.match.params.itemId, [4, Object(N.a)(T.a.GetItemByID)];
+                                            return a.trys.push([0, 6, , 7]), e = g(this.props.company), t = E.a + "/kraken/accounts/" + e + "/items/" + this.props.match.params.itemId, [4, Object(N.a)(f.a.GetItemByID)];
                                         case 1:
                                             return (n = a.sent()) ? [4, Object(h.a)(t, {
                                                 headers: {
@@ -4329,15 +4339,15 @@
                                 return a.__generator(this, function(a) {
                                     switch (a.label) {
                                         case 0:
-                                            return a.trys.push([0, 10, , 11]), t = g(this.props.company), [4, Object(N.a)(T.a.UpdateItem)];
+                                            return a.trys.push([0, 10, , 11]), [4, Object(N.a)(f.a.UpdateItem)];
                                         case 1:
-                                            return (n = a.sent()) ? (r = I(e, String(t), n), i = E.a + "/kraken/accounts/" + t + "/items/" + e.item_id, [4, Object(h.a)(i, {
+                                            return (t = a.sent()) ? (n = g(this.props.company), r = I(e, String(n), t), i = E.a + "/kraken/accounts/" + n + "/items/" + e.item_id, [4, Object(h.a)(i, {
                                                 method: "PUT",
                                                 body: JSON.stringify(r),
                                                 headers: {
-                                                    "X-Twitch-VHSCF": n
+                                                    "X-Twitch-VHSCF": t
                                                 }
-                                            })]) : [3, 9];
+                                            })]) : [2];
                                         case 2:
                                             return 200 !== (s = a.sent()).status ? [3, 6] : (Object(c.d)(c.a.DropItemUpdated), e.image ? [4, this.uploadFile(e.image)] : [3, 4]);
                                         case 3:
@@ -4381,16 +4391,16 @@
                                 return a.__generator(this, function(a) {
                                     switch (a.label) {
                                         case 0:
-                                            if (!this.state.item) throw new Error("Failed to upload");
-                                            return [4, Object(N.a)(T.a.PostItemImageUrl)];
+                                            if (!this.state.item) throw new Error("Failed to upload because there is no item");
+                                            return [4, Object(N.a)(f.a.PostItemImageUrl)];
                                         case 1:
-                                            if (e = a.sent()) return t = g(this.props.company), n = {
+                                            if (!(e = a.sent())) throw new Error("Failed to upload, invalid token");
+                                            return t = g(this.props.company), n = {
                                                 imageType: de.ITEM,
                                                 itemID: this.state.item.ItemID,
                                                 serviceID: t,
                                                 token: e
-                                            }, [2, this.props.createUploadURLMutation(n)];
-                                            throw new Error("Failed to upload")
+                                            }, [2, this.props.createUploadURLMutation(n)]
                                     }
                                 })
                             })
@@ -4609,7 +4619,7 @@
                                             }), [2];
                                             t = g(this.props.company), a.label = 1;
                                         case 1:
-                                            return a.trys.push([1, 3, , 4]), [4, k({
+                                            return a.trys.push([1, 3, , 4]), [4, j({
                                                 companyId: t,
                                                 prevCursor: n,
                                                 nextCursor: r
@@ -4842,7 +4852,7 @@
                                 return a.__generator(this, function(a) {
                                     switch (a.label) {
                                         case 0:
-                                            return [4, Object(N.a)(T.a.PutService)];
+                                            return [4, Object(N.a)(f.a.PutService)];
                                         case 1:
                                             if (!(t = a.sent())) return [3, 5];
                                             a.label = 2;
@@ -4878,7 +4888,7 @@
                                 return a.__generator(this, function(a) {
                                     switch (a.label) {
                                         case 0:
-                                            return [4, Object(N.a)(T.a.GetService)];
+                                            return [4, Object(N.a)(f.a.GetService)];
                                         case 1:
                                             if (!(e = a.sent())) return [3, 7];
                                             a.label = 2;
@@ -4992,7 +5002,7 @@
                         }), r.createElement(i.a, {
                             exact: !0,
                             path: "/console/drops/:campaignId",
-                            component: fe
+                            component: Te
                         })))
                     }, t
                 }(r.Component),

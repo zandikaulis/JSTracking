@@ -28,7 +28,7 @@
                                         reason: o,
                                         cancellation_directive: r.FULL_REFUND,
                                         benefits_directive: i.CANCEL_BENEFITS
-                                    }, c && (l.gift_origin_id = c), [4, s.a.putOrThrow(d, {
+                                    }, c && (l.gift_origin_id = c, l.cancellation_directive = r.NO_REFUND), [4, s.a.putOrThrow(d, {
                                         body: l
                                     }, {
                                         version: 5
@@ -1501,8 +1501,8 @@
                 C = n.n(O),
                 N = n("yLwq"),
                 T = n("QVaV"),
-                w = n("cMjZ"),
-                F = n("DMoW"),
+                F = n("cMjZ"),
+                w = n("DMoW"),
                 P = n("fQWD"),
                 U = n("aCAx"),
                 D = n("cZKs"),
@@ -1712,7 +1712,7 @@
                     return u.__extends(t, e), t.prototype.render = function() {
                         var e = Object(l.d)("Edit Subscription", "SubscriptionCard"),
                             t = null;
-                        if (this.props.subscriptionBenefit.platform === F.U.WEB) {
+                        if (this.props.subscriptionBenefit.platform === w.U.WEB) {
                             var n = this.renderInteractables();
                             if (n.length < 1) return null;
                             t = n
@@ -1770,13 +1770,13 @@
                             textAlign: B.Sb.Center
                         }, d.createElement(B.W, null, t)))
                     }, t.prototype.renderMobileMessage = function() {
-                        return this.props.subscriptionBenefit.platform === F.U.ANDROID ? d.createElement(B.W, null, Object(l.d)("To edit this subscription, please go to the Twitch Subscription Manager on your Android device.              <x:link>               Click here for more information.             </x:link>", {
+                        return this.props.subscriptionBenefit.platform === w.U.ANDROID ? d.createElement(B.W, null, Object(l.d)("To edit this subscription, please go to the Twitch Subscription Manager on your Android device.              <x:link>               Click here for more information.             </x:link>", {
                             "x:link": function(e) {
                                 return d.createElement(B.U, {
                                     to: "https://help.twitch.tv/customer/portal/articles/2935963-how-to-purchase-and-manage-subscriptions-on-android#Manage"
                                 }, e)
                             }
-                        }, "EditSubscriptionBalloon")) : this.props.subscriptionBenefit.platform === F.U.IOS ? d.createElement(B.W, null, Object(l.d)("To edit this subscription, please go to your Subscription Manager on your iOS device.              <x:link>               Click here for more information.             </x:link>", {
+                        }, "EditSubscriptionBalloon")) : this.props.subscriptionBenefit.platform === w.U.IOS ? d.createElement(B.W, null, Object(l.d)("To edit this subscription, please go to your Subscription Manager on your iOS device.              <x:link>               Click here for more information.             </x:link>", {
                             "x:link": function(e) {
                                 return d.createElement(B.U, {
                                     to: "https://help.twitch.tv/customer/portal/articles/2935963-how-to-purchase-and-manage-subscriptions-on-ios#Manage"
@@ -2016,10 +2016,10 @@
                             Object(S.d)({
                                 fragment: ne,
                                 fragmentName: "subscriptionBenefit",
-                                id: Object(w.a)(t.props.subBenefit),
+                                id: Object(F.a)(t.props.subBenefit),
                                 mutator: function(e) {
                                     return u.__assign({}, e, {
-                                        platform: F.U.WEB,
+                                        platform: w.U.WEB,
                                         originID: null,
                                         isRefundable: !1,
                                         endsAt: null,
@@ -2037,7 +2037,7 @@
                             Object(S.d)({
                                 fragment: ne,
                                 fragmentName: "subscriptionBenefit",
-                                id: Object(w.a)(t.props.subBenefit),
+                                id: Object(F.a)(t.props.subBenefit),
                                 mutator: function(e) {
                                     return u.__assign({}, e, {
                                         paidUpgrade: null

@@ -25,7 +25,7 @@
                                         reason: o,
                                         cancellation_directive: r.FULL_REFUND,
                                         benefits_directive: i.CANCEL_BENEFITS
-                                    }, u && (d.gift_origin_id = u), [4, s.a.putOrThrow(l, {
+                                    }, u && (d.gift_origin_id = u, d.cancellation_directive = r.NO_REFUND), [4, s.a.putOrThrow(l, {
                                         body: d
                                     }, {
                                         version: 5
@@ -2017,7 +2017,7 @@
                         return Object(g.d)("My schedule changed and I can't keep up with the stream anymore", "unsubscribe-reasons")
                     }
                 }],
-                A = [j, F, {
+                R = [j, F, {
                     value: "I just wanted to get a shoutout",
                     translation: function() {
                         return Object(g.d)("I just wanted to get a shoutout", "unsubscribe-reasons")
@@ -2028,7 +2028,7 @@
                         return Object(g.d)("The channel benefits are not what I expected", "unsubscribe-reasons")
                     }
                 }],
-                R = [U, F, P, C, D, {
+                A = [U, F, P, C, D, {
                     value: "I don't feel like Turbo offers enough value",
                     translation: function() {
                         return Object(g.d)("I don't feel like Turbo offers enough value", "unsubscribe-reasons")
@@ -2055,7 +2055,7 @@
                             reason: "",
                             unsubscribing: !1,
                             showUnsubConfirmation: !1
-                        }, t.cancelReasons = "turbo" === t.props.productName ? B : A, t.doNotRenewReasons = "turbo" === t.props.productName ? R : x, t.isCancel = t.props.unsubscribeType === r.Cancel, t.reasons = t.isCancel ? Object(S.a)(t.cancelReasons.slice()) : Object(S.a)(t.doNotRenewReasons.slice()), t.updateReason = function(e) {
+                        }, t.cancelReasons = "turbo" === t.props.productName ? B : R, t.doNotRenewReasons = "turbo" === t.props.productName ? A : x, t.isCancel = t.props.unsubscribeType === r.Cancel, t.reasons = t.isCancel ? Object(S.a)(t.cancelReasons.slice()) : Object(S.a)(t.doNotRenewReasons.slice()), t.updateReason = function(e) {
                             t.setState({
                                 reason: e
                             })

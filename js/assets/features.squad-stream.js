@@ -1005,6 +1005,7 @@
             n.d(t, "a", function() {
                 return a
             });
+            n("/7QA");
             var i = n("3Bft");
 
             function a(e) {
@@ -5792,24 +5793,6 @@
             e.exports = n
         },
         CK1f: function(e, t, n) {},
-        CiVV: function(e, t, n) {
-            "use strict";
-            n.d(t, "a", function() {
-                return a
-            });
-            var i = n("q1tI"),
-                a = function() {
-                    return i.createElement("figure", {
-                        className: "tw-svg tw-svg__asset--inherit"
-                    }, i.createElement("svg", {
-                        xmlns: "http://www.w3.org/2000/svg",
-                        width: "20",
-                        height: "20"
-                    }, i.createElement("path", {
-                        d: "M17 17.357c-.466.4-1.08.643-1.754.643-.672 0-1.507-.414-1.753-.636a1.29 1.29 0 0 0-.898-.333c-.295 0-.546.077-.753.231-.5.477-1.167.741-1.858.738a2.683 2.683 0 0 1-1.75-.64 1.317 1.317 0 0 0-.9-.33c-.296 0-.547.078-.754.232-.5.476-1.166.74-1.857.738A2.684 2.684 0 0 1 3 17.383V8.096C3.336 4.676 6.335 2 9.984 2 13.86 2 17 5.016 17 8.737l-.001.12.001 8.5zM7.5 11a1.5 1.5 0 1 0 0-3 1.5 1.5 0 0 0 0 3zm5 0a1.5 1.5 0 1 0 0-3 1.5 1.5 0 0 0 0 3z"
-                    })))
-                }
-        },
         "CpU+": function(e, t, n) {
             "use strict";
             n.d(t, "a", function() {
@@ -22134,8 +22117,12 @@
             ! function(e) {
                 e.Weekly = "WEEK", e.AllTime = "ALLTIME", e.Monthly = "MONTH"
             }(f || (f = {}));
+            var M;
             n("2C+f");
-            var M = function(e) {
+            ! function(e) {
+                e.UserPlaceEntry = "user-place-entry"
+            }(M || (M = {}));
+            var I = function(e) {
                 function t() {
                     var t = null !== e && e.apply(this, arguments) || this;
                     return t.renderExpandArrow = function() {
@@ -22206,10 +22193,22 @@
                         display: g.X.Flex,
                         alignItems: g.f.Center,
                         flexDirection: g.Aa.Column
+                    }, o.createElement(g.Ya, {
+                        display: g.X.Flex
                     }, o.createElement(g.W, {
                         type: g.Wb.H5,
                         bold: !0
-                    }, e), i, o.createElement(g.Ya, {
+                    }, e), " ", o.createElement(g.Ya, {
+                        alignSelf: g.g.Start
+                    }, o.createElement(g.Zb, {
+                        label: Object(p.d)("List of users ordered by total amount of Bits used for a given time period. Users with the highest Bits are at the top.", "Bits--PinnedCheerV2"),
+                        width: 150,
+                        direction: g.bc.Bottom
+                    }, o.createElement(g.tb, {
+                        asset: g.ub.NotificationInfo,
+                        height: 16,
+                        width: 16
+                    })))), i, o.createElement(g.Ya, {
                         className: "bits-leaderboard-expanded__section-break",
                         margin: {
                             y: 1
@@ -22236,13 +22235,7 @@
                     }), o.createElement(g.W, {
                         type: g.Wb.Span,
                         bold: !0
-                    }, Object(p.d)("Cheer your way to the top!", "Bits--PinnedCheersV2")), o.createElement(g.U, {
-                        to: "https://blog.twitch.tv/earn-new-rewards-for-supporting-your-favorite-creators-da6b34a98827",
-                        targetBlank: !0,
-                        hoverUnderlineNone: !1
-                    }, o.createElement(g.W, {
-                        bold: !0
-                    }, Object(p.d)("Learn More", "Bits--PinnedCheersV2"))))))
+                    }, Object(p.d)("Cheer your way to the top!", "Bits--PinnedCheersV2")))))
                 }, t.prototype.renderTopThreeEntry = function(e, t) {
                     return o.createElement(g.Ya, {
                         key: e.node.id,
@@ -22292,7 +22285,8 @@
                     return o.createElement(g.Ya, {
                         padding: {
                             top: .5
-                        }
+                        },
+                        "data-test-selector": M.UserPlaceEntry
                     }, o.createElement(g.Fb, {
                         borderTop: !0
                     }, o.createElement(g.Ya, {
@@ -22303,7 +22297,7 @@
                 }, t
             }(o.Component);
 
-            function I(e) {
+            function A(e) {
                 switch (e) {
                     case 1:
                         return Object(p.d)("Cheer now to be #1!", "Bits--PinnedCheerV2");
@@ -22316,7 +22310,7 @@
                 }
             }
             n("986b");
-            var A = function(e) {
+            var T = function(e) {
                     function t() {
                         return null !== e && e.apply(this, arguments) || this
                     }
@@ -22344,7 +22338,7 @@
                             }, s)
                         }
                         if (this.props.isEmpty || this.props.data && !this.props.data.user) {
-                            var l = I(1);
+                            var l = A(1);
                             e = o.createElement(g.Ya, {
                                 className: "bits-leaderboard-header-first-entry__container",
                                 overflow: g.db.Hidden,
@@ -22413,7 +22407,7 @@
                         }, e)
                     }, t
                 }(o.Component),
-                T = Object(s.compose)(Object(l.a)(E, {
+                L = Object(s.compose)(Object(l.a)(E, {
                     name: "data",
                     skip: function(e) {
                         return !e.id || !e.entryKey
@@ -22426,8 +22420,8 @@
                             }
                         }
                     }
-                }))(A),
-                L = (n("ifPV"), function(e) {
+                }))(T),
+                U = (n("ifPV"), function(e) {
                     function t() {
                         return null !== e && e.apply(this, arguments) || this
                     }
@@ -22459,7 +22453,7 @@
                             }, s)
                         }
                         if (this.props.isEmpty || this.props.data && !this.props.data.user) {
-                            var l = I(this.props.rank ? this.props.rank : 0);
+                            var l = A(this.props.rank ? this.props.rank : 0);
                             e = o.createElement(g.Ya, {
                                 overflow: g.db.Hidden,
                                 display: g.X.Flex,
@@ -22525,7 +22519,7 @@
                         }, e)
                     }, t
                 }(o.Component)),
-                U = Object(s.compose)(Object(l.a)(E, {
+                R = Object(s.compose)(Object(l.a)(E, {
                     name: "data",
                     skip: function(e) {
                         return !e.id || !e.entryKey
@@ -22538,19 +22532,19 @@
                             }
                         }
                     }
-                }))(L),
-                R = (n("MBj5"), function(e) {
+                }))(U),
+                B = (n("MBj5"), function(e) {
                     function t() {
                         var t = null !== e && e.apply(this, arguments) || this;
                         return t.renderFirstPlaceEntry = function() {
                             var e, n = null;
-                            return t.props.topEdges && t.props.topEdges[0] && (n = t.props.topEdges[0]), e = n ? o.createElement(T, {
+                            return t.props.topEdges && t.props.topEdges[0] && (n = t.props.topEdges[0]), e = n ? o.createElement(L, {
                                 selfId: t.props.selfId,
                                 id: n.node.id,
                                 entryKey: n.node.entryKey,
                                 score: n.node.score,
                                 bitsConfig: t.props.bitsConfig
-                            }) : o.createElement(T, {
+                            }) : o.createElement(L, {
                                 isEmpty: !0
                             }), o.createElement(g.Qa, {
                                 key: 1
@@ -22605,14 +22599,14 @@
                         }, t, n)), a)
                     }, t.prototype.renderRunnerUpEntry = function(e, t) {
                         var n, a = null;
-                        return e > 0 && this.props.topEdges && this.props.topEdges[e - 1] && (a = this.props.topEdges[e - 1]), n = a ? o.createElement(U, {
+                        return e > 0 && this.props.topEdges && this.props.topEdges[e - 1] && (a = this.props.topEdges[e - 1]), n = a ? o.createElement(R, {
                             selfId: this.props.selfId,
                             id: a.node.id,
                             entryKey: a.node.entryKey,
                             score: a.node.score,
                             medal: t,
                             bitsConfig: this.props.bitsConfig
-                        }) : o.createElement(U, {
+                        }) : o.createElement(R, {
                             isEmpty: !0,
                             medal: i.Default,
                             rank: e
@@ -22621,10 +22615,10 @@
                         }, n)
                     }, t
                 }(o.Component)),
-                B = n("+LJB"),
-                F = n("RiD7"),
-                j = n("Qime"),
-                P = (n("MIhh"), function(e) {
+                F = n("+LJB"),
+                j = n("RiD7"),
+                P = n("Qime"),
+                x = (n("MIhh"), function(e) {
                     function t() {
                         var t = null !== e && e.apply(this, arguments) || this;
                         return t.state = {
@@ -22648,7 +22642,7 @@
                                     s = !1;
                                 i && (s = o.findIndex(function(e) {
                                     return e.node.entryKey === i
-                                }) >= 0), Object(F.i)({
+                                }) >= 0), Object(j.i)({
                                     leaderboardSize: o.length,
                                     leaderboardMode: r || f.AllTime,
                                     userPresentInLeaderboard: s,
@@ -22671,7 +22665,7 @@
                             n = this.props.data.user.cheer.settings.leaderboard.timePeriodType || f.AllTime;
                         this.props.data.user.self && this.props.data.user.self.bitsLeaderboardItem && (t = this.props.data.user.self.bitsLeaderboardItem);
                         var i = null;
-                        this.state.isExpanded && (i = o.createElement(M, {
+                        this.state.isExpanded && (i = o.createElement(I, {
                             topEdges: e,
                             userPlaceEdge: t,
                             toggleExpand: this.toggleIsExpanded,
@@ -22681,7 +22675,7 @@
                             secondsRemaining: this.props.data.user.cheer.leaderboard.secondsRemaining
                         }));
                         var a = null;
-                        return this.state.isExpanded || (a = o.createElement(R, {
+                        return this.state.isExpanded || (a = o.createElement(B, {
                             topEdges: e,
                             toggleExpand: this.toggleIsExpanded,
                             selfId: this.props.userID,
@@ -22694,7 +22688,7 @@
                         }, a, i))
                     }, t
                 }(o.Component)),
-                x = Object(s.compose)(Object(l.a)(j, {
+                H = Object(s.compose)(Object(l.a)(P, {
                     name: "data",
                     options: function(e) {
                         return {
@@ -22705,7 +22699,7 @@
                     }
                 }), Object(c.a)(function(e) {
                     return {
-                        query: j,
+                        query: P,
                         variables: {
                             channelID: e.channelID
                         },
@@ -22716,9 +22710,9 @@
                         }
                     }
                 }), Object(c.a)(function(e) {
-                    return Object(B.a)(j, e.channelID, e.data.user && e.data.user.cheer && e.data.user.cheer.leaderboard, e.userID)
-                }))(P),
-                H = function(e) {
+                    return Object(F.a)(P, e.channelID, e.data.user && e.data.user.cheer && e.data.user.cheer.leaderboard, e.userID)
+                }))(x),
+                G = function(e) {
                     function t() {
                         var t = null !== e && e.apply(this, arguments) || this;
                         return t.state = {
@@ -22729,7 +22723,7 @@
                         }, t
                     }
                     return r.__extends(t, e), t.prototype.render = function() {
-                        return o.createElement(x, {
+                        return o.createElement(H, {
                             channelID: this.props.channelID,
                             userID: this.props.userID,
                             bitsConfig: this.props.bitsConfig,
@@ -22739,18 +22733,18 @@
                         })
                     }, t
                 }(o.Component),
-                G = n("/MKj"),
-                V = n("kRBY");
-            var q = Object(G.connect)(function(e) {
-                var t = Object(V.e)(e);
+                V = n("/MKj"),
+                q = n("kRBY");
+            var W = Object(V.connect)(function(e) {
+                var t = Object(q.e)(e);
                 return {
                     isStaff: t && t.roles && t.roles.isStaff
                 }
-            })(H);
+            })(G);
             n.d(t, !1, function() {
-                return H
+                return G
             }), n.d(t, "a", function() {
-                return q
+                return W
             })
         },
         r2XO: function(e, t, n) {
@@ -23358,8 +23352,7 @@
                 }))(ce),
                 ue = n("QVaV"),
                 me = n("8SX2"),
-                pe = n("CiVV"),
-                he = function(e) {
+                pe = function(e) {
                     var t = e.event,
                         n = t.promoGiftTotal,
                         i = t.promoName,
@@ -23387,15 +23380,17 @@
                         margin: {
                             right: .5
                         }
-                    }, Object(pe.a)()), a.createElement(P.W, {
+                    }, a.createElement(P.tb, {
+                        asset: P.ub.Ghost
+                    })), a.createElement(P.W, {
                         color: P.O.Alt2,
                         type: P.Wb.Span
                     }, l))
                 };
-            he.displayName = "AnonGiftPaidUpgradeNoticeLine";
-            var ge = n("0WFu"),
-                fe = "All-Access Pass",
-                be = function(e) {
+            pe.displayName = "AnonGiftPaidUpgradeNoticeLine";
+            var he = n("0WFu"),
+                ge = "All-Access Pass",
+                fe = function(e) {
                     var t = e.event,
                         n = a.createElement(me.a, {
                             contentID: t.recipientID,
@@ -23413,22 +23408,24 @@
                         margin: {
                             right: .5
                         }
-                    }, Object(pe.a)()), a.createElement(P.W, {
+                    }, a.createElement(P.tb, {
+                        asset: P.ub.Ghost
+                    })), a.createElement(P.W, {
                         color: P.O.Alt2,
                         type: P.Wb.Span
                     }, function(e, t) {
-                        return e.planName === fe ? Object(s.d)("An anonymous gifter gave {recipientButton} an All-Access Pass!", {
+                        return e.planName === ge ? Object(s.d)("An anonymous gifter gave {recipientButton} an All-Access Pass!", {
                             recipientButton: t
                         }, "AnonSubGiftNoticeLine") : "custom" === e.plan ? Object(s.d)("An anonymous gifter gave {recipientButton} a Sub!", {
                             recipientButton: t
                         }, "AnonSubGiftNoticeLine") : Object(s.d)("An anonymous gifter gave {recipientButton} a Tier {tierNumber} Sub!", {
                             recipientButton: t,
-                            tierNumber: Object(ge.a)(e.plan) || 1
+                            tierNumber: Object(he.a)(e.plan) || 1
                         }, "AnonSubGiftNoticeLine")
                     }(t.methods, n)))
                 };
-            be.displayName = "AnonSubGiftNoticeLine";
-            var ve = function(e) {
+            fe.displayName = "AnonSubGiftNoticeLine";
+            var be = function(e) {
                 var t = e.event,
                     n = t.channel,
                     i = t.massGiftCount,
@@ -23439,7 +23436,7 @@
                     }, "AnonSubMysteryGiftNoticeLine") : Object(s.d)("{massGiftCount, plural,        one {An anonymous gifter is gifting {massGiftCount} Tier {tierNumber} Sub to {channel}'s community!}        other {An anonymous gifter is gifting {massGiftCount} Tier {tierNumber} Subs to {channel}'s community!}}", {
                         channel: n,
                         massGiftCount: i,
-                        tierNumber: Object(ge.a)(r) || 1
+                        tierNumber: Object(he.a)(r) || 1
                     }, "AnonSubMysteryGiftNoticeLine");
                 return a.createElement(P.Ya, {
                     alignItems: P.f.Start,
@@ -23452,13 +23449,15 @@
                     margin: {
                         right: .5
                     }
-                }, Object(pe.a)()), a.createElement(P.W, {
+                }, a.createElement(P.tb, {
+                    asset: P.ub.Ghost
+                })), a.createElement(P.W, {
                     color: P.O.Alt2,
                     type: P.Wb.Span
                 }, o))
             };
-            ve.displayName = "AnonSubMysteryGiftNoticeLine";
-            var ke = function(e) {
+            be.displayName = "AnonSubMysteryGiftNoticeLine";
+            var ve = function(e) {
                 return a.createElement(P.Fb, {
                     color: P.O.Alt2,
                     display: P.X.Inline
@@ -23470,8 +23469,8 @@
                     }, Object(ue.a)(e.event.message.user.userLogin, e.event.message.user.userDisplayName))
                 }, "FirstCheerNoticeLine"))
             };
-            ke.displayName = "FirstCheerNoticeLine";
-            var Ce = function(e) {
+            ve.displayName = "FirstCheerNoticeLine";
+            var ke = function(e) {
                 var t = e.event,
                     n = a.createElement(me.a, {
                         contentID: t.user.id,
@@ -23496,9 +23495,9 @@
                     recipientButton: n
                 }, "GiftPaidUpgradeNoticeLine"))
             };
-            Ce.displayName = "GiftPaidUpgradeNoticeLine";
+            ke.displayName = "GiftPaidUpgradeNoticeLine";
             n("xDdc");
-            var ye = function(e) {
+            var Ce = function(e) {
                 return a.createElement(P.Ya, {
                     className: "user-notice-line",
                     margin: {
@@ -23510,9 +23509,9 @@
                     }
                 }, e.children)
             };
-            ye.displayName = "UserNoticeLine";
-            var Se = n("OvAg"),
-                Ee = function(e) {
+            Ce.displayName = "UserNoticeLine";
+            var ye = n("OvAg"),
+                Se = function(e) {
                     function t() {
                         return null !== e && e.apply(this, arguments) || this
                     }
@@ -23527,7 +23526,7 @@
                             displayName: a.createElement("strong", null, n.displayName),
                             viewerCount: a.createElement("strong", null, e.viewerCount)
                         }, "RaidIncomingMessage");
-                        return a.createElement(ye, {
+                        return a.createElement(Ce, {
                             "data-test-selector": "incoming-raid"
                         }, a.createElement(P.Ya, {
                             display: P.X.Flex,
@@ -23544,7 +23543,7 @@
                         }, o)))
                     }, t
                 }(a.Component),
-                Ne = Object(C.a)(Se, {
+                Ee = Object(C.a)(ye, {
                     options: function(e) {
                         return {
                             variables: {
@@ -23552,10 +23551,10 @@
                             }
                         }
                     }
-                })(Ee),
-                De = n("5zf8"),
-                _e = n("x0+1"),
-                Oe = function(e) {
+                })(Se),
+                Ne = n("5zf8"),
+                De = n("x0+1"),
+                _e = function(e) {
                     function t() {
                         return null !== e && e.apply(this, arguments) || this
                     }
@@ -23585,7 +23584,7 @@
                                     r = parseInt(i, 10);
                                 n = r ? Object(s.d)("{user} enabled {length} followers-only mode for this room.", {
                                     user: t,
-                                    length: Object(De.b)(60 * r)
+                                    length: Object(Ne.b)(60 * r)
                                 }, "ModerationActionLine") : Object(s.d)("{user} enabled followers-only mode for this room.", {
                                     user: t
                                 }, "ModerationActionLine");
@@ -23692,7 +23691,7 @@
                                     break;
                                 case m.d.Delete:
                                     var f = g || "";
-                                    n = a.createElement(_e.a, {
+                                    n = a.createElement(De.a, {
                                         targetLogin: u,
                                         moderatorLogin: t,
                                         messageBody: f
@@ -23710,7 +23709,7 @@
                     }, t
                 }(a.Component);
 
-            function we() {
+            function Oe() {
                 return {
                     raid_error_self: Object(s.d)("You cannot raid your own channel.", "RaidErrorSelfMessage"),
                     raid_error_forbidden: Object(s.d)("You cannot raid this channel.", "RaidErrorAlreadyRaidingMessage"),
@@ -23726,12 +23725,12 @@
                     }, "RaidNoticeOwnerMessage")
                 }
             }
-            var Me = function(e) {
-                return a.createElement("span", null, we()[e.message.msgid])
+            var we = function(e) {
+                return a.createElement("span", null, Oe()[e.message.msgid])
             };
-            Me.displayName = "RaidNoticeLine";
-            var Ie = n("+GjP"),
-                Ae = function(e) {
+            we.displayName = "RaidNoticeLine";
+            var Me = n("+GjP"),
+                Ie = function(e) {
                     var t = a.createElement(me.a, {
                             contentID: e.event.user.id,
                             login: e.event.user.username,
@@ -23741,7 +23740,7 @@
                     return n = e.event.methods.prime ? Object(s.d)("{userLogin} just subscribed with {service}!", {
                         userLogin: t,
                         service: function(e) {
-                            var t = Object(Ie.e)("https://twitch.amazon.com/prime", {
+                            var t = Object(Me.e)("https://twitch.amazon.com/prime", {
                                 ref: "subscriptionMessage",
                                 channel: e
                             });
@@ -23754,18 +23753,18 @@
                         }(e.event.channel)
                     }, "SubNoticeLine") : Object(s.d)("{userLogin} just subscribed with a Tier {tierNumber} sub!", {
                         userLogin: t,
-                        tierNumber: Object(ge.a)(e.event.methods.plan) || 1
+                        tierNumber: Object(he.a)(e.event.methods.plan) || 1
                     }, "SubNoticeLine"), a.createElement(P.W, {
                         color: P.O.Alt2,
                         type: P.Wb.Span
                     }, n)
                 };
-            Ae.displayName = "SubNoticeLine";
-            var Te = function(e) {
+            Ie.displayName = "SubNoticeLine";
+            var Ae = function(e) {
                 return a.createElement(P.Fb, {
                     color: P.O.Alt2,
                     display: P.X.Inline
-                }, a.createElement(Ae, {
+                }, a.createElement(Ie, {
                     event: e.event
                 }), a.createElement("span", null, " "), Object(s.d)("{userLogin} subscribed for {months} months in a row!", {
                     userLogin: a.createElement(me.a, {
@@ -23776,9 +23775,9 @@
                     months: e.event.months
                 }, "ResubNoticeLine"))
             };
-            Te.displayName = "ResubNoticeLine";
-            var Le = n("yZCp"),
-                Ue = function(e) {
+            Ae.displayName = "ResubNoticeLine";
+            var Te = n("yZCp"),
+                Le = function(e) {
                     var t = e.event.message,
                         n = t.user.isIntl ? t.user.userDisplayName + " (" + t.user.userLogin + ")" : t.user.userDisplayName,
                         i = Object(s.d)("{user} is new here. Say hello!", {
@@ -23792,8 +23791,8 @@
                         color: P.O.Alt2
                     }, i)
                 };
-            Ue.displayName = "RitualNoticeLine";
-            var Re = function(e) {
+            Le.displayName = "RitualNoticeLine";
+            var Ue = function(e) {
                 var t = e.event,
                     n = a.createElement(me.a, {
                         contentID: t.user.id,
@@ -23838,13 +23837,13 @@
                         recipientButton: t,
                         tierNumber: i
                     }, "SubGiftNoticeLine")
-                }(n, i, t.senderCount, Object(ge.a)(t.methods.plan) || 1), a.createElement(P.W, {
+                }(n, i, t.senderCount, Object(he.a)(t.methods.plan) || 1), a.createElement(P.W, {
                     color: P.O.Alt2,
                     type: P.Wb.Span
                 }, r)
             };
-            Re.displayName = "SubGiftNoticeLine";
-            var Be = function(e) {
+            Ue.displayName = "SubGiftNoticeLine";
+            var Re = function(e) {
                 var t = e.event,
                     n = a.createElement(me.a, {
                         contentID: t.user.id,
@@ -23885,15 +23884,15 @@
                         massGiftCount: n,
                         tierNumber: a
                     }, "SubMysteryGiftNoticeLine")
-                }(n, t.channel, t.massGiftCount, t.senderCount, Object(ge.a)(t.plan) || 1), a.createElement(P.W, {
+                }(n, t.channel, t.massGiftCount, t.senderCount, Object(he.a)(t.plan) || 1), a.createElement(P.W, {
                     color: P.O.Alt2,
                     type: P.Wb.Span
                 }, i)
             };
-            Be.displayName = "SubMysteryGiftNoticeLine";
-            var Fe, je = n("+kC+"),
-                Pe = n("cr+I"),
-                xe = Object(k.compose)(Object(C.a)(je, {
+            Re.displayName = "SubMysteryGiftNoticeLine";
+            var Be, Fe = n("+kC+"),
+                je = n("cr+I"),
+                Pe = Object(k.compose)(Object(C.a)(Fe, {
                     options: function(e) {
                         return {
                             variables: {
@@ -23914,7 +23913,7 @@
                     if (!n) return a.createElement(P.Ya, null, Object(s.d)("This room is in subscribers only mode.", "SubsOnlyUpsellLine"));
                     var r = a.createElement(P.U, {
                         targetBlank: !0,
-                        to: n + "?" + Pe.stringify({
+                        to: n + "?" + je.stringify({
                             ref: "subscriber_only_mode_chat"
                         })
                     }, n);
@@ -23922,11 +23921,11 @@
                         productLink: r
                     }, "SubsOnlyUpsellLine"))
                 }),
-                He = n("k8pZ");
+                xe = n("k8pZ");
             ! function(e) {
                 e.Timestamp = "extension-message-timestamp", e.ExtensionName = "extension-message-name"
-            }(Fe || (Fe = {}));
-            var Ge = function(e) {
+            }(Be || (Be = {}));
+            var He = function(e) {
                 function t() {
                     var t = null !== e && e.apply(this, arguments) || this;
                     return t.onExtensionNameClick = function(e) {
@@ -23958,7 +23957,7 @@
                     return this.props.showTimestamps ? a.createElement("span", {
                         key: "timestamp",
                         className: "room-message__timestamp",
-                        "data-test-selector": Fe.Timestamp
+                        "data-test-selector": Be.Timestamp
                     }, Object(W.a)(new Date(this.props.message.sentAt))) : null
                 }, t.prototype.renderMessageBody = function() {
                     var e = Object(p.g)(this.props.message);
@@ -23968,7 +23967,7 @@
                 }, t.prototype.renderMessageAuthor = function(e) {
                     return a.createElement("button", {
                         onClick: this.onExtensionNameClick,
-                        "data-test-selector": Fe.ExtensionName
+                        "data-test-selector": Be.ExtensionName
                     }, a.createElement("span", {
                         key: e.clientID + "-" + e.version + "-messageauthor"
                     }, a.createElement("span", {
@@ -23981,41 +23980,41 @@
                     }, e.displayName))))
                 }, t
             }(a.Component);
-            var Ve, qe = Object(k.compose)(Object(r.connect)(function(e, t) {
+            var Ge, Ve = Object(k.compose)(Object(r.connect)(function(e, t) {
                     return {
-                        installedExtensions: Object(He.a)(e, t.channelID)
+                        installedExtensions: Object(xe.a)(e, t.channelID)
                     }
                 }), Object(z.b)(function(e) {
                     return {
                         onExtensionNameClick: e.onShowExtensionMessageCard
                     }
-                }))(Ge),
-                We = "https://www.twitch.tv/settings/connections";
+                }))(He),
+                qe = "https://www.twitch.tv/settings/connections";
             ! function(e) {
                 e.Kickback = "msg_blizzard", e.Enabled = "blizzard_connect_on", e.Disabled = "blizzard_connect_off", e.AlreadyEnabled = "already_blizzard_mode_on", e.AlreadyDisabled = "already_blizzard_mode_off"
-            }(Ve || (Ve = {}));
-            var Ye = function(e) {
+            }(Ge || (Ge = {}));
+            var We = function(e) {
                 var t = null;
                 switch (e.type) {
-                    case Ve.Kickback:
+                    case Ge.Kickback:
                         var n = a.createElement(P.U, {
                             targetBlank: !0,
-                            to: We
-                        }, We);
+                            to: qe
+                        }, qe);
                         t = Object(s.d)("You must connect your Blizzard account to send messages in this room. You can connect your Blizzard account in your Twitch settings at {settingsLink}", {
                             settingsLink: n
                         }, "BlizzardConnectModeNoticeLine");
                         break;
-                    case Ve.Enabled:
+                    case Ge.Enabled:
                         t = Object(s.d)("This room now requires a Blizzard account connection to chat.", "BlizzardConnectModeNoticeLine");
                         break;
-                    case Ve.Disabled:
+                    case Ge.Disabled:
                         t = Object(s.d)("This room no longer requires a Blizzard account connection to chat.", "BlizzardConnectModeNoticeLine");
                         break;
-                    case Ve.AlreadyEnabled:
+                    case Ge.AlreadyEnabled:
                         t = Object(s.d)("This room already requires a Blizzard account connection to chat.", "BlizzardConnectModeNoticeLine");
                         break;
-                    case Ve.AlreadyDisabled:
+                    case Ge.AlreadyDisabled:
                         t = Object(s.d)("This room does not require a Blizzard account connection to chat.", "BlizzardConnectModeNoticeLine");
                         break;
                     default:
@@ -24023,14 +24022,14 @@
                 }
                 return a.createElement(P.Ya, null, t)
             };
-            Ye.displayName = "BlizzardConnectNoticeLine";
+            We.displayName = "BlizzardConnectNoticeLine";
             n("NWfm");
-            var ze, Xe = "timeout_success",
-                Qe = "untimeout_success",
-                Ke = "ban_success",
-                $e = "unban_success",
-                Ze = "delete_message_success",
-                Je = function(e) {
+            var Ye, ze = "timeout_success",
+                Xe = "untimeout_success",
+                Qe = "ban_success",
+                Ke = "unban_success",
+                $e = "delete_message_success",
+                Ze = function(e) {
                     function t() {
                         return null !== e && e.apply(this, arguments) || this
                     }
@@ -24111,7 +24110,7 @@
                                     confirmModerationAction: this.props.confirmModerationAction
                                 }) : null;
                             case m.b.ModerationAction:
-                                return this.props.isCurrentUserModerator && this.props.showModerationActions ? a.createElement(Oe, {
+                                return this.props.isCurrentUserModerator && this.props.showModerationActions ? a.createElement(_e, {
                                     moderationActionEvent: e
                                 }) : null;
                             case m.b.Connected:
@@ -24172,7 +24171,7 @@
                                     theme: this.props.theme
                                 });
                             case m.b.FirstCheerMessage:
-                                return a.createElement(ye, null, a.createElement(ke, {
+                                return a.createElement(Ce, null, a.createElement(ve, {
                                     event: e
                                 }), a.createElement(P.Ya, null, a.createElement(J, {
                                     badgeSets: this.props.badgeSets,
@@ -24196,7 +24195,7 @@
                                     className: "chat-line__moderation"
                                 }, Object(W.g)(e)) : null;
                             case m.b.Subscription:
-                                return a.createElement(ye, null, t, a.createElement(Ae, {
+                                return a.createElement(Ce, null, t, a.createElement(Ie, {
                                     event: e
                                 }));
                             case m.b.SubGift:
@@ -24210,15 +24209,15 @@
                                         recipientID: e.recipientID,
                                         recipientLogin: e.recipientLogin
                                     };
-                                    return a.createElement(ye, null, a.createElement(be, {
+                                    return a.createElement(Ce, null, a.createElement(fe, {
                                         event: n
                                     }))
                                 }
-                                return a.createElement(ye, null, t, a.createElement(Re, {
+                                return a.createElement(Ce, null, t, a.createElement(Ue, {
                                     event: e
                                 }));
                             case m.b.AnonSubGift:
-                                return a.createElement(ye, null, a.createElement(be, {
+                                return a.createElement(Ce, null, a.createElement(fe, {
                                     event: e
                                 }));
                             case m.b.SubMysteryGift:
@@ -24230,19 +24229,19 @@
                                         plan: e.plan,
                                         massGiftCount: e.massGiftCount
                                     };
-                                    return a.createElement(ye, null, a.createElement(ve, {
+                                    return a.createElement(Ce, null, a.createElement(be, {
                                         event: n
                                     }))
                                 }
-                                return a.createElement(ye, null, t, a.createElement(Be, {
+                                return a.createElement(Ce, null, t, a.createElement(Re, {
                                     event: e
                                 }));
                             case m.b.AnonSubMysteryGift:
-                                return a.createElement(ye, null, a.createElement(ve, {
+                                return a.createElement(Ce, null, a.createElement(be, {
                                     event: e
                                 }));
                             case m.b.RewardGift:
-                                return a.createElement(Le.a, {
+                                return a.createElement(Te.a, {
                                     event: e,
                                     channelID: this.props.channelID
                                 });
@@ -24272,15 +24271,15 @@
                                     showModerationIcons: this.props.showModerationIcons,
                                     showTimestamps: this.props.showTimestamps,
                                     useHighContrastColors: !!this.props.useHighContrastColors
-                                })), a.createElement(ye, null, !i && t, a.createElement(Te, {
+                                })), a.createElement(Ce, null, !i && t, a.createElement(Ae, {
                                     event: e
                                 }), a.createElement(P.Ya, null, i));
                             case m.b.GiftPaidUpgrade:
-                                return a.createElement(ye, null, t, a.createElement(Ce, {
+                                return a.createElement(Ce, null, t, a.createElement(ke, {
                                     event: e
                                 }));
                             case m.b.AnonGiftPaidUpgrade:
-                                return a.createElement(ye, null, t, a.createElement(he, {
+                                return a.createElement(Ce, null, t, a.createElement(pe, {
                                     event: e
                                 }));
                             case m.b.RoomMods:
@@ -24313,37 +24312,37 @@
                                 }, Object(s.d)("Chat was cleared by a moderator", "ChatLine"));
                             case m.b.Notice:
                                 if (function(e) {
-                                        return e.msgid in we()
+                                        return e.msgid in Oe()
                                     }(e)) return a.createElement(P.Ya, {
                                     className: "chat-line__status"
-                                }, a.createElement(Me, {
+                                }, a.createElement(we, {
                                     message: e
                                 }));
                                 switch (e.msgid) {
                                     case "msg_subsonly":
                                         return a.createElement(P.Ya, {
                                             className: "chat-line__status"
-                                        }, a.createElement(xe, {
+                                        }, a.createElement(Pe, {
                                             channelID: this.props.channelID
                                         }));
-                                    case Ve.Kickback:
-                                    case Ve.Enabled:
-                                    case Ve.Disabled:
-                                    case Ve.AlreadyEnabled:
-                                    case Ve.AlreadyDisabled:
+                                    case Ge.Kickback:
+                                    case Ge.Enabled:
+                                    case Ge.Disabled:
+                                    case Ge.AlreadyEnabled:
+                                    case Ge.AlreadyDisabled:
                                         return a.createElement(P.Ya, {
                                             className: "chat-line__status"
-                                        }, a.createElement(Ye, {
+                                        }, a.createElement(We, {
                                             type: e.msgid
                                         }))
                                 }
                                 if (this.props.isCurrentUserModerator) switch (e.msgid) {
-                                    case Ze:
+                                    case $e:
+                                    case ze:
+                                    case Qe:
+                                        return null;
                                     case Xe:
                                     case Ke:
-                                        return null;
-                                    case Qe:
-                                    case $e:
                                         if (this.props.showModerationActions) return null
                                 }
                                 return a.createElement(P.Ya, {
@@ -24354,15 +24353,15 @@
                                     className: "chat-line__status"
                                 }, e.message);
                             case m.b.Raid:
-                                return a.createElement(Ne, {
+                                return a.createElement(Ee, {
                                     message: e
                                 });
                             case m.b.Unraid:
-                                return a.createElement(ye, null, a.createElement(P.W, {
+                                return a.createElement(Ce, null, a.createElement(P.W, {
                                     color: P.O.Alt2
                                 }, Object(s.d)("The raid has been cancelled.", "RaidCancelMessage")));
                             case m.b.Ritual:
-                                return a.createElement(ye, null, a.createElement(Ue, {
+                                return a.createElement(Ce, null, a.createElement(Le, {
                                     event: e
                                 }), a.createElement(J, {
                                     badgeSets: this.props.badgeSets,
@@ -24382,7 +24381,7 @@
                                     useHighContrastColors: !!this.props.useHighContrastColors
                                 }));
                             case m.b.ExtensionMessage:
-                                return a.createElement(qe, {
+                                return a.createElement(Ve, {
                                     badgeSets: this.props.badgeSets,
                                     channelID: this.props.channelID,
                                     currentUserLogin: this.props.currentUserLogin,
@@ -24394,10 +24393,10 @@
                         }
                     }, t
                 }(a.Component),
-                et = n("GnwI"),
-                tt = (n("HjUq"), ["scroll", "wheel", "mousewheel", "DOMMouseScroll", "keyup", "mousedown"]),
-                nt = 10,
-                it = function(e) {
+                Je = n("GnwI"),
+                et = (n("HjUq"), ["scroll", "wheel", "mousewheel", "DOMMouseScroll", "keyup", "mousedown"]),
+                tt = 10,
+                nt = function(e) {
                     function t() {
                         var t = null !== e && e.apply(this, arguments) || this;
                         return t.state = {
@@ -24405,7 +24404,7 @@
                         }, t.shouldUpdateMessages = !1, t.saveScrollRef = function(e) {
                             return t.scroll = e
                         }, t.handleScrollEvent = function(e) {
-                            t.scroll && t.scroll.scrollContent && (e.which > 0 || "mousedown" === e.type || "mousewheel" === e.type || "wheel" === e.type) && (t.scroll.scrollContent.scrollHeight - t.scroll.scrollContent.scrollTop - t.scroll.scrollContent.offsetHeight <= nt ? t.setState({
+                            t.scroll && t.scroll.scrollContent && (e.which > 0 || "mousedown" === e.type || "mousewheel" === e.type || "wheel" === e.type) && (t.scroll.scrollContent.scrollHeight - t.scroll.scrollContent.scrollTop - t.scroll.scrollContent.offsetHeight <= tt ? t.setState({
                                 isAutoScrolling: !0
                             }) : t.setState({
                                 isAutoScrolling: !1
@@ -24424,12 +24423,12 @@
                     }
                     return i.__extends(t, e), t.prototype.componentDidMount = function() {
                         var e = this;
-                        tt.forEach(function(t) {
+                        et.forEach(function(t) {
                             e.scroll && e.scroll.scrollContent && e.scroll.scrollContent.addEventListener(t, e.handleScrollEvent)
                         })
                     }, t.prototype.componentWillUnmount = function() {
                         var e = this;
-                        tt.forEach(function(t) {
+                        et.forEach(function(t) {
                             e.scroll && e.scroll.scrollContent && e.scroll.scrollContent.removeEventListener(t, e.handleScrollEvent)
                         })
                     }, t.prototype.componentWillReceiveProps = function(e) {
@@ -24439,7 +24438,7 @@
                     }, t.prototype.render = function() {
                         var e = this,
                             t = this.props.messages.map(function(t) {
-                                return a.createElement(Je, {
+                                return a.createElement(Ze, {
                                     badgeSets: e.props.badgeSets,
                                     channelID: e.props.channelID,
                                     isCurrentUserModerator: e.props.isCurrentUserModerator,
@@ -24508,10 +24507,10 @@
                         }, Object(s.d)("More messages below.", "ChatList"))))
                     }, t
                 }(a.Component),
-                at = Object(et.b)("ChatListPresentation", {
+                it = Object(Je.b)("ChatListPresentation", {
                     autoReportInteractive: !0
-                })(it),
-                rt = function(e) {
+                })(nt),
+                at = function(e) {
                     function t() {
                         var t = null !== e && e.apply(this, arguments) || this;
                         return t.state = {
@@ -24585,7 +24584,7 @@
                     }, t.prototype.componentWillUnmount = function() {
                         this.props.messageBufferAPI && this.props.messageBufferAPI.removeUpdateHandler(this.onBufferUpdate), this.clearBufferHandle()
                     }, t.prototype.render = function() {
-                        return a.createElement(at, {
+                        return a.createElement(it, {
                             channelID: this.props.channelID,
                             badgeSets: this.props.badgeSets,
                             currentUserDisplayName: this.props.currentUserDisplayName,
@@ -24608,7 +24607,7 @@
                         })
                     }, t
                 }(a.Component);
-            var ot = Object(o.compose)(Object(r.connect)(function(e) {
+            var rt = Object(o.compose)(Object(r.connect)(function(e) {
                 return {
                     chatRenderSentEvent: Object(g.b)(e),
                     showAutoModActions: e.chat.showAutoModActions,
@@ -24624,12 +24623,12 @@
                 topic: function(e) {
                     return e.channelID ? Object(d.z)(e.channelID) : ""
                 },
-                mapMessageTypesToProps: (ze = {}, ze[c.PubsubMessageType.StreamChatRoomChatRichEmbed] = "chatRichEmbedInfo", ze[c.PubsubMessageType.StreamChatRoomExtensionMessage] = "extensionMessage", ze)
-            }]), h.a)(rt);
+                mapMessageTypesToProps: (Ye = {}, Ye[c.PubsubMessageType.StreamChatRoomChatRichEmbed] = "chatRichEmbedInfo", Ye[c.PubsubMessageType.StreamChatRoomExtensionMessage] = "extensionMessage", Ye)
+            }]), h.a)(at);
             n.d(t, !1, function() {
-                return rt
+                return at
             }), n.d(t, "a", function() {
-                return ot
+                return rt
             })
         },
         r2Xj: function(e, t, n) {

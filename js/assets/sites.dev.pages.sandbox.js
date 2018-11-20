@@ -506,8 +506,8 @@
         "43KI": function(e, t, n) {
             (t = e.exports = n("rXFu")).Stream = t, t.Readable = t, t.Writable = n("3BRs"), t.Duplex = n("sZro"), t.Transform = n("J78i"), t.PassThrough = n("eA/Y")
         },
-        479: function(e, t) {},
-        480: function(e, t) {},
+        487: function(e, t) {},
+        488: function(e, t) {},
         "49sm": function(e, t) {
             var n = {}.toString;
             e.exports = Array.isArray || function(e) {
@@ -17039,7 +17039,7 @@
         Xhqo: function(e, t, n) {
             "use strict";
             var r = n("hwdV").Buffer,
-                i = n(479);
+                i = n(487);
 
             function o(e, t, n) {
                 e.copy(t, n)
@@ -19736,7 +19736,7 @@
                     u = t.Uint8Array || function() {};
                 var d = n("Onz0");
                 d.inherits = n("P7XM");
-                var h = n(480),
+                var h = n(488),
                     p = void 0;
                 p = h && h.debuglog ? h.debuglog("stream") : function() {};
                 var f, m = n("Xhqo"),

@@ -2,10 +2,10 @@
     [172], {
         "4mBO": function(e, t, n) {
             "use strict";
-            var a, r = n("mrSG"),
+            var r, a = n("mrSG"),
                 o = n("q1tI"),
                 i = n("1rIY"),
-                s = (a = Object(i.a)("LiveDashboardDeferredLoading", {
+                s = (r = Object(i.a)("LiveDashboardDeferredLoading", {
                     canRenderAnyComponent: !1,
                     loadFirst: {},
                     registerReportLoaded: function() {
@@ -17,7 +17,7 @@
                         return null
                     }
                 })).InnerProvider,
-                d = a.withContext,
+                d = r.withContext,
                 c = function(e, t) {
                     return void 0 === t && (t = {}),
                         function(n) {
@@ -33,7 +33,7 @@
                 return void 0 === t && (t = {}),
                     function(n) {
                         return d(c(e, t))(function(t) {
-                            return void 0 !== t.loadFirst[e] || t.canRenderAnyComponent ? o.createElement(n, r.__assign({}, t)) : null
+                            return void 0 !== t.loadFirst[e] || t.canRenderAnyComponent ? o.createElement(n, a.__assign({}, t)) : null
                         })
                     }
             }
@@ -50,7 +50,7 @@
                             t.setState(function(t) {
                                 var n;
                                 return {
-                                    loadFirst: r.__assign({}, t.loadFirst, (n = {}, n[e] = !0, n))
+                                    loadFirst: a.__assign({}, t.loadFirst, (n = {}, n[e] = !0, n))
                                 }
                             })
                         }) : function() {
@@ -58,11 +58,11 @@
                         }
                     }, t
                 }
-                return r.__extends(t, e), t.prototype.componentDidMount = function() {
+                return a.__extends(t, e), t.prototype.componentDidMount = function() {
                     var e = this;
                     this.setState(function(t) {
                         return {
-                            loadFirst: r.__assign({}, t.loadFirst, e.autoReportLoadedNames)
+                            loadFirst: a.__assign({}, t.loadFirst, e.autoReportLoadedNames)
                         }
                     })
                 }, t.prototype.componentDidUpdate = function() {
@@ -111,16 +111,16 @@
         "7yAc": function(e, t, n) {
             "use strict";
             n.r(t);
-            var a = n("oJmH"),
-                r = n("V+GM"),
+            var r = n("oJmH"),
+                a = n("V+GM"),
                 o = n("NvVO"),
                 i = n("2xye"),
                 s = n("GnwI"),
                 d = n("NQSV"),
-                c = Object(a.compose)(Object(s.b)("DashboardBroadcastPage", {
+                c = Object(r.compose)(Object(s.b)("DashboardBroadcastPage", {
                     autoReportInteractive: !0,
                     destination: o.a.DashboardBroadcastPage
-                }), Object(r.a)({
+                }), Object(a.a)({
                     location: i.PageviewLocation.DashboardBroadcast
                 }))(d.a);
             n.d(t, "DashboardBroadcastPage", function() {
@@ -329,9 +329,9 @@
         EkNY: function(e, t, n) {
             "use strict";
             n.d(t, "a", function() {
-                return a
-            }), n.d(t, "d", function() {
                 return r
+            }), n.d(t, "d", function() {
+                return a
             }), n.d(t, "b", function() {
                 return s
             }), n.d(t, "c", function() {
@@ -353,18 +353,18 @@
             }), n.d(t, "f", function() {
                 return y
             }), n.d(t, "h", function() {
-                return S
+                return w
             });
-            var a, r, o, i, s, d, c = n("mrSG"),
+            var r, a, o, i, s, d, c = n("mrSG"),
                 l = n("/7QA"),
                 u = n("2xye"),
                 p = n("lDS7");
             ! function(e) {
                 e.Added = "added", e.Removed = "removed"
-            }(a || (a = {})),
+            }(r || (r = {})),
             function(e) {
                 e.SliderMove = "slidermove", e.StreamDelayClick = "streamdelayclick"
-            }(r || (r = {})),
+            }(a || (a = {})),
             function(e) {
                 e.Click = "click"
             }(o || (o = {})),
@@ -384,7 +384,7 @@
                     })
                 },
                 f = function(e) {
-                    S(d.StreamInformation, {
+                    w(d.StreamInformation, {
                         target_name: "update",
                         update_successful: e
                     })
@@ -411,12 +411,12 @@
                         action: n
                     })
                 },
-                v = function(e, t, n, a) {
-                    S(d.StreamDelay, {
+                v = function(e, t, n, r) {
+                    w(d.StreamDelay, {
                         type: e,
                         slider_start_position: t,
                         slider_position: n,
-                        update_successful: a
+                        update_successful: r
                     })
                 },
                 C = function(e) {
@@ -434,7 +434,7 @@
                         channel_id: e.channelID
                     })
                 },
-                S = function(e, t) {
+                w = function(e, t) {
                     l.p.tracking.track(u.SpadeEventType.LiveDashboardInteraction, c.__assign({
                         action: e
                     }, t || {}))
@@ -442,7 +442,7 @@
         },
         JBqe: function(e, t, n) {
             "use strict";
-            var a, r, o = n("mrSG"),
+            var r, a, o = n("mrSG"),
                 i = n("q1tI"),
                 s = n("x7UT"),
                 d = n("0Log"),
@@ -463,13 +463,13 @@
                         })
                     })
                 },
-                f = (a = Object(l.a)("IsStreamLiveContext", {
+                f = (r = Object(l.a)("IsStreamLiveContext", {
                     isLive: void 0,
                     onStreamStatusChange: function() {
                         return null
                     }
                 })).InnerProvider,
-                h = a.withContext,
+                h = r.withContext,
                 g = function(e) {
                     return e
                 };
@@ -546,7 +546,7 @@
                     topic: function(e) {
                         return Object(c.J)(e.channelID)
                     },
-                    mapMessageTypesToProps: (r = {}, r[d.PubsubMessageType.ChannelStreamUp] = "streamUp", r[d.PubsubMessageType.ChannelStreamDown] = "streamDown", r)
+                    mapMessageTypesToProps: (a = {}, a[d.PubsubMessageType.ChannelStreamUp] = "streamUp", a[d.PubsubMessageType.ChannelStreamDown] = "streamDown", a)
                 }])(C);
             n.d(t, !1, function() {
                 return f
@@ -566,7 +566,7 @@
         },
         NQSV: function(e, t, n) {
             "use strict";
-            var a, r = n("mrSG"),
+            var r, a = n("mrSG"),
                 o = n("q1tI"),
                 i = n("/7QA"),
                 s = n("UWzm"),
@@ -583,13 +583,13 @@
                 v = n.n(b),
                 C = n("wcfy"),
                 y = n.n(C),
-                S = n("LWua"),
-                w = n.n(S),
+                w = n("LWua"),
+                S = n.n(w),
                 E = n("EkNY"),
                 _ = n("Ue10");
             ! function(e) {
                 e.DownloadButton = "broadast-items-card__download-button"
-            }(a || (a = {}));
+            }(r || (r = {}));
             var L = function(e) {
                     var t = e.link,
                         n = e.title;
@@ -632,7 +632,7 @@
                             top: 2
                         }
                     }, o.createElement(_.z, {
-                        "data-test-selector": a.DownloadButton,
+                        "data-test-selector": r.DownloadButton,
                         fullWidth: !0,
                         type: _.F.Hollow,
                         linkTo: t,
@@ -648,11 +648,11 @@
                     }, Object(i.d)("Setup Guide", "BroadcastItemCard")))))
                 },
                 k = n("IFXb"),
-                D = (n("L/BW"), function(e) {
+                O = (n("L/BW"), function(e) {
                     function t() {
                         return null !== e && e.apply(this, arguments) || this
                     }
-                    return r.__extends(t, e), t.prototype.componentDidMount = function() {
+                    return a.__extends(t, e), t.prototype.componentDidMount = function() {
                         i.p.setPageTitle(Object(i.d)("Broadcast", "BroadcastPage"))
                     }, t.prototype.render = function() {
                         return o.createElement(_.Ya, {
@@ -730,7 +730,7 @@
                                 bottom: 2
                             }
                         }, o.createElement(L, {
-                            imgURL: w.a,
+                            imgURL: S.a,
                             title: "XSplit Broadcaster",
                             link: "http://www.xsplit.com/",
                             longDescription: Object(i.d)("Simple yet powerful live streaming and recording software. XSplit Broadcaster is a revolutionary audio/video mixing application that allows for highly customizable professional quality live broadcasts by using simple and intuitive interface anyone can master.", "BroadcastRootPage"),
@@ -801,28 +801,28 @@
                     }, t
                 }(o.Component));
             n.d(t, "a", function() {
-                return D
+                return O
             })
         },
         NkOX: function(e, t, n) {
             "use strict";
-            var a, r;
+            var r, a;
             n.d(t, "a", function() {
-                    return a
-                }), n.d(t, "b", function() {
                     return r
+                }), n.d(t, "b", function() {
+                    return a
                 }),
                 function(e) {
                     e.ActivityFeed = "activity-feed", e.AdsWidget = "ads-widget", e.BountyBoardWidget = "bounty-board-widget", e.ExtensionLiveConfigure = "extension-live-configure", e.HostWidget = "host-widget", e.LiveChat = "live-chat", e.SquadStream = "squad-stream", e.Stats = "stats", e.StreamDelay = "stream-delay", e.StreamHealth = "stream-health", e.StreamInformation = "stream-information", e.StreamMarker = "stream-marker", e.VideoPreview = "video-preview", e.VideoProducerWidget = "video-producer-widget"
-                }(a || (a = {})),
+                }(r || (r = {})),
                 function(e) {
                     e.ActivityFeedWidget = "activity_feed_widget", e.AdsWidget = "ads_widget", e.BountyBoardWidget = "bounty_board_widget", e.ExtensionLiveConfigureWidget = "extension_config_widget", e.HostWidget = "host_widget", e.LiveChatWidget = "chat_widget", e.SquadStreamWidget = "squad_stream_widget", e.StatsWidget = "stats_widget", e.StreamDelayWidget = "stream_delay_widget", e.StreamHealthWidget = "stream_health_widget", e.StreamInformationWidget = "stream_information_widget", e.StreamMarkerWidget = "stream_marker_widget", e.VideoPreviewWidget = "video_preview_widget", e.VideoProducerWidget = "video_producer_widget"
-                }(r || (r = {}))
+                }(a || (a = {}))
         },
         Nmvj: function(e, t, n) {
             e.exports = n.p + "assets/streamelements_1x-5a78a214c1701af3da1d.png"
         },
-        SMeG: function(e, t, n) {},
+        O4PT: function(e, t, n) {},
         SX9i: function(e, t, n) {
             e.exports = n.p + "assets/opera_1x-2766d8f4415bd7218cc9.png"
         },
@@ -834,8 +834,8 @@
         },
         lDS7: function(e, t, n) {
             "use strict";
-            var a = n("mrSG"),
-                r = n("q1tI"),
+            var r = n("mrSG"),
+                a = n("q1tI"),
                 o = n("oJmH"),
                 i = n("/7QA"),
                 s = n("yR8l"),
@@ -851,22 +851,22 @@
                         }, t.handleHover = function() {
                             var e;
                             switch (t.props.statType) {
-                                case S.CURRENT_VIEWERS:
+                                case w.CURRENT_VIEWERS:
                                     e = "viewers_value";
                                     break;
-                                case S.STREAM_UP_TIME:
+                                case w.STREAM_UP_TIME:
                                     e = "uptime_value";
                                     break;
-                                case S.NUMBER_OF_CLIPS:
+                                case w.NUMBER_OF_CLIPS:
                                     e = "clips_value";
                                     break;
-                                case S.TOTAL_VIEWS:
+                                case w.TOTAL_VIEWS:
                                     e = "views_value";
                                     break;
-                                case S.FOLLOWERS:
+                                case w.FOLLOWERS:
                                     e = "followers_value";
                                     break;
-                                case S.SUBSCRIPTIONS:
+                                case w.SUBSCRIPTIONS:
                                     e = "subscribers_value";
                                     break;
                                 default:
@@ -877,33 +877,33 @@
                             t.setState({
                                 hidden: !t.state.hidden
                             });
-                            var e = i.m.get("streamStatsConfiguration", w);
+                            var e = i.m.get("streamStatsConfiguration", S);
                             e[t.props.statType] = !e[t.props.statType], i.m.set("streamStatsConfiguration", e)
                         }, t.renderStat = function() {
                             var e = Object(i.d)("Offline", "LiveDashboard");
-                            return t.state.hidden ? r.createElement(u.Zb, {
+                            return t.state.hidden ? a.createElement(u.Zb, {
                                 label: t.props.statDescription || e,
                                 direction: u.bc.Right
-                            }, Object(i.d)("Hover to view", "LiveDashboard")) : r.createElement(u.Zb, {
+                            }, Object(i.d)("Hover to view", "LiveDashboard")) : a.createElement(u.Zb, {
                                 label: Object(i.d)("Click to hide", "LiveDashboard"),
                                 direction: u.bc.Right
                             }, t.props.statDescription || e)
                         }, t
                     }
-                    return a.__extends(t, e), t.prototype.render = function() {
+                    return r.__extends(t, e), t.prototype.render = function() {
                         var e = this.props.color;
-                        return r.createElement(u.Fb, {
+                        return a.createElement(u.Fb, {
                             margin: {
                                 left: 1
                             },
                             fontSize: u.Ca.Size5,
                             color: e
-                        }, r.createElement("span", {
+                        }, a.createElement("span", {
                             onClick: this.handleClick,
                             onMouseOver: this.handleHover
                         }, this.renderStat()))
                     }, t
-                }(r.Component),
+                }(a.Component),
                 m = n("xTFG"),
                 f = n("NkOX"),
                 h = n("qYDK"),
@@ -912,13 +912,13 @@
                 v = n("6XEL"),
                 C = n("9kwc");
             n.d(t, "a", function() {
-                return w
-            }), n.d(t, "b", function() {
                 return S
+            }), n.d(t, "b", function() {
+                return w
             }), n.d(t, "c", function() {
                 return _
             });
-            var y, S, w = {
+            var y, w, S = {
                 showViewers: !0,
                 showUptime: !0,
                 showViews: !0,
@@ -932,7 +932,7 @@
             }(y || (y = {})),
             function(e) {
                 e.CURRENT_VIEWERS = "showViewers", e.STREAM_UP_TIME = "showUptime", e.TOTAL_VIEWS = "showViews", e.FOLLOWERS = "showFollowers", e.NUMBER_OF_CLIPS = "showClips", e.SUBSCRIPTIONS = "showSubs"
-            }(S || (S = {}));
+            }(w || (w = {}));
             var E = function(e) {
                     function t(t) {
                         var n = e.call(this, t) || this;
@@ -941,94 +941,94 @@
                         }, n.renderViewersCount = function() {
                             var e = n.getStreamInfo(),
                                 t = e && null !== e.viewersCount ? Object(i.f)(e.viewersCount) : 0,
-                                a = n.state.statsConfig && n.state.statsConfig[S.CURRENT_VIEWERS],
+                                r = n.state.statsConfig && n.state.statsConfig[w.CURRENT_VIEWERS],
                                 o = n.props.isLive;
-                            return r.createElement(p, {
+                            return a.createElement(p, {
                                 "data-test-selector": y.CURRENT_VIEWERS_COUNT,
                                 statDescription: o ? t + " " + Object(i.d)("Viewers", "LiveDashboard") : null,
-                                statType: S.CURRENT_VIEWERS,
-                                showStat: a,
+                                statType: w.CURRENT_VIEWERS,
+                                showStat: r,
                                 color: o ? u.O.Live : void 0
                             })
                         }, n.renderStreamTime = function() {
                             var e = n.getStreamInfo(),
                                 t = e && e.createdAt || (new Date).toISOString(),
-                                a = n.props.isLive;
-                            return r.createElement(p, {
-                                statDescription: a ? Object(d.b)((Date.now() - new Date(t).getTime()) / 1e3, d.a.ClockHM) : null,
-                                statType: S.STREAM_UP_TIME,
-                                showStat: !n.state.statsConfig || n.state.statsConfig[S.STREAM_UP_TIME],
-                                color: a ? u.O.Base : void 0
+                                r = n.props.isLive;
+                            return a.createElement(p, {
+                                statDescription: r ? Object(d.b)((Date.now() - new Date(t).getTime()) / 1e3, d.a.ClockHM) : null,
+                                statType: w.STREAM_UP_TIME,
+                                showStat: !n.state.statsConfig || n.state.statsConfig[w.STREAM_UP_TIME],
+                                color: r ? u.O.Base : void 0
                             })
                         }, n.renderNumberOfClips = function() {
                             var e = n.state.broadcastClipsCount,
                                 t = n.props.isLive;
-                            return r.createElement(p, {
+                            return a.createElement(p, {
                                 "data-test-selector": y.NUMBER_OF_CLIPS,
                                 statDescription: t ? Object(i.f)(e) + " " + (1 === e ? Object(i.d)("Clip", "LiveDashboard") : Object(i.d)("Clips", "LiveDashboard")) : null,
-                                statType: S.NUMBER_OF_CLIPS,
-                                showStat: n.state.statsConfig && n.state.statsConfig[S.NUMBER_OF_CLIPS],
+                                statType: w.NUMBER_OF_CLIPS,
+                                showStat: n.state.statsConfig && n.state.statsConfig[w.NUMBER_OF_CLIPS],
                                 color: t ? u.O.Base : void 0
                             })
                         }, n.renderSubscriptionStat = function() {
                             var e = Object(i.d)("Subscribers", "LiveDashboard"),
                                 t = Object(i.d)("Sub Points", "LiveDashboard"),
-                                a = n.props.data && n.props.data.user && null !== n.props.data.user.subscriberScore ? n.props.data.user.subscriberScore : null,
-                                o = a && a.countBreakdown;
-                            if (!a || !o) return null;
+                                r = n.props.data && n.props.data.user && null !== n.props.data.user.subscriberScore ? n.props.data.user.subscriberScore : null,
+                                o = r && r.countBreakdown;
+                            if (!r || !o) return null;
                             var s = Object(i.f)(o.reduce(function(e, t) {
                                     return e + t.count
                                 }, 0)),
-                                d = Object(i.f)(a.current);
-                            return a.next ? r.createElement(u.Fb, {
+                                d = Object(i.f)(r.current);
+                            return r.next ? a.createElement(u.Fb, {
                                 color: u.O.Alt2,
                                 display: u.X.Flex,
                                 alignItems: u.f.Center,
                                 margin: {
                                     bottom: .5
                                 }
-                            }, r.createElement(u.Zb, {
+                            }, a.createElement(u.Zb, {
                                 label: Object(i.d)("Subscribers shows number of active subs.\n Sub points unlock additional emote slots.", "LiveDashboard"),
                                 direction: u.bc.Right
-                            }, r.createElement(u.tb, {
+                            }, a.createElement(u.tb, {
                                 asset: u.ub.Star
-                            })), r.createElement(p, {
-                                statDescription: s + " " + e + " (" + d + " / " + Object(i.f)(a.next) + " " + t + ")",
-                                statType: S.SUBSCRIPTIONS,
-                                showStat: n.state.statsConfig && n.state.statsConfig[S.SUBSCRIPTIONS],
+                            })), a.createElement(p, {
+                                statDescription: s + " " + e + " (" + d + " / " + Object(i.f)(r.next) + " " + t + ")",
+                                statType: w.SUBSCRIPTIONS,
+                                showStat: n.state.statsConfig && n.state.statsConfig[w.SUBSCRIPTIONS],
                                 color: u.O.Base
-                            })) : r.createElement(u.Fb, {
+                            })) : a.createElement(u.Fb, {
                                 color: u.O.Alt2,
                                 display: u.X.Flex,
                                 alignItems: u.f.Center,
                                 margin: {
                                     bottom: .5
                                 }
-                            }, r.createElement(u.Zb, {
+                            }, a.createElement(u.Zb, {
                                 label: Object(i.d)("Congrats on reaching the max number of emote slots", "LiveDashboard"),
                                 direction: u.bc.Right
-                            }, r.createElement(u.tb, {
+                            }, a.createElement(u.tb, {
                                 asset: u.ub.Star
-                            })), r.createElement(p, {
+                            })), a.createElement(p, {
                                 statDescription: s + " " + e + " (" + d + " " + t + ")",
-                                statType: S.SUBSCRIPTIONS,
-                                showStat: n.state.statsConfig && n.state.statsConfig[S.SUBSCRIPTIONS],
+                                statType: w.SUBSCRIPTIONS,
+                                showStat: n.state.statsConfig && n.state.statsConfig[w.SUBSCRIPTIONS],
                                 color: u.O.Base
                             }))
                         }, n.setFetchBroadcastClipsCountInterval = function() {
                             n.intervalID && clearInterval(n.intervalID), n.fetchBroadcastClipsCount(), n.intervalID = setInterval(n.fetchBroadcastClipsCount, 3e4)
                         }, n.fetchBroadcastClipsCount = function() {
-                            return a.__awaiter(n, void 0, void 0, function() {
-                                var e, t, n, r, o;
-                                return a.__generator(this, function(a) {
-                                    switch (a.label) {
+                            return r.__awaiter(n, void 0, void 0, function() {
+                                var e, t, n, a, o;
+                                return r.__generator(this, function(r) {
+                                    switch (r.label) {
                                         case 0:
                                             return e = this.getStreamInfo(), (t = e && e.id) ? [4, Object(v.c)({
                                                 path: "/v4/broadcasts/" + t + "/clips/count"
                                             })] : (this.props.latencyTracking.reportInteractive(), this.props.reportLoaded(), [2]);
                                         case 1:
-                                            return (n = a.sent()).body && !n.error ? (r = n.body.count, this.setState({
-                                                broadcastClipsCount: r
+                                            return (n = r.sent()).body && !n.error ? (a = n.body.count, this.setState({
+                                                broadcastClipsCount: a
                                             })) : (o = "Unable to fetch broadcast clips count", i.k.error(new Error(o), o)), this.props.latencyTracking.reportInteractive(), this.props.reportLoaded(), [2]
                                     }
                                 })
@@ -1036,11 +1036,11 @@
                         };
                         var o = i.m.get("streamStatsConfiguration", null);
                         return n.state = {
-                            statsConfig: o || w,
+                            statsConfig: o || S,
                             broadcastClipsCount: 0
                         }, n
                     }
-                    return a.__extends(t, e), t.prototype.componentDidMount = function() {
+                    return r.__extends(t, e), t.prototype.componentDidMount = function() {
                         this.props.data.loading || this.setFetchBroadcastClipsCountInterval()
                     }, t.prototype.componentDidUpdate = function(e) {
                         e.data.loading && !this.props.data.loading && this.setFetchBroadcastClipsCountInterval()
@@ -1051,89 +1051,89 @@
                         var e = this.props.data.user,
                             t = e && e.followers,
                             n = Object(i.f)(e && e.profileViewCount || 0),
-                            a = e && t && null !== t.totalCount ? Object(i.f)(t.totalCount) : 0;
-                        return r.createElement(h.a, {
+                            r = e && t && null !== t.totalCount ? Object(i.f)(t.totalCount) : 0;
+                        return a.createElement(h.a, {
                             title: Object(i.d)("Stats", "LiveDashboard")
-                        }, r.createElement(u.Ya, {
+                        }, a.createElement(u.Ya, {
                             padding: 2
-                        }, r.createElement(u.Fb, {
+                        }, a.createElement(u.Fb, {
                             color: u.O.Alt2,
                             display: u.X.Flex,
                             alignItems: u.f.Center,
                             margin: {
                                 bottom: .5
                             }
-                        }, r.createElement(u.Zb, {
+                        }, a.createElement(u.Zb, {
                             label: Object(i.d)("The number of people currently watching your channel", "LiveDashboard"),
                             direction: u.bc.Right
-                        }, r.createElement(u.tb, {
+                        }, a.createElement(u.tb, {
                             asset: u.ub.GlyphLive
-                        })), this.renderViewersCount()), r.createElement(u.Fb, {
+                        })), this.renderViewersCount()), a.createElement(u.Fb, {
                             color: u.O.Alt2,
                             display: u.X.Flex,
                             alignItems: u.f.Center,
                             margin: {
                                 bottom: .5
                             }
-                        }, r.createElement(u.Zb, {
+                        }, a.createElement(u.Zb, {
                             label: Object(i.d)("How long you have been broadcasting for this session", "LiveDashboard"),
                             direction: u.bc.Right
-                        }, r.createElement(u.tb, {
+                        }, a.createElement(u.tb, {
                             asset: u.ub.Timeout
-                        })), this.renderStreamTime()), r.createElement(u.Fb, {
+                        })), this.renderStreamTime()), a.createElement(u.Fb, {
                             color: u.O.Alt2,
                             display: u.X.Flex,
                             alignItems: u.f.Center,
                             margin: {
                                 bottom: .5
                             }
-                        }, r.createElement(u.Zb, {
+                        }, a.createElement(u.Zb, {
                             label: Object(i.d)("The number of clips that have been created", "LiveDashboard"),
                             direction: u.bc.Right
-                        }, r.createElement(u.Fb, {
+                        }, a.createElement(u.Fb, {
                             className: "stats-widget-clips-icon",
                             display: u.X.InlineFlex
-                        }, r.createElement(u.tb, {
+                        }, a.createElement(u.tb, {
                             asset: u.ub.Clip,
                             height: 20,
                             width: 20
-                        }))), this.renderNumberOfClips()), r.createElement(u.Fb, {
+                        }))), this.renderNumberOfClips()), a.createElement(u.Fb, {
                             color: u.O.Alt2,
                             display: u.X.Flex,
                             alignItems: u.f.Center,
                             margin: {
                                 bottom: .5
                             }
-                        }, r.createElement(u.Zb, {
+                        }, a.createElement(u.Zb, {
                             label: Object(i.d)("The number of people who have viewed the channel", "LiveDashboard"),
                             direction: u.bc.Right
-                        }, r.createElement(u.tb, {
+                        }, a.createElement(u.tb, {
                             asset: u.ub.GlyphViews
-                        })), r.createElement(p, {
+                        })), a.createElement(p, {
                             statDescription: n + " " + Object(i.d)("Views", "LiveDashboard"),
-                            statType: S.TOTAL_VIEWS,
-                            showStat: !this.state.statsConfig || this.state.statsConfig[S.TOTAL_VIEWS],
+                            statType: w.TOTAL_VIEWS,
+                            showStat: !this.state.statsConfig || this.state.statsConfig[w.TOTAL_VIEWS],
                             color: u.O.Base
-                        })), r.createElement(u.Fb, {
+                        })), a.createElement(u.Fb, {
                             color: u.O.Alt2,
                             display: u.X.Flex,
                             alignItems: u.f.Center,
                             margin: {
                                 bottom: .5
                             }
-                        }, r.createElement(u.Zb, {
+                        }, a.createElement(u.Zb, {
                             label: Object(i.d)("The number of people currently following your channel", "LiveDashboard"),
                             direction: u.bc.Right
-                        }, r.createElement(u.tb, {
+                        }, a.createElement(u.tb, {
                             asset: u.ub.Heart
-                        })), r.createElement(p, {
-                            statDescription: a + " " + Object(i.d)("Followers", "LiveDashboard"),
-                            statType: S.FOLLOWERS,
-                            showStat: !this.state.statsConfig || this.state.statsConfig[S.FOLLOWERS],
+                        })), a.createElement(p, {
+                            statDescription: r + " " + Object(i.d)("Followers", "LiveDashboard"),
+                            statType: w.FOLLOWERS,
+                            showStat: !this.state.statsConfig || this.state.statsConfig[w.FOLLOWERS],
                             color: u.O.Base
                         })), this.renderSubscriptionStat()))
                     }, t
-                }(r.Component),
+                }(a.Component),
                 _ = Object(o.compose)(Object(g.b)(f.a.Stats), b.b, Object(m.b)(f.a.Stats, {
                     autoReportCardVisibility: !0
                 }), Object(s.a)(C, {
@@ -1148,33 +1148,50 @@
                     }
                 }), Object(c.b)("Stats"))(E)
         },
+        logO: function(e, t, n) {},
         odMz: function(e, t, n) {
             "use strict";
-            var a, r;
+            var r, a;
             ! function(e) {
                 e[e.RemoveTarget = 0] = "RemoveTarget", e[e.SetGrabbed = 1] = "SetGrabbed", e[e.SetTarget = 2] = "SetTarget"
-            }(a || (a = {})),
+            }(r || (r = {})),
             function(e) {
                 e.Bottom = "bottom", e.Top = "top"
-            }(r || (r = {}));
+            }(a || (a = {}));
             var o = function() {
                 return function(e, t) {
-                    void 0 === t && (t = !1), this.name = e, this.isCollapsed = t, this.isGrabbed = !1
+                    void 0 === t && (t = !1), this.name = e, this.isCollapsed = t, this.isGrabbed = !1, this.isPoppedOut = !1
                 }
             }();
             n.d(t, "b", function() {
-                return a
-            }), n.d(t, "c", function() {
                 return r
+            }), n.d(t, "c", function() {
+                return a
             }), n.d(t, "a", function() {
                 return o
             })
         },
         qYDK: function(e, t, n) {
             "use strict";
-            var a, r, o, i, s = n("fvjX"),
-                d = n("1rIY"),
-                c = (a = Object(d.a)("DragAndDropLayoutContext", {
+            var r, a, o = n("mrSG"),
+                i = n("q1tI"),
+                s = n("fvjX"),
+                d = n("/7QA"),
+                c = n("1rIY"),
+                l = n("odMz"),
+                u = (r = Object(c.a)("DragAndDropCardContext", {
+                    card: new l.a("unknown")
+                })).InnerProvider,
+                p = r.withContext;
+
+            function m(e) {
+                return e
+            }
+
+            function f(e) {
+                return p(e || m)
+            }
+            var h = (a = Object(c.a)("DragAndDropLayoutContext", {
                     dropCard: function() {
                         return null
                     },
@@ -1185,25 +1202,251 @@
                         return null
                     }
                 })).InnerProvider,
-                l = a.withContext,
-                u = n("mrSG"),
-                p = n("q1tI"),
-                m = n("/7QA"),
-                f = n("odMz"),
-                h = n("Ue10"),
-                g = (n("7WKn"), function(e) {
+                g = a.withContext;
+
+            function b(e) {
+                return e
+            }
+
+            function v(e) {
+                return g(e || b)
+            }
+            var C = n("Ue10"),
+                y = function(e) {
+                    function t() {
+                        var t = null !== e && e.apply(this, arguments) || this;
+                        return t.handleButtonIconClick = function() {
+                            t.props.updateCard(t.props.name, {
+                                isPoppedOut: !t.props.isPoppedOut
+                            })
+                        }, t
+                    }
+                    return o.__extends(t, e), t.prototype.render = function() {
+                        return i.createElement(C.A, {
+                            ariaLabel: Object(d.d)("Popout", "PopoutButtonComponent"),
+                            icon: C.ub.Popout,
+                            onClick: this.handleButtonIconClick
+                        })
+                    }, t
+                }(i.Component);
+            var w, S, E = Object(s.compose)(v(function(e) {
+                    return {
+                        updateCard: e.updateCard
+                    }
+                }), f(function(e) {
+                    return {
+                        name: e.card.name,
+                        isPoppedOut: e.card.isPoppedOut
+                    }
+                }))(y),
+                _ = (n("5g1g"), n("wUQP")),
+                L = function() {
+                    return _.a.On === d.b.get("dashboard_live_popout", _.a.Off)
+                },
+                k = function(e) {
+                    function t() {
+                        return null !== e && e.apply(this, arguments) || this
+                    }
+                    return o.__extends(t, e), t.prototype.render = function() {
+                        return i.createElement(C.Fb, {
+                            color: C.O.Base,
+                            fontSize: C.Ca.Size5,
+                            margin: {
+                                y: "auto"
+                            }
+                        }, this.props.title)
+                    }, t
+                }(i.Component);
+            n("logO");
+            ! function(e) {
+                e.Content = "drag-and-drop-card-content", e.PopoutButton = "drag-and-drop-popout-button"
+            }(w || (w = {})),
+            function(e) {
+                e.Carat = "carat", e.Menu = "drag-and-drop-card-menu"
+            }(S || (S = {}));
+            var O = function(e) {
+                function t() {
+                    var t = null !== e && e.apply(this, arguments) || this;
+                    return t.isDashboardLivePopoutEnabled = L(), t.handleCaratClick = function() {
+                        t.props.updateCard(t.props.name, {
+                            isCollapsed: !t.props.isCollapsed
+                        })
+                    }, t.addEventListeners = function() {
+                        t[S.Carat].addEventListener("mousedown", t.stopMouseDownPropagation), t[S.Menu].addEventListener("mousedown", t.stopMouseDownPropagation)
+                    }, t.removeEventListeners = function() {
+                        t[S.Carat].removeEventListener("mousedown", t.stopMouseDownPropagation), t[S.Menu].removeEventListener("mousedown", t.stopMouseDownPropagation)
+                    }, t.registerRef = function(e, n) {
+                        t[e] = n
+                    }, t.stopMouseDownPropagation = function(e) {
+                        e.stopPropagation()
+                    }, t
+                }
+                return o.__extends(t, e), t.prototype.componentDidMount = function() {
+                    this.addEventListeners()
+                }, t.prototype.componentWillUnmount = function() {
+                    this.removeEventListeners()
+                }, t.prototype.render = function() {
+                    var e = this.props,
+                        t = e.isCollapsed,
+                        n = e.isGrabbed;
+                    return i.createElement(C.Fb, {
+                        background: C.r.Base,
+                        border: !0,
+                        breakpointLarge: {
+                            margin: {
+                                bottom: 2
+                            }
+                        },
+                        className: "drag-and-drop-card-container" + (n ? " drag-and-drop-card-container__grabbed" : ""),
+                        display: C.X.Flex,
+                        elevation: n ? 4 : 1,
+                        flexDirection: C.Aa.Column,
+                        margin: {
+                            bottom: 1
+                        },
+                        refDelegate: this.props.refDelegateCard
+                    }, i.createElement(C.Fb, {
+                        alignContent: C.e.Center,
+                        alignItems: C.f.Center,
+                        borderBottom: !0,
+                        className: "drag-and-drop-card-header",
+                        display: C.X.Flex,
+                        justifyContent: C.Xa.Between,
+                        padding: {
+                            x: 1
+                        },
+                        position: C.kb.Relative,
+                        refDelegate: this.props.refDelegateHeader
+                    }, i.createElement(C.Ya, {
+                        display: C.X.Flex,
+                        justifyContent: C.Xa.Center
+                    }, i.createElement(C.Ya, {
+                        margin: {
+                            right: 1
+                        }
+                    }, i.createElement(C.Ya, {
+                        className: "drag-and-drop-card-carat" + (t ? "__collapsed" : ""),
+                        refDelegate: this.registerRef.bind(this, S.Carat)
+                    }, i.createElement(C.A, {
+                        ariaLabel: Object(d.d)("Collapse/Expand", "DragAndDropCard"),
+                        icon: C.ub.GlyphArrDown,
+                        onClick: this.handleCaratClick
+                    }))), i.createElement(k, {
+                        title: this.props.title
+                    })), i.createElement(C.Ya, {
+                        display: C.X.Flex,
+                        alignItems: C.f.Center
+                    }, i.createElement(C.Ya, {
+                        display: C.X.Flex,
+                        alignItems: C.f.Center,
+                        refDelegate: this.registerRef.bind(this, S.Menu)
+                    }, this.isDashboardLivePopoutEnabled && i.createElement(C.Ya, {
+                        "data-test-selector": w.PopoutButton,
+                        margin: {
+                            left: 1
+                        }
+                    }, i.createElement(E, null)), this.props.menu), i.createElement(C.Ya, {
+                        margin: {
+                            left: 1
+                        }
+                    }, i.createElement(C.A, {
+                        ariaLabel: Object(d.d)("Drag", "DragAndDropCard"),
+                        icon: C.ub.DragHandle
+                    })))), !this.props.isPoppedOut && i.createElement(C.Ya, {
+                        className: "drag-and-drop-card-content" + (t ? " drag-and-drop-card-content__collapsed" : ""),
+                        "data-test-selector": w.Content,
+                        position: C.kb.Relative
+                    }, this.props.children))
+                }, t
+            }(i.Component);
+            S.Carat, S.Menu;
+            var D, R = Object(s.compose)(f(function(e) {
+                    var t = e.card;
+                    return {
+                        name: t.name,
+                        isCollapsed: t.isCollapsed,
+                        isGrabbed: t.isGrabbed,
+                        isPoppedOut: t.isPoppedOut
+                    }
+                }), v(function(e) {
+                    return {
+                        updateCard: e.updateCard
+                    }
+                }))(O),
+                I = n("i8i4"),
+                P = (n("O4PT"), 300),
+                x = 360,
+                T = function(e) {
+                    function t() {
+                        var t = null !== e && e.apply(this, arguments) || this;
+                        return t.state = {
+                            window: void 0
+                        }, t.handleWindowError = function(e) {
+                            e.preventDefault(), e.stopPropagation()
+                        }, t.tryToOpenWindow = function() {
+                            var e = "twitch-" + t.props.card.name,
+                                n = t.props.height || P,
+                                r = window.open("", e, "left=" + (window.screenX + window.screen.width / 2) + ",top=" + window.screen.height / 2 + ",titlebar=no,toolbar=no,menubar=no,resizable=yes,scrollbars=yes,location=no,personalbar=no,chrome=yes,height=" + n + ",width=" + x);
+                            r && t.setInitialWindowState(r, n)
+                        }, t.tryToCloseWindow = function() {
+                            if (t.props.card.isPoppedOut) return t.props.updateCard(t.props.card.name, {
+                                isPoppedOut: !1
+                            }), null
+                        }, t
+                    }
+                    return o.__extends(t, e), t.prototype.componentDidMount = function() {
+                        this.tryToOpenWindow()
+                    }, t.prototype.componentWillUnmount = function() {
+                        this.state.window && this.state.window.close(), window.removeEventListener("beforeunload", this.tryToCloseWindow)
+                    }, t.prototype.render = function() {
+                        return this.state.window ? I.createPortal(i.createElement(C.Ya, {
+                            display: C.X.Flex,
+                            flexDirection: C.Aa.Column,
+                            fullHeight: !0,
+                            fullWidth: !0,
+                            justifyContent: C.Xa.Start
+                        }, i.createElement(C.Fb, {
+                            alignItems: C.f.Center,
+                            borderBottom: !0,
+                            display: C.X.Flex,
+                            flexShrink: 0,
+                            fullWidth: !0,
+                            justifyContent: C.Xa.Between,
+                            padding: {
+                                x: 2,
+                                y: 1
+                            }
+                        }, i.createElement(k, {
+                            title: this.props.title
+                        }), this.props.menu), i.createElement(C.Ya, {
+                            className: "popout-window-container",
+                            flexShrink: 1,
+                            fullWidth: !0
+                        }, this.props.children)), this.state.window.document.body) : null
+                    }, t.prototype.setInitialWindowState = function(e, t) {
+                        window.addEventListener("beforeunload", this.tryToCloseWindow), e.addEventListener("beforeunload", this.tryToCloseWindow), e.addEventListener("error", this.handleWindowError), e.document.head.innerHTML = "", e.document.body.innerHTML = "", Array.prototype.forEach.call(window.document.querySelectorAll('link[rel="stylesheet"], style'), function(t) {
+                            e.document.head.appendChild(t.cloneNode(!0))
+                        });
+                        var n = document.createElement("title");
+                        n.innerHTML = "Twitch", e.document.head.appendChild(n), e.document.title = "Twitch", e.resizeTo(Math.max(t, P), x), this.setState({
+                            window: e
+                        })
+                    }, t
+                }(i.Component),
+                B = Object(s.compose)(v(), f())(T),
+                F = (n("7WKn"), function(e) {
                     function t() {
                         var t = null !== e && e.apply(this, arguments) || this;
                         return t.setContainerRef = function(e) {
                             t.containerRef = e
                         }, t
                     }
-                    return u.__extends(t, e), t.prototype.componentDidMount = function() {
+                    return o.__extends(t, e), t.prototype.componentDidMount = function() {
                         this.setPlaceholderStyles()
                     }, t.prototype.componentDidUpdate = function() {
                         this.setPlaceholderStyles()
                     }, t.prototype.render = function() {
-                        return p.createElement(h.Ya, {
+                        return i.createElement(C.Ya, {
                             breakpointLarge: {
                                 margin: {
                                     bottom: 2
@@ -1221,97 +1464,66 @@
                         if (e && this.containerRef) {
                             var t = e.getBoundingClientRect(),
                                 n = t.height,
-                                a = t.width;
-                            this.containerRef.style.height = n + "px", this.containerRef.style.width = a + "px"
+                                r = t.width;
+                            this.containerRef.style.height = n + "px", this.containerRef.style.width = r + "px"
                         }
                     }, t
-                }(p.Component)),
-                b = function(e) {
-                    function t() {
-                        return null !== e && e.apply(this, arguments) || this
-                    }
-                    return u.__extends(t, e), t.prototype.render = function() {
-                        return p.createElement(h.Fb, {
-                            className: "drag-and-drop-card-title",
-                            color: h.O.Base,
-                            fontSize: h.Ca.Size5,
-                            margin: {
-                                y: "auto"
-                            }
-                        }, this.props.title)
-                    }, t
-                }(p.Component);
-            n("SMeG");
+                }(i.Component));
             ! function(e) {
-                e.ContentCollapsed = "drag-and-drop-card-content__collapsed"
-            }(r || (r = {})),
-            function(e) {
-                e.Card = "drag-and-drop-card", e.Container = "drag-and-drop-card-container", e.Content = "drag-and-drop-card-content"
-            }(o || (o = {})),
-            function(e) {
-                e.Carat = "carat", e.Card = "card", e.Container = "container", e.Header = "header", e.Menu = "drag-and-drop-card-menu"
-            }(i || (i = {}));
-            var v = function(e) {
+                e.Card = "card", e.Container = "container", e.Header = "header"
+            }(D || (D = {}));
+            var j = function(e) {
                 function t() {
                     var t = null !== e && e.apply(this, arguments) || this;
                     return t.handleContainerMouseEnter = function(e) {
                         var n = e.clientY;
                         if (t.props.grabbedCard && !t.isHoveringSelf) {
-                            var a = t.getPlaceholderPosition(n);
+                            var r = t.getPlaceholderPosition(n);
                             t.props.updateCard(t.props.card.name, {
-                                placeholderPosition: a
-                            }, f.b.SetTarget)
+                                placeholderPosition: r
+                            }, l.b.SetTarget)
                         }
                     }, t.handleContainerMouseLeave = function() {
                         if (t.props.grabbedCard) {
                             var e = t.props.card;
                             t.props.updateCard(e.name, {
                                 placeholderPosition: void 0
-                            }, f.b.RemoveTarget)
+                            }, l.b.RemoveTarget)
                         }
                     }, t.handleContainerMouseMove = function(e) {
                         var n = e.clientY;
                         if (t.isHoveringOtherCard) {
-                            var a = t.getPlaceholderPosition(n);
+                            var r = t.getPlaceholderPosition(n);
                             t.props.updateCard(t.props.card.name, {
-                                placeholderPosition: a
-                            }, f.b.SetTarget)
+                                placeholderPosition: r
+                            }, l.b.SetTarget)
                         }
                     }, t.getPlaceholderPosition = function(e) {
-                        var n = t[i.Container].getBoundingClientRect();
-                        return e > n.top + n.height / 2 ? f.c.Bottom : f.c.Top
-                    }, t.handleCaratClick = function() {
-                        var e = t.props.card,
-                            n = e.name,
-                            a = e.isCollapsed;
-                        t.props.updateCard(n, {
-                            isCollapsed: !a
-                        })
-                    }, t.stopMouseDownPropagation = function(e) {
-                        e.stopPropagation()
+                        var n = t[D.Container].getBoundingClientRect();
+                        return e > n.top + n.height / 2 ? l.c.Bottom : l.c.Top
                     }, t.handleCardMouseMove = function(e) {
                         var n = e.movementX,
-                            a = e.movementY;
+                            r = e.movementY;
                         if (t.props.card.isGrabbed) {
-                            var r = t[i.Card];
-                            r.style.left = parseInt(r.style.left || "0", 10) + n + "px", r.style.top = parseInt(r.style.top || "0", 10) + a + "px"
+                            var a = t[D.Card];
+                            a.style.left = parseInt(a.style.left || "0", 10) + n + "px", a.style.top = parseInt(a.style.top || "0", 10) + r + "px"
                         }
                     }, t.handleHeaderMouseDown = function(e) {
                         var n = e.clientY,
-                            a = t[i.Card],
-                            r = a.getBoundingClientRect(),
-                            o = r.top,
-                            s = r.left,
-                            d = r.width;
-                        a.style.left = s + "px", a.style.top = o + "px", a.style.width = d + "px";
-                        var c = t.getPlaceholderPosition(n),
-                            l = t.props.card.name;
-                        t.props.updateCard(l, {
-                            placeholderPosition: c
-                        }, f.b.SetGrabbed), t.props.updateCard(l, {}, f.b.SetTarget)
+                            r = t[D.Card],
+                            a = r.getBoundingClientRect(),
+                            o = a.top,
+                            i = a.left,
+                            s = a.width;
+                        r.style.left = i + "px", r.style.top = o + "px", r.style.width = s + "px";
+                        var d = t.getPlaceholderPosition(n),
+                            c = t.props.card.name;
+                        t.props.updateCard(c, {
+                            placeholderPosition: d
+                        }, l.b.SetGrabbed), t.props.updateCard(c, {}, l.b.SetTarget)
                     }, t.handleCardMouseUp = function() {
                         if (t.props.card.isGrabbed) {
-                            var e = t[i.Card];
+                            var e = t[D.Card];
                             e.style.left = null, e.style.top = null, e.style.width = "100%", t.props.dropCard()
                         }
                         var n = t.props.card;
@@ -1322,164 +1534,99 @@
                     }, t.registerRef = function(e, n) {
                         t[e] = n
                     }, t.addEventListeners = function() {
-                        var e = t[i.Container];
-                        e.addEventListener("mousemove", t.handleContainerMouseMove), e.addEventListener("mouseleave", t.handleContainerMouseLeave), e.addEventListener("mouseenter", t.handleContainerMouseEnter), t[i.Carat].addEventListener("mousedown", t.stopMouseDownPropagation), t[i.Header].addEventListener("mousedown", t.handleHeaderMouseDown), t[i.Menu].addEventListener("mousedown", t.stopMouseDownPropagation), window.addEventListener("mouseup", t.handleCardMouseUp), window.addEventListener("mousemove", t.handleCardMouseMove)
+                        var e = t[D.Container];
+                        e.addEventListener("mousemove", t.handleContainerMouseMove), e.addEventListener("mouseleave", t.handleContainerMouseLeave), e.addEventListener("mouseenter", t.handleContainerMouseEnter), t[D.Header].addEventListener("mousedown", t.handleHeaderMouseDown), window.addEventListener("mouseup", t.handleCardMouseUp), window.addEventListener("mousemove", t.handleCardMouseMove)
                     }, t.removeEventListeners = function() {
-                        var e = t[i.Container];
-                        e.removeEventListener("mousemove", t.handleContainerMouseMove), e.removeEventListener("mouseleave", t.handleContainerMouseLeave), e.removeEventListener("mouseenter", t.handleContainerMouseEnter), t[i.Carat].removeEventListener("mousedown", t.stopMouseDownPropagation), t[i.Header].removeEventListener("mousedown", t.handleHeaderMouseDown), t[i.Menu].removeEventListener("mousedown", t.stopMouseDownPropagation), window.removeEventListener("mouseup", t.handleCardMouseUp), window.removeEventListener("mousemove", t.handleCardMouseMove)
+                        var e = t[D.Container];
+                        e.removeEventListener("mousemove", t.handleContainerMouseMove), e.removeEventListener("mouseleave", t.handleContainerMouseLeave), e.removeEventListener("mouseenter", t.handleContainerMouseEnter), t[D.Header].removeEventListener("mousedown", t.handleHeaderMouseDown), window.removeEventListener("mouseup", t.handleCardMouseUp), window.removeEventListener("mousemove", t.handleCardMouseMove)
                     }, t
                 }
-                return u.__extends(t, e), t.prototype.componentDidUpdate = function(e) {
+                return o.__extends(t, e), t.prototype.componentDidUpdate = function(e) {
                     e.card.isCollapsed !== this.props.card.isCollapsed && this.props.onCardsUpdate()
                 }, t.prototype.componentDidMount = function() {
                     this.addEventListeners(), this.props.updateCard(this.props.card.name, {
-                        cardRef: this[i.Card]
+                        cardRef: this[D.Card]
                     })
                 }, t.prototype.componentWillUnmount = function() {
                     this.removeEventListeners()
                 }, t.prototype.render = function() {
                     var e = this.props,
-                        t = e.card,
-                        n = t.isCollapsed,
-                        a = t.isGrabbed,
-                        s = t.placeholderPosition,
-                        d = e.grabbedCard,
-                        c = e.menu;
-                    return p.createElement(h.Ya, {
-                        "data-test-selector": o.Container,
-                        display: h.X.Flex,
-                        flexDirection: h.Aa.Column,
-                        refDelegate: this.registerRef.bind(this, i.Container)
-                    }, p.createElement(g, {
-                        cloneStyleRef: d && d.cardRef,
-                        show: s === f.c.Top
-                    }), p.createElement(h.Fb, {
-                        background: h.r.Base,
-                        border: !0,
-                        breakpointLarge: {
-                            margin: {
-                                bottom: 2
-                            }
-                        },
-                        className: "drag-and-drop-card-container" + (a ? " drag-and-drop-card-container__grabbed" : ""),
-                        "data-test-selector": o.Card,
-                        display: h.X.Flex,
-                        elevation: a ? 4 : 1,
-                        flexDirection: h.Aa.Column,
-                        margin: {
-                            bottom: 1
-                        },
-                        refDelegate: this.registerRef.bind(this, i.Card)
-                    }, p.createElement(h.Fb, {
-                        alignContent: h.e.Center,
-                        alignItems: h.f.Center,
-                        borderBottom: !0,
-                        className: "drag-and-drop-card-header",
-                        display: h.X.Flex,
-                        justifyContent: h.Xa.Between,
-                        padding: {
-                            x: 1
-                        },
-                        position: h.kb.Relative,
-                        refDelegate: this.registerRef.bind(this, i.Header)
-                    }, p.createElement(h.Ya, {
-                        display: h.X.Flex,
-                        justifyContent: h.Xa.Center
-                    }, p.createElement(h.Ya, {
-                        margin: {
-                            right: 1
-                        }
-                    }, p.createElement(h.Ya, {
-                        className: "drag-and-drop-card-carat" + (n ? "__collapsed" : ""),
-                        refDelegate: this.registerRef.bind(this, i.Carat)
-                    }, p.createElement(h.A, {
-                        ariaLabel: Object(m.d)("Collapse/Expand", "DragAndDropCard"),
-                        icon: h.ub.GlyphArrDown,
-                        onClick: this.handleCaratClick
-                    }))), p.createElement(b, {
-                        title: this.props.title
-                    })), p.createElement(h.Ya, {
-                        display: h.X.Flex,
-                        alignItems: h.f.Center
-                    }, p.createElement(h.Ya, {
-                        refDelegate: this.registerRef.bind(this, i.Menu)
-                    }, c), p.createElement(h.Ya, {
-                        margin: {
-                            left: 1
-                        }
-                    }, p.createElement(h.A, {
-                        ariaLabel: Object(m.d)("Drag", "DragAndDropCard"),
-                        icon: h.ub.DragHandle
-                    })))), p.createElement(h.Ya, {
-                        className: "drag-and-drop-card-content" + (n ? " " + r.ContentCollapsed : ""),
-                        "data-test-selector": o.Content,
-                        position: h.kb.Relative
-                    }, n && this.props.unmountOnCollapse ? null : this.props.children)), p.createElement(g, {
-                        cloneStyleRef: d && d.cardRef,
-                        show: s === f.c.Bottom
-                    }))
+                        t = e.card.placeholderPosition,
+                        n = e.grabbedCard,
+                        r = e.menu,
+                        a = e.title;
+                    return i.createElement(i.Fragment, null, i.createElement(C.Ya, {
+                        display: C.X.Flex,
+                        flexDirection: C.Aa.Column,
+                        refDelegate: this.registerRef.bind(this, D.Container)
+                    }, i.createElement(F, {
+                        cloneStyleRef: n && n.cardRef,
+                        show: t === l.c.Top
+                    }), i.createElement(R, {
+                        menu: r,
+                        refDelegateHeader: this.registerRef.bind(this, D.Header),
+                        refDelegateCard: this.registerRef.bind(this, D.Card),
+                        title: a
+                    }, this.props.card.isCollapsed && this.props.unmountOnCollapse ? null : this.props.children), i.createElement(F, {
+                        cloneStyleRef: n && n.cardRef,
+                        show: t === l.c.Bottom
+                    })), this.props.card.isPoppedOut && i.createElement(B, {
+                        height: this.props.popoutHeight,
+                        menu: r,
+                        title: a
+                    }, this.props.children))
                 }, Object.defineProperty(t.prototype, "isHoveringOtherCard", {
                     get: function() {
                         var e = this.props.targetCard;
-                        return !(!e || e.cardRef !== this[i.Card] || !this.props.grabbedCard)
+                        return !(!e || e.cardRef !== this[D.Card] || !this.props.grabbedCard)
                     },
                     enumerable: !0,
                     configurable: !0
                 }), Object.defineProperty(t.prototype, "isHoveringSelf", {
                     get: function() {
                         var e = this.props.grabbedCard;
-                        return !(!e || e.cardRef !== this[i.Card])
+                        return !(!e || e.cardRef !== this[D.Card])
                     },
                     enumerable: !0,
                     configurable: !0
                 }), t
-            }(p.Component);
-            i.Carat, i.Card, i.Container, i.Header, i.Menu;
-            var C, y = v,
-                S = (C = Object(d.a)("DragAndDropCardContext", {
-                    card: new f.a("unknown")
-                })).InnerProvider,
-                w = C.withContext;
-            var E = Object(s.compose)(l(function(e) {
-                    return e
-                }), w(function(e) {
-                    return e
-                }))(y),
-                _ = n("i8i4"),
-                L = n("8/mp"),
-                k = n("b+ID"),
-                D = function(e) {
+            }(i.Component);
+            D.Card, D.Container, D.Header;
+            var W = Object(s.compose)(f(), v())(j),
+                M = n("8/mp"),
+                N = n("b+ID"),
+                U = function(e) {
                     function t() {
                         var t = null !== e && e.apply(this, arguments) || this;
                         return t.setRootContainerRef = function(e) {
                             t.rootContainerRef = e
                         }, t
                     }
-                    return u.__extends(t, e), t.prototype.componentDidMount = function() {
+                    return o.__extends(t, e), t.prototype.componentDidMount = function() {
                         this.rootContainerRef.appendChild(this.props.element)
                     }, t.prototype.render = function() {
-                        return p.createElement(h.Ya, {
+                        return i.createElement(C.Ya, {
                             refDelegate: this.setRootContainerRef
                         })
                     }, t
-                }(p.Component),
-                O = (n("6Ll5"), function(e) {
+                }(i.Component),
+                A = (n("6Ll5"), function(e) {
                     function t() {
                         var t = null !== e && e.apply(this, arguments) || this;
                         return t.handleContainerMouseOver = function() {
                             var e = t.props.grabbedCard;
                             e && e.cardRef && !t.props.targetCard && t.props.updateCard(t.placeholderName, {
                                 column: t.props.column,
-                                placeholderPosition: f.c.Bottom,
+                                placeholderPosition: l.c.Bottom,
                                 row: t.props.row
-                            }, f.b.SetTarget)
+                            }, l.b.SetTarget)
                         }, t.handleContainerMouseLeave = function() {
-                            t.props.grabbedCard && t.props.targetCard && t.props.updateCard(t.placeholderName, {}, f.b.RemoveTarget)
+                            t.props.grabbedCard && t.props.targetCard && t.props.updateCard(t.placeholderName, {}, l.b.RemoveTarget)
                         }, t.setContainerRef = function(e) {
                             t.containerRef = e
                         }, t
                     }
-                    return u.__extends(t, e), t.prototype.componentDidMount = function() {
+                    return o.__extends(t, e), t.prototype.componentDidMount = function() {
                         this.containerRef.addEventListener("mouseover", this.handleContainerMouseOver), this.containerRef.addEventListener("mouseleave", this.handleContainerMouseLeave)
                     }, t.prototype.componentWillUnmount = function() {
                         this.containerRef.removeEventListener("mouseove", this.handleContainerMouseOver), this.containerRef.removeEventListener("mouseleave", this.handleContainerMouseLeave)
@@ -1487,9 +1634,9 @@
                         var e = this.props,
                             t = e.grabbedCard,
                             n = e.targetCard;
-                        return p.createElement(h.Fb, {
-                            alignContent: h.e.Stretch,
-                            alignItems: h.f.Stretch,
+                        return i.createElement(C.Fb, {
+                            alignContent: C.e.Stretch,
+                            alignItems: C.f.Stretch,
                             breakpointLarge: {
                                 margin: {
                                     right: 2
@@ -1499,11 +1646,11 @@
                                 }
                             },
                             className: "drag-and-drop-layout-column",
-                            display: h.X.Flex,
-                            flexDirection: h.Aa.Column,
+                            display: C.X.Flex,
+                            flexDirection: C.Aa.Column,
                             fullHeight: !0,
                             fullWidth: !0,
-                            justifyContent: h.Xa.Start,
+                            justifyContent: C.Xa.Start,
                             margin: {
                                 right: 1
                             },
@@ -1511,7 +1658,7 @@
                                 y: 1
                             },
                             refDelegate: this.setContainerRef
-                        }, this.props.children, p.createElement(g, {
+                        }, this.props.children, i.createElement(F, {
                             cloneStyleRef: t && t.cardRef,
                             show: !(!n || n.name !== this.placeholderName)
                         }))
@@ -1522,8 +1669,8 @@
                         enumerable: !0,
                         configurable: !0
                     }), t
-                }(p.Component)),
-                R = (n("uZYF"), function(e) {
+                }(i.Component)),
+                Y = (n("uZYF"), function(e) {
                     function t(t) {
                         var n = e.call(this, t) || this;
                         n.handleCardsUpdate = function() {
@@ -1535,107 +1682,107 @@
                             }))
                         }, n.dropCard = function() {
                             n.setState(function(e) {
-                                var t, n, a = e.common,
-                                    r = a.grabbedCard,
-                                    o = a.targetCard,
-                                    i = e.cards,
-                                    s = e.roots;
-                                if (r && o && r.name !== o.name && (s.forEach(function(e, a) {
-                                        e.forEach(function(e, i) {
-                                            e.name === r.name ? t = {
-                                                column: a,
+                                var t, n, r = e.common,
+                                    a = r.grabbedCard,
+                                    i = r.targetCard,
+                                    s = e.cards,
+                                    d = e.roots;
+                                if (a && i && a.name !== i.name && (d.forEach(function(e, r) {
+                                        e.forEach(function(e, o) {
+                                            e.name === a.name ? t = {
+                                                column: r,
                                                 el: e.el,
                                                 name: e.name,
-                                                row: i
-                                            } : e.name === o.name && (n = {
-                                                column: a,
+                                                row: o
+                                            } : e.name === i.name && (n = {
+                                                column: r,
                                                 el: e.el,
                                                 name: e.name,
-                                                row: i
+                                                row: o
                                             })
                                         })
                                     }), n || (n = {
-                                        column: o.column || 0,
-                                        el: o.el,
-                                        name: o.name,
-                                        row: o.row || 0
+                                        column: i.column || 0,
+                                        el: i.el,
+                                        name: i.name,
+                                        row: i.row || 0
                                     }), t && n)) {
-                                    var d = s[t.column],
-                                        c = s[n.column],
-                                        l = o.placeholderPosition === f.c.Bottom;
-                                    c.splice(n.row + (l ? 1 : 0), 0, t), t.column === n.column ? c.splice(t.row + (t.row > n.row ? 1 : 0), 1) : d.splice(t.row, 1)
+                                    var c = d[t.column],
+                                        u = d[n.column],
+                                        p = i.placeholderPosition === l.c.Bottom;
+                                    u.splice(n.row + (p ? 1 : 0), 0, t), t.column === n.column ? u.splice(t.row + (t.row > n.row ? 1 : 0), 1) : c.splice(t.row, 1)
                                 }
                                 return {
-                                    cards: i,
-                                    common: u.__assign({}, e.common, {
+                                    cards: s,
+                                    common: o.__assign({}, e.common, {
                                         grabbedCard: void 0,
                                         targetCard: void 0
                                     }),
-                                    roots: s
+                                    roots: d
                                 }
                             }, n.handleCardsUpdate)
-                        }, n.updateCard = function(e, t, a) {
+                        }, n.updateCard = function(e, t, r) {
                             void 0 === t && (t = {}), n.setState(function(n) {
-                                var r = u.__assign({}, n),
-                                    o = r.cards,
-                                    i = !!o[e],
-                                    s = u.__assign({}, o[e] || new f.a(e), t);
-                                switch (a) {
-                                    case f.b.RemoveTarget:
-                                        r.common = u.__assign({}, n.common, {
+                                var a = o.__assign({}, n),
+                                    i = a.cards,
+                                    s = !!i[e],
+                                    d = o.__assign({}, i[e] || new l.a(e), t);
+                                switch (r) {
+                                    case l.b.RemoveTarget:
+                                        a.common = o.__assign({}, n.common, {
                                             targetCard: void 0
                                         });
                                         break;
-                                    case f.b.SetGrabbed:
-                                        s.isGrabbed = !0, r.common = u.__assign({}, r.common, {
-                                            grabbedCard: s
+                                    case l.b.SetGrabbed:
+                                        d.isGrabbed = !0, a.common = o.__assign({}, a.common, {
+                                            grabbedCard: d
                                         });
                                         break;
-                                    case f.b.SetTarget:
-                                        r.common = u.__assign({}, r.common, {
-                                            targetCard: s
+                                    case l.b.SetTarget:
+                                        a.common = o.__assign({}, a.common, {
+                                            targetCard: d
                                         })
                                 }
-                                return i && (r.cards[e] = s), r
+                                return s && (a.cards[e] = d), a
                             })
                         };
-                        var a = {},
-                            r = t.initialCardsState.map(function(e) {
+                        var r = {},
+                            a = t.initialCardsState.map(function(e) {
                                 return e.map(function(e) {
-                                    return e.el = document.createElement("div"), a[e.name] = e, {
+                                    return e.el = document.createElement("div"), r[e.name] = e, {
                                         el: e.el,
                                         name: e.name
                                     }
                                 })
                             });
                         return n.state = {
-                            cards: a,
+                            cards: r,
                             common: {
                                 dropCard: n.dropCard,
                                 onCardsUpdate: n.handleCardsUpdate,
                                 updateCard: n.updateCard
                             },
-                            roots: r
+                            roots: a
                         }, n
                     }
-                    return u.__extends(t, e), t.prototype.componentDidMount = function() {
+                    return o.__extends(t, e), t.prototype.componentDidMount = function() {
                         this.handleCardsUpdate()
                     }, t.prototype.render = function() {
                         var e = this,
                             t = this.props.isExpandedView;
-                        return p.createElement(p.Fragment, null, p.createElement(L.b, {
+                        return i.createElement(i.Fragment, null, i.createElement(M.b, {
                             className: "drag-and-drop-layout-scrollable-area" + (t ? "__expanded-view" : "")
-                        }, p.createElement(h.Ya, {
-                            alignContent: h.e.Stretch,
-                            alignItems: h.f.Stretch,
+                        }, i.createElement(C.Ya, {
+                            alignContent: C.e.Stretch,
+                            alignItems: C.f.Stretch,
                             className: "drag-and-drop-layout",
-                            display: h.X.Flex,
-                            flexDirection: h.Aa.Row,
+                            display: C.X.Flex,
+                            flexDirection: C.Aa.Row,
                             fullHeight: !0,
                             fullWidth: !0,
-                            justifyContent: h.Xa.Between
+                            justifyContent: C.Xa.Between
                         }, this.state.roots.map(function(t, n) {
-                            return p.createElement(O, {
+                            return i.createElement(A, {
                                 column: n,
                                 key: n,
                                 grabbedCard: e.state.common.grabbedCard,
@@ -1645,57 +1792,57 @@
                             }, t.map(function(e) {
                                 var t = e.el,
                                     n = e.name;
-                                return p.createElement(D, {
+                                return i.createElement(U, {
                                     element: t,
                                     key: n
                                 })
                             }))
-                        }))), p.createElement(c, {
+                        }))), i.createElement(h, {
                             value: this.state.common
                         }, Object.keys(this.state.cards).map(function(t) {
                             var n = e.state.cards[t];
-                            return _.createPortal(p.createElement(S, {
+                            return I.createPortal(i.createElement(u, {
                                 value: {
                                     card: n
                                 }
                             }, e.props.cards[n.name]), n.el)
                         })))
                     }, t
-                }(p.Component));
-            var I = Object(k.b)(function(e) {
+                }(i.Component));
+            var H = Object(N.b)(function(e) {
                     return {
                         isExpandedView: e.isExpandedView
                     }
-                })(R),
-                x = n("eJ65"),
-                P = n("N0BP"),
-                B = function(e) {
+                })(Y),
+                G = n("eJ65"),
+                V = n("N0BP"),
+                X = function(e) {
                     function t() {
                         return null !== e && e.apply(this, arguments) || this
                     }
-                    return u.__extends(t, e), t.prototype.render = function() {
-                        return p.createElement(h.Ya, {
+                    return o.__extends(t, e), t.prototype.render = function() {
+                        return i.createElement(C.Ya, {
                             margin: {
                                 left: 1
                             },
-                            position: h.kb.Relative
-                        }, p.createElement(x.a, null, p.createElement(h.A, u.__assign({
+                            position: C.kb.Relative
+                        }, i.createElement(G.a, null, i.createElement(C.A, o.__assign({
                             ariaLabel: this.props.ariaIconLabel,
                             icon: this.props.icon
-                        }, Object(P.a)(this.props))), p.createElement(h.u, {
+                        }, Object(V.a)(this.props))), i.createElement(C.u, {
                             offsetY: "0",
                             offsetX: "1rem",
-                            direction: h.v.Left,
-                            size: h.w.Small
+                            direction: C.v.Left,
+                            size: C.w.Small
                         }, this.props.children)))
                     }, t
-                }(p.Component);
+                }(i.Component);
             n.d(t, "a", function() {
-                return E
+                return W
             }), n.d(t, "c", function() {
-                return I
+                return H
             }), n.d(t, "b", function() {
-                return B
+                return X
             })
         },
         uZYF: function(e, t, n) {},
@@ -1709,15 +1856,15 @@
             }), n.d(t, "b", function() {
                 return d
             });
-            var a, r = n("1rIY"),
-                o = (a = Object(r.a)("CardsTrackingContext", {
+            var r, a = n("1rIY"),
+                o = (r = Object(a.a)("CardsTrackingContext", {
                     registerReportCardVisibility: function() {
                         return function() {
                             return null
                         }
                     }
                 })).InnerProvider,
-                i = a.withContext,
+                i = r.withContext,
                 s = function(e, t) {
                     return function(n) {
                         return {

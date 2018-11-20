@@ -2552,7 +2552,7 @@
                             display: S.X.Flex,
                             flexDirection: S.Aa.Column,
                             alignItems: S.f.Center,
-                            justifyContent: S.Xa.Center
+                            justifyContent: S.Xa.Start
                         }, c.createElement(S.Ya, {
                             fullWidth: !0
                         }, this.getContent(), c.createElement(S.Ya, {

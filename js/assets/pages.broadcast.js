@@ -6,30 +6,30 @@
                 return s
             });
             var r = n("mrSG"),
-                a = n("q1tI"),
-                o = n("/7QA"),
+                o = n("q1tI"),
+                a = n("/7QA"),
                 i = n("2Ygb");
 
             function s(e, t) {
-                var n = a.createContext(t),
+                var n = o.createContext(t),
                     s = n.Consumer,
                     c = n.Provider;
                 return {
                     withContext: function(t) {
                         return function(n) {
-                            var o;
-                            return (o = function(e) {
-                                function o() {
+                            var a;
+                            return (a = function(e) {
+                                function a() {
                                     return null !== e && e.apply(this, arguments) || this
                                 }
-                                return r.__extends(o, e), o.prototype.render = function() {
+                                return r.__extends(a, e), a.prototype.render = function() {
                                     var e = this;
-                                    return a.createElement(s, null, function(o) {
-                                        var i = t(o);
-                                        return a.createElement(n, r.__assign({}, e.props, i))
+                                    return o.createElement(s, null, function(a) {
+                                        var i = t(a);
+                                        return o.createElement(n, r.__assign({}, e.props, i))
                                     })
-                                }, o
-                            }(a.Component)).displayName = Object(i.a)("With" + e, n), o
+                                }, a
+                            }(o.Component)).displayName = Object(i.a)("With" + e, n), a
                         }
                     },
                     InnerProvider: function(t) {
@@ -37,20 +37,20 @@
                             return null !== t && t.apply(this, arguments) || this
                         }
                         return r.__extends(n, t), n.prototype.componentDidMount = function() {
-                            "object" === typeof this.props.value && this.props.value || o.k.error(new Error(n.displayName + " rendered without an appropriate initial value"), "Set an initial value in your provider component at mount time.")
+                            "object" === typeof this.props.value && this.props.value || a.k.error(new Error(n.displayName + " rendered without an appropriate initial value"), "Set an initial value in your provider component at mount time.")
                         }, n.prototype.render = function() {
-                            return a.createElement(c, {
+                            return o.createElement(c, {
                                 value: this.props.value
                             }, this.props.children)
                         }, n.displayName = "Inner" + e + "Provider", n
-                    }(a.Component)
+                    }(o.Component)
                 }
             }
         },
         "4mBO": function(e, t, n) {
             "use strict";
-            var r, a = n("mrSG"),
-                o = n("q1tI"),
+            var r, o = n("mrSG"),
+                a = n("q1tI"),
                 i = n("1rIY"),
                 s = (r = Object(i.a)("LiveDashboardDeferredLoading", {
                     canRenderAnyComponent: !1,
@@ -80,7 +80,7 @@
                 return void 0 === t && (t = {}),
                     function(n) {
                         return c(u(e, t))(function(t) {
-                            return void 0 !== t.loadFirst[e] || t.canRenderAnyComponent ? o.createElement(n, a.__assign({}, t)) : null
+                            return void 0 !== t.loadFirst[e] || t.canRenderAnyComponent ? a.createElement(n, o.__assign({}, t)) : null
                         })
                     }
             }
@@ -97,7 +97,7 @@
                             t.setState(function(t) {
                                 var n;
                                 return {
-                                    loadFirst: a.__assign({}, t.loadFirst, (n = {}, n[e] = !0, n))
+                                    loadFirst: o.__assign({}, t.loadFirst, (n = {}, n[e] = !0, n))
                                 }
                             })
                         }) : function() {
@@ -105,11 +105,11 @@
                         }
                     }, t
                 }
-                return a.__extends(t, e), t.prototype.componentDidMount = function() {
+                return o.__extends(t, e), t.prototype.componentDidMount = function() {
                     var e = this;
                     this.setState(function(t) {
                         return {
-                            loadFirst: a.__assign({}, t.loadFirst, e.autoReportLoadedNames)
+                            loadFirst: o.__assign({}, t.loadFirst, e.autoReportLoadedNames)
                         }
                     })
                 }, t.prototype.componentDidUpdate = function() {
@@ -126,7 +126,7 @@
                         })
                     }
                 }, t.prototype.render = function() {
-                    return o.createElement(s, {
+                    return a.createElement(s, {
                         value: {
                             canRenderAnyComponent: this.state.canRenderDeferredComponents || this.hasReachedMaximumDeferredTime,
                             loadFirst: this.state.loadFirst,
@@ -142,7 +142,7 @@
                     enumerable: !0,
                     configurable: !0
                 }), t
-            }(o.Component);
+            }(a.Component);
             n.d(t, !1, function() {
                 return s
             }), n.d(t, !1, function() {
@@ -153,39 +153,59 @@
                 return l
             })
         },
+        "5g1g": function(e, t, n) {
+            "use strict";
+            var r = n("mrSG"),
+                o = n("q1tI"),
+                a = n("wUQP"),
+                i = function(e) {
+                    function t() {
+                        return null !== e && e.apply(this, arguments) || this
+                    }
+                    return r.__extends(t, e), t.prototype.render = function() {
+                        return this.props.incremental && Object(a.c)(this.props.name) || Object(a.b)(this.props.name) ? this.props.children : null
+                    }, t
+                }(o.Component),
+                s = i;
+            n.d(t, "b", function() {
+                return i
+            }), n.d(t, "a", function() {
+                return s
+            })
+        },
         "5zf8": function(e, t, n) {
             "use strict";
             n.d(t, "a", function() {
-                return a
+                return o
             }), n.d(t, "b", function() {
                 return c
             });
-            var r, a, o = n("/7QA");
+            var r, o, a = n("/7QA");
 
             function i(e, t) {
                 switch (e) {
                     case r.Second:
-                        return Object(o.d)("{secondCount, plural, one {# second} other {# seconds}}", {
+                        return Object(a.d)("{secondCount, plural, one {# second} other {# seconds}}", {
                             secondCount: t
                         }, "formatDuration");
                     case r.Minute:
-                        return Object(o.d)("{minuteCount, plural, one {# minute} other {# minutes}}", {
+                        return Object(a.d)("{minuteCount, plural, one {# minute} other {# minutes}}", {
                             minuteCount: t
                         }, "formatDuration");
                     case r.Hour:
-                        return Object(o.d)("{hourCount, plural, one {# hour} other {# hours}}", {
+                        return Object(a.d)("{hourCount, plural, one {# hour} other {# hours}}", {
                             hourCount: t
                         }, "formatDuration");
                     case r.Day:
-                        return Object(o.d)("{dayCount, plural, one {# day} other {# days}}", {
+                        return Object(a.d)("{dayCount, plural, one {# day} other {# days}}", {
                             dayCount: t
                         }, "formatDuration");
                     case r.Week:
-                        return Object(o.d)("{weekCount, plural, one {# week} other {# weeks}}", {
+                        return Object(a.d)("{weekCount, plural, one {# week} other {# weeks}}", {
                             weekCount: t
                         }, "formatDuration");
                     case r.Month:
-                        return Object(o.d)("{monthCount, plural, one {# month} other {# months}}", {
+                        return Object(a.d)("{monthCount, plural, one {# month} other {# months}}", {
                             monthCount: t
                         }, "formatDuration");
                     default:
@@ -196,27 +216,27 @@
             function s(e, t) {
                 switch (e) {
                     case r.Second:
-                        return Object(o.d)("{secondCount}s", {
+                        return Object(a.d)("{secondCount}s", {
                             secondCount: t
                         }, "formatDuration");
                     case r.Minute:
-                        return Object(o.d)("{minuteCount}m", {
+                        return Object(a.d)("{minuteCount}m", {
                             minuteCount: t
                         }, "formatDuration");
                     case r.Hour:
-                        return Object(o.d)("{hourCount}h", {
+                        return Object(a.d)("{hourCount}h", {
                             hourCount: t
                         }, "formatDuration");
                     case r.Day:
-                        return Object(o.d)("{dayCount}d", {
+                        return Object(a.d)("{dayCount}d", {
                             dayCount: t
                         }, "formatDuration");
                     case r.Week:
-                        return Object(o.d)("{weekCount}w", {
+                        return Object(a.d)("{weekCount}w", {
                             weekCount: t
                         }, "formatDuration");
                     case r.Month:
-                        return Object(o.d)("{monthCount}mo", {
+                        return Object(a.d)("{monthCount}mo", {
                             monthCount: t
                         }, "formatDuration");
                     default:
@@ -226,16 +246,16 @@
 
             function c(e, t) {
                 var n;
-                switch (void 0 === t && (t = a.Humanized), t === a.ClockAuto && (t = e >= 3600 ? a.ClockHMS : a.ClockMS), t) {
-                    case a.ClockHM:
-                    case a.ClockHMS:
+                switch (void 0 === t && (t = o.Humanized), t === o.ClockAuto && (t = e >= 3600 ? o.ClockHMS : o.ClockMS), t) {
+                    case o.ClockHM:
+                    case o.ClockHMS:
                         n = r.Hour;
                         break;
-                    case a.ClockMS:
+                    case o.ClockMS:
                         n = r.Minute
                 }
                 var c = 2;
-                t === a.ClockHMS && (c = 3);
+                t === o.ClockHMS && (c = 3);
                 var d = function(e, t) {
                         void 0 === t && (t = r.Month);
                         var n = {};
@@ -243,16 +263,16 @@
                     }(e, n),
                     l = Object.keys(d);
                 if (l.forEach(function(e, n) {
-                        t !== a.Humanized && t !== a.HumanizedShort || d[e] || delete d[e], n < l.length - c && delete d[e]
-                    }), t === a.Humanized) return function(e) {
+                        t !== o.Humanized && t !== o.HumanizedShort || d[e] || delete d[e], n < l.length - c && delete d[e]
+                    }), t === o.Humanized) return function(e) {
                     return e.months ? i(r.Month, e.months) : e.weeks && e.days ? i(r.Week, e.weeks) + " " + i(r.Day, e.days) : e.weeks ? i(r.Week, e.weeks) : e.days && e.hours ? i(r.Day, e.days) + " " + i(r.Hour, e.hours) : e.days ? i(r.Day, e.days) : e.hours && e.minutes ? i(r.Hour, e.hours) + " " + i(r.Minute, e.minutes) : e.hours ? i(r.Hour, e.hours) : e.minutes && e.seconds ? i(r.Minute, e.minutes) + " " + i(r.Second, e.seconds) : e.minutes ? i(r.Minute, e.minutes) : i(r.Second, e.seconds || 0)
                 }(d);
-                if (t === a.HumanizedShort) return function(e) {
+                if (t === o.HumanizedShort) return function(e) {
                     return e.months ? s(r.Month, e.months) : e.weeks && e.days ? "" + s(r.Week, e.weeks) + s(r.Day, e.days) : e.weeks ? s(r.Week, e.weeks) : e.days && e.hours ? "" + s(r.Day, e.days) + s(r.Hour, e.hours) : e.days ? s(r.Day, e.days) : e.hours && e.minutes ? "" + s(r.Hour, e.hours) + s(r.Minute, e.minutes) : e.hours ? s(r.Hour, e.hours) : e.minutes && e.seconds ? "" + s(r.Minute, e.minutes) + s(r.Second, e.seconds) : e.minutes ? s(r.Minute, e.minutes) : s(r.Second, e.seconds || 0)
                 }(d);
                 var p = ":",
                     m = !1;
-                switch (o.p.intl.getLanguageCode()) {
+                switch (a.p.intl.getLanguageCode()) {
                     case "cy":
                     case "da":
                     case "fi":
@@ -270,11 +290,11 @@
                     f = d.minutes || 0,
                     g = d.hours || 0;
                 switch (t) {
-                    case a.ClockHM:
-                    case a.ClockHMS:
-                        var v = (m ? u(g, 2) : g) + p + u(f, 2);
-                        return t === a.ClockHMS && (v += p + u(h, 2)), v;
-                    case a.ClockMS:
+                    case o.ClockHM:
+                    case o.ClockHMS:
+                        var b = (m ? u(g, 2) : g) + p + u(f, 2);
+                        return t === o.ClockHMS && (b += p + u(h, 2)), b;
+                    case o.ClockMS:
                         return (m ? u(f, 2) : f) + p + u(h, 2)
                 }
             }
@@ -287,24 +307,24 @@
             }(r || (r = {})),
             function(e) {
                 e[e.Humanized = 0] = "Humanized", e[e.HumanizedShort = 1] = "HumanizedShort", e[e.ClockAuto = 2] = "ClockAuto", e[e.ClockHM = 3] = "ClockHM", e[e.ClockMS = 4] = "ClockMS", e[e.ClockHMS = 5] = "ClockHMS"
-            }(a || (a = {}))
+            }(o || (o = {}))
         },
         "6Ll5": function(e, t, n) {},
         "6XEL": function(e, t, n) {
             "use strict";
             var r = {};
 
-            function a(e) {
+            function o(e) {
                 return "/" + e + "/dashboard/achievements/"
             }
 
-            function o(e) {
+            function a(e) {
                 return "/" + e.channelLogin + "/dashboard/achievements/" + e.id
             }
             n.d(r, "channelAchievements", function() {
-                return a
-            }), n.d(r, "achievement", function() {
                 return o
+            }), n.d(r, "achievement", function() {
+                return a
             });
             var i, s = n("dG1e"),
                 c = n("rSo7"),
@@ -312,10 +332,10 @@
 
             function d(e, t, n) {
                 return e.sort(function(e, r) {
-                    for (var a = 0; a < t.length; a++) {
-                        var o = t[a],
-                            s = n[a] || i.Ascending,
-                            c = l(o(e), o(r)) * s;
+                    for (var o = 0; o < t.length; o++) {
+                        var a = t[o],
+                            s = n[o] || i.Ascending,
+                            c = l(a(e), a(r)) * s;
                         if (0 !== c) return c
                     }
                     return 0
@@ -547,7 +567,7 @@
             n.d(t, "a", function() {
                 return r
             }), n.d(t, "d", function() {
-                return a
+                return o
             }), n.d(t, "b", function() {
                 return s
             }), n.d(t, "c", function() {
@@ -561,9 +581,9 @@
             }), n.d(t, "j", function() {
                 return g
             }), n.d(t, "g", function() {
-                return v
-            }), n.d(t, "i", function() {
                 return b
+            }), n.d(t, "i", function() {
+                return v
             }), n.d(t, "e", function() {
                 return C
             }), n.d(t, "f", function() {
@@ -571,7 +591,7 @@
             }), n.d(t, "h", function() {
                 return w
             });
-            var r, a, o, i, s, c, u = n("mrSG"),
+            var r, o, a, i, s, c, u = n("mrSG"),
                 d = n("/7QA"),
                 l = n("2xye"),
                 p = n("lDS7");
@@ -580,10 +600,10 @@
             }(r || (r = {})),
             function(e) {
                 e.SliderMove = "slidermove", e.StreamDelayClick = "streamdelayclick"
-            }(a || (a = {})),
+            }(o || (o = {})),
             function(e) {
                 e.Click = "click"
-            }(o || (o = {})),
+            }(a || (a = {})),
             function(e) {
                 e.Hover = "hover"
             }(i || (i = {})),
@@ -614,11 +634,11 @@
                 },
                 g = function(e) {
                     d.p.tracking.track(l.SpadeEventType.LiveDashboardStreamHealthEvent, {
-                        action: o.Click,
+                        action: a.Click,
                         target_name: e
                     })
                 },
-                v = function(e, t, n) {
+                b = function(e, t, n) {
                     d.p.tracking.track(l.SpadeEventType.AutoHostChannelUpdate, {
                         time: Date.now(),
                         location: "dashboard",
@@ -627,7 +647,7 @@
                         action: n
                     })
                 },
-                b = function(e, t, n, r) {
+                v = function(e, t, n, r) {
                     w(c.StreamDelay, {
                         type: e,
                         slider_start_position: t,
@@ -659,15 +679,15 @@
         IFXb: function(e, t, n) {
             "use strict";
             var r = n("mrSG"),
-                a = n("q1tI"),
-                o = n("8/mp"),
+                o = n("q1tI"),
+                a = n("8/mp"),
                 i = n("Ue10"),
                 s = (n("wPMx"), function(e) {
                     function t() {
                         return null !== e && e.apply(this, arguments) || this
                     }
                     return r.__extends(t, e), t.prototype.render = function() {
-                        return a.createElement(o.b, null, a.createElement(i.Ya, {
+                        return o.createElement(a.b, null, o.createElement(i.Ya, {
                             className: "dashboard-centered-page",
                             margin: {
                                 y: 4
@@ -678,14 +698,14 @@
                             position: i.kb.Relative
                         }, this.props.children))
                     }, t
-                }(a.Component));
+                }(o.Component));
             n.d(t, "a", function() {
                 return s
             })
         },
         JBqe: function(e, t, n) {
             "use strict";
-            var r, a, o = n("mrSG"),
+            var r, o, a = n("mrSG"),
                 i = n("q1tI"),
                 s = n("x7UT"),
                 c = n("0Log"),
@@ -694,9 +714,9 @@
                 l = n("kxrW"),
                 p = n("b6Yk"),
                 m = function(e) {
-                    return o.__awaiter(void 0, void 0, void 0, function() {
+                    return a.__awaiter(void 0, void 0, void 0, function() {
                         var t;
-                        return o.__generator(this, function(n) {
+                        return a.__generator(this, function(n) {
                             switch (n.label) {
                                 case 0:
                                     return [4, p.a.get("/v5/streams/" + e)];
@@ -717,17 +737,17 @@
                     return e
                 };
 
-            function v(e) {
+            function b(e) {
                 return f(g)(e)
             }
-            var b = 3e5,
+            var v = 3e5,
                 C = function(e) {
                     function t(t) {
                         var n = e.call(this, t) || this;
                         return n.fetchIsStreamLiveLegacyAPI = function() {
-                            return o.__awaiter(n, void 0, void 0, function() {
+                            return a.__awaiter(n, void 0, void 0, function() {
                                 var e;
-                                return o.__generator(this, function(t) {
+                                return a.__generator(this, function(t) {
                                     switch (t.label) {
                                         case 0:
                                             return [4, m(this.props.channelID)];
@@ -741,13 +761,13 @@
                         }, n.onStreamStatusChange = function(e) {
                             n.setLiveState(e === l.a.Online)
                         }, n.pollLegacyAPI = function() {
-                            n.legacyAPIIntervalID = setInterval(n.fetchIsStreamLiveLegacyAPI, b)
+                            n.legacyAPIIntervalID = setInterval(n.fetchIsStreamLiveLegacyAPI, v)
                         }, n.resetLegacyAPIPoll = function() {
                             n.legacyAPIIntervalID && (clearInterval(n.legacyAPIIntervalID), n.pollLegacyAPI())
                         }, n.setInitialLiveState = function() {
-                            return o.__awaiter(n, void 0, void 0, function() {
+                            return a.__awaiter(n, void 0, void 0, function() {
                                 var e;
-                                return o.__generator(this, function(t) {
+                                return a.__generator(this, function(t) {
                                     switch (t.label) {
                                         case 0:
                                             return void 0 !== this.state.isLive ? [3, 2] : [4, m(this.props.channelID)];
@@ -764,7 +784,7 @@
                             onStreamStatusChange: n.onStreamStatusChange
                         }, n
                     }
-                    return o.__extends(t, e), t.prototype.componentDidMount = function() {
+                    return a.__extends(t, e), t.prototype.componentDidMount = function() {
                         this.onPubsubUpdate(), this.setInitialLiveState(), this.pollLegacyAPI()
                     }, t.prototype.componentDidUpdate = function() {
                         this.onPubsubUpdate()
@@ -789,14 +809,14 @@
                     topic: function(e) {
                         return Object(u.J)(e.channelID)
                     },
-                    mapMessageTypesToProps: (a = {}, a[c.PubsubMessageType.ChannelStreamUp] = "streamUp", a[c.PubsubMessageType.ChannelStreamDown] = "streamDown", a)
+                    mapMessageTypesToProps: (o = {}, o[c.PubsubMessageType.ChannelStreamUp] = "streamUp", o[c.PubsubMessageType.ChannelStreamDown] = "streamDown", o)
                 }])(C);
             n.d(t, !1, function() {
                 return h
             }), n.d(t, !1, function() {
                 return f
             }), n.d(t, "b", function() {
-                return v
+                return b
             }), n.d(t, !1, function() {
                 return C
             }), n.d(t, "a", function() {
@@ -809,8 +829,8 @@
         },
         NQSV: function(e, t, n) {
             "use strict";
-            var r, a = n("mrSG"),
-                o = n("q1tI"),
+            var r, o = n("mrSG"),
+                a = n("q1tI"),
                 i = n("/7QA"),
                 s = n("UWzm"),
                 c = n.n(s),
@@ -822,219 +842,219 @@
                 h = n.n(m),
                 f = n("Nmvj"),
                 g = n.n(f),
-                v = n("g/LZ"),
-                b = n.n(v),
+                b = n("g/LZ"),
+                v = n.n(b),
                 C = n("wcfy"),
                 y = n.n(C),
                 w = n("LWua"),
                 S = n.n(w),
-                _ = n("EkNY"),
-                E = n("Ue10");
+                E = n("EkNY"),
+                _ = n("Ue10");
             ! function(e) {
                 e.DownloadButton = "broadast-items-card__download-button"
             }(r || (r = {}));
             var k = function(e) {
                     var t = e.link,
                         n = e.title;
-                    return o.createElement(E.Fb, {
-                        background: E.r.Base,
+                    return a.createElement(_.Fb, {
+                        background: _.r.Base,
                         elevation: 1,
                         padding: 2,
-                        display: E.X.Flex,
-                        flexDirection: E.Aa.Column,
+                        display: _.X.Flex,
+                        flexDirection: _.Aa.Column,
                         fullHeight: !0
-                    }, o.createElement(E.Ya, {
-                        display: E.X.Flex,
-                        justifyContent: E.Xa.Center,
+                    }, a.createElement(_.Ya, {
+                        display: _.X.Flex,
+                        justifyContent: _.Xa.Center,
                         margin: {
                             top: 1
                         }
-                    }, o.createElement(E.S, {
+                    }, a.createElement(_.S, {
                         alt: n,
                         src: e.imgURL
-                    })), o.createElement(E.Ya, {
+                    })), a.createElement(_.Ya, {
                         margin: {
                             top: 2,
                             bottom: 1
                         }
-                    }, o.createElement(E.W, {
-                        fontSize: E.Ca.Size5
-                    }, n), o.createElement(E.U, {
+                    }, a.createElement(_.W, {
+                        fontSize: _.Ca.Size5
+                    }, n), a.createElement(_.U, {
                         targetBlank: !0,
                         to: t
-                    }, t)), o.createElement(E.W, {
-                        type: E.Wb.P,
-                        color: E.O.Alt2
-                    }, e.longDescription), o.createElement(E.Ya, {
-                        display: E.X.Flex,
-                        flexDirection: E.Aa.Column,
+                    }, t)), a.createElement(_.W, {
+                        type: _.Wb.P,
+                        color: _.O.Alt2
+                    }, e.longDescription), a.createElement(_.Ya, {
+                        display: _.X.Flex,
+                        flexDirection: _.Aa.Column,
                         fullWidth: !0,
                         flexGrow: 1,
-                        justifyContent: E.Xa.End,
+                        justifyContent: _.Xa.End,
                         margin: {
                             top: 2
                         }
-                    }, o.createElement(E.z, {
+                    }, a.createElement(_.z, {
                         "data-test-selector": r.DownloadButton,
                         fullWidth: !0,
-                        type: E.F.Hollow,
+                        type: _.F.Hollow,
                         linkTo: t,
-                        onClick: _.e.bind(null, n)
-                    }, Object(i.d)("Download", "BroadcastItemCard")), o.createElement(E.Ya, {
+                        onClick: E.e.bind(null, n)
+                    }, Object(i.d)("Download", "BroadcastItemCard")), a.createElement(_.Ya, {
                         margin: {
                             top: 1
                         }
-                    }, o.createElement(E.z, {
+                    }, a.createElement(_.z, {
                         fullWidth: !0,
-                        type: E.F.Text,
+                        type: _.F.Text,
                         linkTo: e.setupGuideLink
                     }, Object(i.d)("Setup Guide", "BroadcastItemCard")))))
                 },
-                L = n("IFXb"),
-                O = (n("L/BW"), function(e) {
+                O = n("IFXb"),
+                L = (n("L/BW"), function(e) {
                     function t() {
                         return null !== e && e.apply(this, arguments) || this
                     }
-                    return a.__extends(t, e), t.prototype.componentDidMount = function() {
+                    return o.__extends(t, e), t.prototype.componentDidMount = function() {
                         i.p.setPageTitle(Object(i.d)("Broadcast", "BroadcastPage"))
                     }, t.prototype.render = function() {
-                        return o.createElement(E.Ya, {
-                            display: E.X.Flex,
-                            flexDirection: E.Aa.Column,
-                            flexWrap: E.Ba.NoWrap,
+                        return a.createElement(_.Ya, {
+                            display: _.X.Flex,
+                            flexDirection: _.Aa.Column,
+                            flexWrap: _.Ba.NoWrap,
                             fullHeight: !0
-                        }, o.createElement(E.Ya, {
+                        }, a.createElement(_.Ya, {
                             className: "broadcast-container",
-                            position: E.kb.Relative,
+                            position: _.kb.Relative,
                             flexGrow: 1,
                             fullHeight: !0,
-                            overflow: E.db.Hidden
-                        }, o.createElement(L.a, null, o.createElement(E.W, {
+                            overflow: _.db.Hidden
+                        }, a.createElement(O.a, null, a.createElement(_.W, {
                             bold: !0,
-                            type: E.Wb.H4
-                        }, Object(i.d)("Broadcast While You Play", "BroadcastRootPage")), o.createElement(E.Ya, {
+                            type: _.Wb.H4
+                        }, Object(i.d)("Broadcast While You Play", "BroadcastRootPage")), a.createElement(_.Ya, {
                             margin: {
                                 y: 1
                             }
-                        }, o.createElement(E.W, {
-                            color: E.O.Alt2,
-                            type: E.Wb.P
-                        }, Object(i.d)("Here are the most common tools for broadcasting.", "BroadcastRootPage")), o.createElement(E.W, {
-                            color: E.O.Alt2
+                        }, a.createElement(_.W, {
+                            color: _.O.Alt2,
+                            type: _.Wb.P
+                        }, Object(i.d)("Here are the most common tools for broadcasting.", "BroadcastRootPage")), a.createElement(_.W, {
+                            color: _.O.Alt2
                         }, Object(i.d)("For more info, visit the <x:link>Support Center</x:link>.", {
                             "x:link": function(e) {
-                                return o.createElement(E.U, {
+                                return a.createElement(_.U, {
                                     targetBlank: !0,
                                     to: "https://help.twitch.tv/customer/portal/topics/301257-getting-started/articles"
                                 }, e)
                             }
-                        }, "BroadcastRootPage"))), o.createElement(E.W, {
-                            color: E.O.Alt2
+                        }, "BroadcastRootPage"))), a.createElement(_.W, {
+                            color: _.O.Alt2
                         }, Object(i.d)("Looking for your stream key? You can find it on your <x:link>dashboard</x:link>.", {
                             "x:link": function(e) {
-                                return o.createElement(E.U, {
+                                return a.createElement(_.U, {
                                     to: "/dashboard/settings"
                                 }, e)
                             }
-                        }, "BroadcastRootPage")), o.createElement(E.Ya, {
+                        }, "BroadcastRootPage")), a.createElement(_.Ya, {
                             margin: {
                                 y: 2
                             }
-                        }, o.createElement(E.W, {
+                        }, a.createElement(_.W, {
                             bold: !0,
-                            type: E.Wb.H4
-                        }, Object(i.d)("Broadcasting Applications", "BroadcastRootPage"))), o.createElement(E.cc, {
-                            childWidth: E.dc.Large,
-                            gutterSize: E.ec.Small,
+                            type: _.Wb.H4
+                        }, Object(i.d)("Broadcasting Applications", "BroadcastRootPage"))), a.createElement(_.cc, {
+                            childWidth: _.dc.Large,
+                            gutterSize: _.ec.Small,
                             noGrow: !0,
                             placeholderItems: 8
-                        }, o.createElement(E.Ya, {
+                        }, a.createElement(_.Ya, {
                             margin: {
                                 bottom: 2
                             }
-                        }, o.createElement(k, {
+                        }, a.createElement(k, {
                             imgURL: h.a,
                             title: "Player.me",
                             link: "https://player.me/",
                             longDescription: Object(i.d)("Free, easy-to-use, all-in-one application for streaming and recording. Includes thousands of professionally designed overlays with alerts, a stream dashboard for tracking events, live stream chat and scene switching.", "BroadcastRootPage"),
                             setupGuideLink: "https://helpdesk.player.me/en/article/streaming-setup-guide-svsjha"
-                        })), o.createElement(E.Ya, {
+                        })), a.createElement(_.Ya, {
                             margin: {
                                 bottom: 2
                             }
-                        }, o.createElement(k, {
+                        }, a.createElement(k, {
                             imgURL: y.a,
                             title: "Streamlabs OBS",
                             link: "https://streamlabs.com/streamlabs-obs/",
                             longDescription: Object(i.d)("Streamlabs OBS is free, open source, and easy way to get started streaming. The app is built on top of OBS with a whole lot of exciting features: facemasks, built-in widgets & chat, game specific encoders and thousands of free overlays and themes.", "BroadcastRootPage"),
                             setupGuideLink: "https://support.streamlabs.com/hc/en-us/articles/115004797393-Streamlabs-OBS-All-In-One-Window-Walk-Through"
-                        })), o.createElement(E.Ya, {
+                        })), a.createElement(_.Ya, {
                             margin: {
                                 bottom: 2
                             }
-                        }, o.createElement(k, {
+                        }, a.createElement(k, {
                             imgURL: S.a,
                             title: "XSplit Broadcaster",
                             link: "http://www.xsplit.com/",
                             longDescription: Object(i.d)("Simple yet powerful live streaming and recording software. XSplit Broadcaster is a revolutionary audio/video mixing application that allows for highly customizable professional quality live broadcasts by using simple and intuitive interface anyone can master.", "BroadcastRootPage"),
                             setupGuideLink: "https://www.xsplit.com/support"
-                        })), o.createElement(E.Ya, {
+                        })), a.createElement(_.Ya, {
                             margin: {
                                 bottom: 2
                             }
-                        }, o.createElement(k, {
+                        }, a.createElement(k, {
                             imgURL: d.a,
                             title: "Open Broadcast Software",
                             link: "http://obsproject.com/",
                             longDescription: Object(i.d)("Free and open source software for recording and live streaming. Source code is available to everyone to contribute and improve.", "BroadcastRootPage"),
                             setupGuideLink: "https://obsproject.com/help"
-                        }))), o.createElement(E.Ya, {
+                        }))), a.createElement(_.Ya, {
                             margin: {
                                 y: 2
                             }
-                        }, o.createElement(E.W, {
+                        }, a.createElement(_.W, {
                             bold: !0,
-                            type: E.Wb.H4
-                        }, Object(i.d)("Broadcasting Tools", "BroadcastRootPage"))), o.createElement(E.cc, {
-                            childWidth: E.dc.Large,
-                            gutterSize: E.ec.Small,
+                            type: _.Wb.H4
+                        }, Object(i.d)("Broadcasting Tools", "BroadcastRootPage"))), a.createElement(_.cc, {
+                            childWidth: _.dc.Large,
+                            gutterSize: _.ec.Small,
                             noGrow: !0,
                             placeholderItems: 3
-                        }, o.createElement(E.Ya, {
+                        }, a.createElement(_.Ya, {
                             margin: {
                                 bottom: 2
                             }
-                        }, o.createElement(k, {
-                            imgURL: b.a,
+                        }, a.createElement(k, {
+                            imgURL: v.a,
                             title: "Streamlabs",
                             link: "https://streamlabs.com/",
                             longDescription: Object(i.d)("Level up your stream with alerts, donations, and 20+ interactive widgets.", "BroadcastRootPage"),
                             setupGuideLink: "https://support.streamlabs.com/hc/en-us/articles/217741147-Setting-up-your-Streamlabs-widgets-"
-                        })), o.createElement(E.Ya, {
+                        })), a.createElement(_.Ya, {
                             margin: {
                                 bottom: 2
                             }
-                        }, o.createElement(k, {
+                        }, a.createElement(k, {
                             imgURL: g.a,
                             title: "StreamElements",
                             link: "https://streamelements.com/",
                             longDescription: Object(i.d)("A full suite for all your streaming needs: Bot, Overlays, Loyalty points, Giveaways and much more for new and veteran streamers alike.", "BroadcastRootPage"),
                             setupGuideLink: "https://support.streamelements.com/hc/en-us/articles/115003424812-Quick-Start-Guide"
-                        })), o.createElement(E.Ya, {
+                        })), a.createElement(_.Ya, {
                             margin: {
                                 bottom: 2
                             }
-                        }, o.createElement(k, {
+                        }, a.createElement(k, {
                             imgURL: c.a,
                             title: "Muxy",
                             link: "https://www.muxy.io/",
                             longDescription: Object(i.d)("Muxy provides alerts, tips, a real-time Live Feed, Cheer visualizations, and stream analytics.", "BroadcastRootPage"),
                             setupGuideLink: "https://muxy.io/tutorial/"
-                        })), o.createElement(E.Ya, {
+                        })), a.createElement(_.Ya, {
                             margin: {
                                 bottom: 2
                             }
-                        }, o.createElement(k, {
+                        }, a.createElement(k, {
                             imgURL: p.a,
                             title: "Opera Event",
                             link: "https://gather.operaevent.co/",
@@ -1042,30 +1062,30 @@
                             setupGuideLink: "https://gather.operaevent.co/"
                         }))))))
                     }, t
-                }(o.Component));
+                }(a.Component));
             n.d(t, "a", function() {
-                return O
+                return L
             })
         },
         NkOX: function(e, t, n) {
             "use strict";
-            var r, a;
+            var r, o;
             n.d(t, "a", function() {
                     return r
                 }), n.d(t, "b", function() {
-                    return a
+                    return o
                 }),
                 function(e) {
                     e.ActivityFeed = "activity-feed", e.AdsWidget = "ads-widget", e.BountyBoardWidget = "bounty-board-widget", e.ExtensionLiveConfigure = "extension-live-configure", e.HostWidget = "host-widget", e.LiveChat = "live-chat", e.SquadStream = "squad-stream", e.Stats = "stats", e.StreamDelay = "stream-delay", e.StreamHealth = "stream-health", e.StreamInformation = "stream-information", e.StreamMarker = "stream-marker", e.VideoPreview = "video-preview", e.VideoProducerWidget = "video-producer-widget"
                 }(r || (r = {})),
                 function(e) {
                     e.ActivityFeedWidget = "activity_feed_widget", e.AdsWidget = "ads_widget", e.BountyBoardWidget = "bounty_board_widget", e.ExtensionLiveConfigureWidget = "extension_config_widget", e.HostWidget = "host_widget", e.LiveChatWidget = "chat_widget", e.SquadStreamWidget = "squad_stream_widget", e.StatsWidget = "stats_widget", e.StreamDelayWidget = "stream_delay_widget", e.StreamHealthWidget = "stream_health_widget", e.StreamInformationWidget = "stream_information_widget", e.StreamMarkerWidget = "stream_marker_widget", e.VideoPreviewWidget = "video_preview_widget", e.VideoProducerWidget = "video_producer_widget"
-                }(a || (a = {}))
+                }(o || (o = {}))
         },
         Nmvj: function(e, t, n) {
             e.exports = n.p + "assets/streamelements_1x-5a78a214c1701af3da1d.png"
         },
-        SMeG: function(e, t, n) {},
+        O4PT: function(e, t, n) {},
         SX9i: function(e, t, n) {
             e.exports = n.p + "assets/opera_1x-2766d8f4415bd7218cc9.png"
         },
@@ -1074,8 +1094,8 @@
         },
         "b+ID": function(e, t, n) {
             "use strict";
-            var r, a = n("mrSG"),
-                o = n("q1tI"),
+            var r, o = n("mrSG"),
+                a = n("q1tI"),
                 i = n("8Ad5"),
                 s = n("1rIY"),
                 c = (r = Object(s.a)("ExpandedViewButtonContext", {
@@ -1101,16 +1121,16 @@
                             toggleExpandedView: n.toggleExpandedView
                         }, n
                     }
-                    return a.__extends(t, e), t.prototype.componentDidMount = function() {
+                    return o.__extends(t, e), t.prototype.componentDidMount = function() {
                         window.addEventListener("keyup", this.handleKeyUp)
                     }, t.prototype.componentWillUnmount = function() {
                         window.removeEventListener("keyup", this.handleKeyUp)
                     }, t.prototype.render = function() {
-                        return o.createElement(c, {
+                        return a.createElement(c, {
                             value: this.state
                         }, this.props.children)
                     }, t
-                }(o.Component);
+                }(a.Component);
             n.d(t, !1, function() {
                 return c
             }), n.d(t, "b", function() {
@@ -1125,122 +1145,122 @@
                 return i
             });
             var r = n("mrSG"),
-                a = n("/7QA"),
-                o = n("kRBY"),
+                o = n("/7QA"),
+                a = n("kRBY"),
                 i = function() {
                     function e() {}
                     return e.get = function(e, t, n) {
                         return void 0 === t && (t = {}), void 0 === n && (n = {}), r.__awaiter(this, void 0, Promise, function() {
-                            return r.__generator(this, function(a) {
-                                switch (a.label) {
+                            return r.__generator(this, function(o) {
+                                switch (o.label) {
                                     case 0:
                                         return [4, this.request(e, r.__assign({}, t, {
                                             method: "GET"
                                         }), n)];
                                     case 1:
-                                        return [2, a.sent()]
+                                        return [2, o.sent()]
                                 }
                             })
                         })
                     }, e.getOrThrow = function(e, t, n) {
                         return void 0 === t && (t = {}), void 0 === n && (n = {}), r.__awaiter(this, void 0, Promise, function() {
-                            return r.__generator(this, function(a) {
-                                switch (a.label) {
+                            return r.__generator(this, function(o) {
+                                switch (o.label) {
                                     case 0:
                                         return [4, this.requestOrThrow(e, r.__assign({}, t, {
                                             method: "GET"
                                         }), n)];
                                     case 1:
-                                        return [2, a.sent()]
+                                        return [2, o.sent()]
                                 }
                             })
                         })
                     }, e.put = function(e, t, n) {
                         return void 0 === t && (t = {}), void 0 === n && (n = {}), r.__awaiter(this, void 0, Promise, function() {
-                            return r.__generator(this, function(a) {
-                                switch (a.label) {
+                            return r.__generator(this, function(o) {
+                                switch (o.label) {
                                     case 0:
                                         return [4, this.request(e, r.__assign({}, t, {
                                             method: "PUT"
                                         }), n)];
                                     case 1:
-                                        return [2, a.sent()]
+                                        return [2, o.sent()]
                                 }
                             })
                         })
                     }, e.putOrThrow = function(e, t, n) {
                         return void 0 === t && (t = {}), void 0 === n && (n = {}), r.__awaiter(this, void 0, Promise, function() {
-                            return r.__generator(this, function(a) {
-                                switch (a.label) {
+                            return r.__generator(this, function(o) {
+                                switch (o.label) {
                                     case 0:
                                         return [4, this.requestOrThrow(e, r.__assign({}, t, {
                                             method: "PUT"
                                         }), n)];
                                     case 1:
-                                        return [2, a.sent()]
+                                        return [2, o.sent()]
                                 }
                             })
                         })
                     }, e.post = function(e, t, n) {
                         return void 0 === t && (t = {}), void 0 === n && (n = {}), r.__awaiter(this, void 0, Promise, function() {
-                            return r.__generator(this, function(a) {
-                                switch (a.label) {
+                            return r.__generator(this, function(o) {
+                                switch (o.label) {
                                     case 0:
                                         return [4, this.request(e, r.__assign({}, t, {
                                             method: "POST"
                                         }), n)];
                                     case 1:
-                                        return [2, a.sent()]
+                                        return [2, o.sent()]
                                 }
                             })
                         })
                     }, e.postOrThrow = function(e, t, n) {
                         return void 0 === t && (t = {}), void 0 === n && (n = {}), r.__awaiter(this, void 0, Promise, function() {
-                            return r.__generator(this, function(a) {
-                                switch (a.label) {
+                            return r.__generator(this, function(o) {
+                                switch (o.label) {
                                     case 0:
                                         return [4, this.requestOrThrow(e, r.__assign({}, t, {
                                             method: "POST"
                                         }), n)];
                                     case 1:
-                                        return [2, a.sent()]
+                                        return [2, o.sent()]
                                 }
                             })
                         })
                     }, e.delete = function(e, t, n) {
                         return void 0 === t && (t = {}), void 0 === n && (n = {}), r.__awaiter(this, void 0, Promise, function() {
-                            return r.__generator(this, function(a) {
-                                switch (a.label) {
+                            return r.__generator(this, function(o) {
+                                switch (o.label) {
                                     case 0:
                                         return [4, this.request(e, r.__assign({}, t, {
                                             method: "DELETE"
                                         }), n)];
                                     case 1:
-                                        return [2, a.sent()]
+                                        return [2, o.sent()]
                                 }
                             })
                         })
                     }, e.deleteOrThrow = function(e, t, n) {
                         return void 0 === t && (t = {}), void 0 === n && (n = {}), r.__awaiter(this, void 0, Promise, function() {
-                            return r.__generator(this, function(a) {
-                                switch (a.label) {
+                            return r.__generator(this, function(o) {
+                                switch (o.label) {
                                     case 0:
                                         return [4, this.requestOrThrow(e, r.__assign({}, t, {
                                             method: "DELETE"
                                         }), n)];
                                     case 1:
-                                        return [2, a.sent()]
+                                        return [2, o.sent()]
                                 }
                             })
                         })
                     }, e.request = function(e, t, n) {
                         return void 0 === t && (t = {}), void 0 === n && (n = {}), r.__awaiter(this, void 0, Promise, function() {
-                            var a, o, i, s;
+                            var o, a, i, s;
                             return r.__generator(this, function(c) {
                                 switch (c.label) {
                                     case 0:
-                                        return t = this.constructOptions(t, n), a = t.headers ? t.headers["Content-Type"] : void 0, o = this.serialize(t.body, a), i = r.__assign({}, t, {
-                                            body: o
+                                        return t = this.constructOptions(t, n), o = t.headers ? t.headers["Content-Type"] : void 0, a = this.serialize(t.body, o), i = r.__assign({}, t, {
+                                            body: a
                                         }), [4, this._fetch(e, i)];
                                     case 1:
                                         return s = c.sent(), [4, this.constructLegacyAPIResponse(s)];
@@ -1251,29 +1271,29 @@
                         })
                     }, e.requestOrThrow = function(e, t, n) {
                         return void 0 === t && (t = {}), void 0 === n && (n = {}), r.__awaiter(this, void 0, Promise, function() {
-                            var a;
-                            return r.__generator(this, function(o) {
-                                switch (o.label) {
+                            var o;
+                            return r.__generator(this, function(a) {
+                                switch (a.label) {
                                     case 0:
-                                        return o.trys.push([0, 2, , 3]), [4, this.request(e, t, n)];
+                                        return a.trys.push([0, 2, , 3]), [4, this.request(e, t, n)];
                                     case 1:
-                                        if ((a = o.sent()).requestError) throw a.requestError;
-                                        if (a.error) throw new Error("Error while sending legacy-api request: " + a.error.status + " - " + a.error.message);
-                                        return [2, r.__assign({}, a, {
-                                            body: a.body
+                                        if ((o = a.sent()).requestError) throw o.requestError;
+                                        if (o.error) throw new Error("Error while sending legacy-api request: " + o.error.status + " - " + o.error.message);
+                                        return [2, r.__assign({}, o, {
+                                            body: o.body
                                         })];
                                     case 2:
-                                        throw o.sent();
+                                        throw a.sent();
                                     case 3:
                                         return [2]
                                 }
                             })
                         })
                     }, e.getAPIURL = function(e) {
-                        return new URL(e, a.p.config.apiBaseURL)
+                        return new URL(e, o.p.config.apiBaseURL)
                     }, e.constructLegacyAPIResponse = function(e) {
                         return r.__awaiter(this, void 0, Promise, function() {
-                            var t, n, a, o;
+                            var t, n, o, a;
                             return r.__generator(this, function(r) {
                                 switch (r.label) {
                                     case 0:
@@ -1285,7 +1305,7 @@
                                     case 2:
                                         return n = r.sent(), e.ok ? t.body = n : t.error = n, [3, 4];
                                     case 3:
-                                        return a = r.sent(), e.headers && e.headers.get && (o = e.headers.get("Content-Type")) && -1 !== o.indexOf("application/json") && (t.requestError = a), [3, 4];
+                                        return o = r.sent(), e.headers && e.headers.get && (a = e.headers.get("Content-Type")) && -1 !== a.indexOf("application/json") && (t.requestError = o), [3, 4];
                                     case 4:
                                         return [2, t]
                                 }
@@ -1311,36 +1331,36 @@
                             contentType: t
                         }), null) : null
                     }, e.getDefaultHeaders = function(e, t) {
-                        var n = a.p.store.getState(),
+                        var n = o.p.store.getState(),
                             r = {
                                 Accept: "application/vnd.twitchtv.v" + (t.version || 5) + "+json; charset=UTF-8",
                                 "Accept-Language": "en-us",
-                                "Client-ID": a.p.config.legacyClientID,
+                                "Client-ID": o.p.config.legacyClientID,
                                 "X-Requested-With": "XMLHttpRequest"
                             };
                         e.body && FormData.prototype.isPrototypeOf(e.body) || (r["Content-Type"] = "application/json; charset=UTF-8");
-                        var i = Object(o.e)(n);
+                        var i = Object(a.e)(n);
                         return i && (r.Authorization = "OAuth " + i.authToken, i.legacyCSRFToken && (r["Twitch-Api-Token"] = i.legacyCSRFToken)), t.excludeHeaders && t.excludeHeaders.forEach(function(e) {
                             r[e] && delete r[e]
                         }), r
-                    }, e.logger = a.p.logger.withCategory("legacy-api"), e
+                    }, e.logger = o.p.logger.withCategory("legacy-api"), e
                 }()
         },
         dG1e: function(e, t, n) {
             "use strict";
             n.d(t, "a", function() {
-                return o
+                return a
             });
             var r = n("mrSG"),
-                a = n("b6Yk");
+                o = n("b6Yk");
 
-            function o(e, t) {
+            function a(e, t) {
                 return void 0 === t && (t = {}), r.__awaiter(this, void 0, void 0, function() {
                     var n;
                     return r.__generator(this, function(r) {
                         switch (r.label) {
                             case 0:
-                                return [4, a.a.request(e.path, e, t)];
+                                return [4, o.a.request(e.path, e, t)];
                             case 1:
                                 return n = r.sent(), [2, new i(n, e)]
                         }
@@ -1378,8 +1398,8 @@
         lDS7: function(e, t, n) {
             "use strict";
             var r = n("mrSG"),
-                a = n("q1tI"),
-                o = n("oJmH"),
+                o = n("q1tI"),
+                a = n("oJmH"),
                 i = n("/7QA"),
                 s = n("yR8l"),
                 c = n("5zf8"),
@@ -1424,10 +1444,10 @@
                             e[t.props.statType] = !e[t.props.statType], i.m.set("streamStatsConfiguration", e)
                         }, t.renderStat = function() {
                             var e = Object(i.d)("Offline", "LiveDashboard");
-                            return t.state.hidden ? a.createElement(l.Zb, {
+                            return t.state.hidden ? o.createElement(l.Zb, {
                                 label: t.props.statDescription || e,
                                 direction: l.bc.Right
-                            }, Object(i.d)("Hover to view", "LiveDashboard")) : a.createElement(l.Zb, {
+                            }, Object(i.d)("Hover to view", "LiveDashboard")) : o.createElement(l.Zb, {
                                 label: Object(i.d)("Click to hide", "LiveDashboard"),
                                 direction: l.bc.Right
                             }, t.props.statDescription || e)
@@ -1435,31 +1455,31 @@
                     }
                     return r.__extends(t, e), t.prototype.render = function() {
                         var e = this.props.color;
-                        return a.createElement(l.Fb, {
+                        return o.createElement(l.Fb, {
                             margin: {
                                 left: 1
                             },
                             fontSize: l.Ca.Size5,
                             color: e
-                        }, a.createElement("span", {
+                        }, o.createElement("span", {
                             onClick: this.handleClick,
                             onMouseOver: this.handleHover
                         }, this.renderStat()))
                     }, t
-                }(a.Component),
+                }(o.Component),
                 m = n("xTFG"),
                 h = n("NkOX"),
                 f = n("qYDK"),
                 g = n("4mBO"),
-                v = n("JBqe"),
-                b = n("6XEL"),
+                b = n("JBqe"),
+                v = n("6XEL"),
                 C = n("9kwc");
             n.d(t, "a", function() {
                 return S
             }), n.d(t, "b", function() {
                 return w
             }), n.d(t, "c", function() {
-                return E
+                return _
             });
             var y, w, S = {
                 showViewers: !0,
@@ -1476,7 +1496,7 @@
             function(e) {
                 e.CURRENT_VIEWERS = "showViewers", e.STREAM_UP_TIME = "showUptime", e.TOTAL_VIEWS = "showViews", e.FOLLOWERS = "showFollowers", e.NUMBER_OF_CLIPS = "showClips", e.SUBSCRIPTIONS = "showSubs"
             }(w || (w = {}));
-            var _ = function(e) {
+            var E = function(e) {
                     function t(t) {
                         var n = e.call(this, t) || this;
                         n.getStreamInfo = function() {
@@ -1485,19 +1505,19 @@
                             var e = n.getStreamInfo(),
                                 t = e && null !== e.viewersCount ? Object(i.f)(e.viewersCount) : 0,
                                 r = n.state.statsConfig && n.state.statsConfig[w.CURRENT_VIEWERS],
-                                o = n.props.isLive;
-                            return a.createElement(p, {
+                                a = n.props.isLive;
+                            return o.createElement(p, {
                                 "data-test-selector": y.CURRENT_VIEWERS_COUNT,
-                                statDescription: o ? t + " " + Object(i.d)("Viewers", "LiveDashboard") : null,
+                                statDescription: a ? t + " " + Object(i.d)("Viewers", "LiveDashboard") : null,
                                 statType: w.CURRENT_VIEWERS,
                                 showStat: r,
-                                color: o ? l.O.Live : void 0
+                                color: a ? l.O.Live : void 0
                             })
                         }, n.renderStreamTime = function() {
                             var e = n.getStreamInfo(),
                                 t = e && e.createdAt || (new Date).toISOString(),
                                 r = n.props.isLive;
-                            return a.createElement(p, {
+                            return o.createElement(p, {
                                 statDescription: r ? Object(c.b)((Date.now() - new Date(t).getTime()) / 1e3, c.a.ClockHM) : null,
                                 statType: w.STREAM_UP_TIME,
                                 showStat: !n.state.statsConfig || n.state.statsConfig[w.STREAM_UP_TIME],
@@ -1506,7 +1526,7 @@
                         }, n.renderNumberOfClips = function() {
                             var e = n.state.broadcastClipsCount,
                                 t = n.props.isLive;
-                            return a.createElement(p, {
+                            return o.createElement(p, {
                                 "data-test-selector": y.NUMBER_OF_CLIPS,
                                 statDescription: t ? Object(i.f)(e) + " " + (1 === e ? Object(i.d)("Clip", "LiveDashboard") : Object(i.d)("Clips", "LiveDashboard")) : null,
                                 statType: w.NUMBER_OF_CLIPS,
@@ -1517,42 +1537,42 @@
                             var e = Object(i.d)("Subscribers", "LiveDashboard"),
                                 t = Object(i.d)("Sub Points", "LiveDashboard"),
                                 r = n.props.data && n.props.data.user && null !== n.props.data.user.subscriberScore ? n.props.data.user.subscriberScore : null,
-                                o = r && r.countBreakdown;
-                            if (!r || !o) return null;
-                            var s = Object(i.f)(o.reduce(function(e, t) {
+                                a = r && r.countBreakdown;
+                            if (!r || !a) return null;
+                            var s = Object(i.f)(a.reduce(function(e, t) {
                                     return e + t.count
                                 }, 0)),
                                 c = Object(i.f)(r.current);
-                            return r.next ? a.createElement(l.Fb, {
+                            return r.next ? o.createElement(l.Fb, {
                                 color: l.O.Alt2,
                                 display: l.X.Flex,
                                 alignItems: l.f.Center,
                                 margin: {
                                     bottom: .5
                                 }
-                            }, a.createElement(l.Zb, {
+                            }, o.createElement(l.Zb, {
                                 label: Object(i.d)("Subscribers shows number of active subs.\n Sub points unlock additional emote slots.", "LiveDashboard"),
                                 direction: l.bc.Right
-                            }, a.createElement(l.tb, {
+                            }, o.createElement(l.tb, {
                                 asset: l.ub.Star
-                            })), a.createElement(p, {
+                            })), o.createElement(p, {
                                 statDescription: s + " " + e + " (" + c + " / " + Object(i.f)(r.next) + " " + t + ")",
                                 statType: w.SUBSCRIPTIONS,
                                 showStat: n.state.statsConfig && n.state.statsConfig[w.SUBSCRIPTIONS],
                                 color: l.O.Base
-                            })) : a.createElement(l.Fb, {
+                            })) : o.createElement(l.Fb, {
                                 color: l.O.Alt2,
                                 display: l.X.Flex,
                                 alignItems: l.f.Center,
                                 margin: {
                                     bottom: .5
                                 }
-                            }, a.createElement(l.Zb, {
+                            }, o.createElement(l.Zb, {
                                 label: Object(i.d)("Congrats on reaching the max number of emote slots", "LiveDashboard"),
                                 direction: l.bc.Right
-                            }, a.createElement(l.tb, {
+                            }, o.createElement(l.tb, {
                                 asset: l.ub.Star
-                            })), a.createElement(p, {
+                            })), o.createElement(p, {
                                 statDescription: s + " " + e + " (" + c + " " + t + ")",
                                 statType: w.SUBSCRIPTIONS,
                                 showStat: n.state.statsConfig && n.state.statsConfig[w.SUBSCRIPTIONS],
@@ -1562,24 +1582,24 @@
                             n.intervalID && clearInterval(n.intervalID), n.fetchBroadcastClipsCount(), n.intervalID = setInterval(n.fetchBroadcastClipsCount, 3e4)
                         }, n.fetchBroadcastClipsCount = function() {
                             return r.__awaiter(n, void 0, void 0, function() {
-                                var e, t, n, a, o;
+                                var e, t, n, o, a;
                                 return r.__generator(this, function(r) {
                                     switch (r.label) {
                                         case 0:
-                                            return e = this.getStreamInfo(), (t = e && e.id) ? [4, Object(b.c)({
+                                            return e = this.getStreamInfo(), (t = e && e.id) ? [4, Object(v.c)({
                                                 path: "/v4/broadcasts/" + t + "/clips/count"
                                             })] : (this.props.latencyTracking.reportInteractive(), this.props.reportLoaded(), [2]);
                                         case 1:
-                                            return (n = r.sent()).body && !n.error ? (a = n.body.count, this.setState({
-                                                broadcastClipsCount: a
-                                            })) : (o = "Unable to fetch broadcast clips count", i.k.error(new Error(o), o)), this.props.latencyTracking.reportInteractive(), this.props.reportLoaded(), [2]
+                                            return (n = r.sent()).body && !n.error ? (o = n.body.count, this.setState({
+                                                broadcastClipsCount: o
+                                            })) : (a = "Unable to fetch broadcast clips count", i.k.error(new Error(a), a)), this.props.latencyTracking.reportInteractive(), this.props.reportLoaded(), [2]
                                     }
                                 })
                             })
                         };
-                        var o = i.m.get("streamStatsConfiguration", null);
+                        var a = i.m.get("streamStatsConfiguration", null);
                         return n.state = {
-                            statsConfig: o || S,
+                            statsConfig: a || S,
                             broadcastClipsCount: 0
                         }, n
                     }
@@ -1595,89 +1615,89 @@
                             t = e && e.followers,
                             n = Object(i.f)(e && e.profileViewCount || 0),
                             r = e && t && null !== t.totalCount ? Object(i.f)(t.totalCount) : 0;
-                        return a.createElement(f.a, {
+                        return o.createElement(f.a, {
                             title: Object(i.d)("Stats", "LiveDashboard")
-                        }, a.createElement(l.Ya, {
+                        }, o.createElement(l.Ya, {
                             padding: 2
-                        }, a.createElement(l.Fb, {
+                        }, o.createElement(l.Fb, {
                             color: l.O.Alt2,
                             display: l.X.Flex,
                             alignItems: l.f.Center,
                             margin: {
                                 bottom: .5
                             }
-                        }, a.createElement(l.Zb, {
+                        }, o.createElement(l.Zb, {
                             label: Object(i.d)("The number of people currently watching your channel", "LiveDashboard"),
                             direction: l.bc.Right
-                        }, a.createElement(l.tb, {
+                        }, o.createElement(l.tb, {
                             asset: l.ub.GlyphLive
-                        })), this.renderViewersCount()), a.createElement(l.Fb, {
+                        })), this.renderViewersCount()), o.createElement(l.Fb, {
                             color: l.O.Alt2,
                             display: l.X.Flex,
                             alignItems: l.f.Center,
                             margin: {
                                 bottom: .5
                             }
-                        }, a.createElement(l.Zb, {
+                        }, o.createElement(l.Zb, {
                             label: Object(i.d)("How long you have been broadcasting for this session", "LiveDashboard"),
                             direction: l.bc.Right
-                        }, a.createElement(l.tb, {
+                        }, o.createElement(l.tb, {
                             asset: l.ub.Timeout
-                        })), this.renderStreamTime()), a.createElement(l.Fb, {
+                        })), this.renderStreamTime()), o.createElement(l.Fb, {
                             color: l.O.Alt2,
                             display: l.X.Flex,
                             alignItems: l.f.Center,
                             margin: {
                                 bottom: .5
                             }
-                        }, a.createElement(l.Zb, {
+                        }, o.createElement(l.Zb, {
                             label: Object(i.d)("The number of clips that have been created", "LiveDashboard"),
                             direction: l.bc.Right
-                        }, a.createElement(l.Fb, {
+                        }, o.createElement(l.Fb, {
                             className: "stats-widget-clips-icon",
                             display: l.X.InlineFlex
-                        }, a.createElement(l.tb, {
+                        }, o.createElement(l.tb, {
                             asset: l.ub.Clip,
                             height: 20,
                             width: 20
-                        }))), this.renderNumberOfClips()), a.createElement(l.Fb, {
+                        }))), this.renderNumberOfClips()), o.createElement(l.Fb, {
                             color: l.O.Alt2,
                             display: l.X.Flex,
                             alignItems: l.f.Center,
                             margin: {
                                 bottom: .5
                             }
-                        }, a.createElement(l.Zb, {
+                        }, o.createElement(l.Zb, {
                             label: Object(i.d)("The number of people who have viewed the channel", "LiveDashboard"),
                             direction: l.bc.Right
-                        }, a.createElement(l.tb, {
+                        }, o.createElement(l.tb, {
                             asset: l.ub.GlyphViews
-                        })), a.createElement(p, {
+                        })), o.createElement(p, {
                             statDescription: n + " " + Object(i.d)("Views", "LiveDashboard"),
                             statType: w.TOTAL_VIEWS,
                             showStat: !this.state.statsConfig || this.state.statsConfig[w.TOTAL_VIEWS],
                             color: l.O.Base
-                        })), a.createElement(l.Fb, {
+                        })), o.createElement(l.Fb, {
                             color: l.O.Alt2,
                             display: l.X.Flex,
                             alignItems: l.f.Center,
                             margin: {
                                 bottom: .5
                             }
-                        }, a.createElement(l.Zb, {
+                        }, o.createElement(l.Zb, {
                             label: Object(i.d)("The number of people currently following your channel", "LiveDashboard"),
                             direction: l.bc.Right
-                        }, a.createElement(l.tb, {
+                        }, o.createElement(l.tb, {
                             asset: l.ub.Heart
-                        })), a.createElement(p, {
+                        })), o.createElement(p, {
                             statDescription: r + " " + Object(i.d)("Followers", "LiveDashboard"),
                             statType: w.FOLLOWERS,
                             showStat: !this.state.statsConfig || this.state.statsConfig[w.FOLLOWERS],
                             color: l.O.Base
                         })), this.renderSubscriptionStat()))
                     }, t
-                }(a.Component),
-                E = Object(o.compose)(Object(g.b)(h.a.Stats), v.b, Object(m.b)(h.a.Stats, {
+                }(o.Component),
+                _ = Object(a.compose)(Object(g.b)(h.a.Stats), b.b, Object(m.b)(h.a.Stats, {
                     autoReportCardVisibility: !0
                 }), Object(s.a)(C, {
                     options: function(e) {
@@ -1689,14 +1709,15 @@
                             }
                         }
                     }
-                }), Object(u.b)("Stats"))(_)
+                }), Object(u.b)("Stats"))(E)
         },
+        logO: function(e, t, n) {},
         moen: function(e, t, n) {
             "use strict";
             n.r(t);
             var r = n("q1tI"),
-                a = n("/MKj"),
-                o = n("mLw1"),
+                o = n("/MKj"),
+                a = n("mLw1"),
                 i = n("fvjX"),
                 s = n("V+GM"),
                 c = n("NvVO"),
@@ -1704,7 +1725,7 @@
                 d = n("kRBY"),
                 l = n("GnwI"),
                 p = n("NQSV");
-            var m = Object(i.compose)(Object(a.connect)(function(e) {
+            var m = Object(i.compose)(Object(o.connect)(function(e) {
                 var t = Object(d.e)(e);
                 return {
                     isLoggedIn: Object(d.f)(e),
@@ -1716,7 +1737,7 @@
             }), Object(s.a)({
                 location: u.PageviewLocation.Broadcast
             }))(function(e) {
-                return e.isLoggedIn ? r.createElement(o.a, {
+                return e.isLoggedIn ? r.createElement(a.a, {
                     to: "/" + e.userLogin + "/dashboard/broadcast"
                 }) : r.createElement(p.a, null)
             });
@@ -1726,31 +1747,47 @@
         },
         odMz: function(e, t, n) {
             "use strict";
-            var r, a;
+            var r, o;
             ! function(e) {
                 e[e.RemoveTarget = 0] = "RemoveTarget", e[e.SetGrabbed = 1] = "SetGrabbed", e[e.SetTarget = 2] = "SetTarget"
             }(r || (r = {})),
             function(e) {
                 e.Bottom = "bottom", e.Top = "top"
-            }(a || (a = {}));
-            var o = function() {
+            }(o || (o = {}));
+            var a = function() {
                 return function(e, t) {
-                    void 0 === t && (t = !1), this.name = e, this.isCollapsed = t, this.isGrabbed = !1
+                    void 0 === t && (t = !1), this.name = e, this.isCollapsed = t, this.isGrabbed = !1, this.isPoppedOut = !1
                 }
             }();
             n.d(t, "b", function() {
                 return r
             }), n.d(t, "c", function() {
-                return a
-            }), n.d(t, "a", function() {
                 return o
+            }), n.d(t, "a", function() {
+                return a
             })
         },
         qYDK: function(e, t, n) {
             "use strict";
-            var r, a, o, i, s = n("fvjX"),
-                c = n("1rIY"),
-                u = (r = Object(c.a)("DragAndDropLayoutContext", {
+            var r, o, a = n("mrSG"),
+                i = n("q1tI"),
+                s = n("fvjX"),
+                c = n("/7QA"),
+                u = n("1rIY"),
+                d = n("odMz"),
+                l = (r = Object(u.a)("DragAndDropCardContext", {
+                    card: new d.a("unknown")
+                })).InnerProvider,
+                p = r.withContext;
+
+            function m(e) {
+                return e
+            }
+
+            function h(e) {
+                return p(e || m)
+            }
+            var f = (o = Object(u.a)("DragAndDropLayoutContext", {
                     dropCard: function() {
                         return null
                     },
@@ -1761,25 +1798,251 @@
                         return null
                     }
                 })).InnerProvider,
-                d = r.withContext,
-                l = n("mrSG"),
-                p = n("q1tI"),
-                m = n("/7QA"),
-                h = n("odMz"),
-                f = n("Ue10"),
-                g = (n("7WKn"), function(e) {
+                g = o.withContext;
+
+            function b(e) {
+                return e
+            }
+
+            function v(e) {
+                return g(e || b)
+            }
+            var C = n("Ue10"),
+                y = function(e) {
+                    function t() {
+                        var t = null !== e && e.apply(this, arguments) || this;
+                        return t.handleButtonIconClick = function() {
+                            t.props.updateCard(t.props.name, {
+                                isPoppedOut: !t.props.isPoppedOut
+                            })
+                        }, t
+                    }
+                    return a.__extends(t, e), t.prototype.render = function() {
+                        return i.createElement(C.A, {
+                            ariaLabel: Object(c.d)("Popout", "PopoutButtonComponent"),
+                            icon: C.ub.Popout,
+                            onClick: this.handleButtonIconClick
+                        })
+                    }, t
+                }(i.Component);
+            var w, S, E = Object(s.compose)(v(function(e) {
+                    return {
+                        updateCard: e.updateCard
+                    }
+                }), h(function(e) {
+                    return {
+                        name: e.card.name,
+                        isPoppedOut: e.card.isPoppedOut
+                    }
+                }))(y),
+                _ = (n("5g1g"), n("wUQP")),
+                k = function() {
+                    return _.a.On === c.b.get("dashboard_live_popout", _.a.Off)
+                },
+                O = function(e) {
+                    function t() {
+                        return null !== e && e.apply(this, arguments) || this
+                    }
+                    return a.__extends(t, e), t.prototype.render = function() {
+                        return i.createElement(C.Fb, {
+                            color: C.O.Base,
+                            fontSize: C.Ca.Size5,
+                            margin: {
+                                y: "auto"
+                            }
+                        }, this.props.title)
+                    }, t
+                }(i.Component);
+            n("logO");
+            ! function(e) {
+                e.Content = "drag-and-drop-card-content", e.PopoutButton = "drag-and-drop-popout-button"
+            }(w || (w = {})),
+            function(e) {
+                e.Carat = "carat", e.Menu = "drag-and-drop-card-menu"
+            }(S || (S = {}));
+            var L = function(e) {
+                function t() {
+                    var t = null !== e && e.apply(this, arguments) || this;
+                    return t.isDashboardLivePopoutEnabled = k(), t.handleCaratClick = function() {
+                        t.props.updateCard(t.props.name, {
+                            isCollapsed: !t.props.isCollapsed
+                        })
+                    }, t.addEventListeners = function() {
+                        t[S.Carat].addEventListener("mousedown", t.stopMouseDownPropagation), t[S.Menu].addEventListener("mousedown", t.stopMouseDownPropagation)
+                    }, t.removeEventListeners = function() {
+                        t[S.Carat].removeEventListener("mousedown", t.stopMouseDownPropagation), t[S.Menu].removeEventListener("mousedown", t.stopMouseDownPropagation)
+                    }, t.registerRef = function(e, n) {
+                        t[e] = n
+                    }, t.stopMouseDownPropagation = function(e) {
+                        e.stopPropagation()
+                    }, t
+                }
+                return a.__extends(t, e), t.prototype.componentDidMount = function() {
+                    this.addEventListeners()
+                }, t.prototype.componentWillUnmount = function() {
+                    this.removeEventListeners()
+                }, t.prototype.render = function() {
+                    var e = this.props,
+                        t = e.isCollapsed,
+                        n = e.isGrabbed;
+                    return i.createElement(C.Fb, {
+                        background: C.r.Base,
+                        border: !0,
+                        breakpointLarge: {
+                            margin: {
+                                bottom: 2
+                            }
+                        },
+                        className: "drag-and-drop-card-container" + (n ? " drag-and-drop-card-container__grabbed" : ""),
+                        display: C.X.Flex,
+                        elevation: n ? 4 : 1,
+                        flexDirection: C.Aa.Column,
+                        margin: {
+                            bottom: 1
+                        },
+                        refDelegate: this.props.refDelegateCard
+                    }, i.createElement(C.Fb, {
+                        alignContent: C.e.Center,
+                        alignItems: C.f.Center,
+                        borderBottom: !0,
+                        className: "drag-and-drop-card-header",
+                        display: C.X.Flex,
+                        justifyContent: C.Xa.Between,
+                        padding: {
+                            x: 1
+                        },
+                        position: C.kb.Relative,
+                        refDelegate: this.props.refDelegateHeader
+                    }, i.createElement(C.Ya, {
+                        display: C.X.Flex,
+                        justifyContent: C.Xa.Center
+                    }, i.createElement(C.Ya, {
+                        margin: {
+                            right: 1
+                        }
+                    }, i.createElement(C.Ya, {
+                        className: "drag-and-drop-card-carat" + (t ? "__collapsed" : ""),
+                        refDelegate: this.registerRef.bind(this, S.Carat)
+                    }, i.createElement(C.A, {
+                        ariaLabel: Object(c.d)("Collapse/Expand", "DragAndDropCard"),
+                        icon: C.ub.GlyphArrDown,
+                        onClick: this.handleCaratClick
+                    }))), i.createElement(O, {
+                        title: this.props.title
+                    })), i.createElement(C.Ya, {
+                        display: C.X.Flex,
+                        alignItems: C.f.Center
+                    }, i.createElement(C.Ya, {
+                        display: C.X.Flex,
+                        alignItems: C.f.Center,
+                        refDelegate: this.registerRef.bind(this, S.Menu)
+                    }, this.isDashboardLivePopoutEnabled && i.createElement(C.Ya, {
+                        "data-test-selector": w.PopoutButton,
+                        margin: {
+                            left: 1
+                        }
+                    }, i.createElement(E, null)), this.props.menu), i.createElement(C.Ya, {
+                        margin: {
+                            left: 1
+                        }
+                    }, i.createElement(C.A, {
+                        ariaLabel: Object(c.d)("Drag", "DragAndDropCard"),
+                        icon: C.ub.DragHandle
+                    })))), !this.props.isPoppedOut && i.createElement(C.Ya, {
+                        className: "drag-and-drop-card-content" + (t ? " drag-and-drop-card-content__collapsed" : ""),
+                        "data-test-selector": w.Content,
+                        position: C.kb.Relative
+                    }, this.props.children))
+                }, t
+            }(i.Component);
+            S.Carat, S.Menu;
+            var D, P = Object(s.compose)(h(function(e) {
+                    var t = e.card;
+                    return {
+                        name: t.name,
+                        isCollapsed: t.isCollapsed,
+                        isGrabbed: t.isGrabbed,
+                        isPoppedOut: t.isPoppedOut
+                    }
+                }), v(function(e) {
+                    return {
+                        updateCard: e.updateCard
+                    }
+                }))(L),
+                R = n("i8i4"),
+                I = (n("O4PT"), 300),
+                x = 360,
+                T = function(e) {
+                    function t() {
+                        var t = null !== e && e.apply(this, arguments) || this;
+                        return t.state = {
+                            window: void 0
+                        }, t.handleWindowError = function(e) {
+                            e.preventDefault(), e.stopPropagation()
+                        }, t.tryToOpenWindow = function() {
+                            var e = "twitch-" + t.props.card.name,
+                                n = t.props.height || I,
+                                r = window.open("", e, "left=" + (window.screenX + window.screen.width / 2) + ",top=" + window.screen.height / 2 + ",titlebar=no,toolbar=no,menubar=no,resizable=yes,scrollbars=yes,location=no,personalbar=no,chrome=yes,height=" + n + ",width=" + x);
+                            r && t.setInitialWindowState(r, n)
+                        }, t.tryToCloseWindow = function() {
+                            if (t.props.card.isPoppedOut) return t.props.updateCard(t.props.card.name, {
+                                isPoppedOut: !1
+                            }), null
+                        }, t
+                    }
+                    return a.__extends(t, e), t.prototype.componentDidMount = function() {
+                        this.tryToOpenWindow()
+                    }, t.prototype.componentWillUnmount = function() {
+                        this.state.window && this.state.window.close(), window.removeEventListener("beforeunload", this.tryToCloseWindow)
+                    }, t.prototype.render = function() {
+                        return this.state.window ? R.createPortal(i.createElement(C.Ya, {
+                            display: C.X.Flex,
+                            flexDirection: C.Aa.Column,
+                            fullHeight: !0,
+                            fullWidth: !0,
+                            justifyContent: C.Xa.Start
+                        }, i.createElement(C.Fb, {
+                            alignItems: C.f.Center,
+                            borderBottom: !0,
+                            display: C.X.Flex,
+                            flexShrink: 0,
+                            fullWidth: !0,
+                            justifyContent: C.Xa.Between,
+                            padding: {
+                                x: 2,
+                                y: 1
+                            }
+                        }, i.createElement(O, {
+                            title: this.props.title
+                        }), this.props.menu), i.createElement(C.Ya, {
+                            className: "popout-window-container",
+                            flexShrink: 1,
+                            fullWidth: !0
+                        }, this.props.children)), this.state.window.document.body) : null
+                    }, t.prototype.setInitialWindowState = function(e, t) {
+                        window.addEventListener("beforeunload", this.tryToCloseWindow), e.addEventListener("beforeunload", this.tryToCloseWindow), e.addEventListener("error", this.handleWindowError), e.document.head.innerHTML = "", e.document.body.innerHTML = "", Array.prototype.forEach.call(window.document.querySelectorAll('link[rel="stylesheet"], style'), function(t) {
+                            e.document.head.appendChild(t.cloneNode(!0))
+                        });
+                        var n = document.createElement("title");
+                        n.innerHTML = "Twitch", e.document.head.appendChild(n), e.document.title = "Twitch", e.resizeTo(Math.max(t, I), x), this.setState({
+                            window: e
+                        })
+                    }, t
+                }(i.Component),
+                M = Object(s.compose)(v(), h())(T),
+                j = (n("7WKn"), function(e) {
                     function t() {
                         var t = null !== e && e.apply(this, arguments) || this;
                         return t.setContainerRef = function(e) {
                             t.containerRef = e
                         }, t
                     }
-                    return l.__extends(t, e), t.prototype.componentDidMount = function() {
+                    return a.__extends(t, e), t.prototype.componentDidMount = function() {
                         this.setPlaceholderStyles()
                     }, t.prototype.componentDidUpdate = function() {
                         this.setPlaceholderStyles()
                     }, t.prototype.render = function() {
-                        return p.createElement(f.Ya, {
+                        return i.createElement(C.Ya, {
                             breakpointLarge: {
                                 margin: {
                                     bottom: 2
@@ -1801,33 +2064,11 @@
                             this.containerRef.style.height = n + "px", this.containerRef.style.width = r + "px"
                         }
                     }, t
-                }(p.Component)),
-                v = function(e) {
-                    function t() {
-                        return null !== e && e.apply(this, arguments) || this
-                    }
-                    return l.__extends(t, e), t.prototype.render = function() {
-                        return p.createElement(f.Fb, {
-                            className: "drag-and-drop-card-title",
-                            color: f.O.Base,
-                            fontSize: f.Ca.Size5,
-                            margin: {
-                                y: "auto"
-                            }
-                        }, this.props.title)
-                    }, t
-                }(p.Component);
-            n("SMeG");
+                }(i.Component));
             ! function(e) {
-                e.ContentCollapsed = "drag-and-drop-card-content__collapsed"
-            }(a || (a = {})),
-            function(e) {
-                e.Card = "drag-and-drop-card", e.Container = "drag-and-drop-card-container", e.Content = "drag-and-drop-card-content"
-            }(o || (o = {})),
-            function(e) {
-                e.Carat = "carat", e.Card = "card", e.Container = "container", e.Header = "header", e.Menu = "drag-and-drop-card-menu"
-            }(i || (i = {}));
-            var b = function(e) {
+                e.Card = "card", e.Container = "container", e.Header = "header"
+            }(D || (D = {}));
+            var B = function(e) {
                 function t() {
                     var t = null !== e && e.apply(this, arguments) || this;
                     return t.handleContainerMouseEnter = function(e) {
@@ -1836,14 +2077,14 @@
                             var r = t.getPlaceholderPosition(n);
                             t.props.updateCard(t.props.card.name, {
                                 placeholderPosition: r
-                            }, h.b.SetTarget)
+                            }, d.b.SetTarget)
                         }
                     }, t.handleContainerMouseLeave = function() {
                         if (t.props.grabbedCard) {
                             var e = t.props.card;
                             t.props.updateCard(e.name, {
                                 placeholderPosition: void 0
-                            }, h.b.RemoveTarget)
+                            }, d.b.RemoveTarget)
                         }
                     }, t.handleContainerMouseMove = function(e) {
                         var n = e.clientY;
@@ -1851,43 +2092,34 @@
                             var r = t.getPlaceholderPosition(n);
                             t.props.updateCard(t.props.card.name, {
                                 placeholderPosition: r
-                            }, h.b.SetTarget)
+                            }, d.b.SetTarget)
                         }
                     }, t.getPlaceholderPosition = function(e) {
-                        var n = t[i.Container].getBoundingClientRect();
-                        return e > n.top + n.height / 2 ? h.c.Bottom : h.c.Top
-                    }, t.handleCaratClick = function() {
-                        var e = t.props.card,
-                            n = e.name,
-                            r = e.isCollapsed;
-                        t.props.updateCard(n, {
-                            isCollapsed: !r
-                        })
-                    }, t.stopMouseDownPropagation = function(e) {
-                        e.stopPropagation()
+                        var n = t[D.Container].getBoundingClientRect();
+                        return e > n.top + n.height / 2 ? d.c.Bottom : d.c.Top
                     }, t.handleCardMouseMove = function(e) {
                         var n = e.movementX,
                             r = e.movementY;
                         if (t.props.card.isGrabbed) {
-                            var a = t[i.Card];
-                            a.style.left = parseInt(a.style.left || "0", 10) + n + "px", a.style.top = parseInt(a.style.top || "0", 10) + r + "px"
+                            var o = t[D.Card];
+                            o.style.left = parseInt(o.style.left || "0", 10) + n + "px", o.style.top = parseInt(o.style.top || "0", 10) + r + "px"
                         }
                     }, t.handleHeaderMouseDown = function(e) {
                         var n = e.clientY,
-                            r = t[i.Card],
-                            a = r.getBoundingClientRect(),
-                            o = a.top,
-                            s = a.left,
-                            c = a.width;
-                        r.style.left = s + "px", r.style.top = o + "px", r.style.width = c + "px";
-                        var u = t.getPlaceholderPosition(n),
-                            d = t.props.card.name;
-                        t.props.updateCard(d, {
-                            placeholderPosition: u
-                        }, h.b.SetGrabbed), t.props.updateCard(d, {}, h.b.SetTarget)
+                            r = t[D.Card],
+                            o = r.getBoundingClientRect(),
+                            a = o.top,
+                            i = o.left,
+                            s = o.width;
+                        r.style.left = i + "px", r.style.top = a + "px", r.style.width = s + "px";
+                        var c = t.getPlaceholderPosition(n),
+                            u = t.props.card.name;
+                        t.props.updateCard(u, {
+                            placeholderPosition: c
+                        }, d.b.SetGrabbed), t.props.updateCard(u, {}, d.b.SetTarget)
                     }, t.handleCardMouseUp = function() {
                         if (t.props.card.isGrabbed) {
-                            var e = t[i.Card];
+                            var e = t[D.Card];
                             e.style.left = null, e.style.top = null, e.style.width = "100%", t.props.dropCard()
                         }
                         var n = t.props.card;
@@ -1898,164 +2130,99 @@
                     }, t.registerRef = function(e, n) {
                         t[e] = n
                     }, t.addEventListeners = function() {
-                        var e = t[i.Container];
-                        e.addEventListener("mousemove", t.handleContainerMouseMove), e.addEventListener("mouseleave", t.handleContainerMouseLeave), e.addEventListener("mouseenter", t.handleContainerMouseEnter), t[i.Carat].addEventListener("mousedown", t.stopMouseDownPropagation), t[i.Header].addEventListener("mousedown", t.handleHeaderMouseDown), t[i.Menu].addEventListener("mousedown", t.stopMouseDownPropagation), window.addEventListener("mouseup", t.handleCardMouseUp), window.addEventListener("mousemove", t.handleCardMouseMove)
+                        var e = t[D.Container];
+                        e.addEventListener("mousemove", t.handleContainerMouseMove), e.addEventListener("mouseleave", t.handleContainerMouseLeave), e.addEventListener("mouseenter", t.handleContainerMouseEnter), t[D.Header].addEventListener("mousedown", t.handleHeaderMouseDown), window.addEventListener("mouseup", t.handleCardMouseUp), window.addEventListener("mousemove", t.handleCardMouseMove)
                     }, t.removeEventListeners = function() {
-                        var e = t[i.Container];
-                        e.removeEventListener("mousemove", t.handleContainerMouseMove), e.removeEventListener("mouseleave", t.handleContainerMouseLeave), e.removeEventListener("mouseenter", t.handleContainerMouseEnter), t[i.Carat].removeEventListener("mousedown", t.stopMouseDownPropagation), t[i.Header].removeEventListener("mousedown", t.handleHeaderMouseDown), t[i.Menu].removeEventListener("mousedown", t.stopMouseDownPropagation), window.removeEventListener("mouseup", t.handleCardMouseUp), window.removeEventListener("mousemove", t.handleCardMouseMove)
+                        var e = t[D.Container];
+                        e.removeEventListener("mousemove", t.handleContainerMouseMove), e.removeEventListener("mouseleave", t.handleContainerMouseLeave), e.removeEventListener("mouseenter", t.handleContainerMouseEnter), t[D.Header].removeEventListener("mousedown", t.handleHeaderMouseDown), window.removeEventListener("mouseup", t.handleCardMouseUp), window.removeEventListener("mousemove", t.handleCardMouseMove)
                     }, t
                 }
-                return l.__extends(t, e), t.prototype.componentDidUpdate = function(e) {
+                return a.__extends(t, e), t.prototype.componentDidUpdate = function(e) {
                     e.card.isCollapsed !== this.props.card.isCollapsed && this.props.onCardsUpdate()
                 }, t.prototype.componentDidMount = function() {
                     this.addEventListeners(), this.props.updateCard(this.props.card.name, {
-                        cardRef: this[i.Card]
+                        cardRef: this[D.Card]
                     })
                 }, t.prototype.componentWillUnmount = function() {
                     this.removeEventListeners()
                 }, t.prototype.render = function() {
                     var e = this.props,
-                        t = e.card,
-                        n = t.isCollapsed,
-                        r = t.isGrabbed,
-                        s = t.placeholderPosition,
-                        c = e.grabbedCard,
-                        u = e.menu;
-                    return p.createElement(f.Ya, {
-                        "data-test-selector": o.Container,
-                        display: f.X.Flex,
-                        flexDirection: f.Aa.Column,
-                        refDelegate: this.registerRef.bind(this, i.Container)
-                    }, p.createElement(g, {
-                        cloneStyleRef: c && c.cardRef,
-                        show: s === h.c.Top
-                    }), p.createElement(f.Fb, {
-                        background: f.r.Base,
-                        border: !0,
-                        breakpointLarge: {
-                            margin: {
-                                bottom: 2
-                            }
-                        },
-                        className: "drag-and-drop-card-container" + (r ? " drag-and-drop-card-container__grabbed" : ""),
-                        "data-test-selector": o.Card,
-                        display: f.X.Flex,
-                        elevation: r ? 4 : 1,
-                        flexDirection: f.Aa.Column,
-                        margin: {
-                            bottom: 1
-                        },
-                        refDelegate: this.registerRef.bind(this, i.Card)
-                    }, p.createElement(f.Fb, {
-                        alignContent: f.e.Center,
-                        alignItems: f.f.Center,
-                        borderBottom: !0,
-                        className: "drag-and-drop-card-header",
-                        display: f.X.Flex,
-                        justifyContent: f.Xa.Between,
-                        padding: {
-                            x: 1
-                        },
-                        position: f.kb.Relative,
-                        refDelegate: this.registerRef.bind(this, i.Header)
-                    }, p.createElement(f.Ya, {
-                        display: f.X.Flex,
-                        justifyContent: f.Xa.Center
-                    }, p.createElement(f.Ya, {
-                        margin: {
-                            right: 1
-                        }
-                    }, p.createElement(f.Ya, {
-                        className: "drag-and-drop-card-carat" + (n ? "__collapsed" : ""),
-                        refDelegate: this.registerRef.bind(this, i.Carat)
-                    }, p.createElement(f.A, {
-                        ariaLabel: Object(m.d)("Collapse/Expand", "DragAndDropCard"),
-                        icon: f.ub.GlyphArrDown,
-                        onClick: this.handleCaratClick
-                    }))), p.createElement(v, {
-                        title: this.props.title
-                    })), p.createElement(f.Ya, {
-                        display: f.X.Flex,
-                        alignItems: f.f.Center
-                    }, p.createElement(f.Ya, {
-                        refDelegate: this.registerRef.bind(this, i.Menu)
-                    }, u), p.createElement(f.Ya, {
-                        margin: {
-                            left: 1
-                        }
-                    }, p.createElement(f.A, {
-                        ariaLabel: Object(m.d)("Drag", "DragAndDropCard"),
-                        icon: f.ub.DragHandle
-                    })))), p.createElement(f.Ya, {
-                        className: "drag-and-drop-card-content" + (n ? " " + a.ContentCollapsed : ""),
-                        "data-test-selector": o.Content,
-                        position: f.kb.Relative
-                    }, n && this.props.unmountOnCollapse ? null : this.props.children)), p.createElement(g, {
-                        cloneStyleRef: c && c.cardRef,
-                        show: s === h.c.Bottom
-                    }))
+                        t = e.card.placeholderPosition,
+                        n = e.grabbedCard,
+                        r = e.menu,
+                        o = e.title;
+                    return i.createElement(i.Fragment, null, i.createElement(C.Ya, {
+                        display: C.X.Flex,
+                        flexDirection: C.Aa.Column,
+                        refDelegate: this.registerRef.bind(this, D.Container)
+                    }, i.createElement(j, {
+                        cloneStyleRef: n && n.cardRef,
+                        show: t === d.c.Top
+                    }), i.createElement(P, {
+                        menu: r,
+                        refDelegateHeader: this.registerRef.bind(this, D.Header),
+                        refDelegateCard: this.registerRef.bind(this, D.Card),
+                        title: o
+                    }, this.props.card.isCollapsed && this.props.unmountOnCollapse ? null : this.props.children), i.createElement(j, {
+                        cloneStyleRef: n && n.cardRef,
+                        show: t === d.c.Bottom
+                    })), this.props.card.isPoppedOut && i.createElement(M, {
+                        height: this.props.popoutHeight,
+                        menu: r,
+                        title: o
+                    }, this.props.children))
                 }, Object.defineProperty(t.prototype, "isHoveringOtherCard", {
                     get: function() {
                         var e = this.props.targetCard;
-                        return !(!e || e.cardRef !== this[i.Card] || !this.props.grabbedCard)
+                        return !(!e || e.cardRef !== this[D.Card] || !this.props.grabbedCard)
                     },
                     enumerable: !0,
                     configurable: !0
                 }), Object.defineProperty(t.prototype, "isHoveringSelf", {
                     get: function() {
                         var e = this.props.grabbedCard;
-                        return !(!e || e.cardRef !== this[i.Card])
+                        return !(!e || e.cardRef !== this[D.Card])
                     },
                     enumerable: !0,
                     configurable: !0
                 }), t
-            }(p.Component);
-            i.Carat, i.Card, i.Container, i.Header, i.Menu;
-            var C, y = b,
-                w = (C = Object(c.a)("DragAndDropCardContext", {
-                    card: new h.a("unknown")
-                })).InnerProvider,
-                S = C.withContext;
-            var _ = Object(s.compose)(d(function(e) {
-                    return e
-                }), S(function(e) {
-                    return e
-                }))(y),
-                E = n("i8i4"),
-                k = n("8/mp"),
-                L = n("b+ID"),
-                O = function(e) {
+            }(i.Component);
+            D.Card, D.Container, D.Header;
+            var F = Object(s.compose)(h(), v())(B),
+                W = n("8/mp"),
+                A = n("b+ID"),
+                U = function(e) {
                     function t() {
                         var t = null !== e && e.apply(this, arguments) || this;
                         return t.setRootContainerRef = function(e) {
                             t.rootContainerRef = e
                         }, t
                     }
-                    return l.__extends(t, e), t.prototype.componentDidMount = function() {
+                    return a.__extends(t, e), t.prototype.componentDidMount = function() {
                         this.rootContainerRef.appendChild(this.props.element)
                     }, t.prototype.render = function() {
-                        return p.createElement(f.Ya, {
+                        return i.createElement(C.Ya, {
                             refDelegate: this.setRootContainerRef
                         })
                     }, t
-                }(p.Component),
-                D = (n("6Ll5"), function(e) {
+                }(i.Component),
+                H = (n("6Ll5"), function(e) {
                     function t() {
                         var t = null !== e && e.apply(this, arguments) || this;
                         return t.handleContainerMouseOver = function() {
                             var e = t.props.grabbedCard;
                             e && e.cardRef && !t.props.targetCard && t.props.updateCard(t.placeholderName, {
                                 column: t.props.column,
-                                placeholderPosition: h.c.Bottom,
+                                placeholderPosition: d.c.Bottom,
                                 row: t.props.row
-                            }, h.b.SetTarget)
+                            }, d.b.SetTarget)
                         }, t.handleContainerMouseLeave = function() {
-                            t.props.grabbedCard && t.props.targetCard && t.props.updateCard(t.placeholderName, {}, h.b.RemoveTarget)
+                            t.props.grabbedCard && t.props.targetCard && t.props.updateCard(t.placeholderName, {}, d.b.RemoveTarget)
                         }, t.setContainerRef = function(e) {
                             t.containerRef = e
                         }, t
                     }
-                    return l.__extends(t, e), t.prototype.componentDidMount = function() {
+                    return a.__extends(t, e), t.prototype.componentDidMount = function() {
                         this.containerRef.addEventListener("mouseover", this.handleContainerMouseOver), this.containerRef.addEventListener("mouseleave", this.handleContainerMouseLeave)
                     }, t.prototype.componentWillUnmount = function() {
                         this.containerRef.removeEventListener("mouseove", this.handleContainerMouseOver), this.containerRef.removeEventListener("mouseleave", this.handleContainerMouseLeave)
@@ -2063,9 +2230,9 @@
                         var e = this.props,
                             t = e.grabbedCard,
                             n = e.targetCard;
-                        return p.createElement(f.Fb, {
-                            alignContent: f.e.Stretch,
-                            alignItems: f.f.Stretch,
+                        return i.createElement(C.Fb, {
+                            alignContent: C.e.Stretch,
+                            alignItems: C.f.Stretch,
                             breakpointLarge: {
                                 margin: {
                                     right: 2
@@ -2075,11 +2242,11 @@
                                 }
                             },
                             className: "drag-and-drop-layout-column",
-                            display: f.X.Flex,
-                            flexDirection: f.Aa.Column,
+                            display: C.X.Flex,
+                            flexDirection: C.Aa.Column,
                             fullHeight: !0,
                             fullWidth: !0,
-                            justifyContent: f.Xa.Start,
+                            justifyContent: C.Xa.Start,
                             margin: {
                                 right: 1
                             },
@@ -2087,7 +2254,7 @@
                                 y: 1
                             },
                             refDelegate: this.setContainerRef
-                        }, this.props.children, p.createElement(g, {
+                        }, this.props.children, i.createElement(j, {
                             cloneStyleRef: t && t.cardRef,
                             show: !(!n || n.name !== this.placeholderName)
                         }))
@@ -2098,8 +2265,8 @@
                         enumerable: !0,
                         configurable: !0
                     }), t
-                }(p.Component)),
-                R = (n("uZYF"), function(e) {
+                }(i.Component)),
+                N = (n("uZYF"), function(e) {
                     function t(t) {
                         var n = e.call(this, t) || this;
                         n.handleCardsUpdate = function() {
@@ -2112,71 +2279,71 @@
                         }, n.dropCard = function() {
                             n.setState(function(e) {
                                 var t, n, r = e.common,
-                                    a = r.grabbedCard,
-                                    o = r.targetCard,
-                                    i = e.cards,
-                                    s = e.roots;
-                                if (a && o && a.name !== o.name && (s.forEach(function(e, r) {
-                                        e.forEach(function(e, i) {
-                                            e.name === a.name ? t = {
+                                    o = r.grabbedCard,
+                                    i = r.targetCard,
+                                    s = e.cards,
+                                    c = e.roots;
+                                if (o && i && o.name !== i.name && (c.forEach(function(e, r) {
+                                        e.forEach(function(e, a) {
+                                            e.name === o.name ? t = {
                                                 column: r,
                                                 el: e.el,
                                                 name: e.name,
-                                                row: i
-                                            } : e.name === o.name && (n = {
+                                                row: a
+                                            } : e.name === i.name && (n = {
                                                 column: r,
                                                 el: e.el,
                                                 name: e.name,
-                                                row: i
+                                                row: a
                                             })
                                         })
                                     }), n || (n = {
-                                        column: o.column || 0,
-                                        el: o.el,
-                                        name: o.name,
-                                        row: o.row || 0
+                                        column: i.column || 0,
+                                        el: i.el,
+                                        name: i.name,
+                                        row: i.row || 0
                                     }), t && n)) {
-                                    var c = s[t.column],
-                                        u = s[n.column],
-                                        d = o.placeholderPosition === h.c.Bottom;
-                                    u.splice(n.row + (d ? 1 : 0), 0, t), t.column === n.column ? u.splice(t.row + (t.row > n.row ? 1 : 0), 1) : c.splice(t.row, 1)
+                                    var u = c[t.column],
+                                        l = c[n.column],
+                                        p = i.placeholderPosition === d.c.Bottom;
+                                    l.splice(n.row + (p ? 1 : 0), 0, t), t.column === n.column ? l.splice(t.row + (t.row > n.row ? 1 : 0), 1) : u.splice(t.row, 1)
                                 }
                                 return {
-                                    cards: i,
-                                    common: l.__assign({}, e.common, {
+                                    cards: s,
+                                    common: a.__assign({}, e.common, {
                                         grabbedCard: void 0,
                                         targetCard: void 0
                                     }),
-                                    roots: s
+                                    roots: c
                                 }
                             }, n.handleCardsUpdate)
                         }, n.updateCard = function(e, t, r) {
                             void 0 === t && (t = {}), n.setState(function(n) {
-                                var a = l.__assign({}, n),
-                                    o = a.cards,
-                                    i = !!o[e],
-                                    s = l.__assign({}, o[e] || new h.a(e), t);
+                                var o = a.__assign({}, n),
+                                    i = o.cards,
+                                    s = !!i[e],
+                                    c = a.__assign({}, i[e] || new d.a(e), t);
                                 switch (r) {
-                                    case h.b.RemoveTarget:
-                                        a.common = l.__assign({}, n.common, {
+                                    case d.b.RemoveTarget:
+                                        o.common = a.__assign({}, n.common, {
                                             targetCard: void 0
                                         });
                                         break;
-                                    case h.b.SetGrabbed:
-                                        s.isGrabbed = !0, a.common = l.__assign({}, a.common, {
-                                            grabbedCard: s
+                                    case d.b.SetGrabbed:
+                                        c.isGrabbed = !0, o.common = a.__assign({}, o.common, {
+                                            grabbedCard: c
                                         });
                                         break;
-                                    case h.b.SetTarget:
-                                        a.common = l.__assign({}, a.common, {
-                                            targetCard: s
+                                    case d.b.SetTarget:
+                                        o.common = a.__assign({}, o.common, {
+                                            targetCard: c
                                         })
                                 }
-                                return i && (a.cards[e] = s), a
+                                return s && (o.cards[e] = c), o
                             })
                         };
                         var r = {},
-                            a = t.initialCardsState.map(function(e) {
+                            o = t.initialCardsState.map(function(e) {
                                 return e.map(function(e) {
                                     return e.el = document.createElement("div"), r[e.name] = e, {
                                         el: e.el,
@@ -2191,27 +2358,27 @@
                                 onCardsUpdate: n.handleCardsUpdate,
                                 updateCard: n.updateCard
                             },
-                            roots: a
+                            roots: o
                         }, n
                     }
-                    return l.__extends(t, e), t.prototype.componentDidMount = function() {
+                    return a.__extends(t, e), t.prototype.componentDidMount = function() {
                         this.handleCardsUpdate()
                     }, t.prototype.render = function() {
                         var e = this,
                             t = this.props.isExpandedView;
-                        return p.createElement(p.Fragment, null, p.createElement(k.b, {
+                        return i.createElement(i.Fragment, null, i.createElement(W.b, {
                             className: "drag-and-drop-layout-scrollable-area" + (t ? "__expanded-view" : "")
-                        }, p.createElement(f.Ya, {
-                            alignContent: f.e.Stretch,
-                            alignItems: f.f.Stretch,
+                        }, i.createElement(C.Ya, {
+                            alignContent: C.e.Stretch,
+                            alignItems: C.f.Stretch,
                             className: "drag-and-drop-layout",
-                            display: f.X.Flex,
-                            flexDirection: f.Aa.Row,
+                            display: C.X.Flex,
+                            flexDirection: C.Aa.Row,
                             fullHeight: !0,
                             fullWidth: !0,
-                            justifyContent: f.Xa.Between
+                            justifyContent: C.Xa.Between
                         }, this.state.roots.map(function(t, n) {
-                            return p.createElement(D, {
+                            return i.createElement(H, {
                                 column: n,
                                 key: n,
                                 grabbedCard: e.state.common.grabbedCard,
@@ -2221,67 +2388,67 @@
                             }, t.map(function(e) {
                                 var t = e.el,
                                     n = e.name;
-                                return p.createElement(O, {
+                                return i.createElement(U, {
                                     element: t,
                                     key: n
                                 })
                             }))
-                        }))), p.createElement(u, {
+                        }))), i.createElement(f, {
                             value: this.state.common
                         }, Object.keys(this.state.cards).map(function(t) {
                             var n = e.state.cards[t];
-                            return E.createPortal(p.createElement(w, {
+                            return R.createPortal(i.createElement(l, {
                                 value: {
                                     card: n
                                 }
                             }, e.props.cards[n.name]), n.el)
                         })))
                     }, t
-                }(p.Component));
-            var I = Object(L.b)(function(e) {
+                }(i.Component));
+            var Y = Object(A.b)(function(e) {
                     return {
                         isExpandedView: e.isExpandedView
                     }
-                })(R),
-                x = n("eJ65"),
-                P = n("N0BP"),
-                M = function(e) {
+                })(N),
+                G = n("eJ65"),
+                V = n("N0BP"),
+                q = function(e) {
                     function t() {
                         return null !== e && e.apply(this, arguments) || this
                     }
-                    return l.__extends(t, e), t.prototype.render = function() {
-                        return p.createElement(f.Ya, {
+                    return a.__extends(t, e), t.prototype.render = function() {
+                        return i.createElement(C.Ya, {
                             margin: {
                                 left: 1
                             },
-                            position: f.kb.Relative
-                        }, p.createElement(x.a, null, p.createElement(f.A, l.__assign({
+                            position: C.kb.Relative
+                        }, i.createElement(G.a, null, i.createElement(C.A, a.__assign({
                             ariaLabel: this.props.ariaIconLabel,
                             icon: this.props.icon
-                        }, Object(P.a)(this.props))), p.createElement(f.u, {
+                        }, Object(V.a)(this.props))), i.createElement(C.u, {
                             offsetY: "0",
                             offsetX: "1rem",
-                            direction: f.v.Left,
-                            size: f.w.Small
+                            direction: C.v.Left,
+                            size: C.w.Small
                         }, this.props.children)))
                     }, t
-                }(p.Component);
+                }(i.Component);
             n.d(t, "a", function() {
-                return _
+                return F
             }), n.d(t, "c", function() {
-                return I
+                return Y
             }), n.d(t, "b", function() {
-                return M
+                return q
             })
         },
         rSo7: function(e, t, n) {
             "use strict";
             n.d(t, "a", function() {
-                return a
+                return o
             });
             var r = n("/7QA");
 
-            function a(e) {
+            function o(e) {
                 var t = Math.floor(e / 60),
                     n = e % 60;
                 return t && n ? Object(r.d)("{hours, number}h{minutes, number}m", {
@@ -2302,12 +2469,12 @@
         xTFG: function(e, t, n) {
             "use strict";
             n.d(t, "a", function() {
-                return o
+                return a
             }), n.d(t, "b", function() {
                 return c
             });
-            var r, a = n("1rIY"),
-                o = (r = Object(a.a)("CardsTrackingContext", {
+            var r, o = n("1rIY"),
+                a = (r = Object(o.a)("CardsTrackingContext", {
                     registerReportCardVisibility: function() {
                         return function() {
                             return null

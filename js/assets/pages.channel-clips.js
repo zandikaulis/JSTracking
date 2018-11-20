@@ -231,9 +231,9 @@
             }), n.d(t, "C", function() {
                 return L
             }), n.d(t, "I", function() {
-                return A
-            }), n.d(t, "D", function() {
                 return j
+            }), n.d(t, "D", function() {
+                return A
             }), n.d(t, "G", function() {
                 return U
             }), n.d(t, "B", function() {
@@ -331,13 +331,13 @@
                 }
             }
 
-            function A() {
+            function j() {
                 return {
                     type: m
                 }
             }
 
-            function j() {
+            function A() {
                 return {
                     type: h
                 }
@@ -1137,6 +1137,7 @@
             n.d(t, "a", function() {
                 return a
             });
+            n("/7QA");
             var i = n("3Bft");
 
             function a(e) {
@@ -4445,8 +4446,8 @@
                 T = n("f00E"),
                 R = n("y5D0"),
                 L = n("kz7j"),
-                A = n("kRBY"),
-                j = n("9o5F"),
+                j = n("kRBY"),
+                A = n("9o5F"),
                 U = n("tKDy"),
                 B = n("okS7"),
                 F = n("ry0r"),
@@ -4983,8 +4984,8 @@
                         n = !1;
                     return t === ke.ON ? n = !0 : t === ke.STAFF_ONLY && e && (n = !0), s.m.get("overrideRestrictedChatInputFeatureFlag", n)
                 };
-            var Ie, Te, Re, Le, Ae = n("lNGo"),
-                je = n("ySk3"),
+            var Ie, Te, Re, Le, je = n("lNGo"),
+                Ae = n("ySk3"),
                 Ue = n("x0gr"),
                 Be = n("mmRu"),
                 Fe = n("cpJf"),
@@ -5374,7 +5375,7 @@
                         size: v.w.Medium
                     }, a.createElement(N.a, {
                         onClickOut: this.handleAuthContextBalloonClose
-                    }, a.createElement(j.a, {
+                    }, a.createElement(A.a, {
                         source: I.a.Chat,
                         targetUserDisplayName: this.props.channelDisplayName,
                         onClose: this.handleAuthContextBalloonClose
@@ -5488,7 +5489,7 @@
                 }, t.prototype.login = function(e) {
                     this.storePendingMessage(this.state.value), this.props.login(e)
                 }, t.prototype.trackChatEvent = function(e) {
-                    Object(Ae.a)({
+                    Object(je.a)({
                         channelID: this.props.channelID,
                         channelLogin: this.props.channelLogin,
                         emotePickerSessionID: e,
@@ -5505,7 +5506,7 @@
                                 }
                             }); e < t.length; e++) {
                             var n = t[e];
-                            n.type === we.a.Mention && n.content.currentUserMentionRelation !== Ne.a.Recipient && Object(je.a)({
+                            n.type === we.a.Mention && n.content.currentUserMentionRelation !== Ne.a.Recipient && Object(Ae.a)({
                                 channelLogin: this.props.channelLogin,
                                 isHostMode: this.props.isHostMode,
                                 mentionedUserDisplayName: n.content.recipient,
@@ -5580,7 +5581,7 @@
                         slowModeDuration: e.chat.slowModeDuration,
                         subsOnlyMode: e.chat.subsOnlyMode,
                         emotePickerSessionID: e.chat.emotePickerSessionID,
-                        sessionUser: Object(A.e)(e)
+                        sessionUser: Object(j.e)(e)
                     }
                 }, function(e) {
                     return Object(o.bindActionCreators)({
@@ -6269,24 +6270,6 @@
             e.exports = n.p + "assets/notification_upsell_arrow-c9d4ff7c87444b45d813.png"
         },
         CK1f: function(e, t, n) {},
-        CiVV: function(e, t, n) {
-            "use strict";
-            n.d(t, "a", function() {
-                return a
-            });
-            var i = n("q1tI"),
-                a = function() {
-                    return i.createElement("figure", {
-                        className: "tw-svg tw-svg__asset--inherit"
-                    }, i.createElement("svg", {
-                        xmlns: "http://www.w3.org/2000/svg",
-                        width: "20",
-                        height: "20"
-                    }, i.createElement("path", {
-                        d: "M17 17.357c-.466.4-1.08.643-1.754.643-.672 0-1.507-.414-1.753-.636a1.29 1.29 0 0 0-.898-.333c-.295 0-.546.077-.753.231-.5.477-1.167.741-1.858.738a2.683 2.683 0 0 1-1.75-.64 1.317 1.317 0 0 0-.9-.33c-.296 0-.547.078-.754.232-.5.476-1.166.74-1.857.738A2.684 2.684 0 0 1 3 17.383V8.096C3.336 4.676 6.335 2 9.984 2 13.86 2 17 5.016 17 8.737l-.001.12.001 8.5zM7.5 11a1.5 1.5 0 1 0 0-3 1.5 1.5 0 0 0 0 3zm5 0a1.5 1.5 0 1 0 0-3 1.5 1.5 0 0 0 0 3z"
-                    })))
-                }
-        },
         "CpU+": function(e, t, n) {
             "use strict";
             n.d(t, "a", function() {
@@ -8629,7 +8612,7 @@
             ! function(e) {
                 e.LockSelector = "video-lock", e.UpsellSelector = "upsell"
             }(k || (k = {}));
-            var A, j, U = function(e) {
+            var j, A, U = function(e) {
                 function t() {
                     return null !== e && e.apply(this, arguments) || this
                 }
@@ -8710,10 +8693,10 @@
                 return void 0 !== e.clipCreatedByChannelLogin
             }! function(e) {
                 e.Avatar = "preview-card-avatar", e.BoxArt = "preview-card-box-art"
-            }(A || (A = {})),
+            }(j || (j = {})),
             function(e) {
                 e[e.SingleGameList = 1] = "SingleGameList", e[e.SingleChannelList = 2] = "SingleChannelList", e[e.MixedGameAndChannelList = 3] = "MixedGameAndChannelList"
-            }(j || (j = {}));
+            }(A || (A = {}));
             var x = function(e) {
                     function t() {
                         var t = null !== e && e.apply(this, arguments) || this;
@@ -8815,7 +8798,7 @@
                             viewerCount: this.props.viewCount
                         }, "VideoPreviewCard") : ""
                     }, t.prototype.renderIconicImage = function() {
-                        return this.props.context === j.SingleChannelList && this.props.gameBoxArtImageProps && this.props.gameBoxArtImageProps.src && this.props.gameTitleLinkTo ? a.createElement(s.Ya, {
+                        return this.props.context === A.SingleChannelList && this.props.gameBoxArtImageProps && this.props.gameBoxArtImageProps.src && this.props.gameTitleLinkTo ? a.createElement(s.Ya, {
                             margin: {
                                 right: 1
                             }
@@ -8824,9 +8807,9 @@
                             linkTo: Object(R.a)(this.getTrackingContext(h.PageviewContent.GameBoxart), this.props.gameTitleLinkTo),
                             onClick: this.props.onGameTitleClick,
                             aspect: s.p.BoxArt,
-                            "data-test-selector": A.BoxArt,
+                            "data-test-selector": j.BoxArt,
                             "data-a-target": "preview-card-boxart-link"
-                        })) : (this.props.context === j.SingleGameList || this.props.context === j.MixedGameAndChannelList) && this.props.channelImageProps && this.props.channelImageProps.src ? a.createElement(s.Ya, {
+                        })) : (this.props.context === A.SingleGameList || this.props.context === A.MixedGameAndChannelList) && this.props.channelImageProps && this.props.channelImageProps.src ? a.createElement(s.Ya, {
                             margin: {
                                 right: 1
                             }
@@ -8835,7 +8818,7 @@
                             linkTo: Object(R.a)(this.getTrackingContext(h.PageviewContent.UserThumbnail), this.props.channelLinkTo),
                             onClick: this.props.onChannelImageClick || this.props.onChannelLoginClick,
                             aspect: s.p.Aspect1x1,
-                            "data-test-selector": A.Avatar
+                            "data-test-selector": j.Avatar
                         })) : void 0
                     }, t.prototype.renderTitles = function() {
                         var e = null,
@@ -8852,7 +8835,7 @@
                             linkTo: this.props.clipCreatedByChannelLoginLinkTo,
                             onClick: this.props.onClipCreatedByChannelLoginClick,
                             automationSelector: "preview-card-clip-curator-link"
-                        }) : B(this.props) && this.props.multipleVideoGameMarkersType && this.props.videoGameChanges && this.props.videoGameChanges.length > 0 ? e = this.renderPreviewCardGameInfo(this.props.multipleVideoGameMarkersType, this.props.videoGameChanges, this.props.onVideoGameBalloonClick, this.props.onVideoGameBalloonItemClick) : this.props.context !== j.SingleGameList && this.props.gameTitle && this.props.gameTitleLinkTo && t.push({
+                        }) : B(this.props) && this.props.multipleVideoGameMarkersType && this.props.videoGameChanges && this.props.videoGameChanges.length > 0 ? e = this.renderPreviewCardGameInfo(this.props.multipleVideoGameMarkersType, this.props.videoGameChanges, this.props.onVideoGameBalloonClick, this.props.onVideoGameBalloonItemClick) : this.props.context !== A.SingleGameList && this.props.gameTitle && this.props.gameTitleLinkTo && t.push({
                             text: this.props.gameTitle,
                             linkTo: Object(R.a)(this.getTrackingContext(h.PageviewContent.GameMetadata), this.props.gameTitleLinkTo),
                             onClick: this.props.onGameTitleClick,
@@ -8904,9 +8887,9 @@
                     autoReportInteractive: !0
                 })(x);
             n.d(t, !1, function() {
-                return A
-            }), n.d(t, "b", function() {
                 return j
+            }), n.d(t, "b", function() {
+                return A
             }), n.d(t, !1, function() {
                 return x
             }), n.d(t, "a", function() {
@@ -10542,8 +10525,8 @@
                 })(M),
                 R = n("/7QA"),
                 L = n("CpU+"),
-                A = n("fKMw"),
-                j = n("DMoW"),
+                j = n("fKMw"),
+                A = n("DMoW"),
                 U = n("Ue10"),
                 B = n("CA5B");
             ! function(e) {
@@ -10665,48 +10648,48 @@
                     }, t.prototype.getCommonErrorMessage = function(e, t) {
                         switch (e) {
                             default: return "";
-                            case j.B.GRANTEE_NOT_FOUND:
-                                    case j.O.REVOKEE_NOT_FOUND:
+                            case A.B.GRANTEE_NOT_FOUND:
+                                    case A.O.REVOKEE_NOT_FOUND:
                                     return Object(R.d)("Invalid username: {login}.", {
                                     login: t
                                 }, "VIPCommandHandler");
-                            case j.B.FORBIDDEN:
-                                    case j.O.FORBIDDEN:
+                            case A.B.FORBIDDEN:
+                                    case A.O.FORBIDDEN:
                                     return Object(R.d)("You don't have permission to perform that action.", "VIPCommandHandler")
                         }
                     }, t.prototype.getVIPErrorMessage = function(e, t) {
                         switch (void 0 === t && (t = ""), e) {
-                            case j.B.FORBIDDEN:
-                            case j.B.GRANTEE_NOT_FOUND:
+                            case A.B.FORBIDDEN:
+                            case A.B.GRANTEE_NOT_FOUND:
                                 return this.getCommonErrorMessage(e, t);
-                            case j.B.GRANTEE_ALREADY_VIP:
+                            case A.B.GRANTEE_ALREADY_VIP:
                                 return Object(R.d)("{login} is already a VIP of this channel.", {
                                     login: t
                                 }, "VIPCommandHandler");
-                            case j.B.GRANTEE_CHAT_BANNED:
+                            case A.B.GRANTEE_CHAT_BANNED:
                                 return Object(R.d)("{login} is banned in this channel. You must unban this user before granting VIP status.", {
                                     login: t
                                 }, "VIPCommandHandler");
-                            case j.B.MAX_VIPS_REACHED:
+                            case A.B.MAX_VIPS_REACHED:
                                 return Object(R.d)("Unable to add VIP. Visit the Achievements page on your dashboard to learn how to unlock additional VIP slots.", "VIPCommandHandler");
-                            case j.B.VIP_ACHIEVEMENT_INCOMPLETE:
+                            case A.B.VIP_ACHIEVEMENT_INCOMPLETE:
                                 return Object(R.d)("Unable to add VIP. Visit the Achievements page on your dashboard to learn how to unlock this feature.", "VIPCommandHandler");
                             case D.QUERY_ERROR:
-                            case j.B.CHANNEL_NOT_FOUND:
+                            case A.B.CHANNEL_NOT_FOUND:
                             default:
                                 return Object(R.d)("Unable to add VIP.", "VIPCommandHandler")
                         }
                     }, t.prototype.getUnVIPErrorMessage = function(e, t) {
                         switch (void 0 === t && (t = ""), e) {
-                            case j.O.FORBIDDEN:
-                            case j.O.REVOKEE_NOT_FOUND:
+                            case A.O.FORBIDDEN:
+                            case A.O.REVOKEE_NOT_FOUND:
                                 return this.getCommonErrorMessage(e, t);
-                            case j.O.REVOKEE_NOT_VIP:
+                            case A.O.REVOKEE_NOT_VIP:
                                 return Object(R.d)("{login} is not a VIP of this channel.", {
                                     login: t
                                 }, "VIPCommandHandler");
                             case D.QUERY_ERROR:
-                            case j.O.CHANNEL_NOT_FOUND:
+                            case A.O.CHANNEL_NOT_FOUND:
                             default:
                                 return Object(R.d)("Unable to remove VIP.", "VIPCommandHandler")
                         }
@@ -10714,7 +10697,7 @@
                         return Object(R.d)("There was a problem fetching the list of VIPs. Please try again.", "VIPCommandHandler")
                     }, t
                 }(h.Component),
-                x = Object(g.compose)(Object(L.a)(), Object(A.a)(), s.a)(F),
+                x = Object(g.compose)(Object(L.a)(), Object(j.a)(), s.a)(F),
                 P = n("vKai"),
                 H = function(e) {
                     function t() {
@@ -11689,7 +11672,7 @@
                 Le = f.a.wrap(function() {
                     return n.e(191).then(n.bind(null, "miqE"))
                 }, "ShareToChat", Oe),
-                Ae = function(e) {
+                je = function(e) {
                     function t(t) {
                         var n = e.call(this, t) || this;
                         return n.state = {
@@ -11885,7 +11868,7 @@
                         configurable: !0
                     }), t
                 }(h.Component);
-            var je = Object(i.compose)(Object(a.connect)(function(e) {
+            var Ae = Object(i.compose)(Object(a.connect)(function(e) {
                     return {
                         firstPageLoaded: e.session.firstPageLoaded,
                         isChatRulesOpen: e.chat.isChatRulesOpen,
@@ -11921,7 +11904,7 @@
                 }), Object(u.b)("ChatRoom", {
                     autoReportInteractive: !0
                 }), Object(v.a)(), l.a, d.a)(function(e) {
-                    return h.createElement(W.a, null, h.createElement(Ae, m.__assign({}, e)))
+                    return h.createElement(W.a, null, h.createElement(je, m.__assign({}, e)))
                 }),
                 Ue = function(e) {
                     function t() {
@@ -11946,7 +11929,7 @@
                             return e.trim().length
                         }).length && (o = e.chatSettings.rules);
                         var s = !(!e || !e.chatSettings) && e.chatSettings.blockLinks;
-                        return h.createElement(je, {
+                        return h.createElement(Ae, {
                             key: this.props.channelLogin,
                             authToken: this.props.sessionUser && this.props.sessionUser.authToken,
                             bitsConfig: this.props.bitsConfig,
@@ -12579,7 +12562,7 @@
                 }(c.Component),
                 R = n("MLDe"),
                 L = (n("n/Dx"), 2e3),
-                A = function(e) {
+                j = function(e) {
                     function t() {
                         var t = null !== e && e.apply(this, arguments) || this;
                         return t.state = {
@@ -12729,12 +12712,12 @@
                         }, "ClipsViewModalContent"))))
                     }, t = s.__decorate([Object(h.b)("ClipsViewModalContent")], t)
                 }(c.Component),
-                j = n("S1Za");
+                A = n("S1Za");
             var U = Object(a.connect)(null, function(e) {
                     return Object(r.bindActionCreators)({
-                        reportPlayerInstanceStarted: j.b
+                        reportPlayerInstanceStarted: A.b
                     }, e)
-                })(A),
+                })(j),
                 B = (n("9a8W"), function(e) {
                     function t() {
                         var t = null !== e && e.apply(this, arguments) || this;
@@ -14276,8 +14259,8 @@
                 T = n("oJmH"),
                 R = n("2+sX"),
                 L = n("u5aL"),
-                A = n("eJ65"),
-                j = n("x7UT"),
+                j = n("eJ65"),
+                A = n("x7UT"),
                 U = n("/aPz"),
                 B = n("D7An"),
                 F = n("4rCz");
@@ -14451,7 +14434,7 @@
                         })), this.props.renderBalloonInBalloonLayer ? r.createElement(g.Ya, {
                             "data-test-selector": x.BalloonLayerButton,
                             refDelegate: this.setContainerRefDelegate
-                        }, p) : r.createElement(g.Ya, null, r.createElement(A.a, {
+                        }, p) : r.createElement(g.Ya, null, r.createElement(j.a, {
                             "data-test-selector": x.DefaultButton,
                             onToggle: this.handleMenuToggle
                         }, p, r.createElement(g.u, {
@@ -14498,7 +14481,7 @@
                     skip: function(e) {
                         return !e.channelLogin
                     }
-                }), Object(j.a)([{
+                }), Object(A.a)([{
                     topic: function(e) {
                         return Object(U.I)(e.data.currentUser && e.data.currentUser.id || "")
                     },
@@ -16714,7 +16697,7 @@
                 L = E.a.wrap(function() {
                     return n.e(203).then(n.bind(null, "cs/o"))
                 }, "RoomPicker"),
-                A = function(e) {
+                j = function(e) {
                     function t() {
                         var t = null !== e && e.apply(this, arguments) || this;
                         return t.state = {
@@ -16990,7 +16973,7 @@
                         }, Object(y.d)("Show Chat", "RoomSelector")))
                     }, t
                 }(C.Component),
-                j = n("Qdho");
+                A = n("Qdho");
             var U = Object(i.compose)(Object(a.connect)(function(e) {
                 return {
                     firstPageLoaded: e.session.firstPageLoaded,
@@ -17003,7 +16986,7 @@
                         return g.O()
                     }
                 }, e)
-            }), Object(o.a)(j, {
+            }), Object(o.a)(A, {
                 skip: function(e) {
                     return !e.firstPageLoaded
                 },
@@ -17023,7 +17006,7 @@
                 }
             }), Object(s.a)(function(e) {
                 return {
-                    query: j,
+                    query: A,
                     skip: !e.firstPageLoaded || !e.data || !e.data.channel,
                     variables: {
                         login: e.channelLogin
@@ -17058,7 +17041,7 @@
                 }
             }), Object(s.a)(function(e) {
                 return {
-                    query: j,
+                    query: A,
                     skip: !(e.firstPageLoaded && e.sessionUser && e.data && e.data.channel),
                     variables: {
                         login: e.channelLogin
@@ -17083,7 +17066,7 @@
                 }
             }), Object(s.a)(function(e) {
                 return {
-                    query: j,
+                    query: A,
                     skip: !(e.firstPageLoaded && e.sessionUser && e.data && e.data.channel),
                     variables: {
                         login: e.channelLogin
@@ -17108,7 +17091,7 @@
                 }
             }), Object(s.a)(function(e) {
                 return {
-                    query: j,
+                    query: A,
                     skip: !(e.firstPageLoaded && e.sessionUser && e.data && e.data.channel),
                     variables: {
                         login: e.channelLogin
@@ -17131,7 +17114,7 @@
                 }
             }), Object(f.b)(), Object(b.b)("RoomSelector", {
                 autoReportInteractive: !0
-            }))(A);
+            }))(j);
             n.d(t, "a", function() {
                 return U
             })
@@ -20428,7 +20411,7 @@
             T.displayName = "MentionFragment";
             var R = n("QVaV"),
                 L = n("sU0Q"),
-                A = function(e) {
+                j = function(e) {
                     function t() {
                         return null !== e && e.apply(this, arguments) || this
                     }
@@ -20455,7 +20438,7 @@
                         })
                     }, t
                 }(i.Component),
-                j = Object(b.a)(L, {
+                A = Object(b.a)(L, {
                     options: function(e) {
                         return {
                             variables: {
@@ -20465,7 +20448,7 @@
                             fetchPolicy: "cache-first"
                         }
                     }
-                })(A),
+                })(j),
                 U = n("ZtEv");
 
             function B(e, t, n) {
@@ -20533,7 +20516,7 @@
                                 }))), l.push(B(s, o, t.disableLinks));
                                 break;
                             case h.a.VideoLink:
-                                n || (n = i.createElement(j, {
+                                n || (n = i.createElement(A, {
                                     key: s,
                                     id: o.content.id,
                                     url: o.content.url
@@ -20863,20 +20846,26 @@
                     someoneElse: function() {
                         return Object(c.d)("Someone else", "ReportModalWizard")
                     },
-                    sexuallyCoercive: function() {
-                        return Object(c.d)("acting in a sexually coercive or inappropriate way", "ReportModalWizard")
-                    },
                     abusiveViolence: function() {
-                        return Object(c.d)("They're threatening violence or physical harm", "ReportModalWizard")
+                        return Object(c.d)("Threatening violence or physical harm", "ReportModalWizard")
                     },
                     commitingViolence: function() {
-                        return Object(c.d)("They're committing acts of violence or physical harm", "ReportModalWizard")
+                        return Object(c.d)("Committing acts of violence or physical harm", "ReportModalWizard")
                     },
                     threatening: function() {
-                        return Object(c.d)("threatening, harming, or endangering someone", "ReportModalWizard")
+                        return Object(c.d)("Threatening, harming, or endangering someone", "ReportModalWizard")
                     },
                     abusive: function() {
-                        return Object(c.d)("being hateful, harassing, or abusive", "ReportModalWizard")
+                        return Object(c.d)("Being hateful, harassing, or abusive", "ReportModalWizard")
+                    },
+                    harassment: function() {
+                        return Object(c.d)("Hate speech, harassment, or abuse", "ReportModalWizard")
+                    },
+                    moreOptions: function() {
+                        return Object(c.d)("Give me more options...", "ReportModalWizard")
+                    },
+                    scam: function() {
+                        return Object(c.d)("Attempts to scam other community members", "ReportModalWizard")
                     }
                 },
                 O = {
@@ -20928,13 +20917,13 @@
                     },
                     endBlurb_socialmedia: {
                         getTitle: function() {
-                            return Object(c.d)("Please submit a report to the site or service where the incident occurred as well if you have not already done so.", "ReportModalWizard")
+                            return Object(c.d)("Please submit a report on the site or service where the incident occurred as well if you have not already done so.", "ReportModalWizard")
                         },
                         type: a.Text
                     },
                     endBlurb_threat: {
                         getTitle: function() {
-                            return Object(c.d)("If you feel you are in immediate danger, please contact your local law enforcement.", "ReportModalWizard")
+                            return Object(c.d)("If you feel you are in immediate danger, please contact your local law enforcement. To protect yourself on Twitch, you may also block the user.", "ReportModalWizard")
                         },
                         type: a.Text
                     },
@@ -20985,42 +20974,52 @@
                     },
                     maliciousRaid: {
                         getTitle: function() {
-                            return Object(c.d)("They're participating in a malicious raid", "ReportModalWizard")
+                            return Object(c.d)("Participating in a malicious raid", "ReportModalWizard")
                         },
                         value: "malicious raid",
                         reportReason: i.Harassment
                     },
+                    automod: {
+                        getTitle: function() {
+                            return Object(c.d)("It's being used to bypass AutoMod", "ReportModalWizard")
+                        },
+                        value: "bypass automod",
+                        reportReason: i.Other
+                    },
                     violence: {
                         getTitle: function() {
-                            return Object(c.d)("It contains threats, harm, or endangerment of someone", "ReportModalWizard")
+                            return Object(c.d)("Threats, harm, or endangerment of someone", "ReportModalWizard")
                         },
                         value: "violence/threats",
                         reportReason: i.Harm
                     },
                     report_username: {
                         getTitle: function() {
-                            return Object(c.d)("They're using an inappropriate or offensive username", "ReportModalWizard")
+                            return Object(c.d)("The username is inappropriate", "ReportModalWizard")
                         },
                         value: "inappropriate username",
                         reportReason: i.OffensiveUsername
                     },
                     report_emotes: {
                         getTitle: function() {
-                            return Object(c.d)("The emotes are inappropriate or offensive", "ReportModalWizard")
+                            return Object(c.d)("The emotes or badges", "ReportModalWizard")
                         },
                         value: "inappropriate emotes",
                         reportReason: i.Other
                     },
-                    abusive: {
+                    emotes_break_guidelines: {
                         getTitle: function() {
-                            return Object(c.d)("It's hateful, harassing, or abusive", "ReportModalWizard")
+                            return Object(c.d)("The emotes break Twitch's guidelines", "ReportModalWizard")
                         },
+                        value: "emotes break guidelines",
+                        reportReason: i.Other
+                    },
+                    abusive: {
+                        getTitle: _.harassment,
                         value: "abusive"
                     },
                     scam: {
-                        getTitle: function() {
-                            return Object(c.d)("It contains attempts to scam other community members", "ReportModalWizard")
-                        },
+                        getTitle: _.scam,
                         value: "scam",
                         reportReason: i.Spam
                     },
@@ -21033,6 +21032,13 @@
                     impersonation: {
                         getTitle: function() {
                             return Object(c.d)("They're impersonating someone", "ReportModalWizard")
+                        },
+                        value: "impersonation",
+                        reportReason: i.Impersonation
+                    },
+                    impersonating: {
+                        getTitle: function() {
+                            return Object(c.d)("Impersonating someone", "ReportModalWizard")
                         },
                         value: "impersonation",
                         reportReason: i.Impersonation
@@ -21050,21 +21056,27 @@
                         },
                         value: "intellectual property"
                     },
-                    inappropriateContent: {
+                    itsInappropriateContent: {
                         getTitle: function() {
                             return Object(c.d)("It's inappropriate or obscene", "ReportModalWizard")
                         },
                         value: "inappropriate content"
                     },
+                    inappropriateContent: {
+                        getTitle: function() {
+                            return Object(c.d)("Inappropriate or obscene content", "ReportModalWizard")
+                        },
+                        value: "inappropriate content"
+                    },
                     violateDevAgreement: {
                         getTitle: function() {
-                            return Object(c.d)("I think they're violating Twitch's Developer Agreement", "ReportModalWizard")
+                            return Object(c.d)("They're breaking Twitch's Developer Agreement", "ReportModalWizard")
                         },
                         value: "violating developer agreement"
                     },
                     revealPersonalInfo: {
                         getTitle: function() {
-                            return Object(c.d)("They might have revealed someone's personal information", "ReportModalWizard")
+                            return Object(c.d)("Revealing someone's personal information", "ReportModalWizard")
                         },
                         value: "revealing personal info",
                         reportReason: i.Other
@@ -21085,35 +21097,42 @@
                     },
                     inappropriateExtension: {
                         getTitle: function() {
-                            return Object(c.d)("Their extension contains malicious or inappropriate content", "ReportModalWizard")
+                            return Object(c.d)("The extensions are inappropriate or malicious", "ReportModalWizard")
                         },
                         value: "inappropriate extension",
                         reportReason: i.Other
                     },
                     cheating: {
                         getTitle: function() {
-                            return Object(c.d)("They're cheating in an online game", "ReportModalWizard")
+                            return Object(c.d)("Cheating in an online game", "ReportModalWizard")
                         },
                         value: "cheating",
                         reportReason: i.Cheating
                     },
                     bitsViolation: {
                         getTitle: function() {
-                            return Object(c.d)("Their use of Bits goes against Twitch's Policy", "ReportModalWizard")
+                            return Object(c.d)("They're breaking Twitch's Bits Policy", "ReportModalWizard")
                         },
                         value: "bits violation",
                         reportReason: i.BitsViolation
                     },
+                    compromisedAccount: {
+                        getTitle: function() {
+                            return Object(c.d)("The account is stolen or compromised", "ReportModalWizard")
+                        },
+                        value: "account compromised",
+                        reportReason: i.Other
+                    },
                     video_labeling: {
                         getTitle: function() {
-                            return Object(c.d)("Their content is labeled incorrectly", "ReportModalWizard")
+                            return Object(c.d)("Their content is misclassified (wrong category or tags)", "ReportModalWizard")
                         },
                         value: "incorrect label",
                         reportReason: i.Miscategorized
                     },
                     video_inactive: {
                         getTitle: function() {
-                            return Object(c.d)("The stream is inactive (sleeping/AFK)", "ReportModalWizard")
+                            return Object(c.d)("There's no streamer, or the streamer is inactive", "ReportModalWizard")
                         },
                         value: "inactive stream",
                         reportReason: i.Miscategorized
@@ -21123,16 +21142,30 @@
                         value: "general_video",
                         omitFromDescription: !0
                     },
+                    hateSpeechSymbols: {
+                        getTitle: function() {
+                            return Object(c.d)("It contains hate speech or hate symbols", "ReportModalWizard")
+                        },
+                        value: "hate speech symbols",
+                        reportReason: i.HatefulConduct
+                    },
                     hateSpeech: {
                         getTitle: function() {
-                            return Object(c.d)("They're using hate speech, hateful symbols, or hateful media", "ReportModalWizard")
+                            return Object(c.d)("Hate speech, hateful symbols, or other hateful conduct", "ReportModalWizard")
                         },
                         value: "hate speech",
                         reportReason: i.HatefulConduct
                     },
+                    harassing: {
+                        getTitle: function() {
+                            return Object(c.d)("It's harassing or bullying someone", "ReportModalWizard")
+                        },
+                        value: "harassment",
+                        reportReason: i.Harassment
+                    },
                     harassment: {
                         getTitle: function() {
-                            return Object(c.d)("They're harassing or bullying someone", "ReportModalWizard")
+                            return Object(c.d)("Harassing or bullying someone", "ReportModalWizard")
                         },
                         value: "harassment",
                         reportReason: i.Harassment
@@ -21149,14 +21182,14 @@
                     },
                     swatting: {
                         getTitle: function() {
-                            return Object(c.d)("They're inciting or committing swatting or a DDOS attack", "ReportModalWizard")
+                            return Object(c.d)("Involvement in swatting or DDOS attacks", "ReportModalWizard")
                         },
                         value: "swatting/ddosing",
                         reportReason: i.Harassment
                     },
                     personalInfo: {
                         getTitle: function() {
-                            return Object(c.d)("They're purposely revealing personal information", "ReportModalWizard")
+                            return Object(c.d)("Doxxing (purposely revealing personal information)", "ReportModalWizard")
                         },
                         value: "revealing personal info",
                         reportReason: i.Harassment
@@ -21195,18 +21228,11 @@
                         value: "prohibited game",
                         reportReason: i.Prohibited
                     },
-                    sexuallyViolent: {
+                    sexuallyViolentChildAnimal: {
                         getTitle: function() {
-                            return Object(c.d)("Violent sexual conduct", "ReportModalWizard")
+                            return Object(c.d)("Sexual conduct involving violence, children, or animals", "ReportModalWizard")
                         },
-                        value: "sexually violent",
-                        reportReason: i.SexualViolence
-                    },
-                    childAnimal: {
-                        getTitle: function() {
-                            return Object(c.d)("Sexual conduct involving a child or animal", "ReportModalWizard")
-                        },
-                        value: "sexual conduct; child or animal",
+                        value: "sexual conduct: violent, child, or animal",
                         reportReason: i.SexualViolence
                     },
                     pornographic: {
@@ -21246,7 +21272,7 @@
                     },
                     evasion: {
                         getTitle: function() {
-                            return Object(c.d)("They were banned or suspended and are trying to get around it (ban evasion)", "ReportModalWizard")
+                            return Object(c.d)("Evading a block, ban, or suspension", "ReportModalWizard")
                         },
                         value: "ban evasion"
                     },
@@ -21278,14 +21304,14 @@
                     },
                     impersonation_brand: {
                         getTitle: function() {
-                            return Object(c.d)("Someone I represent, or a brand/company I work for", "ReportModalWizard")
+                            return Object(c.d)("Someone I represent, or a company I work for", "ReportModalWizard")
                         },
                         value: "impersonating brand",
                         reportReason: i.Impersonation
                     },
                     impersonation_other: {
                         getTitle: _.someoneElse,
-                        value: "impersonating someone else",
+                        value: "Impersonating someone else",
                         reportReason: i.Impersonation
                     },
                     selfharm: {
@@ -21295,31 +21321,15 @@
                         value: "selfharm",
                         reportReason: i.SelfHarm
                     },
-                    chat: {
-                        getTitle: function() {
-                            return Object(c.d)("In a stream chat message", "ReportModalWizard")
-                        },
-                        value: "chat"
-                    },
-                    profile: {
-                        getTitle: function() {
-                            return Object(c.d)("In the profile content, extensions, or emotes", "ReportModalWizard")
-                        },
-                        value: "profile"
-                    },
                     video: {
                         getTitle: function() {
                             return Object(c.d)("In a live stream, video, or clip", "ReportModalWizard")
                         },
                         value: "video"
                     },
-                    room: {
-                        getTitle: function(e) {
-                            return Object(c.d)("In one of {username}'s rooms", {
-                                username: e
-                            }, "ReportModalWizard")
-                        },
-                        value: "room"
+                    video_more_options: {
+                        getTitle: _.moreOptions,
+                        value: "video more options"
                     },
                     whisper: {
                         getTitle: function() {
@@ -21328,12 +21338,46 @@
                         value: "whisper",
                         reportContext: b.N.WHISPER_REPORT
                     },
-                    username: {
+                    whisper_more_options: {
+                        getTitle: _.moreOptions,
+                        value: "whisper more options"
+                    },
+                    chat: {
                         getTitle: function() {
-                            return Object(c.d)("In the username", "ReportModalWizard")
+                            return Object(c.d)("In a chat message or room", "ReportModalWizard")
                         },
-                        value: "username",
-                        reportReason: i.OffensiveUsername
+                        value: "chat"
+                    },
+                    chat_more_options: {
+                        getTitle: _.moreOptions,
+                        value: "chat more options"
+                    },
+                    moderating: {
+                        getTitle: function(e) {
+                            return Object(c.d)("{username} isn't moderating their chat", {
+                                username: e
+                            }, "ReportModalWizard")
+                        },
+                        value: "moderating",
+                        reportReason: i.Other
+                    },
+                    otherContent: {
+                        getTitle: function(e) {
+                            return Object(c.d)("In {username}'s other content (profile, emotes, etc.)", {
+                                username: e
+                            }, "ReportModalWizard")
+                        },
+                        value: "other content"
+                    },
+                    profile: {
+                        getTitle: function() {
+                            return Object(c.d)("The profile content (avatar, panels, etc.)", "ReportModalWizard")
+                        },
+                        value: "profile"
+                    },
+                    profile_more_options: {
+                        getTitle: _.moreOptions,
+                        value: "profile more options"
                     },
                     report_other: {
                         getTitle: function() {
@@ -21394,7 +21438,7 @@
                     },
                     external_incitingRaids: {
                         getTitle: function() {
-                            return Object(c.d)("inciting brigading or malicious raids", "ReportModalWizard")
+                            return Object(c.d)("Inciting brigading or malicious raids", "ReportModalWizard")
                         },
                         reportReason: i.Harassment,
                         value: "brigading/raids"
@@ -21404,7 +21448,7 @@
                         value: "threatening"
                     },
                     external_harassment: {
-                        getTitle: _.abusive,
+                        getTitle: _.harassment,
                         value: "hateful/harassing"
                     },
                     external_abusiveViolence: {
@@ -21426,7 +21470,7 @@
                     },
                     spam: {
                         getTitle: function() {
-                            return Object(c.d)("They're spamming or spreading malicious links", "ReportModalWizard")
+                            return Object(c.d)("Spam, malicious links, or bot accounts", "ReportModalWizard")
                         },
                         value: "spam",
                         reportReason: i.Spam
@@ -21437,15 +21481,19 @@
                         },
                         value: "bot"
                     },
-                    spam_scam: {
+                    spam_links: {
                         getTitle: function() {
-                            return Object(c.d)("They're trying to scam other community members or sending malicious links", "ReportModalWizard")
+                            return Object(c.d)("Sending malicious links", "ReportModalWizard")
                         },
-                        value: "scam or malicious links"
+                        value: "malicious links"
+                    },
+                    spam_scam: {
+                        getTitle: _.scam,
+                        value: "scam"
                     },
                     spam_repeated: {
                         getTitle: function() {
-                            return Object(c.d)("They're sending repeated messages (spam)", "ReportModalWizard")
+                            return Object(c.d)("Sending repeated messages (spam)", "ReportModalWizard")
                         },
                         value: "repeat messages"
                     }
@@ -21570,7 +21618,7 @@
                         return Object(c.d)("What would you like to report? (Please choose the most relevant statement that applies.)", "ReportModalWizard")
                     }
                 },
-                A = {
+                j = {
                     report: function(e) {
                         return Object(c.d)("Report {username}", {
                             username: e
@@ -21586,8 +21634,23 @@
                             username: e
                         }, "ReportModalWizard")
                     },
-                    reportProfile: function(e) {
+                    reportWhisper: function(e) {
+                        return Object(c.d)("Report {username}'s Whisper", {
+                            username: e
+                        }, "ReportModalWizard")
+                    },
+                    reportProfileOrOtherContent: function(e) {
                         return Object(c.d)("Report {username}'s Profile Or Other Content", {
+                            username: e
+                        }, "ReportModalWizard")
+                    },
+                    reportProfile: function(e) {
+                        return Object(c.d)("Report {username}'s Profile Content", {
+                            username: e
+                        }, "ReportModalWizard")
+                    },
+                    reportEmotesBadges: function(e) {
+                        return Object(c.d)("Report {username}'s Emotes or Badges", {
                             username: e
                         }, "ReportModalWizard")
                     },
@@ -21606,24 +21669,24 @@
                         return Object(c.d)("Thank you for your concern", "ReportModalWizard")
                     }
                 },
-                j = {
+                A = {
                     getDescription: function() {
                         return Object(c.d)("Reports are reviewed by Twitch Staff 24 hours a day. We will issue penalties, such as account suspension and/or content removal, once we verify that a violation of our policies has occurred.", "ReportModalWizard")
                     },
                     blockPrompt: !0,
-                    getTitle: A.thanks,
+                    getTitle: j.thanks,
                     type: w.Info,
                     value: "end card"
                 },
                 U = {
-                    socialMedia: r.__assign({}, j, {
+                    socialMedia: r.__assign({}, A, {
                         items: [O.endBlurb_socialmedia]
                     }),
-                    violence: r.__assign({}, j, {
+                    violence: r.__assign({}, A, {
                         items: [O.endBlurb_threat]
                     }),
                     legal: {
-                        getTitle: A.thanksConcern,
+                        getTitle: j.thanksConcern,
                         getDescription: function() {
                             return Object(c.d)("To submit a claim or report a violation of this type, you will need to follow the steps listed on the relevant page below.", "ReportModalWizard")
                         },
@@ -21632,7 +21695,7 @@
                         value: "ip end"
                     },
                     selfharm: {
-                        getTitle: A.thanksConcern,
+                        getTitle: j.thanksConcern,
                         getDescription: function() {
                             return Object(c.d)("If you know the user personally, and you believe them to be in danger, please contact their local authorities immediately. The link below contains some general information that may be of use.", "ReportModalWizard")
                         },
@@ -21641,7 +21704,7 @@
                         value: "selfharm end"
                     },
                     twitchEvent: {
-                        getTitle: A.thanksConcern,
+                        getTitle: j.thanksConcern,
                         getDescription: function() {
                             return Object(c.d)("Please bring this concern to the attention of staff or security at the event if you have not already done so. More information is available at the link below.", "ReportModalWizard")
                         },
@@ -21651,72 +21714,100 @@
                     }
                 },
                 B = {
-                    getTitle: A.report,
+                    getTitle: j.report,
                     getLabel: function() {
                         return Object(c.d)("Where is the problem?", "ReportModalWizard")
                     },
-                    items: [O.video, O.whisper, O.chat, O.room, O.profile, O.username, O.report_other],
+                    items: [O.video, O.whisper, O.chat, O.moderating, O.otherContent, O.report_username, O.report_other],
                     type: w.MultipleChoice,
                     value: "content type"
                 },
                 F = {
                     identifyUser: {
-                        getTitle: A.reportVideo,
+                        getTitle: j.reportVideo,
                         getLabel: L.identifyUser,
                         items: [O.video_streamer, O.video_someoneElse, O.video_chatSomeone],
                         type: w.MultipleChoice,
                         value: "video identify user"
                     },
                     content: {
-                        getTitle: A.reportVideo,
+                        getTitle: j.reportVideo,
                         getLabel: L.contentGeneral,
-                        items: [O.revealPersonalInfo, O.video_labeling, O.video_inactive, O.video_general, O.report_ip, O.violateDevAgreement, O.selfharm],
+                        items: [O.violence, O.abusive, O.video_inactive, O.video_labeling, O.inappropriateContent, O.selfharm, O.video_more_options],
                         type: w.MultipleChoice,
                         value: "video report reason"
                     },
-                    general: {
-                        getTitle: A.reportVideo,
-                        getLabel: L.content,
-                        items: [O.report_username, O.violence, O.abusive, O.cheating, O.scam, O.inappropriateContent, O.evasion, O.impersonation, O.underage, O.bitsViolation],
+                    moreOptions: {
+                        getTitle: j.reportVideo,
+                        getLabel: L.contentGeneral,
+                        items: [O.revealPersonalInfo, O.cheating, O.impersonating, O.underage, O.bitsViolation, O.report_ip, O.other],
                         type: w.MultipleChoice,
                         value: "video general report reason"
                     }
                 },
                 x = {
                     content: {
-                        getTitle: A.reportMessage,
+                        getTitle: j.reportMessage,
                         getLabel: L.contentGeneral,
-                        items: [O.revealPersonalInfo, O.evasion, O.spam, O.maliciousRaid, O.report_username, O.messaging_general, O.selfharm],
+                        items: [O.report_username, O.violence, O.abusive, O.evasion, O.spam, O.selfharm, O.chat_more_options],
                         type: w.MultipleChoice,
                         value: "message report reason"
                     },
-                    general: {
-                        getTitle: A.reportMessage,
-                        getLabel: L.content,
-                        items: [O.report_emotes, O.violence, O.abusive, O.inappropriateContent, O.impersonation, O.underage, O.bitsViolation],
+                    moreOptions: {
+                        getTitle: j.reportMessage,
+                        getLabel: L.contentGeneral,
+                        items: [O.emotes_break_guidelines, O.inappropriateContent, O.revealPersonalInfo, O.maliciousRaid, O.underage, O.bitsViolation, O.other],
                         type: w.MultipleChoice,
                         value: "message general report reason"
                     }
                 },
-                P = r.__assign({}, x.content, {
-                    getDescription: function() {
-                        return Object(c.d)("Please note that we may review additional messages in this conversation to determine the context of your report.", "ReportModalWizard")
-                    }
-                }),
-                H = {
-                    content: {
-                        getTitle: A.reportProfile,
+                P = {
+                    general: {
+                        getTitle: j.reportWhisper,
                         getLabel: L.contentGeneral,
-                        items: [O.revealPersonalInfo, O.inappropriateBadge, O.inappropriateExtension, O.noModeration, O.profile_general, O.report_ip, O.violateDevAgreement, O.selfharm],
+                        items: [O.report_username, O.violence, O.abusive, O.spam, O.selfharm, O.whisper_more_options],
+                        type: w.MultipleChoice,
+                        value: "whisper report reason",
+                        getDescription: function() {
+                            return Object(c.d)("Please note that we may review additional messages in this conversation to determine the context of your report.", "ReportModalWizard")
+                        }
+                    },
+                    moreOptions: {
+                        getTitle: j.reportWhisper,
+                        getLabel: L.contentGeneral,
+                        items: [O.emotes_break_guidelines, O.evasion, O.inappropriateContent, O.revealPersonalInfo, O.underage, O.other],
+                        type: w.MultipleChoice,
+                        value: "whisper general report reason"
+                    }
+                },
+                H = {
+                    profile: {
+                        getTitle: j.reportProfile,
+                        getLabel: L.contentGeneral,
+                        items: [O.revealPersonalInfo, O.violence, O.abusive, O.inappropriateContent, O.selfharm, O.profile_more_options],
                         type: w.MultipleChoice,
                         value: "profile report reason"
                     },
-                    general: {
-                        getTitle: A.reportProfile,
-                        getLabel: L.content,
-                        items: [O.report_username, O.violence, O.abusive, O.scam, O.inappropriateContent, O.evasion, O.impersonation, O.underage, O.bitsViolation],
+                    profileMoreOptions: {
+                        getTitle: j.reportProfile,
+                        getLabel: L.contentGeneral,
+                        items: [O.scam, O.evasion, O.impersonation, O.underage, O.report_ip, O.other],
                         type: w.MultipleChoice,
                         value: "profile general report reason"
+                    },
+                    emotes: {
+                        getTitle: j.reportEmotesBadges,
+                        getLabel: L.content,
+                        items: [O.hateSpeechSymbols, O.harassing, O.itsInappropriateContent, O.automod, O.report_ip, O.other],
+                        type: w.MultipleChoice,
+                        value: "emote report reason"
+                    },
+                    general: {
+                        getTitle: j.reportProfileOrOtherContent,
+                        getLabel: L.content,
+                        items: [O.report_username, O.profile, O.report_emotes, O.inappropriateExtension, O.compromisedAccount, O.violateDevAgreement],
+                        type: w.MultipleChoice,
+                        value: "profile content location"
                     }
                 },
                 W = {
@@ -21731,7 +21822,7 @@
                     type: w.MultipleChoice
                 },
                 V = {
-                    getTitle: A.tellUsMore,
+                    getTitle: j.tellUsMore,
                     items: [O.input_description],
                     type: w.Confirm,
                     value: "tell us more"
@@ -21749,24 +21840,11 @@
                 },
                 Y = {
                     content: {
-                        getTitle: A.reportAbusive,
+                        getTitle: j.reportAbusive,
                         getLabel: L.relevantStatements,
                         items: [O.hateSpeech, O.harassment, O.abusiveViolence, O.commitingViolence, O.swatting, O.personalInfo],
                         type: w.MultipleChoice,
                         value: "abuse type"
-                    },
-                    violence: {
-                        getTitle: function(e) {
-                            return Object(c.d)("Report {username} for Violence or Threats", {
-                                username: e
-                            }, "ReportModalWizard")
-                        },
-                        getLabel: function() {
-                            return Object(c.d)("Are the threats or actions directed at you or someone else?", "ReportModalWizard")
-                        },
-                        items: [O.threat_me, O.threat_person, O.threat_group, O.threat_selfharm],
-                        type: w.MultipleChoice,
-                        value: "violence type"
                     }
                 },
                 z = {
@@ -21789,7 +21867,7 @@
                                 username: e
                             }, "ReportModalWizard")
                         },
-                        getLabel: L.thisPersonIs,
+                        getLabel: L.contentGeneral,
                         getDescription: function() {
                             return Object(c.d)("Please note that incidents reported through this form must involve Twitch community members. If possible, please submit a report to the site or service where the incident occurred as well.", "ReportModalWizard")
                         },
@@ -21798,10 +21876,6 @@
                         nextCard: G.socialMedia,
                         value: "external site conduct"
                     },
-                    external_violence: r.__assign({}, Y.violence, {
-                        items: [O.threat_me, O.threat_person, O.threat_group],
-                        nextCard: G.socialMedia
-                    }),
                     external_abusive: r.__assign({}, Y.content, {
                         items: [O.hateSpeech, O.harassment, O.external_abusiveViolence, O.external_commitingViolence, O.swatting, O.personalInfo],
                         nextCard: G.socialMedia
@@ -21814,7 +21888,7 @@
                         }, "ReportModalWizard")
                     },
                     getLabel: L.contentGeneral,
-                    items: [O.spam_bot, O.spam_scam, O.spam_repeated],
+                    items: [O.spam_bot, O.spam_scam, O.spam_links, O.spam_repeated],
                     type: w.MultipleChoice,
                     value: "spam type"
                 },
@@ -21825,7 +21899,7 @@
                         }, "ReportModalWizard")
                     },
                     getLabel: L.relevantStatements,
-                    items: [O.inappropriate_game, O.gory, O.sexuallyViolent, O.childAnimal, O.pornographic, O.suggestive, O.nudity, O.other],
+                    items: [O.inappropriate_game, O.gory, O.sexuallyViolentChildAnimal, O.pornographic, O.suggestive, O.nudity, O.other],
                     type: w.MultipleChoice,
                     value: "inappropriate content type"
                 },
@@ -21853,7 +21927,7 @@
                         return Object(c.d)("Who is being impersonated?", "ReportModalWizard")
                     },
                     getDescription: function() {
-                        return Object(c.d)("Parody, cosplay, and other portrayals without the intent to deceive or defraud are allowed under Twitch's Community Guidelines. If you would still like to submit a report, please continue.", "ReportModalWizard")
+                        return Object(c.d)("Please note that parody, cosplay, and other portrayals without the intent to deceive or defraud are allowed under Twitch's Community Guidelines. If you would still like to submit a report, please continue.", "ReportModalWizard")
                     },
                     items: [O.impersonation_me, O.impersonation_brand, O.impersonation_other],
                     type: w.MultipleChoice,
@@ -21861,40 +21935,40 @@
                 },
                 $ = B,
                 Z = V,
-                J = j,
+                J = A,
                 ee = {
-                    video: F.identifyUser,
-                    whisper: P,
+                    video: F.content,
+                    "video more options": F.moreOptions,
+                    whisper: P.general,
+                    "whisper more options": P.moreOptions,
                     chat: x.content,
-                    profile: H.content,
+                    "chat more options": x.moreOptions,
+                    "other content": H.general,
+                    profile: H.profile,
+                    "profile more options": H.profileMoreOptions,
                     room: W,
                     "somewhere else": z.identifyLocation,
                     streamer: F.content,
                     "someone else in video": F.content,
                     "someone in chat": x.content,
-                    general_video: F.general,
-                    general_messaging: x.general,
-                    general_profile: H.general,
-                    "channel owner": H.content,
+                    general_video: F.moreOptions,
+                    general_messaging: x.content,
+                    general_profile: H.profile,
+                    "channel owner": H.general,
                     "community member": x.content,
-                    "on twitch": H.content,
+                    "on twitch": H.general,
                     "another site": z.externalSite,
                     "twitch event": U.twitchEvent,
                     "brigading/raids": G.socialMedia,
-                    threatening: z.external_violence,
                     "hateful/harassing": z.external_abusive,
-                    "external site; threatening violence": z.external_violence,
-                    "external site; committing violence": z.external_violence,
                     "external site; scam": G.socialMedia,
                     "ban evasion": Q,
                     spam: q,
                     hateful: Y.content,
                     impersonation: K,
-                    "violence/threats": Y.violence,
-                    "threatening violence": Y.violence,
-                    "committing violence": Y.violence,
                     abusive: Y.content,
                     "inappropriate content": X,
+                    "inappropriate emotes": H.emotes,
                     "intellectual property": U.legal,
                     "violating developer agreement": U.legal
                 },
@@ -21904,15 +21978,15 @@
                     other: J
                 },
                 ne = {
-                    CHANNEL_FEED_POST_REPORT: H.content,
-                    COMMUNITY_REPORT: H.content,
+                    CHANNEL_FEED_POST_REPORT: H.general,
+                    COMMUNITY_REPORT: H.general,
                     CHAT_REPORT: x.content,
                     CLIP_REPORT: F.content,
-                    EVENT_REPORT: H.content,
-                    EXTENSION_REPORT: H.content,
-                    LIVE_UP_REPORT: H.content,
+                    EVENT_REPORT: H.general,
+                    EXTENSION_REPORT: H.general,
+                    LIVE_UP_REPORT: H.general,
                     ROOM_REPORT: W,
-                    WHISPER_REPORT: P,
+                    WHISPER_REPORT: P.general,
                     VOD_COMMENT_REPORT: x.content
                 },
                 ie = "report-wizard-back",
@@ -22258,7 +22332,7 @@
                             ui_context: n.props.reportContext.contentType,
                             target_user_id: n.props.reportContext.targetUserID,
                             report_sent: n.state.submitStatus === D.a.Success,
-                            modal_type: "wizard_v1",
+                            modal_type: "wizard_v2",
                             extra_user_id: n.props.reportContext.additionalTrackingID,
                             action: e,
                             close_type: r,
@@ -25434,8 +25508,8 @@
                 })(D),
                 R = n("tuvy"),
                 L = n("i4un"),
-                A = n("dIU+"),
-                j = n("GnwI"),
+                j = n("dIU+"),
+                A = n("GnwI"),
                 U = n("Ba7Q"),
                 B = n("QjI3"),
                 F = (n("BOil"), n("HXcb"));
@@ -25886,12 +25960,12 @@
                                 justifyContent: w.Xa.Center
                             }, r.createElement("div", {
                                 className: i
-                            }, r.createElement(A.a, {
+                            }, r.createElement(j.a, {
                                 updateContainerWidth: this.onUpdateDebounce,
                                 channelLogin: this.props.channelLogin,
                                 onFollow: this.maybeShowBrowserNotificationsUpsell,
-                                followUIType: A.b.IconAndText,
-                                unfollowUIType: A.b.IconOnly,
+                                followUIType: j.b.IconAndText,
+                                unfollowUIType: j.b.IconOnly,
                                 onToggleAnimationComplete: this.toggleLiveNotificationsBtnShown,
                                 hideDropdownWhenFollowing: !0,
                                 fullWidthButton: !0,
@@ -25920,12 +25994,12 @@
                             margin: {
                                 left: 1
                             }
-                        }, r.createElement(A.a, {
+                        }, r.createElement(j.a, {
                             updateContainerWidth: this.onUpdateDebounce,
                             channelLogin: this.props.channelLogin,
                             onFollow: this.maybeShowBrowserNotificationsUpsell,
-                            followUIType: A.b.IconAndText,
-                            unfollowUIType: A.b.IconOnly,
+                            followUIType: j.b.IconAndText,
+                            unfollowUIType: j.b.IconOnly,
                             useContextualModals: !0
                         })), r.createElement(w.Ya, {
                             margin: {
@@ -25970,7 +26044,7 @@
                         return !e.channelLogin || !e.firstPageLoaded
                     },
                     mapMessageTypesToProps: (I = {}, I[m.PubsubMessageType.ViewCount] = "viewCount", I)
-                }]), Object(j.b)("ChannelHeader"))(q)
+                }]), Object(A.b)("ChannelHeader"))(q)
         },
         "ky+Y": function(e, t, n) {},
         lNGo: function(e, t, n) {
@@ -26249,11 +26323,11 @@
                 T = n("GnwI"),
                 R = n("br9A"),
                 L = n("TSYQ"),
-                A = n("8/mp"),
-                j = n("8Ad5");
+                j = n("8/mp"),
+                A = n("8Ad5");
 
             function U(e) {
-                return e.charCode === j.a.Enter || e.charCode === j.a.Space
+                return e.charCode === A.a.Enter || e.charCode === A.a.Space
             }
             var B, F = n("2xye"),
                 x = n("7SjK"),
@@ -26384,7 +26458,7 @@
                                 s.o.track(F.SpadeEventType.EmotePickerClickthrough, t)
                             }
                         }, n.closeOnEsc = function(e) {
-                            e.keyCode === j.a.Esc && n.props.toggleVisibility()
+                            e.keyCode === A.a.Esc && n.props.toggleVisibility()
                         }, n.handleFilterChange = function(e) {
                             var t = e.target.value,
                                 i = t.toLowerCase(),
@@ -26533,7 +26607,7 @@
                                 onClickEmote: e.onClickEmote
                             }))
                         });
-                        return t.length > 0 ? r.createElement(A.b, {
+                        return t.length > 0 ? r.createElement(j.b, {
                             className: "emote-picker__tab-content"
                         }, r.createElement(l.Ya, {
                             padding: 1
@@ -26731,7 +26805,7 @@
                                 isEsportChannel: this.props.isEsportChannel
                             })), r.createElement(l.fc, null, r.createElement("hr", {
                                 className: "emote-sub-upsell__divider"
-                            })), r.createElement(A.b, {
+                            })), r.createElement(j.b, {
                                 className: "emote-sub-upsell__content"
                             }, r.createElement(l.Ya, null, r.createElement(l.Ya, {
                                 padding: {
@@ -26991,7 +27065,7 @@
                             fullWidth: !0,
                             justifyContent: l.Xa.Center,
                             padding: 1
-                        }, r.createElement(l.ab, null)) : "" !== this.state.filter ? this.renderSearchContent() : r.createElement(r.Fragment, null, r.createElement(A.b, {
+                        }, r.createElement(l.ab, null)) : "" !== this.state.filter ? this.renderSearchContent() : r.createElement(r.Fragment, null, r.createElement(j.b, {
                             scrollRef: this.saveScrollRef,
                             className: "emote-picker__tab-content"
                         }, r.createElement(l.Ya, {
@@ -27063,7 +27137,7 @@
                         }, "EmotePickerCard");
                         return this.state.filteredEmotes.length > 0 && (e = Object(s.d)('Search Results for "{inputValue}"', {
                             inputValue: this.state.inputValue
-                        }, "EmotePickerCard")), r.createElement(A.b, {
+                        }, "EmotePickerCard")), r.createElement(j.b, {
                             className: "emote-picker__tab-content"
                         }, r.createElement(l.Ya, {
                             position: l.kb.Relative,
@@ -28947,8 +29021,12 @@
             ! function(e) {
                 e.Weekly = "WEEK", e.AllTime = "ALLTIME", e.Monthly = "MONTH"
             }(f || (f = {}));
+            var D;
             n("2C+f");
-            var D = function(e) {
+            ! function(e) {
+                e.UserPlaceEntry = "user-place-entry"
+            }(D || (D = {}));
+            var I = function(e) {
                 function t() {
                     var t = null !== e && e.apply(this, arguments) || this;
                     return t.renderExpandArrow = function() {
@@ -29019,10 +29097,22 @@
                         display: g.X.Flex,
                         alignItems: g.f.Center,
                         flexDirection: g.Aa.Column
+                    }, o.createElement(g.Ya, {
+                        display: g.X.Flex
                     }, o.createElement(g.W, {
                         type: g.Wb.H5,
                         bold: !0
-                    }, e), i, o.createElement(g.Ya, {
+                    }, e), " ", o.createElement(g.Ya, {
+                        alignSelf: g.g.Start
+                    }, o.createElement(g.Zb, {
+                        label: Object(m.d)("List of users ordered by total amount of Bits used for a given time period. Users with the highest Bits are at the top.", "Bits--PinnedCheerV2"),
+                        width: 150,
+                        direction: g.bc.Bottom
+                    }, o.createElement(g.tb, {
+                        asset: g.ub.NotificationInfo,
+                        height: 16,
+                        width: 16
+                    })))), i, o.createElement(g.Ya, {
                         className: "bits-leaderboard-expanded__section-break",
                         margin: {
                             y: 1
@@ -29049,13 +29139,7 @@
                     }), o.createElement(g.W, {
                         type: g.Wb.Span,
                         bold: !0
-                    }, Object(m.d)("Cheer your way to the top!", "Bits--PinnedCheersV2")), o.createElement(g.U, {
-                        to: "https://blog.twitch.tv/earn-new-rewards-for-supporting-your-favorite-creators-da6b34a98827",
-                        targetBlank: !0,
-                        hoverUnderlineNone: !1
-                    }, o.createElement(g.W, {
-                        bold: !0
-                    }, Object(m.d)("Learn More", "Bits--PinnedCheersV2"))))))
+                    }, Object(m.d)("Cheer your way to the top!", "Bits--PinnedCheersV2")))))
                 }, t.prototype.renderTopThreeEntry = function(e, t) {
                     return o.createElement(g.Ya, {
                         key: e.node.id,
@@ -29105,7 +29189,8 @@
                     return o.createElement(g.Ya, {
                         padding: {
                             top: .5
-                        }
+                        },
+                        "data-test-selector": D.UserPlaceEntry
                     }, o.createElement(g.Fb, {
                         borderTop: !0
                     }, o.createElement(g.Ya, {
@@ -29116,7 +29201,7 @@
                 }, t
             }(o.Component);
 
-            function I(e) {
+            function T(e) {
                 switch (e) {
                     case 1:
                         return Object(m.d)("Cheer now to be #1!", "Bits--PinnedCheerV2");
@@ -29129,7 +29214,7 @@
                 }
             }
             n("986b");
-            var T = function(e) {
+            var R = function(e) {
                     function t() {
                         return null !== e && e.apply(this, arguments) || this
                     }
@@ -29157,7 +29242,7 @@
                             }, s)
                         }
                         if (this.props.isEmpty || this.props.data && !this.props.data.user) {
-                            var l = I(1);
+                            var l = T(1);
                             e = o.createElement(g.Ya, {
                                 className: "bits-leaderboard-header-first-entry__container",
                                 overflow: g.db.Hidden,
@@ -29226,7 +29311,7 @@
                         }, e)
                     }, t
                 }(o.Component),
-                R = Object(s.compose)(Object(l.a)(E, {
+                L = Object(s.compose)(Object(l.a)(E, {
                     name: "data",
                     skip: function(e) {
                         return !e.id || !e.entryKey
@@ -29239,8 +29324,8 @@
                             }
                         }
                     }
-                }))(T),
-                L = (n("ifPV"), function(e) {
+                }))(R),
+                j = (n("ifPV"), function(e) {
                     function t() {
                         return null !== e && e.apply(this, arguments) || this
                     }
@@ -29272,7 +29357,7 @@
                             }, s)
                         }
                         if (this.props.isEmpty || this.props.data && !this.props.data.user) {
-                            var l = I(this.props.rank ? this.props.rank : 0);
+                            var l = T(this.props.rank ? this.props.rank : 0);
                             e = o.createElement(g.Ya, {
                                 overflow: g.db.Hidden,
                                 display: g.X.Flex,
@@ -29351,19 +29436,19 @@
                             }
                         }
                     }
-                }))(L),
-                j = (n("MBj5"), function(e) {
+                }))(j),
+                U = (n("MBj5"), function(e) {
                     function t() {
                         var t = null !== e && e.apply(this, arguments) || this;
                         return t.renderFirstPlaceEntry = function() {
                             var e, n = null;
-                            return t.props.topEdges && t.props.topEdges[0] && (n = t.props.topEdges[0]), e = n ? o.createElement(R, {
+                            return t.props.topEdges && t.props.topEdges[0] && (n = t.props.topEdges[0]), e = n ? o.createElement(L, {
                                 selfId: t.props.selfId,
                                 id: n.node.id,
                                 entryKey: n.node.entryKey,
                                 score: n.node.score,
                                 bitsConfig: t.props.bitsConfig
-                            }) : o.createElement(R, {
+                            }) : o.createElement(L, {
                                 isEmpty: !0
                             }), o.createElement(g.Qa, {
                                 key: 1
@@ -29434,10 +29519,10 @@
                         }, n)
                     }, t
                 }(o.Component)),
-                U = n("+LJB"),
-                B = n("RiD7"),
-                F = n("Qime"),
-                x = (n("MIhh"), function(e) {
+                B = n("+LJB"),
+                F = n("RiD7"),
+                x = n("Qime"),
+                P = (n("MIhh"), function(e) {
                     function t() {
                         var t = null !== e && e.apply(this, arguments) || this;
                         return t.state = {
@@ -29461,7 +29546,7 @@
                                     s = !1;
                                 i && (s = o.findIndex(function(e) {
                                     return e.node.entryKey === i
-                                }) >= 0), Object(B.i)({
+                                }) >= 0), Object(F.i)({
                                     leaderboardSize: o.length,
                                     leaderboardMode: r || f.AllTime,
                                     userPresentInLeaderboard: s,
@@ -29484,7 +29569,7 @@
                             n = this.props.data.user.cheer.settings.leaderboard.timePeriodType || f.AllTime;
                         this.props.data.user.self && this.props.data.user.self.bitsLeaderboardItem && (t = this.props.data.user.self.bitsLeaderboardItem);
                         var i = null;
-                        this.state.isExpanded && (i = o.createElement(D, {
+                        this.state.isExpanded && (i = o.createElement(I, {
                             topEdges: e,
                             userPlaceEdge: t,
                             toggleExpand: this.toggleIsExpanded,
@@ -29494,7 +29579,7 @@
                             secondsRemaining: this.props.data.user.cheer.leaderboard.secondsRemaining
                         }));
                         var a = null;
-                        return this.state.isExpanded || (a = o.createElement(j, {
+                        return this.state.isExpanded || (a = o.createElement(U, {
                             topEdges: e,
                             toggleExpand: this.toggleIsExpanded,
                             selfId: this.props.userID,
@@ -29507,7 +29592,7 @@
                         }, a, i))
                     }, t
                 }(o.Component)),
-                P = Object(s.compose)(Object(l.a)(F, {
+                H = Object(s.compose)(Object(l.a)(x, {
                     name: "data",
                     options: function(e) {
                         return {
@@ -29518,7 +29603,7 @@
                     }
                 }), Object(c.a)(function(e) {
                     return {
-                        query: F,
+                        query: x,
                         variables: {
                             channelID: e.channelID
                         },
@@ -29529,9 +29614,9 @@
                         }
                     }
                 }), Object(c.a)(function(e) {
-                    return Object(U.a)(F, e.channelID, e.data.user && e.data.user.cheer && e.data.user.cheer.leaderboard, e.userID)
-                }))(x),
-                H = function(e) {
+                    return Object(B.a)(x, e.channelID, e.data.user && e.data.user.cheer && e.data.user.cheer.leaderboard, e.userID)
+                }))(P),
+                W = function(e) {
                     function t() {
                         var t = null !== e && e.apply(this, arguments) || this;
                         return t.state = {
@@ -29542,7 +29627,7 @@
                         }, t
                     }
                     return r.__extends(t, e), t.prototype.render = function() {
-                        return o.createElement(P, {
+                        return o.createElement(H, {
                             channelID: this.props.channelID,
                             userID: this.props.userID,
                             bitsConfig: this.props.bitsConfig,
@@ -29552,18 +29637,18 @@
                         })
                     }, t
                 }(o.Component),
-                W = n("/MKj"),
-                V = n("kRBY");
-            var G = Object(W.connect)(function(e) {
-                var t = Object(V.e)(e);
+                V = n("/MKj"),
+                G = n("kRBY");
+            var Y = Object(V.connect)(function(e) {
+                var t = Object(G.e)(e);
                 return {
                     isStaff: t && t.roles && t.roles.isStaff
                 }
-            })(H);
+            })(W);
             n.d(t, !1, function() {
-                return H
+                return W
             }), n.d(t, "a", function() {
-                return G
+                return Y
             })
         },
         r2XO: function(e, t, n) {
@@ -29599,8 +29684,8 @@
                 T = n("KGti"),
                 R = n("sblI"),
                 L = n("iyGE"),
-                A = n("gO1k");
-            var j = n("a2UF"),
+                j = n("gO1k");
+            var A = n("a2UF"),
                 U = n("AREq");
             var B = n("Av0x"),
                 F = n("5g1g"),
@@ -29790,9 +29875,9 @@
                         channelID: e.channelID
                     }
                 };
-            var G = Object(k.compose)(Object(L.a)(V), Object(j.a)(V), function() {
+            var G = Object(k.compose)(Object(L.a)(V), Object(A.a)(V), function() {
                     var e = this;
-                    return Object(C.a)(A, {
+                    return Object(C.a)(j, {
                         props: function(t) {
                             return {
                                 deleteChatMessageMutation: function(n) {
@@ -30171,8 +30256,7 @@
                 }))(ce),
                 ue = n("QVaV"),
                 pe = n("8SX2"),
-                me = n("CiVV"),
-                he = function(e) {
+                me = function(e) {
                     var t = e.event,
                         n = t.promoGiftTotal,
                         i = t.promoName,
@@ -30200,15 +30284,17 @@
                         margin: {
                             right: .5
                         }
-                    }, Object(me.a)()), a.createElement(x.W, {
+                    }, a.createElement(x.tb, {
+                        asset: x.ub.Ghost
+                    })), a.createElement(x.W, {
                         color: x.O.Alt2,
                         type: x.Wb.Span
                     }, l))
                 };
-            he.displayName = "AnonGiftPaidUpgradeNoticeLine";
-            var ge = n("0WFu"),
-                fe = "All-Access Pass",
-                be = function(e) {
+            me.displayName = "AnonGiftPaidUpgradeNoticeLine";
+            var he = n("0WFu"),
+                ge = "All-Access Pass",
+                fe = function(e) {
                     var t = e.event,
                         n = a.createElement(pe.a, {
                             contentID: t.recipientID,
@@ -30226,22 +30312,24 @@
                         margin: {
                             right: .5
                         }
-                    }, Object(me.a)()), a.createElement(x.W, {
+                    }, a.createElement(x.tb, {
+                        asset: x.ub.Ghost
+                    })), a.createElement(x.W, {
                         color: x.O.Alt2,
                         type: x.Wb.Span
                     }, function(e, t) {
-                        return e.planName === fe ? Object(s.d)("An anonymous gifter gave {recipientButton} an All-Access Pass!", {
+                        return e.planName === ge ? Object(s.d)("An anonymous gifter gave {recipientButton} an All-Access Pass!", {
                             recipientButton: t
                         }, "AnonSubGiftNoticeLine") : "custom" === e.plan ? Object(s.d)("An anonymous gifter gave {recipientButton} a Sub!", {
                             recipientButton: t
                         }, "AnonSubGiftNoticeLine") : Object(s.d)("An anonymous gifter gave {recipientButton} a Tier {tierNumber} Sub!", {
                             recipientButton: t,
-                            tierNumber: Object(ge.a)(e.plan) || 1
+                            tierNumber: Object(he.a)(e.plan) || 1
                         }, "AnonSubGiftNoticeLine")
                     }(t.methods, n)))
                 };
-            be.displayName = "AnonSubGiftNoticeLine";
-            var ve = function(e) {
+            fe.displayName = "AnonSubGiftNoticeLine";
+            var be = function(e) {
                 var t = e.event,
                     n = t.channel,
                     i = t.massGiftCount,
@@ -30252,7 +30340,7 @@
                     }, "AnonSubMysteryGiftNoticeLine") : Object(s.d)("{massGiftCount, plural,        one {An anonymous gifter is gifting {massGiftCount} Tier {tierNumber} Sub to {channel}'s community!}        other {An anonymous gifter is gifting {massGiftCount} Tier {tierNumber} Subs to {channel}'s community!}}", {
                         channel: n,
                         massGiftCount: i,
-                        tierNumber: Object(ge.a)(r) || 1
+                        tierNumber: Object(he.a)(r) || 1
                     }, "AnonSubMysteryGiftNoticeLine");
                 return a.createElement(x.Ya, {
                     alignItems: x.f.Start,
@@ -30265,13 +30353,15 @@
                     margin: {
                         right: .5
                     }
-                }, Object(me.a)()), a.createElement(x.W, {
+                }, a.createElement(x.tb, {
+                    asset: x.ub.Ghost
+                })), a.createElement(x.W, {
                     color: x.O.Alt2,
                     type: x.Wb.Span
                 }, o))
             };
-            ve.displayName = "AnonSubMysteryGiftNoticeLine";
-            var ke = function(e) {
+            be.displayName = "AnonSubMysteryGiftNoticeLine";
+            var ve = function(e) {
                 return a.createElement(x.Fb, {
                     color: x.O.Alt2,
                     display: x.X.Inline
@@ -30283,8 +30373,8 @@
                     }, Object(ue.a)(e.event.message.user.userLogin, e.event.message.user.userDisplayName))
                 }, "FirstCheerNoticeLine"))
             };
-            ke.displayName = "FirstCheerNoticeLine";
-            var Ce = function(e) {
+            ve.displayName = "FirstCheerNoticeLine";
+            var ke = function(e) {
                 var t = e.event,
                     n = a.createElement(pe.a, {
                         contentID: t.user.id,
@@ -30309,9 +30399,9 @@
                     recipientButton: n
                 }, "GiftPaidUpgradeNoticeLine"))
             };
-            Ce.displayName = "GiftPaidUpgradeNoticeLine";
+            ke.displayName = "GiftPaidUpgradeNoticeLine";
             n("xDdc");
-            var ye = function(e) {
+            var Ce = function(e) {
                 return a.createElement(x.Ya, {
                     className: "user-notice-line",
                     margin: {
@@ -30323,9 +30413,9 @@
                     }
                 }, e.children)
             };
-            ye.displayName = "UserNoticeLine";
-            var Se = n("OvAg"),
-                Ee = function(e) {
+            Ce.displayName = "UserNoticeLine";
+            var ye = n("OvAg"),
+                Se = function(e) {
                     function t() {
                         return null !== e && e.apply(this, arguments) || this
                     }
@@ -30340,7 +30430,7 @@
                             displayName: a.createElement("strong", null, n.displayName),
                             viewerCount: a.createElement("strong", null, e.viewerCount)
                         }, "RaidIncomingMessage");
-                        return a.createElement(ye, {
+                        return a.createElement(Ce, {
                             "data-test-selector": "incoming-raid"
                         }, a.createElement(x.Ya, {
                             display: x.X.Flex,
@@ -30357,7 +30447,7 @@
                         }, o)))
                     }, t
                 }(a.Component),
-                Ne = Object(C.a)(Se, {
+                Ee = Object(C.a)(ye, {
                     options: function(e) {
                         return {
                             variables: {
@@ -30365,10 +30455,10 @@
                             }
                         }
                     }
-                })(Ee),
-                we = n("5zf8"),
-                _e = n("x0+1"),
-                Oe = function(e) {
+                })(Se),
+                Ne = n("5zf8"),
+                we = n("x0+1"),
+                _e = function(e) {
                     function t() {
                         return null !== e && e.apply(this, arguments) || this
                     }
@@ -30398,7 +30488,7 @@
                                     r = parseInt(i, 10);
                                 n = r ? Object(s.d)("{user} enabled {length} followers-only mode for this room.", {
                                     user: t,
-                                    length: Object(we.b)(60 * r)
+                                    length: Object(Ne.b)(60 * r)
                                 }, "ModerationActionLine") : Object(s.d)("{user} enabled followers-only mode for this room.", {
                                     user: t
                                 }, "ModerationActionLine");
@@ -30505,7 +30595,7 @@
                                     break;
                                 case p.d.Delete:
                                     var f = g || "";
-                                    n = a.createElement(_e.a, {
+                                    n = a.createElement(we.a, {
                                         targetLogin: u,
                                         moderatorLogin: t,
                                         messageBody: f
@@ -30523,7 +30613,7 @@
                     }, t
                 }(a.Component);
 
-            function Me() {
+            function Oe() {
                 return {
                     raid_error_self: Object(s.d)("You cannot raid your own channel.", "RaidErrorSelfMessage"),
                     raid_error_forbidden: Object(s.d)("You cannot raid this channel.", "RaidErrorAlreadyRaidingMessage"),
@@ -30539,12 +30629,12 @@
                     }, "RaidNoticeOwnerMessage")
                 }
             }
-            var De = function(e) {
-                return a.createElement("span", null, Me()[e.message.msgid])
+            var Me = function(e) {
+                return a.createElement("span", null, Oe()[e.message.msgid])
             };
-            De.displayName = "RaidNoticeLine";
-            var Ie = n("+GjP"),
-                Te = function(e) {
+            Me.displayName = "RaidNoticeLine";
+            var De = n("+GjP"),
+                Ie = function(e) {
                     var t = a.createElement(pe.a, {
                             contentID: e.event.user.id,
                             login: e.event.user.username,
@@ -30554,7 +30644,7 @@
                     return n = e.event.methods.prime ? Object(s.d)("{userLogin} just subscribed with {service}!", {
                         userLogin: t,
                         service: function(e) {
-                            var t = Object(Ie.e)("https://twitch.amazon.com/prime", {
+                            var t = Object(De.e)("https://twitch.amazon.com/prime", {
                                 ref: "subscriptionMessage",
                                 channel: e
                             });
@@ -30567,18 +30657,18 @@
                         }(e.event.channel)
                     }, "SubNoticeLine") : Object(s.d)("{userLogin} just subscribed with a Tier {tierNumber} sub!", {
                         userLogin: t,
-                        tierNumber: Object(ge.a)(e.event.methods.plan) || 1
+                        tierNumber: Object(he.a)(e.event.methods.plan) || 1
                     }, "SubNoticeLine"), a.createElement(x.W, {
                         color: x.O.Alt2,
                         type: x.Wb.Span
                     }, n)
                 };
-            Te.displayName = "SubNoticeLine";
-            var Re = function(e) {
+            Ie.displayName = "SubNoticeLine";
+            var Te = function(e) {
                 return a.createElement(x.Fb, {
                     color: x.O.Alt2,
                     display: x.X.Inline
-                }, a.createElement(Te, {
+                }, a.createElement(Ie, {
                     event: e.event
                 }), a.createElement("span", null, " "), Object(s.d)("{userLogin} subscribed for {months} months in a row!", {
                     userLogin: a.createElement(pe.a, {
@@ -30589,9 +30679,9 @@
                     months: e.event.months
                 }, "ResubNoticeLine"))
             };
-            Re.displayName = "ResubNoticeLine";
-            var Le = n("yZCp"),
-                Ae = function(e) {
+            Te.displayName = "ResubNoticeLine";
+            var Re = n("yZCp"),
+                Le = function(e) {
                     var t = e.event.message,
                         n = t.user.isIntl ? t.user.userDisplayName + " (" + t.user.userLogin + ")" : t.user.userDisplayName,
                         i = Object(s.d)("{user} is new here. Say hello!", {
@@ -30605,7 +30695,7 @@
                         color: x.O.Alt2
                     }, i)
                 };
-            Ae.displayName = "RitualNoticeLine";
+            Le.displayName = "RitualNoticeLine";
             var je = function(e) {
                 var t = e.event,
                     n = a.createElement(pe.a, {
@@ -30651,13 +30741,13 @@
                         recipientButton: t,
                         tierNumber: i
                     }, "SubGiftNoticeLine")
-                }(n, i, t.senderCount, Object(ge.a)(t.methods.plan) || 1), a.createElement(x.W, {
+                }(n, i, t.senderCount, Object(he.a)(t.methods.plan) || 1), a.createElement(x.W, {
                     color: x.O.Alt2,
                     type: x.Wb.Span
                 }, r)
             };
             je.displayName = "SubGiftNoticeLine";
-            var Ue = function(e) {
+            var Ae = function(e) {
                 var t = e.event,
                     n = a.createElement(pe.a, {
                         contentID: t.user.id,
@@ -30698,15 +30788,15 @@
                         massGiftCount: n,
                         tierNumber: a
                     }, "SubMysteryGiftNoticeLine")
-                }(n, t.channel, t.massGiftCount, t.senderCount, Object(ge.a)(t.plan) || 1), a.createElement(x.W, {
+                }(n, t.channel, t.massGiftCount, t.senderCount, Object(he.a)(t.plan) || 1), a.createElement(x.W, {
                     color: x.O.Alt2,
                     type: x.Wb.Span
                 }, i)
             };
-            Ue.displayName = "SubMysteryGiftNoticeLine";
-            var Be, Fe = n("+kC+"),
-                xe = n("cr+I"),
-                Pe = Object(k.compose)(Object(C.a)(Fe, {
+            Ae.displayName = "SubMysteryGiftNoticeLine";
+            var Ue, Be = n("+kC+"),
+                Fe = n("cr+I"),
+                xe = Object(k.compose)(Object(C.a)(Be, {
                     options: function(e) {
                         return {
                             variables: {
@@ -30727,7 +30817,7 @@
                     if (!n) return a.createElement(x.Ya, null, Object(s.d)("This room is in subscribers only mode.", "SubsOnlyUpsellLine"));
                     var r = a.createElement(x.U, {
                         targetBlank: !0,
-                        to: n + "?" + xe.stringify({
+                        to: n + "?" + Fe.stringify({
                             ref: "subscriber_only_mode_chat"
                         })
                     }, n);
@@ -30735,11 +30825,11 @@
                         productLink: r
                     }, "SubsOnlyUpsellLine"))
                 }),
-                He = n("k8pZ");
+                Pe = n("k8pZ");
             ! function(e) {
                 e.Timestamp = "extension-message-timestamp", e.ExtensionName = "extension-message-name"
-            }(Be || (Be = {}));
-            var We = function(e) {
+            }(Ue || (Ue = {}));
+            var He = function(e) {
                 function t() {
                     var t = null !== e && e.apply(this, arguments) || this;
                     return t.onExtensionNameClick = function(e) {
@@ -30771,7 +30861,7 @@
                     return this.props.showTimestamps ? a.createElement("span", {
                         key: "timestamp",
                         className: "room-message__timestamp",
-                        "data-test-selector": Be.Timestamp
+                        "data-test-selector": Ue.Timestamp
                     }, Object(Y.a)(new Date(this.props.message.sentAt))) : null
                 }, t.prototype.renderMessageBody = function() {
                     var e = Object(m.g)(this.props.message);
@@ -30781,7 +30871,7 @@
                 }, t.prototype.renderMessageAuthor = function(e) {
                     return a.createElement("button", {
                         onClick: this.onExtensionNameClick,
-                        "data-test-selector": Be.ExtensionName
+                        "data-test-selector": Ue.ExtensionName
                     }, a.createElement("span", {
                         key: e.clientID + "-" + e.version + "-messageauthor"
                     }, a.createElement("span", {
@@ -30794,41 +30884,41 @@
                     }, e.displayName))))
                 }, t
             }(a.Component);
-            var Ve, Ge = Object(k.compose)(Object(r.connect)(function(e, t) {
+            var We, Ve = Object(k.compose)(Object(r.connect)(function(e, t) {
                     return {
-                        installedExtensions: Object(He.a)(e, t.channelID)
+                        installedExtensions: Object(Pe.a)(e, t.channelID)
                     }
                 }), Object(q.b)(function(e) {
                     return {
                         onExtensionNameClick: e.onShowExtensionMessageCard
                     }
-                }))(We),
-                Ye = "https://www.twitch.tv/settings/connections";
+                }))(He),
+                Ge = "https://www.twitch.tv/settings/connections";
             ! function(e) {
                 e.Kickback = "msg_blizzard", e.Enabled = "blizzard_connect_on", e.Disabled = "blizzard_connect_off", e.AlreadyEnabled = "already_blizzard_mode_on", e.AlreadyDisabled = "already_blizzard_mode_off"
-            }(Ve || (Ve = {}));
-            var ze = function(e) {
+            }(We || (We = {}));
+            var Ye = function(e) {
                 var t = null;
                 switch (e.type) {
-                    case Ve.Kickback:
+                    case We.Kickback:
                         var n = a.createElement(x.U, {
                             targetBlank: !0,
-                            to: Ye
-                        }, Ye);
+                            to: Ge
+                        }, Ge);
                         t = Object(s.d)("You must connect your Blizzard account to send messages in this room. You can connect your Blizzard account in your Twitch settings at {settingsLink}", {
                             settingsLink: n
                         }, "BlizzardConnectModeNoticeLine");
                         break;
-                    case Ve.Enabled:
+                    case We.Enabled:
                         t = Object(s.d)("This room now requires a Blizzard account connection to chat.", "BlizzardConnectModeNoticeLine");
                         break;
-                    case Ve.Disabled:
+                    case We.Disabled:
                         t = Object(s.d)("This room no longer requires a Blizzard account connection to chat.", "BlizzardConnectModeNoticeLine");
                         break;
-                    case Ve.AlreadyEnabled:
+                    case We.AlreadyEnabled:
                         t = Object(s.d)("This room already requires a Blizzard account connection to chat.", "BlizzardConnectModeNoticeLine");
                         break;
-                    case Ve.AlreadyDisabled:
+                    case We.AlreadyDisabled:
                         t = Object(s.d)("This room does not require a Blizzard account connection to chat.", "BlizzardConnectModeNoticeLine");
                         break;
                     default:
@@ -30836,14 +30926,14 @@
                 }
                 return a.createElement(x.Ya, null, t)
             };
-            ze.displayName = "BlizzardConnectNoticeLine";
+            Ye.displayName = "BlizzardConnectNoticeLine";
             n("NWfm");
-            var qe, Xe = "timeout_success",
-                Qe = "untimeout_success",
-                Ke = "ban_success",
-                $e = "unban_success",
-                Ze = "delete_message_success",
-                Je = function(e) {
+            var ze, qe = "timeout_success",
+                Xe = "untimeout_success",
+                Qe = "ban_success",
+                Ke = "unban_success",
+                $e = "delete_message_success",
+                Ze = function(e) {
                     function t() {
                         return null !== e && e.apply(this, arguments) || this
                     }
@@ -30924,7 +31014,7 @@
                                     confirmModerationAction: this.props.confirmModerationAction
                                 }) : null;
                             case p.b.ModerationAction:
-                                return this.props.isCurrentUserModerator && this.props.showModerationActions ? a.createElement(Oe, {
+                                return this.props.isCurrentUserModerator && this.props.showModerationActions ? a.createElement(_e, {
                                     moderationActionEvent: e
                                 }) : null;
                             case p.b.Connected:
@@ -30985,7 +31075,7 @@
                                     theme: this.props.theme
                                 });
                             case p.b.FirstCheerMessage:
-                                return a.createElement(ye, null, a.createElement(ke, {
+                                return a.createElement(Ce, null, a.createElement(ve, {
                                     event: e
                                 }), a.createElement(x.Ya, null, a.createElement(J, {
                                     badgeSets: this.props.badgeSets,
@@ -31009,7 +31099,7 @@
                                     className: "chat-line__moderation"
                                 }, Object(Y.g)(e)) : null;
                             case p.b.Subscription:
-                                return a.createElement(ye, null, t, a.createElement(Te, {
+                                return a.createElement(Ce, null, t, a.createElement(Ie, {
                                     event: e
                                 }));
                             case p.b.SubGift:
@@ -31023,15 +31113,15 @@
                                         recipientID: e.recipientID,
                                         recipientLogin: e.recipientLogin
                                     };
-                                    return a.createElement(ye, null, a.createElement(be, {
+                                    return a.createElement(Ce, null, a.createElement(fe, {
                                         event: n
                                     }))
                                 }
-                                return a.createElement(ye, null, t, a.createElement(je, {
+                                return a.createElement(Ce, null, t, a.createElement(je, {
                                     event: e
                                 }));
                             case p.b.AnonSubGift:
-                                return a.createElement(ye, null, a.createElement(be, {
+                                return a.createElement(Ce, null, a.createElement(fe, {
                                     event: e
                                 }));
                             case p.b.SubMysteryGift:
@@ -31043,19 +31133,19 @@
                                         plan: e.plan,
                                         massGiftCount: e.massGiftCount
                                     };
-                                    return a.createElement(ye, null, a.createElement(ve, {
+                                    return a.createElement(Ce, null, a.createElement(be, {
                                         event: n
                                     }))
                                 }
-                                return a.createElement(ye, null, t, a.createElement(Ue, {
+                                return a.createElement(Ce, null, t, a.createElement(Ae, {
                                     event: e
                                 }));
                             case p.b.AnonSubMysteryGift:
-                                return a.createElement(ye, null, a.createElement(ve, {
+                                return a.createElement(Ce, null, a.createElement(be, {
                                     event: e
                                 }));
                             case p.b.RewardGift:
-                                return a.createElement(Le.a, {
+                                return a.createElement(Re.a, {
                                     event: e,
                                     channelID: this.props.channelID
                                 });
@@ -31085,15 +31175,15 @@
                                     showModerationIcons: this.props.showModerationIcons,
                                     showTimestamps: this.props.showTimestamps,
                                     useHighContrastColors: !!this.props.useHighContrastColors
-                                })), a.createElement(ye, null, !i && t, a.createElement(Re, {
+                                })), a.createElement(Ce, null, !i && t, a.createElement(Te, {
                                     event: e
                                 }), a.createElement(x.Ya, null, i));
                             case p.b.GiftPaidUpgrade:
-                                return a.createElement(ye, null, t, a.createElement(Ce, {
+                                return a.createElement(Ce, null, t, a.createElement(ke, {
                                     event: e
                                 }));
                             case p.b.AnonGiftPaidUpgrade:
-                                return a.createElement(ye, null, t, a.createElement(he, {
+                                return a.createElement(Ce, null, t, a.createElement(me, {
                                     event: e
                                 }));
                             case p.b.RoomMods:
@@ -31126,37 +31216,37 @@
                                 }, Object(s.d)("Chat was cleared by a moderator", "ChatLine"));
                             case p.b.Notice:
                                 if (function(e) {
-                                        return e.msgid in Me()
+                                        return e.msgid in Oe()
                                     }(e)) return a.createElement(x.Ya, {
                                     className: "chat-line__status"
-                                }, a.createElement(De, {
+                                }, a.createElement(Me, {
                                     message: e
                                 }));
                                 switch (e.msgid) {
                                     case "msg_subsonly":
                                         return a.createElement(x.Ya, {
                                             className: "chat-line__status"
-                                        }, a.createElement(Pe, {
+                                        }, a.createElement(xe, {
                                             channelID: this.props.channelID
                                         }));
-                                    case Ve.Kickback:
-                                    case Ve.Enabled:
-                                    case Ve.Disabled:
-                                    case Ve.AlreadyEnabled:
-                                    case Ve.AlreadyDisabled:
+                                    case We.Kickback:
+                                    case We.Enabled:
+                                    case We.Disabled:
+                                    case We.AlreadyEnabled:
+                                    case We.AlreadyDisabled:
                                         return a.createElement(x.Ya, {
                                             className: "chat-line__status"
-                                        }, a.createElement(ze, {
+                                        }, a.createElement(Ye, {
                                             type: e.msgid
                                         }))
                                 }
                                 if (this.props.isCurrentUserModerator) switch (e.msgid) {
-                                    case Ze:
+                                    case $e:
+                                    case qe:
+                                    case Qe:
+                                        return null;
                                     case Xe:
                                     case Ke:
-                                        return null;
-                                    case Qe:
-                                    case $e:
                                         if (this.props.showModerationActions) return null
                                 }
                                 return a.createElement(x.Ya, {
@@ -31167,15 +31257,15 @@
                                     className: "chat-line__status"
                                 }, e.message);
                             case p.b.Raid:
-                                return a.createElement(Ne, {
+                                return a.createElement(Ee, {
                                     message: e
                                 });
                             case p.b.Unraid:
-                                return a.createElement(ye, null, a.createElement(x.W, {
+                                return a.createElement(Ce, null, a.createElement(x.W, {
                                     color: x.O.Alt2
                                 }, Object(s.d)("The raid has been cancelled.", "RaidCancelMessage")));
                             case p.b.Ritual:
-                                return a.createElement(ye, null, a.createElement(Ae, {
+                                return a.createElement(Ce, null, a.createElement(Le, {
                                     event: e
                                 }), a.createElement(J, {
                                     badgeSets: this.props.badgeSets,
@@ -31195,7 +31285,7 @@
                                     useHighContrastColors: !!this.props.useHighContrastColors
                                 }));
                             case p.b.ExtensionMessage:
-                                return a.createElement(Ge, {
+                                return a.createElement(Ve, {
                                     badgeSets: this.props.badgeSets,
                                     channelID: this.props.channelID,
                                     currentUserLogin: this.props.currentUserLogin,
@@ -31207,10 +31297,10 @@
                         }
                     }, t
                 }(a.Component),
-                et = n("GnwI"),
-                tt = (n("HjUq"), ["scroll", "wheel", "mousewheel", "DOMMouseScroll", "keyup", "mousedown"]),
-                nt = 10,
-                it = function(e) {
+                Je = n("GnwI"),
+                et = (n("HjUq"), ["scroll", "wheel", "mousewheel", "DOMMouseScroll", "keyup", "mousedown"]),
+                tt = 10,
+                nt = function(e) {
                     function t() {
                         var t = null !== e && e.apply(this, arguments) || this;
                         return t.state = {
@@ -31218,7 +31308,7 @@
                         }, t.shouldUpdateMessages = !1, t.saveScrollRef = function(e) {
                             return t.scroll = e
                         }, t.handleScrollEvent = function(e) {
-                            t.scroll && t.scroll.scrollContent && (e.which > 0 || "mousedown" === e.type || "mousewheel" === e.type || "wheel" === e.type) && (t.scroll.scrollContent.scrollHeight - t.scroll.scrollContent.scrollTop - t.scroll.scrollContent.offsetHeight <= nt ? t.setState({
+                            t.scroll && t.scroll.scrollContent && (e.which > 0 || "mousedown" === e.type || "mousewheel" === e.type || "wheel" === e.type) && (t.scroll.scrollContent.scrollHeight - t.scroll.scrollContent.scrollTop - t.scroll.scrollContent.offsetHeight <= tt ? t.setState({
                                 isAutoScrolling: !0
                             }) : t.setState({
                                 isAutoScrolling: !1
@@ -31237,12 +31327,12 @@
                     }
                     return i.__extends(t, e), t.prototype.componentDidMount = function() {
                         var e = this;
-                        tt.forEach(function(t) {
+                        et.forEach(function(t) {
                             e.scroll && e.scroll.scrollContent && e.scroll.scrollContent.addEventListener(t, e.handleScrollEvent)
                         })
                     }, t.prototype.componentWillUnmount = function() {
                         var e = this;
-                        tt.forEach(function(t) {
+                        et.forEach(function(t) {
                             e.scroll && e.scroll.scrollContent && e.scroll.scrollContent.removeEventListener(t, e.handleScrollEvent)
                         })
                     }, t.prototype.componentWillReceiveProps = function(e) {
@@ -31252,7 +31342,7 @@
                     }, t.prototype.render = function() {
                         var e = this,
                             t = this.props.messages.map(function(t) {
-                                return a.createElement(Je, {
+                                return a.createElement(Ze, {
                                     badgeSets: e.props.badgeSets,
                                     channelID: e.props.channelID,
                                     isCurrentUserModerator: e.props.isCurrentUserModerator,
@@ -31321,10 +31411,10 @@
                         }, Object(s.d)("More messages below.", "ChatList"))))
                     }, t
                 }(a.Component),
-                at = Object(et.b)("ChatListPresentation", {
+                it = Object(Je.b)("ChatListPresentation", {
                     autoReportInteractive: !0
-                })(it),
-                rt = function(e) {
+                })(nt),
+                at = function(e) {
                     function t() {
                         var t = null !== e && e.apply(this, arguments) || this;
                         return t.state = {
@@ -31398,7 +31488,7 @@
                     }, t.prototype.componentWillUnmount = function() {
                         this.props.messageBufferAPI && this.props.messageBufferAPI.removeUpdateHandler(this.onBufferUpdate), this.clearBufferHandle()
                     }, t.prototype.render = function() {
-                        return a.createElement(at, {
+                        return a.createElement(it, {
                             channelID: this.props.channelID,
                             badgeSets: this.props.badgeSets,
                             currentUserDisplayName: this.props.currentUserDisplayName,
@@ -31421,7 +31511,7 @@
                         })
                     }, t
                 }(a.Component);
-            var ot = Object(o.compose)(Object(r.connect)(function(e) {
+            var rt = Object(o.compose)(Object(r.connect)(function(e) {
                 return {
                     chatRenderSentEvent: Object(g.b)(e),
                     showAutoModActions: e.chat.showAutoModActions,
@@ -31437,12 +31527,12 @@
                 topic: function(e) {
                     return e.channelID ? Object(d.z)(e.channelID) : ""
                 },
-                mapMessageTypesToProps: (qe = {}, qe[c.PubsubMessageType.StreamChatRoomChatRichEmbed] = "chatRichEmbedInfo", qe[c.PubsubMessageType.StreamChatRoomExtensionMessage] = "extensionMessage", qe)
-            }]), h.a)(rt);
+                mapMessageTypesToProps: (ze = {}, ze[c.PubsubMessageType.StreamChatRoomChatRichEmbed] = "chatRichEmbedInfo", ze[c.PubsubMessageType.StreamChatRoomExtensionMessage] = "extensionMessage", ze)
+            }]), h.a)(at);
             n.d(t, !1, function() {
-                return rt
+                return at
             }), n.d(t, "a", function() {
-                return ot
+                return rt
             })
         },
         r2Xj: function(e, t, n) {
@@ -31829,8 +31919,8 @@
                         "data-test-selector": "help-link"
                     }, Object(c.d)("How do I cheer?", "Bits--CharityCheerIntro"))))
                 },
-                A = n("dx/T"),
-                j = function(e) {
+                j = n("dx/T"),
+                A = function(e) {
                     return s.createElement(v.Ya, {
                         display: v.X.Flex,
                         flexGrow: 1,
@@ -32534,7 +32624,7 @@
                         case ae.HGG2018TEST:
                             return s.createElement(oe, null);
                         default:
-                            return s.createElement(j, {
+                            return s.createElement(A, {
                                 onClickHelp: e.onClickHelp
                             })
                     }
@@ -32585,7 +32675,7 @@
                         bitsSendHasError: e.bitsSendHasError,
                         chatMessage: e.chatMessage
                     });
-                    if (e.helpRequested) return s.createElement(A.a, null);
+                    if (e.helpRequested) return s.createElement(j.a, null);
                     var a = c.b.get(O.d, R.a.Off),
                         r = null;
                     if (e.bitsOffers && (r = e.bitsOffers.find(function(e) {
@@ -32610,7 +32700,7 @@
                         sponsorCampaign: t
                     }) : a === R.a.On ? s.createElement(L, {
                         onClickHelp: e.showHelp
-                    }) : s.createElement(j, {
+                    }) : s.createElement(A, {
                         onClickHelp: e.showHelp
                     })
                 };

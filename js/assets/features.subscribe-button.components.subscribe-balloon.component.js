@@ -14,6 +14,7 @@
             n.d(t, "a", function() {
                 return r
             });
+            n("/7QA");
             var i = n("3Bft");
 
             function r(e) {
@@ -2711,24 +2712,6 @@
         CdEI: function(e, t, n) {
             e.exports = n.p + "assets/random-viewer-4x-f63102da906995e27c24.png"
         },
-        CiVV: function(e, t, n) {
-            "use strict";
-            n.d(t, "a", function() {
-                return r
-            });
-            var i = n("q1tI"),
-                r = function() {
-                    return i.createElement("figure", {
-                        className: "tw-svg tw-svg__asset--inherit"
-                    }, i.createElement("svg", {
-                        xmlns: "http://www.w3.org/2000/svg",
-                        width: "20",
-                        height: "20"
-                    }, i.createElement("path", {
-                        d: "M17 17.357c-.466.4-1.08.643-1.754.643-.672 0-1.507-.414-1.753-.636a1.29 1.29 0 0 0-.898-.333c-.295 0-.546.077-.753.231-.5.477-1.167.741-1.858.738a2.683 2.683 0 0 1-1.75-.64 1.317 1.317 0 0 0-.9-.33c-.296 0-.547.078-.754.232-.5.476-1.166.74-1.857.738A2.684 2.684 0 0 1 3 17.383V8.096C3.336 4.676 6.335 2 9.984 2 13.86 2 17 5.016 17 8.737l-.001.12.001 8.5zM7.5 11a1.5 1.5 0 1 0 0-3 1.5 1.5 0 0 0 0 3zm5 0a1.5 1.5 0 1 0 0-3 1.5 1.5 0 0 0 0 3z"
-                    })))
-                }
-        },
         "D+xR": function(e, t, n) {
             e.exports = n.p + "assets/100-gifts-2x-964c2934bb2454637abf.png"
         },
@@ -2954,15 +2937,14 @@
                 u = n("FLOH"),
                 l = n("L+W6"),
                 d = n("DnOo"),
-                p = n("FNz+"),
-                m = n("a5fV"),
-                f = n("W8Fi"),
-                b = n("br9A"),
-                g = n("AXRb"),
-                h = n("Ue10"),
-                v = (n("J5He"), "gift-subscription-button"),
-                S = "subscribe-button",
-                y = function(e) {
+                p = n("a5fV"),
+                m = n("W8Fi"),
+                f = n("br9A"),
+                b = n("AXRb"),
+                g = n("Ue10"),
+                h = (n("J5He"), "gift-subscription-button"),
+                v = "subscribe-button",
+                S = function(e) {
                     function t() {
                         var t = null !== e && e.apply(this, arguments) || this;
                         return t.state = {
@@ -2973,7 +2955,7 @@
                                 if (n) {
                                     var i = n.replace("subscribe-button-modal-tab-", "");
                                     t.props.handleSubMenuAction({
-                                        action: b.a.ChangeTier,
+                                        action: f.a.ChangeTier,
                                         checkoutButtonTier: t.getPrice(t.getSubProduct(i))
                                     }), t.setState({
                                         activeTab: i
@@ -3007,20 +2989,20 @@
                                     productName: e.name,
                                     purchase: n,
                                     subProductId: e.id
-                                }) : r.createElement(h.z, {
+                                }) : r.createElement(g.z, {
                                     ariaLabel: i + " " + n,
-                                    "data-test-selector": v,
+                                    "data-test-selector": h,
                                     onClick: t.onGiftSelect,
                                     purchase: n
                                 }, i)
                             }
-                            return t.props.subbedTier === t.state.activeTab && t.state.activeTab === o.a.Prime ? r.createElement(g.a, {
+                            return t.props.subbedTier === t.state.activeTab && t.state.activeTab === o.a.Prime ? r.createElement(b.a, {
                                 "data-a-target": "subscribe-with-prime-button",
                                 handleSubMenuAction: t.props.handleSubMenuAction,
                                 channelLogin: t.props.subLogin
                             }) : r.createElement(d.a, {
                                 "data-a-target": "subscribe-now-button",
-                                "data-test-selector": S,
+                                "data-test-selector": v,
                                 handleSubAction: t.props.handleSubMenuAction,
                                 isSubbedToTier: t.props.subbedTier === t.state.activeTab,
                                 productName: e.name,
@@ -3029,7 +3011,7 @@
                             })
                         }, t.reportGiftCheckoutAction = function() {
                             t.props.handleSubMenuAction({
-                                action: b.a.BuyGiftSub,
+                                action: f.a.BuyGiftSub,
                                 checkoutButtonTier: t.getPrice(t.getSubProduct(t.state.activeTab)),
                                 giftRecipient: t.props.giftRecipient || null
                             })
@@ -3038,74 +3020,74 @@
                         }, t
                     }
                     return i.__extends(t, e), t.prototype.render = function() {
-                        var e = this.props.subbedTier && r.createElement(h.Ya, {
+                        var e = this.props.subbedTier && r.createElement(g.Ya, {
                             className: "subscription-balloon-options__subbed-star",
-                            display: h.X.InlineFlex,
+                            display: g.X.InlineFlex,
                             margin: {
                                 right: .5
                             }
-                        }, r.createElement(h.tb, {
-                            asset: h.ub.Star
+                        }, r.createElement(g.tb, {
+                            asset: g.ub.Star
                         }));
-                        return r.createElement(h.Ya, {
+                        return r.createElement(g.Ya, {
                             className: "channel-header__subscription-balloon-options"
-                        }, r.createElement(h.Ya, {
+                        }, r.createElement(g.Ya, {
                             margin: {
                                 bottom: 1
                             }
-                        }, r.createElement(h.Hb, null, this.props.subbedTier === o.a.Prime ? !this.props.isGift && r.createElement(h.Ya, {
-                            display: h.X.InlineFlex,
+                        }, r.createElement(g.Hb, null, this.props.subbedTier === o.a.Prime ? !this.props.isGift && r.createElement(g.Ya, {
+                            display: g.X.InlineFlex,
                             margin: {
                                 right: 2
                             }
-                        }, r.createElement(h.Ya, {
+                        }, r.createElement(g.Ya, {
                             className: "subscription-balloon-options__prime-crown",
-                            display: h.X.InlineFlex,
+                            display: g.X.InlineFlex,
                             margin: {
                                 right: 1
                             }
-                        }, r.createElement(h.tb, {
-                            asset: h.ub.Crown
-                        })), r.createElement(h.Gb, {
+                        }, r.createElement(g.tb, {
+                            asset: g.ub.Crown
+                        })), r.createElement(g.Gb, {
                             active: this.state.activeTab === o.a.Prime,
-                            "data-a-target": k(o.a.Prime),
-                            "data-tier": k(o.a.Prime),
+                            "data-a-target": y(o.a.Prime),
+                            "data-tier": y(o.a.Prime),
                             onClick: this.toggleActiveTab
-                        }, Object(a.d)("Prime", "SubTierTabs"))) : r.createElement(h.Ya, {
-                            display: h.X.InlineFlex,
+                        }, Object(a.d)("Prime", "SubTierTabs"))) : r.createElement(g.Ya, {
+                            display: g.X.InlineFlex,
                             margin: {
                                 right: 2
                             }
-                        }, this.props.subbedTier === o.a.Tier1 && e, r.createElement(h.Gb, {
+                        }, this.props.subbedTier === o.a.Tier1 && e, r.createElement(g.Gb, {
                             active: this.state.activeTab === o.a.Tier1,
-                            "data-a-target": k(o.a.Tier1),
-                            "data-tier": k(o.a.Tier1),
+                            "data-a-target": y(o.a.Tier1),
+                            "data-tier": y(o.a.Tier1),
                             onClick: this.toggleActiveTab
-                        }, Object(a.d)("Tier 1", "SubTierTabs"))), r.createElement(h.Ya, {
-                            display: h.X.InlineFlex,
+                        }, Object(a.d)("Tier 1", "SubTierTabs"))), r.createElement(g.Ya, {
+                            display: g.X.InlineFlex,
                             margin: {
                                 right: 2
                             }
-                        }, this.props.subbedTier === o.a.Tier2 && e, r.createElement(h.Gb, {
+                        }, this.props.subbedTier === o.a.Tier2 && e, r.createElement(g.Gb, {
                             active: this.state.activeTab === o.a.Tier2,
-                            "data-a-target": k(o.a.Tier2),
-                            "data-tier": k(o.a.Tier2),
+                            "data-a-target": y(o.a.Tier2),
+                            "data-tier": y(o.a.Tier2),
                             onClick: this.toggleActiveTab
-                        }, Object(a.d)("Tier 2", "SubTierTabs"))), r.createElement(h.Ya, {
-                            display: h.X.InlineFlex
-                        }, this.props.subbedTier === o.a.Tier3 && e, r.createElement(h.Gb, {
+                        }, Object(a.d)("Tier 2", "SubTierTabs"))), r.createElement(g.Ya, {
+                            display: g.X.InlineFlex
+                        }, this.props.subbedTier === o.a.Tier3 && e, r.createElement(g.Gb, {
                             active: this.state.activeTab === o.a.Tier3,
-                            "data-a-target": k(o.a.Tier3),
-                            "data-tier": k(o.a.Tier3),
+                            "data-a-target": y(o.a.Tier3),
+                            "data-tier": y(o.a.Tier3),
                             onClick: this.toggleActiveTab
-                        }, Object(a.d)("Tier 3", "SubTierTabs"))))), r.createElement(h.Ya, null, r.createElement(h.Ya, {
+                        }, Object(a.d)("Tier 3", "SubTierTabs"))))), r.createElement(g.Ya, null, r.createElement(g.Ya, {
                             margin: {
                                 bottom: 1
                             }
-                        }, r.createElement(h.W, {
-                            type: h.Wb.H5,
+                        }, r.createElement(g.W, {
+                            type: g.Wb.H5,
                             bold: !0
-                        }, this.getTabTitle())), r.createElement(h.Ya, {
+                        }, this.getTabTitle())), r.createElement(g.Ya, {
                             margin: {
                                 bottom: 1
                             }
@@ -3115,22 +3097,22 @@
                         })), r.createElement(l.a, {
                             isGift: this.props.isGift,
                             subscriptionProduct: this.getSubProduct(this.state.activeTab)
-                        }), this.props.giftRecipient && Object(p.a)(this.props.isStaff) && r.createElement(h.Ya, {
+                        }), this.props.giftRecipient && r.createElement(g.Ya, {
                             margin: {
                                 top: 1
                             }
-                        }, r.createElement(h.N, {
+                        }, r.createElement(g.N, {
                             checked: this.props.giftingAnonymously,
                             label: Object(a.d)("Gift Anonymously", "SubscribeTierTabs"),
                             onChange: this.props.onAnonymousGiftingSelect
-                        })), r.createElement(h.Ya, {
+                        })), r.createElement(g.Ya, {
                             margin: {
                                 right: 1,
                                 top: 1
                             }
                         }, this.getTierSubscribeButton())))
                     }, t.prototype.getPrice = function(e) {
-                        return Object(f.g)(this.props.subscriptionProducts) || Object(f.e)(this.props.subscriptionProducts) ? Object(f.c)(e, this.props.isGift) : e.priceInfo ? Object(m.a)(Object(m.b)(e.priceInfo.total, e.priceInfo.exponent), e.priceInfo.currency) : e.price
+                        return Object(m.g)(this.props.subscriptionProducts) || Object(m.e)(this.props.subscriptionProducts) ? Object(m.c)(e, this.props.isGift) : e.priceInfo ? Object(p.a)(Object(p.b)(e.priceInfo.total, e.priceInfo.exponent), e.priceInfo.currency) : e.price
                     }, t.prototype.getSubProduct = function(e) {
                         switch (e) {
                             case o.a.Tier1:
@@ -3145,22 +3127,22 @@
                     }, t
                 }(r.Component);
 
-            function k(e) {
+            function y(e) {
                 return "subscribe-button-modal-tab-" + e
             }
-            var O = Object(s.b)("SubTierTabs", {
+            var k = Object(s.b)("SubTierTabs", {
                 autoReportInteractive: !0
-            })(y);
+            })(S);
             n.d(t, !1, function() {
+                return h
+            }), n.d(t, !1, function() {
                 return v
             }), n.d(t, !1, function() {
                 return S
             }), n.d(t, !1, function() {
                 return y
-            }), n.d(t, !1, function() {
-                return k
             }), n.d(t, "a", function() {
-                return O
+                return k
             })
         },
         EBDZ: function(e, t, n) {},
@@ -3247,18 +3229,6 @@
         },
         FMOh: function(e, t, n) {
             e.exports = n.p + "assets/specific-viewer-2x-aa0b9ac4ccd63c0f0ef5.png"
-        },
-        "FNz+": function(e, t, n) {
-            "use strict";
-            n.d(t, "a", function() {
-                return r
-            });
-            var i = n("/7QA");
-
-            function r(e) {
-                var t = i.b.get("anonymous_gifting", "off");
-                return "on" === t || !("staff" !== t || !e)
-            }
         },
         GJys: function(e, t, n) {
             e.exports = n.p + "assets/20-gifts-2x-a82739f104cf891a55f7.png"
@@ -6659,9 +6629,7 @@
                         }, t))
                     }, t
                 }(a.Component),
-                B = n("FNz+"),
-                L = n("CiVV"),
-                U = (n("D/Iv"), function(e) {
+                B = (n("D/Iv"), function(e) {
                     function t() {
                         var t = null !== e && e.apply(this, arguments) || this;
                         return t.state = {
@@ -6709,7 +6677,7 @@
                         }, a.createElement(d.Ya, {
                             alignItems: d.f.Center,
                             display: d.X.InlineFlex
-                        }, a.createElement(d.W, null, Object(s.d)("Back", "GiftRecipientSearch"))))), Object(B.a)(this.props.isStaff) && a.createElement(d.Ya, {
+                        }, a.createElement(d.W, null, Object(s.d)("Back", "GiftRecipientSearch"))))), a.createElement(d.Ya, {
                             alignSelf: d.g.Center
                         }, a.createElement(d.N, {
                             checked: this.props.giftingAnonymously,
@@ -6721,12 +6689,8 @@
                             }
                         }, a.createElement(d.Ya, {
                             display: d.X.Flex
-                        }, this.props.giftingAnonymously ? a.createElement(d.Ya, {
-                            alignSelf: d.g.Center,
-                            display: d.X.Flex,
-                            flexDirection: d.Aa.Column
-                        }, Object(L.a)()) : a.createElement(d.tb, {
-                            asset: d.ub.Gift
+                        }, a.createElement(d.tb, {
+                            asset: this.props.giftingAnonymously ? d.ub.Ghost : d.ub.Gift
                         }), a.createElement(d.Ya, {
                             flexGrow: 1,
                             padding: {
@@ -6780,8 +6744,8 @@
                         }))))))
                     }, t
                 }(a.Component)),
-                M = 50,
-                W = function(e) {
+                L = 50,
+                U = function(e) {
                     function t(t) {
                         var n = e.call(this, t) || this;
                         return n.onChange = function(e) {
@@ -6789,7 +6753,7 @@
                                 isWaiting: !0
                             }), n.inputTimer = setTimeout(function() {
                                 return n.doSearch(e)
-                            }, M)) : n.setState(n.getEmptyState())
+                            }, L)) : n.setState(n.getEmptyState())
                         }, n.loadMore = function() {
                             return r.__awaiter(n, void 0, void 0, function() {
                                 var e, t, n;
@@ -6842,7 +6806,7 @@
                         }), n
                     }
                     return r.__extends(t, e), t.prototype.render = function() {
-                        return a.createElement(U, {
+                        return a.createElement(B, {
                             giftingAnonymously: this.props.giftingAnonymously,
                             handleSubMenuAction: this.props.handleSubMenuAction,
                             hasInput: this.state.hasInput,
@@ -6928,7 +6892,7 @@
             ! function(e) {
                 e[e.Top = 0] = "Top", e[e.SubOptions = 1] = "SubOptions", e[e.GiftOptions = 2] = "GiftOptions", e[e.RecipientSelect = 3] = "RecipientSelect", e[e.MysteryGiftSelect = 4] = "MysteryGiftSelect", e[e.Esports = 5] = "Esports"
             }(A || (A = {}));
-            var Y, H = function(e) {
+            var M, W = function(e) {
                     function t() {
                         var t = null !== e && e.apply(this, arguments) || this;
                         return t.goToPreviousPage = function() {
@@ -6954,7 +6918,7 @@
                             showRecipientSelect: this.props.showRecipientSelect
                         })
                     }, t.prototype.getGiftRecipientSearchPage = function() {
-                        return this.props.subscriptionProducts ? a.createElement(W, {
+                        return this.props.subscriptionProducts ? a.createElement(U, {
                             giftingAnonymously: this.props.giftingAnonymously,
                             handleSubMenuAction: this.props.handleSubMenuAction,
                             isEsportChannel: !0,
@@ -6966,23 +6930,23 @@
                         }) : null
                     }, t
                 }(a.Component),
-                z = n("gzT4"),
+                Y = n("gzT4"),
+                H = n.n(Y),
+                z = n("eVBn"),
                 V = n.n(z),
-                X = n("eVBn"),
+                X = n("W+18"),
                 q = n.n(X),
-                Q = n("W+18"),
+                Q = n("CdEI"),
                 K = n.n(Q),
-                $ = n("CdEI"),
+                $ = n("HdJw"),
                 J = n.n($),
-                Z = n("HdJw"),
+                Z = n("FMOh"),
                 ee = n.n(Z),
-                te = n("FMOh"),
+                te = n("fIIl"),
                 ne = n.n(te),
-                ie = n("fIIl"),
-                re = n.n(ie),
-                ae = (n("hKya"), "animated-background-transition"),
-                oe = ae + "__toggled-content",
-                se = function(e) {
+                ie = (n("hKya"), "animated-background-transition"),
+                re = ie + "__toggled-content",
+                ae = function(e) {
                     function t() {
                         var t = null !== e && e.apply(this, arguments) || this;
                         return t.state = {
@@ -7004,12 +6968,12 @@
                     }, t.prototype.componentWillUnmount = function() {
                         this.ref && this.ref.removeEventListener("animationend", this.unToggle)
                     }, t.prototype.render = function() {
-                        var e = this.props.toggle ? oe + "--show" : oe + "--hide";
-                        return this.state.toggled && (e = this.props.toggle ? oe + "--fade-in" : oe + "--fade-out"), a.createElement(d.Ya, {
-                            className: ae,
+                        var e = this.props.toggle ? re + "--show" : re + "--hide";
+                        return this.state.toggled && (e = this.props.toggle ? re + "--fade-in" : re + "--fade-out"), a.createElement(d.Ya, {
+                            className: ie,
                             position: d.kb.Relative
                         }, a.createElement(d.Ya, {
-                            className: ae + "__background",
+                            className: ie + "__background",
                             position: d.kb.Absolute
                         }), a.createElement(d.Ya, {
                             className: e,
@@ -7020,16 +6984,16 @@
                         }, this.props.content))
                     }, t
                 }(a.Component),
-                ce = n("TMQs"),
-                ue = n.n(ce),
-                le = (n("gCfo"), "dismissed_anonymous_gifting_promo"),
-                de = function(e) {
+                oe = n("TMQs"),
+                se = n.n(oe),
+                ce = (n("gCfo"), "dismissed_anonymous_gifting_promo"),
+                ue = function(e) {
                     function t() {
                         var t = null !== e && e.apply(this, arguments) || this;
                         return t.state = {
-                            dismissedPromo: s.m.get(le, !1)
+                            dismissedPromo: s.m.get(ce, !1)
                         }, t.closeButtonOnClick = function() {
-                            s.m.set(le, !0), t.setState({
+                            s.m.set(ce, !0), t.setState({
                                 dismissedPromo: !0
                             })
                         }, t
@@ -7047,7 +7011,7 @@
                             }
                         }, a.createElement(d.S, {
                             alt: Object(s.d)("Ghost", "AnonymousGiftingPromo"),
-                            src: ue.a
+                            src: se.a
                         })), a.createElement(d.W, {
                             color: d.O.Overlay
                         }, Object(s.d)("<x:strong>New!</x:strong> You can now give gifts anonymously!", {
@@ -7074,10 +7038,9 @@
             n("EBDZ");
             ! function(e) {
                 e.IneligibleToGiftMessage = "IneligibleToGiftMessage", e.MysteryGiftButton = "MysteryGiftButton", e.SingleGiftButton = "SingleGiftButton"
-            }(Y || (Y = {}));
-            var pe = function(e) {
-                    var t = Object(B.a)(e.isStaff),
-                        n = Object(s.d)("Gift Anonymously", "GiftOptions");
+            }(M || (M = {}));
+            var le = function(e) {
+                    var t = Object(s.d)("Gift Anonymously", "GiftOptions");
                     return a.createElement(d.Ya, {
                         className: "subscription-gift-options",
                         padding: 2
@@ -7102,12 +7065,8 @@
                         display: d.X.InlineFlex
                     }, a.createElement(d.W, null, Object(s.d)("Back", "GiftOptions"))))), a.createElement(d.Ya, {
                         display: d.X.Flex
-                    }, e.giftingAnonymously ? a.createElement(d.Ya, {
-                        alignSelf: d.g.Center,
-                        display: d.X.Flex,
-                        flexDirection: d.Aa.Column
-                    }, Object(L.a)()) : a.createElement(d.tb, {
-                        asset: d.ub.Gift
+                    }, a.createElement(d.tb, {
+                        asset: e.giftingAnonymously ? d.ub.Ghost : d.ub.Gift
                     }), a.createElement(d.Ya, {
                         flexGrow: 1,
                         padding: {
@@ -7116,25 +7075,25 @@
                     }, a.createElement(d.W, {
                         bold: !0,
                         fontSize: d.Ca.Size4
-                    }, Object(s.d)("Gift a Subscription", "GiftOptions"))))), t && a.createElement(d.Ya, {
+                    }, Object(s.d)("Gift a Subscription", "GiftOptions"))))), a.createElement(d.Ya, {
                         alignSelf: e.onBack ? d.g.Start : d.g.Center,
                         margin: {
                             top: .5
                         }
                     }, a.createElement(d.N, {
                         checked: e.giftingAnonymously,
-                        label: n,
+                        label: t,
                         onChange: e.onAnonymousGiftingSelect
-                    }))), e.currentUserCanGift ? t && a.createElement(d.Ya, {
+                    }))), e.currentUserCanGift ? a.createElement(d.Ya, {
                         margin: {
                             top: 1
                         }
-                    }, a.createElement(de, null)) : a.createElement(d.Fb, {
+                    }, a.createElement(ue, null)) : a.createElement(d.Fb, {
                         borderBottom: !0,
                         borderRight: !0,
                         borderTop: !0,
                         className: "subscription-gift-options__ineligible-message",
-                        "data-test-selector": Y.IneligibleToGiftMessage,
+                        "data-test-selector": M.IneligibleToGiftMessage,
                         margin: {
                             top: 1
                         },
@@ -7149,14 +7108,14 @@
                         margin: {
                             bottom: "auto"
                         }
-                    }, a.createElement(se, {
+                    }, a.createElement(ae, {
                         content: a.createElement(d.S, {
                             alt: Object(s.d)("Give a gift to a viewer", "GiftOptions"),
-                            src: ee.a,
+                            src: J.a,
                             srcSet: {
-                                "1x": ee.a,
-                                "2x": ne.a,
-                                "4x": re.a
+                                "1x": J.a,
+                                "2x": ee.a,
+                                "4x": ne.a
                             }
                         }),
                         toggle: e.giftingAnonymously,
@@ -7164,7 +7123,7 @@
                             borderRadius: d.x.Medium
                         }, a.createElement(d.S, {
                             alt: Object(s.d)("Give a gift to a viewer anonymously", "GiftOptions"),
-                            src: V.a
+                            src: H.a
                         }))
                     })), a.createElement(d.Ya, {
                         margin: {
@@ -7190,7 +7149,7 @@
                             top: 1
                         }
                     }, a.createElement(d.z, {
-                        "data-test-selector": Y.SingleGiftButton,
+                        "data-test-selector": M.SingleGiftButton,
                         disabled: !e.currentUserCanGift,
                         onClick: e.onGiftSelect
                     }, Object(s.d)("Give a Gift Subscription", "GiftOptions"))))), !e.isNonStandardSub && a.createElement(d.Ya, {
@@ -7203,14 +7162,14 @@
                         margin: {
                             bottom: "auto"
                         }
-                    }, a.createElement(se, {
+                    }, a.createElement(ae, {
                         content: a.createElement(d.S, {
                             alt: Object(s.d)("Give a gift to the community", "GiftOptions"),
-                            src: q.a,
+                            src: V.a,
                             srcSet: {
-                                "1x": q.a,
-                                "2x": K.a,
-                                "4x": J.a
+                                "1x": V.a,
+                                "2x": q.a,
+                                "4x": K.a
                             }
                         }),
                         toggle: e.giftingAnonymously,
@@ -7218,7 +7177,7 @@
                             borderRadius: d.x.Medium
                         }, a.createElement(d.S, {
                             alt: Object(s.d)("Give a gift to the community anonymously", "GiftOptions"),
-                            src: V.a
+                            src: H.a
                         }))
                     })), a.createElement(d.Ya, {
                         margin: {
@@ -7253,29 +7212,29 @@
                             top: 1
                         }
                     }, a.createElement(d.z, {
-                        "data-test-selector": Y.MysteryGiftButton,
+                        "data-test-selector": M.MysteryGiftButton,
                         disabled: !e.currentUserCanGift,
                         onClick: e.onMysteryGiftSelect
                     }, Object(s.d)("Give Gift Subscriptions", "GiftOptions"))))))
                 },
-                me = n("UUve");
+                de = n("UUve");
 
-            function fe(e, t) {
+            function pe(e, t) {
                 return "$" + (parseFloat(t.price.slice(1)) * e).toFixed(2)
             }
             n("XlIw");
-            var be = 1,
-                ge = 100,
-                he = function(e) {
+            var me = 1,
+                fe = 100,
+                be = function(e) {
                     function t() {
                         var t = null !== e && e.apply(this, arguments) || this;
                         return t.state = {
-                            giftCount: be,
-                            inputString: be.toString()
+                            giftCount: me,
+                            inputString: me.toString()
                         }, t.handleChange = function(e) {
                             if ("" !== e.target.value) {
                                 var n = parseInt(e.target.value, 10);
-                                isNaN(n) || (n < be ? n = be : n > ge && (n = ge), t.setState({
+                                isNaN(n) || (n < me ? n = me : n > fe && (n = fe), t.setState({
                                     giftCount: n,
                                     inputString: n.toString()
                                 }))
@@ -7284,7 +7243,7 @@
                                 inputString: e.target.value
                             })
                         }, t.onCheckoutClick = function() {
-                            s.n.set(me.c, t.props.subscriptionProduct.name), s.n.set(me.b, t.state.giftCount), s.n.set(me.a, t.props.giftingAnonymously), t.props.handleSubMenuAction({
+                            s.n.set(de.c, t.props.subscriptionProduct.name), s.n.set(de.b, t.state.giftCount), s.n.set(de.a, t.props.giftingAnonymously), t.props.handleSubMenuAction({
                                 action: I.a.BuyCustomMysteryGift,
                                 checkoutButtonTier: t.props.subscriptionProduct.tier,
                                 mysteryGiftCount: t.state.giftCount,
@@ -7315,70 +7274,70 @@
                                 right: 1
                             }
                         }, a.createElement(d.Sa, {
-                            max: this.props.limit || ge,
-                            min: be,
+                            max: this.props.limit || fe,
+                            min: me,
                             onChange: this.handleChange,
                             type: d.Ua.Number,
                             value: this.state.inputString
                         })), a.createElement(d.W, {
                             className: "custom-community-gift-bundle__max-text"
                         }, Object(s.d)("(Max {limit, number})", {
-                            limit: this.props.limit || ge
+                            limit: this.props.limit || fe
                         }, "CustomMysteryGiftBundle"))), a.createElement(d.Ya, {
                             className: "custom-community-gift-bundle__purchase-button"
                         }, a.createElement(d.z, {
                             fullWidth: !0,
                             onClick: this.onCheckoutClick,
-                            purchase: fe(this.state.giftCount, this.props.subscriptionProduct),
+                            purchase: pe(this.state.giftCount, this.props.subscriptionProduct),
                             targetBlank: !0
                         }, Object(s.d)("{mysteryGiftCount, plural, one {Give {mysteryGiftCount} Gift} other {Give {mysteryGiftCount} Gifts}}", {
                             mysteryGiftCount: this.state.giftCount
                         }, "CustomMysteryGiftBundle")))))
                     }, t
                 }(a.Component),
-                ve = n("6BMd"),
+                ge = n("6BMd"),
+                he = n.n(ge),
+                ve = (n("EYib"), n("EEuB")),
                 Se = n.n(ve),
-                ye = (n("EYib"), n("EEuB")),
+                ye = n("/iCH"),
                 ke = n.n(ye),
-                Oe = n("/iCH"),
+                Oe = n("/Zlu"),
                 Ee = n.n(Oe),
-                Pe = n("/Zlu"),
+                Pe = n("wK7Q"),
                 Ce = n.n(Pe),
-                Ne = n("wK7Q"),
+                Ne = n("+naV"),
                 Te = n.n(Ne),
-                _e = n("+naV"),
+                _e = n("TybJ"),
                 De = n.n(_e),
-                xe = n("TybJ"),
+                xe = n("rhZM"),
                 Ge = n.n(xe),
-                Ie = n("rhZM"),
+                Ie = n("D+xR"),
                 Fe = n.n(Ie),
-                we = n("D+xR"),
+                we = n("CCnc"),
                 Ae = n.n(we),
-                je = n("CCnc"),
+                je = n("u3Ph"),
                 Re = n.n(je),
-                Be = n("u3Ph"),
+                Be = n("GJys"),
                 Le = n.n(Be),
-                Ue = n("GJys"),
+                Ue = n("SPHB"),
                 Me = n.n(Ue),
-                We = n("SPHB"),
+                We = n("OdUb"),
                 Ye = n.n(We),
-                He = n("OdUb"),
+                He = n("nhit"),
                 ze = n.n(He),
-                Ve = n("nhit"),
+                Ve = n("R9CH"),
                 Xe = n.n(Ve),
-                qe = n("R9CH"),
+                qe = n("2xp8"),
                 Qe = n.n(qe),
-                Ke = n("2xp8"),
+                Ke = n("kHse"),
                 $e = n.n(Ke),
-                Je = n("kHse"),
-                Ze = n.n(Je),
-                et = n("wM1o"),
-                tt = n.n(et);
-            var nt, it = function(e) {
+                Je = n("wM1o"),
+                Ze = n.n(Je);
+            var et, tt = function(e) {
                     function t() {
                         var t = null !== e && e.apply(this, arguments) || this;
                         return t.handleClick = function() {
-                            s.n.set(me.c, t.props.subscriptionProduct.name), s.n.set(me.b, String(t.props.mysteryGiftCount)), s.n.set(me.a, t.props.giftingAnonymously), t.props.handleSubMenuAction({
+                            s.n.set(de.c, t.props.subscriptionProduct.name), s.n.set(de.b, String(t.props.mysteryGiftCount)), s.n.set(de.a, t.props.giftingAnonymously), t.props.handleSubMenuAction({
                                 action: I.a.BuyMysteryGift,
                                 checkoutButtonTier: t.props.subscriptionProduct.tier,
                                 mysteryGiftCount: t.props.mysteryGiftCount,
@@ -7389,29 +7348,29 @@
                     return r.__extends(t, e), t.prototype.render = function() {
                         var e = function(e) {
                             return e >= 100 ? {
-                                "1x": Fe.a,
-                                "2x": Ae.a,
-                                "4x": Re.a
+                                "1x": Ge.a,
+                                "2x": Fe.a,
+                                "4x": Ae.a
                             } : e >= 50 ? {
-                                "1x": $e.a,
-                                "2x": Ze.a,
-                                "4x": tt.a
+                                "1x": Qe.a,
+                                "2x": $e.a,
+                                "4x": Ze.a
                             } : e >= 20 ? {
-                                "1x": Le.a,
-                                "2x": Me.a,
-                                "4x": Ye.a
+                                "1x": Re.a,
+                                "2x": Le.a,
+                                "4x": Me.a
                             } : e >= 10 ? {
-                                "1x": Te.a,
-                                "2x": De.a,
-                                "4x": Ge.a
+                                "1x": Ce.a,
+                                "2x": Te.a,
+                                "4x": De.a
                             } : e >= 5 ? {
-                                "1x": ze.a,
-                                "2x": Xe.a,
-                                "4x": Qe.a
+                                "1x": Ye.a,
+                                "2x": ze.a,
+                                "4x": Xe.a
                             } : e >= 1 ? {
-                                "1x": ke.a,
-                                "2x": Ee.a,
-                                "4x": Ce.a
+                                "1x": Se.a,
+                                "2x": ke.a,
+                                "4x": Ee.a
                             } : {
                                 "1x": "",
                                 "2x": "",
@@ -7423,7 +7382,7 @@
                             margin: {
                                 bottom: 2
                             }
-                        }, a.createElement(se, {
+                        }, a.createElement(ae, {
                             content: a.createElement(d.S, {
                                 alt: Object(s.d)("{mysteryGiftCount, plural, one {Give {mysteryGiftCount} gift randomly.} other {Give {mysteryGiftCount} gifts randomly.}}", {
                                     mysteryGiftCount: this.props.mysteryGiftCount
@@ -7438,7 +7397,7 @@
                                 alt: Object(s.d)("{mysteryGiftCount, plural, one {Give {mysteryGiftCount} anonymous gift randomly.} other {Give {mysteryGiftCount} anonymous gifts randomly.}}", {
                                     mysteryGiftCount: this.props.mysteryGiftCount
                                 }, "MysteryGiftBundle"),
-                                src: Se.a
+                                src: he.a
                             }))
                         }), a.createElement(d.Ya, {
                             display: d.X.Flex,
@@ -7448,14 +7407,14 @@
                         }, a.createElement(d.z, {
                             fullWidth: !0,
                             onClick: this.handleClick,
-                            purchase: fe(this.props.mysteryGiftCount, this.props.subscriptionProduct),
+                            purchase: pe(this.props.mysteryGiftCount, this.props.subscriptionProduct),
                             targetBlank: !0
                         }, Object(s.d)("{mysteryGiftCount, plural, one {Give {mysteryGiftCount} Gift} other {Give {mysteryGiftCount} Gifts}}", {
                             mysteryGiftCount: this.props.mysteryGiftCount
                         }, "MysteryGiftBundle"))))
                     }, t
                 }(a.Component),
-                rt = (n("uOOi"), function(e) {
+                nt = (n("uOOi"), function(e) {
                     function t() {
                         var t = null !== e && e.apply(this, arguments) || this;
                         return t.state = {
@@ -7487,7 +7446,7 @@
                             icon: d.ub.AngleLeft,
                             onClick: e.onBack,
                             type: d.F.Text
-                        }, a.createElement(d.W, null, Object(s.d)("Back", "MysteryGiftBundleSelection")))), Object(B.a)(e.isStaff) && a.createElement(d.Ya, {
+                        }, a.createElement(d.W, null, Object(s.d)("Back", "MysteryGiftBundleSelection")))), a.createElement(d.Ya, {
                             alignSelf: d.g.Center
                         }, a.createElement(d.N, {
                             checked: e.giftingAnonymously,
@@ -7499,12 +7458,8 @@
                             }
                         }, a.createElement(d.Ya, {
                             display: d.X.Flex
-                        }, e.giftingAnonymously ? a.createElement(d.Ya, {
-                            alignSelf: d.g.Center,
-                            display: d.X.Flex,
-                            flexDirection: d.Aa.Column
-                        }, Object(L.a)()) : a.createElement(d.tb, {
-                            asset: d.ub.Gift
+                        }, a.createElement(d.tb, {
+                            asset: e.giftingAnonymously ? d.ub.Ghost : d.ub.Gift
                         }), a.createElement(d.Ya, {
                             flexGrow: 1,
                             padding: {
@@ -7541,14 +7496,14 @@
                                 top: 2
                             }
                         }, e.mysteryGiftBundles.map(function(n) {
-                            return a.createElement(it, {
+                            return a.createElement(tt, {
                                 giftingAnonymously: e.giftingAnonymously,
                                 handleSubMenuAction: e.handleSubMenuAction,
                                 key: "MysteryGiftBundle" + n,
                                 mysteryGiftCount: n,
                                 subscriptionProduct: t.activeProduct
                             })
-                        }), a.createElement(he, {
+                        }), a.createElement(be, {
                             giftingAnonymously: e.giftingAnonymously,
                             handleSubMenuAction: e.handleSubMenuAction,
                             limit: e.customMysteryGiftBundleLimit,
@@ -7556,18 +7511,18 @@
                         })))))))
                     }, t
                 }(a.Component)),
-                at = n("DMoW"),
-                ot = n("L+W6"),
-                st = n("a5fV"),
-                ct = n("AXRb"),
-                ut = function(e) {
+                it = n("DMoW"),
+                rt = n("L+W6"),
+                at = n("a5fV"),
+                ot = n("AXRb"),
+                st = function(e) {
                     var t = null,
                         n = null,
                         i = null,
                         r = e.subscriptionProducts[0].price;
                     if (e.subscriptionProducts[0].priceInfo) {
                         var o = e.subscriptionProducts[0].priceInfo;
-                        r = Object(st.a)(Object(st.b)(o.total, o.exponent), o.currency)
+                        r = Object(at.a)(Object(at.b)(o.total, o.exponent), o.currency)
                     }
                     if (Object(b.g)(e.subscriptionProducts) && (r = Object(b.c)(e.subscriptionProducts[0])), e.channelLogin && (e.inPrimeRegion || e.userHasPrime)) {
                         var c = e.userHasPrime ? Object(s.d)("Use your free channel subscription to directly support your favorite streamer. {upsellTextLink}", {
@@ -7592,7 +7547,7 @@
                                 bottom: 1
                             },
                             "data-test-selector": "prime-sub-upsell"
-                        }, a.createElement(d.W, null, c)), a.createElement(ct.a, {
+                        }, a.createElement(d.W, null, c)), a.createElement(ot.a, {
                             "data-a-target": "subscribe-with-prime-button",
                             handleSubMenuAction: e.handleSubMenuAction,
                             channelLogin: e.channelLogin
@@ -7623,13 +7578,13 @@
                         }, l))
                     }
                     var p = e.subscriptionProducts[0],
-                        m = (p.interval && p.interval.unit) === at.T.ONE_TIME;
+                        m = (p.interval && p.interval.unit) === it.T.ONE_TIME;
                     return a.createElement(d.Ya, {
                         padding: 2
                     }, i, a.createElement(d.Ya, null, a.createElement(d.W, {
                         type: d.Wb.H4,
                         bold: !0
-                    }, Object(s.d)("Paid Subscription", "NonSubbedTopPage")), a.createElement(ot.a, {
+                    }, Object(s.d)("Paid Subscription", "NonSubbedTopPage")), a.createElement(rt.a, {
                         subscriptionProduct: e.subscriptionProducts[0],
                         isOneTime: m
                     }), a.createElement(d.Ya, {
@@ -7653,8 +7608,8 @@
                         }
                     }, t, n))
                 },
-                lt = n("DqL7"),
-                dt = function(e) {
+                ct = n("DqL7"),
+                ut = function(e) {
                     return a.createElement(d.Ya, {
                         padding: 2
                     }, a.createElement(d.Ya, null, a.createElement(d.Ya, {
@@ -7674,7 +7629,7 @@
                     }, a.createElement(d.Ya, {
                         alignItems: d.f.Center,
                         display: d.X.InlineFlex
-                    }, a.createElement(d.W, null, Object(s.d)("Back", "PaidSubOptions"))))), a.createElement(lt.a, {
+                    }, a.createElement(d.W, null, Object(s.d)("Back", "PaidSubOptions"))))), a.createElement(ct.a, {
                         canPrimeSubscribe: !1,
                         channelDisplayName: e.channelDisplayName,
                         handleSubMenuAction: e.handleSubMenuAction,
@@ -7683,11 +7638,11 @@
                         userHasPrime: !1
                     })))
                 },
-                pt = n("3Bft"),
-                mt = n("HGFl"),
-                ft = n("0WFu"),
-                bt = function(e) {
-                    var t = Object(ft.a)(e.subbedTier);
+                lt = n("3Bft"),
+                dt = n("HGFl"),
+                pt = n("0WFu"),
+                mt = function(e) {
+                    var t = Object(pt.a)(e.subbedTier);
                     return a.createElement(d.Ya, {
                         display: d.X.Flex
                     }, a.createElement(d.Ya, {
@@ -7705,15 +7660,15 @@
                         }
                     }, a.createElement(d.W, {
                         bold: !0,
-                        "data-test-selector": nt.ChannelDisplayName,
+                        "data-test-selector": et.ChannelDisplayName,
                         fontSize: d.Ca.Size5
                     }, e.channelDisplayName, !e.isPrimeSubscription && t && Object(s.d)(" - Tier {subscriptionTier}", {
                         subscriptionTier: t
                     }, "CurrentSubscriptionChannelInfo")), a.createElement(d.W, {
-                        "data-test-selector": nt.SubscriptionName
+                        "data-test-selector": et.SubscriptionName
                     }, e.subProduct.displayName)))
                 },
-                gt = function(e) {
+                ft = function(e) {
                     var t = "";
                     return t = e.isPrimeSubscription ? Object(s.d)("Your Prime Subscription", "CurrentSubscriptionHeader") : e.isGift ? Object(s.d)("Your Gift Subscription", "CurrentSubscriptionHeader") : Object(s.d)("Your Subscription", "CurrentSubscriptionHeader"), a.createElement(d.Ya, {
                         className: "current-subscription__heading-" + (e.isPrimeSubscription ? "prime" : "tier"),
@@ -7733,16 +7688,16 @@
                         }
                     }, a.createElement(d.W, {
                         bold: !0,
-                        "data-test-selector": nt.Header,
+                        "data-test-selector": et.Header,
                         type: d.Wb.H4
                     }, t)))
                 },
-                ht = function(e) {
+                bt = function(e) {
                     function t() {
                         var t = null !== e && e.apply(this, arguments) || this;
                         return t.onContinueSub = function() {
                             var e = Object(b.b)(t.props.subProducts) || t.props.subProduct;
-                            s.n.set(me.c, e.name), t.props.handleSubMenuAction({
+                            s.n.set(de.c, e.name), t.props.handleSubMenuAction({
                                 action: I.a.BuyGiftToPaidUpgrade,
                                 checkoutButtonTier: e.tier
                             })
@@ -7751,14 +7706,14 @@
                     return r.__extends(t, e), t.prototype.render = function() {
                         var e = this.props,
                             t = Object(b.b)(e.subProducts),
-                            n = Object(ft.a)(e.subbedTier);
+                            n = Object(pt.a)(e.subbedTier);
                         return a.createElement(d.Fb, {
                             borderTop: !0,
                             padding: 2,
                             className: "current-subscription"
-                        }, a.createElement(gt, {
+                        }, a.createElement(ft, {
                             isGift: !0
-                        }), a.createElement(bt, {
+                        }), a.createElement(mt, {
                             channelDisplayName: e.channelDisplayName,
                             channelProfileImageURL: e.channelProfileImageURL,
                             subbedTier: e.subbedTier,
@@ -7769,7 +7724,7 @@
                                 top: .5
                             }
                         }, a.createElement(d.W, {
-                            "data-test-selector": nt.GiftMessage,
+                            "data-test-selector": et.GiftMessage,
                             type: d.Wb.Span
                         }, e.giftSender ? Object(s.d)("Gift from <x:strong>{giftSender}</x:strong>", {
                             giftSender: e.giftSender,
@@ -7781,7 +7736,7 @@
                                 }, e)
                             }
                         }, "CurrentGiftSubscription") : Object(s.d)("Gift Subscription", "CurrentGiftSubscription"), e.subEndDate && a.createElement(a.Fragment, null, " - ", Object(s.d)("Benefits expire on {subEndDate}", {
-                            subEndDate: Object(s.c)(Object(mt.c)(e.subEndDate.toString()), {
+                            subEndDate: Object(s.c)(Object(dt.c)(e.subEndDate.toString()), {
                                 day: "numeric",
                                 month: "long"
                             })
@@ -7793,10 +7748,10 @@
                         }, a.createElement(d.W, {
                             bold: !0,
                             className: "current-subscription__gift-message",
-                            "data-test-selector": nt.GiftUpgradeMessage
+                            "data-test-selector": et.GiftUpgradeMessage
                         }, Object(s.d)("Your new Tier {subbedTier} Paid Subscription will begin on {subEndDate}", {
-                            subbedTier: Object(ft.a)(e.pendingSubscription.tier) || "",
-                            subEndDate: Object(s.c)(Object(mt.c)(e.subEndDate.toString()), {
+                            subbedTier: Object(pt.a)(e.pendingSubscription.tier) || "",
+                            subEndDate: Object(s.c)(Object(dt.c)(e.subEndDate.toString()), {
                                 month: "long",
                                 day: "numeric"
                             })
@@ -7816,14 +7771,14 @@
                                 right: .5
                             }
                         }, a.createElement(d.z, {
-                            "data-test-selector": nt.GiftPaidUpgradeButton,
+                            "data-test-selector": et.GiftPaidUpgradeButton,
                             icon: d.ub.Star,
                             onClick: this.onContinueSub,
                             purchase: t ? Object(b.a)(t) : e.subProduct.price
                         }, Object(s.d)("Continue Sub", "CurrentGiftSubscription"))), t && a.createElement(d.Ya, {
                             display: d.X.InlineBlock,
                             verticalAlign: d.gc.Middle
-                        }, a.createElement(ot.a, {
+                        }, a.createElement(rt.a, {
                             isPaidUpgrade: !0,
                             subscriptionProduct: t
                         }))), a.createElement(d.Ya, {
@@ -7837,23 +7792,23 @@
                             }
                         }, a.createElement(d.z, {
                             "data-a-target": "upgrade-tier-button",
-                            "data-test-selector": nt.UpgradeCurrentTierButton,
+                            "data-test-selector": et.UpgradeCurrentTierButton,
                             onClick: e.onUpgradeTier,
                             type: d.F.Hollow
                         }, 3 === n ? Object(s.d)("Change Your Tier", "CurrentGiftSubscription") : Object(s.d)("Upgrade Your Tier", "CurrentGiftSubscription"))), a.createElement(d.z, {
                             "data-a-target": "gift-subscription-button",
-                            "data-test-selector": nt.GiftSubscriptionButton,
+                            "data-test-selector": et.GiftSubscriptionButton,
                             onClick: e.onGiftOptionsSelect,
                             type: d.F.Hollow
                         }, Object(s.d)("Gift a Subscription", "CurrentGiftSubscription"))))
                     }, t
                 }(a.Component),
-                vt = function(e) {
+                gt = function(e) {
                     function t() {
                         var t = null !== e && e.apply(this, arguments) || this;
                         return t.onUpgradeSub = function() {
                             var e = t.props.upgradeSubProduct;
-                            s.n.set(me.c, e.name), t.props.handleSubMenuAction({
+                            s.n.set(de.c, e.name), t.props.handleSubMenuAction({
                                 action: I.a.BuyPaidUpgrade,
                                 checkoutButtonTier: e.tier
                             })
@@ -7861,12 +7816,12 @@
                     }
                     return r.__extends(t, e), t.prototype.render = function() {
                         var e = this.props,
-                            t = Object(ft.a)(e.subbedTier);
+                            t = Object(pt.a)(e.subbedTier);
                         return a.createElement(d.Fb, {
                             borderTop: !0,
                             padding: 2,
                             className: "current-subscription"
-                        }, a.createElement(gt, null), a.createElement(bt, {
+                        }, a.createElement(ft, null), a.createElement(mt, {
                             channelDisplayName: e.channelDisplayName,
                             channelProfileImageURL: e.channelProfileImageURL,
                             subbedTier: e.subbedTier,
@@ -7880,7 +7835,7 @@
                             }
                         }, a.createElement(d.z, {
                             "data-a-target": "upgrade-tier-button",
-                            "data-test-selector": nt.UpgradeCurrentTierButton,
+                            "data-test-selector": et.UpgradeCurrentTierButton,
                             icon: d.ub.Star,
                             onClick: this.onUpgradeSub,
                             purchase: e.upgradeSubProduct.price
@@ -7898,20 +7853,20 @@
                             }
                         }, a.createElement(d.z, {
                             "data-a-target": "upgrade-tier-button",
-                            "data-test-selector": nt.UpgradeOtherTierButton,
+                            "data-test-selector": et.UpgradeOtherTierButton,
                             onClick: e.onUpgradeTier,
                             type: d.F.Hollow
                         }, Object(s.d)("More Paid Subscription Options", "CurrentPaidSubscription"))))))
                     }, t
                 }(a.Component),
-                St = function(e) {
+                ht = function(e) {
                     return a.createElement(d.Fb, {
                         borderTop: !0,
                         padding: 2,
                         className: "current-subscription"
-                    }, a.createElement(gt, {
+                    }, a.createElement(ft, {
                         isPrimeSubscription: !0
-                    }), a.createElement(bt, {
+                    }), a.createElement(mt, {
                         channelDisplayName: e.channelDisplayName,
                         channelProfileImageURL: e.channelProfileImageURL,
                         isPrimeSubscription: !0,
@@ -7923,10 +7878,10 @@
                             top: .5
                         }
                     }, a.createElement(d.W, {
-                        "data-test-selector": nt.ExpiryMessage,
+                        "data-test-selector": et.ExpiryMessage,
                         type: d.Wb.Span
                     }, Object(s.d)("Benefits expire on {subEndDate}", {
-                        subEndDate: Object(s.c)(Object(mt.c)(e.subEndDate.toString()), {
+                        subEndDate: Object(s.c)(Object(dt.c)(e.subEndDate.toString()), {
                             day: "numeric",
                             month: "long"
                         })
@@ -7934,7 +7889,7 @@
                         margin: {
                             top: 1
                         }
-                    }, a.createElement(ct.a, {
+                    }, a.createElement(ot.a, {
                         channelLogin: e.channelLogin,
                         handleSubMenuAction: e.handleSubMenuAction
                     })), a.createElement(d.Ya, {
@@ -7951,7 +7906,7 @@
                         }
                     }, a.createElement(d.z, {
                         "data-a-target": "upgrade-tier-button",
-                        "data-test-selector": nt.UpgradeCurrentTierButton,
+                        "data-test-selector": et.UpgradeCurrentTierButton,
                         onClick: e.onUpgradeTier,
                         type: d.F.Hollow
                     }, Object(s.d)("Upgrade Your Tier", "CurrentPrimeSubscription")))))
@@ -7959,9 +7914,9 @@
             n("psMd");
             ! function(e) {
                 e.ChannelDisplayName = "ChannelDisplayName", e.ExpiryMessage = "ExpiryMessage", e.GiftMessage = "GiftMessage", e.GiftPaidUpgradeButton = "GiftPaidUpgradeButton", e.GiftUpgradeMessage = "GiftUpgradeMessage", e.GiftSubscriptionButton = "GiftSubscriptionButton", e.Header = "Header", e.SubscriptionName = "SubscriptionName", e.SubscriptionTier = "SubscriptionTier", e.UpgradeCurrentTierButton = "UpgradeCurrentTierButton", e.UpgradeOtherTierButton = "UpgradeOtherTierButton"
-            }(nt || (nt = {}));
-            var yt, kt, Ot = function(e) {
-                    return pt.a.Prime === e.subbedTier ? a.createElement(St, {
+            }(et || (et = {}));
+            var vt, St, yt = function(e) {
+                    return lt.a.Prime === e.subbedTier ? a.createElement(ht, {
                         channelDisplayName: e.channelDisplayName,
                         channelLogin: e.channelLogin,
                         channelProfileImageURL: e.channelProfileImageURL,
@@ -7971,7 +7926,7 @@
                         subbedTier: e.subbedTier,
                         subEndDate: e.subEndDate,
                         subProduct: e.subProduct
-                    }) : e.isGift ? a.createElement(ht, {
+                    }) : e.isGift ? a.createElement(bt, {
                         channelDisplayName: e.channelDisplayName,
                         channelProfileImageURL: e.channelProfileImageURL,
                         pendingSubscription: e.pendingSubscription,
@@ -7983,7 +7938,7 @@
                         subEndDate: e.subEndDate,
                         subProduct: e.subProduct,
                         subProducts: e.subProducts
-                    }) : a.createElement(vt, {
+                    }) : a.createElement(gt, {
                         channelDisplayName: e.channelDisplayName,
                         channelProfileImageURL: e.channelProfileImageURL,
                         handleSubMenuAction: e.handleSubMenuAction,
@@ -7994,8 +7949,8 @@
                         upgradeSubProduct: e.upgradeSubProduct
                     })
                 },
-                Et = function(e) {
-                    var t = e.subbedTier !== pt.a.Tier3 ? Object(s.d)("Change Your Subscription", "SubOptions") : Object(s.d)("Your Subscription", "SubOptions");
+                kt = function(e) {
+                    var t = e.subbedTier !== lt.a.Tier3 ? Object(s.d)("Change Your Subscription", "SubOptions") : Object(s.d)("Your Subscription", "SubOptions");
                     return a.createElement(d.Ya, {
                         padding: 2
                     }, a.createElement(d.Ya, {
@@ -8017,7 +7972,7 @@
                     }, a.createElement(d.Ya, {
                         alignItems: d.f.Center,
                         display: d.X.InlineFlex
-                    }, a.createElement(d.W, null, Object(s.d)("Back", "SubOptions"))))), a.createElement(lt.a, {
+                    }, a.createElement(d.W, null, Object(s.d)("Back", "SubOptions"))))), a.createElement(ct.a, {
                         authToken: e.authToken,
                         canPrimeSubscribe: !0,
                         channelDisplayName: e.channelDisplayName,
@@ -8030,63 +7985,63 @@
                         userHasPrime: e.userHasPrime
                     }))
                 },
-                Pt = n("CDqf");
+                Ot = n("CDqf");
             n("h0zH");
             ! function(e) {
                 e[e.CurrentSubscription = 0] = "CurrentSubscription", e[e.GiftOptions = 1] = "GiftOptions", e[e.GiftSelect = 2] = "GiftSelect", e[e.MysteryGiftSelect = 3] = "MysteryGiftSelect", e[e.SubOptions = 4] = "SubOptions"
-            }(yt || (yt = {})),
+            }(vt || (vt = {})),
             function(e) {
                 e.CurrentSubscription = "CurrentSubscription", e.GiftOptions = "GiftOptions", e.GiftRecipientSearch = "GiftRecipientSearch", e.MysteryGiftBundleSelection = "MysteryGiftBundleSelection", e.SubOptions = "SubOptions"
-            }(kt || (kt = {}));
-            var Ct, Nt = function(e) {
+            }(St || (St = {}));
+            var Et, Pt = function(e) {
                     function t() {
                         var t = null !== e && e.apply(this, arguments) || this;
                         return t.state = {
-                            currentPage: yt.CurrentSubscription
+                            currentPage: vt.CurrentSubscription
                         }, t.showCurrentSubscription = function() {
                             t.setState({
-                                currentPage: yt.CurrentSubscription
+                                currentPage: vt.CurrentSubscription
                             })
                         }, t.showGiftOptions = function() {
                             t.setState({
-                                currentPage: yt.GiftOptions
+                                currentPage: vt.GiftOptions
                             })
                         }, t.onGiftSelect = function() {
                             t.setState({
-                                currentPage: yt.GiftSelect
+                                currentPage: vt.GiftSelect
                             })
                         }, t.showMysteryGiftBundleSelect = function() {
                             t.setState({
-                                currentPage: yt.MysteryGiftSelect
+                                currentPage: vt.MysteryGiftSelect
                             })
                         }, t.showSubOptions = function() {
                             t.setState({
-                                currentPage: yt.SubOptions
+                                currentPage: vt.SubOptions
                             })
                         }, t
                     }
                     return r.__extends(t, e), t.prototype.render = function() {
                         var e = this.props.isGift && !this.props.pendingSubscription && Object(b.f)(this.props.subscriptionProducts);
                         switch (this.state.currentPage) {
-                            case yt.CurrentSubscription:
-                                return a.createElement(a.Fragment, null, e ? a.createElement(Pt.a, {
+                            case vt.CurrentSubscription:
+                                return a.createElement(a.Fragment, null, e ? a.createElement(Ot.a, {
                                     alignCTA: "Right",
                                     roundedTop: !0
-                                }) : a.createElement(pe, {
+                                }) : a.createElement(le, {
                                     channelDisplayName: this.props.channelDisplayName,
                                     currentUserCanGift: this.props.currentUserCanGift,
-                                    "data-test-selector": kt.GiftOptions,
+                                    "data-test-selector": St.GiftOptions,
                                     giftingAnonymously: this.props.giftingAnonymously,
                                     isNonStandardSub: this.props.isNonStandardSub,
                                     isStaff: this.props.isStaff,
                                     onAnonymousGiftingSelect: this.props.onAnonymousGiftingSelect,
                                     onGiftSelect: this.onGiftSelect,
                                     onMysteryGiftSelect: this.showMysteryGiftBundleSelect
-                                }), a.createElement(Ot, {
+                                }), a.createElement(yt, {
                                     channelDisplayName: this.props.channelDisplayName,
                                     channelLogin: this.props.channelLogin,
                                     channelProfileImageURL: this.props.channelProfileImageURL,
-                                    "data-test-selector": kt.CurrentSubscription,
+                                    "data-test-selector": St.CurrentSubscription,
                                     pendingSubscription: this.props.pendingSubscription,
                                     giftSender: this.props.giftSender,
                                     handleSubMenuAction: this.props.handleSubMenuAction,
@@ -8099,11 +8054,11 @@
                                     subProducts: this.props.subscriptionProducts,
                                     upgradeSubProduct: this.getUpgradeSubProduct()
                                 }));
-                            case yt.GiftOptions:
-                                return a.createElement(pe, {
+                            case vt.GiftOptions:
+                                return a.createElement(le, {
                                     channelDisplayName: this.props.channelDisplayName,
                                     currentUserCanGift: this.props.currentUserCanGift,
-                                    "data-test-selector": kt.GiftOptions,
+                                    "data-test-selector": St.GiftOptions,
                                     giftingAnonymously: this.props.giftingAnonymously,
                                     isNonStandardSub: this.props.isNonStandardSub,
                                     isStaff: this.props.isStaff,
@@ -8112,9 +8067,9 @@
                                     onGiftSelect: this.onGiftSelect,
                                     onMysteryGiftSelect: this.showMysteryGiftBundleSelect
                                 });
-                            case yt.GiftSelect:
-                                return a.createElement(W, {
-                                    "data-test-selector": kt.GiftRecipientSearch,
+                            case vt.GiftSelect:
+                                return a.createElement(U, {
+                                    "data-test-selector": St.GiftRecipientSearch,
                                     giftingAnonymously: this.props.giftingAnonymously,
                                     handleSubMenuAction: this.props.handleSubMenuAction,
                                     isEsportChannel: this.props.isEsportChannel,
@@ -8124,10 +8079,10 @@
                                     onBack: e ? this.showGiftOptions : this.showCurrentSubscription,
                                     subscriptionProducts: this.props.subscriptionProducts
                                 });
-                            case yt.MysteryGiftSelect:
-                                return a.createElement(rt, {
+                            case vt.MysteryGiftSelect:
+                                return a.createElement(nt, {
                                     customMysteryGiftBundleLimit: 100,
-                                    "data-test-selector": kt.MysteryGiftBundleSelection,
+                                    "data-test-selector": St.MysteryGiftBundleSelection,
                                     giftingAnonymously: this.props.giftingAnonymously,
                                     isStaff: this.props.isStaff,
                                     mysteryGiftBundles: [1, 5, 10, 20, 50, 100],
@@ -8136,12 +8091,12 @@
                                     subscriptionProducts: this.props.subscriptionProducts,
                                     handleSubMenuAction: this.props.handleSubMenuAction
                                 });
-                            case yt.SubOptions:
-                                return a.createElement(Et, {
+                            case vt.SubOptions:
+                                return a.createElement(kt, {
                                     authToken: this.props.authToken,
                                     channelDisplayName: this.props.channelDisplayName,
                                     channelLogin: this.props.channelLogin,
-                                    "data-test-selector": kt.SubOptions,
+                                    "data-test-selector": St.SubOptions,
                                     handleSubMenuAction: this.props.handleSubMenuAction,
                                     isSubscribed: !0,
                                     onBack: this.showCurrentSubscription,
@@ -8155,39 +8110,39 @@
                         }
                     }, t.prototype.getCurrentSubProduct = function() {
                         switch (this.props.subbedTier) {
-                            case pt.a.Tier1:
+                            case lt.a.Tier1:
                                 return this.props.subscriptionProducts[0];
-                            case pt.a.Tier2:
+                            case lt.a.Tier2:
                                 return this.props.subscriptionProducts[1];
-                            case pt.a.Tier3:
+                            case lt.a.Tier3:
                                 return this.props.subscriptionProducts[2];
                             default:
                                 return this.props.subscriptionProducts[0]
                         }
                     }, t.prototype.getUpgradeSubProduct = function() {
                         switch (this.props.subbedTier) {
-                            case pt.a.Tier1:
+                            case lt.a.Tier1:
                                 return this.props.subscriptionProducts[1];
-                            case pt.a.Tier2:
+                            case lt.a.Tier2:
                                 return this.props.subscriptionProducts[2];
-                            case pt.a.Tier3:
+                            case lt.a.Tier3:
                             default:
                                 return null
                         }
                     }, t
                 }(a.Component),
-                Tt = (n("77JB"), n("wEyv"));
+                Ct = (n("77JB"), n("wEyv"));
             n.d(t, "TestSelectors", function() {
-                    return Ct
+                    return Et
                 }), n.d(t, "SubscribeBalloonComponent", function() {
-                    return _t
+                    return Nt
                 }), n.d(t, "SubscribeBalloon", function() {
-                    return Dt
+                    return Tt
                 }),
                 function(e) {
                     e.CampaignsSubscribeBalloon = "CampaignsSubscribeBalloon", e.GiftOptions = "GiftOptions", e.GiftRecipientSearch = "GiftRecipientSearch", e.MysteryGiftBundleSelection = "MysteryGiftBundleSelection", e.NonSubbedTopPage = "NonSubbedTopPage", e.PaidSubOptions = "PaidSubOptions", e.SubbedTopPage = "SubbedTopPage"
-                }(Ct || (Ct = {}));
-            var _t = function(e) {
+                }(Et || (Et = {}));
+            var Nt = function(e) {
                     function t() {
                         var t = null !== e && e.apply(this, arguments) || this;
                         return t.state = {
@@ -8330,13 +8285,13 @@
                         switch (this.state.currentPage) {
                             case A.Top:
                                 var o = !!n && !!n.subscriptionBenefit && n.subscriptionBenefit.gift;
-                                return this.props.isSubscribed ? n && n.subscriptionBenefit && a.createElement(Nt, {
+                                return this.props.isSubscribed ? n && n.subscriptionBenefit && a.createElement(Pt, {
                                     authToken: this.props.authToken,
                                     channelDisplayName: t.displayName || "",
                                     channelLogin: this.props.channelLogin,
                                     channelProfileImageURL: t.profileImageURL,
                                     currentUserCanGift: this.canSendGift(),
-                                    "data-test-selector": Ct.SubbedTopPage,
+                                    "data-test-selector": Et.SubbedTopPage,
                                     giftingAnonymously: this.state.giftingAnonymously,
                                     giftSender: o && o.isGift && o.gifter ? o.gifter.displayName : null,
                                     handleSubMenuAction: this.props.handleSubMenuAction,
@@ -8353,11 +8308,11 @@
                                     subscriptionProducts: i,
                                     subEndDate: n.subscriptionBenefit.endsAt ? new Date(n.subscriptionBenefit.endsAt) : void 0,
                                     userHasPrime: r
-                                }) : a.createElement(ut, {
+                                }) : a.createElement(st, {
                                     authToken: this.props.authToken,
                                     canPrimeSubscribe: !!n && n.canPrimeSubscribe,
                                     channelLogin: this.props.channelLogin,
-                                    "data-test-selector": Ct.NonSubbedTopPage,
+                                    "data-test-selector": Et.NonSubbedTopPage,
                                     handleSubMenuAction: this.props.handleSubMenuAction,
                                     handleTopPageSubButtonClick: this.handleTopPageSubButtonClick,
                                     inPrimeRegion: this.props.inPrimeRegion,
@@ -8368,10 +8323,10 @@
                                     userHasPrime: r
                                 });
                             case A.SubOptions:
-                                return a.createElement(dt, {
+                                return a.createElement(ut, {
                                     channelDisplayName: t.displayName || "",
                                     channelLogin: this.props.channelLogin,
-                                    "data-test-selector": Ct.PaidSubOptions,
+                                    "data-test-selector": Et.PaidSubOptions,
                                     handleSubMenuAction: this.props.handleSubMenuAction,
                                     header: Object(s.d)("All Paid Subscriptions", "SubscribeBalloon"),
                                     isSubscribed: this.props.isSubscribed,
@@ -8379,10 +8334,10 @@
                                     subscriptionProducts: i
                                 });
                             case A.GiftOptions:
-                                return a.createElement(pe, {
+                                return a.createElement(le, {
                                     channelDisplayName: t.displayName || "",
                                     currentUserCanGift: this.canSendGift(),
-                                    "data-test-selector": Ct.GiftOptions,
+                                    "data-test-selector": Et.GiftOptions,
                                     giftingAnonymously: this.state.giftingAnonymously,
                                     isNonStandardSub: this.props.isNonStandardSub,
                                     isStaff: this.props.isStaff,
@@ -8392,8 +8347,8 @@
                                     onMysteryGiftSelect: this.showMysteryGiftBundleSelect
                                 });
                             case A.RecipientSelect:
-                                return a.createElement(W, {
-                                    "data-test-selector": Ct.GiftRecipientSearch,
+                                return a.createElement(U, {
+                                    "data-test-selector": Et.GiftRecipientSearch,
                                     giftingAnonymously: this.state.giftingAnonymously,
                                     handleSubMenuAction: this.props.handleSubMenuAction,
                                     isEsportChannel: this.props.isEsportChannel,
@@ -8403,9 +8358,9 @@
                                     subscriptionProducts: i
                                 });
                             case A.MysteryGiftSelect:
-                                return a.createElement(rt, {
+                                return a.createElement(nt, {
                                     customMysteryGiftBundleLimit: 100,
-                                    "data-test-selector": Ct.MysteryGiftBundleSelection,
+                                    "data-test-selector": Et.MysteryGiftBundleSelection,
                                     giftingAnonymously: this.state.giftingAnonymously,
                                     isStaff: this.props.isStaff,
                                     handleSubMenuAction: this.props.handleSubMenuAction,
@@ -8415,10 +8370,10 @@
                                     subscriptionProducts: i
                                 });
                             case A.Esports:
-                                return a.createElement(H, {
+                                return a.createElement(W, {
                                     channelLogin: this.props.channelLogin,
                                     currentPage: this.state.currentPage,
-                                    "data-test-selector": Ct.CampaignsSubscribeBalloon,
+                                    "data-test-selector": Et.CampaignsSubscribeBalloon,
                                     giftingAnonymously: this.state.giftingAnonymously,
                                     handleSubMenuAction: this.props.handleSubMenuAction,
                                     handleTopPageSubButtonClick: this.handleTopPageSubButtonClick,
@@ -8435,7 +8390,7 @@
                         }
                     }, t
                 }(a.Component),
-                Dt = Object(o.compose)(Object(u.a)(Tt, {
+                Tt = Object(o.compose)(Object(u.a)(Ct, {
                     options: function(e) {
                         return {
                             fetchPolicy: "network-only",
@@ -8448,7 +8403,7 @@
                     skip: function(e) {
                         return !e.channelLogin
                     }
-                }), Object(O.b)("SubscribeBalloon"))(_t)
+                }), Object(O.b)("SubscribeBalloon"))(Nt)
         },
         fIIl: function(e, t, n) {
             e.exports = n.p + "assets/specific-viewer-4x-01e3327376e17ea6f48e.png"

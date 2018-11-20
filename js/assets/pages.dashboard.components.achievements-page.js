@@ -288,7 +288,7 @@
                         },
                         getQuestReqStrings: function() {
                             var e;
-                            return (e = {})[p.a.UNIQUE_CHATTERS] = Object(s.d)("Reach 5 unique chatters in a stream", "VIPBadge"), e[p.a.FOLLOW_COUNT] = Object(s.d)("Reach 50 followers", "VIPBadge"), e
+                            return (e = {})[p.a.UNIQUE_CHATTERS] = Object(s.d)("Get 5 people chatting at the same time", "VIPBadge"), e[p.a.FOLLOW_COUNT] = Object(s.d)("Reach 50 followers", "VIPBadge"), e
                         },
                         hasTimedCompletionWindow: !1,
                         position: 1,
@@ -807,7 +807,7 @@
                 M = n("y/W1"),
                 z = n("qe41"),
                 H = n("9+Lo"),
-                V = (n("qCmY"), function(e) {
+                G = (n("qCmY"), function(e) {
                     var t = Object(E.b)(),
                         n = e.quest.completedRequirementsCount,
                         r = e.quest.totalRequirements,
@@ -988,7 +988,7 @@
                         to: e.quest.learnMoreURL
                     }, Object(o.d)("Learn more", "AchievementsPathToAffiliate"))))))
                 }),
-                G = function(e) {
+                V = function(e) {
                     function t() {
                         var t = null !== e && e.apply(this, arguments) || this;
                         return t.state = {
@@ -1003,7 +1003,7 @@
                         var e = this,
                             t = this.state.userSelectedQuest || this.props.quests[0],
                             n = this.props.quests.map(function(n) {
-                                return a.createElement(V, {
+                                return a.createElement(G, {
                                     key: n.key,
                                     quest: n,
                                     channelLogin: e.props.channel.name,
@@ -1301,7 +1301,7 @@
                             return Object(E.b)() ? a.createElement(_.a, null, a.createElement(oe, i.__assign({}, t, {
                                 channelName: e.name
                             }), function() {
-                                return a.createElement(g.Ya, null, a.createElement(G, {
+                                return a.createElement(g.Ya, null, a.createElement(V, {
                                     quests: t.quests,
                                     channel: e,
                                     isLoading: t.isLoading
@@ -1314,7 +1314,7 @@
                             }), function(n) {
                                 return a.createElement(A, {
                                     isSpotlightShown: n,
-                                    left: a.createElement(G, {
+                                    left: a.createElement(V, {
                                         quests: t.quests,
                                         channel: e,
                                         isLoading: t.isLoading

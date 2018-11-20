@@ -329,6 +329,7 @@
             e.exports = n
         },
         NrqC: function(e, t, n) {},
+        UXeV: function(e, t, n) {},
         VQbD: function(e, t, n) {
             "use strict";
             n.d(t, "a", function() {
@@ -976,17 +977,17 @@
                     }, "Logging and error reporting"), a.createElement("div", null, a.createElement(c.z, {
                         onClick: k
                     }, "Log a debug-level message"), a.createElement(c.z, {
-                        onClick: w
-                    }, "Log a info-level message"), a.createElement(c.z, {
                         onClick: C
-                    }, "Log a warning-level message"), a.createElement(c.z, {
-                        onClick: x
-                    }, "Log an error-level message with error"), a.createElement(c.z, {
-                        onClick: O
-                    }, "Log a fatal-level message with error"), a.createElement(c.z, {
+                    }, "Log a info-level message"), a.createElement(c.z, {
                         onClick: S
-                    }, "Log message with unserializable argument"), a.createElement(c.z, {
+                    }, "Log a warning-level message"), a.createElement(c.z, {
+                        onClick: w
+                    }, "Log an error-level message with error"), a.createElement(c.z, {
                         onClick: N
+                    }, "Log a fatal-level message with error"), a.createElement(c.z, {
+                        onClick: x
+                    }, "Log message with unserializable argument"), a.createElement(c.z, {
+                        onClick: I
                     }, "Throw an error")), a.createElement("h2", {
                         style: {
                             margin: "2rem 0"
@@ -1062,20 +1063,20 @@
                 f.k.debug("debug message")
             }
 
-            function w() {
+            function C() {
                 f.k.info("info message")
             }
 
-            function C() {
+            function S() {
                 f.k.warn("warn message")
             }
 
-            function S() {
+            function x() {
                 var e = {};
                 e.self = e, f.k.info("Can't serialize this arg, oh no.", e)
             }
 
-            function x() {
+            function w() {
                 try {
                     throw new Error("throwing an error.")
                 } catch (e) {
@@ -1083,7 +1084,7 @@
                 }
             }
 
-            function O() {
+            function N() {
                 try {
                     throw new Error("throwing a super bad unrecoverable error.")
                 } catch (e) {
@@ -1091,19 +1092,197 @@
                 }
             }
 
-            function N() {
+            function I() {
                 throw new Error("Throwing an uncaught error.")
             }
-            var T = n("VQbD"),
-                W = (n("NrqC"), function(e) {
+            var O, R;
+            n("UXeV");
+            ! function(e) {
+                e.Container = "lazy-carousel-container", e.Prev = "lazy-carousel-prev-button", e.Next = "lazy-carousel-next-button", e.NavDot = "lazy-carousel-nav-dot", e.NavDotContainer = "lazy-carousel-nav-dot-container", e.Animation = "lazy-carousel-animation-container"
+            }(O || (O = {})),
+            function(e) {
+                e.PrevStart = "PrevStart", e.PrevEnd = "PrevEnd", e.NextStart = "NextStart", e.NextEnd = "NextEnd"
+            }(R || (R = {}));
+            var P = function(e) {
+                    function t(t) {
+                        var n = e.call(this, t) || this;
+                        return n.state = {
+                            currIndex: 0,
+                            animState: R.PrevEnd,
+                            animEnabled: !1
+                        }, n.nextIndex = 0, n.slideAnimationEnded = function() {
+                            switch (n.state.animState) {
+                                case R.PrevStart:
+                                    n.props.onCarouselNavigation && n.props.onCarouselNavigation(n.nextIndex), n.setState({
+                                        animState: R.PrevEnd,
+                                        currIndex: n.nextIndex
+                                    });
+                                    break;
+                                case R.NextStart:
+                                    n.props.onCarouselNavigation && n.props.onCarouselNavigation(n.nextIndex), n.setState({
+                                        animState: R.NextEnd,
+                                        currIndex: n.nextIndex
+                                    });
+                                    break;
+                                default:
+                                    n.setState({
+                                        animEnabled: !1
+                                    })
+                            }
+                        }, n.navigateLeft = function() {
+                            var e = n.state.currIndex;
+                            e - 1 < 0 || (n.nextIndex = e - 1, n.setState({
+                                animEnabled: !0,
+                                animState: R.PrevStart
+                            }))
+                        }, n.navigateRight = function() {
+                            var e = n.state.currIndex;
+                            e + 1 >= n.props.itemCount || (n.nextIndex = e + 1, n.setState({
+                                animEnabled: !0,
+                                animState: R.NextStart
+                            }))
+                        }, n.navigateTo = function(e) {
+                            var t = n.state.currIndex,
+                                r = R.PrevStart;
+                            t !== e && (t < e && (r = R.NextStart), n.nextIndex = e, n.setState({
+                                animEnabled: !0,
+                                animState: r
+                            }))
+                        }, n.renderDots = function() {
+                            for (var e = [], t = !1, r = 0; r < n.props.itemCount; r++) t = r === n.state.currIndex, e.push(a.createElement(c.Fb, {
+                                "data-test-selector": O.NavDotContainer,
+                                className: "lazy-carousel__dot",
+                                key: "lazy-carousel-dot_" + r,
+                                margin: .5,
+                                borderRadius: c.x.Rounded,
+                                background: t ? c.r.Accent : c.r.Alt2,
+                                display: c.X.Flex,
+                                alignItems: c.f.Stretch
+                            }, a.createElement(c.Va, {
+                                "data-test-selector": O.NavDot,
+                                borderRadius: c.x.Rounded,
+                                onClick: n.navigateTo.bind(n, r),
+                                blurAfterClick: !0
+                            })));
+                            return e
+                        }, t.startingIndex && (n.state.currIndex = Math.min(t.startingIndex, t.itemCount - 1)), n
+                    }
+                    return l.__extends(t, e), t.prototype.render = function() {
+                        var e = c.n.SlideOutLeft;
+                        switch (this.state.animState) {
+                            case R.PrevStart:
+                                e = c.n.SlideOutRight;
+                                break;
+                            case R.PrevEnd:
+                                e = c.n.SlideInLeft;
+                                break;
+                            case R.NextStart:
+                                e = c.n.SlideOutLeft;
+                                break;
+                            case R.NextEnd:
+                                e = c.n.SlideInRight
+                        }
+                        return a.createElement(c.Qa, l.__assign({}, this.props), a.createElement("div", {
+                            className: "lazy-carousel"
+                        }, a.createElement(c.Fb, {
+                            borderTop: !0,
+                            borderBottom: !0,
+                            display: c.X.Flex,
+                            flexDirection: c.Aa.Row,
+                            flexWrap: c.Ba.NoWrap
+                        }, a.createElement(c.Fb, {
+                            background: c.r.Base,
+                            display: c.X.Flex,
+                            alignItems: c.f.Stretch,
+                            borderLeft: !0,
+                            borderRight: !0,
+                            zIndex: c.jc.Above
+                        }, a.createElement(c.Va, {
+                            "data-test-selector": O.Prev,
+                            blurAfterClick: !0,
+                            onClick: this.navigateLeft,
+                            disabled: 0 === this.state.currIndex
+                        }, a.createElement(c.tb, {
+                            asset: c.ub.AngleLeft
+                        }))), a.createElement(c.Ya, {
+                            className: "lazy-carousel__container",
+                            "data-test-selector": O.Container,
+                            flexGrow: 1,
+                            flexShrink: 0
+                        }, a.createElement(c.i, {
+                            "data-test-selector": O.Animation,
+                            delay: c.j.Short,
+                            duration: c.k.Medium,
+                            enabled: this.state.animEnabled,
+                            timing: c.m.EaseOut,
+                            type: e,
+                            onAnimationEnd: this.slideAnimationEnded
+                        }, a.createElement(c.Ya, {
+                            className: "lazy-carousel__item-container",
+                            fullWidth: !0,
+                            display: c.X.InlineBlock
+                        }, this.props.renderItem(this.state.currIndex)))), a.createElement(c.Fb, {
+                            background: c.r.Base,
+                            display: c.X.Flex,
+                            alignItems: c.f.Stretch,
+                            borderLeft: !0,
+                            borderRight: !0,
+                            zIndex: c.jc.Above
+                        }, a.createElement(c.Va, {
+                            "data-test-selector": O.Next,
+                            blurAfterClick: !0,
+                            onClick: this.navigateRight,
+                            disabled: this.state.currIndex + 1 >= this.props.itemCount
+                        }, a.createElement(c.tb, {
+                            asset: c.ub.AngleRight
+                        })))), a.createElement(c.Fb, {
+                            borderLeft: !0,
+                            borderRight: !0,
+                            borderBottom: !0,
+                            display: c.X.Flex,
+                            justifyContent: c.Xa.Center,
+                            flexDirection: c.Aa.Row
+                        }, this.renderDots())))
+                    }, t
+                }(a.Component),
+                A = n("VQbD"),
+                L = (n("NrqC"), function(e) {
                     function t() {
-                        return null !== e && e.apply(this, arguments) || this
+                        var t = null !== e && e.apply(this, arguments) || this;
+                        return t.state = {
+                            lazyCarouselIndex: 0
+                        }, t.onLazyCarouselNavigation = function(e) {
+                            t.setState({
+                                lazyCarouselIndex: e
+                            })
+                        }, t.renderLazyCarouselItem = function(e) {
+                            return a.createElement(c.Fb, {
+                                fontSize: c.Ca.Size2,
+                                color: c.O.Overlay,
+                                padding: 2,
+                                textAlign: c.Sb.Center,
+                                background: c.r.Accent
+                            }, e + 1)
+                        }, t
                     }
                     return l.__extends(t, e), t.prototype.render = function() {
                         return a.createElement(v.b, null, a.createElement(c.Ya, {
                             className: "testing-carousel",
                             padding: 3
                         }, a.createElement(c.W, {
+                            type: c.Wb.H2
+                        }, "Lazy Carousel - Standard Item ", this.state.lazyCarouselIndex + 1), a.createElement(c.Ya, {
+                            "data-a-target": "lazy-standard"
+                        }, a.createElement(c.Qa, {
+                            margin: {
+                                bottom: 3,
+                                top: 1
+                            }
+                        }, a.createElement(P, {
+                            itemCount: 5,
+                            onCarouselNavigation: this.onLazyCarouselNavigation,
+                            renderItem: this.renderLazyCarouselItem
+                        }))), a.createElement(c.W, {
                             type: c.Wb.H2
                         }, "Media Carousel - Standard"), a.createElement(c.Ya, {
                             "data-a-target": "carousel-standard"
@@ -1112,7 +1291,7 @@
                                 bottom: 3,
                                 top: 1
                             }
-                        }, a.createElement(T.a, {
+                        }, a.createElement(A.a, {
                             items: this.renderStandardItems()
                         }))), a.createElement(c.W, {
                             type: c.Wb.H2
@@ -1123,7 +1302,7 @@
                                 bottom: 3,
                                 top: 1
                             }
-                        }, a.createElement(T.a, {
+                        }, a.createElement(A.a, {
                             items: this.renderStandardTinyItems()
                         }))), a.createElement(c.W, {
                             type: c.Wb.H2
@@ -1134,7 +1313,7 @@
                                 bottom: 3,
                                 top: 1
                             }
-                        }, a.createElement(T.a, {
+                        }, a.createElement(A.a, {
                             items: this.renderStandardHugeItems()
                         }))), a.createElement(c.W, {
                             type: c.Wb.H2
@@ -1145,7 +1324,7 @@
                                 bottom: 3,
                                 top: 1
                             }
-                        }, a.createElement(T.a, {
+                        }, a.createElement(A.a, {
                             items: this.renderSingleItem()
                         }))), a.createElement(c.W, {
                             type: c.Wb.H2
@@ -1156,7 +1335,7 @@
                                 bottom: 3,
                                 top: 1
                             }
-                        }, a.createElement(T.a, {
+                        }, a.createElement(A.a, {
                             items: this.renderSingleHugeItem()
                         }))), a.createElement(c.W, {
                             type: c.Wb.H2
@@ -1167,7 +1346,7 @@
                                 bottom: 3,
                                 top: 1
                             }
-                        }, a.createElement(T.a, {
+                        }, a.createElement(A.a, {
                             items: this.renderVariousWidthItems()
                         })))))
                     }, t.prototype.renderStandardItems = function() {
@@ -1286,17 +1465,17 @@
                         })
                     }, t
                 }(a.Component)),
-                R = n("/MKj"),
-                P = n("fvjX"),
-                U = n("KxT4"),
+                T = n("/MKj"),
+                W = n("fvjX"),
+                F = n("KxT4"),
                 D = n("IX50"),
-                L = (n("+6bW"), U.c.Google),
-                A = function(e) {
+                U = (n("+6bW"), F.c.Google),
+                B = function(e) {
                     function t(t) {
                         var n = e.call(this, t) || this;
                         return n.onToggleTwitchAdsConsent = function() {
                             var e, t = !n.props.twitchAdsConsent;
-                            n.props.saveVendorPreferences(((e = {})[L] = t, e))
+                            n.props.saveVendorPreferences(((e = {})[U] = t, e))
                         }, n.state = {
                             gdprStates: [t.gdpr],
                             toggleValue: t.twitchAdsConsent
@@ -1311,7 +1490,7 @@
                         })
                     }, t.prototype.render = function() {
                         var e = window.location.search.includes("gdpr_override"),
-                            t = Object(U.f)();
+                            t = Object(F.f)();
                         return a.createElement(c.Ya, {
                             padding: 2
                         }, a.createElement(c.W, {
@@ -1368,22 +1547,22 @@
                         }, "Reset Test")))
                     }, t
                 }(a.Component),
-                F = Object(P.compose)(Object(y.b)("GDPRTestPage", {
+                z = Object(W.compose)(Object(y.b)("GDPRTestPage", {
                     autoReportInteractive: !0,
                     destination: E.a.Unknown
-                }), Object(R.connect)(function(e) {
+                }), Object(T.connect)(function(e) {
                     return {
-                        twitchAdsConsent: !!e.gdpr.vendorPreferences[L]
+                        twitchAdsConsent: !!e.gdpr.vendorPreferences[U]
                     }
                 }, function(e) {
-                    return Object(P.bindActionCreators)({
+                    return Object(W.bindActionCreators)({
                         saveVendorPreferences: D.c,
                         resetConsent: D.b
                     }, e)
-                }), Object(U.j)(L))(A),
-                I = n("yR8l"),
-                q = n("cViM"),
-                B = function(e) {
+                }), Object(F.j)(U))(B),
+                q = n("yR8l"),
+                Y = n("cViM"),
+                j = function(e) {
                     function t(t) {
                         var n = e.call(this, t) || this;
                         return n.renderPropState = function(e, t) {
@@ -1434,31 +1613,31 @@
                         }))
                     }, t
                 }(a.Component),
-                Y = Object(I.a)(q)(B),
-                j = n("+6oQ"),
-                H = function(e) {
-                    function t() {
-                        return null !== e && e.apply(this, arguments) || this
-                    }
-                    return l.__extends(t, e), t.prototype.render = function() {
-                        return this.props.data.currentUser ? a.createElement(Y, null) : null
-                    }, t
-                }(a.Component),
-                Q = Object(I.a)(j)(H),
-                z = n("+5a/"),
+                H = Object(q.a)(Y)(j),
+                Q = n("+6oQ"),
                 G = function(e) {
                     function t() {
                         return null !== e && e.apply(this, arguments) || this
                     }
                     return l.__extends(t, e), t.prototype.render = function() {
-                        return a.createElement(Q, null)
+                        return this.props.data.currentUser ? a.createElement(H, null) : null
                     }, t
                 }(a.Component),
-                M = Object(I.a)(z)(G),
-                V = n("oJmH"),
-                X = n("wIs1"),
-                J = n("LL7G"),
-                K = function(e) {
+                M = Object(q.a)(Q)(G),
+                V = n("+5a/"),
+                X = function(e) {
+                    function t() {
+                        return null !== e && e.apply(this, arguments) || this
+                    }
+                    return l.__extends(t, e), t.prototype.render = function() {
+                        return a.createElement(M, null)
+                    }, t
+                }(a.Component),
+                J = Object(q.a)(V)(X),
+                K = n("oJmH"),
+                $ = n("wIs1"),
+                Z = n("LL7G"),
+                ee = function(e) {
                     function t() {
                         return null !== e && e.apply(this, arguments) || this
                     }
@@ -1470,7 +1649,7 @@
                         }, a.createElement("p", null, "Testing GraphQL"))
                     }, t
                 }(a.Component),
-                $ = Object(V.compose)(Object(I.a)(J, {
+                te = Object(K.compose)(Object(q.a)(Z, {
                     options: function(e) {
                         return {
                             variables: {
@@ -1478,8 +1657,8 @@
                             }
                         }
                     }
-                }), X.a)(K),
-                Z = function(e) {
+                }), $.a)(ee),
+                ne = function(e) {
                     function t() {
                         var t = null !== e && e.apply(this, arguments) || this;
                         return t.state = {
@@ -1500,13 +1679,13 @@
                             })
                         }, 1e3)
                     }, t.prototype.render = function() {
-                        return a.createElement($, {
+                        return a.createElement(te, {
                             shouldSkip: this.state.shouldSkip
                         })
                     }, t
                 }(a.Component),
-                ee = n("b6Yk"),
-                te = function(e) {
+                re = n("b6Yk"),
+                ae = function(e) {
                     function t() {
                         var t = null !== e && e.apply(this, arguments) || this;
                         return t.logger = f.p.logger.withCategory("legacy-api-test"), t.testFailingAPICall = function() {
@@ -1515,7 +1694,7 @@
                                 return l.__generator(this, function(n) {
                                     switch (n.label) {
                                         case 0:
-                                            return n.trys.push([0, 2, , 3]), [4, ee.a.getOrThrow("/v5/some-bad-route/test.json")];
+                                            return n.trys.push([0, 2, , 3]), [4, re.a.getOrThrow("/v5/some-bad-route/test.json")];
                                         case 1:
                                             return e = n.sent(), this.logger.debug("API success for a bad route", {
                                                 response: e
@@ -1539,22 +1718,22 @@
                         }, a.createElement("p", null, "Testing LegacyAPI"))
                     }, t
                 }(a.Component),
-                ne = function() {
+                ie = function() {
                     return a.createElement(o.a, null, a.createElement(i.a, {
                         path: "/_dev/gql",
-                        component: Z
+                        component: ne
                     }), a.createElement(i.a, {
                         path: "/_dev/gql_loading",
-                        component: M
+                        component: J
                     }), a.createElement(i.a, {
                         path: "/_dev/gdpr",
-                        component: F
+                        component: z
                     }), a.createElement(i.a, {
                         path: "/_dev/legacy-api",
-                        component: te
+                        component: ae
                     }), a.createElement(i.a, {
                         path: "/_dev/testing/carousel",
-                        component: W
+                        component: L
                     }), a.createElement(i.a, {
                         path: "/_dev/context",
                         component: g
@@ -1564,7 +1743,7 @@
                     }))
                 };
             n.d(t, "DevOnlyRoot", function() {
-                return ne
+                return ie
             })
         }
     }
