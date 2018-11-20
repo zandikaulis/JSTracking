@@ -3058,7 +3058,7 @@ MediaPlayer.prototype.getVideoBitRate = function () {
 }
 
 MediaPlayer.prototype.getVersion = function () {
-    return "2.7.1-570b4846";
+    return "2.7.1-0df4f4ee";
 }
 
 MediaPlayer.prototype.isLooping = function () {
@@ -4074,6 +4074,8 @@ function noop() {}
 function getDecodedFrames(video){
     if (typeof video.webkitDecodedFrameCount === 'number') {
         return video.webkitDecodedFrameCount;
+    } else if (typeof video.getVideoPlaybackQuality === 'function') {
+        return video.getVideoPlaybackQuality().totalVideoFrames;
     } else if (typeof video.mozDecodedFrames === 'number') {
         return video.mozDecodedFrames;
     } else {
