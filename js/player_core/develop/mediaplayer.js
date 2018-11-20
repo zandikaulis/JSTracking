@@ -2878,9 +2878,9 @@ var PAUSE_HIDDEN_SILENT_TAB = (Browser.chrome && Browser.major === 63) || Browse
 // Prefix all localstorage keys to avoid namespace collisions
 var LOCAL_STORAGE_PREFIX = 'cvp.';
 
-//Min resolution for display size change
-var minWidth = 852;
-var minHeight = 480;
+// Default params for display size change
+var minWidth = 1000000;
+var minHeight = 1000000;
 
 /** MediaPlayer constructor. This is the main export of PlayerCore
  *  @param {string} config.settings - Settings ID to load
@@ -2909,7 +2909,12 @@ var MediaPlayer = exports.MediaPlayer = function MediaPlayer(config, worker) {
     });
 
     var configSettings = loadSettings(config.settings);
-    this._enableVideoDisplaySizeChange = (configSettings.abr && configSettings.abr.displaySizeChange);
+    var abr = configSettings.abr;
+    if(abr) {
+        this._enableVideoDisplaySizeChange = abr.displaySizeChange;
+        minWidth = (typeof abr.minWidth !== 'undefined') ? abr.minWidth : minWidth;
+        minHeight = (typeof abr.minHeight !== 'undefined') ? abr.minHeight : minHeight;
+    }
 
     // This represents cached state from the worker. State objects
     // like this one are sent from the worker on when the player
@@ -3053,7 +3058,7 @@ MediaPlayer.prototype.getVideoBitRate = function () {
 }
 
 MediaPlayer.prototype.getVersion = function () {
-    return "2.7.1-11396aa4";
+    return "2.7.1-570b4846";
 }
 
 MediaPlayer.prototype.isLooping = function () {
@@ -4919,7 +4924,7 @@ module.exports = {"abr":{"enableLowLatency":true}};
 /*! exports provided: abr, default */
 /***/ (function(module) {
 
-module.exports = {"abr":{"displaySizeChange":true}};
+module.exports = {"abr":{"displaySizeChange":true,"minWidth":852,"minHeight":480}};
 
 /***/ }),
 
