@@ -1315,13 +1315,13 @@ window.__twilightSettings = {
         },
         "9f4dd7bf-2df6-4c26-834f-58b153f61329": {
             "name": "bits_new_user_cheer_v1.1",
-            "v": 5178,
+            "v": 5186,
             "t": 2,
             "groups": [{
-                "weight": 50,
+                "weight": 0,
                 "value": "on"
             }, {
-                "weight": 50,
+                "weight": 100,
                 "value": "off"
             }]
         },
