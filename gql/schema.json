@@ -42803,6 +42803,22 @@
             {
               "args": [], 
               "deprecationReason": null, 
+              "description": "Whether the pending sub is cancelable.", 
+              "isDeprecated": false, 
+              "name": "isCancelable", 
+              "type": {
+                "kind": "NON_NULL", 
+                "name": null, 
+                "ofType": {
+                  "kind": "SCALAR", 
+                  "name": "Boolean", 
+                  "ofType": null
+                }
+              }
+            }, 
+            {
+              "args": [], 
+              "deprecationReason": null, 
               "description": "The id of the pending subscription purchase. Used to cancel the paid upgrade.", 
               "isDeprecated": false, 
               "name": "originID", 
