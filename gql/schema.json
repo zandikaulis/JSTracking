@@ -57645,6 +57645,18 @@
             }, 
             {
               "deprecationReason": null, 
+              "description": "The stream title contains banned words.", 
+              "isDeprecated": false, 
+              "name": "STREAM_TITLE_BANNED_WORDS"
+            }, 
+            {
+              "deprecationReason": null, 
+              "description": "The stream title is too long.", 
+              "isDeprecated": false, 
+              "name": "STREAM_TITLE_TOO_LONG"
+            }, 
+            {
+              "deprecationReason": null, 
               "description": "The user is not authorized to start the bounty.", 
               "isDeprecated": false, 
               "name": "UNAUTHORIZED"
