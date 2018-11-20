@@ -215,6 +215,18 @@ window.__twilightSettings = {
                 "value": "variant_b"
             }]
         },
+        "05577e96-5b1e-4656-b430-a42df69bc910": {
+            "name": "SQUAD_STREAM_REDIRECT",
+            "v": 5183,
+            "t": 1,
+            "groups": [{
+                "weight": 50,
+                "value": "variant"
+            }, {
+                "weight": 50,
+                "value": "control"
+            }]
+        },
         "05dc2471-5696-4e15-9ff6-57d2fd4837c2": {
             "name": "pushy_onsite_email_verification",
             "v": 4855,
