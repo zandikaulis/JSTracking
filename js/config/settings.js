@@ -28,7 +28,6 @@ window.__twilightSettings = {
     "chat_input_box_followers_only_restriction_enabled": "on",
     "chat_input_box_verified_only_restriction_enabled": "on",
     "chatrooms_enabled": true,
-    "chatrooms_staff_beta": true,
     "code_redemption_redeem_page": "on",
     "commerce_bar_experience": "sponsored",
     "community_sub_gifting_banner_timeouts": [0, 25, 35, 45, 55, 60, 60],
