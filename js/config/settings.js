@@ -591,7 +591,7 @@ window.__twilightSettings = {
         },
         "35b1e483-c6ca-4efa-b58e-fed92ef91290": {
             "name": "disco_gladiator",
-            "v": 4668,
+            "v": 5192,
             "t": 2,
             "groups": [{
                 "weight": 100,
