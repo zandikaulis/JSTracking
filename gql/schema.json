@@ -6724,6 +6724,105 @@
           "possibleTypes": null
         }, 
         {
+          "description": "A visible campaign on a given user's channel.", 
+          "enumValues": null, 
+          "fields": [
+            {
+              "args": [], 
+              "deprecationReason": null, 
+              "description": "The domain that campaign belongs to.", 
+              "isDeprecated": false, 
+              "name": "domain", 
+              "type": {
+                "kind": "NON_NULL", 
+                "name": null, 
+                "ofType": {
+                  "kind": "SCALAR", 
+                  "name": "String", 
+                  "ofType": null
+                }
+              }
+            }, 
+            {
+              "args": [], 
+              "deprecationReason": null, 
+              "description": "The time the campaign ends being active.", 
+              "isDeprecated": false, 
+              "name": "endDate", 
+              "type": {
+                "kind": "NON_NULL", 
+                "name": null, 
+                "ofType": {
+                  "kind": "SCALAR", 
+                  "name": "Time", 
+                  "ofType": null
+                }
+              }
+            }, 
+            {
+              "args": [], 
+              "deprecationReason": null, 
+              "description": "Unique identifier for the campaign.", 
+              "isDeprecated": false, 
+              "name": "id", 
+              "type": {
+                "kind": "NON_NULL", 
+                "name": null, 
+                "ofType": {
+                  "kind": "SCALAR", 
+                  "name": "ID", 
+                  "ofType": null
+                }
+              }
+            }, 
+            {
+              "args": [], 
+              "deprecationReason": null, 
+              "description": "The objectives users can progress in within this campaign.", 
+              "isDeprecated": false, 
+              "name": "objectives", 
+              "type": {
+                "kind": "NON_NULL", 
+                "name": null, 
+                "ofType": {
+                  "kind": "LIST", 
+                  "name": null, 
+                  "ofType": {
+                    "kind": "NON_NULL", 
+                    "name": null, 
+                    "ofType": {
+                      "kind": "OBJECT", 
+                      "name": "CampaignObjective", 
+                      "ofType": null
+                    }
+                  }
+                }
+              }
+            }, 
+            {
+              "args": [], 
+              "deprecationReason": null, 
+              "description": "The time the campaign becomes active.", 
+              "isDeprecated": false, 
+              "name": "startDate", 
+              "type": {
+                "kind": "NON_NULL", 
+                "name": null, 
+                "ofType": {
+                  "kind": "SCALAR", 
+                  "name": "Time", 
+                  "ofType": null
+                }
+              }
+            }
+          ], 
+          "inputFields": null, 
+          "interfaces": [], 
+          "kind": "OBJECT", 
+          "name": "Campaign", 
+          "possibleTypes": null
+        }, 
+        {
           "description": "This type holds the information about the grouping of objectives. Each group has a list of cheermotes that progress objectives in this particular group.", 
           "enumValues": null, 
           "fields": [
@@ -68806,6 +68905,33 @@
               "type": {
                 "kind": "OBJECT", 
                 "name": "BroadcastSettings", 
+                "ofType": null
+              }
+            }, 
+            {
+              "args": [
+                {
+                  "defaultValue": null, 
+                  "description": null, 
+                  "name": "campaignID", 
+                  "type": {
+                    "kind": "NON_NULL", 
+                    "name": null, 
+                    "ofType": {
+                      "kind": "SCALAR", 
+                      "name": "ID", 
+                      "ofType": null
+                    }
+                  }
+                }
+              ], 
+              "deprecationReason": null, 
+              "description": "A User's campaign for their channel.", 
+              "isDeprecated": false, 
+              "name": "campaign", 
+              "type": {
+                "kind": "OBJECT", 
+                "name": "Campaign", 
                 "ofType": null
               }
             }, 
