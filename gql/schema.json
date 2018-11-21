@@ -75603,9 +75603,15 @@
           "enumValues": [
             {
               "deprecationReason": null, 
-              "description": "Archives sorted by recency.", 
+              "description": "Broadcasts sorted by recency.", 
               "isDeprecated": false, 
               "name": "LATEST_BROADCASTS"
+            }, 
+            {
+              "deprecationReason": null, 
+              "description": "Non broadcasts sorted by recency.", 
+              "isDeprecated": false, 
+              "name": "LATEST_NON_BROADCASTS"
             }, 
             {
               "deprecationReason": null, 
