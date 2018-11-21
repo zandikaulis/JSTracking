@@ -18971,7 +18971,7 @@
                         }, n
                     }
                     return r.__extends(t, e), t.prototype.shouldComponentUpdate = function(e) {
-                        return null !== this.props.emotePickerSessionID || null === e.emotePickerSessionID
+                        return this.props.emotePickerSessionID === e.emotePickerSessionID || this.props.channelSubscriptionProducts !== e.channelSubscriptionProducts || this.props.globalEmotes !== e.globalEmotes || this.props.frequentlyUsedEmotes !== e.frequentlyUsedEmotes || this.props.otherChannelEmoteSets !== e.otherChannelEmoteSets || this.props.unlockedEmotes !== e.unlockedEmotes
                     }, t.prototype.componentDidMount = function() {
                         if (this.props.channelID && this.updateChannelEmotes(this.props), this.props.emotePickerSessionID && this.props.channelID) {
                             var e = {
@@ -18983,7 +18983,7 @@
                             s.o.track(A.SpadeEventType.ViewedEmotePicker, e)
                         }
                     }, t.prototype.componentWillReceiveProps = function(e) {
-                        if (this.props.channelID !== e.channelID && this.updateChannelEmotes(e), e.channelID && e.emotePickerSessionID && !this.props.emotePickerSessionID) {
+                        if (this.props.channelID === e.channelID && this.props.channelSubscriptionProducts === e.channelSubscriptionProducts || this.updateChannelEmotes(e), e.channelID && e.emotePickerSessionID && !this.props.emotePickerSessionID) {
                             var t = {
                                 channel_id: e.channelID,
                                 emote_picker_sid: e.emotePickerSessionID,

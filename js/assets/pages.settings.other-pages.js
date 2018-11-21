@@ -2279,7 +2279,7 @@
             ! function(e) {
                 e.CreatingAccounts = "658863-creating-an-account", e.SmartNotifications = "2944759"
             }(r || (r = {}));
-            var l = ((i = {})[r.CreatingAccounts] = ["en", "de"], i[r.SmartNotifications] = c, i);
+            var l = ((i = {})[r.CreatingAccounts] = ["da", "de", "en", "es-mx", "es", "fi", "fr", "it", "ja", "ko", "nl", "no", "pt-br", "ru", "sv", "th", "zh-tw"], i[r.SmartNotifications] = c, i);
 
             function d(e) {
                 var t = Object(o.b)(a.p.store.getState()) || "en",
@@ -2670,81 +2670,97 @@
         },
         "9MO3": function(e, t, n) {
             "use strict";
-            n.d(t, "c", function() {
-                return d
+            n.d(t, "e", function() {
+                return o
+            }), n.d(t, "c", function() {
+                return u
             }), n.d(t, "a", function() {
-                return m
+                return p
             }), n.d(t, "b", function() {
-                return g
+                return h
             }), n.d(t, "d", function() {
-                return f
+                return v
             });
             var i = n("/7QA"),
                 r = n("DMoW"),
                 a = n("yI6f");
 
-            function o() {
+            function o(e, t, n) {
+                if ("string" == typeof e.text) return e.text;
+                var r = e.contentType === a.b.Live ? t : n;
+                return r ? e.text(r) : Object(i.d)("I am not interested in this content", "RecFeedbackModal")
+            }
+
+            function s(e) {
+                return Object(i.d)("I am not interested in this channel: {channel}", {
+                    channel: e
+                }, "FeedbackReason")
+            }
+
+            function c() {
                 return {
-                    text: Object(i.d)("I am not interested in this category", "FeedbackReason"),
+                    text: function(e) {
+                        return function(e) {
+                            return Object(i.d)("I am not interested in this category: {category}", {
+                                category: e
+                            }, "FeedbackReason")
+                        }(e)
+                    },
                     contentType: a.b.Game,
                     feedbackType: r.L.NOT_INTERESTED
                 }
             }
 
-            function s() {
+            function l() {
                 return Object(i.d)("Other", "FeedbackReasonOther")
             }
+            var d = null;
 
-            function c() {
-                return Object(i.d)("I am not interested in this channel", "FeedbackReason")
+            function u() {
+                return null === d && (d = [c()]), d
             }
-            var l = null;
+            var m = null;
 
-            function d() {
-                return null === l && (l = [o(), {
-                    text: s(),
-                    contentType: a.b.Shelf,
-                    feedbackType: r.L.OTHER
-                }]), l
-            }
-            var u = null;
-
-            function m() {
-                return null === u && (u = [{
-                    text: c(),
+            function p() {
+                return null === m && (m = [{
+                    text: function(e) {
+                        return s(e)
+                    },
                     contentType: a.b.Live,
                     feedbackType: r.L.NOT_INTERESTED
-                }, o(), {
-                    text: s(),
+                }, c(), {
+                    text: l(),
                     contentType: a.b.Live,
                     feedbackType: r.L.OTHER
-                }]), u
+                }]), m
             }
-            var p = null;
+            var g = null;
 
-            function g() {
-                return null === p && (p = [o(), {
-                    text: s(),
+            function h() {
+                return null === g && (g = [c(), {
+                    text: l(),
                     contentType: a.b.Game,
                     feedbackType: r.L.OTHER
-                }]), p
+                }]), g
             }
-            var h = null;
+            var f = null;
 
-            function f() {
-                return null === h && (h = [{
+            function v() {
+                return null === f && (f = [{
                     text: Object(i.d)("I am not interested in this video", "FeedbackReason"),
                     contentType: a.b.Vod,
                     feedbackType: r.L.NOT_INTERESTED
                 }, {
-                    text: c(),
+                    text: function(e) {
+                        return s(e)
+                    },
                     contentType: a.b.Live,
                     feedbackType: r.L.NOT_INTERESTED
-                }, o(), {
-                    text: s(),
+                }, c(), {
+                    text: l(),
                     contentType: a.b.Vod,
                     feedbackType: r.L.OTHER
-                }]), h
+                }]), f
             }
         },
         AOMz: function(e, t, n) {},
@@ -6940,11 +6956,11 @@
                 g = n("yR8l"),
                 h = n("9MO3");
 
-            function f(e, t) {
-                var n = e.find(function(e) {
+            function f(e, t, n, i) {
+                var r = e.find(function(e) {
                     return t === e.feedbackType
                 });
-                return n ? n.text : ""
+                return r ? Object(h.e)(r, n, i) : ""
             }
             var v, k = n("Ue10"),
                 b = n("geRD"),
@@ -7312,7 +7328,7 @@
                                                 width: 38,
                                                 height: 51
                                             },
-                                            reasonText: f(i, e.category),
+                                            reasonText: f(i, e.category, null, n.displayName),
                                             reason: e.category,
                                             type: e.type,
                                             cursor: t
@@ -7328,7 +7344,7 @@
                                                 width: 90,
                                                 height: 51
                                             },
-                                            reasonText: f(i, e.category),
+                                            reasonText: f(i, e.category, null, null),
                                             reason: e.category,
                                             type: e.type,
                                             cursor: t
@@ -7345,7 +7361,7 @@
                                                 width: 50,
                                                 height: 50
                                             },
-                                            reasonText: f(i, e.category),
+                                            reasonText: f(i, e.category, r.displayName, null),
                                             reason: e.category,
                                             type: e.type,
                                             cursor: t

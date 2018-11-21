@@ -17,9 +17,9 @@
             }), t.d(n, "d", function() {
                 return E
             }), t.d(n, "e", function() {
-                return _
-            }), t.d(n, "c", function() {
                 return R
+            }), t.d(n, "c", function() {
+                return _
             });
             var E, a = 500,
                 i = 5e3,
@@ -30,7 +30,7 @@
             ! function(e) {
                 e.BountiesCompleted = "completedBountyCount", e.Viewers = "totalViewerCount", e.Viewers2m = "twoMinuteViewerCount", e.MinutesWatched = "minutesWatched"
             }(E || (E = {}));
-            var R, _ = {
+            var _, R = {
                 series: [],
                 total: 0,
                 interval: {
@@ -40,7 +40,7 @@
             };
             ! function(e) {
                 e.BountiesExpanded = "expandedBountyCount", e.BountiesAccepted = "claimedBountyCount", e.BountiesCompleted = "completedBountyCount", e.BountiesTotal = "viewedBountyCount"
-            }(R || (R = {}))
+            }(_ || (_ = {}))
         },
         "17YR": function(e, n, t) {
             "use strict";
@@ -82,7 +82,7 @@
         "4brS": function(e, n, t) {},
         DMoW: function(e, n, t) {
             "use strict";
-            var E, a, i, o, r, N, T, R, _, c, A, u, O, d, I, l, D, S, s, m, C, L, f, p, U, M, b, P, v, g, B, F, V, G, y, k, H, h, Y, W, j, K, w, X, x, Q, z, Z, J, q, $, ee, ne, te, Ee, ae, ie, oe, re, Ne, Te, Re, _e, ce, Ae, ue, Oe, de, Ie, le, De, Se, se, me, Ce, Le, fe, pe, Ue, Me, be, Pe, ve, ge, Be, Fe, Ve, Ge, ye, ke, He, he, Ye, We, je, Ke, we, Xe, xe, Qe, ze, Ze, Je, qe, $e, en, nn, tn, En, an, on, rn, Nn, Tn, Rn, _n, cn, An, un, On, dn, In, ln, Dn, Sn;
+            var E, a, i, o, r, N, T, _, R, A, c, u, O, d, I, l, D, S, s, m, C, L, f, p, U, M, b, P, v, B, g, F, V, G, y, k, H, h, Y, W, j, K, w, X, x, Q, z, Z, J, q, $, ee, ne, te, Ee, ae, ie, oe, re, Ne, Te, _e, Re, Ae, ce, ue, Oe, de, Ie, le, De, Se, se, me, Ce, Le, fe, pe, Ue, Me, be, Pe, ve, Be, ge, Fe, Ve, Ge, ye, ke, He, he, Ye, We, je, Ke, we, Xe, xe, Qe, ze, Ze, Je, qe, $e, en, nn, tn, En, an, on, rn, Nn, Tn, _n, Rn, An, cn, un, On, dn, In, ln, Dn, Sn;
             t.d(n, "N", function() {
                     return E
                 }), t.d(n, "e", function() {
@@ -92,7 +92,7 @@
                 }), t.d(n, "B", function() {
                     return N
                 }), t.d(n, "b", function() {
-                    return R
+                    return _
                 }), t.d(n, "i", function() {
                     return O
                 }), t.d(n, "d", function() {
@@ -190,7 +190,7 @@
                 }), t.d(n, "L", function() {
                     return Tn
                 }), t.d(n, "M", function() {
-                    return Rn
+                    return _n
                 }), t.d(n, "f", function() {
                     return ln
                 }), t.d(n, "v", function() {
@@ -219,16 +219,16 @@
                 }(T || (T = {})),
                 function(e) {
                     e.AWAY = "AWAY", e.BUSY = "BUSY", e.IDLE = "IDLE", e.OFFLINE = "OFFLINE", e.ONLINE = "ONLINE"
-                }(R || (R = {})),
-                function(e) {
-                    e.IDLE = "IDLE", e.OFFLINE = "OFFLINE", e.ONLINE = "ONLINE"
                 }(_ || (_ = {})),
                 function(e) {
+                    e.IDLE = "IDLE", e.OFFLINE = "OFFLINE", e.ONLINE = "ONLINE"
+                }(R || (R = {})),
+                function(e) {
                     e.AWAY = "AWAY", e.BUSY = "BUSY", e.OFFLINE = "OFFLINE", e.ONLINE = "ONLINE"
-                }(c || (c = {})),
+                }(A || (A = {})),
                 function(e) {
                     e.AR = "AR", e.BG = "BG", e.CS = "CS", e.DA = "DA", e.DE = "DE", e.EL = "EL", e.EN = "EN", e.EN_GB = "EN_GB", e.ES = "ES", e.ES_MX = "ES_MX", e.FI = "FI", e.FR = "FR", e.HI = "HI", e.HU = "HU", e.IT = "IT", e.JA = "JA", e.KO = "KO", e.NL = "NL", e.NO = "NO", e.PL = "PL", e.PT = "PT", e.PT_BR = "PT_BR", e.RO = "RO", e.RU = "RU", e.SK = "SK", e.SV = "SV", e.TH = "TH", e.TR = "TR", e.VI = "VI", e.ZH = "ZH", e.ZH_CN = "ZH_CN", e.ZH_TW = "ZH_TW"
-                }(A || (A = {})),
+                }(c || (c = {})),
                 function(e) {
                     e.AR = "AR", e.ASL = "ASL", e.BG = "BG", e.CS = "CS", e.DA = "DA", e.DE = "DE", e.EL = "EL", e.EN = "EN", e.ES = "ES", e.FI = "FI", e.FR = "FR", e.HU = "HU", e.IT = "IT", e.JA = "JA", e.KO = "KO", e.NL = "NL", e.NO = "NO", e.OTHER = "OTHER", e.PL = "PL", e.PT = "PT", e.RO = "RO", e.RU = "RU", e.SK = "SK", e.SV = "SV", e.TH = "TH", e.TR = "TR", e.VI = "VI", e.ZH = "ZH", e.ZH_HK = "ZH_HK"
                 }(u || (u = {})),
@@ -285,10 +285,10 @@
                 }(v || (v = {})),
                 function(e) {
                     e.NEW_CHATTER = "NEW_CHATTER"
-                }(g || (g = {})),
+                }(B || (B = {})),
                 function(e) {
                     e.TOKEN_NOT_AVAILABLE = "TOKEN_NOT_AVAILABLE", e.TOKEN_NOT_FOUND = "TOKEN_NOT_FOUND"
-                }(B || (B = {})),
+                }(g || (g = {})),
                 function(e) {
                     e.FOLLOWER_ONLY_MODE_ENFORCEMENT_FAILED = "FOLLOWER_ONLY_MODE_ENFORCEMENT_FAILED", e.SUB_ONLY_MODE_ENFORCEMENT_FAILED = "SUB_ONLY_MODE_ENFORCEMENT_FAILED", e.TOKEN_NOT_AVAILABLE = "TOKEN_NOT_AVAILABLE", e.TOKEN_NOT_FOUND = "TOKEN_NOT_FOUND", e.USER_CHAT_BANNED = "USER_CHAT_BANNED", e.USER_CHAT_TIMED_OUT = "USER_CHAT_TIMED_OUT"
                 }(F || (F = {})),
@@ -381,16 +381,16 @@
                 }(Te || (Te = {})),
                 function(e) {
                     e.MAX_ROOMS_LIMIT_EXCEEDED = "MAX_ROOMS_LIMIT_EXCEEDED", e.NAME_CONTAINS_INVALID_CHARACTERS = "NAME_CONTAINS_INVALID_CHARACTERS", e.NAME_INAPPROPRIATE = "NAME_INAPPROPRIATE", e.NAME_LENGTH_INVALID = "NAME_LENGTH_INVALID", e.NAME_NOT_UNIQUE = "NAME_NOT_UNIQUE", e.ROLES_INVALID = "ROLES_INVALID", e.TOPIC_INAPPROPRIATE = "TOPIC_INAPPROPRIATE", e.TOPIC_LENGTH_INVALID = "TOPIC_LENGTH_INVALID"
-                }(Re || (Re = {})),
-                function(e) {
-                    e.ADMIN = "ADMIN", e.BROADCASTER = "BROADCASTER", e.GLOBALMOD = "GLOBALMOD", e.MOD = "MOD", e.REGULAR = "REGULAR", e.STAFF = "STAFF"
                 }(_e || (_e = {})),
                 function(e) {
+                    e.ADMIN = "ADMIN", e.BROADCASTER = "BROADCASTER", e.GLOBALMOD = "GLOBALMOD", e.MOD = "MOD", e.REGULAR = "REGULAR", e.STAFF = "STAFF"
+                }(Re || (Re = {})),
+                function(e) {
                     e.FORBIDDEN = "FORBIDDEN", e.NAME_CONTAINS_INVALID_CHARACTERS = "NAME_CONTAINS_INVALID_CHARACTERS", e.NAME_INAPPROPRIATE = "NAME_INAPPROPRIATE", e.NAME_LENGTH_INVALID = "NAME_LENGTH_INVALID", e.NAME_NOT_UNIQUE = "NAME_NOT_UNIQUE", e.ROLES_INVALID = "ROLES_INVALID", e.ROOM_NOT_FOUND = "ROOM_NOT_FOUND", e.TOPIC_INAPPROPRIATE = "TOPIC_INAPPROPRIATE", e.TOPIC_LENGTH_INVALID = "TOPIC_LENGTH_INVALID"
-                }(ce || (ce = {})),
+                }(Ae || (Ae = {})),
                 function(e) {
                     e.AUTO_MOD_ENFORCEMENT_FAILED = "AUTO_MOD_ENFORCEMENT_FAILED", e.EMOTE_ONLY_MODE_ENFORCEMENT_FAILED = "EMOTE_ONLY_MODE_ENFORCEMENT_FAILED", e.FORBIDDEN = "FORBIDDEN", e.R9K_MODE_ENFORCEMENT_FAILED = "R9K_MODE_ENFORCEMENT_FAILED", e.RATE_LIMIT_FAILED = "RATE_LIMIT_FAILED", e.SLOW_MODE_ENFORCEMENT_FAILED = "SLOW_MODE_ENFORCEMENT_FAILED", e.SPAM_ENFORCEMENT_FAILED = "SPAM_ENFORCEMENT_FAILED", e.USER_CHAT_BANNED = "USER_CHAT_BANNED", e.USER_CHAT_TIMED_OUT = "USER_CHAT_TIMED_OUT", e.USER_SUSPENDED = "USER_SUSPENDED", e.ZALGO_ENFORCEMENT_FAILED = "ZALGO_ENFORCEMENT_FAILED"
-                }(Ae || (Ae = {})),
+                }(ce || (ce = {})),
                 function(e) {
                     e.FORBIDDEN = "FORBIDDEN", e.ROOM_NOT_FOUND = "ROOM_NOT_FOUND", e.SLOW_MODE_DURATION_INVALID = "SLOW_MODE_DURATION_INVALID"
                 }(ue || (ue = {})),
@@ -447,10 +447,10 @@
                 }(ve || (ve = {})),
                 function(e) {
                     e.ALREADY_LINKED = "ALREADY_LINKED", e.CODE_EXPIRED = "CODE_EXPIRED", e.CODE_INCORRECT = "CODE_INCORRECT"
-                }(ge || (ge = {})),
+                }(Be || (Be = {})),
                 function(e) {
                     e.all = "all", e.ps4 = "ps4", e.xbox = "xbox"
-                }(Be || (Be = {})),
+                }(ge || (ge = {})),
                 function(e) {
                     e.COMMUNITY = "COMMUNITY", e.GAME = "GAME"
                 }(Fe || (Fe = {})),
@@ -464,7 +464,7 @@
                     e.DEFAULT = "DEFAULT", e.EXTENSION = "EXTENSION"
                 }(ye || (ye = {})),
                 function(e) {
-                    e.ALL_VIDEOS = "ALL_VIDEOS", e.COLLECTION = "COLLECTION", e.GAME_VIDEOS = "GAME_VIDEOS", e.LATEST_BROADCASTS = "LATEST_BROADCASTS", e.LONG_VIDEOS = "LONG_VIDEOS", e.SHORT_VIDEOS = "SHORT_VIDEOS", e.TOP_CLIPS = "TOP_CLIPS"
+                    e.ALL_VIDEOS = "ALL_VIDEOS", e.COLLECTION = "COLLECTION", e.GAME_VIDEOS = "GAME_VIDEOS", e.LATEST_BROADCASTS = "LATEST_BROADCASTS", e.LATEST_NON_BROADCASTS = "LATEST_NON_BROADCASTS", e.LONG_VIDEOS = "LONG_VIDEOS", e.SHORT_VIDEOS = "SHORT_VIDEOS", e.TOP_CLIPS = "TOP_CLIPS"
                 }(ke || (ke = {})),
                 function(e) {
                     e.ALREADY_CLAIMED = "ALREADY_CLAIMED", e.REQUEST_THROTTLED = "REQUEST_THROTTLED", e.UNAUTHORIZED = "UNAUTHORIZED", e.UNKNOWN = "UNKNOWN"
@@ -494,7 +494,7 @@
                     e.INVALID_PARAMETER = "INVALID_PARAMETER", e.UNAUTHORIZED = "UNAUTHORIZED", e.UNKNOWN_ERROR = "UNKNOWN_ERROR"
                 }(xe || (xe = {})),
                 function(e) {
-                    e.BOUNTY_NOT_LIVE = "BOUNTY_NOT_LIVE", e.INVALID_PARAMETER = "INVALID_PARAMETER", e.UNAUTHORIZED = "UNAUTHORIZED", e.UNKNOWN_ERROR = "UNKNOWN_ERROR"
+                    e.BOUNTY_NOT_LIVE = "BOUNTY_NOT_LIVE", e.INVALID_PARAMETER = "INVALID_PARAMETER", e.STREAM_TITLE_BANNED_WORDS = "STREAM_TITLE_BANNED_WORDS", e.STREAM_TITLE_TOO_LONG = "STREAM_TITLE_TOO_LONG", e.UNAUTHORIZED = "UNAUTHORIZED", e.UNKNOWN_ERROR = "UNKNOWN_ERROR"
                 }(Qe || (Qe = {})),
                 function(e) {
                     e.INVITATION_ALREADY_EXISTS = "INVITATION_ALREADY_EXISTS", e.INVITATION_INVALID = "INVITATION_INVALID", e.SQUAD_FULL = "SQUAD_FULL", e.UNAUTHORIZED = "UNAUTHORIZED", e.USER_ALREADY_IN_SQUAD = "USER_ALREADY_IN_SQUAD"
@@ -540,16 +540,16 @@
                 }(Tn || (Tn = {})),
                 function(e) {
                     e.CATEGORY = "CATEGORY", e.CHANNEL = "CHANNEL", e.SHELF = "SHELF", e.UNSPECIFIED = "UNSPECIFIED", e.VOD = "VOD"
-                }(Rn || (Rn = {})),
-                function(e) {
-                    e.PRICE_ASC = "PRICE_ASC", e.PRICE_DESC = "PRICE_DESC", e.PURCHASE_DATE_ASC = "PURCHASE_DATE_ASC", e.PURCHASE_DATE_DESC = "PURCHASE_DATE_DESC"
                 }(_n || (_n = {})),
                 function(e) {
+                    e.PRICE_ASC = "PRICE_ASC", e.PRICE_DESC = "PRICE_DESC", e.PURCHASE_DATE_ASC = "PURCHASE_DATE_ASC", e.PURCHASE_DATE_DESC = "PURCHASE_DATE_DESC"
+                }(Rn || (Rn = {})),
+                function(e) {
                     e.ALL = "ALL", e.SUBSCRIPTIONS = "SUBSCRIPTIONS"
-                }(cn || (cn = {})),
+                }(An || (An = {})),
                 function(e) {
                     e.SUBSCRIPTION = "SUBSCRIPTION"
-                }(An || (An = {})),
+                }(cn || (cn = {})),
                 function(e) {
                     e.MONKEYS = "MONKEYS", e.PURPLE = "PURPLE", e.ROBOTS = "ROBOTS"
                 }(un || (un = {})),
@@ -1206,12 +1206,12 @@
                 r = t("fvjX"),
                 N = t("aCAx"),
                 T = t("Ue10"),
-                R = t("/7QA"),
-                _ = t("cZKs");
+                _ = t("/7QA"),
+                R = t("cZKs");
             ! function(e) {
                 e.TitleText = "dev-cancel-campaign-modal-title-text", e.ContentText = "dev-create-campaign-content-text", e.CloseButton = "dev-create-campaign-modal-close-button"
             }(E || (E = {}));
-            var c = function(e) {
+            var A = function(e) {
                     function n() {
                         var n = null !== e && e.apply(this, arguments) || this;
                         return n.onClose = function() {
@@ -1229,14 +1229,14 @@
                             type: T.Wb.H4,
                             bold: !0,
                             "data-test-selector": E.TitleText
-                        }, Object(R.d)("Cancel Campaign", "DevBountyCancelCampaignModal")), i.createElement(_.a, null)), i.createElement(T.Ya, {
+                        }, Object(_.d)("Cancel Campaign", "DevBountyCancelCampaignModal")), i.createElement(R.a, null)), i.createElement(T.Ya, {
                             display: T.X.Flex,
                             flexDirection: T.Aa.Column,
                             padding: 2
                         }, i.createElement(T.W, {
                             type: T.Wb.P,
                             "data-test-selector": E.ContentText
-                        }, Object(R.d)("You must contact <x:link>bountyboard@twitch.tv</x:link> in order to cancel your campaign. Once contacted, cancellations typically take 24-48 hours to process.", {
+                        }, Object(_.d)("You must contact <x:link>bountyboard@twitch.tv</x:link> in order to cancel your campaign. Once contacted, cancellations typically take 24-48 hours to process.", {
                             "x:link": function(e) {
                                 return i.createElement("a", {
                                     href: "mailto:bountyboard@twitch.tv"
@@ -1245,7 +1245,7 @@
                         }, "DevBountyBoardCampaignPage")), i.createElement("br", null), i.createElement(T.W, {
                             type: T.Wb.P,
                             "data-test-selector": E.ContentText
-                        }, Object(R.d)("By cancelling a campaign early you will only have your unclaimed budget refunded. Broadcasters who have already claimed bounties will have their remaining time to complete the bounty.", "DevBountyCancelCampaignModal"))), i.createElement(T.Fb, {
+                        }, Object(_.d)("By cancelling a campaign early you will only have your unclaimed budget refunded. Broadcasters who have already claimed bounties will have their remaining time to complete the bounty.", "DevBountyCancelCampaignModal"))), i.createElement(T.Fb, {
                             alignItems: T.f.Center,
                             background: T.r.Alt2,
                             borderTop: !0,
@@ -1257,10 +1257,10 @@
                         }, i.createElement(T.z, {
                             onClick: this.onClose,
                             "data-test-selector": E.CloseButton
-                        }, Object(R.d)("Close", "DevBountyCancelCampaignModal"))))
+                        }, Object(_.d)("Close", "DevBountyCancelCampaignModal"))))
                     }, n
                 }(i.PureComponent),
-                A = (t("4brS"), function(e) {
+                c = (t("4brS"), function(e) {
                     function n() {
                         return null !== e && e.apply(this, arguments) || this
                     }
@@ -1268,7 +1268,7 @@
                         return i.createElement(T.Fb, {
                             background: T.r.Base,
                             className: "dev-bounty-board-cancel-campaign-modal__container"
-                        }, i.createElement(c, {
+                        }, i.createElement(A, {
                             onClose: this.props.closeModal
                         }))
                     }, n
@@ -1277,9 +1277,9 @@
                 return Object(r.bindActionCreators)({
                     closeModal: N.c
                 }, e)
-            })(A);
+            })(c);
             t.d(n, !1, function() {
-                return A
+                return c
             }), t.d(n, "a", function() {
                 return u
             })
@@ -1474,13 +1474,13 @@
             }), t.d(n, "c", function() {
                 return T
             }), t.d(n, "f", function() {
-                return R
-            }), t.d(n, "d", function() {
                 return _
+            }), t.d(n, "d", function() {
+                return R
             }), t.d(n, "a", function() {
-                return c
-            }), t.d(n, "e", function() {
                 return A
+            }), t.d(n, "e", function() {
+                return c
             });
             var E = t("/7QA"),
                 a = t("DMoW"),
@@ -1524,12 +1524,12 @@
                             return ""
                     }
                 },
-                R = function(e) {
+                _ = function(e) {
                     var n = Object(o.b)(e).getTime(),
-                        t = _(e) ? 4 : 5;
+                        t = R(e) ? 4 : 5;
                     return new Date(n - 60 * t * 60 * 1e3)
                 },
-                _ = function(e) {
+                R = function(e) {
                     try {
                         return -1 !== Object(E.j)(e, {
                             timeZone: "America/New_York",
@@ -1539,14 +1539,14 @@
                         return !1
                     }
                 },
-                c = function(e) {
+                A = function(e) {
                     var n = e / 100;
                     return n - Math.floor(n) != 0 ? Object(E.f)(n, {
                         style: "currency",
                         currency: "USD"
                     }) : "$" + Object(E.f)(n)
                 },
-                A = function(e, n) {
+                c = function(e, n) {
                     var t = [
                         [Object(E.d)("Date", "DevBountyBoardCampaignPage")].concat(n.dates.map(function(e) {
                             return e.toDateString() + " ET"
@@ -1582,10 +1582,10 @@
                 r = t("/7QA"),
                 N = t("GnwI"),
                 T = t("Ue10"),
-                R = t("WSnR"),
-                _ = t("yR8l"),
-                c = t("DMoW"),
-                A = t("H3dc");
+                _ = t("WSnR"),
+                R = t("yR8l"),
+                A = t("DMoW"),
+                c = t("H3dc");
             ! function(e) {
                 e.AccordionHeaderSelector = "dev-bounty-dashboard-campaign-list-accordion-header-selector", e.AccordionBodySelector = "dev-bounty-dashboard-campaign-list-accordion-body-selector", e.LoadingSelector = "dev-bounty-dashboard-campaign-list-loading-indicator", e.EmptySelector = "dev-bounty-dashboard-campaign-list-empty-set"
             }(E || (E = {}));
@@ -1610,7 +1610,7 @@
                     }, n.prototype.render = function() {
                         var e = this,
                             n = [];
-                        return Object.values(c.f).forEach(function(t) {
+                        return Object.values(A.f).forEach(function(t) {
                             n = n.concat(e.getCampaigns(t))
                         }), n.sort(this.compareCampaigns), !this.props.data.currentUser && this.props.data.loading ? this.renderLoading() : 0 === n.length ? this.renderEmpty() : i.createElement(i.Fragment, null, i.createElement(T.a, {
                             title: Object(r.d)("{title} ({count})", {
@@ -1652,7 +1652,7 @@
                         }, i.createElement(T.W, null, e))
                     }, n
                 }(i.Component),
-                d = Object(o.compose)(Object(N.b)("DevBountyDashboardCampaignList"), Object(_.a)(A, {
+                d = Object(o.compose)(Object(N.b)("DevBountyDashboardCampaignList"), Object(R.a)(c, {
                     options: function(e) {
                         return {
                             variables: {
@@ -1695,9 +1695,9 @@
                     }, n.prototype.renderCampaignRow = function(e) {
                         var n = e.node;
                         if (!n) return null;
-                        var t = Object(R.f)(new Date(n.startTime)),
-                            E = Object(R.f)(new Date(n.endTime)),
-                            a = Object(R.b)(e),
+                        var t = Object(_.f)(new Date(n.startTime)),
+                            E = Object(_.f)(new Date(n.endTime)),
+                            a = Object(_.b)(e),
                             o = n.brandDetails && n.brandDetails.spentBudgetCents || 0;
                         return i.createElement(T.Nb, {
                             key: n.id
@@ -1709,7 +1709,7 @@
                             fontSize: T.Ca.Size5
                         }, n.title))), i.createElement(T.Kb, null, i.createElement(T.W, {
                             fontSize: T.Ca.Size5
-                        }, Object(R.a)(o))), i.createElement(T.Kb, null, i.createElement(T.W, {
+                        }, Object(_.a)(o))), i.createElement(T.Kb, null, i.createElement(T.W, {
                             ellipsis: !0,
                             title: a,
                             fontSize: T.Ca.Size5
@@ -1753,9 +1753,9 @@
                         return n.renderCampaignRow = function(e) {
                             var t = e.node;
                             if (!t) return null;
-                            var E = Object(R.f)(new Date(t.startTime)),
-                                a = Object(R.f)(new Date(t.endTime)),
-                                o = Object(R.b)(e),
+                            var E = Object(_.f)(new Date(t.startTime)),
+                                a = Object(_.f)(new Date(t.endTime)),
+                                o = Object(_.b)(e),
                                 N = t.brandDetails && t.brandDetails.totalBudgetCents || 0;
                             return i.createElement(T.Nb, {
                                 key: t.id
@@ -1767,7 +1767,7 @@
                                 fontSize: T.Ca.Size5
                             }, t.title))), i.createElement(T.Kb, null, i.createElement(T.W, {
                                 fontSize: T.Ca.Size5
-                            }, Object(R.a)(N))), i.createElement(T.Kb, null, i.createElement(T.W, {
+                            }, Object(_.a)(N))), i.createElement(T.Kb, null, i.createElement(T.W, {
                                 ellipsis: !0,
                                 title: o,
                                 fontSize: T.Ca.Size5
@@ -1841,9 +1841,9 @@
                         return n.renderCampaignRow = function(e) {
                             var t = e.node;
                             if (!t) return null;
-                            var E = Object(R.f)(new Date(t.startTime)),
-                                a = Object(R.f)(new Date(t.endTime)),
-                                o = Object(R.b)(e),
+                            var E = Object(_.f)(new Date(t.startTime)),
+                                a = Object(_.f)(new Date(t.endTime)),
+                                o = Object(_.b)(e),
                                 N = t.brandDetails && t.brandDetails.totalBudgetCents || 0;
                             return i.createElement(T.Nb, {
                                 key: t.id
@@ -1857,7 +1857,7 @@
                                 fontSize: T.Ca.Size5
                             }, t.status)), i.createElement(T.Kb, null, i.createElement(T.W, {
                                 fontSize: T.Ca.Size5
-                            }, Object(R.a)(N))), i.createElement(T.Kb, null, i.createElement(T.W, {
+                            }, Object(_.a)(N))), i.createElement(T.Kb, null, i.createElement(T.W, {
                                 ellipsis: !0,
                                 title: o,
                                 fontSize: T.Ca.Size5
@@ -1928,7 +1928,7 @@
             ! function(e) {
                 e.DetailsButtonSelector = "dev-bounty-rejected-campaign-details-button", e.DeleteButtonSelector = "dev-bounty-rejected-campaign-delete-button"
             }(P || (P = {}));
-            var g = function(e) {
+            var B = function(e) {
                     function n() {
                         return null !== e && e.apply(this, arguments) || this
                     }
@@ -1980,9 +1980,9 @@
                         }, Object(r.d)("Details", "DevBountyDashboardRejectedCampaignList")))))) : null
                     }, n
                 }(i.Component),
-                B = Object(o.compose)(Object(N.b)("DevBountyDashboardRejectedCampaignList", {
+                g = Object(o.compose)(Object(N.b)("DevBountyDashboardRejectedCampaignList", {
                     autoReportInteractive: !0
-                }))(g),
+                }))(B),
                 F = (t("n/TW"), function(e) {
                     function n() {
                         return null !== e && e.apply(this, arguments) || this
@@ -2016,7 +2016,7 @@
                             margin: {
                                 y: 2
                             }
-                        }, i.createElement(B, null)), i.createElement(T.Ya, {
+                        }, i.createElement(g, null)), i.createElement(T.Ya, {
                             margin: {
                                 y: 2
                             }

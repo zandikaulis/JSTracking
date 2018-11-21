@@ -3,12 +3,12 @@
         "/ZC1": function(e, t, a) {
             "use strict";
             a.d(t, "a", function() {
-                return o
+                return i
             });
             var n = a("mrSG"),
                 r = a("q1tI"),
-                i = a("Ue10"),
-                o = (a("sL9O"), function(e) {
+                o = a("Ue10"),
+                i = (a("sL9O"), function(e) {
                     function t() {
                         var t = null !== e && e.apply(this, arguments) || this;
                         return t.state = {
@@ -30,16 +30,16 @@
                         }, t
                     }
                     return n.__extends(t, e), t.prototype.render = function() {
-                        return r.createElement(i.Z, {
+                        return r.createElement(o.Z, {
                             dragOver: this.state.isDraggingOver,
                             error: this.props.error
-                        }, r.createElement(i.Qa, {
-                            position: i.kb.Absolute,
+                        }, r.createElement(o.Qa, {
+                            position: o.kb.Absolute,
                             attachTop: !0,
                             attachLeft: !0,
                             fullWidth: !0,
                             fullHeight: !0,
-                            zIndex: i.jc.Above
+                            zIndex: o.jc.Above
                         }, r.createElement("input", {
                             "data-a-target": "file-picker-input",
                             "data-test-selector": "file-picker-input",
@@ -74,10 +74,10 @@
             "use strict";
             var n = a("mrSG"),
                 r = a("q1tI"),
-                i = a("/MKj"),
-                o = a("fvjX"),
-                l = a("aCAx"),
-                s = function(e) {
+                o = a("/MKj"),
+                i = a("fvjX"),
+                s = a("aCAx"),
+                l = function(e) {
                     function t() {
                         var t = null !== e && e.apply(this, arguments) || this;
                         return t.openModal = function() {
@@ -99,80 +99,80 @@
                         return this.props.children(this.openModal)
                     }, t
                 }(r.Component);
-            var u = Object(i.connect)(null, function(e) {
-                return Object(o.bindActionCreators)({
-                    showModal: l.d,
-                    closeModal: l.c
+            var c = Object(o.connect)(null, function(e) {
+                return Object(i.bindActionCreators)({
+                    showModal: s.d,
+                    closeModal: s.c
                 }, e)
-            })(s);
+            })(l);
             a.d(t, "a", function() {
-                return u
+                return c
             })
         },
         CDtL: function(e, t, a) {
             "use strict";
             a.d(t, "a", function() {
-                return c
+                return u
             });
             var n = a("mrSG"),
                 r = a("/7QA"),
-                i = a("PZVp"),
-                o = a("/aPz"),
-                l = a("2/NB"),
-                s = a("Lxz1"),
-                u = 1e4,
-                c = function() {
+                o = a("PZVp"),
+                i = a("/aPz"),
+                s = a("2/NB"),
+                l = a("Lxz1"),
+                c = 1e4,
+                u = function() {
                     return function(e, t) {
                         var a = this;
                         this.getUploadURL = e, this.onFinishUploading = t, this.uploadFile = function(e) {
-                            return new Promise(function(t, c) {
+                            return new Promise(function(t, u) {
                                 return n.__awaiter(a, void 0, void 0, function() {
-                                    var a, m, d, p, g, f = this;
+                                    var a, d, p, m, g, f = this;
                                     return n.__generator(this, function(n) {
                                         switch (n.label) {
                                             case 0:
                                                 return n.trys.push([0, 3, , 4]), [4, this.getUploadURL(e)];
                                             case 1:
-                                                return a = n.sent(), m = a.url, d = a.uploadID, [4, fetch(m, {
+                                                return a = n.sent(), d = a.url, p = a.uploadID, [4, fetch(d, {
                                                     body: e,
                                                     method: "PUT"
                                                 })];
                                             case 2:
-                                                return (p = n.sent()).status > 300 && c(new Error(Object(s.e)(p.status))), this.unsubscribe = r.l.subscribe({
-                                                    topic: Object(o.D)(d),
+                                                return (m = n.sent()).status > 300 && u(new Error(Object(l.e)(m.status))), this.unsubscribe = r.l.subscribe({
+                                                    topic: Object(i.D)(p),
                                                     success: function() {
                                                         f.timeoutID = setTimeout(function() {
-                                                            f.unsubscribe(), c(new Error(Object(s.d)()))
-                                                        }, u)
+                                                            f.unsubscribe(), u(new Error(Object(l.d)()))
+                                                        }, c)
                                                     },
                                                     failure: function() {
-                                                        clearTimeout(f.timeoutID), c(new Error(Object(s.d)()))
+                                                        clearTimeout(f.timeoutID), u(new Error(Object(l.d)()))
                                                     },
                                                     onMessage: function(e) {
-                                                        if (e.upload_id === d) {
+                                                        if (e.upload_id === p) {
                                                             switch (clearTimeout(f.timeoutID), e.status) {
-                                                                case i.a.POSTPROCESS_COMPLETE:
+                                                                case o.a.POSTPROCESS_COMPLETE:
                                                                     f.onFinishUploading && f.onFinishUploading(), t();
                                                                     break;
-                                                                case i.a.WIDTH_VALIDATION_FAILED:
-                                                                case i.a.HEIGHT_VALIDATION_FAILED:
-                                                                    c(new Error(Object(s.c)()));
+                                                                case o.a.WIDTH_VALIDATION_FAILED:
+                                                                case o.a.HEIGHT_VALIDATION_FAILED:
+                                                                    u(new Error(Object(l.c)()));
                                                                     break;
-                                                                case i.a.FILE_SIZE_VALIDATION_FAILED:
-                                                                    c(new Error(Object(s.a)()));
+                                                                case o.a.FILE_SIZE_VALIDATION_FAILED:
+                                                                    u(new Error(Object(l.a)()));
                                                                     break;
-                                                                case i.a.IS_IMAGE_VALIDATION_FAILED:
-                                                                    c(new Error(Object(s.b)(l.b)));
+                                                                case o.a.IS_IMAGE_VALIDATION_FAILED:
+                                                                    u(new Error(Object(l.b)(s.b)));
                                                                     break;
                                                                 default:
-                                                                    c(new Error(Object(s.d)()))
+                                                                    u(new Error(Object(l.d)()))
                                                             }
                                                             f.unsubscribe && f.unsubscribe()
                                                         }
                                                     }
                                                 }), [3, 4];
                                             case 3:
-                                                return g = n.sent(), r.k.error(g, "unable to upload image"), c(new Error(Object(s.d)())), [3, 4];
+                                                return g = n.sent(), r.k.error(g, "unable to upload image"), u(new Error(Object(l.d)())), [3, 4];
                                             case 4:
                                                 return [2]
                                         }
@@ -187,11 +187,11 @@
             "use strict";
             var n = a("mrSG"),
                 r = a("q1tI"),
-                i = a("9rZX"),
-                o = a("fvjX"),
-                l = a("GnwI"),
-                s = a("Ue10"),
-                u = (a("xefp"), function(e) {
+                o = a("9rZX"),
+                i = a("fvjX"),
+                s = a("GnwI"),
+                l = a("Ue10"),
+                c = (a("xefp"), function(e) {
                     function t() {
                         var t = null !== e && e.apply(this, arguments) || this;
                         return t.state = {}, t
@@ -199,102 +199,102 @@
                     return n.__extends(t, e), t.prototype.componentDidMount = function() {
                         this.props.latencyTracking.reportInteractive()
                     }, t.prototype.render = function() {
-                        return r.createElement(i, {
+                        return r.createElement(o, {
                             overlayClassName: "modal__backdrop",
                             className: "modal__content",
                             isOpen: this.props.isOpen,
                             ariaHideApp: !1
-                        }, r.createElement(s.Ya, {
+                        }, r.createElement(l.Ya, {
                             className: "multiview-modal"
-                        }, r.createElement(s.Fb, {
+                        }, r.createElement(l.Fb, {
                             className: "multiview-modal__content",
                             padding: 4,
                             margin: {
                                 top: 5
                             },
-                            background: s.r.Base
+                            background: l.r.Base
                         }, this.props.children)))
                     }, t
                 }(r.Component)),
-                c = Object(o.compose)(Object(l.b)("MultiviewModal"))(u);
+                u = Object(i.compose)(Object(s.b)("MultiviewModal"))(c);
             a.d(t, !1, function() {
-                return u
-            }), a.d(t, "a", function() {
                 return c
+            }), a.d(t, "a", function() {
+                return u
             })
         },
         Driw: function(e, t, a) {
             "use strict";
             var n, r = a("mrSG"),
-                i = a("q1tI"),
-                o = a("/7QA"),
-                l = a("cZKs"),
-                s = a("eJ65"),
-                u = a("B+LW"),
-                c = a("Ue10");
+                o = a("q1tI"),
+                i = a("/7QA"),
+                s = a("cZKs"),
+                l = a("eJ65"),
+                c = a("B+LW"),
+                u = a("Ue10");
             ! function(e) {
                 e.Edit = "more-balloon__edit", e.Delete = "more-balloon__delete", e.DeleteConfirm = "more-balloon__delete-confirm"
             }(n || (n = {}));
-            var m = function(e) {
+            var d = function(e) {
                 function t() {
                     var t = null !== e && e.apply(this, arguments) || this;
                     return t.renderDeleteButton = function() {
-                        if (t.props.onDelete) return t.props.deleteModalMessage ? i.createElement(u.a, {
+                        if (t.props.onDelete) return t.props.deleteModalMessage ? o.createElement(c.a, {
                             triggerModal: t.renderDeleteModal
                         }, t.renderBaseDeleteButton) : t.renderBaseDeleteButton(t.props.onDelete)
                     }, t.renderBaseDeleteButton = function(e) {
-                        return i.createElement(c.Va, {
+                        return o.createElement(u.Va, {
                             onClick: e,
                             "data-test-selector": n.Delete
-                        }, i.createElement(c.Ya, {
+                        }, o.createElement(u.Ya, {
                             className: "more-balloon__balloon-item",
                             padding: {
                                 x: 1,
                                 y: 1
                             },
-                            display: c.X.Flex,
-                            alignItems: c.f.Center
-                        }, i.createElement(c.tb, {
-                            asset: c.ub.Trash,
-                            type: c.vb.Brand
-                        }), i.createElement(c.Ya, {
+                            display: u.X.Flex,
+                            alignItems: u.f.Center
+                        }, o.createElement(u.tb, {
+                            asset: u.ub.Trash,
+                            type: u.vb.Brand
+                        }), o.createElement(u.Ya, {
                             margin: {
                                 left: 1
                             }
-                        }, Object(o.e)("Delete", "MultiviewMoreBalloon"))))
+                        }, Object(i.e)("Delete", "MultiviewMoreBalloon"))))
                     }, t.renderDeleteModal = function(e) {
-                        if (t.props.deleteModalMessage) return i.createElement(c.Fb, {
-                            background: c.r.Base,
+                        if (t.props.deleteModalMessage) return o.createElement(u.Fb, {
+                            background: u.r.Base,
                             className: "multiview-more-balloon__delete-prompt",
                             elevation: 3
-                        }, i.createElement(c.Fb, {
+                        }, o.createElement(u.Fb, {
                             borderBottom: !0,
-                            display: c.X.Flex,
-                            justifyContent: c.Xa.Center,
+                            display: u.X.Flex,
+                            justifyContent: u.Xa.Center,
                             padding: 2
-                        }, i.createElement(c.W, {
+                        }, o.createElement(u.W, {
                             bold: !0,
-                            fontSize: c.Ca.Size4
-                        }, t.props.deleteModalMessage)), i.createElement(c.Fb, {
-                            background: c.r.Alt,
-                            display: c.X.Flex,
-                            justifyContent: c.Xa.Center,
+                            fontSize: u.Ca.Size4
+                        }, t.props.deleteModalMessage)), o.createElement(u.Fb, {
+                            background: u.r.Alt,
+                            display: u.X.Flex,
+                            justifyContent: u.Xa.Center,
                             padding: 2
-                        }, i.createElement(c.Ya, {
+                        }, o.createElement(u.Ya, {
                             margin: {
                                 right: .5
                             }
-                        }, i.createElement(c.z, {
+                        }, o.createElement(u.z, {
                             onClick: e,
-                            type: c.F.Hollow
-                        }, Object(o.e)("Cancel", "MultiviewMoreBalloon"))), i.createElement(c.Ya, {
+                            type: u.F.Hollow
+                        }, Object(i.e)("Cancel", "MultiviewMoreBalloon"))), o.createElement(u.Ya, {
                             margin: {
                                 left: 1
                             }
-                        }, i.createElement(c.z, {
+                        }, o.createElement(u.z, {
                             "data-test-selector": n.DeleteConfirm,
                             onClick: t.onDeleteClick.bind(t, e)
-                        }, Object(o.e)("Delete", "MultiviewMoreBalloon")))), i.createElement(l.a, {
+                        }, Object(i.e)("Delete", "MultiviewMoreBalloon")))), o.createElement(s.a, {
                             closeOnBackdropClick: !0
                         }))
                     }, t.onDeleteClick = function(e) {
@@ -302,97 +302,263 @@
                     }, t
                 }
                 return r.__extends(t, e), t.prototype.render = function() {
-                    return i.createElement(c.Ya, {
+                    return o.createElement(u.Ya, {
                         margin: {
                             right: .5
                         }
-                    }, i.createElement(s.a, null, i.createElement(c.z, {
-                        icon: c.ub.More,
-                        type: c.F.Text
-                    }), i.createElement(c.u, {
-                        direction: this.props.last ? c.v.TopRight : c.v.BottomRight,
+                    }, o.createElement(l.a, {
+                        hideBalloonOnInsideClick: !0
+                    }, o.createElement(u.z, {
+                        icon: u.ub.More,
+                        type: u.F.Text
+                    }), o.createElement(u.u, {
+                        direction: this.props.last ? u.v.TopRight : u.v.BottomRight,
                         tailOffset: 8
-                    }, this.props.onEdit && i.createElement(c.Va, {
+                    }, this.props.onEdit && o.createElement(u.Va, {
                         onClick: this.props.onEdit,
                         "data-test-selector": n.Edit
-                    }, i.createElement(c.Ya, {
+                    }, o.createElement(u.Ya, {
                         className: "more-balloon__balloon-item",
                         padding: {
                             x: 1,
                             y: 1
                         },
-                        display: c.X.Flex,
-                        alignItems: c.f.Center
-                    }, i.createElement(c.tb, {
-                        asset: c.ub.Edit,
-                        type: c.vb.Brand
-                    }), i.createElement(c.Ya, {
+                        display: u.X.Flex,
+                        alignItems: u.f.Center
+                    }, o.createElement(u.tb, {
+                        asset: u.ub.Edit,
+                        type: u.vb.Brand
+                    }), o.createElement(u.Ya, {
                         margin: {
                             left: 1
                         }
-                    }, Object(o.e)("Edit", "MultiviewMoreBalloon")))), this.renderDeleteButton())))
+                    }, Object(i.e)("Edit", "MultiviewMoreBalloon")))), this.renderDeleteButton())))
                 }, t
-            }(i.Component);
+            }(o.Component);
             a.d(t, !1, function() {
                 return n
             }), a.d(t, "a", function() {
-                return m
+                return d
+            })
+        },
+        GIun: function(e, t, a) {
+            "use strict";
+            var n = a("q1tI"),
+                r = function(e) {
+                    var t = n.Children.only(e.children);
+                    return n.cloneElement(t, {
+                        "data-selectable": !0,
+                        tabIndex: -1
+                    })
+                };
+            a.d(t, "a", function() {
+                return r
             })
         },
         Lxz1: function(e, t, a) {
             "use strict";
             a.d(t, "f", function() {
-                return o
+                return i
             }), a.d(t, "g", function() {
-                return l
-            }), a.d(t, "e", function() {
                 return s
+            }), a.d(t, "e", function() {
+                return l
             }), a.d(t, "c", function() {
-                return u
-            }), a.d(t, "a", function() {
                 return c
+            }), a.d(t, "a", function() {
+                return u
             }), a.d(t, "d", function() {
-                return m
+                return d
             }), a.d(t, "b", function() {
-                return p
+                return m
             });
             var n, r = a("/7QA"),
-                i = a("2/NB"),
-                o = function(e, t) {
+                o = a("2/NB"),
+                i = function(e, t) {
                     return Object(r.d)("Recommended image size: {imageDimensions} and less than {imageFileMegabytes, number}MB", {
                         imageDimensions: e,
                         imageFileMegabytes: t
                     }, "ImageUploader")
                 },
-                l = function(e, t) {
+                s = function(e, t) {
                     return Object(r.d)("Required image size: {imageDimensions} and less than {imageFileMegabytes, number}MB", {
                         imageDimensions: e,
                         imageFileMegabytes: t
                     }, "ImageUploader")
                 },
-                s = function(e) {
+                l = function(e) {
                     return Object(r.d)("Couldn't upload image. Request returned {statusCode, number}", {
                         statusCode: e
                     }, "ImageUploader")
                 },
-                u = function() {
+                c = function() {
                     return Object(r.d)("The provided image does not have the required dimensions.", "ImageUploader")
                 },
-                c = function() {
+                u = function() {
                     return Object(r.d)("File too large.", "ImageUploader")
                 },
-                m = function() {
+                d = function() {
                     return Object(r.d)("Unexpected error while uploading your image. Please try again later", "ImageUploader")
                 },
-                d = ((n = {})[i.a.JPEG] = "JPG", n[i.a.PNG] = "PNG", n[i.a.GIF] = "GIF", n),
-                p = function(e) {
+                p = ((n = {})[o.a.JPEG] = "JPG", n[o.a.PNG] = "PNG", n[o.a.GIF] = "GIF", n),
+                m = function(e) {
                     var t = e.map(function(e) {
-                        return d[e]
+                        return p[e]
                     });
                     return t.length > 1 && (t[t.length - 1] = "or " + t[t.length - 1]), Object(r.d)("Incompatible format. File must be an image in {allowedTypes} format.", {
                         allowedTypes: t.join(", ")
                     }, "ImageUploader")
                 }
+        },
+        N3I0: function(e, t, a) {
+            "use strict";
+            var n = a("mrSG"),
+                r = a("q1tI"),
+                o = a("u5aL"),
+                i = a("/7QA"),
+                s = a("Ue10"),
+                l = function() {
+                    return r.createElement(s.Ya, {
+                        display: s.X.Flex,
+                        flexDirection: s.Aa.Column,
+                        justifyContent: s.Xa.Center,
+                        alignItems: s.f.Center,
+                        flexGrow: 1,
+                        fullHeight: !0,
+                        padding: {
+                            y: 1
+                        },
+                        zIndex: s.jc.Above
+                    }, r.createElement(s.Fb, {
+                        color: s.O.Alt2,
+                        textAlign: s.Sb.Center,
+                        flexShrink: 1
+                    }, r.createElement(s.tb, {
+                        asset: s.ub.DeadGlitch,
+                        width: 46,
+                        height: 48
+                    })), r.createElement(s.Qa, {
+                        margin: {
+                            top: 1
+                        },
+                        textAlign: s.Sb.Center
+                    }, r.createElement(s.W, {
+                        type: s.Wb.H4,
+                        "data-test-selector": "search-error-message"
+                    }, Object(i.d)("Search is not available at this time", "DropdownSearchError"))), r.createElement(s.W, {
+                        type: s.Wb.P
+                    }, Object(i.d)("Please try again later", "DropdownSearchError")))
+                },
+                c = a("8Ad5"),
+                u = function(e) {
+                    function t() {
+                        var t = null !== e && e.apply(this, arguments) || this;
+                        return t.state = {
+                            focusSelectable: !1,
+                            isInputFocused: !1,
+                            isOpen: !1
+                        }, t.handleChange = function(e) {
+                            t.props.onChange(e.target.value)
+                        }, t.handleFocus = function() {
+                            t.props.onFocusInput && t.props.onFocusInput(), t.setState({
+                                isInputFocused: !0
+                            })
+                        }, t.handleBlur = function() {
+                            t.setState({
+                                isInputFocused: !1
+                            })
+                        }, t.onKeyDown = function(e) {
+                            var a = function() {
+                                e.preventDefault(), e.stopPropagation()
+                            };
+                            e.keyCode === c.a.Esc ? t.setState({
+                                isOpen: !1
+                            }) : e.keyCode === c.a.Up ? (a(), t.focusNext(-1)) : e.keyCode === c.a.Down && (a(), t.focusNext(1))
+                        }, t.onClickOut = function() {
+                            t.state.isOpen && t.setState({
+                                isOpen: !1
+                            }), t.props.onClose && t.props.onClose()
+                        }, t.onMouseOver = function(e) {
+                            var a = e.target.closest("[data-selectable]");
+                            a && (a.focus(), a.tabIndex = 0, t.state.currentFocus && (t.state.currentFocus.tabIndex = -1), t.setState({
+                                currentFocus: a
+                            }), t.props.onFocusChange && t.props.onFocusChange(a))
+                        }, t.getInputRef = function(e) {
+                            t.inputRef = e
+                        }, t
+                    }
+                    return n.__extends(t, e), t.prototype.render = function() {
+                        var e = void 0 === this.props.showDropdown || this.props.showDropdown,
+                            t = this.props.isErrored ? r.createElement(l, null) : r.Children.only(this.props.children),
+                            a = r.createElement(s.wb, {
+                                onChange: this.handleChange,
+                                onKeyDown: this.onKeyDown,
+                                onBlur: this.handleBlur,
+                                onFocus: this.handleFocus,
+                                placeholder: this.props.placeholder,
+                                id: "nav-search-input",
+                                "data-a-target": "nav-search-input",
+                                spellCheck: !1,
+                                refDelegate: this.getInputRef,
+                                size: this.props.inputSize,
+                                autoFocus: this.props.autoFocus
+                            });
+                        return this.props.inline ? r.createElement(o.a, {
+                            onClickOut: this.onClickOut
+                        }, r.createElement(s.Fb, {
+                            background: this.state.isInputFocused || this.state.isOpen ? s.r.Base : void 0,
+                            borderRadius: s.x.Large,
+                            padding: .5,
+                            position: s.kb.Relative,
+                            elevation: this.state.isInputFocused || this.state.isOpen ? 3 : void 0
+                        }, a, e && r.createElement(s.Fb, {
+                            attachLeft: !0,
+                            background: s.r.Base,
+                            borderRadius: s.x.Large,
+                            display: this.state.isOpen ? s.X.Block : s.X.Hide,
+                            fullWidth: !0,
+                            padding: {
+                                y: 1
+                            },
+                            position: s.kb.Absolute,
+                            zIndex: s.jc.Above,
+                            elevation: 3
+                        }, r.createElement("div", {
+                            tabIndex: 0,
+                            onKeyDown: this.onKeyDown,
+                            onMouseOver: this.props.enableMouseEvents ? this.onMouseOver : void 0
+                        }, t)))) : r.createElement(o.a, {
+                            onClickOut: this.onClickOut
+                        }, a, e && r.createElement(s.u, n.__assign({
+                            noTail: !0
+                        }, this.props.balloonProps, {
+                            show: this.state.isOpen
+                        }), r.createElement("div", {
+                            tabIndex: 0,
+                            onKeyDown: this.onKeyDown,
+                            onMouseOver: this.props.enableMouseEvents ? this.onMouseOver : void 0
+                        }, t)))
+                    }, t.prototype.toggle = function(e) {
+                        e !== this.state.isOpen && this.setState({
+                            isOpen: e
+                        })
+                    }, t.prototype.setValue = function(e) {
+                        this.inputRef.value = e
+                    }, t.prototype.focusNext = function(e) {
+                        var t, a = document.querySelectorAll("[data-selectable=true]"),
+                            n = document.activeElement,
+                            r = Array.prototype.indexOf.call(a, n);
+                        if ((t = r < 0 ? e > 0 ? 0 : a.length - 1 : r + e) < 0 && (t = 0), !(t >= a.length)) {
+                            var o = a.item(t);
+                            o.focus(), o.tabIndex = 0, this.state.currentFocus && (this.state.currentFocus.tabIndex = -1), this.setState({
+                                currentFocus: o
+                            }), this.props.onFocusChange && this.props.onFocusChange(o)
+                        }
+                    }, t
+                }(r.Component);
+            a.d(t, "a", function() {
+                return u
+            })
         },
         PZVp: function(e, t, a) {
             "use strict";
@@ -519,29 +685,30 @@
                     e.Group = "Group", e.Team = "Team", e.Player = "Player", e.Role = "Role"
                 }(r || (r = {}))
         },
+        kcKo: function(e, t, a) {},
         khW5: function(e, t, a) {},
         sL9O: function(e, t, a) {},
         vD5X: function(e, t, a) {
             "use strict";
             a.r(t);
             var n, r = a("mrSG"),
-                i = a("q1tI"),
-                o = a("fvjX"),
-                l = a("/7QA"),
-                s = a("GnwI"),
-                u = a("IFXb"),
-                c = a("8/mp"),
-                m = a("/ZC1"),
-                d = a("yR8l"),
-                p = a("geRD"),
+                o = a("q1tI"),
+                i = a("fvjX"),
+                s = a("/7QA"),
+                l = a("GnwI"),
+                c = a("IFXb"),
+                u = a("8/mp"),
+                d = a("/ZC1"),
+                p = a("yR8l"),
+                m = a("geRD"),
                 g = a("CDtL"),
                 f = a("Ue10"),
-                b = a("hoVs"),
-                E = (a("khW5"), ["image/*"]);
+                h = a("hoVs"),
+                b = (a("khW5"), ["image/*"]);
             ! function(e) {
                 e.Container = "content-attribute-image-uploader__test__container", e.InfoText = "content-attribute-image-uploader__test__info-text", e.PreviewImage = "content-attribute-image-uploader__test__preview-image"
             }(n || (n = {}));
-            var h, I = function(e) {
+            var E, y = function(e) {
                     function t() {
                         var t = null !== e && e.apply(this, arguments) || this;
                         return t.state = {
@@ -549,16 +716,16 @@
                             imageURL: t.props.existingImageURL
                         }, t.getPreviewImage = function() {
                             var e = null;
-                            if (t.state.imageURL) e = i.createElement(f.Ya, null, i.createElement(f.S, {
+                            if (t.state.imageURL) e = o.createElement(f.Ya, null, o.createElement(f.S, {
                                 "data-test-selector": n.PreviewImage,
                                 src: t.state.imageURL,
                                 alt: t.state.imageURL
                             }));
                             else {
                                 var a = "";
-                                t.state.uploading && (a = "content-attribute-image-uploader__upload-svg--anim-fill"), e = i.createElement(f.Ya, {
+                                t.state.uploading && (a = "content-attribute-image-uploader__upload-svg--anim-fill"), e = o.createElement(f.Ya, {
                                     className: a
-                                }, i.createElement(f.tb, {
+                                }, o.createElement(f.tb, {
                                     "data-test-selector": n.PreviewImage,
                                     asset: f.ub.Upload,
                                     type: f.vb.Alt2,
@@ -597,7 +764,7 @@
                                 return r.__generator(this, function(a) {
                                     switch (a.label) {
                                         case 0:
-                                            return [4, this.props.createImageUploadConfig(Object(p.a)({
+                                            return [4, this.props.createImageUploadConfig(Object(m.a)({
                                                 channelID: this.props.channelID
                                             }))];
                                         case 1:
@@ -634,26 +801,26 @@
                         }, t
                     }
                     return r.__extends(t, e), t.prototype.render = function() {
-                        return i.createElement(f.Ya, {
+                        return o.createElement(f.Ya, {
                             className: "content-attribute-image-uploader",
                             display: f.X.InlineBlock,
                             position: f.kb.Relative,
                             textAlign: f.Sb.Left
-                        }, i.createElement(f.Ya, {
+                        }, o.createElement(f.Ya, {
                             className: "content-attribute-image-uploader__container",
                             "data-test-selector": n.Container,
                             textAlign: f.Sb.Left
-                        }, i.createElement(m.a, {
-                            allowedFileTypes: E,
+                        }, o.createElement(d.a, {
+                            allowedFileTypes: b,
                             onFilesSubmitted: this.onImageInputChange
-                        }, i.createElement(f.Fb, {
+                        }, o.createElement(f.Fb, {
                             display: f.X.Flex,
                             alignItems: f.f.Start
-                        }, i.createElement(f.Qa, {
+                        }, o.createElement(f.Qa, {
                             className: "content-attribute-image-uploader__preview-image",
                             display: f.X.Flex,
                             margin: 1
-                        }, this.getPreviewImage()), i.createElement(f.Ya, {
+                        }, this.getPreviewImage()), o.createElement(f.Ya, {
                             className: "content-attribute-image-uploader__info-text",
                             "data-test-selector": n.InfoText,
                             display: f.X.Flex,
@@ -662,181 +829,326 @@
                             textAlign: f.Sb.Left,
                             margin: 1,
                             padding: 2
-                        }, i.createElement(f.W, {
+                        }, o.createElement(f.W, {
                             fontSize: f.Ca.Size5
-                        }, Object(l.e)("Drag and drop or select file to upload", "MultiviewContentAttributeImageUploader")), i.createElement(f.W, {
+                        }, Object(s.e)("Drag and drop or select file to upload", "MultiviewContentAttributeImageUploader")), o.createElement(f.W, {
                             fontSize: f.Ca.Size6
                         }, this.props.hintMessage))))))
                     }, t
-                }(i.Component),
-                v = Object(o.compose)(Object(d.a)(b, {
+                }(o.Component),
+                v = Object(i.compose)(Object(p.a)(h, {
                     name: "createImageUploadConfig"
-                }))(I),
-                _ = a("CS6u"),
-                T = a("il7S");
+                }))(y),
+                I = a("GIun"),
+                T = a("vV5t"),
+                _ = a("Driw");
+            a("kcKo");
+            ! function(e) {
+                e.Container = "player-association-list__container", e.AddPlayerButton = "player-association-list__add_player", e.SelectedPlayersRow = "player-association-list__selected_players_row", e.DropdownPlayersRow = "player-association-list__dropdown_players_row", e.NoPlayersMessage = "player-association-list__no_players_message"
+            }(E || (E = {}));
+            var S, C = function(e) {
+                    function t(t) {
+                        var a = e.call(this, t) || this;
+                        return a.state = {
+                            players: new Set,
+                            playersMap: new Map,
+                            playerSearchTerm: ""
+                        }, a.filterPlayersBySearchTerm = function(e) {
+                            return a.props.availablePlayers.filter(function(t) {
+                                return t.value.toLowerCase().indexOf(e.toLowerCase()) > -1
+                            })
+                        }, a.renderPlayersRows = function() {
+                            return 0 === a.state.playersMap.size ? o.createElement(f.Fb, {
+                                background: f.r.Base,
+                                elevation: 1,
+                                alignItems: f.f.Center,
+                                justifyContent: f.Xa.Between,
+                                display: f.X.Flex,
+                                flexDirection: f.Aa.Row,
+                                margin: {
+                                    bottom: 1
+                                }
+                            }, o.createElement(f.Ya, {
+                                fullWidth: !0,
+                                padding: 2,
+                                alignItems: f.f.Center,
+                                textAlign: f.Sb.Center
+                            }, o.createElement(f.W, {
+                                "data-test-selector": E.NoPlayersMessage,
+                                fontSize: f.Ca.Size4
+                            }, Object(s.e)("No players on this team", "EditTeamPlayerAssociation")))) : Array.from(a.state.playersMap.values()).map(function(e, t) {
+                                return o.createElement(f.Fb, {
+                                    background: f.r.Base,
+                                    elevation: 1,
+                                    alignItems: f.f.Center,
+                                    justifyContent: f.Xa.Between,
+                                    display: f.X.Flex,
+                                    flexDirection: f.Aa.Row,
+                                    margin: {
+                                        bottom: 1
+                                    },
+                                    key: t,
+                                    "data-test-selector": E.SelectedPlayersRow
+                                }, o.createElement(f.Ya, {
+                                    flexDirection: f.Aa.Column,
+                                    padding: 2,
+                                    flexGrow: 1
+                                }, o.createElement(f.W, {
+                                    fontSize: f.Ca.Size4
+                                }, e.value)), o.createElement(_.a, {
+                                    onDelete: a.removePlayer.bind(a, e),
+                                    last: 0 !== t && t === a.state.playersMap.size - 1
+                                }))
+                            })
+                        }, a.renderPlayersDropdown = function() {
+                            var e = a.filterPlayersBySearchTerm(a.state.playerSearchTerm);
+                            return 0 === e.length ? o.createElement(f.Ya, {
+                                padding: 1
+                            }, o.createElement(f.W, null, Object(s.e)("No players available", "EditTeamPlayerAssociation"))) : e.map(function(e, t) {
+                                return o.createElement(I.a, {
+                                    key: t
+                                }, o.createElement(f.Va, {
+                                    onClick: a.onSelectPlayer.bind(a, e),
+                                    selected: a.isPlayerSelected(e),
+                                    border: !1,
+                                    borderRadius: f.x.None
+                                }, o.createElement(f.Ya, {
+                                    padding: 1
+                                }, o.createElement(f.W, {
+                                    "data-test-selector": E.DropdownPlayersRow
+                                }, "" + e.value))))
+                            })
+                        }, a.onSelectPlayer = function(e) {
+                            a.state.playersMap.has(e.id) || (a.setState(function(t) {
+                                return {
+                                    playersMap: t.playersMap.set(e.id, e)
+                                }
+                            }), a.props.addPlayerAssociation(e))
+                        }, a.onPlayerInputChange = function(e) {
+                            a.setState({
+                                playerSearchTerm: e
+                            })
+                        }, a.removePlayer = function(e) {
+                            a.setState(function(t) {
+                                return {
+                                    playersMap: function(e, t) {
+                                        return e.delete(t), e
+                                    }(t.playersMap, e.id)
+                                }
+                            }), a.props.removePlayerAssociation(e)
+                        }, a.isPlayerSelected = function(e) {
+                            return a.state.playersMap.has(e.id)
+                        }, a.props.team && a.props.availablePlayers.forEach(function(e) {
+                            a.props.team && e.parentID === a.props.team.id && a.state.playersMap.set(e.id, e)
+                        }), a
+                    }
+                    return r.__extends(t, e), t.prototype.render = function() {
+                        return o.createElement(f.Ya, {
+                            fullHeight: !0,
+                            className: "player-association-list",
+                            "data-test-selector": E.Container,
+                            "padding-bottom": 5
+                        }, o.createElement(f.Ya, {
+                            className: "player-association-list__players-dropdown",
+                            "data-test-selector": E.AddPlayerButton,
+                            display: f.X.Flex,
+                            alignItems: f.f.Center,
+                            justifyContent: f.Xa.Between
+                        }, o.createElement(f.Ya, null, o.createElement(f.W, {
+                            fontSize: f.Ca.Size6
+                        }, Object(s.e)("Players", "EditTeamPlayerAssociation"))), o.createElement(T.a, {
+                            onChange: this.onPlayerInputChange,
+                            balloonDirection: f.v.BottomRight,
+                            buttonText: Object(s.e)("Add Player", "EditTeamPlayerAssociation"),
+                            ref: this.state.playerSearchTerm
+                        }, this.renderPlayersDropdown())), o.createElement(f.Ya, {
+                            className: "player-association-list__players-rows",
+                            margin: {
+                                top: 2
+                            }
+                        }, this.renderPlayersRows()))
+                    }, t
+                }(o.Component),
+                A = Object(i.compose)()(C),
+                D = a("CS6u"),
+                w = a("il7S");
             ! function(e) {
                 e.Cancel = "edit-team-modal__cancel", e.Save = "edit-team-modal__save", e.Value = "edit-team-modal__value", e.ValueForm = "edit-team-modal__value-form", e.ImageUploader = "edit-team-modal__image-uploader"
-            }(h || (h = {}));
-            var S, D = function(e) {
-                    function t() {
-                        var t = null !== e && e.apply(this, arguments) || this;
-                        return t.state = {
-                            isSaving: !1,
-                            isUploadingImage: !1,
-                            errorMessage: "",
-                            team: {
-                                __typename: "MultiviewContentAttribute",
-                                id: "",
-                                key: T.a.Team,
-                                name: T.b.Team,
-                                parentID: null,
-                                parentKey: null,
-                                value: "",
-                                valueShortName: "",
-                                imageURL: "",
-                                createdAt: "",
-                                updatedAt: ""
-                            }
-                        }, t.onTeamNameChange = function(e) {
-                            var a = e.target.value,
-                                n = r.__assign({}, t.state.team, {
-                                    value: a
-                                });
-                            t.setState({
-                                team: n
-                            })
-                        }, t.validTeamName = function() {
-                            return !!t.state.team.value
-                        }, t.canSave = function() {
-                            return !t.state.isSaving && !t.state.isUploadingImage && t.validTeamName()
-                        }, t.onSave = function() {
-                            return r.__awaiter(t, void 0, void 0, function() {
-                                var e, t;
-                                return r.__generator(this, function(a) {
-                                    switch (a.label) {
-                                        case 0:
-                                            if (!this.validTeamName()) return [2];
-                                            this.setState({
-                                                isSaving: !0
-                                            }), e = "", a.label = 1;
-                                        case 1:
-                                            return a.trys.push([1, 3, , 4]), [4, this.props.onSave(this.state.team)];
-                                        case 2:
-                                            return a.sent(), [3, 4];
-                                        case 3:
-                                            return t = a.sent(), l.k.error(t, "Error updating team"), e = Object(l.e)("There was a problem saving this team", "EditTeamModal"), [3, 4];
-                                        case 4:
-                                            return this.setState({
-                                                isSaving: !1,
-                                                errorMessage: e
-                                            }), [2]
-                                    }
-                                })
-                            })
-                        }, t.uploadingImageURL = function() {
-                            t.setState({
-                                isUploadingImage: !0
-                            })
-                        }, t.addImageURL = function(e) {
-                            var a = r.__assign({}, t.state.team, {
-                                imageURL: e
+            }(S || (S = {}));
+            var O, F = function(e) {
+                function t() {
+                    var t = null !== e && e.apply(this, arguments) || this;
+                    return t.state = {
+                        isSaving: !1,
+                        isUploadingImage: !1,
+                        errorMessage: "",
+                        team: {
+                            __typename: "MultiviewContentAttribute",
+                            id: "",
+                            key: w.a.Team,
+                            name: w.b.Team,
+                            parentID: null,
+                            parentKey: null,
+                            value: "",
+                            valueShortName: "",
+                            imageURL: "",
+                            createdAt: "",
+                            updatedAt: ""
+                        },
+                        playersToAdd: [],
+                        playersToRemove: []
+                    }, t.playersToAssign = new Map, t.playersToUnAssign = new Map, t.onTeamNameChange = function(e) {
+                        var a = e.target.value,
+                            n = r.__assign({}, t.state.team, {
+                                value: a
                             });
-                            t.setState({
-                                team: a,
-                                isUploadingImage: !1
-                            })
-                        }, t.handleImageUploadFailure = function(e) {
-                            l.k.error(e, "Failed to upload image via upload service");
-                            var a = Object(l.e)("There was a problem uploading the team icon", "EditTeamModal");
-                            t.setState({
-                                isUploadingImage: !1,
-                                errorMessage: a
-                            })
-                        }, t
-                    }
-                    return r.__extends(t, e), t.prototype.componentDidMount = function() {
-                        this.props.team && this.setState({
-                            team: this.props.team
+                        t.setState({
+                            team: n
                         })
-                    }, t.prototype.render = function() {
-                        var e = this.state.team;
-                        return i.createElement(_.a, {
-                            isOpen: !0
-                        }, i.createElement(f.Ya, {
-                            className: "edit-team-modal"
-                        }, i.createElement(f.Fb, {
-                            display: f.X.Flex,
-                            padding: {
-                                bottom: 2
-                            },
-                            margin: {
-                                bottom: 2
-                            },
-                            justifyContent: f.Xa.Between,
-                            borderBottom: !0
-                        }, i.createElement(f.Ya, {
-                            flexGrow: 0,
-                            flexShrink: 1
-                        }, i.createElement(f.W, {
-                            type: f.Wb.H3
-                        }, Object(l.e)("Edit Team", "EditTeamModal"))), i.createElement(f.Ya, {
-                            flexGrow: 0,
-                            flexShrink: 0
-                        }, i.createElement(f.z, {
-                            onClick: this.props.onClose,
-                            "data-test-selector": h.Cancel,
-                            type: f.F.Text
-                        }, Object(l.e)("Cancel", "EditTeamModal")), i.createElement(f.Ya, {
-                            margin: {
-                                left: 1
-                            },
-                            display: f.X.InlineBlock
-                        }, i.createElement(f.z, {
-                            onClick: this.onSave,
-                            "data-test-selector": h.Save,
-                            disabled: !this.canSave()
-                        }, Object(l.e)("Save", "EditTeamModal"))))), i.createElement(c.b, null, i.createElement(f.Ya, null, i.createElement(f.Ya, {
-                            padding: {
-                                right: 2
-                            },
-                            margin: {
-                                bottom: 2
-                            }
-                        }, i.createElement(f.Ea, {
-                            id: "team-name",
-                            "data-test-selector": h.ValueForm,
-                            label: Object(l.e)("Team Name", "EditTeamModal"),
-                            error: !this.validTeamName(),
-                            errorMessage: Object(l.e)("Must provide a team name", "EditTeamModal")
-                        }, i.createElement(f.Ya, {
-                            className: "edit-team-modal__team-name-input"
-                        }, i.createElement(f.Sa, {
-                            type: f.Ua.Text,
-                            "data-test-selector": h.Value,
-                            onChange: this.onTeamNameChange,
-                            value: e.value
-                        })))), i.createElement(f.Ya, {
-                            padding: {
-                                right: 2
-                            }
-                        }, i.createElement(f.Ea, {
-                            label: Object(l.e)("Team Icon", "EditTeamModal")
-                        }, i.createElement(v, {
-                            "data-test-selector": h.ImageUploader,
-                            channelID: this.props.channelID,
-                            onSuccess: this.addImageURL,
-                            onLoading: this.uploadingImageURL,
-                            onError: this.handleImageUploadFailure,
-                            existingImageURL: this.state.team.imageURL,
-                            hintMessage: Object(l.e)("Recommended size: 112 x 112, and less than 100kb", "EditTeamModal")
-                        })), this.state.errorMessage && i.createElement(f.Da, {
-                            errorMessage: this.state.errorMessage
-                        }))))))
+                    }, t.validTeamName = function() {
+                        return !!t.state.team.value
+                    }, t.canSave = function() {
+                        return !t.state.isSaving && !t.state.isUploadingImage && t.validTeamName()
+                    }, t.onSave = function() {
+                        return r.__awaiter(t, void 0, void 0, function() {
+                            var e, t;
+                            return r.__generator(this, function(a) {
+                                switch (a.label) {
+                                    case 0:
+                                        if (!this.validTeamName()) return [2];
+                                        this.setState({
+                                            isSaving: !0
+                                        }), e = "", a.label = 1;
+                                    case 1:
+                                        return a.trys.push([1, 3, , 4]), [4, this.props.onSave(this.state.team, Array.from(this.playersToAssign.values()), Array.from(this.playersToUnAssign.values()))];
+                                    case 2:
+                                        return a.sent(), [3, 4];
+                                    case 3:
+                                        return t = a.sent(), s.k.error(t, "Error updating team"), e = Object(s.e)("There was a problem saving this team", "EditTeamModal"), [3, 4];
+                                    case 4:
+                                        return this.setState({
+                                            isSaving: !1,
+                                            errorMessage: e
+                                        }), [2]
+                                }
+                            })
+                        })
+                    }, t.uploadingImageURL = function() {
+                        t.setState({
+                            isUploadingImage: !0
+                        })
+                    }, t.addImageURL = function(e) {
+                        var a = r.__assign({}, t.state.team, {
+                            imageURL: e
+                        });
+                        t.setState({
+                            team: a,
+                            isUploadingImage: !1
+                        })
+                    }, t.handleImageUploadFailure = function(e) {
+                        s.k.error(e, "Failed to upload image via upload service");
+                        var a = Object(s.e)("There was a problem uploading the team icon", "EditTeamModal");
+                        t.setState({
+                            isUploadingImage: !1,
+                            errorMessage: a
+                        })
+                    }, t.assignPlayer = function(e) {
+                        t.playersToUnAssign.has(e.id) ? t.playersToUnAssign.delete(e.id) : t.playersToAssign.set(e.id, e)
+                    }, t.unassignPlayer = function(e) {
+                        t.playersToAssign.has(e.id) ? t.playersToAssign.delete(e.id) : t.playersToUnAssign.set(e.id, e)
                     }, t
-                }(i.Component),
-                A = a("Driw");
-            (S || (S = {})).EmptyList = "teams-tab__empty-list";
-            var C = function(e) {
+                }
+                return r.__extends(t, e), t.prototype.componentDidMount = function() {
+                    this.props.team && this.setState({
+                        team: this.props.team
+                    })
+                }, t.prototype.render = function() {
+                    var e = this.state.team;
+                    return o.createElement(D.a, {
+                        isOpen: !0
+                    }, o.createElement(u.b, null, o.createElement(f.Ya, {
+                        padding: {
+                            right: 2
+                        },
+                        className: "edit-team-modal",
+                        display: f.X.Flex,
+                        flexDirection: f.Aa.Column
+                    }, o.createElement(f.Fb, {
+                        display: f.X.Flex,
+                        padding: {
+                            bottom: 2
+                        },
+                        margin: {
+                            bottom: 2
+                        },
+                        justifyContent: f.Xa.Between,
+                        borderBottom: !0
+                    }, o.createElement(f.Ya, {
+                        flexGrow: 0,
+                        flexShrink: 1
+                    }, o.createElement(f.W, {
+                        type: f.Wb.H3
+                    }, Object(s.e)("Edit Team", "EditTeamModal"))), o.createElement(f.Ya, {
+                        flexGrow: 0,
+                        flexShrink: 0
+                    }, o.createElement(f.z, {
+                        onClick: this.props.onClose,
+                        "data-test-selector": S.Cancel,
+                        type: f.F.Text
+                    }, Object(s.e)("Cancel", "EditTeamModal")), o.createElement(f.Ya, {
+                        margin: {
+                            left: 1
+                        },
+                        display: f.X.InlineBlock
+                    }, o.createElement(f.z, {
+                        onClick: this.onSave,
+                        "data-test-selector": S.Save,
+                        disabled: !this.canSave()
+                    }, Object(s.e)("Save", "EditTeamModal"))))), o.createElement(f.Ya, {
+                        margin: {
+                            bottom: 2
+                        }
+                    }, o.createElement(f.Ea, {
+                        id: "team-name",
+                        "data-test-selector": S.ValueForm,
+                        label: Object(s.e)("Team Name", "EditTeamModal"),
+                        error: !this.validTeamName(),
+                        errorMessage: Object(s.e)("Must provide a team name", "EditTeamModal")
+                    }, o.createElement(f.Ya, {
+                        className: "edit-team-modal__team-name-input"
+                    }, o.createElement(f.Sa, {
+                        type: f.Ua.Text,
+                        "data-test-selector": S.Value,
+                        onChange: this.onTeamNameChange,
+                        value: e.value
+                    })))), o.createElement(f.Ya, {
+                        margin: {
+                            bottom: 2
+                        }
+                    }, o.createElement(f.Ea, {
+                        label: Object(s.e)("Team Icon", "EditTeamModal"),
+                        error: "" !== this.state.errorMessage,
+                        errorMessage: this.state.errorMessage
+                    }, o.createElement(v, {
+                        "data-test-selector": S.ImageUploader,
+                        channelID: this.props.channelID,
+                        onSuccess: this.addImageURL,
+                        onLoading: this.uploadingImageURL,
+                        onError: this.handleImageUploadFailure,
+                        existingImageURL: this.state.team.imageURL,
+                        hintMessage: Object(s.e)("Recommended size: 112 x 112, and less than 100kb", "EditTeamModal")
+                    }))), o.createElement(f.Ya, {
+                        flexGrow: 1
+                    }, o.createElement(A, {
+                        team: this.props.team,
+                        availablePlayers: this.props.players || [],
+                        addPlayerAssociation: this.assignPlayer,
+                        removePlayerAssociation: this.unassignPlayer
+                    })))))
+                }, t
+            }(o.Component);
+            (O || (O = {})).EmptyList = "teams-tab__empty-list";
+            var M = function(e) {
                     function t() {
                         var t = null !== e && e.apply(this, arguments) || this;
                         return t.state = {
@@ -845,19 +1157,29 @@
                             isSaving: !1
                         }, t.filteredTeamContentAttributes = function() {
                             return t.props.availableContentAttributes.filter(function(e) {
-                                return e.key === T.a.Team
+                                return e.key === w.a.Team
+                            })
+                        }, t.filterUnassignedPlayerContentAttributes = function() {
+                            return t.props.availableContentAttributes.filter(function(e) {
+                                return e.key === w.a.Player && !e.parentID
+                            })
+                        }, t.filterPlayerContentAttributesByTeam = function(e) {
+                            return t.props.availableContentAttributes.filter(function(t) {
+                                return t.key === w.a.Player && t.parentKey === w.a.Team && t.parentID === e
                             })
                         }, t.renderCreateTeamModal = function() {
-                            if (t.state.isAddingTeam) return i.createElement(D, {
+                            if (t.state.isAddingTeam) return o.createElement(F, {
                                 channelID: t.props.channelID,
                                 team: null,
+                                players: t.filterUnassignedPlayerContentAttributes(),
                                 onClose: t.cancelAddingTeam,
                                 onSave: t.createTeam
                             })
                         }, t.renderEditTeamModal = function() {
-                            if (t.state.team) return i.createElement(D, {
+                            if (t.state.team) return o.createElement(F, {
                                 channelID: t.props.channelID,
                                 team: t.state.team,
+                                players: t.filterUnassignedPlayerContentAttributes().concat(t.filterPlayerContentAttributesByTeam(t.state.team.id)),
                                 onClose: t.closeTeamModal,
                                 onSave: t.updateTeam
                             })
@@ -879,25 +1201,27 @@
                             })
                         }, t.validTeamName = function(e) {
                             return !!e.value
-                        }, t.createTeam = function(e) {
+                        }, t.createTeam = function(e, a) {
                             return r.__awaiter(t, void 0, void 0, function() {
-                                var t, a, n;
-                                return r.__generator(this, function(i) {
-                                    switch (i.label) {
+                                var t, n, o, i;
+                                return r.__generator(this, function(l) {
+                                    switch (l.label) {
                                         case 0:
                                             if (!this.validTeamName(e)) return [2];
                                             this.setState({
                                                 isSaving: !0
-                                            }), t = "", i.label = 1;
+                                            }), t = "", l.label = 1;
                                         case 1:
-                                            return i.trys.push([1, 3, , 4]), a = r.__assign({
+                                            return l.trys.push([1, 4, , 5]), n = r.__assign({
                                                 ownerChannelID: this.props.channelID
-                                            }, e), [4, this.props.createContentAttributes([a])];
+                                            }, e), [4, this.props.createContentAttributes([n])];
                                         case 2:
-                                            return i.sent(), this.cancelAddingTeam(), [3, 4];
+                                            return o = l.sent(), [4, this.props.updateContentAttributes(this.assignPlayersToTeam(o.succeeded[0], a))];
                                         case 3:
-                                            return n = i.sent(), l.k.error(n, "Error creating team"), t = Object(l.e)("There was a problem creating this team", "TeamsTab"), [3, 4];
+                                            return l.sent(), this.cancelAddingTeam(), [3, 5];
                                         case 4:
+                                            return i = l.sent(), s.k.error(i, "Error creating team"), t = Object(s.e)("There was a problem creating this team", "TeamsTab"), [3, 5];
+                                        case 5:
                                             return this.setState({
                                                 isSaving: !1,
                                                 errorMessage: t
@@ -905,24 +1229,32 @@
                                     }
                                 })
                             })
-                        }, t.updateTeam = function(e) {
+                        }, t.updateTeam = function(e, a, n) {
                             return r.__awaiter(t, void 0, void 0, function() {
-                                var t, a, n;
-                                return r.__generator(this, function(i) {
-                                    switch (i.label) {
+                                var t, o, i, l;
+                                return r.__generator(this, function(r) {
+                                    switch (r.label) {
                                         case 0:
                                             if (!this.validTeamName(e)) return [2];
                                             this.setState({
                                                 isSaving: !0
-                                            }), t = "", i.label = 1;
+                                            }), t = "", r.label = 1;
                                         case 1:
-                                            return i.trys.push([1, 3, , 4]), a = r.__assign({
-                                                ownerChannelID: this.props.channelID
-                                            }, e), [4, this.props.updateContentAttributes([a])];
+                                            return r.trys.push([1, 3, , 4]), o = {
+                                                ownerChannelID: this.props.channelID,
+                                                id: e.id,
+                                                key: e.key,
+                                                name: e.name,
+                                                value: e.value,
+                                                valueShortName: e.valueShortName,
+                                                imageURL: e.imageURL,
+                                                parentKey: e.parentKey,
+                                                parentID: e.parentID
+                                            }, i = [o].concat(this.assignPlayersToTeam(e, a)).concat(this.unassignPlayersFromTeam(n)), [4, this.props.updateContentAttributes(i)];
                                         case 2:
-                                            return i.sent(), [3, 4];
+                                            return r.sent(), [3, 4];
                                         case 3:
-                                            return n = i.sent(), l.k.error(n, "Error updating team"), t = Object(l.e)("There was a problem updating this team", "TeamsTab"), [3, 4];
+                                            return l = r.sent(), s.k.error(l, "Error updating team"), t = Object(s.e)("There was a problem updating this team", "TeamsTab"), [3, 4];
                                         case 4:
                                             return this.setState({
                                                 isSaving: !1,
@@ -937,16 +1269,34 @@
                                 return r.__generator(this, function(n) {
                                     switch (n.label) {
                                         case 0:
-                                            return n.trys.push([0, 2, , 3]), [4, this.props.deleteContentAttributes([e.id])];
+                                            return n.trys.push([0, 3, , 4]), [4, this.props.updateContentAttributes(this.unassignPlayersFromTeam(this.filterPlayerContentAttributesByTeam(e.id)))];
                                         case 1:
-                                            return n.sent(), [3, 3];
+                                            return n.sent(), [4, this.props.deleteContentAttributes([e.id])];
                                         case 2:
-                                            return t = n.sent(), l.k.error(t, "Could not delete team"), a = Object(l.e)("There was a problem deleting this team", "TeamsTab"), this.setState({
-                                                errorMessage: a
-                                            }), [3, 3];
+                                            return n.sent(), [3, 4];
                                         case 3:
+                                            return t = n.sent(), s.k.error(t, "Could not delete team"), a = Object(s.e)("There was a problem deleting this team", "TeamsTab"), this.setState({
+                                                errorMessage: a
+                                            }), [3, 4];
+                                        case 4:
                                             return [2]
                                     }
+                                })
+                            })
+                        }, t.assignPlayersToTeam = function(e, a) {
+                            return 0 === a.length ? a : a.map(function(a) {
+                                return r.__assign({}, a, {
+                                    ownerChannelID: t.props.channelID,
+                                    parentKey: w.a.Team,
+                                    parentID: e.id
+                                })
+                            })
+                        }, t.unassignPlayersFromTeam = function(e) {
+                            return 0 === e.length ? e : e.map(function(e) {
+                                return r.__assign({}, e, {
+                                    ownerChannelID: t.props.channelID,
+                                    parentKey: null,
+                                    parentID: null
                                 })
                             })
                         }, t
@@ -958,7 +1308,7 @@
                             t = this.filteredTeamContentAttributes(),
                             a = f.Ca.Size5,
                             n = f.Ca.Size5;
-                        return i.createElement(u.a, null, i.createElement(f.Fb, {
+                        return o.createElement(c.a, null, o.createElement(f.Fb, {
                             display: f.X.Flex,
                             justifyContent: f.Xa.Between,
                             padding: {
@@ -968,14 +1318,14 @@
                                 bottom: 1
                             },
                             borderBottom: !0
-                        }, i.createElement(f.W, {
+                        }, o.createElement(f.W, {
                             type: f.Wb.H4,
                             bold: !0
-                        }, Object(l.e)("Teams", "TeamsTab")), i.createElement(f.Ya, null, i.createElement(f.z, {
+                        }, Object(s.e)("Teams", "TeamsTab")), o.createElement(f.Ya, null, o.createElement(f.z, {
                             icon: f.ub.Plus,
                             type: f.F.Hollow,
                             onClick: this.startAddingNewTeam
-                        }, Object(l.e)("Add Team", "TeamsTab")))), i.createElement(f.Ya, null, i.createElement(f.Ya, {
+                        }, Object(s.e)("Add Team", "TeamsTab")))), o.createElement(f.Ya, null, o.createElement(f.Ya, {
                             display: f.X.Flex,
                             flexGrow: 1,
                             padding: {
@@ -983,27 +1333,27 @@
                                 right: 0,
                                 y: 1
                             }
-                        }, i.createElement(f.P, {
+                        }, o.createElement(f.P, {
                             cols: 5,
                             offset: 1
-                        }, i.createElement(f.W, {
+                        }, o.createElement(f.W, {
                             bold: !0,
                             fontSize: a
-                        }, Object(l.e)("Team Name", "TeamsTab"))), i.createElement(f.P, {
+                        }, Object(s.e)("Team Name", "TeamsTab"))), o.createElement(f.P, {
                             cols: 4
-                        }, i.createElement(f.W, {
+                        }, o.createElement(f.W, {
                             bold: !0,
                             fontSize: a
-                        }, Object(l.e)("Roster", "TeamsTab"))), i.createElement(f.P, {
+                        }, Object(s.e)("Roster", "TeamsTab"))), o.createElement(f.P, {
                             cols: 2
-                        }, i.createElement(f.W, {
+                        }, o.createElement(f.W, {
                             bold: !0,
                             fontSize: a
-                        }, Object(l.e)("Last Modified", "TeamsTab"))))), !t.length && i.createElement(f.W, {
-                            "data-test-selector": S.EmptyList,
+                        }, Object(s.e)("Last Modified", "TeamsTab"))))), !t.length && o.createElement(f.W, {
+                            "data-test-selector": O.EmptyList,
                             italic: !0
-                        }, Object(l.e)("No Teams", "TeamsTab")), t.map(function(a, r) {
-                            return i.createElement(f.Fb, {
+                        }, Object(s.e)("No Teams", "TeamsTab")), t.map(function(a, r) {
+                            return o.createElement(f.Fb, {
                                 background: f.r.Base,
                                 elevation: 1,
                                 alignItems: f.f.Center,
@@ -1013,7 +1363,7 @@
                                     bottom: 1
                                 },
                                 key: r
-                            }, i.createElement(f.Ya, {
+                            }, o.createElement(f.Ya, {
                                 className: "multiview-dashboard-teams__row",
                                 display: f.X.Flex,
                                 padding: {
@@ -1024,49 +1374,112 @@
                                 },
                                 flexGrow: 1,
                                 alignItems: f.f.Center
-                            }, i.createElement(f.P, {
+                            }, o.createElement(f.P, {
                                 cols: 1
-                            }, a.imageURL && i.createElement(f.q, {
+                            }, a.imageURL && o.createElement(f.q, {
                                 src: a.imageURL,
                                 alt: a.value,
                                 size: 30
-                            })), i.createElement(f.P, {
+                            })), o.createElement(f.P, {
                                 cols: 5
-                            }, i.createElement(f.W, {
+                            }, o.createElement(f.W, {
                                 fontSize: n
-                            }, a.value)), i.createElement(f.P, {
+                            }, a.value)), o.createElement(f.P, {
                                 cols: 4
-                            }, i.createElement(f.W, {
+                            }, o.createElement(f.Ya, null, o.createElement(f.W, {
                                 fontSize: n
-                            }, Object(l.e)("0 player", "TeamsTab"))), i.createElement(f.P, {
+                            }, Object(s.e)("{count, plural, one {# player} other {# players}}", {
+                                count: e.filterPlayerContentAttributesByTeam(a.id).length
+                            }, "TeamsTab")))), o.createElement(f.P, {
                                 cols: 2
-                            }, i.createElement(f.Ya, {
+                            }, o.createElement(f.Ya, {
                                 display: f.X.Flex,
                                 alignItems: f.f.Center
-                            }, i.createElement(f.Ya, {
+                            }, o.createElement(f.Ya, {
                                 flexGrow: 1
-                            }, a.updatedAt && i.createElement(f.W, {
+                            }, a.updatedAt && o.createElement(f.W, {
                                 fontSize: n
-                            }, Object(l.c)(new Date(a.updatedAt), "medium"))), i.createElement(f.Ya, {
+                            }, Object(s.c)(new Date(a.updatedAt), "medium"))), o.createElement(f.Ya, {
                                 flexGrow: 0
-                            }, i.createElement(A.a, {
+                            }, o.createElement(_.a, {
                                 onEdit: e.editTeam.bind(e, a),
                                 onDelete: e.deleteTeam.bind(e, a),
-                                deleteModalMessage: Object(l.e)("Are you sure you want to delete team: {value}?", {
+                                deleteModalMessage: Object(s.e)("Are you sure you want to delete team: {value}?", {
                                     value: a.value
                                 }, "TeamsTab"),
                                 last: r === t.length - 1
                             }))))))
                         }), this.renderCreateTeamModal(), this.renderEditTeamModal())
                     }, t
-                }(i.Component),
-                O = Object(o.compose)(Object(s.b)("TeamsTab"))(C);
+                }(o.Component),
+                P = Object(i.compose)(Object(l.b)("TeamsTab"))(M);
             a.d(t, "TestSelectors", function() {
-                return S
-            }), a.d(t, "TeamsTabComponent", function() {
-                return C
-            }), a.d(t, "TeamsTab", function() {
                 return O
+            }), a.d(t, "TeamsTabComponent", function() {
+                return M
+            }), a.d(t, "TeamsTab", function() {
+                return P
+            })
+        },
+        vV5t: function(e, t, a) {
+            "use strict";
+            var n = a("mrSG"),
+                r = a("q1tI"),
+                o = a("N3I0"),
+                i = a("8/mp"),
+                s = a("eJ65"),
+                l = a("Ue10"),
+                c = function(e) {
+                    function t() {
+                        var t = null !== e && e.apply(this, arguments) || this;
+                        return t.toggle = function(e) {
+                            t.dropdownSearch && t.dropdownSearch.toggle(e), t.balloon && t.balloon.toggleBalloon(e)
+                        }, t.setBallonRef = function(e) {
+                            t.balloon = e
+                        }, t.setSearchRef = function(e) {
+                            t.dropdownSearch = e
+                        }, t.onBalloonToggle = function(e) {
+                            e || (t.dropdownSearch && t.dropdownSearch.setValue(""), t.onInputChange(""))
+                        }, t.onSearchFocus = function() {
+                            t.dropdownSearch && t.dropdownSearch.toggle(!0)
+                        }, t.onInputChange = function(e) {
+                            t.onSearchFocus(), t.props.onChange(e)
+                        }, t
+                    }
+                    return n.__extends(t, e), t.prototype.componentDidMount = function() {
+                        this.onSearchFocus()
+                    }, t.prototype.render = function() {
+                        return r.createElement(l.Ya, {
+                            margin: {
+                                right: .5
+                            }
+                        }, r.createElement(s.a, {
+                            onToggle: this.onBalloonToggle,
+                            ref: this.setBallonRef
+                        }, r.createElement(l.z, {
+                            disabled: this.props.disabled,
+                            type: l.F.Hollow
+                        }, this.props.buttonText), r.createElement(l.u, {
+                            direction: this.props.balloonDirection || l.v.BottomLeft,
+                            tailOffset: 8
+                        }, r.createElement(l.Ya, {
+                            position: l.kb.Relative
+                        }, r.createElement(o.a, {
+                            autoFocus: !0,
+                            inline: !0,
+                            showDropdown: !0,
+                            onChange: this.onInputChange,
+                            onFocusInput: this.onSearchFocus,
+                            placeholder: this.props.buttonText,
+                            ref: this.setSearchRef
+                        }, r.createElement(i.b, {
+                            className: "content-attribute-dropdown__scrollable-area",
+                            suppressScrollX: !0
+                        }, r.createElement(l.Ya, null, this.props.children)))))))
+                    }, t
+                }(r.Component);
+            a.d(t, "a", function() {
+                return c
             })
         },
         xefp: function(e, t, a) {}

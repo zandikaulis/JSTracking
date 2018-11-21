@@ -22755,72 +22755,33 @@
                 g = n("+pBb"),
                 f = n("Y3y8"),
                 v = n("GnwI");
-            var b, k = n("mrSG"),
-                y = n("q1tI"),
-                C = n("/7QA"),
-                S = n("w0yC"),
-                E = n("ZS2+"),
-                N = n("KwB3"),
-                O = n("BJwa"),
-                _ = n("a1OF");
-            ! function(e) {
-                e.MentionPill = "mentionPill", e.ViewRooms = "viewRooms"
-            }(b || (b = {}));
-            var w = function(e) {
-                    return C.m.get("hasSeenRoomsOnboarding", {})[e] || !1
-                },
-                D = function(e) {
-                    var t;
-                    C.m.set("hasSeenRoomsOnboarding", k.__assign({}, C.m.get("hasSeenRoomsOnboarding", {}), ((t = {})[e] = !0, t)))
-                },
-                I = n("Ue10"),
-                T = (n("zWFo"), "Stream Chat"),
-                M = E.a.wrap(function() {
+            var b = n("mrSG"),
+                k = n("q1tI"),
+                y = n("/7QA"),
+                C = n("w0yC"),
+                S = n("ZS2+"),
+                E = n("KwB3"),
+                N = n("BJwa"),
+                O = n("Ue10"),
+                _ = (n("zWFo"), "Stream Chat"),
+                w = S.a.wrap(function() {
                     return n.e(205).then(n.bind(null, "+k6+"))
                 }, "ActiveRoomButton"),
-                L = E.a.wrap(function() {
+                D = S.a.wrap(function() {
                     return n.e(204).then(n.bind(null, "Xf1I"))
                 }, "Room"),
-                R = E.a.wrap(function() {
+                I = S.a.wrap(function() {
                     return n.e(203).then(n.bind(null, "cs/o"))
                 }, "RoomPicker"),
-                F = function(e) {
+                T = function(e) {
                     function t() {
                         var t = null !== e && e.apply(this, arguments) || this;
                         return t.state = {
-                            activeRoomID: T,
-                            activeRoomName: T,
-                            hasSeenGeneralOnboarding: w(b.ViewRooms),
+                            activeRoomID: _,
+                            activeRoomName: _,
                             isActiveRoomDeleted: !1,
                             shouldAutoOpenRoomPicker: !0,
                             showRoomPicker: !1
-                        }, t.renderOnboardingBalloon = function() {
-                            var e = t.props.data;
-                            if (t.state.showRoomPicker || t.state.hasSeenGeneralOnboarding) return null;
-                            if (!e || !e.channel) return null;
-                            var n = t.props.sessionUser && t.props.sessionUser.id === e.channel.id;
-                            return e.channel.channelRooms && 0 === e.channel.channelRooms.length && !n ? null : y.createElement(I.u, {
-                                direction: I.v.BottomRight,
-                                offsetX: "1rem",
-                                show: !0,
-                                size: I.w.Small
-                            }, y.createElement(S.a, {
-                                onClickOut: t.dismissGeneralOnboarding
-                            }, y.createElement(I.Ya, {
-                                padding: 3,
-                                textAlign: I.Sb.Center
-                            }, y.createElement("img", {
-                                src: Object(_.d)("508650", 3),
-                                width: "28"
-                            }), y.createElement(I.Ya, {
-                                margin: {
-                                    y: 1
-                                }
-                            }, y.createElement(I.W, {
-                                color: I.O.Alt2
-                            }, Object(C.d)("Rooms help you keep the conversation going", "RoomSelector"))), y.createElement(I.z, {
-                                onClick: t.headerClick
-                            }, Object(C.d)("View rooms", "RoomSelector")))))
                         }, t.isChannelLive = function(e) {
                             return !(e.error || !e.channel) && !!(e.channel.stream && e.channel.stream.id || e.channel.hosting && e.channel.hosting.id)
                         }, t.checkRoomPickerAutoOpen = function(e) {
@@ -22831,10 +22792,10 @@
                                 t.setState({
                                     shouldAutoOpenRoomPicker: !1,
                                     showRoomPicker: r
-                                }), r && t.dismissGeneralOnboarding()
+                                })
                             }
                         }, t.headerClick = function() {
-                            t.dismissGeneralOnboarding(), t.setState(function(e) {
+                            t.setState(function(e) {
                                 return {
                                     shouldAutoOpenRoomPicker: !1,
                                     showRoomPicker: !e.showRoomPicker
@@ -22848,30 +22809,26 @@
                                 showRoomPicker: !1
                             })
                         }, t.onActiveRoomDelete = function() {
-                            t.state.activeRoomID !== T && t.setState({
+                            t.state.activeRoomID !== _ && t.setState({
                                 isActiveRoomDeleted: !0
                             })
                         }, t.goToStreamChat = function() {
-                            t.handleRoomSelect(T, T)
-                        }, t.dismissGeneralOnboarding = function() {
-                            t.setState({
-                                hasSeenGeneralOnboarding: !0
-                            }), D(b.ViewRooms)
+                            t.handleRoomSelect(_, _)
                         }, t.closeRoomPicker = function() {
                             t.setState({
                                 showRoomPicker: !1
                             })
                         }, t
                     }
-                    return k.__extends(t, e), t.prototype.componentWillMount = function() {
-                        this.checkRoomPickerAutoOpen(this.props), this.state.showRoomPicker && this.dismissGeneralOnboarding()
+                    return b.__extends(t, e), t.prototype.componentWillMount = function() {
+                        this.checkRoomPickerAutoOpen(this.props)
                     }, t.prototype.componentWillReceiveProps = function(e) {
                         var t = this;
                         if (e.channelLogin !== this.props.channelLogin && this.setState({
                                 shouldAutoOpenRoomPicker: !0
                             }), this.checkRoomPickerAutoOpen(e), this.props.data && e.data && this.props.data.channel && e.data.channel && this.props.data.channel.self && e.data.channel.self && !e.data.channel.self.isChannelMember && this.props.data.channel.self.isChannelMember !== e.data.channel.self.isChannelMember && this.goToStreamChat(), e.data && e.data.channel && e.data.channel.self) {
                             var n = e.data.channel.self;
-                            (!n.isChannelMember || n.banStatus && n.banStatus.isPermanent) && this.state.activeRoomID !== T && this.goToStreamChat()
+                            (!n.isChannelMember || n.banStatus && n.banStatus.isPermanent) && this.state.activeRoomID !== _ && this.goToStreamChat()
                         }
                         if (this.props.sessionUser && this.props.routedRoomName && this.props.data && this.props.data.loading && !this.props.data.channel && e.data && !e.data.loading && e.data.channel && e.data.channel.channelRooms && e.data.channel.self.isChannelMember) {
                             var i = e.data.channel.channelRooms.find(function(e) {
@@ -22881,25 +22838,25 @@
                                 activeRoomID: i.id,
                                 activeRoomName: i.name
                             })
-                        } else this.props.channelLogin !== e.channelLogin && this.state.activeRoomID !== T && this.goToStreamChat()
+                        } else this.props.channelLogin !== e.channelLogin && this.state.activeRoomID !== _ && this.goToStreamChat()
                     }, t.prototype.render = function() {
-                        return y.createElement(I.Ya, {
+                        return k.createElement(O.Ya, {
                             fullWidth: !0,
                             fullHeight: !0,
-                            display: I.X.Flex,
-                            flexDirection: I.Aa.Column,
+                            display: O.X.Flex,
+                            flexDirection: O.Aa.Column,
                             flexGrow: 1,
-                            flexWrap: I.Ba.NoWrap,
-                            position: I.kb.Relative
+                            flexWrap: O.Ba.NoWrap,
+                            position: O.kb.Relative
                         }, this.renderHeader(), this.renderRoomPicker(), this.renderHiddenState(), this.renderChat(), this.renderCurrentRoom())
                     }, t.prototype.renderChat = function() {
                         if (this.props.isHidden && !this.props.isPopout) return null;
-                        var e = this.props.isBackground || this.state.activeRoomID !== T,
+                        var e = this.props.isBackground || this.state.activeRoomID !== _,
                             t = this.props.bitsConfig && this.props.bitsConfig.orderedActions.length > 0;
-                        return y.createElement(N.a, {
+                        return k.createElement(E.a, {
                             bitsConfig: t ? this.props.bitsConfig : void 0,
                             channelLogin: this.props.channelLogin,
-                            clientID: C.a.authSettings.clientID,
+                            clientID: y.a.authSettings.clientID,
                             isBackground: e,
                             isEmbedded: this.props.isEmbedded,
                             isPopout: this.props.isPopout,
@@ -22910,7 +22867,7 @@
                             shouldConnectChat: this.props.shouldConnectChat
                         })
                     }, t.prototype.renderCurrentRoom = function() {
-                        return this.props.isHidden && !this.props.isPopout || !this.props.data || !this.props.data.channel || this.state.activeRoomID === T ? null : y.createElement(L, {
+                        return this.props.isHidden && !this.props.isPopout || !this.props.data || !this.props.data.channel || this.state.activeRoomID === _ ? null : k.createElement(D, {
                             bitsConfig: this.props.bitsConfig,
                             isDeleted: this.state.isActiveRoomDeleted,
                             isPopout: this.props.isPopout,
@@ -22924,69 +22881,69 @@
                             passThroughCommands: this.props.passThroughCommands
                         })
                     }, t.prototype.renderHeader = function() {
-                        var e = y.createElement(I.Ya, {
-                            display: I.X.Flex,
-                            alignItems: I.f.Center
-                        }, !this.state.showRoomPicker && Object(C.d)("Rooms", "RoomSelector"), y.createElement(I.Ya, {
-                            display: I.X.Flex,
-                            alignItems: I.f.Center
-                        }, this.renderTotalUnreadMentionCount(), !this.state.showRoomPicker && y.createElement(I.Ya, {
+                        var e = k.createElement(O.Ya, {
+                            display: O.X.Flex,
+                            alignItems: O.f.Center
+                        }, !this.state.showRoomPicker && Object(y.d)("Rooms", "RoomSelector"), k.createElement(O.Ya, {
+                            display: O.X.Flex,
+                            alignItems: O.f.Center
+                        }, this.renderTotalUnreadMentionCount(), !this.state.showRoomPicker && k.createElement(O.Ya, {
                             padding: {
                                 left: .5
                             },
-                            display: I.X.Flex
-                        }, y.createElement(I.tb, {
-                            asset: I.ub.RoomList
-                        })), this.state.showRoomPicker && y.createElement(I.A, {
+                            display: O.X.Flex
+                        }, k.createElement(O.tb, {
+                            asset: O.ub.RoomList
+                        })), this.state.showRoomPicker && k.createElement(O.A, {
                             ariaLabel: "RoomListOpen",
-                            icon: I.ub.RoomListOpen,
+                            icon: O.ub.RoomListOpen,
                             "data-test-selector": "close-room-picker-button",
                             onClick: this.headerClick,
                             blurAfterClick: !0
                         })));
-                        this.state.showRoomPicker || (e = y.createElement(I.Ya, {
-                            position: I.kb.Relative
-                        }, y.createElement(I.z, {
+                        this.state.showRoomPicker || (e = k.createElement(O.Ya, {
+                            position: O.kb.Relative
+                        }, k.createElement(O.z, {
                             "data-a-target": "room-selector-button",
                             "data-test-selector": "open-room-picker-button",
                             onClick: this.headerClick,
-                            type: I.F.Text
-                        }, e), this.renderOnboardingBalloon())), this.props.isEmbedded && (e = y.createElement(I.Ya, null));
-                        var t = y.createElement(I.Fb, {
+                            type: O.F.Text
+                        }, e))), this.props.isEmbedded && (e = k.createElement(O.Ya, null));
+                        var t = k.createElement(O.Fb, {
                             className: "room-selector__header",
-                            background: I.r.Alt,
+                            background: O.r.Alt,
                             borderLeft: !this.props.isEmbedded,
                             borderRight: !this.props.isEmbedded,
                             borderBottom: !0,
-                            display: I.X.Flex,
+                            display: O.X.Flex,
                             fullWidth: !0,
-                            justifyContent: I.Xa.Between,
-                            alignItems: I.f.Center,
+                            justifyContent: O.Xa.Between,
+                            alignItems: O.f.Center,
                             flexShrink: 0,
                             padding: {
                                 left: 2,
                                 right: 1
                             }
-                        }, y.createElement("div", {
-                            id: O.a
+                        }, k.createElement("div", {
+                            id: N.a
                         }, this.renderActiveRoomName()), e);
-                        return this.state.showRoomPicker && (t = y.createElement(I.Ya, {
+                        return this.state.showRoomPicker && (t = k.createElement(O.Ya, {
                             className: "room-selector__open-header-wrapper"
                         }, t)), t
                     }, t.prototype.renderRoomPicker = function() {
-                        if (this.state.showRoomPicker && this.props.data && this.props.data.channel) return y.createElement(S.a, {
+                        if (this.state.showRoomPicker && this.props.data && this.props.data.channel) return k.createElement(C.a, {
                             onClickOut: this.closeRoomPicker
-                        }, y.createElement(I.Fb, {
+                        }, k.createElement(O.Fb, {
                             attachLeft: !0,
                             attachRight: !0,
-                            background: I.r.Alt,
+                            background: O.r.Alt,
                             borderBottom: !0,
                             borderLeft: !0,
                             borderRight: !0,
                             elevation: 2,
-                            position: I.kb.Absolute,
-                            zIndex: I.jc.Above
-                        }, y.createElement(R, {
+                            position: O.kb.Absolute,
+                            zIndex: O.jc.Above
+                        }, k.createElement(I, {
                             channelID: this.props.data.channel.id,
                             handleRoomSelect: this.handleRoomSelect,
                             isChannelLive: this.isChannelLive(this.props.data),
@@ -22995,27 +22952,27 @@
                             "data-test-selector": "room-picker"
                         })))
                     }, t.prototype.renderActiveRoomName = function() {
-                        return this.state.showRoomPicker ? y.createElement(I.W, {
-                            color: I.O.Alt,
-                            "data-test-selector": O.a
-                        }, Object(C.d)("Rooms", "RoomSelectorOpened")) : this.state.activeRoomName === T ? this.props.renderChannelName && this.props.data && this.props.data.channel ? y.createElement(I.W, {
-                            color: I.O.Alt,
-                            "data-test-selector": O.a
-                        }, Object(C.d)("<x:bold>{displayName}</x:bold>'s Chat", {
+                        return this.state.showRoomPicker ? k.createElement(O.W, {
+                            color: O.O.Alt,
+                            "data-test-selector": N.a
+                        }, Object(y.d)("Rooms", "RoomSelectorOpened")) : this.state.activeRoomName === _ ? this.props.renderChannelName && this.props.data && this.props.data.channel ? k.createElement(O.W, {
+                            color: O.O.Alt,
+                            "data-test-selector": N.a
+                        }, Object(y.d)("<x:bold>{displayName}</x:bold>'s Chat", {
                             displayName: this.props.data.channel.displayName,
                             "x:bold": function(e) {
-                                return y.createElement(I.W, {
-                                    type: I.Wb.Span,
+                                return k.createElement(O.W, {
+                                    type: O.Wb.Span,
                                     bold: !0
                                 }, e)
                             }
-                        }, "RoomSelectorOpened")) : y.createElement(I.W, {
-                            color: I.O.Alt,
-                            "data-test-selector": O.a
-                        }, Object(C.d)("Stream Chat", "RoomSelectorOpened")) : this.state.isActiveRoomDeleted ? y.createElement(I.W, {
-                            color: I.O.Alt,
-                            "data-test-selector": O.a
-                        }, this.state.activeRoomName) : y.createElement(M, {
+                        }, "RoomSelectorOpened")) : k.createElement(O.W, {
+                            color: O.O.Alt,
+                            "data-test-selector": N.a
+                        }, Object(y.d)("Stream Chat", "RoomSelectorOpened")) : this.state.isActiveRoomDeleted ? k.createElement(O.W, {
+                            color: O.O.Alt,
+                            "data-test-selector": N.a
+                        }, this.state.activeRoomName) : k.createElement(w, {
                             roomID: this.state.activeRoomID,
                             roomName: this.state.activeRoomName
                         })
@@ -23026,42 +22983,42 @@
                         var n = t.channel.channelRooms.reduce(function(t, n) {
                             return n.self.isMuted || n.id === e.state.activeRoomID ? t : t + n.self.unreadMentionCount
                         }, 0);
-                        return n > 0 ? y.createElement(I.Ya, {
-                            display: I.X.InlineBlock,
+                        return n > 0 ? k.createElement(O.Ya, {
+                            display: O.X.InlineBlock,
                             padding: {
                                 left: .5
                             },
-                            position: I.kb.Relative
-                        }, y.createElement(I.hb, {
+                            position: O.kb.Relative
+                        }, k.createElement(O.hb, {
                             label: n.toString(),
-                            type: I.ib.Alert
+                            type: O.ib.Alert
                         })) : void 0
                     }, t.prototype.renderHiddenState = function() {
-                        return !this.props.isHidden || this.props.isPopout ? null : y.createElement(I.Fb, {
-                            alignItems: I.f.Center,
+                        return !this.props.isHidden || this.props.isPopout ? null : k.createElement(O.Fb, {
+                            alignItems: O.f.Center,
                             borderLeft: !0,
                             "data-test-selector": "room-selector-hidden-state",
-                            display: I.X.Flex,
-                            flexDirection: I.Aa.Column,
+                            display: O.X.Flex,
+                            flexDirection: O.Aa.Column,
                             fullHeight: !0,
                             fullWidth: !0,
-                            justifyContent: I.Xa.Center,
-                            color: I.O.Base,
-                            position: I.kb.Relative
-                        }, y.createElement(I.Ya, {
+                            justifyContent: O.Xa.Center,
+                            color: O.O.Base,
+                            position: O.kb.Relative
+                        }, k.createElement(O.Ya, {
                             margin: {
                                 bottom: 1
                             }
-                        }, y.createElement(I.W, {
-                            fontSize: I.Ca.Size5
-                        }, Object(C.d)("Chat is hidden.", "RoomSelector"))), y.createElement(I.z, {
+                        }, k.createElement(O.W, {
+                            fontSize: O.Ca.Size5
+                        }, Object(y.d)("Chat is hidden.", "RoomSelector"))), k.createElement(O.z, {
                             onClick: this.props.onChatUnhide,
                             "data-a-target": "show-chat-button"
-                        }, Object(C.d)("Show Chat", "RoomSelector")))
+                        }, Object(y.d)("Show Chat", "RoomSelector")))
                     }, t
-                }(y.Component),
-                j = n("Qdho");
-            var x = Object(i.compose)(Object(r.connect)(function(e) {
+                }(k.Component),
+                M = n("Qdho");
+            var L = Object(i.compose)(Object(r.connect)(function(e) {
                 return {
                     firstPageLoaded: e.session.firstPageLoaded,
                     isHidden: e.chat.isHidden,
@@ -23073,7 +23030,7 @@
                         return g.O()
                     }
                 }, e)
-            }), Object(o.a)(j, {
+            }), Object(o.a)(M, {
                 skip: function(e) {
                     return !e.firstPageLoaded
                 },
@@ -23093,7 +23050,7 @@
                 }
             }), Object(s.a)(function(e) {
                 return {
-                    query: j,
+                    query: M,
                     skip: !e.firstPageLoaded || !e.data || !e.data.channel,
                     variables: {
                         login: e.channelLogin
@@ -23128,7 +23085,7 @@
                 }
             }), Object(s.a)(function(e) {
                 return {
-                    query: j,
+                    query: M,
                     skip: !(e.firstPageLoaded && e.sessionUser && e.data && e.data.channel),
                     variables: {
                         login: e.channelLogin
@@ -23153,7 +23110,7 @@
                 }
             }), Object(s.a)(function(e) {
                 return {
-                    query: j,
+                    query: M,
                     skip: !(e.firstPageLoaded && e.sessionUser && e.data && e.data.channel),
                     variables: {
                         login: e.channelLogin
@@ -23178,7 +23135,7 @@
                 }
             }), Object(s.a)(function(e) {
                 return {
-                    query: j,
+                    query: M,
                     skip: !(e.firstPageLoaded && e.sessionUser && e.data && e.data.channel),
                     variables: {
                         login: e.channelLogin
@@ -23201,9 +23158,9 @@
                 }
             }), Object(f.b)(), Object(v.b)("RoomSelector", {
                 autoReportInteractive: !0
-            }))(F);
+            }))(T);
             n.d(t, "a", function() {
-                return x
+                return L
             })
         },
         VFOQ: function(e, t, n) {},
@@ -39502,7 +39459,7 @@
                         }, n
                     }
                     return r.__extends(t, e), t.prototype.shouldComponentUpdate = function(e) {
-                        return null !== this.props.emotePickerSessionID || null === e.emotePickerSessionID
+                        return this.props.emotePickerSessionID === e.emotePickerSessionID || this.props.channelSubscriptionProducts !== e.channelSubscriptionProducts || this.props.globalEmotes !== e.globalEmotes || this.props.frequentlyUsedEmotes !== e.frequentlyUsedEmotes || this.props.otherChannelEmoteSets !== e.otherChannelEmoteSets || this.props.unlockedEmotes !== e.unlockedEmotes
                     }, t.prototype.componentDidMount = function() {
                         if (this.props.channelID && this.updateChannelEmotes(this.props), this.props.emotePickerSessionID && this.props.channelID) {
                             var e = {
@@ -39514,7 +39471,7 @@
                             s.o.track(U.SpadeEventType.ViewedEmotePicker, e)
                         }
                     }, t.prototype.componentWillReceiveProps = function(e) {
-                        if (this.props.channelID !== e.channelID && this.updateChannelEmotes(e), e.channelID && e.emotePickerSessionID && !this.props.emotePickerSessionID) {
+                        if (this.props.channelID === e.channelID && this.props.channelSubscriptionProducts === e.channelSubscriptionProducts || this.updateChannelEmotes(e), e.channelID && e.emotePickerSessionID && !this.props.emotePickerSessionID) {
                             var t = {
                                 channel_id: e.channelID,
                                 emote_picker_sid: e.emotePickerSessionID,

@@ -126,9 +126,9 @@
             }), n.d(t, "v", function() {
                 return V
             }), n.d(t, "q", function() {
-                return j
-            }), n.d(t, "C", function() {
                 return G
+            }), n.d(t, "C", function() {
+                return j
             }), n.d(t, "B", function() {
                 return H
             });
@@ -280,11 +280,11 @@
                 return o.PubsubTopic.PurchaseFulfillmentEvents + "." + e
             }
 
-            function j(e) {
+            function G(e) {
                 return o.PubsubTopic.MultiviewChanletUpdate + "." + e
             }
 
-            function G(e) {
+            function j(e) {
                 return r.l.subscribe({
                     topic: e.topic,
                     onMessage: function(t) {
@@ -1450,7 +1450,7 @@
         },
         DMoW: function(e, t, n) {
             "use strict";
-            var r, o, i, a, s, l, c, u, d, p, E, m, h, f, g, _, T, R, I, b, v, O, C, S, A, N, y, D, P, L, M, U, k, x, w, B, F, W, V, j, G, H, z, Y, q, X, K, Q, Z, J, $, ee, te, ne, re, oe, ie, ae, se, le, ce, ue, de, pe, Ee, me, he, fe, ge, _e, Te, Re, Ie, be, ve, Oe, Ce, Se, Ae, Ne, ye, De, Pe, Le, Me, Ue, ke, xe, we, Be, Fe, We, Ve, je, Ge, He, ze, Ye, qe, Xe, Ke, Qe, Ze, Je, $e, et, tt, nt, rt, ot, it, at, st, lt, ct, ut, dt, pt, Et, mt, ht, ft, gt, _t, Tt;
+            var r, o, i, a, s, l, c, u, d, p, E, m, h, f, g, _, T, R, I, b, v, O, C, S, A, N, y, D, P, L, M, U, k, x, w, B, F, W, V, G, j, H, z, Y, q, X, K, Q, Z, J, $, ee, te, ne, re, oe, ie, ae, se, le, ce, ue, de, pe, Ee, me, he, fe, ge, _e, Te, Re, Ie, be, ve, Oe, Ce, Se, Ae, Ne, ye, De, Pe, Le, Me, Ue, ke, xe, we, Be, Fe, We, Ve, Ge, je, He, ze, Ye, qe, Xe, Ke, Qe, Ze, Je, $e, et, tt, nt, rt, ot, it, at, st, lt, ct, ut, dt, pt, Et, mt, ht, ft, gt, _t, Tt;
             n.d(t, "N", function() {
                     return r
                 }), n.d(t, "e", function() {
@@ -1494,9 +1494,9 @@
                 }), n.d(t, "t", function() {
                     return V
                 }), n.d(t, "T", function() {
-                    return j
-                }), n.d(t, "V", function() {
                     return G
+                }), n.d(t, "V", function() {
+                    return j
                 }), n.d(t, "G", function() {
                     return H
                 }), n.d(t, "W", function() {
@@ -1540,7 +1540,7 @@
                 }), n.d(t, "k", function() {
                     return Ve
                 }), n.d(t, "w", function() {
-                    return je
+                    return Ge
                 }), n.d(t, "m", function() {
                     return He
                 }), n.d(t, "j", function() {
@@ -1683,10 +1683,10 @@
                 }(V || (V = {})),
                 function(e) {
                     e.MONTH = "MONTH", e.ONE_TIME = "ONE_TIME", e.WEEK = "WEEK", e.YEAR = "YEAR"
-                }(j || (j = {})),
+                }(G || (G = {})),
                 function(e) {
                     e.CHANSUB = "CHANSUB", e.TEAMSUB = "TEAMSUB", e.TURBO = "TURBO"
-                }(G || (G = {})),
+                }(j || (j = {})),
                 function(e) {
                     e.GOOGLE_IAB = "GOOGLE_IAB", e.PRIME = "PRIME", e.RECURLY = "RECURLY", e.XSOLLA_V3 = "XSOLLA_V3", e.ZUORA = "ZUORA"
                 }(H || (H = {})),
@@ -1832,7 +1832,7 @@
                     e.DEFAULT = "DEFAULT", e.EXTENSION = "EXTENSION"
                 }(we || (we = {})),
                 function(e) {
-                    e.ALL_VIDEOS = "ALL_VIDEOS", e.COLLECTION = "COLLECTION", e.GAME_VIDEOS = "GAME_VIDEOS", e.LATEST_BROADCASTS = "LATEST_BROADCASTS", e.LONG_VIDEOS = "LONG_VIDEOS", e.SHORT_VIDEOS = "SHORT_VIDEOS", e.TOP_CLIPS = "TOP_CLIPS"
+                    e.ALL_VIDEOS = "ALL_VIDEOS", e.COLLECTION = "COLLECTION", e.GAME_VIDEOS = "GAME_VIDEOS", e.LATEST_BROADCASTS = "LATEST_BROADCASTS", e.LATEST_NON_BROADCASTS = "LATEST_NON_BROADCASTS", e.LONG_VIDEOS = "LONG_VIDEOS", e.SHORT_VIDEOS = "SHORT_VIDEOS", e.TOP_CLIPS = "TOP_CLIPS"
                 }(Be || (Be = {})),
                 function(e) {
                     e.ALREADY_CLAIMED = "ALREADY_CLAIMED", e.REQUEST_THROTTLED = "REQUEST_THROTTLED", e.UNAUTHORIZED = "UNAUTHORIZED", e.UNKNOWN = "UNKNOWN"
@@ -1845,10 +1845,10 @@
                 }(Ve || (Ve = {})),
                 function(e) {
                     e.ACTIVE = "ACTIVE", e.PENDING = "PENDING", e.REJECTED = "REJECTED", e.UNKNOWN = "UNKNOWN", e.UNSET = "UNSET"
-                }(je || (je = {})),
+                }(Ge || (Ge = {})),
                 function(e) {
                     e.ACTIVE = "ACTIVE", e.PENDING = "PENDING"
-                }(Ge || (Ge = {})),
+                }(je || (je = {})),
                 function(e) {
                     e.BOUNTY_ALREADY_CLAIMED = "BOUNTY_ALREADY_CLAIMED", e.BOUNTY_LIMIT_REACHED = "BOUNTY_LIMIT_REACHED", e.INVALID_PARAMETER = "INVALID_PARAMETER", e.UNKNOWN_ERROR = "UNKNOWN_ERROR"
                 }(He || (He = {})),
@@ -1862,7 +1862,7 @@
                     e.INVALID_PARAMETER = "INVALID_PARAMETER", e.UNAUTHORIZED = "UNAUTHORIZED", e.UNKNOWN_ERROR = "UNKNOWN_ERROR"
                 }(qe || (qe = {})),
                 function(e) {
-                    e.BOUNTY_NOT_LIVE = "BOUNTY_NOT_LIVE", e.INVALID_PARAMETER = "INVALID_PARAMETER", e.UNAUTHORIZED = "UNAUTHORIZED", e.UNKNOWN_ERROR = "UNKNOWN_ERROR"
+                    e.BOUNTY_NOT_LIVE = "BOUNTY_NOT_LIVE", e.INVALID_PARAMETER = "INVALID_PARAMETER", e.STREAM_TITLE_BANNED_WORDS = "STREAM_TITLE_BANNED_WORDS", e.STREAM_TITLE_TOO_LONG = "STREAM_TITLE_TOO_LONG", e.UNAUTHORIZED = "UNAUTHORIZED", e.UNKNOWN_ERROR = "UNKNOWN_ERROR"
                 }(Xe || (Xe = {})),
                 function(e) {
                     e.INVITATION_ALREADY_EXISTS = "INVITATION_ALREADY_EXISTS", e.INVITATION_INVALID = "INVITATION_INVALID", e.SQUAD_FULL = "SQUAD_FULL", e.UNAUTHORIZED = "UNAUTHORIZED", e.USER_ALREADY_IN_SQUAD = "USER_ALREADY_IN_SQUAD"
@@ -2585,8 +2585,8 @@
                         onClick: e.onClose
                     }, n))
                 },
-                j = n("5zC2"),
-                G = n("22qk"),
+                G = n("5zC2"),
+                j = n("22qk"),
                 H = n("5IFo"),
                 z = n("JVUd"),
                 Y = n("0HeA"),
@@ -3183,7 +3183,7 @@
                                 borderTop: !0,
                                 borderRight: !0,
                                 borderLeft: !0
-                            }, E.createElement(j.a, {
+                            }, E.createElement(G.a, {
                                 channelID: t.props.channelID,
                                 channelLogin: t.props.channelName,
                                 className: n,
@@ -3520,7 +3520,7 @@
                     }, t.prototype.render = function() {
                         var e, t = Object(h.d)("More Info", "ExtensionPanel"),
                             n = Object(h.d)("Report Extension", "ExtensionPanel"),
-                            r = Object(G.d)(this.extension.id, this.extension.version) + "?tt_medium=" + this.getCurrentMedium() + "&tt_content=" + T.PageviewContent.ExtensionPanel,
+                            r = Object(j.d)(this.extension.id, this.extension.version) + "?tt_medium=" + this.getCurrentMedium() + "&tt_content=" + T.PageviewContent.ExtensionPanel,
                             o = d(this.props.className || "extension-panel", ((e = {})["extension-panel__popout"] = this.props.isPopout, e)),
                             i = this.props.isFramePoppedOut ? E.createElement(J, {
                                 extension: this.extension,
@@ -5410,7 +5410,7 @@
                         value: "profile content location"
                     }
                 },
-                j = {
+                G = {
                     getTitle: function(e) {
                         return Object(c.d)("Report {username}'s Room", {
                             username: e
@@ -5421,18 +5421,18 @@
                     value: "room report user",
                     type: C.MultipleChoice
                 },
-                G = {
+                j = {
                     getTitle: U.tellUsMore,
                     items: [A.input_description],
                     type: C.Confirm,
                     value: "tell us more"
                 },
                 H = {
-                    banEvasion: i.__assign({}, G, {
+                    banEvasion: i.__assign({}, j, {
                         items: [A.input_usernames, A.input_description],
                         value: "ban evasion tell us more"
                     }),
-                    socialMedia: i.__assign({}, G, {
+                    socialMedia: i.__assign({}, j, {
                         items: [A.input_link, A.input_connection, A.input_description],
                         nextCard: x.socialMedia,
                         value: "social media tell us more"
@@ -5534,7 +5534,7 @@
                     value: "impersonation type"
                 },
                 Z = w,
-                J = G,
+                J = j,
                 $ = k,
                 ee = {
                     video: B.content,
@@ -5546,7 +5546,7 @@
                     "other content": V.general,
                     profile: V.profile,
                     "profile more options": V.profileMoreOptions,
-                    room: j,
+                    room: G,
                     "somewhere else": Y.identifyLocation,
                     streamer: B.content,
                     "someone else in video": B.content,
@@ -5585,7 +5585,7 @@
                     EVENT_REPORT: V.general,
                     EXTENSION_REPORT: V.general,
                     LIVE_UP_REPORT: V.general,
-                    ROOM_REPORT: j,
+                    ROOM_REPORT: G,
                     WHISPER_REPORT: W.general,
                     VOD_COMMENT_REPORT: F.content
                 },
@@ -6322,7 +6322,10 @@
                             })
                         }, n.onOpenStream = function() {
                             if (n.props.playerTypeOverride === L.f.Frontpage && n.player)
-                                if (n.props.channelLogin) v.p.history.push("/" + n.props.channelLogin);
+                                if (n.props.channelLogin) v.p.history.push({
+                                    pathname: "/" + n.props.channelLogin,
+                                    state: n.props.linkTrackingContext
+                                });
                                 else if (n.props.vodID) {
                                 var e = Math.floor(n.player.getCurrentTime());
                                 v.p.history.push("/videos/" + n.props.vodID + "?t=" + Object(k.a)(e))
@@ -6665,7 +6668,7 @@
                 }(l.Component)
             }, o.a)(W);
 
-            function j(e, t, n) {
+            function G(e, t, n) {
                 if (e.collectionID || !e.videoID)
                     if (e.collectionID && e.videoID) {
                         if (n && n.currentVideoID && n.currentCollectionID && n.currentVideoID === e.videoID && n.currentCollectionID === e.collectionID) return;
@@ -6676,7 +6679,7 @@
             n.d(t, !1, function() {}), n.d(t, !1, function() {}), n.d(t, !1, function() {}), n.d(t, !1, function() {}), n.d(t, "b", function() {
                 return V
             }), n.d(t, "c", function() {
-                return j
+                return G
             }), n.d(t, "a", function() {
                 return L.f
             })

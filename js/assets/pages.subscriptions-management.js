@@ -1217,7 +1217,7 @@
                                         },
                                         value: {
                                             kind: "IntValue",
-                                            value: "50"
+                                            value: "150"
                                         }
                                     }],
                                     directives: []
@@ -1279,11 +1279,11 @@
                 }],
                 loc: {
                     start: 0,
-                    end: 532
+                    end: 533
                 }
             };
             r.loc.source = {
-                body: '#import "twilight/features/badges/models/badge-fragment.gql"\nfragment subscriptionBenefit on SubscriptionBenefit {\nid\noriginID\nendsAt\nisRefundable\nplatform\ngift {\ngifter {\nid\nlogin\ndisplayName\n}\nisGift\n}\npaidUpgrade {\noriginID\nprice\nstartsAt\n}\nproduct {\nid\ntier\nprice\nname\ndisplayName\nurl\nself {\npaidUpgradePromotion {\nnewPrice\noldPrice\ndiscountType\ndiscountValue\n}\n}\n}\npurchasedWithPrime\nrenewsAt\ntier\nuser {\nid\ndisplayName\nlogin\nbannerImageURL\nprofileImageURL(width: 50)\nself {\ndisplayBadges {\n...badge\n}\n}\nroles {\nisPartner\n}\n}\n}',
+                body: '#import "twilight/features/badges/models/badge-fragment.gql"\nfragment subscriptionBenefit on SubscriptionBenefit {\nid\noriginID\nendsAt\nisRefundable\nplatform\ngift {\ngifter {\nid\nlogin\ndisplayName\n}\nisGift\n}\npaidUpgrade {\noriginID\nprice\nstartsAt\n}\nproduct {\nid\ntier\nprice\nname\ndisplayName\nurl\nself {\npaidUpgradePromotion {\nnewPrice\noldPrice\ndiscountType\ndiscountValue\n}\n}\n}\npurchasedWithPrime\nrenewsAt\ntier\nuser {\nid\ndisplayName\nlogin\nbannerImageURL\nprofileImageURL(width: 150)\nself {\ndisplayBadges {\n...badge\n}\n}\nroles {\nisPartner\n}\n}\n}',
                 name: "GraphQL request",
                 locationOffset: {
                     line: 1,
@@ -1515,7 +1515,7 @@
             function(e) {
                 e[e.Success = 0] = "Success", e[e.Error = 1] = "Error", e[e.InProgress = 2] = "InProgress", e[e.Unconfirmed = 3] = "Unconfirmed"
             }(R || (R = {}));
-            var A, x = function(e) {
+            var x, A = function(e) {
                     function t() {
                         var t = null !== e && e.apply(this, arguments) || this;
                         return t.state = {
@@ -1638,7 +1638,7 @@
                 G = n("0VVg");
             ! function(e) {
                 e.ChangeTierButton = "ChangeTierButton", e.ChangePaymentMethodButton = "ChangePaymentMethodButton", e.DoNotRenewButton = "DoNotRenewButton", e.CancelGiftButton = "CancelGiftButton", e.CancelPaidUpgrade = "CancelPaidUpgrade", e.CancelAndRefundButton = "CancelAndRefundButton"
-            }(A || (A = {}));
+            }(x || (x = {}));
             var W = function(e) {
                     function t() {
                         var t = null !== e && e.apply(this, arguments) || this;
@@ -1655,26 +1655,26 @@
                                 show: !1
                             })
                         }, t.renderChangePaymentMethodButton = function() {
-                            return t.renderInteractable(A.ChangePaymentMethodButton, Object(l.d)("Change Payment Method", "EditSubscriptionBalloon"), {
+                            return t.renderInteractable(x.ChangePaymentMethodButton, Object(l.d)("Change Payment Method", "EditSubscriptionBalloon"), {
                                 linkTo: "/payments"
                             })
                         }, t.renderDoNotRenewButton = function() {
-                            return t.props.subscriptionBenefit.product ? t.renderInteractable(A.DoNotRenewButton, Object(l.d)("Don't Renew Subscription", "EditSubscriptionBalloon"), {
+                            return t.props.subscriptionBenefit.product ? t.renderInteractable(x.DoNotRenewButton, Object(l.d)("Don't Renew Subscription", "EditSubscriptionBalloon"), {
                                 linkTo: "/unsubscribe/" + t.props.subscriptionBenefit.product.name,
                                 type: B.Wa.Alert
                             }) : null
                         }, t.renderCancelAndRefundButton = function() {
-                            return t.props.subscriptionBenefit.product ? t.renderInteractable(A.CancelAndRefundButton, Object(l.d)("Cancel And Refund", "EditSubscriptionBalloon"), {
+                            return t.props.subscriptionBenefit.product ? t.renderInteractable(x.CancelAndRefundButton, Object(l.d)("Cancel And Refund", "EditSubscriptionBalloon"), {
                                 type: B.Wa.Alert,
                                 linkTo: "/unsubscribe/" + t.props.subscriptionBenefit.product.name + "?cancel=true"
                             }) : null
                         }, t.renderDisableGiftButton = function() {
-                            return null !== t.props.subscriptionBenefit.paidUpgrade ? null : t.renderInteractable(A.CancelGiftButton, Object(l.d)("Disable Gift Benefits", "EditSubscriptionBalloon"), {
+                            return null !== t.props.subscriptionBenefit.paidUpgrade ? null : t.renderInteractable(x.CancelGiftButton, Object(l.d)("Disable Gift Benefits", "EditSubscriptionBalloon"), {
                                 type: B.Wa.Alert,
                                 onClick: t.onDisableGiftBenefits
                             })
                         }, t.renderCancelPaidUpgrade = function() {
-                            return t.renderInteractable(A.CancelPaidUpgrade, Object(l.d)("Cancel Paid Subscription", "EditSubscriptionBalloon"), {
+                            return t.renderInteractable(x.CancelPaidUpgrade, Object(l.d)("Cancel Paid Subscription", "EditSubscriptionBalloon"), {
                                 type: B.Wa.Alert,
                                 onClick: t.onCancelPaidUpgrade
                             })
@@ -1756,7 +1756,7 @@
                             var e = {
                                 linkTo: "/subs/" + this.props.subscriptionBenefit.user.login
                             };
-                            return this.renderInteractable(A.ChangeTierButton, Object(l.d)("Change Subscription Tier", "EditSubscriptionBalloon"), e)
+                            return this.renderInteractable(x.ChangeTierButton, Object(l.d)("Change Subscription Tier", "EditSubscriptionBalloon"), e)
                         }
                         return null
                     }, t.prototype.renderInteractable = function(e, t, n) {
@@ -1792,7 +1792,7 @@
                     return Object(i.bindActionCreators)({
                         showDisableGiftModal: function(e) {
                             var t = u.__rest(e, []);
-                            return Object(U.d)(x, t)
+                            return Object(U.d)(A, t)
                         },
                         closeModal: U.c
                     }, e)
@@ -2079,6 +2079,7 @@
                             position: B.kb.Absolute
                         }, d.createElement(B.q, {
                             alt: a,
+                            borderRadius: B.x.Small,
                             size: 50,
                             src: t
                         }))), d.createElement(B.Fb, {

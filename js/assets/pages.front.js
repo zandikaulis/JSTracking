@@ -27,6 +27,7 @@
                             vodID: "",
                             showChannelInfoOnHover: e.showChannelInfoOnHover,
                             disableTheatreButton: !0,
+                            linkTrackingContext: e.linkTrackingContext,
                             playerTypeOverride: a.a.Frontpage,
                             onInit: e.onPlayerInit,
                             onDestroy: e.onPlayerDestroy,
@@ -441,6 +442,10 @@
                                 id: this.props.item.content.id,
                                 paused: this.props.shouldPause,
                                 showChannelInfoOnHover: !0,
+                                linkTrackingContext: {
+                                    medium: h.PageviewMedium.TwitchHome,
+                                    content: this.props.isScheduled ? h.PageviewContent.CarouselPromo : h.PageviewContent.CarouselBackfill
+                                },
                                 onPauseToggled: this.props.onPauseToggled,
                                 onPlayerInit: this.fadeVideoIn
                             };
@@ -673,6 +678,7 @@
                                 item: e,
                                 isRightSide: t.shouldMetaBeDisplayedOnRight(n),
                                 showVideo: s,
+                                isScheduled: e.isScheduled,
                                 autoplay: t.state.autoplay,
                                 transitionDuration: t.options.transitionDuration,
                                 offsetFromCenter: t.getMedianCount() - n,
@@ -1167,7 +1173,9 @@
                                     contextualCardActionProps: t.getFeedbackProps({
                                         vodID: null,
                                         categoryID: r && r.id,
+                                        categoryName: r && r.displayName,
                                         channelID: null,
+                                        channelName: null,
                                         feedbackReasons: Object(Oe.b)(),
                                         hideContent: t.hideContent
                                     })
@@ -1226,8 +1234,10 @@
                                 i = e.channelID,
                                 r = e.categoryID,
                                 a = e.vodID,
-                                o = e.feedbackReasons,
-                                s = e.hideContent;
+                                o = e.categoryName,
+                                s = e.channelName,
+                                l = e.feedbackReasons,
+                                c = e.hideContent;
                             if (Me() && t.props.firstPageLoaded) return {
                                 component: Fe,
                                 props: {
@@ -1235,8 +1245,10 @@
                                     channelID: i,
                                     categoryID: r,
                                     vodID: a,
-                                    feedbackReasons: o,
-                                    hideContent: s,
+                                    categoryName: o,
+                                    channelName: s,
+                                    feedbackReasons: l,
+                                    hideContent: c,
                                     onModalOpen: t.trackRecFeedbackPreModalClick,
                                     onMenuOpen: t.trackRecFeedbackMenuClick,
                                     trackRecFeedbackClickStep: t.trackRecFeedbackClickStep,
@@ -1371,7 +1383,9 @@
                             },
                             contextualCardActionProps: this.getFeedbackProps({
                                 channelID: n.broadcaster && n.broadcaster.id,
+                                channelName: n.broadcaster && n.broadcaster.displayName,
                                 categoryID: n.game && n.game.id,
+                                categoryName: n.game && n.game.displayName,
                                 feedbackReasons: Object(Oe.a)(),
                                 hideContent: this.hideContent
                             })
@@ -1502,7 +1516,9 @@
                             contextualCardActionProps: this.getFeedbackProps({
                                 vodID: n.id,
                                 categoryID: n.game && n.game.id,
+                                categoryName: n.game && n.game.displayName,
                                 channelID: n.owner && n.owner.id,
+                                channelName: n.owner && n.owner.displayName,
                                 feedbackReasons: Object(Oe.d)(),
                                 hideContent: this.hideContent
                             })
@@ -1703,6 +1719,7 @@
                         }, o.createElement("div", null, r), this.props.firstPageLoaded && i.title.context && Ue() && o.createElement(Ae, {
                             shelfID: i.id,
                             categoryID: i.title.context.id,
+                            categoryName: i.title.context.displayName,
                             feedbackReasons: Object(Oe.c)(),
                             hideContent: this.hideContent,
                             onModalOpen: this.trackRecFeedbackPreModalClickShelf,
@@ -3016,81 +3033,97 @@
         },
         "9MO3": function(e, t, n) {
             "use strict";
-            n.d(t, "c", function() {
-                return d
+            n.d(t, "e", function() {
+                return o
+            }), n.d(t, "c", function() {
+                return u
             }), n.d(t, "a", function() {
-                return p
+                return m
             }), n.d(t, "b", function() {
-                return h
+                return g
             }), n.d(t, "d", function() {
-                return f
+                return v
             });
             var i = n("/7QA"),
                 r = n("DMoW"),
                 a = n("yI6f");
 
-            function o() {
+            function o(e, t, n) {
+                if ("string" == typeof e.text) return e.text;
+                var r = e.contentType === a.b.Live ? t : n;
+                return r ? e.text(r) : Object(i.d)("I am not interested in this content", "RecFeedbackModal")
+            }
+
+            function s(e) {
+                return Object(i.d)("I am not interested in this channel: {channel}", {
+                    channel: e
+                }, "FeedbackReason")
+            }
+
+            function l() {
                 return {
-                    text: Object(i.d)("I am not interested in this category", "FeedbackReason"),
+                    text: function(e) {
+                        return function(e) {
+                            return Object(i.d)("I am not interested in this category: {category}", {
+                                category: e
+                            }, "FeedbackReason")
+                        }(e)
+                    },
                     contentType: a.b.Game,
                     feedbackType: r.L.NOT_INTERESTED
                 }
             }
 
-            function s() {
+            function c() {
                 return Object(i.d)("Other", "FeedbackReasonOther")
             }
+            var d = null;
 
-            function l() {
-                return Object(i.d)("I am not interested in this channel", "FeedbackReason")
+            function u() {
+                return null === d && (d = [l()]), d
             }
-            var c = null;
+            var p = null;
 
-            function d() {
-                return null === c && (c = [o(), {
-                    text: s(),
-                    contentType: a.b.Shelf,
-                    feedbackType: r.L.OTHER
-                }]), c
-            }
-            var u = null;
-
-            function p() {
-                return null === u && (u = [{
-                    text: l(),
+            function m() {
+                return null === p && (p = [{
+                    text: function(e) {
+                        return s(e)
+                    },
                     contentType: a.b.Live,
                     feedbackType: r.L.NOT_INTERESTED
-                }, o(), {
-                    text: s(),
+                }, l(), {
+                    text: c(),
                     contentType: a.b.Live,
                     feedbackType: r.L.OTHER
-                }]), u
+                }]), p
             }
-            var m = null;
+            var h = null;
 
-            function h() {
-                return null === m && (m = [o(), {
-                    text: s(),
+            function g() {
+                return null === h && (h = [l(), {
+                    text: c(),
                     contentType: a.b.Game,
                     feedbackType: r.L.OTHER
-                }]), m
+                }]), h
             }
-            var g = null;
+            var f = null;
 
-            function f() {
-                return null === g && (g = [{
+            function v() {
+                return null === f && (f = [{
                     text: Object(i.d)("I am not interested in this video", "FeedbackReason"),
                     contentType: a.b.Vod,
                     feedbackType: r.L.NOT_INTERESTED
                 }, {
-                    text: l(),
+                    text: function(e) {
+                        return s(e)
+                    },
                     contentType: a.b.Live,
                     feedbackType: r.L.NOT_INTERESTED
-                }, o(), {
-                    text: s(),
+                }, l(), {
+                    text: c(),
                     contentType: a.b.Vod,
                     feedbackType: r.L.OTHER
-                }]), g
+                }]), f
             }
         },
         "9a8W": function(e, t, n) {},

@@ -852,9 +852,9 @@
                 r = n("kRBY"),
                 l = n("mrSG"),
                 s = n("q1tI"),
-                o = n("4p7I"),
+                d = n("4p7I"),
                 u = n("yoKv"),
-                d = n("fvjX"),
+                o = n("fvjX"),
                 c = n("/7QA"),
                 m = n("ZS2+"),
                 p = n("LA8z"),
@@ -863,8 +863,8 @@
                 k = n("geRD"),
                 h = n("GnwI"),
                 f = n("bRMw"),
-                g = n("Ue10"),
-                C = n("BwG8"),
+                C = n("Ue10"),
+                g = n("BwG8"),
                 A = n("7MYR"),
                 w = n("KXXx"),
                 N = n("V2z7"),
@@ -879,17 +879,17 @@
                 T = m.a.wrap(function() {
                     return n.e(151).then(n.bind(null, "tgcK"))
                 }, "RolesTab"),
-                O = m.a.wrap(function() {
+                M = m.a.wrap(function() {
                     return n.e(150).then(n.bind(null, "vD5X"))
                 }, "TeamsTab");
             ! function(e) {
                 e.Tabs = "multiview-page__tabs", e.WrongUser = "multiview-page__wrong-user", e.ChanletsTab = "multiview-page__chanlets-tab", e.TeamsTab = "multiview-page__teams-tab", e.PlayersTab = "multiview-page__players-tab", e.RolesTab = "multiview-page__roles-tab"
             }(i || (i = {}));
-            var M = function(e) {
+            var O = function(e) {
                     function t() {
                         var t = null !== e && e.apply(this, arguments) || this;
                         return t.renderChanletsTab = function() {
-                            if (!t.props.data || !t.props.data.user || !t.props.data.user.channel) return s.createElement(g.ab, {
+                            if (!t.props.data || !t.props.data.user || !t.props.data.user.channel) return s.createElement(C.ab, {
                                 fillContent: !0
                             });
                             var e = t.props.data.user.channel;
@@ -905,11 +905,11 @@
                                 updateContentAttributes: t.updateContentAttributes
                             })
                         }, t.renderTeamsTab = function() {
-                            if (!t.props.data || !t.props.data.user || !t.props.data.user.channel) return s.createElement(g.ab, {
+                            if (!t.props.data || !t.props.data.user || !t.props.data.user.channel) return s.createElement(C.ab, {
                                 fillContent: !0
                             });
                             var e = t.props.data.user.channel;
-                            return s.createElement(O, {
+                            return s.createElement(M, {
                                 "data-test-selector": i.TeamsTab,
                                 channelID: t.props.data.user.id,
                                 availableContentAttributes: e.availableContentAttributes || [],
@@ -918,7 +918,7 @@
                                 deleteContentAttributes: t.deleteContentAttributes
                             })
                         }, t.renderPlayersTab = function() {
-                            if (!t.props.data || !t.props.data.user || !t.props.data.user.channel) return s.createElement(g.ab, {
+                            if (!t.props.data || !t.props.data.user || !t.props.data.user.channel) return s.createElement(C.ab, {
                                 fillContent: !0
                             });
                             var e = t.props.data.user.channel;
@@ -931,7 +931,7 @@
                                 deleteContentAttributes: t.deleteContentAttributes
                             })
                         }, t.renderRolesTab = function() {
-                            if (!t.props.data || !t.props.data.user || !t.props.data.user.channel) return s.createElement(g.ab, {
+                            if (!t.props.data || !t.props.data.user || !t.props.data.user.channel) return s.createElement(C.ab, {
                                 fillContent: !0
                             });
                             var e = t.props.data.user.channel;
@@ -999,83 +999,101 @@
                             })
                         }, t.createContentAttributes = function(e) {
                             return l.__awaiter(t, void 0, void 0, function() {
-                                var t;
-                                return l.__generator(this, function(n) {
-                                    switch (n.label) {
+                                var t, n, i;
+                                return l.__generator(this, function(a) {
+                                    switch (a.label) {
                                         case 0:
-                                            return [4, this.props.createContentAttributes(Object(k.a)({
+                                            return t = [], n = [], 0 === e.length ? [2, {
+                                                succeeded: t,
+                                                failed: n
+                                            }] : [4, this.props.createContentAttributes(Object(k.a)({
                                                 params: e
                                             }))];
                                         case 1:
-                                            return t = n.sent(), Object(k.e)(N, {
+                                            return i = a.sent(), Object(k.e)(N, {
                                                 channelLogin: this.props.match.params.channelLogin
                                             }, function(e) {
-                                                var n = e.user && e.user.channel;
-                                                if (n && n.availableContentAttributes) {
-                                                    var i = t.data && t.data.createMultiviewContentAttributes && t.data.createMultiviewContentAttributes.succeededCreates;
-                                                    i && (n.availableContentAttributes = n.availableContentAttributes.concat(i))
+                                                var t = e.user && e.user.channel;
+                                                if (t && t.availableContentAttributes) {
+                                                    var n = i.data && i.data.createMultiviewContentAttributes && i.data.createMultiviewContentAttributes.succeededCreates;
+                                                    n && (t.availableContentAttributes = t.availableContentAttributes.concat(n))
                                                 }
                                                 return e
-                                            }), [2]
+                                            }), i.data && i.data.createMultiviewContentAttributes && i.data.createMultiviewContentAttributes.succeededCreates && (t = i.data.createMultiviewContentAttributes.succeededCreates, n = i.data.createMultiviewContentAttributes.failedCreates), [2, {
+                                                succeeded: t,
+                                                failed: n
+                                            }]
                                     }
                                 })
                             })
                         }, t.updateContentAttributes = function(e) {
                             return l.__awaiter(t, void 0, void 0, function() {
-                                var t;
-                                return l.__generator(this, function(n) {
-                                    switch (n.label) {
+                                var t, n, i;
+                                return l.__generator(this, function(a) {
+                                    switch (a.label) {
                                         case 0:
-                                            return [4, this.props.updateContentAttributes(Object(k.a)({
+                                            return t = [], n = [], 0 === e.length ? [2, {
+                                                succeeded: t,
+                                                failed: n
+                                            }] : [4, this.props.updateContentAttributes(Object(k.a)({
                                                 params: e
                                             }))];
                                         case 1:
-                                            return t = n.sent(), Object(k.e)(N, {
+                                            return i = a.sent(), Object(k.e)(N, {
                                                 channelLogin: this.props.match.params.channelLogin
                                             }, function(e) {
-                                                var n = e.user && e.user.channel;
-                                                if (n && n.availableContentAttributes) {
-                                                    var i = t.data && t.data.updateMultiviewContentAttributes && t.data.updateMultiviewContentAttributes.succeededUpdates;
-                                                    if (i)
+                                                var t = e.user && e.user.channel;
+                                                if (t && t.availableContentAttributes) {
+                                                    var n = i.data && i.data.updateMultiviewContentAttributes && i.data.updateMultiviewContentAttributes.succeededUpdates;
+                                                    if (n)
                                                         for (var a = function(e) {
-                                                                var t = n.availableContentAttributes.findIndex(function(t) {
+                                                                var n = t.availableContentAttributes.findIndex(function(t) {
                                                                     return t.id === e.id
                                                                 });
-                                                                t > -1 && (n.availableContentAttributes[t] = e)
-                                                            }, r = 0, l = i; r < l.length; r++) {
+                                                                n > -1 && (t.availableContentAttributes[n] = e)
+                                                            }, r = 0, l = n; r < l.length; r++) {
                                                             a(l[r])
                                                         }
                                                 }
                                                 return e
-                                            }), [2]
+                                            }), i.data && i.data.updateMultiviewContentAttributes && (t = i.data.updateMultiviewContentAttributes.succeededUpdates, n = i.data.updateMultiviewContentAttributes.failedUpdates), [2, {
+                                                succeeded: t,
+                                                failed: n
+                                            }]
                                     }
                                 })
                             })
                         }, t.deleteContentAttributes = function(e) {
                             return l.__awaiter(t, void 0, void 0, function() {
-                                var t;
-                                return l.__generator(this, function(n) {
-                                    switch (n.label) {
+                                var t, n, i;
+                                return l.__generator(this, function(a) {
+                                    switch (a.label) {
                                         case 0:
-                                            return [4, this.props.deleteContentAttributes(Object(k.a)({
+                                            return t = [], n = [], 0 === e.length ? [2, {
+                                                succeeded: t,
+                                                failed: n
+                                            }] : [4, this.props.deleteContentAttributes(Object(k.a)({
                                                 IDs: e
                                             }))];
                                         case 1:
-                                            return t = n.sent(), Object(k.e)(N, {
+                                            return i = a.sent(), Object(k.e)(N, {
                                                 channelLogin: this.props.match.params.channelLogin
                                             }, function(e) {
-                                                var n = e.user && e.user.channel;
-                                                if (n && n.availableContentAttributes) {
-                                                    var i = t.data && t.data.deleteMultiviewContentAttributes && t.data.deleteMultiviewContentAttributes.succeededDeletes;
-                                                    if (i)
-                                                        for (var a = 0, r = i; a < r.length; a++) {
+                                                var t = e.user && e.user.channel;
+                                                if (t && t.availableContentAttributes) {
+                                                    var n = i.data && i.data.deleteMultiviewContentAttributes && i.data.deleteMultiviewContentAttributes.succeededDeletes;
+                                                    if (n)
+                                                        for (var a = 0, r = n; a < r.length; a++) {
                                                             var l = r[a],
-                                                                s = n.availableContentAttributes.indexOf(l);
-                                                            s > -1 && (n.availableContentAttributes = n.availableContentAttributes.splice(s, 1))
+                                                                s = t.availableContentAttributes.indexOf(l);
+                                                            s > -1 && (t.availableContentAttributes = t.availableContentAttributes.splice(s, 1))
                                                         }
                                                 }
                                                 return e
-                                            }), [2]
+                                            }), i.data && i.data.deleteMultiviewContentAttributes && (t = i.data.deleteMultiviewContentAttributes.succeededDeletes, n = i.data.deleteMultiviewContentAttributes.failedDeletes), [2, {
+                                                succeeded: t,
+                                                failed: n
+                                            }]
                                     }
                                 })
                             })
@@ -1085,24 +1103,24 @@
                         this.props.data.loading || this.props.latencyTracking.reportInteractive()
                     }, t.prototype.render = function() {
                         if (!Object(f.b)(f.a, this.props.match.params.channelLogin)) return s.createElement(p.a, null);
-                        if (this.props.data.loading) return s.createElement(g.ab, {
+                        if (this.props.data.loading) return s.createElement(C.ab, {
                             fillContent: !0
                         });
-                        if (this.props.data.error || !this.props.data.user || !this.props.data.user.channel) return s.createElement(g.Ya, {
+                        if (this.props.data.error || !this.props.data.user || !this.props.data.user.channel) return s.createElement(C.Ya, {
                             padding: 2
-                        }, s.createElement(g.W, {
+                        }, s.createElement(C.W, {
                             italic: !0
                         }, Object(c.e)("There was an issue loading your Multiview settings.", "MultiviewPage")));
                         if (this.props.user && this.props.user.id !== this.props.data.user.id) {
                             var e = this.props.user.login;
-                            return s.createElement(g.Ya, {
+                            return s.createElement(C.Ya, {
                                 padding: 2,
                                 "data-test-selector": i.WrongUser
-                            }, s.createElement(g.W, {
+                            }, s.createElement(C.W, {
                                 italic: !0
                             }, Object(c.e)("You can not edit the Multiview settings for this channel. <x:link>Click here</x:link> to get to your channel’s Multiview dashboard", {
                                 "x:link": function(t) {
-                                    return s.createElement(g.U, {
+                                    return s.createElement(C.U, {
                                         to: "/" + e + "/dashboard/multiview"
                                     }, t)
                                 }
@@ -1121,33 +1139,33 @@
                                 linkTo: "/roles",
                                 label: Object(c.e)("Roles", "MultiviewPage")
                             }], n = 0, a = 0; a < t.length; a++) this.props.location.pathname.match(t[a].linkTo) && (n = a), t[a].linkTo = "/" + this.props.match.params.channelLogin + "/dashboard/multiview" + t[a].linkTo;
-                        return s.createElement(v.b, null, s.createElement(g.Ya, {
+                        return s.createElement(v.b, null, s.createElement(C.Ya, {
                             padding: 2
-                        }, s.createElement(g.Ob, {
+                        }, s.createElement(C.Ob, {
                             "data-test-selector": i.Tabs,
                             activeTabIndex: n,
-                            justifyContent: g.Xa.Start,
+                            justifyContent: C.Xa.Start,
                             tabs: t
-                        }), s.createElement(g.Ya, {
+                        }), s.createElement(C.Ya, {
                             padding: 2
-                        }, s.createElement(u.a, null, s.createElement(o.a, {
+                        }, s.createElement(u.a, null, s.createElement(d.a, {
                             path: "/" + this.props.match.params.channelLogin + "/dashboard/multiview/teams",
                             exact: !0,
                             render: this.renderTeamsTab
-                        }), s.createElement(o.a, {
+                        }), s.createElement(d.a, {
                             path: "/" + this.props.match.params.channelLogin + "/dashboard/multiview/players",
                             exact: !0,
                             render: this.renderPlayersTab
-                        }), s.createElement(o.a, {
+                        }), s.createElement(d.a, {
                             path: "/" + this.props.match.params.channelLogin + "/dashboard/multiview/roles",
                             exact: !0,
                             render: this.renderRolesTab
-                        }), s.createElement(o.a, {
+                        }), s.createElement(d.a, {
                             render: this.renderChanletsTab
                         })))))
                     }, t
                 }(s.Component),
-                _ = Object(d.compose)(Object(h.b)("Multiview"), Object(b.a)(N, {
+                _ = Object(o.compose)(Object(h.b)("Multiview"), Object(b.a)(N, {
                     options: function(e) {
                         return {
                             variables: {
@@ -1155,7 +1173,7 @@
                             }
                         }
                     }
-                }), Object(b.a)(C, {
+                }), Object(b.a)(g, {
                     name: "createChanlet"
                 }), Object(b.a)(S, {
                     name: "updateChanlet"
@@ -1165,7 +1183,7 @@
                     name: "updateContentAttributes"
                 }), Object(b.a)(w, {
                     name: "deleteContentAttributes"
-                }))(M);
+                }))(O);
             var L = Object(a.connect)(function(e) {
                 return {
                     user: Object(r.e)(e)

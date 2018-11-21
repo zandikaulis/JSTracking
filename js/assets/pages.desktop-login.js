@@ -3538,7 +3538,7 @@
             ! function(e) {
                 e.CreatingAccounts = "658863-creating-an-account", e.SmartNotifications = "2944759"
             }(o || (o = {}));
-            var u = ((n = {})[o.CreatingAccounts] = ["en", "de"], n[o.SmartNotifications] = c, n);
+            var u = ((n = {})[o.CreatingAccounts] = ["da", "de", "en", "es-mx", "es", "fi", "fr", "it", "ja", "ko", "nl", "no", "pt-br", "ru", "sv", "th", "zh-tw"], n[o.SmartNotifications] = c, n);
 
             function l(e) {
                 var t = Object(s.b)(a.p.store.getState()) || "en",

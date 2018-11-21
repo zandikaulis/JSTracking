@@ -42,18 +42,7 @@
                 n.prototype = Object.create(e.prototype), n.prototype.constructor = n, n.__proto__ = e
             }
         },
-        qodT: function(n, e) {
-            function t(n, e) {
-                for (var t = 0; t < e.length; t++) {
-                    var r = e[t];
-                    r.enumerable = r.enumerable || !1, r.configurable = !0, "value" in r && (r.writable = !0), Object.defineProperty(n, r.key, r)
-                }
-            }
-            n.exports = function(n, e, r) {
-                return e && t(n.prototype, e), r && t(n, r), n
-            }
-        },
-        "zVe/": function(n, e, t) {
+        YJVR: function(n, e, t) {
             "use strict";
             t.r(e);
             var r, i = t("ApsV"),
@@ -71,97 +60,97 @@
                 n.Live = "live", n.MainDir = "main_dir", n.GameDir = "game_dir", n.Vod = "vod", n.Profile = "profile", n.ContentGate = "content_gate", n.Clip = "clip"
             }(u || (u = {}));
             var h = function() {
-                    function n() {}
-                    var e = n.prototype;
-                    return e.trackBranchEvent = function(n, e) {
-                        this.isBranchAvailable() && window.branch.track(n, e)
-                    }, e.fetchBranchURL = function(n, e, t, r) {
-                        var i = this;
-                        return new Promise(function(a, o) {
-                            i.isBranchAvailable() || o(), window.branch.link({
-                                campaign: e,
-                                feature: n,
-                                channel: "mobile_web",
-                                data: {
-                                    app_session_id: t,
-                                    device_id: r
-                                }
-                            }, function(n, e) {
-                                e ? a(e) : o(n)
-                            })
-                        })
-                    }, e.showBranchJourney = function(n, e) {
-                        if (this.isBranchAvailable() && ("undefined" == typeof localStorage || this.debugMode !== r.NoDisplay)) {
-                            var t = a()({}, e.tags, {
-                                app_session_id: e.app_session_id,
-                                device_id: e.device_id
-                            });
-                            switch (n.type) {
-                                case u.MainDir:
-                                    window.branch.setBranchViewData({
-                                        data: a()({}, t)
-                                    });
-                                    break;
-                                case u.GameDir:
-                                    window.branch.setBranchViewData({
-                                        data: a()({}, t, {
-                                            game: n.game
-                                        })
-                                    });
-                                    break;
-                                case u.Clip:
-                                    window.branch.setBranchViewData({
-                                        data: a()({}, t, {
-                                            channel: n.channel,
-                                            game: n.game
-                                        })
-                                    });
-                                    break;
-                                case u.Live:
-                                case u.Vod:
-                                case u.Profile:
-                                case u.ContentGate:
-                                    window.branch.setBranchViewData({
-                                        data: a()({}, t, {
-                                            channel: n.channel
-                                        })
-                                    });
-                                    break;
-                                default:
-                                    this.handleUnknown(n)
+                function n() {}
+                var e = n.prototype;
+                return e.trackBranchEvent = function(n, e) {
+                    this.isBranchAvailable() && window.branch.track(n, e)
+                }, e.fetchBranchURL = function(n, e, t, r) {
+                    var i = this;
+                    return new Promise(function(a, o) {
+                        i.isBranchAvailable() || o(), window.branch.link({
+                            campaign: e,
+                            feature: n,
+                            channel: "mobile_web",
+                            data: {
+                                app_session_id: t,
+                                device_id: r
                             }
-                            this.trackBranchEvent(s.PageView, {
-                                app_session_id: e.app_session_id,
-                                device_id: e.device_id,
-                                eligible_for: n.type
-                            })
+                        }, function(n, e) {
+                            e ? a(e) : o(n)
+                        })
+                    })
+                }, e.showBranchJourney = function(n, e) {
+                    if (this.isBranchAvailable() && this.debugMode !== r.NoDisplay) {
+                        var t = a()({}, e.tags, {
+                            app_session_id: e.app_session_id,
+                            device_id: e.device_id
+                        });
+                        switch (n.type) {
+                            case u.MainDir:
+                                window.branch.setBranchViewData({
+                                    data: a()({}, t)
+                                });
+                                break;
+                            case u.GameDir:
+                                window.branch.setBranchViewData({
+                                    data: a()({}, t, {
+                                        game: n.game
+                                    })
+                                });
+                                break;
+                            case u.Clip:
+                                window.branch.setBranchViewData({
+                                    data: a()({}, t, {
+                                        channel: n.channel,
+                                        game: n.game
+                                    })
+                                });
+                                break;
+                            case u.Live:
+                            case u.Vod:
+                            case u.Profile:
+                            case u.ContentGate:
+                                window.branch.setBranchViewData({
+                                    data: a()({}, t, {
+                                        channel: n.channel
+                                    })
+                                });
+                                break;
+                            default:
+                                this.handleUnknown(n)
                         }
-                    }, e.closeBranchJourney = function() {
-                        this.isBranchAvailable() && window.branch.closeJourney()
-                    }, e.addBranchListener = function(n) {
-                        this.isBranchAvailable() && window.branch.addListener(n)
-                    }, e.removeBranchListener = function(n) {
-                        this.isBranchAvailable() && window.branch.removeListener(n)
-                    }, e.setBranchIdentity = function(n) {
-                        this.isBranchAvailable() && window.branch.setIdentity(n)
-                    }, e.isBranchAvailable = function() {
-                        return "undefined" != typeof window && !!window.branch
-                    }, e.handleUnknown = function(n) {}, c()(n, [{
-                        key: "debugMode",
-                        get: function() {
-                            return localStorage.getItem("tachyon_branch_journey_override")
-                        }
-                    }]), n
-                }(),
-                p = t("Gc7M"),
+                        this.trackBranchEvent(s.PageView, {
+                            app_session_id: e.app_session_id,
+                            device_id: e.device_id,
+                            eligible_for: n.type
+                        })
+                    }
+                }, e.closeBranchJourney = function() {
+                    this.isBranchAvailable() && window.branch.closeJourney()
+                }, e.addBranchListener = function(n) {
+                    this.isBranchAvailable() && window.branch.addListener(n)
+                }, e.removeBranchListener = function(n) {
+                    this.isBranchAvailable() && window.branch.removeListener(n)
+                }, e.setBranchIdentity = function(n) {
+                    this.isBranchAvailable() && window.branch.setIdentity(n)
+                }, e.isBranchAvailable = function() {
+                    return "undefined" != typeof window && !!window.branch
+                }, e.handleUnknown = function(n) {}, c()(n, [{
+                    key: "debugMode",
+                    get: function() {
+                        return "undefined" != typeof window && window.localStorage ? window.localStorage.getItem("tachyon_branch_journey_override") : null
+                    }
+                }]), n
+            }();
+            var p = t("Gc7M"),
                 d = t.n(p),
                 l = t("q1tI"),
                 f = t("6gnU"),
                 b = t.n(f);
             var v = l.createContext({}),
-                m = v.Provider,
-                y = v.Consumer,
-                w = function(n) {
+                w = v.Provider,
+                m = v.Consumer,
+                y = function(n) {
                     function e() {
                         var e;
                         return (e = n.apply(this, arguments) || this).initialized = !1, e.mounted = !1, e
@@ -175,9 +164,9 @@
                     }, t.componentWillUnmount = function() {
                         this.mounted = !1
                     }, t.render = function() {
-                        return l.createElement(m, {
+                        return l.createElement(w, {
                             value: {
-                                branch: this.branchUtil
+                                branch: this.branchManager
                             }
                         }, this.props.children)
                     }, t.initBranch = function() {
@@ -205,20 +194,21 @@
                                 },
                                 no_journeys: !0
                             }, function() {
-                                n.mounted && (n.branchUtil = new h, n.branchUtil.setBranchIdentity(e), n.forceUpdate())
+                                n.mounted && (n.branchManager = new h, n.branchManager.setBranchIdentity(e), n.forceUpdate())
                             })
                         }
                     }, e
                 }(l.Component);
 
             function B(n) {
+                var e;
                 return (e = function(e) {
                     function t() {
                         return e.apply(this, arguments) || this
                     }
                     return d()(t, e), t.prototype.render = function() {
                         var e = this;
-                        return l.createElement(y, null, function(t) {
+                        return l.createElement(m, null, function(t) {
                             return l.createElement(n, b()({}, e.props, {
                                 branch: t.branch
                             }))
@@ -226,10 +216,9 @@
                     }, t
                 }(l.Component)).displayName = "Branch(" + function(n) {
                     return n.displayName || n.name || "Component"
-                }(n) + ")", e;
-                var e
+                }(n) + ")", e
             }
-            w.displayName = "BranchRoot";
+            y.displayName = "BranchRoot";
             var g = "branch_cta",
                 _ = "branch_dismiss",
                 k = "branch_continue",
@@ -267,7 +256,22 @@
                     }, t.componentWillUnmount = function() {
                         this.closeBranch()
                     }, t.componentDidUpdate = function(n) {
-                        !n.branch && this.props.branch && this.initBranch()
+                        !n.branch && this.props.branch ? this.initBranch() : this.props.branch && ! function(n, e) {
+                            if (n || e) {
+                                if (n && e) {
+                                    for (var t = !0, r = Object.keys(n), i = 0; i < r.length; i++) {
+                                        var a = r[i];
+                                        if (!e[a] || e[a] !== n[a]) {
+                                            t = !1;
+                                            break
+                                        }
+                                    }
+                                    return t
+                                }
+                                return !1
+                            }
+                            return !0
+                        }(this.props.viewData.tags, n.viewData.tags) && (this.closeBranch(), this.initBranch())
                     }, t.render = function() {
                         return null
                     }, t.initBranch = function() {
@@ -306,7 +310,25 @@
                     }, e
                 }(l.Component);
             T.displayName = "BranchTimedTracker";
-            var U = B(T);
+            var U = B(T),
+                E = function() {
+                    function n(n) {
+                        this.branchURL = n
+                    }
+                    var e = n.prototype;
+                    return e.trackBranchEvent = function() {}, e.fetchBranchURL = function() {
+                        return Promise.resolve(this.branchURL)
+                    }, e.showBranchJourney = function() {}, e.closeBranchJourney = function() {}, e.addBranchListener = function() {}, e.removeBranchListener = function() {}, e.setBranchIdentity = function() {}, c()(n, [{
+                        key: "debugMode",
+                        get: function() {
+                            return null
+                        }
+                    }]), n
+                }();
+
+            function L(n) {
+                return new E(n)
+            }
             t.d(e, "BranchJourneyType", function() {
                 return u
             }), t.d(e, "BranchEvent", function() {
@@ -316,10 +338,23 @@
             }), t.d(e, "BranchTimedTracker", function() {
                 return U
             }), t.d(e, "BranchRoot", function() {
-                return w
+                return y
             }), t.d(e, "withBranch", function() {
                 return B
+            }), t.d(e, "mockBranchManager", function() {
+                return L
             })
+        },
+        qodT: function(n, e) {
+            function t(n, e) {
+                for (var t = 0; t < e.length; t++) {
+                    var r = e[t];
+                    r.enumerable = r.enumerable || !1, r.configurable = !0, "value" in r && (r.writable = !0), Object.defineProperty(n, r.key, r)
+                }
+            }
+            n.exports = function(n, e, r) {
+                return e && t(n.prototype, e), r && t(n, r), n
+            }
         }
     }
 ]);

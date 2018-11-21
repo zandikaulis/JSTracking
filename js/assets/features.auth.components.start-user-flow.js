@@ -27,6 +27,7 @@
                             vodID: "",
                             showChannelInfoOnHover: e.showChannelInfoOnHover,
                             disableTheatreButton: !0,
+                            linkTrackingContext: e.linkTrackingContext,
                             playerTypeOverride: i.a.Frontpage,
                             onInit: e.onPlayerInit,
                             onDestroy: e.onPlayerDestroy,
@@ -1099,8 +1100,8 @@
                         className: "preview-card-titles__subtitle-wrapper"
                     }, t))
                 }),
-                N = n("H1ft"),
-                T = n("ZbA5"),
+                T = n("H1ft"),
+                N = n("ZbA5"),
                 L = n("QVaV"),
                 F = n("hyVY"),
                 O = n("MXoD"),
@@ -1241,7 +1242,7 @@
                         return function(e) {
                             return void 0 !== e.streamType
                         }(this.props) ? r.createElement(E, {
-                            topLeft: r.createElement(T.a, {
+                            topLeft: r.createElement(N.a, {
                                 type: this.props.streamType,
                                 hosting: !!this.props.hostedByChannelLogin
                             }),
@@ -1357,22 +1358,22 @@
                             attachTop: !0
                         }) : null
                     }, t.prototype.shouldShowGameBalloon = function(e) {
-                        return !!R(e) && (!!(e.videoGameChanges && e.videoGameChanges.length > 0) && e.multipleVideoGameMarkersType === N.a.Balloon)
+                        return !!R(e) && (!!(e.videoGameChanges && e.videoGameChanges.length > 0) && e.multipleVideoGameMarkersType === T.a.Balloon)
                     }, t.prototype.renderPreviewCardGameInfo = function(e, t, n, a) {
                         switch (e) {
-                            case N.a.Balloon:
+                            case T.a.Balloon:
                                 return r.createElement(p, {
                                     videoGameChanges: t,
                                     videoID: t[0].videoID,
                                     onBalloonClick: n,
                                     onBalloonItemClick: a
                                 });
-                            case N.a.Inline:
+                            case T.a.Inline:
                                 return r.createElement(h, {
                                     videoGameChanges: t,
                                     trackingContext: this.props.trackingContext
                                 });
-                            case N.a.None:
+                            case T.a.None:
                                 return null;
                             default:
                                 return e
@@ -3038,8 +3039,8 @@
                 }(i.Component),
                 x = Object(C.b)("CarouselCard")(_),
                 I = n("6x+I"),
-                N = n("QVaV"),
-                T = (n("cH/u"), function(e) {
+                T = n("QVaV"),
+                N = (n("cH/u"), function(e) {
                     function t() {
                         var t = null !== e && e.apply(this, arguments) || this;
                         return t.getContentRender = function() {
@@ -3123,7 +3124,7 @@
                                 color: E.O.Base,
                                 lineHeight: E.Za.Heading,
                                 "data-a-target": "carousel-broadcaster-displayname"
-                            }, Object(N.a)(t.props.item.broadcaster.login, t.props.item.broadcaster.displayName)), i.createElement(E.W, {
+                            }, Object(T.a)(t.props.item.broadcaster.login, t.props.item.broadcaster.displayName)), i.createElement(E.W, {
                                 fontSize: E.Ca.Size6,
                                 color: E.O.Base,
                                 "data-a-target": "carousel-user-playing-message"
@@ -3241,7 +3242,7 @@
                                             state: Object(y.b)(t.props.item.isScheduled)
                                         },
                                         "data-a-target": "carousel-broadcaster-displayname"
-                                    }, Object(N.a)(t.props.item.broadcaster.login, t.props.item.broadcaster.displayName))),
+                                    }, Object(T.a)(t.props.item.broadcaster.login, t.props.item.broadcaster.displayName))),
                                     game: i.createElement("span", {
                                         onClick: t.promotionCardClick.bind(t, "game_name")
                                     }, i.createElement(E.U, {
@@ -3454,7 +3455,7 @@
                                 case k.c.Vertical:
                                     return i.createElement(P, r.__assign({}, e));
                                 default:
-                                    return i.createElement(T, r.__assign({}, e))
+                                    return i.createElement(N, r.__assign({}, e))
                             }
                         }, t.selectContent = function(e) {
                             t.setState({

@@ -2752,6 +2752,7 @@
                             case W.Ca.LONG_VIDEOS:
                             case W.Ca.GAME_VIDEOS:
                             case W.Ca.LATEST_BROADCASTS:
+                            case W.Ca.LATEST_NON_BROADCASTS:
                             case W.Ca.ALL_VIDEOS:
                                 i = o.createElement(O.a, {
                                     hideTags: !0,

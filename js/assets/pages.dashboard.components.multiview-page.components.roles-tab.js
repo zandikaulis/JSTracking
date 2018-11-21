@@ -162,7 +162,9 @@
                         margin: {
                             right: .5
                         }
-                    }, r.createElement(s.a, null, r.createElement(d.z, {
+                    }, r.createElement(s.a, {
+                        hideBalloonOnInsideClick: !0
+                    }, r.createElement(d.z, {
                         icon: d.ub.More,
                         type: d.F.Text
                     }), r.createElement(d.u, {

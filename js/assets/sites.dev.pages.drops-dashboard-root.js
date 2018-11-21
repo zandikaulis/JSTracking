@@ -84,9 +84,9 @@
             }), n.d(t, "p", function() {
                 return g
             }), n.d(t, "w", function() {
-                return f
-            }), n.d(t, "y", function() {
                 return T
+            }), n.d(t, "y", function() {
+                return f
             }), n.d(t, "m", function() {
                 return I
             }), n.d(t, "d", function() {
@@ -128,9 +128,9 @@
             }), n.d(t, "r", function() {
                 return G
             }), n.d(t, "x", function() {
-                return V
-            }), n.d(t, "v", function() {
                 return B
+            }), n.d(t, "v", function() {
+                return V
             }), n.d(t, "q", function() {
                 return H
             }), n.d(t, "C", function() {
@@ -190,11 +190,11 @@
                 return r.PubsubTopic.ModerationActionsByUserAndChannel + "." + e + "." + t
             }
 
-            function f(e) {
+            function T(e) {
                 return r.PubsubTopic.Raid + "." + e
             }
 
-            function T(e) {
+            function f(e) {
                 return r.PubsubTopic.StreamChange + "." + e
             }
 
@@ -278,11 +278,11 @@
                 return r.PubsubTopic.MysteryGift + "." + e
             }
 
-            function V(e) {
+            function B(e) {
                 return r.PubsubTopic.SquadUpdates + "." + e
             }
 
-            function B(e) {
+            function V(e) {
                 return r.PubsubTopic.PurchaseFulfillmentEvents + "." + e
             }
 
@@ -549,7 +549,7 @@
         },
         DMoW: function(e, t, n) {
             "use strict";
-            var a, r, i, s, o, c, u, l, p, E, d, m, _, h, g, f, T, I, D, N, O, S, R, A, C, b, v, L, U, P, F, y, M, k, j, w, G, V, B, H, Y, x, W, K, X, z, q, Q, Z, J, $, ee, te, ne, ae, re, ie, se, oe, ce, ue, le, pe, Ee, de, me, _e, he, ge, fe, Te, Ie, De, Ne, Oe, Se, Re, Ae, Ce, be, ve, Le, Ue, Pe, Fe, ye, Me, ke, je, we, Ge, Ve, Be, He, Ye, xe, We, Ke, Xe, ze, qe, Qe, Ze, Je, $e, et, tt, nt, at, rt, it, st, ot, ct, ut, lt, pt, Et, dt, mt, _t, ht, gt, ft, Tt;
+            var a, r, i, s, o, c, u, l, p, E, d, m, _, h, g, T, f, I, D, N, O, S, R, A, C, b, v, L, U, P, F, y, M, k, j, w, G, B, V, H, Y, x, W, K, X, z, q, Q, Z, J, $, ee, te, ne, ae, re, ie, se, oe, ce, ue, le, pe, Ee, de, me, _e, he, ge, Te, fe, Ie, De, Ne, Oe, Se, Re, Ae, Ce, be, ve, Le, Ue, Pe, Fe, ye, Me, ke, je, we, Ge, Be, Ve, He, Ye, xe, We, Ke, Xe, ze, qe, Qe, Ze, Je, $e, et, tt, nt, at, rt, it, st, ot, ct, ut, lt, pt, Et, dt, mt, _t, ht, gt, Tt, ft;
             n.d(t, "N", function() {
                     return a
                 }), n.d(t, "e", function() {
@@ -589,9 +589,9 @@
                 }), n.d(t, "u", function() {
                     return G
                 }), n.d(t, "Aa", function() {
-                    return V
-                }), n.d(t, "t", function() {
                     return B
+                }), n.d(t, "t", function() {
+                    return V
                 }), n.d(t, "T", function() {
                     return H
                 }), n.d(t, "V", function() {
@@ -637,7 +637,7 @@
                 }), n.d(t, "Ca", function() {
                     return we
                 }), n.d(t, "k", function() {
-                    return Be
+                    return Ve
                 }), n.d(t, "w", function() {
                     return He
                 }), n.d(t, "m", function() {
@@ -661,7 +661,7 @@
                 }), n.d(t, "f", function() {
                     return gt
                 }), n.d(t, "v", function() {
-                    return ft
+                    return Tt
                 }),
                 function(e) {
                     e.CHANNEL_FEED_COMMENT_REPORT = "CHANNEL_FEED_COMMENT_REPORT", e.CHANNEL_FEED_POST_REPORT = "CHANNEL_FEED_POST_REPORT", e.CHAT_REPORT = "CHAT_REPORT", e.CLIP_REPORT = "CLIP_REPORT", e.COLLECTION_REPORT = "COLLECTION_REPORT", e.CURSE_PRIVATE_GROUP = "CURSE_PRIVATE_GROUP", e.CURSE_PUBLIC_GROUP = "CURSE_PUBLIC_GROUP", e.CURSE_WHISPER = "CURSE_WHISPER", e.EVENT_REPORT = "EVENT_REPORT", e.EXTENSION_REPORT = "EXTENSION_REPORT", e.LIVE_UP_REPORT = "LIVE_UP_REPORT", e.RAID_REPORT = "RAID_REPORT", e.ROOM_REPORT = "ROOM_REPORT", e.SINGS_DUET_SEED_REPORT = "SINGS_DUET_SEED_REPORT", e.SINGS_GROUP_BIO_REPORT = "SINGS_GROUP_BIO_REPORT", e.SINGS_GROUP_CHAT_REPORT = "SINGS_GROUP_CHAT_REPORT", e.SINGS_GROUP_NAME_REPORT = "SINGS_GROUP_NAME_REPORT", e.SINGS_VOD_COMMENT_REPORT = "SINGS_VOD_COMMENT_REPORT", e.USER_REPORT = "USER_REPORT", e.VOD_COMMENT_REPORT = "VOD_COMMENT_REPORT", e.VOD_REPORT = "VOD_REPORT", e.WHISPER_REPORT = "WHISPER_REPORT"
@@ -710,10 +710,10 @@
                 }(g || (g = {})),
                 function(e) {
                     e.ALLTIME = "ALLTIME", e.MONTH = "MONTH", e.WEEK = "WEEK"
-                }(f || (f = {})),
+                }(T || (T = {})),
                 function(e) {
                     e.AD = "AD", e.BUNDLE = "BUNDLE"
-                }(T || (T = {})),
+                }(f || (f = {})),
                 function(e) {
                     e.GAME_TRAILER = "GAME_TRAILER", e.MISC_TRAILER = "MISC_TRAILER", e.PAY_TO_STREAM = "PAY_TO_STREAM"
                 }(I || (I = {})),
@@ -776,10 +776,10 @@
                 }(G || (G = {})),
                 function(e) {
                     e.FORBIDDEN = "FORBIDDEN", e.TARGET_NOT_BANNED = "TARGET_NOT_BANNED", e.TARGET_NOT_FOUND = "TARGET_NOT_FOUND"
-                }(V || (V = {})),
+                }(B || (B = {})),
                 function(e) {
                     e.EUR = "EUR", e.GBP = "GBP", e.USD = "USD"
-                }(B || (B = {})),
+                }(V || (V = {})),
                 function(e) {
                     e.MONTH = "MONTH", e.ONE_TIME = "ONE_TIME", e.WEEK = "WEEK", e.YEAR = "YEAR"
                 }(H || (H = {})),
@@ -872,10 +872,10 @@
                 }(ge || (ge = {})),
                 function(e) {
                     e.CLAIMABLE_GIFT_CREATION_ERROR = "CLAIMABLE_GIFT_CREATION_ERROR", e.GIFT_CREATION_ERROR = "GIFT_CREATION_ERROR", e.MAX_GIFTS_FOR_OFFER_EXCEEDED = "MAX_GIFTS_FOR_OFFER_EXCEEDED", e.UNKNOWN_ERROR = "UNKNOWN_ERROR"
-                }(fe || (fe = {})),
+                }(Te || (Te = {})),
                 function(e) {
                     e.CLAIM_CODE = "CLAIM_CODE", e.DIRECT_ENTITLEMENT = "DIRECT_ENTITLEMENT", e.EXTERNAL = "EXTERNAL"
-                }(Te || (Te = {})),
+                }(fe || (fe = {})),
                 function(e) {
                     e.ERROR_STATUS = "ERROR_STATUS", e.GIFT_CLAIMED = "GIFT_CLAIMED", e.GIFT_CLAIM_PENDING = "GIFT_CLAIM_PENDING"
                 }(Ie || (Ie = {})),
@@ -931,17 +931,17 @@
                     e.DEFAULT = "DEFAULT", e.EXTENSION = "EXTENSION"
                 }(je || (je = {})),
                 function(e) {
-                    e.ALL_VIDEOS = "ALL_VIDEOS", e.COLLECTION = "COLLECTION", e.GAME_VIDEOS = "GAME_VIDEOS", e.LATEST_BROADCASTS = "LATEST_BROADCASTS", e.LONG_VIDEOS = "LONG_VIDEOS", e.SHORT_VIDEOS = "SHORT_VIDEOS", e.TOP_CLIPS = "TOP_CLIPS"
+                    e.ALL_VIDEOS = "ALL_VIDEOS", e.COLLECTION = "COLLECTION", e.GAME_VIDEOS = "GAME_VIDEOS", e.LATEST_BROADCASTS = "LATEST_BROADCASTS", e.LATEST_NON_BROADCASTS = "LATEST_NON_BROADCASTS", e.LONG_VIDEOS = "LONG_VIDEOS", e.SHORT_VIDEOS = "SHORT_VIDEOS", e.TOP_CLIPS = "TOP_CLIPS"
                 }(we || (we = {})),
                 function(e) {
                     e.ALREADY_CLAIMED = "ALREADY_CLAIMED", e.REQUEST_THROTTLED = "REQUEST_THROTTLED", e.UNAUTHORIZED = "UNAUTHORIZED", e.UNKNOWN = "UNKNOWN"
                 }(Ge || (Ge = {})),
                 function(e) {
                     e.BITS_KEY_CODE = "BITS_KEY_CODE"
-                }(Ve || (Ve = {})),
+                }(Be || (Be = {})),
                 function(e) {
                     e.BROADCASTER = "BROADCASTER", e.EDITOR = "EDITOR", e.MODERATOR = "MODERATOR", e.REGULAR = "REGULAR", e.SUBSCRIBER = "SUBSCRIBER"
-                }(Be || (Be = {})),
+                }(Ve || (Ve = {})),
                 function(e) {
                     e.ACTIVE = "ACTIVE", e.PENDING = "PENDING", e.REJECTED = "REJECTED", e.UNKNOWN = "UNKNOWN", e.UNSET = "UNSET"
                 }(He || (He = {})),
@@ -961,7 +961,7 @@
                     e.INVALID_PARAMETER = "INVALID_PARAMETER", e.UNAUTHORIZED = "UNAUTHORIZED", e.UNKNOWN_ERROR = "UNKNOWN_ERROR"
                 }(Xe || (Xe = {})),
                 function(e) {
-                    e.BOUNTY_NOT_LIVE = "BOUNTY_NOT_LIVE", e.INVALID_PARAMETER = "INVALID_PARAMETER", e.UNAUTHORIZED = "UNAUTHORIZED", e.UNKNOWN_ERROR = "UNKNOWN_ERROR"
+                    e.BOUNTY_NOT_LIVE = "BOUNTY_NOT_LIVE", e.INVALID_PARAMETER = "INVALID_PARAMETER", e.STREAM_TITLE_BANNED_WORDS = "STREAM_TITLE_BANNED_WORDS", e.STREAM_TITLE_TOO_LONG = "STREAM_TITLE_TOO_LONG", e.UNAUTHORIZED = "UNAUTHORIZED", e.UNKNOWN_ERROR = "UNKNOWN_ERROR"
                 }(ze || (ze = {})),
                 function(e) {
                     e.INVITATION_ALREADY_EXISTS = "INVITATION_ALREADY_EXISTS", e.INVITATION_INVALID = "INVITATION_INVALID", e.SQUAD_FULL = "SQUAD_FULL", e.UNAUTHORIZED = "UNAUTHORIZED", e.USER_ALREADY_IN_SQUAD = "USER_ALREADY_IN_SQUAD"
@@ -1034,10 +1034,10 @@
                 }(gt || (gt = {})),
                 function(e) {
                     e.ITEM = "ITEM", e.LINK_NOTIFICATION = "LINK_NOTIFICATION"
-                }(ft || (ft = {})),
+                }(Tt || (Tt = {})),
                 function(e) {
                     e.SERVICE_DEPENDENCY_FAILURE = "SERVICE_DEPENDENCY_FAILURE", e.UNKNOWN = "UNKNOWN", e.USER_UNAUTHORIZED = "USER_UNAUTHORIZED"
-                }(Tt || (Tt = {}))
+                }(ft || (ft = {}))
         },
         GD6M: function(e, t, n) {
             "use strict";
@@ -1230,8 +1230,8 @@
                     }, t
                 }(r.Component),
                 g = n("Svt6"),
-                f = n("+GjP"),
-                T = n("1mFg"),
+                T = n("+GjP"),
+                f = n("1mFg"),
                 I = g.a + "/kraken/search/games",
                 D = 7,
                 N = function(e) {
@@ -1245,10 +1245,10 @@
                                 return a.__generator(this, function(a) {
                                     switch (a.label) {
                                         case 0:
-                                            return a.trys.push([0, 4, , 5]), e.length ? (t = Object(f.e)(I, {
+                                            return a.trys.push([0, 4, , 5]), e.length ? (t = Object(T.e)(I, {
                                                 query: e.trim(),
                                                 type: "suggest"
-                                            }), [4, Object(T.a)(t)]) : (this.setState({
+                                            }), [4, Object(f.a)(t)]) : (this.setState({
                                                 games: []
                                             }), [2]);
                                         case 1:
@@ -1554,8 +1554,8 @@
                 _ = n("GnwI"),
                 h = n("N0BP"),
                 g = n("yLwq"),
-                f = n("Ue10"),
-                T = function(e) {
+                T = n("Ue10"),
+                f = function(e) {
                     function t() {
                         var t = null !== e && e.apply(this, arguments) || this;
                         return t.onSelect = function(e) {
@@ -1564,31 +1564,31 @@
                     }
                     return a.__extends(t, e), t.prototype.render = function() {
                         var e = this.props.user.avatar || Object(g.c)(this.props.user.id, 64);
-                        return r.createElement(f.Ya, a.__assign({
+                        return r.createElement(T.Ya, a.__assign({
                             padding: {
                                 y: .5,
                                 x: 1
                             }
-                        }, Object(h.a)(this.props)), r.createElement(f.Va, {
+                        }, Object(h.a)(this.props)), r.createElement(T.Va, {
                             onClick: this.onSelect
-                        }, r.createElement(f.G, {
+                        }, r.createElement(T.G, {
                             row: !0
-                        }, r.createElement(f.I, {
+                        }, r.createElement(T.I, {
                             alt: this.props.user.name,
                             src: e,
-                            size: f.J.Size4,
-                            aspect: f.p.Aspect1x1
-                        }), r.createElement(f.Ya, {
+                            size: T.J.Size4,
+                            aspect: T.p.Aspect1x1
+                        }), r.createElement(T.Ya, {
                             flexGrow: 1,
-                            display: f.X.Flex,
-                            position: f.kb.Relative
-                        }, r.createElement(f.Qa, {
+                            display: T.X.Flex,
+                            position: T.kb.Relative
+                        }, r.createElement(T.Qa, {
                             padding: {
                                 x: 1
                             },
                             flexGrow: 1
-                        }, r.createElement(f.W, {
-                            type: f.Wb.Span,
+                        }, r.createElement(T.W, {
+                            type: T.Wb.Span,
                             ellipsis: !0
                         }, this.props.user.name))))))
                     }, t
@@ -1598,12 +1598,12 @@
                         var t = null !== e && e.apply(this, arguments) || this;
                         return t.userSearch = null, t.renderSearchContent = function() {
                             var e = null;
-                            return t.props.waiting ? e = r.createElement(f.ab, {
+                            return t.props.waiting ? e = r.createElement(T.ab, {
                                 fillContent: !0
                             }) : t.props.userResults && (e = t.props.userResults.map(function(e) {
                                 return r.createElement(d.a, {
                                     key: e.id
-                                }, r.createElement(T, {
+                                }, r.createElement(f, {
                                     user: e,
                                     onSelect: t.onSelect
                                 }))
@@ -1619,23 +1619,23 @@
                         this.userSearch && e.open !== this.props.open && this.userSearch.toggle(e.open)
                     }, t.prototype.render = function() {
                         var e = this.renderSearchContent();
-                        return r.createElement(f.Ya, null, r.createElement(E.a, {
+                        return r.createElement(T.Ya, null, r.createElement(E.a, {
                             onChange: this.props.onInputChange,
                             onFocusInput: this.props.onFocusInput,
                             ref: this.setUserSearchRef,
                             placeholder: Object(s.d)("Search Users", "DevUserSearch"),
                             balloonProps: {
                                 show: this.props.open,
-                                direction: f.v.Bottom,
-                                size: f.w.Large
+                                direction: T.v.Bottom,
+                                size: T.w.Large
                             },
                             onClose: this.props.onSearchClose
-                        }, r.createElement(f.Ya, {
+                        }, r.createElement(T.Ya, {
                             className: "user-search__user-search"
                         }, r.createElement(m.b, {
                             contentClassName: "user-search__user-search-content",
                             suppressScrollX: !0
-                        }, r.createElement(f.Ya, {
+                        }, r.createElement(T.Ya, {
                             fullWidth: !0
                         }, e)))))
                     }, t
@@ -2251,7 +2251,7 @@
                             _ = i.restrictSearchableAttributes,
                             h = void 0 === _ ? [] : _;
                         return a.__awaiter(this, void 0, void 0, function() {
-                            var r, i, s, u, E, _, g, f, T = this;
+                            var r, i, s, u, E, _, g, T, f = this;
                             return a.__generator(this, function(I) {
                                 switch (I.label) {
                                     case 0:
@@ -2259,7 +2259,7 @@
                                             id: n,
                                             currentPage: c
                                         }, i = function(e) {
-                                            return a.__awaiter(T, void 0, void 0, function() {
+                                            return a.__awaiter(f, void 0, void 0, function() {
                                                 var n, i;
                                                 return a.__generator(this, function(a) {
                                                     switch (a.label) {
@@ -2323,9 +2323,9 @@
                                     case 10:
                                         return g.streamTags = I.sent(), [3, 14];
                                     case 11:
-                                        return f = r, [4, i(p.tags)];
+                                        return T = r, [4, i(p.tags)];
                                     case 12:
-                                        return f.tags = I.sent(), [3, 14];
+                                        return T.tags = I.sent(), [3, 14];
                                     case 13:
                                         return [2, null];
                                     case 14:
@@ -2491,9 +2491,9 @@
             function g(e) {
                 return !e.legacy && e.curseCompanyId && -1 !== e.curseCompanyId ? e.curseCompanyId.toString() : e.id
             }
-            var f = n("fy8Z");
+            var T = n("fy8Z");
 
-            function T(e, t) {
+            function f(e, t) {
                 return {
                     id: e.id ? e.id : void 0,
                     account_id: t,
@@ -2633,7 +2633,7 @@
                                 return a.__generator(this, function(a) {
                                     switch (a.label) {
                                         case 0:
-                                            return [4, Object(N.a)(f.a.GetCampaignsByCompany)];
+                                            return [4, Object(N.a)(T.a.GetCampaignsByCompany)];
                                         case 1:
                                             return (e = a.sent()) ? (t = g(this.props.company), n = E.a + "/kraken/accounts/" + t + "/campaigns", [4, Object(h.a)(n, {
                                                 headers: {
@@ -2799,7 +2799,7 @@
                     return a.__generator(this, function(a) {
                         switch (a.label) {
                             case 0:
-                                return t = e.activeOnly, n = e.companyId, r = e.prevCursor, i = e.nextCursor, s = e.limit, [4, Object(N.a)(f.a.GetItemsByCompany)];
+                                return t = e.activeOnly, n = e.companyId, r = e.prevCursor, i = e.nextCursor, s = e.limit, [4, Object(N.a)(T.a.GetItemsByCompany)];
                             case 1:
                                 return (o = a.sent()) ? (c = E.a + "/kraken/accounts/" + n + "/items", (u = k.stringify({
                                     active_only: t,
@@ -2840,8 +2840,8 @@
             }
             var w = n("/MKj"),
                 G = n("aCAx"),
-                V = n("HEnu"),
-                B = n("cZKs"),
+                B = n("HEnu"),
+                V = n("cZKs"),
                 H = n("NLLf"),
                 Y = (n("TofP"), function(e) {
                     function t() {
@@ -2851,7 +2851,7 @@
                         return r.createElement(O.Fb, {
                             className: "image-uploader-modal",
                             background: O.r.Base
-                        }, r.createElement(H.a, a.__assign({}, this.props)), r.createElement(B.a, {
+                        }, r.createElement(H.a, a.__assign({}, this.props)), r.createElement(V.a, {
                             closeOnBackdropClick: !0
                         }))
                     }, t
@@ -3555,7 +3555,7 @@
                         }
                     }, r.createElement(O.Ea, {
                         label: Object(o.d)("Start Date/Time (UTC)", "DevDropsCampaignForm")
-                    }, r.createElement(V.a, {
+                    }, r.createElement(B.a, {
                         onChange: this.onStartDate,
                         defaultDate: this.state.startDate
                     }), r.createElement(z, {
@@ -3568,7 +3568,7 @@
                         }
                     }, r.createElement(O.Ea, {
                         label: Object(o.d)("End Date/Time (UTC)", "DevDropsCampaignForm")
-                    }, r.createElement(V.a, {
+                    }, r.createElement(B.a, {
                         onChange: this.onEndDate,
                         defaultDate: this.state.endDate
                     }), r.createElement(z, {
@@ -3817,11 +3817,11 @@
                                 return a.__generator(this, function(a) {
                                     switch (a.label) {
                                         case 0:
-                                            return a.trys.push([0, 7, , 8]), e.image ? [4, Object(N.a)(f.a.PostCampaign)] : (this.setState({
+                                            return a.trys.push([0, 7, , 8]), e.image ? [4, Object(N.a)(T.a.PostCampaign)] : (this.setState({
                                                 errorMessage: Object(o.d)("Campaign image is mandatory. If you don't have a valid image, consider using the example provided in the hint text of the upload button.", "DevDropsCreateCampaign")
                                             }), [2]);
                                         case 1:
-                                            return (t = a.sent()) ? (n = g(this.props.company), r = T(e, n), i = E.a + "/kraken/accounts/" + n + "/campaigns", [4, Object(h.a)(i, {
+                                            return (t = a.sent()) ? (n = g(this.props.company), r = f(e, n), i = E.a + "/kraken/accounts/" + n + "/campaigns", [4, Object(h.a)(i, {
                                                 method: "POST",
                                                 body: JSON.stringify(r),
                                                 headers: {
@@ -3876,7 +3876,7 @@
                                     return a.__generator(this, function(a) {
                                         switch (a.label) {
                                             case 0:
-                                                return [4, Object(N.a)(f.a.PostCampaignImageUrl)];
+                                                return [4, Object(N.a)(T.a.PostCampaignImageUrl)];
                                             case 1:
                                                 if (t = a.sent()) return n = {
                                                     campaignID: e,
@@ -3954,7 +3954,7 @@
                                 return a.__generator(this, function(a) {
                                     switch (a.label) {
                                         case 0:
-                                            return a.trys.push([0, 9, , 10]), e.image ? [4, Object(N.a)(f.a.CreateItem)] : (this.setState({
+                                            return a.trys.push([0, 9, , 10]), e.image ? [4, Object(N.a)(T.a.CreateItem)] : (this.setState({
                                                 errorMessage: Object(o.d)("Item image is mandatory. If you don't have a valid image, consider using the example provided in the hint text of the upload button.", "DevDropsCreateItem")
                                             }), [2]);
                                         case 1:
@@ -4017,7 +4017,7 @@
                                     return a.__generator(this, function(a) {
                                         switch (a.label) {
                                             case 0:
-                                                return [4, Object(N.a)(f.a.PostItemImageUrl)];
+                                                return [4, Object(N.a)(T.a.PostItemImageUrl)];
                                             case 1:
                                                 if (t = a.sent()) return n = {
                                                     imageType: P.v.ITEM,
@@ -4067,7 +4067,7 @@
                 }), Object(p.a)({
                     location: m.PageviewLocation.DevSiteDropsCreateItem
                 }), le(), Object(u.a)(), U.a)(he),
-                fe = function(e) {
+                Te = function(e) {
                     function t() {
                         var t = null !== e && e.apply(this, arguments) || this;
                         return t.state = {
@@ -4128,7 +4128,7 @@
                                 return a.__generator(this, function(a) {
                                     switch (a.label) {
                                         case 0:
-                                            return a.trys.push([0, 6, , 7]), e = E.a + "/kraken/campaigns/" + this.props.match.params.campaignId, [4, Object(N.a)(f.a.GetCampaignById)];
+                                            return a.trys.push([0, 6, , 7]), e = E.a + "/kraken/campaigns/" + this.props.match.params.campaignId, [4, Object(N.a)(T.a.GetCampaignById)];
                                         case 1:
                                             return (t = a.sent()) ? [4, Object(h.a)(e, {
                                                 headers: {
@@ -4158,9 +4158,9 @@
                                 return a.__generator(this, function(a) {
                                     switch (a.label) {
                                         case 0:
-                                            return a.trys.push([0, 7, , 8]), [4, Object(N.a)(f.a.PutCampaign)];
+                                            return a.trys.push([0, 7, , 8]), [4, Object(N.a)(T.a.PutCampaign)];
                                         case 1:
-                                            return (t = a.sent()) ? (n = g(this.props.company), r = T(e, String(n)), i = E.a + "/kraken/accounts/" + n + "/campaigns/" + e.id, [4, Object(h.a)(i, {
+                                            return (t = a.sent()) ? (n = g(this.props.company), r = f(e, String(n)), i = E.a + "/kraken/accounts/" + n + "/campaigns/" + e.id, [4, Object(h.a)(i, {
                                                 method: "PUT",
                                                 body: JSON.stringify(r),
                                                 headers: {
@@ -4203,7 +4203,7 @@
                                     switch (a.label) {
                                         case 0:
                                             if (!this.state.campaign) throw new Error("Failed to upload");
-                                            return [4, Object(N.a)(f.a.PostCampaignImageUrl)];
+                                            return [4, Object(N.a)(T.a.PostCampaignImageUrl)];
                                         case 1:
                                             if (e = a.sent()) return t = g(this.props.company), n = {
                                                 campaignID: this.state.campaign.id,
@@ -4285,11 +4285,11 @@
                         })))) : r.createElement(O.ab, null)
                     }, t
                 }(r.Component),
-                Te = Object(l.compose)(Object(_.b)("DevDropsEditCampaignPage", {
+                fe = Object(l.compose)(Object(_.b)("DevDropsEditCampaignPage", {
                     destination: d.a.DevSiteDropsEditCampaign
                 }), Object(p.a)({
                     location: m.PageviewLocation.DevSiteDropsEditCampaign
-                }), le(), Object(u.a)(), U.a)(fe);
+                }), le(), Object(u.a)(), U.a)(Te);
             ! function(e) {
                 e.ITEM = "ITEM", e.LINK_NOTIFICATION = "LINK_NOTIFICATION"
             }(de || (de = {})),
@@ -4307,7 +4307,7 @@
                                 return a.__generator(this, function(a) {
                                     switch (a.label) {
                                         case 0:
-                                            return a.trys.push([0, 6, , 7]), e = g(this.props.company), t = E.a + "/kraken/accounts/" + e + "/items/" + this.props.match.params.itemId, [4, Object(N.a)(f.a.GetItemByID)];
+                                            return a.trys.push([0, 6, , 7]), e = g(this.props.company), t = E.a + "/kraken/accounts/" + e + "/items/" + this.props.match.params.itemId, [4, Object(N.a)(T.a.GetItemByID)];
                                         case 1:
                                             return (n = a.sent()) ? [4, Object(h.a)(t, {
                                                 headers: {
@@ -4339,7 +4339,7 @@
                                 return a.__generator(this, function(a) {
                                     switch (a.label) {
                                         case 0:
-                                            return a.trys.push([0, 10, , 11]), [4, Object(N.a)(f.a.UpdateItem)];
+                                            return a.trys.push([0, 10, , 11]), [4, Object(N.a)(T.a.UpdateItem)];
                                         case 1:
                                             return (t = a.sent()) ? (n = g(this.props.company), r = I(e, String(n), t), i = E.a + "/kraken/accounts/" + n + "/items/" + e.item_id, [4, Object(h.a)(i, {
                                                 method: "PUT",
@@ -4392,7 +4392,7 @@
                                     switch (a.label) {
                                         case 0:
                                             if (!this.state.item) throw new Error("Failed to upload because there is no item");
-                                            return [4, Object(N.a)(f.a.PostItemImageUrl)];
+                                            return [4, Object(N.a)(T.a.PostItemImageUrl)];
                                         case 1:
                                             if (!(e = a.sent())) throw new Error("Failed to upload, invalid token");
                                             return t = g(this.props.company), n = {
@@ -4852,7 +4852,7 @@
                                 return a.__generator(this, function(a) {
                                     switch (a.label) {
                                         case 0:
-                                            return [4, Object(N.a)(f.a.PutService)];
+                                            return [4, Object(N.a)(T.a.PutService)];
                                         case 1:
                                             if (!(t = a.sent())) return [3, 5];
                                             a.label = 2;
@@ -4888,7 +4888,7 @@
                                 return a.__generator(this, function(a) {
                                     switch (a.label) {
                                         case 0:
-                                            return [4, Object(N.a)(f.a.GetService)];
+                                            return [4, Object(N.a)(T.a.GetService)];
                                         case 1:
                                             if (!(e = a.sent())) return [3, 7];
                                             a.label = 2;
@@ -5002,7 +5002,7 @@
                         }), r.createElement(i.a, {
                             exact: !0,
                             path: "/console/drops/:campaignId",
-                            component: Te
+                            component: fe
                         })))
                     }, t
                 }(r.Component),

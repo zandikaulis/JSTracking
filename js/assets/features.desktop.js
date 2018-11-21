@@ -256,9 +256,9 @@
                             i.p.integrations.performance.setStartupSamples({
                                 samples: [r]
                             }), i.p.tracking.trackDesktopBenchmark(m.AppLoaded, {
-                                duration: t.value,
-                                twilight_relative_start_time: n,
-                                preload_relative_start_time: a
+                                duration: Math.trunc(t.value),
+                                twilight_relative_start_time: Math.trunc(n),
+                                preload_relative_start_time: Math.trunc(a)
                             })
                         }
                         this.props.updateAppLoadMetric(t)
