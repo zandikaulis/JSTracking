@@ -1,6 +1,7 @@
 window.__twilightSettings = {
     "environment": "production",
     "activity_feed_gate": "off",
+    "all_your_bits_are_belong_to_us": false,
     "amazon_ads_url": "https://s.amazon-adsystem.com/iui3?d=3p-hbg&ex-src=twitch.tv&ex-hargs=v%3D1.0%3Bc%3D8858214122683%3Bp%3De75425fb-5407-7bd5-fd20-f462e98a8777",
     "announce_collaboration_widget": "off",
     "anonymous_gifting": "on",
