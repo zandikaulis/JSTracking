@@ -40,6 +40,7 @@ window.__twilightSettings = {
     "consolidated_dashboard_settings": "off",
     "creator_camp_launch": "all",
     "creator_subtember2018_launch": "off",
+    "cumulative_tenure": "off",
     "dashboard_live_popout": "off",
     "dashboard_moderation_settings_enabled": true,
     "dashboard_payout_history": true,
