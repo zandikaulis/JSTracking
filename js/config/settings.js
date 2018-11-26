@@ -1079,16 +1079,16 @@ window.__twilightSettings = {
         },
         "744750a4-a3c6-4791-981e-815fde73aa9a": {
             "name": "social_buttons_move",
-            "v": 4907,
+            "v": 5200,
             "t": 2,
             "groups": [{
-                "weight": 60,
+                "weight": 100,
                 "value": "control"
             }, {
-                "weight": 20,
+                "weight": 0,
                 "value": "variant_a"
             }, {
-                "weight": 20,
+                "weight": 0,
                 "value": "variant_b"
             }]
         },
