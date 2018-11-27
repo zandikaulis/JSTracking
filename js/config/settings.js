@@ -530,6 +530,24 @@ window.__twilightSettings = {
                 "value": "enabled"
             }]
         },
+        "2d4a0ad4-1658-4cfb-a542-896b3a8524cc": {
+            "name": "contextual_auth_modals_v2",
+            "v": 5224,
+            "t": 1,
+            "groups": [{
+                "weight": 100,
+                "value": "control"
+            }, {
+                "weight": 0,
+                "value": "balloon"
+            }, {
+                "weight": 0,
+                "value": "split"
+            }, {
+                "weight": 0,
+                "value": "two_step"
+            }]
+        },
         "2d6bf24d-39b8-491b-936e-4daebd3cc17c": {
             "name": "twilight_clips_already",
             "v": 3141,
