@@ -92,6 +92,7 @@ window.__twilightSettings = {
     "native_not_me": "staff",
     "net_neutrality_visible": false,
     "new_live_announcements": true,
+    "new_paypal_enabled": false,
     "nfl_channels": ["cctester33", "stevemz"],
     "nfl_game_id": "14017",
     "notification_app_server_public_key": "BGzteaQYOqrTAPN8EuuowBVG67pHwyZo879XZkC7cUV2QP4qQf-92Pmm9tyOuriJdiKnMDDRi28F5HQK6uSk0vM",
