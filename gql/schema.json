@@ -37559,6 +37559,33 @@
                     "name": null, 
                     "ofType": {
                       "kind": "INPUT_OBJECT", 
+                      "name": "ResendVerificationEmailInput", 
+                      "ofType": null
+                    }
+                  }
+                }
+              ], 
+              "deprecationReason": null, 
+              "description": "resendVerificationEmail resends a verification email to the current user.", 
+              "isDeprecated": false, 
+              "name": "resendVerificationEmail", 
+              "type": {
+                "kind": "OBJECT", 
+                "name": "ResendVerificationEmailPayload", 
+                "ofType": null
+              }
+            }, 
+            {
+              "args": [
+                {
+                  "defaultValue": null, 
+                  "description": null, 
+                  "name": "input", 
+                  "type": {
+                    "kind": "NON_NULL", 
+                    "name": null, 
+                    "ofType": {
+                      "kind": "INPUT_OBJECT", 
                       "name": "RestrictVideoInput", 
                       "ofType": null
                     }
@@ -51919,6 +51946,54 @@
           "interfaces": [], 
           "kind": "OBJECT", 
           "name": "RequestRitualTokenPayload", 
+          "possibleTypes": null
+        }, 
+        {
+          "description": "ResendVerificationEmailInput is input required to resend the verification email.", 
+          "enumValues": null, 
+          "fields": null, 
+          "inputFields": [
+            {
+              "defaultValue": null, 
+              "description": "ID of the user to resend a verification email to.", 
+              "name": "userID", 
+              "type": {
+                "kind": "NON_NULL", 
+                "name": null, 
+                "ofType": {
+                  "kind": "SCALAR", 
+                  "name": "ID", 
+                  "ofType": null
+                }
+              }
+            }
+          ], 
+          "interfaces": null, 
+          "kind": "INPUT_OBJECT", 
+          "name": "ResendVerificationEmailInput", 
+          "possibleTypes": null
+        }, 
+        {
+          "description": "ResendVerificationEmailPayload is the output after resending a verification email.", 
+          "enumValues": null, 
+          "fields": [
+            {
+              "args": [], 
+              "deprecationReason": null, 
+              "description": "The modified user.", 
+              "isDeprecated": false, 
+              "name": "user", 
+              "type": {
+                "kind": "OBJECT", 
+                "name": "User", 
+                "ofType": null
+              }
+            }
+          ], 
+          "inputFields": null, 
+          "interfaces": [], 
+          "kind": "OBJECT", 
+          "name": "ResendVerificationEmailPayload", 
           "possibleTypes": null
         }, 
         {
@@ -71610,6 +71685,29 @@
             {
               "args": [
                 {
+                  "defaultValue": null, 
+                  "description": null, 
+                  "name": "address", 
+                  "type": {
+                    "kind": "SCALAR", 
+                    "name": "String", 
+                    "ofType": null
+                  }
+                }
+              ], 
+              "deprecationReason": null, 
+              "description": "Verification request object for the user and an associated contact address.\nIf no address is provided, the current email address associated with the user account will be used.", 
+              "isDeprecated": false, 
+              "name": "verificationRequest", 
+              "type": {
+                "kind": "OBJECT", 
+                "name": "VerificationRequest", 
+                "ofType": null
+              }
+            }, 
+            {
+              "args": [
+                {
                   "defaultValue": "10", 
                   "description": null, 
                   "name": "first", 
@@ -73388,6 +73486,22 @@
                 "ofType": {
                   "kind": "SCALAR", 
                   "name": "String", 
+                  "ofType": null
+                }
+              }
+            }, 
+            {
+              "args": [], 
+              "deprecationReason": null, 
+              "description": "Time at which the verification request was last modified.", 
+              "isDeprecated": false, 
+              "name": "modified", 
+              "type": {
+                "kind": "NON_NULL", 
+                "name": null, 
+                "ofType": {
+                  "kind": "SCALAR", 
+                  "name": "Time", 
                   "ofType": null
                 }
               }
