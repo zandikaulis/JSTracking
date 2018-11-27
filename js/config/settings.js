@@ -3,6 +3,8 @@ window.__twilightSettings = {
     "activity_feed_gate": "off",
     "all_your_bits_are_belong_to_us": false,
     "amazon_ads_url": "https://s.amazon-adsystem.com/iui3?d=3p-hbg&ex-src=twitch.tv&ex-hargs=v%3D1.0%3Bc%3D8858214122683%3Bp%3De75425fb-5407-7bd5-fd20-f462e98a8777",
+    "amazon_ads_url_crown_uk": "https://aax-eu.amazon-adsystem.com/s/iui3?d=forester-did&ex-fargs=%3Fid%3Db8b26227-de81-5bfb-4046-b9158f6a8c08%26type%3D4%26m%3D3&ex-fch=416613&ex-src=https://www.twitch.tv&ex-hargs=v%3D1.0%3Bc%3D3815840130302%3Bp%3DB8B26227-DE81-5BFB-4046-B9158F6A8C08",
+    "amazon_ads_url_crown_us": "https://s.amazon-adsystem.com/iui3?d=forester-did&ex-fargs=%3Fid%3D2d452222-ea0d-0b73-d0cc-472923e63141%26type%3D4%26m%3D1&ex-fch=416613&ex-src=https://www.twitch.tv&ex-hargs=v%3D1.0%3Bc%3D7416603020101%3Bp%3D2D452222-EA0D-0B73-D0CC-472923E63141",
     "announce_collaboration_widget": "off",
     "anonymous_gifting": "on",
     "benchmark_component_threshold": 0.1,
