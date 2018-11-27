@@ -1143,6 +1143,18 @@ window.__twilightSettings = {
                 "value": "enabled"
             }]
         },
+        "7b8d95e0-69f8-403f-bf2a-e9efe6233b36": {
+            "name": "ttv_primary_content",
+            "v": 5203,
+            "t": 1,
+            "groups": [{
+                "weight": 90,
+                "value": "control"
+            }, {
+                "weight": 10,
+                "value": "treatment"
+            }]
+        },
         "7ff6a29e-5681-45ed-ad66-46d35a9549bc": {
             "name": "Player Core NPM Experiment",
             "v": 5172,
