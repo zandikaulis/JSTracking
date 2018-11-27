@@ -701,7 +701,7 @@
                     function t() {
                         var t = null !== e && e.apply(this, arguments) || this;
                         return t.onBalloonItemClick = function() {
-                            t.props.onBalloonItemClick && t.props.onBalloonItemClick(t.props.videoID, t.props.index)
+                            t.props.onBalloonItemClick && t.props.onBalloonItemClick(t.props.index)
                         }, t
                     }
                     return a.__extends(t, e), t.prototype.render = function() {
@@ -768,7 +768,7 @@
                     function t() {
                         var t = null !== e && e.apply(this, arguments) || this;
                         return t.onBalloonToggle = function(e) {
-                            t.props.onBalloonClick && !e && t.props.onBalloonClick(t.props.videoID)
+                            t.props.onBalloonClick && !e && t.props.onBalloonClick()
                         }, t
                     }
                     return a.__extends(t, e), t.prototype.componentDidMount = function() {
@@ -789,7 +789,8 @@
                         }, r.createElement(m.a, {
                             key: "game-balloon",
                             display: l.X.Inline,
-                            onToggle: this.onBalloonToggle
+                            onToggle: this.onBalloonToggle,
+                            hideBalloonOnInsideClick: !0
                         }, r.createElement(l.z, {
                             type: l.F.Hollow,
                             icon: l.ub.ViewerList
@@ -835,8 +836,7 @@
                             return r.createElement(s, {
                                 index: n,
                                 gameChange: e,
-                                key: t.props.videoID + "-" + e.offset,
-                                videoID: t.props.videoID,
+                                key: e.offset,
                                 onBalloonItemClick: t.props.onBalloonItemClick
                             })
                         })
@@ -1364,7 +1364,6 @@
                             case T.a.Balloon:
                                 return r.createElement(p, {
                                     videoGameChanges: t,
-                                    videoID: t[0].videoID,
                                     onBalloonClick: n,
                                     onBalloonItemClick: a
                                 });
@@ -1403,11 +1402,11 @@
             var a, r = n("/7QA"),
                 i = n("D7An");
             ! function(e) {
-                e.None = "None", e.Inline = "Inline", e.Balloon = "Balloon"
+                e.None = "None", e.Inline = "Inline", e.Balloon = "moments_with_images"
             }(a || (a = {}));
             var o = function() {
                 switch (r.p.experiments.getAssignment(i.b.Archer)) {
-                    case "balloon":
+                    case "moments_with_images":
                         return a.Balloon;
                     case "inline":
                         return a.Inline;
@@ -1482,7 +1481,7 @@
                 s = n("D7An"),
                 c = n("kRBY"),
                 d = l.a.wrap(function() {
-                    return n.e(149).then(n.bind(null, "jOTV"))
+                    return n.e(150).then(n.bind(null, "jOTV"))
                 }, "NewUserSurveyComponent"),
                 m = function(e) {
                     function t() {

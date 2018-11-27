@@ -1,5 +1,5 @@
 (window.webpackJsonp = window.webpackJsonp || []).push([
-    [133], {
+    [134], {
         "5fUb": function(e, t, n) {},
         "Ar/j": function(e, t, n) {
             "use strict";
@@ -682,16 +682,16 @@
                 }(a.Component),
                 x = Object(s.compose)(r.a)(y),
                 w = c.a.wrap(function() {
-                    return n.e(132).then(n.bind(null, "CG/P"))
+                    return n.e(133).then(n.bind(null, "CG/P"))
                 }, "AddonDetailsDescriptionPage"),
                 j = c.a.wrap(function() {
-                    return n.e(131).then(n.bind(null, "eojJ"))
+                    return n.e(132).then(n.bind(null, "eojJ"))
                 }, "AddonDetailsScreenshotsPage"),
                 T = c.a.wrap(function() {
-                    return n.e(130).then(n.bind(null, "coCq"))
+                    return n.e(131).then(n.bind(null, "coCq"))
                 }, "AddonDetailsChangelogPage"),
                 F = c.a.wrap(function() {
-                    return n.e(129).then(n.bind(null, "x5gZ"))
+                    return n.e(130).then(n.bind(null, "x5gZ"))
                 }, "AddonDetailsVersionPage"),
                 k = function(e) {
                     function t() {

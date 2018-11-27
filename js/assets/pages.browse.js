@@ -765,7 +765,7 @@
                     return Promise.resolve().then(n.bind(null, "SKDF"))
                 }, "BrowseGamesPage"),
                 W = k.a.wrap(function() {
-                    return n.e(128).then(n.bind(null, "JTXL"))
+                    return n.e(129).then(n.bind(null, "JTXL"))
                 }, "DirectoryPopularPage"),
                 G = function(e) {
                     function t() {
@@ -1168,7 +1168,7 @@
                         return {
                             variables: {
                                 gameName: e.gameName,
-                                tagType: h.X.TOP,
+                                tagType: h.Y.TOP,
                                 limit: 50
                             }
                         }
@@ -2977,7 +2977,8 @@
                                 y: 2,
                                 x: 1
                             },
-                            margin: 1
+                            margin: 1,
+                            borderRadius: T.x.Large
                         }, this.renderImage(), i.createElement(T.Ya, {
                             textAlign: T.Sb.Center
                         }, this.renderText(), i.createElement(T.z, {

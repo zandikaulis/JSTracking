@@ -1,5 +1,5 @@
 (window.webpackJsonp = window.webpackJsonp || []).push([
-    [204, 193], {
+    [205, 194], {
         "+djN": function(e, n, t) {
             "use strict";
             t.d(n, "c", function() {
@@ -4119,7 +4119,7 @@
                                         trackBitsCardInteraction: e.trackBitsCardInteraction,
                                         visible: e.state.showCard === Je.Bits,
                                         cheerMessageAutoModded: !1,
-                                        bitsSendErrorCode: Ie.P.UNKNOWN,
+                                        bitsSendErrorCode: Ie.Q.UNKNOWN,
                                         bitsSendHasError: !1
                                     })
                                 }

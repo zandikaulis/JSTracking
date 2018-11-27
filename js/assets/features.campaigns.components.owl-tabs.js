@@ -1,5 +1,5 @@
 (window.webpackJsonp = window.webpackJsonp || []).push([
-    [110], {
+    [111], {
         "+8bU": function(e, t, a) {},
         "+z1J": function(e, t, a) {
             "use strict";
@@ -593,6 +593,7 @@
                         }, t
                     }
                     return i.__extends(t, e), t.prototype.render = function() {
+                        var e = this.props.type === h.F.Default || this.props.type ? this.props.type : h.F.Hollow;
                         return s.createElement(h.Ya, {
                             className: "blizzard-account-link"
                         }, this.props.data && this.props.data.loading && s.createElement(h.z, {
@@ -605,38 +606,50 @@
                         }, s.createElement(h.tb, {
                             asset: h.ub.DeadGlitch
                         })), this.props.data && this.props.data.currentUser && !this.props.data.currentUser.blizzardAccount && s.createElement(l.a, null, s.createElement(h.z, {
-                            type: h.F.Hollow,
+                            type: e,
                             "data-test-selector": "blizzard_account_link_component_unlinked",
                             dropdown: !0,
                             size: h.D.Default
-                        }, Object(o.d)("Link your Blizzard Account", "CampaignsBlizzardAccountLink")), s.createElement(h.u, {
+                        }, this.props.linkText || Object(o.d)("Link your Blizzard Account", "CampaignsBlizzardAccountLink")), s.createElement(h.u, {
                             direction: h.v.BottomRight,
                             size: h.w.Small,
                             noTail: !0
                         }, s.createElement(h.Ya, {
-                            padding: .5
+                            padding: 1
                         }, s.createElement(h.Va, {
                             onClick: this.blizzardLink,
                             "data-region": "us"
-                        }, Object(o.d)("North America (US)", "CampaignsBlizzardAccountLink")), s.createElement(h.Va, {
+                        }, s.createElement(h.Ya, {
+                            padding: .5
+                        }, Object(o.d)("North America (US)", "CampaignsBlizzardAccountLink"))), s.createElement(h.Va, {
                             onClick: this.blizzardLink,
                             "data-region": "eu"
-                        }, Object(o.d)("Europe (EU)", "CampaignsBlizzardAccountLink")), s.createElement(h.Va, {
+                        }, s.createElement(h.Ya, {
+                            padding: .5
+                        }, Object(o.d)("Europe (EU)", "CampaignsBlizzardAccountLink"))), s.createElement(h.Va, {
                             onClick: this.blizzardLink,
                             "data-region": "kr"
-                        }, Object(o.d)("Korea (KR)", "CampaignsBlizzardAccountLink")), s.createElement(h.Va, {
+                        }, s.createElement(h.Ya, {
+                            padding: .5
+                        }, Object(o.d)("Korea (KR)", "CampaignsBlizzardAccountLink"))), s.createElement(h.Va, {
                             onClick: this.blizzardLink,
                             "data-region": "tw"
-                        }, Object(o.d)("Taiwan (TW)", "CampaignsBlizzardAccountLink")), s.createElement(h.Va, {
+                        }, s.createElement(h.Ya, {
+                            padding: .5
+                        }, Object(o.d)("Taiwan (TW)", "CampaignsBlizzardAccountLink"))), s.createElement(h.Va, {
                             onClick: this.blizzardLink,
                             "data-region": "cn"
-                        }, Object(o.d)("China (CN)", "CampaignsBlizzardAccountLink")), s.createElement(h.Va, {
+                        }, s.createElement(h.Ya, {
+                            padding: .5
+                        }, Object(o.d)("China (CN)", "CampaignsBlizzardAccountLink"))), s.createElement(h.Va, {
                             onClick: this.blizzardLink,
                             "data-region": "sea"
-                        }, Object(o.d)("South East Asia (SEA)", "CampaignsBlizzardAccountLink"))))), this.props.data && this.props.data.currentUser && this.props.data.currentUser.blizzardAccount && s.createElement(h.Zb, {
+                        }, s.createElement(h.Ya, {
+                            padding: .5
+                        }, Object(o.d)("South East Asia (SEA)", "CampaignsBlizzardAccountLink")))))), this.props.data && this.props.data.currentUser && this.props.data.currentUser.blizzardAccount && s.createElement(h.Zb, {
                             label: this.props.data.currentUser.blizzardAccount.battleTag
                         }, s.createElement(l.a, null, s.createElement(h.z, {
-                            type: h.F.Hollow,
+                            type: e,
                             size: h.D.Default,
                             "data-test-selector": "blizzard_account_link_component_linked"
                         }, s.createElement(h.Ya, {
@@ -661,11 +674,13 @@
                             size: h.w.Small,
                             noTail: !0
                         }, s.createElement(h.Ya, {
-                            padding: .5
+                            padding: 1
                         }, s.createElement(h.Va, {
                             onClick: this.blizzardUnlink,
                             "data-test-selector": "blizzard_account_link_component_unlink_account"
-                        }, Object(o.d)("Unlink Blizzard Account", "CampaignsBlizzardAccountLink")))))))
+                        }, s.createElement(h.Ya, {
+                            padding: .5
+                        }, Object(o.d)("Unlink Blizzard Account", "CampaignsBlizzardAccountLink"))))))))
                     }, t = i.__decorate([Object(d.a)(g)], t)
                 }(s.Component));
             var f = Object(n.connect)(function(e) {

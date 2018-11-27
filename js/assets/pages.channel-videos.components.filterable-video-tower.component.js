@@ -1,5 +1,5 @@
 (window.webpackJsonp = window.webpackJsonp || []).push([
-    [121], {
+    [122], {
         "0INk": function(e, t, i) {
             "use strict";
             i.d(t, "b", function() {
@@ -47,12 +47,12 @@
                 },
                 c = function(e) {
                     return n.__awaiter(void 0, void 0, void 0, function() {
-                        var t, i, l, d, c, p = this;
-                        return n.__generator(this, function(m) {
-                            switch (m.label) {
+                        var t, i, l, d, c, m = this;
+                        return n.__generator(this, function(p) {
+                            switch (p.label) {
                                 case 0:
-                                    return m.trys.push([0, 2, , 3]), t = e.map(function(e) {
-                                        return n.__awaiter(p, void 0, void 0, function() {
+                                    return p.trys.push([0, 2, , 3]), t = e.map(function(e) {
+                                        return n.__awaiter(m, void 0, void 0, function() {
                                             var t;
                                             return n.__generator(this, function(i) {
                                                 switch (i.label) {
@@ -70,7 +70,7 @@
                                         })
                                     }), [4, Promise.all(t)];
                                 case 1:
-                                    return i = m.sent(), l = i.filter(function(e) {
+                                    return i = p.sent(), l = i.filter(function(e) {
                                         return !!e
                                     }), d = l.map(function() {
                                         return r.TwitchDataType.Game
@@ -85,7 +85,7 @@
                                         location: s()
                                     }), [3, 3];
                                 case 2:
-                                    return m.sent(), [3, 3];
+                                    return p.sent(), [3, 3];
                                 case 3:
                                     return [2]
                             }
@@ -94,6 +94,595 @@
                 }
         },
         "0T/G": function(e, t) {},
+        "1Ijn": function(e, t) {
+            var i = {
+                kind: "Document",
+                definitions: [{
+                    kind: "OperationDefinition",
+                    operation: "query",
+                    name: {
+                        kind: "Name",
+                        value: "VideoPreviewCard__VideoMoments"
+                    },
+                    variableDefinitions: [{
+                        kind: "VariableDefinition",
+                        variable: {
+                            kind: "Variable",
+                            name: {
+                                kind: "Name",
+                                value: "videoId"
+                            }
+                        },
+                        type: {
+                            kind: "NonNullType",
+                            type: {
+                                kind: "NamedType",
+                                name: {
+                                    kind: "Name",
+                                    value: "ID"
+                                }
+                            }
+                        }
+                    }],
+                    directives: [],
+                    selectionSet: {
+                        kind: "SelectionSet",
+                        selections: [{
+                            kind: "Field",
+                            name: {
+                                kind: "Name",
+                                value: "video"
+                            },
+                            arguments: [{
+                                kind: "Argument",
+                                name: {
+                                    kind: "Name",
+                                    value: "id"
+                                },
+                                value: {
+                                    kind: "Variable",
+                                    name: {
+                                        kind: "Name",
+                                        value: "videoId"
+                                    }
+                                }
+                            }],
+                            directives: [],
+                            selectionSet: {
+                                kind: "SelectionSet",
+                                selections: [{
+                                    kind: "Field",
+                                    name: {
+                                        kind: "Name",
+                                        value: "id"
+                                    },
+                                    arguments: [],
+                                    directives: []
+                                }, {
+                                    kind: "Field",
+                                    name: {
+                                        kind: "Name",
+                                        value: "moments"
+                                    },
+                                    arguments: [{
+                                        kind: "Argument",
+                                        name: {
+                                            kind: "Name",
+                                            value: "momentRequestType"
+                                        },
+                                        value: {
+                                            kind: "EnumValue",
+                                            value: "VIDEO_CHAPTER_MARKERS"
+                                        }
+                                    }],
+                                    directives: [],
+                                    selectionSet: {
+                                        kind: "SelectionSet",
+                                        selections: [{
+                                            kind: "Field",
+                                            name: {
+                                                kind: "Name",
+                                                value: "edges"
+                                            },
+                                            arguments: [],
+                                            directives: [],
+                                            selectionSet: {
+                                                kind: "SelectionSet",
+                                                selections: [{
+                                                    kind: "FragmentSpread",
+                                                    name: {
+                                                        kind: "Name",
+                                                        value: "videoMomentEdge"
+                                                    },
+                                                    directives: []
+                                                }]
+                                            }
+                                        }]
+                                    }
+                                }]
+                            }
+                        }]
+                    }
+                }, {
+                    kind: "FragmentDefinition",
+                    name: {
+                        kind: "Name",
+                        value: "videoMomentEdge"
+                    },
+                    typeCondition: {
+                        kind: "NamedType",
+                        name: {
+                            kind: "Name",
+                            value: "VideoMomentEdge"
+                        }
+                    },
+                    directives: [],
+                    selectionSet: {
+                        kind: "SelectionSet",
+                        selections: [{
+                            kind: "Field",
+                            name: {
+                                kind: "Name",
+                                value: "cursor"
+                            },
+                            arguments: [],
+                            directives: []
+                        }, {
+                            kind: "Field",
+                            name: {
+                                kind: "Name",
+                                value: "node"
+                            },
+                            arguments: [],
+                            directives: [],
+                            selectionSet: {
+                                kind: "SelectionSet",
+                                selections: [{
+                                    kind: "FragmentSpread",
+                                    name: {
+                                        kind: "Name",
+                                        value: "videoChapter"
+                                    },
+                                    directives: []
+                                }]
+                            }
+                        }]
+                    }
+                }, {
+                    kind: "FragmentDefinition",
+                    name: {
+                        kind: "Name",
+                        value: "videoChapter"
+                    },
+                    typeCondition: {
+                        kind: "NamedType",
+                        name: {
+                            kind: "Name",
+                            value: "VideoMoment"
+                        }
+                    },
+                    directives: [],
+                    selectionSet: {
+                        kind: "SelectionSet",
+                        selections: [{
+                            kind: "Field",
+                            name: {
+                                kind: "Name",
+                                value: "id"
+                            },
+                            arguments: [],
+                            directives: []
+                        }, {
+                            kind: "Field",
+                            name: {
+                                kind: "Name",
+                                value: "durationMilliseconds"
+                            },
+                            arguments: [],
+                            directives: []
+                        }, {
+                            kind: "Field",
+                            name: {
+                                kind: "Name",
+                                value: "positionMilliseconds"
+                            },
+                            arguments: [],
+                            directives: []
+                        }, {
+                            kind: "Field",
+                            name: {
+                                kind: "Name",
+                                value: "type"
+                            },
+                            arguments: [],
+                            directives: []
+                        }, {
+                            kind: "Field",
+                            name: {
+                                kind: "Name",
+                                value: "description"
+                            },
+                            arguments: [],
+                            directives: []
+                        }, {
+                            kind: "Field",
+                            name: {
+                                kind: "Name",
+                                value: "thumbnailURL"
+                            },
+                            arguments: [],
+                            directives: []
+                        }, {
+                            kind: "FragmentSpread",
+                            name: {
+                                kind: "Name",
+                                value: "momentDetails"
+                            },
+                            directives: []
+                        }, {
+                            kind: "Field",
+                            name: {
+                                kind: "Name",
+                                value: "video"
+                            },
+                            arguments: [],
+                            directives: [],
+                            selectionSet: {
+                                kind: "SelectionSet",
+                                selections: [{
+                                    kind: "Field",
+                                    name: {
+                                        kind: "Name",
+                                        value: "id"
+                                    },
+                                    arguments: [],
+                                    directives: []
+                                }, {
+                                    kind: "Field",
+                                    name: {
+                                        kind: "Name",
+                                        value: "lengthSeconds"
+                                    },
+                                    arguments: [],
+                                    directives: []
+                                }]
+                            }
+                        }]
+                    }
+                }, {
+                    kind: "FragmentDefinition",
+                    name: {
+                        kind: "Name",
+                        value: "momentDetails"
+                    },
+                    typeCondition: {
+                        kind: "NamedType",
+                        name: {
+                            kind: "Name",
+                            value: "VideoMoment"
+                        }
+                    },
+                    directives: [],
+                    selectionSet: {
+                        kind: "SelectionSet",
+                        selections: [{
+                            kind: "Field",
+                            name: {
+                                kind: "Name",
+                                value: "details"
+                            },
+                            arguments: [],
+                            directives: [],
+                            selectionSet: {
+                                kind: "SelectionSet",
+                                selections: [{
+                                    kind: "FragmentSpread",
+                                    name: {
+                                        kind: "Name",
+                                        value: "gameChangeDetails"
+                                    },
+                                    directives: []
+                                }, {
+                                    kind: "FragmentSpread",
+                                    name: {
+                                        kind: "Name",
+                                        value: "hearthstoneDetails"
+                                    },
+                                    directives: []
+                                }, {
+                                    kind: "FragmentSpread",
+                                    name: {
+                                        kind: "Name",
+                                        value: "overwatchDetails"
+                                    },
+                                    directives: []
+                                }, {
+                                    kind: "FragmentSpread",
+                                    name: {
+                                        kind: "Name",
+                                        value: "pubgDetails"
+                                    },
+                                    directives: []
+                                }]
+                            }
+                        }]
+                    }
+                }, {
+                    kind: "FragmentDefinition",
+                    name: {
+                        kind: "Name",
+                        value: "gameChangeDetails"
+                    },
+                    typeCondition: {
+                        kind: "NamedType",
+                        name: {
+                            kind: "Name",
+                            value: "GameChangeMomentDetails"
+                        }
+                    },
+                    directives: [],
+                    selectionSet: {
+                        kind: "SelectionSet",
+                        selections: [{
+                            kind: "Field",
+                            name: {
+                                kind: "Name",
+                                value: "game"
+                            },
+                            arguments: [],
+                            directives: [],
+                            selectionSet: {
+                                kind: "SelectionSet",
+                                selections: [{
+                                    kind: "Field",
+                                    name: {
+                                        kind: "Name",
+                                        value: "id"
+                                    },
+                                    arguments: [],
+                                    directives: []
+                                }, {
+                                    kind: "Field",
+                                    name: {
+                                        kind: "Name",
+                                        value: "displayName"
+                                    },
+                                    arguments: [],
+                                    directives: []
+                                }, {
+                                    kind: "Field",
+                                    name: {
+                                        kind: "Name",
+                                        value: "boxArtURL"
+                                    },
+                                    arguments: [{
+                                        kind: "Argument",
+                                        name: {
+                                            kind: "Name",
+                                            value: "width"
+                                        },
+                                        value: {
+                                            kind: "IntValue",
+                                            value: "40"
+                                        }
+                                    }, {
+                                        kind: "Argument",
+                                        name: {
+                                            kind: "Name",
+                                            value: "height"
+                                        },
+                                        value: {
+                                            kind: "IntValue",
+                                            value: "53"
+                                        }
+                                    }],
+                                    directives: []
+                                }]
+                            }
+                        }]
+                    }
+                }, {
+                    kind: "FragmentDefinition",
+                    name: {
+                        kind: "Name",
+                        value: "hearthstoneDetails"
+                    },
+                    typeCondition: {
+                        kind: "NamedType",
+                        name: {
+                            kind: "Name",
+                            value: "HearthstoneMomentDetails"
+                        }
+                    },
+                    directives: [],
+                    selectionSet: {
+                        kind: "SelectionSet",
+                        selections: [{
+                            kind: "Field",
+                            name: {
+                                kind: "Name",
+                                value: "broadcasterHero"
+                            },
+                            arguments: [],
+                            directives: [],
+                            selectionSet: {
+                                kind: "SelectionSet",
+                                selections: [{
+                                    kind: "Field",
+                                    name: {
+                                        kind: "Name",
+                                        value: "id"
+                                    },
+                                    arguments: [],
+                                    directives: []
+                                }, {
+                                    kind: "Field",
+                                    name: {
+                                        kind: "Name",
+                                        value: "class"
+                                    },
+                                    arguments: [],
+                                    directives: []
+                                }, {
+                                    kind: "Field",
+                                    name: {
+                                        kind: "Name",
+                                        value: "name"
+                                    },
+                                    arguments: [],
+                                    directives: []
+                                }]
+                            }
+                        }, {
+                            kind: "Field",
+                            name: {
+                                kind: "Name",
+                                value: "opponentHero"
+                            },
+                            arguments: [],
+                            directives: [],
+                            selectionSet: {
+                                kind: "SelectionSet",
+                                selections: [{
+                                    kind: "Field",
+                                    name: {
+                                        kind: "Name",
+                                        value: "id"
+                                    },
+                                    arguments: [],
+                                    directives: []
+                                }, {
+                                    kind: "Field",
+                                    name: {
+                                        kind: "Name",
+                                        value: "class"
+                                    },
+                                    arguments: [],
+                                    directives: []
+                                }, {
+                                    kind: "Field",
+                                    name: {
+                                        kind: "Name",
+                                        value: "name"
+                                    },
+                                    arguments: [],
+                                    directives: []
+                                }]
+                            }
+                        }, {
+                            kind: "Field",
+                            name: {
+                                kind: "Name",
+                                value: "gameMode"
+                            },
+                            arguments: [],
+                            directives: [],
+                            selectionSet: {
+                                kind: "SelectionSet",
+                                selections: [{
+                                    kind: "Field",
+                                    name: {
+                                        kind: "Name",
+                                        value: "type"
+                                    },
+                                    arguments: [],
+                                    directives: []
+                                }, {
+                                    kind: "Field",
+                                    name: {
+                                        kind: "Name",
+                                        value: "value"
+                                    },
+                                    arguments: [],
+                                    directives: []
+                                }]
+                            }
+                        }]
+                    }
+                }, {
+                    kind: "FragmentDefinition",
+                    name: {
+                        kind: "Name",
+                        value: "overwatchDetails"
+                    },
+                    typeCondition: {
+                        kind: "NamedType",
+                        name: {
+                            kind: "Name",
+                            value: "OverwatchMomentDetails"
+                        }
+                    },
+                    directives: [],
+                    selectionSet: {
+                        kind: "SelectionSet",
+                        selections: [{
+                            kind: "Field",
+                            name: {
+                                kind: "Name",
+                                value: "role"
+                            },
+                            arguments: [],
+                            directives: []
+                        }, {
+                            kind: "Field",
+                            name: {
+                                kind: "Name",
+                                value: "heroName"
+                            },
+                            arguments: [],
+                            directives: []
+                        }]
+                    }
+                }, {
+                    kind: "FragmentDefinition",
+                    name: {
+                        kind: "Name",
+                        value: "pubgDetails"
+                    },
+                    typeCondition: {
+                        kind: "NamedType",
+                        name: {
+                            kind: "Name",
+                            value: "PUBGMomentDetails"
+                        }
+                    },
+                    directives: [],
+                    selectionSet: {
+                        kind: "SelectionSet",
+                        selections: [{
+                            kind: "Field",
+                            name: {
+                                kind: "Name",
+                                value: "maxPlayerCount"
+                            },
+                            arguments: [],
+                            directives: []
+                        }, {
+                            kind: "Field",
+                            name: {
+                                kind: "Name",
+                                value: "minPlayerCount"
+                            },
+                            arguments: [],
+                            directives: []
+                        }]
+                    }
+                }],
+                loc: {
+                    start: 0,
+                    end: 946
+                }
+            };
+            i.loc.source = {
+                body: "query VideoPreviewCard__VideoMoments($videoId: ID!) {\nvideo(id: $videoId) {\nid\nmoments(momentRequestType: VIDEO_CHAPTER_MARKERS) {\nedges {\n...videoMomentEdge\n}\n}\n}\n}\nfragment videoMomentEdge on VideoMomentEdge {\ncursor\nnode {\n...videoChapter\n}\n}\nfragment videoChapter on VideoMoment {\nid\ndurationMilliseconds\npositionMilliseconds\ntype\ndescription\nthumbnailURL\n...momentDetails\nvideo {\nid\nlengthSeconds\n}\n}\nfragment momentDetails on VideoMoment {\ndetails {\n...gameChangeDetails\n...hearthstoneDetails\n...overwatchDetails\n...pubgDetails\n}\n}\nfragment gameChangeDetails on GameChangeMomentDetails {\ngame {\nid\ndisplayName\nboxArtURL(width: 40 height: 53)\n}\n}\nfragment hearthstoneDetails on HearthstoneMomentDetails {\nbroadcasterHero {\nid\nclass\nname\n}\nopponentHero {\nid\nclass\nname\n}\ngameMode {\ntype\nvalue\n}\n}\nfragment overwatchDetails on OverwatchMomentDetails {\nrole\nheroName\n}\nfragment pubgDetails on PUBGMomentDetails {\nmaxPlayerCount\nminPlayerCount\n}",
+                name: "GraphQL request",
+                locationOffset: {
+                    line: 1,
+                    column: 1
+                }
+            };
+            e.exports = i
+        },
         "5NSO": function(e, t, i) {},
         "80G/": function(e, t, i) {},
         "86FS": function(e, t, i) {
@@ -101,17 +690,44 @@
             var n = i("mrSG"),
                 a = i("q1tI"),
                 r = i("H1ft"),
-                o = i("SWMh"),
-                s = i("cr+I"),
-                l = i("/7QA"),
-                d = i("GFmA"),
-                c = i("0INk"),
-                p = i("yWUM"),
-                m = i("vRsq"),
-                u = i("2xye"),
-                h = i("GnwI"),
-                g = i("4HIT"),
-                v = function(e) {
+                o = i("yR8l"),
+                s = function(e) {
+                    return e.map(function(e, t, i) {
+                        var a, r = e.node;
+                        if ("GAME_CHANGE" !== r.type || 0 !== r.durationMilliseconds) return l(r);
+                        var o = i[t + 1] && i[t + 1].node;
+                        a = o ? o.positionMilliseconds - r.positionMilliseconds : r.video && r.video.lengthSeconds && 1e3 * r.video.lengthSeconds - r.positionMilliseconds || 0;
+                        var s = n.__assign({}, r, {
+                            durationMilliseconds: a
+                        });
+                        return l(s)
+                    })
+                },
+                l = function(e) {
+                    return {
+                        duration: e.durationMilliseconds / 1e3,
+                        label: e.description || "",
+                        offset: e.positionMilliseconds / 1e3,
+                        thumbnailUrl: d(e),
+                        videoID: e.video && e.video.id || ""
+                    }
+                },
+                d = function(e) {
+                    return e.thumbnailURL ? e.thumbnailURL : e.details && c(e.details) && e.details.game && e.details.game.boxArtURL ? e.details.game.boxArtURL : "https://static-cdn.jtvnw.net/ttv-static/404_boxart-285x380.jpg"
+                },
+                c = function(e) {
+                    return !!e.game
+                },
+                m = i("cr+I"),
+                p = i("/7QA"),
+                u = i("GFmA"),
+                v = i("0INk"),
+                g = i("yWUM"),
+                h = i("vRsq"),
+                k = i("2xye"),
+                f = i("GnwI"),
+                b = i("4HIT"),
+                y = function(e) {
                     function t() {
                         var t = null !== e && e.apply(this, arguments) || this;
                         return t.onClickHandler = function() {
@@ -119,33 +735,33 @@
                         }, t.gameChangesWithLinks = function() {
                             return t.props.videoGameChanges.map(function(e) {
                                 var i = {
-                                    t: Object(p.a)(e.offset)
+                                    t: Object(g.a)(e.offset)
                                 };
                                 return t.props.collectionID && (i.collection = t.props.collectionID), n.__assign({}, e, {
                                     linkTo: {
                                         pathname: "/videos/" + t.props.video.id,
-                                        search: s.stringify(i),
+                                        search: m.stringify(i),
                                         state: {
-                                            content: u.PageviewContent.PreviewCardGameBalloonGame,
+                                            content: k.PageviewContent.PreviewCardGameBalloonGame,
                                             medium: t.props.tracking.medium
                                         }
                                     }
                                 })
                             })
-                        }, t.trackVideoGameBalloonClick = function(e) {
-                            t.props.video.owner && t.props.video.owner.id && t.props.video.owner.login && Object(c.b)({
-                                videoID: e,
+                        }, t.trackVideoGameBalloonClick = function() {
+                            t.props.video.owner && t.props.video.owner.id && t.props.video.owner.login && Object(v.b)({
+                                videoID: t.props.video.id,
                                 broadcasterID: t.props.video.owner.id,
                                 channelLogin: t.props.video.owner.login,
                                 contentIndex: t.props.tracking.content_index,
                                 pageviewMedium: t.props.tracking.medium
                             })
-                        }, t.trackVideoGameBalloonItemClick = function(e, i) {
-                            t.props.video.owner && t.props.video.owner.id && t.props.video.owner.login && Object(c.c)({
-                                videoID: e,
+                        }, t.trackVideoGameBalloonItemClick = function(e) {
+                            t.props.video.owner && t.props.video.owner.id && t.props.video.owner.login && Object(v.c)({
+                                videoID: t.props.video.id,
                                 broadcasterID: t.props.video.owner.id,
                                 channelLogin: t.props.video.owner.login,
-                                contentIndex: i,
+                                contentIndex: e,
                                 pageviewMedium: t.props.tracking.medium
                             })
                         }, t
@@ -156,7 +772,7 @@
                             onClick: this.onClickHandler,
                             title: this.props.video.title,
                             linkTo: {
-                                pathname: Object(m.i)(void 0, this.props.video.id),
+                                pathname: Object(h.i)(void 0, this.props.video.id),
                                 state: this.getLinkState(),
                                 search: this.generateSearchString()
                             },
@@ -180,7 +796,7 @@
                                 state: this.getLinkState()
                             },
                             gameBoxArtImageProps: {
-                                src: this.props.video.game && this.props.video.game.boxArtURL || l.a.defaultBoxArtURL,
+                                src: this.props.video.game && this.props.video.game.boxArtURL || p.a.defaultBoxArtURL,
                                 alt: this.props.video.game ? this.props.video.game.displayName : ""
                             },
                             videoGameChanges: this.gameChangesWithLinks(),
@@ -202,14 +818,14 @@
                             trackingContext: this.props.tracking,
                             tagListProps: !0 !== this.props.hideTags && this.props.video.contentTags ? {
                                 tags: this.props.video.contentTags,
-                                linkPath: g.a.PopularTag
+                                linkPath: b.a.PopularTag
                             } : void 0
                         };
-                        return a.createElement(d.a, n.__assign({}, e))
+                        return a.createElement(u.a, n.__assign({}, e))
                     }, t.prototype.generateSearchString = function() {
                         var e = {};
                         this.props.collectionID && (e.collection = this.props.collectionID);
-                        var t = s.stringify(e);
+                        var t = m.stringify(e);
                         return t ? "?" + t : ""
                     }, t.prototype.getVideoPreviousWatchPercentage = function() {
                         return this.props.video && this.props.video.self && this.props.video.self.viewingHistory && null !== this.props.video.self.viewingHistory.position ? 0 === this.props.video.lengthSeconds || 0 === this.props.video.self.viewingHistory.position ? null : this.props.video.self.viewingHistory.position / (this.props.video.lengthSeconds || 1 / 0) * 100 : null
@@ -232,41 +848,39 @@
                         }
                     }, t
                 }(a.Component),
-                k = Object(h.b)("VideoPreviewCard", {
+                C = Object(f.b)("VideoPreviewCard", {
                     autoReportInteractive: !0
-                })(v);
+                })(y),
+                w = i("1Ijn");
             i.d(t, "a", function() {
-                return f
+                return N
             });
-            var f = function(e) {
-                function t() {
-                    var t = null !== e && e.apply(this, arguments) || this;
-                    return t.state = {
-                        videoGameChanges: []
-                    }, t.maybeFetchVideoMarkers = function(e, i) {
-                        return n.__awaiter(t, void 0, void 0, function() {
-                            var t;
-                            return n.__generator(this, function(n) {
-                                switch (n.label) {
-                                    case 0:
-                                        return this.promise = Object(o.a)(e, i, this.props.video.game), [4, this.promise];
-                                    case 1:
-                                        return t = n.sent(), this.setState({
-                                            videoGameChanges: t
-                                        }), [2]
-                                }
-                            })
-                        })
+            var S = function(e) {
+                    function t() {
+                        var t = null !== e && e.apply(this, arguments) || this;
+                        return t.convertMomentEdgesToChanges = function() {
+                            var e = s(t.props.data && t.props.data.video && t.props.data.video.moments && t.props.data.video.moments.edges || []);
+                            return e.length > 1 ? e : []
+                        }, t
+                    }
+                    return n.__extends(t, e), t.prototype.render = function() {
+                        return a.createElement(C, n.__assign({
+                            videoGameChanges: this.convertMomentEdgesToChanges()
+                        }, this.props))
                     }, t
-                }
-                return n.__extends(t, e), t.prototype.render = function() {
-                    return a.createElement(k, n.__assign({
-                        videoGameChanges: this.state.videoGameChanges
-                    }, this.props))
-                }, t.prototype.componentWillMount = function() {
-                    this.props.multipleVideoGameMarkersType && this.props.multipleVideoGameMarkersType !== r.a.None && !this.promise && this.maybeFetchVideoMarkers(this.props.video.id, this.props.video.lengthSeconds || 0)
-                }, t
-            }(a.Component)
+                }(a.Component),
+                N = Object(o.a)(w, {
+                    options: function(e) {
+                        return {
+                            variables: {
+                                videoId: e.video.id
+                            }
+                        }
+                    },
+                    skip: function(e) {
+                        return !(e.multipleVideoGameMarkersType && (e.multipleVideoGameMarkersType !== r.a.None || e.video.id))
+                    }
+                })(S)
         },
         B3R5: function(e, t, i) {},
         EJax: function(e, t, i) {
@@ -278,11 +892,11 @@
                 l = i("sLlB"),
                 d = i("QzU5"),
                 c = i("XKWF"),
-                p = i("Ue10");
+                m = i("Ue10");
             ! function(e) {
                 e.Button = "filter-dropdown-button", e.FilterItemAll = "filter-item-all", e.FilterItemPastPremiere = "filter-item-past-premiere", e.FilterItemArchive = "filter-item-archive", e.FilterItemHighlight = "filter-item-highlight", e.FilterItemUpload = "filter-item-upload", e.SortNewest = "sort-option-newest", e.SortPopular = "sort-option-popular", e.SortSelector = "sort-selector"
             }(n || (n = {}));
-            var m = function(e) {
+            var p = function(e) {
                     function t() {
                         var t = null !== e && e.apply(this, arguments) || this;
                         return t.getBroadcastTypeLabel = function(e) {
@@ -318,15 +932,15 @@
                         }, t
                     }
                     return a.__extends(t, e), t.prototype.render = function() {
-                        return r.createElement(p.Ya, {
-                            alignItems: p.f.End,
-                            display: p.X.Flex,
-                            flexDirection: p.Aa.Row,
+                        return r.createElement(m.Ya, {
+                            alignItems: m.f.End,
+                            display: m.X.Flex,
+                            flexDirection: m.Aa.Row,
                             fullWidth: !0,
-                            justifyContent: p.Xa.Between
-                        }, r.createElement(p.Ya, {
-                            display: p.X.Flex,
-                            flexDirection: p.Aa.Row
+                            justifyContent: m.Xa.Between
+                        }, r.createElement(m.Ya, {
+                            display: m.X.Flex,
+                            flexDirection: m.Aa.Row
                         }, this.renderLanguageSelector(), r.createElement(s.a, {
                             buttonLabel: this.getBroadcastTypeLabel(this.props.broadcastType),
                             "data-test-selector": n.Button,
@@ -334,81 +948,81 @@
                             hideDropdownOnInsideClick: !0
                         }, this.renderInteractables())), r.createElement("div", null, this.renderSortSelector()))
                     }, t.prototype.renderInteractables = function() {
-                        return r.createElement(r.Fragment, null, r.createElement(p.Va, {
+                        return r.createElement(r.Fragment, null, r.createElement(m.Va, {
                             "data-a-target": "video-type-filter-all",
                             "data-filter-type": "all",
                             "data-test-selector": n.FilterItemAll,
                             onClick: this.typeChangeHandler,
                             selected: !1
-                        }, r.createElement(p.Ya, {
-                            display: p.X.Flex,
+                        }, r.createElement(m.Ya, {
+                            display: m.X.Flex,
                             padding: {
                                 y: .5,
                                 x: 1
                             }
-                        }, this.getBroadcastTypeLabel(), this.renderCheckmark())), r.createElement(p.Va, {
+                        }, this.getBroadcastTypeLabel(), this.renderCheckmark())), r.createElement(m.Va, {
                             "data-a-target": "video-type-filter-past-premieres",
                             "data-filter-type": d.a.PastPremiere,
                             "data-test-selector": n.FilterItemPastPremiere,
                             onClick: this.typeChangeHandler,
                             selected: !1
-                        }, r.createElement(p.Ya, {
-                            display: p.X.Flex,
+                        }, r.createElement(m.Ya, {
+                            display: m.X.Flex,
                             padding: {
                                 y: .5,
                                 x: 1
                             }
-                        }, this.getBroadcastTypeLabel(d.a.PastPremiere), this.renderCheckmark(d.a.PastPremiere))), r.createElement(p.Va, {
+                        }, this.getBroadcastTypeLabel(d.a.PastPremiere), this.renderCheckmark(d.a.PastPremiere))), r.createElement(m.Va, {
                             "data-a-target": "video-type-filter-past-broadcasts",
                             "data-filter-type": d.a.Archive,
                             "data-test-selector": n.FilterItemArchive,
                             onClick: this.typeChangeHandler,
                             selected: !1
-                        }, r.createElement(p.Ya, {
-                            display: p.X.Flex,
+                        }, r.createElement(m.Ya, {
+                            display: m.X.Flex,
                             padding: {
                                 y: .5,
                                 x: 1
                             }
-                        }, this.getBroadcastTypeLabel(d.a.Archive), this.renderCheckmark(d.a.Archive))), r.createElement(p.Va, {
+                        }, this.getBroadcastTypeLabel(d.a.Archive), this.renderCheckmark(d.a.Archive))), r.createElement(m.Va, {
                             "data-a-target": "video-type-filter-highlights",
                             "data-filter-type": d.a.Highlight,
                             "data-test-selector": n.FilterItemHighlight,
                             onClick: this.typeChangeHandler,
                             selected: !1
-                        }, r.createElement(p.Ya, {
-                            display: p.X.Flex,
+                        }, r.createElement(m.Ya, {
+                            display: m.X.Flex,
                             padding: {
                                 y: .5,
                                 x: 1
                             }
-                        }, this.getBroadcastTypeLabel(d.a.Highlight), this.renderCheckmark(d.a.Highlight))), r.createElement(p.Va, {
+                        }, this.getBroadcastTypeLabel(d.a.Highlight), this.renderCheckmark(d.a.Highlight))), r.createElement(m.Va, {
                             "data-a-target": "video-type-filter-uploads",
                             "data-filter-type": d.a.Upload,
                             "data-test-selector": n.FilterItemUpload,
                             onClick: this.typeChangeHandler,
                             selected: !1
-                        }, r.createElement(p.Ya, {
-                            display: p.X.Flex,
+                        }, r.createElement(m.Ya, {
+                            display: m.X.Flex,
                             padding: {
                                 y: .5,
                                 x: 1
                             }
                         }, this.getBroadcastTypeLabel(d.a.Upload), this.renderCheckmark(d.a.Upload))))
                     }, t.prototype.renderCheckmark = function(e) {
-                        return this.props.broadcastType === e ? r.createElement(p.Ya, {
+                        return this.props.broadcastType === e ? r.createElement(m.Ya, {
                             attachRight: !0,
-                            position: p.kb.Absolute,
+                            position: m.kb.Absolute,
                             margin: {
                                 right: 1
                             }
-                        }, r.createElement(p.tb, {
-                            asset: p.ub.Check,
+                        }, r.createElement(m.tb, {
+                            asset: m.ub.Check,
                             height: 18,
                             width: 18
                         })) : null
                     }, t.prototype.renderLanguageSelector = function() {
-                        return this.props.hideLanguageSelector ? null : r.createElement(p.Ya, {
+                        return this.props.hideLanguageSelector ? null : r.createElement(m.Ya, {
                             margin: {
                                 right: 0
                             }
@@ -416,12 +1030,12 @@
                     }, t.prototype.renderSortSelector = function() {
                         if (this.props.hideSortSelector) return null;
                         var e = this.props.selectedSort && Object(c.b)(this.props.selectedSort) || c.a.Newest,
-                            t = r.createElement(p.Ab, {
+                            t = r.createElement(m.Ab, {
                                 "data-a-target": "video-sort-select",
                                 "data-test-selector": n.SortSelector,
                                 name: "sort",
                                 onChange: this.sortChangeHandler,
-                                size: p.Ta.Large,
+                                size: m.Ta.Large,
                                 value: e
                             }, r.createElement("option", {
                                 "data-a-target": "video-sort-newest",
@@ -432,7 +1046,7 @@
                                 "data-test-selector": n.SortPopular,
                                 value: c.a.Popular
                             }, Object(o.d)("Popular", "VideoFilter")));
-                        return r.createElement(p.Ya, {
+                        return r.createElement(m.Ya, {
                             padding: {
                                 y: .5
                             }
@@ -441,7 +1055,7 @@
                 }(r.Component),
                 u = i("daWW");
             i.d(t, "a", function() {
-                return m
+                return p
             }), i.d(t, "b", function() {
                 return u.a
             }), i.d(t, !1, function() {
@@ -460,7 +1074,7 @@
                     function t() {
                         var t = null !== e && e.apply(this, arguments) || this;
                         return t.onBalloonItemClick = function() {
-                            t.props.onBalloonItemClick && t.props.onBalloonItemClick(t.props.videoID, t.props.index)
+                            t.props.onBalloonItemClick && t.props.onBalloonItemClick(t.props.index)
                         }, t
                     }
                     return n.__extends(t, e), t.prototype.render = function() {
@@ -522,12 +1136,12 @@
                 }(a.Component)),
                 d = i("0INk"),
                 c = i("8/mp"),
-                p = i("eJ65"),
-                m = (i("vDRX"), function(e) {
+                m = i("eJ65"),
+                p = (i("vDRX"), function(e) {
                     function t() {
                         var t = null !== e && e.apply(this, arguments) || this;
                         return t.onBalloonToggle = function(e) {
-                            t.props.onBalloonClick && !e && t.props.onBalloonClick(t.props.videoID)
+                            t.props.onBalloonClick && !e && t.props.onBalloonClick()
                         }, t
                     }
                     return n.__extends(t, e), t.prototype.componentDidMount = function() {
@@ -545,10 +1159,11 @@
                             margin: {
                                 top: .5
                             }
-                        }, a.createElement(p.a, {
+                        }, a.createElement(m.a, {
                             key: "game-balloon",
                             display: s.X.Inline,
-                            onToggle: this.onBalloonToggle
+                            onToggle: this.onBalloonToggle,
+                            hideBalloonOnInsideClick: !0
                         }, a.createElement(s.z, {
                             type: s.F.Hollow,
                             icon: s.ub.ViewerList
@@ -594,15 +1209,14 @@
                             return a.createElement(l, {
                                 index: i,
                                 gameChange: e,
-                                key: t.props.videoID + "-" + e.offset,
-                                videoID: t.props.videoID,
+                                key: e.offset,
                                 onBalloonItemClick: t.props.onBalloonItemClick
                             })
                         })
                     }, t
                 }(a.Component)),
                 u = i("kduP"),
-                h = i("2xye"),
+                v = i("2xye"),
                 g = function(e) {
                     return a.createElement(s.Ya, null, a.createElement(s.W, {
                         color: s.O.Alt,
@@ -614,15 +1228,15 @@
                             to: {
                                 pathname: Object(u.c)(t.label),
                                 state: {
-                                    content: h.PageviewContent.TextLink,
+                                    content: v.PageviewContent.TextLink,
                                     medium: e.trackingContext && e.trackingContext.medium
                                 }
                             },
                             type: s.V.Inherit
-                        }, t.label, v(i, n.length - 1) ? null : ", "))
+                        }, t.label, h(i, n.length - 1) ? null : ", "))
                     })))
                 },
-                v = function(e, t) {
+                h = function(e, t) {
                     return e === t
                 },
                 k = i("N0BP"),
@@ -642,7 +1256,7 @@
                 });
             f.displayName = "PreviewCardIconicImage";
             var b, y = i("TSYQ"),
-                w = (i("cRsL"), function(e) {
+                C = (i("cRsL"), function(e) {
                     var t = y("preview-card-top-bar", {
                         "preview-card-top-bar--gray": !e.selected,
                         "preview-card-top-bar--green": e.selected
@@ -670,7 +1284,7 @@
                         color: s.O.Overlay
                     }, e.subTitle)))
                 }),
-                C = (i("m493"), function(e) {
+                w = (i("m493"), function(e) {
                     var t = .5,
                         i = null;
                     "number" == typeof e.progressBarPercent && e.progressBarPercent > 0 && (i = a.createElement(s.Ya, {
@@ -689,7 +1303,7 @@
                         position: s.kb.Absolute,
                         attachTop: !0,
                         fullWidth: !0
-                    }, a.createElement(w, n.__assign({}, e.topBar))), r = 3), a.createElement(s.Ya, {
+                    }, a.createElement(C, n.__assign({}, e.topBar))), r = 3), a.createElement(s.Ya, {
                         position: s.kb.Absolute,
                         attachTop: !0,
                         attachLeft: !0,
@@ -763,8 +1377,8 @@
                         }
                     }, t, a.createElement(s.W, null, e.value))
                 }),
-                E = i("GnwI"),
-                P = (i("B3R5"), function(e) {
+                N = i("GnwI"),
+                E = (i("B3R5"), function(e) {
                     function t() {
                         var t = null !== e && e.apply(this, arguments) || this;
                         return t.state = {
@@ -828,7 +1442,7 @@
                         })))
                     }, t
                 }(a.Component)),
-                I = Object(E.b)("PreviewCardThumbnail")(P),
+                F = Object(N.b)("PreviewCardThumbnail")(E),
                 T = (i("80G/"), function(e) {
                     var t = null;
                     return e.subtitles && e.subtitles.length > 0 && (t = e.subtitles.map(function(e, t) {
@@ -859,16 +1473,16 @@
                         className: "preview-card-titles__subtitle-wrapper"
                     }, t))
                 }),
-                x = i("H1ft"),
-                N = i("ZbA5"),
-                L = i("QVaV"),
-                V = i("hyVY"),
-                F = i("MXoD"),
+                P = i("H1ft"),
+                I = i("ZbA5"),
+                x = i("QVaV"),
+                L = i("hyVY"),
+                V = i("MXoD"),
                 _ = i("0LAi");
             ! function(e) {
                 e.LockSelector = "video-lock", e.UpsellSelector = "upsell"
             }(b || (b = {}));
-            var A, B, O = function(e) {
+            var A, O, B = function(e) {
                 function t() {
                     return null !== e && e.apply(this, arguments) || this
                 }
@@ -941,19 +1555,19 @@
             }(a.PureComponent);
             i("5NSO");
 
-            function G(e) {
+            function D(e) {
                 return void 0 !== e.watchedProgressPercent
             }
 
-            function R(e) {
+            function G(e) {
                 return void 0 !== e.clipCreatedByChannelLogin
             }! function(e) {
                 e.Avatar = "preview-card-avatar", e.BoxArt = "preview-card-box-art"
             }(A || (A = {})),
             function(e) {
                 e[e.SingleGameList = 1] = "SingleGameList", e[e.SingleChannelList = 2] = "SingleChannelList", e[e.MixedGameAndChannelList = 3] = "MixedGameAndChannelList"
-            }(B || (B = {}));
-            var D = function(e) {
+            }(O || (O = {}));
+            var R = function(e) {
                     function t() {
                         var t = null !== e && e.apply(this, arguments) || this;
                         return t.getTrackingContext = function(e) {
@@ -972,12 +1586,12 @@
                             borderRadius: s.x.Medium,
                             overflow: s.db.Hidden
                         }, this.renderVODRestrictionOverlay(), a.createElement(s.U, {
-                            to: Object(F.a)(this.getTrackingContext(h.PageviewContent.VideoThumbnail), this.props.linkTo),
+                            to: Object(V.a)(this.getTrackingContext(v.PageviewContent.VideoThumbnail), this.props.linkTo),
                             onClick: this.props.onThumbnailClick || this.props.onClick,
                             "data-a-target": "preview-card-image-link"
-                        }, this.props.thumbnailImageProps && a.createElement(I, {
+                        }, this.props.thumbnailImageProps && a.createElement(F, {
                             staticImageProps: this.props.thumbnailImageProps,
-                            animatedImageProps: G(this.props) && this.props.animatedImageProps || void 0,
+                            animatedImageProps: D(this.props) && this.props.animatedImageProps || void 0,
                             trackImageLatency: this.props.trackImageLatency
                         }), this.renderOverlay())), a.createElement(s.Ya, {
                             display: s.X.Flex,
@@ -1000,8 +1614,8 @@
                     }, t.prototype.renderOverlay = function() {
                         return function(e) {
                             return void 0 !== e.streamType
-                        }(this.props) ? a.createElement(C, {
-                            topLeft: a.createElement(N.a, {
+                        }(this.props) ? a.createElement(w, {
+                            topLeft: a.createElement(I.a, {
                                 type: this.props.streamType,
                                 hosting: !!this.props.hostedByChannelLogin
                             }),
@@ -1012,9 +1626,9 @@
                                 }, "VideoPreviewCard")
                             }),
                             bottomRight: void 0
-                        }) : G(this.props) ? a.createElement(C, {
+                        }) : D(this.props) ? a.createElement(w, {
                             topLeft: void 0 !== this.props.durationInSeconds && a.createElement(S, {
-                                value: Object(V.b)(this.props.durationInSeconds),
+                                value: Object(L.b)(this.props.durationInSeconds),
                                 icon: s.ub.Play,
                                 withBackground: !0
                             }),
@@ -1030,9 +1644,9 @@
                             }) : null,
                             progressBarPercent: this.props.watchedProgressPercent,
                             topBar: this.props.topBar
-                        }) : R(this.props) ? a.createElement(C, {
+                        }) : G(this.props) ? a.createElement(w, {
                             topLeft: a.createElement(S, {
-                                value: Object(V.b)(this.props.durationInSeconds),
+                                value: Object(L.b)(this.props.durationInSeconds),
                                 icon: s.ub.Clip,
                                 withBackground: !0
                             }),
@@ -1045,33 +1659,33 @@
                             }) : null
                         }) : void 0
                     }, t.prototype.getListPositionLabel = function() {
-                        return G(this.props) && this.props.listPosition ? Object(r.d)("{totalVideos, plural, one {{position} / # video} other {{position} / # videos}}", {
+                        return D(this.props) && this.props.listPosition ? Object(r.d)("{totalVideos, plural, one {{position} / # video} other {{position} / # videos}}", {
                             position: this.props.listPosition.position,
                             totalVideos: this.props.listPosition.totalVideos
                         }, "VideoPreviewCard") : ""
                     }, t.prototype.getViewCountLabel = function() {
-                        return G(this.props) || R(this.props) ? Object(r.d)("{viewerCount, plural, one {# view} other {# views}}", {
+                        return D(this.props) || G(this.props) ? Object(r.d)("{viewerCount, plural, one {# view} other {# views}}", {
                             viewerCount: this.props.viewCount
                         }, "VideoPreviewCard") : ""
                     }, t.prototype.renderIconicImage = function() {
-                        return this.props.context === B.SingleChannelList && this.props.gameBoxArtImageProps && this.props.gameBoxArtImageProps.src && this.props.gameTitleLinkTo ? a.createElement(s.Ya, {
+                        return this.props.context === O.SingleChannelList && this.props.gameBoxArtImageProps && this.props.gameBoxArtImageProps.src && this.props.gameTitleLinkTo ? a.createElement(s.Ya, {
                             margin: {
                                 right: 1
                             }
                         }, a.createElement(f, {
                             imageProps: this.props.gameBoxArtImageProps,
-                            linkTo: Object(F.a)(this.getTrackingContext(h.PageviewContent.GameBoxart), this.props.gameTitleLinkTo),
+                            linkTo: Object(V.a)(this.getTrackingContext(v.PageviewContent.GameBoxart), this.props.gameTitleLinkTo),
                             onClick: this.props.onGameTitleClick,
                             aspect: s.p.BoxArt,
                             "data-test-selector": A.BoxArt,
                             "data-a-target": "preview-card-boxart-link"
-                        })) : (this.props.context === B.SingleGameList || this.props.context === B.MixedGameAndChannelList) && this.props.channelImageProps && this.props.channelImageProps.src ? a.createElement(s.Ya, {
+                        })) : (this.props.context === O.SingleGameList || this.props.context === O.MixedGameAndChannelList) && this.props.channelImageProps && this.props.channelImageProps.src ? a.createElement(s.Ya, {
                             margin: {
                                 right: 1
                             }
                         }, a.createElement(f, {
                             imageProps: this.props.channelImageProps,
-                            linkTo: Object(F.a)(this.getTrackingContext(h.PageviewContent.UserThumbnail), this.props.channelLinkTo),
+                            linkTo: Object(V.a)(this.getTrackingContext(v.PageviewContent.UserThumbnail), this.props.channelLinkTo),
                             onClick: this.props.onChannelImageClick || this.props.onChannelLoginClick,
                             aspect: s.p.Aspect1x1,
                             "data-test-selector": A.Avatar
@@ -1080,26 +1694,26 @@
                         var e = null,
                             t = [];
                         return this.shouldShowGameBalloon(this.props) || t.push({
-                            text: Object(L.a)(this.props.channelLogin, this.props.channelDisplayName, !0),
-                            linkTo: Object(F.a)(this.getTrackingContext(h.PageviewContent.ChannelMetadata), this.props.channelLinkTo),
+                            text: Object(x.a)(this.props.channelLogin, this.props.channelDisplayName, !0),
+                            linkTo: Object(V.a)(this.getTrackingContext(v.PageviewContent.ChannelMetadata), this.props.channelLinkTo),
                             onClick: this.props.onChannelLoginClick,
                             automationSelector: "preview-card-channel-link"
-                        }), R(this.props) && this.props.clipCreatedByChannelLoginLinkTo ? t.push({
+                        }), G(this.props) && this.props.clipCreatedByChannelLoginLinkTo ? t.push({
                             text: Object(r.d)("Clipped by {userName}", {
                                 userName: this.props.clipCreatedByChannelLogin || ""
                             }, "VideoPreviewCard"),
                             linkTo: this.props.clipCreatedByChannelLoginLinkTo,
                             onClick: this.props.onClipCreatedByChannelLoginClick,
                             automationSelector: "preview-card-clip-curator-link"
-                        }) : G(this.props) && this.props.multipleVideoGameMarkersType && this.props.videoGameChanges && this.props.videoGameChanges.length > 0 ? e = this.renderPreviewCardGameInfo(this.props.multipleVideoGameMarkersType, this.props.videoGameChanges, this.props.onVideoGameBalloonClick, this.props.onVideoGameBalloonItemClick) : this.props.context !== B.SingleGameList && this.props.gameTitle && this.props.gameTitleLinkTo && t.push({
+                        }) : D(this.props) && this.props.multipleVideoGameMarkersType && this.props.videoGameChanges && this.props.videoGameChanges.length > 0 ? e = this.renderPreviewCardGameInfo(this.props.multipleVideoGameMarkersType, this.props.videoGameChanges, this.props.onVideoGameBalloonClick, this.props.onVideoGameBalloonItemClick) : this.props.context !== O.SingleGameList && this.props.gameTitle && this.props.gameTitleLinkTo && t.push({
                             text: this.props.gameTitle,
-                            linkTo: Object(F.a)(this.getTrackingContext(h.PageviewContent.GameMetadata), this.props.gameTitleLinkTo),
+                            linkTo: Object(V.a)(this.getTrackingContext(v.PageviewContent.GameMetadata), this.props.gameTitleLinkTo),
                             onClick: this.props.onGameTitleClick,
                             automationSelector: "preview-card-game-link"
                         }), a.createElement(a.Fragment, null, a.createElement(T, {
                             title: this.props.title,
                             onClick: this.props.onVideoTitleClick || this.props.onClick,
-                            linkTo: Object(F.a)(this.getTrackingContext(h.PageviewContent.VideoTitle), this.props.linkTo),
+                            linkTo: Object(V.a)(this.getTrackingContext(v.PageviewContent.VideoTitle), this.props.linkTo),
                             subtitles: t,
                             "data-a-target": "preview-card-title-link"
                         }), e)
@@ -1112,44 +1726,43 @@
                             tagNumberLimit: 3
                         }))) : null
                     }, t.prototype.renderVODRestrictionOverlay = function() {
-                        return G(this.props) && this.props.restriction && this.props.restriction.productName && this.props.restriction.title ? a.createElement(O, {
+                        return D(this.props) && this.props.restriction && this.props.restriction.productName && this.props.restriction.title ? a.createElement(B, {
                             restriction: this.props.restriction,
                             attachTop: !0
                         }) : null
                     }, t.prototype.shouldShowGameBalloon = function(e) {
-                        return !!G(e) && (!!(e.videoGameChanges && e.videoGameChanges.length > 0) && e.multipleVideoGameMarkersType === x.a.Balloon)
+                        return !!D(e) && (!!(e.videoGameChanges && e.videoGameChanges.length > 0) && e.multipleVideoGameMarkersType === P.a.Balloon)
                     }, t.prototype.renderPreviewCardGameInfo = function(e, t, i, n) {
                         switch (e) {
-                            case x.a.Balloon:
-                                return a.createElement(m, {
+                            case P.a.Balloon:
+                                return a.createElement(p, {
                                     videoGameChanges: t,
-                                    videoID: t[0].videoID,
                                     onBalloonClick: i,
                                     onBalloonItemClick: n
                                 });
-                            case x.a.Inline:
+                            case P.a.Inline:
                                 return a.createElement(g, {
                                     videoGameChanges: t,
                                     trackingContext: this.props.trackingContext
                                 });
-                            case x.a.None:
+                            case P.a.None:
                                 return null;
                             default:
                                 return e
                         }
                     }, t
                 }(a.Component),
-                j = Object(E.b)("PreviewCard", {
+                M = Object(N.b)("PreviewCard", {
                     autoReportInteractive: !0
-                })(D);
+                })(R);
             i.d(t, !1, function() {
                 return A
             }), i.d(t, "b", function() {
-                return B
+                return O
             }), i.d(t, !1, function() {
-                return D
+                return R
             }), i.d(t, "a", function() {
-                return j
+                return M
             })
         },
         HrG3: function(e, t, i) {
@@ -1228,12 +1841,12 @@
                 l = i("ZDlU"),
                 d = i("GFmA"),
                 c = i("8/mp"),
-                p = i("yR8l"),
-                m = i("geRD"),
+                m = i("yR8l"),
+                p = i("geRD"),
                 u = i("2xye"),
-                h = i("llur"),
+                v = i("llur"),
                 g = i("GnwI"),
-                v = i("EJax"),
+                h = i("EJax"),
                 k = i("XKWF"),
                 f = function(e) {
                     var t = e.user;
@@ -1246,19 +1859,19 @@
             i.d(t, "TestSelectors", function() {
                     return n
                 }), i.d(t, "DEFAULT_PAGE_SIZE", function() {
-                    return w
-                }), i.d(t, "DEFAULT_VIDEO_SORT", function() {
                     return C
+                }), i.d(t, "DEFAULT_VIDEO_SORT", function() {
+                    return w
                 }), i.d(t, "FilterableVideoTowerComponent", function() {
                     return S
                 }), i.d(t, "FilterableVideoTower", function() {
-                    return P
+                    return E
                 }),
                 function(e) {
                     e.NoVideos = "no-videos"
                 }(n || (n = {}));
-            var w = 30,
-                C = k.a.Newest,
+            var C = 30,
+                w = k.a.Newest,
                 S = function(e) {
                     function t() {
                         return null !== e && e.apply(this, arguments) || this
@@ -1285,10 +1898,10 @@
                             "data-test-selector": n.NoVideos
                         }, Object(s.d)("No videos found.", "ChannelVideosPage")));
                         var t = !(this.props.data.loading || this.props.data.error || !this.props.data.user || !this.props.data.user.videos || !this.props.data.user.videos.pageInfo || !this.props.data.user.videos.pageInfo.hasNextPage);
-                        return r.createElement(b.Ya, null, r.createElement(v.b, {
+                        return r.createElement(b.Ya, null, r.createElement(h.b, {
                             videos: e,
                             listContext: d.b.SingleChannelList,
-                            trackingContent: Object(h.a)(this.props.sort),
+                            trackingContent: Object(v.a)(this.props.sort),
                             trackingMedium: u.PageviewMedium.ChannelVideos,
                             multipleVideoGameMarkersType: this.props.multipleVideoGameMarkersType,
                             hideTags: !0
@@ -1299,14 +1912,14 @@
                         }))
                     }, t
                 }(r.Component),
-                E = {
+                N = {
                     options: function(e) {
                         return {
                             variables: {
-                                limit: w,
+                                limit: C,
                                 channelOwnerLogin: e.channelLogin,
                                 broadcastType: e.filter ? e.filter : null,
-                                videoSort: e.sort || C
+                                videoSort: e.sort || w
                             }
                         }
                     },
@@ -1325,7 +1938,7 @@
                                         return i.user && i.user.videos ? {
                                             user: a.__assign({}, i.user, {
                                                 videos: a.__assign({}, i.user.videos, {
-                                                    edges: Object(m.c)(f(e), f(i))
+                                                    edges: Object(p.c)(f(e), f(i))
                                                 })
                                             })
                                         } : e
@@ -1335,7 +1948,7 @@
                         })
                     }
                 },
-                P = Object(o.compose)(Object(p.a)(y, E), Object(g.b)("FilterableVideoTower"))(S)
+                E = Object(o.compose)(Object(m.a)(y, N), Object(g.b)("FilterableVideoTower"))(S)
         },
         XA5B: function(e, t, i) {},
         ZbA5: function(e, t, i) {
@@ -1344,37 +1957,37 @@
                 l = i("TSYQ"),
                 d = i("q1tI"),
                 c = i("/7QA"),
-                p = i("oB8h"),
-                m = i("Ue10");
+                m = i("oB8h"),
+                p = i("Ue10");
             i("kVMo");
             ! function(e) {
                 e.HostingDot = "stream-type-indicator__hosting-dot"
             }(o || (o = {}));
-            var u = ((n = {})[p.a.Live] = "stream-type-indicator--live", n[p.a.Premiere] = "stream-type-indicator--premiere", n[p.a.Rerun] = "stream-type-indicator--rerun", n[p.a.WatchParty] = "stream-type-indicator--rerun", n),
-                h = ((a = {})[p.a.Premiere] = m.ub.VideoPremiere, a[p.a.Rerun] = m.ub.VideoRerun, a[p.a.WatchParty] = m.ub.VideoRerun, a),
-                g = ((r = {})[p.a.Premiere] = m.vb.Live, r[p.a.Rerun] = m.vb.Inherit, r[p.a.WatchParty] = m.vb.Inherit, r),
-                v = function(e) {
+            var u = ((n = {})[m.a.Live] = "stream-type-indicator--live", n[m.a.Premiere] = "stream-type-indicator--premiere", n[m.a.Rerun] = "stream-type-indicator--rerun", n[m.a.WatchParty] = "stream-type-indicator--rerun", n),
+                v = ((a = {})[m.a.Premiere] = p.ub.VideoPremiere, a[m.a.Rerun] = p.ub.VideoRerun, a[m.a.WatchParty] = p.ub.VideoRerun, a),
+                g = ((r = {})[m.a.Premiere] = p.vb.Live, r[m.a.Rerun] = p.vb.Inherit, r[m.a.WatchParty] = p.vb.Inherit, r),
+                h = function(e) {
                     function t() {
                         return null !== e && e.apply(this, arguments) || this
                     }
                     return s.__extends(t, e), t.prototype.render = function() {
-                        return d.createElement(m.Fb, {
+                        return d.createElement(p.Fb, {
                             className: this.getClassNames(),
-                            color: m.O.Overlay,
-                            background: m.r.Overlay,
+                            color: p.O.Overlay,
+                            background: p.r.Overlay,
                             padding: {
                                 x: .5
                             },
-                            borderRadius: m.x.Small,
-                            display: m.X.Flex
-                        }, d.createElement(m.Ya, {
-                            display: m.X.Flex,
-                            alignItems: m.f.Center,
+                            borderRadius: p.x.Small,
+                            display: p.X.Flex
+                        }, d.createElement(p.Ya, {
+                            display: p.X.Flex,
+                            alignItems: p.f.Center,
                             margin: {
                                 right: .5
                             }
-                        }, this.getIcon()), d.createElement(m.W, {
-                            type: m.Wb.Span
+                        }, this.getIcon()), d.createElement(p.W, {
+                            type: p.Wb.Span
                         }, this.getLabel()))
                     }, t.prototype.getClassNames = function() {
                         var e = {
@@ -1382,19 +1995,19 @@
                         };
                         return e[u[this.props.type]] = !0, l(e)
                     }, t.prototype.getIcon = function() {
-                        return this.props.hosting ? d.createElement(m.Fb, {
-                            borderRadius: m.x.Rounded,
+                        return this.props.hosting ? d.createElement(p.Fb, {
+                            borderRadius: p.x.Rounded,
                             className: "stream-type-indicator__hosting-dot",
                             "data-test-selector": o.HostingDot
-                        }) : this.props.type === p.a.Live ? d.createElement(m.Ya, {
+                        }) : this.props.type === m.a.Live ? d.createElement(p.Ya, {
                             className: "stream-type-indicator__live-wrapper",
-                            display: m.X.Flex,
-                            alignItems: m.f.Center
-                        }, d.createElement(m.K, {
-                            status: m.M.Live,
-                            size: m.L.Small
-                        })) : d.createElement(m.tb, {
-                            asset: h[this.props.type],
+                            display: p.X.Flex,
+                            alignItems: p.f.Center
+                        }, d.createElement(p.K, {
+                            status: p.M.Live,
+                            size: p.L.Small
+                        })) : d.createElement(p.tb, {
+                            asset: v[this.props.type],
                             type: g[this.props.type],
                             width: 14,
                             height: 14
@@ -1402,12 +2015,12 @@
                     }, t.prototype.getLabel = function() {
                         if (this.props.hosting) return Object(c.d)("Hosting", "StreamTypeIndicator");
                         switch (this.props.type) {
-                            case p.a.Live:
+                            case m.a.Live:
                                 return Object(c.d)("LIVE", "StreamTypeIndicator");
-                            case p.a.Premiere:
+                            case m.a.Premiere:
                                 return Object(c.d)("Premiere", "StreamTypeIndicator");
-                            case p.a.Rerun:
-                            case p.a.WatchParty:
+                            case m.a.Rerun:
+                            case m.a.WatchParty:
                                 return Object(c.d)("Rerun", "StreamTypeIndicator");
                             default:
                                 return ""
@@ -1417,7 +2030,7 @@
             i.d(t, !1, function() {
                 return o
             }), i.d(t, "a", function() {
-                return v
+                return h
             })
         },
         aRnl: function(e, t, i) {
@@ -1689,7 +2302,7 @@
                 l = i("RXle"),
                 d = i("L5dg"),
                 c = i("Ue10"),
-                p = function(e) {
+                m = function(e) {
                     var t = null,
                         i = null;
                     if (null === e.videos) t = a.createElement(d.a, {
@@ -1726,13 +2339,13 @@
                         placeholderItems: 20
                     }, t, i)
                 },
-                m = Object(s.b)("VideoTower", {
+                p = Object(s.b)("VideoTower", {
                     autoReportInteractive: !0
-                })(p);
+                })(m);
             i.d(t, !1, function() {
-                return p
-            }), i.d(t, "a", function() {
                 return m
+            }), i.d(t, "a", function() {
+                return p
             })
         },
         gAd6: function(e, t) {

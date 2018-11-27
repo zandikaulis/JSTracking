@@ -2104,16 +2104,16 @@
                     autoReportInteractive: !0
                 })(T),
                 L = c.a.wrap(function() {
-                    return n.e(188).then(n.bind(null, "eAh4"))
+                    return n.e(189).then(n.bind(null, "eAh4"))
                 }, "TwitchPrimeOffersPage"),
                 F = c.a.wrap(function() {
-                    return n.e(187).then(n.bind(null, "di4w"))
+                    return n.e(188).then(n.bind(null, "di4w"))
                 }, "TwitchPrimeFortniteSuccessPage"),
                 j = c.a.wrap(function() {
-                    return n.e(186).then(n.bind(null, "IyqF"))
+                    return n.e(187).then(n.bind(null, "IyqF"))
                 }, "TwitchPrimeFortniteLinkingPage"),
                 U = c.a.wrap(function() {
-                    return n.e(185).then(n.bind(null, "CinY"))
+                    return n.e(186).then(n.bind(null, "CinY"))
                 }, "TwitchPrimeFortnitePage"),
                 B = function(e) {
                     function t() {

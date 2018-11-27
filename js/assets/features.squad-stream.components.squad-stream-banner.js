@@ -1,5 +1,5 @@
 (window.webpackJsonp = window.webpackJsonp || []).push([
-    [126], {
+    [127], {
         "/guG": function(e, n, a) {
             "use strict";
             a.d(n, "b", function() {
@@ -74,16 +74,19 @@
                 r = a("q1tI"),
                 i = a("oJmH"),
                 d = a("9C/b"),
-                u = a("/7QA"),
-                s = a("yR8l"),
-                l = a("eDVu"),
-                o = a("0Log"),
-                c = a("/aPz"),
-                m = a("DMoW"),
-                p = a("GnwI"),
-                S = a("aKsW");
+                u = a("mLw1"),
+                s = a("/7QA"),
+                o = a("lZCe"),
+                l = a("yR8l"),
+                c = a("eDVu"),
+                m = a("0Log"),
+                p = a("/aPz"),
+                S = a("D7An"),
+                f = a("DMoW"),
+                q = a("GnwI"),
+                h = a("aKsW");
 
-            function f(e) {
+            function v(e) {
                 if (!e || !e.squad) return null;
                 for (var n = [], a = 0, t = e.squad.members; a < t.length; a++) {
                     var r = t[a],
@@ -101,13 +104,13 @@
                     id: e.squad.id,
                     status: function(e) {
                         switch (e) {
-                            case o.SquadStatus.Pending:
-                                return m.R.PENDING;
-                            case o.SquadStatus.Live:
-                                return m.R.LIVE;
-                            case o.SquadStatus.Ended:
+                            case m.SquadStatus.Pending:
+                                return f.S.PENDING;
+                            case m.SquadStatus.Live:
+                                return f.S.LIVE;
+                            case m.SquadStatus.Ended:
                             default:
-                                return m.R.ENDED
+                                return f.S.ENDED
                         }
                     }(e.squad.status),
                     members: n,
@@ -117,17 +120,17 @@
                     }
                 }
             }
-            var q = a("egMT"),
-                h = a("/guG"),
-                v = a("Ue10"),
-                k = a("qcLq"),
-                g = function(e) {
+            var g = a("egMT"),
+                k = a("/guG"),
+                b = a("Ue10"),
+                _ = a("qcLq"),
+                y = function(e) {
                     function n() {
                         var n = null !== e && e.apply(this, arguments) || this;
                         return n.goToSquadPage = function() {
-                            n.trackBannerAction(S.a.Click), n.props.history.push("/" + n.props.channelLogin + "/squad")
+                            n.trackBannerAction(h.a.Click), n.props.history.push("/" + n.props.channelLogin + "/squad")
                         }, n.trackBannerAction = function(e) {
-                            Object(h.a)({
+                            Object(k.a)({
                                 action: e,
                                 userID: n.props.data.currentUser && n.props.data.currentUser.id,
                                 channel: n.props.channelLogin,
@@ -137,31 +140,31 @@
                             })
                         }, n.makeBannerText = function(e, n) {
                             var a = function(e) {
-                                return e && e.displayName ? r.createElement(v.W, {
+                                return e && e.displayName ? r.createElement(b.W, {
                                     bold: !0,
                                     noWrap: !0,
-                                    type: v.Wb.Span,
-                                    color: v.O.Base
+                                    type: b.Wb.Span,
+                                    color: b.O.Base
                                 }, e.displayName) : ""
                             };
                             switch (n.length) {
                                 case 0:
-                                    return Object(u.d)("{channelOwnerName} is Squad Streaming", {
+                                    return Object(s.d)("{channelOwnerName} is Squad Streaming", {
                                         channelOwnerName: a(e)
                                     }, "SquadStreamBanner");
                                 case 1:
-                                    return Object(u.d)("{channelOwnerName} is Squad Streaming with {squadMemberIndex0}", {
+                                    return Object(s.d)("{channelOwnerName} is Squad Streaming with {squadMemberIndex0}", {
                                         channelOwnerName: a(e),
                                         squadMemberIndex0: a(n[0])
                                     }, "SquadStreamBanner");
                                 case 2:
-                                    return Object(u.d)("{channelOwnerName} is Squad Streaming with {squadMemberIndex0}, {squadMemberIndex1}", {
+                                    return Object(s.d)("{channelOwnerName} is Squad Streaming with {squadMemberIndex0}, {squadMemberIndex1}", {
                                         channelOwnerName: a(e),
                                         squadMemberIndex0: a(n[0]),
                                         squadMemberIndex1: a(n[1])
                                     }, "SquadStreamBanner");
                                 default:
-                                    return Object(u.d)("{channelOwnerName} is Squad Streaming with {squadMemberIndex0}, {squadMemberIndex1}, {squadMemberIndex2}", {
+                                    return Object(s.d)("{channelOwnerName} is Squad Streaming with {squadMemberIndex0}, {squadMemberIndex1}, {squadMemberIndex2}", {
                                         channelOwnerName: a(e),
                                         squadMemberIndex0: a(n[0]),
                                         squadMemberIndex1: a(n[1]),
@@ -171,67 +174,83 @@
                         }, n
                     }
                     return t.__extends(n, e), n.prototype.componentDidMount = function() {
-                        this.shouldRender(this.props) && this.trackBannerAction(S.a.View), this.props.triggerPlayerReposition()
+                        this.shouldRender(this.props) && this.trackBannerAction(h.a.View), this.props.triggerPlayerReposition()
                     }, n.prototype.componentDidUpdate = function(e) {
-                        !this.shouldRender(e) && this.shouldRender(this.props) && this.trackBannerAction(S.a.View), this.props.triggerPlayerReposition()
+                        !this.shouldRender(e) && this.shouldRender(this.props) && this.trackBannerAction(h.a.View), this.props.triggerPlayerReposition()
                     }, n.prototype.render = function() {
+                        var e = this;
                         if (!this.shouldRender(this.props)) return null;
-                        var e = this.props.channelID,
-                            n = this.props.data && this.props.data.user && this.props.data.user.squadStream && this.props.data.user.squadStream.members || [],
-                            a = n.filter(function(n) {
-                                return n.id === e
+                        var n = this.props.channelID,
+                            a = this.props.data && this.props.data.user && this.props.data.user.squadStream && this.props.data.user.squadStream.members || [],
+                            i = a.filter(function(e) {
+                                return e.id === n
                             })[0],
-                            t = n.filter(function(n) {
-                                return n.id !== e
+                            d = a.filter(function(e) {
+                                return e.id !== n
                             }),
-                            i = [a].concat(t).map(function(e) {
-                                return e && e.id && e.profileImageURL ? r.createElement(v.Ya, {
+                            l = [i].concat(d).map(function(e) {
+                                return e && e.id && e.profileImageURL ? r.createElement(b.Ya, {
                                     key: e.id,
                                     margin: {
                                         right: 1
                                     }
-                                }, r.createElement(v.q, {
+                                }, r.createElement(b.q, {
                                     size: 30,
-                                    alt: Object(u.d)("avatar", "SquadStreamBanner"),
+                                    alt: Object(s.d)("avatar", "SquadStreamBanner"),
                                     src: e.profileImageURL
                                 })) : null
                             }).filter(function(e) {
                                 return null !== e
-                            });
-                        return r.createElement(v.i, {
-                            type: v.n.SlideInBottom,
-                            delay: v.j.Medium,
-                            duration: v.k.Medium,
-                            enabled: !0
-                        }, r.createElement(v.Fb, {
-                            display: v.X.Flex,
-                            background: v.r.Base,
-                            alignItems: v.f.Center,
-                            padding: 1,
-                            margin: {
-                                bottom: 1
-                            },
-                            borderRadius: v.x.Large,
-                            elevation: 2
-                        }, r.createElement(v.Fb, {
-                            display: v.X.Flex,
-                            color: v.O.Overlay
-                        }, i), r.createElement(v.Ya, null, r.createElement(v.W, {
-                            noWrap: !0,
-                            type: v.Wb.Span,
-                            color: v.O.Alt2,
-                            fontSize: v.Ca.Size5
-                        }, this.makeBannerText(a, t))), r.createElement(v.Ya, {
-                            display: v.X.Flex,
-                            alignItems: v.f.Start,
-                            flexGrow: 1
-                        }), r.createElement(v.Ya, {
-                            margin: {
-                                left: 1
-                            }
-                        }, r.createElement(v.z, {
-                            onClick: this.goToSquadPage
-                        }, Object(u.d)("Watch In Squad Mode", "SquadStreamBanner")))))
+                            }),
+                            c = r.createElement(b.i, {
+                                type: b.n.SlideInBottom,
+                                delay: b.j.Medium,
+                                duration: b.k.Medium,
+                                enabled: !0
+                            }, r.createElement(b.Fb, {
+                                display: b.X.Flex,
+                                background: b.r.Base,
+                                alignItems: b.f.Center,
+                                padding: 1,
+                                margin: {
+                                    bottom: 1
+                                },
+                                borderRadius: b.x.Large,
+                                elevation: 2
+                            }, r.createElement(b.Fb, {
+                                display: b.X.Flex,
+                                color: b.O.Overlay
+                            }, l), r.createElement(b.Ya, null, r.createElement(b.W, {
+                                noWrap: !0,
+                                type: b.Wb.Span,
+                                color: b.O.Alt2,
+                                fontSize: b.Ca.Size5
+                            }, this.makeBannerText(i, d))), r.createElement(b.Ya, {
+                                display: b.X.Flex,
+                                alignItems: b.f.Start,
+                                flexGrow: 1
+                            }), r.createElement(b.Ya, {
+                                margin: {
+                                    left: 1
+                                }
+                            }, r.createElement(b.z, {
+                                onClick: this.goToSquadPage
+                            }, Object(s.d)("Watch In Squad Mode", "SquadStreamBanner"))))),
+                            m = r.createElement(u.a, {
+                                to: "/" + this.props.channelLogin + "/squad"
+                            }),
+                            p = {
+                                assignments: {
+                                    fallback: function() {
+                                        return c
+                                    },
+                                    variant: function() {
+                                        return e.props.history.location.state && e.props.history.location.state.squadExited ? c : m
+                                    }
+                                },
+                                name: S.b.SquadStreamRedirect
+                            };
+                        return r.createElement(o.a, t.__assign({}, p))
                     }, n.prototype.isSquadMember = function(e) {
                         var n = e.channelID,
                             a = e.data && e.data.user && e.data.user.squadStream && e.data.user.squadStream.members || [];
@@ -239,10 +258,10 @@
                             return e.id === n
                         }))
                     }, n.prototype.shouldRender = function(e) {
-                        return !!Object(q.a)(e.channelLogin) && (!!this.isSquadMember(e) && (!e.data.loading && !e.data.error && (e.data.user && e.data.user.squadStream && e.data.user.squadStream.status === m.R.LIVE || !1)))
+                        return !!Object(g.a)(e.channelLogin) && (!!this.isSquadMember(e) && (!e.data.loading && !e.data.error && (e.data.user && e.data.user.squadStream && e.data.user.squadStream.status === f.S.LIVE || !1)))
                     }, n
                 }(r.Component),
-                b = Object(i.compose)(Object(s.a)(k, {
+                N = Object(i.compose)(Object(l.a)(_, {
                     options: function(e) {
                         return {
                             variables: {
@@ -250,26 +269,26 @@
                             }
                         }
                     }
-                }), Object(l.a)(function(e) {
+                }), Object(c.a)(function(e) {
                     return {
-                        query: k,
+                        query: _,
                         variables: {
                             channelLogin: e.channelLogin
                         },
-                        topic: Object(c.g)(e.channelID),
-                        type: o.PubsubMessageType.Squad,
+                        topic: Object(p.g)(e.channelID),
+                        type: m.PubsubMessageType.Squad,
                         mutator: function(e, n) {
-                            var a = f(e);
+                            var a = v(e);
                             return n.user && (n.user.squadStream = a), n
                         }
                     }
-                }), Object(p.b)("SquadStreamBanner", {
+                }), Object(q.b)("SquadStreamBanner", {
                     autoReportInteractive: !0
-                }), d.a)(g);
+                }), d.a)(y);
             a.d(n, "SquadStreamBannerComponent", function() {
-                return g
+                return y
             }), a.d(n, "SquadStreamBanner", function() {
-                return b
+                return N
             })
         },
         aKsW: function(e, n, a) {
@@ -302,7 +321,7 @@
             a.d(n, "a", function() {
                 return s
             }), a.d(n, "b", function() {
-                return l
+                return o
             });
             var t = a("/7QA"),
                 r = "squad_stream_dashboard",
@@ -318,7 +337,7 @@
                 return "on" === t.b.get(i, "off") && u(e)
             }
 
-            function l(e) {
+            function o(e) {
                 return "on" === t.b.get(r, "off") && u(e)
             }
         },

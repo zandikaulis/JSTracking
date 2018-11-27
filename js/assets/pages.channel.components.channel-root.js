@@ -924,10 +924,9 @@
             "use strict";
             var i = n("q1tI"),
                 r = n("/7QA"),
-                a = n("z36O"),
+                a = n("SHn+"),
                 o = n("kduP"),
-                s = n("Ue10"),
-                l = function(e) {
+                s = function(e) {
                     return i.createElement(a.a, {
                         linkTo: {
                             pathname: Object(o.c)(e.name),
@@ -936,14 +935,13 @@
                                 medium: "twitch_channel"
                             }
                         },
-                        tooltip: Object(r.d)("Game", "GameLink"),
-                        svgAsset: s.ub.NavGames,
+                        label: Object(r.d)("Category:", "GameLink"),
                         title: e.name,
                         "data-a-target": "stream-game-link"
                     })
                 };
             n.d(t, "a", function() {
-                return l
+                return s
             })
         },
         "0FG4": function(e, t, n) {
@@ -1067,14 +1065,21 @@
         },
         "0WFu": function(e, t, n) {
             "use strict";
-            n.d(t, "a", function() {
+            n.d(t, "b", function() {
                 return r
+            }), n.d(t, "a", function() {
+                return a
             });
             n("/7QA");
             var i = n("3Bft");
 
             function r(e) {
                 return [i.a.Prime, i.a.Custom].includes(e) ? null : parseInt(e, 10) / 1e3
+            }
+
+            function a(e) {
+                var t = e instanceof Date ? e : new Date(e);
+                return Math.round((t.getTime() - Date.now()) / 864e5)
             }
         },
         "0bws": function(e, t, n) {
@@ -1551,7 +1556,7 @@
                             t.props.isLoggedIn ? t.props.showReportUserModal({
                                 onClose: t.handleReportModalClose,
                                 reportContext: {
-                                    contentType: c.N.USER_REPORT,
+                                    contentType: c.O.USER_REPORT,
                                     targetUserID: t.props.hostChannelID
                                 },
                                 title: Object(s.d)("Report {channelDisplayName}", {
@@ -4537,14 +4542,13 @@
             var i = n("mrSG"),
                 r = n("q1tI"),
                 a = n("/7QA"),
-                o = n("z36O"),
+                o = n("SHn+"),
                 s = n("Ue10"),
                 l = function(e) {
                     return r.createElement(o.a, i.__assign({
                         linkTo: "/team/" + e.name,
-                        svgAsset: s.ub.Team,
                         title: e.displayName,
-                        tooltip: Object(a.d)("Team", "TeamLink")
+                        label: Object(a.d)("Team:", "TeamLink")
                     }, Object(s.kc)(e)))
                 };
             n.d(t, "a", function() {
@@ -5688,7 +5692,7 @@
                             dragging: !1,
                             viewerCardComponentLoaded: !1
                         }, t.ViewerCard = s.a.wrap(function() {
-                            return Promise.all([n.e(0), n.e(202)]).then(n.bind(null, "q3Qz"))
+                            return Promise.all([n.e(0), n.e(203)]).then(n.bind(null, "q3Qz"))
                         }, "ViewerCard", {
                             placeholder: o.createElement(m.Fb, {
                                 background: m.r.Base,
@@ -5704,7 +5708,7 @@
                                 })
                             }
                         }), t.ExtensionMessageCard = s.a.wrap(function() {
-                            return n.e(201).then(n.bind(null, "n3tJ"))
+                            return n.e(202).then(n.bind(null, "n3tJ"))
                         }, "ExtensionMessageCard", {
                             placeholder: o.createElement(m.Fb, {
                                 background: m.r.Base,
@@ -6376,26 +6380,26 @@
 
             function a(e, t, n) {
                 if (void 0 === n && (n = !1), n) switch (t) {
-                    case r.Aa.FORBIDDEN:
+                    case r.Ba.FORBIDDEN:
                         return Object(i.d)("You don't have permissions to untimeout {login}.", {
                             login: e
                         }, "UnbanUserErrorCode");
-                    case r.Aa.TARGET_NOT_FOUND:
+                    case r.Ba.TARGET_NOT_FOUND:
                         return Object(i.d)("The user you are trying to untimeout doesn't exist.", "UnbanUserErrorCode");
-                    case r.Aa.TARGET_NOT_BANNED:
+                    case r.Ba.TARGET_NOT_BANNED:
                         return Object(i.d)("{login} is not currently timed out from this channel.", {
                             login: e
                         }, "UnbanUserErrorCode");
                     default:
                         throw new Error("Unrecognized operation result")
                 } else switch (t) {
-                    case r.Aa.FORBIDDEN:
+                    case r.Ba.FORBIDDEN:
                         return Object(i.d)("You don't have permissions to unban {login}.", {
                             login: e
                         }, "UnbanUserErrorCode");
-                    case r.Aa.TARGET_NOT_FOUND:
+                    case r.Ba.TARGET_NOT_FOUND:
                         return Object(i.d)("The user you are trying to unban doesn't exist.", "UnbanUserErrorCode");
-                    case r.Aa.TARGET_NOT_BANNED:
+                    case r.Ba.TARGET_NOT_BANNED:
                         return Object(i.d)("{login} is not currently banned from this channel.", {
                             login: e
                         }, "UnbanUserErrorCode");
@@ -7174,7 +7178,7 @@
                                         }), this.chatInputRef && this.chatInputRef.focus(), [2]) : [3, 6];
                                     case 5:
                                         return i.sent(), this.props.onSendCheerError && this.props.onSendCheerError({
-                                            code: h.P.UNKNOWN
+                                            code: h.Q.UNKNOWN
                                         }), this.setState({
                                             isSendingBits: !1
                                         }), this.chatInputRef && this.chatInputRef.focus(), [2];
@@ -7703,10 +7707,10 @@
                 et = "chat_rules_shown",
                 tt = s.k.withCategory("chat-room"),
                 nt = l.a.wrap(function() {
-                    return n.e(200).then(n.bind(null, "A39y"))
+                    return n.e(201).then(n.bind(null, "A39y"))
                 }, "ChatViewers"),
                 it = l.a.wrap(function() {
-                    return Promise.all([n.e(0), n.e(199)]).then(n.bind(null, "Y9qK"))
+                    return Promise.all([n.e(0), n.e(200)]).then(n.bind(null, "Y9qK"))
                 }, "NewChatterRitual", {
                     failSilently: !0,
                     placeholder: null
@@ -7748,7 +7752,7 @@
                                 e && e()
                             })
                         }, n.onSendCheerError = function(e) {
-                            e.code !== h.P.AUTO_MOD_MESSAGE ? n.setState({
+                            e.code !== h.Q.AUTO_MOD_MESSAGE ? n.setState({
                                 bitsSendErrorCode: e.code,
                                 bitsSendHasError: !0
                             }) : n.setState({
@@ -7758,7 +7762,7 @@
                             })
                         }, n.clearBitsSendError = function() {
                             n.setState({
-                                bitsSendErrorCode: h.P.UNKNOWN,
+                                bitsSendErrorCode: h.Q.UNKNOWN,
                                 bitsSendHasError: !1
                             })
                         }, n.clearCheerAutoModPrompt = function() {
@@ -7780,7 +7784,7 @@
                             badgeSets: i,
                             showCheerAutoModPrompt: !1,
                             shouldSendAutoModdedCheer: !1,
-                            bitsSendErrorCode: h.P.UNKNOWN,
+                            bitsSendErrorCode: h.Q.UNKNOWN,
                             bitsSendHasError: !1,
                             moderatedMessageParts: null
                         }, n
@@ -9892,7 +9896,7 @@
                                 checkoutButtonTier: t.props.tierPrice
                             })
                         }, t.openCheckout = function() {
-                            t.props.isMobileCheckout || o.n.set(s.c, t.props.productName)
+                            t.props.isMobileCheckout || o.n.set(s.d, t.props.productName)
                         }, t
                     }
                     return i.__extends(t, e), t.prototype.render = function() {
@@ -12083,11 +12087,11 @@
             var i, r = n("/7QA"),
                 a = n("D7An");
             ! function(e) {
-                e.None = "None", e.Inline = "Inline", e.Balloon = "Balloon"
+                e.None = "None", e.Inline = "Inline", e.Balloon = "moments_with_images"
             }(i || (i = {}));
             var o = function() {
                 switch (r.p.experiments.getAssignment(a.b.Archer)) {
-                    case "balloon":
+                    case "moments_with_images":
                         return i.Balloon;
                     case "inline":
                         return i.Inline;
@@ -13813,12 +13817,12 @@
                         switch (e) {
                             default: return "";
                             case L.B.GRANTEE_NOT_FOUND:
-                                    case L.O.REVOKEE_NOT_FOUND:
+                                    case L.P.REVOKEE_NOT_FOUND:
                                     return Object(R.d)("Invalid username: {login}.", {
                                     login: t
                                 }, "VIPCommandHandler");
                             case L.B.FORBIDDEN:
-                                    case L.O.FORBIDDEN:
+                                    case L.P.FORBIDDEN:
                                     return Object(R.d)("You don't have permission to perform that action.", "VIPCommandHandler")
                         }
                     }, t.prototype.getVIPErrorMessage = function(e, t) {
@@ -13845,15 +13849,15 @@
                         }
                     }, t.prototype.getUnVIPErrorMessage = function(e, t) {
                         switch (void 0 === t && (t = ""), e) {
-                            case L.O.FORBIDDEN:
-                            case L.O.REVOKEE_NOT_FOUND:
+                            case L.P.FORBIDDEN:
+                            case L.P.REVOKEE_NOT_FOUND:
                                 return this.getCommonErrorMessage(e, t);
-                            case L.O.REVOKEE_NOT_VIP:
+                            case L.P.REVOKEE_NOT_VIP:
                                 return Object(R.d)("{login} is not a VIP of this channel.", {
                                     login: t
                                 }, "VIPCommandHandler");
                             case I.QUERY_ERROR:
-                            case L.O.CHANNEL_NOT_FOUND:
+                            case L.P.CHANNEL_NOT_FOUND:
                             default:
                                 return Object(R.d)("Unable to remove VIP.", "VIPCommandHandler")
                         }
@@ -14819,22 +14823,22 @@
                     placeholder: null
                 },
                 De = g.a.wrap(function() {
-                    return n.e(196).then(n.bind(null, "Gnts"))
+                    return n.e(197).then(n.bind(null, "Gnts"))
                 }, "MysteryGiftChatBannerQueue", we),
                 Ie = g.a.wrap(function() {
-                    return n.e(195).then(n.bind(null, "KSjr"))
+                    return n.e(196).then(n.bind(null, "KSjr"))
                 }, "NativeBroadcastNotification", we),
                 Te = g.a.wrap(function() {
-                    return n.e(194).then(n.bind(null, "T3fw"))
+                    return n.e(195).then(n.bind(null, "T3fw"))
                 }, "Orbis", we),
                 Me = g.a.wrap(function() {
-                    return n.e(193).then(n.bind(null, "7htX"))
+                    return n.e(194).then(n.bind(null, "7htX"))
                 }, "RaidNotification", we),
                 Re = g.a.wrap(function() {
-                    return n.e(192).then(n.bind(null, "rg60"))
+                    return n.e(193).then(n.bind(null, "rg60"))
                 }, "RitualsOnboardingSticky", we),
                 Fe = g.a.wrap(function() {
-                    return n.e(191).then(n.bind(null, "miqE"))
+                    return n.e(192).then(n.bind(null, "miqE"))
                 }, "ShareToChat", we),
                 je = function(e) {
                     function t(t) {
@@ -15159,7 +15163,7 @@
                 l = n("D7An"),
                 c = n("kRBY"),
                 d = s.a.wrap(function() {
-                    return n.e(149).then(n.bind(null, "jOTV"))
+                    return n.e(150).then(n.bind(null, "jOTV"))
                 }, "NewUserSurveyComponent"),
                 u = function(e) {
                     function t() {
@@ -17473,236 +17477,50 @@
         },
         QjI3: function(e, t, n) {
             "use strict";
-            var i, r = n("mrSG"),
-                a = n("q1tI"),
-                o = n("/MKj"),
-                s = n("fvjX"),
-                l = n("ZS2+"),
-                c = n("UUve"),
-                d = n("1/iK"),
-                u = n("aCAx"),
-                m = n("kRBY"),
-                p = n("GnwI"),
-                h = n("cZKs"),
-                f = n("Ue10"),
-                g = n("/7QA"),
-                v = n("yR8l"),
-                b = n("3Bft"),
-                k = n("/0dD"),
-                y = n("tIid"),
-                C = n("ht6z"),
-                S = n("76Lv"),
-                E = n("KriR"),
-                N = n("br9A"),
-                O = (n("y2dA"), n("eaNi"));
+            var i = n("mrSG"),
+                r = n("q1tI"),
+                a = n("/MKj"),
+                o = n("fvjX"),
+                s = n("ZS2+"),
+                l = n("UUve"),
+                c = n("1/iK"),
+                d = n("aCAx"),
+                u = n("kRBY"),
+                m = n("GnwI"),
+                p = n("d0xR"),
+                h = n("oJmH"),
+                f = n("/7QA"),
+                g = n("2+sX"),
+                v = n("u5aL"),
+                b = n("eJ65"),
+                k = n("yR8l"),
+                y = n("x7UT"),
+                C = n("3Bft"),
+                S = n("tIid"),
+                E = n("ht6z"),
+                N = n("/aPz"),
+                O = n("KriR"),
+                _ = n("D7An"),
+                w = n("4rCz"),
+                D = n("0WFu");
+            var I, T = n("br9A"),
+                M = n("Ue10"),
+                R = (n("a7aT"), n("z+dA"));
             ! function(e) {
                 e.SubButton = "subscribe-button__dropdown", e.BalloonLayerButton = "subscribe-button__balloon-layer-btn", e.DefaultButton = "subscribe-button__default-btn", e.SubscribeBalloon = "subscribe-button__subscribe-balloon"
-            }(i || (i = {}));
-            var _ = l.a.wrap(function() {
-                    return Promise.all([n.e(0), n.e(198)]).then(n.bind(null, "f+qK"))
+            }(I || (I = {}));
+            var F = s.a.wrap(function() {
+                    return Promise.all([n.e(0), n.e(199)]).then(n.bind(null, "f+qK"))
                 }, "SubscribeBalloon"),
-                w = function(e) {
-                    function t() {
-                        var t = null !== e && e.apply(this, arguments) || this;
-                        return t.modalLevel = "top_page", t.handleSubMenuAction = function(e) {
-                            new Set([N.a.ClickCheckout, N.a.BuyGiftSub, N.a.BuyMysteryGift, N.a.BuyCustomMysteryGift, N.a.BuyGiftToPaidUpgrade, N.a.BuyPaidUpgrade]).has(e.action) && t.checkAndDisplaySubscriptionCheckout();
-                            var n = t.props.data,
-                                i = n.user,
-                                r = !!(i && i.self && i.self.subscriptionBenefit),
-                                a = n.requestInfo && Object(C.a)(n.requestInfo.countryCode);
-                            Object(N.b)({
-                                action: e.action || "",
-                                channelLogin: t.props.channelLogin || "",
-                                channelID: i && i.id || "",
-                                checkoutButtonTier: e.checkoutButtonTier,
-                                hasSubCredit: i && i.self && i.self.canPrimeSubscribe,
-                                hostChannelID: t.props.data.user && t.props.data.user.id || "",
-                                hostChannelLogin: t.props.channelLogin,
-                                isMenuOpen: e.action !== N.a.OpenSubMenu,
-                                mysteryGiftCount: e.mysteryGiftCount,
-                                sub_location: "squad_page",
-                                modal: !r,
-                                modalLevel: r ? "" : t.modalLevel.slice(),
-                                showPrimeContent: a,
-                                giftRecipient: e.giftRecipient || null
-                            }), !e.modalLevel || e.action !== N.a.ClickMoreSubOptions && e.action !== N.a.ClickBack || (t.modalLevel = e.modalLevel)
-                        }, t
-                    }
-                    return r.__extends(t, e), t.prototype.componentDidMount = function() {
-                        this.checkAndDisplaySubscriptionCheckout()
-                    }, t.prototype.componentDidUpdate = function(e) {
-                        !this.isUserDataReady(e) && this.isUserDataReady(this.props) && this.checkAndDisplaySubscriptionCheckout()
-                    }, t.prototype.render = function() {
-                        if (!(this.props.data && this.props.data.user && this.props.data.user.id && this.props.data.user.subscriptionProducts && this.props.data.requestInfo)) return null;
-                        var e = this.props.data.user,
-                            t = e.self,
-                            n = e.subscriptionProducts.filter(function(e) {
-                                return e
-                            });
-                        if (0 === n.length) return null;
-                        if (this.props.hideEsportsSubscription && Object(y.a)(this.props.data.user.id || "", this.props.sessionUser)) return null;
-                        var i = Object(C.a)(this.props.data.requestInfo.countryCode),
-                            r = !(!t || !t.subscriptionBenefit),
-                            o = Object(y.a)(this.props.data.user.id || "", this.props.sessionUser),
-                            s = 1 === n.length;
-                        n.some(function(e) {
-                            return !e.emoteSetID
-                        }) && (s = !0);
-                        var l = null;
-                        t && t.subscriptionBenefit && (l = t.subscriptionBenefit.purchasedWithPrime ? b.a.Prime : t.subscriptionBenefit.tier, this.modalLevel = "");
-                        var c = this.props.data.user.displayName || this.props.channelLogin,
-                            d = n[0];
-                        return a.createElement(f.Fb, {
-                            className: Object(S.b)(k.a.Light)
-                        }, a.createElement(f.Fb, {
-                            overflow: f.db.Hidden,
-                            fullWidth: !0,
-                            className: "subscribe-modal__banner"
-                        }, this.props.data.user.bannerImageURL && a.createElement(f.S, {
-                            src: this.props.data.user.bannerImageURL,
-                            alt: Object(g.d)("{channelName}'s banner image", {
-                                channelName: c
-                            }, "SubscribeModal")
-                        })), this.props.data.user.profileImageURL && a.createElement(f.Fb, {
-                            className: "subscribe-modal__avatar",
-                            background: f.r.Alt,
-                            position: f.kb.Absolute,
-                            borderRadius: f.x.Small,
-                            overflow: f.db.Hidden
-                        }, a.createElement(f.q, {
-                            size: 80,
-                            src: this.props.data.user.profileImageURL,
-                            alt: Object(g.d)("{channelName}'s profile image", {
-                                channelName: c
-                            }, "SubscribeModal")
-                        })), a.createElement(f.Ya, {
-                            padding: {
-                                x: 2
-                            },
-                            margin: {
-                                top: 3
-                            }
-                        }, a.createElement(f.W, {
-                            fontSize: f.Ca.Size3
-                        }, Object(g.d)("Subscribe to {channelName}", {
-                            channelName: c
-                        }, "SubscribeModal"))), a.createElement(_, {
-                            authToken: this.props.authToken,
-                            channelLogin: this.props.channelLogin,
-                            inPrimeRegion: i,
-                            isEsportChannel: o,
-                            isNonStandardSub: s,
-                            isStaff: !(!this.props.sessionUser || !this.props.sessionUser.roles) && this.props.sessionUser.roles.isStaff,
-                            isSubscribed: r,
-                            userHasPrime: !1,
-                            productId: d ? d.id : "",
-                            subbedTier: l || b.a.Prime,
-                            handleSubMenuAction: this.handleSubMenuAction
-                        }))
-                    }, t.prototype.isUserDataReady = function(e) {
-                        return e.data && e.data.user && !e.data.loading && !e.data.error
-                    }, t.prototype.checkAndDisplaySubscriptionCheckout = function() {
-                        var e = g.n.get(c.c, "");
-                        if (e) {
-                            var t = this.props.data.user;
-                            if (t && t.subscriptionProducts)
-                                if (this.props.showSubscriptionCheckoutModal && this.props.showLoginModal) t.subscriptionProducts.filter(function(e) {
-                                    return e
-                                }).map(function(e) {
-                                    return e.name
-                                }).includes(e) ? this.props.sessionUser ? this.props.showSubscriptionCheckoutModal({
-                                    isAnonymous: g.n.get(c.a, !1),
-                                    mysteryGiftCount: Number(g.n.get(c.b, "")),
-                                    productName: e,
-                                    recipientLogin: g.n.get(c.d, ""),
-                                    trackingContext: {
-                                        source: E.c.ChannelSubscribeButton
-                                    }
-                                }) : (g.n.set("subscription-target-login", this.props.channelLogin), this.props.showLoginModal()) : Object(c.e)()
-                        }
-                    }, t
-                }(a.Component),
-                D = Object(v.a)(O, {
-                    options: function(e) {
-                        return {
-                            variables: {
-                                login: e.channelLogin
-                            }
-                        }
-                    }
-                })(w);
-            var I = function(e) {
-                function t() {
-                    var t = null !== e && e.apply(this, arguments) || this;
-                    return t.handleClose = function() {
-                        t.props.closeModal()
-                    }, t
-                }
-                return r.__extends(t, e), t.prototype.componentWillUnmount = function() {
-                    this.props.onClose && this.props.onClose()
-                }, t.prototype.render = function() {
-                    return a.createElement(f.Fb, {
-                        className: "subscribe-modal",
-                        background: f.r.Base
-                    }, a.createElement(D, {
-                        authToken: this.props.authToken,
-                        sessionUser: this.props.sessionUser,
-                        onClose: this.handleClose,
-                        channelLogin: this.props.channelLogin,
-                        showLoginModal: this.props.showLoginModal,
-                        showSubscriptionCheckoutModal: this.props.showSubscriptionCheckoutModal
-                    }), a.createElement(h.a, {
-                        closeOnBackdropClick: !0,
-                        closeOnPageNavigation: !0
-                    }))
-                }, t
-            }(a.Component);
-            var T = Object(o.connect)(function(e) {
-                    return {
-                        authToken: Object(m.a)(e),
-                        sessionUser: Object(m.e)(e)
-                    }
-                }, function(e) {
-                    return Object(s.bindActionCreators)({
-                        closeModal: u.c,
-                        showLoginModal: Object(c.f)(d.a.ChannelSubscriptionButton),
-                        showSubscriptionCheckoutModal: function(e) {
-                            var t = r.__rest(e, []);
-                            return Object(u.d)(l.a, {
-                                component: "CheckoutModal",
-                                loader: function() {
-                                    return Promise.all([n.e(0), n.e(209)]).then(n.bind(null, "KJv/"))
-                                },
-                                componentProps: t
-                            })
-                        }
-                    }, e)
-                })(I),
-                M = n("oJmH"),
-                R = n("2+sX"),
-                F = n("u5aL"),
-                j = n("eJ65"),
-                L = n("x7UT"),
-                U = n("/aPz"),
-                A = n("D7An"),
-                x = n("4rCz");
-            n("a7aT");
-            var B, P = n("z+dA");
-            ! function(e) {
-                e.SubButton = "subscribe-button__dropdown", e.BalloonLayerButton = "subscribe-button__balloon-layer-btn", e.DefaultButton = "subscribe-button__default-btn", e.SubscribeBalloon = "subscribe-button__subscribe-balloon"
-            }(B || (B = {}));
-            var V = l.a.wrap(function() {
-                    return Promise.all([n.e(0), n.e(198)]).then(n.bind(null, "f+qK"))
-                }, "SubscribeBalloon"),
-                W = function(e) {
+                j = function(e) {
                     function t() {
                         var t = null !== e && e.apply(this, arguments) || this;
                         return t.state = {
                             inPrimeRegion: !1
                         }, t.modalLevel = "top_page", t.renderBalloonContentForBalloonLayer = function() {
-                            return a.createElement(F.a, {
+                            return r.createElement(v.a, {
                                 onClickOut: t.handleBalloonClickOut
-                            }, a.createElement(f.Ya, {
+                            }, r.createElement(M.Ya, {
                                 "data-a-target": "sub-balloon",
                                 refDelegate: t.setBalloonContentRefDelegate
                             }, t.balloonWrapperContent))
@@ -17711,7 +17529,7 @@
                                 channelLogin: t.props.channelLogin,
                                 onClose: t.handleModalClose
                             }), t.handleSubMenuAction({
-                                action: N.a.OpenSubMenu
+                                action: T.a.OpenSubMenu
                             })) : (t.props.balloonLayer.show({
                                 direction: t.getBalloonDirection(),
                                 ref: t.containerRef,
@@ -17725,17 +17543,17 @@
                             })
                         }, t.handleModalClose = function() {
                             t.handleSubMenuAction({
-                                action: N.a.CloseSubMenu
+                                action: T.a.CloseSubMenu
                             })
                         }, t.setBalloonWrapperContent = function(e) {
                             t.balloonWrapperContent = e
                         }, t.handleSubMenuAction = function(e) {
-                            new Set([N.a.ClickCheckout, N.a.BuyGiftSub, N.a.BuyMysteryGift, N.a.BuyCustomMysteryGift, N.a.BuyGiftToPaidUpgrade, N.a.BuyPaidUpgrade]).has(e.action) && t.checkAndDisplaySubscriptionCheckout();
+                            new Set([T.a.ClickCheckout, T.a.BuyGiftSub, T.a.BuyMysteryGift, T.a.BuyCustomMysteryGift, T.a.BuyGiftToPaidUpgrade, T.a.BuyPaidUpgrade, T.a.BuyDNRToResub]).has(e.action) && t.checkAndDisplaySubscriptionCheckout();
                             var n = t.props.data,
                                 i = n.user,
                                 r = !!(i && i.self && i.self.subscriptionBenefit),
-                                a = n.requestInfo && Object(C.a)(n.requestInfo.countryCode);
-                            Object(N.b)({
+                                a = n.requestInfo && Object(E.a)(n.requestInfo.countryCode);
+                            Object(T.b)({
                                 action: e.action || "",
                                 channelLogin: t.props.channelLogin || "",
                                 channelID: i && i.id || "",
@@ -17744,35 +17562,35 @@
                                 hostChannelID: t.props.hostChannelID,
                                 hostChannelLogin: t.props.hostChannelLogin,
                                 isAnonymous: e.isAnonymous,
-                                isMenuOpen: e.action !== N.a.OpenSubMenu,
+                                isMenuOpen: e.action !== T.a.OpenSubMenu,
                                 mysteryGiftCount: e.mysteryGiftCount,
                                 sub_location: "channel_page",
                                 modal: !r,
                                 modalLevel: r ? "" : t.modalLevel.slice(),
                                 showPrimeContent: a,
                                 giftRecipient: e.giftRecipient || null
-                            }), !e.modalLevel || e.action !== N.a.ClickMoreSubOptions && e.action !== N.a.ClickBack || (t.modalLevel = e.modalLevel)
+                            }), !e.modalLevel || e.action !== T.a.ClickMoreSubOptions && e.action !== T.a.ClickBack || (t.modalLevel = e.modalLevel)
                         }, t.handleMenuToggle = function(e) {
                             t.handleSubMenuAction({
-                                action: e ? N.a.CloseSubMenu : N.a.OpenSubMenu
+                                action: e ? T.a.CloseSubMenu : T.a.OpenSubMenu
                             })
                         }, t.getBalloonDirection = function() {
-                            var e = t.props.balloonDirection || f.v.BottomRight;
-                            return t.props.hostChannelID && (e = f.v.TopLeft), e
+                            var e = t.props.balloonDirection || M.v.BottomRight;
+                            return t.props.hostChannelID && (e = M.v.TopLeft), e
                         }, t.setContainerRefDelegate = function(e) {
                             t.containerRef = e
                         }, t.setBalloonContentRefDelegate = function(e) {
                             t.balloonContentRef = e
                         }, t
                     }
-                    return r.__extends(t, e), t.prototype.componentDidMount = function() {
+                    return i.__extends(t, e), t.prototype.componentDidMount = function() {
                         this.props.reportInteractive && this.isUserDataReady(this.props) && this.props.reportInteractive(), this.checkAndDisplaySubscriptionCheckout()
                     }, t.prototype.componentDidUpdate = function(e) {
                         this.props.channelLogin && !this.isUserDataReady(this.props) || !this.props.updateContainerWidth || this.props.updateContainerWidth(), this.props.reportInteractive && this.props.data && !this.props.data.loading && this.props.reportInteractive(), !this.isUserDataReady(e) && this.isUserDataReady(this.props) && this.checkAndDisplaySubscriptionCheckout()
                     }, t.prototype.componentWillReceiveProps = function(e) {
                         this.isUserDataReady(e) && e.pubsub.messages.subscriptionInfo !== this.props.pubsub.messages.subscriptionInfo && this.props.data.refetch()
                     }, t.prototype.componentWillUnmount = function() {
-                        Object(c.e)()
+                        Object(l.f)()
                     }, t.prototype.render = function() {
                         var e = this.props.data;
                         if (!e || e.loading || e.error) return null;
@@ -17781,57 +17599,59 @@
                         var n = t.self,
                             i = t.subscriptionProducts;
                         if (!i) return null;
-                        var r = i.filter(function(e) {
+                        var a = i.filter(function(e) {
                             return e
                         });
-                        if (0 === r.length) return null;
-                        if (this.props.hideEsportsSubscription && Object(y.a)(t.id || "", this.props.sessionUser)) return null;
-                        var o = e.requestInfo && Object(C.a)(e.requestInfo.countryCode),
+                        if (0 === a.length) return null;
+                        if (this.props.hideEsportsSubscription && Object(S.a)(t.id || "", this.props.sessionUser)) return null;
+                        var o = e.requestInfo && Object(E.a)(e.requestInfo.countryCode),
                             s = !(!n || !n.subscriptionBenefit),
-                            l = Object(y.a)(t.id || "", this.props.sessionUser),
-                            c = 1 === r.length;
-                        r.some(function(e) {
+                            l = Object(S.a)(t.id || "", this.props.sessionUser),
+                            c = 1 === a.length;
+                        a.some(function(e) {
                             return !e.emoteSetID
                         }) && (c = !0);
                         var d = null;
-                        n && n.subscriptionBenefit && (d = n.subscriptionBenefit.purchasedWithPrime ? b.a.Prime : n.subscriptionBenefit.tier, this.modalLevel = "");
+                        n && n.subscriptionBenefit && (d = n.subscriptionBenefit.purchasedWithPrime ? C.a.Prime : n.subscriptionBenefit.tier, this.modalLevel = "");
                         var u = function(e) {
+                            var t = w.q.experiments.getAssignment(_.b.SubsReanimator);
                             if (e.isSubscribed) {
-                                if (e.hasInsiderPass) return Object(x.d)("All-Access Pass", "SubscribeButton");
-                                if (e.isNonStandardSub) return Object(x.d)("Subscribed", "SubscribeButton");
-                                if (e.hostedDisplayName) return Object(x.d)("Subscribed to {username}", {
+                                if (e.hasInsiderPass) return Object(w.d)("All-Access Pass", "SubscribeButton");
+                                if (e.isNonStandardSub) return Object(w.d)("Subscribed", "SubscribeButton");
+                                if (e.hostedDisplayName) return Object(w.d)("Subscribed to {username}", {
                                     username: e.hostedDisplayName
                                 }, "SubscribeButton");
-                                if ("control" !== x.q.experiments.getAssignment(A.b.SubsReanimator) && e.benefitIsDNRd && e.benefitEndsAt) {
-                                    var t = new Date(e.benefitEndsAt),
-                                        n = Math.round((t.getTime() - Date.now()) / 864e5);
-                                    if (n <= 15 && n > 7) return Object(x.d)("Continue Sub", "SubscribeButton");
-                                    if (n <= 7) return Object(x.d)("Continue Sub - {daysRemaining} Days Remaining", {
+                                if ("control" !== t && e.benefitIsDNRd && e.benefitEndsAt && !e.hasPendingSub) {
+                                    var n = Object(D.a)(e.benefitEndsAt);
+                                    if (n <= 15 && n > 7) return Object(w.d)("Continue Sub", "SubscribeButton");
+                                    if (n <= 7 && 0 !== n) return Object(w.d)("{daysRemaining, plural, one {Continue Sub - {daysRemaining} Day Remaining} other {Continue Sub - {daysRemaining} Days Remaining}}", {
                                         daysRemaining: n
-                                    }, "SubscribeButton")
+                                    }, "SubscribeButton");
+                                    if (0 === n) return Object(w.d)("Continue Sub - Ends Today", "SubscribeButton")
                                 }
-                                return Object(x.d)("Gift A Sub", "SubscribeButton")
+                                return Object(w.d)("Gift A Sub", "SubscribeButton")
                             }
-                            return e.hasInsiderPass ? Object(x.d)("Get the All-Access Pass", "SubscribeButton") : e.hostedDisplayName ? Object(x.d)("Subscribe to {username}", {
+                            return e.hasInsiderPass ? Object(w.d)("Get the All-Access Pass", "SubscribeButton") : e.hostedDisplayName ? Object(w.d)("Subscribe to {username}", {
                                 username: e.hostedDisplayName
-                            }, "SubscribeButton") : Object(x.d)("Subscribe", "SubscribeButton")
+                            }, "SubscribeButton") : Object(w.d)("Subscribe", "SubscribeButton")
                         }({
                             isSubscribed: s,
                             isNonStandardSub: c,
                             hasInsiderPass: l,
+                            hasPendingSub: !!(n && n.subscriptionBenefit && n.subscriptionBenefit.pendingSubscription),
                             benefitIsDNRd: !(!n || !n.subscriptionBenefit) && n.subscriptionBenefit.isDNRd,
                             benefitEndsAt: n && n.subscriptionBenefit && n.subscriptionBenefit.endsAt,
                             hostedDisplayName: this.props.hostChannelID ? t.displayName || "" : void 0
                         });
-                        if (s && c && !l) return a.createElement(f.z, {
+                        if (s && c && !l) return r.createElement(M.z, {
                             disabled: !0,
                             ariaLabel: u,
-                            icon: f.ub.Star
+                            icon: M.ub.Star
                         }, u);
-                        var m = a.createElement(f.z, {
+                        var m = r.createElement(M.z, {
                             ariaLabel: u,
                             "data-a-target": s ? "subscribed-button" : "subscribe-button",
-                            "data-test-selector": B.SubButton,
+                            "data-test-selector": I.SubButton,
                             dropdown: !this.props.hideDropdownArrow,
                             fullWidth: !0,
                             icon: this.getButtonIcon(s, d),
@@ -17839,11 +17659,11 @@
                             type: this.getButtonType(s)
                         }, u);
                         if (this.props.useModal) return m;
-                        var p = r[0];
-                        return this.setBalloonWrapperContent(a.createElement(V, {
+                        var p = a[0];
+                        return this.setBalloonWrapperContent(r.createElement(F, {
                             authToken: this.props.authToken,
                             channelLogin: this.props.channelLogin || "",
-                            "data-test-selector": B.SubscribeBalloon,
+                            "data-test-selector": I.SubscribeBalloon,
                             handleSubMenuAction: this.handleSubMenuAction,
                             inPrimeRegion: o,
                             isEsportChannel: l,
@@ -17851,29 +17671,29 @@
                             isStaff: !(!this.props.sessionUser || !this.props.sessionUser.roles) && this.props.sessionUser.roles.isStaff,
                             isSubscribed: s,
                             productId: p ? p.id : "",
-                            subbedTier: d || b.a.Prime,
+                            subbedTier: d || C.a.Prime,
                             userHasPrime: !1
-                        })), this.props.renderBalloonInBalloonLayer ? a.createElement(f.Ya, {
-                            "data-test-selector": B.BalloonLayerButton,
+                        })), this.props.renderBalloonInBalloonLayer ? r.createElement(M.Ya, {
+                            "data-test-selector": I.BalloonLayerButton,
                             refDelegate: this.setContainerRefDelegate
-                        }, m) : a.createElement(f.Ya, null, a.createElement(j.a, {
-                            "data-test-selector": B.DefaultButton,
+                        }, m) : r.createElement(M.Ya, null, r.createElement(b.a, {
+                            "data-test-selector": I.DefaultButton,
                             onToggle: this.handleMenuToggle
-                        }, m, a.createElement(f.u, {
+                        }, m, r.createElement(M.u, {
                             "data-a-target": "sub-balloon",
                             direction: this.getBalloonDirection(),
-                            size: f.w.Large
+                            size: M.w.Large
                         }, this.balloonWrapperContent)))
                     }, t.prototype.getButtonType = function(e) {
-                        f.F.Default;
-                        return e && void 0 !== this.props.subscribedButtonType ? this.props.subscribedButtonType : e ? f.F.Success : this.props.unsubscribedButtonType || f.F.Default
+                        M.F.Default;
+                        return e && void 0 !== this.props.subscribedButtonType ? this.props.subscribedButtonType : e ? M.F.Success : this.props.unsubscribedButtonType || M.F.Default
                     }, t.prototype.getButtonIcon = function(e, t) {
                         var n = void 0;
-                        return e ? n = t === b.a.Prime ? f.ub.Crown : f.ub.Star : this.props.forceIcon && (n = f.ub.StarHollow), n
+                        return e ? n = t === C.a.Prime ? M.ub.Crown : M.ub.Star : this.props.forceIcon && (n = M.ub.StarHollow), n
                     }, t.prototype.isUserDataReady = function(e) {
                         return e.data && e.data.user && !e.data.loading && !e.data.error
                     }, t.prototype.checkAndDisplaySubscriptionCheckout = function() {
-                        var e = g.n.get(c.c, "");
+                        var e = f.n.get(l.d, "");
                         if (e) {
                             var t = this.props.data.user;
                             if (t && t.subscriptionProducts) t.subscriptionProducts.filter(function(e) {
@@ -17881,18 +17701,18 @@
                             }).map(function(e) {
                                 return e.name
                             }).includes(e) ? this.props.sessionUser ? this.props.showSubscriptionCheckoutModal({
-                                isAnonymous: g.n.get(c.a, !1),
-                                mysteryGiftCount: Number(g.n.get(c.b, "")),
+                                isAnonymous: f.n.get(l.a, !1),
+                                mysteryGiftCount: Number(f.n.get(l.c, "")),
                                 productName: e,
-                                recipientLogin: g.n.get(c.d, ""),
+                                recipientLogin: f.n.get(l.e, ""),
                                 trackingContext: {
-                                    source: E.c.ChannelSubscribeButton
+                                    source: O.c.ChannelSubscribeButton
                                 }
-                            }) : this.props.showLoginModal() : Object(c.e)()
+                            }) : this.props.showLoginModal() : Object(l.f)()
                         }
                     }, t
-                }(a.Component),
-                H = Object(M.compose)(Object(v.a)(P, {
+                }(r.Component),
+                L = Object(h.compose)(Object(k.a)(R, {
                     options: function(e) {
                         return {
                             variables: {
@@ -17903,9 +17723,9 @@
                     skip: function(e) {
                         return !e.channelLogin
                     }
-                }), Object(L.a)([{
+                }), Object(y.a)([{
                     topic: function(e) {
-                        return Object(U.I)(e.data.currentUser && e.data.currentUser.id || "")
+                        return Object(N.I)(e.data.currentUser && e.data.currentUser.id || "")
                     },
                     mapMessageTypesToProps: {
                         "*": "subscriptionInfo"
@@ -17913,16 +17733,16 @@
                     skip: function(e) {
                         return !(e.data && !e.data.loading && !e.data.error && e.data.currentUser)
                     }
-                }]), Object(R.e)())(W),
-                G = function(e) {
+                }]), Object(g.e)())(j),
+                U = function(e) {
                     function t() {
                         var t = null !== e && e.apply(this, arguments) || this;
                         return t.reportInteractive = function() {
                             t.props.latencyTracking.reportInteractive()
                         }, t
                     }
-                    return r.__extends(t, e), t.prototype.render = function() {
-                        return a.createElement(H, {
+                    return i.__extends(t, e), t.prototype.render = function() {
+                        return r.createElement(L, {
                             authToken: this.props.authToken,
                             balloonDirection: this.props.balloonDirection,
                             channelLogin: this.props.channelLogin,
@@ -17942,42 +17762,42 @@
                             updateContainerWidth: this.props.updateContainerWidth,
                             useModal: this.props.useModal
                         })
-                    }, t = r.__decorate([Object(p.b)("SubscribeButton")], t)
-                }(a.Component);
-            var Y = Object(o.connect)(function(e) {
+                    }, t = i.__decorate([Object(m.b)("SubscribeButton")], t)
+                }(r.Component);
+            var A = Object(a.connect)(function(e) {
                 return {
-                    authToken: Object(m.a)(e),
-                    sessionUser: Object(m.e)(e)
+                    authToken: Object(u.a)(e),
+                    sessionUser: Object(u.e)(e)
                 }
             }, function(e) {
-                return Object(s.bindActionCreators)({
-                    showLoginModal: Object(c.f)(d.a.ChannelSubscriptionButton),
+                return Object(o.bindActionCreators)({
+                    showLoginModal: Object(l.g)(c.a.ChannelSubscriptionButton),
                     showSubscriptionModal: function(e) {
-                        var t = r.__rest(e, []);
-                        return Object(u.d)(T, t)
+                        var t = i.__rest(e, []);
+                        return Object(d.d)(p.a, t)
                     },
                     showSubscriptionCheckoutModal: function(e) {
-                        var t = r.__rest(e, []);
-                        return Object(u.d)(l.a, {
+                        var t = i.__rest(e, []);
+                        return Object(d.d)(s.a, {
                             component: "CheckoutModal",
                             loader: function() {
-                                return Promise.all([n.e(0), n.e(209)]).then(n.bind(null, "KJv/"))
+                                return Promise.all([n.e(0), n.e(210)]).then(n.bind(null, "KJv/"))
                             },
                             componentProps: t
                         })
                     }
                 }, e)
-            })(G);
+            })(U);
             n.d(t, !1, function() {
-                return G
+                return U
             }), n.d(t, "a", function() {
-                return Y
+                return A
             }), n.d(t, !1, function() {
-                return B
+                return I
             }), n.d(t, !1, function() {
-                return W
+                return j
             }), n.d(t, !1, function() {
-                return H
+                return L
             })
         },
         QlOJ: function(e, t, n) {
@@ -18732,7 +18552,7 @@
                                     t.props.data.currentUser ? t.props.onReportClick({
                                         onClose: t.handleReportModalClose,
                                         reportContext: {
-                                            contentType: v.N.CLIP_REPORT,
+                                            contentType: v.O.CLIP_REPORT,
                                             contentID: e.slug,
                                             targetUserID: t.getBroadcasterID(e),
                                             additionalTrackingID: t.getcuratorID(e)
@@ -19841,49 +19661,41 @@
             e.exports = n
         },
         S58p: function(e, t, n) {},
-        SWMh: function(e, t, n) {
+        "SHn+": function(e, t, n) {
             "use strict";
-            n.d(t, "a", function() {
-                return a
-            });
             var i = n("mrSG"),
-                r = n("b6Yk"),
-                a = function(e, t, n) {
-                    return i.__awaiter(void 0, void 0, Promise, function() {
-                        var a, o;
-                        return i.__generator(this, function(i) {
-                            switch (i.label) {
-                                case 0:
-                                    a = null, i.label = 1;
-                                case 1:
-                                    return i.trys.push([1, 3, , 4]), [4, r.a.get("/v5/videos/" + e + "/markers")];
-                                case 2:
-                                    return (o = i.sent()).body && o.body.markers.game_changes && (a = o.body.markers.game_changes.sort(function(e, t) {
-                                        return e.time - t.time
-                                    }).map(function(e, n, i) {
-                                        var r = i[n + 1];
-                                        return {
-                                            duration: r ? r.time - e.time : t - e.time,
-                                            offset: e.time,
-                                            label: e.label,
-                                            thumbnailUrl: e.thumbnail.sheet_url,
-                                            videoID: o.body.vod_id
-                                        }
-                                    }), n && n.boxArtURL && a.unshift({
-                                        duration: a[0].offset,
-                                        videoID: e,
-                                        offset: 0,
-                                        label: n.name,
-                                        thumbnailUrl: n.boxArtURL
-                                    })), [3, 4];
-                                case 3:
-                                    return i.sent(), [3, 4];
-                                case 4:
-                                    return [2, a || []]
-                            }
-                        })
-                    })
-                }
+                r = n("q1tI"),
+                a = n("Ue10"),
+                o = function(e) {
+                    return r.createElement(a.Ya, {
+                        margin: {
+                            right: 1
+                        },
+                        display: a.X.Flex,
+                        alignItems: a.f.Center
+                    }, r.createElement(a.Ya, {
+                        margin: {
+                            right: .5
+                        }
+                    }, r.createElement(a.Fb, {
+                        display: a.X.Flex,
+                        alignItems: a.f.Center
+                    }, r.createElement(a.W, {
+                        fontSize: a.Ca.Size5,
+                        "data-test-selector": "labeled-text-label"
+                    }, e.label))), r.createElement(a.W, {
+                        fontSize: a.Ca.Size5,
+                        ellipsis: !0
+                    }, r.createElement(a.U, i.__assign({
+                        to: e.linkTo
+                    }, Object(a.kc)(e), {
+                        targetBlank: e.targetBlank,
+                        "data-test-selector": "labeled-link-title"
+                    }), e.title)))
+                };
+            n.d(t, "a", function() {
+                return o
+            })
         },
         SceP: function(e, t) {
             var n = {
@@ -20418,7 +20230,7 @@
                                         self: {
                                             __typename: "UserSelfConnection",
                                             whisperPermissions: {
-                                                receive: l.Da.NOT_PERMITTED,
+                                                receive: l.Ea.NOT_PERMITTED,
                                                 __typename: "WhisperPermissions"
                                             }
                                         }
@@ -20428,7 +20240,7 @@
                                         self: {
                                             __typename: "UserSelfConnection",
                                             whisperPermissions: {
-                                                receive: l.Da.PERMITTED,
+                                                receive: l.Ea.PERMITTED,
                                                 __typename: "WhisperPermissions"
                                             }
                                         }
@@ -20565,18 +20377,20 @@
         },
         UUve: function(e, t, n) {
             "use strict";
-            n.d(t, "c", function() {
+            n.d(t, "d", function() {
                 return a
-            }), n.d(t, "d", function() {
+            }), n.d(t, "e", function() {
                 return o
-            }), n.d(t, "b", function() {
+            }), n.d(t, "c", function() {
                 return s
             }), n.d(t, "a", function() {
                 return l
-            }), n.d(t, "e", function() {
-                return d
+            }), n.d(t, "b", function() {
+                return c
             }), n.d(t, "f", function() {
                 return u
+            }), n.d(t, "g", function() {
+                return m
             });
             var i = n("/7QA"),
                 r = n("y5D0"),
@@ -20584,18 +20398,19 @@
                 o = "SUB_CHECKOUT__RECIPIENT",
                 s = "SUB_CHECKOUT__MYSTERY_GIFT_COUNT",
                 l = "SUB_CHECKOUT__GIFTING_ANONYMOUSLY",
-                c = [a, o, s, l];
+                c = "SUB_CHECKOUT__IS_ONE_TIME",
+                d = [a, o, s, l, c];
 
-            function d() {
-                c.forEach(function(e) {
+            function u() {
+                d.forEach(function(e) {
                     return i.n.remove(e)
                 })
             }
 
-            function u(e) {
+            function m(e) {
                 return function() {
                     return Object(r.e)(e, {
-                        onClose: d
+                        onClose: u
                     })
                 }
             }
@@ -21264,13 +21079,13 @@
                 O = n("Ue10"),
                 _ = (n("zWFo"), "Stream Chat"),
                 w = S.a.wrap(function() {
-                    return n.e(205).then(n.bind(null, "+k6+"))
+                    return n.e(206).then(n.bind(null, "+k6+"))
                 }, "ActiveRoomButton"),
                 D = S.a.wrap(function() {
-                    return n.e(204).then(n.bind(null, "Xf1I"))
+                    return n.e(205).then(n.bind(null, "Xf1I"))
                 }, "Room"),
                 I = S.a.wrap(function() {
-                    return n.e(203).then(n.bind(null, "cs/o"))
+                    return n.e(204).then(n.bind(null, "cs/o"))
                 }, "RoomPicker"),
                 T = function(e) {
                     function t() {
@@ -25198,6 +25013,7 @@
                     BuyGiftToPaidUpgrade: "buy_gift_to_paid_upgrade",
                     BuyMysteryGift: "buy_mystery_gift",
                     BuyPaidUpgrade: "buy_paid_upgrade",
+                    BuyDNRToResub: "buy_dnr_to_resub",
                     ChangeTier: "change_tier",
                     ClickAnonymousGiftCheckbox: "anonymous_gift_click",
                     ClickCheckout: "click_checkout_button",
@@ -25319,9 +25135,9 @@
                 P = n("50oY"),
                 V = n("WOQ1"),
                 W = n("4p7I"),
-                H = n("mLw1"),
-                G = n("yoKv"),
-                Y = n("9C/b"),
+                H = n("yoKv"),
+                G = n("9C/b"),
+                Y = n("mLw1"),
                 z = n("vRsq"),
                 q = n("/MKj"),
                 X = n("fvjX"),
@@ -25344,7 +25160,7 @@
                     }))), o.createElement(J.a, null))
                 },
                 te = c.a.wrap(function() {
-                    return n.e(114).then(n.bind(null, "r93r"))
+                    return n.e(115).then(n.bind(null, "r93r"))
                 }, "ChannelEventsContent", {
                     placeholder: o.createElement(ee, null)
                 }),
@@ -25391,7 +25207,7 @@
                 }))(ie),
                 ae = n("bdHe"),
                 oe = c.a.wrap(function() {
-                    return n.e(115).then(n.bind(null, "EJeP"))
+                    return n.e(116).then(n.bind(null, "EJeP"))
                 }, "ChannelFollowersContent", {
                     placeholder: o.createElement(ae.a, null)
                 }),
@@ -25430,7 +25246,7 @@
                     }
                 }))(le),
                 de = c.a.wrap(function() {
-                    return n.e(116).then(n.bind(null, "bpxw"))
+                    return n.e(117).then(n.bind(null, "bpxw"))
                 }, "ChannelFollowingContent", {
                     placeholder: o.createElement(ae.a, null)
                 }),
@@ -25470,7 +25286,7 @@
                 }))(me),
                 he = n("7JxC"),
                 fe = (n("4IKE"), c.a.wrap(function() {
-                    return Promise.all([n.e(0), n.e(117)]).then(n.bind(null, "EuHz"))
+                    return Promise.all([n.e(0), n.e(118)]).then(n.bind(null, "EuHz"))
                 }, "ChannelPanels", {
                     placeholder: o.createElement(he.a, null)
                 })),
@@ -25522,37 +25338,38 @@
                         firstPageLoaded: e.session.firstPageLoaded
                     }
                 }))(be),
-                Ce = n("QzU5"),
-                Se = n("L4bB"),
-                Ee = n("XKWF"),
-                Ne = n("RsJ2"),
-                Oe = n("QdeI"),
-                _e = n("cERj"),
-                we = n("bO5A"),
-                De = c.a.wrap(function() {
-                    return n.e(124).then(n.bind(null, "gcyA"))
-                }, "ChannelVideosOverviewContent", {
-                    placeholder: o.createElement(Oe.a, null)
-                }),
+                Ce = n("H1ft"),
+                Se = n("QzU5"),
+                Ee = n("L4bB"),
+                Ne = n("XKWF"),
+                Oe = n("RsJ2"),
+                _e = n("QdeI"),
+                we = n("cERj"),
+                De = n("bO5A"),
                 Ie = c.a.wrap(function() {
-                    return n.e(123).then(n.bind(null, "6mes"))
-                }, "ChannelClipsContent", {
-                    placeholder: o.createElement(Oe.a, null)
+                    return n.e(125).then(n.bind(null, "gcyA"))
+                }, "ChannelVideosOverviewContent", {
+                    placeholder: o.createElement(_e.a, null)
                 }),
                 Te = c.a.wrap(function() {
-                    return n.e(122).then(n.bind(null, "WfYB"))
-                }, "ChannelCollectionsContent", {
-                    placeholder: o.createElement(Oe.a, null)
+                    return n.e(124).then(n.bind(null, "6mes"))
+                }, "ChannelClipsContent", {
+                    placeholder: o.createElement(_e.a, null)
                 }),
                 Me = c.a.wrap(function() {
-                    return n.e(121).then(n.bind(null, "TCEa"))
+                    return n.e(123).then(n.bind(null, "WfYB"))
+                }, "ChannelCollectionsContent", {
+                    placeholder: o.createElement(_e.a, null)
+                }),
+                Re = c.a.wrap(function() {
+                    return n.e(122).then(n.bind(null, "TCEa"))
                 }, "FilterableVideoTower", {
-                    placeholder: o.createElement(Oe.a, null)
+                    placeholder: o.createElement(_e.a, null)
                 });
             ! function(e) {
                 e.Content = "content", e.Sort = "sort"
             }(ke || (ke = {}));
-            var Re = function(e) {
+            var Fe = function(e) {
                     function t() {
                         return null !== e && e.apply(this, arguments) || this
                     }
@@ -25577,14 +25394,14 @@
                             padding: {
                                 right: 1
                             }
-                        }, o.createElement(_e.a, {
+                        }, o.createElement(we.a, {
                             channelLogin: this.props.channelLogin
                         })), e)
                     }, t.prototype.getComponentsForFilter = function(e) {
                         var t = this.props.channelLogin,
                             n = Object(z.n)(this.props);
                         if (!e) return {
-                            content: o.createElement(De, {
+                            content: o.createElement(Ie, {
                                 channelLogin: t,
                                 collectionID: n
                             })
@@ -25596,20 +25413,20 @@
                             case z.e.Uploads:
                                 return {
                                     content: this.getFilterableVideoTower(e),
-                                    sort: o.createElement(we.a, null)
+                                    sort: o.createElement(De.a, null)
                                 };
                             case z.e.Clips:
                                 return {
-                                    content: o.createElement(Ie, {
+                                    content: o.createElement(Te, {
                                         channelName: t
                                     }),
-                                    sort: o.createElement(Se.a, {
+                                    sort: o.createElement(Ee.a, {
                                         hideLanguageFilter: !0
                                     })
                                 };
                             case z.e.Collections:
                                 return {
-                                    content: o.createElement(Te, {
+                                    content: o.createElement(Me, {
                                         channelLogin: t
                                     }),
                                     sort: o.createElement(Z.Ya, {
@@ -25619,14 +25436,14 @@
                                         justifyContent: Z.Xa.End
                                     }, o.createElement(Z.Ya, {
                                         flexGrow: 0
-                                    }, o.createElement(Ne.a, {
+                                    }, o.createElement(Oe.a, {
                                         channelLogin: t
                                     })))
                                 };
                             case z.e.All:
                                 return {
                                     content: this.getFilterableVideoTower(e),
-                                    sort: o.createElement(we.a, null)
+                                    sort: o.createElement(De.a, null)
                                 };
                             default:
                                 return e
@@ -25635,16 +25452,16 @@
                         var t = void 0;
                         switch (e) {
                             case z.e.Highlights:
-                                t = Ce.a.Highlight;
+                                t = Se.a.Highlight;
                                 break;
                             case z.e.PastBroadcasts:
-                                t = Ce.a.Archive;
+                                t = Se.a.Archive;
                                 break;
                             case z.e.PastPremieres:
-                                t = Ce.a.PastPremiere;
+                                t = Se.a.PastPremiere;
                                 break;
                             case z.e.Uploads:
-                                t = Ce.a.Upload;
+                                t = Se.a.Upload;
                                 break;
                             case z.e.All:
                                 break;
@@ -25652,15 +25469,16 @@
                                 return e
                         }
                         var n = Object(z.y)(this.props.location.search) || z.f.Newest;
-                        return o.createElement(Me, {
+                        return o.createElement(Re, {
                             channelLogin: this.props.channelLogin,
                             filter: t,
-                            sort: Object(Ee.c)(n)
+                            sort: Object(Ne.c)(n),
+                            multipleVideoGameMarkersType: Object(Ce.b)()
                         })
                     }, t
                 }(o.Component),
-                Fe = Object(s.compose)(Y.a, Object(S.b)("ChannelVideosContent"))(Re),
-                je = function(e) {
+                je = Object(s.compose)(G.a, Object(S.b)("ChannelVideosContent"))(Fe),
+                Le = function(e) {
                     function t() {
                         return null !== e && e.apply(this, arguments) || this
                     }
@@ -25669,7 +25487,7 @@
                     }, t.prototype.componentDidUpdate = function() {
                         this.setPageTitle()
                     }, t.prototype.render = function() {
-                        return o.createElement(Fe, {
+                        return o.createElement(je, {
                             channelLogin: this.props.channelLogin,
                             channelID: this.props.channelID,
                             pageviewProps: this.props.pageviewProps,
@@ -25683,7 +25501,7 @@
                         }, "ChannelRootVideosPage"))
                     }, t
                 }(o.Component),
-                Le = Object(s.compose)(Object(S.b)("ChannelVideosPage", {
+                Ue = Object(s.compose)(Object(S.b)("ChannelVideosPage", {
                     destination: K.a.VideosPage,
                     autoReportInteractive: !0
                 }), Object(Q.a)({
@@ -25694,13 +25512,13 @@
                     skip: function(e) {
                         return e.loading || !!e.error
                     }
-                }))(je),
-                Ue = n("yR8l"),
-                Ae = n("0lTu"),
-                xe = c.a.wrap(function() {
-                    return n.e(118).then(n.bind(null, "n7kk"))
+                }))(Le),
+                Ae = n("yR8l"),
+                xe = n("0lTu"),
+                Be = c.a.wrap(function() {
+                    return n.e(119).then(n.bind(null, "n7kk"))
                 }, "CampaignsRewardsTab"),
-                Be = function(e) {
+                Pe = function(e) {
                     function t() {
                         return null !== e && e.apply(this, arguments) || this
                     }
@@ -25708,14 +25526,14 @@
                         if (!this.props.firstPageLoaded) return null;
                         var e = this.props.data.currentUser && this.props.data.currentUser.blizzardAccount || void 0,
                             t = !(!this.props.data.currentUser || !this.props.data.currentUser.hasPrime);
-                        return o.createElement(xe, {
+                        return o.createElement(Be, {
                             channelID: this.props.channelID,
                             blizzardAccount: e,
                             userHasPrime: t
                         })
                     }, t
                 }(o.Component),
-                Pe = Object(X.compose)(Object(Ue.a)(Ae, {
+                Ve = Object(X.compose)(Object(Ae.a)(xe, {
                     skip: function(e) {
                         return !e.firstPageLoaded
                     }
@@ -25730,30 +25548,30 @@
                     skip: function(e) {
                         return e.loading || !!e.error
                     }
-                }))(Be);
-            var Ve = Object(s.compose)(Object(q.connect)(function(e) {
+                }))(Pe);
+            var We = Object(s.compose)(Object(q.connect)(function(e) {
                     return {
                         firstPageLoaded: e.session.firstPageLoaded
                     }
-                }))(Pe),
-                We = n("QlRw"),
-                He = n("8AB4"),
-                Ge = c.a.wrap(function() {
-                    return n.e(119).then(n.bind(null, "GIGq"))
+                }))(Ve),
+                He = n("QlRw"),
+                Ge = n("8AB4"),
+                Ye = c.a.wrap(function() {
+                    return n.e(120).then(n.bind(null, "GIGq"))
                 }, "CampaignsInsiderPassTab"),
-                Ye = function(e) {
+                ze = function(e) {
                     function t() {
                         return null !== e && e.apply(this, arguments) || this
                     }
                     return i.__extends(t, e), t.prototype.render = function() {
                         if (!this.props.firstPageLoaded || !this.props.data.user) return null;
-                        var e = !!(this.props.data.currentUser && this.props.data.currentUser.blizzardAccount && this.props.data.currentUser && this.props.data.currentUser.blizzardAccount && this.props.data.currentUser.blizzardAccount.region !== We.a.China),
+                        var e = !!(this.props.data.currentUser && this.props.data.currentUser.blizzardAccount && this.props.data.currentUser && this.props.data.currentUser.blizzardAccount && this.props.data.currentUser.blizzardAccount.region !== He.a.China),
                             t = !(!this.props.data.user.self || !this.props.data.user.self.subscriptionBenefit) || !1,
                             n = !(!this.props.data.currentUser || !this.props.data.currentUser.hasPrime),
                             i = this.props.data.user.subscriptionProducts ? this.props.data.user.subscriptionProducts.reduce(function(e, t) {
                                 return null !== t && e.push(t), e
                             }, []) : [];
-                        return o.createElement(Ge, {
+                        return o.createElement(Ye, {
                             channelID: this.props.channelID,
                             blizzardRewardsAvailable: e,
                             userHasPrime: n,
@@ -25762,7 +25580,7 @@
                         })
                     }, t
                 }(o.Component),
-                ze = Object(X.compose)(Object(Ue.a)(He, {
+                qe = Object(X.compose)(Object(Ae.a)(Ge, {
                     skip: function(e) {
                         return !e.firstPageLoaded
                     }
@@ -25777,17 +25595,17 @@
                     skip: function(e) {
                         return e.loading || !!e.error
                     }
-                }))(Ye);
-            var qe = Object(s.compose)(Object(q.connect)(function(e) {
+                }))(ze);
+            var Xe = Object(s.compose)(Object(q.connect)(function(e) {
                     return {
                         firstPageLoaded: e.session.firstPageLoaded
                     }
-                }))(ze),
-                Xe = n("bbjt"),
-                Qe = c.a.wrap(function() {
-                    return n.e(120).then(n.bind(null, "Y6wA"))
+                }))(qe),
+                Qe = n("bbjt"),
+                Ke = c.a.wrap(function() {
+                    return n.e(121).then(n.bind(null, "Y6wA"))
                 }, "CampaignsProgressTab"),
-                Ke = function(e) {
+                $e = function(e) {
                     function t() {
                         return null !== e && e.apply(this, arguments) || this
                     }
@@ -25795,7 +25613,7 @@
                         if (!this.props.firstPageLoaded) return null;
                         var e = !!(this.props.data.user && this.props.data.user.self && this.props.data.user.self.subscriptionBenefit) || !1,
                             t = this.props.data.currentUser && this.props.data.currentUser.blizzardAccount || void 0;
-                        return o.createElement(Qe, {
+                        return o.createElement(Ke, {
                             channelID: this.props.channelID,
                             blizzardAccount: t,
                             channelLogin: this.props.channelLogin,
@@ -25803,7 +25621,7 @@
                         })
                     }, t
                 }(o.Component),
-                $e = Object(X.compose)(Object(Ue.a)(Xe, {
+                Je = Object(X.compose)(Object(Ae.a)(Qe, {
                     options: function(e) {
                         return {
                             variables: {
@@ -25825,18 +25643,18 @@
                     skip: function(e) {
                         return e.loading || !!e.error
                     }
-                }))(Ke);
-            var Je = Object(s.compose)(Object(q.connect)(function(e) {
+                }))($e);
+            var Ze = Object(s.compose)(Object(q.connect)(function(e) {
                     return {
                         firstPageLoaded: e.session.firstPageLoaded
                     }
-                }))($e),
-                Ze = function(e) {
+                }))(Je),
+                et = function(e) {
                     function t() {
                         return null !== e && e.apply(this, arguments) || this
                     }
                     return i.__extends(t, e), t.prototype.render = function() {
-                        return o.createElement(o.Fragment, null, this.props.firstPageLoaded && this.props.channel && this.props.channel.id && o.createElement(Fe, {
+                        return o.createElement(o.Fragment, null, this.props.firstPageLoaded && this.props.channel && this.props.channel.id && o.createElement(je, {
                             channelLogin: this.props.channelLogin,
                             channelID: this.props.channel.id,
                             pageviewProps: this.props.pageviewProps,
@@ -25845,7 +25663,7 @@
                         }))
                     }, t
                 }(o.Component);
-            var et, tt = Object(s.compose)(Object(S.b)("VideoWatchPage", {
+            var tt, nt = Object(s.compose)(Object(S.b)("VideoWatchPage", {
                     autoReportInteractive: !0,
                     destination: K.a.VideoWatchPage
                 }), Object(Q.a)({
@@ -25860,8 +25678,8 @@
                     return {
                         firstPageLoaded: e.session.firstPageLoaded
                     }
-                }))(Ze),
-                nt = function(e) {
+                }))(et),
+                it = function(e) {
                     function t() {
                         var t = null !== e && e.apply(this, arguments) || this;
                         return t.renderPanelArea = function() {
@@ -25873,7 +25691,7 @@
                                 error: t.props.error
                             })
                         }, t.renderVideosArea = function() {
-                            return o.createElement(tt, {
+                            return o.createElement(nt, {
                                 channelLogin: t.props.channelLogin,
                                 channel: t.props.channel,
                                 pageviewProps: t.props.pageviewProps,
@@ -25881,7 +25699,7 @@
                                 error: t.props.error
                             })
                         }, t.renderEsportsProgress = function() {
-                            return t.props.channel && t.props.channel.id ? t.props.showEsportsRoute ? o.createElement(Je, {
+                            return t.props.channel && t.props.channel.id ? t.props.showEsportsRoute ? o.createElement(Ze, {
                                 channelLogin: t.props.channelLogin,
                                 channelID: t.props.channel.id,
                                 pageviewProps: t.props.pageviewProps,
@@ -25889,7 +25707,7 @@
                                 error: t.props.error
                             }) : void 0 : null
                         }, t.renderEsportsLoot = function() {
-                            return t.props.channel && t.props.channel.id ? t.props.showEsportsRoute ? o.createElement(Ve, {
+                            return t.props.channel && t.props.channel.id ? t.props.showEsportsRoute ? o.createElement(We, {
                                 channelLogin: t.props.channelLogin,
                                 channelID: t.props.channel.id,
                                 pageviewProps: t.props.pageviewProps,
@@ -25897,7 +25715,7 @@
                                 error: t.props.error
                             }) : void 0 : null
                         }, t.renderEsportsPass = function() {
-                            return t.props.channel && t.props.channel.id ? t.props.showEsportsRoute ? o.createElement(qe, {
+                            return t.props.channel && t.props.channel.id ? t.props.showEsportsRoute ? o.createElement(Xe, {
                                 channelLogin: t.props.channelLogin,
                                 channelID: t.props.channel.id,
                                 pageviewProps: t.props.pageviewProps,
@@ -25929,7 +25747,7 @@
                                 error: t.props.error
                             }) : null
                         }, t.renderVideosPage = function() {
-                            return t.props.channel && t.props.channel.id ? o.createElement(Le, {
+                            return t.props.channel && t.props.channel.id ? o.createElement(Ue, {
                                 channelLogin: t.props.channelLogin,
                                 channelID: t.props.channel.id,
                                 pageviewProps: t.props.pageviewProps,
@@ -25940,30 +25758,34 @@
                             var e = Object(z.k)(t.props.match.params.channelLogin, {
                                 filter: z.e.Clips
                             });
-                            return o.createElement(H.a, {
+                            return o.createElement(Y.a, {
                                 to: e
                             })
                         }, t.redirectLegacyChannelCollections = function() {
                             var e = Object(z.k)(t.props.match.params.channelLogin, {
                                 filter: z.e.Collections
                             });
-                            return o.createElement(H.a, {
+                            return o.createElement(Y.a, {
                                 to: e
                             })
                         }, t.redirectLegacyVideoFilters = function(e) {
-                            var n, i = t.props.match.params.channelLogin,
-                                r = Object(z.t)(e),
-                                a = Object(z.y)(e.location.search) || void 0;
-                            return n = r ? Object(z.k)(i, {
-                                filter: Object(z.B)(r) || void 0,
-                                sort: a
-                            }) : Object(z.k)(i), o.createElement(H.a, {
-                                to: n
+                            var n, r = t.props.match.params.channelLogin,
+                                a = Object(z.t)(e),
+                                s = Object(z.y)(e.location.search) || void 0,
+                                l = i.__assign({}, e.location.state);
+                            return n = a ? Object(z.k)(r, {
+                                filter: Object(z.B)(a) || void 0,
+                                sort: s
+                            }) : Object(z.k)(r), o.createElement(Y.a, {
+                                to: {
+                                    pathname: n,
+                                    state: l
+                                }
                             })
                         }, t
                     }
                     return i.__extends(t, e), t.prototype.render = function() {
-                        return o.createElement(G.a, null, o.createElement(W.a, {
+                        return o.createElement(H.a, null, o.createElement(W.a, {
                             path: "/collections/:collectionID",
                             render: this.renderVideosArea
                         }), o.createElement(W.a, {
@@ -26031,16 +25853,16 @@
                         }))
                     }, t
                 }(o.Component),
-                it = Object(Y.a)(nt),
-                rt = n("kduP");
+                rt = Object(G.a)(it),
+                at = n("kduP");
             ! function(e) {
                 e.Title = "title", e.Date = "date"
-            }(et || (et = {}));
-            var at, ot = /\S/,
-                st = function(e) {
+            }(tt || (tt = {}));
+            var ot, st = /\S/,
+                lt = function(e) {
                     var t = e.clip,
                         n = "";
-                    return t.title && "" !== t.title && ot.test(t.title) && t.title && (n = t.title), o.createElement(Z.Fb, null, o.createElement(Z.Ya, {
+                    return t.title && "" !== t.title && st.test(t.title) && t.title && (n = t.title), o.createElement(Z.Fb, null, o.createElement(Z.Ya, {
                         display: Z.X.Flex
                     }, o.createElement(Z.W, {
                         ellipsis: !0,
@@ -26048,19 +25870,19 @@
                         title: n,
                         fontSize: Z.Ca.Size5,
                         type: Z.Wb.Span,
-                        "data-test-selector": et.Title
+                        "data-test-selector": tt.Title
                     }, n), o.createElement(Z.W, {
                         bold: !0,
                         fontSize: Z.Ca.Size5,
                         type: Z.Wb.Span,
                         color: Z.O.Alt2,
-                        "data-test-selector": et.Date
+                        "data-test-selector": tt.Date
                     }, " • ", Object(l.c)(new Date(t.createdAt), "medium"))))
                 };
             ! function(e) {
                 e.InfoPlaceholder = "info-placeholder", e.SubText = "sub-text", e.SubTextGame = "sub-text-game", e.SubTextCurator = "sub-text-curator", e.SubTextViews = "sub-text-views"
-            }(at || (at = {}));
-            var lt, ct = Object(S.b)("ClipInfo", {
+            }(ot || (ot = {}));
+            var ct, dt = Object(S.b)("ClipInfo", {
                     autoReportInteractive: !0
                 })(function(e) {
                     var t, n = e.clip,
@@ -26070,26 +25892,26 @@
                     t = n && n.game && i ? Object(l.d)("{broadcaster} playing {game}", {
                         broadcaster: i,
                         game: o.createElement(Z.U, {
-                            to: "" + Object(rt.c)(n.game.name)
+                            to: "" + Object(at.c)(n.game.name)
                         }, n.game.name)
                     }, "ClipInfo") : i;
                     var r, a = n && n.game ? o.createElement("span", {
-                            "data-test-selector": at.SubTextGame
+                            "data-test-selector": ot.SubTextGame
                         }, t) : null,
                         s = n && n.curator ? o.createElement("span", {
-                            "data-test-selector": at.SubTextCurator
+                            "data-test-selector": ot.SubTextCurator
                         }, n && n.game && !!n.curator && o.createElement("span", null, " • "), n && n.curator && Object(l.d)("Clipped by {curator}", {
                             curator: o.createElement(Z.U, {
                                 to: "/" + n.curator.login
                             }, n.curator.login)
                         }, "ClipInfo")) : null,
                         c = o.createElement("span", {
-                            "data-test-selector": at.SubTextViews
+                            "data-test-selector": ot.SubTextViews
                         }, n && n.curator && o.createElement("span", null, " • "), n && Object(l.d)("{viewCount, plural, one {# view} other {# views}}", {
                             viewCount: n.viewCount || 0
                         }, "ClipInfo"));
                     return r = null === n ? o.createElement(Z.Ya, {
-                        "data-test-selector": at.InfoPlaceholder,
+                        "data-test-selector": ot.InfoPlaceholder,
                         display: Z.X.Flex,
                         flexDirection: Z.Aa.Column
                     }, o.createElement(Z.jb, {
@@ -26098,10 +25920,10 @@
                     }), o.createElement(Z.jb, {
                         lineCount: 1,
                         width: 240
-                    })) : o.createElement("div", null, o.createElement(st, {
+                    })) : o.createElement("div", null, o.createElement(lt, {
                         clip: n
                     }), o.createElement(Z.Fb, {
-                        "data-test-selector": at.SubText,
+                        "data-test-selector": ot.SubText,
                         color: Z.O.Alt2
                     }, a, s, c)), o.createElement(Z.G, {
                         row: !0
@@ -26109,10 +25931,10 @@
                         overflow: Z.db.Hidden
                     }, r))
                 }),
-                dt = n("vrNp"),
-                ut = n("RCUI"),
-                mt = n("Uk/b"),
-                pt = function(e) {
+                ut = n("vrNp"),
+                mt = n("RCUI"),
+                pt = n("Uk/b"),
+                ht = function(e) {
                     function t() {
                         return null !== e && e.apply(this, arguments) || this
                     }
@@ -26138,7 +25960,7 @@
                                 x: 2,
                                 y: 1
                             }
-                        }, o.createElement(ct, {
+                        }, o.createElement(dt, {
                             clip: this.props.clip
                         })), o.createElement(Z.Fb, {
                             alignItems: Z.f.Center,
@@ -26156,35 +25978,35 @@
                             padding: {
                                 x: 1
                             }
-                        }, o.createElement(dt.a, {
+                        }, o.createElement(ut.a, {
                             login: this.props.clip && this.props.clip.broadcaster && this.props.clip.broadcaster.login
-                        }), o.createElement(mt.a, {
+                        }), o.createElement(pt.a, {
                             clip: this.props.clip,
                             balloonDirection: Z.v.TopRight,
                             buttonType: Z.F.Hollow
-                        })), o.createElement(ut.a, {
+                        })), o.createElement(mt.a, {
                             clip: this.props.clip
                         })))))
                     }, t
                 }(o.Component),
-                ht = Object(S.b)("ClipDescription", {
+                ft = Object(S.b)("ClipDescription", {
                     autoReportInteractive: !0
-                })(pt),
-                ft = n("5Ijs"),
-                gt = n("6x+I"),
-                vt = n("EyXs"),
-                bt = n("a9YZ");
+                })(ht),
+                gt = n("5Ijs"),
+                vt = n("6x+I"),
+                bt = n("EyXs"),
+                kt = n("a9YZ");
             ! function(e) {
                 e.MoreInfoBox = "more-info-box", e.ToggleExpandButton = "toggle-expand-button", e.DescriptionContainer = "description-container"
-            }(lt || (lt = {}));
-            var kt, yt = function(e) {
+            }(ct || (ct = {}));
+            var yt, Ct = function(e) {
                     function t() {
                         var t = null !== e && e.apply(this, arguments) || this;
                         return t.state = {
                             isExpanded: !1
                         }, t.renderDescription = function() {
                             if (t.props.description && t.state.isExpanded) {
-                                var e = Object(bt.d)(t.props.description).map(function(e, t) {
+                                var e = Object(kt.d)(t.props.description).map(function(e, t) {
                                     return 0 === e.length ? o.createElement("br", {
                                         key: "desc-line" + t
                                     }) : o.createElement(Z.Ya, {
@@ -26192,12 +26014,12 @@
                                             x: 2
                                         },
                                         key: "desc-line" + t
-                                    }, o.createElement(gt, i.__assign({
+                                    }, o.createElement(vt, i.__assign({
                                         source: e
-                                    }, vt.a)))
+                                    }, bt.a)))
                                 });
                                 return o.createElement(Z.fc, {
-                                    "data-test-selector": lt.DescriptionContainer
+                                    "data-test-selector": ct.DescriptionContainer
                                 }, e)
                             }
                         }, t.toggleExpand = function() {
@@ -26211,7 +26033,7 @@
                     return i.__extends(t, e), t.prototype.render = function() {
                         return this.props.description ? o.createElement(Z.Fb, {
                             background: Z.r.Base,
-                            "data-test-selector": lt.MoreInfoBox
+                            "data-test-selector": ct.MoreInfoBox
                         }, this.renderDescription(), o.createElement(Z.Fb, {
                             display: Z.X.Flex,
                             padding: {
@@ -26219,23 +26041,23 @@
                                 bottom: 1
                             }
                         }, o.createElement(Z.U, {
-                            "data-test-selector": lt.ToggleExpandButton,
+                            "data-test-selector": ct.ToggleExpandButton,
                             type: Z.V.Default,
                             onClick: this.toggleExpand
                         }, this.state.isExpanded ? Object($.d)("Show Less", "ChannelRootMoreInfoBox") : Object($.d)("Show More", "ChannelRootMoreInfoBox")))) : null
                     }, t
                 }(o.Component),
-                Ct = Object(X.compose)(Object(S.b)("MoreInfoBox", {
+                St = Object(X.compose)(Object(S.b)("MoreInfoBox", {
                     autoReportInteractive: !0
-                }))(yt),
-                St = n("z36O");
+                }))(Ct),
+                Et = n("SHn+");
 
-            function Et(e) {
+            function Nt(e) {
                 return "curator" in e
             }! function(e) {
                 e[e.ClipCurator = 0] = "ClipCurator", e[e.ClipCuratorDot = 1] = "ClipCuratorDot", e[e.ClipCuratorName = 2] = "ClipCuratorName"
-            }(kt || (kt = {}));
-            var Nt, Ot = function(e) {
+            }(yt || (yt = {}));
+            var Ot, _t = function(e) {
                 var t = e.login,
                     n = e.includesSeparator,
                     i = Object(l.d)("Clipped by {curator}", {
@@ -26252,7 +26074,7 @@
                     r = null;
                 if (n) {
                     r = o.createElement(Z.Ya, {
-                        "data-test-selector": kt.ClipCuratorDot,
+                        "data-test-selector": yt.ClipCuratorDot,
                         margin: {
                             right: 1
                         }
@@ -26266,17 +26088,17 @@
                 }, r, o.createElement(Z.W, {
                     fontSize: Z.Ca.Size5,
                     type: Z.Wb.Span,
-                    "data-test-selector": kt.ClipCurator
+                    "data-test-selector": yt.ClipCurator
                 }, i))
             };
             ! function(e) {
                 e[e.GameImagePlaceholder = 0] = "GameImagePlaceholder"
-            }(Nt || (Nt = {}));
-            var _t, wt = function(e) {
+            }(Ot || (Ot = {}));
+            var wt, Dt = function(e) {
                 var t = e.boxArtURL,
                     n = e.name;
                 return n ? o.createElement(Z.U, {
-                    to: Object(rt.c)(n),
+                    to: Object(at.c)(n),
                     "data-a-target": "video-info-game-boxart-link"
                 }, o.createElement(Z.I, {
                     src: t || l.a.defaultBoxArtURL,
@@ -26284,17 +26106,17 @@
                     aspect: Z.p.BoxArt,
                     size: Z.J.Size4
                 })) : o.createElement(Z.jb, {
-                    "data-test-selector": Nt.GameImagePlaceholder,
+                    "data-test-selector": Ot.GameImagePlaceholder,
                     height: 55,
                     width: 40
                 })
             };
-            (_t || (_t = {})).Title = "title";
-            var Dt, It = /\S/,
-                Tt = function(e) {
+            (wt || (wt = {})).Title = "title";
+            var It, Tt = /\S/,
+                Mt = function(e) {
                     var t = e.title,
                         n = e.dateString,
-                        i = t && "" !== t && It.test(t),
+                        i = t && "" !== t && Tt.test(t),
                         r = i && t ? t : "",
                         a = "";
                     return n && (a = Object(l.i)(new Date(n))), a && (r = i ? r + " · " + a : a), o.createElement(Z.Fb, {
@@ -26305,14 +26127,14 @@
                         ellipsis: !0,
                         title: r,
                         fontSize: Z.Ca.Size4,
-                        "data-test-selector": _t.Title
+                        "data-test-selector": wt.Title
                     }, r))
                 };
             n("GEha");
             ! function(e) {
                 e[e.InfoPlaceholder = 0] = "InfoPlaceholder"
-            }(Dt || (Dt = {}));
-            var Mt, Rt = Object(S.b)("VideoInfo", {
+            }(It || (It = {}));
+            var Rt, Ft = Object(S.b)("VideoInfo", {
                     autoReportInteractive: !0
                 })(function(e) {
                     var t = e.video;
@@ -26321,7 +26143,7 @@
                     }, o.createElement(Z.Ya, {
                         className: "video-info__container"
                     }, o.createElement(Z.Ya, {
-                        "data-test-selector": Dt.InfoPlaceholder,
+                        "data-test-selector": It.InfoPlaceholder,
                         display: Z.X.Flex,
                         flexDirection: Z.Aa.Column
                     }, o.createElement(Z.jb, {
@@ -26338,24 +26160,23 @@
                             margin: {
                                 right: 1
                             }
-                        }, o.createElement(wt, {
+                        }, o.createElement(Dt, {
                             boxArtURL: t.game.boxArtURL,
                             name: t.game.name
-                        })), i = o.createElement(St.a, {
+                        })), i = o.createElement(Et.a, {
                             linkTo: {
-                                pathname: Object(rt.c)(t.game.name),
+                                pathname: Object(at.c)(t.game.name),
                                 state: {
                                     content: f.PageviewContent.Game,
                                     medium: f.PageviewMedium.VideoWatchPage
                                 }
                             },
-                            tooltip: Object(l.d)("Game", "ChannelVideoInfo"),
-                            svgAsset: Z.ub.NavGames,
+                            label: Object(l.d)("Category:", "ChannelVideoInfo"),
                             title: t.game.name,
                             "data-a-target": "video-info-game-link"
-                        })), !Et(t)) {
+                        })), !Nt(t)) {
                         var r = null;
-                        return t.scope === h.Ba.PRIVATE && (r = o.createElement(Z.Fb, {
+                        return t.scope === h.Ca.PRIVATE && (r = o.createElement(Z.Fb, {
                             fontSize: Z.Ca.Size4
                         }, o.createElement(Z.hb, {
                             label: Object(l.d)("Private", "ChannelVideoInfo")
@@ -26363,19 +26184,19 @@
                             row: !0
                         }, n, o.createElement(Z.Ya, {
                             className: "video-info__container"
-                        }, r, o.createElement(Tt, {
+                        }, r, o.createElement(Mt, {
                             dateString: t.publishedAt,
                             title: t.title
                         }), o.createElement(Z.Ya, {
                             display: Z.X.InlineFlex
                         }, i)))
                     }
-                    if (Et(t)) {
+                    if (Nt(t)) {
                         var a = t.curator ? t.curator.login : "",
                             s = null;
                         if (a) {
                             var c = !(!t || !t.game);
-                            s = o.createElement(Ot, {
+                            s = o.createElement(_t, {
                                 login: a,
                                 includesSeparator: c
                             })
@@ -26384,7 +26205,7 @@
                             row: !0
                         }, n, o.createElement(Z.Ya, {
                             className: "video-info__container"
-                        }, o.createElement(Tt, {
+                        }, o.createElement(Mt, {
                             dateString: t.createdAt,
                             title: t.title
                         }), o.createElement(Z.Ya, {
@@ -26393,12 +26214,12 @@
                     }
                     return null
                 }),
-                Ft = n("oVvm");
+                jt = n("oVvm");
             n("GXBl");
             ! function(e) {
                 e[e.VideoDescription = 0] = "VideoDescription", e[e.TotalViews = 1] = "TotalViews"
-            }(Mt || (Mt = {}));
-            var jt = function(e) {
+            }(Rt || (Rt = {}));
+            var Lt = function(e) {
                     function t() {
                         return null !== e && e.apply(this, arguments) || this
                     }
@@ -26410,12 +26231,12 @@
                                 i = n.description,
                                 r = n.viewCount;
                             i && (e = o.createElement(Z.Fb, {
-                                "data-test-selector": Mt.VideoDescription
-                            }, o.createElement(Ct, {
+                                "data-test-selector": Rt.VideoDescription
+                            }, o.createElement(St, {
                                 description: i
                             }))), t = o.createElement(Z.Fb, {
                                 alignItems: Z.f.Center,
-                                "data-test-selector": Mt.TotalViews,
+                                "data-test-selector": Rt.TotalViews,
                                 display: Z.X.Flex,
                                 color: Z.O.Alt2,
                                 flexGrow: 1,
@@ -26447,7 +26268,7 @@
                                 x: 1,
                                 y: 1
                             }
-                        }, o.createElement(Rt, {
+                        }, o.createElement(Ft, {
                             video: this.props.video
                         })), o.createElement(Z.Fb, {
                             alignItems: Z.f.Center,
@@ -26468,9 +26289,9 @@
                             margin: {
                                 right: 1
                             }
-                        }, o.createElement(dt.a, {
+                        }, o.createElement(ut.a, {
                             login: this.props.video && this.props.video.owner && this.props.video.owner.login
-                        })), o.createElement(ft.a, {
+                        })), o.createElement(gt.a, {
                             balloonDirection: Z.v.TopRight,
                             buttonType: Z.F.Hollow,
                             content: {
@@ -26481,48 +26302,48 @@
                             tracking: {
                                 location: f.PageviewLocation.VideoWatchPage
                             }
-                        })), o.createElement(Ft.a, {
+                        })), o.createElement(jt.a, {
                             currentUser: this.props.currentUser,
                             video: this.props.video,
                             getCurrentVideoTime: this.props.getLastVideoOffset
                         })))), e)
                     }, t
                 }(o.Component),
-                Lt = Object(S.b)("ClipDescription", {
+                Ut = Object(S.b)("ClipDescription", {
                     autoReportInteractive: !0
-                })(jt),
-                Ut = n("gUUB"),
-                At = n("cu2Y"),
-                xt = n("sTgJ"),
-                Bt = n("zQgx"),
-                Pt = n("Q94S"),
-                Vt = n("uleC"),
-                Wt = n("bRMw"),
-                Ht = n("CCjQ");
+                })(Lt),
+                At = n("gUUB"),
+                xt = n("cu2Y"),
+                Bt = n("sTgJ"),
+                Pt = n("zQgx"),
+                Vt = n("Q94S"),
+                Wt = n("uleC"),
+                Ht = n("bRMw"),
+                Gt = n("CCjQ");
             n("Bw4G");
             n.d(t, "b", function() {
-                return qt
+                return Xt
             }), n.d(t, "a", function() {
-                return Kt
+                return $t
             });
-            var Gt, Yt = c.a.wrap(function() {
-                    return n.e(126).then(n.bind(null, "KGyh"))
+            var Yt, zt = c.a.wrap(function() {
+                    return n.e(127).then(n.bind(null, "KGyh"))
                 }, "SquadStreamBanner"),
-                zt = c.a.wrap(function() {
-                    return n.e(125).then(n.bind(null, "5k+0"))
+                qt = c.a.wrap(function() {
+                    return n.e(126).then(n.bind(null, "5k+0"))
                 }, "MultiviewBanner");
             ! function(e) {
                 e.SquadStreamBanner = "channel_root_squad_stream_banner", e.MultiviewBanner = "channel_page_multiview_banner"
-            }(Gt || (Gt = {}));
-            var qt = 0,
-                Xt = 1,
-                Qt = function(e) {
+            }(Yt || (Yt = {}));
+            var Xt = 0,
+                Qt = 1,
+                Kt = function(e) {
                     function t(t) {
                         var n = e.call(this, t) || this;
                         return n.currentWatchingActivity = {
                             userID: null,
                             isWatching: !1
-                        }, n.lastVideoOffset = Bt.a, n.onCompanionAdBuffered = function(e) {
+                        }, n.lastVideoOffset = Pt.a, n.onCompanionAdBuffered = function(e) {
                             n.setState({
                                 bufferedCompanion: e
                             })
@@ -26550,11 +26371,11 @@
                             var t = Math.floor(e);
                             if (t !== n.lastVideoOffset)
                                 if (n.lastVideoOffset = t, n.props.clip) {
-                                    var i = t + n.getSourceVideoClipStartOffset() - Xt;
+                                    var i = t + n.getSourceVideoClipStartOffset() - Qt;
                                     n.props.onVideoTimeChange(i)
                                 } else n.props.onVideoTimeChange(t);
                             else n.state.requestedVideoOffset === t && n.setState({
-                                requestedVideoOffset: Bt.a
+                                requestedVideoOffset: Pt.a
                             })
                         }, n.onPlayerSeekRequest = function(e) {
                             n.setState({
@@ -26576,7 +26397,7 @@
                         }, n.getLastVideoOffset = function() {
                             return n.lastVideoOffset
                         }, n.state = {
-                            requestedVideoOffset: Object(Bt.g)(t),
+                            requestedVideoOffset: Object(Pt.g)(t),
                             theatreFullscreenGroup: Object(p.a)()
                         }, n
                     }
@@ -26585,9 +26406,9 @@
                     }, t.prototype.componentWillReceiveProps = function(e) {
                         var t = this.props.channelLogin,
                             n = e.channel && e.channel.login;
-                        Object(Bt.g)(this.props) !== Object(Bt.g)(e) && this.setState({
-                            requestedVideoOffset: Object(Bt.g)(e)
-                        }), t === n && this.props.videoID === e.videoID && this.props.collectionID === e.collectionID && this.props.clipSlug === e.clipSlug && this.getCurrentPage(this.props) === this.getCurrentPage(e) && Object(Pt.f)(this.props) === Object(Pt.f)(e) || this.context.scrollToTop(), this.updateWatchingActivity(e)
+                        Object(Pt.g)(this.props) !== Object(Pt.g)(e) && this.setState({
+                            requestedVideoOffset: Object(Pt.g)(e)
+                        }), t === n && this.props.videoID === e.videoID && this.props.collectionID === e.collectionID && this.props.clipSlug === e.clipSlug && this.getCurrentPage(this.props) === this.getCurrentPage(e) && Object(Vt.f)(this.props) === Object(Vt.f)(e) || this.context.scrollToTop(), this.updateWatchingActivity(e)
                     }, t.prototype.componentDidUpdate = function() {
                         this.onRender()
                     }, t.prototype.componentWillUnmount = function() {
@@ -26598,7 +26419,7 @@
                             i = this.props.video,
                             a = n && n.stream && n.stream.game ? n.stream.game.name : void 0,
                             s = this.props.contentType === b.a.LIVE;
-                        if (!this.props.loading && !this.props.error && (this.props.contentType === b.a.LIVE && (!n || n && !n.id) || this.props.contentType === b.a.CLIP && Object(Bt.e)(t, this.props.clip) || this.props.contentType === b.a.VIDEO && Object(Bt.l)(t, this.props.video))) return o.createElement(d.a, null);
+                        if (!this.props.loading && !this.props.error && (this.props.contentType === b.a.LIVE && (!n || n && !n.id) || this.props.contentType === b.a.CLIP && Object(Pt.e)(t, this.props.clip) || this.props.contentType === b.a.VIDEO && Object(Pt.l)(t, this.props.video))) return o.createElement(d.a, null);
                         if (!this.props.loading && this.props.error && (this.props.contentType === b.a.VIDEO || this.props.contentType === b.a.CLIP)) return o.createElement(d.a, null);
                         var l = r(((e = {})[B.b] = this.props.theatreModeEnabled, e)),
                             c = r({
@@ -26631,11 +26452,11 @@
                         })), o.createElement(y.a, {
                             game: a,
                             hostingInfo: this.getHostingContext()
-                        }), o.createElement(E.a, null), o.createElement(it, {
+                        }), o.createElement(E.a, null), o.createElement(rt, {
                             channelLogin: this.props.channelLogin,
                             channel: this.props.channel,
-                            pageviewProps: Object(Pt.d)(this.props.channel, this.props.video, this.props.collection, this.props.clip),
-                            showEsportsRoute: Object(Bt.k)(this.props.channel),
+                            pageviewProps: Object(Vt.d)(this.props.channel, this.props.video, this.props.collection, this.props.clip),
+                            showEsportsRoute: Object(Pt.k)(this.props.channel),
                             loading: this.props.loading,
                             error: !!this.props.error
                         }), s && o.createElement(N.a, null))
@@ -26648,31 +26469,31 @@
                             a = this.props.videoID,
                             s = !a && !n && !r,
                             l = this.props.video;
-                        if (s && Object(Vt.a)(e) && !this.props.isLoggedIn) {
+                        if (s && Object(Wt.a)(e) && !this.props.isLoggedIn) {
                             var c = void 0;
                             if (t && t.login === this.props.channelLogin && (c = t.broadcastSettings && t.broadcastSettings.game ? t.broadcastSettings.game.id : null), void 0 === c) return o.createElement(V.a, null);
-                            if (Object(Vt.b)(c)) return o.createElement(xt.a, {
+                            if (Object(Wt.b)(c)) return o.createElement(Bt.a, {
                                 channelLogin: e,
                                 live: this.props.live,
-                                title: Object(Bt.f)(this.props.channel)
+                                title: Object(Pt.f)(this.props.channel)
                             })
                         }
                         var d = {};
-                        s ? (d.channelLogin = this.props.videoPlayerSource, d.hostChannel = this.channelIsHosting() ? this.props.match.params.channelLogin : void 0, d.showChannelInfoOnHover = !1) : (this.state.requestedVideoOffset !== Bt.a && (d.nextVideoOffset = this.state.requestedVideoOffset), n && (d.collectionID = n), a && (d.vodID = a), r && (d.clipSlug = r, d.playerTypeOverride = L.a.ClipsWatchPage));
+                        s ? (d.channelLogin = this.props.videoPlayerSource, d.hostChannel = this.channelIsHosting() ? this.props.match.params.channelLogin : void 0, d.showChannelInfoOnHover = !1) : (this.state.requestedVideoOffset !== Pt.a && (d.nextVideoOffset = this.state.requestedVideoOffset), n && (d.collectionID = n), a && (d.vodID = a), r && (d.clipSlug = r, d.playerTypeOverride = L.a.ClipsWatchPage));
                         var u = !this.props.live && !this.channelIsHosting() && !l || !!r,
                             m = null;
-                        s && this.props.firstPageLoaded && !this.channelIsHosting() && t && t.id && (m = o.createElement(Yt, {
+                        s && this.props.firstPageLoaded && !this.channelIsHosting() && t && t.id && (m = o.createElement(zt, {
                             channelID: t.id,
                             channelLogin: e,
                             channelDisplayName: t.displayName,
                             triggerPlayerReposition: this.triggerPlayerReposition,
-                            "data-test-selector": Gt.SquadStreamBanner
+                            "data-test-selector": Yt.SquadStreamBanner
                         }));
                         var f = null;
-                        Object(Wt.b)(Wt.a, e) && s && this.props.firstPageLoaded && !this.channelIsHosting() && t && t.stream && t.stream.id && (f = o.createElement(zt, {
+                        Object(Ht.b)(Ht.a, e) && s && this.props.firstPageLoaded && !this.channelIsHosting() && t && t.stream && t.stream.id && (f = o.createElement(qt, {
                             channelLogin: e,
                             triggerPlayerReposition: this.triggerPlayerReposition,
-                            "data-test-selector": Gt.MultiviewBanner
+                            "data-test-selector": Yt.MultiviewBanner
                         }));
                         var g = null;
                         s && !this.channelIsHosting() && this.props.firstPageLoaded && t && t.id && (g = o.createElement(k.a, {
@@ -26681,14 +26502,14 @@
                             triggerPlayerReposition: this.triggerPlayerReposition
                         }));
                         var v = null;
-                        return l && l.scope === h.Ba.PRIVATE && l.owner && l.owner.login && (v = o.createElement(Ht.a, {
+                        return l && l.scope === h.Ca.PRIVATE && l.owner && l.owner.login && (v = o.createElement(Gt.a, {
                             ownerLogin: e
                         })), o.createElement(o.Fragment, null, o.createElement(Z.Ya, {
                             className: "channel-root__player-container",
                             padding: {
                                 bottom: 2
                             }
-                        }, g, m, f, v, s && !this.channelIsHosting() && o.createElement(Ut.a, {
+                        }, g, m, f, v, s && !this.channelIsHosting() && o.createElement(At.a, {
                             channelLogin: e
                         }), o.createElement(A, {
                             triggerPlayerReposition: this.triggerPlayerReposition
@@ -26700,7 +26521,6 @@
                                 attachToWindow: !0,
                                 fullscreenRef: Object(p.c)(this.state.theatreFullscreenGroup),
                                 onFullscreenChange: p.b,
-                                videoMarkers: this.props.videoMarkers || void 0,
                                 onSeek: this.onVideoTimeChange,
                                 onVideoTimeChange: this.onVideoTimeChange
                             }, d),
@@ -26746,14 +26566,14 @@
                                 });
                             case b.a.COLLECTION:
                             case b.a.VIDEO:
-                                return o.createElement(Lt, {
+                                return o.createElement(Ut, {
                                     collectionID: e.collection && e.collection.id,
                                     currentUser: e.currentUser,
                                     video: e.video,
                                     getLastVideoOffset: this.getLastVideoOffset
                                 });
                             case b.a.CLIP:
-                                return o.createElement(ht, {
+                                return o.createElement(ft, {
                                     clip: e.clip
                                 });
                             case b.a.NONE:
@@ -26767,7 +26587,7 @@
                             a = this.props.collectionID,
                             s = this.props.hostedChannel,
                             l = !this.props.loading && a && this.props.collection && 0 === this.props.collection.items.totalCount;
-                        return e ? n = o.createElement(o.Fragment, null, o.createElement(At.a, {
+                        return e ? n = o.createElement(o.Fragment, null, o.createElement(xt.a, {
                             bufferedCompanion: this.state.bufferedCompanion,
                             onCompanionAdConsumed: this.onCompanionAdConsumed
                         }), o.createElement(D.a, {
@@ -26788,12 +26608,12 @@
                         }, o.createElement(F.l, i.__assign({
                             onPlayerSeekRequest: this.onPlayerSeekRequest,
                             onShowLogin: this.props.videoChatLogin,
-                            videoID: Object(Pt.e)(this.props) || t && t.id || ""
-                        }, Object(Bt.i)(this.props))))), n
+                            videoID: Object(Vt.e)(this.props) || t && t.id || ""
+                        }, Object(Pt.i)(this.props))))), n
                     }, t.prototype.updateWatchingActivity = function(e) {
                         if (e.match.params.channelLogin && !e.loading && !e.error && e.channel && e.firstPageLoaded && e.initialUserAvailabilityIsSet) {
                             var t = e.channel.id,
-                                n = !!Object(Bt.d)(e.channel) || Object(Bt.b)(e.channel);
+                                n = !!Object(Pt.d)(e.channel) || Object(Pt.b)(e.channel);
                             this.currentWatchingActivity.userID === t && this.currentWatchingActivity.isWatching === n || (this.currentWatchingActivity = {
                                 userID: t,
                                 isWatching: n
@@ -26811,14 +26631,14 @@
                             hostedChannelId: this.props.hostedChannel.id
                         }
                     }, t.prototype.onRender = function() {
-                        this.props.loading || (this.props.latencyTracking.reportInteractive(), Object(Bt.j)(this.props.channel, this.props.video, this.props.clip))
+                        this.props.loading || (this.props.latencyTracking.reportInteractive(), Object(Pt.j)(this.props.channel, this.props.video, this.props.clip))
                     }, t.prototype.getSourceVideoClipStartOffset = function() {
-                        return this.props.clip && this.props.clip.videoOffsetSeconds ? this.props.clip.videoOffsetSeconds : qt
+                        return this.props.clip && this.props.clip.videoOffsetSeconds ? this.props.clip.videoOffsetSeconds : Xt
                     }, t.contextTypes = {
                         scrollToTop: a.func
                     }, t
                 }(o.PureComponent);
-            var Kt = Object(s.compose)(Object(v.b)(function(e) {
+            var $t = Object(s.compose)(Object(v.b)(function(e) {
                 return {
                     contentType: e.contentType,
                     channelLogin: e.channelLogin,
@@ -26837,10 +26657,9 @@
                     currentUser: e.currentUser,
                     page: e.page,
                     hostedChannel: e.hostedChannel,
-                    videoMarkers: e.videoMarkers,
                     clearData: e.clearData
                 }
-            }), Object(S.b)("ChannelRoot"))(Qt)
+            }), Object(S.b)("ChannelRoot"))(Kt)
         },
         cERj: function(e, t, n) {
             "use strict";
@@ -27086,7 +26905,8 @@
                                 y: 2,
                                 x: 1
                             },
-                            margin: 1
+                            margin: 1,
+                            borderRadius: b.x.Large
                         }, this.renderImage(), a.createElement(b.Ya, {
                             textAlign: b.Sb.Center
                         }, this.renderText(), a.createElement(b.z, {
@@ -28024,6 +27844,226 @@
                 return K
             })
         },
+        d0xR: function(e, t, n) {
+            "use strict";
+            var i, r = n("mrSG"),
+                a = n("q1tI"),
+                o = n("/MKj"),
+                s = n("fvjX"),
+                l = n("ZS2+"),
+                c = n("cZKs"),
+                d = n("UUve"),
+                u = n("1/iK"),
+                m = n("aCAx"),
+                p = n("kRBY"),
+                h = n("Ue10"),
+                f = n("/7QA"),
+                g = n("yR8l"),
+                v = n("3Bft"),
+                b = n("/0dD"),
+                k = n("tIid"),
+                y = n("ht6z"),
+                C = n("76Lv"),
+                S = n("KriR"),
+                E = n("br9A"),
+                N = (n("y2dA"), n("eaNi"));
+            ! function(e) {
+                e.SubButton = "subscribe-button__dropdown", e.BalloonLayerButton = "subscribe-button__balloon-layer-btn", e.DefaultButton = "subscribe-button__default-btn", e.SubscribeBalloon = "subscribe-button__subscribe-balloon"
+            }(i || (i = {}));
+            var O = l.a.wrap(function() {
+                    return Promise.all([n.e(0), n.e(199)]).then(n.bind(null, "f+qK"))
+                }, "SubscribeBalloon"),
+                _ = function(e) {
+                    function t() {
+                        var t = null !== e && e.apply(this, arguments) || this;
+                        return t.modalLevel = "top_page", t.handleSubMenuAction = function(e) {
+                            new Set([E.a.ClickCheckout, E.a.BuyGiftSub, E.a.BuyMysteryGift, E.a.BuyCustomMysteryGift, E.a.BuyGiftToPaidUpgrade, E.a.BuyPaidUpgrade]).has(e.action) && t.checkAndDisplaySubscriptionCheckout();
+                            var n = t.props.data,
+                                i = n.user,
+                                r = !!(i && i.self && i.self.subscriptionBenefit),
+                                a = n.requestInfo && Object(y.a)(n.requestInfo.countryCode);
+                            Object(E.b)({
+                                action: e.action || "",
+                                channelLogin: t.props.channelLogin || "",
+                                channelID: i && i.id || "",
+                                checkoutButtonTier: e.checkoutButtonTier,
+                                hasSubCredit: i && i.self && i.self.canPrimeSubscribe,
+                                hostChannelID: t.props.data.user && t.props.data.user.id || "",
+                                hostChannelLogin: t.props.channelLogin,
+                                isMenuOpen: e.action !== E.a.OpenSubMenu,
+                                mysteryGiftCount: e.mysteryGiftCount,
+                                sub_location: "squad_page",
+                                modal: !r,
+                                modalLevel: r ? "" : t.modalLevel.slice(),
+                                showPrimeContent: a,
+                                giftRecipient: e.giftRecipient || null
+                            }), !e.modalLevel || e.action !== E.a.ClickMoreSubOptions && e.action !== E.a.ClickBack || (t.modalLevel = e.modalLevel)
+                        }, t
+                    }
+                    return r.__extends(t, e), t.prototype.componentDidMount = function() {
+                        this.checkAndDisplaySubscriptionCheckout()
+                    }, t.prototype.componentDidUpdate = function(e) {
+                        !this.isUserDataReady(e) && this.isUserDataReady(this.props) && this.checkAndDisplaySubscriptionCheckout()
+                    }, t.prototype.render = function() {
+                        if (!(this.props.data && this.props.data.user && this.props.data.user.id && this.props.data.user.subscriptionProducts && this.props.data.requestInfo)) return null;
+                        var e = this.props.data.user,
+                            t = e.self,
+                            n = e.subscriptionProducts.filter(function(e) {
+                                return e
+                            });
+                        if (0 === n.length) return null;
+                        if (this.props.hideEsportsSubscription && Object(k.a)(this.props.data.user.id || "", this.props.sessionUser)) return null;
+                        var i = Object(y.a)(this.props.data.requestInfo.countryCode),
+                            r = !(!t || !t.subscriptionBenefit),
+                            o = Object(k.a)(this.props.data.user.id || "", this.props.sessionUser),
+                            s = 1 === n.length;
+                        n.some(function(e) {
+                            return !e.emoteSetID
+                        }) && (s = !0);
+                        var l = null;
+                        t && t.subscriptionBenefit && (l = t.subscriptionBenefit.purchasedWithPrime ? v.a.Prime : t.subscriptionBenefit.tier, this.modalLevel = "");
+                        var c = this.props.data.user.displayName || this.props.channelLogin,
+                            d = n[0];
+                        return a.createElement(h.Fb, {
+                            className: Object(C.b)(b.a.Light)
+                        }, a.createElement(h.Fb, {
+                            overflow: h.db.Hidden,
+                            fullWidth: !0,
+                            className: "subscribe-modal__banner"
+                        }, this.props.data.user.bannerImageURL && a.createElement(h.S, {
+                            src: this.props.data.user.bannerImageURL,
+                            alt: Object(f.d)("{channelName}'s banner image", {
+                                channelName: c
+                            }, "SubscribeModal")
+                        })), this.props.data.user.profileImageURL && a.createElement(h.Fb, {
+                            className: "subscribe-modal__avatar",
+                            background: h.r.Alt,
+                            position: h.kb.Absolute,
+                            borderRadius: h.x.Small,
+                            overflow: h.db.Hidden
+                        }, a.createElement(h.q, {
+                            size: 80,
+                            src: this.props.data.user.profileImageURL,
+                            alt: Object(f.d)("{channelName}'s profile image", {
+                                channelName: c
+                            }, "SubscribeModal")
+                        })), a.createElement(h.Ya, {
+                            padding: {
+                                x: 2
+                            },
+                            margin: {
+                                top: 3
+                            }
+                        }, a.createElement(h.W, {
+                            fontSize: h.Ca.Size3
+                        }, Object(f.d)("Subscribe to {channelName}", {
+                            channelName: c
+                        }, "SubscribeModal"))), a.createElement(O, {
+                            authToken: this.props.authToken,
+                            channelLogin: this.props.channelLogin,
+                            inPrimeRegion: i,
+                            isEsportChannel: o,
+                            isNonStandardSub: s,
+                            isStaff: !(!this.props.sessionUser || !this.props.sessionUser.roles) && this.props.sessionUser.roles.isStaff,
+                            isSubscribed: r,
+                            userHasPrime: !1,
+                            productId: d ? d.id : "",
+                            subbedTier: l || v.a.Prime,
+                            handleSubMenuAction: this.handleSubMenuAction
+                        }))
+                    }, t.prototype.isUserDataReady = function(e) {
+                        return e.data && e.data.user && !e.data.loading && !e.data.error
+                    }, t.prototype.checkAndDisplaySubscriptionCheckout = function() {
+                        var e = f.n.get(d.d, "");
+                        if (e) {
+                            var t = this.props.data.user;
+                            if (t && t.subscriptionProducts)
+                                if (this.props.showSubscriptionCheckoutModal && this.props.showLoginModal) t.subscriptionProducts.filter(function(e) {
+                                    return e
+                                }).map(function(e) {
+                                    return e.name
+                                }).includes(e) ? this.props.sessionUser ? this.props.showSubscriptionCheckoutModal({
+                                    isAnonymous: f.n.get(d.a, !1),
+                                    mysteryGiftCount: Number(f.n.get(d.c, "")),
+                                    productName: e,
+                                    recipientLogin: f.n.get(d.e, ""),
+                                    trackingContext: {
+                                        source: S.c.ChannelSubscribeButton
+                                    }
+                                }) : (f.n.set("subscription-target-login", this.props.channelLogin), this.props.showLoginModal()) : Object(d.f)()
+                        }
+                    }, t
+                }(a.Component),
+                w = Object(g.a)(N, {
+                    options: function(e) {
+                        return {
+                            variables: {
+                                login: e.channelLogin
+                            }
+                        }
+                    }
+                })(_);
+            var D = function(e) {
+                function t() {
+                    var t = null !== e && e.apply(this, arguments) || this;
+                    return t.handleClose = function() {
+                        t.props.closeModal()
+                    }, t
+                }
+                return r.__extends(t, e), t.prototype.componentWillUnmount = function() {
+                    this.props.onClose && this.props.onClose()
+                }, t.prototype.render = function() {
+                    return a.createElement(h.Fb, {
+                        className: "subscribe-modal",
+                        background: h.r.Base
+                    }, a.createElement(w, {
+                        authToken: this.props.authToken,
+                        sessionUser: this.props.sessionUser,
+                        onClose: this.handleClose,
+                        channelLogin: this.props.channelLogin,
+                        showLoginModal: this.props.showLoginModal,
+                        showSubscriptionCheckoutModal: this.props.showSubscriptionCheckoutModal
+                    }), a.createElement(c.a, {
+                        closeOnBackdropClick: !0,
+                        closeOnPageNavigation: !0
+                    }))
+                }, t
+            }(a.Component);
+            var I = Object(o.connect)(function(e) {
+                return {
+                    authToken: Object(p.a)(e),
+                    sessionUser: Object(p.e)(e)
+                }
+            }, function(e) {
+                return Object(s.bindActionCreators)({
+                    closeModal: m.c,
+                    showLoginModal: Object(d.g)(u.a.ChannelSubscriptionButton),
+                    showSubscriptionCheckoutModal: function(e) {
+                        var t = r.__rest(e, []);
+                        return Object(m.d)(l.a, {
+                            component: "CheckoutModal",
+                            loader: function() {
+                                return Promise.all([n.e(0), n.e(210)]).then(n.bind(null, "KJv/"))
+                            },
+                            componentProps: t
+                        })
+                    }
+                }, e)
+            })(D);
+            n.d(t, !1, function() {
+                return D
+            }), n.d(t, "a", function() {
+                return I
+            }), n.d(t, !1, function() {
+                return "subscription-target-login"
+            }), n.d(t, !1, function() {
+                return i
+            }), n.d(t, !1, function() {
+                return _
+            }), n.d(t, !1, function() {
+                return w
+            })
+        },
         dAHa: function(e, t, n) {
             "use strict";
             var i, r, a = n("mrSG"),
@@ -28647,7 +28687,7 @@
                             return Object(c.d)("In a whisper (private message)", "ReportModalWizard")
                         },
                         value: "whisper",
-                        reportContext: v.N.WHISPER_REPORT
+                        reportContext: v.O.WHISPER_REPORT
                     },
                     whisper_more_options: {
                         getTitle: _.moreOptions,
@@ -29580,7 +29620,7 @@
                             return a.__generator(this, function(a) {
                                 switch (a.label) {
                                     case 0:
-                                        if (n = i === v.N.WHISPER_REPORT ? i : this.props.reportContext.contentType, r = v.N[n], null === (o = {
+                                        if (n = i === v.O.WHISPER_REPORT ? i : this.props.reportContext.contentType, r = v.O[n], null === (o = {
                                                 description: t,
                                                 reason: e,
                                                 content: r,
@@ -30238,7 +30278,7 @@
                                 t.props.showReportUserModal({
                                     onClose: t.handleReportModalClose,
                                     reportContext: {
-                                        contentType: E.N.USER_REPORT,
+                                        contentType: E.O.USER_REPORT,
                                         targetUserID: t.props.userData.user.id
                                     },
                                     title: Object(g.d)("Report {channelLogin}", {
@@ -30295,7 +30335,9 @@
                             channelLogin: this.props.channelLogin,
                             balloonDirection: A.v.TopRight
                         }))));
-                        var a = this.getGame();
+                        var a = this.getGame(),
+                            o = this.renderGame(),
+                            s = this.renderTeam();
                         return p.createElement(A.Fb, {
                             className: "channel-info-bar",
                             "data-test-selector": $.ChannelInfoBarWrapper,
@@ -30350,7 +30392,15 @@
                         }, e)), p.createElement(A.Ya, null, r)), p.createElement(A.Ya, {
                             display: A.X.Flex,
                             flexWrap: A.Ba.Wrap
-                        }, this.renderGame(), this.renderTeam()), p.createElement(A.Ya, {
+                        }, o, o && s && p.createElement(A.Ya, {
+                            margin: {
+                                right: 1
+                            }
+                        }, p.createElement(A.W, {
+                            bold: !0,
+                            color: A.O.Alt2,
+                            fontSize: A.Ca.Size5
+                        }, "•")), s), p.createElement(A.Ya, {
                             margin: {
                                 top: .5
                             },
@@ -30458,7 +30508,7 @@
                     }
                 }), Object(U.b)("ChannelInfoBar"))(te),
                 ie = o.a.wrap(function() {
-                    return n.e(113).then(n.bind(null, "bDGO"))
+                    return n.e(114).then(n.bind(null, "bDGO"))
                 }, "EditBroadcastModal");
             var re = Object(r.connect)(function(e) {
                 return {
@@ -30716,7 +30766,7 @@
                                                     kind: "Field",
                                                     name: {
                                                         kind: "Name",
-                                                        value: "paidUpgrade"
+                                                        value: "pendingSubscription"
                                                     },
                                                     arguments: [],
                                                     directives: [],
@@ -30823,11 +30873,11 @@
                 }],
                 loc: {
                     start: 0,
-                    end: 410
+                    end: 418
                 }
             };
             n.loc.source = {
-                body: "query MultiStream_SubscribeModal_User($login: String!) {\nuser(login: $login) {\nid\ndisplayName\nbannerImageURL\nprofileImageURL(width:300)\nsubscriptionProducts {\nid\nemoteSetID\nname\nself {\npaidUpgradePromotion {\nnewPrice\n}\n}\n}\nself {\ncanPrimeSubscribe\nsubscriptionBenefit {\nid\npurchasedWithPrime\ntier\npaidUpgrade {\nstartsAt\n}\ngift {\nisGift\n}\n}\n}\n}\ncurrentUser {\nid\nroles {\nisStaff\n}\n}\nrequestInfo {\ncountryCode\n}\n}",
+                body: "query MultiStream_SubscribeModal_User($login: String!) {\nuser(login: $login) {\nid\ndisplayName\nbannerImageURL\nprofileImageURL(width:300)\nsubscriptionProducts {\nid\nemoteSetID\nname\nself {\npaidUpgradePromotion {\nnewPrice\n}\n}\n}\nself {\ncanPrimeSubscribe\nsubscriptionBenefit {\nid\npurchasedWithPrime\ntier\npendingSubscription {\nstartsAt\n}\ngift {\nisGift\n}\n}\n}\n}\ncurrentUser {\nid\nroles {\nisStaff\n}\n}\nrequestInfo {\ncountryCode\n}\n}",
                 name: "GraphQL request",
                 locationOffset: {
                     line: 1,
@@ -34398,7 +34448,7 @@
                 O = n("Ue10"),
                 _ = (n("/nm5"), n("41XU")),
                 w = l.a.wrap(function() {
-                    return n.e(142).then(n.bind(null, "7lJP"))
+                    return n.e(143).then(n.bind(null, "7lJP"))
                 }, "UserImageUploader"),
                 D = function(e) {
                     function t() {
@@ -34523,7 +34573,7 @@
                 return X
             });
             var B, P = l.a.wrap(function() {
-                return n.e(143).then(n.bind(null, "g9Rq"))
+                return n.e(144).then(n.bind(null, "g9Rq"))
             }, "EditProfileOverlay");
             ! function(e) {
                 e.SocialButtonsDefault = "channel-header__social-buttons-default", e.SocialButtonsVariantB = "channel-header__social-buttons-variant-b"
@@ -34930,16 +34980,17 @@
                         !this.props.data || this.props.data.loading && !this.props.data.error || this.props.latencyTracking.reportInteractive()
                     }, t.prototype.renderSocialButtons = function() {
                         var e = this.getFollowingState(),
-                            t = null,
-                            n = B.SocialButtonsDefault;
+                            t = this.props.data && this.props.data.user && this.props.data.user.displayName || void 0,
+                            n = null,
+                            i = B.SocialButtonsDefault;
                         if (Object(F.c)()) {
-                            var i = r("channel-header__follow-btn", {
+                            var o = r("channel-header__follow-btn", {
                                     "channel-header__follow-btn--following": !!this.state.showLiveNotificationsButton
                                 }),
-                                o = r("channel-header__notification-toggle-container", {
+                                s = r("channel-header__notification-toggle-container", {
                                     "channel-header__notification-toggle-container--visible": !!this.state.showLiveNotificationsButton
                                 });
-                            n = B.SocialButtonsVariantB, t = a.createElement(a.Fragment, null, a.createElement(O.Ya, {
+                            i = B.SocialButtonsVariantB, n = a.createElement(a.Fragment, null, a.createElement(O.Ya, {
                                 className: "channel-header__follow-btn-container",
                                 display: O.X.Flex,
                                 overflow: O.db.Hidden,
@@ -34959,7 +35010,7 @@
                                 display: O.X.InlineFlex,
                                 justifyContent: O.Xa.Center
                             }, a.createElement("div", {
-                                className: i
+                                className: o
                             }, a.createElement(j.a, {
                                 updateContainerWidth: this.onUpdateDebounce,
                                 channelLogin: this.props.channelLogin,
@@ -34967,13 +35018,14 @@
                                 followUIType: j.b.IconAndText,
                                 unfollowUIType: j.b.IconOnly,
                                 onToggleAnimationComplete: this.toggleLiveNotificationsBtnShown,
+                                channelName: t,
                                 hideDropdownWhenFollowing: !0,
                                 fullWidthButton: !0,
                                 hollowIcons: !0,
                                 animatedButton: !0,
                                 useContextualModals: !0
                             })))), a.createElement("div", {
-                                className: o
+                                className: s
                             }, a.createElement(U.a, {
                                 channelLogin: this.props.channelLogin,
                                 toggleType: U.b.Button,
@@ -34988,7 +35040,7 @@
                                 unsubscribedButtonType: e ? O.F.Default : O.F.Hollow,
                                 forceIcon: !0
                             })))
-                        } else(this.props.channelIsHosting || Object(F.e)()) && (n = B.SocialButtonsDefault, t = a.createElement(a.Fragment, null, a.createElement(O.Ya, {
+                        } else(this.props.channelIsHosting || Object(F.e)()) && (i = B.SocialButtonsDefault, n = a.createElement(a.Fragment, null, a.createElement(O.Ya, {
                             display: O.X.Flex,
                             alignItems: O.f.Stretch,
                             margin: {
@@ -35000,6 +35052,7 @@
                             onFollow: this.maybeShowBrowserNotificationsUpsell,
                             followUIType: j.b.IconAndText,
                             unfollowUIType: j.b.IconOnly,
+                            channelName: t,
                             useContextualModals: !0
                         })), a.createElement(O.Ya, {
                             margin: {
@@ -35016,9 +35069,9 @@
                             flexShrink: 0,
                             alignItems: O.f.Center,
                             className: "channel-header__right",
-                            "data-test-selector": n,
+                            "data-test-selector": i,
                             "data-target": "channel-header-right"
-                        }, t)
+                        }, n)
                     }, t.prototype.getFollowingState = function(e) {
                         return void 0 === e && (e = this.props), !!(e.data && e.data.user && e.data.user.self && e.data.user.self.follower) && null !== e.data.user.self.follower.disableNotifications
                     }, t.prototype.getFollowData = function() {
@@ -36083,7 +36136,7 @@
                             },
                             r = {};
                         if (this.props.plan.tier) {
-                            var o = Object(D.a)(this.props.plan.tier);
+                            var o = Object(D.b)(this.props.plan.tier);
                             null === o && (o = 1), r.purchase = Object(s.d)("Tier { tierNum }", {
                                 tierNum: o
                             }, "assembleSubscribeTexts")
@@ -37029,7 +37082,7 @@
                             }(n.ownedSetIDs, e.channelData.user.subscriptionProducts), n.subscribeTexts = function(e) {
                                 for (var t = [], n = 0; n < e.length; n++) {
                                     var i = e[n],
-                                        r = Object(D.a)(i.tier);
+                                        r = Object(D.b)(i.tier);
                                     null === r && (r = 1), 0 === n && i.emotes && i.emotes.length > 1 ? t[n] = Object(s.d)("Unlock {numEmotes, number} Sub Emotes", {
                                         numEmotes: i.emotes.length
                                     }, "assembleSubscribeTexts") : 0 === n ? t[n] = Object(s.d)("Unlock 1 Sub Emote", "assembleSubscribeTexts") : i.emotes && i.emotes.length > 1 ? t[n] = Object(s.d)("{numEmotes, number} Extra Tier {tier} Sub Emotes", {
@@ -37046,9 +37099,9 @@
                     }, t.prototype.subscriptionProductHasEmotes = function(e) {
                         return void 0 !== e.emoteSetID && !!e.emotes && e.emotes.length > 0
                     }, t.prototype.checkAndDisplaySubscriptionCheckout = function() {
-                        var e = s.n.get(v.c, ""),
-                            t = s.n.get(v.d, ""),
-                            n = s.n.get(v.b, ""),
+                        var e = s.n.get(v.d, ""),
+                            t = s.n.get(v.e, ""),
+                            n = s.n.get(v.c, ""),
                             i = Number(n);
                         e && (this.props.channelData && this.props.channelData.user && this.props.channelData.user.subscriptionProducts.map(function(e) {
                             return e.name
@@ -37059,7 +37112,7 @@
                             trackingContext: {
                                 source: E.c.EmotePicker
                             }
-                        }) : this.props.showLoginModal() : Object(v.e)())
+                        }) : this.props.showLoginModal() : Object(v.f)())
                     }, t
                 }(a.Component);
             var re = Object(d.compose)(Object(i.connect)(function(e) {
@@ -37073,13 +37126,13 @@
                     return Object(u.bindActionCreators)({
                         closeEmotePicker: S.A,
                         openEmotePicker: S.M,
-                        showLoginModal: Object(v.f)(b.a.EmotePickerSubscriptionButton),
+                        showLoginModal: Object(v.g)(b.a.EmotePickerSubscriptionButton),
                         showSubscriptionCheckoutModal: function(e) {
                             var t = r.__rest(e, []);
                             return Object(k.d)(p.a, {
                                 component: "CheckoutModal",
                                 loader: function() {
-                                    return Promise.all([n.e(0), n.e(209)]).then(n.bind(null, "KJv/"))
+                                    return Promise.all([n.e(0), n.e(210)]).then(n.bind(null, "KJv/"))
                                 },
                                 componentProps: t
                             })
@@ -37797,7 +37850,7 @@
                                         }, "ReportVideoModal") : Object(p.d)("Report this video", "ReportVideoModal"), n.props.onShowReportUserModal({
                                             onClose: n.handleReportModalClose,
                                             reportContext: {
-                                                contentType: _.N.VOD_REPORT,
+                                                contentType: _.O.VOD_REPORT,
                                                 contentID: e.id,
                                                 targetUserID: e.owner && e.owner.id ? e.owner.id : "",
                                                 extra: n.getVideoReportExtraField()
@@ -42299,7 +42352,7 @@
                             recipientButton: t
                         }, "AnonSubGiftNoticeLine") : Object(s.d)("An anonymous gifter gave {recipientButton} a Tier {tierNumber} Sub!", {
                             recipientButton: t,
-                            tierNumber: Object(he.a)(e.plan) || 1
+                            tierNumber: Object(he.b)(e.plan) || 1
                         }, "AnonSubGiftNoticeLine")
                     }(t.methods, n)))
                 };
@@ -42315,7 +42368,7 @@
                     }, "AnonSubMysteryGiftNoticeLine") : Object(s.d)("{massGiftCount, plural,        one {An anonymous gifter is gifting {massGiftCount} Tier {tierNumber} Sub to {channel}'s community!}        other {An anonymous gifter is gifting {massGiftCount} Tier {tierNumber} Subs to {channel}'s community!}}", {
                         channel: n,
                         massGiftCount: i,
-                        tierNumber: Object(he.a)(a) || 1
+                        tierNumber: Object(he.b)(a) || 1
                     }, "AnonSubMysteryGiftNoticeLine");
                 return r.createElement(B.Ya, {
                     alignItems: B.f.Start,
@@ -42632,7 +42685,7 @@
                         }(e.event.channel)
                     }, "SubNoticeLine") : Object(s.d)("{userLogin} just subscribed with a Tier {tierNumber} sub!", {
                         userLogin: t,
-                        tierNumber: Object(he.a)(e.event.methods.plan) || 1
+                        tierNumber: Object(he.b)(e.event.methods.plan) || 1
                     }, "SubNoticeLine"), r.createElement(B.W, {
                         color: B.O.Alt2,
                         type: B.Wb.Span
@@ -42716,7 +42769,7 @@
                         recipientButton: t,
                         tierNumber: i
                     }, "SubGiftNoticeLine")
-                }(n, i, t.senderCount, Object(he.a)(t.methods.plan) || 1), r.createElement(B.W, {
+                }(n, i, t.senderCount, Object(he.b)(t.methods.plan) || 1), r.createElement(B.W, {
                     color: B.O.Alt2,
                     type: B.Wb.Span
                 }, a)
@@ -42763,7 +42816,7 @@
                         massGiftCount: n,
                         tierNumber: r
                     }, "SubMysteryGiftNoticeLine")
-                }(n, t.channel, t.massGiftCount, t.senderCount, Object(he.a)(t.plan) || 1), r.createElement(B.W, {
+                }(n, t.channel, t.massGiftCount, t.senderCount, Object(he.b)(t.plan) || 1), r.createElement(B.W, {
                     color: B.O.Alt2,
                     type: B.Wb.Span
                 }, i)
@@ -44064,7 +44117,7 @@
                     }, t
                 }(s.Component),
                 G = n("XmgI"),
-                Y = (n("H0r1"), (V = {})[f.P.USER_BANNED] = "user-banned-selector", V[f.P.USER_INELIGIBLE] = "user-ineligible-selector", V[f.P.USER_SUSPENDED] = "user-suspended-selector", V[f.P.CHANNEL_INELIGIBLE] = "channel-ineligible-selector", V[f.P.ZALGO_MESSAGE] = "zalgo-message-selector", V[f.P.CHANNEL_BLOCKED_TERMS] = "channel-blocked-terms-selector", V[f.P.INVALID_EVENT_ID] = "invalid-event-id-selector", V[f.P.REQUEST_THROTTLED] = "request-throttled-selector", V[f.P.UNKNOWN] = "unknown-selector", V),
+                Y = (n("H0r1"), (V = {})[f.Q.USER_BANNED] = "user-banned-selector", V[f.Q.USER_INELIGIBLE] = "user-ineligible-selector", V[f.Q.USER_SUSPENDED] = "user-suspended-selector", V[f.Q.CHANNEL_INELIGIBLE] = "channel-ineligible-selector", V[f.Q.ZALGO_MESSAGE] = "zalgo-message-selector", V[f.Q.CHANNEL_BLOCKED_TERMS] = "channel-blocked-terms-selector", V[f.Q.INVALID_EVENT_ID] = "invalid-event-id-selector", V[f.Q.REQUEST_THROTTLED] = "request-throttled-selector", V[f.Q.UNKNOWN] = "unknown-selector", V),
                 z = function(e) {
                     var t;
                     if (e.prefixes && 1 === e.prefixes.length) {
@@ -44114,7 +44167,7 @@
                         sponsoredBitsBonus: e.sponsoredBitsBonus
                     }));
                     var a = function(e) {
-                            if (e.smallestCheermote < e.minPerEmote || e.bitsSendHasError && e.bitsSendErrorCode === f.P.EMOTE_AMOUNT_BELOW_MIN_BITS) {
+                            if (e.smallestCheermote < e.minPerEmote || e.bitsSendHasError && e.bitsSendErrorCode === f.Q.EMOTE_AMOUNT_BELOW_MIN_BITS) {
                                 var t = Object(c.d)("This channel has set a minimum of {minPerEmote} Bits to use a Cheer emote in chat.", {
                                     minPerEmote: e.minPerEmote
                                 }, "Bits--PendingCheer");
@@ -44125,7 +44178,7 @@
                                     "data-a-target": "min-emote-bits-error"
                                 }, t)
                             }
-                            if (e.chatMessage && e.chatMessage.length > w.o || e.bitsSendHasError && e.bitsSendErrorCode === f.P.MESSAGE_LENGTH_EXCEEDED) {
+                            if (e.chatMessage && e.chatMessage.length > w.o || e.bitsSendHasError && e.bitsSendErrorCode === f.Q.MESSAGE_LENGTH_EXCEEDED) {
                                 var n = Object(c.d)("You have exceeded the maximum number of characters you can use in your cheer.", "Bits--PendingCheer");
                                 return s.createElement(b.W, {
                                     "data-test-selector": "message-length-exceeded-selector",
@@ -44134,24 +44187,24 @@
                                 }, n)
                             }
                             if (e.bitsSendHasError) {
-                                var i = Y[e.bitsSendErrorCode] || Y[f.P.UNKNOWN],
+                                var i = Y[e.bitsSendErrorCode] || Y[f.Q.UNKNOWN],
                                     r = void 0;
                                 switch (e.bitsSendErrorCode) {
-                                    case f.P.ZALGO_MESSAGE:
+                                    case f.Q.ZALGO_MESSAGE:
                                         r = Object(c.d)("You have unsupported characters in your message, please remove them and try again.", "Bits--PendingCheer");
                                         break;
-                                    case f.P.USER_BANNED:
-                                    case f.P.USER_INELIGIBLE:
-                                    case f.P.USER_SUSPENDED:
-                                    case f.P.CHANNEL_INELIGIBLE:
+                                    case f.Q.USER_BANNED:
+                                    case f.Q.USER_INELIGIBLE:
+                                    case f.Q.USER_SUSPENDED:
+                                    case f.Q.CHANNEL_INELIGIBLE:
                                         r = Object(c.d)("Sorry, you are unable to send bits in this channel at this time.", "Bits--PendingCheer");
                                         break;
-                                    case f.P.CHANNEL_BLOCKED_TERMS:
+                                    case f.Q.CHANNEL_BLOCKED_TERMS:
                                         r = Object(c.d)("You have blocked words in your message, please remove them and try again.", "Bits--PendingCheer");
                                         break;
-                                    case f.P.INVALID_EVENT_ID:
-                                    case f.P.REQUEST_THROTTLED:
-                                    case f.P.UNKNOWN:
+                                    case f.Q.INVALID_EVENT_ID:
+                                    case f.Q.REQUEST_THROTTLED:
+                                    case f.Q.UNKNOWN:
                                     default:
                                         r = Object(c.d)("Something went wrong when processing your cheer, please try again later.", "Bits--PendingCheer")
                                 }
@@ -44164,7 +44217,7 @@
                             return null
                         }(e),
                         o = function(e) {
-                            if (e.largestCheermote > w.p || e.bitsSendHasError && e.bitsSendErrorCode === f.P.TOO_LARGE_BITS_EMOTE) {
+                            if (e.largestCheermote > w.p || e.bitsSendHasError && e.bitsSendErrorCode === f.Q.TOO_LARGE_BITS_EMOTE) {
                                 var t = Object(c.d)("{maximumCheerSize} is the largest Cheer emote, add another emote to Cheer louder!", {
                                     maximumCheerSize: w.p
                                 }, "Bits--PendingCheer");
@@ -44183,7 +44236,7 @@
                             }, Object(c.d)("Please purchase {neededBits} more Bits to Cheer", {
                                 neededBits: e.amount - e.bitsBalance
                             }, "Bits--PendingCheer"));
-                            if (e.amount < e.minToCheer || e.bitsSendHasError && e.bitsSendErrorCode === f.P.AMOUNT_BELOW_MIN_BITS) {
+                            if (e.amount < e.minToCheer || e.bitsSendHasError && e.bitsSendErrorCode === f.Q.AMOUNT_BELOW_MIN_BITS) {
                                 var n = Object(c.d)("Add {moreBitsAmount} more Bits to reach this channel's minimum Cheer.", {
                                     moreBitsAmount: e.minToCheer - e.amount
                                 }, "Bits--PendingCheer");
@@ -44192,7 +44245,7 @@
                                     "data-a-target": "min-cheer-bits-error"
                                 }, n)
                             }
-                            if (e.amount > w.q || e.bitsSendHasError && e.bitsSendErrorCode === f.P.TOO_LARGE_CHEER) {
+                            if (e.amount > w.q || e.bitsSendHasError && e.bitsSendErrorCode === f.Q.TOO_LARGE_CHEER) {
                                 var i = Object(c.d)("{maximumCheerSize} is the maximum amount of Bits you can send in one message, send multiple messages if you want to Cheer more!", {
                                     maximumCheerSize: w.q
                                 }, "Bits--PendingCheer");
@@ -46183,7 +46236,7 @@
                 S = n("F6GT"),
                 E = n("x0gr"),
                 N = c.a.wrap(function() {
-                    return n.e(197).then(n.bind(null, "8MX0"))
+                    return Promise.all([n.e(0), n.e(198)]).then(n.bind(null, "8MX0"))
                 }, "ChatSettingsComponent"),
                 O = function(e) {
                     function t() {
@@ -46389,22 +46442,20 @@
             var i = n("mrSG"),
                 r = n("q1tI"),
                 a = n("/7QA"),
-                o = n("H1ft"),
-                s = n("0Log"),
-                l = n("5zf8"),
-                c = n("/aPz"),
-                d = n("2xye"),
-                u = n("1rIY"),
-                m = n("Mg1H"),
-                p = n("Q34B"),
-                h = n("vRsq"),
-                f = n("zQgx"),
-                g = n("Q94S");
+                o = n("0Log"),
+                s = n("/aPz"),
+                l = n("2xye"),
+                c = n("1rIY"),
+                d = n("Mg1H"),
+                u = n("Q34B"),
+                m = n("vRsq"),
+                p = n("zQgx"),
+                h = n("Q94S");
 
-            function v(e, t) {
+            function f(e, t) {
                 var n = e.owner ? e.owner.login : "",
-                    i = p.a.VIDEO,
-                    r = Object(h.i)(n, e.id);
+                    i = u.a.VIDEO,
+                    r = Object(m.i)(n, e.id);
                 return {
                     clipSlug: "",
                     collectionID: t ? t.id : "",
@@ -46417,7 +46468,7 @@
                 }
             }
 
-            function b(e) {
+            function g(e) {
                 if (e && e.hosting && e.hosting.id && e.hosting.login) {
                     var t = e.hosting;
                     return {
@@ -46429,19 +46480,18 @@
                 }
                 return null
             }
-            var k, y = n("kmJV"),
-                C = n("xyN1"),
-                S = n("csJo"),
-                E = n("mGiD"),
-                N = n("MAph"),
-                O = n("SWMh"),
-                _ = n("50oY");
+            var v, b = n("kmJV"),
+                k = n("xyN1"),
+                y = n("csJo"),
+                C = n("mGiD"),
+                S = n("MAph"),
+                E = n("50oY");
             n.d(t, "b", function() {
-                return D
+                return O
             }), n.d(t, "a", function() {
-                return I
+                return _
             });
-            var w = (k = Object(u.a)("ChannelContext", {
+            var N = (v = Object(c.a)("ChannelContext", {
                     loading: !1,
                     error: !1,
                     channel: null,
@@ -46451,22 +46501,21 @@
                     collection: null,
                     collectionID: "",
                     contentCanonicalUrl: "",
-                    contentType: p.a.NONE,
+                    contentType: u.a.NONE,
                     currentUser: null,
                     hostedChannel: null,
                     isSecondaryStreamPlaying: !1,
                     live: !1,
-                    page: _.c.About,
+                    page: E.c.About,
                     video: null,
                     videoID: "",
-                    videoMarkers: [],
                     videoPlayerSource: "",
                     viewerCount: null,
                     clearData: function() {},
                     toggleInsiderChannel: function() {}
                 })).InnerProvider,
-                D = k.withContext,
-                I = function(e) {
+                O = v.withContext,
+                _ = function(e) {
                     function t() {
                         var t = null !== e && e.apply(this, arguments) || this;
                         return t.state = {
@@ -46478,17 +46527,16 @@
                             clip: null,
                             videoID: "",
                             video: null,
-                            videoMarkers: [],
                             collectionID: "",
                             collection: null,
                             contentCanonicalUrl: "",
-                            contentType: p.a.NONE,
+                            contentType: u.a.NONE,
                             currentUser: null,
                             live: !1,
                             hostedChannel: null,
                             videoPlayerSource: "",
                             isSecondaryStreamPlaying: !1,
-                            page: _.c.About,
+                            page: E.c.About,
                             viewerCount: null,
                             toggleInsiderChannel: function() {
                                 t.toggleInsiderChannel()
@@ -46506,9 +46554,9 @@
                             })), t.setState(t.updateVideoSource({
                                 route: e
                             }));
-                            var i = Object(g.e)(e),
-                                r = Object(g.a)(e),
-                                a = Object(g.b)(e);
+                            var i = Object(h.e)(e),
+                                r = Object(h.a)(e),
+                                a = Object(h.b)(e);
                             t.setState({
                                 channelLogin: (n || "").toLowerCase()
                             }), i ? t.fetchVideo(i, a) : r ? t.fetchClip(r) : a ? t.fetchCollection(a) : n ? (t.fetchChannel(n), t.setupPubsub("", n)) : t.logger.warn("Channel Root had no content to load", e.match)
@@ -46523,7 +46571,7 @@
                     }, t.prototype.componentWillReceiveProps = function(e) {
                         e.match.url !== this.props.match.url && this.updateRoute(e)
                     }, t.prototype.render = function() {
-                        return r.createElement(w, {
+                        return r.createElement(N, {
                             value: this.state
                         }, this.props.children)
                     }, t.prototype.resetPrivateVariables = function() {
@@ -46534,7 +46582,7 @@
                             loading: !0
                         });
                         var n = a.p.apollo.client.watchQuery({
-                            query: y,
+                            query: b,
                             variables: {
                                 currentChannelLogin: e
                             }
@@ -46562,7 +46610,7 @@
                             loading: !0
                         });
                         var r = a.p.apollo.client.watchQuery({
-                            query: E,
+                            query: C,
                             variables: {
                                 videoID: e,
                                 collectionID: t,
@@ -46575,7 +46623,7 @@
                                     loading: !1
                                 }, n.updateCurrentUser(e.data.currentUser), n.updateVideo(e.data.video), n.updateChannel(e.data.video && e.data.video.owner), n.updateVideoSource({
                                     video: e.data.video
-                                }))), n.fetchVideoMarkers(e.data.video)
+                                })))
                             },
                             error: function(i) {
                                 r.unsubscribe(), n.setState({
@@ -46593,21 +46641,21 @@
                             loading: !0
                         });
                         var n = a.p.apollo.client.watchQuery({
-                            query: S,
+                            query: y,
                             variables: {
                                 collectionID: e
                             }
                         }).subscribe({
                             next: function(e) {
                                 n.unsubscribe();
-                                var r = Object(g.c)(e.data.collection);
+                                var r = Object(h.c)(e.data.collection);
                                 t.setState(i.__assign({
                                     error: !1,
                                     loading: !1
                                 }, t.updateCurrentUser(e.data.currentUser), t.updateCollection(e.data.collection), t.updateVideo(r), t.updateChannel(e.data.collection && e.data.collection.owner), t.updateVideoSource({
                                     video: r,
                                     collection: e.data.collection
-                                }))), t.fetchVideoMarkers(r)
+                                })))
                             },
                             error: function(i) {
                                 n.unsubscribe(), t.setState({
@@ -46624,7 +46672,7 @@
                             loading: !0
                         });
                         var n = a.p.apollo.client.watchQuery({
-                            query: C,
+                            query: k,
                             variables: {
                                 currentChannelLogin: "",
                                 includeChannel: !1,
@@ -46671,9 +46719,9 @@
                         }
                     }, t.prototype.updateChannel = function(e) {
                         var t = e && e.login || "",
-                            n = !!Object(f.d)(e),
-                            i = b(e),
-                            r = Object(f.h)(e);
+                            n = !!Object(p.d)(e),
+                            i = g(e),
+                            r = Object(p.h)(e);
                         return this.setupPubsub(e && e.id || "", t), this.clearResetOfflineTimer(), n && (this.resetOfflineTimer = setTimeout(this.onResetOffline, 6e4)), {
                             channel: e,
                             channelLogin: t,
@@ -46684,19 +46732,19 @@
                     }, t.prototype.updateVideoSource = function(e) {
                         var t;
                         return e.route ? t = function(e, t) {
-                            var n = Object(g.a)(t) || "",
-                                i = Object(g.e)(t) || "",
-                                r = Object(g.b)(t) || "",
+                            var n = Object(h.a)(t) || "",
+                                i = Object(h.e)(t) || "",
+                                r = Object(h.b)(t) || "",
                                 a = "",
-                                o = p.a.NONE,
+                                o = u.a.NONE,
                                 s = "",
                                 l = !1;
-                            if ("" !== n) o = p.a.CLIP, a = Object(h.h)(e, n);
-                            else if (i || r) o = r ? p.a.COLLECTION : p.a.VIDEO, a = Object(h.i)(e, i, r);
+                            if ("" !== n) o = u.a.CLIP, a = Object(m.h)(e, n);
+                            else if (i || r) o = r ? u.a.COLLECTION : u.a.VIDEO, a = Object(m.i)(e, i, r);
                             else {
-                                o = p.a.LIVE, a = "/" + e;
-                                var c = Object(m.b)(e);
-                                l = (s = Object(m.c)(e) && c ? c : e) === c
+                                o = u.a.LIVE, a = "/" + e;
+                                var c = Object(d.b)(e);
+                                l = (s = Object(d.c)(e) && c ? c : e) === c
                             }
                             return {
                                 clipSlug: n,
@@ -46710,14 +46758,14 @@
                             }
                         }(e.route.match.params.channelLogin || "", e.route) : e.live ? t = function(e) {
                             var t = e.login || "",
-                                n = p.a.LIVE,
+                                n = u.a.LIVE,
                                 i = "/" + t,
-                                r = Object(m.b)(t),
-                                a = Object(m.c)(t) && r ? r : t,
+                                r = Object(d.b)(t),
+                                a = Object(d.c)(t) && r ? r : t,
                                 o = null,
                                 s = !(!e.self || !e.self.subscriptionBenefit) || !1,
-                                l = Object(f.c)(e);
-                            return s && l || (a = (o = b(e)) ? o.login || "" : t || "", Object(m.a)(a)), {
+                                l = Object(p.c)(e);
+                            return s && l || (a = (o = g(e)) ? o.login || "" : t || "", Object(d.a)(a)), {
                                 clipSlug: "",
                                 collectionID: "",
                                 contentCanonicalUrl: i,
@@ -46729,8 +46777,8 @@
                             }
                         }(e.live) : e.clip ? t = function(e) {
                             var t = e.broadcaster && e.broadcaster.login,
-                                n = p.a.CLIP,
-                                i = Object(h.h)(t || "", e.slug);
+                                n = u.a.CLIP,
+                                i = Object(m.h)(t || "", e.slug);
                             return {
                                 clipSlug: e.slug,
                                 collectionID: "",
@@ -46742,40 +46790,40 @@
                                 videoPlayerSource: ""
                             }
                         }(e.clip) : e.collection ? t = function(e) {
-                            var t = Object(g.c)(e);
-                            return t ? v(t, e) : {
+                            var t = Object(h.c)(e);
+                            return t ? f(t, e) : {
                                 clipSlug: "",
                                 collectionID: e.id,
                                 contentCanonicalUrl: "",
-                                contentType: p.a.COLLECTION,
+                                contentType: u.a.COLLECTION,
                                 hostedChannel: null,
                                 isSecondaryStreamPlaying: !1,
                                 videoID: "",
                                 videoPlayerSource: ""
                             }
-                        }(e.collection) : e.video && (t = v(e.video)), t || (this.logger.warn("Unable to set context.", e), {})
+                        }(e.collection) : e.video && (t = f(e.video)), t || (this.logger.warn("Unable to set context.", e), {})
                     }, t.prototype.getPageType = function(e) {
                         if (e.match.params.standaloneType) {
-                            if (e.match.params.standaloneType === _.e.Videos) return _.c.Videos;
-                            if (e.match.params.standaloneType === _.e.Collections) return _.c.Videos
+                            if (e.match.params.standaloneType === E.e.Videos) return E.c.Videos;
+                            if (e.match.params.standaloneType === E.e.Collections) return E.c.Videos
                         }
                         if (void 0 === e.match.params.page) {
                             if (e.match.params.contentType) {
-                                if (e.match.params.contentType === _.a.Video) return _.c.Videos;
-                                if (e.match.params.contentType === _.a.Clip) return _.c.Videos;
-                                if (e.match.params.contentType === _.a.Collection) return _.c.Videos
+                                if (e.match.params.contentType === E.a.Video) return E.c.Videos;
+                                if (e.match.params.contentType === E.a.Clip) return E.c.Videos;
+                                if (e.match.params.contentType === E.a.Collection) return E.c.Videos
                             }
-                            return _.c.About
+                            return E.c.About
                         }
-                        return e.match.params.page && _.d.has(e.match.params.page) ? e.match.params.page : (a.k.error(new Error, "Unknown Page Type: '" + e.match.params.page + "' in route: " + e.match.url), _.c.About)
+                        return e.match.params.page && E.d.has(e.match.params.page) ? e.match.params.page : (a.k.error(new Error, "Unknown Page Type: '" + e.match.params.page + "' in route: " + e.match.url), E.c.About)
                     }, t.prototype.setupPubsub = function(e, t) {
                         var n = this;
                         if (!this.pubsubHostTargetChange || this.pubsubHostTargetChange.channelLogin !== t)
                             if (this.pubsubHostTargetChange && this.pubsubHostTargetChange.unsubscribe(), e) {
                                 var i = a.p.pubsub.subscribe({
-                                    topic: Object(c.z)(e),
+                                    topic: Object(s.z)(e),
                                     onMessage: function(i) {
-                                        i.type === s.PubsubMessageType.StreamChatRoomHostTargetChange && n.handleStreamChatRoomHostTargetChange(i, t, e)
+                                        i.type === o.PubsubMessageType.StreamChatRoomHostTargetChange && n.handleStreamChatRoomHostTargetChange(i, t, e)
                                     }
                                 });
                                 this.pubsubHostTargetChange = {
@@ -46786,9 +46834,9 @@
                         if (!this.pubsubViewCountUpdate || this.pubsubViewCountUpdate.channelLogin !== t)
                             if (this.pubsubViewCountUpdate && this.pubsubViewCountUpdate.unsubscribe(), t) {
                                 i = a.p.pubsub.subscribe({
-                                    topic: Object(c.K)(t),
+                                    topic: Object(s.K)(t),
                                     onMessage: function(e) {
-                                        e.type === s.PubsubMessageType.ViewCount && n.handleViewCount(e)
+                                        e.type === o.PubsubMessageType.ViewCount && n.handleViewCount(e)
                                     }
                                 });
                                 this.pubsubViewCountUpdate = {
@@ -46798,7 +46846,7 @@
                             } else this.pubsubViewCountUpdate = void 0
                     }, t.prototype.handleStreamChatRoomHostTargetChange = function(e, t, n) {
                         if (e.data.channel_id === n) {
-                            a.o.track(d.SpadeEventType.HostModeDebug, {
+                            a.o.track(l.SpadeEventType.HostModeDebug, {
                                 log_type: "pubsub_msg_v2",
                                 channel: t,
                                 data_channel_id: e.data.channel_id,
@@ -46817,14 +46865,14 @@
                                     displayName: o,
                                     profileImageURL: null
                                 }
-                            }), this.fetchPubsubHostedChannel(o), a.o.track(d.SpadeEventType.HostModeDebug, {
+                            }), this.fetchPubsubHostedChannel(o), a.o.track(l.SpadeEventType.HostModeDebug, {
                                 log_type: "state_change",
                                 channel: t,
                                 host_channel: o
                             })) : (this.setState({
                                 videoPlayerSource: t,
                                 hostedChannel: null
-                            }), a.o.track(d.SpadeEventType.HostModeDebug, {
+                            }), a.o.track(l.SpadeEventType.HostModeDebug, {
                                 log_type: "state_change",
                                 channel: t,
                                 host_channel: null
@@ -46839,7 +46887,7 @@
                                         this.nextHostTarget = e, i.label = 1;
                                     case 1:
                                         return i.trys.push([1, 3, , 4]), [4, a.p.apollo.client.query({
-                                            query: N,
+                                            query: S,
                                             variables: {
                                                 hostedChannelLogin: e
                                             }
@@ -46862,31 +46910,6 @@
                                 }
                             })
                         })
-                    }, t.prototype.fetchVideoMarkers = function(e) {
-                        return i.__awaiter(this, void 0, void 0, function() {
-                            var t, n;
-                            return i.__generator(this, function(r) {
-                                switch (r.label) {
-                                    case 0:
-                                        if (!e || !e.lengthSeconds || Object(o.b)() === o.a.None) return [2];
-                                        r.label = 1;
-                                    case 1:
-                                        return r.trys.push([1, 3, , 4]), [4, Object(O.a)(e.id, e.lengthSeconds, e.game)];
-                                    case 2:
-                                        return t = r.sent(), (n = t.map(function(e) {
-                                            return i.__assign({}, e, {
-                                                subLabel: Object(l.b)(e.duration)
-                                            })
-                                        })) && n.length && this.setState({
-                                            videoMarkers: n
-                                        }), [3, 4];
-                                    case 3:
-                                        return r.sent(), [3, 4];
-                                    case 4:
-                                        return [2]
-                                }
-                            })
-                        })
                     }, t.prototype.handleViewCount = function(e) {
                         e.viewers !== this.state.viewerCount && this.setState({
                             live: !0,
@@ -46896,12 +46919,12 @@
                         this.resetOfflineTimer && (clearTimeout(this.resetOfflineTimer), this.resetOfflineTimer = void 0)
                     }, t.prototype.toggleInsiderChannel = function() {
                         var e = this.state.channelLogin,
-                            t = Object(m.b)(e),
+                            t = Object(d.b)(e),
                             n = this.state.videoPlayerSource === e,
                             i = n && t ? t : e;
                         this.setState({
                             videoPlayerSource: i
-                        }), Object(m.d)(e, n)
+                        }), Object(d.d)(e, n)
                     }, t
                 }(r.Component)
         },
@@ -50183,45 +50206,6 @@
                 }
             };
             e.exports = n
-        },
-        z36O: function(e, t, n) {
-            "use strict";
-            var i = n("mrSG"),
-                r = n("q1tI"),
-                a = n("Ue10"),
-                o = function(e) {
-                    return r.createElement(a.Ya, {
-                        margin: {
-                            right: 1
-                        },
-                        display: a.X.Flex,
-                        alignItems: a.f.Center
-                    }, r.createElement(a.Zb, {
-                        align: a.ac.Left,
-                        label: e.tooltip,
-                        direction: a.bc.Bottom
-                    }, r.createElement(a.Ya, {
-                        margin: {
-                            right: .5
-                        }
-                    }, r.createElement(a.Fb, {
-                        display: a.X.Flex,
-                        alignItems: a.f.Center,
-                        color: a.O.Alt2
-                    }, r.createElement(a.tb, {
-                        asset: e.svgAsset
-                    }))), r.createElement(a.W, {
-                        fontSize: a.Ca.Size5,
-                        ellipsis: !0
-                    }, r.createElement(a.U, i.__assign({
-                        to: e.linkTo
-                    }, Object(a.kc)(e), {
-                        targetBlank: e.targetBlank
-                    }), e.title))))
-                };
-            n.d(t, "a", function() {
-                return o
-            })
         },
         zClW: function(e, t, n) {
             "use strict";

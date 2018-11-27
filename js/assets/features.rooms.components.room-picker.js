@@ -1,5 +1,5 @@
 (window.webpackJsonp = window.webpackJsonp || []).push([
-    [203], {
+    [204], {
         "/HY+": function(e, t, n) {
             "use strict";
             var o = n("dAHa"),
@@ -3456,7 +3456,7 @@
                             return Object(d.d)("In a whisper (private message)", "ReportModalWizard")
                         },
                         value: "whisper",
-                        reportContext: b.N.WHISPER_REPORT
+                        reportContext: b.O.WHISPER_REPORT
                     },
                     whisper_more_options: {
                         getTitle: N.moreOptions,
@@ -4389,7 +4389,7 @@
                             return i.__generator(this, function(i) {
                                 switch (i.label) {
                                     case 0:
-                                        if (n = o === b.N.WHISPER_REPORT ? o : this.props.reportContext.contentType, r = b.N[n], null === (a = {
+                                        if (n = o === b.O.WHISPER_REPORT ? o : this.props.reportContext.contentType, r = b.O[n], null === (a = {
                                                 description: t,
                                                 reason: e,
                                                 content: r,
@@ -5482,7 +5482,7 @@
                             t.props.isLoggedIn ? t.props.onShowModal(N.a, {
                                 reportContext: {
                                     contentID: t.props.roomID,
-                                    contentType: O.N.ROOM_REPORT,
+                                    contentType: O.O.ROOM_REPORT,
                                     targetUserID: t.props.data.room.owner.id
                                 },
                                 title: Object(m.d)("Report {roomName}", {

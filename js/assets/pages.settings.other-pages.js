@@ -1,5 +1,5 @@
 (window.webpackJsonp = window.webpackJsonp || []).push([
-    [148], {
+    [149], {
         "+HZ4": function(e, t, n) {},
         "+TUL": function(e, t, n) {},
         "+oVX": function(e, t, n) {
@@ -28,7 +28,7 @@
             ! function(e) {
                 e.Toggle = "advanced-notification-settings-toggle__toggle"
             }(i || (i = {}));
-            var E, N = function(e) {
+            var N, E = function(e) {
                     function t() {
                         var t = null !== e && e.apply(this, arguments) || this;
                         return t.changeHandler = function() {
@@ -107,7 +107,7 @@
                 O = (n("HoeP"), n("9+K3"));
             ! function(e) {
                 e.Description = "advanced-notificatino-settings__description", e.Header = "advanced-notificatino-settings__header"
-            }(E || (E = {}));
+            }(N || (N = {}));
             var _, U = function(e) {
                     function t() {
                         var t = null !== e && e.apply(this, arguments) || this;
@@ -172,15 +172,12 @@
                         if (i || !t || !t.follows || null === t.follows.totalCount) return o.createElement(k.a, {
                             message: Object(c.d)("Error loading data.", "AdvancedNotificationSettings")
                         });
-                        var r = Object(c.d)("{followCount, plural, one {You follow # channel} other {You follow # channels}}", {
-                                followCount: t.follows.totalCount
-                            }, "AdvancedNotificationSettings"),
-                            a = o.createElement(C.Fb, {
+                        var r = o.createElement(C.Fb, {
                                 borderBottom: !0
                             }, o.createElement(C.Va, {
                                 onClick: this.toggleCollapse,
                                 type: C.Wa.Alt,
-                                "data-test-selector": E.Header
+                                "data-test-selector": N.Header
                             }, o.createElement(C.Ya, {
                                 display: C.X.Flex,
                                 padding: {
@@ -194,16 +191,16 @@
                                 fontSize: C.Ca.Size5,
                                 color: C.O.Alt,
                                 bold: !0
-                            }, Object(c.d)("Advanced", "AdvancedNotificationSettings"))), o.createElement(C.Ya, {
+                            }, Object(c.d)("Per Channel", "AdvancedNotificationSettings"))), o.createElement(C.Ya, {
                                 padding: {
                                     x: 1
                                 },
                                 flexGrow: 1
                             }, o.createElement(C.W, {
-                                "data-test-selector": E.Description,
+                                "data-test-selector": N.Description,
                                 fontSize: C.Ca.Size5,
                                 color: C.O.Alt
-                            }, r)), o.createElement(C.Ya, {
+                            }, this.getHeaderStatusText())), o.createElement(C.Ya, {
                                 className: this.state.collapsed ? "advanced-notification-settings--collapse" : "advanced-notification-settings--expand",
                                 flexGrow: 0,
                                 flexShrink: 1,
@@ -213,8 +210,8 @@
                                 asset: C.ub.AngleRight,
                                 type: C.vb.Alt
                             }))))),
-                            s = !(n || i || !t.follows.pageInfo || !t.follows.pageInfo.hasNextPage);
-                        return t.follows.totalCount > 0 ? this.state.collapsed ? o.createElement(C.Fb, null, a) : o.createElement(C.Fb, null, a, o.createElement(C.Fb, {
+                            a = !(n || i || !t.follows.pageInfo || !t.follows.pageInfo.hasNextPage);
+                        return t.follows.totalCount > 0 ? this.state.collapsed ? o.createElement(C.Fb, null, r) : o.createElement(C.Fb, null, r, o.createElement(C.Fb, {
                             borderBottom: !0,
                             padding: 2
                         }, o.createElement(C.Ya, {
@@ -222,16 +219,9 @@
                                 bottom: 1
                             }
                         }, o.createElement(C.W, {
-                            fontSize: C.Ca.Size5,
-                            color: C.O.Alt2
-                        }, Object(c.d)("Manage which channels you receive notifications for.", "AdvancedNotificationSettings"))), o.createElement(C.Ya, {
-                            padding: {
-                                bottom: 1
-                            }
-                        }, o.createElement(C.W, {
                             fontSize: C.Ca.Size4,
                             color: C.O.Alt
-                        }, r)), o.createElement(C.Fb, {
+                        }, Object(c.d)("Send me notifications about", "AdvancedNotificationSettings"))), o.createElement(C.Fb, {
                             className: "advanced-notification-settings__toggle-container",
                             borderTop: !0,
                             borderLeft: !0,
@@ -241,9 +231,18 @@
                             }
                         }, this.renderToggles(), o.createElement(b.a, {
                             loadMore: this.props.loadMore,
-                            enabled: s,
+                            enabled: a,
                             pixelThreshold: 200
                         })))) : null
+                    }, t.prototype.getHeaderStatusText = function() {
+                        var e = this.props.data.currentUser;
+                        if (e && e.follows && e.follows.edges && e.follows.totalCount && e.follows.totalCount > 0 && e.follows.edges.length > 0) {
+                            var t = e.follows.edges.reduce(function(e, t) {
+                                return t && t.notificationSettings && t.notificationSettings.isEnabled ? e + 1 : e
+                            }, 0);
+                            return 0 === t ? Object(c.d)("Notifications turned off for all channels you follow", "AdvancedNotificationSettings") : t === e.follows.totalCount ? Object(c.d)("Notifications turned on for all channels you follow", "AdvancedNotificationSettings") : Object(c.d)("Notifications turned on for some channels you follow", "AdvancedNotificationSettings")
+                        }
+                        return Object(c.d)("You are not following any channels", "AdvancedNotificationSettings")
                     }, t.prototype.renderToggles = function() {
                         var e = this.props.data.currentUser;
                         if (e && e.follows && e.follows.edges) {
@@ -253,7 +252,7 @@
                                     var a = r.node.followers && null !== r.node.followers.totalCount ? Object(c.d)("{followerCount,number} followers", {
                                         followerCount: r.node.followers.totalCount
                                     }, "AdvancedNotificationSettings") : null;
-                                    t.push(o.createElement(N, {
+                                    t.push(o.createElement(E, {
                                         userId: r.node.id,
                                         text: r.node.displayName,
                                         login: r.node.login,
@@ -321,8 +320,8 @@
                 }), Object(S.a)(w, {
                     name: "setAdvancedNotificationSetting"
                 }), Object(f.b)("AdvancedNotificationSettings"))(U),
-                D = n("oJmH"),
-                x = n("gOYK"),
+                x = n("oJmH"),
+                D = n("gOYK"),
                 j = n("Ahlu");
             n("+TUL");
             ! function(e) {
@@ -345,12 +344,12 @@
                                         case 0:
                                             return this.setState({
                                                 deciding: !0
-                                            }), [4, x.a.hasPushSubscription()];
+                                            }), [4, D.a.hasPushSubscription()];
                                         case 1:
                                             if (!t.sent()) return [3, 6];
                                             t.label = 2;
                                         case 2:
-                                            return t.trys.push([2, 4, , 5]), [4, x.a.userUnsubscribe(j.a.Settings)];
+                                            return t.trys.push([2, 4, , 5]), [4, D.a.userUnsubscribe(j.a.Settings)];
                                         case 3:
                                             return t.sent(), [3, 5];
                                         case 4:
@@ -358,7 +357,7 @@
                                         case 5:
                                             return [3, 8];
                                         case 6:
-                                            return [4, x.a.userSubscribe(j.a.Settings)];
+                                            return [4, D.a.userSubscribe(j.a.Settings)];
                                         case 7:
                                             if (t.sent(), Object(h.a)()) return this.setState({
                                                 hide: !0
@@ -381,7 +380,7 @@
                             return r.__generator(this, function(t) {
                                 switch (t.label) {
                                     case 0:
-                                        return t.trys.push([0, 3, , 4]), [4, x.a.initialize()];
+                                        return t.trys.push([0, 3, , 4]), [4, D.a.initialize()];
                                     case 1:
                                         return t.sent(), [4, this.updateSubscriptionState()];
                                     case 2:
@@ -457,7 +456,7 @@
                             return r.__generator(this, function(t) {
                                 switch (t.label) {
                                     case 0:
-                                        return [4, x.a.hasPushSubscription()];
+                                        return [4, D.a.hasPushSubscription()];
                                     case 1:
                                         return e = t.sent(), this.setState({
                                             hasSubscription: e
@@ -467,7 +466,7 @@
                         })
                     }, t
                 }(o.Component),
-                I = Object(D.compose)(Object(f.b)("BrowserPushNotificationsSettings"))(L);
+                I = Object(x.compose)(Object(f.b)("BrowserPushNotificationsSettings"))(L);
             n("BpmJ");
             ! function(e) {
                 e.Toggle = "platform-notification-settings-toggle__toggle"
@@ -561,8 +560,8 @@
                 z = n("fWal"),
                 q = n("pxuV"),
                 M = (n("yqqX"), n("t7x/")),
-                Y = "ALL",
-                V = "smart";
+                V = "ALL",
+                Y = "smart";
             ! function(e) {
                 e.Explanation = "explanation", e.Description = "description", e.AllToggle = "all-toggle"
             }(A || (A = {}));
@@ -578,8 +577,8 @@
                                     switch (r.label) {
                                         case 0:
                                             return this.props.data.currentUser && this.props.setNotificationSetting ? (n = {
-                                                category: Y,
-                                                platform: V,
+                                                category: V,
+                                                platform: Y,
                                                 settingState: t = e ? "off" : "on"
                                             }, i = {
                                                 setNotificationSetting: {
@@ -592,8 +591,8 @@
                                                 if (!e.currentUser || !e.currentUser.notificationSettings || !o.data.setNotificationSetting) return e;
                                                 var t = o.data.setNotificationSetting.settingState;
                                                 return e.currentUser.notificationSettings = e.currentUser.notificationSettings.map(function(e) {
-                                                    return e.category === Y && (e.platforms = e.platforms.map(function(e) {
-                                                        return e.platformName === V && (e.isEnabled = "on" === t, e.settingState = t), e
+                                                    return e.category === V && (e.platforms = e.platforms.map(function(e) {
+                                                        return e.platformName === Y && (e.isEnabled = "on" === t, e.settingState = t), e
                                                     })), e
                                                 }), e
                                             }, Object(y.e)(M, {}, s), [2]
@@ -622,12 +621,12 @@
                         if (!this.props.data.currentUser || !this.props.data.currentUser.notificationSettings) return null;
                         for (var t = 0, n = this.props.data.currentUser.notificationSettings; t < n.length; t++) {
                             var i = n[t];
-                            i.category === Y && (e = i.platforms)
+                            i.category === V && (e = i.platforms)
                         }
                         if (!e) return null;
                         for (var r = 0, a = e; r < a.length; r++) {
                             var o = a[r];
-                            if (o.platformName === V) return o
+                            if (o.platformName === Y) return o
                         }
                         return null
                     }, Object.defineProperty(t.prototype, "stateForSmart", {
@@ -654,7 +653,7 @@
                 e.onsite = "onsite", e.email = "email", e.push = "push"
             }(G || (G = {})),
             function(e) {
-                e.DisplayName = "platform-notification-settings__display-name", e.Explanation = "platform-notification-settings__explanation", e.Description = "platform-notification-settings__description", e.ToggleAll = "platform-notification-settings__all-toggle", e.SavedIndicator = "platform-notification-settings__saved-indicator", e.Header = "platform-notification-settings__collapsible-header"
+                e.DisplayName = "platform-notification-settings__display-name", e.Explanation = "platform-notification-settings__explanation", e.ToggleAll = "platform-notification-settings__all-toggle", e.SavedIndicator = "platform-notification-settings__saved-indicator", e.Header = "platform-notification-settings__collapsible-header"
             }(W || (W = {}));
             var $ = function(e) {
                     function t() {
@@ -665,47 +664,47 @@
                         }, t.VisibleSettings = [{
                             category: "LIVE",
                             name: Object(c.d)("Live", "PlatformNotificationSettings"),
-                            description: Object(c.d)("When a streamer I follow goes Live", "PlatformNotificationSettings")
+                            description: Object(c.d)("When a channel you follow goes live", "PlatformNotificationSettings")
                         }, {
                             category: "VIDEOS",
-                            name: Object(c.d)("Video Broadcast", "PlatformNotificationSettings"),
-                            description: Object(c.d)("When a channel I follow starts a Vodcast. This also includes Video Comment notifications", "PlatformNotificationSettings")
+                            name: Object(c.d)("Past Broadcasts", "PlatformNotificationSettings"),
+                            description: Object(c.d)("When a channel you follow starts a rerun", "PlatformNotificationSettings")
                         }, {
                             category: "CLIPS",
                             name: Object(c.d)("Clips", "PlatformNotificationSettings"),
-                            description: Object(c.d)("Receive notifications for clips you made and clips made by your viewers", "PlatformNotificationSettings")
+                            description: Object(c.d)("When a clip of your channel or a clip you made becomes popular", "PlatformNotificationSettings")
                         }, {
                             category: "EVENTS",
                             name: Object(c.d)("Events", "PlatformNotificationSettings"),
-                            description: Object(c.d)("Any time an event I follow starts", "PlatformNotificationSettings")
+                            description: Object(c.d)("When an event you follow is about to begin", "PlatformNotificationSettings")
                         }, {
                             category: "CHAT",
-                            name: Object(c.d)("Chat", "PlatformNotificationSettings"),
-                            description: Object(c.d)("Any time there’s Rooms activity related to me.", "PlatformNotificationSettings")
+                            name: Object(c.d)("Chat Mentions", "PlatformNotificationSettings"),
+                            description: Object(c.d)("When someone mentions you in a room", "PlatformNotificationSettings")
                         }, {
                             category: "FRIENDS",
-                            name: Object(c.d)("Friends", "PlatformNotificationSettings"),
-                            description: Object(c.d)("When a friend sends me a message", "PlatformNotificationSettings")
+                            name: Object(c.d)("Friend Activity", "PlatformNotificationSettings"),
+                            description: Object(c.d)("When a friend sends you a whisper", "PlatformNotificationSettings")
                         }, {
                             category: "STREAMER",
                             name: Object(c.d)("Your Channel", "PlatformNotificationSettings"),
-                            description: Object(c.d)("Receive notifications when viewers follow your channel or auto host you", "PlatformNotificationSettings")
+                            description: Object(c.d)("When someone follows you or adds you to their autohost list", "PlatformNotificationSettings")
                         }, {
                             category: "MODERATOR",
-                            name: Object(c.d)("Moderator", "PlatformNotificationSettings"),
-                            description: Object(c.d)("Any time I get a notification as a moderator", "PlatformNotificationSettings")
+                            name: Object(c.d)("Moderation Needs", "PlatformNotificationSettings"),
+                            description: Object(c.d)("When a channel you moderate requires your attention", "PlatformNotificationSettings")
                         }, {
                             category: "COMMERCE",
                             name: Object(c.d)("Gifts and Rewards", "PlatformNotificationSettings"),
-                            description: Object(c.d)("Receive notifications for drops, crates, and subscription gifts", "PlatformNotificationSettings")
+                            description: Object(c.d)("When there are special offers for drops and crates, or when you receive a gifted subscription", "PlatformNotificationSettings")
                         }, {
                             category: "SUB_MESSAGES",
-                            name: Object(c.d)("Channels you Subscribe to", "PlatformNotificationSettings"),
-                            description: Object(c.d)("Receive subscriber emails from channels you subscribe to", "PlatformNotificationSettings")
+                            name: Object(c.d)("Subscriber Emails", "PlatformNotificationSettings"),
+                            description: Object(c.d)("When a channel you subscribe to wants to send an email to all subscribers", "PlatformNotificationSettings")
                         }, {
                             category: "3PDEVELOPERS",
                             name: Object(c.d)("Developer Updates", "PlatformNotificationSettings"),
-                            description: Object(c.d)("Activities related to company management, game approvals, and other console related communications.", "PlatformNotificationSettings")
+                            description: Object(c.d)("For developers: when there is news related to company management, game approvals, and other console related communications", "PlatformNotificationSettings")
                         }], t.toggleAll = function() {
                             t.toggleSettingCategory("ALL", t.getGlobalStateForPlatform())
                         }, t.toggleCollapse = function() {
@@ -804,15 +803,7 @@
                         return this.state.collapsed ? o.createElement(C.Fb, null, e) : o.createElement(C.Fb, null, e, o.createElement(C.Fb, {
                             padding: 2,
                             borderBottom: !0
-                        }, o.createElement(C.Ya, {
-                            padding: {
-                                bottom: 1
-                            }
-                        }, o.createElement(C.W, {
-                            "data-test-selector": W.Description,
-                            fontSize: C.Ca.Size5,
-                            color: C.O.Alt
-                        }, this.props.description)), o.createElement(C.Fb, {
+                        }, o.createElement(C.Fb, {
                             display: C.X.Flex,
                             margin: {
                                 y: .5
@@ -900,7 +891,7 @@
                         if (!t || !t.currentUser || !t.currentUser.notificationSettings) return !1;
                         for (var n = 0, i = t.currentUser.notificationSettings; n < i.length; n++) {
                             var r = i[n];
-                            if (r.category === Y) {
+                            if (r.category === V) {
                                 e = r.platforms;
                                 break
                             }
@@ -908,7 +899,7 @@
                         if (!e) return !1;
                         for (var a = 0, o = e; a < o.length; a++) {
                             var s = o[a];
-                            if (s.platformName === V) return "on" === s.settingState
+                            if (s.platformName === Y) return "on" === s.settingState
                         }
                         return !1
                     }, t.prototype.renderToggles = function() {
@@ -957,7 +948,7 @@
                     name: "setNotificationSetting"
                 }))($),
                 J = (n("NkC9"), l.a.wrap(function() {
-                    return n.e(146).then(n.bind(null, "ZaEz"))
+                    return n.e(147).then(n.bind(null, "ZaEz"))
                 }, "DesktopNotificationSettings")),
                 ee = function(e) {
                     function t() {
@@ -972,7 +963,7 @@
                             t = !!e["open-advanced"] && "true" === e["open-advanced"];
                         return o.createElement(o.Fragment, null, o.createElement(v.a, {
                             title: Object(c.d)("Notifications", "SettingsNotificationsPage"),
-                            description: Object(c.d)("Get the notifications you care about, where you want to see them.", "SettingsNotificationsPage")
+                            description: Object(c.d)("Get the notifications you care about, where you want to see them. We will always keep you informed about important updates to Twitch and your account.", "SettingsNotificationsPage")
                         }), o.createElement(H, {
                             description: Object(c.d)("When turned on, your notifications are sent to where you are. When you’re active on Twitch, you’ll get an on-site notification when a channel you follow goes live. When you’re not using Twitch, you'll get either a mobile notification or an email, not both. You can learn more  <x:link>in this article</x:link>.", {
                                 "x:link": function(e) {
@@ -981,7 +972,7 @@
                                     }, e)
                                 }
                             }, "SettingsNotificationsPage"),
-                            explanation: Object(c.d)("Enable smart notifications", "SettingsNotificationsPage"),
+                            explanation: Object(c.d)("Smart notifications", "SettingsNotificationsPage"),
                             key: "smart"
                         }), c.p.integrations.notifications && o.createElement(J, null), o.createElement(C.Fb, {
                             className: "notification-settings__body",
@@ -992,23 +983,20 @@
                             startCollapsed: t,
                             platformName: G.onsite,
                             displayName: Object(c.d)("On Twitch", "SettingsNotificationsPage"),
-                            description: Object(c.d)("We'll always keep you informed on important updates to Twitch and your account.", "SettingsNotificationsPage"),
-                            explanation: Object(c.d)("Send me notifications on Twitch about", "SettingsNotificationsPage"),
+                            explanation: Object(c.d)("All notifications on Twitch", "SettingsNotificationsPage"),
                             key: "onsite",
                             extraSettings: this.renderBrowserPushNotifications()
                         }), o.createElement(Z, {
                             startCollapsed: !0,
                             platformName: G.email,
                             displayName: Object(c.d)("By Email", "SettingsNotificationsPage"),
-                            description: Object(c.d)("Receive important notifications through email. You may receive additional emails about features and content on Twitch. You can turn off specific emails using the unsubscribe link included in each message.", "SettingsNotificationsPage"),
-                            explanation: Object(c.d)("Send me emails about", "SettingsNotificationsPage"),
+                            explanation: Object(c.d)("All emails", "SettingsNotificationsPage"),
                             key: "email"
                         }), o.createElement(Z, {
                             platformName: G.push,
                             startCollapsed: !0,
                             displayName: Object(c.d)("On Mobile", "SettingsNotificationsPage"),
-                            description: Object(c.d)("Get Twitch updates on the go. Receive notifications right on your phone's home screen.", "SettingsNotificationsPage"),
-                            explanation: Object(c.d)("Send me push notifications", "SettingsNotificationsPage"),
+                            explanation: Object(c.d)("All push notifications", "SettingsNotificationsPage"),
                             key: "push"
                         }), o.createElement(F, {
                             startCollapsed: !t
@@ -1300,8 +1288,8 @@
                 S = n("EpBn"),
                 y = n("3hKJ"),
                 C = n("7PeK"),
-                E = n("8Z7p"),
-                N = n("Ue10"),
+                N = n("8Z7p"),
+                E = n("Ue10"),
                 w = n("qRXA");
             ! function(e) {
                 e[e.AddressNotAllowed = 1] = "AddressNotAllowed", e[e.InvalidAddress = 2] = "InvalidAddress", e[e.InvalidDomain = 3] = "InvalidDomain"
@@ -1337,7 +1325,7 @@
                                         case 1:
                                             return c.trys.push([1, 3, , 4]), [4, v.a.put("/kraken/users/" + this.props.data.currentUser.id, n)];
                                         case 2:
-                                            return r = c.sent(), a = r.error && r.error.message, 200 === r.status ? e = k.b.Success : a ? a.includes(E.a.EmailNotValid) ? t = i.InvalidAddress : a.includes(E.a.EmailDomainNotAllowed) ? t = i.InvalidDomain : a.includes(E.a.EmailNotAllowed) ? t = i.AddressNotAllowed : a.includes(E.a.SudoTokenInvalid) || a.includes(E.a.SudoTokenMissing) ? this.props.onSudoTokenInvalid() : this.logErrorToSentinel(r) : this.logErrorToSentinel(r), [3, 4];
+                                            return r = c.sent(), a = r.error && r.error.message, 200 === r.status ? e = k.b.Success : a ? a.includes(N.a.EmailNotValid) ? t = i.InvalidAddress : a.includes(N.a.EmailDomainNotAllowed) ? t = i.InvalidDomain : a.includes(N.a.EmailNotAllowed) ? t = i.AddressNotAllowed : a.includes(N.a.SudoTokenInvalid) || a.includes(N.a.SudoTokenMissing) ? this.props.onSudoTokenInvalid() : this.logErrorToSentinel(r) : this.logErrorToSentinel(r), [3, 4];
                                         case 3:
                                             return o = c.sent(), this.logger.warn("Network error submitting profile for user", {
                                                 user: this.props.data.currentUser && this.props.data.currentUser.id,
@@ -1376,10 +1364,10 @@
                             label: Object(g.d)("Email", "ChangeEmailForm"),
                             error: !(!t && !this.props.data.error),
                             errorMessage: t
-                        }, r.createElement(N.Sa, {
+                        }, r.createElement(E.Sa, {
                             disabled: this.props.data.loading || !!this.props.data.error || this.state.saveStatus === k.b.Working,
                             onChange: this.onChange,
-                            type: N.Ua.Email,
+                            type: E.Ua.Email,
                             value: this.state.value
                         }))))
                     }, t.prototype.renderValidationError = function() {
@@ -2707,7 +2695,7 @@
                         }(e)
                     },
                     contentType: a.b.Game,
-                    feedbackType: r.L.NOT_INTERESTED
+                    feedbackType: r.M.NOT_INTERESTED
                 }
             }
 
@@ -2727,11 +2715,11 @@
                         return s(e)
                     },
                     contentType: a.b.Live,
-                    feedbackType: r.L.NOT_INTERESTED
+                    feedbackType: r.M.NOT_INTERESTED
                 }, c(), {
                     text: l(),
                     contentType: a.b.Live,
-                    feedbackType: r.L.OTHER
+                    feedbackType: r.M.OTHER
                 }]), m
             }
             var g = null;
@@ -2740,7 +2728,7 @@
                 return null === g && (g = [c(), {
                     text: l(),
                     contentType: a.b.Game,
-                    feedbackType: r.L.OTHER
+                    feedbackType: r.M.OTHER
                 }]), g
             }
             var f = null;
@@ -2749,17 +2737,17 @@
                 return null === f && (f = [{
                     text: Object(i.d)("I am not interested in this video", "FeedbackReason"),
                     contentType: a.b.Vod,
-                    feedbackType: r.L.NOT_INTERESTED
+                    feedbackType: r.M.NOT_INTERESTED
                 }, {
                     text: function(e) {
                         return s(e)
                     },
                     contentType: a.b.Live,
-                    feedbackType: r.L.NOT_INTERESTED
+                    feedbackType: r.M.NOT_INTERESTED
                 }, c(), {
                     text: l(),
                     contentType: a.b.Vod,
-                    feedbackType: r.L.OTHER
+                    feedbackType: r.M.OTHER
                 }]), f
             }
         },
@@ -3698,10 +3686,10 @@
                 S = n("c0Zc"),
                 y = n("yR8l"),
                 C = n("geRD"),
-                E = n("fWal"),
-                N = function(e) {
+                N = n("fWal"),
+                E = function(e) {
                     var t = e.saving || e.errorLoading;
-                    return r.createElement(E.a, {
+                    return r.createElement(N.a, {
                         id: "settings-security-page-block-subs",
                         label: Object(o.d)("Block Receiving Gifts on Channels You don't Follow", "BlockGiftedSubsToggle"),
                         description: Object(o.d)("Block incoming gift subscriptions to channels you don't follow", "BlockGiftedSubsToggle"),
@@ -3789,7 +3777,7 @@
                         var e = this.props.data.currentUser,
                             t = e && e.subscriptionSettings,
                             n = !!this.props.data.error || !this.props.data.loading && !t;
-                        return r.createElement(N, {
+                        return r.createElement(E, {
                             checked: this.state.checked,
                             saving: this.state.saving,
                             loading: this.props.data.loading,
@@ -3807,8 +3795,8 @@
                     name: "updateUserSubscriptionSettings"
                 }))(_),
                 F = n("b6Yk"),
-                D = "/v5/whispers/settings",
-                x = function(e) {
+                x = "/v5/whispers/settings",
+                D = function(e) {
                     function t() {
                         var t = null !== e && e.apply(this, arguments) || this;
                         return t.state = {
@@ -3825,7 +3813,7 @@
                                                 updating: !0
                                             }), n.label = 1;
                                         case 1:
-                                            return n.trys.push([1, 3, , 4]), [4, F.a.post(D, {
+                                            return n.trys.push([1, 3, , 4]), [4, F.a.post(x, {
                                                 body: {
                                                     restrict_whispers: e
                                                 }
@@ -3856,7 +3844,7 @@
                             return i.__generator(this, function(t) {
                                 switch (t.label) {
                                     case 0:
-                                        return t.trys.push([0, 2, , 3]), [4, F.a.get(D)];
+                                        return t.trys.push([0, 2, , 3]), [4, F.a.get(x)];
                                     case 1:
                                         return e = t.sent(), this.setState({
                                             enabled: e.body && e.body.restrict_whispers || !1,
@@ -3875,7 +3863,7 @@
                             })
                         })
                     }, t.prototype.render = function() {
-                        return r.createElement(E.a, {
+                        return r.createElement(N.a, {
                             id: "settings-security-page-block-whispers",
                             label: Object(o.d)("Block Whispers from Strangers", "SettingsSecurityPage"),
                             description: Object(o.d)("Block whispers from strangers unless you whisper them first. A stranger is anyone who is NOT: your friend, someone you follow, someone you subscribe to, one of your mods, or one of your editors.", "SettingsSecurityPage"),
@@ -3903,7 +3891,7 @@
                 }, "ChangePasswordLink")))
             }
             var T = function(e) {
-                    return e.loading || e.errorLoading || !e.checked && !e.saving ? null : r.createElement(E.a, {
+                    return e.loading || e.errorLoading || !e.checked && !e.saving ? null : r.createElement(N.a, {
                         id: "settings-security-hide-directory",
                         label: Object(o.d)("Hide channel from directory", "HideDirectoryToggle"),
                         description: Object(o.d)("Live video, past broadcasts, and highlights are listed publicly in the directory by default. Turning this off is irreversible.", "HideDirectoryToggle"),
@@ -4084,7 +4072,7 @@
                             })
                         })
                     }, t.prototype.render = function() {
-                        return this.state.show ? r.createElement(E.a, {
+                        return this.state.show ? r.createElement(N.a, {
                             id: "settings-security-page-hide-live-video",
                             label: Object(o.d)("Hide Live Video", "HideLiveVideoSetting"),
                             description: Object(o.d)("Only allow your editors to view your live video", "HideLiveVideoSetting"),
@@ -4173,7 +4161,7 @@
                             })
                         })
                     }, t.prototype.render = function() {
-                        return this.state.show ? r.createElement(E.a, {
+                        return this.state.show ? r.createElement(N.a, {
                             id: "settings-security-page-hide-past-broadcasts",
                             label: Object(o.d)("Hide Past Broadcasts", "HidePastBroadcastsSetting"),
                             description: Object(o.d)("Only allow your editors to view your past broadcasts", "HidePastBroadcastsSetting"),
@@ -4190,7 +4178,7 @@
                         configurable: !0
                     }), t
                 }(r.Component);
-            var Y, V = Object(d.connect)(function(e) {
+            var V, Y = Object(d.connect)(function(e) {
                     var t = Object(R.e)(e);
                     return {
                         sessionUserID: t && t.id
@@ -4200,7 +4188,7 @@
                     var t = e.saving || e.errorLoading,
                         n = Object(o.d)("Hide Subscription Gift Purchase Count", "HideGiftedSubCountSettingsPresentation"),
                         i = Object(o.d)("Do not show the total number of Gift Subscriptions you have given in the channel when you purchase a Gift Subscription", "HideGiftedSubCountSettingPresentation");
-                    return r.createElement(E.a, {
+                    return r.createElement(N.a, {
                         id: "settings-security-page-hide-subscription-gift-count",
                         label: n,
                         description: i,
@@ -4307,22 +4295,22 @@
                         return r.createElement(h.a, {
                             label: Object(o.d)("Two-Factor Authentication", "TwoFactorAuthenticationSetting"),
                             orientation: f.Fa.Horizontal,
-                            error: this.props.status === Y.Error,
+                            error: this.props.status === V.Error,
                             errorMessage: Object(o.d)("Sorry, something went wrong. Please try again later.", "TwoFactorAuthenticationSetting")
                         }, this.renderBody())
                     }, t.prototype.renderBody = function() {
                         switch (this.props.status) {
-                            case Y.Loading:
+                            case V.Loading:
                                 return this.renderLoading();
-                            case Y.Error:
+                            case V.Error:
                                 return this.renderError();
-                            case Y.UnverifiedEmail:
+                            case V.UnverifiedEmail:
                                 return this.renderVerifyEmail();
-                            case Y.CanEnable:
+                            case V.CanEnable:
                                 return this.renderEnableButton();
-                            case Y.Enabled:
+                            case V.Enabled:
                                 return this.renderDisableButton();
-                            case Y.EnabledAndRequired:
+                            case V.EnabledAndRequired:
                                 return this.renderEnabledAndRequired();
                             default:
                                 return null
@@ -4377,7 +4365,7 @@
                 J = n("7aL7");
             ! function(e) {
                 e[e.Loading = 0] = "Loading", e[e.Error = 1] = "Error", e[e.UnverifiedEmail = 2] = "UnverifiedEmail", e[e.CanEnable = 3] = "CanEnable", e[e.Enabled = 4] = "Enabled", e[e.EnabledAndRequired = 5] = "EnabledAndRequired"
-            }(Y || (Y = {}));
+            }(V || (V = {}));
             var ee = function(e) {
                     function t() {
                         return null !== e && e.apply(this, arguments) || this
@@ -4394,7 +4382,7 @@
                         get: function() {
                             var e = this.props.data,
                                 t = e.currentUser;
-                            return e.loading ? Y.Loading : !t || e.error ? Y.Error : this.twoFactorEnabled ? this.userRoleRequiresTwoFactor ? Y.EnabledAndRequired : Y.Enabled : t.isEmailVerified ? Y.CanEnable : Y.UnverifiedEmail
+                            return e.loading ? V.Loading : !t || e.error ? V.Error : this.twoFactorEnabled ? this.userRoleRequiresTwoFactor ? V.EnabledAndRequired : V.Enabled : t.isEmailVerified ? V.CanEnable : V.UnverifiedEmail
                         },
                         enumerable: !0,
                         configurable: !0
@@ -4425,7 +4413,7 @@
                             description: Object(o.d)("Keep your account safe and sound", "SettingsSecurityPage")
                         }), r.createElement(b.a, null, r.createElement(j, null), r.createElement(te, null)), r.createElement(S.a, {
                             title: Object(o.d)("Privacy", "SettingsSecurityPage")
-                        }), r.createElement(b.a, null, r.createElement(x, null), r.createElement(U, null), r.createElement(Q, null), r.createElement(A, null), r.createElement(V, null), r.createElement(q, null), r.createElement(v, null)))
+                        }), r.createElement(b.a, null, r.createElement(D, null), r.createElement(U, null), r.createElement(Q, null), r.createElement(A, null), r.createElement(Y, null), r.createElement(q, null), r.createElement(v, null)))
                     }, t
                 }(r.Component),
                 ie = Object(a.compose)(Object(k.b)("SettingsSecurityPage", {
@@ -4662,8 +4650,8 @@
                         sessionUser: Object(u.e)(e)
                     }
                 })(y),
-                E = n("oJmH"),
-                N = n("yR8l"),
+                N = n("oJmH"),
+                E = n("yR8l"),
                 w = n("geRD"),
                 O = n("2Ygb"),
                 _ = n("hP+/");
@@ -4694,13 +4682,13 @@
                         return {
                             channelID: e.session.user && e.session.user.id || ""
                         }
-                    }), Object(N.a)(_, {
+                    }), Object(E.a)(_, {
                         name: "updateChatSettings"
                     }))(t)
                 }
             }
             var F = n("fWal"),
-                D = function(e) {
+                x = function(e) {
                     var t = e.saving || e.errorLoading;
                     return r.createElement(F.a, {
                         id: "settings-channel-page-block-hyperlinks",
@@ -4713,7 +4701,7 @@
                         showPlaceholder: e.loading
                     })
                 },
-                x = n("e2/s"),
+                D = n("e2/s"),
                 j = function(e) {
                     function t() {
                         var t = null !== e && e.apply(this, arguments) || this;
@@ -4748,7 +4736,7 @@
                                                         })
                                                     })
                                                 } : t
-                                            }, Object(w.e)(x, {}, t), this.logger.debug("Updated chat setting", {
+                                            }, Object(w.e)(D, {}, t), this.logger.debug("Updated chat setting", {
                                                 hideLinks: e
                                             }), this.setState({
                                                 saving: !1,
@@ -4784,7 +4772,7 @@
                         var e = this.props.data.currentUser,
                             t = e && e.chatSettings,
                             n = !!this.props.data.error || !this.props.data.loading && !t;
-                        return r.createElement(D, {
+                        return r.createElement(x, {
                             loading: this.props.data.loading,
                             saving: this.state.saving,
                             checked: this.state.checked,
@@ -4794,7 +4782,7 @@
                         })
                     }, t
                 }(r.Component),
-                T = Object(E.compose)(Object(m.b)("BlockHyperlinksToggle"), Object(N.a)(x, {
+                T = Object(N.compose)(Object(m.b)("BlockHyperlinksToggle"), Object(E.a)(D, {
                     options: {
                         fetchPolicy: "network-only"
                     }
@@ -4941,7 +4929,7 @@
                         return t && t.chatSettings && t.chatSettings.chatDelayMs || 0
                     }, t
                 }(r.Component),
-                R = Object(E.compose)(Object(m.b)("ChatDelayRadioButtons"), Object(N.a)(I, {
+                R = Object(N.compose)(Object(m.b)("ChatDelayRadioButtons"), Object(E.a)(I, {
                     options: {
                         fetchPolicy: "network-only"
                     }
@@ -5066,12 +5054,12 @@
                         return t && t.chatSettings && t.chatSettings.rules.join("\n") || ""
                     }, t
                 }(r.Component),
-                M = Object(E.compose)(Object(m.b)("ChatRulesTextArea"), Object(N.a)(z, {
+                M = Object(N.compose)(Object(m.b)("ChatRulesTextArea"), Object(E.a)(z, {
                     options: {
                         fetchPolicy: "network-only"
                     }
                 }), U())(q),
-                Y = function(e) {
+                V = function(e) {
                     var t = e.saving || e.errorLoading;
                     return r.createElement(F.a, {
                         id: "settings-channel-page-email-verification",
@@ -5084,7 +5072,7 @@
                         showPlaceholder: e.loading
                     })
                 },
-                V = n("pUt1"),
+                Y = n("pUt1"),
                 G = function(e) {
                     function t() {
                         var t = null !== e && e.apply(this, arguments) || this;
@@ -5119,7 +5107,7 @@
                                                         })
                                                     })
                                                 } : t
-                                            }, Object(w.e)(V, {}, t), this.logger.debug("Updated chat setting", {
+                                            }, Object(w.e)(Y, {}, t), this.logger.debug("Updated chat setting", {
                                                 requireVerifiedAccount: e
                                             }), this.setState({
                                                 saving: !1,
@@ -5155,7 +5143,7 @@
                         var e = this.props.data.currentUser,
                             t = e && e.chatSettings,
                             n = !!this.props.data.error || !this.props.data.loading && !t;
-                        return r.createElement(Y, {
+                        return r.createElement(V, {
                             loading: this.props.data.loading,
                             saving: this.state.saving,
                             checked: this.state.checked,
@@ -5165,7 +5153,7 @@
                         })
                     }, t
                 }(r.Component),
-                W = Object(E.compose)(Object(m.b)("EmailVerificationToggle"), Object(N.a)(V, {
+                W = Object(N.compose)(Object(m.b)("EmailVerificationToggle"), Object(E.a)(Y, {
                     options: {
                         fetchPolicy: "network-only"
                     }
@@ -6346,8 +6334,8 @@
                 S = "prime-upsell__logo-container__svg",
                 y = "prime-banner-upsell",
                 C = "twitch.prime.lootpage.upsell.image",
-                E = "twitch.prime.lootpage.upsell.linktext",
-                N = "twitch.prime.lootpage.upsell.text",
+                N = "twitch.prime.lootpage.upsell.linktext",
+                E = "twitch.prime.lootpage.upsell.text",
                 w = "twitch.prime.lootpage.upsell.buttonurl",
                 O = "twitch.prime.lootpage.upsell.buttontext",
                 _ = "twitch.prime.lootpage.upsell.theme",
@@ -6460,10 +6448,10 @@
                                 "data-test-selector": S
                             }))
                         }, t.renderUpsellText = function() {
-                            return t.getTextFromOverride(N) || Object(o.d)("Free games, in-game loot, exclusives and surprises. New offers every month with Twitch Prime membership.", "PrimeUpsell")
+                            return t.getTextFromOverride(E) || Object(o.d)("Free games, in-game loot, exclusives and surprises. New offers every month with Twitch Prime membership.", "PrimeUpsell")
                         }, t.renderUpsellLink = function() {
                             var e = t.props.userData,
-                                n = !Object(p.n)(e) && t.getTextFromOverride(E),
+                                n = !Object(p.n)(e) && t.getTextFromOverride(N),
                                 i = !Object(p.n)(e) && t.getTextFromOverride(w) || "",
                                 a = t.getTextFromOverride(_) || "default";
                             return i && n && r.createElement(h.W, {
@@ -6531,7 +6519,7 @@
                     options: function() {
                         return {
                             variables: {
-                                stringIds: [O, w, C, E, N, _],
+                                stringIds: [O, w, C, N, E, _],
                                 dateOverride: Object(l.f)(l.e.DateOverride)
                             }
                         }
@@ -6550,9 +6538,9 @@
             }), n.d(t, !1, function() {
                 return C
             }), n.d(t, !1, function() {
-                return E
-            }), n.d(t, !1, function() {
                 return N
+            }), n.d(t, !1, function() {
+                return E
             }), n.d(t, !1, function() {
                 return w
             }), n.d(t, !1, function() {
@@ -7130,8 +7118,8 @@
                         }, "FeedbackItemList")
                     }, t
                 }(r.Component),
-                E = n("Sdr/"),
-                N = function(e) {
+                N = n("Sdr/"),
+                E = function(e) {
                     function t() {
                         var t = null !== e && e.apply(this, arguments) || this;
                         return t.state = {
@@ -7220,9 +7208,9 @@
                         }, this.props.emptyStateDescription)
                     }, t
                 }(r.Component),
-                w = Object(m.compose)(Object(g.a)(E, {
+                w = Object(m.compose)(Object(g.a)(N, {
                     name: "deleteFeedback"
-                }))(N),
+                }))(E),
                 O = n("ckiV"),
                 _ = 5,
                 U = function(e) {
@@ -7289,7 +7277,7 @@
                             subtitle: this.props.subtitle,
                             emptyStateDescription: this.props.emptyStateDescription,
                             normalizedFeedbackItems: e,
-                            showLoadingSpinner: this.props.type === s.M.CATEGORY
+                            showLoadingSpinner: this.props.type === s.N.CATEGORY
                         }), t && r.createElement(k.Ya, {
                             margin: {
                                 top: 1
@@ -7412,24 +7400,24 @@
                         })
                     }
                 }))(U),
-                D = function(e) {
+                x = function(e) {
                     function t() {
                         var t = null !== e && e.apply(this, arguments) || this;
                         return t.feedbackTypeProps = [{
                             title: Object(d.d)("Category Feedback", "SettingsRecommendationsPage"),
                             subtitle: Object(d.d)("Your feedback on Twitch's personalized category recommendations", "SettingsRecommendationsPage"),
                             emptyStateDescription: Object(d.d)("You haven't given any category recommendation feedback", "SettingsRecommendationsPage"),
-                            type: s.M.CATEGORY
+                            type: s.N.CATEGORY
                         }, {
                             title: Object(d.d)("Channel Feedback", "SettingsRecommendationsPage"),
                             subtitle: Object(d.d)("Your feedback on Twitch's personalized channel recommendations", "SettingsRecommendationsPage"),
                             emptyStateDescription: Object(d.d)("You haven't given any channel recommendation feedback", "SettingsRecommendationsPage"),
-                            type: s.M.CHANNEL
+                            type: s.N.CHANNEL
                         }, {
                             title: Object(d.d)("Video Feedback", "SettingsRecommendationsPage"),
                             subtitle: Object(d.d)("Your feedback on Twitch's personalized video recommendations", "SettingsRecommendationsPage"),
                             emptyStateDescription: Object(d.d)("You haven't given any video recommendation feedback", "SettingsRecommendationsPage"),
-                            type: s.M.VOD
+                            type: s.N.VOD
                         }], t
                     }
                     return i.__extends(t, e), t.prototype.render = function() {
@@ -7440,16 +7428,16 @@
                         }))
                     }, t
                 }(r.Component),
-                x = Object(a.compose)(Object(u.b)("SettingsRecommendationsPage", {
+                D = Object(a.compose)(Object(u.b)("SettingsRecommendationsPage", {
                     autoReportInteractive: !0,
                     destination: c.a.SettingsRecommendatons
                 }), Object(o.a)({
                     location: l.PageviewLocation.SettingsPage
-                }))(D);
+                }))(x);
             n.d(t, "SettingsRecommendationsPageComponent", function() {
-                return D
-            }), n.d(t, "SettingsRecommendationsPage", function() {
                 return x
+            }), n.d(t, "SettingsRecommendationsPage", function() {
+                return D
             })
         },
         cVLR: function(e, t, n) {
@@ -7474,11 +7462,11 @@
                 S = [250, 249, 250],
                 y = [15, 14, 17],
                 C = 3,
-                E = /^#[A-Fa-f0-9]{3,6}$/;
-            var N, w, O = "#b22222";
+                N = /^#[A-Fa-f0-9]{3,6}$/;
+            var E, w, O = "#b22222";
             ! function(e) {
                 e.ConfirmButton = "confirm-button", e.ContrastWarning = "contrast-warning", e.InvalidWarning = "invalid-warning", e.SaveError = "save-error"
-            }(N || (N = {})),
+            }(E || (E = {})),
             function(e) {
                 e.Empty = "empty", e.Dirty = "dirty", e.SaveError = "save-error", e.InvalidInput = "invalid-input", e.Success = "success", e.Loading = "loading"
             }(w || (w = {}));
@@ -7588,10 +7576,10 @@
                     }, t.prototype.renderStatus = function() {
                         return this.state.status === w.SaveError ? r.createElement(h.W, {
                             color: h.O.Error,
-                            "data-test-selector": N.SaveError
+                            "data-test-selector": E.SaveError
                         }, Object(s.d)("Oops, something went wrong. Please try again.", "ChatColorPicker")) : this.state.status === w.InvalidInput ? r.createElement(h.W, {
                             color: h.O.Error,
-                            "data-test-selector": N.InvalidWarning
+                            "data-test-selector": E.InvalidWarning
                         }, Object(s.d)("Please enter a valid hexadecimal color code.", "ChatColorPicker")) : this.state.isHighContrast ? void 0 : this.renderContrastWarning()
                     }, t.prototype.renderContrastWarning = function() {
                         var e = Object(s.d)("<x:strong>Heads up!</x:strong> Some colors may be <x:strong>hard to read</x:strong> in light or dark themes. Check it here before chatting.", {
@@ -7612,7 +7600,7 @@
                                 asset: h.ub.Warning
                             }));
                         return r.createElement(h.Ya, {
-                            "data-test-selector": N.ContrastWarning
+                            "data-test-selector": E.ContrastWarning
                         }, t, r.createElement(h.W, {
                             type: h.Wb.Span,
                             color: h.O.Alt2
@@ -7623,7 +7611,7 @@
                         this.state.status === w.Loading ? t = h.E.Loading : this.state.status === w.Success && (t = h.E.Success);
                         var n = h.F.Default;
                         return this.state.status === w.Success && (n = h.F.Success), r.createElement(h.z, {
-                            "data-test-selector": N.ConfirmButton,
+                            "data-test-selector": E.ConfirmButton,
                             "data-a-target": "color-confirm-button",
                             disabled: e,
                             onClick: this.onClickSave,
@@ -7672,7 +7660,7 @@
                         }, Object(s.d)("Hi there!", "ChatColorPicker"))))))
                     }, t.prototype.validateColor = function(e) {
                         e && function(e) {
-                            return E.test(e.trim())
+                            return N.test(e.trim())
                         }(e) ? this.setState({
                             status: w.Dirty,
                             isHighContrast: function(e) {
@@ -7686,7 +7674,7 @@
                 }(r.Component),
                 U = Object(a.compose)(Object(c.a)(f), Object(d.a)())(_);
             n.d(t, !1, function() {
-                return N
+                return E
             }), n.d(t, !1, function() {
                 return _
             }), n.d(t, "a", function() {
@@ -9065,7 +9053,7 @@
                         }) : r.createElement(h.a, null)
                     }, t
                 }(r.Component),
-                E = Object(o.compose)(Object(m.b)("SettingsTurboPage", {
+                N = Object(o.compose)(Object(m.b)("SettingsTurboPage", {
                     autoReportInteractive: !0,
                     destination: d.a.SettingsTurbo
                 }), Object(c.a)({
@@ -9076,7 +9064,7 @@
             }), n.d(t, "SettingsTurboPageComponent", function() {
                 return C
             }), n.d(t, "SettingsTurboPage", function() {
-                return E
+                return N
             })
         },
         kRbC: function(e, t, n) {},
@@ -9127,7 +9115,7 @@
                 },
                 y = n("S2IA"),
                 C = n("5lRV"),
-                E = function(e) {
+                N = function(e) {
                     function t() {
                         var t = null !== e && e.apply(this, arguments) || this;
                         return t.state = {
@@ -9213,13 +9201,13 @@
                         })
                     }, t
                 }(r.Component),
-                N = Object(o.compose)(Object(p.b)("PostSubscriptionsToggle"), Object(c.a)(C, {
+                E = Object(o.compose)(Object(p.b)("PostSubscriptionsToggle"), Object(c.a)(C, {
                     options: {
                         fetchPolicy: "network-only"
                     }
                 }), Object(c.a)(y, {
                     name: "updatePostSubscriptions"
-                }))(E),
+                }))(N),
                 w = n("cVLR"),
                 O = n("3/9Z"),
                 _ = n("W61N"),
@@ -9246,7 +9234,7 @@
                         return r.createElement(r.Fragment, null, r.createElement(w.a, null), r.createElement(O.a, null), r.createElement(h.a, {
                             title: Object(s.d)("Subscriptions Settings", "SettingsPrimePage"),
                             description: Object(s.d)("Choose how your subscription activity will display in chat", "SettingsPrimePage")
-                        }), r.createElement(g.a, null, r.createElement(N, null)))
+                        }), r.createElement(g.a, null, r.createElement(E, null)))
                     }, t
                 }(r.Component),
                 F = Object(o.compose)(Object(p.b)("SettingsPrimePage", {
@@ -10012,7 +10000,7 @@
                 S = n("fbdC"),
                 y = n("aCAx"),
                 C = n("Ue10"),
-                E = function(e) {
+                N = function(e) {
                     function t() {
                         var t = null !== e && e.apply(this, arguments) || this;
                         return t.handleClick = function() {
@@ -10029,13 +10017,13 @@
                         }))
                     }, t
                 }(a.Component);
-            var N, w = Object(b.connect)(null, function(e) {
+            var E, w = Object(b.connect)(null, function(e) {
                     return {
                         showModal: function(t) {
                             return e(Object(y.d)(S.a, t))
                         }
                     }
-                })(E),
+                })(N),
                 O = n("BK8n"),
                 _ = (n("kRbC"), function(e) {
                     function t() {
@@ -10234,8 +10222,8 @@
                         configurable: !0
                     }), t
                 }(a.Component),
-                D = n("IPK1"),
-                x = Object(g.compose)(Object(h.a)(U), Object(h.a)(D, {
+                x = n("IPK1"),
+                D = Object(g.compose)(Object(h.a)(U), Object(h.a)(x, {
                     name: "unlinkAmazonConnection"
                 }))(F),
                 j = n("cr+I"),
@@ -10244,43 +10232,43 @@
             n("AOMz");
             ! function(e) {
                 e.NorthAmerica = "us", e.Europe = "eu", e.Korea = "kr", e.Taiwan = "tw", e.China = "cn", e.SouthEastAsia = "sea"
-            }(N || (N = {}));
+            }(E || (E = {}));
             var L = function(e) {
                     function t() {
                         var t = null !== e && e.apply(this, arguments) || this;
                         return t.state = {
                             error: !1,
                             working: !1,
-                            region: N.NorthAmerica
+                            region: E.NorthAmerica
                         }, t.logger = s.k.withCategory("BlizzardConnection"), t.handleClick = function() {
                             t.setState({
                                 error: !1
                             }), t.connected ? t.disconnect() : t.connect()
                         }, t.handleRegionSelect = function(e) {
                             switch (e.currentTarget.value) {
-                                case N.NorthAmerica:
+                                case E.NorthAmerica:
                                     return void t.setState({
-                                        region: N.NorthAmerica
+                                        region: E.NorthAmerica
                                     });
-                                case N.Europe:
+                                case E.Europe:
                                     return void t.setState({
-                                        region: N.Europe
+                                        region: E.Europe
                                     });
-                                case N.Korea:
+                                case E.Korea:
                                     return void t.setState({
-                                        region: N.Korea
+                                        region: E.Korea
                                     });
-                                case N.Taiwan:
+                                case E.Taiwan:
                                     return void t.setState({
-                                        region: N.Taiwan
+                                        region: E.Taiwan
                                     });
-                                case N.China:
+                                case E.China:
                                     return void t.setState({
-                                        region: N.China
+                                        region: E.China
                                     });
-                                case N.SouthEastAsia:
+                                case E.SouthEastAsia:
                                     return void t.setState({
-                                        region: N.SouthEastAsia
+                                        region: E.SouthEastAsia
                                     });
                                 default:
                                     return
@@ -10313,18 +10301,18 @@
                             value: this.state.region,
                             onChange: this.handleRegionSelect
                         }, a.createElement("option", {
-                            value: N.NorthAmerica
-                        }, this.getRegionText(N.NorthAmerica)), a.createElement("option", {
-                            value: N.Europe
-                        }, this.getRegionText(N.Europe)), a.createElement("option", {
-                            value: N.Korea
-                        }, this.getRegionText(N.Korea)), a.createElement("option", {
-                            value: N.Taiwan
-                        }, this.getRegionText(N.Taiwan)), a.createElement("option", {
-                            value: N.China
-                        }, this.getRegionText(N.China)), a.createElement("option", {
-                            value: N.SouthEastAsia
-                        }, this.getRegionText(N.SouthEastAsia)))))
+                            value: E.NorthAmerica
+                        }, this.getRegionText(E.NorthAmerica)), a.createElement("option", {
+                            value: E.Europe
+                        }, this.getRegionText(E.Europe)), a.createElement("option", {
+                            value: E.Korea
+                        }, this.getRegionText(E.Korea)), a.createElement("option", {
+                            value: E.Taiwan
+                        }, this.getRegionText(E.Taiwan)), a.createElement("option", {
+                            value: E.China
+                        }, this.getRegionText(E.China)), a.createElement("option", {
+                            value: E.SouthEastAsia
+                        }, this.getRegionText(E.SouthEastAsia)))))
                     }, t.prototype.getSubtitle = function() {
                         if (this.connected) {
                             var e = this.getRegionText(this.props.data.currentUser.blizzardAccount.region),
@@ -10334,17 +10322,17 @@
                         return Object(s.d)("Connect your Blizzard games and Twitch activity", "BlizzardConnection")
                     }, t.prototype.getRegionText = function(e) {
                         switch (e) {
-                            case N.NorthAmerica:
+                            case E.NorthAmerica:
                                 return Object(s.d)("North America (US)", "BlizzardConnection");
-                            case N.Europe:
+                            case E.Europe:
                                 return Object(s.d)("Europe (EU)", "BlizzardConnection");
-                            case N.Korea:
+                            case E.Korea:
                                 return Object(s.d)("Korea (KR)", "BlizzardConnection");
-                            case N.Taiwan:
+                            case E.Taiwan:
                                 return Object(s.d)("Taiwan (TW)", "BlizzardConnection");
-                            case N.China:
+                            case E.China:
                                 return Object(s.d)("China (CN)", "BlizzardConnection");
-                            case N.SouthEastAsia:
+                            case E.SouthEastAsia:
                                 return Object(s.d)("South East Asia (SEA)", "BlizzardConnection");
                             default:
                                 return
@@ -10576,7 +10564,7 @@
                     }, t
                 }(a.Component),
                 M = Object(u.b)("ExtensionsConnectionList")(q);
-            var Y, V = Object(b.connect)(function(e) {
+            var V, Y = Object(b.connect)(function(e) {
                     return {
                         sessionUser: Object(R.e)(e)
                     }
@@ -10680,13 +10668,13 @@
             n("/THz");
             ! function(e) {
                 e.NorthAmerica = "na", e.Brazil = "br", e.EuropeWest = "euw", e.EuropeNordicAndEast = "eune", e.Japan = "jp", e.Korea = "kr", e.LatinAmericaNorth = "lan", e.LatinAmericaSouth = "las", e.Oceanic = "oce", e.Turkey = "tr", e.Russia = "ru", e.PublicBetaEnvironment = "pbe"
-            }(Y || (Y = {}));
+            }(V || (V = {}));
             var H = function(e) {
                 function t() {
                     var t = null !== e && e.apply(this, arguments) || this;
                     return t.state = {
                         connected: !1,
-                        region: Y.NorthAmerica,
+                        region: V.NorthAmerica,
                         summonerName: "",
                         error: !1,
                         working: !0
@@ -10831,40 +10819,40 @@
                 }, t.prototype.renderBody = function() {
                     var e = [{
                         label: Object(s.d)("North America", "LeagueOfLegendsConnection"),
-                        value: Y.NorthAmerica
+                        value: V.NorthAmerica
                     }, {
                         label: Object(s.d)("Brazil", "LeagueOfLegendsConnection"),
-                        value: Y.Brazil
+                        value: V.Brazil
                     }, {
                         label: Object(s.d)("Europe West", "LeagueOfLegendsConnection"),
-                        value: Y.EuropeWest
+                        value: V.EuropeWest
                     }, {
                         label: Object(s.d)("Europe Nordic & East", "LeagueOfLegendsConnection"),
-                        value: Y.EuropeNordicAndEast
+                        value: V.EuropeNordicAndEast
                     }, {
                         label: Object(s.d)("Japan", "LeagueOfLegendsConnection"),
-                        value: Y.Japan
+                        value: V.Japan
                     }, {
                         label: Object(s.d)("Korea", "LeagueOfLegendsConnection"),
-                        value: Y.Korea
+                        value: V.Korea
                     }, {
                         label: Object(s.d)("Latin America North", "LeagueOfLegendsConnection"),
-                        value: Y.LatinAmericaNorth
+                        value: V.LatinAmericaNorth
                     }, {
                         label: Object(s.d)("Latin America South", "LeagueOfLegendsConnection"),
-                        value: Y.LatinAmericaSouth
+                        value: V.LatinAmericaSouth
                     }, {
                         label: Object(s.d)("Oceanic", "LeagueOfLegendsConnection"),
-                        value: Y.Oceanic
+                        value: V.Oceanic
                     }, {
                         label: Object(s.d)("Turkey", "LeagueOfLegendsConnection"),
-                        value: Y.Turkey
+                        value: V.Turkey
                     }, {
                         label: Object(s.d)("Russia", "LeagueOfLegendsConnection"),
-                        value: Y.Russia
+                        value: V.Russia
                     }, {
                         label: Object(s.d)("Public Beta Environment", "LeagueOfLegendsConnection"),
-                        value: Y.PublicBetaEnvironment
+                        value: V.PublicBetaEnvironment
                     }];
                     return a.createElement(C.Ya, {
                         className: "league-of-legends-connection__body",
@@ -11495,7 +11483,7 @@
                 Se = n("XoAB"),
                 ye = Object(h.a)(Se)(be),
                 Ce = n("xAZU"),
-                Ee = function(e) {
+                Ne = function(e) {
                     function t() {
                         var t = null !== e && e.apply(this, arguments) || this;
                         return t.state = {
@@ -11590,7 +11578,7 @@
                         })
                     }, t
                 }(a.Component),
-                Ne = Object(h.a)(Ce)(Ee),
+                Ee = Object(h.a)(Ce)(Ne),
                 we = function(e) {
                     function t() {
                         return null !== e && e.apply(this, arguments) || this
@@ -11599,10 +11587,10 @@
                         return a.createElement(a.Fragment, null, a.createElement(p.a, {
                             title: Object(s.d)("Recommended Connections", "SettingsConnectionsPage"),
                             description: Object(s.d)("Manage your connected accounts and services", "SettingsConnectionsPage")
-                        }), a.createElement(m.a, null, a.createElement(x, null), a.createElement(A, null), a.createElement(me, null), a.createElement(Ne, null), a.createElement(X, null), a.createElement(he, null), a.createElement(Q, null), a.createElement(ye, null), a.createElement(ke, null), a.createElement(oe, null), a.createElement(le, null)), a.createElement(p.a, {
+                        }), a.createElement(m.a, null, a.createElement(D, null), a.createElement(A, null), a.createElement(me, null), a.createElement(Ee, null), a.createElement(X, null), a.createElement(he, null), a.createElement(Q, null), a.createElement(ye, null), a.createElement(ke, null), a.createElement(oe, null), a.createElement(le, null)), a.createElement(p.a, {
                             title: Object(s.d)("Extensions Connections", "SettingsConnectionsPage"),
                             description: Object(s.d)("You have shared your Twitch username with these extensions", "SettingsConnectionsPage")
-                        }), a.createElement(m.a, null, a.createElement(V, null)), a.createElement(p.a, {
+                        }), a.createElement(m.a, null, a.createElement(Y, null)), a.createElement(p.a, {
                             title: Object(s.d)("Other Connections", "SettingsConnectionsPage"),
                             description: Object(s.d)("You have authorized these apps to use your Twitch account", "SettingsConnectionsPage")
                         }), a.createElement(m.a, null, a.createElement(ie, null)), a.createElement(p.a, {

@@ -1,5 +1,5 @@
 (window.webpackJsonp = window.webpackJsonp || []).push([
-    [114], {
+    [115], {
         DXJk: function(e, n) {
             var t = {
                 kind: "Document",
@@ -287,7 +287,7 @@
                                 var e = "https://www.twitch.tv/events/" + n.props.eventID;
                                 n.props.showReportUserModal({
                                     reportContext: {
-                                        contentType: p.N.USER_REPORT,
+                                        contentType: p.O.USER_REPORT,
                                         targetUserID: n.props.targetUser.id
                                     },
                                     title: Object(m.d)("Report {channelName}", {

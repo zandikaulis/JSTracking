@@ -3623,7 +3623,7 @@
                     type: L.Wb.Strong
                 }, Object(E.d)("LIMITED PROMOTION: ", "ExtensionBitsPromoBold")), a.createElement(L.W, {
                     type: L.Wb.P
-                }, Object(E.d)("From October 31, 2018 11:59pm PST through December 31, 2018 11:59pm PST, when you use a Bits-enabled Extension, there will be no revenue split with the Developer during this limited promotional period.  Twitch will cover the 20% developer revenue share normally attributed to Bits-enabled Extensions.", "ExtensionBitsPromo")))))
+                }, Object(E.d)("Now through December 31, 2018, Twitch is paying you the entire revenue share for all Bits used within an Extension on your channel. That means you keep 100% of the Bits earned within an Extension and Twitch is covering the developer share.", "ExtensionBitsPromo")))))
             };
             J.displayName = "ExtensionDetails";
             var K = t("r52A"),

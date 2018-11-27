@@ -2631,42 +2631,42 @@
                             var t = this;
                             switch (e) {
                                 case s.PLAYER_AMAZON_LIVE:
-                                    return n.e(215).then(function() {
+                                    return n.e(216).then(function() {
                                         var e = n("iSLP");
                                         t.setState({
                                             playerTypeComponent: e.default
                                         })
                                     }.bind(null, n)).catch(n.oe);
                                 case s.PLAYER_CLIPS_VIEWING:
-                                    return n.e(214).then(function() {
+                                    return n.e(215).then(function() {
                                         var e = n("5Kqy");
                                         t.setState({
                                             playerTypeComponent: e.default
                                         })
                                     }.bind(null, n)).catch(n.oe);
                                 case s.PLAYER_CLIPS_EMBED:
-                                    return n.e(213).then(function() {
+                                    return n.e(214).then(function() {
                                         var e = n("aRgI");
                                         t.setState({
                                             playerTypeComponent: e.default
                                         })
                                     }.bind(null, n)).catch(n.oe);
                                 case s.PLAYER_CLIPS_EDITING:
-                                    return n.e(212).then(function() {
+                                    return n.e(213).then(function() {
                                         var e = n("3K1P");
                                         t.setState({
                                             playerTypeComponent: e.default
                                         })
                                     }.bind(null, n)).catch(n.oe);
                                 case s.PLAYER_CLIPS_WATCH:
-                                    return n.e(211).then(function() {
+                                    return n.e(212).then(function() {
                                         var e = n("8/R1");
                                         t.setState({
                                             playerTypeComponent: e.default
                                         })
                                     }.bind(null, n)).catch(n.oe);
                                 case s.PLAYER_HIGHLIGHTER:
-                                    return n.e(210).then(function() {
+                                    return n.e(211).then(function() {
                                         var e = n("SVNA");
                                         t.setState({
                                             playerTypeComponent: e.default

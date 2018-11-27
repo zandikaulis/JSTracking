@@ -1615,7 +1615,7 @@
                         return {
                             variables: {
                                 gameName: e.gameName,
-                                tagType: h.X.TOP,
+                                tagType: h.Y.TOP,
                                 limit: 50
                             }
                         }
@@ -1848,7 +1848,7 @@
                     function t() {
                         var t = null !== e && e.apply(this, arguments) || this;
                         return t.onBalloonItemClick = function() {
-                            t.props.onBalloonItemClick && t.props.onBalloonItemClick(t.props.videoID, t.props.index)
+                            t.props.onBalloonItemClick && t.props.onBalloonItemClick(t.props.index)
                         }, t
                     }
                     return a.__extends(t, e), t.prototype.render = function() {
@@ -1915,7 +1915,7 @@
                     function t() {
                         var t = null !== e && e.apply(this, arguments) || this;
                         return t.onBalloonToggle = function(e) {
-                            t.props.onBalloonClick && !e && t.props.onBalloonClick(t.props.videoID)
+                            t.props.onBalloonClick && !e && t.props.onBalloonClick()
                         }, t
                     }
                     return a.__extends(t, e), t.prototype.componentDidMount = function() {
@@ -1936,7 +1936,8 @@
                         }, i.createElement(u.a, {
                             key: "game-balloon",
                             display: s.X.Inline,
-                            onToggle: this.onBalloonToggle
+                            onToggle: this.onBalloonToggle,
+                            hideBalloonOnInsideClick: !0
                         }, i.createElement(s.z, {
                             type: s.F.Hollow,
                             icon: s.ub.ViewerList
@@ -1982,8 +1983,7 @@
                             return i.createElement(l, {
                                 index: n,
                                 gameChange: e,
-                                key: t.props.videoID + "-" + e.offset,
-                                videoID: t.props.videoID,
+                                key: e.offset,
                                 onBalloonItemClick: t.props.onBalloonItemClick
                             })
                         })
@@ -2511,7 +2511,6 @@
                             case I.a.Balloon:
                                 return i.createElement(m, {
                                     videoGameChanges: t,
-                                    videoID: t[0].videoID,
                                     onBalloonClick: n,
                                     onBalloonItemClick: a
                                 });
@@ -2587,11 +2586,11 @@
             var a, i = n("/7QA"),
                 r = n("D7An");
             ! function(e) {
-                e.None = "None", e.Inline = "Inline", e.Balloon = "Balloon"
+                e.None = "None", e.Inline = "Inline", e.Balloon = "moments_with_images"
             }(a || (a = {}));
             var o = function() {
                 switch (i.p.experiments.getAssignment(r.b.Archer)) {
-                    case "balloon":
+                    case "moments_with_images":
                         return a.Balloon;
                     case "inline":
                         return a.Inline;
@@ -4910,7 +4909,8 @@
                                 y: 2,
                                 x: 1
                             },
-                            margin: 1
+                            margin: 1,
+                            borderRadius: k.x.Large
                         }, this.renderImage(), r.createElement(k.Ya, {
                             textAlign: k.Sb.Center
                         }, this.renderText(), r.createElement(k.z, {
@@ -7006,13 +7006,13 @@
                 Pe = n("mHR/"),
                 Re = n("kJyr"),
                 Ge = re.a.wrap(function() {
-                    return n.e(141).then(n.bind(null, "3f6U"))
+                    return n.e(142).then(n.bind(null, "3f6U"))
                 }, "DirectoryGameClipsPage"),
                 Be = re.a.wrap(function() {
-                    return n.e(140).then(n.bind(null, "N7a1"))
+                    return n.e(141).then(n.bind(null, "N7a1"))
                 }, "DirectoryGameDetailsPage"),
                 Ve = re.a.wrap(function() {
-                    return n.e(139).then(n.bind(null, "TH8Y"))
+                    return n.e(140).then(n.bind(null, "TH8Y"))
                 }, "DirectoryGameVideosPage"),
                 Ue = re.a.wrap(function() {
                     return Promise.resolve().then(n.bind(null, "mpcK"))

@@ -5,14 +5,14 @@
         },
         "0VVg": function(e, t, n) {
             "use strict";
-            var r, i, a = n("mrSG"),
+            var i, r, a = n("mrSG"),
                 s = n("b6Yk");
             ! function(e) {
                 e.FULL_REFUND = "FULL_REFUND", e.NO_REFUND = "NO_REFUND"
-            }(r || (r = {})),
+            }(i || (i = {})),
             function(e) {
                 e.CANCEL_BENEFITS = "CANCEL_BENEFITS", e.DO_NOT_RENEW_BENEFITS = "DO_NOT_RENEW_BENEFITS"
-            }(i || (i = {}));
+            }(r || (r = {}));
             var o = function() {
                 function e() {}
                 return e.cancelSubscription = function(e) {
@@ -26,9 +26,9 @@
                                     return a.trys.push([1, 8, , 9]), u && u.startsWith("amzn1.twitch.payments.sub.") ? (d = "/kraken/order/subscriptions/" + u + "/cancel", l = {
                                         user_id: t,
                                         reason: o,
-                                        cancellation_directive: r.FULL_REFUND,
-                                        benefits_directive: i.CANCEL_BENEFITS
-                                    }, c && (l.gift_origin_id = c, l.cancellation_directive = r.NO_REFUND), [4, s.a.putOrThrow(d, {
+                                        cancellation_directive: i.FULL_REFUND,
+                                        benefits_directive: r.CANCEL_BENEFITS
+                                    }, c && (l.gift_origin_id = c, l.cancellation_directive = i.NO_REFUND), [4, s.a.putOrThrow(d, {
                                         body: l
                                     }, {
                                         version: 5
@@ -80,8 +80,8 @@
                                     return a.trys.push([1, 6, , 7]), u && u.startsWith("amzn1.twitch.payments.sub.") ? (c = "/kraken/order/subscriptions/" + u + "/cancel", d = {
                                         user_id: t,
                                         reason: o,
-                                        cancellation_directive: r.NO_REFUND,
-                                        benefits_directive: i.DO_NOT_RENEW_BENEFITS
+                                        cancellation_directive: i.NO_REFUND,
+                                        benefits_directive: r.DO_NOT_RENEW_BENEFITS
                                     }, [4, s.a.putOrThrow(c, {
                                         body: d
                                     }, {
@@ -123,9 +123,9 @@
                 }, e
             }();
             n.d(t, !1, function() {
-                return r
-            }), n.d(t, !1, function() {
                 return i
+            }), n.d(t, !1, function() {
+                return r
             }), n.d(t, !1, function() {
                 return "amzn1.twitch.payments.sub."
             }), n.d(t, !1, function() {
@@ -137,9 +137,9 @@
         "3Bft": function(e, t, n) {
             "use strict";
             n.d(t, "a", function() {
-                return r
+                return i
             });
-            var r = {
+            var i = {
                 Prime: "prime",
                 Tier1: "1000",
                 Tier2: "2000",
@@ -484,17 +484,17 @@
         },
         "5g1g": function(e, t, n) {
             "use strict";
-            var r = n("mrSG"),
-                i = n("q1tI"),
+            var i = n("mrSG"),
+                r = n("q1tI"),
                 a = n("wUQP"),
                 s = function(e) {
                     function t() {
                         return null !== e && e.apply(this, arguments) || this
                     }
-                    return r.__extends(t, e), t.prototype.render = function() {
+                    return i.__extends(t, e), t.prototype.render = function() {
                         return this.props.incremental && Object(a.c)(this.props.name) || Object(a.b)(this.props.name) ? this.props.children : null
                     }, t
-                }(i.Component),
+                }(r.Component),
                 o = s;
             n.d(t, "b", function() {
                 return s
@@ -504,13 +504,13 @@
         },
         "7SjK": function(e, t, n) {
             "use strict";
-            var r = n("mrSG"),
-                i = n("q1tI"),
+            var i = n("mrSG"),
+                r = n("q1tI"),
                 a = n("TSYQ"),
                 s = n("/7QA"),
                 o = n("GnwI"),
                 u = n("Ue10"),
-                c = (n("GOKC"), i.createElement(u.Fb, {
+                c = (n("GOKC"), r.createElement(u.Fb, {
                     alignItems: u.f.Center,
                     background: u.r.Overlay,
                     borderRadius: u.x.Small,
@@ -521,7 +521,7 @@
                     justifyContent: u.Xa.Center,
                     position: u.kb.Absolute,
                     zIndex: u.jc.Above
-                }, i.createElement(u.tb, {
+                }, r.createElement(u.tb, {
                     asset: u.ub.Lock,
                     height: 10,
                     width: 10
@@ -531,13 +531,13 @@
                             "emote-button__link--locked": !e.onClick
                         }),
                         n = e.emote,
-                        r = n.displayName,
+                        i = n.displayName,
                         d = n.srcSet;
                     if (!d) return null;
-                    var l = i.createElement("img", {
+                    var l = r.createElement("img", {
                         className: "emote-picker__image",
                         srcSet: d,
-                        alt: r
+                        alt: i
                     });
                     if (e.isCriticalImage) {
                         for (var p = d.split(" ")[0], m = {}, b = 0, f = d.split(","); b < f.length; b++) {
@@ -546,30 +546,30 @@
                                 v = g[0];
                             m[h] = v
                         }
-                        l = i.createElement(o.a, {
+                        l = r.createElement(o.a, {
                             className: "emote-picker__emote-image",
                             src: p,
                             srcSet: m,
-                            alt: r || ""
+                            alt: i || ""
                         })
                     }
-                    return i.createElement("div", {
+                    return r.createElement("div", {
                         className: "emote-button"
-                    }, i.createElement(u.Zb, {
-                        label: r || Object(s.d)("Emote", "EmoteButton"),
+                    }, r.createElement(u.Zb, {
+                        label: i || Object(s.d)("Emote", "EmoteButton"),
                         direction: u.bc.Bottom
-                    }, i.createElement(u.Qa, {
+                    }, r.createElement(u.Qa, {
                         display: u.X.Flex,
                         alignItems: u.f.Center,
                         justifyContent: u.Xa.Center
-                    }, i.createElement("button", {
+                    }, r.createElement("button", {
                         "data-test-selector": "emote-button-clickable",
                         className: t,
-                        "aria-label": r,
-                        name: r,
+                        "aria-label": i,
+                        name: i,
                         onClick: e.onClick ? e.onClick.bind(null, e.emote) : void 0,
-                        "data-a-target": r
-                    }, i.createElement("figure", null, e.locked ? c : null, l)))))
+                        "data-a-target": i
+                    }, r.createElement("figure", null, e.locked ? c : null, l)))))
                 },
                 l = (n("VrOd"), function(e) {
                     function t() {
@@ -578,15 +578,15 @@
                             t.props.onClickEmote && t.props.onClickEmote(e, t.props.context)
                         }, t
                     }
-                    return r.__extends(t, e), t.prototype.render = function() {
+                    return i.__extends(t, e), t.prototype.render = function() {
                         var e = this,
                             t = this.props.emotes.map(function(t, n) {
-                                return i.createElement(u.Ya, {
+                                return r.createElement(u.Ya, {
                                     key: "emote-button-padder-" + t.id + "--" + t.setID,
                                     padding: {
                                         left: e.props.spaced ? .5 : 0
                                     }
-                                }, i.createElement(d, {
+                                }, r.createElement(d, {
                                     key: "emote-button-" + t.id + "--" + t.setID,
                                     emote: t,
                                     isCriticalImage: 0 === n,
@@ -594,13 +594,13 @@
                                     onClick: e.props.locked ? void 0 : e.handleClickEmote
                                 }))
                             });
-                        return i.createElement(u.Ya, {
+                        return r.createElement(u.Ya, {
                             display: u.X.Flex,
                             flexWrap: u.Ba.Wrap,
                             justifyContent: u.Xa.Center
                         }, t)
                     }, t
-                }(i.Component));
+                }(r.Component));
             n.d(t, "a", function() {
                 return l
             })
@@ -608,16 +608,16 @@
         BLKr: function(e, t, n) {},
         CDqf: function(e, t, n) {
             "use strict";
-            var r = n("mrSG"),
-                i = n("q1tI"),
+            var i = n("mrSG"),
+                r = n("q1tI"),
                 a = n("/7QA"),
                 s = n("Ue10"),
                 o = (n("WAGi"), function(e) {
                     function t() {
                         return null !== e && e.apply(this, arguments) || this
                     }
-                    return r.__extends(t, e), t.prototype.render = function() {
-                        return i.createElement(s.Fb, {
+                    return i.__extends(t, e), t.prototype.render = function() {
+                        return r.createElement(s.Fb, {
                             borderRadius: this.getBannerBorderRadius(),
                             className: "sub-promo-banner",
                             display: s.X.Flex
@@ -625,34 +625,34 @@
                     }, t.prototype.getCTA = function() {
                         var e = this.props.alignCTA,
                             t = "Left" === e ? "Right" : "Left",
-                            n = i.createElement(s.Ya, {
+                            n = r.createElement(s.Ya, {
                                 className: "sub-promo-banner__triangle-" + e.toLowerCase()
                             }),
-                            r = i.createElement(s.Fb, {
+                            i = r.createElement(s.Fb, {
                                 borderRadius: this.getChildBorderRadius(e),
                                 className: "sub-promo-banner__promo-price",
                                 display: s.X.Flex,
                                 flexDirection: s.Aa.Column,
                                 justifyContent: s.Xa.Center
-                            }, i.createElement(s.Ya, {
+                            }, r.createElement(s.Ya, {
                                 display: s.X.Flex,
                                 justifyContent: s.Xa.Center
-                            }, i.createElement(s.Ya, {
+                            }, r.createElement(s.Ya, {
                                 margin: {
                                     top: .5
                                 }
-                            }, i.createElement(s.W, {
+                            }, r.createElement(s.W, {
                                 className: "sub-promo-banner__currency-symbol",
                                 color: s.O.Overlay
-                            }, "$1".substring(0, 1))), i.createElement(s.W, {
+                            }, "$1".substring(0, 1))), r.createElement(s.W, {
                                 bold: !0,
                                 className: "sub-promo-banner__currency-number",
                                 color: s.O.Overlay
-                            }, "$1".substring(1))), i.createElement(s.W, {
+                            }, "$1".substring(1))), r.createElement(s.W, {
                                 className: "sub-promo-banner__subs-cta",
                                 color: s.O.Overlay
                             }, Object(a.d)("SUBS", "SubPromoBanner"))),
-                            o = i.createElement(s.Fb, {
+                            o = r.createElement(s.Fb, {
                                 borderLeft: !1,
                                 borderRadius: this.getChildBorderRadius(t),
                                 className: "sub-promo-banner__cta",
@@ -665,14 +665,14 @@
                                     right: 3,
                                     y: 1
                                 }
-                            }, i.createElement(s.W, {
+                            }, r.createElement(s.W, {
                                 bold: !0,
                                 color: s.O.Overlay,
                                 fontSize: s.Ca.Size4
-                            }, Object(a.d)("Subtember is here!", "SubPromoBanner")), i.createElement(s.W, {
+                            }, Object(a.d)("Subtember is here!", "SubPromoBanner")), r.createElement(s.W, {
                                 color: s.O.Overlay
                             }, Object(a.d)("Make the most of your Gift Sub this September by continuing at Tier 1 for <x:strong>only {promoPrice}</x:strong>. {promoLink}", {
-                                promoLink: i.createElement(s.U, {
+                                promoLink: r.createElement(s.U, {
                                     key: "SubPromoBannerLink",
                                     targetBlank: !0,
                                     to: "https://link.twitch.tv/subtember",
@@ -680,14 +680,14 @@
                                 }, Object(a.d)("Learn More", "SubPromoBanner")),
                                 promoPrice: "$1",
                                 "x:strong": function(e) {
-                                    return i.createElement(s.W, {
+                                    return r.createElement(s.W, {
                                         bold: !0,
                                         key: "SubPromoBannerBoldText",
                                         type: s.Wb.Span
                                     }, e)
                                 }
                             }, "SubPromoBanner")));
-                        return "Left" === e ? i.createElement(i.Fragment, null, r, n, o) : i.createElement(i.Fragment, null, o, n, r)
+                        return "Left" === e ? r.createElement(r.Fragment, null, i, n, o) : r.createElement(r.Fragment, null, o, n, i)
                     }, t.prototype.getBannerBorderRadius = function() {
                         var e = this.props,
                             t = e.roundedBottom,
@@ -705,12 +705,12 @@
                             topRight: s.x.Large
                         } : {}
                     }, t.prototype.getChildBorderRadius = function(e) {
-                        var t, n, r, i = this.props,
-                            a = i.roundedBottom,
-                            o = i.roundedTop;
-                        return a && o ? ((t = {})["bottom" + e] = s.x.Large, t["top" + e] = s.x.Large, t) : a ? ((n = {})["bottom" + e] = s.x.Large, n) : o ? ((r = {})["top" + e] = s.x.Large, r) : {}
+                        var t, n, i, r = this.props,
+                            a = r.roundedBottom,
+                            o = r.roundedTop;
+                        return a && o ? ((t = {})["bottom" + e] = s.x.Large, t["top" + e] = s.x.Large, t) : a ? ((n = {})["bottom" + e] = s.x.Large, n) : o ? ((i = {})["top" + e] = s.x.Large, i) : {}
                     }, t
-                }(i.Component));
+                }(r.Component));
             n.d(t, "a", function() {
                 return o
             })
@@ -871,7 +871,7 @@
             e.exports = n
         },
         KXaD: function(e, t, n) {
-            var r = {
+            var i = {
                 kind: "Document",
                 definitions: [{
                     kind: "FragmentDefinition",
@@ -989,7 +989,7 @@
                             kind: "Field",
                             name: {
                                 kind: "Name",
-                                value: "paidUpgrade"
+                                value: "pendingSubscription"
                             },
                             arguments: [],
                             directives: [],
@@ -1016,6 +1016,22 @@
                                     name: {
                                         kind: "Name",
                                         value: "startsAt"
+                                    },
+                                    arguments: [],
+                                    directives: []
+                                }, {
+                                    kind: "Field",
+                                    name: {
+                                        kind: "Name",
+                                        value: "type"
+                                    },
+                                    arguments: [],
+                                    directives: []
+                                }, {
+                                    kind: "Field",
+                                    name: {
+                                        kind: "Name",
+                                        value: "isCancelable"
                                     },
                                     arguments: [],
                                     directives: []
@@ -1279,25 +1295,25 @@
                 }],
                 loc: {
                     start: 0,
-                    end: 533
+                    end: 559
                 }
             };
-            r.loc.source = {
-                body: '#import "twilight/features/badges/models/badge-fragment.gql"\nfragment subscriptionBenefit on SubscriptionBenefit {\nid\noriginID\nendsAt\nisRefundable\nplatform\ngift {\ngifter {\nid\nlogin\ndisplayName\n}\nisGift\n}\npaidUpgrade {\noriginID\nprice\nstartsAt\n}\nproduct {\nid\ntier\nprice\nname\ndisplayName\nurl\nself {\npaidUpgradePromotion {\nnewPrice\noldPrice\ndiscountType\ndiscountValue\n}\n}\n}\npurchasedWithPrime\nrenewsAt\ntier\nuser {\nid\ndisplayName\nlogin\nbannerImageURL\nprofileImageURL(width: 150)\nself {\ndisplayBadges {\n...badge\n}\n}\nroles {\nisPartner\n}\n}\n}',
+            i.loc.source = {
+                body: '#import "twilight/features/badges/models/badge-fragment.gql"\nfragment subscriptionBenefit on SubscriptionBenefit {\nid\noriginID\nendsAt\nisRefundable\nplatform\ngift {\ngifter {\nid\nlogin\ndisplayName\n}\nisGift\n}\npendingSubscription {\noriginID\nprice\nstartsAt\ntype\nisCancelable\n}\nproduct {\nid\ntier\nprice\nname\ndisplayName\nurl\nself {\npaidUpgradePromotion {\nnewPrice\noldPrice\ndiscountType\ndiscountValue\n}\n}\n}\npurchasedWithPrime\nrenewsAt\ntier\nuser {\nid\ndisplayName\nlogin\nbannerImageURL\nprofileImageURL(width: 150)\nself {\ndisplayBadges {\n...badge\n}\n}\nroles {\nisPartner\n}\n}\n}',
                 name: "GraphQL request",
                 locationOffset: {
                     line: 1,
                     column: 1
                 }
             };
-            var i = {};
-            r.definitions = r.definitions.concat(function(e) {
+            var r = {};
+            i.definitions = i.definitions.concat(function(e) {
                 return e.filter(function(e) {
                     if ("FragmentDefinition" !== e.kind) return !0;
                     var t = e.name.value;
-                    return !i[t] && (i[t] = !0, !0)
+                    return !r[t] && (r[t] = !0, !0)
                 })
-            }(n("IKE4").definitions)), e.exports = r
+            }(n("IKE4").definitions)), e.exports = i
         },
         OpME: function(e, t, n) {
             "use strict";
@@ -1314,8 +1330,8 @@
             }), n.d(t, "d", function() {
                 return f
             });
-            var r = n("mrSG"),
-                i = n("lZdE"),
+            var i = n("mrSG"),
+                r = n("lZdE"),
                 a = n("cpJf"),
                 s = {
                     "B-?\\)": "B)",
@@ -1349,16 +1365,16 @@
                 for (var t = [], n = function(e) {
                         if (!e || !e.id || !e.token) return "continue";
                         var n = s[e.token] || e.token,
-                            i = o.reduce(function(t, n) {
-                                var r = t;
-                                return r && (r = r.concat(", ")), r.concat("https://static-cdn.jtvnw.net/emoticons/v1/" + e.id + "/" + n + " " + n + "x")
+                            r = o.reduce(function(t, n) {
+                                var i = t;
+                                return i && (i = i.concat(", ")), i.concat("https://static-cdn.jtvnw.net/emoticons/v1/" + e.id + "/" + n + " " + n + "x")
                             }, "");
-                        t.push(r.__assign({
+                        t.push(i.__assign({
                             displayName: n,
-                            srcSet: i
+                            srcSet: r
                         }, e))
-                    }, i = 0, a = e; i < a.length; i++) {
-                    n(a[i])
+                    }, r = 0, a = e; r < a.length; r++) {
+                    n(a[r])
                 }
                 return t
             }
@@ -1367,7 +1383,7 @@
                 var n = c(e);
                 return t && (n = function(e, t) {
                     return e.map(function(e) {
-                        return r.__assign({}, e, {
+                        return i.__assign({}, e, {
                             setID: t
                         })
                     })
@@ -1383,13 +1399,13 @@
             }
 
             function p(e) {
-                for (var t = [], n = 0, r = e; n < r.length; n++) {
-                    var i = r[n];
-                    if (i && i.id && i.emotes) {
+                for (var t = [], n = 0, i = e; n < i.length; n++) {
+                    var r = i[n];
+                    if (r && r.id && r.emotes) {
                         for (var a = {
-                                id: i.id,
+                                id: r.id,
                                 emotes: []
-                            }, s = 0, o = i.emotes; s < o.length; s++) {
+                            }, s = 0, o = r.emotes; s < o.length; s++) {
                             var u = o[s];
                             u && u.id && u.token && a.emotes.push(u)
                         }
@@ -1400,8 +1416,8 @@
             }
 
             function m(e) {
-                for (var t = [], n = [], r = 0, i = e; r < i.length; r++) {
-                    var a = i[r];
+                for (var t = [], n = [], i = 0, r = e; i < r.length; i++) {
+                    var a = r[i];
                     if (a && a.id && a.emotes) {
                         var s = {
                             id: a.id,
@@ -1413,19 +1429,19 @@
                 return n.concat(t)
             }
             var b = function(e, t, n) {
-                    var r = n || a.d,
+                    var i = n || a.d,
                         s = [],
                         o = [],
                         u = [],
-                        c = new RegExp("^" + Object(i.a)(t), "i");
+                        c = new RegExp("^" + Object(r.a)(t), "i");
                     return e.forEach(function(e) {
-                        r[e.token] ? u.push(e) : e.token.match(c) ? s.push(e) : o.push(e)
+                        i[e.token] ? u.push(e) : e.token.match(c) ? s.push(e) : o.push(e)
                     }), s.sort(function(e, t) {
                         return e.token < t.token ? -1 : e.token > t.token ? 1 : 0
                     }), o.sort(function(e, t) {
                         return e.token < t.token ? -1 : e.token > t.token ? 1 : 0
                     }), u.sort(function(e, t) {
-                        return r[t.token].count - r[e.token].count
+                        return i[t.token].count - i[e.token].count
                     }), u.concat(s).concat(o)
                 },
                 f = function(e) {
@@ -1438,8 +1454,8 @@
         UGMo: function(e, t, n) {
             "use strict";
             n.r(t);
-            var r = n("/MKj"),
-                i = n("fvjX"),
+            var i = n("/MKj"),
+                r = n("fvjX"),
                 a = n("1/iK"),
                 s = n("y5D0"),
                 o = n("kRBY"),
@@ -1498,59 +1514,59 @@
                     }, d.createElement(B.W, null, Object(l.d)('To use your free subscription, go to a channel of your choice and select "Subscribe Free"', "AvailablePrimeSubCard"))))
                 }),
                 O = n("/jfp"),
-                C = n.n(O),
-                N = n("yLwq"),
+                N = n.n(O),
+                C = n("yLwq"),
                 T = n("QVaV"),
                 F = n("cMjZ"),
                 w = n("DMoW"),
                 P = n("fQWD"),
-                U = n("aCAx"),
-                D = n("cZKs"),
+                D = n("aCAx"),
+                U = n("cZKs"),
                 I = n("b6Yk");
-            var j, R;
+            var R, j;
             n("l1sD");
             ! function(e) {
                 e.ErrorMessage = "DisableGiftModalErrorMessage", e.CancelButton = "DisableGiftCancelButton", e.ConfirmButton = "DisableGiftConfirmButton"
-            }(j || (j = {})),
+            }(R || (R = {})),
             function(e) {
                 e[e.Success = 0] = "Success", e[e.Error = 1] = "Error", e[e.InProgress = 2] = "InProgress", e[e.Unconfirmed = 3] = "Unconfirmed"
-            }(R || (R = {}));
+            }(j || (j = {}));
             var x, A = function(e) {
                     function t() {
                         var t = null !== e && e.apply(this, arguments) || this;
                         return t.state = {
-                            requestStatus: R.Unconfirmed
+                            requestStatus: j.Unconfirmed
                         }, t.onConfirmDisableGift = function() {
                             return u.__awaiter(t, void 0, void 0, function() {
-                                var e, t, n, r = this;
-                                return u.__generator(this, function(i) {
-                                    switch (i.label) {
+                                var e, t, n, i = this;
+                                return u.__generator(this, function(r) {
+                                    switch (r.label) {
                                         case 0:
                                             e = this.props.currentUserID, t = this.props.originID, n = this.props.subscriptionProductID, this.setState({
-                                                requestStatus: R.InProgress
-                                            }), i.label = 1;
+                                                requestStatus: j.InProgress
+                                            }), r.label = 1;
                                         case 1:
-                                            return i.trys.push([1, 3, , 4]), [4, function(e, t, n) {
+                                            return r.trys.push([1, 3, , 4]), [4, function(e, t, n) {
                                                 return u.__awaiter(this, void 0, void 0, function() {
-                                                    var r, i;
+                                                    var i, r;
                                                     return u.__generator(this, function(a) {
                                                         switch (a.label) {
                                                             case 0:
-                                                                r = {
+                                                                i = {
                                                                     recipient_id: e,
                                                                     origin_id: t,
                                                                     product_id: n
                                                                 }, a.label = 1;
                                                             case 1:
                                                                 return a.trys.push([1, 3, , 4]), [4, I.a.postOrThrow("/v5/subscriptions/gift/cancel", {
-                                                                    body: r
+                                                                    body: i
                                                                 }, {
                                                                     version: 5
                                                                 })];
                                                             case 2:
                                                                 return a.sent(), [3, 4];
                                                             case 3:
-                                                                return i = a.sent(), [2, Promise.reject(i)];
+                                                                return r = a.sent(), [2, Promise.reject(r)];
                                                             case 4:
                                                                 return [2]
                                                         }
@@ -1558,14 +1574,14 @@
                                                 })
                                             }(e, t, n)];
                                         case 2:
-                                            return i.sent(), this.setState({
-                                                requestStatus: R.Success
+                                            return r.sent(), this.setState({
+                                                requestStatus: j.Success
                                             }, function() {
-                                                r.props.onSuccess()
+                                                i.props.onSuccess()
                                             }), [3, 4];
                                         case 3:
-                                            return i.sent(), this.setState({
-                                                requestStatus: R.Error
+                                            return r.sent(), this.setState({
+                                                requestStatus: j.Error
                                             }), [3, 4];
                                         case 4:
                                             return [2]
@@ -1600,16 +1616,16 @@
                             state: this.getConfirmButtonState(),
                             type: B.F.Alert,
                             onClick: this.onConfirmDisableGift,
-                            "data-test-selector": j.ConfirmButton
+                            "data-test-selector": R.ConfirmButton
                         }, Object(l.d)("Disable Benefits", "DisableGiftModal"))), d.createElement(B.z, {
                             onClick: this.props.onCancel,
-                            "data-test-selector": j.CancelButton
-                        }, Object(l.d)("Cancel", "DisableGiftModal"))), d.createElement(D.a, {
+                            "data-test-selector": R.CancelButton
+                        }, Object(l.d)("Cancel", "DisableGiftModal"))), d.createElement(U.a, {
                             closeOnBackdropClick: !0,
                             closeOnPageNavigation: !0
                         }))
                     }, t.prototype.renderErrorDisplay = function() {
-                        return this.state.requestStatus === R.Error ? d.createElement(B.Fb, {
+                        return this.state.requestStatus === j.Error ? d.createElement(B.Fb, {
                             borderTop: !0,
                             borderRight: !0,
                             borderBottom: !0,
@@ -1618,16 +1634,16 @@
                                 top: 1
                             },
                             className: "disable-gift-modal__error",
-                            "data-test-selector": j.ErrorMessage
+                            "data-test-selector": R.ErrorMessage
                         }, d.createElement(B.W, null, Object(l.d)("Something went wrong and your request could not be processed at this time. Please try again later.", "DisableGiftModal"))) : null
                     }, t.prototype.getConfirmButtonState = function() {
                         switch (this.state.requestStatus) {
-                            case R.InProgress:
+                            case j.InProgress:
                                 return B.E.Loading;
-                            case R.Success:
+                            case j.Success:
                                 return B.E.Success;
-                            case R.Unconfirmed:
-                            case R.Error:
+                            case j.Unconfirmed:
+                            case j.Error:
                             default:
                                 return B.E.Default
                         }
@@ -1669,14 +1685,15 @@
                                 linkTo: "/unsubscribe/" + t.props.subscriptionBenefit.product.name + "?cancel=true"
                             }) : null
                         }, t.renderDisableGiftButton = function() {
-                            return null !== t.props.subscriptionBenefit.paidUpgrade ? null : t.renderInteractable(x.CancelGiftButton, Object(l.d)("Disable Gift Benefits", "EditSubscriptionBalloon"), {
+                            return null !== t.props.subscriptionBenefit.pendingSubscription ? null : t.renderInteractable(x.CancelGiftButton, Object(l.d)("Disable Gift Benefits", "EditSubscriptionBalloon"), {
                                 type: B.Wa.Alert,
                                 onClick: t.onDisableGiftBenefits
                             })
                         }, t.renderCancelPaidUpgrade = function() {
-                            return t.renderInteractable(x.CancelPaidUpgrade, Object(l.d)("Cancel Paid Subscription", "EditSubscriptionBalloon"), {
+                            var e = "";
+                            return t.props.subscriptionBenefit.pendingSubscription && (t.props.subscriptionBenefit.pendingSubscription.type === w.L.GIFT_TO_PAID ? e = Object(l.d)("Cancel Paid Subscription", "EditSubscriptionBalloon") : t.props.subscriptionBenefit.pendingSubscription.type === w.L.DNR_TO_RESUB_RECURRING ? e = Object(l.d)("Cancel Recurring Subscription", "EditSubscriptionBalloon") : t.props.subscriptionBenefit.pendingSubscription.type === w.L.DNR_TO_RESUB_NONRECURRING && (e = Object(l.d)("Cancel One Month Subscription Extension", "EditSubscriptionBalloon"))), t.renderInteractable(x.CancelPaidUpgrade, e, {
                                 type: B.Wa.Alert,
-                                onClick: t.onCancelPaidUpgrade
+                                onClick: t.onCancelPendingSubscription
                             })
                         }, t.onDisableGiftBenefits = function() {
                             var e = t.props.subscriptionBenefit;
@@ -1688,16 +1705,16 @@
                                 originID: e.originID,
                                 subscriptionProductID: e.product.id
                             })
-                        }, t.onCancelPaidUpgrade = function() {
+                        }, t.onCancelPendingSubscription = function() {
                             return u.__awaiter(t, void 0, void 0, function() {
                                 var e;
                                 return u.__generator(this, function(t) {
                                     switch (t.label) {
                                         case 0:
-                                            return e = this.props.subscriptionBenefit, this.props.currentUserID && e.product && e.product.name && e.originID && e.paidUpgrade ? [4, G.a.cancelPaidUpgrade({
+                                            return e = this.props.subscriptionBenefit, this.props.currentUserID && e.product && e.product.name && e.originID && e.pendingSubscription ? [4, G.a.cancelPaidUpgrade({
                                                 userID: this.props.currentUserID,
                                                 productName: e.product.name,
-                                                originID: e.paidUpgrade.originID,
+                                                originID: e.pendingSubscription.originID,
                                                 giftOriginID: e.originID
                                             })] : [3, 2];
                                         case 1:
@@ -1712,7 +1729,7 @@
                     return u.__extends(t, e), t.prototype.render = function() {
                         var e = Object(l.d)("Edit Subscription", "SubscriptionCard"),
                             t = null;
-                        if (this.props.subscriptionBenefit.platform === w.U.WEB) {
+                        if (this.props.subscriptionBenefit.platform === w.V.WEB) {
                             var n = this.renderInteractables();
                             if (n.length < 1) return null;
                             t = n
@@ -1748,7 +1765,7 @@
                         var e = this.props.subscriptionBenefit,
                             t = e.gift,
                             n = [];
-                        return t && t.isGift ? t && t.isGift && (n.push(this.renderDisableGiftButton()), e.paidUpgrade && n.push(this.renderCancelPaidUpgrade())) : (n.push(this.renderChangeTierButton()), e.renewsAt && (n.push(this.renderChangePaymentMethodButton()), n.push(this.renderDoNotRenewButton())), e.isRefundable && n.push(this.renderCancelAndRefundButton())), n.filter(function(e) {
+                        return t && t.isGift ? t && t.isGift && (n.push(this.renderDisableGiftButton()), e.pendingSubscription && e.pendingSubscription.isCancelable && n.push(this.renderCancelPaidUpgrade())) : (n.push(this.renderChangeTierButton()), e.renewsAt && (n.push(this.renderChangePaymentMethodButton()), n.push(this.renderDoNotRenewButton())), e.isRefundable && n.push(this.renderCancelAndRefundButton())), n.filter(function(e) {
                             return !!e
                         })
                     }, t.prototype.renderChangeTierButton = function() {
@@ -1770,13 +1787,13 @@
                             textAlign: B.Sb.Center
                         }, d.createElement(B.W, null, t)))
                     }, t.prototype.renderMobileMessage = function() {
-                        return this.props.subscriptionBenefit.platform === w.U.ANDROID ? d.createElement(B.W, null, Object(l.d)("To edit this subscription, please go to the Twitch Subscription Manager on your Android device.              <x:link>               Click here for more information.             </x:link>", {
+                        return this.props.subscriptionBenefit.platform === w.V.ANDROID ? d.createElement(B.W, null, Object(l.d)("To edit this subscription, please go to the Twitch Subscription Manager on your Android device.              <x:link>               Click here for more information.             </x:link>", {
                             "x:link": function(e) {
                                 return d.createElement(B.U, {
                                     to: "https://help.twitch.tv/customer/portal/articles/2935963-how-to-purchase-and-manage-subscriptions-on-android#Manage"
                                 }, e)
                             }
-                        }, "EditSubscriptionBalloon")) : this.props.subscriptionBenefit.platform === w.U.IOS ? d.createElement(B.W, null, Object(l.d)("To edit this subscription, please go to your Subscription Manager on your iOS device.              <x:link>               Click here for more information.             </x:link>", {
+                        }, "EditSubscriptionBalloon")) : this.props.subscriptionBenefit.platform === w.V.IOS ? d.createElement(B.W, null, Object(l.d)("To edit this subscription, please go to your Subscription Manager on your iOS device.              <x:link>               Click here for more information.             </x:link>", {
                             "x:link": function(e) {
                                 return d.createElement(B.U, {
                                     to: "https://help.twitch.tv/customer/portal/articles/2935963-how-to-purchase-and-manage-subscriptions-on-ios#Manage"
@@ -1788,13 +1805,13 @@
                 V = Object(y.compose)(Object(g.b)("EditSubscriptionBalloon", {
                     autoReportInteractive: !0
                 }))(W);
-            var Y = Object(r.connect)(void 0, function(e) {
-                    return Object(i.bindActionCreators)({
+            var Y = Object(i.connect)(void 0, function(e) {
+                    return Object(r.bindActionCreators)({
                         showDisableGiftModal: function(e) {
                             var t = u.__rest(e, []);
-                            return Object(U.d)(A, t)
+                            return Object(D.d)(A, t)
                         },
-                        closeModal: U.c
+                        closeModal: D.c
                     }, e)
                 })(V),
                 q = n("7SjK"),
@@ -1999,16 +2016,16 @@
                 }),
                 ne = n("KXaD");
 
-            function re(e, t) {
+            function ie(e, t) {
                 return t || (t = new Date), t.getMonth() === e.getMonth() && e.getDate() - t.getDate() > 25 ? Object(l.i)(e, {
                     units: "day"
                 }) : Object(l.i)(e)
             }
-            var ie;
+            var re;
             n("I/Sa");
             ! function(e) {
                 e.TierDisplay = "TierDisplay", e.ExpiryMessage = "ExpiryMessage", e.PaidUpgradeButton = "PaidUpgradeButton", e.PaidUpgradeMessage = "PaidUpgradeMessage", e.ChannelDisplayName = "ChannelDisplayName"
-            }(ie || (ie = {}));
+            }(re || (re = {}));
             var ae, se, oe = function(e) {
                     function t() {
                         var t = null !== e && e.apply(this, arguments) || this;
@@ -2019,12 +2036,12 @@
                                 id: Object(F.a)(t.props.subBenefit),
                                 mutator: function(e) {
                                     return u.__assign({}, e, {
-                                        platform: w.U.WEB,
+                                        platform: w.V.WEB,
                                         originID: null,
                                         isRefundable: !1,
                                         endsAt: null,
                                         gift: null,
-                                        paidUpgrade: null,
+                                        pendingSubscription: null,
                                         product: null,
                                         purchasedWithPrime: !1,
                                         renewsAt: null,
@@ -2033,14 +2050,14 @@
                                     })
                                 }
                             })
-                        }, t.onCancelPaidUpgradeSuccess = function() {
+                        }, t.onCancelPendingSubscriptionSuccess = function() {
                             Object(S.d)({
                                 fragment: ne,
                                 fragmentName: "subscriptionBenefit",
                                 id: Object(F.a)(t.props.subBenefit),
                                 mutator: function(e) {
                                     return u.__assign({}, e, {
-                                        paidUpgrade: null
+                                        pendingSubscription: null
                                     })
                                 }
                             })
@@ -2048,15 +2065,15 @@
                     }
                     return u.__extends(t, e), t.prototype.render = function() {
                         var e, t, n = this.renderPaidUpgradeButton(),
-                            r = this.props.subBenefit.user && this.props.subBenefit.user.login,
-                            i = null,
+                            i = this.props.subBenefit.user && this.props.subBenefit.user.login,
+                            r = null,
                             a = "",
                             s = void 0;
-                        if (this.props.subBenefit.user && this.props.subBenefit.user.displayName && this.props.subBenefit.user.login) i = this.props.subBenefit.user.bannerImageURL, e = Object(T.a)(this.props.subBenefit.user.login, this.props.subBenefit.user.displayName), a = this.props.subBenefit.user.displayName, s = "/" + this.props.subBenefit.user.login, t = this.props.subBenefit.user.profileImageURL;
-                        else if (this.isTurbo) a = e = Object(l.d)("Twitch Turbo", "SubscriptionCard"), s = "/settings/turbo", t = C.a;
+                        if (this.props.subBenefit.user && this.props.subBenefit.user.displayName && this.props.subBenefit.user.login) r = this.props.subBenefit.user.bannerImageURL, e = Object(T.a)(this.props.subBenefit.user.login, this.props.subBenefit.user.displayName), a = this.props.subBenefit.user.displayName, s = "/" + this.props.subBenefit.user.login, t = this.props.subBenefit.user.profileImageURL;
+                        else if (this.isTurbo) a = e = Object(l.d)("Twitch Turbo", "SubscriptionCard"), s = "/settings/turbo", t = N.a;
                         else {
                             if (this.props.subBenefit.user && this.props.subBenefit.user.displayName) return null;
-                            a = e = Object(l.d)("Suspended/Deactivated Broadcaster", "SubscriptionCard"), t = Object(N.a)(N.b[0], 50), s = "/"
+                            a = e = Object(l.d)("Suspended/Deactivated Broadcaster", "SubscriptionCard"), t = Object(C.a)(C.b[0], 50), s = "/"
                         }
                         return d.createElement(B.Ya, {
                             className: "subscription-card",
@@ -2065,7 +2082,7 @@
                                 bottom: 2
                             }
                         }, d.createElement(te, {
-                            bannerImageSrc: i,
+                            bannerImageSrc: r,
                             linkTo: s
                         }), d.createElement(B.G, {
                             border: !0
@@ -2095,7 +2112,7 @@
                             justifyContent: B.Xa.End
                         }, d.createElement(Y, {
                             currentUserID: this.props.currentUserID,
-                            onCancelPaidUpgradeSuccess: this.onCancelPaidUpgradeSuccess,
+                            onCancelPaidUpgradeSuccess: this.onCancelPendingSubscriptionSuccess,
                             onDisableGiftSuccess: this.onGiftDisableSuccess,
                             subscriptionBenefit: this.props.subBenefit
                         })), d.createElement(B.Zb, {
@@ -2111,7 +2128,7 @@
                         }, d.createElement(B.U, {
                             className: "subscription-card__channel-name",
                             "data-a-target": "subscription-card__channel-name",
-                            "data-test-selector": ie.ChannelDisplayName,
+                            "data-test-selector": re.ChannelDisplayName,
                             hoverUnderlineNone: !0,
                             to: s,
                             type: B.V.Inherit
@@ -2119,7 +2136,7 @@
                             bold: !0,
                             type: B.Wb.H3,
                             ellipsis: !0
-                        }, e)), this.renderVerifiedPartnerBadge())), this.renderTierDisplay(), this.renderCurrentSubscriberBadge(), this.renderGiftInfo(), this.renderBenefitRenewsOrEndsOn(), this.renderPaidUpgradeInfo(), (n || r) && d.createElement(B.Ya, {
+                        }, e)), this.renderVerifiedPartnerBadge())), this.renderTierDisplay(), this.renderCurrentSubscriberBadge(), this.renderGiftInfo(), this.renderBenefitRenewsOrEndsOn(), this.renderPendingSubInfo(), (n || i) && d.createElement(B.Ya, {
                             display: B.X.Flex,
                             margin: {
                                 top: 1
@@ -2131,7 +2148,7 @@
                             margin: {
                                 right: .5
                             }
-                        }, n), r && d.createElement(Z, {
+                        }, n), i && d.createElement(Z, {
                             channelLogin: this.props.subBenefit.user.login
                         }))))))
                     }, t.prototype.renderVerifiedPartnerBadge = function() {
@@ -2149,7 +2166,7 @@
                         }))
                     }, t.prototype.renderTierDisplay = function() {
                         return d.createElement(B.Ya, {
-                            "data-test-selector": ie.TierDisplay,
+                            "data-test-selector": re.TierDisplay,
                             display: B.X.Flex,
                             margin: {
                                 bottom: 2
@@ -2229,15 +2246,15 @@
                         }, "SubscriptionCard") : Object(l.d)("Gift Subscription", "SubscriptionCard")))) : null
                     }, t.prototype.renderPaidUpgradeButton = function() {
                         var e = this.props.subBenefit;
-                        if (!e.user || !e.user.login || !e.gift || !e.gift.isGift || !e.product || !e.product.url || e.paidUpgrade) return null;
+                        if (!e.user || !e.user.login || !e.gift || !e.gift.isGift || !e.product || !e.product.url || e.pendingSubscription) return null;
                         var t = e.product,
                             n = t.url,
-                            r = t.price;
-                        return t.self && t.self.paidUpgradePromotion && ("2000" === t.tier ? n = t.url.slice(0, t.url.indexOf("_2000")) : "3000" === t.tier && (n = t.url.slice(0, t.url.indexOf("_3000"))), r = t.self.paidUpgradePromotion.newPrice), d.createElement(B.z, {
-                            "data-test-selector": ie.PaidUpgradeButton,
+                            i = t.price;
+                        return t.self && t.self.paidUpgradePromotion && ("2000" === t.tier ? n = t.url.slice(0, t.url.indexOf("_2000")) : "3000" === t.tier && (n = t.url.slice(0, t.url.indexOf("_3000"))), i = t.self.paidUpgradePromotion.newPrice), d.createElement(B.z, {
+                            "data-test-selector": re.PaidUpgradeButton,
                             icon: B.ub.Star,
                             linkTo: n,
-                            purchase: r
+                            purchase: i
                         }, Object(l.d)("Continue Sub", "SubscriptionCard"))
                     }, t.prototype.renderBenefitRenewsOrEndsOn = function() {
                         var e = null,
@@ -2245,30 +2262,30 @@
                         if (this.props.subBenefit.endsAt) {
                             if (!this.props.subBenefit.renewsAt && this.props.subBenefit.endsAt) {
                                 var n = new Date(this.props.subBenefit.endsAt),
-                                    r = Object(l.c)(n, {
+                                    i = Object(l.c)(n, {
                                         month: "short",
                                         day: "numeric"
                                     }),
-                                    i = re(n);
+                                    r = ie(n);
                                 e = Object(l.d)("Benefits end {date} ({relative})", {
-                                    date: r,
-                                    relative: i
+                                    date: i,
+                                    relative: r
                                 }, "SubscriptionCard"), t = B.ub.Timeout
                             } else if (this.props.subBenefit.renewsAt) {
                                 var a = new Date(this.props.subBenefit.renewsAt);
-                                r = Object(l.c)(a, {
+                                i = Object(l.c)(a, {
                                     month: "short",
                                     day: "numeric"
-                                }), i = re(a);
+                                }), r = ie(a);
                                 e = Object(l.d)("Renews on {date} ({relative})", {
-                                    date: r,
-                                    relative: i
+                                    date: i,
+                                    relative: r
                                 }, "SubscriptionCard"), t = B.ub.Refresh
                             }
                         } else e = Object(l.d)("Lifetime Subscription", "SubscriptionCard");
                         return null === e ? null : d.createElement(B.Ya, {
                             alignItems: B.f.Center,
-                            "data-test-selector": ie.ExpiryMessage,
+                            "data-test-selector": re.ExpiryMessage,
                             display: B.X.Flex,
                             margin: {
                                 bottom: .5
@@ -2281,15 +2298,23 @@
                                 left: .5
                             }
                         }, d.createElement(B.W, null, e)))
-                    }, t.prototype.renderPaidUpgradeInfo = function() {
-                        if (!this.props.subBenefit.paidUpgrade) return null;
-                        var e = Object(l.c)(new Date(this.props.subBenefit.paidUpgrade.startsAt), {
-                            month: "short",
-                            day: "numeric"
-                        });
-                        return d.createElement(B.Ya, {
+                    }, t.prototype.renderPendingSubInfo = function() {
+                        if (!this.props.subBenefit.pendingSubscription) return null;
+                        var e = this.props.subBenefit.pendingSubscription,
+                            t = Object(l.c)(new Date(e.startsAt), {
+                                month: "short",
+                                day: "numeric"
+                            }),
+                            n = null;
+                        return e.type === w.L.GIFT_TO_PAID ? n = Object(l.d)("Your new Paid Subscription will begin on {date}", {
+                            date: t
+                        }, "SubscriptionCard") : e.type === w.L.DNR_TO_RESUB_RECURRING ? n = Object(l.d)("Your Recurring Subscription will continue on {date}", {
+                            date: t
+                        }, "SubscriptionCard") : e.type === w.L.DNR_TO_RESUB_NONRECURRING && (n = Object(l.d)("Your one-month Subscription extension will begin on {date}", {
+                            date: t
+                        }, "SubscriptionCard")), d.createElement(B.Ya, {
                             alignItems: B.f.Center,
-                            "data-test-selector": ie.PaidUpgradeMessage,
+                            "data-test-selector": re.PaidUpgradeMessage,
                             display: B.X.Flex,
                             margin: {
                                 bottom: .5
@@ -2301,9 +2326,7 @@
                             margin: {
                                 left: .5
                             }
-                        }, d.createElement(B.W, null, Object(l.d)("Your new Paid Subscription will begin on {date}", {
-                            date: e
-                        }, "SubscriptionCard"))))
+                        }, d.createElement(B.W, null, n)))
                     }, Object.defineProperty(t.prototype, "isTurbo", {
                         get: function() {
                             return this.props.subBenefit.product && "324" === this.props.subBenefit.product.id
@@ -2338,20 +2361,20 @@
                             roundedTop: !0
                         })), this.renderSubCards())
                     }, t.prototype.renderSubCards = function() {
-                        for (var e = [], t = !1, n = 0, r = this.props.subscriptions; n < r.length; n++) {
-                            var i = r[n];
-                            if (i && this.filterSubType(i)) {
+                        for (var e = [], t = !1, n = 0, i = this.props.subscriptions; n < i.length; n++) {
+                            var r = i[n];
+                            if (r && this.filterSubType(r)) {
                                 var a = d.createElement(B.Ya, {
-                                    key: "subscription-" + i.id,
+                                    key: "subscription-" + r.id,
                                     margin: {
                                         right: 2
                                     }
                                 }, d.createElement(ue, {
                                     currentUserID: this.props.currentUserID,
-                                    subBenefit: i,
+                                    subBenefit: r,
                                     turboBadge: this.props.turboBadge
                                 }));
-                                i.purchasedWithPrime ? (t = !0, e.unshift(a)) : e.push(a)
+                                r.purchasedWithPrime ? (t = !0, e.unshift(a)) : e.push(a)
                             }
                         }
                         return this.props.type === se.Paid && this.props.hasPrime && !t && e.unshift(d.createElement(_, {
@@ -2466,7 +2489,7 @@
                         }
                 }
             }
-            var be, fe, ge = Object(i.compose)(Object(k.a)(le, {
+            var be, fe, ge = Object(r.compose)(Object(k.a)(le, {
                     options: function(e) {
                         return {
                             fetchPolicy: "network-only",
@@ -2488,11 +2511,11 @@
                                     }),
                                     updateQuery: function(e, t) {
                                         var n = t.fetchMoreResult,
-                                            r = [];
-                                        return e.currentUser && e.currentUser.subscriptionBenefits && e.currentUser.subscriptionBenefits.edges && n.currentUser && n.currentUser.subscriptionBenefits && n.currentUser.subscriptionBenefits.edges && (r = Object(S.c)(e.currentUser.subscriptionBenefits.edges, n.currentUser.subscriptionBenefits.edges)), {
+                                            i = [];
+                                        return e.currentUser && e.currentUser.subscriptionBenefits && e.currentUser.subscriptionBenefits.edges && n.currentUser && n.currentUser.subscriptionBenefits && n.currentUser.subscriptionBenefits.edges && (i = Object(S.c)(e.currentUser.subscriptionBenefits.edges, n.currentUser.subscriptionBenefits.edges)), {
                                             currentUser: u.__assign({}, n.currentUser, {
                                                 subscriptionBenefits: u.__assign({}, n.currentUser && n.currentUser.subscriptionBenefits ? n.currentUser.subscriptionBenefits : {}, {
-                                                    edges: r
+                                                    edges: i
                                                 })
                                             })
                                         }
@@ -2635,20 +2658,20 @@
                         return fe.Paid
                     }, t
                 }(d.Component),
-                ke = Object(i.compose)(Object(g.b)("SubsManagementPage", {
+                ke = Object(r.compose)(Object(g.b)("SubsManagementPage", {
                     autoReportInteractive: !0,
                     destination: f.a.SubsManagementPage
                 }), Object(b.a)({
                     location: he.PageviewLocation.SubsManagementPage
                 }))(ve);
-            var Se = Object(r.connect)(function(e) {
+            var Se = Object(i.connect)(function(e) {
                 var t = Object(o.e)(e);
                 return {
                     isLoggedIn: Object(o.f)(e),
                     currentUserIsStaff: !!(t && t.roles && t.roles.isStaff)
                 }
             }, function(e) {
-                return Object(i.bindActionCreators)({
+                return Object(r.bindActionCreators)({
                     login: function() {
                         return s.e(a.a.SubsManagementPage)
                     }
@@ -2664,9 +2687,9 @@
         ZEQw: function(e, t, n) {
             "use strict";
             n.d(t, "c", function() {
-                return r
-            }), n.d(t, "d", function() {
                 return i
+            }), n.d(t, "d", function() {
+                return r
             }), n.d(t, "e", function() {
                 return a
             }), n.d(t, "b", function() {
@@ -2674,8 +2697,8 @@
             }), n.d(t, "a", function() {
                 return o
             });
-            var r = "subscribe_to_channel",
-                i = "turbo",
+            var i = "subscribe_to_channel",
+                r = "turbo",
                 a = "visit_url",
                 s = "none",
                 o = "broadcaster"
@@ -2685,122 +2708,122 @@
             n.d(t, "a", function() {
                 return s
             });
-            var r = n("mrSG"),
-                i = n("/7QA"),
+            var i = n("mrSG"),
+                r = n("/7QA"),
                 a = n("kRBY"),
                 s = function() {
                     function e() {}
                     return e.get = function(e, t, n) {
-                        return void 0 === t && (t = {}), void 0 === n && (n = {}), r.__awaiter(this, void 0, Promise, function() {
-                            return r.__generator(this, function(i) {
-                                switch (i.label) {
+                        return void 0 === t && (t = {}), void 0 === n && (n = {}), i.__awaiter(this, void 0, Promise, function() {
+                            return i.__generator(this, function(r) {
+                                switch (r.label) {
                                     case 0:
-                                        return [4, this.request(e, r.__assign({}, t, {
+                                        return [4, this.request(e, i.__assign({}, t, {
                                             method: "GET"
                                         }), n)];
                                     case 1:
-                                        return [2, i.sent()]
+                                        return [2, r.sent()]
                                 }
                             })
                         })
                     }, e.getOrThrow = function(e, t, n) {
-                        return void 0 === t && (t = {}), void 0 === n && (n = {}), r.__awaiter(this, void 0, Promise, function() {
-                            return r.__generator(this, function(i) {
-                                switch (i.label) {
+                        return void 0 === t && (t = {}), void 0 === n && (n = {}), i.__awaiter(this, void 0, Promise, function() {
+                            return i.__generator(this, function(r) {
+                                switch (r.label) {
                                     case 0:
-                                        return [4, this.requestOrThrow(e, r.__assign({}, t, {
+                                        return [4, this.requestOrThrow(e, i.__assign({}, t, {
                                             method: "GET"
                                         }), n)];
                                     case 1:
-                                        return [2, i.sent()]
+                                        return [2, r.sent()]
                                 }
                             })
                         })
                     }, e.put = function(e, t, n) {
-                        return void 0 === t && (t = {}), void 0 === n && (n = {}), r.__awaiter(this, void 0, Promise, function() {
-                            return r.__generator(this, function(i) {
-                                switch (i.label) {
+                        return void 0 === t && (t = {}), void 0 === n && (n = {}), i.__awaiter(this, void 0, Promise, function() {
+                            return i.__generator(this, function(r) {
+                                switch (r.label) {
                                     case 0:
-                                        return [4, this.request(e, r.__assign({}, t, {
+                                        return [4, this.request(e, i.__assign({}, t, {
                                             method: "PUT"
                                         }), n)];
                                     case 1:
-                                        return [2, i.sent()]
+                                        return [2, r.sent()]
                                 }
                             })
                         })
                     }, e.putOrThrow = function(e, t, n) {
-                        return void 0 === t && (t = {}), void 0 === n && (n = {}), r.__awaiter(this, void 0, Promise, function() {
-                            return r.__generator(this, function(i) {
-                                switch (i.label) {
+                        return void 0 === t && (t = {}), void 0 === n && (n = {}), i.__awaiter(this, void 0, Promise, function() {
+                            return i.__generator(this, function(r) {
+                                switch (r.label) {
                                     case 0:
-                                        return [4, this.requestOrThrow(e, r.__assign({}, t, {
+                                        return [4, this.requestOrThrow(e, i.__assign({}, t, {
                                             method: "PUT"
                                         }), n)];
                                     case 1:
-                                        return [2, i.sent()]
+                                        return [2, r.sent()]
                                 }
                             })
                         })
                     }, e.post = function(e, t, n) {
-                        return void 0 === t && (t = {}), void 0 === n && (n = {}), r.__awaiter(this, void 0, Promise, function() {
-                            return r.__generator(this, function(i) {
-                                switch (i.label) {
+                        return void 0 === t && (t = {}), void 0 === n && (n = {}), i.__awaiter(this, void 0, Promise, function() {
+                            return i.__generator(this, function(r) {
+                                switch (r.label) {
                                     case 0:
-                                        return [4, this.request(e, r.__assign({}, t, {
+                                        return [4, this.request(e, i.__assign({}, t, {
                                             method: "POST"
                                         }), n)];
                                     case 1:
-                                        return [2, i.sent()]
+                                        return [2, r.sent()]
                                 }
                             })
                         })
                     }, e.postOrThrow = function(e, t, n) {
-                        return void 0 === t && (t = {}), void 0 === n && (n = {}), r.__awaiter(this, void 0, Promise, function() {
-                            return r.__generator(this, function(i) {
-                                switch (i.label) {
+                        return void 0 === t && (t = {}), void 0 === n && (n = {}), i.__awaiter(this, void 0, Promise, function() {
+                            return i.__generator(this, function(r) {
+                                switch (r.label) {
                                     case 0:
-                                        return [4, this.requestOrThrow(e, r.__assign({}, t, {
+                                        return [4, this.requestOrThrow(e, i.__assign({}, t, {
                                             method: "POST"
                                         }), n)];
                                     case 1:
-                                        return [2, i.sent()]
+                                        return [2, r.sent()]
                                 }
                             })
                         })
                     }, e.delete = function(e, t, n) {
-                        return void 0 === t && (t = {}), void 0 === n && (n = {}), r.__awaiter(this, void 0, Promise, function() {
-                            return r.__generator(this, function(i) {
-                                switch (i.label) {
+                        return void 0 === t && (t = {}), void 0 === n && (n = {}), i.__awaiter(this, void 0, Promise, function() {
+                            return i.__generator(this, function(r) {
+                                switch (r.label) {
                                     case 0:
-                                        return [4, this.request(e, r.__assign({}, t, {
+                                        return [4, this.request(e, i.__assign({}, t, {
                                             method: "DELETE"
                                         }), n)];
                                     case 1:
-                                        return [2, i.sent()]
+                                        return [2, r.sent()]
                                 }
                             })
                         })
                     }, e.deleteOrThrow = function(e, t, n) {
-                        return void 0 === t && (t = {}), void 0 === n && (n = {}), r.__awaiter(this, void 0, Promise, function() {
-                            return r.__generator(this, function(i) {
-                                switch (i.label) {
+                        return void 0 === t && (t = {}), void 0 === n && (n = {}), i.__awaiter(this, void 0, Promise, function() {
+                            return i.__generator(this, function(r) {
+                                switch (r.label) {
                                     case 0:
-                                        return [4, this.requestOrThrow(e, r.__assign({}, t, {
+                                        return [4, this.requestOrThrow(e, i.__assign({}, t, {
                                             method: "DELETE"
                                         }), n)];
                                     case 1:
-                                        return [2, i.sent()]
+                                        return [2, r.sent()]
                                 }
                             })
                         })
                     }, e.request = function(e, t, n) {
-                        return void 0 === t && (t = {}), void 0 === n && (n = {}), r.__awaiter(this, void 0, Promise, function() {
-                            var i, a, s, o;
-                            return r.__generator(this, function(u) {
+                        return void 0 === t && (t = {}), void 0 === n && (n = {}), i.__awaiter(this, void 0, Promise, function() {
+                            var r, a, s, o;
+                            return i.__generator(this, function(u) {
                                 switch (u.label) {
                                     case 0:
-                                        return t = this.constructOptions(t, n), i = t.headers ? t.headers["Content-Type"] : void 0, a = this.serialize(t.body, i), s = r.__assign({}, t, {
+                                        return t = this.constructOptions(t, n), r = t.headers ? t.headers["Content-Type"] : void 0, a = this.serialize(t.body, r), s = i.__assign({}, t, {
                                             body: a
                                         }), [4, this._fetch(e, s)];
                                     case 1:
@@ -2811,17 +2834,17 @@
                             })
                         })
                     }, e.requestOrThrow = function(e, t, n) {
-                        return void 0 === t && (t = {}), void 0 === n && (n = {}), r.__awaiter(this, void 0, Promise, function() {
-                            var i;
-                            return r.__generator(this, function(a) {
+                        return void 0 === t && (t = {}), void 0 === n && (n = {}), i.__awaiter(this, void 0, Promise, function() {
+                            var r;
+                            return i.__generator(this, function(a) {
                                 switch (a.label) {
                                     case 0:
                                         return a.trys.push([0, 2, , 3]), [4, this.request(e, t, n)];
                                     case 1:
-                                        if ((i = a.sent()).requestError) throw i.requestError;
-                                        if (i.error) throw new Error("Error while sending legacy-api request: " + i.error.status + " - " + i.error.message);
-                                        return [2, r.__assign({}, i, {
-                                            body: i.body
+                                        if ((r = a.sent()).requestError) throw r.requestError;
+                                        if (r.error) throw new Error("Error while sending legacy-api request: " + r.error.status + " - " + r.error.message);
+                                        return [2, i.__assign({}, r, {
+                                            body: r.body
                                         })];
                                     case 2:
                                         throw a.sent();
@@ -2831,30 +2854,30 @@
                             })
                         })
                     }, e.getAPIURL = function(e) {
-                        return new URL(e, i.p.config.apiBaseURL)
+                        return new URL(e, r.p.config.apiBaseURL)
                     }, e.constructLegacyAPIResponse = function(e) {
-                        return r.__awaiter(this, void 0, Promise, function() {
-                            var t, n, i, a;
-                            return r.__generator(this, function(r) {
-                                switch (r.label) {
+                        return i.__awaiter(this, void 0, Promise, function() {
+                            var t, n, r, a;
+                            return i.__generator(this, function(i) {
+                                switch (i.label) {
                                     case 0:
                                         t = {
                                             status: e.status
-                                        }, r.label = 1;
+                                        }, i.label = 1;
                                     case 1:
-                                        return r.trys.push([1, 3, , 4]), [4, e.json()];
+                                        return i.trys.push([1, 3, , 4]), [4, e.json()];
                                     case 2:
-                                        return n = r.sent(), e.ok ? t.body = n : t.error = n, [3, 4];
+                                        return n = i.sent(), e.ok ? t.body = n : t.error = n, [3, 4];
                                     case 3:
-                                        return i = r.sent(), e.headers && e.headers.get && (a = e.headers.get("Content-Type")) && -1 !== a.indexOf("application/json") && (t.requestError = i), [3, 4];
+                                        return r = i.sent(), e.headers && e.headers.get && (a = e.headers.get("Content-Type")) && -1 !== a.indexOf("application/json") && (t.requestError = r), [3, 4];
                                     case 4:
                                         return [2, t]
                                 }
                             })
                         })
                     }, e._fetch = function(e, t) {
-                        return void 0 === t && (t = {}), r.__awaiter(this, void 0, Promise, function() {
-                            return r.__generator(this, function(n) {
+                        return void 0 === t && (t = {}), i.__awaiter(this, void 0, Promise, function() {
+                            return i.__generator(this, function(n) {
                                 switch (n.label) {
                                     case 0:
                                         return [4, fetch(this.getAPIURL(e).toString(), t)];
@@ -2865,55 +2888,55 @@
                         })
                     }, e.constructOptions = function(e, t) {
                         return e = Object.assign({}, e, {
-                            headers: r.__assign({}, this.getDefaultHeaders(e, t), e.headers)
+                            headers: i.__assign({}, this.getDefaultHeaders(e, t), e.headers)
                         })
                     }, e.serialize = function(e, t) {
                         return "application/json; charset=UTF-8" === t ? JSON.stringify(e) : "string" == typeof e ? e : e && FormData.prototype.isPrototypeOf(e) ? e : e ? (this.logger.error(new Error("Could not serialize this request body for the content-type provided."), "attempting to serialize object with a non-JSON content-type", {
                             contentType: t
                         }), null) : null
                     }, e.getDefaultHeaders = function(e, t) {
-                        var n = i.p.store.getState(),
-                            r = {
+                        var n = r.p.store.getState(),
+                            i = {
                                 Accept: "application/vnd.twitchtv.v" + (t.version || 5) + "+json; charset=UTF-8",
                                 "Accept-Language": "en-us",
-                                "Client-ID": i.p.config.legacyClientID,
+                                "Client-ID": r.p.config.legacyClientID,
                                 "X-Requested-With": "XMLHttpRequest"
                             };
-                        e.body && FormData.prototype.isPrototypeOf(e.body) || (r["Content-Type"] = "application/json; charset=UTF-8");
+                        e.body && FormData.prototype.isPrototypeOf(e.body) || (i["Content-Type"] = "application/json; charset=UTF-8");
                         var s = Object(a.e)(n);
-                        return s && (r.Authorization = "OAuth " + s.authToken, s.legacyCSRFToken && (r["Twitch-Api-Token"] = s.legacyCSRFToken)), t.excludeHeaders && t.excludeHeaders.forEach(function(e) {
-                            r[e] && delete r[e]
-                        }), r
-                    }, e.logger = i.p.logger.withCategory("legacy-api"), e
+                        return s && (i.Authorization = "OAuth " + s.authToken, s.legacyCSRFToken && (i["Twitch-Api-Token"] = s.legacyCSRFToken)), t.excludeHeaders && t.excludeHeaders.forEach(function(e) {
+                            i[e] && delete i[e]
+                        }), i
+                    }, e.logger = r.p.logger.withCategory("legacy-api"), e
                 }()
         },
         cMjZ: function(e, t, n) {
             "use strict";
             n.d(t, "a", function() {
-                return i
+                return r
             });
-            var r = n("o4DC");
+            var i = n("o4DC");
 
-            function i(e) {
-                return e && Object(r.c)(e) || ""
+            function r(e) {
+                return e && Object(i.c)(e) || ""
             }
         },
         cpJf: function(e, t, n) {
             "use strict";
-            var r;
+            var i;
             n.d(t, "a", function() {
-                    return r
+                    return i
                 }), n.d(t, "d", function() {
                     return a
                 }), n.d(t, "c", function() {
                     return s
                 }), n.d(t, "b", function() {
-                    return i
+                    return r
                 }),
                 function(e) {
                     e.Chat = "stream_chat", e.Feeds = "feeds", e.Room = "chatroom", e.Whisper = "whisper", e.VodChat = "vod-chat"
-                }(r || (r = {}));
-            var i, a = {
+                }(i || (i = {}));
+            var r, a = {
                     TriHard: {
                         count: 196568036
                     },
@@ -2996,28 +3019,28 @@
                 s = ["354", "49106", "4339", "48", "25", "55338", "70433", "1902", "68856", "81103", "76171", "27509"];
             ! function(e) {
                 e.Web = "WEB", e.IOS = "IOS", e.Android = "ANDROID"
-            }(i || (i = {}))
+            }(r || (r = {}))
         },
         fQWD: function(e, t, n) {
             "use strict";
-            var r = n("vHGB");
+            var i = n("vHGB");
             n.d(t, "a", function() {
-                return r.a
+                return i.a
             })
         },
         l1sD: function(e, t, n) {},
         lZdE: function(e, t, n) {
             "use strict";
 
-            function r(e) {
+            function i(e) {
                 return e.replace(/[.*+?^${}()|[\]\\]/g, "\\$&")
             }
             n.d(t, "a", function() {
-                return r
+                return i
             })
         },
         sEB7: function(e, t, n) {
-            var r = {
+            var i = {
                 kind: "Document",
                 definitions: [{
                     kind: "OperationDefinition",
@@ -3282,7 +3305,7 @@
                     end: 536
                 }
             };
-            r.loc.source = {
+            i.loc.source = {
                 body: '#import "twilight/features/badges/models/badge-fragment.gql"\n#import "twilight/pages/subscriptions-management/models/subscription-benefit-fragment.gql"\nquery SubscriptionsManagement_SubscriptionBenefits($limit: Int $cursor: Cursor $filter: SubscriptionBenefitFilter $platform: SubscriptionPlatform) {\ncurrentUser {\nid\nhasPrime\navailableBadges {\n...badge\n}\nsubscriptionBenefits(first: $limit after: $cursor criteria: {filter: $filter platform: $platform}) {\npageInfo {\nhasNextPage\n}\nedges {\ncursor\nnode {\n...subscriptionBenefit\n}\n}\n}\n}\n}',
                 name: "GraphQL request",
                 locationOffset: {
@@ -3290,21 +3313,21 @@
                     column: 1
                 }
             };
-            var i = {};
+            var r = {};
 
             function a(e) {
                 return e.filter(function(e) {
                     if ("FragmentDefinition" !== e.kind) return !0;
                     var t = e.name.value;
-                    return !i[t] && (i[t] = !0, !0)
+                    return !r[t] && (r[t] = !0, !0)
                 })
             }
-            r.definitions = r.definitions.concat(a(n("IKE4").definitions)), r.definitions = r.definitions.concat(a(n("KXaD").definitions)), e.exports = r
+            i.definitions = i.definitions.concat(a(n("IKE4").definitions)), i.definitions = i.definitions.concat(a(n("KXaD").definitions)), e.exports = i
         },
         vHGB: function(e, t, n) {
             "use strict";
-            var r = n("mrSG"),
-                i = n("q1tI"),
+            var i = n("mrSG"),
+                r = n("q1tI"),
                 a = n("ZEQw"),
                 s = n("Ue10"),
                 o = (n("E78O"), n("/7QA")),
@@ -3335,29 +3358,29 @@
                         })
                     }, t
                 }
-                return r.__extends(t, e), t.prototype.render = function() {
+                return i.__extends(t, e), t.prototype.render = function() {
                     var e = this.props.badge,
                         t = e.title,
                         n = e.image1x,
-                        r = e.image2x,
+                        i = e.image2x,
                         a = e.image4x,
-                        u = i.createElement("img", {
+                        u = r.createElement("img", {
                             alt: t,
                             "aria-label": Object(o.d)("{badgeTitle} badge", {
                                 badgeTitle: t
                             }, "Badge"),
                             className: "chat-badge",
                             src: n,
-                            srcSet: n + " 1x, " + r + " 2x, " + a + " 4x",
+                            srcSet: n + " 1x, " + i + " 2x, " + a + " 4x",
                             onMouseOver: this.onMouseOver,
                             onMouseOut: this.onMouseOut
                         });
-                    return this.targetURL = this.getTargetURL(), "" !== this.targetURL && (u = i.createElement("a", {
+                    return this.targetURL = this.getTargetURL(), "" !== this.targetURL && (u = r.createElement("a", {
                         href: this.targetURL,
                         onClick: this.onBadgeClickHandler,
                         target: "_blank",
                         "data-a-target": "chat-badge"
-                    }, u)), this.state.isHovering ? i.createElement(s.Zb, {
+                    }, u)), this.state.isHovering ? r.createElement(s.Zb, {
                         align: s.ac.Left,
                         "data-a-target": "chat-badge",
                         display: s.X.Inline,
@@ -3380,7 +3403,7 @@
                 }, t.prototype.getSubscriberLink = function() {
                     return "https://www.twitch.tv/" + this.props.badge.channelName + "/subscribe?ref=in_chat_subscriber_link"
                 }, t
-            }(i.Component)
+            }(r.Component)
         }
     }
 ]);

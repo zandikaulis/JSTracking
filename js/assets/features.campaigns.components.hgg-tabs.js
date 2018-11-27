@@ -459,6 +459,7 @@
                         }, t
                     }
                     return i.__extends(t, e), t.prototype.render = function() {
+                        var e = this.props.type === h.F.Default || this.props.type ? this.props.type : h.F.Hollow;
                         return o.createElement(h.Ya, {
                             className: "blizzard-account-link"
                         }, this.props.data && this.props.data.loading && o.createElement(h.z, {
@@ -471,38 +472,50 @@
                         }, o.createElement(h.tb, {
                             asset: h.ub.DeadGlitch
                         })), this.props.data && this.props.data.currentUser && !this.props.data.currentUser.blizzardAccount && o.createElement(l.a, null, o.createElement(h.z, {
-                            type: h.F.Hollow,
+                            type: e,
                             "data-test-selector": "blizzard_account_link_component_unlinked",
                             dropdown: !0,
                             size: h.D.Default
-                        }, Object(s.d)("Link your Blizzard Account", "CampaignsBlizzardAccountLink")), o.createElement(h.u, {
+                        }, this.props.linkText || Object(s.d)("Link your Blizzard Account", "CampaignsBlizzardAccountLink")), o.createElement(h.u, {
                             direction: h.v.BottomRight,
                             size: h.w.Small,
                             noTail: !0
                         }, o.createElement(h.Ya, {
-                            padding: .5
+                            padding: 1
                         }, o.createElement(h.Va, {
                             onClick: this.blizzardLink,
                             "data-region": "us"
-                        }, Object(s.d)("North America (US)", "CampaignsBlizzardAccountLink")), o.createElement(h.Va, {
+                        }, o.createElement(h.Ya, {
+                            padding: .5
+                        }, Object(s.d)("North America (US)", "CampaignsBlizzardAccountLink"))), o.createElement(h.Va, {
                             onClick: this.blizzardLink,
                             "data-region": "eu"
-                        }, Object(s.d)("Europe (EU)", "CampaignsBlizzardAccountLink")), o.createElement(h.Va, {
+                        }, o.createElement(h.Ya, {
+                            padding: .5
+                        }, Object(s.d)("Europe (EU)", "CampaignsBlizzardAccountLink"))), o.createElement(h.Va, {
                             onClick: this.blizzardLink,
                             "data-region": "kr"
-                        }, Object(s.d)("Korea (KR)", "CampaignsBlizzardAccountLink")), o.createElement(h.Va, {
+                        }, o.createElement(h.Ya, {
+                            padding: .5
+                        }, Object(s.d)("Korea (KR)", "CampaignsBlizzardAccountLink"))), o.createElement(h.Va, {
                             onClick: this.blizzardLink,
                             "data-region": "tw"
-                        }, Object(s.d)("Taiwan (TW)", "CampaignsBlizzardAccountLink")), o.createElement(h.Va, {
+                        }, o.createElement(h.Ya, {
+                            padding: .5
+                        }, Object(s.d)("Taiwan (TW)", "CampaignsBlizzardAccountLink"))), o.createElement(h.Va, {
                             onClick: this.blizzardLink,
                             "data-region": "cn"
-                        }, Object(s.d)("China (CN)", "CampaignsBlizzardAccountLink")), o.createElement(h.Va, {
+                        }, o.createElement(h.Ya, {
+                            padding: .5
+                        }, Object(s.d)("China (CN)", "CampaignsBlizzardAccountLink"))), o.createElement(h.Va, {
                             onClick: this.blizzardLink,
                             "data-region": "sea"
-                        }, Object(s.d)("South East Asia (SEA)", "CampaignsBlizzardAccountLink"))))), this.props.data && this.props.data.currentUser && this.props.data.currentUser.blizzardAccount && o.createElement(h.Zb, {
+                        }, o.createElement(h.Ya, {
+                            padding: .5
+                        }, Object(s.d)("South East Asia (SEA)", "CampaignsBlizzardAccountLink")))))), this.props.data && this.props.data.currentUser && this.props.data.currentUser.blizzardAccount && o.createElement(h.Zb, {
                             label: this.props.data.currentUser.blizzardAccount.battleTag
                         }, o.createElement(l.a, null, o.createElement(h.z, {
-                            type: h.F.Hollow,
+                            type: e,
                             size: h.D.Default,
                             "data-test-selector": "blizzard_account_link_component_linked"
                         }, o.createElement(h.Ya, {
@@ -527,11 +540,13 @@
                             size: h.w.Small,
                             noTail: !0
                         }, o.createElement(h.Ya, {
-                            padding: .5
+                            padding: 1
                         }, o.createElement(h.Va, {
                             onClick: this.blizzardUnlink,
                             "data-test-selector": "blizzard_account_link_component_unlink_account"
-                        }, Object(s.d)("Unlink Blizzard Account", "CampaignsBlizzardAccountLink")))))))
+                        }, o.createElement(h.Ya, {
+                            padding: .5
+                        }, Object(s.d)("Unlink Blizzard Account", "CampaignsBlizzardAccountLink"))))))))
                     }, t = i.__decorate([Object(c.a)(g)], t)
                 }(o.Component));
             var f = Object(a.connect)(function(e) {
@@ -799,11 +814,11 @@
                         return ""
                     }
                 },
-                S = n("vt2+");
+                A = n("vt2+");
             ! function(e) {
                 e.CommunityRewards = "community-rewards", e.IndividualRewards = "individual-rewards"
             }(k || (k = {}));
-            var A, F = function(e) {
+            var S, F = function(e) {
                     function t() {
                         var t = null !== e && e.apply(this, arguments) || this;
                         return t.renderCommunityRewards = function() {
@@ -813,9 +828,9 @@
                                 return e.tag === _.a.Global && e.isActive
                             });
                             if (!n) return null;
-                            var a = Object(S.b)(n.milestones || []),
+                            var a = Object(A.b)(n.milestones || []),
                                 r = a.length > 0 && a.filter(function(e) {
-                                    return n.progress >= e.threshold && Object(S.a)(e, new Date(Date.now()))
+                                    return n.progress >= e.threshold && Object(A.a)(e, new Date(Date.now()))
                                 }).length === a.length,
                                 s = a.map(function(e) {
                                     return e.participationThreshold
@@ -848,7 +863,7 @@
                                 return e.tag === _.a.Individual && !e.cheergroup
                             });
                             if (!n) return null;
-                            var a = Object(S.b)(n.milestones || []);
+                            var a = Object(A.b)(n.milestones || []);
                             return i.createElement(b.Ya, {
                                 "data-test-selector": k.IndividualRewards
                             }, i.createElement(l.a, {
@@ -935,7 +950,7 @@
                 T = n("ImQ+"),
                 R = n("t95G"),
                 L = n("gzKk");
-            (A || (A = {})).Community = "community-objectives";
+            (S || (S = {})).Community = "community-objectives";
             var z = function(e) {
                 function t() {
                     return null !== e && e.apply(this, arguments) || this
@@ -967,7 +982,7 @@
                         totalRewards: t,
                         rewardsEntitled: n,
                         showCheer: this.props.isLoggedIn,
-                        "data-test-selector": A.Community
+                        "data-test-selector": S.Community
                     }, i.createElement(b.Ya, {
                         display: b.X.Flex,
                         flexWrap: b.Ba.Wrap,
@@ -1015,7 +1030,7 @@
                 U = n("QlRw"),
                 B = n("KnFV"),
                 P = n("0nav"),
-                G = function(e) {
+                Y = function(e) {
                     function t(t) {
                         var n = e.call(this, t) || this;
                         return n.state = {
@@ -1134,11 +1149,11 @@
                         return t || n
                     }, t
                 }(i.Component),
-                Y = G;
+                G = Y;
             n.d(t, "HGGTabsComponent", function() {
-                return G
-            }), n.d(t, "HGGTabs", function() {
                 return Y
+            }), n.d(t, "HGGTabs", function() {
+                return G
             })
         },
         AvCV: function(e, t, n) {},
@@ -1973,7 +1988,7 @@
                     }, t
                 }
                 return o.__extends(t, e), t.prototype.render = function() {
-                    var e = this.props.trigger && this.props.trigger.triggerType === d.Z.CHEER;
+                    var e = this.props.trigger && this.props.trigger.triggerType === d.Aa.CHEER;
                     if (!this.props.milestone && !e) return null;
                     if (this.props.milestone && !Object(b.a)(this.props.milestone, new Date(Date.now()))) return this.renderNotAvailableBallon();
                     var t, n = !!this.props.milestone && this.props.milestone.objectiveTag === g.a.Global;

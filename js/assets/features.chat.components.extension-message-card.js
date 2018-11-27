@@ -1,5 +1,5 @@
 (window.webpackJsonp = window.webpackJsonp || []).push([
-    [201], {
+    [202], {
         "/HY+": function(e, t, r) {
             "use strict";
             var n = r("dAHa"),
@@ -1097,7 +1097,7 @@
                             return Object(c.d)("In a whisper (private message)", "ReportModalWizard")
                         },
                         value: "whisper",
-                        reportContext: v.N.WHISPER_REPORT
+                        reportContext: v.O.WHISPER_REPORT
                     },
                     whisper_more_options: {
                         getTitle: x.moreOptions,
@@ -2030,7 +2030,7 @@
                             return a.__generator(this, function(a) {
                                 switch (a.label) {
                                     case 0:
-                                        if (r = n === v.N.WHISPER_REPORT ? n : this.props.reportContext.contentType, o = v.N[r], null === (i = {
+                                        if (r = n === v.O.WHISPER_REPORT ? n : this.props.reportContext.contentType, o = v.O[r], null === (i = {
                                                 description: t,
                                                 reason: e,
                                                 content: o,
@@ -2314,7 +2314,7 @@
                             var e = t.props.extensionMessageCardData.extension;
                             e && t.props.showReportExtensionModal({
                                 reportContext: {
-                                    contentType: h.N.EXTENSION_REPORT,
+                                    contentType: h.O.EXTENSION_REPORT,
                                     contentID: e.clientID + "-" + e.version,
                                     targetUserID: t.props.channelID
                                 },

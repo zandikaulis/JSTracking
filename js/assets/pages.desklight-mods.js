@@ -67,10 +67,10 @@
                 })(d.a),
                 f = n("Ue10"),
                 h = s.a.wrap(function() {
-                    return n.e(138).then(n.bind(null, "Mg9V"))
+                    return n.e(139).then(n.bind(null, "Mg9V"))
                 }, "DesklightModsAvailableGamesPage"),
                 v = s.a.wrap(function() {
-                    return n.e(137).then(n.bind(null, "UYLc"))
+                    return n.e(138).then(n.bind(null, "UYLc"))
                 }, "GameRoot"),
                 b = function(e) {
                     function t() {

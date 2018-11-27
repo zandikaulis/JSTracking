@@ -1,5 +1,5 @@
 (window.webpackJsonp = window.webpackJsonp || []).push([
-    [188], {
+    [189], {
         EpOa: function(e, t, r) {
             "use strict";
             var n = r("mrSG"),
@@ -7,32 +7,32 @@
                 i = r("/7QA"),
                 o = r("GnwI"),
                 s = r("j3KY"),
-                l = r("Rjl4"),
-                c = r("Ue10"),
+                c = r("Rjl4"),
+                l = r("Ue10"),
                 m = (r("SyMV"), function(e) {
                     function t() {
                         var t = null !== e && e.apply(this, arguments) || this;
                         return t.onTryPrimeClick = function() {
-                            Object(l.o)({
+                            Object(c.o)({
                                 buttonPosition: t.props.tracking.position
                             })
                         }, t.getButtonTypeFromTheme = function() {
                             return {
-                                twitch: c.F.Default
+                                twitch: l.F.Default
                             }[t.props.theme || "default"] || void 0
                         }, t
                     }
                     return n.__extends(t, e), t.prototype.render = function() {
                         var e = this.props.theme || "default";
-                        return a.createElement(c.Ya, {
+                        return a.createElement(l.Ya, {
                             className: "prime-upsell-button__subsite prime-upsell-button__subsite--" + e,
                             margin: {
                                 top: 2,
                                 bottom: 1
                             }
-                        }, a.createElement(c.z, {
+                        }, a.createElement(l.z, {
                             fullWidth: !0,
-                            size: c.D.Large,
+                            size: l.D.Large,
                             linkTo: this.props.buttonURLOverride || this.getLink(),
                             targetBlank: !0,
                             onClick: this.onTryPrimeClick,
@@ -65,7 +65,7 @@
                 o = r("wIs1"),
                 s = r("/7QA");
 
-            function l(e) {
+            function c(e) {
                 return function(t) {
                     var r = function(r) {
                         function o(t) {
@@ -79,13 +79,13 @@
                                     r.location && r.location.state && (t.medium = r.location.state.medium, t.content = r.location.state.content, t.content_index = r.location.state.content_index, t.email_id = r.location.state.email_id);
                                     var i = a.referenceTracking,
                                         o = i.content,
-                                        l = i.medium,
-                                        c = i.content_index,
+                                        c = i.medium,
+                                        l = i.content_index,
                                         m = i.email_id;
                                     s.p.tracking.trackPageview(n.__assign({
                                         content: o,
-                                        medium: l,
-                                        content_index: c,
+                                        medium: c,
+                                        content_index: l,
                                         email_id: m,
                                         location: e.location
                                     }, t))
@@ -125,7 +125,7 @@
                 }
             }
             r.d(t, "a", function() {
-                return l
+                return c
             })
         },
         "X+nQ": function(e, t, r) {
@@ -135,9 +135,9 @@
                 i = r("oJmH"),
                 o = r("/7QA"),
                 s = r("yR8l"),
-                l = r("GnwI"),
-                c = r("9pSj"),
-                m = Object(l.b)("AmazonPrimeLogo", {
+                c = r("GnwI"),
+                l = r("9pSj"),
+                m = Object(c.b)("AmazonPrimeLogo", {
                     autoReportInteractive: !0
                 })(function(e) {
                     var t = e.width || "110",
@@ -158,28 +158,28 @@
                     }))
                 }),
                 p = r("Rjl4"),
-                u = r("zUQL"),
-                d = r("O4UZ"),
+                d = r("zUQL"),
+                u = r("O4UZ"),
                 f = r("EpOa"),
                 h = r("Ue10"),
                 g = r("uDwM"),
                 v = (r("iQf2"), "prime-upsell__msg-link"),
                 b = "prime-upsell__msg-container__upsell-text",
                 k = "prime-upsell__logo-container__img",
-                O = "prime-upsell__logo-container__svg",
-                y = "prime-banner-upsell",
-                T = "twitch.prime.lootpage.upsell.image",
-                w = "twitch.prime.lootpage.upsell.linktext",
+                y = "prime-upsell__logo-container__svg",
+                O = "prime-banner-upsell",
+                w = "twitch.prime.lootpage.upsell.image",
+                T = "twitch.prime.lootpage.upsell.linktext",
                 _ = "twitch.prime.lootpage.upsell.text",
-                P = "twitch.prime.lootpage.upsell.buttonurl",
-                x = "twitch.prime.lootpage.upsell.buttontext",
-                E = "twitch.prime.lootpage.upsell.theme",
-                D = function(e) {
+                x = "twitch.prime.lootpage.upsell.buttonurl",
+                D = "twitch.prime.lootpage.upsell.buttontext",
+                P = "twitch.prime.lootpage.upsell.theme",
+                E = function(e) {
                     function t() {
                         var t = null !== e && e.apply(this, arguments) || this;
                         return t.renderBannerPlaceholder = function() {
                             var e = t.props.userData;
-                            if (Object(d.m)(e) || t.props.promotionData && t.props.promotionData.loading) return a.createElement(h.Qa, {
+                            if (Object(u.m)(e) || t.props.promotionData && t.props.promotionData.loading) return a.createElement(h.Qa, {
                                 fullHeight: !0,
                                 fullWidth: !0
                             }, a.createElement(h.jb, {
@@ -187,11 +187,11 @@
                             }))
                         }, t.renderBanner = function() {
                             var e = t.props.userData,
-                                r = !Object(d.n)(e) || t.getTextFromOverride(P),
+                                r = !Object(u.n)(e) || t.getTextFromOverride(x),
                                 n = t.queriesDoneLoading();
                             if (n && !r) return null;
                             if (!n || r) {
-                                var i = t.getTextFromOverride(E) || "default";
+                                var i = t.getTextFromOverride(P) || "default";
                                 return a.createElement(h.Ya, {
                                     className: "prime-ad-banner",
                                     display: n && r ? h.X.Block : h.X.Hide
@@ -200,7 +200,7 @@
                                     duration: h.k.Long,
                                     enabled: !!r
                                 }, a.createElement(h.Fb, {
-                                    "data-test-target": y,
+                                    "data-test-target": O,
                                     className: "prime-banner-upsell prime-banner-upsell--" + i.toLowerCase(),
                                     padding: {
                                         x: 5,
@@ -262,7 +262,7 @@
                                 })))))
                             }
                         }, t.renderLogoOrImage = function() {
-                            var e = t.getTextFromOverride(T),
+                            var e = t.getTextFromOverride(w),
                                 r = e && a.createElement(h.S, {
                                     src: e,
                                     alt: Object(o.d)("Promotional Banner for Twitch Prime", "TwitchPrimeBanner"),
@@ -280,15 +280,15 @@
                                 asset: h.ub.LogoTwitchPrime,
                                 width: 330,
                                 height: 150,
-                                "data-test-selector": O
+                                "data-test-selector": y
                             }))
                         }, t.renderUpsellText = function() {
                             return t.getTextFromOverride(_) || Object(o.d)("Free games, in-game loot, exclusives and surprises. New offers every month with Twitch Prime membership.", "PrimeUpsell")
                         }, t.renderUpsellLink = function() {
                             var e = t.props.userData,
-                                r = !Object(d.n)(e) && t.getTextFromOverride(w),
-                                n = !Object(d.n)(e) && t.getTextFromOverride(P) || "",
-                                i = t.getTextFromOverride(E) || "default";
+                                r = !Object(u.n)(e) && t.getTextFromOverride(T),
+                                n = !Object(u.n)(e) && t.getTextFromOverride(x) || "",
+                                i = t.getTextFromOverride(P) || "default";
                             return n && r && a.createElement(h.W, {
                                 type: h.Wb.P,
                                 fontSize: h.Ca.Size4,
@@ -301,9 +301,9 @@
                             }, r))
                         }, t.renderTryPrimeButton = function() {
                             var e = t.props.userData,
-                                r = Object(d.n)(e) && t.getTextFromOverride(x) || "",
-                                n = Object(d.n)(e) && t.getTextFromOverride(P) || "",
-                                i = t.getTextFromOverride(E) || "default";
+                                r = Object(u.n)(e) && t.getTextFromOverride(D) || "",
+                                n = Object(u.n)(e) && t.getTextFromOverride(x) || "",
+                                i = t.getTextFromOverride(P) || "default";
                             return a.createElement(f.a, {
                                 externalReftag: t.props.externalReftag,
                                 tracking: {
@@ -311,7 +311,7 @@
                                 },
                                 buttonURLOverride: n,
                                 buttonTextOverride: r,
-                                buttonDataTargetOverride: Object(d.n)(e) ? "prime-main-redirect-button-header" : "prime-upsell-try-prime-button-header",
+                                buttonDataTargetOverride: Object(u.n)(e) ? "prime-main-redirect-button-header" : "prime-upsell-try-prime-button-header",
                                 theme: i
                             })
                         }, t.getTextFromOverride = function(e) {
@@ -329,7 +329,7 @@
                             var e = {
                                     twitch: h.V.Default
                                 },
-                                r = t.getTextFromOverride(E);
+                                r = t.getTextFromOverride(P);
                             return r && e[r] || h.V.Inherit
                         }, t.queriesDoneLoading = function() {
                             return t.userDataReportInteractive() && t.promotionDataReportInteractive()
@@ -347,19 +347,19 @@
                         return a.createElement(h.Ya, null, this.renderBannerPlaceholder(), this.renderBanner())
                     }, t
                 }(a.Component),
-                F = Object(i.compose)(Object(l.b)("TwitchPrimeBanner"), Object(s.a)(u, {
+                F = Object(i.compose)(Object(c.b)("TwitchPrimeBanner"), Object(s.a)(d, {
                     name: "userData"
                 }), Object(s.a)(g, {
                     name: "promotionData",
                     options: function() {
                         return {
                             variables: {
-                                stringIds: [x, P, T, w, _, E],
-                                dateOverride: Object(c.f)(c.e.DateOverride)
+                                stringIds: [D, x, w, T, _, P],
+                                dateOverride: Object(l.f)(l.e.DateOverride)
                             }
                         }
                     }
-                }))(D);
+                }))(E);
             r.d(t, !1, function() {
                 return v
             }), r.d(t, !1, function() {
@@ -367,23 +367,23 @@
             }), r.d(t, !1, function() {
                 return k
             }), r.d(t, !1, function() {
-                return O
-            }), r.d(t, !1, function() {
                 return y
             }), r.d(t, !1, function() {
-                return T
+                return O
             }), r.d(t, !1, function() {
                 return w
             }), r.d(t, !1, function() {
-                return _
+                return T
             }), r.d(t, !1, function() {
-                return P
+                return _
             }), r.d(t, !1, function() {
                 return x
             }), r.d(t, !1, function() {
-                return E
-            }), r.d(t, !1, function() {
                 return D
+            }), r.d(t, !1, function() {
+                return P
+            }), r.d(t, !1, function() {
+                return E
             }), r.d(t, "a", function() {
                 return F
             })
@@ -396,21 +396,47 @@
                 i = r("oJmH"),
                 o = r("i8i4"),
                 s = r("/7QA"),
-                l = r("yR8l"),
-                c = r("V+GM"),
+                c = r("yR8l"),
+                l = r("V+GM"),
                 m = r("NvVO"),
                 p = r("2xye"),
-                u = r("GnwI"),
-                d = r("jmDq"),
+                d = r("GnwI"),
+                u = r("jmDq"),
                 f = r("4NwI"),
                 h = r("RfIv"),
                 g = r("Rjl4"),
                 v = r("zUQL"),
                 b = r("O4UZ"),
                 k = r("EpOa"),
-                O = r("X+nQ"),
-                y = r("Ue10"),
-                T = (r("sKC6"), function(e) {
+                y = r("X+nQ"),
+                O = r("wIs1"),
+                w = r("Ue10"),
+                T = function(e) {
+                    function t() {
+                        return null !== e && e.apply(this, arguments) || this
+                    }
+                    return n.__extends(t, e), t.prototype.render = function() {
+                        return a.createElement(w.Qa, null, a.createElement(w.Ya, {
+                            className: "prime-pixels"
+                        }, a.createElement("img", {
+                            height: "1",
+                            width: "1",
+                            "data-border": "0",
+                            alt: "",
+                            src: "https://s.amazon-adsystem.com/iui3?d=forester-did&ex-fargs=%3Fid%3D573a4bd9-f106-f600-a392-699ceaddb160%26type%3D6%26m%3D1&ex-fch=416613&ex-src=https://www.twitch.tv/prime&ex-hargs=v%3D1.0%3Bc%3D7416603020101%3Bp%3D573A4BD9-F106-F600-A392-699CEADDB160"
+                        }), a.createElement("img", {
+                            height: "1",
+                            width: "1",
+                            "data-border": "0",
+                            alt: "",
+                            src: "https://aax-eu.amazon-adsystem.com/s/iui3?d=forester-did&ex-fargs=%3Fid%3D5b59d365-e0b2-268d-00a0-aa0f59cce0c1%26type%3D4%26m%3D3&ex-fch=416613&ex-src=https://www.twitch.tv/&ex-hargs=v%3D1.0%3Bc%3D3815840130302%3Bp%3D5B59D365-E0B2-268D-00A0-AA0F59CCE0C1"
+                        })))
+                    }, t
+                }(a.Component),
+                _ = Object(i.compose)(O.a, Object(d.b)("TwitchPrimeLootPagePixels", {
+                    autoReportInteractive: !0
+                }))(T),
+                x = (r("sKC6"), function(e) {
                     function t() {
                         var t = null !== e && e.apply(this, arguments) || this;
                         return t.renderOfferListsInOrder = function() {
@@ -419,13 +445,13 @@
                                 n = t.renderOfferList(h.a.Game, Object(s.d)("Free Games with Prime", "PrimePageOffers"));
                             switch (e) {
                                 case "Game":
-                                    return a.createElement(y.Fb, {
-                                        background: y.r.Base,
+                                    return a.createElement(w.Fb, {
+                                        background: w.r.Base,
                                         className: "prime-offers"
                                     }, n, r);
                                 default:
-                                    return a.createElement(y.Fb, {
-                                        background: y.r.Base,
+                                    return a.createElement(w.Fb, {
+                                        background: w.r.Base,
                                         className: "prime-offers"
                                     }, r, n)
                             }
@@ -434,7 +460,7 @@
                             return a.createElement("div", {
                                 id: n,
                                 ref: n
-                            }, a.createElement(y.Ya, {
+                            }, a.createElement(w.Ya, {
                                 "data-a-target": "offers-list",
                                 className: "prime-offers__list"
                             }, a.createElement(f.a, {
@@ -459,19 +485,19 @@
                             t = e && o.findDOMNode(this.refs[e]);
                         t && t.scrollIntoView()
                     }, t.prototype.render = function() {
-                        return a.createElement(y.Qa, {
+                        return a.createElement(w.Qa, {
                             fullWidth: !0
-                        }, a.createElement(y.Ya, {
+                        }, a.createElement(w.Ya, {
                             fullWidth: !0
-                        }, a.createElement(O.a, {
+                        }, a.createElement(y.a, {
                             externalReftag: this.getReftagFromSearch()
-                        }), this.renderOfferListsInOrder(), this.renderFooterUpsellButton(), a.createElement(d.a, null)))
+                        }), this.renderOfferListsInOrder(), this.renderFooterUpsellButton(), a.createElement(u.a, null), a.createElement(_, null)))
                     }, t.prototype.renderFooterUpsellButton = function() {
                         var e = this.props.userData;
-                        if (!Object(b.m)(e) && !Object(b.n)(e)) return a.createElement(y.Fb, {
-                            justifyContent: y.Xa.Center,
-                            alignItems: y.f.Center,
-                            textAlign: y.Sb.Center,
+                        if (!Object(b.m)(e) && !Object(b.n)(e)) return a.createElement(w.Fb, {
+                            justifyContent: w.Xa.Center,
+                            alignItems: w.f.Center,
+                            textAlign: w.Sb.Center,
                             padding: 2
                         }, a.createElement(k.a, {
                             externalReftag: this.getReftagFromSearch(),
@@ -486,15 +512,15 @@
                         if (t) return t[1]
                     }, t
                 }(a.Component)),
-                w = Object(i.compose)(Object(l.a)(v, {
+                D = Object(i.compose)(Object(c.a)(v, {
                     name: "userData"
-                }), Object(u.b)("TwitchPrimeOffersPage", {
+                }), Object(d.b)("TwitchPrimeOffersPage", {
                     destination: m.a.TwitchPrimeOffersPage
-                }), Object(c.a)({
+                }), Object(l.a)({
                     location: p.PageviewLocation.TwitchPrimeOffersPage
-                }))(T);
+                }))(x);
             r.d(t, "TwitchPrimeOffersPage", function() {
-                return w
+                return D
             })
         },
         iQf2: function(e, t, r) {},
@@ -505,7 +531,7 @@
                 i = r("/7QA"),
                 o = r("GnwI"),
                 s = r("Ue10"),
-                l = (r("QkMI"), function(e) {
+                c = (r("QkMI"), function(e) {
                     function t() {
                         return null !== e && e.apply(this, arguments) || this
                     }
@@ -582,11 +608,11 @@
                         }, Object(i.d)("Twitch Prime Guide", "PrimeSubsiteFooter")))))
                     }, t
                 }(a.Component)),
-                c = Object(o.b)("PrimeFooter", {
+                l = Object(o.b)("PrimeFooter", {
                     autoReportInteractive: !0
-                })(l);
+                })(c);
             r.d(t, "a", function() {
-                return c
+                return l
             })
         },
         sKC6: function(e, t, r) {},

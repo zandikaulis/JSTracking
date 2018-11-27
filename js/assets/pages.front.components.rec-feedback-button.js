@@ -1,5 +1,5 @@
 (window.webpackJsonp = window.webpackJsonp || []).push([
-    [145], {
+    [146], {
         GyBV: function(e, t, n) {
             "use strict";
             n.r(t);
@@ -61,7 +61,7 @@
                 g = n("kRI/"),
                 y = n("3lt/"),
                 v = n("M8Tb");
-            var M = function(e) {
+            var I = function(e) {
                     function t(t) {
                         var n = e.call(this, t) || this;
                         return n.logger = r.p.logger.withCategory("recs-feedback"), n.renderSingleChoiceBody = function() {
@@ -152,15 +152,15 @@
                                             itemType: function(e) {
                                                 switch (e) {
                                                     case h.b.Shelf:
-                                                        return k.M.SHELF;
+                                                        return k.N.SHELF;
                                                     case h.b.Game:
-                                                        return k.M.CATEGORY;
+                                                        return k.N.CATEGORY;
                                                     case h.b.Live:
-                                                        return k.M.CHANNEL;
+                                                        return k.N.CHANNEL;
                                                     case h.b.Vod:
-                                                        return k.M.VOD;
+                                                        return k.N.VOD;
                                                     case h.b.Clip:
-                                                        return k.M.UNSPECIFIED;
+                                                        return k.N.UNSPECIFIED;
                                                     default:
                                                         return e
                                                 }
@@ -250,19 +250,19 @@
                         }
                     }, t
                 }(a.Component),
-                I = Object(m.a)(v, {
+                R = Object(m.a)(v, {
                     name: "addFeedback"
-                })(M);
-            var R = Object(l.connect)(null, function(e) {
+                })(I);
+            var C = Object(l.connect)(null, function(e) {
                     return Object(p.bindActionCreators)({
                         closeModal: u.c
                     }, e)
-                })(I),
-                C = function(e) {
+                })(R),
+                M = function(e) {
                     function t() {
                         var t = null !== e && e.apply(this, arguments) || this;
                         return t.openModal = function() {
-                            t.props.showModal(R, {
+                            t.props.showModal(C, {
                                 shelfID: t.props.shelfID,
                                 channelID: t.props.channelID,
                                 vodID: t.props.vodID,
@@ -290,9 +290,9 @@
                 return Object(p.bindActionCreators)({
                     showModal: u.d
                 }, e)
-            })(C);
+            })(M);
             n.d(t, "RecFeedbackButtonComponent", function() {
-                return C
+                return M
             }), n.d(t, "RecFeedbackButton", function() {
                 return F
             })

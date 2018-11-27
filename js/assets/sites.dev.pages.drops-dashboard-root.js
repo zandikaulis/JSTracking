@@ -1,5 +1,5 @@
 (window.webpackJsonp = window.webpackJsonp || []).push([
-    [218], {
+    [219], {
         "/ZC1": function(e, t, n) {
             "use strict";
             n.d(t, "a", function() {
@@ -70,9 +70,9 @@
             }), n.d(t, "K", function() {
                 return l
             }), n.d(t, "L", function() {
-                return p
-            }), n.d(t, "o", function() {
                 return E
+            }), n.d(t, "o", function() {
+                return p
             }), n.d(t, "D", function() {
                 return d
             }), n.d(t, "J", function() {
@@ -88,15 +88,15 @@
             }), n.d(t, "y", function() {
                 return f
             }), n.d(t, "m", function() {
-                return I
-            }), n.d(t, "d", function() {
                 return D
+            }), n.d(t, "d", function() {
+                return I
             }), n.d(t, "c", function() {
                 return N
             }), n.d(t, "E", function() {
-                return O
-            }), n.d(t, "b", function() {
                 return S
+            }), n.d(t, "b", function() {
+                return O
             }), n.d(t, "a", function() {
                 return R
             }), n.d(t, "H", function() {
@@ -116,9 +116,9 @@
             }), n.d(t, "s", function() {
                 return F
             }), n.d(t, "z", function() {
-                return y
-            }), n.d(t, "f", function() {
                 return M
+            }), n.d(t, "f", function() {
+                return y
             }), n.d(t, "g", function() {
                 return k
             }), n.d(t, "A", function() {
@@ -128,9 +128,9 @@
             }), n.d(t, "r", function() {
                 return G
             }), n.d(t, "x", function() {
-                return B
-            }), n.d(t, "v", function() {
                 return V
+            }), n.d(t, "v", function() {
+                return B
             }), n.d(t, "q", function() {
                 return H
             }), n.d(t, "C", function() {
@@ -162,11 +162,11 @@
                 return r.PubsubTopic.VideoPlayback + "." + e
             }
 
-            function p(e) {
+            function E(e) {
                 return r.PubsubTopic.VideoThumbnailProcessing + "." + e
             }
 
-            function E(e) {
+            function p(e) {
                 return r.PubsubTopic.ImageUpload + "." + e
             }
 
@@ -198,11 +198,11 @@
                 return r.PubsubTopic.StreamChange + "." + e
             }
 
-            function I(e) {
+            function D(e) {
                 return r.PubsubTopic.Friendship + "." + e
             }
 
-            function D(e) {
+            function I(e) {
                 return r.PubsubTopic.ChannelBitsPinEvents + "." + e
             }
 
@@ -210,11 +210,11 @@
                 return r.PubsubTopic.BitsLeaderboardEvents + "." + e.id
             }
 
-            function O(e) {
+            function S(e) {
                 return r.PubsubTopic.UserBitsUpdates + "." + e
             }
 
-            function S() {
+            function O() {
                 return r.PubsubTopic.BitsCampaignEvents + ".updates"
             }
 
@@ -254,11 +254,11 @@
                 return r.PubsubTopic.OnsiteNotifications + "." + e
             }
 
-            function y(e) {
+            function M(e) {
                 return r.PubsubTopic.StreamChatRoom + "." + e
             }
 
-            function M(e) {
+            function y(e) {
                 return r.PubsubTopic.ChannelEventUpdates + "." + e
             }
 
@@ -278,11 +278,11 @@
                 return r.PubsubTopic.MysteryGift + "." + e
             }
 
-            function B(e) {
+            function V(e) {
                 return r.PubsubTopic.SquadUpdates + "." + e
             }
 
-            function V(e) {
+            function B(e) {
                 return r.PubsubTopic.PurchaseFulfillmentEvents + "." + e
             }
 
@@ -491,19 +491,19 @@
                         this.getUploadURL = e, this.onFinishUploading = t, this.uploadFile = function(e) {
                             return new Promise(function(t, l) {
                                 return a.__awaiter(n, void 0, void 0, function() {
-                                    var n, p, E, d, m, _ = this;
+                                    var n, E, p, d, m, _ = this;
                                     return a.__generator(this, function(a) {
                                         switch (a.label) {
                                             case 0:
                                                 return a.trys.push([0, 3, , 4]), [4, this.getUploadURL(e)];
                                             case 1:
-                                                return n = a.sent(), p = n.url, E = n.uploadID, [4, fetch(p, {
+                                                return n = a.sent(), E = n.url, p = n.uploadID, [4, fetch(E, {
                                                     body: e,
                                                     method: "PUT"
                                                 })];
                                             case 2:
                                                 return (d = a.sent()).status > 300 && l(new Error(Object(c.e)(d.status))), this.unsubscribe = r.l.subscribe({
-                                                    topic: Object(s.D)(E),
+                                                    topic: Object(s.D)(p),
                                                     success: function() {
                                                         _.timeoutID = setTimeout(function() {
                                                             _.unsubscribe(), l(new Error(Object(c.d)()))
@@ -513,7 +513,7 @@
                                                         clearTimeout(_.timeoutID), l(new Error(Object(c.d)()))
                                                     },
                                                     onMessage: function(e) {
-                                                        if (e.upload_id === E) {
+                                                        if (e.upload_id === p) {
                                                             switch (clearTimeout(_.timeoutID), e.status) {
                                                                 case i.a.POSTPROCESS_COMPLETE:
                                                                     _.onFinishUploading && _.onFinishUploading(), t();
@@ -549,12 +549,12 @@
         },
         DMoW: function(e, t, n) {
             "use strict";
-            var a, r, i, s, o, c, u, l, p, E, d, m, _, h, g, T, f, I, D, N, O, S, R, A, C, b, v, L, U, P, F, y, M, k, j, w, G, B, V, H, Y, x, W, K, X, z, q, Q, Z, J, $, ee, te, ne, ae, re, ie, se, oe, ce, ue, le, pe, Ee, de, me, _e, he, ge, Te, fe, Ie, De, Ne, Oe, Se, Re, Ae, Ce, be, ve, Le, Ue, Pe, Fe, ye, Me, ke, je, we, Ge, Be, Ve, He, Ye, xe, We, Ke, Xe, ze, qe, Qe, Ze, Je, $e, et, tt, nt, at, rt, it, st, ot, ct, ut, lt, pt, Et, dt, mt, _t, ht, gt, Tt, ft;
-            n.d(t, "N", function() {
+            var a, r, i, s, o, c, u, l, E, p, d, m, _, h, g, T, f, D, I, N, S, O, R, A, C, b, v, L, U, P, F, M, y, k, j, w, G, V, B, H, Y, x, W, K, X, z, q, Q, Z, J, $, ee, te, ne, ae, re, ie, se, oe, ce, ue, le, Ee, pe, de, me, _e, he, ge, Te, fe, De, Ie, Ne, Se, Oe, Re, Ae, Ce, be, ve, Le, Ue, Pe, Fe, Me, ye, ke, je, we, Ge, Ve, Be, He, Ye, xe, We, Ke, Xe, ze, qe, Qe, Ze, Je, $e, et, tt, nt, at, rt, it, st, ot, ct, ut, lt, Et, pt, dt, mt, _t, ht, gt, Tt, ft, Dt, It;
+            n.d(t, "O", function() {
                     return a
                 }), n.d(t, "e", function() {
                     return r
-                }), n.d(t, "O", function() {
+                }), n.d(t, "P", function() {
                     return o
                 }), n.d(t, "B", function() {
                     return c
@@ -565,103 +565,105 @@
                 }), n.d(t, "d", function() {
                     return g
                 }), n.d(t, "g", function() {
-                    return I
-                }), n.d(t, "h", function() {
                     return D
-                }), n.d(t, "Z", function() {
-                    return O
-                }), n.d(t, "n", function() {
+                }), n.d(t, "h", function() {
+                    return I
+                }), n.d(t, "Aa", function() {
                     return S
-                }), n.d(t, "Ba", function() {
+                }), n.d(t, "n", function() {
+                    return O
+                }), n.d(t, "Ca", function() {
                     return R
-                }), n.d(t, "R", function() {
+                }), n.d(t, "S", function() {
                     return A
                 }), n.d(t, "s", function() {
                     return C
                 }), n.d(t, "l", function() {
                     return L
-                }), n.d(t, "P", function() {
+                }), n.d(t, "Q", function() {
                     return U
                 }), n.d(t, "C", function() {
                     return j
                 }), n.d(t, "c", function() {
-                    return w
-                }), n.d(t, "u", function() {
                     return G
-                }), n.d(t, "Aa", function() {
+                }), n.d(t, "u", function() {
+                    return V
+                }), n.d(t, "Ba", function() {
                     return B
                 }), n.d(t, "t", function() {
-                    return V
-                }), n.d(t, "T", function() {
                     return H
-                }), n.d(t, "V", function() {
-                    return Y
-                }), n.d(t, "G", function() {
-                    return x
-                }), n.d(t, "W", function() {
-                    return W
-                }), n.d(t, "F", function() {
-                    return K
-                }), n.d(t, "E", function() {
-                    return X
-                }), n.d(t, "q", function() {
-                    return z
                 }), n.d(t, "U", function() {
-                    return q
-                }), n.d(t, "a", function() {
-                    return Q
-                }), n.d(t, "x", function() {
-                    return Z
-                }), n.d(t, "z", function() {
-                    return J
-                }), n.d(t, "I", function() {
-                    return ee
-                }), n.d(t, "J", function() {
-                    return te
-                }), n.d(t, "H", function() {
-                    return ae
-                }), n.d(t, "K", function() {
-                    return re
-                }), n.d(t, "Y", function() {
-                    return oe
+                    return Y
+                }), n.d(t, "W", function() {
+                    return x
+                }), n.d(t, "G", function() {
+                    return W
                 }), n.d(t, "X", function() {
-                    return he
-                }), n.d(t, "p", function() {
-                    return Re
-                }), n.d(t, "o", function() {
-                    return Ae
-                }), n.d(t, "Da", function() {
-                    return Le
-                }), n.d(t, "D", function() {
-                    return je
-                }), n.d(t, "Ca", function() {
-                    return we
-                }), n.d(t, "k", function() {
-                    return Ve
-                }), n.d(t, "w", function() {
-                    return He
-                }), n.d(t, "m", function() {
-                    return xe
-                }), n.d(t, "j", function() {
-                    return We
-                }), n.d(t, "y", function() {
-                    return Ke
-                }), n.d(t, "S", function() {
-                    return ze
-                }), n.d(t, "r", function() {
-                    return qe
-                }), n.d(t, "Q", function() {
-                    return $e
-                }), n.d(t, "A", function() {
-                    return ot
+                    return K
+                }), n.d(t, "F", function() {
+                    return X
+                }), n.d(t, "E", function() {
+                    return z
+                }), n.d(t, "q", function() {
+                    return q
+                }), n.d(t, "V", function() {
+                    return Q
+                }), n.d(t, "a", function() {
+                    return Z
+                }), n.d(t, "x", function() {
+                    return J
+                }), n.d(t, "z", function() {
+                    return $
+                }), n.d(t, "I", function() {
+                    return te
+                }), n.d(t, "J", function() {
+                    return ne
+                }), n.d(t, "H", function() {
+                    return re
+                }), n.d(t, "K", function() {
+                    return ie
+                }), n.d(t, "Z", function() {
+                    return ce
                 }), n.d(t, "L", function() {
-                    return ct
-                }), n.d(t, "M", function() {
+                    return he
+                }), n.d(t, "Y", function() {
+                    return ge
+                }), n.d(t, "p", function() {
+                    return Ae
+                }), n.d(t, "o", function() {
+                    return Ce
+                }), n.d(t, "Ea", function() {
+                    return Pe
+                }), n.d(t, "D", function() {
+                    return Ge
+                }), n.d(t, "Da", function() {
+                    return Ve
+                }), n.d(t, "k", function() {
+                    return Ye
+                }), n.d(t, "w", function() {
+                    return xe
+                }), n.d(t, "m", function() {
+                    return Ke
+                }), n.d(t, "j", function() {
+                    return Xe
+                }), n.d(t, "y", function() {
+                    return ze
+                }), n.d(t, "T", function() {
+                    return Qe
+                }), n.d(t, "r", function() {
+                    return Ze
+                }), n.d(t, "R", function() {
+                    return tt
+                }), n.d(t, "A", function() {
                     return ut
+                }), n.d(t, "M", function() {
+                    return lt
+                }), n.d(t, "N", function() {
+                    return Et
                 }), n.d(t, "f", function() {
-                    return gt
+                    return ft
                 }), n.d(t, "v", function() {
-                    return Tt
+                    return Dt
                 }),
                 function(e) {
                     e.CHANNEL_FEED_COMMENT_REPORT = "CHANNEL_FEED_COMMENT_REPORT", e.CHANNEL_FEED_POST_REPORT = "CHANNEL_FEED_POST_REPORT", e.CHAT_REPORT = "CHAT_REPORT", e.CLIP_REPORT = "CLIP_REPORT", e.COLLECTION_REPORT = "COLLECTION_REPORT", e.CURSE_PRIVATE_GROUP = "CURSE_PRIVATE_GROUP", e.CURSE_PUBLIC_GROUP = "CURSE_PUBLIC_GROUP", e.CURSE_WHISPER = "CURSE_WHISPER", e.EVENT_REPORT = "EVENT_REPORT", e.EXTENSION_REPORT = "EXTENSION_REPORT", e.LIVE_UP_REPORT = "LIVE_UP_REPORT", e.RAID_REPORT = "RAID_REPORT", e.ROOM_REPORT = "ROOM_REPORT", e.SINGS_DUET_SEED_REPORT = "SINGS_DUET_SEED_REPORT", e.SINGS_GROUP_BIO_REPORT = "SINGS_GROUP_BIO_REPORT", e.SINGS_GROUP_CHAT_REPORT = "SINGS_GROUP_CHAT_REPORT", e.SINGS_GROUP_NAME_REPORT = "SINGS_GROUP_NAME_REPORT", e.SINGS_VOD_COMMENT_REPORT = "SINGS_VOD_COMMENT_REPORT", e.USER_REPORT = "USER_REPORT", e.VOD_COMMENT_REPORT = "VOD_COMMENT_REPORT", e.VOD_REPORT = "VOD_REPORT", e.WHISPER_REPORT = "WHISPER_REPORT"
@@ -689,10 +691,10 @@
                 }(l || (l = {})),
                 function(e) {
                     e.IDLE = "IDLE", e.OFFLINE = "OFFLINE", e.ONLINE = "ONLINE"
-                }(p || (p = {})),
+                }(E || (E = {})),
                 function(e) {
                     e.AWAY = "AWAY", e.BUSY = "BUSY", e.OFFLINE = "OFFLINE", e.ONLINE = "ONLINE"
-                }(E || (E = {})),
+                }(p || (p = {})),
                 function(e) {
                     e.AR = "AR", e.BG = "BG", e.CS = "CS", e.DA = "DA", e.DE = "DE", e.EL = "EL", e.EN = "EN", e.EN_GB = "EN_GB", e.ES = "ES", e.ES_MX = "ES_MX", e.FI = "FI", e.FR = "FR", e.HI = "HI", e.HU = "HU", e.IT = "IT", e.JA = "JA", e.KO = "KO", e.NL = "NL", e.NO = "NO", e.PL = "PL", e.PT = "PT", e.PT_BR = "PT_BR", e.RO = "RO", e.RU = "RU", e.SK = "SK", e.SV = "SV", e.TH = "TH", e.TR = "TR", e.VI = "VI", e.ZH = "ZH", e.ZH_CN = "ZH_CN", e.ZH_TW = "ZH_TW"
                 }(d || (d = {})),
@@ -716,19 +718,19 @@
                 }(f || (f = {})),
                 function(e) {
                     e.GAME_TRAILER = "GAME_TRAILER", e.MISC_TRAILER = "MISC_TRAILER", e.PAY_TO_STREAM = "PAY_TO_STREAM"
-                }(I || (I = {})),
+                }(D || (D = {})),
                 function(e) {
                     e.AVAILABLE = "AVAILABLE", e.CANCELLED = "CANCELLED", e.COMPLETED = "COMPLETED", e.LIVE = "LIVE"
-                }(D || (D = {})),
+                }(I || (I = {})),
                 function(e) {
                     e.FIXED_VALUE_OFF = "FIXED_VALUE_OFF", e.NONE = "NONE", e.PERCENT_OFF = "PERCENT_OFF"
                 }(N || (N = {})),
                 function(e) {
                     e.CHEER = "CHEER"
-                }(O || (O = {})),
+                }(S || (S = {})),
                 function(e) {
                     e.CREATED = "CREATED", e.CREATING = "CREATING", e.FAILED = "FAILED"
-                }(S || (S = {})),
+                }(O || (O = {})),
                 function(e) {
                     e.PRIVATE = "PRIVATE", e.PUBLIC = "PUBLIC"
                 }(R || (R = {})),
@@ -758,10 +760,10 @@
                 }(F || (F = {})),
                 function(e) {
                     e.FOLLOWER_ONLY_MODE_ENFORCEMENT_FAILED = "FOLLOWER_ONLY_MODE_ENFORCEMENT_FAILED", e.SUB_ONLY_MODE_ENFORCEMENT_FAILED = "SUB_ONLY_MODE_ENFORCEMENT_FAILED", e.TOKEN_NOT_AVAILABLE = "TOKEN_NOT_AVAILABLE", e.TOKEN_NOT_FOUND = "TOKEN_NOT_FOUND", e.USER_CHAT_BANNED = "USER_CHAT_BANNED", e.USER_CHAT_TIMED_OUT = "USER_CHAT_TIMED_OUT"
-                }(y || (y = {})),
+                }(M || (M = {})),
                 function(e) {
                     e.TOKEN_NOT_AVAILABLE = "TOKEN_NOT_AVAILABLE", e.TOKEN_NOT_FOUND = "TOKEN_NOT_FOUND"
-                }(M || (M = {})),
+                }(y || (y = {})),
                 function(e) {
                     e.AVAILABLE = "AVAILABLE", e.DISMISSED = "DISMISSED", e.ELIGIBLE = "ELIGIBLE", e.REDEEMED = "REDEEMED"
                 }(k || (k = {})),
@@ -769,275 +771,281 @@
                     e.NONE = "NONE", e.READ = "READ", e.WRITE = "WRITE"
                 }(j || (j = {})),
                 function(e) {
-                    e.DURATION_INVALID = "DURATION_INVALID", e.FORBIDDEN = "FORBIDDEN", e.TARGET_ALREADY_BANNED = "TARGET_ALREADY_BANNED", e.TARGET_IS_ADMIN = "TARGET_IS_ADMIN", e.TARGET_IS_ANONYMOUS = "TARGET_IS_ANONYMOUS", e.TARGET_IS_BROADCASTER = "TARGET_IS_BROADCASTER", e.TARGET_IS_GLOBAL_MOD = "TARGET_IS_GLOBAL_MOD", e.TARGET_IS_MOD = "TARGET_IS_MOD", e.TARGET_IS_SELF = "TARGET_IS_SELF", e.TARGET_IS_STAFF = "TARGET_IS_STAFF", e.TARGET_IS_VIP = "TARGET_IS_VIP", e.TARGET_NOT_FOUND = "TARGET_NOT_FOUND"
+                    e.ALLOW_MESSAGE = "ALLOW_MESSAGE", e.BAN_USER = "BAN_USER", e.CHANGE_CHANNEL_RULES = "CHANGE_CHANNEL_RULES", e.COMMENT = "COMMENT", e.DENY_MESSAGE = "DENY_MESSAGE", e.INVALID_ACTION = "INVALID_ACTION", e.SET_CHANNEL_MODE = "SET_CHANNEL_MODE", e.TIMEOUT_USER = "TIMEOUT_USER", e.UNBAN_USER = "UNBAN_USER", e.UPDATE_MODERATED_TERMS = "UPDATE_MODERATED_TERMS"
                 }(w || (w = {})),
                 function(e) {
-                    e.FORBIDDEN = "FORBIDDEN", e.SUCCESS = "SUCCESS", e.TARGET_IS_BROADCASTER = "TARGET_IS_BROADCASTER", e.TARGET_IS_MODERATOR = "TARGET_IS_MODERATOR"
+                    e.DURATION_INVALID = "DURATION_INVALID", e.FORBIDDEN = "FORBIDDEN", e.TARGET_ALREADY_BANNED = "TARGET_ALREADY_BANNED", e.TARGET_IS_ADMIN = "TARGET_IS_ADMIN", e.TARGET_IS_ANONYMOUS = "TARGET_IS_ANONYMOUS", e.TARGET_IS_BROADCASTER = "TARGET_IS_BROADCASTER", e.TARGET_IS_GLOBAL_MOD = "TARGET_IS_GLOBAL_MOD", e.TARGET_IS_MOD = "TARGET_IS_MOD", e.TARGET_IS_SELF = "TARGET_IS_SELF", e.TARGET_IS_STAFF = "TARGET_IS_STAFF", e.TARGET_IS_VIP = "TARGET_IS_VIP", e.TARGET_NOT_FOUND = "TARGET_NOT_FOUND"
                 }(G || (G = {})),
+                function(e) {
+                    e.FORBIDDEN = "FORBIDDEN", e.SUCCESS = "SUCCESS", e.TARGET_IS_BROADCASTER = "TARGET_IS_BROADCASTER", e.TARGET_IS_MODERATOR = "TARGET_IS_MODERATOR"
+                }(V || (V = {})),
                 function(e) {
                     e.FORBIDDEN = "FORBIDDEN", e.TARGET_NOT_BANNED = "TARGET_NOT_BANNED", e.TARGET_NOT_FOUND = "TARGET_NOT_FOUND"
                 }(B || (B = {})),
                 function(e) {
                     e.EUR = "EUR", e.GBP = "GBP", e.USD = "USD"
-                }(V || (V = {})),
-                function(e) {
-                    e.MONTH = "MONTH", e.ONE_TIME = "ONE_TIME", e.WEEK = "WEEK", e.YEAR = "YEAR"
                 }(H || (H = {})),
                 function(e) {
-                    e.CHANSUB = "CHANSUB", e.TEAMSUB = "TEAMSUB", e.TURBO = "TURBO"
+                    e.MONTH = "MONTH", e.ONE_TIME = "ONE_TIME", e.WEEK = "WEEK", e.YEAR = "YEAR"
                 }(Y || (Y = {})),
                 function(e) {
-                    e.GOOGLE_IAB = "GOOGLE_IAB", e.PRIME = "PRIME", e.RECURLY = "RECURLY", e.XSOLLA_V3 = "XSOLLA_V3", e.ZUORA = "ZUORA"
+                    e.CHANSUB = "CHANSUB", e.TEAMSUB = "TEAMSUB", e.TURBO = "TURBO"
                 }(x || (x = {})),
                 function(e) {
-                    e.ACTIVE = "ACTIVE", e.CANCELLED = "CANCELLED", e.INACTIVE = "INACTIVE"
+                    e.GOOGLE_IAB = "GOOGLE_IAB", e.PRIME = "PRIME", e.RECURLY = "RECURLY", e.XSOLLA_V3 = "XSOLLA_V3", e.ZUORA = "ZUORA"
                 }(W || (W = {})),
                 function(e) {
-                    e.AMAZON = "AMAZON", e.CREDIT_CARD = "CREDIT_CARD", e.GOOGLE_IAB = "GOOGLE_IAB", e.PAYPAL = "PAYPAL"
+                    e.ACTIVE = "ACTIVE", e.CANCELLED = "CANCELLED", e.INACTIVE = "INACTIVE"
                 }(K || (K = {})),
                 function(e) {
-                    e.AMERICAN_EXPRESS = "AMERICAN_EXPRESS", e.DISCOVER = "DISCOVER", e.MASTERCARD = "MASTERCARD", e.VISA = "VISA"
+                    e.AMAZON = "AMAZON", e.CREDIT_CARD = "CREDIT_CARD", e.GOOGLE_IAB = "GOOGLE_IAB", e.PAYPAL = "PAYPAL"
                 }(X || (X = {})),
                 function(e) {
-                    e.CATEGORY = "CATEGORY", e.CLIP = "CLIP", e.LIVE_CHANNEL = "LIVE_CHANNEL", e.VOD = "VOD"
+                    e.AMERICAN_EXPRESS = "AMERICAN_EXPRESS", e.DISCOVER = "DISCOVER", e.MASTERCARD = "MASTERCARD", e.VISA = "VISA"
                 }(z || (z = {})),
                 function(e) {
-                    e.ANDROID = "ANDROID", e.IOS = "IOS", e.WEB = "WEB"
+                    e.CATEGORY = "CATEGORY", e.CLIP = "CLIP", e.LIVE_CHANNEL = "LIVE_CHANNEL", e.VOD = "VOD"
                 }(q || (q = {})),
                 function(e) {
-                    e.ACTIVE = "ACTIVE", e.INACTIVE = "INACTIVE", e.REJECTED_PERMISSIONS = "REJECTED_PERMISSIONS"
+                    e.ANDROID = "ANDROID", e.IOS = "IOS", e.WEB = "WEB"
                 }(Q || (Q = {})),
                 function(e) {
-                    e.COMPONENT = "COMPONENT", e.HIDDEN = "HIDDEN", e.PANEL = "PANEL", e.VIDEO_OVERLAY = "VIDEO_OVERLAY"
+                    e.ACTIVE = "ACTIVE", e.INACTIVE = "INACTIVE", e.REJECTED_PERMISSIONS = "REJECTED_PERMISSIONS"
                 }(Z || (Z = {})),
                 function(e) {
-                    e.APPROVED = "APPROVED", e.ASSETS_UPLOADED = "ASSETS_UPLOADED", e.DELETED = "DELETED", e.DEPRECATED = "DEPRECATED", e.IN_REVIEW = "IN_REVIEW", e.IN_TEST = "IN_TEST", e.PENDING_ACTION = "PENDING_ACTION", e.READY_FOR_REVIEW = "READY_FOR_REVIEW", e.REJECTED = "REJECTED", e.RELEASED = "RELEASED", e.UPLOADING = "UPLOADING"
+                    e.COMPONENT = "COMPONENT", e.HIDDEN = "HIDDEN", e.PANEL = "PANEL", e.VIDEO_OVERLAY = "VIDEO_OVERLAY"
                 }(J || (J = {})),
                 function(e) {
-                    e.GAME_COMMERCE = "GAME_COMMERCE", e.GAME_COMMERCE_V2 = "GAME_COMMERCE_V2"
+                    e.APPROVED = "APPROVED", e.ASSETS_UPLOADED = "ASSETS_UPLOADED", e.DELETED = "DELETED", e.DEPRECATED = "DEPRECATED", e.IN_REVIEW = "IN_REVIEW", e.IN_TEST = "IN_TEST", e.PENDING_ACTION = "PENDING_ACTION", e.READY_FOR_REVIEW = "READY_FOR_REVIEW", e.REJECTED = "REJECTED", e.RELEASED = "RELEASED", e.UPLOADING = "UPLOADING"
                 }($ || ($ = {})),
                 function(e) {
-                    e.AFFILIATE = "AFFILIATE", e.CUSTOM_PARTNER = "CUSTOM_PARTNER", e.EXTENSIONS_DEVELOPER = "EXTENSIONS_DEVELOPER", e.PREMIUM_PARTNER = "PREMIUM_PARTNER", e.STANDARD_PARTNER = "STANDARD_PARTNER", e.UNPAID_PARTNER = "UNPAID_PARTNER"
+                    e.GAME_COMMERCE = "GAME_COMMERCE", e.GAME_COMMERCE_V2 = "GAME_COMMERCE_V2"
                 }(ee || (ee = {})),
                 function(e) {
-                    e.AGREEMENT_NOT_STARTED = "AGREEMENT_NOT_STARTED", e.AGREEMENT_PENDING_UPGRADE = "AGREEMENT_PENDING_UPGRADE", e.CANCELED = "CANCELED", e.COMPLETED = "COMPLETED", e.PAYOUT_METHOD_NOT_STARTED = "PAYOUT_METHOD_NOT_STARTED", e.PAYOUT_METHOD_PENDING = "PAYOUT_METHOD_PENDING", e.REGISTRATION_NOT_STARTED = "REGISTRATION_NOT_STARTED", e.REVIEW_PENDING = "REVIEW_PENDING", e.ROYALTY_TAX_INTERVIEW_ACTION_REQUIRED = "ROYALTY_TAX_INTERVIEW_ACTION_REQUIRED", e.ROYALTY_TAX_INTERVIEW_FAILED = "ROYALTY_TAX_INTERVIEW_FAILED", e.ROYALTY_TAX_INTERVIEW_MISMATCH = "ROYALTY_TAX_INTERVIEW_MISMATCH", e.ROYALTY_TAX_INTERVIEW_NOT_STARTED = "ROYALTY_TAX_INTERVIEW_NOT_STARTED", e.ROYALTY_TAX_INTERVIEW_PENDING = "ROYALTY_TAX_INTERVIEW_PENDING", e.SERVICE_TAX_INTERVIEW_ACTION_REQUIRED = "SERVICE_TAX_INTERVIEW_ACTION_REQUIRED", e.SERVICE_TAX_INTERVIEW_FAILED = "SERVICE_TAX_INTERVIEW_FAILED", e.SERVICE_TAX_INTERVIEW_MISMATCH = "SERVICE_TAX_INTERVIEW_MISMATCH", e.SERVICE_TAX_INTERVIEW_NOT_STARTED = "SERVICE_TAX_INTERVIEW_NOT_STARTED", e.SERVICE_TAX_INTERVIEW_PENDING = "SERVICE_TAX_INTERVIEW_PENDING"
+                    e.AFFILIATE = "AFFILIATE", e.CUSTOM_PARTNER = "CUSTOM_PARTNER", e.EXTENSIONS_DEVELOPER = "EXTENSIONS_DEVELOPER", e.PREMIUM_PARTNER = "PREMIUM_PARTNER", e.STANDARD_PARTNER = "STANDARD_PARTNER", e.UNPAID_PARTNER = "UNPAID_PARTNER"
                 }(te || (te = {})),
                 function(e) {
-                    e.FORBIDDEN = "FORBIDDEN", e.INTERNAL_ERROR = "INTERNAL_ERROR", e.INVALID_AGREEMENT_VERSION = "INVALID_AGREEMENT_VERSION", e.UNAUTHENTICATED = "UNAUTHENTICATED"
+                    e.AGREEMENT_NOT_STARTED = "AGREEMENT_NOT_STARTED", e.AGREEMENT_PENDING_UPGRADE = "AGREEMENT_PENDING_UPGRADE", e.CANCELED = "CANCELED", e.COMPLETED = "COMPLETED", e.PAYOUT_METHOD_NOT_STARTED = "PAYOUT_METHOD_NOT_STARTED", e.PAYOUT_METHOD_PENDING = "PAYOUT_METHOD_PENDING", e.REGISTRATION_NOT_STARTED = "REGISTRATION_NOT_STARTED", e.REVIEW_PENDING = "REVIEW_PENDING", e.ROYALTY_TAX_INTERVIEW_ACTION_REQUIRED = "ROYALTY_TAX_INTERVIEW_ACTION_REQUIRED", e.ROYALTY_TAX_INTERVIEW_FAILED = "ROYALTY_TAX_INTERVIEW_FAILED", e.ROYALTY_TAX_INTERVIEW_MISMATCH = "ROYALTY_TAX_INTERVIEW_MISMATCH", e.ROYALTY_TAX_INTERVIEW_NOT_STARTED = "ROYALTY_TAX_INTERVIEW_NOT_STARTED", e.ROYALTY_TAX_INTERVIEW_PENDING = "ROYALTY_TAX_INTERVIEW_PENDING", e.SERVICE_TAX_INTERVIEW_ACTION_REQUIRED = "SERVICE_TAX_INTERVIEW_ACTION_REQUIRED", e.SERVICE_TAX_INTERVIEW_FAILED = "SERVICE_TAX_INTERVIEW_FAILED", e.SERVICE_TAX_INTERVIEW_MISMATCH = "SERVICE_TAX_INTERVIEW_MISMATCH", e.SERVICE_TAX_INTERVIEW_NOT_STARTED = "SERVICE_TAX_INTERVIEW_NOT_STARTED", e.SERVICE_TAX_INTERVIEW_PENDING = "SERVICE_TAX_INTERVIEW_PENDING"
                 }(ne || (ne = {})),
                 function(e) {
-                    e.AFFILIATE = "AFFILIATE", e.EXTENSIONS_DEVELOPER = "EXTENSIONS_DEVELOPER", e.PARTNER = "PARTNER"
+                    e.FORBIDDEN = "FORBIDDEN", e.INTERNAL_ERROR = "INTERNAL_ERROR", e.INVALID_AGREEMENT_VERSION = "INVALID_AGREEMENT_VERSION", e.UNAUTHENTICATED = "UNAUTHENTICATED"
                 }(ae || (ae = {})),
                 function(e) {
-                    e.CUSTOM = "CUSTOM", e.LEGACY = "LEGACY", e.PREMIUM = "PREMIUM", e.STANDARD = "STANDARD"
+                    e.AFFILIATE = "AFFILIATE", e.EXTENSIONS_DEVELOPER = "EXTENSIONS_DEVELOPER", e.PARTNER = "PARTNER"
                 }(re || (re = {})),
                 function(e) {
-                    e.FORBIDDEN = "FORBIDDEN", e.INTERNAL_ERROR = "INTERNAL_ERROR", e.INVALID_FORMAT = "INVALID_FORMAT", e.UNAUTHENTICATED = "UNAUTHENTICATED"
+                    e.CUSTOM = "CUSTOM", e.LEGACY = "LEGACY", e.PREMIUM = "PREMIUM", e.STANDARD = "STANDARD"
                 }(ie || (ie = {})),
                 function(e) {
-                    e.BIRTHDATE = "BIRTHDATE", e.CITY = "CITY", e.COMPANY_NAME = "COMPANY_NAME", e.COUNTRY_CODE = "COUNTRY_CODE", e.EMAIL = "EMAIL", e.FIRST_NAME = "FIRST_NAME", e.LAST_NAME = "LAST_NAME", e.MIDDLE_NAME = "MIDDLE_NAME", e.PARENT_EMAIL = "PARENT_EMAIL", e.PARENT_NAME = "PARENT_NAME", e.POSTAL = "POSTAL", e.STATE_CODE = "STATE_CODE", e.STREET_ADDRESS = "STREET_ADDRESS", e.STREET_ADDRESS_2 = "STREET_ADDRESS_2"
+                    e.FORBIDDEN = "FORBIDDEN", e.INTERNAL_ERROR = "INTERNAL_ERROR", e.INVALID_FORMAT = "INVALID_FORMAT", e.UNAUTHENTICATED = "UNAUTHENTICATED"
                 }(se || (se = {})),
                 function(e) {
-                    e.CITY = "CITY", e.COUNTRY = "COUNTRY", e.EMAIL = "EMAIL", e.NAME = "NAME", e.POSTAL = "POSTAL", e.STATE = "STATE", e.STREET_ADDRESS = "STREET_ADDRESS", e.STREET_ADDRESS_2 = "STREET_ADDRESS_2"
+                    e.BIRTHDATE = "BIRTHDATE", e.CITY = "CITY", e.COMPANY_NAME = "COMPANY_NAME", e.COUNTRY_CODE = "COUNTRY_CODE", e.EMAIL = "EMAIL", e.FIRST_NAME = "FIRST_NAME", e.LAST_NAME = "LAST_NAME", e.MIDDLE_NAME = "MIDDLE_NAME", e.PARENT_EMAIL = "PARENT_EMAIL", e.PARENT_NAME = "PARENT_NAME", e.POSTAL = "POSTAL", e.STATE_CODE = "STATE_CODE", e.STREET_ADDRESS = "STREET_ADDRESS", e.STREET_ADDRESS_2 = "STREET_ADDRESS_2"
                 }(oe || (oe = {})),
                 function(e) {
-                    e.ROYALTY = "ROYALTY", e.SERVICE = "SERVICE"
+                    e.CITY = "CITY", e.COUNTRY = "COUNTRY", e.EMAIL = "EMAIL", e.NAME = "NAME", e.POSTAL = "POSTAL", e.STATE = "STATE", e.STREET_ADDRESS = "STREET_ADDRESS", e.STREET_ADDRESS_2 = "STREET_ADDRESS_2"
                 }(ce || (ce = {})),
                 function(e) {
-                    e.BROADCASTER = "BROADCASTER", e.EVERYONE = "EVERYONE", e.MODERATOR = "MODERATOR", e.SUBSCRIBER = "SUBSCRIBER"
+                    e.ROYALTY = "ROYALTY", e.SERVICE = "SERVICE"
                 }(ue || (ue = {})),
                 function(e) {
-                    e.MAX_ROOMS_LIMIT_EXCEEDED = "MAX_ROOMS_LIMIT_EXCEEDED", e.NAME_CONTAINS_INVALID_CHARACTERS = "NAME_CONTAINS_INVALID_CHARACTERS", e.NAME_INAPPROPRIATE = "NAME_INAPPROPRIATE", e.NAME_LENGTH_INVALID = "NAME_LENGTH_INVALID", e.NAME_NOT_UNIQUE = "NAME_NOT_UNIQUE", e.ROLES_INVALID = "ROLES_INVALID", e.TOPIC_INAPPROPRIATE = "TOPIC_INAPPROPRIATE", e.TOPIC_LENGTH_INVALID = "TOPIC_LENGTH_INVALID"
+                    e.BROADCASTER = "BROADCASTER", e.EVERYONE = "EVERYONE", e.MODERATOR = "MODERATOR", e.SUBSCRIBER = "SUBSCRIBER"
                 }(le || (le = {})),
+                function(e) {
+                    e.MAX_ROOMS_LIMIT_EXCEEDED = "MAX_ROOMS_LIMIT_EXCEEDED", e.NAME_CONTAINS_INVALID_CHARACTERS = "NAME_CONTAINS_INVALID_CHARACTERS", e.NAME_INAPPROPRIATE = "NAME_INAPPROPRIATE", e.NAME_LENGTH_INVALID = "NAME_LENGTH_INVALID", e.NAME_NOT_UNIQUE = "NAME_NOT_UNIQUE", e.ROLES_INVALID = "ROLES_INVALID", e.TOPIC_INAPPROPRIATE = "TOPIC_INAPPROPRIATE", e.TOPIC_LENGTH_INVALID = "TOPIC_LENGTH_INVALID"
+                }(Ee || (Ee = {})),
                 function(e) {
                     e.ADMIN = "ADMIN", e.BROADCASTER = "BROADCASTER", e.GLOBALMOD = "GLOBALMOD", e.MOD = "MOD", e.REGULAR = "REGULAR", e.STAFF = "STAFF"
                 }(pe || (pe = {})),
                 function(e) {
                     e.FORBIDDEN = "FORBIDDEN", e.NAME_CONTAINS_INVALID_CHARACTERS = "NAME_CONTAINS_INVALID_CHARACTERS", e.NAME_INAPPROPRIATE = "NAME_INAPPROPRIATE", e.NAME_LENGTH_INVALID = "NAME_LENGTH_INVALID", e.NAME_NOT_UNIQUE = "NAME_NOT_UNIQUE", e.ROLES_INVALID = "ROLES_INVALID", e.ROOM_NOT_FOUND = "ROOM_NOT_FOUND", e.TOPIC_INAPPROPRIATE = "TOPIC_INAPPROPRIATE", e.TOPIC_LENGTH_INVALID = "TOPIC_LENGTH_INVALID"
-                }(Ee || (Ee = {})),
-                function(e) {
-                    e.AUTO_MOD_ENFORCEMENT_FAILED = "AUTO_MOD_ENFORCEMENT_FAILED", e.EMOTE_ONLY_MODE_ENFORCEMENT_FAILED = "EMOTE_ONLY_MODE_ENFORCEMENT_FAILED", e.FORBIDDEN = "FORBIDDEN", e.R9K_MODE_ENFORCEMENT_FAILED = "R9K_MODE_ENFORCEMENT_FAILED", e.RATE_LIMIT_FAILED = "RATE_LIMIT_FAILED", e.SLOW_MODE_ENFORCEMENT_FAILED = "SLOW_MODE_ENFORCEMENT_FAILED", e.SPAM_ENFORCEMENT_FAILED = "SPAM_ENFORCEMENT_FAILED", e.USER_CHAT_BANNED = "USER_CHAT_BANNED", e.USER_CHAT_TIMED_OUT = "USER_CHAT_TIMED_OUT", e.USER_SUSPENDED = "USER_SUSPENDED", e.ZALGO_ENFORCEMENT_FAILED = "ZALGO_ENFORCEMENT_FAILED"
                 }(de || (de = {})),
                 function(e) {
-                    e.FORBIDDEN = "FORBIDDEN", e.ROOM_NOT_FOUND = "ROOM_NOT_FOUND", e.SLOW_MODE_DURATION_INVALID = "SLOW_MODE_DURATION_INVALID"
+                    e.AUTO_MOD_ENFORCEMENT_FAILED = "AUTO_MOD_ENFORCEMENT_FAILED", e.EMOTE_ONLY_MODE_ENFORCEMENT_FAILED = "EMOTE_ONLY_MODE_ENFORCEMENT_FAILED", e.FORBIDDEN = "FORBIDDEN", e.R9K_MODE_ENFORCEMENT_FAILED = "R9K_MODE_ENFORCEMENT_FAILED", e.RATE_LIMIT_FAILED = "RATE_LIMIT_FAILED", e.SLOW_MODE_ENFORCEMENT_FAILED = "SLOW_MODE_ENFORCEMENT_FAILED", e.SPAM_ENFORCEMENT_FAILED = "SPAM_ENFORCEMENT_FAILED", e.USER_CHAT_BANNED = "USER_CHAT_BANNED", e.USER_CHAT_TIMED_OUT = "USER_CHAT_TIMED_OUT", e.USER_SUSPENDED = "USER_SUSPENDED", e.ZALGO_ENFORCEMENT_FAILED = "ZALGO_ENFORCEMENT_FAILED"
                 }(me || (me = {})),
                 function(e) {
-                    e.DNR_TO_RESUB_NONRECURRING = "DNR_TO_RESUB_NONRECURRING", e.DNR_TO_RESUB_RECURRING = "DNR_TO_RESUB_RECURRING", e.GIFT_TO_PAID = "GIFT_TO_PAID"
+                    e.FORBIDDEN = "FORBIDDEN", e.ROOM_NOT_FOUND = "ROOM_NOT_FOUND", e.SLOW_MODE_DURATION_INVALID = "SLOW_MODE_DURATION_INVALID"
                 }(_e || (_e = {})),
                 function(e) {
-                    e.CONTENT = "CONTENT", e.TOP = "TOP"
+                    e.DNR_TO_RESUB_NONRECURRING = "DNR_TO_RESUB_NONRECURRING", e.DNR_TO_RESUB_RECURRING = "DNR_TO_RESUB_RECURRING", e.GIFT_TO_PAID = "GIFT_TO_PAID"
                 }(he || (he = {})),
                 function(e) {
-                    e.AWAY = "AWAY", e.BUSY = "BUSY", e.OFFLINE = "OFFLINE", e.ONLINE = "ONLINE"
+                    e.CONTENT = "CONTENT", e.TOP = "TOP"
                 }(ge || (ge = {})),
                 function(e) {
-                    e.CLAIMABLE_GIFT_CREATION_ERROR = "CLAIMABLE_GIFT_CREATION_ERROR", e.GIFT_CREATION_ERROR = "GIFT_CREATION_ERROR", e.MAX_GIFTS_FOR_OFFER_EXCEEDED = "MAX_GIFTS_FOR_OFFER_EXCEEDED", e.UNKNOWN_ERROR = "UNKNOWN_ERROR"
+                    e.AWAY = "AWAY", e.BUSY = "BUSY", e.OFFLINE = "OFFLINE", e.ONLINE = "ONLINE"
                 }(Te || (Te = {})),
                 function(e) {
-                    e.CLAIM_CODE = "CLAIM_CODE", e.DIRECT_ENTITLEMENT = "DIRECT_ENTITLEMENT", e.EXTERNAL = "EXTERNAL"
+                    e.CLAIMABLE_GIFT_CREATION_ERROR = "CLAIMABLE_GIFT_CREATION_ERROR", e.GIFT_CREATION_ERROR = "GIFT_CREATION_ERROR", e.MAX_GIFTS_FOR_OFFER_EXCEEDED = "MAX_GIFTS_FOR_OFFER_EXCEEDED", e.UNKNOWN_ERROR = "UNKNOWN_ERROR"
                 }(fe || (fe = {})),
+                function(e) {
+                    e.CLAIM_CODE = "CLAIM_CODE", e.DIRECT_ENTITLEMENT = "DIRECT_ENTITLEMENT", e.EXTERNAL = "EXTERNAL"
+                }(De || (De = {})),
                 function(e) {
                     e.ERROR_STATUS = "ERROR_STATUS", e.GIFT_CLAIMED = "GIFT_CLAIMED", e.GIFT_CLAIM_PENDING = "GIFT_CLAIM_PENDING"
                 }(Ie || (Ie = {})),
                 function(e) {
                     e.GIFT_NOT_CLAIMABLE = "GIFT_NOT_CLAIMABLE", e.NON_EXISTENT_GIFT = "NON_EXISTENT_GIFT", e.UNKNOWN_ERROR = "UNKNOWN_ERROR", e.USER_DOES_NOT_OWN_GIFT = "USER_DOES_NOT_OWN_GIFT"
-                }(De || (De = {})),
+                }(Ne || (Ne = {})),
                 function(e) {
                     e.OFFERS_FAILED_TO_UPDATE = "OFFERS_FAILED_TO_UPDATE", e.UNKNOWN = "UNKNOWN"
-                }(Ne || (Ne = {})),
+                }(Se || (Se = {})),
                 function(e) {
                     e.TOO_MANY_RECENT_SPENDS = "TOO_MANY_RECENT_SPENDS", e.UNABLE_TO_SPEND = "UNABLE_TO_SPEND"
                 }(Oe || (Oe = {})),
                 function(e) {
                     e.OFFER_ALREADY_CLAIMED = "OFFER_ALREADY_CLAIMED", e.UNKNOWN = "UNKNOWN"
-                }(Se || (Se = {})),
-                function(e) {
-                    e.DEFAULT = "DEFAULT", e.SERIES = "SERIES"
                 }(Re || (Re = {})),
                 function(e) {
-                    e.ALL_TIME = "ALL_TIME", e.LAST_DAY = "LAST_DAY", e.LAST_MONTH = "LAST_MONTH", e.LAST_WEEK = "LAST_WEEK", e.TRENDING = "TRENDING"
+                    e.DEFAULT = "DEFAULT", e.SERIES = "SERIES"
                 }(Ae || (Ae = {})),
                 function(e) {
-                    e.ALL_TIME = "ALL_TIME", e.LAST_DAY = "LAST_DAY", e.LAST_MONTH = "LAST_MONTH", e.LAST_WEEK = "LAST_WEEK"
+                    e.ALL_TIME = "ALL_TIME", e.LAST_DAY = "LAST_DAY", e.LAST_MONTH = "LAST_MONTH", e.LAST_WEEK = "LAST_WEEK", e.TRENDING = "TRENDING"
                 }(Ce || (Ce = {})),
                 function(e) {
-                    e.CREATED_AT_ASC = "CREATED_AT_ASC", e.CREATED_AT_DESC = "CREATED_AT_DESC", e.TRENDING = "TRENDING", e.VIEWS_ASC = "VIEWS_ASC", e.VIEWS_DESC = "VIEWS_DESC"
+                    e.ALL_TIME = "ALL_TIME", e.LAST_DAY = "LAST_DAY", e.LAST_MONTH = "LAST_MONTH", e.LAST_WEEK = "LAST_WEEK"
                 }(be || (be = {})),
                 function(e) {
-                    e.HIGH = "HIGH", e.LOW = "LOW", e.MEDIUM = "MEDIUM"
+                    e.CREATED_AT_ASC = "CREATED_AT_ASC", e.CREATED_AT_DESC = "CREATED_AT_DESC", e.TRENDING = "TRENDING", e.VIEWS_ASC = "VIEWS_ASC", e.VIEWS_DESC = "VIEWS_DESC"
                 }(ve || (ve = {})),
                 function(e) {
-                    e.NOT_PERMITTED = "NOT_PERMITTED", e.NOT_RESTRICTED = "NOT_RESTRICTED", e.PERMITTED = "PERMITTED", e.TEMPORARY = "TEMPORARY"
+                    e.HEARTHSTONE_VCA = "HEARTHSTONE_VCA", e.OVERWATCH_VCA = "OVERWATCH_VCA", e.PUBG_VCA = "PUBG_VCA", e.STREAM_MARKER = "STREAM_MARKER", e.VCA = "VCA"
                 }(Le || (Le = {})),
                 function(e) {
-                    e.BODY_EMPTY = "BODY_EMPTY", e.NOT_DELIVERED = "NOT_DELIVERED", e.TARGET_BANNED = "TARGET_BANNED", e.TARGET_RESTRICTED = "TARGET_RESTRICTED"
+                    e.HIGH = "HIGH", e.LOW = "LOW", e.MEDIUM = "MEDIUM"
                 }(Ue || (Ue = {})),
                 function(e) {
-                    e.ALREADY_LINKED = "ALREADY_LINKED", e.CODE_EXPIRED = "CODE_EXPIRED", e.CODE_INCORRECT = "CODE_INCORRECT"
+                    e.NOT_PERMITTED = "NOT_PERMITTED", e.NOT_RESTRICTED = "NOT_RESTRICTED", e.PERMITTED = "PERMITTED", e.TEMPORARY = "TEMPORARY"
                 }(Pe || (Pe = {})),
                 function(e) {
-                    e.all = "all", e.ps4 = "ps4", e.xbox = "xbox"
+                    e.BODY_EMPTY = "BODY_EMPTY", e.NOT_DELIVERED = "NOT_DELIVERED", e.TARGET_BANNED = "TARGET_BANNED", e.TARGET_RESTRICTED = "TARGET_RESTRICTED"
                 }(Fe || (Fe = {})),
                 function(e) {
-                    e.COMMUNITY = "COMMUNITY", e.GAME = "GAME"
-                }(ye || (ye = {})),
-                function(e) {
-                    e.ASC = "ASC", e.DESC = "DESC"
+                    e.ALREADY_LINKED = "ALREADY_LINKED", e.CODE_EXPIRED = "CODE_EXPIRED", e.CODE_INCORRECT = "CODE_INCORRECT"
                 }(Me || (Me = {})),
                 function(e) {
-                    e.TIME = "TIME", e.VIEWS = "VIEWS"
+                    e.all = "all", e.ps4 = "ps4", e.xbox = "xbox"
+                }(ye || (ye = {})),
+                function(e) {
+                    e.COMMUNITY = "COMMUNITY", e.GAME = "GAME"
                 }(ke || (ke = {})),
                 function(e) {
-                    e.DEFAULT = "DEFAULT", e.EXTENSION = "EXTENSION"
+                    e.ASC = "ASC", e.DESC = "DESC"
                 }(je || (je = {})),
                 function(e) {
-                    e.ALL_VIDEOS = "ALL_VIDEOS", e.COLLECTION = "COLLECTION", e.GAME_VIDEOS = "GAME_VIDEOS", e.LATEST_BROADCASTS = "LATEST_BROADCASTS", e.LATEST_NON_BROADCASTS = "LATEST_NON_BROADCASTS", e.LONG_VIDEOS = "LONG_VIDEOS", e.SHORT_VIDEOS = "SHORT_VIDEOS", e.TOP_CLIPS = "TOP_CLIPS"
+                    e.TIME = "TIME", e.VIEWS = "VIEWS"
                 }(we || (we = {})),
                 function(e) {
-                    e.ALREADY_CLAIMED = "ALREADY_CLAIMED", e.REQUEST_THROTTLED = "REQUEST_THROTTLED", e.UNAUTHORIZED = "UNAUTHORIZED", e.UNKNOWN = "UNKNOWN"
+                    e.DEFAULT = "DEFAULT", e.EXTENSION = "EXTENSION"
                 }(Ge || (Ge = {})),
                 function(e) {
-                    e.BITS_KEY_CODE = "BITS_KEY_CODE"
-                }(Be || (Be = {})),
-                function(e) {
-                    e.BROADCASTER = "BROADCASTER", e.EDITOR = "EDITOR", e.MODERATOR = "MODERATOR", e.REGULAR = "REGULAR", e.SUBSCRIBER = "SUBSCRIBER"
+                    e.ALL_VIDEOS = "ALL_VIDEOS", e.COLLECTION = "COLLECTION", e.GAME_VIDEOS = "GAME_VIDEOS", e.LATEST_BROADCASTS = "LATEST_BROADCASTS", e.LATEST_NON_BROADCASTS = "LATEST_NON_BROADCASTS", e.LONG_VIDEOS = "LONG_VIDEOS", e.SHORT_VIDEOS = "SHORT_VIDEOS", e.TOP_CLIPS = "TOP_CLIPS"
                 }(Ve || (Ve = {})),
                 function(e) {
-                    e.ACTIVE = "ACTIVE", e.PENDING = "PENDING", e.REJECTED = "REJECTED", e.UNKNOWN = "UNKNOWN", e.UNSET = "UNSET"
+                    e.ALREADY_CLAIMED = "ALREADY_CLAIMED", e.REQUEST_THROTTLED = "REQUEST_THROTTLED", e.UNAUTHORIZED = "UNAUTHORIZED", e.UNKNOWN = "UNKNOWN"
+                }(Be || (Be = {})),
+                function(e) {
+                    e.BITS_KEY_CODE = "BITS_KEY_CODE"
                 }(He || (He = {})),
                 function(e) {
-                    e.ACTIVE = "ACTIVE", e.PENDING = "PENDING"
+                    e.BROADCASTER = "BROADCASTER", e.EDITOR = "EDITOR", e.MODERATOR = "MODERATOR", e.REGULAR = "REGULAR", e.SUBSCRIBER = "SUBSCRIBER"
                 }(Ye || (Ye = {})),
                 function(e) {
-                    e.BOUNTY_ALREADY_CLAIMED = "BOUNTY_ALREADY_CLAIMED", e.BOUNTY_LIMIT_REACHED = "BOUNTY_LIMIT_REACHED", e.INVALID_PARAMETER = "INVALID_PARAMETER", e.UNKNOWN_ERROR = "UNKNOWN_ERROR"
+                    e.ACTIVE = "ACTIVE", e.PENDING = "PENDING", e.REJECTED = "REJECTED", e.UNKNOWN = "UNKNOWN", e.UNSET = "UNSET"
                 }(xe || (xe = {})),
                 function(e) {
-                    e.BOUNTY_NOT_LIVE = "BOUNTY_NOT_LIVE", e.INVALID_PARAMETER = "INVALID_PARAMETER", e.UNKNOWN_ERROR = "UNKNOWN_ERROR"
+                    e.ACTIVE = "ACTIVE", e.PENDING = "PENDING"
                 }(We || (We = {})),
                 function(e) {
-                    e.PROMPT_FOR_PERMISSIONS = "PROMPT_FOR_PERMISSIONS", e.REQUIRES_CONFIGURATION = "REQUIRES_CONFIGURATION"
+                    e.BOUNTY_ALREADY_CLAIMED = "BOUNTY_ALREADY_CLAIMED", e.BOUNTY_LIMIT_REACHED = "BOUNTY_LIMIT_REACHED", e.INVALID_PARAMETER = "INVALID_PARAMETER", e.UNKNOWN_ERROR = "UNKNOWN_ERROR"
                 }(Ke || (Ke = {})),
                 function(e) {
-                    e.INVALID_PARAMETER = "INVALID_PARAMETER", e.UNAUTHORIZED = "UNAUTHORIZED", e.UNKNOWN_ERROR = "UNKNOWN_ERROR"
+                    e.BOUNTY_NOT_LIVE = "BOUNTY_NOT_LIVE", e.INVALID_PARAMETER = "INVALID_PARAMETER", e.UNKNOWN_ERROR = "UNKNOWN_ERROR"
                 }(Xe || (Xe = {})),
                 function(e) {
-                    e.BOUNTY_NOT_LIVE = "BOUNTY_NOT_LIVE", e.INVALID_PARAMETER = "INVALID_PARAMETER", e.STREAM_TITLE_BANNED_WORDS = "STREAM_TITLE_BANNED_WORDS", e.STREAM_TITLE_TOO_LONG = "STREAM_TITLE_TOO_LONG", e.UNAUTHORIZED = "UNAUTHORIZED", e.UNKNOWN_ERROR = "UNKNOWN_ERROR"
+                    e.PROMPT_FOR_PERMISSIONS = "PROMPT_FOR_PERMISSIONS", e.REQUIRES_CONFIGURATION = "REQUIRES_CONFIGURATION"
                 }(ze || (ze = {})),
                 function(e) {
-                    e.INVITATION_ALREADY_EXISTS = "INVITATION_ALREADY_EXISTS", e.INVITATION_INVALID = "INVITATION_INVALID", e.SQUAD_FULL = "SQUAD_FULL", e.UNAUTHORIZED = "UNAUTHORIZED", e.USER_ALREADY_IN_SQUAD = "USER_ALREADY_IN_SQUAD"
+                    e.INVALID_PARAMETER = "INVALID_PARAMETER", e.UNAUTHORIZED = "UNAUTHORIZED", e.UNKNOWN_ERROR = "UNKNOWN_ERROR"
                 }(qe || (qe = {})),
                 function(e) {
-                    e.SQUAD_CANNOT_BE_UPDATED = "SQUAD_CANNOT_BE_UPDATED", e.SQUAD_NOT_FOUND = "SQUAD_NOT_FOUND", e.SQUAD_TOO_FEW_MEMBERS = "SQUAD_TOO_FEW_MEMBERS", e.UNAUTHORIZED = "UNAUTHORIZED"
+                    e.BOUNTY_NOT_LIVE = "BOUNTY_NOT_LIVE", e.INVALID_PARAMETER = "INVALID_PARAMETER", e.STREAM_TITLE_BANNED_WORDS = "STREAM_TITLE_BANNED_WORDS", e.STREAM_TITLE_TOO_LONG = "STREAM_TITLE_TOO_LONG", e.UNAUTHORIZED = "UNAUTHORIZED", e.UNKNOWN_ERROR = "UNKNOWN_ERROR"
                 }(Qe || (Qe = {})),
                 function(e) {
-                    e.UNAUTHORIZED = "UNAUTHORIZED", e.USER_NOT_IN_SQUAD = "USER_NOT_IN_SQUAD"
+                    e.INVITATION_ALREADY_EXISTS = "INVITATION_ALREADY_EXISTS", e.INVITATION_INVALID = "INVITATION_INVALID", e.SQUAD_FULL = "SQUAD_FULL", e.UNAUTHORIZED = "UNAUTHORIZED", e.USER_ALREADY_IN_SQUAD = "USER_ALREADY_IN_SQUAD"
                 }(Ze || (Ze = {})),
                 function(e) {
-                    e.UNAUTHORIZED = "UNAUTHORIZED", e.USER_NOT_IN_SQUAD = "USER_NOT_IN_SQUAD"
+                    e.SQUAD_CANNOT_BE_UPDATED = "SQUAD_CANNOT_BE_UPDATED", e.SQUAD_NOT_FOUND = "SQUAD_NOT_FOUND", e.SQUAD_TOO_FEW_MEMBERS = "SQUAD_TOO_FEW_MEMBERS", e.UNAUTHORIZED = "UNAUTHORIZED"
                 }(Je || (Je = {})),
                 function(e) {
-                    e.ACCEPTED = "ACCEPTED", e.DELETED = "DELETED", e.PENDING = "PENDING", e.REJECTED = "REJECTED", e.UNKNOWN = "UNKNOWN"
+                    e.UNAUTHORIZED = "UNAUTHORIZED", e.USER_NOT_IN_SQUAD = "USER_NOT_IN_SQUAD"
                 }($e || ($e = {})),
                 function(e) {
-                    e.CHANNEL_NOT_FOUND = "CHANNEL_NOT_FOUND", e.TARGET_USER_ALREADY_EDITOR = "TARGET_USER_ALREADY_EDITOR", e.TARGET_USER_NOT_FOUND = "TARGET_USER_NOT_FOUND"
+                    e.UNAUTHORIZED = "UNAUTHORIZED", e.USER_NOT_IN_SQUAD = "USER_NOT_IN_SQUAD"
                 }(et || (et = {})),
                 function(e) {
-                    e.CHANNEL_NOT_FOUND = "CHANNEL_NOT_FOUND", e.TARGET_USER_NOT_FOUND = "TARGET_USER_NOT_FOUND"
+                    e.ACCEPTED = "ACCEPTED", e.DELETED = "DELETED", e.PENDING = "PENDING", e.REJECTED = "REJECTED", e.UNKNOWN = "UNKNOWN"
                 }(tt || (tt = {})),
                 function(e) {
-                    e.BASELINE = "BASELINE", e.HIGH = "HIGH", e.MAIN = "MAIN"
+                    e.CHANNEL_NOT_FOUND = "CHANNEL_NOT_FOUND", e.TARGET_USER_ALREADY_EDITOR = "TARGET_USER_ALREADY_EDITOR", e.TARGET_USER_NOT_FOUND = "TARGET_USER_NOT_FOUND"
                 }(nt || (nt = {})),
                 function(e) {
-                    e.CSGO_SKILL = "CSGO_SKILL", e.LOL_SUMMONER_RANK = "LOL_SUMMONER_RANK", e.RELEVANCE = "RELEVANCE", e.VIEWER_COUNT = "VIEWER_COUNT"
+                    e.CHANNEL_NOT_FOUND = "CHANNEL_NOT_FOUND", e.TARGET_USER_NOT_FOUND = "TARGET_USER_NOT_FOUND"
                 }(at || (at = {})),
                 function(e) {
-                    e.HYPE = "HYPE", e.STARTTIME = "STARTTIME"
+                    e.BASELINE = "BASELINE", e.HIGH = "HIGH", e.MAIN = "MAIN"
                 }(rt || (rt = {})),
                 function(e) {
-                    e.PREMIERE = "PREMIERE", e.SEGMENT = "SEGMENT", e.SINGLE = "SINGLE", e.TIMETABLE = "TIMETABLE"
+                    e.CSGO_SKILL = "CSGO_SKILL", e.LOL_SUMMONER_RANK = "LOL_SUMMONER_RANK", e.RELEVANCE = "RELEVANCE", e.VIEWER_COUNT = "VIEWER_COUNT"
                 }(it || (it = {})),
                 function(e) {
-                    e.CANCELLED = "CANCELLED", e.FAILED = "FAILED", e.SCHEDULED = "SCHEDULED", e.STARTED = "STARTED", e.SUCCESS = "SUCCESS", e.UNKNOWN = "UNKNOWN", e.UNSCHEDULED = "UNSCHEDULED"
+                    e.HYPE = "HYPE", e.STARTTIME = "STARTTIME"
                 }(st || (st = {})),
                 function(e) {
-                    e.ALL = "ALL", e.LIVE = "LIVE"
+                    e.PREMIERE = "PREMIERE", e.SEGMENT = "SEGMENT", e.SINGLE = "SINGLE", e.TIMETABLE = "TIMETABLE"
                 }(ot || (ot = {})),
                 function(e) {
-                    e.ALREADY_WATCHED = "ALREADY_WATCHED", e.NOT_INTERESTED = "NOT_INTERESTED", e.OFFENSIVE = "OFFENSIVE", e.OTHER = "OTHER", e.UNSPECIFIED = "UNSPECIFIED"
+                    e.CANCELLED = "CANCELLED", e.FAILED = "FAILED", e.SCHEDULED = "SCHEDULED", e.STARTED = "STARTED", e.SUCCESS = "SUCCESS", e.UNKNOWN = "UNKNOWN", e.UNSCHEDULED = "UNSCHEDULED"
                 }(ct || (ct = {})),
                 function(e) {
-                    e.CATEGORY = "CATEGORY", e.CHANNEL = "CHANNEL", e.SHELF = "SHELF", e.UNSPECIFIED = "UNSPECIFIED", e.VOD = "VOD"
+                    e.ALL = "ALL", e.LIVE = "LIVE"
                 }(ut || (ut = {})),
                 function(e) {
-                    e.PRICE_ASC = "PRICE_ASC", e.PRICE_DESC = "PRICE_DESC", e.PURCHASE_DATE_ASC = "PURCHASE_DATE_ASC", e.PURCHASE_DATE_DESC = "PURCHASE_DATE_DESC"
+                    e.ALREADY_WATCHED = "ALREADY_WATCHED", e.NOT_INTERESTED = "NOT_INTERESTED", e.OFFENSIVE = "OFFENSIVE", e.OTHER = "OTHER", e.UNSPECIFIED = "UNSPECIFIED"
                 }(lt || (lt = {})),
                 function(e) {
-                    e.ALL = "ALL", e.SUBSCRIPTIONS = "SUBSCRIPTIONS"
-                }(pt || (pt = {})),
-                function(e) {
-                    e.SUBSCRIPTION = "SUBSCRIPTION"
+                    e.CATEGORY = "CATEGORY", e.CHANNEL = "CHANNEL", e.SHELF = "SHELF", e.UNSPECIFIED = "UNSPECIFIED", e.VOD = "VOD"
                 }(Et || (Et = {})),
                 function(e) {
-                    e.MONKEYS = "MONKEYS", e.PURPLE = "PURPLE", e.ROBOTS = "ROBOTS"
+                    e.PRICE_ASC = "PRICE_ASC", e.PRICE_DESC = "PRICE_DESC", e.PURCHASE_DATE_ASC = "PURCHASE_DATE_ASC", e.PURCHASE_DATE_DESC = "PURCHASE_DATE_DESC"
+                }(pt || (pt = {})),
+                function(e) {
+                    e.ALL = "ALL", e.SUBSCRIPTIONS = "SUBSCRIPTIONS"
                 }(dt || (dt = {})),
                 function(e) {
-                    e.ALL = "ALL", e.GIFT = "GIFT", e.PLATFORM = "PLATFORM"
+                    e.SUBSCRIPTION = "SUBSCRIPTION"
                 }(mt || (mt = {})),
                 function(e) {
-                    e.INVALID_USER_ID = "INVALID_USER_ID", e.UNAUTHORIZED = "UNAUTHORIZED"
+                    e.MONKEYS = "MONKEYS", e.PURPLE = "PURPLE", e.ROBOTS = "ROBOTS"
                 }(_t || (_t = {})),
                 function(e) {
-                    e.DELETED = "DELETED", e.PENDING_REVIEW = "PENDING_REVIEW", e.PENDING_REVIEW_SPAM = "PENDING_REVIEW_SPAM", e.PUBLISHED = "PUBLISHED", e.UNPUBLISHED = "UNPUBLISHED"
+                    e.ALL = "ALL", e.GIFT = "GIFT", e.PLATFORM = "PLATFORM"
                 }(ht || (ht = {})),
                 function(e) {
-                    e.APPROVED = "APPROVED", e.COMPLETED = "COMPLETED", e.LIVE = "LIVE", e.PENDING = "PENDING", e.REJECTED = "REJECTED"
+                    e.INVALID_USER_ID = "INVALID_USER_ID", e.UNAUTHORIZED = "UNAUTHORIZED"
                 }(gt || (gt = {})),
                 function(e) {
-                    e.ITEM = "ITEM", e.LINK_NOTIFICATION = "LINK_NOTIFICATION"
+                    e.DELETED = "DELETED", e.PENDING_REVIEW = "PENDING_REVIEW", e.PENDING_REVIEW_SPAM = "PENDING_REVIEW_SPAM", e.PUBLISHED = "PUBLISHED", e.UNPUBLISHED = "UNPUBLISHED"
                 }(Tt || (Tt = {})),
                 function(e) {
+                    e.APPROVED = "APPROVED", e.COMPLETED = "COMPLETED", e.LIVE = "LIVE", e.PENDING = "PENDING", e.REJECTED = "REJECTED"
+                }(ft || (ft = {})),
+                function(e) {
+                    e.ITEM = "ITEM", e.LINK_NOTIFICATION = "LINK_NOTIFICATION"
+                }(Dt || (Dt = {})),
+                function(e) {
                     e.SERVICE_DEPENDENCY_FAILURE = "SERVICE_DEPENDENCY_FAILURE", e.UNKNOWN = "UNKNOWN", e.USER_UNAUTHORIZED = "USER_UNAUTHORIZED"
-                }(ft || (ft = {}))
+                }(It || (It = {}))
         },
         GD6M: function(e, t, n) {
             "use strict";
@@ -1065,7 +1073,7 @@
                 l = Object(i.compose)(Object(o.b)("DevGameSuggestion", {
                     autoReportInteractive: !0
                 }))(u),
-                p = function(e) {
+                E = function(e) {
                     function t() {
                         var t = null !== e && e.apply(this, arguments) || this;
                         return t.onClick = function() {
@@ -1079,7 +1087,7 @@
                         })
                     }, t
                 }(r.Component),
-                E = 100,
+                p = 100,
                 d = "GAME_SEARCH_INPUT_SELECTOR",
                 m = function(e) {
                     function t() {
@@ -1095,7 +1103,7 @@
                             }, function() {
                                 t.inputTimer && (clearTimeout(t.inputTimer), t.inputTimer = 0), t.inputTimer = setTimeout(function() {
                                     return t.props.onInputChange(t.state.searchTerm)
-                                }, E)
+                                }, p)
                             })
                         }, t.onClickOut = function() {
                             t.setState({
@@ -1132,7 +1140,7 @@
                                     padding: {
                                         right: .5
                                     }
-                                }, r.createElement(p, {
+                                }, r.createElement(E, {
                                     game: e,
                                     onLabelRemove: t.onLabelClick
                                 }))
@@ -1232,8 +1240,8 @@
                 g = n("Svt6"),
                 T = n("+GjP"),
                 f = n("1mFg"),
-                I = g.a + "/kraken/search/games",
-                D = 7,
+                D = g.a + "/kraken/search/games",
+                I = 7,
                 N = function(e) {
                     function t() {
                         var t = null !== e && e.apply(this, arguments) || this;
@@ -1245,7 +1253,7 @@
                                 return a.__generator(this, function(a) {
                                     switch (a.label) {
                                         case 0:
-                                            return a.trys.push([0, 4, , 5]), e.length ? (t = Object(T.e)(I, {
+                                            return a.trys.push([0, 4, , 5]), e.length ? (t = Object(T.e)(D, {
                                                 query: e.trim(),
                                                 type: "suggest"
                                             }), [4, Object(f.a)(t)]) : (this.setState({
@@ -1256,7 +1264,7 @@
                                         case 2:
                                             i = a.sent(), r = i.games, a.label = 3;
                                         case 3:
-                                            return r = r.slice(0, this.props.limit || D), this.setState({
+                                            return r = r.slice(0, this.props.limit || I), this.setState({
                                                 games: r
                                             }), [3, 5];
                                         case 4:
@@ -1547,8 +1555,8 @@
                 c = n("kRBY"),
                 u = n("H/lO"),
                 l = n("NZDK"),
-                p = n("fvjX"),
-                E = n("N3I0"),
+                E = n("fvjX"),
+                p = n("N3I0"),
                 d = n("GIun"),
                 m = n("8/mp"),
                 _ = n("GnwI"),
@@ -1593,7 +1601,7 @@
                         }, this.props.user.name))))))
                     }, t
                 }(r.Component),
-                I = function(e) {
+                D = function(e) {
                     function t() {
                         var t = null !== e && e.apply(this, arguments) || this;
                         return t.userSearch = null, t.renderSearchContent = function() {
@@ -1619,7 +1627,7 @@
                         this.userSearch && e.open !== this.props.open && this.userSearch.toggle(e.open)
                     }, t.prototype.render = function() {
                         var e = this.renderSearchContent();
-                        return r.createElement(T.Ya, null, r.createElement(E.a, {
+                        return r.createElement(T.Ya, null, r.createElement(p.a, {
                             onChange: this.props.onInputChange,
                             onFocusInput: this.props.onFocusInput,
                             ref: this.setUserSearchRef,
@@ -1640,11 +1648,11 @@
                         }, e)))))
                     }, t
                 }(r.Component),
-                D = Object(p.compose)(Object(_.b)("DevUserSearchDropdown", {
+                I = Object(E.compose)(Object(_.b)("DevUserSearchDropdown", {
                     autoReportInteractive: !0
-                }))(I),
+                }))(D),
                 N = 100,
-                O = function(e) {
+                S = function(e) {
                     function t(t) {
                         var n = e.call(this, t) || this;
                         return n.state = {
@@ -1731,7 +1739,7 @@
                         }), n
                     }
                     return a.__extends(t, e), t.prototype.render = function() {
-                        return r.createElement(D, {
+                        return r.createElement(I, {
                             clearOnSelect: this.props.clearOnSelect,
                             userResults: this.state.userResult,
                             open: this.state.searchOpen,
@@ -1743,17 +1751,17 @@
                         })
                     }, t
                 }(r.Component);
-            var S = Object(i.connect)(function(e) {
+            var O = Object(i.connect)(function(e) {
                 return {
                     user: Object(c.e)(e)
                 }
-            })(O);
+            })(S);
             n.d(t, !1, function() {
                 return N
             }), n.d(t, !1, function() {
-                return O
-            }), n.d(t, "a", function() {
                 return S
+            }), n.d(t, "a", function() {
+                return O
             })
         },
         Lxz1: function(e, t, n) {
@@ -1769,7 +1777,7 @@
             }), n.d(t, "a", function() {
                 return l
             }), n.d(t, "d", function() {
-                return p
+                return E
             }), n.d(t, "b", function() {
                 return d
             });
@@ -1798,13 +1806,13 @@
                 l = function() {
                     return Object(r.d)("File too large.", "ImageUploader")
                 },
-                p = function() {
+                E = function() {
                     return Object(r.d)("Unexpected error while uploading your image. Please try again later", "ImageUploader")
                 },
-                E = ((a = {})[i.a.JPEG] = "JPG", a[i.a.PNG] = "PNG", a[i.a.GIF] = "GIF", a),
+                p = ((a = {})[i.a.JPEG] = "JPG", a[i.a.PNG] = "PNG", a[i.a.GIF] = "GIF", a),
                 d = function(e) {
                     var t = e.map(function(e) {
-                        return E[e]
+                        return p[e]
                     });
                     return t.length > 1 && (t[t.length - 1] = "or " + t[t.length - 1]), Object(r.d)("Incompatible format. File must be an image in {allowedTypes} format.", {
                         allowedTypes: t.join(", ")
@@ -2051,7 +2059,7 @@
                 }(r.Component)),
                 u = n("2/NB"),
                 l = n("Lxz1"),
-                p = function(e) {
+                E = function(e) {
                     function t(t) {
                         var n = e.call(this, t) || this;
                         return n.state = {
@@ -2116,13 +2124,13 @@
                     }, t
                 }(r.Component);
             n.d(t, "a", function() {
-                return p
+                return E
             })
         },
         NZDK: function(e, t, n) {
             "use strict";
             n.d(t, "a", function() {
-                return E
+                return p
             });
             var a = n("mrSG"),
                 r = n("hnrd"),
@@ -2132,7 +2140,7 @@
                 c = n("vR4/"),
                 u = n("BSTw"),
                 l = n("Z9JJ"),
-                p = {
+                E = {
                     games: {
                         indexName: o.a.Games,
                         hitsPerPage: 2,
@@ -2185,7 +2193,7 @@
                         optionalFacetFilters: ""
                     }
                 },
-                E = function() {
+                p = function() {
                     function e(e) {
                         this.apolloClient = e.apolloClient, this.client = r(e.appId, e.apiKey), this.stats = e.stats, this.logger = e.logger.withCategory("search-client"), this.sendSearchRequestToForage = "variant" === i.p.experiments.getAssignment(s.b.NewSearchBackend), this.getCountryCode()
                     }
@@ -2195,7 +2203,7 @@
                             return a.__generator(this, function(a) {
                                 switch (a.label) {
                                     case 0:
-                                        return r = [], (n = []).push(this.getTopResult(p.games, e)), n.push(this.getTopResult(p.videos, e)), n.push(this.getTopResult(p.users, e)), n.push(this.getTopResult(p.channels, e)), r.push(this.getTotalResult(p.games, e)), r.push(this.getTotalResult(p.videos, e)), r.push(this.getTotalResult(p.users, e)), r.push(this.getTotalResult(p.channels, e)), [4, this.query(n.concat(r))];
+                                        return r = [], (n = []).push(this.getTopResult(E.games, e)), n.push(this.getTopResult(E.videos, e)), n.push(this.getTopResult(E.users, e)), n.push(this.getTopResult(E.channels, e)), r.push(this.getTotalResult(E.games, e)), r.push(this.getTotalResult(E.videos, e)), r.push(this.getTotalResult(E.users, e)), r.push(this.getTotalResult(E.channels, e)), [4, this.query(n.concat(r))];
                                     case 1:
                                         return (i = a.sent()) ? (s = i.results, [2, {
                                             id: t,
@@ -2245,15 +2253,15 @@
                             c = void 0 === s ? 0 : s,
                             u = i.hitsPerPage,
                             l = void 0 === u ? 50 : u,
-                            E = i.facetFilters,
-                            d = void 0 === E ? "" : E,
+                            p = i.facetFilters,
+                            d = void 0 === p ? "" : p,
                             m = i.numericFilters,
                             _ = i.restrictSearchableAttributes,
                             h = void 0 === _ ? [] : _;
                         return a.__awaiter(this, void 0, void 0, function() {
-                            var r, i, s, u, E, _, g, T, f = this;
-                            return a.__generator(this, function(I) {
-                                switch (I.label) {
+                            var r, i, s, u, p, _, g, T, f = this;
+                            return a.__generator(this, function(D) {
+                                switch (D.label) {
                                     case 0:
                                         switch (r = {
                                             id: n,
@@ -2303,29 +2311,29 @@
                                         }
                                         return [3, 13];
                                     case 1:
-                                        return s = r, [4, i(p.games)];
+                                        return s = r, [4, i(E.games)];
                                     case 2:
-                                        return s.games = I.sent(), [3, 14];
+                                        return s.games = D.sent(), [3, 14];
                                     case 3:
-                                        return u = r, [4, i(p.users)];
+                                        return u = r, [4, i(E.users)];
                                     case 4:
-                                        return u.users = I.sent(), [3, 14];
+                                        return u.users = D.sent(), [3, 14];
                                     case 5:
-                                        return E = r, [4, i(p.channels)];
+                                        return p = r, [4, i(E.channels)];
                                     case 6:
-                                        return E.channels = I.sent(), [3, 14];
+                                        return p.channels = D.sent(), [3, 14];
                                     case 7:
-                                        return _ = r, [4, i(p.videos)];
+                                        return _ = r, [4, i(E.videos)];
                                     case 8:
-                                        return _.videos = I.sent(), [3, 14];
+                                        return _.videos = D.sent(), [3, 14];
                                     case 9:
-                                        return g = r, [4, i(p.streamTags)];
+                                        return g = r, [4, i(E.streamTags)];
                                     case 10:
-                                        return g.streamTags = I.sent(), [3, 14];
+                                        return g.streamTags = D.sent(), [3, 14];
                                     case 11:
-                                        return T = r, [4, i(p.tags)];
+                                        return T = r, [4, i(E.tags)];
                                     case 12:
-                                        return T.tags = I.sent(), [3, 14];
+                                        return T.tags = D.sent(), [3, 14];
                                     case 13:
                                         return [2, null];
                                     case 14:
@@ -2481,8 +2489,8 @@
                 c = n("coZW"),
                 u = n("uLRL"),
                 l = n("fvjX"),
-                p = n("V+GM"),
-                E = n("Svt6"),
+                E = n("V+GM"),
+                p = n("Svt6"),
                 d = n("NvVO"),
                 m = n("2xye"),
                 _ = n("GnwI"),
@@ -2508,7 +2516,7 @@
                 }
             }
 
-            function I(e, t, n) {
+            function D(e, t, n) {
                 return {
                     default_language: e.default_language,
                     active: e.active,
@@ -2517,30 +2525,30 @@
                     jwt: n
                 }
             }
-            var D, N = n("0xbx"),
-                O = n("Ue10"),
-                S = n("HGFl"),
+            var I, N = n("0xbx"),
+                S = n("Ue10"),
+                O = n("HGFl"),
                 R = n("JQ82"),
                 A = function(e) {
-                    var t = Object(S.b)(Object(R.b)(e.campaign.startDate), "MM/DD/YYYY, hh:mm a"),
-                        n = Object(S.b)(Object(R.b)(e.campaign.endDate), "MM/DD/YYYY, hh:mm a"),
+                    var t = Object(O.b)(Object(R.b)(e.campaign.startDate), "MM/DD/YYYY, hh:mm a"),
+                        n = Object(O.b)(Object(R.b)(e.campaign.endDate), "MM/DD/YYYY, hh:mm a"),
                         a = "/console/drops/" + e.campaign.id;
-                    return r.createElement(O.Nb, null, r.createElement(O.Kb, null, r.createElement(O.U, {
+                    return r.createElement(S.Nb, null, r.createElement(S.Kb, null, r.createElement(S.U, {
                         linkTo: a
-                    }, e.campaign.name)), r.createElement(O.Kb, null, e.campaign.id), r.createElement(O.Kb, null, t), r.createElement(O.Kb, null, n), r.createElement(O.Kb, null, e.campaign.enabled.toString()))
+                    }, e.campaign.name)), r.createElement(S.Kb, null, e.campaign.id), r.createElement(S.Kb, null, t), r.createElement(S.Kb, null, n), r.createElement(S.Kb, null, e.campaign.enabled.toString()))
                 };
             ! function(e) {
                 e[e.Enabled = 0] = "Enabled", e[e.EndDate = 1] = "EndDate", e[e.Id = 2] = "Id", e[e.Name = 3] = "Name", e[e.StartDate = 4] = "StartDate"
-            }(D || (D = {}));
+            }(I || (I = {}));
             var C = function(e) {
                     function t() {
                         var t = null !== e && e.apply(this, arguments) || this;
                         return t.state = {
-                            sortingName: O.Cb.Default,
-                            sortingId: O.Cb.Default,
-                            sortingStartDate: O.Cb.Default,
-                            sortingEndDate: O.Cb.Default,
-                            sortingEnabled: O.Cb.Default
+                            sortingName: S.Cb.Default,
+                            sortingId: S.Cb.Default,
+                            sortingStartDate: S.Cb.Default,
+                            sortingEndDate: S.Cb.Default,
+                            sortingEnabled: S.Cb.Default
                         }, t.renderCampaignItems = function() {
                             return t.props.campaigns.map(function(e) {
                                 return r.createElement(A, {
@@ -2554,7 +2562,7 @@
                                     sortingName: t.toggleSorting(e.sortingName)
                                 }
                             }, function() {
-                                t.props.onSort(D.Name, t.state.sortingName)
+                                t.props.onSort(I.Name, t.state.sortingName)
                             })
                         }, t.sortStartDate = function() {
                             t.setState(function(e) {
@@ -2562,7 +2570,7 @@
                                     sortingStartDate: t.toggleSorting(e.sortingStartDate)
                                 }
                             }, function() {
-                                t.props.onSort(D.StartDate, t.state.sortingStartDate)
+                                t.props.onSort(I.StartDate, t.state.sortingStartDate)
                             })
                         }, t.sortEndDate = function() {
                             t.setState(function(e) {
@@ -2570,7 +2578,7 @@
                                     sortingEndDate: t.toggleSorting(e.sortingEndDate)
                                 }
                             }, function() {
-                                t.props.onSort(D.EndDate, t.state.sortingEndDate)
+                                t.props.onSort(I.EndDate, t.state.sortingEndDate)
                             })
                         }, t.sortEnabled = function() {
                             t.setState(function(e) {
@@ -2578,45 +2586,45 @@
                                     sortingEnabled: t.toggleSorting(e.sortingEnabled)
                                 }
                             }, function() {
-                                t.props.onSort(D.Enabled, t.state.sortingEnabled)
+                                t.props.onSort(I.Enabled, t.state.sortingEnabled)
                             })
                         }, t.toggleSorting = function(e) {
-                            return e === O.Cb.Default || e === O.Cb.Ascending ? O.Cb.Descending : O.Cb.Ascending
+                            return e === S.Cb.Default || e === S.Cb.Ascending ? S.Cb.Descending : S.Cb.Ascending
                         }, t
                     }
                     return a.__extends(t, e), t.prototype.render = function() {
                         var e = this.renderCampaignItems();
-                        return r.createElement(O.Ya, {
+                        return r.createElement(S.Ya, {
                             className: "drops-campaigns"
-                        }, r.createElement(O.Ya, {
-                            display: O.X.Flex,
-                            justifyContent: O.Xa.End,
+                        }, r.createElement(S.Ya, {
+                            display: S.X.Flex,
+                            justifyContent: S.Xa.End,
                             margin: {
                                 bottom: 1
                             }
-                        }, r.createElement(O.z, {
+                        }, r.createElement(S.z, {
                             onClick: Object(c.c)(c.a.CreateDropsProcessStart),
                             linkTo: "/console/drops/create",
-                            icon: O.ub.Plus
-                        }, Object(o.d)("Create Drops Campaign", "DevDropsCampaigns"))), r.createElement(O.Ib, null, r.createElement(O.Lb, null, r.createElement(O.Mb, {
+                            icon: S.ub.Plus
+                        }, Object(o.d)("Create Drops Campaign", "DevDropsCampaigns"))), r.createElement(S.Ib, null, r.createElement(S.Lb, null, r.createElement(S.Mb, {
                             label: Object(o.d)("Campaign Name", "DevDropsCampaigns"),
                             sorting: this.state.sortingName,
                             onClick: this.sortName
-                        }), r.createElement(O.Mb, {
+                        }), r.createElement(S.Mb, {
                             label: Object(o.d)("Campaign ID", "DevDropsCampaigns")
-                        }), r.createElement(O.Mb, {
+                        }), r.createElement(S.Mb, {
                             label: Object(o.d)("Start Date (UTC)", "DevDropsCampaigns"),
                             sorting: this.state.sortingStartDate,
                             onClick: this.sortStartDate
-                        }), r.createElement(O.Mb, {
+                        }), r.createElement(S.Mb, {
                             label: Object(o.d)("End Date (UTC)", "DevDropsCampaigns"),
                             sorting: this.state.sortingEndDate,
                             onClick: this.sortEndDate
-                        }), r.createElement(O.Mb, {
+                        }), r.createElement(S.Mb, {
                             label: Object(o.d)("Enabled", "DevDropsCampaigns"),
                             sorting: this.state.sortingEnabled,
                             onClick: this.sortEnabled
-                        })), r.createElement(O.Jb, null, e)))
+                        })), r.createElement(S.Jb, null, e)))
                     }, t
                 }(r.Component),
                 b = Object(l.compose)(Object(_.b)("DevDropsCampaignsComponent", {
@@ -2635,7 +2643,7 @@
                                         case 0:
                                             return [4, Object(N.a)(T.a.GetCampaignsByCompany)];
                                         case 1:
-                                            return (e = a.sent()) ? (t = g(this.props.company), n = E.a + "/kraken/accounts/" + t + "/campaigns", [4, Object(h.a)(n, {
+                                            return (e = a.sent()) ? (t = g(this.props.company), n = p.a + "/kraken/accounts/" + t + "/campaigns", [4, Object(h.a)(n, {
                                                 headers: {
                                                     "X-Twitch-VHSCF": e
                                                 }
@@ -2666,8 +2674,8 @@
                             })
                         }, t.onSort = function(e, n) {
                             switch (e) {
-                                case D.Name:
-                                    n === O.Cb.Ascending ? t.setState(function(e) {
+                                case I.Name:
+                                    n === S.Cb.Ascending ? t.setState(function(e) {
                                         return {
                                             campaigns: e.campaigns.sort(function(e, t) {
                                                 return e.name.localeCompare(t.name)
@@ -2681,8 +2689,8 @@
                                         }
                                     });
                                     break;
-                                case D.Id:
-                                    n === O.Cb.Ascending ? t.setState(function(e) {
+                                case I.Id:
+                                    n === S.Cb.Ascending ? t.setState(function(e) {
                                         return {
                                             campaigns: e.campaigns.sort(function(e, t) {
                                                 return e.id.localeCompare(t.id)
@@ -2696,8 +2704,8 @@
                                         }
                                     });
                                     break;
-                                case D.StartDate:
-                                    n === O.Cb.Ascending ? t.setState(function(e) {
+                                case I.StartDate:
+                                    n === S.Cb.Ascending ? t.setState(function(e) {
                                         return {
                                             campaigns: e.campaigns.sort(function(e, t) {
                                                 return e.startDate.getTime() - t.startDate.getTime()
@@ -2711,8 +2719,8 @@
                                         }
                                     });
                                     break;
-                                case D.EndDate:
-                                    n === O.Cb.Ascending ? t.setState(function(e) {
+                                case I.EndDate:
+                                    n === S.Cb.Ascending ? t.setState(function(e) {
                                         return {
                                             campaigns: e.campaigns.sort(function(e, t) {
                                                 return e.endDate.getTime() - t.endDate.getTime()
@@ -2726,8 +2734,8 @@
                                         }
                                     });
                                     break;
-                                case D.Enabled:
-                                    n === O.Cb.Ascending ? t.setState(function(e) {
+                                case I.Enabled:
+                                    n === S.Cb.Ascending ? t.setState(function(e) {
                                         return {
                                             campaigns: e.campaigns.sort(function(e, t) {
                                                 return Number(e.enabled) - Number(t.enabled)
@@ -2755,21 +2763,21 @@
                 L = Object(l.compose)(Object(_.b)("DevDropsCampaignsPage", {
                     autoReportInteractive: !0,
                     destination: d.a.DevSiteDropsCampaigns
-                }), Object(p.a)({
+                }), Object(E.a)({
                     location: m.PageviewLocation.DevSiteDropsCampaigns
                 }), Object(u.a)())(v),
                 U = n("9C/b"),
                 P = n("DMoW"),
                 F = n("CDtL");
-            var y = E.a + "/v5/rbac/current-games";
+            var M = p.a + "/v5/rbac/current-games";
 
-            function M() {
+            function y() {
                 return a.__awaiter(this, void 0, void 0, function() {
                     var e, t, n;
                     return a.__generator(this, function(a) {
                         switch (a.label) {
                             case 0:
-                                return e = [], [4, Object(h.a)(y)];
+                                return e = [], [4, Object(h.a)(M)];
                             case 1:
                                 return 200 !== (t = a.sent()).status ? [3, 3] : [4, t.json()];
                             case 2:
@@ -2795,13 +2803,13 @@
 
             function j(e) {
                 return a.__awaiter(this, void 0, Promise, function() {
-                    var t, n, r, i, s, o, c, u, l, p;
+                    var t, n, r, i, s, o, c, u, l, E;
                     return a.__generator(this, function(a) {
                         switch (a.label) {
                             case 0:
                                 return t = e.activeOnly, n = e.companyId, r = e.prevCursor, i = e.nextCursor, s = e.limit, [4, Object(N.a)(T.a.GetItemsByCompany)];
                             case 1:
-                                return (o = a.sent()) ? (c = E.a + "/kraken/accounts/" + n + "/items", (u = k.stringify({
+                                return (o = a.sent()) ? (c = p.a + "/kraken/accounts/" + n + "/items", (u = k.stringify({
                                     active_only: t,
                                     after: i,
                                     before: r,
@@ -2814,8 +2822,8 @@
                             case 2:
                                 return 200 !== (l = a.sent()).status ? [3, 4] : [4, l.json()];
                             case 3:
-                                return p = a.sent(), [2, {
-                                    items: p.Items.map(function(e) {
+                                return E = a.sent(), [2, {
+                                    items: E.Items.map(function(e) {
                                         return function(e) {
                                             return {
                                                 id: e.ItemID,
@@ -2829,8 +2837,8 @@
                                     }).sort(function(e, t) {
                                         return e.id.localeCompare(t.id)
                                     }),
-                                    prevCursor: p.Before,
-                                    nextCursor: p.After
+                                    prevCursor: E.Before,
+                                    nextCursor: E.After
                                 }];
                             case 4:
                                 return [2]
@@ -2840,18 +2848,18 @@
             }
             var w = n("/MKj"),
                 G = n("aCAx"),
-                B = n("HEnu"),
-                V = n("cZKs"),
+                V = n("HEnu"),
+                B = n("cZKs"),
                 H = n("NLLf"),
                 Y = (n("TofP"), function(e) {
                     function t() {
                         return null !== e && e.apply(this, arguments) || this
                     }
                     return a.__extends(t, e), t.prototype.render = function() {
-                        return r.createElement(O.Fb, {
+                        return r.createElement(S.Fb, {
                             className: "image-uploader-modal",
-                            background: O.r.Base
-                        }, r.createElement(H.a, a.__assign({}, this.props)), r.createElement(V.a, {
+                            background: S.r.Base
+                        }, r.createElement(H.a, a.__assign({}, this.props)), r.createElement(B.a, {
                             closeOnBackdropClick: !0
                         }))
                     }, t
@@ -2891,39 +2899,39 @@
                     return a.__extends(t, e), t.prototype.render = function() {
                         var e = this,
                             n = t.timeOptions.map(function(t) {
-                                return r.createElement(O.Va, {
+                                return r.createElement(S.Va, {
                                     hover: e.state.selectedTime === t,
                                     key: t,
                                     "data-time": t,
                                     onClick: e.onClickTime
-                                }, r.createElement(O.Ya, {
+                                }, r.createElement(S.Ya, {
                                     padding: .5
                                 }, t))
                             });
-                        return r.createElement(O.Ya, {
-                            position: O.kb.Relative,
+                        return r.createElement(S.Ya, {
+                            position: S.kb.Relative,
                             className: "time-picker"
                         }, r.createElement(K.a, {
                             onClickOut: this.onClickOut
-                        }, r.createElement(O.Sa, {
-                            type: O.Ua.Text,
+                        }, r.createElement(S.Sa, {
+                            type: S.Ua.Text,
                             onFocus: this.onFocus,
                             readOnly: !0,
                             refDelegate: this.setInputRef,
                             value: this.state.selectedTime
-                        }), r.createElement(O.u, {
+                        }), r.createElement(S.u, {
                             noTail: !0,
                             show: this.state.isOpen,
                             "data-a-target": "time-selector-balloon"
-                        }, r.createElement(O.Fb, {
-                            color: O.O.Link,
-                            fontSize: O.Ca.Size5,
+                        }, r.createElement(S.Fb, {
+                            color: S.O.Link,
+                            fontSize: S.Ca.Size5,
                             className: "time-picker__dropdown"
                         }, n))))
                     }, t.prototype.notifyChange = function(e) {
-                        this.props.onChange && this.props.onChange(Object(S.d)(e, this.props.defaultDate))
+                        this.props.onChange && this.props.onChange(Object(O.d)(e, this.props.defaultDate))
                     }, t.prototype.timeToString = function(e) {
-                        return Object(S.b)(e, S.a.timeString)
+                        return Object(O.b)(e, O.a.timeString)
                     }, t.timeOptions = function() {
                         for (var e = [], t = ["00", "30"], n = 0, a = ["am", "pm"]; n < a.length; n++)
                             for (var r = a[n], i = 0; i < 12; ++i)
@@ -2944,22 +2952,22 @@
                         }, t
                     }
                     return a.__extends(t, e), t.prototype.render = function() {
-                        return r.createElement(O.Va, {
+                        return r.createElement(S.Va, {
                             onClick: this.onClick
-                        }, r.createElement(O.Ya, {
-                            display: O.X.Flex,
-                            alignItems: O.f.Center,
+                        }, r.createElement(S.Ya, {
+                            display: S.X.Flex,
+                            alignItems: S.f.Center,
                             padding: .5,
                             fullHeight: !0
-                        }, r.createElement(O.Ya, {
+                        }, r.createElement(S.Ya, {
                             margin: {
                                 right: 2
                             }
-                        }, r.createElement(O.q, {
+                        }, r.createElement(S.q, {
                             size: 40,
                             alt: this.props.name,
                             src: this.props.avatarURL
-                        })), r.createElement(O.Ya, null, r.createElement(O.W, null, this.props.name))))
+                        })), r.createElement(S.Ya, null, r.createElement(S.W, null, this.props.name))))
                     }, t
                 }(r.Component),
                 J = n("Ji7V");
@@ -2982,12 +2990,12 @@
                         }, t
                     }
                     return a.__extends(t, e), t.prototype.render = function() {
-                        if (this.props.data && this.props.data.loading && !this.props.data.users && !this.props.data.error) return r.createElement(O.ab, null);
-                        if (this.props.data && this.props.data.error) return r.createElement(O.Ya, {
+                        if (this.props.data && this.props.data.loading && !this.props.data.users && !this.props.data.error) return r.createElement(S.ab, null);
+                        if (this.props.data && this.props.data.error) return r.createElement(S.Ya, {
                             "data-test-selector": X.Error
                         });
                         var e = this.renderChannels();
-                        return r.createElement(O.Ya, null, e)
+                        return r.createElement(S.Ya, null, e)
                     }, t
                 }(r.Component),
                 te = Object(Q.a)(J, {
@@ -3012,7 +3020,7 @@
                     return n.renderDropsItemImage = function() {
                         if (n.state.imageDataURL) {
                             var e = "drops_itm_image_preview";
-                            return r.createElement(O.S, {
+                            return r.createElement(S.S, {
                                 src: n.state.imageDataURL,
                                 alt: e
                             })
@@ -3020,16 +3028,16 @@
                         if (n.props.item) {
                             e = n.props.item.Translations[n.props.item.DefaultLanguage];
                             var t = ae(n.props.companyId, n.props.item.ItemID, 120);
-                            return r.createElement(O.S, {
+                            return r.createElement(S.S, {
                                 src: t,
                                 alt: e
                             })
                         }
                         return null
                     }, n.renderErrorMessage = function() {
-                        if (n.props.errorMessage && !n.props.updateSuccess) return r.createElement(O.Fb, {
+                        if (n.props.errorMessage && !n.props.updateSuccess) return r.createElement(S.Fb, {
                             className: "dev-drops-item-form__error",
-                            color: O.O.Overlay,
+                            color: S.O.Overlay,
                             "data-test-selector": $.Error,
                             margin: {
                                 top: 1
@@ -3141,7 +3149,7 @@
                     var e = this,
                         t = Object(o.d)("The image must be squared, up-to 120x120 pixels. For example: <x:link>item-default-120x120.jpg</x:link>. It may take up to 15 minutes for image changes to take effect.", {
                             "x:link": function(e) {
-                                return r.createElement(O.U, {
+                                return r.createElement(S.U, {
                                     key: e,
                                     to: "https://gds-vhs-drops-campaign-images.twitch.tv/items/default/default-120x120.jpg",
                                     download: e,
@@ -3150,80 +3158,80 @@
                             }
                         }, "DevDropsItemForm"),
                         n = this.renderDropsItemImage();
-                    return r.createElement(O.Ya, {
+                    return r.createElement(S.Ya, {
                         className: "dev-drops-item-form"
-                    }, r.createElement(O.Ya, {
+                    }, r.createElement(S.Ya, {
                         padding: {
                             top: 2
                         }
-                    }, r.createElement(O.N, {
+                    }, r.createElement(S.N, {
                         checked: this.state.active,
                         label: Object(o.d)("Enabled", "DevDropsItemForm"),
                         onChange: this.setActive
-                    })), this.state.itemId && r.createElement(O.Ya, {
+                    })), this.state.itemId && r.createElement(S.Ya, {
                         padding: {
                             top: 2
                         }
-                    }, r.createElement(O.Ea, {
+                    }, r.createElement(S.Ea, {
                         label: Object(o.d)("Item ID", "DevDropsItemForm"),
                         hint: this.state.itemId
-                    })), r.createElement(O.Ya, {
+                    })), r.createElement(S.Ya, {
                         padding: {
                             top: 2
                         }
-                    }, r.createElement(O.Ea, {
+                    }, r.createElement(S.Ea, {
                         label: Object(o.d)("Item Image", "DevDropsItemForm")
-                    }, r.createElement(O.W, {
-                        color: O.O.Alt2
-                    }, t), n && r.createElement(O.U, {
+                    }, r.createElement(S.W, {
+                        color: S.O.Alt2
+                    }, t), n && r.createElement(S.U, {
                         onClick: this.onUploadButtonClick,
                         children: n
-                    }), r.createElement(O.Ya, {
+                    }), r.createElement(S.Ya, {
                         padding: {
                             top: 1
                         }
-                    }, r.createElement(O.z, {
+                    }, r.createElement(S.z, {
                         "data-test-selector": $.FileButton,
                         onClick: this.onUploadButtonClick
-                    }, Object(o.d)("Upload Image", "DevDropsItemForm"))))), r.createElement(O.Ya, {
+                    }, Object(o.d)("Upload Image", "DevDropsItemForm"))))), r.createElement(S.Ya, {
                         padding: {
                             top: 2
                         }
-                    }, r.createElement(O.Ea, {
+                    }, r.createElement(S.Ea, {
                         label: Object(o.d)("Localized Item Names", "DevDropsItemForm"),
                         hint: Object(o.d)("The name of the item a viewer will see for the reward.", "DevDropsItemForm")
                     }, Object.keys(this.state.translations).map(function(t) {
                         var n = o.a.locales.find(function(e) {
                             return e.locale === t
                         });
-                        if (n) return r.createElement(O.Fb, {
+                        if (n) return r.createElement(S.Fb, {
                             key: t,
                             padding: {
                                 bottom: 1
                             }
-                        }, r.createElement(O.Ja, null, r.createElement(O.P, {
+                        }, r.createElement(S.Ja, null, r.createElement(S.P, {
                             cols: 4
-                        }, r.createElement(O.Qa, {
+                        }, r.createElement(S.Qa, {
                             padding: .5
-                        }, r.createElement(O.W, {
+                        }, r.createElement(S.W, {
                             bold: !0
-                        }, n.name))), r.createElement(O.P, {
+                        }, n.name))), r.createElement(S.P, {
                             cols: 8
-                        }, r.createElement(O.Ya, {
-                            display: O.X.Flex,
+                        }, r.createElement(S.Ya, {
+                            display: S.X.Flex,
                             padding: {
                                 left: 2
                             },
-                            alignItems: O.f.Center,
-                            justifyContent: O.Xa.Between
-                        }, r.createElement(O.W, null, e.state.translations[t]), r.createElement(O.z, {
+                            alignItems: S.f.Center,
+                            justifyContent: S.Xa.Between
+                        }, r.createElement(S.W, null, e.state.translations[t]), r.createElement(S.z, {
                             "data-locale": t,
                             onClick: e.removeLocalizedName,
-                            type: O.F.Hollow
+                            type: S.F.Hollow
                         }, Object(o.d)("Remove", "DevDropsItemForm"))))))
-                    }), r.createElement(O.Ja, null, r.createElement(O.P, {
+                    }), r.createElement(S.Ja, null, r.createElement(S.P, {
                         cols: 4
-                    }, r.createElement(O.Ab, {
+                    }, r.createElement(S.Ab, {
                         refDelegate: this.setLocaleSelectorRef
                     }, o.a.locales.filter(function(t) {
                         return !e.state.translations[t.locale]
@@ -3232,32 +3240,32 @@
                             key: e.locale,
                             value: e.locale
                         }, e.name)
-                    }))), r.createElement(O.P, {
+                    }))), r.createElement(S.P, {
                         cols: 8
-                    }, r.createElement(O.Ya, {
-                        display: O.X.Flex,
+                    }, r.createElement(S.Ya, {
+                        display: S.X.Flex,
                         padding: {
                             left: 1
                         }
-                    }, r.createElement(O.Ya, {
+                    }, r.createElement(S.Ya, {
                         flexGrow: 1,
                         padding: {
                             right: 2
                         }
-                    }, r.createElement(O.Sa, {
+                    }, r.createElement(S.Sa, {
                         refDelegate: this.setLocalizedNameInputRef,
-                        type: O.Ua.Text,
+                        type: S.Ua.Text,
                         placeholder: Object(o.d)("Localized Item Name", "DevDropsItemForm")
-                    })), r.createElement(O.z, {
+                    })), r.createElement(S.z, {
                         onClick: this.addLocalizedName
-                    }, Object(o.d)("Add", "DevDropsItemForm"))))))), r.createElement(O.Ya, {
+                    }, Object(o.d)("Add", "DevDropsItemForm"))))))), r.createElement(S.Ya, {
                         padding: {
                             top: 2
                         }
-                    }, r.createElement(O.Ea, {
+                    }, r.createElement(S.Ea, {
                         label: Object(o.d)("Default Locale for Item Name", "DevDropsItemForm"),
                         hint: Object(o.d)("The locale to use when no value is provided in the viewer's locale.", "DevDropsItemForm")
-                    }, r.createElement(O.Ab, {
+                    }, r.createElement(S.Ab, {
                         value: this.state.defaultLocale,
                         onChange: this.setDefaultLocale,
                         "data-test-selector": $.DefaultLocaleSelect
@@ -3266,26 +3274,26 @@
                             key: e.locale,
                             value: e.locale
                         }, e.name)
-                    })))), this.renderErrorMessage(), r.createElement(O.Ya, {
+                    })))), this.renderErrorMessage(), r.createElement(S.Ya, {
                         padding: {
                             top: 2
                         }
-                    }, r.createElement(O.Ya, {
-                        display: O.X.InlineBlock,
+                    }, r.createElement(S.Ya, {
+                        display: S.X.InlineBlock,
                         padding: {
                             right: 1
                         }
-                    }, r.createElement(O.z, {
-                        type: O.F.Hollow,
+                    }, r.createElement(S.z, {
+                        type: S.F.Hollow,
                         onClick: this.onClickCancel
-                    }, Object(o.d)("Cancel", "DevDropsItemForm"))), r.createElement(O.z, {
+                    }, Object(o.d)("Cancel", "DevDropsItemForm"))), r.createElement(S.z, {
                         "data-test-selector": $.SubmitButton,
                         disabled: !this.state.valid,
                         onClick: this.onSubmit,
                         state: this.submitButtonState()
                     }, Object(o.d)("Submit", "DevDropsItemForm"))))
                 }, t.prototype.submitButtonState = function() {
-                    return this.state.isSubmitting ? O.E.Loading : this.props.updateSuccess ? O.E.Success : O.E.Default
+                    return this.state.isSubmitting ? S.E.Loading : this.props.updateSuccess ? S.E.Success : S.E.Default
                 }, t
             }(r.Component);
 
@@ -3303,7 +3311,7 @@
                     var n = e.call(this, t) || this;
                     if (n.renderDropsImage = function() {
                             if (n.state.imageDataURL) {
-                                return r.createElement(O.S, {
+                                return r.createElement(S.S, {
                                     src: n.state.imageDataURL,
                                     alt: "drops_link_image_preview"
                                 })
@@ -3312,16 +3320,16 @@
                                 var e = function(e, t) {
                                     return "https://twitch-ds-vhs-drops-campaign-images-us-west-2-prod.s3-us-west-2.amazonaws.com/" + e + "/account_link_notification_image_" + t + "x" + t + ".jpg"
                                 }(n.props.campaign.id, 80);
-                                return r.createElement(O.S, {
+                                return r.createElement(S.S, {
                                     src: e,
                                     alt: n.props.campaign.item_name
                                 })
                             }
                             return null
                         }, n.renderErrorMessage = function() {
-                            if (n.props.errorMessage && !n.props.updateSuccess) return r.createElement(O.Fb, {
+                            if (n.props.errorMessage && !n.props.updateSuccess) return r.createElement(S.Fb, {
                                 className: "dev-drops-campaign-form__error",
-                                color: O.O.Overlay,
+                                color: S.O.Overlay,
                                 "data-test-selector": re.Error,
                                 margin: {
                                     top: 1
@@ -3505,7 +3513,7 @@
                     }, "DevDropsCampaignForm"));
                     var n = Object(o.d)("Image for Drops Campaign Notifications. The image must be squared, up-to 120x120 pixels. For example: <x:link>account_link_notification_image_80x80.jpg</x:link>. It may take up to 15 minutes for image changes to take effect.", {
                             "x:link": function(e) {
-                                return r.createElement(O.U, {
+                                return r.createElement(S.U, {
                                     key: e,
                                     to: "https://gds-vhs-drops-campaign-images.twitch.tv/default/account_link_notification_image_80x80.jpg",
                                     download: e,
@@ -3514,102 +3522,102 @@
                             }
                         }, "DevDropsCampaignForm"),
                         a = this.renderDropsImage();
-                    return r.createElement(O.Ya, {
+                    return r.createElement(S.Ya, {
                         className: "dev-drops-campaign-form"
-                    }, r.createElement(O.Ya, {
+                    }, r.createElement(S.Ya, {
                         padding: {
                             top: 2
                         }
-                    }, r.createElement(O.N, {
+                    }, r.createElement(S.N, {
                         checked: this.state.enabled,
                         label: Object(o.d)("Enabled", "DevDropsCampaignForm"),
                         onChange: this.setEnabled
-                    })), r.createElement(O.Ya, {
+                    })), r.createElement(S.Ya, {
                         padding: {
                             top: 2
                         }
-                    }, r.createElement(O.Ea, {
+                    }, r.createElement(S.Ea, {
                         label: Object(o.d)("Campaign Name", "DevDropsCampaignForm")
-                    }, r.createElement(O.Sa, {
-                        type: O.Ua.Text,
+                    }, r.createElement(S.Sa, {
+                        type: S.Ua.Text,
                         value: this.state.itemName,
                         onChange: this.setItemName,
                         "data-test-selector": re.NameField
-                    }))), this.state.campaignId && r.createElement(O.Ya, {
+                    }))), this.state.campaignId && r.createElement(S.Ya, {
                         padding: {
                             top: 1
                         }
-                    }, r.createElement(O.Ea, {
+                    }, r.createElement(S.Ea, {
                         label: Object(o.d)("Campaign ID", "DevDropsCampaignForm")
-                    }, r.createElement(O.Sa, {
-                        type: O.Ua.Text,
+                    }, r.createElement(S.Sa, {
+                        type: S.Ua.Text,
                         value: this.state.campaignId
-                    }))), r.createElement(O.Ya, {
+                    }))), r.createElement(S.Ya, {
                         padding: {
                             top: 1
                         }
-                    }, r.createElement(O.Ja, null, r.createElement(O.P, {
+                    }, r.createElement(S.Ja, null, r.createElement(S.P, {
                         cols: {
                             default: 12,
                             md: 6
                         }
-                    }, r.createElement(O.Ea, {
+                    }, r.createElement(S.Ea, {
                         label: Object(o.d)("Start Date/Time (UTC)", "DevDropsCampaignForm")
-                    }, r.createElement(B.a, {
+                    }, r.createElement(V.a, {
                         onChange: this.onStartDate,
                         defaultDate: this.state.startDate
                     }), r.createElement(z, {
                         onChange: this.onStartTime,
                         defaultDate: this.state.startTime
-                    }))), r.createElement(O.P, {
+                    }))), r.createElement(S.P, {
                         cols: {
                             default: 12,
                             md: 6
                         }
-                    }, r.createElement(O.Ea, {
+                    }, r.createElement(S.Ea, {
                         label: Object(o.d)("End Date/Time (UTC)", "DevDropsCampaignForm")
-                    }, r.createElement(B.a, {
+                    }, r.createElement(V.a, {
                         onChange: this.onEndDate,
                         defaultDate: this.state.endDate
                     }), r.createElement(z, {
                         onChange: this.onEndTime,
                         defaultDate: this.state.endTime
-                    }))))), r.createElement(O.Ya, {
+                    }))))), r.createElement(S.Ya, {
                         padding: {
                             top: 1
                         }
-                    }, r.createElement(O.Ea, {
+                    }, r.createElement(S.Ea, {
                         label: Object(o.d)("Games", "DevDropsCampaignForm")
                     }, r.createElement(ie.a, {
                         onGameSelect: this.onGameSelect,
                         multi: !0,
                         gameSuggestions: this.props.games
-                    }), r.createElement(O.W, {
-                        color: O.O.Alt2
+                    }), r.createElement(S.W, {
+                        color: S.O.Alt2
                     }, Object(o.d)("If your game does not appear in this list, please add it to your company <x:link>here</x:link>.", {
                         "x:link": function(e) {
-                            return r.createElement(O.U, {
+                            return r.createElement(S.U, {
                                 key: e,
                                 to: "/console/games"
                             }, e)
                         }
-                    }, "DevDropsCampaignForm")))), r.createElement(O.Ya, {
+                    }, "DevDropsCampaignForm")))), r.createElement(S.Ya, {
                         padding: {
                             top: 1
                         }
-                    }, r.createElement(O.Ea, {
+                    }, r.createElement(S.Ea, {
                         label: Object(o.d)("Drops Connection URL", "DevDropsCampaignForm"),
                         hint: Object(o.d)("The URL users go to connect their account.", "DevDropsCampaignForm")
-                    }, r.createElement(O.Sa, {
+                    }, r.createElement(S.Sa, {
                         "data-test-selector": re.ConnectionURL,
-                        type: O.Ua.Text,
+                        type: S.Ua.Text,
                         value: this.state.connectionURL,
                         onChange: this.setConnectURL
-                    }))), r.createElement(O.Ya, {
+                    }))), r.createElement(S.Ya, {
                         padding: {
                             top: 1
                         }
-                    }, r.createElement(O.Ea, {
+                    }, r.createElement(S.Ea, {
                         label: Object(o.d)("Whitelisted Channels", "DevDropsCampaignForm")
                     }, r.createElement(se.a, {
                         onUserSelect: this.onUserSelect,
@@ -3617,101 +3625,101 @@
                     })), r.createElement(te, {
                         channels: this.state.channels,
                         onChannelClick: this.onChannelClick
-                    }), r.createElement(O.W, {
-                        color: O.O.Alt2
-                    }, t)), r.createElement(O.Ya, {
+                    }), r.createElement(S.W, {
+                        color: S.O.Alt2
+                    }, t)), r.createElement(S.Ya, {
                         padding: {
                             top: 1
                         }
-                    }, r.createElement(O.Ea, {
+                    }, r.createElement(S.Ea, {
                         label: Object(o.d)("Campaign Image", "DevDropsCampaignForm")
-                    }, r.createElement(O.W, {
-                        color: O.O.Alt2
-                    }, n), a && r.createElement(O.U, {
+                    }, r.createElement(S.W, {
+                        color: S.O.Alt2
+                    }, n), a && r.createElement(S.U, {
                         onClick: this.onUploadButtonClick,
                         children: a
-                    }), r.createElement(O.Ya, {
+                    }), r.createElement(S.Ya, {
                         padding: {
                             top: 1
                         }
-                    }, r.createElement(O.z, {
+                    }, r.createElement(S.z, {
                         "data-test-selector": re.FileButton,
                         onClick: this.onUploadButtonClick
-                    }, Object(o.d)("Upload Image", "DevDropsCampaignForm"))))), r.createElement(O.Ya, {
+                    }, Object(o.d)("Upload Image", "DevDropsCampaignForm"))))), r.createElement(S.Ya, {
                         padding: {
                             top: 1
                         }
-                    }, r.createElement(O.Ya, {
+                    }, r.createElement(S.Ya, {
                         padding: {
                             top: 1
                         }
-                    }, r.createElement(O.W, {
-                        type: O.Wb.H3
-                    }, Object(o.d)("Items", "DevDropsCampaignForm"))), r.createElement("fieldset", null, r.createElement(O.Qa, {
+                    }, r.createElement(S.W, {
+                        type: S.Wb.H3
+                    }, Object(o.d)("Items", "DevDropsCampaignForm"))), r.createElement("fieldset", null, r.createElement(S.Qa, {
                         padding: {
                             y: 1
                         }
-                    }, r.createElement("legend", null, r.createElement(O.W, null, Object(o.d)("Select up to {MAX_DROPS_ITEMS_PER_CAMPAIGN} of your currently active items", {
+                    }, r.createElement("legend", null, r.createElement(S.W, null, Object(o.d)("Select up to {MAX_DROPS_ITEMS_PER_CAMPAIGN} of your currently active items", {
                         MAX_DROPS_ITEMS_PER_CAMPAIGN: q.a
-                    }, "DevDropsCampaignForm")))), r.createElement(O.cc, {
-                        childWidth: O.dc.ExtraSmall,
-                        gutterSize: O.ec.Small,
+                    }, "DevDropsCampaignForm")))), r.createElement(S.cc, {
+                        childWidth: S.dc.ExtraSmall,
+                        gutterSize: S.ec.Small,
                         placeholderItems: 20
                     }, this.props.availableItems.map(function(t, n) {
                         var a = t.translations[t.defaultLanguage],
                             i = e.state.itemIds.has(t.id);
-                        return r.createElement(O.Ya, {
+                        return r.createElement(S.Ya, {
                             key: n,
-                            position: O.kb.Relative,
+                            position: S.kb.Relative,
                             className: "drops-item-selector-container",
                             margin: {
                                 bottom: 2
                             }
-                        }, r.createElement(O.o, {
-                            ratio: O.p.Aspect1x1
-                        }, r.createElement(O.Ma, {
+                        }, r.createElement(S.o, {
+                            ratio: S.p.Aspect1x1
+                        }, r.createElement(S.Ma, {
                             alt: a,
                             checked: i,
                             label: a,
                             name: "item-selector-checkbox",
                             onChange: e.onItemChange,
                             src: ae(e.props.companyId, t.id, 120),
-                            type: O.Na.Checkbox,
+                            type: S.Na.Checkbox,
                             value: t.id
-                        })), i && r.createElement(O.Fb, {
-                            display: O.X.InlineFlex,
-                            alignItems: O.f.Center,
-                            justifyContent: O.Xa.Center,
-                            background: O.r.Accent,
-                            position: O.kb.Absolute,
-                            color: O.O.Overlay,
+                        })), i && r.createElement(S.Fb, {
+                            display: S.X.InlineFlex,
+                            alignItems: S.f.Center,
+                            justifyContent: S.Xa.Center,
+                            background: S.r.Accent,
+                            position: S.kb.Absolute,
+                            color: S.O.Overlay,
                             attachTop: !0
-                        }, r.createElement(O.tb, {
-                            asset: O.ub.Check
-                        })), r.createElement(O.W, {
+                        }, r.createElement(S.tb, {
+                            asset: S.ub.Check
+                        })), r.createElement(S.W, {
                             bold: i,
                             ellipsis: !0
                         }, a))
-                    })))), this.renderErrorMessage(), r.createElement(O.Ya, {
+                    })))), this.renderErrorMessage(), r.createElement(S.Ya, {
                         padding: {
                             top: 1
                         }
-                    }, r.createElement(O.Ya, {
-                        display: O.X.InlineBlock,
+                    }, r.createElement(S.Ya, {
+                        display: S.X.InlineBlock,
                         padding: {
                             right: 1
                         }
-                    }, r.createElement(O.z, {
-                        type: O.F.Hollow,
+                    }, r.createElement(S.z, {
+                        type: S.F.Hollow,
                         onClick: this.onClickCancel
-                    }, Object(o.d)("Cancel", "DevDropsCampaignForm"))), r.createElement(O.z, {
+                    }, Object(o.d)("Cancel", "DevDropsCampaignForm"))), r.createElement(S.z, {
                         disabled: !this.state.valid,
                         "data-test-selector": re.SubmitButton,
                         onClick: this.onSubmit,
                         state: this.submitButtonState()
                     }, Object(o.d)("Submit", "DevDropsCampaignForm"))))
                 }, t.prototype.submitButtonState = function() {
-                    return this.state.isSubmitting ? O.E.Loading : this.props.updateSuccess ? O.E.Success : O.E.Default
+                    return this.state.isSubmitting ? S.E.Loading : this.props.updateSuccess ? S.E.Success : S.E.Default
                 }, t.prototype.campaignDate = function(e, t) {
                     return new Date(Date.UTC(e.getFullYear(), e.getMonth(), e.getDate(), t.getHours(), t.getMinutes()))
                 }, t
@@ -3757,7 +3765,7 @@
                     }
                 })
             }
-            var pe = function(e) {
+            var Ee = function(e) {
                     function t() {
                         var t = null !== e && e.apply(this, arguments) || this;
                         return t.state = {
@@ -3770,7 +3778,7 @@
                                 return a.__generator(this, function(t) {
                                     switch (t.label) {
                                         case 0:
-                                            return t.trys.push([0, 2, , 3]), [4, M()];
+                                            return t.trys.push([0, 2, , 3]), [4, y()];
                                         case 1:
                                             return e = t.sent(), this.setState({
                                                 games: e,
@@ -3813,7 +3821,7 @@
                             t.historyBackToDropsIndex()
                         }, t.onSubmit = function(e) {
                             return a.__awaiter(t, void 0, void 0, function() {
-                                var t, n, r, i, s, u, l, p;
+                                var t, n, r, i, s, u, l, E;
                                 return a.__generator(this, function(a) {
                                     switch (a.label) {
                                         case 0:
@@ -3821,7 +3829,7 @@
                                                 errorMessage: Object(o.d)("Campaign image is mandatory. If you don't have a valid image, consider using the example provided in the hint text of the upload button.", "DevDropsCreateCampaign")
                                             }), [2]);
                                         case 1:
-                                            return (t = a.sent()) ? (n = g(this.props.company), r = f(e, n), i = E.a + "/kraken/accounts/" + n + "/campaigns", [4, Object(h.a)(i, {
+                                            return (t = a.sent()) ? (n = g(this.props.company), r = f(e, n), i = p.a + "/kraken/accounts/" + n + "/campaigns", [4, Object(h.a)(i, {
                                                 method: "POST",
                                                 body: JSON.stringify(r),
                                                 headers: {
@@ -3845,8 +3853,8 @@
                                         case 6:
                                             return a.sent(), [3, 8];
                                         case 7:
-                                            return p = a.sent(), this.setState({
-                                                errorMessage: p.message
+                                            return E = a.sent(), this.setState({
+                                                errorMessage: E.message
                                             }), [3, 8];
                                         case 8:
                                             return [2]
@@ -3905,20 +3913,20 @@
                             })
                         })
                     }, t.prototype.render = function() {
-                        return this.state.gamesLoaded ? r.createElement(O.Ya, {
+                        return this.state.gamesLoaded ? r.createElement(S.Ya, {
                             padding: {
                                 top: 1
                             }
-                        }, r.createElement(O.Ya, {
-                            display: O.X.Flex,
-                            justifyContent: O.Xa.Between
-                        }, r.createElement(O.W, {
-                            type: O.Wb.H2
-                        }, Object(o.d)("Drops Campaign", "DevDropsCreateCampaign")), r.createElement(O.z, {
+                        }, r.createElement(S.Ya, {
+                            display: S.X.Flex,
+                            justifyContent: S.Xa.Between
+                        }, r.createElement(S.W, {
+                            type: S.Wb.H2
+                        }, Object(o.d)("Drops Campaign", "DevDropsCreateCampaign")), r.createElement(S.z, {
                             targetBlank: !0,
                             linkTo: "https://dev.twitch.tv/docs/drops",
-                            type: O.F.Hollow
-                        }, Object(o.d)("Need Help?", "DevDropsCreateCampaign"))), r.createElement(O.Ja, null, r.createElement(O.P, {
+                            type: S.F.Hollow
+                        }, Object(o.d)("Need Help?", "DevDropsCreateCampaign"))), r.createElement(S.Ja, null, r.createElement(S.P, {
                             cols: {
                                 default: 12,
                                 md: 5
@@ -3930,14 +3938,14 @@
                             onCancel: this.onCancel,
                             onSubmit: this.onSubmit,
                             errorMessage: this.state.errorMessage
-                        })))) : r.createElement(O.ab, null)
+                        })))) : r.createElement(S.ab, null)
                     }, t
                 }(r.Component),
-                Ee = Object(l.compose)(Object(_.b)("DevDropsCreateCampaignPage", {
+                pe = Object(l.compose)(Object(_.b)("DevDropsCreateCampaignPage", {
                     destination: d.a.DevSiteDropsCreateCampaign
-                }), Object(p.a)({
+                }), Object(E.a)({
                     location: m.PageviewLocation.DevSiteDropsCreateCampaign
-                }), le(), Object(u.a)(), U.a)(pe);
+                }), le(), Object(u.a)(), U.a)(Ee);
             var de, me, _e = Object(w.connect)(null, function(e) {
                     return Object(l.bindActionCreators)({
                         showModal: G.d
@@ -3950,7 +3958,7 @@
                             t.historyBackToDropsItemsIndex()
                         }, t.onSubmit = function(e) {
                             return a.__awaiter(t, void 0, void 0, function() {
-                                var t, n, r, i, s, u, l, p;
+                                var t, n, r, i, s, u, l, E;
                                 return a.__generator(this, function(a) {
                                     switch (a.label) {
                                         case 0:
@@ -3958,7 +3966,7 @@
                                                 errorMessage: Object(o.d)("Item image is mandatory. If you don't have a valid image, consider using the example provided in the hint text of the upload button.", "DevDropsCreateItem")
                                             }), [2]);
                                         case 1:
-                                            return (t = a.sent()) ? (n = g(this.props.company), r = I(e, n, t), i = E.a + "/kraken/accounts/" + n + "/items", [4, Object(h.a)(i, {
+                                            return (t = a.sent()) ? (n = g(this.props.company), r = D(e, n, t), i = p.a + "/kraken/accounts/" + n + "/items", [4, Object(h.a)(i, {
                                                 method: "POST",
                                                 body: JSON.stringify(r),
                                                 headers: {
@@ -3986,8 +3994,8 @@
                                         case 8:
                                             return [3, 10];
                                         case 9:
-                                            return p = a.sent(), this.setState({
-                                                errorMessage: p.message
+                                            return E = a.sent(), this.setState({
+                                                errorMessage: E.message
                                             }), [3, 10];
                                         case 10:
                                             return [2]
@@ -4035,20 +4043,20 @@
                         }, t
                     }
                     return a.__extends(t, e), t.prototype.render = function() {
-                        return r.createElement(O.Ya, {
+                        return r.createElement(S.Ya, {
                             padding: {
                                 top: 1
                             }
-                        }, r.createElement(O.Ya, {
-                            display: O.X.Flex,
-                            justifyContent: O.Xa.Between
-                        }, r.createElement(O.W, {
-                            type: O.Wb.H2
-                        }, Object(o.d)("Drops Item", "DevDropsCreateItem")), r.createElement(O.z, {
+                        }, r.createElement(S.Ya, {
+                            display: S.X.Flex,
+                            justifyContent: S.Xa.Between
+                        }, r.createElement(S.W, {
+                            type: S.Wb.H2
+                        }, Object(o.d)("Drops Item", "DevDropsCreateItem")), r.createElement(S.z, {
                             targetBlank: !0,
                             linkTo: "https://dev.twitch.tv/docs/drops",
-                            type: O.F.Hollow
-                        }, Object(o.d)("Need Help?", "DevDropsCreateItem"))), r.createElement(O.Ja, null, r.createElement(O.P, {
+                            type: S.F.Hollow
+                        }, Object(o.d)("Need Help?", "DevDropsCreateItem"))), r.createElement(S.Ja, null, r.createElement(S.P, {
                             cols: {
                                 default: 12,
                                 md: 5
@@ -4064,7 +4072,7 @@
                 ge = Object(l.compose)(Object(_.b)("DevDropsCreateItemPage", {
                     autoReportInteractive: !0,
                     destination: d.a.DevSiteDropsCreateItem
-                }), Object(p.a)({
+                }), Object(E.a)({
                     location: m.PageviewLocation.DevSiteDropsCreateItem
                 }), le(), Object(u.a)(), U.a)(he),
                 Te = function(e) {
@@ -4083,7 +4091,7 @@
                                 return a.__generator(this, function(t) {
                                     switch (t.label) {
                                         case 0:
-                                            return t.trys.push([0, 2, , 3]), [4, M()];
+                                            return t.trys.push([0, 2, , 3]), [4, y()];
                                         case 1:
                                             return e = t.sent(), this.setState({
                                                 games: e,
@@ -4128,7 +4136,7 @@
                                 return a.__generator(this, function(a) {
                                     switch (a.label) {
                                         case 0:
-                                            return a.trys.push([0, 6, , 7]), e = E.a + "/kraken/campaigns/" + this.props.match.params.campaignId, [4, Object(N.a)(T.a.GetCampaignById)];
+                                            return a.trys.push([0, 6, , 7]), e = p.a + "/kraken/campaigns/" + this.props.match.params.campaignId, [4, Object(N.a)(T.a.GetCampaignById)];
                                         case 1:
                                             return (t = a.sent()) ? [4, Object(h.a)(e, {
                                                 headers: {
@@ -4160,7 +4168,7 @@
                                         case 0:
                                             return a.trys.push([0, 7, , 8]), [4, Object(N.a)(T.a.PutCampaign)];
                                         case 1:
-                                            return (t = a.sent()) ? (n = g(this.props.company), r = f(e, String(n)), i = E.a + "/kraken/accounts/" + n + "/campaigns/" + e.id, [4, Object(h.a)(i, {
+                                            return (t = a.sent()) ? (n = g(this.props.company), r = f(e, String(n)), i = p.a + "/kraken/accounts/" + n + "/campaigns/" + e.id, [4, Object(h.a)(i, {
                                                 method: "PUT",
                                                 body: JSON.stringify(r),
                                                 headers: {
@@ -4252,22 +4260,22 @@
                             })
                         })
                     }, t.prototype.render = function() {
-                        return this.state.gamesLoaded && this.state.campaign ? r.createElement(O.Ya, {
+                        return this.state.gamesLoaded && this.state.campaign ? r.createElement(S.Ya, {
                             margin: {
                                 top: 1
                             }
-                        }, r.createElement(O.Ya, {
-                            display: O.X.Flex,
-                            justifyContent: O.Xa.Between
-                        }, r.createElement(O.W, {
-                            type: O.Wb.H2
+                        }, r.createElement(S.Ya, {
+                            display: S.X.Flex,
+                            justifyContent: S.Xa.Between
+                        }, r.createElement(S.W, {
+                            type: S.Wb.H2
                         }, Object(o.d)("Drops Campaign: {title}", {
                             title: this.state.campaign.item_name
-                        }, "DevDropsEditCampaign")), r.createElement(O.z, {
+                        }, "DevDropsEditCampaign")), r.createElement(S.z, {
                             targetBlank: !0,
                             linkTo: "https://dev.twitch.tv/docs/drops",
-                            type: O.F.Hollow
-                        }, Object(o.d)("Need Help?", "DevDropsEditCampaign"))), r.createElement(O.Ja, null, r.createElement(O.P, {
+                            type: S.F.Hollow
+                        }, Object(o.d)("Need Help?", "DevDropsEditCampaign"))), r.createElement(S.Ja, null, r.createElement(S.P, {
                             cols: {
                                 default: 12,
                                 md: 5
@@ -4282,12 +4290,12 @@
                             onFormChange: this.onFormChange,
                             onSubmit: this.onSubmit,
                             updateSuccess: this.state.updateSuccess
-                        })))) : r.createElement(O.ab, null)
+                        })))) : r.createElement(S.ab, null)
                     }, t
                 }(r.Component),
                 fe = Object(l.compose)(Object(_.b)("DevDropsEditCampaignPage", {
                     destination: d.a.DevSiteDropsEditCampaign
-                }), Object(p.a)({
+                }), Object(E.a)({
                     location: m.PageviewLocation.DevSiteDropsEditCampaign
                 }), le(), Object(u.a)(), U.a)(Te);
             ! function(e) {
@@ -4296,7 +4304,7 @@
             function(e) {
                 e.SERVICE_DEPENDENCY_FAILURE = "SERVICE_DEPENDENCY_FAILURE", e.UNKNOWN = "UNKNOWN", e.USER_UNAUTHORIZED = "USER_UNAUTHORIZED"
             }(me || (me = {}));
-            var Ie, De = function(e) {
+            var De, Ie = function(e) {
                     function t() {
                         var t = null !== e && e.apply(this, arguments) || this;
                         return t.state = {
@@ -4307,7 +4315,7 @@
                                 return a.__generator(this, function(a) {
                                     switch (a.label) {
                                         case 0:
-                                            return a.trys.push([0, 6, , 7]), e = g(this.props.company), t = E.a + "/kraken/accounts/" + e + "/items/" + this.props.match.params.itemId, [4, Object(N.a)(T.a.GetItemByID)];
+                                            return a.trys.push([0, 6, , 7]), e = g(this.props.company), t = p.a + "/kraken/accounts/" + e + "/items/" + this.props.match.params.itemId, [4, Object(N.a)(T.a.GetItemByID)];
                                         case 1:
                                             return (n = a.sent()) ? [4, Object(h.a)(t, {
                                                 headers: {
@@ -4341,7 +4349,7 @@
                                         case 0:
                                             return a.trys.push([0, 10, , 11]), [4, Object(N.a)(T.a.UpdateItem)];
                                         case 1:
-                                            return (t = a.sent()) ? (n = g(this.props.company), r = I(e, String(n), t), i = E.a + "/kraken/accounts/" + n + "/items/" + e.item_id, [4, Object(h.a)(i, {
+                                            return (t = a.sent()) ? (n = g(this.props.company), r = D(e, String(n), t), i = p.a + "/kraken/accounts/" + n + "/items/" + e.item_id, [4, Object(h.a)(i, {
                                                 method: "PUT",
                                                 body: JSON.stringify(r),
                                                 headers: {
@@ -4443,22 +4451,22 @@
                             })
                         })
                     }, t.prototype.render = function() {
-                        return this.state.item ? r.createElement(O.Ya, {
+                        return this.state.item ? r.createElement(S.Ya, {
                             margin: {
                                 top: 1
                             }
-                        }, r.createElement(O.Ya, {
-                            display: O.X.Flex,
-                            justifyContent: O.Xa.Between
-                        }, r.createElement(O.W, {
-                            type: O.Wb.H2
+                        }, r.createElement(S.Ya, {
+                            display: S.X.Flex,
+                            justifyContent: S.Xa.Between
+                        }, r.createElement(S.W, {
+                            type: S.Wb.H2
                         }, Object(o.d)("Drops Item: {name}", {
                             name: this.state.item.Translations[this.state.item.DefaultLanguage]
-                        }, "DevDropsEditItem")), r.createElement(O.z, {
+                        }, "DevDropsEditItem")), r.createElement(S.z, {
                             targetBlank: !0,
                             linkTo: "https://dev.twitch.tv/docs/drops",
-                            type: O.F.Hollow
-                        }, Object(o.d)("Need Help?", "DevDropsEditItem"))), r.createElement(O.Ja, null, r.createElement(O.P, {
+                            type: S.F.Hollow
+                        }, Object(o.d)("Need Help?", "DevDropsEditItem"))), r.createElement(S.Ja, null, r.createElement(S.P, {
                             cols: {
                                 default: 12,
                                 md: 5
@@ -4471,26 +4479,26 @@
                             onFormChange: this.onFormChange,
                             errorMessage: this.state.errorMessage,
                             updateSuccess: this.state.updateSuccess
-                        })))) : r.createElement(O.ab, null)
+                        })))) : r.createElement(S.ab, null)
                     }, t
                 }(r.Component),
                 Ne = Object(l.compose)(Object(_.b)("DevDropsEditItemPage", {
                     destination: d.a.DevSiteDropsEditItem
-                }), Object(p.a)({
+                }), Object(E.a)({
                     location: m.PageviewLocation.DevSiteDropsEditItems
-                }), le(), Object(u.a)(), U.a)(De),
-                Oe = function(e) {
-                    var t = Object(S.b)(Object(R.b)(e.item.createdAt), "MM/DD/YYYY, hh:mm a"),
-                        n = Object(S.b)(Object(R.b)(e.item.updatedAt), "MM/DD/YYYY, hh:mm a"),
+                }), le(), Object(u.a)(), U.a)(Ie),
+                Se = function(e) {
+                    var t = Object(O.b)(Object(R.b)(e.item.createdAt), "MM/DD/YYYY, hh:mm a"),
+                        n = Object(O.b)(Object(R.b)(e.item.updatedAt), "MM/DD/YYYY, hh:mm a"),
                         a = "/console/drops/items/" + e.item.id;
-                    return r.createElement(O.Nb, null, r.createElement(O.Kb, null, r.createElement(O.U, {
+                    return r.createElement(S.Nb, null, r.createElement(S.Kb, null, r.createElement(S.U, {
                         linkTo: a
-                    }, e.item.translations[e.item.defaultLanguage])), r.createElement(O.Kb, null, e.item.id), r.createElement(O.Kb, null, t), r.createElement(O.Kb, null, n), r.createElement(O.Kb, null, e.item.active.toString()))
+                    }, e.item.translations[e.item.defaultLanguage])), r.createElement(S.Kb, null, e.item.id), r.createElement(S.Kb, null, t), r.createElement(S.Kb, null, n), r.createElement(S.Kb, null, e.item.active.toString()))
                 };
             ! function(e) {
                 e[e.Enabled = 0] = "Enabled", e[e.CreationDate = 1] = "CreationDate", e[e.UpdatedDate = 2] = "UpdatedDate", e[e.Name = 3] = "Name"
-            }(Ie || (Ie = {}));
-            var Se, Re = function(e) {
+            }(De || (De = {}));
+            var Oe, Re = function(e) {
                     function t(t) {
                         var n = e.call(this, t) || this;
                         return n.handleClickNext = function() {
@@ -4514,7 +4522,7 @@
                             }
                         }, n.renderCampaignItems = function() {
                             return n.props.items.map(function(e) {
-                                return r.createElement(Oe, {
+                                return r.createElement(Se, {
                                     item: e,
                                     key: e.id
                                 })
@@ -4525,7 +4533,7 @@
                                     sortingName: n.toggleSorting(e.sortingName)
                                 }
                             }, function() {
-                                n.props.onSort(Ie.Name, n.state.sortingName)
+                                n.props.onSort(De.Name, n.state.sortingName)
                             })
                         }, n.sortEnabled = function() {
                             n.setState(function(e) {
@@ -4533,7 +4541,7 @@
                                     sortingEnabled: n.toggleSorting(e.sortingEnabled)
                                 }
                             }, function() {
-                                n.props.onSort(Ie.Enabled, n.state.sortingEnabled)
+                                n.props.onSort(De.Enabled, n.state.sortingEnabled)
                             })
                         }, n.sortCreationDate = function() {
                             n.setState(function(e) {
@@ -4541,7 +4549,7 @@
                                     sortingCreationDate: n.toggleSorting(e.sortingCreationDate)
                                 }
                             }, function() {
-                                n.props.onSort(Ie.CreationDate, n.state.sortingCreationDate)
+                                n.props.onSort(De.CreationDate, n.state.sortingCreationDate)
                             })
                         }, n.sortUpdatedDate = function() {
                             n.setState(function(e) {
@@ -4549,26 +4557,26 @@
                                     sortingUpdatedDate: n.toggleSorting(e.sortingUpdatedDate)
                                 }
                             }, function() {
-                                n.props.onSort(Ie.UpdatedDate, n.state.sortingUpdatedDate)
+                                n.props.onSort(De.UpdatedDate, n.state.sortingUpdatedDate)
                             })
                         }, n.toggleSorting = function(e) {
-                            return e === O.Cb.Default || e === O.Cb.Ascending ? O.Cb.Descending : O.Cb.Ascending
+                            return e === S.Cb.Default || e === S.Cb.Ascending ? S.Cb.Descending : S.Cb.Ascending
                         }, n.state = {
-                            sortingName: O.Cb.Default,
-                            sortingEnabled: O.Cb.Default,
-                            sortingCreationDate: O.Cb.Default,
-                            sortingUpdatedDate: O.Cb.Default
+                            sortingName: S.Cb.Default,
+                            sortingEnabled: S.Cb.Default,
+                            sortingCreationDate: S.Cb.Default,
+                            sortingUpdatedDate: S.Cb.Default
                         }, n
                     }
                     return a.__extends(t, e), t.prototype.render = function() {
                         var e = this.renderCampaignItems();
-                        return r.createElement(O.Ya, null, r.createElement(O.Ya, {
-                            display: O.X.Flex,
-                            justifyContent: O.Xa.Between,
+                        return r.createElement(S.Ya, null, r.createElement(S.Ya, {
+                            display: S.X.Flex,
+                            justifyContent: S.Xa.Between,
                             margin: {
                                 bottom: 1
                             }
-                        }, r.createElement(O.eb, {
+                        }, r.createElement(S.eb, {
                             currentPage: this.props.currentPage,
                             totalPages: this.props.maxPages,
                             onClickIndex: this.handleClickIndex,
@@ -4576,29 +4584,29 @@
                             onClickPrevious: this.handleClickPrev,
                             nextPageButtonAriaLabel: "Next Page",
                             previousPageButtonAriaLabel: "Previous Page"
-                        }), r.createElement(O.z, {
+                        }), r.createElement(S.z, {
                             onClick: Object(c.c)(c.a.CreateDropsItemProcessStart),
                             linkTo: "/console/drops/items/create",
-                            icon: O.ub.Plus
-                        }, Object(o.d)("Create Drops Item", "DevDropsItems"))), r.createElement(O.Ib, null, r.createElement(O.Lb, null, r.createElement(O.Mb, {
+                            icon: S.ub.Plus
+                        }, Object(o.d)("Create Drops Item", "DevDropsItems"))), r.createElement(S.Ib, null, r.createElement(S.Lb, null, r.createElement(S.Mb, {
                             label: Object(o.d)("Item Name", "DevDropsItems"),
                             sorting: this.state.sortingName,
                             onClick: this.sortName
-                        }), r.createElement(O.Mb, {
+                        }), r.createElement(S.Mb, {
                             label: Object(o.d)("Item ID", "DevDropsItems")
-                        }), r.createElement(O.Mb, {
+                        }), r.createElement(S.Mb, {
                             label: Object(o.d)("Creation Date (UTC)", "DevDropsItems"),
                             sorting: this.state.sortingCreationDate,
                             onClick: this.sortCreationDate
-                        }), r.createElement(O.Mb, {
+                        }), r.createElement(S.Mb, {
                             label: Object(o.d)("Last Updated Date (UTC)", "DevDropsItems"),
                             sorting: this.state.sortingUpdatedDate,
                             onClick: this.sortUpdatedDate
-                        }), r.createElement(O.Mb, {
+                        }), r.createElement(S.Mb, {
                             label: Object(o.d)("Enabled", "DevDropsItems"),
                             sorting: this.state.sortingEnabled,
                             onClick: this.sortEnabled
-                        })), r.createElement(O.Jb, null, e)))
+                        })), r.createElement(S.Jb, null, e)))
                     }, t
                 }(r.Component),
                 Ae = function(e) {
@@ -4644,29 +4652,29 @@
                         }, t.onSort = function(e, n) {
                             var a = t.state.pageCursors[t.state.currentPage].items;
                             switch (e) {
-                                case Ie.Name:
-                                    a = n === O.Cb.Ascending ? a.sort(function(e, t) {
+                                case De.Name:
+                                    a = n === S.Cb.Ascending ? a.sort(function(e, t) {
                                         return e.translations[e.defaultLanguage].localeCompare(t.translations[t.defaultLanguage])
                                     }) : a.sort(function(e, t) {
                                         return t.translations[t.defaultLanguage].localeCompare(e.translations[e.defaultLanguage])
                                     });
                                     break;
-                                case Ie.Enabled:
-                                    a = n === O.Cb.Ascending ? a.sort(function(e, t) {
+                                case De.Enabled:
+                                    a = n === S.Cb.Ascending ? a.sort(function(e, t) {
                                         return Number(e.active) - Number(t.active)
                                     }) : a.sort(function(e, t) {
                                         return Number(t.active) - Number(e.active)
                                     });
                                     break;
-                                case Ie.CreationDate:
-                                    a = n === O.Cb.Ascending ? a.sort(function(e, t) {
+                                case De.CreationDate:
+                                    a = n === S.Cb.Ascending ? a.sort(function(e, t) {
                                         return e.createdAt.getTime() - t.createdAt.getTime()
                                     }) : a.sort(function(e, t) {
                                         return t.createdAt.getTime() - e.createdAt.getTime()
                                     });
                                     break;
-                                case Ie.UpdatedDate:
-                                    a = n === O.Cb.Ascending ? a.sort(function(e, t) {
+                                case De.UpdatedDate:
+                                    a = n === S.Cb.Ascending ? a.sort(function(e, t) {
                                         return e.updatedAt.getTime() - t.updatedAt.getTime()
                                     }) : a.sort(function(e, t) {
                                         return t.updatedAt.getTime() - e.updatedAt.getTime()
@@ -4704,11 +4712,11 @@
                 }(r.Component),
                 Ce = Object(l.compose)(Object(_.b)("DevDropsItemsPage", {
                     destination: d.a.DevSiteDropsItems
-                }), Object(p.a)({
+                }), Object(E.a)({
                     location: m.PageviewLocation.DevSiteDropsItems
                 }), Object(u.a)())(Ae),
                 be = n("mLw1");
-            (Se || (Se = {})).SubmitButton = "dev-drops-settings-submit";
+            (Oe || (Oe = {})).SubmitButton = "dev-drops-settings-submit";
             var ve = function(e) {
                     function t() {
                         var t = null !== e && e.apply(this, arguments) || this;
@@ -4754,9 +4762,9 @@
                                 })
                             })
                         }, t.renderSubmitButton = function() {
-                            var e = O.E.Default;
-                            return t.state.isSubmitting ? e = O.E.Loading : t.state.submitSuccess && (e = O.E.Success), r.createElement(O.z, {
-                                "data-test-selector": Se.SubmitButton,
+                            var e = S.E.Default;
+                            return t.state.isSubmitting ? e = S.E.Loading : t.state.submitSuccess && (e = S.E.Success), r.createElement(S.z, {
+                                "data-test-selector": Oe.SubmitButton,
                                 disabled: t.state.submitSuccess,
                                 onClick: t.saveChanges,
                                 state: e
@@ -4778,57 +4786,57 @@
                         this.props.latencyTracking.reportInteractive()
                     }, t.prototype.render = function() {
                         var e = this.renderSubmitButton();
-                        return r.createElement(O.Ya, {
+                        return r.createElement(S.Ya, {
                             margin: {
                                 top: 1
                             }
-                        }, r.createElement(O.Qa, {
-                            display: O.X.Flex,
-                            justifyContent: O.Xa.Between,
+                        }, r.createElement(S.Qa, {
+                            display: S.X.Flex,
+                            justifyContent: S.Xa.Between,
                             margin: {
                                 bottom: 2
                             }
-                        }, r.createElement("header", null, r.createElement(O.Ya, null, r.createElement(O.W, {
-                            type: O.Wb.H2
-                        }, Object(o.d)("VHS Configuration for Drops", "DevDropsSettings"))), r.createElement(O.z, {
+                        }, r.createElement("header", null, r.createElement(S.Ya, null, r.createElement(S.W, {
+                            type: S.Wb.H2
+                        }, Object(o.d)("VHS Configuration for Drops", "DevDropsSettings"))), r.createElement(S.z, {
                             targetBlank: !0,
                             linkTo: "https://dev.twitch.tv/docs/drops",
-                            type: O.F.Hollow
-                        }, Object(o.d)("Need Help?", "DevDropsSettings")))), r.createElement(O.Ja, null, r.createElement(O.P, {
+                            type: S.F.Hollow
+                        }, Object(o.d)("Need Help?", "DevDropsSettings")))), r.createElement(S.Ja, null, r.createElement(S.P, {
                             cols: {
                                 default: 12,
                                 md: 8,
                                 lg: 5
                             }
-                        }, r.createElement(O.Ya, {
+                        }, r.createElement(S.Ya, {
                             padding: {
                                 bottom: 1
                             }
-                        }, r.createElement(O.Ya, {
+                        }, r.createElement(S.Ya, {
                             margin: {
                                 bottom: 1
                             }
-                        }, r.createElement(O.Ea, {
+                        }, r.createElement(S.Ea, {
                             label: Object(o.d)("Client ID", "DevDropsSettings")
-                        }, r.createElement(O.Sa, {
-                            type: O.Ua.Text,
+                        }, r.createElement(S.Sa, {
+                            type: S.Ua.Text,
                             value: this.state.clientId,
                             onChange: this.setClientId
-                        }))), r.createElement(O.Ya, {
+                        }))), r.createElement(S.Ya, {
                             margin: {
                                 bottom: 1
                             }
-                        }, r.createElement(O.Ea, {
+                        }, r.createElement(S.Ea, {
                             label: Object(o.d)("Endpoint", "DevDropsSettings")
-                        }, r.createElement(O.Sa, {
-                            type: O.Ua.Text,
+                        }, r.createElement(S.Sa, {
+                            type: S.Ua.Text,
                             value: this.state.endpoint,
                             onChange: this.setEndpoint
-                        }))), r.createElement(O.Ya, {
+                        }))), r.createElement(S.Ya, {
                             margin: {
                                 bottom: 1
                             }
-                        }, r.createElement(O.N, {
+                        }, r.createElement(S.N, {
                             label: Object(o.d)("Send periodic VHS reports to Endpoint (uncheck to stop getting reports)", "DevDropsSettings"),
                             checked: this.state.sendReport,
                             onChange: this.setReport
@@ -4857,7 +4865,7 @@
                                             if (!(t = a.sent())) return [3, 5];
                                             a.label = 2;
                                         case 2:
-                                            return a.trys.push([2, 4, , 5]), n = g(this.props.company), r = E.a + "/kraken/service/" + n, i = {
+                                            return a.trys.push([2, 4, , 5]), n = g(this.props.company), r = p.a + "/kraken/service/" + n, i = {
                                                 client_id: e.clientId,
                                                 enabled: e.sendReport,
                                                 endpoint: e.endpoint,
@@ -4893,7 +4901,7 @@
                                             if (!(e = a.sent())) return [3, 7];
                                             a.label = 2;
                                         case 2:
-                                            return a.trys.push([2, 6, , 7]), t = g(this.props.company), n = E.a + "/kraken/service/" + t, [4, Object(h.a)(n, {
+                                            return a.trys.push([2, 6, , 7]), t = g(this.props.company), n = p.a + "/kraken/service/" + t, [4, Object(h.a)(n, {
                                                 headers: {
                                                     "X-Twitch-VHSCF": e
                                                 }
@@ -4934,7 +4942,7 @@
                 Pe = Object(l.compose)(Object(_.b)("DevDropsSettingsPage", {
                     autoReportInteractive: !0,
                     destination: d.a.DevSiteDropsSettings
-                }), Object(p.a)({
+                }), Object(E.a)({
                     location: m.PageviewLocation.DevSiteDropsSettings
                 }), Object(u.a)())(Ue),
                 Fe = function(e) {
@@ -4943,16 +4951,16 @@
                     }
                     return a.__extends(t, e), t.prototype.render = function() {
                         var e = "/console/drops/items";
-                        return r.createElement(O.Ya, null, r.createElement(O.Ya, {
+                        return r.createElement(S.Ya, null, r.createElement(S.Ya, {
                             padding: {
                                 bottom: 1
                             }
-                        }, r.createElement(O.Hb, null, r.createElement(i.a, {
+                        }, r.createElement(S.Hb, null, r.createElement(i.a, {
                             path: "/console/drops",
                             exact: !0
                         }, function(e) {
                             var t = e.match;
-                            return r.createElement(O.Gb, {
+                            return r.createElement(S.Gb, {
                                 linkTo: "/console/drops",
                                 active: Boolean(t)
                             }, Object(o.d)("Campaign Manager", "DevDropsDashboardRoot"))
@@ -4961,7 +4969,7 @@
                             exact: !0
                         }, function(t) {
                             var n = t.match;
-                            return r.createElement(O.Gb, {
+                            return r.createElement(S.Gb, {
                                 linkTo: e,
                                 active: Boolean(n)
                             }, Object(o.d)("Item Manager", "DevDropsDashboardRoot"))
@@ -4970,7 +4978,7 @@
                             exact: !0
                         }, function(e) {
                             var t = e.match;
-                            return r.createElement(O.Gb, {
+                            return r.createElement(S.Gb, {
                                 onClick: Object(c.c)(c.a.ConfigureDropsSettings),
                                 linkTo: "/console/drops/settings",
                                 active: Boolean(t)
@@ -4998,7 +5006,7 @@
                         }), r.createElement(i.a, {
                             exact: !0,
                             path: "/console/drops/create",
-                            component: Ee
+                            component: pe
                         }), r.createElement(i.a, {
                             exact: !0,
                             path: "/console/drops/:campaignId",
@@ -5006,9 +5014,9 @@
                         })))
                     }, t
                 }(r.Component),
-                ye = Object(u.a)()(Fe);
+                Me = Object(u.a)()(Fe);
             n.d(t, "DevDropsDashboardRoot", function() {
-                return ye
+                return Me
             })
         },
         QKmf: function(e, t) {
@@ -5442,9 +5450,9 @@
             n.d(t, "d", function() {
                 return l
             }), n.d(t, "c", function() {
-                return p
-            }), n.d(t, "a", function() {
                 return E
+            }), n.d(t, "a", function() {
+                return p
             }), n.d(t, "b", function() {
                 return a
             }), n.d(t, "g", function() {
@@ -5495,7 +5503,7 @@
                     VideoThumbnailProcessing: "video-thumbnail-processing",
                     Whispers: "whispers"
                 },
-                p = {
+                E = {
                     BitsChannelSettingsEvent: "channel_settings_update",
                     BitsCampaignAddCheermoteEvent: "sponsored-cheermote-add",
                     BitsCampaignRemoveCheermoteEvent: "sponsored-cheermote-remove",
@@ -5571,7 +5579,7 @@
                     WhisperSent: "whisper_sent",
                     WhisperThreadUpdate: "thread"
                 },
-                E = {
+                p = {
                     Accepted: "accepted",
                     Requested: "requested",
                     Removed: "removed",

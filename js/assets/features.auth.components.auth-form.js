@@ -3309,7 +3309,6 @@
                                 y: 3
                             },
                             display: C.X.Flex,
-                            borderRadius: C.x.Medium,
                             flexDirection: C.Aa.Column,
                             background: C.r.Base
                         }, this.renderBackButton(), this.renderHeader(), this.renderNavigation(), this.renderServerMessage(), this.renderForm(), this.renderFooter())

@@ -1,5 +1,5 @@
 (window.webpackJsonp = window.webpackJsonp || []).push([
-    [172], {
+    [173], {
         "4mBO": function(e, t, n) {
             "use strict";
             var r, a = n("mrSG"),
@@ -1594,8 +1594,7 @@
             D.Card, D.Container, D.Header;
             var W = Object(s.compose)(f(), v())(j),
                 M = n("8/mp"),
-                N = n("b+ID"),
-                U = function(e) {
+                N = function(e) {
                     function t() {
                         var t = null !== e && e.apply(this, arguments) || this;
                         return t.setRootContainerRef = function(e) {
@@ -1610,7 +1609,7 @@
                         })
                     }, t
                 }(i.Component),
-                A = (n("6Ll5"), function(e) {
+                U = (n("6Ll5"), function(e) {
                     function t() {
                         var t = null !== e && e.apply(this, arguments) || this;
                         return t.handleContainerMouseOver = function() {
@@ -1670,7 +1669,7 @@
                         configurable: !0
                     }), t
                 }(i.Component)),
-                Y = (n("uZYF"), function(e) {
+                A = (n("uZYF"), function(e) {
                     function t(t) {
                         var n = e.call(this, t) || this;
                         n.handleCardsUpdate = function() {
@@ -1768,21 +1767,20 @@
                     return o.__extends(t, e), t.prototype.componentDidMount = function() {
                         this.handleCardsUpdate()
                     }, t.prototype.render = function() {
-                        var e = this,
-                            t = this.props.isExpandedView;
+                        var e = this;
                         return i.createElement(i.Fragment, null, i.createElement(M.b, {
-                            className: "drag-and-drop-layout-scrollable-area" + (t ? "__expanded-view" : "")
+                            className: this.props.containerClassName || "drag-and-drop-layout-container"
                         }, i.createElement(C.Ya, {
                             alignContent: C.e.Stretch,
                             alignItems: C.f.Stretch,
-                            className: "drag-and-drop-layout",
+                            className: "drag-and-drop-layout-content",
                             display: C.X.Flex,
                             flexDirection: C.Aa.Row,
                             fullHeight: !0,
                             fullWidth: !0,
                             justifyContent: C.Xa.Between
                         }, this.state.roots.map(function(t, n) {
-                            return i.createElement(A, {
+                            return i.createElement(U, {
                                 column: n,
                                 key: n,
                                 grabbedCard: e.state.common.grabbedCard,
@@ -1792,7 +1790,7 @@
                             }, t.map(function(e) {
                                 var t = e.el,
                                     n = e.name;
-                                return i.createElement(U, {
+                                return i.createElement(N, {
                                     element: t,
                                     key: n
                                 })
@@ -1808,15 +1806,10 @@
                             }, e.props.cards[n.name]), n.el)
                         })))
                     }, t
-                }(i.Component));
-            var H = Object(N.b)(function(e) {
-                    return {
-                        isExpandedView: e.isExpandedView
-                    }
-                })(Y),
-                G = n("eJ65"),
-                V = n("N0BP"),
-                X = function(e) {
+                }(i.Component)),
+                Y = n("eJ65"),
+                H = n("N0BP"),
+                G = function(e) {
                     function t() {
                         return null !== e && e.apply(this, arguments) || this
                     }
@@ -1826,10 +1819,10 @@
                                 left: 1
                             },
                             position: C.kb.Relative
-                        }, i.createElement(G.a, null, i.createElement(C.A, o.__assign({
+                        }, i.createElement(Y.a, null, i.createElement(C.A, o.__assign({
                             ariaLabel: this.props.ariaIconLabel,
                             icon: this.props.icon
-                        }, Object(V.a)(this.props))), i.createElement(C.u, {
+                        }, Object(H.a)(this.props))), i.createElement(C.u, {
                             offsetY: "0",
                             offsetX: "1rem",
                             direction: C.v.Left,
@@ -1840,9 +1833,9 @@
             n.d(t, "a", function() {
                 return W
             }), n.d(t, "c", function() {
-                return H
+                return A
             }), n.d(t, "b", function() {
-                return X
+                return G
             })
         },
         uZYF: function(e, t, n) {},

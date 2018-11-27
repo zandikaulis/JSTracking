@@ -1,5 +1,5 @@
 (window.webpackJsonp = window.webpackJsonp || []).push([
-    [154], {
+    [155], {
         "+58i": function(e, t, n) {
             "use strict";
             var a, i = n("mrSG"),
@@ -9539,7 +9539,7 @@
                         return {
                             variables: {
                                 gameName: e.gameName,
-                                tagType: g.X.TOP,
+                                tagType: g.Y.TOP,
                                 limit: 50
                             }
                         }
@@ -14170,7 +14170,7 @@
                         return {
                             variables: {
                                 gameName: e.gameName || "",
-                                tagType: l.X.CONTENT
+                                tagType: l.Y.CONTENT
                             }
                         }
                     },

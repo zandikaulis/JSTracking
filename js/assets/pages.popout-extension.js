@@ -84,13 +84,13 @@
             }), n.d(t, "m", function() {
                 return R
             }), n.d(t, "d", function() {
-                return I
-            }), n.d(t, "c", function() {
                 return b
+            }), n.d(t, "c", function() {
+                return I
             }), n.d(t, "E", function() {
-                return v
-            }), n.d(t, "b", function() {
                 return O
+            }), n.d(t, "b", function() {
+                return v
             }), n.d(t, "a", function() {
                 return C
             }), n.d(t, "H", function() {
@@ -196,19 +196,19 @@
                 return o.PubsubTopic.Friendship + "." + e
             }
 
-            function I(e) {
+            function b(e) {
                 return o.PubsubTopic.ChannelBitsPinEvents + "." + e
             }
 
-            function b(e) {
+            function I(e) {
                 return o.PubsubTopic.BitsLeaderboardEvents + "." + e.id
             }
 
-            function v(e) {
+            function O(e) {
                 return o.PubsubTopic.UserBitsUpdates + "." + e
             }
 
-            function O() {
+            function v() {
                 return o.PubsubTopic.BitsCampaignEvents + ".updates"
             }
 
@@ -1092,13 +1092,13 @@
             }), n.d(t, "i", function() {
                 return R
             }), n.d(t, "h", function() {
-                return I
-            }), n.d(t, "f", function() {
                 return b
+            }), n.d(t, "f", function() {
+                return I
             }), n.d(t, "k", function() {
-                return v
-            }), n.d(t, "u", function() {
                 return O
+            }), n.d(t, "u", function() {
+                return v
             }), n.d(t, "s", function() {
                 return C
             }), n.d(t, "d", function() {
@@ -1125,10 +1125,10 @@
                 _ = "FIRST_PARTY",
                 T = "CUSTOM",
                 R = "SPONSORED",
-                I = "THIRD_PARTY",
-                b = "DISPLAY_ONLY",
-                v = ((r = {})[o.a.Gray] = "#979797", r[o.a.Purple] = "#9c3ee8", r[o.a.Green] = "#1db2a5", r[o.a.Blue] = "#0099fe", r[o.a.Red] = "#f43021", r[o.a.Yellow] = "#f3a71a", r),
-                O = "bits_sponsored_cheermotes",
+                b = "THIRD_PARTY",
+                I = "DISPLAY_ONLY",
+                O = ((r = {})[o.a.Gray] = "#979797", r[o.a.Purple] = "#9c3ee8", r[o.a.Green] = "#1db2a5", r[o.a.Blue] = "#0099fe", r[o.a.Red] = "#f43021", r[o.a.Yellow] = "#f3a71a", r),
+                v = "bits_sponsored_cheermotes",
                 C = "bits_sponsored_cheermotes_announcement",
                 S = "bits_charity_event"
         },
@@ -1450,12 +1450,12 @@
         },
         DMoW: function(e, t, n) {
             "use strict";
-            var r, o, i, a, s, l, c, u, d, p, E, m, h, f, g, _, T, R, I, b, v, O, C, S, A, N, y, D, P, L, M, U, k, x, w, B, F, W, V, G, j, H, z, Y, q, X, K, Q, Z, J, $, ee, te, ne, re, oe, ie, ae, se, le, ce, ue, de, pe, Ee, me, he, fe, ge, _e, Te, Re, Ie, be, ve, Oe, Ce, Se, Ae, Ne, ye, De, Pe, Le, Me, Ue, ke, xe, we, Be, Fe, We, Ve, Ge, je, He, ze, Ye, qe, Xe, Ke, Qe, Ze, Je, $e, et, tt, nt, rt, ot, it, at, st, lt, ct, ut, dt, pt, Et, mt, ht, ft, gt, _t, Tt;
-            n.d(t, "N", function() {
+            var r, o, i, a, s, l, c, u, d, p, E, m, h, f, g, _, T, R, b, I, O, v, C, S, A, N, y, D, P, L, M, U, k, x, w, B, F, W, V, G, j, H, z, Y, q, X, K, Q, Z, J, $, ee, te, ne, re, oe, ie, ae, se, le, ce, ue, de, pe, Ee, me, he, fe, ge, _e, Te, Re, be, Ie, Oe, ve, Ce, Se, Ae, Ne, ye, De, Pe, Le, Me, Ue, ke, xe, we, Be, Fe, We, Ve, Ge, je, He, ze, Ye, qe, Xe, Ke, Qe, Ze, Je, $e, et, tt, nt, rt, ot, it, at, st, lt, ct, ut, dt, pt, Et, mt, ht, ft, gt, _t, Tt, Rt, bt;
+            n.d(t, "O", function() {
                     return r
                 }), n.d(t, "e", function() {
                     return o
-                }), n.d(t, "O", function() {
+                }), n.d(t, "P", function() {
                     return s
                 }), n.d(t, "B", function() {
                     return l
@@ -1468,101 +1468,103 @@
                 }), n.d(t, "g", function() {
                     return R
                 }), n.d(t, "h", function() {
-                    return I
-                }), n.d(t, "Z", function() {
-                    return v
-                }), n.d(t, "n", function() {
+                    return b
+                }), n.d(t, "Aa", function() {
                     return O
-                }), n.d(t, "Ba", function() {
+                }), n.d(t, "n", function() {
+                    return v
+                }), n.d(t, "Ca", function() {
                     return C
-                }), n.d(t, "R", function() {
+                }), n.d(t, "S", function() {
                     return S
                 }), n.d(t, "s", function() {
                     return A
                 }), n.d(t, "l", function() {
                     return D
-                }), n.d(t, "P", function() {
+                }), n.d(t, "Q", function() {
                     return P
                 }), n.d(t, "C", function() {
                     return w
                 }), n.d(t, "c", function() {
-                    return B
-                }), n.d(t, "u", function() {
                     return F
-                }), n.d(t, "Aa", function() {
+                }), n.d(t, "u", function() {
                     return W
-                }), n.d(t, "t", function() {
+                }), n.d(t, "Ba", function() {
                     return V
-                }), n.d(t, "T", function() {
+                }), n.d(t, "t", function() {
                     return G
-                }), n.d(t, "V", function() {
-                    return j
-                }), n.d(t, "G", function() {
-                    return H
-                }), n.d(t, "W", function() {
-                    return z
-                }), n.d(t, "F", function() {
-                    return Y
-                }), n.d(t, "E", function() {
-                    return q
-                }), n.d(t, "q", function() {
-                    return X
                 }), n.d(t, "U", function() {
-                    return K
-                }), n.d(t, "a", function() {
-                    return Q
-                }), n.d(t, "x", function() {
-                    return Z
-                }), n.d(t, "z", function() {
-                    return J
-                }), n.d(t, "I", function() {
-                    return ee
-                }), n.d(t, "J", function() {
-                    return te
-                }), n.d(t, "H", function() {
-                    return re
-                }), n.d(t, "K", function() {
-                    return oe
-                }), n.d(t, "Y", function() {
-                    return se
+                    return j
+                }), n.d(t, "W", function() {
+                    return H
+                }), n.d(t, "G", function() {
+                    return z
                 }), n.d(t, "X", function() {
-                    return fe
-                }), n.d(t, "p", function() {
-                    return Ce
-                }), n.d(t, "o", function() {
-                    return Se
-                }), n.d(t, "Da", function() {
-                    return De
-                }), n.d(t, "D", function() {
-                    return we
-                }), n.d(t, "Ca", function() {
-                    return Be
-                }), n.d(t, "k", function() {
-                    return Ve
-                }), n.d(t, "w", function() {
-                    return Ge
-                }), n.d(t, "m", function() {
-                    return He
-                }), n.d(t, "j", function() {
-                    return ze
-                }), n.d(t, "y", function() {
-                    return Ye
-                }), n.d(t, "S", function() {
-                    return Xe
-                }), n.d(t, "r", function() {
-                    return Ke
-                }), n.d(t, "Q", function() {
-                    return $e
-                }), n.d(t, "A", function() {
-                    return st
+                    return Y
+                }), n.d(t, "F", function() {
+                    return q
+                }), n.d(t, "E", function() {
+                    return X
+                }), n.d(t, "q", function() {
+                    return K
+                }), n.d(t, "V", function() {
+                    return Q
+                }), n.d(t, "a", function() {
+                    return Z
+                }), n.d(t, "x", function() {
+                    return J
+                }), n.d(t, "z", function() {
+                    return $
+                }), n.d(t, "I", function() {
+                    return te
+                }), n.d(t, "J", function() {
+                    return ne
+                }), n.d(t, "H", function() {
+                    return oe
+                }), n.d(t, "K", function() {
+                    return ie
+                }), n.d(t, "Z", function() {
+                    return le
                 }), n.d(t, "L", function() {
-                    return lt
-                }), n.d(t, "M", function() {
+                    return fe
+                }), n.d(t, "Y", function() {
+                    return ge
+                }), n.d(t, "p", function() {
+                    return Se
+                }), n.d(t, "o", function() {
+                    return Ae
+                }), n.d(t, "Ea", function() {
+                    return Le
+                }), n.d(t, "D", function() {
+                    return Fe
+                }), n.d(t, "Da", function() {
+                    return We
+                }), n.d(t, "k", function() {
+                    return je
+                }), n.d(t, "w", function() {
+                    return He
+                }), n.d(t, "m", function() {
+                    return Ye
+                }), n.d(t, "j", function() {
+                    return qe
+                }), n.d(t, "y", function() {
+                    return Xe
+                }), n.d(t, "T", function() {
+                    return Qe
+                }), n.d(t, "r", function() {
+                    return Ze
+                }), n.d(t, "R", function() {
+                    return tt
+                }), n.d(t, "A", function() {
                     return ct
+                }), n.d(t, "M", function() {
+                    return ut
+                }), n.d(t, "N", function() {
+                    return dt
                 }), n.d(t, "f", function() {
-                    return gt
+                    return Tt
                 }), n.d(t, "v", function() {
-                    return _t
+                    return Rt
                 }),
                 function(e) {
                     e.CHANNEL_FEED_COMMENT_REPORT = "CHANNEL_FEED_COMMENT_REPORT", e.CHANNEL_FEED_POST_REPORT = "CHANNEL_FEED_POST_REPORT", e.CHAT_REPORT = "CHAT_REPORT", e.CLIP_REPORT = "CLIP_REPORT", e.COLLECTION_REPORT = "COLLECTION_REPORT", e.CURSE_PRIVATE_GROUP = "CURSE_PRIVATE_GROUP", e.CURSE_PUBLIC_GROUP = "CURSE_PUBLIC_GROUP", e.CURSE_WHISPER = "CURSE_WHISPER", e.EVENT_REPORT = "EVENT_REPORT", e.EXTENSION_REPORT = "EXTENSION_REPORT", e.LIVE_UP_REPORT = "LIVE_UP_REPORT", e.RAID_REPORT = "RAID_REPORT", e.ROOM_REPORT = "ROOM_REPORT", e.SINGS_DUET_SEED_REPORT = "SINGS_DUET_SEED_REPORT", e.SINGS_GROUP_BIO_REPORT = "SINGS_GROUP_BIO_REPORT", e.SINGS_GROUP_CHAT_REPORT = "SINGS_GROUP_CHAT_REPORT", e.SINGS_GROUP_NAME_REPORT = "SINGS_GROUP_NAME_REPORT", e.SINGS_VOD_COMMENT_REPORT = "SINGS_VOD_COMMENT_REPORT", e.USER_REPORT = "USER_REPORT", e.VOD_COMMENT_REPORT = "VOD_COMMENT_REPORT", e.VOD_REPORT = "VOD_REPORT", e.WHISPER_REPORT = "WHISPER_REPORT"
@@ -1620,16 +1622,16 @@
                 }(R || (R = {})),
                 function(e) {
                     e.AVAILABLE = "AVAILABLE", e.CANCELLED = "CANCELLED", e.COMPLETED = "COMPLETED", e.LIVE = "LIVE"
-                }(I || (I = {})),
-                function(e) {
-                    e.FIXED_VALUE_OFF = "FIXED_VALUE_OFF", e.NONE = "NONE", e.PERCENT_OFF = "PERCENT_OFF"
                 }(b || (b = {})),
                 function(e) {
+                    e.FIXED_VALUE_OFF = "FIXED_VALUE_OFF", e.NONE = "NONE", e.PERCENT_OFF = "PERCENT_OFF"
+                }(I || (I = {})),
+                function(e) {
                     e.CHEER = "CHEER"
-                }(v || (v = {})),
+                }(O || (O = {})),
                 function(e) {
                     e.CREATED = "CREATED", e.CREATING = "CREATING", e.FAILED = "FAILED"
-                }(O || (O = {})),
+                }(v || (v = {})),
                 function(e) {
                     e.PRIVATE = "PRIVATE", e.PUBLIC = "PUBLIC"
                 }(C || (C = {})),
@@ -1670,275 +1672,281 @@
                     e.NONE = "NONE", e.READ = "READ", e.WRITE = "WRITE"
                 }(w || (w = {})),
                 function(e) {
-                    e.DURATION_INVALID = "DURATION_INVALID", e.FORBIDDEN = "FORBIDDEN", e.TARGET_ALREADY_BANNED = "TARGET_ALREADY_BANNED", e.TARGET_IS_ADMIN = "TARGET_IS_ADMIN", e.TARGET_IS_ANONYMOUS = "TARGET_IS_ANONYMOUS", e.TARGET_IS_BROADCASTER = "TARGET_IS_BROADCASTER", e.TARGET_IS_GLOBAL_MOD = "TARGET_IS_GLOBAL_MOD", e.TARGET_IS_MOD = "TARGET_IS_MOD", e.TARGET_IS_SELF = "TARGET_IS_SELF", e.TARGET_IS_STAFF = "TARGET_IS_STAFF", e.TARGET_IS_VIP = "TARGET_IS_VIP", e.TARGET_NOT_FOUND = "TARGET_NOT_FOUND"
+                    e.ALLOW_MESSAGE = "ALLOW_MESSAGE", e.BAN_USER = "BAN_USER", e.CHANGE_CHANNEL_RULES = "CHANGE_CHANNEL_RULES", e.COMMENT = "COMMENT", e.DENY_MESSAGE = "DENY_MESSAGE", e.INVALID_ACTION = "INVALID_ACTION", e.SET_CHANNEL_MODE = "SET_CHANNEL_MODE", e.TIMEOUT_USER = "TIMEOUT_USER", e.UNBAN_USER = "UNBAN_USER", e.UPDATE_MODERATED_TERMS = "UPDATE_MODERATED_TERMS"
                 }(B || (B = {})),
                 function(e) {
-                    e.FORBIDDEN = "FORBIDDEN", e.SUCCESS = "SUCCESS", e.TARGET_IS_BROADCASTER = "TARGET_IS_BROADCASTER", e.TARGET_IS_MODERATOR = "TARGET_IS_MODERATOR"
+                    e.DURATION_INVALID = "DURATION_INVALID", e.FORBIDDEN = "FORBIDDEN", e.TARGET_ALREADY_BANNED = "TARGET_ALREADY_BANNED", e.TARGET_IS_ADMIN = "TARGET_IS_ADMIN", e.TARGET_IS_ANONYMOUS = "TARGET_IS_ANONYMOUS", e.TARGET_IS_BROADCASTER = "TARGET_IS_BROADCASTER", e.TARGET_IS_GLOBAL_MOD = "TARGET_IS_GLOBAL_MOD", e.TARGET_IS_MOD = "TARGET_IS_MOD", e.TARGET_IS_SELF = "TARGET_IS_SELF", e.TARGET_IS_STAFF = "TARGET_IS_STAFF", e.TARGET_IS_VIP = "TARGET_IS_VIP", e.TARGET_NOT_FOUND = "TARGET_NOT_FOUND"
                 }(F || (F = {})),
                 function(e) {
-                    e.FORBIDDEN = "FORBIDDEN", e.TARGET_NOT_BANNED = "TARGET_NOT_BANNED", e.TARGET_NOT_FOUND = "TARGET_NOT_FOUND"
+                    e.FORBIDDEN = "FORBIDDEN", e.SUCCESS = "SUCCESS", e.TARGET_IS_BROADCASTER = "TARGET_IS_BROADCASTER", e.TARGET_IS_MODERATOR = "TARGET_IS_MODERATOR"
                 }(W || (W = {})),
                 function(e) {
-                    e.EUR = "EUR", e.GBP = "GBP", e.USD = "USD"
+                    e.FORBIDDEN = "FORBIDDEN", e.TARGET_NOT_BANNED = "TARGET_NOT_BANNED", e.TARGET_NOT_FOUND = "TARGET_NOT_FOUND"
                 }(V || (V = {})),
                 function(e) {
-                    e.MONTH = "MONTH", e.ONE_TIME = "ONE_TIME", e.WEEK = "WEEK", e.YEAR = "YEAR"
+                    e.EUR = "EUR", e.GBP = "GBP", e.USD = "USD"
                 }(G || (G = {})),
                 function(e) {
-                    e.CHANSUB = "CHANSUB", e.TEAMSUB = "TEAMSUB", e.TURBO = "TURBO"
+                    e.MONTH = "MONTH", e.ONE_TIME = "ONE_TIME", e.WEEK = "WEEK", e.YEAR = "YEAR"
                 }(j || (j = {})),
                 function(e) {
-                    e.GOOGLE_IAB = "GOOGLE_IAB", e.PRIME = "PRIME", e.RECURLY = "RECURLY", e.XSOLLA_V3 = "XSOLLA_V3", e.ZUORA = "ZUORA"
+                    e.CHANSUB = "CHANSUB", e.TEAMSUB = "TEAMSUB", e.TURBO = "TURBO"
                 }(H || (H = {})),
                 function(e) {
-                    e.ACTIVE = "ACTIVE", e.CANCELLED = "CANCELLED", e.INACTIVE = "INACTIVE"
+                    e.GOOGLE_IAB = "GOOGLE_IAB", e.PRIME = "PRIME", e.RECURLY = "RECURLY", e.XSOLLA_V3 = "XSOLLA_V3", e.ZUORA = "ZUORA"
                 }(z || (z = {})),
                 function(e) {
-                    e.AMAZON = "AMAZON", e.CREDIT_CARD = "CREDIT_CARD", e.GOOGLE_IAB = "GOOGLE_IAB", e.PAYPAL = "PAYPAL"
+                    e.ACTIVE = "ACTIVE", e.CANCELLED = "CANCELLED", e.INACTIVE = "INACTIVE"
                 }(Y || (Y = {})),
                 function(e) {
-                    e.AMERICAN_EXPRESS = "AMERICAN_EXPRESS", e.DISCOVER = "DISCOVER", e.MASTERCARD = "MASTERCARD", e.VISA = "VISA"
+                    e.AMAZON = "AMAZON", e.CREDIT_CARD = "CREDIT_CARD", e.GOOGLE_IAB = "GOOGLE_IAB", e.PAYPAL = "PAYPAL"
                 }(q || (q = {})),
                 function(e) {
-                    e.CATEGORY = "CATEGORY", e.CLIP = "CLIP", e.LIVE_CHANNEL = "LIVE_CHANNEL", e.VOD = "VOD"
+                    e.AMERICAN_EXPRESS = "AMERICAN_EXPRESS", e.DISCOVER = "DISCOVER", e.MASTERCARD = "MASTERCARD", e.VISA = "VISA"
                 }(X || (X = {})),
                 function(e) {
-                    e.ANDROID = "ANDROID", e.IOS = "IOS", e.WEB = "WEB"
+                    e.CATEGORY = "CATEGORY", e.CLIP = "CLIP", e.LIVE_CHANNEL = "LIVE_CHANNEL", e.VOD = "VOD"
                 }(K || (K = {})),
                 function(e) {
-                    e.ACTIVE = "ACTIVE", e.INACTIVE = "INACTIVE", e.REJECTED_PERMISSIONS = "REJECTED_PERMISSIONS"
+                    e.ANDROID = "ANDROID", e.IOS = "IOS", e.WEB = "WEB"
                 }(Q || (Q = {})),
                 function(e) {
-                    e.COMPONENT = "COMPONENT", e.HIDDEN = "HIDDEN", e.PANEL = "PANEL", e.VIDEO_OVERLAY = "VIDEO_OVERLAY"
+                    e.ACTIVE = "ACTIVE", e.INACTIVE = "INACTIVE", e.REJECTED_PERMISSIONS = "REJECTED_PERMISSIONS"
                 }(Z || (Z = {})),
                 function(e) {
-                    e.APPROVED = "APPROVED", e.ASSETS_UPLOADED = "ASSETS_UPLOADED", e.DELETED = "DELETED", e.DEPRECATED = "DEPRECATED", e.IN_REVIEW = "IN_REVIEW", e.IN_TEST = "IN_TEST", e.PENDING_ACTION = "PENDING_ACTION", e.READY_FOR_REVIEW = "READY_FOR_REVIEW", e.REJECTED = "REJECTED", e.RELEASED = "RELEASED", e.UPLOADING = "UPLOADING"
+                    e.COMPONENT = "COMPONENT", e.HIDDEN = "HIDDEN", e.PANEL = "PANEL", e.VIDEO_OVERLAY = "VIDEO_OVERLAY"
                 }(J || (J = {})),
                 function(e) {
-                    e.GAME_COMMERCE = "GAME_COMMERCE", e.GAME_COMMERCE_V2 = "GAME_COMMERCE_V2"
+                    e.APPROVED = "APPROVED", e.ASSETS_UPLOADED = "ASSETS_UPLOADED", e.DELETED = "DELETED", e.DEPRECATED = "DEPRECATED", e.IN_REVIEW = "IN_REVIEW", e.IN_TEST = "IN_TEST", e.PENDING_ACTION = "PENDING_ACTION", e.READY_FOR_REVIEW = "READY_FOR_REVIEW", e.REJECTED = "REJECTED", e.RELEASED = "RELEASED", e.UPLOADING = "UPLOADING"
                 }($ || ($ = {})),
                 function(e) {
-                    e.AFFILIATE = "AFFILIATE", e.CUSTOM_PARTNER = "CUSTOM_PARTNER", e.EXTENSIONS_DEVELOPER = "EXTENSIONS_DEVELOPER", e.PREMIUM_PARTNER = "PREMIUM_PARTNER", e.STANDARD_PARTNER = "STANDARD_PARTNER", e.UNPAID_PARTNER = "UNPAID_PARTNER"
+                    e.GAME_COMMERCE = "GAME_COMMERCE", e.GAME_COMMERCE_V2 = "GAME_COMMERCE_V2"
                 }(ee || (ee = {})),
                 function(e) {
-                    e.AGREEMENT_NOT_STARTED = "AGREEMENT_NOT_STARTED", e.AGREEMENT_PENDING_UPGRADE = "AGREEMENT_PENDING_UPGRADE", e.CANCELED = "CANCELED", e.COMPLETED = "COMPLETED", e.PAYOUT_METHOD_NOT_STARTED = "PAYOUT_METHOD_NOT_STARTED", e.PAYOUT_METHOD_PENDING = "PAYOUT_METHOD_PENDING", e.REGISTRATION_NOT_STARTED = "REGISTRATION_NOT_STARTED", e.REVIEW_PENDING = "REVIEW_PENDING", e.ROYALTY_TAX_INTERVIEW_ACTION_REQUIRED = "ROYALTY_TAX_INTERVIEW_ACTION_REQUIRED", e.ROYALTY_TAX_INTERVIEW_FAILED = "ROYALTY_TAX_INTERVIEW_FAILED", e.ROYALTY_TAX_INTERVIEW_MISMATCH = "ROYALTY_TAX_INTERVIEW_MISMATCH", e.ROYALTY_TAX_INTERVIEW_NOT_STARTED = "ROYALTY_TAX_INTERVIEW_NOT_STARTED", e.ROYALTY_TAX_INTERVIEW_PENDING = "ROYALTY_TAX_INTERVIEW_PENDING", e.SERVICE_TAX_INTERVIEW_ACTION_REQUIRED = "SERVICE_TAX_INTERVIEW_ACTION_REQUIRED", e.SERVICE_TAX_INTERVIEW_FAILED = "SERVICE_TAX_INTERVIEW_FAILED", e.SERVICE_TAX_INTERVIEW_MISMATCH = "SERVICE_TAX_INTERVIEW_MISMATCH", e.SERVICE_TAX_INTERVIEW_NOT_STARTED = "SERVICE_TAX_INTERVIEW_NOT_STARTED", e.SERVICE_TAX_INTERVIEW_PENDING = "SERVICE_TAX_INTERVIEW_PENDING"
+                    e.AFFILIATE = "AFFILIATE", e.CUSTOM_PARTNER = "CUSTOM_PARTNER", e.EXTENSIONS_DEVELOPER = "EXTENSIONS_DEVELOPER", e.PREMIUM_PARTNER = "PREMIUM_PARTNER", e.STANDARD_PARTNER = "STANDARD_PARTNER", e.UNPAID_PARTNER = "UNPAID_PARTNER"
                 }(te || (te = {})),
                 function(e) {
-                    e.FORBIDDEN = "FORBIDDEN", e.INTERNAL_ERROR = "INTERNAL_ERROR", e.INVALID_AGREEMENT_VERSION = "INVALID_AGREEMENT_VERSION", e.UNAUTHENTICATED = "UNAUTHENTICATED"
+                    e.AGREEMENT_NOT_STARTED = "AGREEMENT_NOT_STARTED", e.AGREEMENT_PENDING_UPGRADE = "AGREEMENT_PENDING_UPGRADE", e.CANCELED = "CANCELED", e.COMPLETED = "COMPLETED", e.PAYOUT_METHOD_NOT_STARTED = "PAYOUT_METHOD_NOT_STARTED", e.PAYOUT_METHOD_PENDING = "PAYOUT_METHOD_PENDING", e.REGISTRATION_NOT_STARTED = "REGISTRATION_NOT_STARTED", e.REVIEW_PENDING = "REVIEW_PENDING", e.ROYALTY_TAX_INTERVIEW_ACTION_REQUIRED = "ROYALTY_TAX_INTERVIEW_ACTION_REQUIRED", e.ROYALTY_TAX_INTERVIEW_FAILED = "ROYALTY_TAX_INTERVIEW_FAILED", e.ROYALTY_TAX_INTERVIEW_MISMATCH = "ROYALTY_TAX_INTERVIEW_MISMATCH", e.ROYALTY_TAX_INTERVIEW_NOT_STARTED = "ROYALTY_TAX_INTERVIEW_NOT_STARTED", e.ROYALTY_TAX_INTERVIEW_PENDING = "ROYALTY_TAX_INTERVIEW_PENDING", e.SERVICE_TAX_INTERVIEW_ACTION_REQUIRED = "SERVICE_TAX_INTERVIEW_ACTION_REQUIRED", e.SERVICE_TAX_INTERVIEW_FAILED = "SERVICE_TAX_INTERVIEW_FAILED", e.SERVICE_TAX_INTERVIEW_MISMATCH = "SERVICE_TAX_INTERVIEW_MISMATCH", e.SERVICE_TAX_INTERVIEW_NOT_STARTED = "SERVICE_TAX_INTERVIEW_NOT_STARTED", e.SERVICE_TAX_INTERVIEW_PENDING = "SERVICE_TAX_INTERVIEW_PENDING"
                 }(ne || (ne = {})),
                 function(e) {
-                    e.AFFILIATE = "AFFILIATE", e.EXTENSIONS_DEVELOPER = "EXTENSIONS_DEVELOPER", e.PARTNER = "PARTNER"
+                    e.FORBIDDEN = "FORBIDDEN", e.INTERNAL_ERROR = "INTERNAL_ERROR", e.INVALID_AGREEMENT_VERSION = "INVALID_AGREEMENT_VERSION", e.UNAUTHENTICATED = "UNAUTHENTICATED"
                 }(re || (re = {})),
                 function(e) {
-                    e.CUSTOM = "CUSTOM", e.LEGACY = "LEGACY", e.PREMIUM = "PREMIUM", e.STANDARD = "STANDARD"
+                    e.AFFILIATE = "AFFILIATE", e.EXTENSIONS_DEVELOPER = "EXTENSIONS_DEVELOPER", e.PARTNER = "PARTNER"
                 }(oe || (oe = {})),
                 function(e) {
-                    e.FORBIDDEN = "FORBIDDEN", e.INTERNAL_ERROR = "INTERNAL_ERROR", e.INVALID_FORMAT = "INVALID_FORMAT", e.UNAUTHENTICATED = "UNAUTHENTICATED"
+                    e.CUSTOM = "CUSTOM", e.LEGACY = "LEGACY", e.PREMIUM = "PREMIUM", e.STANDARD = "STANDARD"
                 }(ie || (ie = {})),
                 function(e) {
-                    e.BIRTHDATE = "BIRTHDATE", e.CITY = "CITY", e.COMPANY_NAME = "COMPANY_NAME", e.COUNTRY_CODE = "COUNTRY_CODE", e.EMAIL = "EMAIL", e.FIRST_NAME = "FIRST_NAME", e.LAST_NAME = "LAST_NAME", e.MIDDLE_NAME = "MIDDLE_NAME", e.PARENT_EMAIL = "PARENT_EMAIL", e.PARENT_NAME = "PARENT_NAME", e.POSTAL = "POSTAL", e.STATE_CODE = "STATE_CODE", e.STREET_ADDRESS = "STREET_ADDRESS", e.STREET_ADDRESS_2 = "STREET_ADDRESS_2"
+                    e.FORBIDDEN = "FORBIDDEN", e.INTERNAL_ERROR = "INTERNAL_ERROR", e.INVALID_FORMAT = "INVALID_FORMAT", e.UNAUTHENTICATED = "UNAUTHENTICATED"
                 }(ae || (ae = {})),
                 function(e) {
-                    e.CITY = "CITY", e.COUNTRY = "COUNTRY", e.EMAIL = "EMAIL", e.NAME = "NAME", e.POSTAL = "POSTAL", e.STATE = "STATE", e.STREET_ADDRESS = "STREET_ADDRESS", e.STREET_ADDRESS_2 = "STREET_ADDRESS_2"
+                    e.BIRTHDATE = "BIRTHDATE", e.CITY = "CITY", e.COMPANY_NAME = "COMPANY_NAME", e.COUNTRY_CODE = "COUNTRY_CODE", e.EMAIL = "EMAIL", e.FIRST_NAME = "FIRST_NAME", e.LAST_NAME = "LAST_NAME", e.MIDDLE_NAME = "MIDDLE_NAME", e.PARENT_EMAIL = "PARENT_EMAIL", e.PARENT_NAME = "PARENT_NAME", e.POSTAL = "POSTAL", e.STATE_CODE = "STATE_CODE", e.STREET_ADDRESS = "STREET_ADDRESS", e.STREET_ADDRESS_2 = "STREET_ADDRESS_2"
                 }(se || (se = {})),
                 function(e) {
-                    e.ROYALTY = "ROYALTY", e.SERVICE = "SERVICE"
+                    e.CITY = "CITY", e.COUNTRY = "COUNTRY", e.EMAIL = "EMAIL", e.NAME = "NAME", e.POSTAL = "POSTAL", e.STATE = "STATE", e.STREET_ADDRESS = "STREET_ADDRESS", e.STREET_ADDRESS_2 = "STREET_ADDRESS_2"
                 }(le || (le = {})),
                 function(e) {
-                    e.BROADCASTER = "BROADCASTER", e.EVERYONE = "EVERYONE", e.MODERATOR = "MODERATOR", e.SUBSCRIBER = "SUBSCRIBER"
+                    e.ROYALTY = "ROYALTY", e.SERVICE = "SERVICE"
                 }(ce || (ce = {})),
                 function(e) {
-                    e.MAX_ROOMS_LIMIT_EXCEEDED = "MAX_ROOMS_LIMIT_EXCEEDED", e.NAME_CONTAINS_INVALID_CHARACTERS = "NAME_CONTAINS_INVALID_CHARACTERS", e.NAME_INAPPROPRIATE = "NAME_INAPPROPRIATE", e.NAME_LENGTH_INVALID = "NAME_LENGTH_INVALID", e.NAME_NOT_UNIQUE = "NAME_NOT_UNIQUE", e.ROLES_INVALID = "ROLES_INVALID", e.TOPIC_INAPPROPRIATE = "TOPIC_INAPPROPRIATE", e.TOPIC_LENGTH_INVALID = "TOPIC_LENGTH_INVALID"
+                    e.BROADCASTER = "BROADCASTER", e.EVERYONE = "EVERYONE", e.MODERATOR = "MODERATOR", e.SUBSCRIBER = "SUBSCRIBER"
                 }(ue || (ue = {})),
                 function(e) {
-                    e.ADMIN = "ADMIN", e.BROADCASTER = "BROADCASTER", e.GLOBALMOD = "GLOBALMOD", e.MOD = "MOD", e.REGULAR = "REGULAR", e.STAFF = "STAFF"
+                    e.MAX_ROOMS_LIMIT_EXCEEDED = "MAX_ROOMS_LIMIT_EXCEEDED", e.NAME_CONTAINS_INVALID_CHARACTERS = "NAME_CONTAINS_INVALID_CHARACTERS", e.NAME_INAPPROPRIATE = "NAME_INAPPROPRIATE", e.NAME_LENGTH_INVALID = "NAME_LENGTH_INVALID", e.NAME_NOT_UNIQUE = "NAME_NOT_UNIQUE", e.ROLES_INVALID = "ROLES_INVALID", e.TOPIC_INAPPROPRIATE = "TOPIC_INAPPROPRIATE", e.TOPIC_LENGTH_INVALID = "TOPIC_LENGTH_INVALID"
                 }(de || (de = {})),
                 function(e) {
-                    e.FORBIDDEN = "FORBIDDEN", e.NAME_CONTAINS_INVALID_CHARACTERS = "NAME_CONTAINS_INVALID_CHARACTERS", e.NAME_INAPPROPRIATE = "NAME_INAPPROPRIATE", e.NAME_LENGTH_INVALID = "NAME_LENGTH_INVALID", e.NAME_NOT_UNIQUE = "NAME_NOT_UNIQUE", e.ROLES_INVALID = "ROLES_INVALID", e.ROOM_NOT_FOUND = "ROOM_NOT_FOUND", e.TOPIC_INAPPROPRIATE = "TOPIC_INAPPROPRIATE", e.TOPIC_LENGTH_INVALID = "TOPIC_LENGTH_INVALID"
+                    e.ADMIN = "ADMIN", e.BROADCASTER = "BROADCASTER", e.GLOBALMOD = "GLOBALMOD", e.MOD = "MOD", e.REGULAR = "REGULAR", e.STAFF = "STAFF"
                 }(pe || (pe = {})),
                 function(e) {
-                    e.AUTO_MOD_ENFORCEMENT_FAILED = "AUTO_MOD_ENFORCEMENT_FAILED", e.EMOTE_ONLY_MODE_ENFORCEMENT_FAILED = "EMOTE_ONLY_MODE_ENFORCEMENT_FAILED", e.FORBIDDEN = "FORBIDDEN", e.R9K_MODE_ENFORCEMENT_FAILED = "R9K_MODE_ENFORCEMENT_FAILED", e.RATE_LIMIT_FAILED = "RATE_LIMIT_FAILED", e.SLOW_MODE_ENFORCEMENT_FAILED = "SLOW_MODE_ENFORCEMENT_FAILED", e.SPAM_ENFORCEMENT_FAILED = "SPAM_ENFORCEMENT_FAILED", e.USER_CHAT_BANNED = "USER_CHAT_BANNED", e.USER_CHAT_TIMED_OUT = "USER_CHAT_TIMED_OUT", e.USER_SUSPENDED = "USER_SUSPENDED", e.ZALGO_ENFORCEMENT_FAILED = "ZALGO_ENFORCEMENT_FAILED"
+                    e.FORBIDDEN = "FORBIDDEN", e.NAME_CONTAINS_INVALID_CHARACTERS = "NAME_CONTAINS_INVALID_CHARACTERS", e.NAME_INAPPROPRIATE = "NAME_INAPPROPRIATE", e.NAME_LENGTH_INVALID = "NAME_LENGTH_INVALID", e.NAME_NOT_UNIQUE = "NAME_NOT_UNIQUE", e.ROLES_INVALID = "ROLES_INVALID", e.ROOM_NOT_FOUND = "ROOM_NOT_FOUND", e.TOPIC_INAPPROPRIATE = "TOPIC_INAPPROPRIATE", e.TOPIC_LENGTH_INVALID = "TOPIC_LENGTH_INVALID"
                 }(Ee || (Ee = {})),
                 function(e) {
-                    e.FORBIDDEN = "FORBIDDEN", e.ROOM_NOT_FOUND = "ROOM_NOT_FOUND", e.SLOW_MODE_DURATION_INVALID = "SLOW_MODE_DURATION_INVALID"
+                    e.AUTO_MOD_ENFORCEMENT_FAILED = "AUTO_MOD_ENFORCEMENT_FAILED", e.EMOTE_ONLY_MODE_ENFORCEMENT_FAILED = "EMOTE_ONLY_MODE_ENFORCEMENT_FAILED", e.FORBIDDEN = "FORBIDDEN", e.R9K_MODE_ENFORCEMENT_FAILED = "R9K_MODE_ENFORCEMENT_FAILED", e.RATE_LIMIT_FAILED = "RATE_LIMIT_FAILED", e.SLOW_MODE_ENFORCEMENT_FAILED = "SLOW_MODE_ENFORCEMENT_FAILED", e.SPAM_ENFORCEMENT_FAILED = "SPAM_ENFORCEMENT_FAILED", e.USER_CHAT_BANNED = "USER_CHAT_BANNED", e.USER_CHAT_TIMED_OUT = "USER_CHAT_TIMED_OUT", e.USER_SUSPENDED = "USER_SUSPENDED", e.ZALGO_ENFORCEMENT_FAILED = "ZALGO_ENFORCEMENT_FAILED"
                 }(me || (me = {})),
                 function(e) {
-                    e.DNR_TO_RESUB_NONRECURRING = "DNR_TO_RESUB_NONRECURRING", e.DNR_TO_RESUB_RECURRING = "DNR_TO_RESUB_RECURRING", e.GIFT_TO_PAID = "GIFT_TO_PAID"
+                    e.FORBIDDEN = "FORBIDDEN", e.ROOM_NOT_FOUND = "ROOM_NOT_FOUND", e.SLOW_MODE_DURATION_INVALID = "SLOW_MODE_DURATION_INVALID"
                 }(he || (he = {})),
                 function(e) {
-                    e.CONTENT = "CONTENT", e.TOP = "TOP"
+                    e.DNR_TO_RESUB_NONRECURRING = "DNR_TO_RESUB_NONRECURRING", e.DNR_TO_RESUB_RECURRING = "DNR_TO_RESUB_RECURRING", e.GIFT_TO_PAID = "GIFT_TO_PAID"
                 }(fe || (fe = {})),
                 function(e) {
-                    e.AWAY = "AWAY", e.BUSY = "BUSY", e.OFFLINE = "OFFLINE", e.ONLINE = "ONLINE"
+                    e.CONTENT = "CONTENT", e.TOP = "TOP"
                 }(ge || (ge = {})),
                 function(e) {
-                    e.CLAIMABLE_GIFT_CREATION_ERROR = "CLAIMABLE_GIFT_CREATION_ERROR", e.GIFT_CREATION_ERROR = "GIFT_CREATION_ERROR", e.MAX_GIFTS_FOR_OFFER_EXCEEDED = "MAX_GIFTS_FOR_OFFER_EXCEEDED", e.UNKNOWN_ERROR = "UNKNOWN_ERROR"
+                    e.AWAY = "AWAY", e.BUSY = "BUSY", e.OFFLINE = "OFFLINE", e.ONLINE = "ONLINE"
                 }(_e || (_e = {})),
                 function(e) {
-                    e.CLAIM_CODE = "CLAIM_CODE", e.DIRECT_ENTITLEMENT = "DIRECT_ENTITLEMENT", e.EXTERNAL = "EXTERNAL"
+                    e.CLAIMABLE_GIFT_CREATION_ERROR = "CLAIMABLE_GIFT_CREATION_ERROR", e.GIFT_CREATION_ERROR = "GIFT_CREATION_ERROR", e.MAX_GIFTS_FOR_OFFER_EXCEEDED = "MAX_GIFTS_FOR_OFFER_EXCEEDED", e.UNKNOWN_ERROR = "UNKNOWN_ERROR"
                 }(Te || (Te = {})),
                 function(e) {
-                    e.ERROR_STATUS = "ERROR_STATUS", e.GIFT_CLAIMED = "GIFT_CLAIMED", e.GIFT_CLAIM_PENDING = "GIFT_CLAIM_PENDING"
+                    e.CLAIM_CODE = "CLAIM_CODE", e.DIRECT_ENTITLEMENT = "DIRECT_ENTITLEMENT", e.EXTERNAL = "EXTERNAL"
                 }(Re || (Re = {})),
+                function(e) {
+                    e.ERROR_STATUS = "ERROR_STATUS", e.GIFT_CLAIMED = "GIFT_CLAIMED", e.GIFT_CLAIM_PENDING = "GIFT_CLAIM_PENDING"
+                }(be || (be = {})),
                 function(e) {
                     e.GIFT_NOT_CLAIMABLE = "GIFT_NOT_CLAIMABLE", e.NON_EXISTENT_GIFT = "NON_EXISTENT_GIFT", e.UNKNOWN_ERROR = "UNKNOWN_ERROR", e.USER_DOES_NOT_OWN_GIFT = "USER_DOES_NOT_OWN_GIFT"
                 }(Ie || (Ie = {})),
                 function(e) {
                     e.OFFERS_FAILED_TO_UPDATE = "OFFERS_FAILED_TO_UPDATE", e.UNKNOWN = "UNKNOWN"
-                }(be || (be = {})),
+                }(Oe || (Oe = {})),
                 function(e) {
                     e.TOO_MANY_RECENT_SPENDS = "TOO_MANY_RECENT_SPENDS", e.UNABLE_TO_SPEND = "UNABLE_TO_SPEND"
                 }(ve || (ve = {})),
                 function(e) {
                     e.OFFER_ALREADY_CLAIMED = "OFFER_ALREADY_CLAIMED", e.UNKNOWN = "UNKNOWN"
-                }(Oe || (Oe = {})),
-                function(e) {
-                    e.DEFAULT = "DEFAULT", e.SERIES = "SERIES"
                 }(Ce || (Ce = {})),
                 function(e) {
-                    e.ALL_TIME = "ALL_TIME", e.LAST_DAY = "LAST_DAY", e.LAST_MONTH = "LAST_MONTH", e.LAST_WEEK = "LAST_WEEK", e.TRENDING = "TRENDING"
+                    e.DEFAULT = "DEFAULT", e.SERIES = "SERIES"
                 }(Se || (Se = {})),
                 function(e) {
-                    e.ALL_TIME = "ALL_TIME", e.LAST_DAY = "LAST_DAY", e.LAST_MONTH = "LAST_MONTH", e.LAST_WEEK = "LAST_WEEK"
+                    e.ALL_TIME = "ALL_TIME", e.LAST_DAY = "LAST_DAY", e.LAST_MONTH = "LAST_MONTH", e.LAST_WEEK = "LAST_WEEK", e.TRENDING = "TRENDING"
                 }(Ae || (Ae = {})),
                 function(e) {
-                    e.CREATED_AT_ASC = "CREATED_AT_ASC", e.CREATED_AT_DESC = "CREATED_AT_DESC", e.TRENDING = "TRENDING", e.VIEWS_ASC = "VIEWS_ASC", e.VIEWS_DESC = "VIEWS_DESC"
+                    e.ALL_TIME = "ALL_TIME", e.LAST_DAY = "LAST_DAY", e.LAST_MONTH = "LAST_MONTH", e.LAST_WEEK = "LAST_WEEK"
                 }(Ne || (Ne = {})),
                 function(e) {
-                    e.HIGH = "HIGH", e.LOW = "LOW", e.MEDIUM = "MEDIUM"
+                    e.CREATED_AT_ASC = "CREATED_AT_ASC", e.CREATED_AT_DESC = "CREATED_AT_DESC", e.TRENDING = "TRENDING", e.VIEWS_ASC = "VIEWS_ASC", e.VIEWS_DESC = "VIEWS_DESC"
                 }(ye || (ye = {})),
                 function(e) {
-                    e.NOT_PERMITTED = "NOT_PERMITTED", e.NOT_RESTRICTED = "NOT_RESTRICTED", e.PERMITTED = "PERMITTED", e.TEMPORARY = "TEMPORARY"
+                    e.HEARTHSTONE_VCA = "HEARTHSTONE_VCA", e.OVERWATCH_VCA = "OVERWATCH_VCA", e.PUBG_VCA = "PUBG_VCA", e.STREAM_MARKER = "STREAM_MARKER", e.VCA = "VCA"
                 }(De || (De = {})),
                 function(e) {
-                    e.BODY_EMPTY = "BODY_EMPTY", e.NOT_DELIVERED = "NOT_DELIVERED", e.TARGET_BANNED = "TARGET_BANNED", e.TARGET_RESTRICTED = "TARGET_RESTRICTED"
+                    e.HIGH = "HIGH", e.LOW = "LOW", e.MEDIUM = "MEDIUM"
                 }(Pe || (Pe = {})),
                 function(e) {
-                    e.ALREADY_LINKED = "ALREADY_LINKED", e.CODE_EXPIRED = "CODE_EXPIRED", e.CODE_INCORRECT = "CODE_INCORRECT"
+                    e.NOT_PERMITTED = "NOT_PERMITTED", e.NOT_RESTRICTED = "NOT_RESTRICTED", e.PERMITTED = "PERMITTED", e.TEMPORARY = "TEMPORARY"
                 }(Le || (Le = {})),
                 function(e) {
-                    e.all = "all", e.ps4 = "ps4", e.xbox = "xbox"
+                    e.BODY_EMPTY = "BODY_EMPTY", e.NOT_DELIVERED = "NOT_DELIVERED", e.TARGET_BANNED = "TARGET_BANNED", e.TARGET_RESTRICTED = "TARGET_RESTRICTED"
                 }(Me || (Me = {})),
                 function(e) {
-                    e.COMMUNITY = "COMMUNITY", e.GAME = "GAME"
+                    e.ALREADY_LINKED = "ALREADY_LINKED", e.CODE_EXPIRED = "CODE_EXPIRED", e.CODE_INCORRECT = "CODE_INCORRECT"
                 }(Ue || (Ue = {})),
                 function(e) {
-                    e.ASC = "ASC", e.DESC = "DESC"
+                    e.all = "all", e.ps4 = "ps4", e.xbox = "xbox"
                 }(ke || (ke = {})),
                 function(e) {
-                    e.TIME = "TIME", e.VIEWS = "VIEWS"
+                    e.COMMUNITY = "COMMUNITY", e.GAME = "GAME"
                 }(xe || (xe = {})),
                 function(e) {
-                    e.DEFAULT = "DEFAULT", e.EXTENSION = "EXTENSION"
+                    e.ASC = "ASC", e.DESC = "DESC"
                 }(we || (we = {})),
                 function(e) {
-                    e.ALL_VIDEOS = "ALL_VIDEOS", e.COLLECTION = "COLLECTION", e.GAME_VIDEOS = "GAME_VIDEOS", e.LATEST_BROADCASTS = "LATEST_BROADCASTS", e.LATEST_NON_BROADCASTS = "LATEST_NON_BROADCASTS", e.LONG_VIDEOS = "LONG_VIDEOS", e.SHORT_VIDEOS = "SHORT_VIDEOS", e.TOP_CLIPS = "TOP_CLIPS"
+                    e.TIME = "TIME", e.VIEWS = "VIEWS"
                 }(Be || (Be = {})),
                 function(e) {
-                    e.ALREADY_CLAIMED = "ALREADY_CLAIMED", e.REQUEST_THROTTLED = "REQUEST_THROTTLED", e.UNAUTHORIZED = "UNAUTHORIZED", e.UNKNOWN = "UNKNOWN"
+                    e.DEFAULT = "DEFAULT", e.EXTENSION = "EXTENSION"
                 }(Fe || (Fe = {})),
                 function(e) {
-                    e.BITS_KEY_CODE = "BITS_KEY_CODE"
+                    e.ALL_VIDEOS = "ALL_VIDEOS", e.COLLECTION = "COLLECTION", e.GAME_VIDEOS = "GAME_VIDEOS", e.LATEST_BROADCASTS = "LATEST_BROADCASTS", e.LATEST_NON_BROADCASTS = "LATEST_NON_BROADCASTS", e.LONG_VIDEOS = "LONG_VIDEOS", e.SHORT_VIDEOS = "SHORT_VIDEOS", e.TOP_CLIPS = "TOP_CLIPS"
                 }(We || (We = {})),
                 function(e) {
-                    e.BROADCASTER = "BROADCASTER", e.EDITOR = "EDITOR", e.MODERATOR = "MODERATOR", e.REGULAR = "REGULAR", e.SUBSCRIBER = "SUBSCRIBER"
+                    e.ALREADY_CLAIMED = "ALREADY_CLAIMED", e.REQUEST_THROTTLED = "REQUEST_THROTTLED", e.UNAUTHORIZED = "UNAUTHORIZED", e.UNKNOWN = "UNKNOWN"
                 }(Ve || (Ve = {})),
                 function(e) {
-                    e.ACTIVE = "ACTIVE", e.PENDING = "PENDING", e.REJECTED = "REJECTED", e.UNKNOWN = "UNKNOWN", e.UNSET = "UNSET"
+                    e.BITS_KEY_CODE = "BITS_KEY_CODE"
                 }(Ge || (Ge = {})),
                 function(e) {
-                    e.ACTIVE = "ACTIVE", e.PENDING = "PENDING"
+                    e.BROADCASTER = "BROADCASTER", e.EDITOR = "EDITOR", e.MODERATOR = "MODERATOR", e.REGULAR = "REGULAR", e.SUBSCRIBER = "SUBSCRIBER"
                 }(je || (je = {})),
                 function(e) {
-                    e.BOUNTY_ALREADY_CLAIMED = "BOUNTY_ALREADY_CLAIMED", e.BOUNTY_LIMIT_REACHED = "BOUNTY_LIMIT_REACHED", e.INVALID_PARAMETER = "INVALID_PARAMETER", e.UNKNOWN_ERROR = "UNKNOWN_ERROR"
+                    e.ACTIVE = "ACTIVE", e.PENDING = "PENDING", e.REJECTED = "REJECTED", e.UNKNOWN = "UNKNOWN", e.UNSET = "UNSET"
                 }(He || (He = {})),
                 function(e) {
-                    e.BOUNTY_NOT_LIVE = "BOUNTY_NOT_LIVE", e.INVALID_PARAMETER = "INVALID_PARAMETER", e.UNKNOWN_ERROR = "UNKNOWN_ERROR"
+                    e.ACTIVE = "ACTIVE", e.PENDING = "PENDING"
                 }(ze || (ze = {})),
                 function(e) {
-                    e.PROMPT_FOR_PERMISSIONS = "PROMPT_FOR_PERMISSIONS", e.REQUIRES_CONFIGURATION = "REQUIRES_CONFIGURATION"
+                    e.BOUNTY_ALREADY_CLAIMED = "BOUNTY_ALREADY_CLAIMED", e.BOUNTY_LIMIT_REACHED = "BOUNTY_LIMIT_REACHED", e.INVALID_PARAMETER = "INVALID_PARAMETER", e.UNKNOWN_ERROR = "UNKNOWN_ERROR"
                 }(Ye || (Ye = {})),
                 function(e) {
-                    e.INVALID_PARAMETER = "INVALID_PARAMETER", e.UNAUTHORIZED = "UNAUTHORIZED", e.UNKNOWN_ERROR = "UNKNOWN_ERROR"
+                    e.BOUNTY_NOT_LIVE = "BOUNTY_NOT_LIVE", e.INVALID_PARAMETER = "INVALID_PARAMETER", e.UNKNOWN_ERROR = "UNKNOWN_ERROR"
                 }(qe || (qe = {})),
                 function(e) {
-                    e.BOUNTY_NOT_LIVE = "BOUNTY_NOT_LIVE", e.INVALID_PARAMETER = "INVALID_PARAMETER", e.STREAM_TITLE_BANNED_WORDS = "STREAM_TITLE_BANNED_WORDS", e.STREAM_TITLE_TOO_LONG = "STREAM_TITLE_TOO_LONG", e.UNAUTHORIZED = "UNAUTHORIZED", e.UNKNOWN_ERROR = "UNKNOWN_ERROR"
+                    e.PROMPT_FOR_PERMISSIONS = "PROMPT_FOR_PERMISSIONS", e.REQUIRES_CONFIGURATION = "REQUIRES_CONFIGURATION"
                 }(Xe || (Xe = {})),
                 function(e) {
-                    e.INVITATION_ALREADY_EXISTS = "INVITATION_ALREADY_EXISTS", e.INVITATION_INVALID = "INVITATION_INVALID", e.SQUAD_FULL = "SQUAD_FULL", e.UNAUTHORIZED = "UNAUTHORIZED", e.USER_ALREADY_IN_SQUAD = "USER_ALREADY_IN_SQUAD"
+                    e.INVALID_PARAMETER = "INVALID_PARAMETER", e.UNAUTHORIZED = "UNAUTHORIZED", e.UNKNOWN_ERROR = "UNKNOWN_ERROR"
                 }(Ke || (Ke = {})),
                 function(e) {
-                    e.SQUAD_CANNOT_BE_UPDATED = "SQUAD_CANNOT_BE_UPDATED", e.SQUAD_NOT_FOUND = "SQUAD_NOT_FOUND", e.SQUAD_TOO_FEW_MEMBERS = "SQUAD_TOO_FEW_MEMBERS", e.UNAUTHORIZED = "UNAUTHORIZED"
+                    e.BOUNTY_NOT_LIVE = "BOUNTY_NOT_LIVE", e.INVALID_PARAMETER = "INVALID_PARAMETER", e.STREAM_TITLE_BANNED_WORDS = "STREAM_TITLE_BANNED_WORDS", e.STREAM_TITLE_TOO_LONG = "STREAM_TITLE_TOO_LONG", e.UNAUTHORIZED = "UNAUTHORIZED", e.UNKNOWN_ERROR = "UNKNOWN_ERROR"
                 }(Qe || (Qe = {})),
                 function(e) {
-                    e.UNAUTHORIZED = "UNAUTHORIZED", e.USER_NOT_IN_SQUAD = "USER_NOT_IN_SQUAD"
+                    e.INVITATION_ALREADY_EXISTS = "INVITATION_ALREADY_EXISTS", e.INVITATION_INVALID = "INVITATION_INVALID", e.SQUAD_FULL = "SQUAD_FULL", e.UNAUTHORIZED = "UNAUTHORIZED", e.USER_ALREADY_IN_SQUAD = "USER_ALREADY_IN_SQUAD"
                 }(Ze || (Ze = {})),
                 function(e) {
-                    e.UNAUTHORIZED = "UNAUTHORIZED", e.USER_NOT_IN_SQUAD = "USER_NOT_IN_SQUAD"
+                    e.SQUAD_CANNOT_BE_UPDATED = "SQUAD_CANNOT_BE_UPDATED", e.SQUAD_NOT_FOUND = "SQUAD_NOT_FOUND", e.SQUAD_TOO_FEW_MEMBERS = "SQUAD_TOO_FEW_MEMBERS", e.UNAUTHORIZED = "UNAUTHORIZED"
                 }(Je || (Je = {})),
                 function(e) {
-                    e.ACCEPTED = "ACCEPTED", e.DELETED = "DELETED", e.PENDING = "PENDING", e.REJECTED = "REJECTED", e.UNKNOWN = "UNKNOWN"
+                    e.UNAUTHORIZED = "UNAUTHORIZED", e.USER_NOT_IN_SQUAD = "USER_NOT_IN_SQUAD"
                 }($e || ($e = {})),
                 function(e) {
-                    e.CHANNEL_NOT_FOUND = "CHANNEL_NOT_FOUND", e.TARGET_USER_ALREADY_EDITOR = "TARGET_USER_ALREADY_EDITOR", e.TARGET_USER_NOT_FOUND = "TARGET_USER_NOT_FOUND"
+                    e.UNAUTHORIZED = "UNAUTHORIZED", e.USER_NOT_IN_SQUAD = "USER_NOT_IN_SQUAD"
                 }(et || (et = {})),
                 function(e) {
-                    e.CHANNEL_NOT_FOUND = "CHANNEL_NOT_FOUND", e.TARGET_USER_NOT_FOUND = "TARGET_USER_NOT_FOUND"
+                    e.ACCEPTED = "ACCEPTED", e.DELETED = "DELETED", e.PENDING = "PENDING", e.REJECTED = "REJECTED", e.UNKNOWN = "UNKNOWN"
                 }(tt || (tt = {})),
                 function(e) {
-                    e.BASELINE = "BASELINE", e.HIGH = "HIGH", e.MAIN = "MAIN"
+                    e.CHANNEL_NOT_FOUND = "CHANNEL_NOT_FOUND", e.TARGET_USER_ALREADY_EDITOR = "TARGET_USER_ALREADY_EDITOR", e.TARGET_USER_NOT_FOUND = "TARGET_USER_NOT_FOUND"
                 }(nt || (nt = {})),
                 function(e) {
-                    e.CSGO_SKILL = "CSGO_SKILL", e.LOL_SUMMONER_RANK = "LOL_SUMMONER_RANK", e.RELEVANCE = "RELEVANCE", e.VIEWER_COUNT = "VIEWER_COUNT"
+                    e.CHANNEL_NOT_FOUND = "CHANNEL_NOT_FOUND", e.TARGET_USER_NOT_FOUND = "TARGET_USER_NOT_FOUND"
                 }(rt || (rt = {})),
                 function(e) {
-                    e.HYPE = "HYPE", e.STARTTIME = "STARTTIME"
+                    e.BASELINE = "BASELINE", e.HIGH = "HIGH", e.MAIN = "MAIN"
                 }(ot || (ot = {})),
                 function(e) {
-                    e.PREMIERE = "PREMIERE", e.SEGMENT = "SEGMENT", e.SINGLE = "SINGLE", e.TIMETABLE = "TIMETABLE"
+                    e.CSGO_SKILL = "CSGO_SKILL", e.LOL_SUMMONER_RANK = "LOL_SUMMONER_RANK", e.RELEVANCE = "RELEVANCE", e.VIEWER_COUNT = "VIEWER_COUNT"
                 }(it || (it = {})),
                 function(e) {
-                    e.CANCELLED = "CANCELLED", e.FAILED = "FAILED", e.SCHEDULED = "SCHEDULED", e.STARTED = "STARTED", e.SUCCESS = "SUCCESS", e.UNKNOWN = "UNKNOWN", e.UNSCHEDULED = "UNSCHEDULED"
+                    e.HYPE = "HYPE", e.STARTTIME = "STARTTIME"
                 }(at || (at = {})),
                 function(e) {
-                    e.ALL = "ALL", e.LIVE = "LIVE"
+                    e.PREMIERE = "PREMIERE", e.SEGMENT = "SEGMENT", e.SINGLE = "SINGLE", e.TIMETABLE = "TIMETABLE"
                 }(st || (st = {})),
                 function(e) {
-                    e.ALREADY_WATCHED = "ALREADY_WATCHED", e.NOT_INTERESTED = "NOT_INTERESTED", e.OFFENSIVE = "OFFENSIVE", e.OTHER = "OTHER", e.UNSPECIFIED = "UNSPECIFIED"
+                    e.CANCELLED = "CANCELLED", e.FAILED = "FAILED", e.SCHEDULED = "SCHEDULED", e.STARTED = "STARTED", e.SUCCESS = "SUCCESS", e.UNKNOWN = "UNKNOWN", e.UNSCHEDULED = "UNSCHEDULED"
                 }(lt || (lt = {})),
                 function(e) {
-                    e.CATEGORY = "CATEGORY", e.CHANNEL = "CHANNEL", e.SHELF = "SHELF", e.UNSPECIFIED = "UNSPECIFIED", e.VOD = "VOD"
+                    e.ALL = "ALL", e.LIVE = "LIVE"
                 }(ct || (ct = {})),
                 function(e) {
-                    e.PRICE_ASC = "PRICE_ASC", e.PRICE_DESC = "PRICE_DESC", e.PURCHASE_DATE_ASC = "PURCHASE_DATE_ASC", e.PURCHASE_DATE_DESC = "PURCHASE_DATE_DESC"
+                    e.ALREADY_WATCHED = "ALREADY_WATCHED", e.NOT_INTERESTED = "NOT_INTERESTED", e.OFFENSIVE = "OFFENSIVE", e.OTHER = "OTHER", e.UNSPECIFIED = "UNSPECIFIED"
                 }(ut || (ut = {})),
                 function(e) {
-                    e.ALL = "ALL", e.SUBSCRIPTIONS = "SUBSCRIPTIONS"
+                    e.CATEGORY = "CATEGORY", e.CHANNEL = "CHANNEL", e.SHELF = "SHELF", e.UNSPECIFIED = "UNSPECIFIED", e.VOD = "VOD"
                 }(dt || (dt = {})),
                 function(e) {
-                    e.SUBSCRIPTION = "SUBSCRIPTION"
+                    e.PRICE_ASC = "PRICE_ASC", e.PRICE_DESC = "PRICE_DESC", e.PURCHASE_DATE_ASC = "PURCHASE_DATE_ASC", e.PURCHASE_DATE_DESC = "PURCHASE_DATE_DESC"
                 }(pt || (pt = {})),
                 function(e) {
-                    e.MONKEYS = "MONKEYS", e.PURPLE = "PURPLE", e.ROBOTS = "ROBOTS"
+                    e.ALL = "ALL", e.SUBSCRIPTIONS = "SUBSCRIPTIONS"
                 }(Et || (Et = {})),
                 function(e) {
-                    e.ALL = "ALL", e.GIFT = "GIFT", e.PLATFORM = "PLATFORM"
+                    e.SUBSCRIPTION = "SUBSCRIPTION"
                 }(mt || (mt = {})),
                 function(e) {
-                    e.INVALID_USER_ID = "INVALID_USER_ID", e.UNAUTHORIZED = "UNAUTHORIZED"
+                    e.MONKEYS = "MONKEYS", e.PURPLE = "PURPLE", e.ROBOTS = "ROBOTS"
                 }(ht || (ht = {})),
                 function(e) {
-                    e.DELETED = "DELETED", e.PENDING_REVIEW = "PENDING_REVIEW", e.PENDING_REVIEW_SPAM = "PENDING_REVIEW_SPAM", e.PUBLISHED = "PUBLISHED", e.UNPUBLISHED = "UNPUBLISHED"
+                    e.ALL = "ALL", e.GIFT = "GIFT", e.PLATFORM = "PLATFORM"
                 }(ft || (ft = {})),
                 function(e) {
-                    e.APPROVED = "APPROVED", e.COMPLETED = "COMPLETED", e.LIVE = "LIVE", e.PENDING = "PENDING", e.REJECTED = "REJECTED"
+                    e.INVALID_USER_ID = "INVALID_USER_ID", e.UNAUTHORIZED = "UNAUTHORIZED"
                 }(gt || (gt = {})),
                 function(e) {
-                    e.ITEM = "ITEM", e.LINK_NOTIFICATION = "LINK_NOTIFICATION"
+                    e.DELETED = "DELETED", e.PENDING_REVIEW = "PENDING_REVIEW", e.PENDING_REVIEW_SPAM = "PENDING_REVIEW_SPAM", e.PUBLISHED = "PUBLISHED", e.UNPUBLISHED = "UNPUBLISHED"
                 }(_t || (_t = {})),
                 function(e) {
+                    e.APPROVED = "APPROVED", e.COMPLETED = "COMPLETED", e.LIVE = "LIVE", e.PENDING = "PENDING", e.REJECTED = "REJECTED"
+                }(Tt || (Tt = {})),
+                function(e) {
+                    e.ITEM = "ITEM", e.LINK_NOTIFICATION = "LINK_NOTIFICATION"
+                }(Rt || (Rt = {})),
+                function(e) {
                     e.SERVICE_DEPENDENCY_FAILURE = "SERVICE_DEPENDENCY_FAILURE", e.UNKNOWN = "UNKNOWN", e.USER_UNAUTHORIZED = "USER_UNAUTHORIZED"
-                }(Tt || (Tt = {}))
+                }(bt || (bt = {}))
         },
         Fxe2: function(e, t, n) {
             "use strict";
@@ -2338,13 +2346,13 @@
                 _ = n("DMoW"),
                 T = n("2xye"),
                 R = n("3CMh"),
-                I = n("0Log"),
-                b = n("geRD"),
-                v = n("/aPz"),
-                O = n("H31v");
+                b = n("0Log"),
+                I = n("geRD"),
+                O = n("/aPz"),
+                v = n("H31v");
 
             function C(e, t, n) {
-                Object(b.e)(e, void 0, function(e) {
+                Object(I.e)(e, void 0, function(e) {
                     return e ? (e.currentUser && e.currentUser.bitsBalance && (e.currentUser.bitsBalance = n), e) : e
                 }, function() {
                     return !t
@@ -2629,10 +2637,10 @@
                 Z = Object(m.compose)(Object(X.a)(function(e) {
                     return function(e, t, n) {
                         return {
-                            topic: n ? Object(v.E)(n) : "",
-                            type: I.PubsubMessageType.UserBitsBalanceUpdate,
+                            topic: n ? Object(O.E)(n) : "",
+                            type: b.PubsubMessageType.UserBitsBalanceUpdate,
                             mutator: function(e, t) {
-                                return t && e.message_type === O.b.Balance ? (t.currentUser && e.data && (t.currentUser.bitsBalance = e.data.balance), t) : t
+                                return t && e.message_type === v.b.Balance ? (t.currentUser && e.data && (t.currentUser.bitsBalance = e.data.balance), t) : t
                             },
                             skip: !t || !n,
                             query: e
@@ -3484,7 +3492,7 @@
                                 o = e.name;
                             t.props.isLoggedIn ? t.props.showReportExtensionModal({
                                 reportContext: {
-                                    contentType: _.N.EXTENSION_REPORT,
+                                    contentType: _.O.EXTENSION_REPORT,
                                     contentID: n + "-" + r,
                                     targetUserID: t.props.channelID
                                 },
@@ -4331,26 +4339,26 @@
                 _ = n("2xye"),
                 T = n("GnwI"),
                 R = n("QVaV"),
-                I = n("Ue10"),
-                b = (n("MPK0"), "report-wizard-block"),
-                v = "report-wizard-unblock",
-                O = function(e) {
+                b = n("Ue10"),
+                I = (n("MPK0"), "report-wizard-block"),
+                O = "report-wizard-unblock",
+                v = function(e) {
                     function t() {
                         var t = null !== e && e.apply(this, arguments) || this;
                         return t.state = {
                             userBlocked: t.props.userBlocked || !1
                         }, t.renderBlock = function() {
-                            return a.createElement(I.U, {
+                            return a.createElement(b.U, {
                                 hoverUnderlineNone: !0,
                                 onClick: t.handleBlock,
-                                "data-test-selector": b
-                            }, a.createElement(I.Ya, {
-                                display: I.X.Flex,
-                                alignItems: I.f.Center
-                            }, a.createElement(I.tb, {
-                                type: I.vb.Brand,
-                                asset: I.ub.Ban
-                            }), a.createElement(I.Ya, {
+                                "data-test-selector": I
+                            }, a.createElement(b.Ya, {
+                                display: b.X.Flex,
+                                alignItems: b.f.Center
+                            }, a.createElement(b.tb, {
+                                type: b.vb.Brand,
+                                asset: b.ub.Ban
+                            }), a.createElement(b.Ya, {
                                 margin: {
                                     left: .5
                                 }
@@ -4358,27 +4366,27 @@
                                 user: t.displayName()
                             }, "ReportWizardBlockActions"))))
                         }, t.renderUnblock = function() {
-                            return a.createElement(I.Ya, {
+                            return a.createElement(b.Ya, {
                                 className: "reporting-wizard__block-actions",
-                                display: I.X.Flex,
-                                alignItems: I.f.Center
-                            }, a.createElement(I.tb, {
-                                type: I.vb.Success,
-                                asset: I.ub.FollowCheck
-                            }), a.createElement(I.Ya, {
+                                display: b.X.Flex,
+                                alignItems: b.f.Center
+                            }, a.createElement(b.tb, {
+                                type: b.vb.Success,
+                                asset: b.ub.FollowCheck
+                            }), a.createElement(b.Ya, {
                                 margin: {
                                     right: 1
                                 }
-                            }, a.createElement(I.W, {
+                            }, a.createElement(b.W, {
                                 className: "block-user__success",
-                                type: I.Wb.Span
+                                type: b.Wb.Span
                             }, Object(c.d)("{user} blocked", {
                                 user: t.displayName()
-                            }, "ReportWizardBlockActions"))), a.createElement(I.U, {
+                            }, "ReportWizardBlockActions"))), a.createElement(b.U, {
                                 hoverUnderlineNone: !0,
                                 onClick: t.handleUnblock,
-                                "data-test-selector": v
-                            }, a.createElement(I.Ya, {
+                                "data-test-selector": O
+                            }, a.createElement(b.Ya, {
                                 margin: {
                                     left: .5
                                 }
@@ -4404,7 +4412,7 @@
                     return i.__extends(t, e), t.prototype.render = function() {
                         var e = this.state.userBlocked ? this.renderUnblock() : this.renderBlock(),
                             t = Object(R.a)(this.props.targetUser.login, this.props.targetUser.displayName, !0);
-                        return a.createElement(I.Fb, {
+                        return a.createElement(b.Fb, {
                             borderTop: !0,
                             padding: {
                                 y: 1
@@ -4412,18 +4420,18 @@
                             margin: {
                                 top: 1
                             }
-                        }, a.createElement(I.Ya, null, Object(c.d)("Would you like to block {user}?", {
+                        }, a.createElement(b.Ya, null, Object(c.d)("Would you like to block {user}?", {
                             user: t
-                        }, "ReportWizardBlockActions")), a.createElement(I.Fb, {
-                            color: I.O.Alt2,
+                        }, "ReportWizardBlockActions")), a.createElement(b.Fb, {
+                            color: b.O.Alt2,
                             margin: {
                                 y: 1
                             }
-                        }, a.createElement(I.fc, {
-                            baseFontSize: I.Ca.Size6
+                        }, a.createElement(b.fc, {
+                            baseFontSize: b.Ca.Size6
                         }, a.createElement("p", null, Object(c.d)("Blocking {user} will:", {
                             user: t
-                        }, "ReportWizardBlockActions")), a.createElement("ul", null, a.createElement("li", null, Object(c.d)("Prevent them from sending you whispers", "ReportWizardBlockActions")), a.createElement("li", null, Object(c.d)("Prevent them from hosting you", "ReportWizardBlockActions")), a.createElement("li", null, Object(c.d)("Prevent them from adding you as a friend", "ReportWizardBlockActions")), a.createElement("li", null, Object(c.d)("Filter their messages out of chats you don’t moderate", "ReportWizardBlockActions"))))), a.createElement(I.Ya, {
+                        }, "ReportWizardBlockActions")), a.createElement("ul", null, a.createElement("li", null, Object(c.d)("Prevent them from sending you whispers", "ReportWizardBlockActions")), a.createElement("li", null, Object(c.d)("Prevent them from hosting you", "ReportWizardBlockActions")), a.createElement("li", null, Object(c.d)("Prevent them from adding you as a friend", "ReportWizardBlockActions")), a.createElement("li", null, Object(c.d)("Filter their messages out of chats you don’t moderate", "ReportWizardBlockActions"))))), a.createElement(b.Ya, {
                             margin: {
                                 top: 1
                             }
@@ -4936,7 +4944,7 @@
                             return Object(c.d)("In a whisper (private message)", "ReportModalWizard")
                         },
                         value: "whisper",
-                        reportContext: g.N.WHISPER_REPORT
+                        reportContext: g.O.WHISPER_REPORT
                     },
                     whisper_more_options: {
                         getTitle: S.moreOptions,
@@ -5115,14 +5123,14 @@
                         }, t
                     }
                     return i.__extends(t, e), t.prototype.render = function() {
-                        var e = this.props.currentCard.getDescription ? a.createElement(I.Ya, {
+                        var e = this.props.currentCard.getDescription ? a.createElement(b.Ya, {
                             padding: {
                                 bottom: 1
                             }
                         }, this.props.currentCard.getDescription()) : null;
-                        return a.createElement(I.Ya, {
+                        return a.createElement(b.Ya, {
                             className: "reporting-wizard-card"
-                        }, e, a.createElement(I.Ea, {
+                        }, e, a.createElement(b.Ea, {
                             label: this.props.currentCard.getLabel ? this.props.currentCard.getLabel() : ""
                         }, this.renderCardItems()))
                     }, t.prototype.renderCardItems = function() {
@@ -5134,43 +5142,43 @@
                         }).map(function(t, n) {
                             switch (t.type) {
                                 case o.Text:
-                                    return a.createElement(I.Ya, {
+                                    return a.createElement(b.Ya, {
                                         key: n,
                                         padding: {
                                             bottom: 1
                                         }
                                     }, t.getTitle());
                                 case o.Link:
-                                    return a.createElement(I.Ya, {
+                                    return a.createElement(b.Ya, {
                                         key: n,
                                         padding: {
                                             bottom: 1
                                         }
-                                    }, a.createElement(I.U, {
+                                    }, a.createElement(b.U, {
                                         to: t.value,
                                         targetBlank: !0
-                                    }, a.createElement(I.Ya, {
-                                        display: I.X.Flex
-                                    }, a.createElement(I.Ya, {
-                                        display: I.X.Inline,
+                                    }, a.createElement(b.Ya, {
+                                        display: b.X.Flex
+                                    }, a.createElement(b.Ya, {
+                                        display: b.X.Inline,
                                         padding: {
                                             right: .5
                                         }
-                                    }, a.createElement(I.tb, {
-                                        asset: I.ub.Document
+                                    }, a.createElement(b.tb, {
+                                        asset: b.ub.Document
                                     })), t.getTitle())));
                                 case o.Textarea:
                                     var r = t.value ? e.props.userTextInputs[t.value] : void 0,
                                         i = t.required && (!r || !!r && 0 === r.trim().length);
-                                    return a.createElement(I.Ya, {
+                                    return a.createElement(b.Ya, {
                                         key: n,
                                         padding: {
                                             bottom: 1
                                         }
-                                    }, a.createElement(I.Ea, {
+                                    }, a.createElement(b.Ea, {
                                         label: t.getTitle(),
                                         labelOptional: t.required ? "" : Object(c.d)("Optional", "ReportModalWizardCard")
-                                    }, a.createElement(I.Tb, {
+                                    }, a.createElement(b.Tb, {
                                         onChange: e.onChange,
                                         rows: t.rows || 3,
                                         name: t.value,
@@ -5180,12 +5188,12 @@
                                     })));
                                 case o.MultipleChoice:
                                 default:
-                                    return a.createElement(I.Ya, {
+                                    return a.createElement(b.Ya, {
                                         key: n,
                                         padding: {
                                             y: .5
                                         }
-                                    }, a.createElement(I.qb, {
+                                    }, a.createElement(b.qb, {
                                         checked: !!e.props.currentSelection && e.props.currentSelection.value === t.value,
                                         onChange: e.onSelect,
                                         label: t.getTitle(e.props.targetUser.displayName),
@@ -5609,11 +5617,11 @@
                             targetUnknown: !1,
                             reportContext: t.props.reportContentType
                         }, t.renderPrimer = function() {
-                            return a.createElement(I.Ya, {
+                            return a.createElement(b.Ya, {
                                 margin: {
                                     top: 1
                                 }
-                            }, a.createElement(I.W, null, Object(c.d)("We are going to ask you a few questions to help us investigate your report quickly and accurately.", "ReportModalWizard")))
+                            }, a.createElement(b.W, null, Object(c.d)("We are going to ask you a few questions to help us investigate your report quickly and accurately.", "ReportModalWizard")))
                         }, t.renderButtons = function() {
                             var e = Object(c.d)("Close", "ReportModalWizard"),
                                 n = t.handleClose,
@@ -5627,26 +5635,26 @@
                                 case C.Confirm:
                                     e = Object(c.d)("Submit Report", "ReportModalWizard"), n = t.handleSubmit, o = !t.state.userTextInput, r = ae
                             }
-                            return a.createElement(I.Ya, null, i, a.createElement(I.z, {
+                            return a.createElement(b.Ya, null, i, a.createElement(b.z, {
                                 onClick: n,
                                 disabled: o,
                                 "data-test-selector": r
-                            }, a.createElement(I.Ya, {
+                            }, a.createElement(b.Ya, {
                                 padding: {
                                     x: 1
                                 }
                             }, e)))
                         }, t.renderBack = function() {
-                            return a.createElement(I.Ya, {
+                            return a.createElement(b.Ya, {
                                 margin: {
                                     right: 1
                                 },
-                                display: I.X.InlineBlock
-                            }, a.createElement(I.z, {
-                                type: I.F.Hollow,
+                                display: b.X.InlineBlock
+                            }, a.createElement(b.z, {
+                                type: b.F.Hollow,
                                 onClick: t.handleBack,
                                 "data-test-selector": re
-                            }, a.createElement(I.Ya, {
+                            }, a.createElement(b.Ya, {
                                 padding: {
                                     x: 1
                                 }
@@ -5799,13 +5807,13 @@
                     return i.__extends(t, e), t.prototype.componentWillUnmount = function() {
                         this.state.modalCloseTracked || this.props.trackClose(L.Close, this.state.currentCard.value, this.getChoiceIndex())
                     }, t.prototype.render = function() {
-                        var e = this.state.currentCard.type === C.Info && this.state.currentCard.blockPrompt ? a.createElement(O, {
+                        var e = this.state.currentCard.type === C.Info && this.state.currentCard.blockPrompt ? a.createElement(v, {
                                 targetUser: this.props.targetUser,
                                 onBlock: this.props.onBlock,
                                 onUnblock: this.props.onUnblock,
                                 userBlocked: this.props.userBlocked
                             }) : null,
-                            t = this.state.error ? a.createElement(I.Fb, {
+                            t = this.state.error ? a.createElement(b.Fb, {
                                 fullWidth: !0,
                                 margin: {
                                     bottom: 1
@@ -5814,19 +5822,19 @@
                                 className: "reporting__error-container"
                             }, this.state.error) : null,
                             n = this.state.prevCards.length || this.state.currentCard.type === C.Info ? null : this.renderPrimer();
-                        return a.createElement(I.Fb, {
+                        return a.createElement(b.Fb, {
                             className: "reporting-wizard",
-                            display: I.X.Flex,
+                            display: b.X.Flex,
                             margin: {
                                 x: 1
                             },
-                            flexDirection: I.Aa.Column,
+                            flexDirection: b.Aa.Column,
                             fullHeight: !0,
                             "data-test-card-value": this.state.currentCard.value
-                        }, t, a.createElement(I.W, {
+                        }, t, a.createElement(b.W, {
                             bold: !0,
-                            fontSize: I.Ca.Size4
-                        }, this.getTitle()), n, a.createElement(I.Ya, {
+                            fontSize: b.Ca.Size4
+                        }, this.getTitle()), n, a.createElement(b.Ya, {
                             margin: {
                                 y: 1
                             }
@@ -5869,7 +5877,7 @@
                             return i.__generator(this, function(i) {
                                 switch (i.label) {
                                     case 0:
-                                        if (n = r === g.N.WHISPER_REPORT ? r : this.props.reportContext.contentType, o = g.N[n], null === (a = {
+                                        if (n = r === g.O.WHISPER_REPORT ? r : this.props.reportContext.contentType, o = g.O[n], null === (a = {
                                                 description: t,
                                                 reason: e,
                                                 content: o,
@@ -5965,14 +5973,14 @@
                 }, t.prototype.componentWillUnmount = function() {
                     this.handleClose(), this.state.showWizard || this.trackClose()
                 }, t.prototype.render = function() {
-                    if (this.props.data.error) return a.createElement(I.Ya, {
+                    if (this.props.data.error) return a.createElement(b.Ya, {
                         margin: {
                             bottom: 1
                         }
-                    }, a.createElement(I.W, {
-                        fontSize: I.Ca.Size5
+                    }, a.createElement(b.W, {
+                        fontSize: b.Ca.Size5
                     }, Object(c.d)("There was an unexpected error. Please refresh the page and try again", "ReportUser")));
-                    if (this.props.data.loading) return a.createElement(I.jb, {
+                    if (this.props.data.loading) return a.createElement(b.jb, {
                         lineCount: 3
                     });
                     if (this.props.data.targetUser) {
@@ -5985,7 +5993,7 @@
                             title: this.props.title,
                             defaultDescription: this.props.defaultDescription
                         };
-                        return this.state.showWizard ? this.props.data.loading ? a.createElement(I.ab, null) : a.createElement(se, i.__assign({}, e, {
+                        return this.state.showWizard ? this.props.data.loading ? a.createElement(b.ab, null) : a.createElement(se, i.__assign({}, e, {
                             user: this.props.sessionUser,
                             onBlock: this.onBlock,
                             onUnblock: this.onUnblock,
@@ -5997,12 +6005,12 @@
                             targetUser: this.props.data.targetUser
                         }))
                     }
-                    return a.createElement(I.Ya, {
+                    return a.createElement(b.Ya, {
                         margin: {
                             bottom: 1
                         }
-                    }, a.createElement(I.W, {
-                        fontSize: I.Ca.Size5
+                    }, a.createElement(b.W, {
+                        fontSize: b.Ca.Size5
                     }, Object(c.d)("The user you are trying to report does not exist", "ReportUser")))
                 }, Object.defineProperty(t.prototype, "userBlocked", {
                     get: function() {
@@ -6086,12 +6094,12 @@
                         }
                     }
                 }))(T),
-                I = n("Ue10"),
-                b = n("1+HG");
+                b = n("Ue10"),
+                I = n("1+HG");
             ! function(e) {
                 e.PopoutExtensionPageRootLayout = "popout-extension-page__root-layout"
             }(r || (r = {}));
-            var v = function(e) {
+            var O = function(e) {
                     function t() {
                         var t = null !== e && e.apply(this, arguments) || this;
                         return t.state = {
@@ -6119,19 +6127,19 @@
                             n = this.props.match.params.extensionID.split("-"),
                             o = n[0],
                             s = n[1];
-                        return a.createElement(I.Ya, {
+                        return a.createElement(b.Ya, {
                             "data-test-selector": r.PopoutExtensionPageRootLayout,
                             className: Object(u.b)(this.state.theme),
-                            display: I.X.Flex,
+                            display: b.X.Flex,
                             fullHeight: !0,
                             fullWidth: !0
-                        }, a.createElement(E.b, null), a.createElement(m.a, null), a.createElement(I.Fb, {
-                            background: I.r.Alt2,
-                            color: I.O.Base,
-                            display: I.X.Flex,
+                        }, a.createElement(E.b, null), a.createElement(m.a, null), a.createElement(b.Fb, {
+                            background: b.r.Alt2,
+                            color: b.O.Base,
+                            display: b.X.Flex,
                             flexGrow: 0,
                             flexShrink: 0,
-                            overflow: I.db.Hidden,
+                            overflow: b.db.Hidden,
                             fullHeight: !0,
                             fullWidth: !0
                         }, a.createElement(R, {
@@ -6146,11 +6154,11 @@
                         })))
                     }, t
                 }(a.Component),
-                O = Object(s.compose)(Object(h.b)("PopoutExtensionPage", {
+                v = Object(s.compose)(Object(h.b)("PopoutExtensionPage", {
                     destination: d.a.ExtensionsPopout
                 }), Object(c.a)({
                     location: p.PageviewLocation.ExtensionsPopout
-                }), Object(l.a)(b, {
+                }), Object(l.a)(I, {
                     name: "userQuery",
                     options: function(e) {
                         return {
@@ -6159,9 +6167,9 @@
                             }
                         }
                     }
-                }))(v);
+                }))(O);
             n.d(t, "PopoutExtensionPage", function() {
-                return O
+                return v
             })
         },
         eDVu: function(e, t, n) {
@@ -6242,10 +6250,10 @@
                 _ = n("AKMF"),
                 T = n("TSYQ"),
                 R = n("1hWM"),
-                I = n("imBb"),
-                b = n("cr+I"),
-                v = n("/7QA"),
-                O = n("Fxe2"),
+                b = n("imBb"),
+                I = n("cr+I"),
+                O = n("/7QA"),
+                v = n("Fxe2"),
                 C = n("f00E"),
                 S = n("vRsq"),
                 A = n("2xye"),
@@ -6281,8 +6289,8 @@
                     showInfo: !1,
                     showtheatre: !1,
                     trackingProperties: {
-                        client_build_id: v.p.config.buildID,
-                        client_app: v.p.session.clientApp
+                        client_build_id: O.p.config.buildID,
+                        client_app: O.p.session.clientApp
                     },
                     width: "100%",
                     oauth_token: "",
@@ -6291,7 +6299,7 @@
                 F = function(e) {
                     function t(t) {
                         var n = e.call(this, t) || this;
-                        return n.lastGDPR = w, n.hasInitializedOffsets = !1, n.logger = v.k.withCategory("video-player"), n.initializePlayer = function(e) {
+                        return n.lastGDPR = w, n.hasInitializedOffsets = !1, n.logger = O.k.withCategory("video-player"), n.initializePlayer = function(e) {
                             var t = a.__assign({}, B, {
                                 allowfullscreen: !n.props.disableFullscreen,
                                 autoplay: !n.props.paused,
@@ -6300,21 +6308,21 @@
                                 muted: n.props.muted,
                                 showtheatre: !n.props.disableTheatreButton,
                                 trackingProperties: a.__assign({}, B.trackingProperties, {
-                                    platform: v.o.getPlatform()
+                                    platform: O.o.getPlatform()
                                 })
                             });
                             n.playerBuffering = n.registerBufferingEvent(!!n.props.paused), n.playerPlayed = n.registerPlayedEvent(!!n.props.paused);
                             var r = n.props.playerTypeOverride;
-                            r && (t.player = r, n.playerType = r, r === L.f.ClipsEditing && (t.muted = !0)), n.props.channelLogin && (t.channel = n.props.channelLogin, n.lastSetChannel = n.props.channelLogin), n.props.collectionID && (t.collection = n.props.collectionID), n.props.clipSlug && (t.clip = n.props.clipSlug), n.props.vodID && (t.video = Object(S.p)(n.props.vodID), v.o.setVideoPlayerTrackingData({
+                            r && (t.player = r, n.playerType = r, r === L.f.ClipsEditing && (t.muted = !0)), n.props.channelLogin && (t.channel = n.props.channelLogin, n.lastSetChannel = n.props.channelLogin), n.props.collectionID && (t.collection = n.props.collectionID), n.props.clipSlug && (t.clip = n.props.clipSlug), n.props.vodID && (t.video = Object(S.p)(n.props.vodID), O.o.setVideoPlayerTrackingData({
                                 vodID: n.props.vodID
-                            })), n.props.showChannelInfoOnHover && (t.showInfo = n.props.showChannelInfoOnHover), void 0 !== n.props.persistUserPreferences && (t.persistUserPreferences = n.props.persistUserPreferences), void 0 !== n.props.nextVideoOffset && n.props.nextVideoOffset >= 0 && (t.time = Object(k.a)(n.props.nextVideoOffset)), t.oauth_token = n.props.authToken || "", t.debug = "true" === b.parse(window.location.search)[x], n.logger.debug("Initializing", t);
+                            })), n.props.showChannelInfoOnHover && (t.showInfo = n.props.showChannelInfoOnHover), void 0 !== n.props.persistUserPreferences && (t.persistUserPreferences = n.props.persistUserPreferences), void 0 !== n.props.nextVideoOffset && n.props.nextVideoOffset >= 0 && (t.time = Object(k.a)(n.props.nextVideoOffset)), t.oauth_token = n.props.authToken || "", t.debug = "true" === I.parse(window.location.search)[x], n.logger.debug("Initializing", t);
                             var o = new e(n.playerRef, t);
-                            n.player = o, o.addEventListener(P.a.PlayerReady, n.onPlayerReady), o.addEventListener(P.a.CompanionAdBuffered, n.companionAdBuffered), o.addEventListener(P.a.Online, n.onStreamStatusOnline), o.addEventListener(P.a.Offline, n.onStreamStatusOffline), o.addEventListener(u.Ended, n.onStreamStatusOffline), o.addEventListener(u.Play, n.onPlayerPlay), o.addEventListener(u.Playing, n.onPlayerPlaying), o.addEventListener(u.Seeking, n.onSeeking), o.addEventListener(u.Seeked, n.onSeek), o.addEventListener(u.TimeUpdate, n.onTimeUpdate), o.addEventListener(P.a.TheatreChange, n.onTheatreChange), o.addEventListener(P.a.FullscreenChange, n.onFullScreenChange), o.addEventListener(P.a.ExternalFullscreenChange, n.onExternalFullScreenChange), o.addEventListener(P.a.ClipsModerationOpen, n.onClipsModerationOpen), o.addEventListener(P.a.TransitionToCollectionVOD, n.onTransitionToCollectionVod), o.addEventListener(P.a.TransitionToRecommendedVOD, n.onTransitionToRecommendedVod), o.addEventListener(P.a.OpenStream, n.onOpenStream), o.addEventListener(u.Pause, n.onPause), o.addEventListener(P.a.PersistenPlayerToggle, n.onPersistentPlayerToggled), o.addEventListener(u.LoadedMetadata, n.onMetadataLoaded), o.addEventListener(u.VolumeChange, n.onVolumeChange), o.addEventListener(P.a.PromptLoginModal, n.props.promptLogin), o.addEventListener(P.a.FocusPlayer, n.onFocusPlayer), o.addEventListener(P.a.FollowChannel, n.followChannel), o.addEventListener(P.a.UnfollowChannel, n.unfollowChannel), o.addEventListener(P.a.ContentRestricted, n.onContentRestricted), R.extensionService.registerPlayer(n.player), R.extensionService.setPlayerWindow(window), n.props.onInit && n.props.onInit(o), n.maybeAttachToWindow(n.props)
+                            n.player = o, o.addEventListener(P.a.PlayerReady, n.onPlayerReady), o.addEventListener(P.a.CompanionAdBuffered, n.companionAdBuffered), o.addEventListener(P.a.Online, n.onStreamStatusOnline), o.addEventListener(P.a.Offline, n.onStreamStatusOffline), o.addEventListener(u.Ended, n.onStreamStatusOffline), o.addEventListener(u.Play, n.onPlayerPlay), o.addEventListener(u.Playing, n.onPlayerPlaying), o.addEventListener(u.Seeking, n.onSeeking), o.addEventListener(u.Seeked, n.onSeek), o.addEventListener(u.TimeUpdate, n.onTimeUpdate), o.addEventListener(P.a.TheatreChange, n.onTheatreChange), o.addEventListener(P.a.FullscreenChange, n.onFullScreenChange), o.addEventListener(P.a.ExternalFullscreenChange, n.onExternalFullScreenChange), o.addEventListener(P.a.ClipsModerationOpen, n.onClipsModerationOpen), o.addEventListener(P.a.TransitionToCollectionVOD, n.onTransitionToCollectionVod), o.addEventListener(P.a.TransitionToRecommendedVOD, n.onTransitionToRecommendedVod), o.addEventListener(P.a.OpenStream, n.onOpenStream), o.addEventListener(u.Pause, n.onPause), o.addEventListener(P.a.PersistenPlayerToggle, n.onPersistentPlayerToggled), o.addEventListener(u.LoadedMetadata, n.onMetadataLoaded), o.addEventListener(u.VolumeChange, n.onVolumeChange), o.addEventListener(P.a.PromptLoginModal, n.props.promptLogin), o.addEventListener(P.a.FocusPlayer, n.onFocusPlayer), o.addEventListener(P.a.FollowChannel, n.followChannel), o.addEventListener(P.a.UnfollowChannel, n.unfollowChannel), o.addEventListener(P.a.SubscribeToChannel, n.subscribeToChannel), o.addEventListener(P.a.ContentRestricted, n.onContentRestricted), R.extensionService.registerPlayer(n.player), R.extensionService.setPlayerWindow(window), n.props.onInit && n.props.onInit(o), n.maybeAttachToWindow(n.props)
                         }, n.attachRef = function(e) {
                             return n.playerRef = e
                         }, n.onMetadataLoaded = function() {
                             var e = n.player && n.player.getSessionInfo();
-                            e && (n.logger.debug("Got player session info from player instance", e), v.o.setVideoPlayerTrackingData({
+                            e && (n.logger.debug("Got player session info from player instance", e), O.o.setVideoPlayerTrackingData({
                                 broadcastID: e.broadcastId,
                                 playSessionID: e.playSessionId
                             })), n.setState({
@@ -6322,22 +6330,24 @@
                             })
                         }, n.onOpenStream = function() {
                             if (n.props.playerTypeOverride === L.f.Frontpage && n.player)
-                                if (n.props.channelLogin) v.p.history.push({
+                                if (n.props.channelLogin) O.p.history.push({
                                     pathname: "/" + n.props.channelLogin,
                                     state: n.props.linkTrackingContext
                                 });
                                 else if (n.props.vodID) {
                                 var e = Math.floor(n.player.getCurrentTime());
-                                v.p.history.push("/videos/" + n.props.vodID + "?t=" + Object(k.a)(e))
-                            } else n.props.collectionID && v.p.history.push("/collections/" + n.props.collectionID)
+                                O.p.history.push("/videos/" + n.props.vodID + "?t=" + Object(k.a)(e))
+                            } else n.props.collectionID && O.p.history.push("/collections/" + n.props.collectionID)
                         }, n.onFocusPlayer = function() {
                             n.player && n.props.onFocusPlayer && n.props.channelLogin && n.props.onFocusPlayer()
                         }, n.followChannel = function() {
                             n.player && n.props.followChannel && n.props.channelLogin && n.props.followChannel()
                         }, n.unfollowChannel = function() {
                             n.player && n.props.unfollowChannel && n.props.channelLogin && n.props.unfollowChannel()
+                        }, n.subscribeToChannel = function() {
+                            n.player && n.props.subscribeToChannel && n.props.channelLogin && n.props.subscribeToChannel()
                         }, n.onPlayerReady = function() {
-                            n.player && (n.logger.debug("Ready"), n.props.latencyTracking.reportInteractive(), n.hasPlayed = !1, n.playerLoaded && n.props.latencyTracking.reportCustomEvent(n.playerLoaded), n.lastFollowingProp && n.player.setFollowing(n.lastFollowingProp), n.setState({
+                            n.player && (n.logger.debug("Ready"), n.props.latencyTracking.reportInteractive(), n.hasPlayed = !1, n.playerLoaded && n.props.latencyTracking.reportCustomEvent(n.playerLoaded), n.lastFollowingProp && n.player.setFollowing(n.lastFollowingProp), n.lastSubscribedProp && n.player.setSubscribed(n.lastSubscribedProp), n.lastSubscribableProp && n.player.setSubscribable(n.lastSubscribableProp), n.setState({
                                 playerInitialized: !0
                             }, n.updatePlayerTrackingDataFromProps))
                         }, n.onPlayerPlay = function() {
@@ -6390,12 +6400,12 @@
                         }, n.onTransitionToCollectionVod = function(e) {
                             if (n.props.onNavigationRequest) {
                                 var t = {};
-                                e.vodId && (t.videoID = Object(O.a)(e.vodId)), e.collectionId && (t.collectionID = e.collectionId), n.props.onNavigationRequest(t)
+                                e.vodId && (t.videoID = Object(v.a)(e.vodId)), e.collectionId && (t.collectionID = e.collectionId), n.props.onNavigationRequest(t)
                             }
                         }, n.onTransitionToRecommendedVod = function(e) {
                             if (n.props.onNavigationRequest) {
                                 var t = {};
-                                e.vodId && (t.videoID = Object(O.a)(e.vodId)), n.props.onNavigationRequest(t)
+                                e.vodId && (t.videoID = Object(v.a)(e.vodId)), n.props.onNavigationRequest(t)
                             }
                         }, n.onPersistentPlayerToggled = function() {
                             n.props.togglePersistentPlayer && n.props.togglePersistentPlayer()
@@ -6403,7 +6413,7 @@
                             n.logger.debug("onContentRestricted - a restriction gate has prevented video playback."), n.hasRestrictedContent = !0
                         }, n.updatePlayerTrackingData = function(e) {
                             n.state.playerInitialized && n.player && n.player.setTrackingProperties(function(e, t) {
-                                var n = v.o.getLastPageview(),
+                                var n = O.o.getLastPageview(),
                                     r = {
                                         host_channel: e.hostChannel,
                                         collapse_right: !e.rightColumnExpanded,
@@ -6433,7 +6443,7 @@
                                     updates: r,
                                     locationStateTrackingProps: i
                                 })), a.__assign({}, i, n, r)
-                            }(e, v.k))
+                            }(e, O.k))
                         }, n.updatePlayerTrackingDataFromProps = function() {
                             n.updatePlayerTrackingData(n.props)
                         }, n.updatePlayerType = function(e) {
@@ -6469,10 +6479,10 @@
                             playerMuted: t.muted,
                             playerRefID: Object(C.a)(),
                             metadataLoaded: !1
-                        }, n.playerType = t.playerTypeOverride || B.player, n.lastSetChannel = t.channelLogin, n.lastPausedProp = t.paused, n.lastMutedProp = t.muted, n.lastFollowingProp = t.viewerIsFollowing, n.lastGDPR = n.createPlayerGDPROptions(t), t.fullscreen.addChangeListener(n.onTwilightFullscreenChange), t.instanceRef && t.instanceRef(n), n
+                        }, n.playerType = t.playerTypeOverride || B.player, n.lastSetChannel = t.channelLogin, n.lastPausedProp = t.paused, n.lastMutedProp = t.muted, n.lastFollowingProp = t.viewerIsFollowing, n.lastSubscribedProp = t.viewerIsSubscribed, n.lastSubscribableProp = t.channelIsSubscribable, n.lastGDPR = n.createPlayerGDPROptions(t), t.fullscreen.addChangeListener(n.onTwilightFullscreenChange), t.instanceRef && t.instanceRef(n), n
                     }
                     return a.__extends(t, e), t.prototype.componentDidMount = function() {
-                        this.playerCreated && this.props.latencyTracking.reportCustomEvent(this.playerCreated), this.bindHotKeys(), this.historyUnlistener = this.props.history.listen(this.onHistoryChange), Object(U.b)(), Object(U.a)(this.initializePlayer), v.o.eventEmitter.addListener(A.SpadeEventType.Pageview, this.updatePlayerTrackingDataFromProps)
+                        this.playerCreated && this.props.latencyTracking.reportCustomEvent(this.playerCreated), this.bindHotKeys(), this.historyUnlistener = this.props.history.listen(this.onHistoryChange), Object(U.b)(), Object(U.a)(this.initializePlayer), O.o.eventEmitter.addListener(A.SpadeEventType.Pageview, this.updatePlayerTrackingDataFromProps)
                     }, t.prototype.componentWillUpdate = function(e, t) {
                         if (t.playerInitialized) {
                             if (this.updatePlayerTrackingData(e), this.updatePlayerType(e.playerTypeOverride), this.player && t.isFullScreen !== this.player.fullscreen && this.player.setFullscreen(t.isFullScreen), this.player) {
@@ -6492,16 +6502,16 @@
                                     endOffset: r.endOffset
                                 }]), this.hasInitializedOffsets || (this.hasInitializedOffsets = !0))
                             }
-                            this.player && e.clipSlug && this.props.clipSlug !== e.clipSlug && this.player.setClip(e.clipSlug), this.player && e.theatreModeEnabled !== this.player.getTheatre() && this.player.setTheatre(e.theatreModeEnabled), this.player && e.miniModeEnabled !== this.props.miniModeEnabled && this.player.setMiniPlayerMode(!!e.miniModeEnabled), this.player && t.playerPaused !== this.lastPausedProp && (t.playerPaused ? this.player.pause() : t.playerPaused || this.player.play(), this.lastPausedProp = t.playerPaused), this.player && t.playerMuted !== this.lastMutedProp && (this.player.setMuted(!!t.playerMuted), this.lastMutedProp = !!t.playerMuted), this.player && e.viewerIsFollowing !== this.lastFollowingProp && (this.player.setFollowing(!!e.viewerIsFollowing), this.lastFollowingProp = !!e.viewerIsFollowing), this.updatePlayerGDPRConsent(e);
+                            this.player && e.clipSlug && this.props.clipSlug !== e.clipSlug && this.player.setClip(e.clipSlug), this.player && e.theatreModeEnabled !== this.player.getTheatre() && this.player.setTheatre(e.theatreModeEnabled), this.player && e.miniModeEnabled !== this.props.miniModeEnabled && this.player.setMiniPlayerMode(!!e.miniModeEnabled), this.player && t.playerPaused !== this.lastPausedProp && (t.playerPaused ? this.player.pause() : t.playerPaused || this.player.play(), this.lastPausedProp = t.playerPaused), this.player && t.playerMuted !== this.lastMutedProp && (this.player.setMuted(!!t.playerMuted), this.lastMutedProp = !!t.playerMuted), this.player && e.viewerIsFollowing !== this.lastFollowingProp && (this.player.setFollowing(!!e.viewerIsFollowing), this.lastFollowingProp = !!e.viewerIsFollowing), this.player && e.viewerIsSubscribed !== this.lastSubscribedProp && (this.player.setSubscribed(!!e.viewerIsSubscribed), this.lastSubscribedProp = !!e.viewerIsSubscribed), this.player && e.channelIsSubscribable !== this.lastSubscribableProp && (this.player.setSubscribable(!!e.channelIsSubscribable), this.lastSubscribableProp = !!e.channelIsSubscribable), this.updatePlayerGDPRConsent(e);
                             var l = e.channelLogin !== this.lastSetChannel;
-                            if (this.player && e.channelLogin && (l || Object(M.b)(this.props, e))) return this.player.pause(), this.resetLatencyTracking(!!e.paused), this.player.setChannel(e.channelLogin), this.lastSetChannel = e.channelLogin, void v.o.setVideoPlayerTrackingData({
+                            if (this.player && e.channelLogin && (l || Object(M.b)(this.props, e))) return this.player.pause(), this.resetLatencyTracking(!!e.paused), this.player.setChannel(e.channelLogin), this.lastSetChannel = e.channelLogin, void O.o.setVideoPlayerTrackingData({
                                 vodID: void 0
                             });
                             var c = e.collectionID && this.props.collectionID !== e.collectionID,
                                 u = e.vodID && this.props.vodID !== e.vodID;
                             if (c || u) {
                                 var d = e.vodID ? Object(S.p)(e.vodID) : "";
-                                if ("" !== d && v.o.setVideoPlayerTrackingData({
+                                if ("" !== d && O.o.setVideoPlayerTrackingData({
                                         vodID: e.vodID
                                     }), !this.player) return;
                                 return this.player.pause(), this.resetLatencyTracking(!!e.paused), void(c || e.collectionID && u ? this.player.setCollection(e.collectionID, d, e.nextVideoOffset) : this.player.setVideo(d, e.nextVideoOffset))
@@ -6538,7 +6548,7 @@
                             ref: this.attachRef
                         }))
                     }, t.prototype.componentWillUnmount = function() {
-                        this.state.playerRefID === this.props.activeVideoPlayerRefID && this.props.reportPlayerInstanceStarted && this.props.reportPlayerInstanceStarted(void 0), this.unbindHotKeys(), this.historyUnlistener && this.historyUnlistener(), this.maybeDetachFromWindow(), this.state.isFullScreen && this.exitFullscreen(), this.props.fullscreen.removeChangeListener(this.onTwilightFullscreenChange), this.props.onDestroy && this.props.onDestroy(), v.o.eventEmitter.removeListener(A.SpadeEventType.Pageview, this.updatePlayerTrackingDataFromProps), this.player && (this.player.removeEventListener(P.a.PlayerReady, this.onPlayerReady), this.player.removeEventListener(P.a.CompanionAdBuffered, this.companionAdBuffered), this.player.removeEventListener(P.a.Online, this.onStreamStatusOnline), this.player.removeEventListener(P.a.Offline, this.onStreamStatusOffline), this.player.removeEventListener(u.Ended, this.onStreamStatusOffline), this.player.removeEventListener(u.Play, this.onPlayerPlay), this.player.removeEventListener(u.Playing, this.onPlayerPlaying), this.player.removeEventListener(P.a.TheatreChange, this.onTheatreChange), this.player.removeEventListener(P.a.TransitionToCollectionVOD, this.onTransitionToCollectionVod), this.player.removeEventListener(P.a.FullscreenChange, this.onFullScreenChange), this.player.removeEventListener(P.a.ExternalFullscreenChange, this.onExternalFullScreenChange), this.player.removeEventListener(u.Seeking, this.onSeeking), this.player.removeEventListener(u.Seeked, this.onSeek), this.player.removeEventListener(u.TimeUpdate, this.onTimeUpdate), this.player.removeEventListener(P.a.OpenStream, this.onOpenStream), this.player.removeEventListener(u.Pause, this.onPause), this.player.removeEventListener(P.a.PersistenPlayerToggle, this.onPersistentPlayerToggled), this.player.removeEventListener(u.LoadedMetadata, this.onMetadataLoaded), this.player.removeEventListener(u.VolumeChange, this.onVolumeChange), this.player.removeEventListener(P.a.PromptLoginModal, this.props.promptLogin), this.player.removeEventListener(P.a.FocusPlayer, this.onFocusPlayer), this.player.removeEventListener(P.a.FollowChannel, this.followChannel), this.player.removeEventListener(P.a.UnfollowChannel, this.unfollowChannel), this.player.removeEventListener(P.a.ContentRestricted, this.onContentRestricted), R.extensionService.unregisterPlayer(), this.player.destroy()), v.o.setVideoPlayerTrackingData({
+                        this.state.playerRefID === this.props.activeVideoPlayerRefID && this.props.reportPlayerInstanceStarted && this.props.reportPlayerInstanceStarted(void 0), this.unbindHotKeys(), this.historyUnlistener && this.historyUnlistener(), this.maybeDetachFromWindow(), this.state.isFullScreen && this.exitFullscreen(), this.props.fullscreen.removeChangeListener(this.onTwilightFullscreenChange), this.props.onDestroy && this.props.onDestroy(), O.o.eventEmitter.removeListener(A.SpadeEventType.Pageview, this.updatePlayerTrackingDataFromProps), this.player && (this.player.removeEventListener(P.a.PlayerReady, this.onPlayerReady), this.player.removeEventListener(P.a.CompanionAdBuffered, this.companionAdBuffered), this.player.removeEventListener(P.a.Online, this.onStreamStatusOnline), this.player.removeEventListener(P.a.Offline, this.onStreamStatusOffline), this.player.removeEventListener(u.Ended, this.onStreamStatusOffline), this.player.removeEventListener(u.Play, this.onPlayerPlay), this.player.removeEventListener(u.Playing, this.onPlayerPlaying), this.player.removeEventListener(P.a.TheatreChange, this.onTheatreChange), this.player.removeEventListener(P.a.TransitionToCollectionVOD, this.onTransitionToCollectionVod), this.player.removeEventListener(P.a.FullscreenChange, this.onFullScreenChange), this.player.removeEventListener(P.a.ExternalFullscreenChange, this.onExternalFullScreenChange), this.player.removeEventListener(u.Seeking, this.onSeeking), this.player.removeEventListener(u.Seeked, this.onSeek), this.player.removeEventListener(u.TimeUpdate, this.onTimeUpdate), this.player.removeEventListener(P.a.OpenStream, this.onOpenStream), this.player.removeEventListener(u.Pause, this.onPause), this.player.removeEventListener(P.a.PersistenPlayerToggle, this.onPersistentPlayerToggled), this.player.removeEventListener(u.LoadedMetadata, this.onMetadataLoaded), this.player.removeEventListener(u.VolumeChange, this.onVolumeChange), this.player.removeEventListener(P.a.PromptLoginModal, this.props.promptLogin), this.player.removeEventListener(P.a.FocusPlayer, this.onFocusPlayer), this.player.removeEventListener(P.a.FollowChannel, this.followChannel), this.player.removeEventListener(P.a.UnfollowChannel, this.unfollowChannel), this.player.removeEventListener(P.a.SubscribeToChannel, this.subscribeToChannel), this.player.removeEventListener(P.a.ContentRestricted, this.onContentRestricted), R.extensionService.unregisterPlayer(), this.player.destroy()), O.o.setVideoPlayerTrackingData({
                             vodID: void 0
                         })
                     }, t.prototype.trackMiniPlayerAction = function(e, t) {
@@ -6596,13 +6606,13 @@
                             isFullScreen: !1
                         }), this.props.fullscreen.disable(), this.props.onFullscreenChange && this.props.onFullscreenChange(!1))
                     }, t.prototype.maybeAttachToWindow = function(e) {
-                        b.parse(window.location.search).attachPlayer && e.attachToWindow && this.player && (window.player = this.player)
+                        I.parse(window.location.search).attachPlayer && e.attachToWindow && this.player && (window.player = this.player)
                     }, t.prototype.maybeDetachFromWindow = function() {
                         window.player = void 0
                     }, t.prototype.bindHotKeys = function() {
-                        I.bind("alt+x", this.maybeRecordClip)
+                        b.bind("alt+x", this.maybeRecordClip)
                     }, t.prototype.unbindHotKeys = function() {
-                        I.unbind("alt+x")
+                        b.unbind("alt+x")
                     }, t.defaultProps = {
                         paused: !1
                     }, t
@@ -6673,7 +6683,7 @@
                     if (e.collectionID && e.videoID) {
                         if (n && n.currentVideoID && n.currentCollectionID && n.currentVideoID === e.videoID && n.currentCollectionID === e.collectionID) return;
                         t.push("/videos/" + e.videoID + "?collection=" + e.collectionID)
-                    } else !e.collectionID || e.videoID ? v.k.withCategory("video-player").error(new Error("No collection or video specified from the emitted player transition event."), "No collection or video specified from the emitted player transition event.") : t.push("/collections/" + e.collectionID);
+                    } else !e.collectionID || e.videoID ? O.k.withCategory("video-player").error(new Error("No collection or video specified from the emitted player transition event."), "No collection or video specified from the emitted player transition event.") : t.push("/collections/" + e.collectionID);
                 else t.push("/videos/" + e.videoID)
             }
             n.d(t, !1, function() {}), n.d(t, !1, function() {}), n.d(t, !1, function() {}), n.d(t, !1, function() {}), n.d(t, "b", function() {
@@ -7016,7 +7026,7 @@
                     return r
                 }),
                 function(e) {
-                    e.PlayerInit = "init", e.ContentShowing = "contentShowing", e.CompanionAdBuffered = "companionadbuffered", e.PlaybackStatistics = "playbackStatistics", e.ChansubRequired = "chansubRequired", e.VideoFailure = "videoFailure", e.Formats = "videoFormats", e.ABSStreamFormatChange = "abs_stream_format_change", e.FormatChanged = "videoFormatChanged", e.TimeChange = "timeChange", e.BufferChange = "bufferChange", e.SegmentChange = "segmentchange", e.UsherFailError = "usherFail", e.CaptionUpdate = "captions", e.SeekFailed = "seekfailed", e.VariantSwitchRequest = "variantSwitchRequested", e.ViewersChange = "viewerschange", e.StreamLoaded = "streamLoaded", e.VideoLoaded = "videoLoaded", e.VideoPaused = "videoPaused", e.QualityChange = "qualitychange", e.Online = "online", e.Offline = "offline", e.Restricted = "restricted", e.CastingChange = "castingchange", e.TheatreChange = "theatrechange", e.MidrollRequested = "midrollrequested", e.ManifestExtraInfo = "manifestExtraInfo", e.TransitionToCollectionVOD = "transitionToCollectionVod", e.TransitionToRecommendedVOD = "transitionToRecommendedVod", e.StitchedAdStart = "stitchedadstart", e.StichedAdEnd = "stitchedadend", e.PersistenPlayerToggle = "persistentPlayerEnableToggle", e.StatsUpdate = "statsupdate", e.PromptLoginModal = "prompt login modal", e.OpenStream = "openStream", e.PlayerReady = "ready", e.FullscreenChange = "fullscreenchange", e.ExternalFullscreenChange = "externalfullscreenchange", e.ClipsModerationOpen = "clips-moderation-open", e.FocusPlayer = "focusPlayer", e.FollowChannel = "followChannel", e.UnfollowChannel = "unfollowChannel", e.ContentRestricted = "contentRestricted"
+                    e.PlayerInit = "init", e.ContentShowing = "contentShowing", e.CompanionAdBuffered = "companionadbuffered", e.PlaybackStatistics = "playbackStatistics", e.ChansubRequired = "chansubRequired", e.VideoFailure = "videoFailure", e.Formats = "videoFormats", e.ABSStreamFormatChange = "abs_stream_format_change", e.FormatChanged = "videoFormatChanged", e.TimeChange = "timeChange", e.BufferChange = "bufferChange", e.SegmentChange = "segmentchange", e.UsherFailError = "usherFail", e.CaptionUpdate = "captions", e.SeekFailed = "seekfailed", e.VariantSwitchRequest = "variantSwitchRequested", e.ViewersChange = "viewerschange", e.StreamLoaded = "streamLoaded", e.VideoLoaded = "videoLoaded", e.VideoPaused = "videoPaused", e.QualityChange = "qualitychange", e.Online = "online", e.Offline = "offline", e.Restricted = "restricted", e.CastingChange = "castingchange", e.TheatreChange = "theatrechange", e.MidrollRequested = "midrollrequested", e.ManifestExtraInfo = "manifestExtraInfo", e.TransitionToCollectionVOD = "transitionToCollectionVod", e.TransitionToRecommendedVOD = "transitionToRecommendedVod", e.StitchedAdStart = "stitchedadstart", e.StichedAdEnd = "stitchedadend", e.PersistenPlayerToggle = "persistentPlayerEnableToggle", e.StatsUpdate = "statsupdate", e.PromptLoginModal = "prompt login modal", e.OpenStream = "openStream", e.PlayerReady = "ready", e.FullscreenChange = "fullscreenchange", e.ExternalFullscreenChange = "externalfullscreenchange", e.ClipsModerationOpen = "clips-moderation-open", e.FocusPlayer = "focusPlayer", e.FollowChannel = "followChannel", e.UnfollowChannel = "unfollowChannel", e.ContentRestricted = "contentRestricted", e.SubscribeToChannel = "subscribeChannel"
                 }(r || (r = {}))
         },
         lTz2: function(e, t, n) {
@@ -7329,13 +7339,13 @@
             }), n.d(t, "t", function() {
                 return R
             }), n.d(t, "m", function() {
-                return I
-            }), n.d(t, "p", function() {
                 return b
+            }), n.d(t, "p", function() {
+                return I
             }), n.d(t, "o", function() {
-                return v
-            }), n.d(t, "B", function() {
                 return O
+            }), n.d(t, "B", function() {
+                return v
             }), n.d(t, "z", function() {
                 return C
             }), n.d(t, "A", function() {
@@ -7417,20 +7427,20 @@
                 }
             }
 
-            function I(e) {
+            function b(e) {
                 var t = l.parse(e.location.search);
                 return e.match.params.collectionID || t.collection || null
             }
 
-            function b(e) {
+            function I(e) {
                 return "" === e ? "" : e.startsWith("v") ? e : "v" + e
             }
 
-            function v() {
+            function O() {
                 return Object(E.b)() ? "videos" : "videos/all"
             }
 
-            function O(e) {
+            function v(e) {
                 switch (e) {
                     case u.a.Archive:
                         return i.PastBroadcasts;
@@ -7549,7 +7559,7 @@
             }
 
             function P(e, t) {
-                var n = "" + v();
+                var n = "" + O();
                 t && t.filter && (n = t.filter);
                 var r = "";
                 return t && t.sort && (r = "?" + h + "=" + t.sort), "/" + e + "/" + n + r

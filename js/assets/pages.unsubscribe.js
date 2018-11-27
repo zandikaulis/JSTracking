@@ -1386,7 +1386,7 @@
                 C = n("GnwI"),
                 F = n("9fjZ"),
                 P = u.a.wrap(function() {
-                    return n.e(208).then(n.bind(null, "skV9"))
+                    return n.e(209).then(n.bind(null, "skV9"))
                 }, "CampaignsTicketDescription"),
                 j = function(e) {
                     function t() {
@@ -2048,7 +2048,7 @@
             ! function(e) {
                 e[e.Cancel = 0] = "Cancel", e[e.DoNotRenew = 1] = "DoNotRenew"
             }(r || (r = {}));
-            var L = function(e) {
+            var W = function(e) {
                     function t() {
                         var t = null !== e && e.apply(this, arguments) || this;
                         return t.state = {
@@ -2194,9 +2194,9 @@
                         configurable: !0
                     }), t
                 }(f.Component),
-                W = Object(w.compose)(Object(m.b)("UnsubscrbeForm", {
+                L = Object(w.compose)(Object(m.b)("UnsubscrbeForm", {
                     autoReportInteractive: !0
-                }))(L),
+                }))(W),
                 Y = (n("9ELW"), function(e) {
                     function t() {
                         var t = null !== e && e.apply(this, arguments) || this;
@@ -2282,7 +2282,7 @@
                             }
                         }, n ? f.createElement(N.jb, {
                             lineCount: 20
-                        }) : f.createElement(W, {
+                        }) : f.createElement(L, {
                             currentUserID: this.props.currentUser.id,
                             productName: this.props.match.params.productName,
                             originID: this.originID,
@@ -2294,11 +2294,11 @@
                             var e = this.props.data.subscriptionProduct;
                             if (!e) return !1;
                             switch (e.type.toUpperCase()) {
-                                case k.V.CHANSUB:
-                                case k.V.TEAMSUB:
+                                case k.W.CHANSUB:
+                                case k.W.TEAMSUB:
                                     return !!(e && e.self && e.self.benefit);
-                                case k.V.TURBO:
-                                    return !!(e && e.self && e.self.purchase && e.self.purchase.details && e.self.purchase.details.productType.toUpperCase() === k.V.TURBO && e.self.purchase.details.state.toUpperCase() === k.W.ACTIVE);
+                                case k.W.TURBO:
+                                    return !!(e && e.self && e.self.purchase && e.self.purchase.details && e.self.purchase.details.productType.toUpperCase() === k.W.TURBO && e.self.purchase.details.state.toUpperCase() === k.X.ACTIVE);
                                 default:
                                     return this.logger.error(new Error("Cannot determine if user has subscription benefit."), "Unexpected subscription product type:", e.type), !1
                             }
@@ -2311,10 +2311,10 @@
                             if (!e) return !1;
                             if (this.isMobileSub) return !1;
                             switch (e.type.toUpperCase()) {
-                                case k.V.CHANSUB:
-                                case k.V.TEAMSUB:
+                                case k.W.CHANSUB:
+                                case k.W.TEAMSUB:
                                     return this.unsubscribeType === r.DoNotRenew ? !!(e && e.self && e.self.benefit && e.self.benefit.renewsAt) : this.unsubscribeType === r.Cancel && !!(e && e.self && e.self.benefit && e.self.benefit.isRefundable);
-                                case k.V.TURBO:
+                                case k.W.TURBO:
                                     return this.hasSubscriptionBenefit;
                                 default:
                                     return !1
@@ -2356,7 +2356,7 @@
                     }), t
                 }(f.Component)),
                 H = n("nI5l");
-            var V = Object(a.compose)(Object(m.b)("UnsubscribePage", {
+            var Q = Object(a.compose)(Object(m.b)("UnsubscribePage", {
                 destination: l.a.UnsubscribePage
             }), Object(o.a)({
                 location: d.PageviewLocation.UnsubscribePage
@@ -2381,7 +2381,7 @@
                 }, e)
             }))(Y);
             n.d(t, "UnsubscribePage", function() {
-                return V
+                return Q
             })
         },
         cpJf: function(e, t, n) {

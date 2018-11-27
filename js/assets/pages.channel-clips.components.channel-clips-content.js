@@ -1,5 +1,5 @@
 (window.webpackJsonp = window.webpackJsonp || []).push([
-    [123], {
+    [124], {
         "0INk": function(e, t, n) {
             "use strict";
             n.d(t, "b", function() {
@@ -443,7 +443,7 @@
                     function t() {
                         var t = null !== e && e.apply(this, arguments) || this;
                         return t.onBalloonItemClick = function() {
-                            t.props.onBalloonItemClick && t.props.onBalloonItemClick(t.props.videoID, t.props.index)
+                            t.props.onBalloonItemClick && t.props.onBalloonItemClick(t.props.index)
                         }, t
                     }
                     return i.__extends(t, e), t.prototype.render = function() {
@@ -510,7 +510,7 @@
                     function t() {
                         var t = null !== e && e.apply(this, arguments) || this;
                         return t.onBalloonToggle = function(e) {
-                            t.props.onBalloonClick && !e && t.props.onBalloonClick(t.props.videoID)
+                            t.props.onBalloonClick && !e && t.props.onBalloonClick()
                         }, t
                     }
                     return i.__extends(t, e), t.prototype.componentDidMount = function() {
@@ -531,7 +531,8 @@
                         }, a.createElement(d.a, {
                             key: "game-balloon",
                             display: l.X.Inline,
-                            onToggle: this.onBalloonToggle
+                            onToggle: this.onBalloonToggle,
+                            hideBalloonOnInsideClick: !0
                         }, a.createElement(l.z, {
                             type: l.F.Hollow,
                             icon: l.ub.ViewerList
@@ -577,8 +578,7 @@
                             return a.createElement(s, {
                                 index: n,
                                 gameChange: e,
-                                key: t.props.videoID + "-" + e.offset,
-                                videoID: t.props.videoID,
+                                key: e.offset,
                                 onBalloonItemClick: t.props.onBalloonItemClick
                             })
                         })
@@ -1106,7 +1106,6 @@
                             case N.a.Balloon:
                                 return a.createElement(u, {
                                     videoGameChanges: t,
-                                    videoID: t[0].videoID,
                                     onBalloonClick: n,
                                     onBalloonItemClick: i
                                 });
@@ -1501,7 +1500,7 @@
                                 t = c.createElement(g.a, {
                                     title: Object(p.d)("Report this Clip", "ClipsViewModal"),
                                     reportContext: {
-                                        contentType: u.N.CLIP_REPORT,
+                                        contentType: u.O.CLIP_REPORT,
                                         contentID: this.props.clip.slug,
                                         targetUserID: this.props.clip.broadcaster && this.props.clip.broadcaster.id || "",
                                         additionalTrackingID: this.props.clip.curator && this.props.clip.curator.id || ""

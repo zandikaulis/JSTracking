@@ -1,5 +1,5 @@
 (window.webpackJsonp = window.webpackJsonp || []).push([
-    [173], {
+    [174], {
         "2bi+": function(e, t, n) {
             "use strict";
             n("DLhE");
@@ -3682,7 +3682,7 @@
                             e(Object(s.d)(_.a, {
                                 title: Object(p.d)("Report this message?", "ModeratorCommentMenu"),
                                 reportContext: {
-                                    contentType: S.N.VOD_COMMENT_REPORT,
+                                    contentType: S.O.VOD_COMMENT_REPORT,
                                     contentID: t,
                                     targetUserID: n,
                                     additionalTrackingID: r
@@ -6417,7 +6417,7 @@
                 S = n("F6GT"),
                 _ = n("x0gr"),
                 E = l.a.wrap(function() {
-                    return n.e(197).then(n.bind(null, "8MX0"))
+                    return Promise.all([n.e(0), n.e(198)]).then(n.bind(null, "8MX0"))
                 }, "ChatSettingsComponent"),
                 O = function(e) {
                     function t() {

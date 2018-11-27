@@ -1,5 +1,5 @@
 (window.webpackJsonp = window.webpackJsonp || []).push([
-    [141], {
+    [142], {
         "+U0Y": function(e, t, n) {
             "use strict";
             n.d(t, "a", function() {
@@ -245,7 +245,7 @@
                 C = n("HStj"),
                 S = n("Ue10"),
                 w = n("EgD6"),
-                T = (n("gY/c"), function(e) {
+                O = (n("gY/c"), function(e) {
                     function t() {
                         var t = null !== e && e.apply(this, arguments) || this;
                         return t.loadMoreTopClips = function() {
@@ -340,11 +340,11 @@
                         }
                     })], t)
                 }(i.Component));
-            var O = Object(u.connect)(function(e) {
+            var T = Object(u.connect)(function(e) {
                     return {
                         languagePreferences: Object(p.a)(e)
                     }
-                })(T),
+                })(O),
                 _ = function(e) {
                     function t() {
                         return null !== e && e.apply(this, arguments) || this
@@ -353,7 +353,7 @@
                         a.p.setPageTitle(decodeURIComponent(this.props.match.params.encodedCommunityName))
                     }, t.prototype.render = function() {
                         var e = Object(s.v)(this.props.location.search) || s.b.Day;
-                        return i.createElement(O, {
+                        return i.createElement(T, {
                             gameName: decodeURIComponent(this.props.match.params.encodedCommunityName),
                             timeRange: e
                         })
@@ -1612,7 +1612,7 @@
                 S = Object(f.b)("ClipCards", {
                     autoReportInteractive: !0
                 })(C);
-            var w, T = Object(u.connect)(null, function(e, t) {
+            var w, O = Object(u.connect)(null, function(e, t) {
                     return Object.assign(Object(p.bindActionCreators)({
                         onCardClick: function(e, n, r) {
                             var i = t.context === s.b.SingleChannelList ? g.b.Channel : g.b.Game;
@@ -1626,7 +1626,7 @@
                         }
                     }, e), t)
                 })(S),
-                O = n("L4bB"),
+                T = n("L4bB"),
                 _ = n("0Rl0"),
                 E = n("cERj"),
                 R = n("mHR/");
@@ -1652,7 +1652,7 @@
                                 childWidth: y.dc.Large,
                                 placeholderItems: 20
                             }, n)
-                        } else e = a.createElement(T, {
+                        } else e = a.createElement(O, {
                             clips: this.props.clips || [],
                             context: t ? s.b.SingleChannelList : s.b.SingleGameList,
                             loadMoreClips: this.props.loadMoreClips,
@@ -1672,7 +1672,7 @@
                                 margin: {
                                     bottom: 2
                                 }
-                            }, o, a.createElement(O.a, {
+                            }, o, a.createElement(T.a, {
                                 hideLanguageFilter: !!t
                             })))
                         }
@@ -2357,8 +2357,8 @@
                 C = n("kduP"),
                 S = n("f00E"),
                 w = n("vhpE"),
-                T = n("bq0i"),
-                O = n("yR8l"),
+                O = n("bq0i"),
+                T = n("yR8l"),
                 _ = n("4rCz"),
                 E = n("ndwU");
             ! function(e) {
@@ -2430,7 +2430,7 @@
                             l = [r.Report];
                         return o && l.push(r.Delete), s && (l.push(r.DeleteAll), t.curator && t.broadcaster && (l.push(r.Ban), l.push(r.Timeout))), c.createElement(R.Ya, {
                             className: "moderation-menu"
-                        }, c.createElement(T.a, null, c.createElement(R.z, {
+                        }, c.createElement(O.a, null, c.createElement(R.z, {
                             type: R.F.Hollow,
                             icon: R.ub.More,
                             ariaLabel: Object(_.d)("More Options", "ModerationMenu"),
@@ -2447,7 +2447,7 @@
                         return e.map(function(e) {
                             return t.renderMenuItem(e)
                         })
-                    }, t = s.__decorate([Object(O.a)(M), Object(h.b)("ModerationMenu")], t)
+                    }, t = s.__decorate([Object(T.a)(M), Object(h.b)("ModerationMenu")], t)
                 }(c.Component),
                 x = n("MLDe"),
                 D = (n("n/Dx"), 2e3),
@@ -2701,7 +2701,7 @@
                                 t = c.createElement(g.a, {
                                     title: Object(d.d)("Report this Clip", "ClipsViewModal"),
                                     reportContext: {
-                                        contentType: p.N.CLIP_REPORT,
+                                        contentType: p.O.CLIP_REPORT,
                                         contentID: this.props.clip.slug,
                                         targetUserID: this.props.clip.broadcaster && this.props.clip.broadcaster.id || "",
                                         additionalTrackingID: this.props.clip.curator && this.props.clip.curator.id || ""
@@ -3605,7 +3605,7 @@
                 C = n("Ue10"),
                 S = (n("MPK0"), "report-wizard-block"),
                 w = "report-wizard-unblock",
-                T = function(e) {
+                O = function(e) {
                     function t() {
                         var t = null !== e && e.apply(this, arguments) || this;
                         return t.state = {
@@ -3707,7 +3707,7 @@
             function(e) {
                 e.Link = "link", e.MultipleChoice = "multiple choice", e.Text = "text", e.Textarea = "textarea"
             }(i || (i = {}));
-            var O, _ = {
+            var T, _ = {
                     generalFilter: function() {
                         return Object(c.d)("I don't think their content or behavior is allowed on Twitch", "ReportModalWizard")
                     },
@@ -4207,7 +4207,7 @@
                             return Object(c.d)("In a whisper (private message)", "ReportModalWizard")
                         },
                         value: "whisper",
-                        reportContext: v.N.WHISPER_REPORT
+                        reportContext: v.O.WHISPER_REPORT
                     },
                     whisper_more_options: {
                         getTitle: _.moreOptions,
@@ -4471,7 +4471,7 @@
                 M = n("RQ6e");
             ! function(e) {
                 e.Confirm = "Confirm", e.MultipleChoice = "MultipleChoice", e.Info = "End Card"
-            }(O || (O = {}));
+            }(T || (T = {}));
             var j, N, x, D = {
                     contentGeneral: function() {
                         return Object(c.d)("What would you like to report?", "ReportModalWizard")
@@ -4546,7 +4546,7 @@
                     },
                     blockPrompt: !0,
                     getTitle: U.thanks,
-                    type: O.Info,
+                    type: T.Info,
                     value: "end card"
                 },
                 F = {
@@ -4562,7 +4562,7 @@
                             return Object(c.d)("To submit a claim or report a violation of this type, you will need to follow the steps listed on the relevant page below.", "ReportModalWizard")
                         },
                         items: [E.endLink_DMCA, E.endLink_trademark, E.endLink_devAgreement],
-                        type: O.Info,
+                        type: T.Info,
                         value: "ip end"
                     },
                     selfharm: {
@@ -4571,7 +4571,7 @@
                             return Object(c.d)("If you know the user personally, and you believe them to be in danger, please contact their local authorities immediately. The link below contains some general information that may be of use.", "ReportModalWizard")
                         },
                         items: [E.endLink_selfharm],
-                        type: O.Info,
+                        type: T.Info,
                         value: "selfharm end"
                     },
                     twitchEvent: {
@@ -4581,7 +4581,7 @@
                         },
                         items: [E.endLink_eventCoC],
                         value: "twitch event end",
-                        type: O.Info
+                        type: T.Info
                     }
                 },
                 L = {
@@ -4590,7 +4590,7 @@
                         return Object(c.d)("Where is the problem?", "ReportModalWizard")
                     },
                     items: [E.video, E.whisper, E.chat, E.moderating, E.otherContent, E.report_username, E.report_other],
-                    type: O.MultipleChoice,
+                    type: T.MultipleChoice,
                     value: "content type"
                 },
                 W = {
@@ -4598,21 +4598,21 @@
                         getTitle: U.reportVideo,
                         getLabel: D.identifyUser,
                         items: [E.video_streamer, E.video_someoneElse, E.video_chatSomeone],
-                        type: O.MultipleChoice,
+                        type: T.MultipleChoice,
                         value: "video identify user"
                     },
                     content: {
                         getTitle: U.reportVideo,
                         getLabel: D.contentGeneral,
                         items: [E.violence, E.abusive, E.video_inactive, E.video_labeling, E.inappropriateContent, E.selfharm, E.video_more_options],
-                        type: O.MultipleChoice,
+                        type: T.MultipleChoice,
                         value: "video report reason"
                     },
                     moreOptions: {
                         getTitle: U.reportVideo,
                         getLabel: D.contentGeneral,
                         items: [E.revealPersonalInfo, E.cheating, E.impersonating, E.underage, E.bitsViolation, E.report_ip, E.other],
-                        type: O.MultipleChoice,
+                        type: T.MultipleChoice,
                         value: "video general report reason"
                     }
                 },
@@ -4621,14 +4621,14 @@
                         getTitle: U.reportMessage,
                         getLabel: D.contentGeneral,
                         items: [E.report_username, E.violence, E.abusive, E.evasion, E.spam, E.selfharm, E.chat_more_options],
-                        type: O.MultipleChoice,
+                        type: T.MultipleChoice,
                         value: "message report reason"
                     },
                     moreOptions: {
                         getTitle: U.reportMessage,
                         getLabel: D.contentGeneral,
                         items: [E.emotes_break_guidelines, E.inappropriateContent, E.revealPersonalInfo, E.maliciousRaid, E.underage, E.bitsViolation, E.other],
-                        type: O.MultipleChoice,
+                        type: T.MultipleChoice,
                         value: "message general report reason"
                     }
                 },
@@ -4637,7 +4637,7 @@
                         getTitle: U.reportWhisper,
                         getLabel: D.contentGeneral,
                         items: [E.report_username, E.violence, E.abusive, E.spam, E.selfharm, E.whisper_more_options],
-                        type: O.MultipleChoice,
+                        type: T.MultipleChoice,
                         value: "whisper report reason",
                         getDescription: function() {
                             return Object(c.d)("Please note that we may review additional messages in this conversation to determine the context of your report.", "ReportModalWizard")
@@ -4647,7 +4647,7 @@
                         getTitle: U.reportWhisper,
                         getLabel: D.contentGeneral,
                         items: [E.emotes_break_guidelines, E.evasion, E.inappropriateContent, E.revealPersonalInfo, E.underage, E.other],
-                        type: O.MultipleChoice,
+                        type: T.MultipleChoice,
                         value: "whisper general report reason"
                     }
                 },
@@ -4656,28 +4656,28 @@
                         getTitle: U.reportProfile,
                         getLabel: D.contentGeneral,
                         items: [E.revealPersonalInfo, E.violence, E.abusive, E.inappropriateContent, E.selfharm, E.profile_more_options],
-                        type: O.MultipleChoice,
+                        type: T.MultipleChoice,
                         value: "profile report reason"
                     },
                     profileMoreOptions: {
                         getTitle: U.reportProfile,
                         getLabel: D.contentGeneral,
                         items: [E.scam, E.evasion, E.impersonation, E.underage, E.report_ip, E.other],
-                        type: O.MultipleChoice,
+                        type: T.MultipleChoice,
                         value: "profile general report reason"
                     },
                     emotes: {
                         getTitle: U.reportEmotesBadges,
                         getLabel: D.content,
                         items: [E.hateSpeechSymbols, E.harassing, E.itsInappropriateContent, E.automod, E.report_ip, E.other],
-                        type: O.MultipleChoice,
+                        type: T.MultipleChoice,
                         value: "emote report reason"
                     },
                     general: {
                         getTitle: U.reportProfileOrOtherContent,
                         getLabel: D.content,
                         items: [E.report_username, E.profile, E.report_emotes, E.inappropriateExtension, E.compromisedAccount, E.violateDevAgreement],
-                        type: O.MultipleChoice,
+                        type: T.MultipleChoice,
                         value: "profile content location"
                     }
                 },
@@ -4690,12 +4690,12 @@
                     getLabel: D.identifyUser,
                     items: [E.report_channelOwner, E.report_member],
                     value: "room report user",
-                    type: O.MultipleChoice
+                    type: T.MultipleChoice
                 },
                 P = {
                     getTitle: U.tellUsMore,
                     items: [E.input_description],
-                    type: O.Confirm,
+                    type: T.Confirm,
                     value: "tell us more"
                 },
                 Y = {
@@ -4714,7 +4714,7 @@
                         getTitle: U.reportAbusive,
                         getLabel: D.relevantStatements,
                         items: [E.hateSpeech, E.harassment, E.abusiveViolence, E.commitingViolence, E.swatting, E.personalInfo],
-                        type: O.MultipleChoice,
+                        type: T.MultipleChoice,
                         value: "abuse type"
                     }
                 },
@@ -4729,7 +4729,7 @@
                             return Object(c.d)("Where did the problem happen?", "ReportModalWizard")
                         },
                         items: [E.location_onTwitch, E.location_anotherSite, E.location_TwitchEvent],
-                        type: O.MultipleChoice,
+                        type: T.MultipleChoice,
                         value: "off-site conduct location"
                     },
                     externalSite: {
@@ -4743,7 +4743,7 @@
                             return Object(c.d)("Please note that incidents reported through this form must involve Twitch community members. If possible, please submit a report to the site or service where the incident occurred as well.", "ReportModalWizard")
                         },
                         items: [E.external_incitingRaids, E.external_threatening, E.external_harassment],
-                        type: O.MultipleChoice,
+                        type: T.MultipleChoice,
                         nextCard: Y.socialMedia,
                         value: "external site conduct"
                     },
@@ -4760,7 +4760,7 @@
                     },
                     getLabel: D.contentGeneral,
                     items: [E.spam_bot, E.spam_scam, E.spam_links, E.spam_repeated],
-                    type: O.MultipleChoice,
+                    type: T.MultipleChoice,
                     value: "spam type"
                 },
                 X = {
@@ -4771,7 +4771,7 @@
                     },
                     getLabel: D.relevantStatements,
                     items: [E.inappropriate_game, E.gory, E.sexuallyViolentChildAnimal, E.pornographic, E.suggestive, E.nudity, E.other],
-                    type: O.MultipleChoice,
+                    type: T.MultipleChoice,
                     value: "inappropriate content type"
                 },
                 Q = {
@@ -4785,7 +4785,7 @@
                     },
                     value: "ban type",
                     items: [E.evasion_chat, E.evasion_sitewide, E.evasion_messaging],
-                    type: O.MultipleChoice,
+                    type: T.MultipleChoice,
                     nextCard: Y.banEvasion
                 },
                 $ = {
@@ -4801,7 +4801,7 @@
                         return Object(c.d)("Please note that parody, cosplay, and other portrayals without the intent to deceive or defraud are allowed under Twitch's Community Guidelines. If you would still like to submit a report, please continue.", "ReportModalWizard")
                     },
                     items: [E.impersonation_me, E.impersonation_brand, E.impersonation_other],
-                    type: O.MultipleChoice,
+                    type: T.MultipleChoice,
                     value: "impersonation type"
                 },
                 K = L,
@@ -4892,10 +4892,10 @@
                                 i = !1,
                                 a = t.state.prevCards.length ? t.renderBack() : null;
                             switch (t.state.currentCard.type) {
-                                case O.MultipleChoice:
+                                case T.MultipleChoice:
                                     e = Object(c.d)("Next", "ReportModalWizard"), n = t.handleNext, r = ae, i = !t.state.currentSelection;
                                     break;
-                                case O.Confirm:
+                                case T.Confirm:
                                     e = Object(c.d)("Submit Report", "ReportModalWizard"), n = t.handleSubmit, i = !t.state.userTextInput, r = oe
                             }
                             return o.createElement(C.Ya, null, a, o.createElement(C.z, {
@@ -4947,7 +4947,7 @@
                                     l = e.nextCard || J;
                                 ee[t.state.currentSelection.value] && (l = ee[t.state.currentSelection.value]);
                                 var c = t.state.currentSelection.reportReason || t.state.reportReason,
-                                    d = l.type === O.Info;
+                                    d = l.type === T.Info;
                                 t.setState({
                                     currentCard: l,
                                     reportReason: c,
@@ -5070,7 +5070,7 @@
                     return a.__extends(t, e), t.prototype.componentWillUnmount = function() {
                         this.state.modalCloseTracked || this.props.trackClose(x.Close, this.state.currentCard.value, this.getChoiceIndex())
                     }, t.prototype.render = function() {
-                        var e = this.state.currentCard.type === O.Info && this.state.currentCard.blockPrompt ? o.createElement(T, {
+                        var e = this.state.currentCard.type === T.Info && this.state.currentCard.blockPrompt ? o.createElement(O, {
                                 targetUser: this.props.targetUser,
                                 onBlock: this.props.onBlock,
                                 onUnblock: this.props.onUnblock,
@@ -5084,7 +5084,7 @@
                                 padding: 1,
                                 className: "reporting__error-container"
                             }, this.state.error) : null,
-                            n = this.state.prevCards.length || this.state.currentCard.type === O.Info ? null : this.renderPrimer();
+                            n = this.state.prevCards.length || this.state.currentCard.type === T.Info ? null : this.renderPrimer();
                         return o.createElement(C.Fb, {
                             className: "reporting-wizard",
                             display: C.X.Flex,
@@ -5140,7 +5140,7 @@
                             return a.__generator(this, function(a) {
                                 switch (a.label) {
                                     case 0:
-                                        if (n = r === v.N.WHISPER_REPORT ? r : this.props.reportContext.contentType, i = v.N[n], null === (o = {
+                                        if (n = r === v.O.WHISPER_REPORT ? r : this.props.reportContext.contentType, i = v.O[n], null === (o = {
                                                 description: t,
                                                 reason: e,
                                                 content: i,
@@ -5904,12 +5904,12 @@
                 })(y)),
                 S = n("oJmH"),
                 w = n("Vsf8"),
-                T = {
+                O = {
                     isLoading: !1,
                     hasErrored: !1,
                     hasSucceeded: !1
                 },
-                O = function(e) {
+                T = function(e) {
                     function t(t) {
                         var n = e.call(this, t) || this;
                         return n.deleteAll = function() {
@@ -5943,7 +5943,7 @@
                             return n.state.hasSucceeded ? Object(a.d)("A request has been made to delete the clip. Please wait a few minutes for this to take effect.", "ClipsModalDeleteAll") : null
                         }, n.renderFailure = function() {
                             return n.state.hasErrored ? Object(a.d)("There was a problem deleting this clip.", "ClipsModalDeleteAll") : null
-                        }, n.state = T, n
+                        }, n.state = O, n
                     }
                     return r.__extends(t, e), t.prototype.componentDidMount = function() {
                         this.props.latencyTracking.reportInteractive()
@@ -6027,7 +6027,7 @@
                             }
                         }
                     }
-                }))(O),
+                }))(T),
                 E = {
                     isLoading: !1,
                     hasErrored: !1,

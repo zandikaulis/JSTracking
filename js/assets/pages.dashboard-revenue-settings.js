@@ -1,5 +1,5 @@
 (window.webpackJsonp = window.webpackJsonp || []).push([
-    [170], {
+    [171], {
         "+UBe": function(e, t) {
             var n = {
                 kind: "Document",
@@ -2837,8 +2837,8 @@
                     }
                 }))(H),
                 $ = n("3R7m"),
-                K = n("o6p4"),
-                Z = function(e) {
+                Z = n("o6p4"),
+                K = function(e) {
                     return i.createElement(P.Fb, {
                         display: P.X.Flex,
                         flexDirection: P.Aa.Row,
@@ -2893,7 +2893,7 @@
                         }, t.renderTierItems = function() {
                             return t.tiers.map(function(e, n) {
                                 var a, r;
-                                return e && e.badge ? (a = e.badge.id, r = i.createElement(Z, {
+                                return e && e.badge ? (a = e.badge.id, r = i.createElement(K, {
                                     threshold: e.threshold,
                                     checked: e.isEnabled,
                                     imageSrc: e.badge.image1x,
@@ -2988,7 +2988,7 @@
                             }
                         }
                     }
-                }), Object(u.a)(K, {
+                }), Object(u.a)(Z, {
                     name: "updateBadgeTiers"
                 }), Object(p.b)("ChatBadgeTiersForm"))(te),
                 ae = n("ulzF"),
@@ -4378,7 +4378,7 @@
                 He = n("/MKj"),
                 Je = n("aCAx"),
                 $e = n("dWDG"),
-                Ke = (n("QtTb"), function(e) {
+                Ze = (n("QtTb"), function(e) {
                     function t() {
                         var t = null !== e && e.apply(this, arguments) || this;
                         return t.state = {
@@ -4420,7 +4420,7 @@
                         }
                     })], t)
                 }(i.PureComponent)),
-                Ze = n("REKr"),
+                Ke = n("REKr"),
                 et = "amendment-modal-accept-button",
                 tt = function(e) {
                     function t() {
@@ -4513,7 +4513,7 @@
                         }, Object(h.d)("Cancel", "CommerceAmendmentModal"))), this.renderAcceptButton(this.props.amendmentAccepted)))
                     }, t
                 }(i.PureComponent),
-                nt = Object(u.a)(Ze, {
+                nt = Object(u.a)(Ke, {
                     name: "setAmendmentAcceptance"
                 })(tt),
                 at = (n("Ys4A"), function(e) {
@@ -4543,7 +4543,7 @@
                             return Object(Je.d)(it, t)
                         }
                     }, e)
-                })(Ke),
+                })(Ze),
                 st = function(e) {
                     function t() {
                         return null !== e && e.apply(this, arguments) || this
@@ -5529,12 +5529,12 @@
                         })
                     }, t
                 }(i.Component);
-            var $t, Kt = Object(He.connect)(null, function(e) {
+            var $t, Zt = Object(He.connect)(null, function(e) {
                     return Object(g.bindActionCreators)({
                         closeModal: Je.c
                     }, e)
                 })(Jt),
-                Zt = "subscriptions/v1/channels",
+                Kt = "subscriptions/v1/channels",
                 en = function() {
                     function e() {}
                     return e.getBadges = function(e) {
@@ -5543,7 +5543,7 @@
                             return a.__generator(this, function(a) {
                                 switch (a.label) {
                                     case 0:
-                                        return a.trys.push([0, 2, , 3]), [4, R.a.getOrThrow(Zt + "/" + e + "/badges", {
+                                        return a.trys.push([0, 2, , 3]), [4, R.a.getOrThrow(Kt + "/" + e + "/badges", {
                                             credentials: "include"
                                         })];
                                     case 1:
@@ -5561,7 +5561,7 @@
                             return a.__generator(this, function(n) {
                                 switch (n.label) {
                                     case 0:
-                                        return n.trys.push([0, 2, , 3]), [4, R.a.getOrThrow(Zt + "/" + e + "/timeout_statuses", {
+                                        return n.trys.push([0, 2, , 3]), [4, R.a.getOrThrow(Kt + "/" + e + "/timeout_statuses", {
                                             credentials: "include"
                                         })];
                                     case 1:
@@ -5579,7 +5579,7 @@
                             return a.__generator(this, function(a) {
                                 switch (a.label) {
                                     case 0:
-                                        return a.trys.push([0, 2, , 3]), [4, R.a.deleteOrThrow(Zt + "/" + e + "/badges/" + t, {
+                                        return a.trys.push([0, 2, , 3]), [4, R.a.deleteOrThrow(Kt + "/" + e + "/badges/" + t, {
                                             credentials: "include"
                                         })];
                                     case 1:
@@ -5597,7 +5597,7 @@
                             return a.__generator(this, function(a) {
                                 switch (a.label) {
                                     case 0:
-                                        return a.trys.push([0, 2, , 3]), (n = new FormData).append("required_tenure_months", t.requiredTenureMonths.toString()), n.append("image_1x", t.image1x), n.append("image_2x", t.image2x), n.append("image_4x", t.image4x), [4, R.a.postOrThrow(Zt + "/" + e + "/badges", {
+                                        return a.trys.push([0, 2, , 3]), (n = new FormData).append("required_tenure_months", t.requiredTenureMonths.toString()), n.append("image_1x", t.image1x), n.append("image_2x", t.image2x), n.append("image_4x", t.image4x), [4, R.a.postOrThrow(Kt + "/" + e + "/badges", {
                                             body: n,
                                             credentials: "include"
                                         })];
@@ -6428,7 +6428,7 @@
                     return Object(g.bindActionCreators)({
                         showUploadBadgeModal: function(e) {
                             var t = a.__rest(e, []);
-                            return Object(Je.d)(Kt, t)
+                            return Object(Je.d)(Zt, t)
                         }
                     }, e)
                 })(_n),
@@ -6773,7 +6773,7 @@
                     name: "acceptProgramAgreement"
                 }))(Hn),
                 $n = n("+ZoN"),
-                Kn = function(e) {
+                Zn = function(e) {
                     function t() {
                         return null !== e && e.apply(this, arguments) || this
                     }
@@ -6818,7 +6818,7 @@
                         }, e)
                     }, t
                 }(i.Component),
-                Zn = Object(u.a)($n)(Kn),
+                Kn = Object(u.a)($n)(Zn),
                 ea = function(e) {
                     var t;
                     switch (e.onboardEntity) {
@@ -6979,7 +6979,7 @@
                         borderTop: !0,
                         borderBottom: !0,
                         padding: 2
-                    }, i.createElement(Zn, {
+                    }, i.createElement(Kn, {
                         onboardEntity: this.props.onboardEntity,
                         status: this.payoutMethodStatus
                     }), i.createElement(ta, {
@@ -7892,8 +7892,8 @@
                     }, t
                 }(i.Component),
                 $a = n("8HtN"),
-                Ka = n("tKvv"),
-                Za = (n("dxDy"), function(e) {
+                Za = n("tKvv"),
+                Ka = (n("dxDy"), function(e) {
                     function t() {
                         var t = null !== e && e.apply(this, arguments) || this;
                         return t.state = {
@@ -8121,11 +8121,11 @@
                         configurable: !0
                     }), t
                 }(i.Component)),
-                ei = Object(g.compose)(Object(u.a)(Ka, {
+                ei = Object(g.compose)(Object(u.a)(Za, {
                     name: "startPayoutOnboardingWorkflow"
                 }), Object(u.a)($a, {
                     name: "registerPayoutInformation"
-                }))(Za),
+                }))(Ka),
                 ti = function(e) {
                     function t() {
                         var t = null !== e && e.apply(this, arguments) || this;
@@ -8921,17 +8921,17 @@
                         if (!e || !t) return null;
                         var n = t.map(function(t, n) {
                             var a, r;
-                            if (t === m.Y.NAME) a = Object(h.d)("Name", "TaxMismatchSpecificErrors"), r = e.companyName ? e.companyName : [e.firstName, e.middleName, e.lastName].filter(function(e) {
+                            if (t === m.Z.NAME) a = Object(h.d)("Name", "TaxMismatchSpecificErrors"), r = e.companyName ? e.companyName : [e.firstName, e.middleName, e.lastName].filter(function(e) {
                                 return null !== e
                             }).join(" ");
-                            else if (t === m.Y.EMAIL) a = Object(h.d)("Email", "TaxMismatchSpecificErrors"), r = e.email;
-                            else if (t === m.Y.STREET_ADDRESS) a = Object(h.d)("Street Address", "TaxMismatchSpecificErrors"), r = e.streetAddress;
-                            else if (t === m.Y.STREET_ADDRESS_2) a = Object(h.d)("Street Address 2", "TaxMismatchSpecificErrors"), r = e.streetAddress2;
-                            else if (t === m.Y.CITY) a = Object(h.d)("City or Town", "TaxMismatchSpecificErrors"), r = e.city;
-                            else if (t === m.Y.STATE) a = Object(h.d)("State/Province", "TaxMismatchSpecificErrors"), r = "US" === e.countryCode ? Na(e.stateCode || "") : "CA" === e.countryCode ? Sa(e.stateCode || "") : e.stateCode;
-                            else if (t === m.Y.COUNTRY) a = Object(h.d)("Country", "TaxMismatchSpecificErrors"), r = Object(ka.b)(e.countryCode || "");
+                            else if (t === m.Z.EMAIL) a = Object(h.d)("Email", "TaxMismatchSpecificErrors"), r = e.email;
+                            else if (t === m.Z.STREET_ADDRESS) a = Object(h.d)("Street Address", "TaxMismatchSpecificErrors"), r = e.streetAddress;
+                            else if (t === m.Z.STREET_ADDRESS_2) a = Object(h.d)("Street Address 2", "TaxMismatchSpecificErrors"), r = e.streetAddress2;
+                            else if (t === m.Z.CITY) a = Object(h.d)("City or Town", "TaxMismatchSpecificErrors"), r = e.city;
+                            else if (t === m.Z.STATE) a = Object(h.d)("State/Province", "TaxMismatchSpecificErrors"), r = "US" === e.countryCode ? Na(e.stateCode || "") : "CA" === e.countryCode ? Sa(e.stateCode || "") : e.stateCode;
+                            else if (t === m.Z.COUNTRY) a = Object(h.d)("Country", "TaxMismatchSpecificErrors"), r = Object(ka.b)(e.countryCode || "");
                             else {
-                                if (t !== m.Y.POSTAL) return null;
+                                if (t !== m.Z.POSTAL) return null;
                                 a = Object(h.d)("Zip Code/Postal Code", "TaxMismatchSpecificErrors"), r = e.postal
                             }
                             return i.createElement(P.Qa, {
@@ -9792,7 +9792,7 @@
                 $i = {
                     "data-test-selector": "require-two-factor-enabled__enable-two-factor-message"
                 },
-                Ki = function(e) {
+                Zi = function(e) {
                     function t() {
                         return null !== e && e.apply(this, arguments) || this
                     }
@@ -9814,7 +9814,7 @@
                         configurable: !0
                     }), t
                 }(i.Component),
-                Zi = Object(r.compose)(Object(u.a)(Ji))(Ki),
+                Ki = Object(r.compose)(Object(u.a)(Ji))(Zi),
                 er = n("Z21N"),
                 tr = function(e) {
                     function t() {
@@ -9989,7 +9989,7 @@
                         var e, t = this.props.data.currentUser && this.props.data.currentUser.payoutInvite && this.props.data.currentUser.payoutInvite.workflow;
                         switch (this.state.stepDisplayed) {
                             case wn.Summary:
-                                return i.createElement(i.Fragment, null, this.renderDefaultHeader(), i.createElement(Zi, {
+                                return i.createElement(i.Fragment, null, this.renderDefaultHeader(), i.createElement(Ki, {
                                     enableTwoFactorMessage: this.enableTwoFactorMessage
                                 }, i.createElement(Oi, {
                                     onboardEntity: this.props.onboardEntity,
@@ -10048,7 +10048,7 @@
                             }, "PayoutOnboardingContainer"),
                             description: mi[this.state.stepDisplayed].description[this.props.onboardEntity](),
                             onClick: this.goBackToSummary
-                        }), i.createElement(Zi, {
+                        }), i.createElement(Ki, {
                             enableTwoFactorMessage: this.enableTwoFactorMessage
                         }, e))
                     }, t.prototype.renderDefaultHeader = function() {
@@ -10145,7 +10145,7 @@
                             title: Object(h.d)("Change Payout Method", "PayoutSettingsPage"),
                             linkToParent: "/" + this.props.match.params.channelName + "/dashboard/settings/revenue"
                         });
-                        return i.createElement(Zi, {
+                        return i.createElement(Ki, {
                             enableTwoFactorMessage: Object(h.d)("You must enable two-factor authentication to change your payout method.", "PayoutSettingsPage")
                         }, i.createElement(C.a, {
                             header: e
@@ -10266,7 +10266,7 @@
                             }
                         }, t.createSubPlanDescription = function(e) {
                             if (e) {
-                                var t = Object(br.a)(e);
+                                var t = Object(br.b)(e);
                                 return null === t && (t = 1), Object(h.d)("Name of your Tier {tierNum} subscription plan that will be visible to everyone", {
                                     tierNum: t
                                 }, "SubsNameSettingsPage")
@@ -10446,7 +10446,7 @@
                             title: this.headerTitle,
                             linkToParent: "/" + this.props.match.params.channelName + "/dashboard/settings/revenue"
                         });
-                        return i.createElement(Zi, {
+                        return i.createElement(Ki, {
                             enableTwoFactorMessage: Object(h.d)("You must enable two-factor authentication to accept your agreement.", "UpgradeTermsPage")
                         }, i.createElement(C.a, {
                             header: e
@@ -10574,7 +10574,7 @@
                             title: Object(h.d)("View Active Partner Agreement", "ViewTermsPage"),
                             linkToParent: "/" + this.props.match.params.channelName + "/dashboard/settings/revenue"
                         });
-                        return i.createElement(Zi, {
+                        return i.createElement(Ki, {
                             enableTwoFactorMessage: Object(h.d)("You must enable two-factor authentication to view your agreement.", "ViewTermsPage")
                         }, i.createElement(C.a, {
                             header: e

@@ -622,8 +622,8 @@
                 y = r("QVaV"),
                 R = r("Ue10"),
                 T = (r("MPK0"), "report-wizard-block"),
-                _ = "report-wizard-unblock",
-                O = function(e) {
+                O = "report-wizard-unblock",
+                _ = function(e) {
                     function t() {
                         var t = null !== e && e.apply(this, arguments) || this;
                         return t.state = {
@@ -666,7 +666,7 @@
                             }, "ReportWizardBlockActions"))), i.createElement(R.U, {
                                 hoverUnderlineNone: !0,
                                 onClick: t.handleUnblock,
-                                "data-test-selector": _
+                                "data-test-selector": O
                             }, i.createElement(R.Ya, {
                                 margin: {
                                     left: .5
@@ -1225,7 +1225,7 @@
                             return Object(c.d)("In a whisper (private message)", "ReportModalWizard")
                         },
                         value: "whisper",
-                        reportContext: b.N.WHISPER_REPORT
+                        reportContext: b.O.WHISPER_REPORT
                     },
                     whisper_more_options: {
                         getTitle: S.moreOptions,
@@ -2088,7 +2088,7 @@
                     return a.__extends(t, e), t.prototype.componentWillUnmount = function() {
                         this.state.modalCloseTracked || this.props.trackClose(z.Close, this.state.currentCard.value, this.getChoiceIndex())
                     }, t.prototype.render = function() {
-                        var e = this.state.currentCard.type === C.Info && this.state.currentCard.blockPrompt ? i.createElement(O, {
+                        var e = this.state.currentCard.type === C.Info && this.state.currentCard.blockPrompt ? i.createElement(_, {
                                 targetUser: this.props.targetUser,
                                 onBlock: this.props.onBlock,
                                 onUnblock: this.props.onUnblock,
@@ -2158,7 +2158,7 @@
                             return a.__generator(this, function(a) {
                                 switch (a.label) {
                                     case 0:
-                                        if (r = n === b.N.WHISPER_REPORT ? n : this.props.reportContext.contentType, o = b.N[r], null === (i = {
+                                        if (r = n === b.O.WHISPER_REPORT ? n : this.props.reportContext.contentType, o = b.O[r], null === (i = {
                                                 description: t,
                                                 reason: e,
                                                 content: o,
@@ -2505,7 +2505,7 @@
                         return t.getReportingContext = function() {
                             var e = c.parse(t.props.location.search);
                             return {
-                                contentType: e.contentType ? e.contentType : m.N.USER_REPORT,
+                                contentType: e.contentType ? e.contentType : m.O.USER_REPORT,
                                 contentID: e.contentId,
                                 targetUserID: t.props.data.targetUser.id
                             }

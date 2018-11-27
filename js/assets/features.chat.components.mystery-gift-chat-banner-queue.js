@@ -1,5 +1,5 @@
 (window.webpackJsonp = window.webpackJsonp || []).push([
-    [196], {
+    [197], {
         "/2Fp": function(e, t) {
             var n = {
                 kind: "Document",
@@ -105,8 +105,8 @@
             n.r(t);
             var i = n("mrSG"),
                 r = n("q1tI"),
-                a = n("fvjX"),
-                o = n("x7UT"),
+                o = n("fvjX"),
+                a = n("x7UT"),
                 s = n("0Log"),
                 u = n("/aPz"),
                 p = n("/7QA"),
@@ -166,7 +166,7 @@
                             var e = null,
                                 n = null;
                             t.props.data && t.props.data.user && (t.props.data.user.displayName && (e = t.props.data.user.displayName), t.props.data.user.login && (n = t.props.data.user.login));
-                            var i = Object(b.a)(t.props.tier) || "";
+                            var i = Object(b.b)(t.props.tier) || "";
                             return n || e ? Object(p.d)("{mysteryGiftCount, plural,          one {{displayName} is giving out {mysteryGiftCount} Tier {tier} Community Sub Gift!}          other {{displayName} is giving out {mysteryGiftCount} Tier {tier} Community Sub Gifts!}}", {
                                 displayName: r.createElement(v.W, {
                                     bold: !0,
@@ -211,7 +211,7 @@
                         }))
                     }, t
                 }(r.Component),
-                D = Object(a.compose)(Object(l.a)(k, {
+                D = Object(o.compose)(Object(l.a)(k, {
                     options: function(e) {
                         return {
                             variables: {
@@ -262,7 +262,7 @@
                         t && this.setState(function(e) {
                             if (!(t.uuid !== e.lastMessageUUID)) return e;
                             var n = i.__assign({}, t, {
-                                humanizedTier: Object(b.a)(t.tier) || 0
+                                humanizedTier: Object(b.b)(t.tier) || 0
                             });
                             return {
                                 lastMessageUUID: n.uuid,
@@ -278,7 +278,7 @@
                         })
                     }, t
                 }(r.Component),
-                N = Object(a.compose)(Object(o.a)([{
+                N = Object(o.compose)(Object(a.a)([{
                     mapMessageTypesToProps: (h = {}, h[s.PubsubMessageType.MysteryGiftPurchase] = "purchase", h),
                     topic: function(e) {
                         return Object(u.r)(e.channelID)

@@ -1,5 +1,5 @@
 (window.webpackJsonp = window.webpackJsonp || []).push([
-    [184], {
+    [185], {
         "+Mtq": function(e, t, n) {},
         "0iXB": function(e, t, n) {},
         "3CMh": function(e, t, n) {
@@ -1176,6 +1176,7 @@
                     Buy500: "buy_500",
                     Buy1000: "buy_1000",
                     Buy1500: "buy_1500",
+                    Buy2500: "buy_2500",
                     Buy5000: "buy_5000",
                     Buy10000: "buy_10000",
                     Buy25000: "buy_25000",
@@ -1196,6 +1197,7 @@
                     500: c.Buy500,
                     1000: c.Buy1000,
                     1500: c.Buy1500,
+                    2500: c.Buy2500,
                     5000: c.Buy5000,
                     10000: c.Buy10000,
                     25000: c.Buy25000

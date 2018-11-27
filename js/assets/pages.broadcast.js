@@ -848,65 +848,65 @@
                 y = n.n(C),
                 w = n("LWua"),
                 S = n.n(w),
-                E = n("EkNY"),
-                _ = n("Ue10");
+                _ = n("EkNY"),
+                E = n("Ue10");
             ! function(e) {
                 e.DownloadButton = "broadast-items-card__download-button"
             }(r || (r = {}));
             var k = function(e) {
                     var t = e.link,
                         n = e.title;
-                    return a.createElement(_.Fb, {
-                        background: _.r.Base,
+                    return a.createElement(E.Fb, {
+                        background: E.r.Base,
                         elevation: 1,
                         padding: 2,
-                        display: _.X.Flex,
-                        flexDirection: _.Aa.Column,
+                        display: E.X.Flex,
+                        flexDirection: E.Aa.Column,
                         fullHeight: !0
-                    }, a.createElement(_.Ya, {
-                        display: _.X.Flex,
-                        justifyContent: _.Xa.Center,
+                    }, a.createElement(E.Ya, {
+                        display: E.X.Flex,
+                        justifyContent: E.Xa.Center,
                         margin: {
                             top: 1
                         }
-                    }, a.createElement(_.S, {
+                    }, a.createElement(E.S, {
                         alt: n,
                         src: e.imgURL
-                    })), a.createElement(_.Ya, {
+                    })), a.createElement(E.Ya, {
                         margin: {
                             top: 2,
                             bottom: 1
                         }
-                    }, a.createElement(_.W, {
-                        fontSize: _.Ca.Size5
-                    }, n), a.createElement(_.U, {
+                    }, a.createElement(E.W, {
+                        fontSize: E.Ca.Size5
+                    }, n), a.createElement(E.U, {
                         targetBlank: !0,
                         to: t
-                    }, t)), a.createElement(_.W, {
-                        type: _.Wb.P,
-                        color: _.O.Alt2
-                    }, e.longDescription), a.createElement(_.Ya, {
-                        display: _.X.Flex,
-                        flexDirection: _.Aa.Column,
+                    }, t)), a.createElement(E.W, {
+                        type: E.Wb.P,
+                        color: E.O.Alt2
+                    }, e.longDescription), a.createElement(E.Ya, {
+                        display: E.X.Flex,
+                        flexDirection: E.Aa.Column,
                         fullWidth: !0,
                         flexGrow: 1,
-                        justifyContent: _.Xa.End,
+                        justifyContent: E.Xa.End,
                         margin: {
                             top: 2
                         }
-                    }, a.createElement(_.z, {
+                    }, a.createElement(E.z, {
                         "data-test-selector": r.DownloadButton,
                         fullWidth: !0,
-                        type: _.F.Hollow,
+                        type: E.F.Hollow,
                         linkTo: t,
-                        onClick: E.e.bind(null, n)
-                    }, Object(i.d)("Download", "BroadcastItemCard")), a.createElement(_.Ya, {
+                        onClick: _.e.bind(null, n)
+                    }, Object(i.d)("Download", "BroadcastItemCard")), a.createElement(E.Ya, {
                         margin: {
                             top: 1
                         }
-                    }, a.createElement(_.z, {
+                    }, a.createElement(E.z, {
                         fullWidth: !0,
-                        type: _.F.Text,
+                        type: E.F.Text,
                         linkTo: e.setupGuideLink
                     }, Object(i.d)("Setup Guide", "BroadcastItemCard")))))
                 },
@@ -918,57 +918,57 @@
                     return o.__extends(t, e), t.prototype.componentDidMount = function() {
                         i.p.setPageTitle(Object(i.d)("Broadcast", "BroadcastPage"))
                     }, t.prototype.render = function() {
-                        return a.createElement(_.Ya, {
-                            display: _.X.Flex,
-                            flexDirection: _.Aa.Column,
-                            flexWrap: _.Ba.NoWrap,
+                        return a.createElement(E.Ya, {
+                            display: E.X.Flex,
+                            flexDirection: E.Aa.Column,
+                            flexWrap: E.Ba.NoWrap,
                             fullHeight: !0
-                        }, a.createElement(_.Ya, {
+                        }, a.createElement(E.Ya, {
                             className: "broadcast-container",
-                            position: _.kb.Relative,
+                            position: E.kb.Relative,
                             flexGrow: 1,
                             fullHeight: !0,
-                            overflow: _.db.Hidden
-                        }, a.createElement(O.a, null, a.createElement(_.W, {
+                            overflow: E.db.Hidden
+                        }, a.createElement(O.a, null, a.createElement(E.W, {
                             bold: !0,
-                            type: _.Wb.H4
-                        }, Object(i.d)("Broadcast While You Play", "BroadcastRootPage")), a.createElement(_.Ya, {
+                            type: E.Wb.H4
+                        }, Object(i.d)("Broadcast While You Play", "BroadcastRootPage")), a.createElement(E.Ya, {
                             margin: {
                                 y: 1
                             }
-                        }, a.createElement(_.W, {
-                            color: _.O.Alt2,
-                            type: _.Wb.P
-                        }, Object(i.d)("Here are the most common tools for broadcasting.", "BroadcastRootPage")), a.createElement(_.W, {
-                            color: _.O.Alt2
+                        }, a.createElement(E.W, {
+                            color: E.O.Alt2,
+                            type: E.Wb.P
+                        }, Object(i.d)("Here are the most common tools for broadcasting.", "BroadcastRootPage")), a.createElement(E.W, {
+                            color: E.O.Alt2
                         }, Object(i.d)("For more info, visit the <x:link>Support Center</x:link>.", {
                             "x:link": function(e) {
-                                return a.createElement(_.U, {
+                                return a.createElement(E.U, {
                                     targetBlank: !0,
                                     to: "https://help.twitch.tv/customer/portal/topics/301257-getting-started/articles"
                                 }, e)
                             }
-                        }, "BroadcastRootPage"))), a.createElement(_.W, {
-                            color: _.O.Alt2
+                        }, "BroadcastRootPage"))), a.createElement(E.W, {
+                            color: E.O.Alt2
                         }, Object(i.d)("Looking for your stream key? You can find it on your <x:link>dashboard</x:link>.", {
                             "x:link": function(e) {
-                                return a.createElement(_.U, {
+                                return a.createElement(E.U, {
                                     to: "/dashboard/settings"
                                 }, e)
                             }
-                        }, "BroadcastRootPage")), a.createElement(_.Ya, {
+                        }, "BroadcastRootPage")), a.createElement(E.Ya, {
                             margin: {
                                 y: 2
                             }
-                        }, a.createElement(_.W, {
+                        }, a.createElement(E.W, {
                             bold: !0,
-                            type: _.Wb.H4
-                        }, Object(i.d)("Broadcasting Applications", "BroadcastRootPage"))), a.createElement(_.cc, {
-                            childWidth: _.dc.Large,
-                            gutterSize: _.ec.Small,
+                            type: E.Wb.H4
+                        }, Object(i.d)("Broadcasting Applications", "BroadcastRootPage"))), a.createElement(E.cc, {
+                            childWidth: E.dc.Large,
+                            gutterSize: E.ec.Small,
                             noGrow: !0,
                             placeholderItems: 8
-                        }, a.createElement(_.Ya, {
+                        }, a.createElement(E.Ya, {
                             margin: {
                                 bottom: 2
                             }
@@ -978,7 +978,7 @@
                             link: "https://player.me/",
                             longDescription: Object(i.d)("Free, easy-to-use, all-in-one application for streaming and recording. Includes thousands of professionally designed overlays with alerts, a stream dashboard for tracking events, live stream chat and scene switching.", "BroadcastRootPage"),
                             setupGuideLink: "https://helpdesk.player.me/en/article/streaming-setup-guide-svsjha"
-                        })), a.createElement(_.Ya, {
+                        })), a.createElement(E.Ya, {
                             margin: {
                                 bottom: 2
                             }
@@ -988,7 +988,7 @@
                             link: "https://streamlabs.com/streamlabs-obs/",
                             longDescription: Object(i.d)("Streamlabs OBS is free, open source, and easy way to get started streaming. The app is built on top of OBS with a whole lot of exciting features: facemasks, built-in widgets & chat, game specific encoders and thousands of free overlays and themes.", "BroadcastRootPage"),
                             setupGuideLink: "https://support.streamlabs.com/hc/en-us/articles/115004797393-Streamlabs-OBS-All-In-One-Window-Walk-Through"
-                        })), a.createElement(_.Ya, {
+                        })), a.createElement(E.Ya, {
                             margin: {
                                 bottom: 2
                             }
@@ -998,7 +998,7 @@
                             link: "http://www.xsplit.com/",
                             longDescription: Object(i.d)("Simple yet powerful live streaming and recording software. XSplit Broadcaster is a revolutionary audio/video mixing application that allows for highly customizable professional quality live broadcasts by using simple and intuitive interface anyone can master.", "BroadcastRootPage"),
                             setupGuideLink: "https://www.xsplit.com/support"
-                        })), a.createElement(_.Ya, {
+                        })), a.createElement(E.Ya, {
                             margin: {
                                 bottom: 2
                             }
@@ -1008,19 +1008,19 @@
                             link: "http://obsproject.com/",
                             longDescription: Object(i.d)("Free and open source software for recording and live streaming. Source code is available to everyone to contribute and improve.", "BroadcastRootPage"),
                             setupGuideLink: "https://obsproject.com/help"
-                        }))), a.createElement(_.Ya, {
+                        }))), a.createElement(E.Ya, {
                             margin: {
                                 y: 2
                             }
-                        }, a.createElement(_.W, {
+                        }, a.createElement(E.W, {
                             bold: !0,
-                            type: _.Wb.H4
-                        }, Object(i.d)("Broadcasting Tools", "BroadcastRootPage"))), a.createElement(_.cc, {
-                            childWidth: _.dc.Large,
-                            gutterSize: _.ec.Small,
+                            type: E.Wb.H4
+                        }, Object(i.d)("Broadcasting Tools", "BroadcastRootPage"))), a.createElement(E.cc, {
+                            childWidth: E.dc.Large,
+                            gutterSize: E.ec.Small,
                             noGrow: !0,
                             placeholderItems: 3
-                        }, a.createElement(_.Ya, {
+                        }, a.createElement(E.Ya, {
                             margin: {
                                 bottom: 2
                             }
@@ -1030,7 +1030,7 @@
                             link: "https://streamlabs.com/",
                             longDescription: Object(i.d)("Level up your stream with alerts, donations, and 20+ interactive widgets.", "BroadcastRootPage"),
                             setupGuideLink: "https://support.streamlabs.com/hc/en-us/articles/217741147-Setting-up-your-Streamlabs-widgets-"
-                        })), a.createElement(_.Ya, {
+                        })), a.createElement(E.Ya, {
                             margin: {
                                 bottom: 2
                             }
@@ -1040,7 +1040,7 @@
                             link: "https://streamelements.com/",
                             longDescription: Object(i.d)("A full suite for all your streaming needs: Bot, Overlays, Loyalty points, Giveaways and much more for new and veteran streamers alike.", "BroadcastRootPage"),
                             setupGuideLink: "https://support.streamelements.com/hc/en-us/articles/115003424812-Quick-Start-Guide"
-                        })), a.createElement(_.Ya, {
+                        })), a.createElement(E.Ya, {
                             margin: {
                                 bottom: 2
                             }
@@ -1050,7 +1050,7 @@
                             link: "https://www.muxy.io/",
                             longDescription: Object(i.d)("Muxy provides alerts, tips, a real-time Live Feed, Cheer visualizations, and stream analytics.", "BroadcastRootPage"),
                             setupGuideLink: "https://muxy.io/tutorial/"
-                        })), a.createElement(_.Ya, {
+                        })), a.createElement(E.Ya, {
                             margin: {
                                 bottom: 2
                             }
@@ -1091,53 +1091,6 @@
         },
         UWzm: function(e, t, n) {
             e.exports = n.p + "assets/muxy_1x-f7ab6fe3091595df63f6.png"
-        },
-        "b+ID": function(e, t, n) {
-            "use strict";
-            var r, o = n("mrSG"),
-                a = n("q1tI"),
-                i = n("8Ad5"),
-                s = n("1rIY"),
-                c = (r = Object(s.a)("ExpandedViewButtonContext", {
-                    isExpandedView: !1,
-                    toggleExpandedView: function() {
-                        return null
-                    }
-                })).InnerProvider,
-                u = r.withContext,
-                d = function(e) {
-                    function t(t) {
-                        var n = e.call(this, t) || this;
-                        return n.handleKeyUp = function(e) {
-                            e.keyCode === i.a.Esc && n.state.isExpandedView && n.toggleExpandedView()
-                        }, n.toggleExpandedView = function(e) {
-                            n.setState(function(t) {
-                                return {
-                                    isExpandedView: void 0 !== e ? e : !t.isExpandedView
-                                }
-                            })
-                        }, n.state = {
-                            isExpandedView: !1,
-                            toggleExpandedView: n.toggleExpandedView
-                        }, n
-                    }
-                    return o.__extends(t, e), t.prototype.componentDidMount = function() {
-                        window.addEventListener("keyup", this.handleKeyUp)
-                    }, t.prototype.componentWillUnmount = function() {
-                        window.removeEventListener("keyup", this.handleKeyUp)
-                    }, t.prototype.render = function() {
-                        return a.createElement(c, {
-                            value: this.state
-                        }, this.props.children)
-                    }, t
-                }(a.Component);
-            n.d(t, !1, function() {
-                return c
-            }), n.d(t, "b", function() {
-                return u
-            }), n.d(t, "a", function() {
-                return d
-            })
         },
         b6Yk: function(e, t, n) {
             "use strict";
@@ -1479,7 +1432,7 @@
             }), n.d(t, "b", function() {
                 return w
             }), n.d(t, "c", function() {
-                return _
+                return E
             });
             var y, w, S = {
                 showViewers: !0,
@@ -1496,7 +1449,7 @@
             function(e) {
                 e.CURRENT_VIEWERS = "showViewers", e.STREAM_UP_TIME = "showUptime", e.TOTAL_VIEWS = "showViews", e.FOLLOWERS = "showFollowers", e.NUMBER_OF_CLIPS = "showClips", e.SUBSCRIPTIONS = "showSubs"
             }(w || (w = {}));
-            var E = function(e) {
+            var _ = function(e) {
                     function t(t) {
                         var n = e.call(this, t) || this;
                         n.getStreamInfo = function() {
@@ -1697,7 +1650,7 @@
                         })), this.renderSubscriptionStat()))
                     }, t
                 }(o.Component),
-                _ = Object(a.compose)(Object(g.b)(h.a.Stats), b.b, Object(m.b)(h.a.Stats, {
+                E = Object(a.compose)(Object(g.b)(h.a.Stats), b.b, Object(m.b)(h.a.Stats, {
                     autoReportCardVisibility: !0
                 }), Object(s.a)(C, {
                     options: function(e) {
@@ -1709,7 +1662,7 @@
                             }
                         }
                     }
-                }), Object(u.b)("Stats"))(E)
+                }), Object(u.b)("Stats"))(_)
         },
         logO: function(e, t, n) {},
         moen: function(e, t, n) {
@@ -1825,7 +1778,7 @@
                         })
                     }, t
                 }(i.Component);
-            var w, S, E = Object(s.compose)(v(function(e) {
+            var w, S, _ = Object(s.compose)(v(function(e) {
                     return {
                         updateCard: e.updateCard
                     }
@@ -1835,9 +1788,9 @@
                         isPoppedOut: e.card.isPoppedOut
                     }
                 }))(y),
-                _ = (n("5g1g"), n("wUQP")),
+                E = (n("5g1g"), n("wUQP")),
                 k = function() {
-                    return _.a.On === c.b.get("dashboard_live_popout", _.a.Off)
+                    return E.a.On === c.b.get("dashboard_live_popout", E.a.Off)
                 },
                 O = function(e) {
                     function t() {
@@ -1941,7 +1894,7 @@
                         margin: {
                             left: 1
                         }
-                    }, i.createElement(E, null)), this.props.menu), i.createElement(C.Ya, {
+                    }, i.createElement(_, null)), this.props.menu), i.createElement(C.Ya, {
                         margin: {
                             left: 1
                         }
@@ -1971,8 +1924,8 @@
                 }))(L),
                 R = n("i8i4"),
                 I = (n("O4PT"), 300),
-                x = 360,
-                T = function(e) {
+                T = 360,
+                x = function(e) {
                     function t() {
                         var t = null !== e && e.apply(this, arguments) || this;
                         return t.state = {
@@ -1982,7 +1935,7 @@
                         }, t.tryToOpenWindow = function() {
                             var e = "twitch-" + t.props.card.name,
                                 n = t.props.height || I,
-                                r = window.open("", e, "left=" + (window.screenX + window.screen.width / 2) + ",top=" + window.screen.height / 2 + ",titlebar=no,toolbar=no,menubar=no,resizable=yes,scrollbars=yes,location=no,personalbar=no,chrome=yes,height=" + n + ",width=" + x);
+                                r = window.open("", e, "left=" + (window.screenX + window.screen.width / 2) + ",top=" + window.screen.height / 2 + ",titlebar=no,toolbar=no,menubar=no,resizable=yes,scrollbars=yes,location=no,personalbar=no,chrome=yes,height=" + n + ",width=" + T);
                             r && t.setInitialWindowState(r, n)
                         }, t.tryToCloseWindow = function() {
                             if (t.props.card.isPoppedOut) return t.props.updateCard(t.props.card.name, {
@@ -2024,12 +1977,12 @@
                             e.document.head.appendChild(t.cloneNode(!0))
                         });
                         var n = document.createElement("title");
-                        n.innerHTML = "Twitch", e.document.head.appendChild(n), e.document.title = "Twitch", e.resizeTo(Math.max(t, I), x), this.setState({
+                        n.innerHTML = "Twitch", e.document.head.appendChild(n), e.document.title = "Twitch", e.resizeTo(Math.max(t, I), T), this.setState({
                             window: e
                         })
                     }, t
                 }(i.Component),
-                M = Object(s.compose)(v(), h())(T),
+                M = Object(s.compose)(v(), h())(x),
                 j = (n("7WKn"), function(e) {
                     function t() {
                         var t = null !== e && e.apply(this, arguments) || this;
@@ -2190,8 +2143,7 @@
             D.Card, D.Container, D.Header;
             var F = Object(s.compose)(h(), v())(B),
                 W = n("8/mp"),
-                A = n("b+ID"),
-                U = function(e) {
+                A = function(e) {
                     function t() {
                         var t = null !== e && e.apply(this, arguments) || this;
                         return t.setRootContainerRef = function(e) {
@@ -2206,7 +2158,7 @@
                         })
                     }, t
                 }(i.Component),
-                H = (n("6Ll5"), function(e) {
+                U = (n("6Ll5"), function(e) {
                     function t() {
                         var t = null !== e && e.apply(this, arguments) || this;
                         return t.handleContainerMouseOver = function() {
@@ -2364,21 +2316,20 @@
                     return a.__extends(t, e), t.prototype.componentDidMount = function() {
                         this.handleCardsUpdate()
                     }, t.prototype.render = function() {
-                        var e = this,
-                            t = this.props.isExpandedView;
+                        var e = this;
                         return i.createElement(i.Fragment, null, i.createElement(W.b, {
-                            className: "drag-and-drop-layout-scrollable-area" + (t ? "__expanded-view" : "")
+                            className: this.props.containerClassName || "drag-and-drop-layout-container"
                         }, i.createElement(C.Ya, {
                             alignContent: C.e.Stretch,
                             alignItems: C.f.Stretch,
-                            className: "drag-and-drop-layout",
+                            className: "drag-and-drop-layout-content",
                             display: C.X.Flex,
                             flexDirection: C.Aa.Row,
                             fullHeight: !0,
                             fullWidth: !0,
                             justifyContent: C.Xa.Between
                         }, this.state.roots.map(function(t, n) {
-                            return i.createElement(H, {
+                            return i.createElement(U, {
                                 column: n,
                                 key: n,
                                 grabbedCard: e.state.common.grabbedCard,
@@ -2388,7 +2339,7 @@
                             }, t.map(function(e) {
                                 var t = e.el,
                                     n = e.name;
-                                return i.createElement(U, {
+                                return i.createElement(A, {
                                     element: t,
                                     key: n
                                 })
@@ -2404,15 +2355,10 @@
                             }, e.props.cards[n.name]), n.el)
                         })))
                     }, t
-                }(i.Component));
-            var Y = Object(A.b)(function(e) {
-                    return {
-                        isExpandedView: e.isExpandedView
-                    }
-                })(N),
-                G = n("eJ65"),
-                V = n("N0BP"),
-                q = function(e) {
+                }(i.Component)),
+                H = n("eJ65"),
+                Y = n("N0BP"),
+                G = function(e) {
                     function t() {
                         return null !== e && e.apply(this, arguments) || this
                     }
@@ -2422,10 +2368,10 @@
                                 left: 1
                             },
                             position: C.kb.Relative
-                        }, i.createElement(G.a, null, i.createElement(C.A, a.__assign({
+                        }, i.createElement(H.a, null, i.createElement(C.A, a.__assign({
                             ariaLabel: this.props.ariaIconLabel,
                             icon: this.props.icon
-                        }, Object(V.a)(this.props))), i.createElement(C.u, {
+                        }, Object(Y.a)(this.props))), i.createElement(C.u, {
                             offsetY: "0",
                             offsetX: "1rem",
                             direction: C.v.Left,
@@ -2436,9 +2382,9 @@
             n.d(t, "a", function() {
                 return F
             }), n.d(t, "c", function() {
-                return Y
+                return N
             }), n.d(t, "b", function() {
-                return q
+                return G
             })
         },
         rSo7: function(e, t, n) {
