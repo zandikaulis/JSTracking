@@ -2879,8 +2879,8 @@ var PAUSE_HIDDEN_SILENT_TAB = (Browser.chrome && Browser.major === 63) || Browse
 var LOCAL_STORAGE_PREFIX = 'cvp.';
 
 // Default params for display size change
-var minWidth = 1000000;
-var minHeight = 1000000;
+var DEFAULT_MIN_WIDTH = 852;
+var DEFAULT_MIN_HEIGHT = 480;
 
 /** MediaPlayer constructor. This is the main export of PlayerCore
  *  @param {string} config.settings - Settings ID to load
@@ -2894,6 +2894,7 @@ var MediaPlayer = exports.MediaPlayer = function MediaPlayer(config, worker) {
     this._seekTime = null;
     this._isPaused = true;
     this._isLoaded = false;
+    this._enableVideoDisplaySizeChange = false;
     this._isQualitySupported = config.isQualitySupported || defaultIsQualitySupported;
     this._onvisibilitychange = this._onVisibilityChange.bind(this);
     this._onmessage = this._onWorkerMessage.bind(this);
@@ -2909,11 +2910,13 @@ var MediaPlayer = exports.MediaPlayer = function MediaPlayer(config, worker) {
     });
 
     var configSettings = loadSettings(config.settings);
+
+    // Check for displaysizechange settings
     var abr = configSettings.abr;
-    if(abr) {
-        this._enableVideoDisplaySizeChange = abr.displaySizeChange;
-        minWidth = (typeof abr.minWidth !== 'undefined') ? abr.minWidth : minWidth;
-        minHeight = (typeof abr.minHeight !== 'undefined') ? abr.minHeight : minHeight;
+    this._enableVideoDisplaySizeChange = abr && abr.displaySizeChange;
+    if(this._enableVideoDisplaySizeChange && abr.minWidth > 0 && abr.minHeight > 0) {
+        DEFAULT_MIN_WIDTH = abr.minWidth;
+        DEFAULT_MIN_HEIGHT = abr.minHeight;
     }
 
     // This represents cached state from the worker. State objects
@@ -3058,7 +3061,7 @@ MediaPlayer.prototype.getVideoBitRate = function () {
 }
 
 MediaPlayer.prototype.getVersion = function () {
-    return "2.7.1-b26d6215";
+    return "2.7.1-0f792c95";
 }
 
 MediaPlayer.prototype.isLooping = function () {
@@ -3124,6 +3127,10 @@ MediaPlayer.prototype.setAutoMaxBitrate = function (bitrate) {
 
 MediaPlayer.prototype.setAutoMaxVideoSize = function (width, height) {
     this._postMessage(WorkerMessage.SET_AUTO_MAX_VIDEO_SIZE, {width:width, height:height});
+}
+
+MediaPlayer.prototype.setAutoUpdateMaxVideoSizeEnabled = function (enable) {
+    this._enableVideoDisplaySizeChange = enable;
 }
 
 MediaPlayer.prototype.getPlaybackRate = function () {
@@ -3533,8 +3540,8 @@ MediaPlayer.prototype._onSinkPlay = function () {
 
 MediaPlayer.prototype._onSinkVideoDisplaySizeChanged = function (width, height) {
     if(this._enableVideoDisplaySizeChange) {
-        width = Math.max(width, minWidth);
-        height = Math.max(height, minHeight);
+        width = Math.max(width, DEFAULT_MIN_WIDTH);
+        height = Math.max(height, DEFAULT_MIN_HEIGHT);
         this.setAutoMaxVideoSize(width, height);
     }
 };
