@@ -57642,6 +57642,18 @@
             {
               "args": [], 
               "deprecationReason": null, 
+              "description": "Network type of the invitation. This field is only non nil when the invitation is fetched for User.IncomingSquadStreamInvitations.", 
+              "isDeprecated": false, 
+              "name": "networkType", 
+              "type": {
+                "kind": "ENUM", 
+                "name": "SquadStreamInvitationNetworkType", 
+                "ofType": null
+              }
+            }, 
+            {
+              "args": [], 
+              "deprecationReason": null, 
               "description": "If the invitation's status is rejected, the reason for the rejection.", 
               "isDeprecated": false, 
               "name": "reasonRejected", 
@@ -57711,7 +57723,7 @@
           "possibleTypes": null
         }, 
         {
-          "description": "Paginated list of Squad Stream invitations.", 
+          "description": "List of Squad Stream invitations.", 
           "enumValues": null, 
           "fields": [
             {
@@ -57719,7 +57731,7 @@
               "deprecationReason": null, 
               "description": "The elements of the list.", 
               "isDeprecated": false, 
-              "name": "edges", 
+              "name": "nodes", 
               "type": {
                 "kind": "LIST", 
                 "name": null, 
@@ -57728,25 +57740,9 @@
                   "name": null, 
                   "ofType": {
                     "kind": "OBJECT", 
-                    "name": "SquadStreamInvitationEdge", 
+                    "name": "SquadStreamInvitation", 
                     "ofType": null
                   }
-                }
-              }
-            }, 
-            {
-              "args": [], 
-              "deprecationReason": null, 
-              "description": "Information about this page.", 
-              "isDeprecated": false, 
-              "name": "pageInfo", 
-              "type": {
-                "kind": "NON_NULL", 
-                "name": null, 
-                "ofType": {
-                  "kind": "OBJECT", 
-                  "name": "PageInfo", 
-                  "ofType": null
                 }
               }
             }, 
@@ -57770,45 +57766,6 @@
           "possibleTypes": null
         }, 
         {
-          "description": "Element in a list of Squad Stream invitations.", 
-          "enumValues": null, 
-          "fields": [
-            {
-              "args": [], 
-              "deprecationReason": null, 
-              "description": "Opaque cursor describing this edge's position in the paginated list.", 
-              "isDeprecated": false, 
-              "name": "cursor", 
-              "type": {
-                "kind": "NON_NULL", 
-                "name": null, 
-                "ofType": {
-                  "kind": "SCALAR", 
-                  "name": "Cursor", 
-                  "ofType": null
-                }
-              }
-            }, 
-            {
-              "args": [], 
-              "deprecationReason": null, 
-              "description": "The Squad Stream invitation.", 
-              "isDeprecated": false, 
-              "name": "node", 
-              "type": {
-                "kind": "OBJECT", 
-                "name": "SquadStreamInvitation", 
-                "ofType": null
-              }
-            }
-          ], 
-          "inputFields": null, 
-          "interfaces": [], 
-          "kind": "OBJECT", 
-          "name": "SquadStreamInvitationEdge", 
-          "possibleTypes": null
-        }, 
-        {
           "description": "Describes the network type of a squad stream invitation.", 
           "enumValues": [
             {
@@ -57822,12 +57779,6 @@
               "description": "The invitation is from outside of the recipient's network.", 
               "isDeprecated": false, 
               "name": "OUT_OF_NETWORK"
-            }, 
-            {
-              "deprecationReason": null, 
-              "description": "The invitation is from anyone (in network or out of network).", 
-              "isDeprecated": false, 
-              "name": "ALL"
             }
           ], 
           "fields": null, 
@@ -70209,44 +70160,9 @@
               }
             }, 
             {
-              "args": [
-                {
-                  "defaultValue": "10", 
-                  "description": null, 
-                  "name": "first", 
-                  "type": {
-                    "kind": "SCALAR", 
-                    "name": "Int", 
-                    "ofType": null
-                  }
-                }, 
-                {
-                  "defaultValue": null, 
-                  "description": null, 
-                  "name": "after", 
-                  "type": {
-                    "kind": "SCALAR", 
-                    "name": "Cursor", 
-                    "ofType": null
-                  }
-                }, 
-                {
-                  "defaultValue": null, 
-                  "description": null, 
-                  "name": "networkType", 
-                  "type": {
-                    "kind": "NON_NULL", 
-                    "name": null, 
-                    "ofType": {
-                      "kind": "ENUM", 
-                      "name": "SquadStreamInvitationNetworkType", 
-                      "ofType": null
-                    }
-                  }
-                }
-              ], 
+              "args": [], 
               "deprecationReason": null, 
-              "description": "A list of the squad stream invitations that the user has received.\nThese invitations are sorted by creation time, and returned with the earliest invitation first.\nThis field only resolves for the authenticated user.", 
+              "description": "A list of the squad stream invitations that the user has received.\nEach invitation has a network type of either in-network or out-of-network. The invitations are sorted by creation\ntime, with the latest invitation first.\nThis field only resolves for the authenticated user.", 
               "isDeprecated": false, 
               "name": "incomingSquadStreamInvitations", 
               "type": {
@@ -75357,6 +75273,12 @@
               "description": "Creator/editor selected moment.", 
               "isDeprecated": false, 
               "name": "STREAM_MARKER"
+            }, 
+            {
+              "deprecationReason": null, 
+              "description": "GAME_CHANGE is when the streamer changes the game during their stream.", 
+              "isDeprecated": false, 
+              "name": "GAME_CHANGE"
             }, 
             {
               "deprecationReason": null, 
