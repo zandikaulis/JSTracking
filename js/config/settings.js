@@ -1642,19 +1642,19 @@ window.__twilightSettings = {
         },
         "d725bd26-74e8-41a2-879b-4c08646aa454": {
             "name": "contextual_auth_modals",
-            "v": 5221,
+            "v": 5230,
             "t": 2,
             "groups": [{
-                "weight": 25,
+                "weight": 100,
                 "value": "control"
             }, {
-                "weight": 25,
+                "weight": 0,
                 "value": "balloon"
             }, {
-                "weight": 25,
+                "weight": 0,
                 "value": "split"
             }, {
-                "weight": 25,
+                "weight": 0,
                 "value": "two_step"
             }]
         },
@@ -1802,20 +1802,15 @@ window.__twilightSettings = {
         },
         "ec70bd08-dbc8-4f48-9f60-d035fec3eb20": {
             "name": "CVP Player Core 2.0 Mediaplayer Experiment Aug 2017",
-            "v": 5177,
+            "v": 5229,
             "t": 1,
+            "s": 1,
             "groups": [{
-                "weight": 70,
+                "weight": 50,
                 "value": "2.6.33"
             }, {
-                "weight": 20,
+                "weight": 50,
                 "value": "2.7.1"
-            }, {
-                "weight": 5,
-                "value": "2.7.1+abrall"
-            }, {
-                "weight": 5,
-                "value": "2.6.29"
             }]
         },
         "ee491c3c-d6f7-4f00-8c53-c630dfa10f41": {
