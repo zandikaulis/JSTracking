@@ -61089,6 +61089,96 @@
           "possibleTypes": null
         }, 
         {
+          "description": "Tenure to a subscription product.", 
+          "enumValues": null, 
+          "fields": [
+            {
+              "args": [], 
+              "deprecationReason": null, 
+              "description": "The ending date of a user's tenure.", 
+              "isDeprecated": false, 
+              "name": "end", 
+              "type": {
+                "kind": "SCALAR", 
+                "name": "Time", 
+                "ofType": null
+              }
+            }, 
+            {
+              "args": [], 
+              "deprecationReason": null, 
+              "description": "The method used to calculate the user's tenure.", 
+              "isDeprecated": false, 
+              "name": "method", 
+              "type": {
+                "kind": "NON_NULL", 
+                "name": null, 
+                "ofType": {
+                  "kind": "ENUM", 
+                  "name": "SubscriptionTenureMethod", 
+                  "ofType": null
+                }
+              }
+            }, 
+            {
+              "args": [], 
+              "deprecationReason": null, 
+              "description": "The total duration of a user's tenure.", 
+              "isDeprecated": false, 
+              "name": "months", 
+              "type": {
+                "kind": "NON_NULL", 
+                "name": null, 
+                "ofType": {
+                  "kind": "SCALAR", 
+                  "name": "Int", 
+                  "ofType": null
+                }
+              }
+            }, 
+            {
+              "args": [], 
+              "deprecationReason": null, 
+              "description": "The starting date of a user's tenure.", 
+              "isDeprecated": false, 
+              "name": "start", 
+              "type": {
+                "kind": "SCALAR", 
+                "name": "Time", 
+                "ofType": null
+              }
+            }
+          ], 
+          "inputFields": null, 
+          "interfaces": [], 
+          "kind": "OBJECT", 
+          "name": "SubscriptionTenure", 
+          "possibleTypes": null
+        }, 
+        {
+          "description": "A type of tenure to a subscription product.", 
+          "enumValues": [
+            {
+              "deprecationReason": null, 
+              "description": "Tenure data calculated cumulatively.", 
+              "isDeprecated": false, 
+              "name": "CUMULATIVE"
+            }, 
+            {
+              "deprecationReason": null, 
+              "description": "Tenure data calculated streak-based.", 
+              "isDeprecated": false, 
+              "name": "STREAK"
+            }
+          ], 
+          "fields": null, 
+          "inputFields": null, 
+          "interfaces": null, 
+          "kind": "ENUM", 
+          "name": "SubscriptionTenureMethod", 
+          "possibleTypes": null
+        }, 
+        {
           "description": "A channel could have multiple subscription products at varying tiers.\nEach value will always map to the respective tier for every channel that has the given tier available as a product.\n\nExample:\nA channel with a \"tier 2\" subscription product will always have the tier represented as T_2000.", 
           "enumValues": [
             {
@@ -72636,6 +72726,33 @@
               "type": {
                 "kind": "OBJECT", 
                 "name": "SubscriptionBenefit", 
+                "ofType": null
+              }
+            }, 
+            {
+              "args": [
+                {
+                  "defaultValue": null, 
+                  "description": null, 
+                  "name": "tenureMethod", 
+                  "type": {
+                    "kind": "NON_NULL", 
+                    "name": null, 
+                    "ofType": {
+                      "kind": "ENUM", 
+                      "name": "SubscriptionTenureMethod", 
+                      "ofType": null
+                    }
+                  }
+                }
+              ], 
+              "deprecationReason": null, 
+              "description": "Subscription tenure data for the user to this channel.", 
+              "isDeprecated": false, 
+              "name": "subscriptionTenure", 
+              "type": {
+                "kind": "OBJECT", 
+                "name": "SubscriptionTenure", 
                 "ofType": null
               }
             }, 
