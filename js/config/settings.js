@@ -324,6 +324,18 @@ window.__twilightSettings = {
                 "value": "variant"
             }]
         },
+        "10679954-c5ee-4300-a242-d3a416dafd44": {
+            "name": "twilight_new_lohp",
+            "v": 5222,
+            "t": 1,
+            "groups": [{
+                "weight": 100,
+                "value": "control"
+            }, {
+                "weight": 0,
+                "value": "variant1"
+            }]
+        },
         "10c75b60-f4c7-460b-99c8-e5caa22fd61f": {
             "name": "twilight_web_side_nav_upsell_center",
             "v": 4183,
@@ -1319,13 +1331,13 @@ window.__twilightSettings = {
         },
         "9f4dd7bf-2df6-4c26-834f-58b153f61329": {
             "name": "bits_new_user_cheer_v1.1",
-            "v": 5187,
+            "v": 5223,
             "t": 2,
             "groups": [{
-                "weight": 0,
+                "weight": 50,
                 "value": "on"
             }, {
-                "weight": 100,
+                "weight": 50,
                 "value": "off"
             }]
         },
