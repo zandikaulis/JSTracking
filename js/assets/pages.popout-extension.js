@@ -88,9 +88,9 @@
             }), n.d(t, "c", function() {
                 return I
             }), n.d(t, "E", function() {
-                return O
-            }), n.d(t, "b", function() {
                 return v
+            }), n.d(t, "b", function() {
+                return O
             }), n.d(t, "a", function() {
                 return C
             }), n.d(t, "H", function() {
@@ -204,11 +204,11 @@
                 return o.PubsubTopic.BitsLeaderboardEvents + "." + e.id
             }
 
-            function O(e) {
+            function v(e) {
                 return o.PubsubTopic.UserBitsUpdates + "." + e
             }
 
-            function v() {
+            function O() {
                 return o.PubsubTopic.BitsCampaignEvents + ".updates"
             }
 
@@ -1096,9 +1096,9 @@
             }), n.d(t, "f", function() {
                 return I
             }), n.d(t, "k", function() {
-                return O
-            }), n.d(t, "u", function() {
                 return v
+            }), n.d(t, "u", function() {
+                return O
             }), n.d(t, "s", function() {
                 return C
             }), n.d(t, "d", function() {
@@ -1127,8 +1127,8 @@
                 R = "SPONSORED",
                 b = "THIRD_PARTY",
                 I = "DISPLAY_ONLY",
-                O = ((r = {})[o.a.Gray] = "#979797", r[o.a.Purple] = "#9c3ee8", r[o.a.Green] = "#1db2a5", r[o.a.Blue] = "#0099fe", r[o.a.Red] = "#f43021", r[o.a.Yellow] = "#f3a71a", r),
-                v = "bits_sponsored_cheermotes",
+                v = ((r = {})[o.a.Gray] = "#979797", r[o.a.Purple] = "#9c3ee8", r[o.a.Green] = "#1db2a5", r[o.a.Blue] = "#0099fe", r[o.a.Red] = "#f43021", r[o.a.Yellow] = "#f3a71a", r),
+                O = "bits_sponsored_cheermotes",
                 C = "bits_sponsored_cheermotes_announcement",
                 S = "bits_charity_event"
         },
@@ -1450,7 +1450,7 @@
         },
         DMoW: function(e, t, n) {
             "use strict";
-            var r, o, i, a, s, l, c, u, d, p, E, m, h, f, g, _, T, R, b, I, O, v, C, S, A, N, y, D, P, L, M, U, k, x, w, B, F, W, V, G, j, H, z, Y, q, X, K, Q, Z, J, $, ee, te, ne, re, oe, ie, ae, se, le, ce, ue, de, pe, Ee, me, he, fe, ge, _e, Te, Re, be, Ie, Oe, ve, Ce, Se, Ae, Ne, ye, De, Pe, Le, Me, Ue, ke, xe, we, Be, Fe, We, Ve, Ge, je, He, ze, Ye, qe, Xe, Ke, Qe, Ze, Je, $e, et, tt, nt, rt, ot, it, at, st, lt, ct, ut, dt, pt, Et, mt, ht, ft, gt, _t, Tt, Rt, bt;
+            var r, o, i, a, s, l, c, u, d, p, E, m, h, f, g, _, T, R, b, I, v, O, C, S, A, N, y, D, P, L, M, U, k, x, w, B, F, W, V, G, j, H, z, Y, q, X, K, Q, Z, J, $, ee, te, ne, re, oe, ie, ae, se, le, ce, ue, de, pe, Ee, me, he, fe, ge, _e, Te, Re, be, Ie, ve, Oe, Ce, Se, Ae, Ne, ye, De, Pe, Le, Me, Ue, ke, xe, we, Be, Fe, We, Ve, Ge, je, He, ze, Ye, qe, Xe, Ke, Qe, Ze, Je, $e, et, tt, nt, rt, ot, it, at, st, lt, ct, ut, dt, pt, Et, mt, ht, ft, gt, _t, Tt, Rt, bt;
             n.d(t, "O", function() {
                     return r
                 }), n.d(t, "e", function() {
@@ -1470,9 +1470,9 @@
                 }), n.d(t, "h", function() {
                     return b
                 }), n.d(t, "Aa", function() {
-                    return O
-                }), n.d(t, "n", function() {
                     return v
+                }), n.d(t, "n", function() {
+                    return O
                 }), n.d(t, "Ca", function() {
                     return C
                 }), n.d(t, "S", function() {
@@ -1628,10 +1628,10 @@
                 }(I || (I = {})),
                 function(e) {
                     e.CHEER = "CHEER"
-                }(O || (O = {})),
+                }(v || (v = {})),
                 function(e) {
                     e.CREATED = "CREATED", e.CREATING = "CREATING", e.FAILED = "FAILED"
-                }(v || (v = {})),
+                }(O || (O = {})),
                 function(e) {
                     e.PRIVATE = "PRIVATE", e.PUBLIC = "PUBLIC"
                 }(C || (C = {})),
@@ -1790,10 +1790,10 @@
                 }(Ie || (Ie = {})),
                 function(e) {
                     e.OFFERS_FAILED_TO_UPDATE = "OFFERS_FAILED_TO_UPDATE", e.UNKNOWN = "UNKNOWN"
-                }(Oe || (Oe = {})),
+                }(ve || (ve = {})),
                 function(e) {
                     e.TOO_MANY_RECENT_SPENDS = "TOO_MANY_RECENT_SPENDS", e.UNABLE_TO_SPEND = "UNABLE_TO_SPEND"
-                }(ve || (ve = {})),
+                }(Oe || (Oe = {})),
                 function(e) {
                     e.OFFER_ALREADY_CLAIMED = "OFFER_ALREADY_CLAIMED", e.UNKNOWN = "UNKNOWN"
                 }(Ce || (Ce = {})),
@@ -1810,7 +1810,7 @@
                     e.CREATED_AT_ASC = "CREATED_AT_ASC", e.CREATED_AT_DESC = "CREATED_AT_DESC", e.TRENDING = "TRENDING", e.VIEWS_ASC = "VIEWS_ASC", e.VIEWS_DESC = "VIEWS_DESC"
                 }(ye || (ye = {})),
                 function(e) {
-                    e.HEARTHSTONE_VCA = "HEARTHSTONE_VCA", e.OVERWATCH_VCA = "OVERWATCH_VCA", e.PUBG_VCA = "PUBG_VCA", e.STREAM_MARKER = "STREAM_MARKER", e.VCA = "VCA"
+                    e.GAME_CHANGE = "GAME_CHANGE", e.HEARTHSTONE_VCA = "HEARTHSTONE_VCA", e.OVERWATCH_VCA = "OVERWATCH_VCA", e.PUBG_VCA = "PUBG_VCA", e.STREAM_MARKER = "STREAM_MARKER", e.VCA = "VCA"
                 }(De || (De = {})),
                 function(e) {
                     e.HIGH = "HIGH", e.LOW = "LOW", e.MEDIUM = "MEDIUM"
@@ -2348,8 +2348,8 @@
                 R = n("3CMh"),
                 b = n("0Log"),
                 I = n("geRD"),
-                O = n("/aPz"),
-                v = n("H31v");
+                v = n("/aPz"),
+                O = n("H31v");
 
             function C(e, t, n) {
                 Object(I.e)(e, void 0, function(e) {
@@ -2637,10 +2637,10 @@
                 Z = Object(m.compose)(Object(X.a)(function(e) {
                     return function(e, t, n) {
                         return {
-                            topic: n ? Object(O.E)(n) : "",
+                            topic: n ? Object(v.E)(n) : "",
                             type: b.PubsubMessageType.UserBitsBalanceUpdate,
                             mutator: function(e, t) {
-                                return t && e.message_type === v.b.Balance ? (t.currentUser && e.data && (t.currentUser.bitsBalance = e.data.balance), t) : t
+                                return t && e.message_type === O.b.Balance ? (t.currentUser && e.data && (t.currentUser.bitsBalance = e.data.balance), t) : t
                             },
                             skip: !t || !n,
                             query: e
@@ -3940,6 +3940,16 @@
                 e.Subs = "subs"
             }(c || (c = {}))
         },
+        Wa8Q: function(e, t, n) {
+            "use strict";
+            var r;
+            n.d(t, "a", function() {
+                    return r
+                }),
+                function(e) {
+                    e.AdStart = "adstart", e.AdEnd = "adend", e.CompanionRendered = "adcompanionrendered", e.AdImpression = "adImpression", e.AdImpressionComplete = "adImpressionComplete", e.AdSkipped = "adSkipped", e.AdError = "adError", e.CompanionAdBuffered = "companionadbuffered"
+                }(r || (r = {}))
+        },
         XKWF: function(e, t, n) {
             "use strict";
             n.d(t, "a", function() {
@@ -4341,8 +4351,8 @@
                 R = n("QVaV"),
                 b = n("Ue10"),
                 I = (n("MPK0"), "report-wizard-block"),
-                O = "report-wizard-unblock",
-                v = function(e) {
+                v = "report-wizard-unblock",
+                O = function(e) {
                     function t() {
                         var t = null !== e && e.apply(this, arguments) || this;
                         return t.state = {
@@ -4385,7 +4395,7 @@
                             }, "ReportWizardBlockActions"))), a.createElement(b.U, {
                                 hoverUnderlineNone: !0,
                                 onClick: t.handleUnblock,
-                                "data-test-selector": O
+                                "data-test-selector": v
                             }, a.createElement(b.Ya, {
                                 margin: {
                                     left: .5
@@ -5807,7 +5817,7 @@
                     return i.__extends(t, e), t.prototype.componentWillUnmount = function() {
                         this.state.modalCloseTracked || this.props.trackClose(L.Close, this.state.currentCard.value, this.getChoiceIndex())
                     }, t.prototype.render = function() {
-                        var e = this.state.currentCard.type === C.Info && this.state.currentCard.blockPrompt ? a.createElement(v, {
+                        var e = this.state.currentCard.type === C.Info && this.state.currentCard.blockPrompt ? a.createElement(O, {
                                 targetUser: this.props.targetUser,
                                 onBlock: this.props.onBlock,
                                 onUnblock: this.props.onUnblock,
@@ -6099,7 +6109,7 @@
             ! function(e) {
                 e.PopoutExtensionPageRootLayout = "popout-extension-page__root-layout"
             }(r || (r = {}));
-            var O = function(e) {
+            var v = function(e) {
                     function t() {
                         var t = null !== e && e.apply(this, arguments) || this;
                         return t.state = {
@@ -6154,7 +6164,7 @@
                         })))
                     }, t
                 }(a.Component),
-                v = Object(s.compose)(Object(h.b)("PopoutExtensionPage", {
+                O = Object(s.compose)(Object(h.b)("PopoutExtensionPage", {
                     destination: d.a.ExtensionsPopout
                 }), Object(c.a)({
                     location: p.PageviewLocation.ExtensionsPopout
@@ -6167,9 +6177,9 @@
                             }
                         }
                     }
-                }))(O);
+                }))(v);
             n.d(t, "PopoutExtensionPage", function() {
-                return v
+                return O
             })
         },
         eDVu: function(e, t, n) {
@@ -6240,42 +6250,43 @@
                     e()
                 })
             };
-            var u, d = n("1/iK"),
-                p = n("y5D0"),
-                E = n("d0ua"),
-                m = n("kRBY"),
-                h = n("XDQu"),
-                f = n("KxT4"),
-                g = n("S1Za"),
-                _ = n("AKMF"),
-                T = n("TSYQ"),
-                R = n("1hWM"),
-                b = n("imBb"),
-                I = n("cr+I"),
-                O = n("/7QA"),
+            var u = n("1/iK"),
+                d = n("y5D0"),
+                p = n("d0ua"),
+                E = n("kRBY"),
+                m = n("XDQu"),
+                h = n("KxT4"),
+                f = n("S1Za"),
+                g = n("AKMF"),
+                _ = n("TSYQ"),
+                T = n("1hWM"),
+                R = n("imBb"),
+                b = n("cr+I"),
+                I = n("/7QA"),
                 v = n("Fxe2"),
-                C = n("f00E"),
-                S = n("vRsq"),
-                A = n("2xye"),
-                N = n("kz7j"),
-                y = n("ndwU"),
-                D = n("GnwI");
+                O = n("f00E"),
+                C = n("vRsq"),
+                S = n("2xye"),
+                A = n("kz7j"),
+                N = n("ndwU"),
+                y = n("GnwI");
+            var D, P = n("Wa8Q");
             ! function(e) {
                 e.LoadStart = "loadstart", e.Error = "error", e.LoadedMetadata = "loadedmetadata", e.CanPlay = "canplay", e.Playing = "playing", e.Waiting = "waiting", e.Seeking = "seeking", e.Seeked = "seeked", e.Ended = "ended", e.DurationChange = "durationchange", e.TimeUpdate = "timeupdate", e.Play = "play", e.Pause = "pause", e.VolumeChange = "volumechange", e.RateChange = "ratechange"
-            }(u || (u = {}));
-            var P = n("kxrW"),
-                L = n("oKCn"),
-                M = n("lTz2"),
-                U = n("C94G"),
-                k = (n("Qqhu"), n("Addw")),
-                x = "debug",
-                w = {
+            }(D || (D = {}));
+            var L = n("kxrW"),
+                M = n("oKCn"),
+                U = n("lTz2"),
+                k = n("C94G"),
+                x = (n("Qqhu"), n("Addw")),
+                w = "debug",
+                B = {
                     amazon: !1,
                     comscore: !1,
                     google: !1,
                     nielsen: !1
                 },
-                B = {
+                F = {
                     allowfullscreen: !0,
                     externalfullscreen: !1,
                     autoplay: !0,
@@ -6285,59 +6296,59 @@
                     debug: !1,
                     height: "100%",
                     playsinline: !0,
-                    player: L.f.Site,
+                    player: M.f.Site,
                     showInfo: !1,
                     showtheatre: !1,
                     trackingProperties: {
-                        client_build_id: O.p.config.buildID,
-                        client_app: O.p.session.clientApp
+                        client_build_id: I.p.config.buildID,
+                        client_app: I.p.session.clientApp
                     },
                     width: "100%",
                     oauth_token: "",
-                    gdpr: w
+                    gdpr: B
                 },
-                F = function(e) {
+                W = function(e) {
                     function t(t) {
                         var n = e.call(this, t) || this;
-                        return n.lastGDPR = w, n.hasInitializedOffsets = !1, n.logger = O.k.withCategory("video-player"), n.initializePlayer = function(e) {
-                            var t = a.__assign({}, B, {
+                        return n.lastGDPR = B, n.hasInitializedOffsets = !1, n.logger = I.k.withCategory("video-player"), n.initializePlayer = function(e) {
+                            var t = a.__assign({}, F, {
                                 allowfullscreen: !n.props.disableFullscreen,
                                 autoplay: !n.props.paused,
                                 externalfullscreen: n.props.fullscreen.supported(),
                                 gdpr: n.createPlayerGDPROptions(n.props),
                                 muted: n.props.muted,
                                 showtheatre: !n.props.disableTheatreButton,
-                                trackingProperties: a.__assign({}, B.trackingProperties, {
-                                    platform: O.o.getPlatform()
+                                trackingProperties: a.__assign({}, F.trackingProperties, {
+                                    platform: I.o.getPlatform()
                                 })
                             });
                             n.playerBuffering = n.registerBufferingEvent(!!n.props.paused), n.playerPlayed = n.registerPlayedEvent(!!n.props.paused);
                             var r = n.props.playerTypeOverride;
-                            r && (t.player = r, n.playerType = r, r === L.f.ClipsEditing && (t.muted = !0)), n.props.channelLogin && (t.channel = n.props.channelLogin, n.lastSetChannel = n.props.channelLogin), n.props.collectionID && (t.collection = n.props.collectionID), n.props.clipSlug && (t.clip = n.props.clipSlug), n.props.vodID && (t.video = Object(S.p)(n.props.vodID), O.o.setVideoPlayerTrackingData({
+                            r && (t.player = r, n.playerType = r, r === M.f.ClipsEditing && (t.muted = !0)), n.props.channelLogin && (t.channel = n.props.channelLogin, n.lastSetChannel = n.props.channelLogin), n.props.collectionID && (t.collection = n.props.collectionID), n.props.clipSlug && (t.clip = n.props.clipSlug), n.props.vodID && (t.video = Object(C.p)(n.props.vodID), I.o.setVideoPlayerTrackingData({
                                 vodID: n.props.vodID
-                            })), n.props.showChannelInfoOnHover && (t.showInfo = n.props.showChannelInfoOnHover), void 0 !== n.props.persistUserPreferences && (t.persistUserPreferences = n.props.persistUserPreferences), void 0 !== n.props.nextVideoOffset && n.props.nextVideoOffset >= 0 && (t.time = Object(k.a)(n.props.nextVideoOffset)), t.oauth_token = n.props.authToken || "", t.debug = "true" === I.parse(window.location.search)[x], n.logger.debug("Initializing", t);
+                            })), n.props.showChannelInfoOnHover && (t.showInfo = n.props.showChannelInfoOnHover), void 0 !== n.props.persistUserPreferences && (t.persistUserPreferences = n.props.persistUserPreferences), void 0 !== n.props.nextVideoOffset && n.props.nextVideoOffset >= 0 && (t.time = Object(x.a)(n.props.nextVideoOffset)), t.oauth_token = n.props.authToken || "", t.debug = "true" === b.parse(window.location.search)[w], n.logger.debug("Initializing", t);
                             var o = new e(n.playerRef, t);
-                            n.player = o, o.addEventListener(P.a.PlayerReady, n.onPlayerReady), o.addEventListener(P.a.CompanionAdBuffered, n.companionAdBuffered), o.addEventListener(P.a.Online, n.onStreamStatusOnline), o.addEventListener(P.a.Offline, n.onStreamStatusOffline), o.addEventListener(u.Ended, n.onStreamStatusOffline), o.addEventListener(u.Play, n.onPlayerPlay), o.addEventListener(u.Playing, n.onPlayerPlaying), o.addEventListener(u.Seeking, n.onSeeking), o.addEventListener(u.Seeked, n.onSeek), o.addEventListener(u.TimeUpdate, n.onTimeUpdate), o.addEventListener(P.a.TheatreChange, n.onTheatreChange), o.addEventListener(P.a.FullscreenChange, n.onFullScreenChange), o.addEventListener(P.a.ExternalFullscreenChange, n.onExternalFullScreenChange), o.addEventListener(P.a.ClipsModerationOpen, n.onClipsModerationOpen), o.addEventListener(P.a.TransitionToCollectionVOD, n.onTransitionToCollectionVod), o.addEventListener(P.a.TransitionToRecommendedVOD, n.onTransitionToRecommendedVod), o.addEventListener(P.a.OpenStream, n.onOpenStream), o.addEventListener(u.Pause, n.onPause), o.addEventListener(P.a.PersistenPlayerToggle, n.onPersistentPlayerToggled), o.addEventListener(u.LoadedMetadata, n.onMetadataLoaded), o.addEventListener(u.VolumeChange, n.onVolumeChange), o.addEventListener(P.a.PromptLoginModal, n.props.promptLogin), o.addEventListener(P.a.FocusPlayer, n.onFocusPlayer), o.addEventListener(P.a.FollowChannel, n.followChannel), o.addEventListener(P.a.UnfollowChannel, n.unfollowChannel), o.addEventListener(P.a.SubscribeToChannel, n.subscribeToChannel), o.addEventListener(P.a.ContentRestricted, n.onContentRestricted), R.extensionService.registerPlayer(n.player), R.extensionService.setPlayerWindow(window), n.props.onInit && n.props.onInit(o), n.maybeAttachToWindow(n.props)
+                            n.player = o, o.addEventListener(L.a.PlayerReady, n.onPlayerReady), o.addEventListener(L.a.CompanionAdBuffered, n.companionAdBuffered), o.addEventListener(L.a.Online, n.onStreamStatusOnline), o.addEventListener(L.a.Offline, n.onStreamStatusOffline), o.addEventListener(D.Ended, n.onStreamStatusOffline), o.addEventListener(D.Play, n.onPlayerPlay), o.addEventListener(D.Playing, n.onPlayerPlaying), o.addEventListener(D.Seeking, n.onSeeking), o.addEventListener(D.Seeked, n.onSeek), o.addEventListener(D.TimeUpdate, n.onTimeUpdate), o.addEventListener(L.a.TheatreChange, n.onTheatreChange), o.addEventListener(L.a.FullscreenChange, n.onFullScreenChange), o.addEventListener(L.a.ExternalFullscreenChange, n.onExternalFullScreenChange), o.addEventListener(L.a.ClipsModerationOpen, n.onClipsModerationOpen), o.addEventListener(L.a.TransitionToCollectionVOD, n.onTransitionToCollectionVod), o.addEventListener(L.a.TransitionToRecommendedVOD, n.onTransitionToRecommendedVod), o.addEventListener(L.a.OpenStream, n.onOpenStream), o.addEventListener(D.Pause, n.onPause), o.addEventListener(L.a.PersistenPlayerToggle, n.onPersistentPlayerToggled), o.addEventListener(D.LoadedMetadata, n.onMetadataLoaded), o.addEventListener(D.VolumeChange, n.onVolumeChange), o.addEventListener(L.a.PromptLoginModal, n.props.promptLogin), o.addEventListener(L.a.FocusPlayer, n.onFocusPlayer), o.addEventListener(L.a.FollowChannel, n.followChannel), o.addEventListener(L.a.UnfollowChannel, n.unfollowChannel), o.addEventListener(L.a.SubscribeToChannel, n.subscribeToChannel), o.addEventListener(L.a.ContentRestricted, n.onContentRestricted), o.addEventListener(P.a.AdStart, n.onAdStart), o.addEventListener(P.a.AdEnd, n.onAdEnd), o.addEventListener(L.a.StitchedAdStart, n.onStitchedAdStart), o.addEventListener(L.a.StitchedAdEnd, n.onStitchedAdEnd), T.extensionService.registerPlayer(n.player), T.extensionService.setPlayerWindow(window), n.props.onInit && n.props.onInit(o), n.maybeAttachToWindow(n.props)
                         }, n.attachRef = function(e) {
                             return n.playerRef = e
                         }, n.onMetadataLoaded = function() {
                             var e = n.player && n.player.getSessionInfo();
-                            e && (n.logger.debug("Got player session info from player instance", e), O.o.setVideoPlayerTrackingData({
+                            e && (n.logger.debug("Got player session info from player instance", e), I.o.setVideoPlayerTrackingData({
                                 broadcastID: e.broadcastId,
                                 playSessionID: e.playSessionId
                             })), n.setState({
                                 metadataLoaded: !0
                             })
                         }, n.onOpenStream = function() {
-                            if (n.props.playerTypeOverride === L.f.Frontpage && n.player)
-                                if (n.props.channelLogin) O.p.history.push({
+                            if (n.props.playerTypeOverride === M.f.Frontpage && n.player)
+                                if (n.props.channelLogin) I.p.history.push({
                                     pathname: "/" + n.props.channelLogin,
                                     state: n.props.linkTrackingContext
                                 });
                                 else if (n.props.vodID) {
                                 var e = Math.floor(n.player.getCurrentTime());
-                                O.p.history.push("/videos/" + n.props.vodID + "?t=" + Object(k.a)(e))
-                            } else n.props.collectionID && O.p.history.push("/collections/" + n.props.collectionID)
+                                I.p.history.push("/videos/" + n.props.vodID + "?t=" + Object(x.a)(e))
+                            } else n.props.collectionID && I.p.history.push("/collections/" + n.props.collectionID)
                         }, n.onFocusPlayer = function() {
                             n.player && n.props.onFocusPlayer && n.props.channelLogin && n.props.onFocusPlayer()
                         }, n.followChannel = function() {
@@ -6372,9 +6383,17 @@
                                 playerMuted: e
                             }), n.props.onMuteToggled && n.props.onMuteToggled(e)
                         }, n.onStreamStatusOnline = function() {
-                            n.props.onStreamStatusChange && n.props.onStreamStatusChange(P.a.Online)
+                            n.props.onStreamStatusChange && n.props.onStreamStatusChange(L.a.Online)
                         }, n.onStreamStatusOffline = function() {
-                            n.props.onStreamStatusChange && n.props.onStreamStatusChange(P.a.Offline)
+                            n.props.onStreamStatusChange && n.props.onStreamStatusChange(L.a.Offline)
+                        }, n.onAdStart = function() {
+                            n.props.onAdChange && n.props.onAdChange(P.a.AdStart)
+                        }, n.onAdEnd = function() {
+                            n.props.onAdChange && n.props.onAdChange(P.a.AdEnd)
+                        }, n.onStitchedAdStart = function() {
+                            n.props.onStitchedAdChange && n.props.onStitchedAdChange(L.a.StitchedAdStart)
+                        }, n.onStitchedAdEnd = function() {
+                            n.props.onStitchedAdChange && n.props.onStitchedAdChange(L.a.StitchedAdEnd)
                         }, n.onTheatreChange = function(e) {
                             e ? (n.logger.debug("Theatre Entered"), n.props.enableTheatreMode && !n.props.theatreModeEnabled && n.props.enableTheatreMode()) : (n.logger.debug("Theatre Exited"), n.props.disableTheatreMode && n.props.theatreModeEnabled && n.props.disableTheatreMode())
                         }, n.onFullScreenChange = function() {
@@ -6413,7 +6432,7 @@
                             n.logger.debug("onContentRestricted - a restriction gate has prevented video playback."), n.hasRestrictedContent = !0
                         }, n.updatePlayerTrackingData = function(e) {
                             n.state.playerInitialized && n.player && n.player.setTrackingProperties(function(e, t) {
-                                var n = O.o.getLastPageview(),
+                                var n = I.o.getLastPageview(),
                                     r = {
                                         host_channel: e.hostChannel,
                                         collapse_right: !e.rightColumnExpanded,
@@ -6443,14 +6462,14 @@
                                     updates: r,
                                     locationStateTrackingProps: i
                                 })), a.__assign({}, i, n, r)
-                            }(e, O.k))
+                            }(e, I.k))
                         }, n.updatePlayerTrackingDataFromProps = function() {
                             n.updatePlayerTrackingData(n.props)
                         }, n.updatePlayerType = function(e) {
-                            var t = e || B.player;
+                            var t = e || F.player;
                             n.player && n.playerType !== t && (n.player.setPlayerType(t), n.playerType = t)
                         }, n.maybeRecordClip = function() {
-                            n.player && n.state.playerInitialized && !Object(y.a)() && n.player.recordClip()
+                            n.player && n.state.playerInitialized && !Object(N.a)() && n.player.recordClip()
                         }, n.createPlayerGDPROptions = function(e) {
                             return {
                                 amazon: !e.gdprBlockAmazonContent,
@@ -6477,12 +6496,12 @@
                             isFullScreen: !1,
                             playerPaused: !!t.paused,
                             playerMuted: t.muted,
-                            playerRefID: Object(C.a)(),
+                            playerRefID: Object(O.a)(),
                             metadataLoaded: !1
-                        }, n.playerType = t.playerTypeOverride || B.player, n.lastSetChannel = t.channelLogin, n.lastPausedProp = t.paused, n.lastMutedProp = t.muted, n.lastFollowingProp = t.viewerIsFollowing, n.lastSubscribedProp = t.viewerIsSubscribed, n.lastSubscribableProp = t.channelIsSubscribable, n.lastGDPR = n.createPlayerGDPROptions(t), t.fullscreen.addChangeListener(n.onTwilightFullscreenChange), t.instanceRef && t.instanceRef(n), n
+                        }, n.playerType = t.playerTypeOverride || F.player, n.lastSetChannel = t.channelLogin, n.lastPausedProp = t.paused, n.lastMutedProp = t.muted, n.lastFollowingProp = t.viewerIsFollowing, n.lastSubscribedProp = t.viewerIsSubscribed, n.lastSubscribableProp = t.channelIsSubscribable, n.lastGDPR = n.createPlayerGDPROptions(t), t.fullscreen.addChangeListener(n.onTwilightFullscreenChange), t.instanceRef && t.instanceRef(n), n
                     }
                     return a.__extends(t, e), t.prototype.componentDidMount = function() {
-                        this.playerCreated && this.props.latencyTracking.reportCustomEvent(this.playerCreated), this.bindHotKeys(), this.historyUnlistener = this.props.history.listen(this.onHistoryChange), Object(U.b)(), Object(U.a)(this.initializePlayer), O.o.eventEmitter.addListener(A.SpadeEventType.Pageview, this.updatePlayerTrackingDataFromProps)
+                        this.playerCreated && this.props.latencyTracking.reportCustomEvent(this.playerCreated), this.bindHotKeys(), this.historyUnlistener = this.props.history.listen(this.onHistoryChange), Object(k.b)(), Object(k.a)(this.initializePlayer), I.o.eventEmitter.addListener(S.SpadeEventType.Pageview, this.updatePlayerTrackingDataFromProps)
                     }, t.prototype.componentWillUpdate = function(e, t) {
                         if (t.playerInitialized) {
                             if (this.updatePlayerTrackingData(e), this.updatePlayerType(e.playerTypeOverride), this.player && t.isFullScreen !== this.player.fullscreen && this.player.setFullscreen(t.isFullScreen), this.player) {
@@ -6504,14 +6523,14 @@
                             }
                             this.player && e.clipSlug && this.props.clipSlug !== e.clipSlug && this.player.setClip(e.clipSlug), this.player && e.theatreModeEnabled !== this.player.getTheatre() && this.player.setTheatre(e.theatreModeEnabled), this.player && e.miniModeEnabled !== this.props.miniModeEnabled && this.player.setMiniPlayerMode(!!e.miniModeEnabled), this.player && t.playerPaused !== this.lastPausedProp && (t.playerPaused ? this.player.pause() : t.playerPaused || this.player.play(), this.lastPausedProp = t.playerPaused), this.player && t.playerMuted !== this.lastMutedProp && (this.player.setMuted(!!t.playerMuted), this.lastMutedProp = !!t.playerMuted), this.player && e.viewerIsFollowing !== this.lastFollowingProp && (this.player.setFollowing(!!e.viewerIsFollowing), this.lastFollowingProp = !!e.viewerIsFollowing), this.player && e.viewerIsSubscribed !== this.lastSubscribedProp && (this.player.setSubscribed(!!e.viewerIsSubscribed), this.lastSubscribedProp = !!e.viewerIsSubscribed), this.player && e.channelIsSubscribable !== this.lastSubscribableProp && (this.player.setSubscribable(!!e.channelIsSubscribable), this.lastSubscribableProp = !!e.channelIsSubscribable), this.updatePlayerGDPRConsent(e);
                             var l = e.channelLogin !== this.lastSetChannel;
-                            if (this.player && e.channelLogin && (l || Object(M.b)(this.props, e))) return this.player.pause(), this.resetLatencyTracking(!!e.paused), this.player.setChannel(e.channelLogin), this.lastSetChannel = e.channelLogin, void O.o.setVideoPlayerTrackingData({
+                            if (this.player && e.channelLogin && (l || Object(U.b)(this.props, e))) return this.player.pause(), this.resetLatencyTracking(!!e.paused), this.player.setChannel(e.channelLogin), this.lastSetChannel = e.channelLogin, void I.o.setVideoPlayerTrackingData({
                                 vodID: void 0
                             });
                             var c = e.collectionID && this.props.collectionID !== e.collectionID,
                                 u = e.vodID && this.props.vodID !== e.vodID;
                             if (c || u) {
-                                var d = e.vodID ? Object(S.p)(e.vodID) : "";
-                                if ("" !== d && O.o.setVideoPlayerTrackingData({
+                                var d = e.vodID ? Object(C.p)(e.vodID) : "";
+                                if ("" !== d && I.o.setVideoPlayerTrackingData({
                                         vodID: e.vodID
                                     }), !this.player) return;
                                 return this.player.pause(), this.resetLatencyTracking(!!e.paused), void(c || e.collectionID && u ? this.player.setCollection(e.collectionID, d, e.nextVideoOffset) : this.player.setVideo(d, e.nextVideoOffset))
@@ -6531,58 +6550,58 @@
                         }
                         void 0 !== e.muted && this.props.muted !== e.muted && this.toggleMute(e.muted)
                     }, t.prototype.render = function() {
-                        var e = T("video-player", {
+                        var e = _("video-player", {
                                 "video-player--theatre": this.props.theatreModeEnabled,
                                 "video-player--theatre-whispers": this.props.theatreModeEnabled && this.props.isWhispersBottomBarVisible && !this.state.isFullScreen,
                                 "video-player--logged-in": this.props.isLoggedIn,
                                 "video-player--fullscreen": this.state.isFullScreen
                             }),
-                            t = T("video-player__container", {
-                                "video-player__container--clips": L.a.includes(this.playerType)
+                            t = _("video-player__container", {
+                                "video-player__container--clips": M.a.includes(this.playerType)
                             });
                         return l.createElement("div", {
-                            className: T(e),
+                            className: _(e),
                             "data-test-selector": "video-player"
                         }, l.createElement("div", {
                             className: t,
                             ref: this.attachRef
                         }))
                     }, t.prototype.componentWillUnmount = function() {
-                        this.state.playerRefID === this.props.activeVideoPlayerRefID && this.props.reportPlayerInstanceStarted && this.props.reportPlayerInstanceStarted(void 0), this.unbindHotKeys(), this.historyUnlistener && this.historyUnlistener(), this.maybeDetachFromWindow(), this.state.isFullScreen && this.exitFullscreen(), this.props.fullscreen.removeChangeListener(this.onTwilightFullscreenChange), this.props.onDestroy && this.props.onDestroy(), O.o.eventEmitter.removeListener(A.SpadeEventType.Pageview, this.updatePlayerTrackingDataFromProps), this.player && (this.player.removeEventListener(P.a.PlayerReady, this.onPlayerReady), this.player.removeEventListener(P.a.CompanionAdBuffered, this.companionAdBuffered), this.player.removeEventListener(P.a.Online, this.onStreamStatusOnline), this.player.removeEventListener(P.a.Offline, this.onStreamStatusOffline), this.player.removeEventListener(u.Ended, this.onStreamStatusOffline), this.player.removeEventListener(u.Play, this.onPlayerPlay), this.player.removeEventListener(u.Playing, this.onPlayerPlaying), this.player.removeEventListener(P.a.TheatreChange, this.onTheatreChange), this.player.removeEventListener(P.a.TransitionToCollectionVOD, this.onTransitionToCollectionVod), this.player.removeEventListener(P.a.FullscreenChange, this.onFullScreenChange), this.player.removeEventListener(P.a.ExternalFullscreenChange, this.onExternalFullScreenChange), this.player.removeEventListener(u.Seeking, this.onSeeking), this.player.removeEventListener(u.Seeked, this.onSeek), this.player.removeEventListener(u.TimeUpdate, this.onTimeUpdate), this.player.removeEventListener(P.a.OpenStream, this.onOpenStream), this.player.removeEventListener(u.Pause, this.onPause), this.player.removeEventListener(P.a.PersistenPlayerToggle, this.onPersistentPlayerToggled), this.player.removeEventListener(u.LoadedMetadata, this.onMetadataLoaded), this.player.removeEventListener(u.VolumeChange, this.onVolumeChange), this.player.removeEventListener(P.a.PromptLoginModal, this.props.promptLogin), this.player.removeEventListener(P.a.FocusPlayer, this.onFocusPlayer), this.player.removeEventListener(P.a.FollowChannel, this.followChannel), this.player.removeEventListener(P.a.UnfollowChannel, this.unfollowChannel), this.player.removeEventListener(P.a.SubscribeToChannel, this.subscribeToChannel), this.player.removeEventListener(P.a.ContentRestricted, this.onContentRestricted), R.extensionService.unregisterPlayer(), this.player.destroy()), O.o.setVideoPlayerTrackingData({
+                        this.state.playerRefID === this.props.activeVideoPlayerRefID && this.props.reportPlayerInstanceStarted && this.props.reportPlayerInstanceStarted(void 0), this.unbindHotKeys(), this.historyUnlistener && this.historyUnlistener(), this.maybeDetachFromWindow(), this.state.isFullScreen && this.exitFullscreen(), this.props.fullscreen.removeChangeListener(this.onTwilightFullscreenChange), this.props.onDestroy && this.props.onDestroy(), I.o.eventEmitter.removeListener(S.SpadeEventType.Pageview, this.updatePlayerTrackingDataFromProps), this.player && (this.player.removeEventListener(L.a.PlayerReady, this.onPlayerReady), this.player.removeEventListener(L.a.CompanionAdBuffered, this.companionAdBuffered), this.player.removeEventListener(L.a.Online, this.onStreamStatusOnline), this.player.removeEventListener(L.a.Offline, this.onStreamStatusOffline), this.player.removeEventListener(D.Ended, this.onStreamStatusOffline), this.player.removeEventListener(D.Play, this.onPlayerPlay), this.player.removeEventListener(D.Playing, this.onPlayerPlaying), this.player.removeEventListener(L.a.TheatreChange, this.onTheatreChange), this.player.removeEventListener(L.a.TransitionToCollectionVOD, this.onTransitionToCollectionVod), this.player.removeEventListener(L.a.FullscreenChange, this.onFullScreenChange), this.player.removeEventListener(L.a.ExternalFullscreenChange, this.onExternalFullScreenChange), this.player.removeEventListener(D.Seeking, this.onSeeking), this.player.removeEventListener(D.Seeked, this.onSeek), this.player.removeEventListener(D.TimeUpdate, this.onTimeUpdate), this.player.removeEventListener(L.a.OpenStream, this.onOpenStream), this.player.removeEventListener(D.Pause, this.onPause), this.player.removeEventListener(L.a.PersistenPlayerToggle, this.onPersistentPlayerToggled), this.player.removeEventListener(D.LoadedMetadata, this.onMetadataLoaded), this.player.removeEventListener(D.VolumeChange, this.onVolumeChange), this.player.removeEventListener(L.a.PromptLoginModal, this.props.promptLogin), this.player.removeEventListener(L.a.FocusPlayer, this.onFocusPlayer), this.player.removeEventListener(L.a.FollowChannel, this.followChannel), this.player.removeEventListener(L.a.UnfollowChannel, this.unfollowChannel), this.player.removeEventListener(L.a.SubscribeToChannel, this.subscribeToChannel), this.player.removeEventListener(L.a.ContentRestricted, this.onContentRestricted), this.player.removeEventListener(P.a.AdStart, this.onAdStart), this.player.removeEventListener(P.a.AdEnd, this.onAdEnd), this.player.removeEventListener(L.a.StitchedAdStart, this.onStitchedAdStart), this.player.removeEventListener(L.a.StitchedAdEnd, this.onStitchedAdEnd), T.extensionService.unregisterPlayer(), this.player.destroy()), I.o.setVideoPlayerTrackingData({
                             vodID: void 0
                         })
                     }, t.prototype.trackMiniPlayerAction = function(e, t) {
                         this.player && this.state.playerInitialized && this.player.trackMiniPlayerAction(e, t)
                     }, t.prototype.resetLatencyTracking = function(e) {
-                        this.logger.debug("Resetting latency tracking."), this.hasBuffered = !1, this.hasPlayed = !1, this.hasPaused = !1, this.hasRestrictedContent = !1, this.props.latencyTracking.resetCustomEvents(N.a.Player), this.playerBuffering = this.registerBufferingEvent(e), this.playerPlayed = this.registerPlayedEvent(e), this.playerCreated = void 0, this.playerLoaded = void 0
+                        this.logger.debug("Resetting latency tracking."), this.hasBuffered = !1, this.hasPlayed = !1, this.hasPaused = !1, this.hasRestrictedContent = !1, this.props.latencyTracking.resetCustomEvents(A.a.Player), this.playerBuffering = this.registerBufferingEvent(e), this.playerPlayed = this.registerPlayedEvent(e), this.playerCreated = void 0, this.playerLoaded = void 0
                     }, t.prototype.registerBufferingEvent = function(e) {
                         return this.props.latencyTracking.registerCustomEvent({
                             benchmark: 1e3,
-                            group: N.a.Player,
-                            key: N.b.PlayerBuffering,
-                            label: N.c.Buffering,
+                            group: A.a.Player,
+                            key: A.b.PlayerBuffering,
+                            label: A.c.Buffering,
                             doNotTrack: e
                         })
                     }, t.prototype.registerCreatedEvent = function() {
                         return this.props.latencyTracking.registerCustomEvent({
                             benchmark: 1e3,
-                            group: N.a.Player,
-                            key: N.b.PlayerCreated,
-                            label: N.c.Created
+                            group: A.a.Player,
+                            key: A.b.PlayerCreated,
+                            label: A.c.Created
                         })
                     }, t.prototype.registerLoadedEvent = function() {
                         return this.props.latencyTracking.registerCustomEvent({
                             benchmark: 2500,
-                            group: N.a.Player,
-                            key: N.b.PlayerLoaded,
-                            label: N.c.Init
+                            group: A.a.Player,
+                            key: A.b.PlayerLoaded,
+                            label: A.c.Init
                         })
                     }, t.prototype.registerPlayedEvent = function(e) {
                         return this.props.latencyTracking.registerCustomEvent({
                             benchmark: 4e3,
-                            group: N.a.Player,
-                            key: N.b.PlayerPlayed,
-                            label: N.c.FirstFrame,
+                            group: A.a.Player,
+                            key: A.b.PlayerPlayed,
+                            label: A.c.FirstFrame,
                             doNotTrack: e
                         })
                     }, t.prototype.shouldSuppressPlaybackTracking = function() {
@@ -6606,40 +6625,40 @@
                             isFullScreen: !1
                         }), this.props.fullscreen.disable(), this.props.onFullscreenChange && this.props.onFullscreenChange(!1))
                     }, t.prototype.maybeAttachToWindow = function(e) {
-                        I.parse(window.location.search).attachPlayer && e.attachToWindow && this.player && (window.player = this.player)
+                        b.parse(window.location.search).attachPlayer && e.attachToWindow && this.player && (window.player = this.player)
                     }, t.prototype.maybeDetachFromWindow = function() {
                         window.player = void 0
                     }, t.prototype.bindHotKeys = function() {
-                        b.bind("alt+x", this.maybeRecordClip)
+                        R.bind("alt+x", this.maybeRecordClip)
                     }, t.prototype.unbindHotKeys = function() {
-                        b.unbind("alt+x")
+                        R.unbind("alt+x")
                     }, t.defaultProps = {
                         paused: !1
                     }, t
                 }(l.Component),
-                W = Object(D.b)("VideoPlayer")(F);
-            var V = Object(i.compose)(Object(r.connect)(function(e) {
+                V = Object(y.b)("VideoPlayer")(W);
+            var G = Object(i.compose)(Object(r.connect)(function(e) {
                 return {
-                    isWhispersBottomBarVisible: Object(h.b)(e),
+                    isWhispersBottomBarVisible: Object(m.b)(e),
                     theatreModeEnabled: e.ui.theatreModeEnabled,
                     rightColumnExpanded: e.ui.rightColumnExpanded,
                     sideNavExpanded: e.ui.sideNavExpanded,
-                    isLoggedIn: Object(m.f)(e),
-                    authToken: Object(m.a)(e),
-                    activeVideoPlayerRefID: Object(_.a)(e),
-                    gdprBlockAmazonContent: Object(f.g)(e, f.c.Amazon),
-                    gdprBlockComScoreContent: Object(f.g)(e, f.c.ComScore),
-                    gdprBlockGoogleContent: Object(f.g)(e, f.c.Google),
-                    gdprBlockNielsenContent: Object(f.g)(e, f.c.Nielsen)
+                    isLoggedIn: Object(E.f)(e),
+                    authToken: Object(E.a)(e),
+                    activeVideoPlayerRefID: Object(g.a)(e),
+                    gdprBlockAmazonContent: Object(h.g)(e, h.c.Amazon),
+                    gdprBlockComScoreContent: Object(h.g)(e, h.c.ComScore),
+                    gdprBlockGoogleContent: Object(h.g)(e, h.c.Google),
+                    gdprBlockNielsenContent: Object(h.g)(e, h.c.Nielsen)
                 }
             }, function(e) {
                 return Object(i.bindActionCreators)({
-                    enableTheatreMode: E.F,
-                    disableTheatreMode: E.C,
-                    togglePersistentPlayer: E.N,
-                    reportPlayerInstanceStarted: g.b,
+                    enableTheatreMode: p.F,
+                    disableTheatreMode: p.C,
+                    togglePersistentPlayer: p.N,
+                    reportPlayerInstanceStarted: f.b,
                     promptLogin: function() {
-                        return Object(p.e)(d.a.ReportHoster)
+                        return Object(d.e)(u.a.ReportHoster)
                     }
                 }, e)
             }), function(e) {
@@ -6676,22 +6695,22 @@
                         s.exit()
                     }, n
                 }(l.Component)
-            }, o.a)(W);
+            }, o.a)(V);
 
-            function G(e, t, n) {
+            function j(e, t, n) {
                 if (e.collectionID || !e.videoID)
                     if (e.collectionID && e.videoID) {
                         if (n && n.currentVideoID && n.currentCollectionID && n.currentVideoID === e.videoID && n.currentCollectionID === e.collectionID) return;
                         t.push("/videos/" + e.videoID + "?collection=" + e.collectionID)
-                    } else !e.collectionID || e.videoID ? O.k.withCategory("video-player").error(new Error("No collection or video specified from the emitted player transition event."), "No collection or video specified from the emitted player transition event.") : t.push("/collections/" + e.collectionID);
+                    } else !e.collectionID || e.videoID ? I.k.withCategory("video-player").error(new Error("No collection or video specified from the emitted player transition event."), "No collection or video specified from the emitted player transition event.") : t.push("/collections/" + e.collectionID);
                 else t.push("/videos/" + e.videoID)
             }
             n.d(t, !1, function() {}), n.d(t, !1, function() {}), n.d(t, !1, function() {}), n.d(t, !1, function() {}), n.d(t, "b", function() {
-                return V
-            }), n.d(t, "c", function() {
                 return G
+            }), n.d(t, "c", function() {
+                return j
             }), n.d(t, "a", function() {
-                return L.f
+                return M.f
             })
         },
         eJ65: function(e, t, n) {
@@ -7026,7 +7045,7 @@
                     return r
                 }),
                 function(e) {
-                    e.PlayerInit = "init", e.ContentShowing = "contentShowing", e.CompanionAdBuffered = "companionadbuffered", e.PlaybackStatistics = "playbackStatistics", e.ChansubRequired = "chansubRequired", e.VideoFailure = "videoFailure", e.Formats = "videoFormats", e.ABSStreamFormatChange = "abs_stream_format_change", e.FormatChanged = "videoFormatChanged", e.TimeChange = "timeChange", e.BufferChange = "bufferChange", e.SegmentChange = "segmentchange", e.UsherFailError = "usherFail", e.CaptionUpdate = "captions", e.SeekFailed = "seekfailed", e.VariantSwitchRequest = "variantSwitchRequested", e.ViewersChange = "viewerschange", e.StreamLoaded = "streamLoaded", e.VideoLoaded = "videoLoaded", e.VideoPaused = "videoPaused", e.QualityChange = "qualitychange", e.Online = "online", e.Offline = "offline", e.Restricted = "restricted", e.CastingChange = "castingchange", e.TheatreChange = "theatrechange", e.MidrollRequested = "midrollrequested", e.ManifestExtraInfo = "manifestExtraInfo", e.TransitionToCollectionVOD = "transitionToCollectionVod", e.TransitionToRecommendedVOD = "transitionToRecommendedVod", e.StitchedAdStart = "stitchedadstart", e.StichedAdEnd = "stitchedadend", e.PersistenPlayerToggle = "persistentPlayerEnableToggle", e.StatsUpdate = "statsupdate", e.PromptLoginModal = "prompt login modal", e.OpenStream = "openStream", e.PlayerReady = "ready", e.FullscreenChange = "fullscreenchange", e.ExternalFullscreenChange = "externalfullscreenchange", e.ClipsModerationOpen = "clips-moderation-open", e.FocusPlayer = "focusPlayer", e.FollowChannel = "followChannel", e.UnfollowChannel = "unfollowChannel", e.ContentRestricted = "contentRestricted", e.SubscribeToChannel = "subscribeChannel"
+                    e.PlayerInit = "init", e.ContentShowing = "contentShowing", e.CompanionAdBuffered = "companionadbuffered", e.PlaybackStatistics = "playbackStatistics", e.ChansubRequired = "chansubRequired", e.VideoFailure = "videoFailure", e.Formats = "videoFormats", e.ABSStreamFormatChange = "abs_stream_format_change", e.FormatChanged = "videoFormatChanged", e.TimeChange = "timeChange", e.BufferChange = "bufferChange", e.SegmentChange = "segmentchange", e.UsherFailError = "usherFail", e.CaptionUpdate = "captions", e.SeekFailed = "seekfailed", e.VariantSwitchRequest = "variantSwitchRequested", e.ViewersChange = "viewerschange", e.StreamLoaded = "streamLoaded", e.VideoLoaded = "videoLoaded", e.VideoPaused = "videoPaused", e.QualityChange = "qualitychange", e.Online = "online", e.Offline = "offline", e.Restricted = "restricted", e.CastingChange = "castingchange", e.TheatreChange = "theatrechange", e.MidrollRequested = "midrollrequested", e.ManifestExtraInfo = "manifestExtraInfo", e.TransitionToCollectionVOD = "transitionToCollectionVod", e.TransitionToRecommendedVOD = "transitionToRecommendedVod", e.StitchedAdStart = "stitchedadstart", e.StitchedAdEnd = "stitchedadend", e.PersistenPlayerToggle = "persistentPlayerEnableToggle", e.StatsUpdate = "statsupdate", e.PromptLoginModal = "prompt login modal", e.OpenStream = "openStream", e.PlayerReady = "ready", e.FullscreenChange = "fullscreenchange", e.ExternalFullscreenChange = "externalfullscreenchange", e.ClipsModerationOpen = "clips-moderation-open", e.FocusPlayer = "focusPlayer", e.FollowChannel = "followChannel", e.UnfollowChannel = "unfollowChannel", e.ContentRestricted = "contentRestricted", e.SubscribeToChannel = "subscribeChannel"
                 }(r || (r = {}))
         },
         lTz2: function(e, t, n) {
@@ -7343,9 +7362,9 @@
             }), n.d(t, "p", function() {
                 return I
             }), n.d(t, "o", function() {
-                return O
-            }), n.d(t, "B", function() {
                 return v
+            }), n.d(t, "B", function() {
+                return O
             }), n.d(t, "z", function() {
                 return C
             }), n.d(t, "A", function() {
@@ -7436,11 +7455,11 @@
                 return "" === e ? "" : e.startsWith("v") ? e : "v" + e
             }
 
-            function O() {
+            function v() {
                 return Object(E.b)() ? "videos" : "videos/all"
             }
 
-            function v(e) {
+            function O(e) {
                 switch (e) {
                     case u.a.Archive:
                         return i.PastBroadcasts;
@@ -7559,7 +7578,7 @@
             }
 
             function P(e, t) {
-                var n = "" + O();
+                var n = "" + v();
                 t && t.filter && (n = t.filter);
                 var r = "";
                 return t && t.sort && (r = "?" + h + "=" + t.sort), "/" + e + "/" + n + r

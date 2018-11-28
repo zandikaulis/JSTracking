@@ -1,5 +1,5 @@
 (window.webpackJsonp = window.webpackJsonp || []).push([
-    [53, 143], {
+    [53, 145], {
         "/ZC1": function(e, t, n) {
             "use strict";
             n.d(t, "a", function() {
@@ -1370,31 +1370,31 @@
                 Ie = Object(S.compose)(Object(O.b)("SettingsTabs"), Object(P.a)(Oe))(Ne),
                 Ce = (n("EPme"), Object(E.a)()),
                 De = h.a.wrap(function() {
-                    return Promise.all([n.e(0), n.e(149)]).then(n.bind(null, "1qL7"))
+                    return Promise.all([n.e(0), n.e(151)]).then(n.bind(null, "1qL7"))
                 }, "ChangeEmailPage"),
                 Te = h.a.wrap(function() {
-                    return Promise.all([n.e(0), n.e(149)]).then(n.bind(null, "kLO1"))
+                    return Promise.all([n.e(0), n.e(151)]).then(n.bind(null, "kLO1"))
                 }, "SettingsTurboPage"),
                 Pe = h.a.wrap(function() {
-                    return Promise.all([n.e(0), n.e(149)]).then(n.bind(null, "lRpU"))
+                    return Promise.all([n.e(0), n.e(151)]).then(n.bind(null, "lRpU"))
                 }, "SettingsPrimePage"),
                 je = h.a.wrap(function() {
-                    return Promise.all([n.e(0), n.e(149)]).then(n.bind(null, "LJ0+"))
+                    return Promise.all([n.e(0), n.e(151)]).then(n.bind(null, "LJ0+"))
                 }, "SettingsChannelPage"),
                 xe = h.a.wrap(function() {
-                    return Promise.all([n.e(0), n.e(149)]).then(n.bind(null, "KXpU"))
+                    return Promise.all([n.e(0), n.e(151)]).then(n.bind(null, "KXpU"))
                 }, "SettingsSecurityPage"),
                 Re = h.a.wrap(function() {
-                    return Promise.all([n.e(0), n.e(149)]).then(n.bind(null, "+oVX"))
+                    return Promise.all([n.e(0), n.e(151)]).then(n.bind(null, "+oVX"))
                 }, "SettingsNotificationsPage"),
                 Ae = h.a.wrap(function() {
-                    return Promise.all([n.e(0), n.e(149)]).then(n.bind(null, "t1je"))
+                    return Promise.all([n.e(0), n.e(151)]).then(n.bind(null, "t1je"))
                 }, "SettingsConnectionsPage"),
                 Fe = h.a.wrap(function() {
-                    return Promise.all([n.e(0), n.e(149)]).then(n.bind(null, "bm35"))
+                    return Promise.all([n.e(0), n.e(151)]).then(n.bind(null, "bm35"))
                 }, "SettingsRecommendationsPage"),
                 Me = h.a.wrap(function() {
-                    return n.e(148).then(n.bind(null, "Rpd6"))
+                    return n.e(150).then(n.bind(null, "Rpd6"))
                 }, "SettingsDesktopPage"),
                 Le = 3,
                 Be = function(e) {

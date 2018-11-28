@@ -1,18 +1,18 @@
 (window.webpackJsonp = window.webpackJsonp || []).push([
-    [106], {
+    [108], {
         "5g1g": function(e, t, n) {
             "use strict";
             var a = n("mrSG"),
-                r = n("q1tI"),
-                o = n("wUQP"),
+                o = n("q1tI"),
+                r = n("wUQP"),
                 i = function(e) {
                     function t() {
                         return null !== e && e.apply(this, arguments) || this
                     }
                     return a.__extends(t, e), t.prototype.render = function() {
-                        return this.props.incremental && Object(o.c)(this.props.name) || Object(o.b)(this.props.name) ? this.props.children : null
+                        return this.props.incremental && Object(r.c)(this.props.name) || Object(r.b)(this.props.name) ? this.props.children : null
                     }, t
-                }(r.Component),
+                }(o.Component),
                 c = i;
             n.d(t, "b", function() {
                 return i
@@ -23,43 +23,51 @@
         Gjsz: function(e, t, n) {
             "use strict";
             n.r(t);
-            var a = n("/MKj"),
+            var a, o = n("/MKj"),
                 r = n("kRBY"),
-                o = n("mrSG"),
-                i = n("q1tI"),
-                c = n("9C/b"),
-                s = n("2INN"),
-                d = n("mf+E"),
-                l = n("jKe7"),
-                u = n("/7QA"),
-                p = n("ZS2+"),
-                b = n("5g1g"),
-                m = n("GnwI"),
-                v = n("coZW"),
-                h = n("Ints"),
-                f = n("Ue10"),
-                D = p.a.wrap(function() {
-                    return n.e(224).then(n.bind(null, "RkBb"))
+                i = n("mrSG"),
+                c = n("q1tI"),
+                s = n("9C/b"),
+                l = n("2INN"),
+                d = n("jKe7"),
+                u = n("mf+E"),
+                p = n("fvjX"),
+                b = n("/7QA"),
+                m = n("ZS2+"),
+                v = n("5g1g"),
+                h = n("GnwI"),
+                f = n("MxwF"),
+                D = n("coZW"),
+                g = n("Ints"),
+                E = n("Ue10"),
+                k = m.a.wrap(function() {
+                    return n.e(227).then(n.bind(null, "RkBb"))
                 }, "DevOverviewPage"),
-                g = p.a.wrap(function() {
-                    return Promise.all([n.e(0), n.e(223)]).then(n.bind(null, "dE6c"))
+                O = m.a.wrap(function() {
+                    return Promise.all([n.e(0), n.e(226)]).then(n.bind(null, "dE6c"))
                 }, "DevAppsPage"),
-                E = p.a.wrap(function() {
-                    return n.e(222).then(n.bind(null, "OfRZ"))
+                w = m.a.wrap(function() {
+                    return n.e(225).then(n.bind(null, "OfRZ"))
                 }, "DevAppCreatePage"),
-                k = p.a.wrap(function() {
-                    return n.e(221).then(n.bind(null, "AhYx"))
+                j = m.a.wrap(function() {
+                    return n.e(224).then(n.bind(null, "AhYx"))
                 }, "DevAppEditPage"),
-                O = p.a.wrap(function() {
-                    return n.e(220).then(n.bind(null, "635G"))
+                x = m.a.wrap(function() {
+                    return n.e(223).then(n.bind(null, "635G"))
                 }, "DevGamesPage"),
-                j = p.a.wrap(function() {
-                    return Promise.all([n.e(31), n.e(0), n.e(219)]).then(n.bind(null, "QH5d"))
+                y = m.a.wrap(function() {
+                    return Promise.all([n.e(31), n.e(0), n.e(222)]).then(n.bind(null, "QH5d"))
                 }, "DevDropsDashboardRoot"),
-                y = p.a.wrap(function() {
-                    return n.e(218).then(n.bind(null, "DrWK"))
+                S = m.a.wrap(function() {
+                    return n.e(221).then(n.bind(null, "DrWK"))
                 }, "DevExtensionsEnableMonetizationPage"),
-                w = function(e) {
+                G = m.a.wrap(function() {
+                    return n.e(220).then(n.bind(null, "2uCZ"))
+                }, "DevExtensionsListPage");
+            ! function(e) {
+                e.ExtensionsTab = "extensions-tab"
+            }(a || (a = {}));
+            var A = function(e) {
                     function t() {
                         var t = null !== e && e.apply(this, arguments) || this;
                         return t.isActive = function(e, n) {
@@ -68,20 +76,26 @@
                             return !!a && (n ? a === e : a.indexOf(e) > -1)
                         }, t
                     }
-                    return o.__extends(t, e), t.prototype.componentDidMount = function() {
+                    return i.__extends(t, e), t.prototype.componentDidMount = function() {
                         this.props.latencyTracking.reportInteractive()
                     }, t.prototype.render = function() {
-                        return this.props.isLoggedIn ? i.createElement(f.Ya, {
+                        if (!this.props.isLoggedIn) return c.createElement(u.a, {
+                            to: "/login"
+                        });
+                        var e = Object(f.a)();
+                        if (!e && "extensions" === this.props.match.params.tenant) return window.location.replace("https://dev.twitch.tv/dashboard/extensions"), null;
+                        var t = e ? "/console/extensions" : "https://dev.twitch.tv/dashboard/extensions";
+                        return c.createElement(E.Ya, {
                             margin: {
                                 x: 1,
                                 bottom: 2
                             },
                             className: "dev-dashboard"
-                        }, i.createElement(f.sb, {
+                        }, c.createElement(E.sb, {
                             centered: !0
-                        }, i.createElement("header", {
+                        }, c.createElement("header", {
                             className: "dev-dashboard__header"
-                        }, i.createElement(f.Fb, {
+                        }, c.createElement(E.Fb, {
                             padding: {
                                 bottom: 2
                             },
@@ -89,94 +103,97 @@
                                 y: 1
                             },
                             borderBottom: !0
-                        }, i.createElement(f.W, {
-                            type: f.Wb.H2
-                        }, Object(u.d)("Dashboard", "DevDashboard"))), i.createElement(f.Ya, {
+                        }, c.createElement(E.W, {
+                            type: E.Wb.H2
+                        }, Object(b.d)("Dashboard", "DevDashboard"))), c.createElement(E.Ya, {
                             margin: {
                                 bottom: 2
                             }
-                        }, i.createElement(f.Hb, null, i.createElement(f.Gb, {
+                        }, c.createElement(E.Hb, null, c.createElement(E.Gb, {
                             linkTo: "https://dev.twitch.tv/dashboard",
                             active: this.isActive("", !0)
-                        }, Object(u.d)("Overview", "DevDashboard")), i.createElement(f.Gb, {
-                            onClick: Object(v.c)(v.a.ViewExtensions),
-                            linkTo: "https://dev.twitch.tv/dashboard/extensions",
+                        }, Object(b.d)("Overview", "DevDashboard")), c.createElement(E.Gb, {
+                            "data-test-selector": a.ExtensionsTab,
+                            onClick: Object(D.c)(D.a.ViewExtensions),
+                            linkTo: t,
                             active: this.isActive("extensions")
-                        }, Object(u.d)("Extensions", "DevDashboard")), i.createElement(f.Gb, {
-                            onClick: Object(v.c)(v.a.ViewApps),
+                        }, Object(b.d)("Extensions", "DevDashboard")), c.createElement(E.Gb, {
+                            onClick: Object(D.c)(D.a.ViewApps),
                             linkTo: "/console/apps",
                             active: this.isActive("apps")
-                        }, Object(u.d)("Apps", "DevDashboard")), i.createElement(f.Gb, {
-                            onClick: Object(v.c)(v.a.ViewGames),
+                        }, Object(b.d)("Apps", "DevDashboard")), c.createElement(E.Gb, {
+                            onClick: Object(D.c)(D.a.ViewGames),
                             linkTo: "/console/games",
                             active: this.isActive("games")
-                        }, Object(u.d)("Games", "DevDashboard")), i.createElement(f.Gb, {
-                            onClick: Object(v.c)(v.a.ViewDrops),
+                        }, Object(b.d)("Games", "DevDashboard")), c.createElement(E.Gb, {
+                            onClick: Object(D.c)(D.a.ViewDrops),
                             linkTo: "/console/drops",
                             active: this.isActive("drops")
-                        }, Object(u.d)("Drops", "DevDashboard")), i.createElement(b.a, {
+                        }, Object(b.d)("Drops", "DevDashboard")), c.createElement(v.a, {
                             name: "bounty_board_brand_portal_enabled"
-                        }, i.createElement(h.a, null, i.createElement(f.Gb, {
+                        }, c.createElement(g.a, null, c.createElement(E.Gb, {
                             linkTo: "/console/bounty-board",
                             active: this.isActive("bounty-board")
-                        }, Object(u.d)("Bounty Board", "DevDashboard"))))))), i.createElement(f.Ya, {
-                            display: f.X.Block
-                        }, i.createElement(l.a, null, i.createElement(s.a, {
+                        }, Object(b.d)("Bounty Board", "DevDashboard"))))))), c.createElement(E.Ya, {
+                            display: E.X.Block
+                        }, c.createElement(d.a, null, c.createElement(l.a, {
                             exact: !0,
                             path: "/console",
-                            component: D
-                        }), i.createElement(s.a, {
+                            component: k
+                        }), c.createElement(l.a, {
                             exact: !0,
                             path: "/console/apps",
-                            component: g
-                        }), i.createElement(s.a, {
+                            component: O
+                        }), c.createElement(l.a, {
                             exact: !0,
                             path: "/console/apps/create",
-                            component: E
-                        }), i.createElement(s.a, {
+                            component: w
+                        }), c.createElement(l.a, {
                             exact: !0,
                             path: "/console/apps/:id",
-                            component: k
-                        }), i.createElement(s.a, {
+                            component: j
+                        }), c.createElement(l.a, {
                             exact: !0,
                             path: "/console/games",
-                            component: O
-                        }), i.createElement(s.a, {
+                            component: x
+                        }), e && c.createElement(l.a, {
+                            exact: !0,
+                            path: "/console/extensions",
+                            component: G
+                        }), c.createElement(l.a, {
                             exact: !0,
                             path: "/console/extensions/enable-monetization",
-                            component: y
-                        }), i.createElement(s.a, {
+                            component: S
+                        }), c.createElement(l.a, {
                             path: "/console/drops",
-                            component: j
-                        }))))) : i.createElement(d.a, {
-                            to: "/login"
-                        })
-                    }, t = o.__decorate([Object(m.b)("DevDashboard")], t)
-                }(i.Component),
-                S = Object(c.a)(w);
-            var x = Object(a.connect)(function(e) {
+                            component: y
+                        })))))
+                    }, t
+                }(c.Component),
+                P = Object(p.compose)(Object(h.b)("DevDashboard"), s.a)(A);
+            var B = Object(o.connect)(function(e) {
                 return {
                     isLoggedIn: Object(r.f)(e),
                     user: Object(r.e)(e)
                 }
-            })(S);
+            })(P);
             n.d(t, "DevDashboardRoot", function() {
-                return x
+                return B
             })
         },
         Ints: function(e, t, n) {
             "use strict";
             var a = n("oJmH"),
-                r = n("yR8l"),
-                o = n("GnwI"),
+                o = n("yR8l"),
+                r = n("GnwI"),
                 i = n("cUgj"),
                 c = function(e) {
                     var t = e.data.currentUser && e.data.currentUser.company;
                     return t && t.brandPortalSettings && t.brandPortalSettings.isEnabled ? e.children : null
                 },
-                s = Object(a.compose)(Object(o.b)("DevBountyDashboardFeatureGate", {
+                s = Object(a.compose)(Object(r.b)("DevBountyDashboardFeatureGate", {
                     autoReportInteractive: !0
-                }), Object(r.a)(i))(c);
+                }), Object(o.a)(i))(c);
             n.d(t, !1, function() {
                 return c
             }), n.d(t, "a", function() {
@@ -282,31 +299,31 @@
             }), n.d(t, "b", function() {
                 return c
             }), n.d(t, "c", function() {
-                return d
+                return l
             });
-            var a, r, o = n("/7QA"),
+            var a, o, r = n("/7QA"),
                 i = n("kRBY");
 
             function c(e) {
-                var t = o.p.store.getState(),
-                    n = o.b.get(e, a.Off);
+                var t = r.p.store.getState(),
+                    n = r.b.get(e, a.Off);
                 return !!(n === a.On || n === a.StaffOnly && Object(i.g)(t))
             }! function(e) {
                 e.On = "on", e.Off = "off", e.StaffOnly = "staff"
             }(a || (a = {})),
             function(e) {
                 e[e.Enabled = 1] = "Enabled", e[e.Disabled = 0] = "Disabled"
-            }(r || (r = {}));
+            }(o || (o = {}));
             var s = Math.pow(2, 32);
 
-            function d(e) {
-                var t = o.b.get(e, [0, r.Disabled]),
+            function l(e) {
+                var t = r.b.get(e, [0, o.Disabled]),
                     n = t[0],
                     a = t[1],
-                    c = o.p.session.deviceID,
-                    d = o.p.store.getState();
-                return !(a !== r.Enabled || !Object(i.g)(d)) || function(e, t) {
-                    for (var n = void 0 === t ? 2166136261 : t, a = 0, r = e.length; a < r; a++) n ^= e.charCodeAt(a), n += (n << 1) + (n << 4) + (n << 7) + (n << 8) + (n << 24);
+                    c = r.p.session.deviceID,
+                    l = r.p.store.getState();
+                return !(a !== o.Enabled || !Object(i.g)(l)) || function(e, t) {
+                    for (var n = void 0 === t ? 2166136261 : t, a = 0, o = e.length; a < o; a++) n ^= e.charCodeAt(a), n += (n << 1) + (n << 4) + (n << 7) + (n << 8) + (n << 24);
                     return n >>> 0
                 }(c + "-" + e) / s < n
             }

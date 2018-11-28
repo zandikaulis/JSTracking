@@ -1,5 +1,5 @@
 (window.webpackJsonp = window.webpackJsonp || []).push([
-    [156], {
+    [158], {
         "0eTn": function(e, t, r) {},
         "16Gl": function(e, t, r) {
             "use strict";
@@ -848,29 +848,31 @@
                         }, this.props.children)
                     }, t
                 }(a.Component)),
-                x = r("u2gS"),
-                T = (r("UK3/"), {
+                x = r("ugx8"),
+                T = r("u2gS"),
+                D = (r("UK3/"), {
                     "data-test-selector": "live-dashboard-link"
                 }),
-                D = {
+                R = {
                     "data-test-selector": "streaming-tools-dashboard-link"
                 },
-                R = {
+                P = {
                     src: "https://static-cdn.jtvnw.net/emoticons/v1/81274/2.0",
                     alt: "VoHiYo"
                 },
-                P = "https://help.twitch.tv/customer/portal/articles/2877822";
-
-            function I(e) {
-                var t = e.query,
-                    r = e.currentStreamSummary;
-                if (!t.isLoading && !t.streamSummaries.length && t.channel && !r) {
-                    var i = a.createElement(C.z, n.__assign({
-                        linkTo: "/" + t.channel.name + "/dashboard/live"
-                    }, T), Object(o.d)("Go to Live Dashboard", "StreamSummaryNoAvailableStreamSummariesNotice"));
-                    return t.channel.role === x.d.None && (i = a.createElement(C.z, n.__assign({
-                        linkTo: "/" + t.channel.name + "/dashboard/broadcast"
-                    }, D), Object(o.d)("Go to Streaming Tools", "StreamSummaryNoAvailableStreamSummariesNotice"))), a.createElement(C.Ya, {
+                I = Object(x.b)(function(e) {
+                    var t = e.currentStreamSummary,
+                        r = e.recentStreamSummariesContext,
+                        i = r.channel,
+                        s = r.isLoading,
+                        c = r.recentStreamSummaries;
+                    if (!i || s || c.length || t) return a.createElement("div", null);
+                    var l = a.createElement(C.z, n.__assign({
+                        linkTo: "/" + i.name + "/dashboard/live"
+                    }, D), Object(o.d)("Go to Live Dashboard", "StreamSummaryNoAvailableStreamSummariesNotice"));
+                    return i.role === T.d.None && (l = a.createElement(C.z, n.__assign({
+                        linkTo: "/" + i.name + "/dashboard/broadcast"
+                    }, R), Object(o.d)("Go to Streaming Tools", "StreamSummaryNoAvailableStreamSummariesNotice"))), a.createElement(C.Ya, {
                         position: C.kb.Absolute,
                         fullWidth: !0,
                         margin: {
@@ -898,7 +900,7 @@
                         margin: {
                             bottom: 1
                         }
-                    }, a.createElement(C.q, n.__assign({}, R, {
+                    }, a.createElement(C.q, n.__assign({}, P, {
                         size: 30
                     })), a.createElement(C.Ya, {
                         margin: {
@@ -918,14 +920,12 @@
                             right: 1
                         },
                         display: C.X.InlineBlock
-                    }, i), a.createElement(C.z, {
-                        linkTo: P,
+                    }, l), a.createElement(C.z, {
+                        linkTo: "https://help.twitch.tv/customer/portal/articles/2877822",
                         type: C.F.Text
                     }, Object(o.d)("Learn More", "StreamSummaryNoAvailableStreamSummariesNotice"))))))))
-                }
-                return a.createElement("div", null)
-            }
-            var L = r("5NYc"),
+                }),
+                L = r("5NYc"),
                 F = (r("wQAB"), r("y/W1")),
                 N = r("qe41"),
                 V = r("9+Lo"),
@@ -935,7 +935,7 @@
                         numTotal: t
                     }, "StreamSummaryQuest")
                 }),
-                q = function(e) {
+                W = function(e) {
                     var t = Object(S.b)(),
                         r = e.quest,
                         i = !1;
@@ -1047,7 +1047,7 @@
                         height: 400
                     }))
                 },
-                W = r("NAv5"),
+                q = r("NAv5"),
                 B = r("gi7w"),
                 Y = r("ybsN"),
                 z = function(e) {
@@ -1240,9 +1240,9 @@
                         get: function() {
                             var e = this.props.streamSummary.interval,
                                 t = this.props.query.quests.filter(function(t) {
-                                    return t.completedAt && Object(W.isWithinRange)(t.completedAt, e.start, e.end)
+                                    return t.completedAt && Object(q.isWithinRange)(t.completedAt, e.start, e.end)
                                 });
-                            return x.e.topCelebratable(t)
+                            return T.e.topCelebratable(t)
                         },
                         enumerable: !0,
                         configurable: !0
@@ -1700,15 +1700,15 @@
                     }, t
                 }(a.Component),
                 Me = r("17YR"),
-                qe = 5;
-            var We = {
+                We = 5;
+            var qe = {
                 get: function() {
                     return Object(o.d)("Error", "StreamSummaryExportTimeseriesStats")
                 }
             };
 
             function Be(e, t) {
-                return e.isError ? We : e.data.dates.reduce(function(r, n, a) {
+                return e.isError ? qe : e.data.dates.reduce(function(r, n, a) {
                     return r.set(n.getTime(), String(t(e.data)[a] || ""))
                 }, new Map)
             }
@@ -1962,7 +1962,7 @@
                                                     return e[t].isError
                                                 }))
                                             }(t) && this.alert(Object(o.d)("Part of the CSV export failed. Please try again in a few minutes.", "StreamSummaryTimeseriesExport")), a = function(e) {
-                                                for (var t = e.interval, r = e.timeseriesResponse, n = [], a = Object(W.addMinutes)(t.start, (qe - t.start.getMinutes() % qe) % qe); a.getTime() <= t.end.getTime();) n.push(a), a = Object(W.addMinutes)(a, qe);
+                                                for (var t = e.interval, r = e.timeseriesResponse, n = [], a = Object(q.addMinutes)(t.start, (We - t.start.getMinutes() % We) % We); a.getTime() <= t.end.getTime();) n.push(a), a = Object(q.addMinutes)(a, We);
                                                 var i = [
                                                     [Object(o.d)("Timestamp", "StreamSummaryExportTimeseriesStats")].concat(n.map(function(e) {
                                                         return Object(o.c)(e, {
@@ -2233,12 +2233,12 @@
                                                 },
                                                 n = e.dates[0];
                                             if (!n) return r;
-                                            for (var a = e.interpolationChunkMinutes, i = Object(W.subMinutes)(n, a); i.getTime() >= t.start.getTime();) r.dates.push(i), r.values.push(0), i = Object(W.subMinutes)(i, a);
+                                            for (var a = e.interpolationChunkMinutes, i = Object(q.subMinutes)(n, a); i.getTime() >= t.start.getTime();) r.dates.push(i), r.values.push(0), i = Object(q.subMinutes)(i, a);
                                             r.dates.reverse();
                                             var s = 0;
                                             for (i = n; i.getTime() <= t.end.getTime();) {
                                                 var o = e.dates[s];
-                                                o && o.getTime() === i.getTime() ? (r.dates.push(e.dates[s]), r.values.push(e.values[s]), s++) : (r.dates.push(i), r.values.push(0)), i = Object(W.addMinutes)(i, a)
+                                                o && o.getTime() === i.getTime() ? (r.dates.push(e.dates[s]), r.values.push(e.values[s]), s++) : (r.dates.push(i), r.values.push(0)), i = Object(q.addMinutes)(i, a)
                                             }
                                             return r
                                         }(r.data, this.props.streamSummary.interval), this.setState({
@@ -2664,14 +2664,13 @@
                         return null !== e && e.apply(this, arguments) || this
                     }
                     return n.__extends(t, e), t.prototype.render = function() {
-                        var e = this.props.channel.role === x.d.Affiliate || this.props.channel.role === x.d.Partner,
+                        var e = this.props.channel.role === T.d.Affiliate || this.props.channel.role === T.d.Partner,
                             t = this.props.sessionCursor.current ? [this.props.sessionCursor.current] : [];
                         return a.createElement(a.Fragment, null, this.props.sessionCursor.isLast && a.createElement(te, {
                             query: this.props.achievementProgressions,
                             streamSummary: this.props.sessionCursor.current,
                             topClips: this.props.topClips
                         }), a.createElement(I, {
-                            query: this.props.streamSessions,
                             currentStreamSummary: this.props.sessionCursor.current
                         }), a.createElement(Pe, {
                             channelName: this.props.channel.name,
@@ -2687,7 +2686,7 @@
                             streamSummary: this.props.sessionCursor.current
                         }), !e && a.createElement(ft, {
                             isLoading: !this.props.sessionCursor.current
-                        })), a.createElement(k, null, a.createElement(q, {
+                        })), a.createElement(k, null, a.createElement(W, {
                             quest: this.props.sessionCursor.current && this.props.achievementProgressions.quests[0],
                             channelName: this.props.channel.name
                         }), a.createElement(O, {
@@ -2768,30 +2767,27 @@
                     return n.__extends(t, e), t.prototype.componentDidMount = function() {
                         o.p.setPageTitle(Object(o.d)("Stream Summary", "DashboardStreamSummaryPage"))
                     }, t.prototype.render = function() {
-                        var e = this,
-                            t = x.c.fromChannelData(this.props.data);
-                        if (!t) return null;
+                        var e = T.c.fromChannelData(this.props.data);
+                        if (!e) return null;
                         if (!this.props.data.loading && this.props.data.channel) {
-                            var r = this.props.userID === this.props.data.channel.id,
-                                n = this.props.data.channel.self && this.props.data.channel.self.isEditor;
-                            if (!this.props.isStaff && !r && !n) return a.createElement(h.a, null)
+                            var t = this.props.userID === this.props.data.channel.id,
+                                r = this.props.data.channel.self && this.props.data.channel.self.isEditor;
+                            if (!this.props.isStaff && !t && !r) return a.createElement(h.a, null)
                         }
                         return a.createElement(a.Fragment, null, a.createElement(f.a, null, a.createElement(xt.a, {
-                            query: this.props.streamSummaryQuery,
                             summaryID: this.props.streamSummaryID,
                             getURLForStreamSummary: Y.d
-                        }, function(r) {
+                        }, function(t) {
                             return a.createElement(At, {
-                                previousStreamSummary: r.previous,
-                                streamSummary: r.current,
-                                channel: t
-                            }, function(n) {
+                                previousStreamSummary: t.previous,
+                                streamSummary: t.current,
+                                channel: e
+                            }, function(r) {
                                 return a.createElement(Ct, {
-                                    channel: t,
-                                    sessionCursor: r,
-                                    achievementProgressions: n.achievementProgressionsQuery,
-                                    streamSessions: e.props.streamSummaryQuery,
-                                    topClips: n.topClips
+                                    channel: e,
+                                    sessionCursor: t,
+                                    achievementProgressions: r.achievementProgressionsQuery,
+                                    topClips: r.topClips
                                 })
                             })
                         })), a.createElement(b.a, null))
@@ -3524,8 +3520,8 @@
                 s = r("a7UW"),
                 o = r("6E8S"),
                 c = r("sBDM"),
-                l = r("nlSm"),
-                u = r("g3ZN"),
+                l = r("g3ZN"),
+                u = r("WaVD"),
                 m = r("Ue10"),
                 d = {
                     "data-test-selector": "referral-percentage"
@@ -3539,13 +3535,13 @@
                         d = e.onViewDetails;
                     if (t.isLoading) return n.createElement(f, null);
                     var h = t.sessions,
-                        b = Object(l.a)(h.map(function(e) {
+                        b = Object(u.a)(h.map(function(e) {
                             return e.videoPlayInternalTwitchReferrers
                         })),
-                        g = Object(l.a)(h.map(function(e) {
+                        g = Object(u.a)(h.map(function(e) {
                             return e.videoPlayInternalChannelsReferrers
                         })),
-                        v = Object(l.a)(h.map(function(e) {
+                        v = Object(u.a)(h.map(function(e) {
                             return e.videoPlayExternalReferrers
                         })),
                         y = n.createElement(s.a, null);
@@ -3554,17 +3550,17 @@
                         padding: {
                             bottom: 1
                         }
-                    }, n.createElement(u.a, {
+                    }, n.createElement(l.a, {
                         referrals: b.items.slice(0, 3),
                         total: b.total,
                         translationFunc: i.b,
                         title: Object(a.d)("Twitch", "DashboardReferralPanel")
-                    }), n.createElement(u.a, {
+                    }), n.createElement(l.a, {
                         referrals: g.items.slice(0, 3),
                         total: g.total,
                         translationFunc: p,
                         title: Object(a.d)("Channels", "DashboardReferralPanel")
-                    }), n.createElement(u.a, {
+                    }), n.createElement(l.a, {
                         referrals: v.items.slice(0, 3),
                         total: v.total,
                         translationFunc: i.a,
