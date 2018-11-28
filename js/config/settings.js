@@ -535,19 +535,19 @@ window.__twilightSettings = {
         },
         "2d4a0ad4-1658-4cfb-a542-896b3a8524cc": {
             "name": "contextual_auth_modals_v2",
-            "v": 5224,
+            "v": 5236,
             "t": 1,
             "groups": [{
-                "weight": 100,
+                "weight": 25,
                 "value": "control"
             }, {
-                "weight": 0,
+                "weight": 25,
                 "value": "balloon"
             }, {
-                "weight": 0,
+                "weight": 25,
                 "value": "split"
             }, {
-                "weight": 0,
+                "weight": 25,
                 "value": "two_step"
             }]
         },
