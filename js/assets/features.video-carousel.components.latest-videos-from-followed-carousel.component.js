@@ -1,5 +1,5 @@
 (window.webpackJsonp = window.webpackJsonp || []).push([
-    [147], {
+    [145], {
         "0Ws6": function(e, t, i) {
             var n = {
                 kind: "Document",
@@ -130,7 +130,7 @@
                 a = i("vRsq"),
                 l = i("tuvy"),
                 c = i("Ue10"),
-                p = Object(o.a)(function(e) {
+                d = Object(o.a)(function(e) {
                     var t, i = e.options;
                     return t = Object(l.a)() ? Object(a.j)(e.channelLogin, e, i) : Object(a.q)(e.channelLogin, i && {
                         filter: i.filter ? Object(a.z)(i.filter) : void 0,
@@ -150,12 +150,12 @@
                     })))
                 });
             i.d(t, "a", function() {
-                    return d
+                    return p
                 }),
                 function(e) {
                     e.Title = "title", e.SubTitle = "subtitle"
                 }(n || (n = {}));
-            var d = function(e) {
+            var p = function(e) {
                 if (!e.titleMessage) return r.createElement(c.jb, {
                     width: 200
                 });
@@ -184,7 +184,7 @@
                     padding: {
                         left: 1
                     }
-                }, r.createElement(p, {
+                }, r.createElement(d, {
                     channelLogin: e.expandLink.channelLogin,
                     options: e.expandLink.options
                 }))), i)
@@ -225,8 +225,8 @@
                 a = i("GFmA"),
                 l = i("yR8l"),
                 c = i("2xye"),
-                p = i("GnwI"),
-                d = i("6h5w"),
+                d = i("GnwI"),
+                p = i("6h5w"),
                 u = i("eqgM"),
                 h = i("XEwr"),
                 g = i("Ue10"),
@@ -243,7 +243,7 @@
                             padding: {
                                 bottom: 1
                             }
-                        }, r.createElement(d.a, {
+                        }, r.createElement(p.a, {
                             titleMessage: Object(s.d)("Latest videos", "LatestVideosFromFollowedCarousel")
                         })), r.createElement(u.a, {
                             currentlyWatchingVideoID: this.props.currentlyWatchingVideoID,
@@ -261,19 +261,18 @@
                         })) : null
                     }, t
                 }(r.Component),
-                f = Object(o.compose)(Object(l.a)(m), Object(p.b)("LatestVideosFromFollowedCarousel"))(v)
+                f = Object(o.compose)(Object(l.a)(m), Object(d.b)("LatestVideosFromFollowedCarousel"))(v)
         },
         bdIb: function(e, t, i) {
             "use strict";
             i.d(t, "a", function() {
-                return l
+                return a
             });
             var n = i("mrSG"),
-                r = i("cr+I"),
-                o = i("q1tI"),
-                s = i("/7QA"),
-                a = i("GFmA"),
-                l = function(e) {
+                r = i("q1tI"),
+                o = i("/7QA"),
+                s = i("GFmA"),
+                a = function(e) {
                     function t() {
                         var t = null !== e && e.apply(this, arguments) || this;
                         return t.onClickHandler = function() {
@@ -281,17 +280,16 @@
                         }, t
                     }
                     return n.__extends(t, e), t.prototype.render = function() {
-                        return o.createElement(a.a, {
+                        return r.createElement(s.a, {
                             context: this.props.context,
                             title: this.props.clip.title,
                             linkTo: {
                                 pathname: this.props.clip.broadcaster ? "/" + this.props.clip.broadcaster.login + "/clip/" + this.props.clip.slug : "",
-                                state: this.getLinkState(),
-                                search: this.generateSearchString()
+                                state: this.getLinkState()
                             },
                             onClick: this.onClickHandler,
                             thumbnailImageProps: {
-                                src: this.props.clip.thumbnailURL || s.p.config.defaultStreamPreviewURL,
+                                src: this.props.clip.thumbnailURL || o.p.config.defaultStreamPreviewURL,
                                 alt: this.props.clip.title
                             },
                             channelDisplayName: this.props.clip.broadcaster && this.props.clip.broadcaster.displayName || "",
@@ -310,7 +308,7 @@
                                 state: this.getLinkState()
                             } : void 0,
                             gameBoxArtImageProps: this.props.clip.game ? {
-                                src: this.props.clip.game.boxArtURL || s.a.defaultBoxArtURL,
+                                src: this.props.clip.game.boxArtURL || o.a.defaultBoxArtURL,
                                 alt: this.props.clip.game.name
                             } : void 0,
                             datePublished: this.props.clip.createdAt,
@@ -319,11 +317,6 @@
                             clipCreatedByChannelLogin: this.props.clip.curator && this.props.clip.curator.login || "",
                             clipCreatedByChannelLoginLinkTo: this.props.clip.curator ? "/" + this.props.clip.curator.login : ""
                         })
-                    }, t.prototype.generateSearchString = function() {
-                        var e = {};
-                        this.props.videoBrowseOptions && (this.props.videoBrowseOptions.filter && (e.filter = this.props.videoBrowseOptions.filter), this.props.videoBrowseOptions.sort && (e.sort = this.props.videoBrowseOptions.sort), this.props.videoBrowseOptions.range && (e.range = this.props.videoBrowseOptions.range));
-                        var t = r.stringify(e);
-                        return t ? "?" + t : ""
                     }, t.prototype.getLinkState = function() {
                         return {
                             content: this.props.tracking.content,
@@ -331,7 +324,7 @@
                             medium: this.props.tracking.medium
                         }
                     }, t
-                }(o.Component)
+                }(r.Component)
         },
         eqgM: function(e, t, i) {
             "use strict";
@@ -340,8 +333,8 @@
                 a = i("q1tI"),
                 l = i("/7QA"),
                 c = i("GnwI"),
-                p = i("TSYQ"),
-                d = i("17x9"),
+                d = i("TSYQ"),
+                p = i("17x9"),
                 u = i("Ue10");
             i("A7Y/");
             var h = "carousel-content",
@@ -467,7 +460,7 @@
                             return !(t.right < 0 || t.bottom < 0 || t.left > i || t.top > n)
                         }(this.carouselContainerRef) && this.props.onFirstVisible()
                     }, t.contextTypes = {
-                        registerReceiver: d.func
+                        registerReceiver: p.func
                     }, t
                 }(a.Component),
                 m = {
@@ -479,7 +472,7 @@
                 b = function(e) {
                     var t, i = v[e.direction],
                         n = ((t = {})[m.DirectionPrevious] = Object(l.d)("previous", "CarouselNavButton"), t[m.DirectionNext] = Object(l.d)("next", "CarouselNavButton"), t),
-                        r = p("preview-card-carousel__button", "preview-card-carousel__button--" + i, {
+                        r = d("preview-card-carousel__button", "preview-card-carousel__button--" + i, {
                             "preview-card-carousel__button--disabled": e.disabled
                         });
                     return a.createElement(u.Ya, {
@@ -518,9 +511,9 @@
                 },
                 k = i("bdIb"),
                 C = i("XEwr"),
-                y = i("RXle"),
-                x = 10,
-                w = function(e) {
+                x = i("RXle"),
+                y = 10,
+                I = function(e) {
                     function t() {
                         var t = null !== e && e.apply(this, arguments) || this;
                         return t.state = {
@@ -573,16 +566,15 @@
                         }, t.getVideoCards = function() {
                             var e = t.props.videos;
                             if (null === e) {
-                                for (var i = [], n = 0; n < x; n++) i.push(a.createElement(y.VideoPreviewCardPlaceholder, {
+                                for (var i = [], n = 0; n < y; n++) i.push(a.createElement(x.VideoPreviewCardPlaceholder, {
                                     key: "carousel-placeholder-" + n
                                 }));
                                 return i
                             }
                             var r = [];
                             if (t.props.spotlight) {
-                                var o = a.createElement(y.VideoPreviewCard, {
+                                var o = a.createElement(x.VideoPreviewCard, {
                                     key: "spotlight",
-                                    videoBrowseOptions: t.props.videoBrowseOptions,
                                     collectionID: t.props.collectionID,
                                     topBar: {
                                         title: t.props.spotlight.title,
@@ -602,9 +594,8 @@
                             var s = r.length;
                             if (t.props.currentlyWatchingVideoID && t.props.renderCurrentlyWatchingCard && t.props.scrollToCurrentlyWatching)
                                 for (var l = t.getCurrentlyWatchingVideoIndex(), c = 0; c < e.length; c++) {
-                                    var p = e[c];
-                                    t.props.firstPageLoaded || !(c < l || c > l + x) ? Object(C.a)(p) || r.push(a.createElement(y.VideoPreviewCard, {
-                                        videoBrowseOptions: t.props.videoBrowseOptions,
+                                    var d = e[c];
+                                    t.props.firstPageLoaded || !(c < l || c > l + y) ? Object(C.a)(d) || r.push(a.createElement(x.VideoPreviewCard, {
                                         context: t.props.listContext,
                                         collectionID: t.props.collectionID,
                                         onClick: t.onPreviewCardClick,
@@ -614,23 +605,22 @@
                                             content_index: c,
                                             medium: t.props.tracking.medium
                                         },
-                                        video: p,
+                                        video: d,
                                         multipleVideoGameMarkersType: t.props.multipleVideoGameMarkersType,
                                         listPosition: t.getPositionLabel(c),
                                         topBar: t.getPositionBanner(c),
                                         hideDuration: t.willRenderPositionBanner(c),
                                         hideTags: t.props.hideTags
-                                    })) : r.push(a.createElement(y.VideoPreviewCardPlaceholder, {
+                                    })) : r.push(a.createElement(x.VideoPreviewCardPlaceholder, {
                                         key: "carousel-placeholder-" + c
                                     }))
                                 } else
                                     for (c = 0; c < e.length; c++)
-                                        if (c + s < x || t.props.firstPageLoaded) {
-                                            p = e[c];
-                                            if (Object(C.a)(p)) {
-                                                if (p.slug === t.props.currentlyWatchingVideoID) continue;
+                                        if (c + s < y || t.props.firstPageLoaded) {
+                                            d = e[c];
+                                            if (Object(C.a)(d)) {
+                                                if (d.slug === t.props.currentlyWatchingVideoID) continue;
                                                 r.push(a.createElement(k.a, {
-                                                    videoBrowseOptions: t.props.videoBrowseOptions,
                                                     context: t.props.listContext,
                                                     onClick: t.onPreviewCardClick,
                                                     key: "video-" + c,
@@ -639,12 +629,11 @@
                                                         content_index: s + c,
                                                         medium: t.props.tracking.medium
                                                     },
-                                                    clip: p
+                                                    clip: d
                                                 }))
                                             } else {
-                                                if (p.id === t.props.currentlyWatchingVideoID && !t.props.renderCurrentlyWatchingCard) continue;
-                                                r.push(a.createElement(y.VideoPreviewCard, {
-                                                    videoBrowseOptions: t.props.videoBrowseOptions,
+                                                if (d.id === t.props.currentlyWatchingVideoID && !t.props.renderCurrentlyWatchingCard) continue;
+                                                r.push(a.createElement(x.VideoPreviewCard, {
                                                     context: t.props.listContext,
                                                     collectionID: t.props.collectionID,
                                                     onClick: t.onPreviewCardClick,
@@ -654,7 +643,7 @@
                                                         content_index: s + c,
                                                         medium: t.props.tracking.medium
                                                     },
-                                                    video: p,
+                                                    video: d,
                                                     multipleVideoGameMarkersType: t.props.multipleVideoGameMarkersType,
                                                     listPosition: t.getPositionLabel(c),
                                                     topBar: t.getPositionBanner(c),
@@ -662,7 +651,7 @@
                                                     hideTags: t.props.hideTags
                                                 }))
                                             }
-                                        } else r.push(a.createElement(y.VideoPreviewCardPlaceholder, {
+                                        } else r.push(a.createElement(x.VideoPreviewCardPlaceholder, {
                                             key: "carousel-placeholder-" + c
                                         }));
                             return r
@@ -713,9 +702,9 @@
                         }, this.getVideoCards())
                     }, t
                 }(a.Component),
-                I = Object(c.b)("VideoCarousel", {
+                w = Object(c.b)("VideoCarousel", {
                     autoReportInteractive: !0
-                })(w);
+                })(I);
             i.d(t, "a", function() {
                 return V
             });
@@ -723,7 +712,7 @@
                 return {
                     firstPageLoaded: e.session.firstPageLoaded
                 }
-            })(I)
+            })(w)
         }
     }
 ]);

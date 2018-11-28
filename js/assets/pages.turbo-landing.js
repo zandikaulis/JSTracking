@@ -5646,7 +5646,7 @@
                     e.CREATED_AT_ASC = "CREATED_AT_ASC", e.CREATED_AT_DESC = "CREATED_AT_DESC", e.TRENDING = "TRENDING", e.VIEWS_ASC = "VIEWS_ASC", e.VIEWS_DESC = "VIEWS_DESC"
                 }(Ae || (Ae = {})),
                 function(e) {
-                    e.GAME_CHANGE = "GAME_CHANGE", e.HEARTHSTONE_VCA = "HEARTHSTONE_VCA", e.OVERWATCH_VCA = "OVERWATCH_VCA", e.PUBG_VCA = "PUBG_VCA", e.STREAM_MARKER = "STREAM_MARKER", e.VCA = "VCA"
+                    e.HEARTHSTONE_VCA = "HEARTHSTONE_VCA", e.OVERWATCH_VCA = "OVERWATCH_VCA", e.PUBG_VCA = "PUBG_VCA", e.STREAM_MARKER = "STREAM_MARKER", e.VCA = "VCA"
                 }(Re || (Re = {})),
                 function(e) {
                     e.HIGH = "HIGH", e.LOW = "LOW", e.MEDIUM = "MEDIUM"
@@ -7307,7 +7307,7 @@
                             };
                             Object(L.h)(i)
                         }, t.onClose = function() {
-                            Object(V.d)(t.props.bitsUserState, t.props.bitsUserSettings) && t.trackBitsCardInteraction(L.a.NewUserCloseTutorial)
+                            Object(V.c)(t.props.bitsUserState, t.props.bitsUserSettings) && t.trackBitsCardInteraction(L.a.NewUserCloseTutorial)
                         }, t.onPromoBuyClose = function(e) {
                             Object(N.a)(e, function() {
                                 t.props.data && t.props.data.refetch()
@@ -7322,7 +7322,7 @@
                                 y: 5
                             },
                             "data-a-target": "get-bits-button-content-loading"
-                        }, d.createElement(O.a, null)) : Object(V.d)(this.props.bitsUserState, this.props.bitsUserSettings) ? d.createElement(U.Ya, {
+                        }, d.createElement(O.a, null)) : Object(V.c)(this.props.bitsUserState, this.props.bitsUserSettings) ? d.createElement(U.Ya, {
                             padding: 2
                         }, d.createElement(S.a, {
                             trackBitsCardInteraction: this.trackBitsCardInteraction,
@@ -7339,7 +7339,7 @@
                             onClose: this.onClose,
                             trackBitsCardInteraction: this.trackBitsCardInteraction,
                             onPromoBuyClose: this.onPromoBuyClose,
-                            shouldShowNewUserCheerUX: Object(V.c)(this.props.bitsUserState, this.props.bitsUserSettings),
+                            shouldShowNewUserCheerUX: Object(V.b)(this.props.bitsUserState, this.props.bitsUserSettings),
                             email: this.props.email
                         })
                     }, t
@@ -14234,13 +14234,11 @@
         ao1a: function(e, t, n) {
             "use strict";
             n.d(t, "a", function() {
+                return c
+            }), n.d(t, "b", function() {
                 return l
             }), n.d(t, "c", function() {
                 return u
-            }), n.d(t, "d", function() {
-                return d
-            }), n.d(t, "b", function() {
-                return p
             });
             var i = n("wUQP"),
                 r = n("D7An"),
@@ -14249,23 +14247,14 @@
                 s = function() {
                     return o.q.experiments.getAssignment(r.b.BitsNewUserCheerV1) === i.a.On
                 },
-                c = function(e, t) {
-                    return t === a.d.ACQUIRED && function(e) {
-                        var t = o.q.dynamicSettings.get("ruby_is_the_cutest_dog_ever", i.a.Off);
-                        return (t === i.a.On || e && t === i.a.StaffOnly) && s()
-                    }(e)
-                },
-                l = function(e) {
+                c = function(e) {
                     return e === a.d.NEW_USER && s()
                 },
+                l = function(e, t) {
+                    return !(!t || !t.firstCheerTutorial || t.firstCheerTutorial.hasSkipped || !c(e))
+                },
                 u = function(e, t) {
-                    return !(!t || !t.firstCheerTutorial || t.firstCheerTutorial.hasSkipped || !l(e))
-                },
-                d = function(e, t) {
-                    return !(!t || !t.firstCheerTutorial || t.firstCheerTutorial.hasAbandoned || t.firstCheerTutorial.hasSkipped || !l(e))
-                },
-                p = function(e, t, n) {
-                    return !(!n || !n.firstCheerTutorial || n.firstCheerTutorial.hasSkipped || !c(e, t))
+                    return !(!t || !t.firstCheerTutorial || t.firstCheerTutorial.hasAbandoned || t.firstCheerTutorial.hasSkipped || !c(e))
                 }
         },
         bYOw: function(e, t, n) {
@@ -16427,7 +16416,7 @@
                         return Object(u.d)(s.a, {
                             component: "CheckoutModal",
                             loader: function() {
-                                return Promise.all([n.e(0), n.e(212)]).then(n.bind(null, "KJv/"))
+                                return Promise.all([n.e(0), n.e(210)]).then(n.bind(null, "KJv/"))
                             },
                             componentProps: t
                         })

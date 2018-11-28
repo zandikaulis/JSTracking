@@ -1,5 +1,5 @@
 (window.webpackJsonp = window.webpackJsonp || []).push([
-    [142], {
+    [140], {
         "+U0Y": function(e, t, n) {
             "use strict";
             n.d(t, "a", function() {
@@ -188,6 +188,14 @@
                     selectionSet: {
                         kind: "SelectionSet",
                         selections: [{
+                            kind: "Field",
+                            name: {
+                                kind: "Name",
+                                value: "id"
+                            },
+                            arguments: [],
+                            directives: []
+                        }, {
                             kind: "Field",
                             name: {
                                 kind: "Name",
@@ -585,11 +593,11 @@
                 }],
                 loc: {
                     start: 0,
-                    end: 943
+                    end: 946
                 }
             };
             n.loc.source = {
-                body: "query VideoPreviewCard__VideoMoments($videoId: ID!) {\nvideo(id: $videoId) {\nid\nmoments(momentRequestType: VIDEO_CHAPTER_MARKERS) {\nedges {\n...videoMomentEdge\n}\n}\n}\n}\nfragment videoMomentEdge on VideoMomentEdge {\ncursor\nnode {\n...videoChapter\n}\n}\nfragment videoChapter on VideoMoment {\ndurationMilliseconds\npositionMilliseconds\ntype\ndescription\nthumbnailURL\n...momentDetails\nvideo {\nid\nlengthSeconds\n}\n}\nfragment momentDetails on VideoMoment {\ndetails {\n...gameChangeDetails\n...hearthstoneDetails\n...overwatchDetails\n...pubgDetails\n}\n}\nfragment gameChangeDetails on GameChangeMomentDetails {\ngame {\nid\ndisplayName\nboxArtURL(width: 40 height: 53)\n}\n}\nfragment hearthstoneDetails on HearthstoneMomentDetails {\nbroadcasterHero {\nid\nclass\nname\n}\nopponentHero {\nid\nclass\nname\n}\ngameMode {\ntype\nvalue\n}\n}\nfragment overwatchDetails on OverwatchMomentDetails {\nrole\nheroName\n}\nfragment pubgDetails on PUBGMomentDetails {\nmaxPlayerCount\nminPlayerCount\n}",
+                body: "query VideoPreviewCard__VideoMoments($videoId: ID!) {\nvideo(id: $videoId) {\nid\nmoments(momentRequestType: VIDEO_CHAPTER_MARKERS) {\nedges {\n...videoMomentEdge\n}\n}\n}\n}\nfragment videoMomentEdge on VideoMomentEdge {\ncursor\nnode {\n...videoChapter\n}\n}\nfragment videoChapter on VideoMoment {\nid\ndurationMilliseconds\npositionMilliseconds\ntype\ndescription\nthumbnailURL\n...momentDetails\nvideo {\nid\nlengthSeconds\n}\n}\nfragment momentDetails on VideoMoment {\ndetails {\n...gameChangeDetails\n...hearthstoneDetails\n...overwatchDetails\n...pubgDetails\n}\n}\nfragment gameChangeDetails on GameChangeMomentDetails {\ngame {\nid\ndisplayName\nboxArtURL(width: 40 height: 53)\n}\n}\nfragment hearthstoneDetails on HearthstoneMomentDetails {\nbroadcasterHero {\nid\nclass\nname\n}\nopponentHero {\nid\nclass\nname\n}\ngameMode {\ntype\nvalue\n}\n}\nfragment overwatchDetails on OverwatchMomentDetails {\nrole\nheroName\n}\nfragment pubgDetails on PUBGMomentDetails {\nmaxPlayerCount\nminPlayerCount\n}",
                 name: "GraphQL request",
                 locationOffset: {
                     line: 1,
@@ -649,8 +657,15 @@
                 r = n("H1ft"),
                 o = n("yR8l"),
                 d = function(e) {
-                    return e.map(function(e) {
-                        return s(e.node)
+                    return e.map(function(e, t, n) {
+                        var a, r = e.node;
+                        if ("GAME_CHANGE" !== r.type || 0 !== r.durationMilliseconds) return s(r);
+                        var o = n[t + 1] && n[t + 1].node;
+                        a = o ? o.positionMilliseconds - r.positionMilliseconds : r.video && r.video.lengthSeconds && 1e3 * r.video.lengthSeconds - r.positionMilliseconds || 0;
+                        var d = i.__assign({}, r, {
+                            durationMilliseconds: a
+                        });
+                        return s(d)
                     })
                 },
                 s = function(e) {
@@ -774,7 +789,7 @@
                         return a.createElement(p.a, i.__assign({}, e))
                     }, t.prototype.generateSearchString = function() {
                         var e = {};
-                        this.props.collectionID && (e.collection = this.props.collectionID), this.props.videoBrowseOptions && (this.props.videoBrowseOptions.filter && (e.filter = this.props.videoBrowseOptions.filter), this.props.videoBrowseOptions.sort && (e.sort = this.props.videoBrowseOptions.sort), this.props.videoBrowseOptions.range && (e.range = this.props.videoBrowseOptions.range));
+                        this.props.collectionID && (e.collection = this.props.collectionID);
                         var t = m.stringify(e);
                         return t ? "?" + t : ""
                     }, t.prototype.getVideoPreviousWatchPercentage = function() {
@@ -803,7 +818,7 @@
                 })(b),
                 S = n("1Ijn");
             n.d(t, "a", function() {
-                return w
+                return F
             });
             var C = function(e) {
                     function t() {
@@ -819,7 +834,7 @@
                         }, this.props))
                     }, t
                 }(a.Component),
-                w = Object(o.a)(S, {
+                F = Object(o.a)(S, {
                     options: function(e) {
                         return {
                             variables: {
@@ -1264,8 +1279,8 @@
                     })
                 },
                 C = n("HStj"),
-                w = n("Ue10"),
-                F = n("tBbK"),
+                F = n("Ue10"),
+                w = n("tBbK"),
                 V = (n("TB8s"), N.a.Popular),
                 P = function(e) {
                     function t() {
@@ -1304,14 +1319,14 @@
                             if (e && e.node) return e.node
                         }));
                         var m = o.createElement(f.a, {
-                                buttonSize: w.D.Large,
+                                buttonSize: F.D.Large,
                                 contentType: C.a.Videos,
                                 directoryName: n
                             }),
-                            u = o.createElement(w.Ya, {
+                            u = o.createElement(F.Ya, {
                                 className: "directory-game-videos-page__filters",
-                                display: w.X.Flex,
-                                flexDirection: w.Aa.Row,
+                                display: F.X.Flex,
+                                flexDirection: F.Aa.Row,
                                 fullWidth: !0,
                                 padding: {
                                     top: 1,
@@ -1323,18 +1338,18 @@
                                 selectedSort: i,
                                 broadcastType: a
                             }));
-                        return o.createElement(o.Fragment, null, u, o.createElement(w.Ya, {
+                        return o.createElement(o.Fragment, null, u, o.createElement(F.Ya, {
                             padding: {
                                 top: 2,
                                 bottom: 3,
                                 x: 3
                             }
-                        }, t ? o.createElement(w.Ya, {
+                        }, t ? o.createElement(F.Ya, {
                             padding: {
                                 top: 1
                             }
-                        }, o.createElement(w.W, {
-                            type: w.Wb.H3
+                        }, o.createElement(F.W, {
+                            type: F.Wb.H3
                         }, t)) : o.createElement(o.Fragment, null, o.createElement(b.b, {
                             hideGameArt: !0,
                             trackingContent: Object(h.a)(i),
@@ -1348,7 +1363,7 @@
                         }))))
                     }, t.prototype.enablePagination = function() {
                         return !!(this.props.data && !this.props.data.loading && !this.props.data.error && this.props.data.game && this.props.data.game.videos && this.props.data.game.videos.pageInfo && this.props.data.game.videos.pageInfo.hasNextPage)
-                    }, t = r.__decorate([Object(m.a)(F, {
+                    }, t = r.__decorate([Object(m.a)(w, {
                         options: function(e) {
                             return {
                                 fetchPolicy: "network-only",
@@ -1365,7 +1380,7 @@
                             return r.__assign({}, e, {
                                 loadMore: function() {
                                     return e.data.fetchMore({
-                                        query: F,
+                                        query: w,
                                         variables: r.__assign({}, e.data.variables, {
                                             followedCursor: e.data.game && e.data.game.videos && e.data.game.videos.edges && e.data.game.videos.edges.length > 0 ? e.data.game.videos.edges[e.data.game.videos.edges.length - 1].cursor : void 0
                                         }),
@@ -1395,13 +1410,13 @@
                         }
                     })], t)
                 }(o.Component);
-            var T = Object(i.connect)(function(e) {
+            var E = Object(i.connect)(function(e) {
                 return {
                     languagePreferences: Object(a.a)(e)
                 }
             })(P);
             n.d(t, "DirectoryGameVideosPage", function() {
-                return T
+                return E
             })
         },
         daWW: function(e, t, n) {
@@ -1430,7 +1445,6 @@
                                     bottom: 2
                                 }
                             }, a.createElement(s.VideoPreviewCard, {
-                                videoBrowseOptions: e.videoBrowseOptions,
                                 hideGameArt: e.hideGameArt,
                                 context: e.listContext || r.b.MixedGameAndChannelList,
                                 tracking: {

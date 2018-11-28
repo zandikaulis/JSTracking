@@ -1,5 +1,5 @@
 (window.webpackJsonp = window.webpackJsonp || []).push([
-    [200], {
+    [198], {
         "/HY+": function(e, t, n) {
             "use strict";
             var r = n("dAHa"),
@@ -2681,7 +2681,7 @@
             function i(e, t) {
                 var n = r.b.get(e, []),
                     o = r.p.store.getState();
-                return n.includes(t) || n.includes(t + "-staff") && Object(a.g)(o) || !(!o.session || !o.session.user || o.session.user.login !== t)
+                return n.includes(t) || n.includes(t + "-staff") && Object(a.g)(o)
             }
         },
         dAHa: function(e, t, n) {

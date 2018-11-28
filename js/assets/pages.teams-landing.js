@@ -568,7 +568,7 @@
                 e.SubButton = "subscribe-button__dropdown", e.BalloonLayerButton = "subscribe-button__balloon-layer-btn", e.DefaultButton = "subscribe-button__default-btn", e.SubscribeBalloon = "subscribe-button__subscribe-balloon"
             }(L || (L = {}));
             var D = s.a.wrap(function() {
-                    return Promise.all([t.e(0), t.e(201)]).then(t.bind(null, "f+qK"))
+                    return Promise.all([t.e(0), t.e(199)]).then(t.bind(null, "f+qK"))
                 }, "SubscribeBalloon"),
                 O = function(e) {
                     function n() {
@@ -839,7 +839,7 @@
                         return Object(u.d)(s.a, {
                             component: "CheckoutModal",
                             loader: function() {
-                                return Promise.all([t.e(0), t.e(212)]).then(t.bind(null, "KJv/"))
+                                return Promise.all([t.e(0), t.e(210)]).then(t.bind(null, "KJv/"))
                             },
                             componentProps: n
                         })
@@ -1890,7 +1890,7 @@
                 e.SubButton = "subscribe-button__dropdown", e.BalloonLayerButton = "subscribe-button__balloon-layer-btn", e.DefaultButton = "subscribe-button__default-btn", e.SubscribeBalloon = "subscribe-button__subscribe-balloon"
             }(i || (i = {}));
             var w = l.a.wrap(function() {
-                    return Promise.all([t.e(0), t.e(201)]).then(t.bind(null, "f+qK"))
+                    return Promise.all([t.e(0), t.e(199)]).then(t.bind(null, "f+qK"))
                 }, "SubscribeBalloon"),
                 F = function(e) {
                     function n() {
@@ -2062,7 +2062,7 @@
                         return Object(m.d)(l.a, {
                             component: "CheckoutModal",
                             loader: function() {
-                                return Promise.all([t.e(0), t.e(212)]).then(t.bind(null, "KJv/"))
+                                return Promise.all([t.e(0), t.e(210)]).then(t.bind(null, "KJv/"))
                             },
                             componentProps: n
                         })

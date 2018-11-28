@@ -1,5 +1,5 @@
 (window.webpackJsonp = window.webpackJsonp || []).push([
-    [144], {
+    [142], {
         "+U0Y": function(e, t, n) {
             "use strict";
             n.d(t, "a", function() {
@@ -1563,7 +1563,6 @@
                         })
                     }, t.prototype.renderClipCardForPage = function(e, t) {
                         return a.createElement(k.a, {
-                            videoBrowseOptions: this.props.videoBrowseOptions,
                             context: this.props.context,
                             key: "video-" + t,
                             tracking: {
@@ -1654,7 +1653,6 @@
                                 placeholderItems: 20
                             }, n)
                         } else e = a.createElement(O, {
-                            videoBrowseOptions: this.props.videoBrowseOptions,
                             clips: this.props.clips || [],
                             context: t ? s.b.SingleChannelList : s.b.SingleGameList,
                             loadMoreClips: this.props.loadMoreClips,
@@ -2675,13 +2673,13 @@
                     }, t
                 }(c.Component)),
                 W = Object(h.b)("ClipsViewModalNavigation")(L);
-            var B = Object(i.connect)(null, function(e) {
+            var A = Object(i.connect)(null, function(e) {
                     return Object(a.bindActionCreators)({
                         showModal: o.d,
                         closeModal: o.c
                     }, e)
                 })(W),
-                A = (n("ygyh"), function(e) {
+                z = (n("ygyh"), function(e) {
                     function t() {
                         var t = null !== e && e.apply(this, arguments) || this;
                         return t.state = {
@@ -2738,7 +2736,7 @@
                                     break
                                 }
                             default:
-                                t = c.createElement(B, {
+                                t = c.createElement(A, {
                                     getClips: this.props.getClips,
                                     clip: this.props.clip,
                                     clipIndex: this.props.clipIndex,
@@ -2755,12 +2753,12 @@
                         }))
                     }, t
                 }(c.Component)),
-                z = Object(h.b)("ClipsViewModal")(A);
+                B = Object(h.b)("ClipsViewModal")(z);
             var V = Object(i.connect)(null, function(e) {
                 return Object(a.bindActionCreators)({
                     showModal: o.d
                 }, e)
-            })(z);
+            })(B);
             n.d(t, "a", function() {
                 return V
             }), n.d(t, !1, function() {})
@@ -3421,14 +3419,13 @@
         bdIb: function(e, t, n) {
             "use strict";
             n.d(t, "a", function() {
-                return l
+                return s
             });
             var r = n("mrSG"),
-                i = n("cr+I"),
-                a = n("q1tI"),
-                o = n("/7QA"),
-                s = n("GFmA"),
-                l = function(e) {
+                i = n("q1tI"),
+                a = n("/7QA"),
+                o = n("GFmA"),
+                s = function(e) {
                     function t() {
                         var t = null !== e && e.apply(this, arguments) || this;
                         return t.onClickHandler = function() {
@@ -3436,17 +3433,16 @@
                         }, t
                     }
                     return r.__extends(t, e), t.prototype.render = function() {
-                        return a.createElement(s.a, {
+                        return i.createElement(o.a, {
                             context: this.props.context,
                             title: this.props.clip.title,
                             linkTo: {
                                 pathname: this.props.clip.broadcaster ? "/" + this.props.clip.broadcaster.login + "/clip/" + this.props.clip.slug : "",
-                                state: this.getLinkState(),
-                                search: this.generateSearchString()
+                                state: this.getLinkState()
                             },
                             onClick: this.onClickHandler,
                             thumbnailImageProps: {
-                                src: this.props.clip.thumbnailURL || o.p.config.defaultStreamPreviewURL,
+                                src: this.props.clip.thumbnailURL || a.p.config.defaultStreamPreviewURL,
                                 alt: this.props.clip.title
                             },
                             channelDisplayName: this.props.clip.broadcaster && this.props.clip.broadcaster.displayName || "",
@@ -3465,7 +3461,7 @@
                                 state: this.getLinkState()
                             } : void 0,
                             gameBoxArtImageProps: this.props.clip.game ? {
-                                src: this.props.clip.game.boxArtURL || o.a.defaultBoxArtURL,
+                                src: this.props.clip.game.boxArtURL || a.a.defaultBoxArtURL,
                                 alt: this.props.clip.game.name
                             } : void 0,
                             datePublished: this.props.clip.createdAt,
@@ -3474,11 +3470,6 @@
                             clipCreatedByChannelLogin: this.props.clip.curator && this.props.clip.curator.login || "",
                             clipCreatedByChannelLoginLinkTo: this.props.clip.curator ? "/" + this.props.clip.curator.login : ""
                         })
-                    }, t.prototype.generateSearchString = function() {
-                        var e = {};
-                        this.props.videoBrowseOptions && (this.props.videoBrowseOptions.filter && (e.filter = this.props.videoBrowseOptions.filter), this.props.videoBrowseOptions.sort && (e.sort = this.props.videoBrowseOptions.sort), this.props.videoBrowseOptions.range && (e.range = this.props.videoBrowseOptions.range));
-                        var t = i.stringify(e);
-                        return t ? "?" + t : ""
                     }, t.prototype.getLinkState = function() {
                         return {
                             content: this.props.tracking.content,
@@ -3486,7 +3477,7 @@
                             medium: this.props.tracking.medium
                         }
                     }, t
-                }(a.Component)
+                }(i.Component)
         },
         cERj: function(e, t, n) {
             "use strict";
@@ -4625,7 +4616,7 @@
                         value: "video general report reason"
                     }
                 },
-                B = {
+                A = {
                     content: {
                         getTitle: U.reportMessage,
                         getLabel: D.contentGeneral,
@@ -4641,7 +4632,7 @@
                         value: "message general report reason"
                     }
                 },
-                A = {
+                z = {
                     general: {
                         getTitle: U.reportWhisper,
                         getLabel: D.contentGeneral,
@@ -4660,7 +4651,7 @@
                         value: "whisper general report reason"
                     }
                 },
-                z = {
+                B = {
                     profile: {
                         getTitle: U.reportProfile,
                         getLabel: D.contentGeneral,
@@ -4819,24 +4810,24 @@
                 ee = {
                     video: W.content,
                     "video more options": W.moreOptions,
-                    whisper: A.general,
-                    "whisper more options": A.moreOptions,
-                    chat: B.content,
-                    "chat more options": B.moreOptions,
-                    "other content": z.general,
-                    profile: z.profile,
-                    "profile more options": z.profileMoreOptions,
+                    whisper: z.general,
+                    "whisper more options": z.moreOptions,
+                    chat: A.content,
+                    "chat more options": A.moreOptions,
+                    "other content": B.general,
+                    profile: B.profile,
+                    "profile more options": B.profileMoreOptions,
                     room: V,
                     "somewhere else": q.identifyLocation,
                     streamer: W.content,
                     "someone else in video": W.content,
-                    "someone in chat": B.content,
+                    "someone in chat": A.content,
                     general_video: W.moreOptions,
-                    general_messaging: B.content,
-                    general_profile: z.profile,
-                    "channel owner": z.general,
-                    "community member": B.content,
-                    "on twitch": z.general,
+                    general_messaging: A.content,
+                    general_profile: B.profile,
+                    "channel owner": B.general,
+                    "community member": A.content,
+                    "on twitch": B.general,
                     "another site": q.externalSite,
                     "twitch event": F.twitchEvent,
                     "brigading/raids": Y.socialMedia,
@@ -4848,7 +4839,7 @@
                     impersonation: $,
                     abusive: G.content,
                     "inappropriate content": X,
-                    "inappropriate emotes": z.emotes,
+                    "inappropriate emotes": B.emotes,
                     "intellectual property": F.legal,
                     "violating developer agreement": F.legal
                 },
@@ -4858,16 +4849,16 @@
                     other: Z
                 },
                 ne = {
-                    CHANNEL_FEED_POST_REPORT: z.general,
-                    COMMUNITY_REPORT: z.general,
-                    CHAT_REPORT: B.content,
+                    CHANNEL_FEED_POST_REPORT: B.general,
+                    COMMUNITY_REPORT: B.general,
+                    CHAT_REPORT: A.content,
                     CLIP_REPORT: W.content,
-                    EVENT_REPORT: z.general,
-                    EXTENSION_REPORT: z.general,
-                    LIVE_UP_REPORT: z.general,
+                    EVENT_REPORT: B.general,
+                    EXTENSION_REPORT: B.general,
+                    LIVE_UP_REPORT: B.general,
                     ROOM_REPORT: V,
-                    WHISPER_REPORT: A.general,
-                    VOD_COMMENT_REPORT: B.content
+                    WHISPER_REPORT: z.general,
+                    VOD_COMMENT_REPORT: A.content
                 },
                 re = "report-wizard-back",
                 ie = "report-wizard-close",

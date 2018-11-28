@@ -1,5 +1,5 @@
 (window.webpackJsonp = window.webpackJsonp || []).push([
-    [229], {
+    [226], {
         "0SKf": function(e, n, t) {
             "use strict";
             t.d(n, "h", function() {
@@ -82,7 +82,7 @@
         "4brS": function(e, n, t) {},
         DMoW: function(e, n, t) {
             "use strict";
-            var E, a, i, N, o, r, T, _, R, A, c, u, O, d, l, I, D, S, m, C, s, L, f, M, U, p, P, b, v, B, g, F, V, G, y, k, H, h, Y, W, j, K, w, X, x, Q, z, Z, J, q, $, ee, ne, te, Ee, ae, ie, Ne, oe, re, Te, _e, Re, Ae, ce, ue, Oe, de, le, Ie, De, Se, me, Ce, se, Le, fe, Me, Ue, pe, Pe, be, ve, Be, ge, Fe, Ve, Ge, ye, ke, He, he, Ye, We, je, Ke, we, Xe, xe, Qe, ze, Ze, Je, qe, $e, en, nn, tn, En, an, Nn, on, rn, Tn, _n, Rn, An, cn, un, On, dn, ln, In, Dn, Sn, mn, Cn;
+            var E, a, i, N, o, r, T, _, R, A, c, u, O, d, l, I, D, S, m, s, C, L, f, M, U, p, P, b, v, B, g, F, V, G, y, k, H, h, Y, W, j, K, w, X, x, Q, z, Z, J, q, $, ee, ne, te, Ee, ae, ie, Ne, oe, re, Te, _e, Re, Ae, ce, ue, Oe, de, le, Ie, De, Se, me, se, Ce, Le, fe, Me, Ue, pe, Pe, be, ve, Be, ge, Fe, Ve, Ge, ye, ke, He, he, Ye, We, je, Ke, we, Xe, xe, Qe, ze, Ze, Je, qe, $e, en, nn, tn, En, an, Nn, on, rn, Tn, _n, Rn, An, cn, un, On, dn, ln, In, Dn, Sn, mn, sn;
             t.d(n, "O", function() {
                     return E
                 }), t.d(n, "e", function() {
@@ -102,7 +102,7 @@
                 }), t.d(n, "h", function() {
                     return m
                 }), t.d(n, "Aa", function() {
-                    return s
+                    return C
                 }), t.d(n, "n", function() {
                     return L
                 }), t.d(n, "Ca", function() {
@@ -257,10 +257,10 @@
                 }(m || (m = {})),
                 function(e) {
                     e.FIXED_VALUE_OFF = "FIXED_VALUE_OFF", e.NONE = "NONE", e.PERCENT_OFF = "PERCENT_OFF"
-                }(C || (C = {})),
+                }(s || (s = {})),
                 function(e) {
                     e.CHEER = "CHEER"
-                }(s || (s = {})),
+                }(C || (C = {})),
                 function(e) {
                     e.CREATED = "CREATED", e.CREATING = "CREATING", e.FAILED = "FAILED"
                 }(L || (L = {})),
@@ -419,10 +419,10 @@
                 }(me || (me = {})),
                 function(e) {
                     e.GIFT_NOT_CLAIMABLE = "GIFT_NOT_CLAIMABLE", e.NON_EXISTENT_GIFT = "NON_EXISTENT_GIFT", e.UNKNOWN_ERROR = "UNKNOWN_ERROR", e.USER_DOES_NOT_OWN_GIFT = "USER_DOES_NOT_OWN_GIFT"
-                }(Ce || (Ce = {})),
+                }(se || (se = {})),
                 function(e) {
                     e.OFFERS_FAILED_TO_UPDATE = "OFFERS_FAILED_TO_UPDATE", e.UNKNOWN = "UNKNOWN"
-                }(se || (se = {})),
+                }(Ce || (Ce = {})),
                 function(e) {
                     e.TOO_MANY_RECENT_SPENDS = "TOO_MANY_RECENT_SPENDS", e.UNABLE_TO_SPEND = "UNABLE_TO_SPEND"
                 }(Le || (Le = {})),
@@ -442,7 +442,7 @@
                     e.CREATED_AT_ASC = "CREATED_AT_ASC", e.CREATED_AT_DESC = "CREATED_AT_DESC", e.TRENDING = "TRENDING", e.VIEWS_ASC = "VIEWS_ASC", e.VIEWS_DESC = "VIEWS_DESC"
                 }(Pe || (Pe = {})),
                 function(e) {
-                    e.GAME_CHANGE = "GAME_CHANGE", e.HEARTHSTONE_VCA = "HEARTHSTONE_VCA", e.OVERWATCH_VCA = "OVERWATCH_VCA", e.PUBG_VCA = "PUBG_VCA", e.STREAM_MARKER = "STREAM_MARKER", e.VCA = "VCA"
+                    e.HEARTHSTONE_VCA = "HEARTHSTONE_VCA", e.OVERWATCH_VCA = "OVERWATCH_VCA", e.PUBG_VCA = "PUBG_VCA", e.STREAM_MARKER = "STREAM_MARKER", e.VCA = "VCA"
                 }(be || (be = {})),
                 function(e) {
                     e.HIGH = "HIGH", e.LOW = "LOW", e.MEDIUM = "MEDIUM"
@@ -578,7 +578,7 @@
                 }(mn || (mn = {})),
                 function(e) {
                     e.SERVICE_DEPENDENCY_FAILURE = "SERVICE_DEPENDENCY_FAILURE", e.UNKNOWN = "UNKNOWN", e.USER_UNAUTHORIZED = "USER_UNAUTHORIZED"
-                }(Cn || (Cn = {}))
+                }(sn || (sn = {}))
         },
         H3dc: function(e, n, t) {
             var E = {
@@ -1752,8 +1752,8 @@
                     autoReportInteractive: !0
                 }))(D),
                 m = t("/MKj"),
-                C = t("fvjX"),
-                s = t("aCAx"),
+                s = t("fvjX"),
+                C = t("aCAx"),
                 L = t("PJwv");
             ! function(e) {
                 e.DetailsButtonSelector = "dev-bounty-live-campaign-details-button", e.CancelButtonSelector = "dev-bounty-live-campaign-cancel-button"
@@ -1837,9 +1837,9 @@
                     autoReportInteractive: !0
                 }))(f);
             var U, p = Object(N.compose)(Object(m.connect)(null, function(e) {
-                return Object(C.bindActionCreators)({
+                return Object(s.bindActionCreators)({
                     showCancelCampaignModal: function() {
-                        return Object(s.d)(L.a, {})
+                        return Object(C.d)(L.a, {})
                     }
                 }, e)
             }))(M);
@@ -1930,9 +1930,9 @@
                     autoReportInteractive: !0
                 }))(P);
             var v, B = Object(N.compose)(Object(m.connect)(null, function(e) {
-                return Object(C.bindActionCreators)({
+                return Object(s.bindActionCreators)({
                     showCancelCampaignModal: function() {
-                        return Object(s.d)(L.a, {})
+                        return Object(C.d)(L.a, {})
                     }
                 }, e)
             }))(b);

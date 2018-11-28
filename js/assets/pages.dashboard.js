@@ -81,9 +81,9 @@
             }), n.d(t, "z", function() {
                 return B
             }), n.d(t, "P", function() {
-                return V
-            }), n.d(t, "S", function() {
                 return z
+            }), n.d(t, "S", function() {
+                return V
             }), n.d(t, "x", function() {
                 return G
             }), n.d(t, "N", function() {
@@ -215,13 +215,13 @@
                 }
             }
 
-            function V() {
+            function z() {
                 return {
                     type: b
                 }
             }
 
-            function z(e) {
+            function V(e) {
                 return {
                     type: s,
                     roomState: e
@@ -1710,7 +1710,7 @@
                 W = n("cys1"),
                 B = n("Ue10");
 
-            function V(e, t) {
+            function z(e, t) {
                 return Object(W.f)(Object(P.a)(e, {
                     emotes: {
                         type: L.a.Position,
@@ -1730,7 +1730,7 @@
                 }))
             }
             n("jPWu");
-            var z = function(e) {
+            var V = function(e) {
                     function t() {
                         var t = null !== e && e.apply(this, arguments) || this;
                         return t.handleThreadClick = function() {
@@ -1741,7 +1741,7 @@
                     }
                     return i.__extends(t, e), t.prototype.render = function() {
                         var e, t, n, r = this.props.user,
-                            i = this.props.lastMessage ? V(this.props.lastMessage.content.content, this.props.lastMessage.content.emotes) : null,
+                            i = this.props.lastMessage ? z(this.props.lastMessage.content.content, this.props.lastMessage.content.emotes) : null,
                             o = this.props.unreadMessageCount,
                             s = Object(a.d)("Unknown", "ThreadListItem");
                         return r ? ((e = r.displayName || r.login) || (e = s), t = r.login, n = r.profileImageURL) : (e = s, t = s, n = null), _.createElement("div", {
@@ -2077,7 +2077,7 @@
                                     } : void 0,
                                     a = t.props.threadsByID[e],
                                     i = q(a.participants, t.props.currentUserID);
-                                return i ? _.createElement(z, {
+                                return i ? _.createElement(V, {
                                     key: "whisperThread:" + a.id,
                                     user: i,
                                     threadID: a.id,
@@ -2840,7 +2840,7 @@
                 e[e.Timestamp = 0] = "Timestamp", e[e.Whisper = 1] = "Whisper", e[e.Warning = 2] = "Warning", e[e.InactiveUserNotice = 3] = "InactiveUserNotice", e[e.NewMessages = 4] = "NewMessages", e[e.Notification = 5] = "Notification"
             }(je || (je = {}));
             n("0JUI");
-            var Ve = function(e) {
+            var ze = function(e) {
                     function t() {
                         return null !== e && e.apply(this, arguments) || this
                     }
@@ -2920,7 +2920,7 @@
                                     var n = [_.createElement("span", {
                                         key: "str-separator"
                                     }, t ? " " : ": ")];
-                                    if (n.push.apply(n, V(e.content, e.emotes)), e.editedAt) {
+                                    if (n.push.apply(n, z(e.content, e.emotes)), e.editedAt) {
                                         var r = Object(a.d)("edited", "ThreadMessage"),
                                             o = Object(a.d)("{timestamp, date, full} {timestamp, time, long}", {
                                                 timestamp: new Date(e.editedAt)
@@ -2990,7 +2990,7 @@
                         }
                     }, t
                 }(_.Component),
-                ze = function(e) {
+                Ve = function(e) {
                     function t() {
                         var t = null !== e && e.apply(this, arguments) || this;
                         return t.state = {
@@ -3005,7 +3005,7 @@
                             return t.props.loadMore()
                         }, t.renderMessages = function(e) {
                             return e.map(function(e, n) {
-                                return _.createElement(Ve, {
+                                return _.createElement(ze, {
                                     message: e,
                                     reportOutgoingWhisperRendered: t.props.reportOutgoingWhisperRendered || void 0,
                                     key: t.generateMessageKey(e, n.toString())
@@ -3128,7 +3128,7 @@
                             return e.whispers.notifications.byThreadID[t] || v
                         }(e, t.thread.id)
                     }
-                })(ze),
+                })(Ve),
                 He = n("Wcon"),
                 Ye = {};
 
@@ -4333,6 +4333,68 @@
                 return r
             })
         },
+        "6D3P": function(e, t, n) {
+            "use strict";
+            var r = n("mrSG"),
+                a = n("q1tI"),
+                i = n("yR8l"),
+                o = n("u2gS"),
+                s = n("l0Eh"),
+                c = n("yCxs"),
+                l = function(e) {
+                    function t() {
+                        var t = null !== e && e.apply(this, arguments) || this;
+                        return t.state = {
+                            channel: void 0,
+                            streamSummaries: [],
+                            interval: t.props.interval,
+                            isLoading: !0
+                        }, t
+                    }
+                    return r.__extends(t, e), t.prototype.componentDidMount = function() {
+                        this.query()
+                    }, t.prototype.componentDidUpdate = function(e) {
+                        (e.data.channel && e.data.channel.id) === (this.props.data.channel && this.props.data.channel.id) && Object(o.f)(e.interval, this.props.interval) || this.query()
+                    }, t.prototype.render = function() {
+                        return this.props.children(this.state)
+                    }, t.prototype.query = function() {
+                        return r.__awaiter(this, void 0, void 0, function() {
+                            var e, t;
+                            return r.__generator(this, function(n) {
+                                switch (n.label) {
+                                    case 0:
+                                        return (e = o.c.fromChannelData(this.props.data)) ? (this.setState({
+                                            isLoading: !0,
+                                            channel: e
+                                        }), [4, Object(c.b)(e, this.props.interval)]) : [2];
+                                    case 1:
+                                        return t = n.sent(), this.setState({
+                                            streamSummaries: t.streamSummaries,
+                                            isLoading: !1
+                                        }), [2]
+                                }
+                            })
+                        })
+                    }, t
+                }(a.Component),
+                d = Object(i.a)(s, {
+                    options: function(e) {
+                        return {
+                            variables: {
+                                channelName: e.channelName
+                            }
+                        }
+                    }
+                })(l);
+            n("ILsx");
+            n.d(t, !1, function() {
+                return l
+            }), n.d(t, "a", function() {
+                return d
+            }), n.d(t, "b", function() {
+                return c.a
+            }), n.d(t, !1, function() {})
+        },
         "6XEL": function(e, t, n) {
             "use strict";
             var r = {};
@@ -5446,129 +5508,107 @@
                 return s
             })
         },
-        ILEO: function(e, t) {
-            var n = {
-                kind: "Document",
-                definitions: [{
-                    kind: "OperationDefinition",
-                    operation: "query",
-                    name: {
-                        kind: "Name",
-                        value: "RecentStreamSummariesContext"
-                    },
-                    variableDefinitions: [{
-                        kind: "VariableDefinition",
-                        variable: {
-                            kind: "Variable",
-                            name: {
-                                kind: "Name",
-                                value: "channelLogin"
-                            }
-                        },
-                        type: {
-                            kind: "NonNullType",
-                            type: {
-                                kind: "NamedType",
-                                name: {
-                                    kind: "Name",
-                                    value: "String"
-                                }
-                            }
-                        }
-                    }],
-                    directives: [],
-                    selectionSet: {
-                        kind: "SelectionSet",
-                        selections: [{
-                            kind: "Field",
-                            alias: {
-                                kind: "Name",
-                                value: "channel"
-                            },
-                            name: {
-                                kind: "Name",
-                                value: "user"
-                            },
-                            arguments: [{
-                                kind: "Argument",
-                                name: {
-                                    kind: "Name",
-                                    value: "login"
-                                },
-                                value: {
-                                    kind: "Variable",
-                                    name: {
-                                        kind: "Name",
-                                        value: "channelLogin"
-                                    }
-                                }
-                            }],
-                            directives: [],
-                            selectionSet: {
-                                kind: "SelectionSet",
-                                selections: [{
-                                    kind: "Field",
-                                    name: {
-                                        kind: "Name",
-                                        value: "id"
-                                    },
-                                    arguments: [],
-                                    directives: []
-                                }, {
-                                    kind: "Field",
-                                    name: {
-                                        kind: "Name",
-                                        value: "login"
-                                    },
-                                    arguments: [],
-                                    directives: []
-                                }, {
-                                    kind: "Field",
-                                    name: {
-                                        kind: "Name",
-                                        value: "roles"
-                                    },
-                                    arguments: [],
-                                    directives: [],
-                                    selectionSet: {
-                                        kind: "SelectionSet",
-                                        selections: [{
-                                            kind: "Field",
-                                            name: {
-                                                kind: "Name",
-                                                value: "isAffiliate"
-                                            },
-                                            arguments: [],
-                                            directives: []
-                                        }, {
-                                            kind: "Field",
-                                            name: {
-                                                kind: "Name",
-                                                value: "isPartner"
-                                            },
-                                            arguments: [],
-                                            directives: []
-                                        }]
-                                    }
-                                }]
-                            }
-                        }]
-                    }
-                }],
-                loc: {
-                    start: 0,
-                    end: 143
+        ILsx: function(e, t, n) {
+            "use strict";
+            n.d(t, "b", function() {
+                return o
+            }), n.d(t, "a", function() {
+                return l
+            });
+            var r = n("NAv5"),
+                a = n("CFgy"),
+                i = n("nlSm");
+
+            function o(e, t) {
+                var n = [];
+                return e.sessions.forEach(function(e) {
+                    var r = l.fromPayload(e, t);
+                    r.isCompleted && n.push(r)
+                }), n
+            }
+            var s = ["google", "youtube", "facebook", "t.co", "reddit"];
+
+            function c(e) {
+                return s.find(function(t) {
+                    return e.indexOf(t) >= 0
+                }) || e
+            }
+            var l = function() {
+                function e(e) {
+                    this.interval = {
+                        start: e.start,
+                        end: e.end
+                    }, this.now = new Date, this.id = e.start.getTime() + "-" + e.end.getTime(), this.isCompleted = this.getIsCompleted(), this.channel = e.channel, this.avgViewerCount = e.avgViewerCount, this.maxViewerCount = e.maxViewerCount, this.followersChange = e.followersChange, this.totalViewers = e.totalViewers, this.uniqueViewers = e.uniqueViewers, this.totalMinutesWatched = e.totalMinutesWatched, this.uniqueChatters = e.uniqueChatters, this.incomingRaids = e.incomingRaids, this.hostedRaidedPercentage = e.hostedRaidedPercentage, this.peakViewershipTime = e.peakViewershipTime, this.startChannelStatus = e.startChannelStatus, this.messagesTotal = e.messagesTotal, this.videoId = e.videoId, this.videoRecordedAt = e.videoRecordedAt, this.videoViews = e.videoViews, this.videoSmallThumbnail = e.videoSmallThumbnail, this.videoMediumThumbnail = e.videoMediumThumbnail, this.clipCreatesTotal = e.clipCreatesTotal, this.clipPlaysTotal = e.clipPlaysTotal, this.clipPlaysBreakdown = e.clipPlaysBreakdown, this.commercialCount = e.commercialCount, this.commercialDensity = e.commercialDensity, this.commercialLengthTotal = e.commercialLengthTotal, this.subscriptionsNew = e.subscriptionsNew, this.videoPlayExternalReferrers = e.videoPlayExternalReferrers, this.videoPlayInternalChannelsReferrers = e.videoPlayInternalChannelsReferrers, this.videoPlayInternalTwitchReferrers = e.videoPlayInternalTwitchReferrers, this.videoPlayAllReferrers = e.videoPlayAllReferrers, this.videoPlayGeographics = e.videoPlayGeographics, this.videoPlayPlatforms = e.videoPlayPlatforms
                 }
-            };
-            n.loc.source = {
-                body: "query RecentStreamSummariesContext($channelLogin: String!) {\nchannel: user(login: $channelLogin) {\nid\nlogin\nroles {\nisAffiliate\nisPartner\n}\n}\n}",
-                name: "GraphQL request",
-                locationOffset: {
-                    line: 1,
-                    column: 1
-                }
-            };
-            e.exports = n
+                return e.fromPayload = function(t, n) {
+                    var r = t.videos[0],
+                        a = r && r._id,
+                        o = r && new Date(r.recorded_at),
+                        s = r && r.views,
+                        l = r && r.thumbnails && r.thumbnails.small && r.thumbnails.small.length && r.thumbnails.small[0].url || "",
+                        d = r && r.thumbnails && r.thumbnails.medium && r.thumbnails.medium.length && r.thumbnails.medium[0].url || "",
+                        u = r && r.title || "",
+                        m = {
+                            twitch: 0,
+                            reddit: 0,
+                            facebook: 0,
+                            twitter: 0,
+                            other: 0
+                        };
+                    (t.stats.clip_plays_breakdown || []).forEach(function(e) {
+                        return m[e.key] = Number(e.value)
+                    });
+                    var p = t.summary,
+                        h = t.stats,
+                        f = Object(i.b)((h.video_play_external_referrers || []).concat(h.video_play_internal_channels_referrers || [], h.video_play_internal_twitch_referrers || []));
+                    return new e({
+                        start: new Date(t.start_time),
+                        end: new Date(t.end_time),
+                        avgViewerCount: Number(p.concurrents_average),
+                        maxViewerCount: Number(p.concurrents_max),
+                        followersChange: Number(p.followers_change),
+                        totalViewers: Number(p.video_play_total),
+                        uniqueViewers: Number(p.video_play_unique),
+                        totalMinutesWatched: Number(p.minutes_watched_total),
+                        clipCreatesTotal: Number(p.clip_creates_total),
+                        clipPlaysTotal: Number(p.clip_plays_total),
+                        clipPlaysBreakdown: m,
+                        commercialCount: Number(p.commercial_count),
+                        commercialDensity: Number(p.commercial_density),
+                        commercialLengthTotal: Number(p.commercial_length_total),
+                        subscriptionsNew: Number(p.subscriptions_new),
+                        uniqueChatters: Number(p.chatters_unique),
+                        peakViewershipTime: new Date(p.concurrents_peak_time),
+                        incomingRaids: Number(p.raids_incoming),
+                        hostedRaidedPercentage: Number(p.hosted_raided_pct),
+                        startChannelStatus: u,
+                        messagesTotal: Number(p.messages_total),
+                        videoId: a,
+                        videoRecordedAt: o,
+                        videoViews: s,
+                        videoSmallThumbnail: l,
+                        videoMediumThumbnail: d,
+                        channel: n,
+                        videoPlayExternalReferrers: Object(i.b)(h.video_play_external_referrers, c),
+                        videoPlayInternalChannelsReferrers: Object(i.b)(h.video_play_internal_channels_referrers),
+                        videoPlayInternalTwitchReferrers: Object(i.b)(h.video_play_internal_twitch_referrers),
+                        videoPlayAllReferrers: f,
+                        videoPlayGeographics: Object(i.b)(h.video_play_geographics),
+                        videoPlayPlatforms: Object(i.b)(h.video_play_platforms)
+                    })
+                }, e.intervalFromID = function(e) {
+                    var t = e.split("-"),
+                        n = t[0],
+                        r = t[1],
+                        i = {
+                            start: new Date(Number(n)),
+                            end: new Date(Number(r))
+                        };
+                    if (Object(a.e)(i)) return i
+                }, e.prototype.getIsCompleted = function() {
+                    return this.interval.end < Object(r.subMinutes)(this.now, 15)
+                }, e
+            }()
         },
         J45U: function(e, t, n) {},
         JGCS: function(e, t, n) {},
@@ -6964,14 +7004,14 @@
             "use strict";
             var r = n("mrSG"),
                 a = n("q1tI"),
-                i = n("ugx8"),
-                o = n("CFgy"),
-                s = n("Mp9w"),
+                i = n("6D3P"),
+                o = n("yCxs"),
+                s = n("CFgy"),
                 c = function(e) {
                     function t(t) {
                         var n = e.call(this, t) || this,
-                            r = s.a.intervalFromID(n.props.summaryID);
-                        return r && Object(o.e)(r) && (n.summaryInterval = r), n.needsQuery = Boolean(n.summaryInterval && Object(o.c)(n.props.recentStreamSummariesContext.interval, n.summaryInterval)), n.state = {
+                            r = i.b.intervalFromID(n.props.summaryID);
+                        return r && Object(s.e)(r) && (n.summaryInterval = r), n.needsQuery = Boolean(n.summaryInterval && Object(s.c)(n.props.streamSummaryQuery.interval, n.summaryInterval)), n.state = {
                             isLoading: n.needsQuery,
                             streamSummaries: []
                         }, n
@@ -6981,20 +7021,22 @@
                     }, t.prototype.componentDidUpdate = function() {
                         this.query()
                     }, t.prototype.render = function() {
-                        return this.props.children({
-                            isLoading: this.state.isLoading,
-                            historicalStreamSummary: this.state.streamSummaries[0] || null
-                        })
+                        return this.props.children(r.__assign({}, this.props.streamSummaryQuery, {
+                            isLoading: this.props.streamSummaryQuery.isLoading || this.state.isLoading,
+                            historicalStreamSummary: this.state.streamSummaries[0]
+                        }))
                     }, t.prototype.query = function() {
                         return r.__awaiter(this, void 0, void 0, function() {
-                            var e, t;
-                            return r.__generator(this, function(n) {
-                                switch (n.label) {
+                            var e;
+                            return r.__generator(this, function(t) {
+                                switch (t.label) {
                                     case 0:
-                                        return e = this.props.recentStreamSummariesContext.channel, this.needsQuery && e ? (this.needsQuery = !1, [4, Object(s.b)(e, this.summaryInterval)]) : [2];
+                                        return this.needsQuery && this.props.streamSummaryQuery.channel ? (this.needsQuery = !1, [4, Object(o.b)(this.props.streamSummaryQuery.channel, this.summaryInterval)]) : [2];
                                     case 1:
-                                        return t = n.sent(), this.setState({
-                                            streamSummaries: t.streamSummaries,
+                                        return (e = t.sent()).isError && this.setState({
+                                            isLoading: !1
+                                        }), this.setState({
+                                            streamSummaries: e.streamSummaries,
                                             isLoading: !1
                                         }), [2]
                                 }
@@ -7002,117 +7044,116 @@
                         })
                     }, t
                 }(a.Component),
-                l = Object(i.b)(c),
-                d = n("mLw1"),
-                u = n("/7QA"),
-                m = n("Snp4"),
-                p = n("bket"),
-                h = n("2psh"),
-                f = n("Ue10"),
-                g = {
+                l = n("mLw1"),
+                d = n("/7QA"),
+                u = n("Snp4"),
+                m = n("bket"),
+                p = n("2psh"),
+                h = n("Ue10"),
+                f = {
                     "data-test-selector": "stream-summary-date-time"
                 },
-                b = function(e) {
+                g = function(e) {
                     var t = e.currentStreamSummary,
                         n = e.streamSummaries,
                         i = e.getURLForStreamSummary;
-                    return a.createElement(f.Ya, {
-                        position: f.kb.Relative,
+                    return a.createElement(h.Ya, {
+                        position: h.kb.Relative,
                         fullWidth: !0
-                    }, a.createElement(p.a, {
+                    }, a.createElement(m.a, {
                         control: function(e) {
                             var n = e.toggle;
-                            return a.createElement(f.Ya, {
-                                display: f.X.Flex,
+                            return a.createElement(h.Ya, {
+                                display: h.X.Flex,
                                 fullHeight: !0
-                            }, a.createElement(f.Va, r.__assign({
-                                type: f.Wa.Base
-                            }, g, {
+                            }, a.createElement(h.Va, r.__assign({
+                                type: h.Wa.Base
+                            }, f, {
                                 onClick: n
-                            }), a.createElement(f.Ya, {
-                                justifyContent: f.Xa.Center,
-                                display: f.X.Flex,
-                                flexDirection: f.Aa.Column,
-                                alignItems: f.f.Center
-                            }, a.createElement(f.W, {
-                                color: f.O.Link,
-                                fontSize: f.Ca.Size4
-                            }, Object(u.c)(t.interval.start, {
+                            }), a.createElement(h.Ya, {
+                                justifyContent: h.Xa.Center,
+                                display: h.X.Flex,
+                                flexDirection: h.Aa.Column,
+                                alignItems: h.f.Center
+                            }, a.createElement(h.W, {
+                                color: h.O.Link,
+                                fontSize: h.Ca.Size4
+                            }, Object(d.c)(t.interval.start, {
                                 weekday: "long",
                                 month: "long",
                                 day: "numeric"
-                            })), a.createElement(f.W, {
-                                fontSize: f.Ca.Size6,
-                                color: f.O.Alt2
+                            })), a.createElement(h.W, {
+                                fontSize: h.Ca.Size6,
+                                color: h.O.Alt2
                             }, function(e) {
-                                return Object(u.d)("{start, time, short} – {end, time, short}", {
+                                return Object(d.d)("{start, time, short} – {end, time, short}", {
                                     start: e.start,
                                     end: e.end
                                 }, "StreamSummaryNav")
                             }(t.interval)))))
                         },
-                        onOpen: h.b
+                        onOpen: p.b
                     }, function(e) {
                         var r = e.close;
-                        return a.createElement(f.u, {
-                            direction: f.v.BottomCenter,
+                        return a.createElement(h.u, {
+                            direction: h.v.BottomCenter,
                             noTail: !0,
                             offsetY: "-2rem",
-                            size: f.w.Medium,
+                            size: h.w.Medium,
                             show: !0
-                        }, a.createElement(f.Ya, {
+                        }, a.createElement(h.Ya, {
                             padding: {
                                 y: .5
                             }
                         }, n.slice().reverse().map(function(e) {
-                            return a.createElement(v, {
+                            return a.createElement(b, {
                                 href: i(e),
                                 isActive: t === e,
                                 key: e.id,
                                 onClick: r
-                            }, k(e.interval))
-                        }), !n.includes(t) && a.createElement(a.Fragment, null, a.createElement(f.jb, {
+                            }, v(e.interval))
+                        }), !n.includes(t) && a.createElement(a.Fragment, null, a.createElement(h.jb, {
                             height: 5
-                        }), a.createElement(v, {
+                        }), a.createElement(b, {
                             href: i(t),
                             isActive: !0,
                             onClick: r
-                        }, k(t.interval)))))
+                        }, v(t.interval)))))
                     }))
                 },
-                v = function(e) {
+                b = function(e) {
                     var t, n = e.href,
                         r = e.isActive,
                         i = e.children,
                         o = e.onClick;
-                    return t = r ? a.createElement(f.Ya, {
-                        display: f.X.Flex
-                    }, a.createElement(f.Ya, {
-                        display: f.X.Flex,
+                    return t = r ? a.createElement(h.Ya, {
+                        display: h.X.Flex
+                    }, a.createElement(h.Ya, {
+                        display: h.X.Flex,
                         padding: {
                             right: 1
                         }
-                    }, a.createElement(f.tb, {
-                        asset: f.ub.Check,
+                    }, a.createElement(h.tb, {
+                        asset: h.ub.Check,
                         width: 10,
                         height: 10,
-                        type: f.vb.Alt2
-                    })), a.createElement(f.W, {
-                        fontSize: f.Ca.Size6,
-                        color: f.O.Alt2
-                    }, i)) : a.createElement(f.Ya, {
-                        display: f.X.Flex
-                    }, a.createElement(f.W, {
-                        fontSize: f.Ca.Size6
-                    }, i)), a.createElement(f.Va, {
+                        type: h.vb.Alt2
+                    })), a.createElement(h.W, {
+                        fontSize: h.Ca.Size6,
+                        color: h.O.Alt2
+                    }, i)) : a.createElement(h.Ya, {
+                        display: h.X.Flex
+                    }, a.createElement(h.W, {
+                        fontSize: h.Ca.Size6
+                    }, i)), a.createElement(h.Va, {
                         linkTo: n,
                         onClick: o,
                         disabled: r
-                    }, a.createElement(f.Ya, {
-                        display: f.X.Flex,
-                        flexDirection: f.Aa.Row,
-                        alignItems: f.f.Center,
-                        justifyContent: f.Xa.Between,
+                    }, a.createElement(h.Ya, {
+                        display: h.X.Flex,
+                        flexDirection: h.Aa.Row,
+                        alignItems: h.f.Center,
+                        justifyContent: h.Xa.Between,
                         padding: {
                             y: .5,
                             x: 1
@@ -7120,19 +7161,19 @@
                     }, t))
                 };
 
-            function k(e) {
-                var t = Object(u.c)(e.start, {
+            function v(e) {
+                var t = Object(d.c)(e.start, {
                     weekday: "short",
                     month: "short",
                     day: "numeric"
                 });
-                return Object(u.d)("{localizedStartDate} {start, time, short} – {end, time, short}", {
+                return Object(d.d)("{localizedStartDate} {start, time, short} – {end, time, short}", {
                     localizedStartDate: t,
                     start: e.start,
                     end: e.end
                 }, "StreamSummaryNav")
             }
-            var y = function() {
+            var k = function() {
                     return function(e, t) {
                         if (this.isLast = !1, this.streamSummaries = e, this.last = this.streamSummaries[this.streamSummaries.length - 1], this.current = this.streamSummaries.find(function(e) {
                                 return e.id === t
@@ -7142,79 +7183,71 @@
                         }
                     }
                 }(),
-                S = (n("VlZV"), function() {
-                    return a.createElement(f.Qa, {
-                        display: f.X.InlineFlex,
-                        alignItems: f.f.Center
-                    }, a.createElement(f.W, {
-                        className: "sm-nav__placeholder-text",
-                        type: f.Wb.H4,
-                        color: f.O.Alt2,
-                        ellipsis: !0
-                    }, Object(u.d)("Today would be a good day to start streaming!", "StreamSummaryNav")))
-                }),
-                E = Object(i.b)(function(e) {
-                    var t, n = e.children,
-                        r = e.getURLForStreamSummary,
-                        i = e.summaryID,
-                        o = e.historicalStreamSummaryContext,
-                        s = o.historicalStreamSummary,
-                        c = o.isLoading,
-                        l = e.recentStreamSummariesContext,
-                        u = l.recentStreamSummaries,
-                        p = l.isLoading,
-                        g = new y(u, i);
-                    !g.current && s && (g = new y([s], i));
-                    if (c || p) t = a.createElement("div", null, a.createElement(f.jb, {
+                y = (n("VlZV"), function(e) {
+                    var t, n = new k(e.query.streamSummaries, e.summaryID);
+                    if (!n.current && e.query.historicalStreamSummary) {
+                        var r = e.query.historicalStreamSummary;
+                        n = new k([r], e.summaryID)
+                    }
+                    if (e.query.isLoading) t = a.createElement("div", null, a.createElement(h.jb, {
                         width: 200,
                         lineCount: 2
                     }));
-                    else if (g.current) t = a.createElement(b, {
-                        currentStreamSummary: g.current,
-                        streamSummaries: u,
-                        getURLForStreamSummary: r
+                    else if (n.current) t = a.createElement(g, {
+                        currentStreamSummary: n.current,
+                        streamSummaries: e.query.streamSummaries,
+                        getURLForStreamSummary: e.getURLForStreamSummary
                     });
-                    else {
-                        if (u.length) {
-                            var v = u[u.length - 1];
-                            return a.createElement(d.a, {
-                                to: r(v)
-                            })
-                        }
-                        t = a.createElement(S, null)
-                    }
-                    return a.createElement(f.Ya, {
-                        position: f.kb.Relative
-                    }, a.createElement(f.Ya, {
+                    else if (e.query.streamSummaries.length) {
+                        var i = e.query.streamSummaries[e.query.streamSummaries.length - 1];
+                        t = a.createElement(l.a, {
+                            to: e.getURLForStreamSummary(i)
+                        })
+                    } else t = a.createElement(S, null);
+                    return a.createElement(h.Ya, {
+                        position: h.kb.Relative
+                    }, a.createElement(h.Ya, {
                         margin: {
                             bottom: 2
                         }
-                    }, a.createElement(m.a, {
-                        previousPath: g.previous ? r(g.previous) : "",
-                        nextPath: g.next ? r(g.next) : "",
-                        onPrevious: h.j,
-                        onNext: h.i
-                    }, t)), n(g))
+                    }, a.createElement(u.a, {
+                        previousPath: n.previous ? e.getURLForStreamSummary(n.previous) : "",
+                        nextPath: n.next ? e.getURLForStreamSummary(n.next) : "",
+                        onPrevious: p.j,
+                        onNext: p.i
+                    }, t)), e.children(n))
                 }),
-                _ = function(e) {
+                S = function() {
+                    return a.createElement(h.Qa, {
+                        display: h.X.InlineFlex,
+                        alignItems: h.f.Center
+                    }, a.createElement(h.W, {
+                        className: "sm-nav__placeholder-text",
+                        type: h.Wb.H4,
+                        color: h.O.Alt2,
+                        ellipsis: !0
+                    }, Object(d.d)("Today would be a good day to start streaming!", "StreamSummaryNav")))
+                },
+                E = function(e) {
                     function t() {
                         return null !== e && e.apply(this, arguments) || this
                     }
                     return r.__extends(t, e), t.prototype.render = function() {
                         var e = this;
-                        return a.createElement(l, {
+                        return a.createElement(c, {
+                            streamSummaryQuery: this.props.query,
                             summaryID: this.props.summaryID
                         }, function(t) {
-                            return a.createElement(E, {
+                            return a.createElement(y, {
                                 summaryID: e.props.summaryID,
-                                historicalStreamSummaryContext: t,
+                                query: t,
                                 getURLForStreamSummary: e.props.getURLForStreamSummary
                             }, e.props.children)
                         })
                     }, t
                 }(a.Component);
             n.d(t, "a", function() {
-                return _
+                return E
             })
         },
         Mj6i: function(e, t, n) {
@@ -7257,131 +7290,6 @@
                     }
                 })
             }
-        },
-        Mp9w: function(e, t, n) {
-            "use strict";
-            var r = n("mrSG"),
-                a = n("cr+I"),
-                i = n("CFgy"),
-                o = n("dG1e"),
-                s = n("NAv5"),
-                c = n("WaVD");
-            var l = ["google", "youtube", "facebook", "t.co", "reddit"];
-
-            function d(e) {
-                return l.find(function(t) {
-                    return e.indexOf(t) >= 0
-                }) || e
-            }
-            var u = function() {
-                function e(e) {
-                    this.interval = {
-                        start: e.start,
-                        end: e.end
-                    }, this.now = new Date, this.id = e.start.getTime() + "-" + e.end.getTime(), this.isCompleted = this.getIsCompleted(), this.channel = e.channel, this.avgViewerCount = e.avgViewerCount, this.maxViewerCount = e.maxViewerCount, this.followersChange = e.followersChange, this.totalViewers = e.totalViewers, this.uniqueViewers = e.uniqueViewers, this.totalMinutesWatched = e.totalMinutesWatched, this.uniqueChatters = e.uniqueChatters, this.incomingRaids = e.incomingRaids, this.hostedRaidedPercentage = e.hostedRaidedPercentage, this.peakViewershipTime = e.peakViewershipTime, this.startChannelStatus = e.startChannelStatus, this.messagesTotal = e.messagesTotal, this.videoId = e.videoId, this.videoRecordedAt = e.videoRecordedAt, this.videoViews = e.videoViews, this.videoSmallThumbnail = e.videoSmallThumbnail, this.videoMediumThumbnail = e.videoMediumThumbnail, this.clipCreatesTotal = e.clipCreatesTotal, this.clipPlaysTotal = e.clipPlaysTotal, this.clipPlaysBreakdown = e.clipPlaysBreakdown, this.commercialCount = e.commercialCount, this.commercialDensity = e.commercialDensity, this.commercialLengthTotal = e.commercialLengthTotal, this.subscriptionsNew = e.subscriptionsNew, this.videoPlayExternalReferrers = e.videoPlayExternalReferrers, this.videoPlayInternalChannelsReferrers = e.videoPlayInternalChannelsReferrers, this.videoPlayInternalTwitchReferrers = e.videoPlayInternalTwitchReferrers, this.videoPlayAllReferrers = e.videoPlayAllReferrers, this.videoPlayGeographics = e.videoPlayGeographics, this.videoPlayPlatforms = e.videoPlayPlatforms
-                }
-                return e.fromPayload = function(t, n) {
-                    var r = t.videos[0],
-                        a = r && r._id,
-                        i = r && new Date(r.recorded_at),
-                        o = r && r.views,
-                        s = r && r.thumbnails && r.thumbnails.small && r.thumbnails.small.length && r.thumbnails.small[0].url || "",
-                        l = r && r.thumbnails && r.thumbnails.medium && r.thumbnails.medium.length && r.thumbnails.medium[0].url || "",
-                        u = r && r.title || "",
-                        m = {
-                            twitch: 0,
-                            reddit: 0,
-                            facebook: 0,
-                            twitter: 0,
-                            other: 0
-                        };
-                    (t.stats.clip_plays_breakdown || []).forEach(function(e) {
-                        return m[e.key] = Number(e.value)
-                    });
-                    var p = t.summary,
-                        h = t.stats,
-                        f = Object(c.b)((h.video_play_external_referrers || []).concat(h.video_play_internal_channels_referrers || [], h.video_play_internal_twitch_referrers || []));
-                    return new e({
-                        start: new Date(t.start_time),
-                        end: new Date(t.end_time),
-                        avgViewerCount: Number(p.concurrents_average),
-                        maxViewerCount: Number(p.concurrents_max),
-                        followersChange: Number(p.followers_change),
-                        totalViewers: Number(p.video_play_total),
-                        uniqueViewers: Number(p.video_play_unique),
-                        totalMinutesWatched: Number(p.minutes_watched_total),
-                        clipCreatesTotal: Number(p.clip_creates_total),
-                        clipPlaysTotal: Number(p.clip_plays_total),
-                        clipPlaysBreakdown: m,
-                        commercialCount: Number(p.commercial_count),
-                        commercialDensity: Number(p.commercial_density),
-                        commercialLengthTotal: Number(p.commercial_length_total),
-                        subscriptionsNew: Number(p.subscriptions_new),
-                        uniqueChatters: Number(p.chatters_unique),
-                        peakViewershipTime: new Date(p.concurrents_peak_time),
-                        incomingRaids: Number(p.raids_incoming),
-                        hostedRaidedPercentage: Number(p.hosted_raided_pct),
-                        startChannelStatus: u,
-                        messagesTotal: Number(p.messages_total),
-                        videoId: a,
-                        videoRecordedAt: i,
-                        videoViews: o,
-                        videoSmallThumbnail: s,
-                        videoMediumThumbnail: l,
-                        channel: n,
-                        videoPlayExternalReferrers: Object(c.b)(h.video_play_external_referrers, d),
-                        videoPlayInternalChannelsReferrers: Object(c.b)(h.video_play_internal_channels_referrers),
-                        videoPlayInternalTwitchReferrers: Object(c.b)(h.video_play_internal_twitch_referrers),
-                        videoPlayAllReferrers: f,
-                        videoPlayGeographics: Object(c.b)(h.video_play_geographics),
-                        videoPlayPlatforms: Object(c.b)(h.video_play_platforms)
-                    })
-                }, e.intervalFromID = function(e) {
-                    var t = e.split("-"),
-                        n = t[0],
-                        r = t[1],
-                        a = {
-                            start: new Date(Number(n)),
-                            end: new Date(Number(r))
-                        };
-                    if (Object(i.e)(a)) return a
-                }, e.prototype.getIsCompleted = function() {
-                    return this.interval.end < Object(s.subMinutes)(this.now, 15)
-                }, e
-            }();
-
-            function m(e, t) {
-                return r.__awaiter(this, void 0, void 0, function() {
-                    var n, s, c, l;
-                    return r.__generator(this, function(r) {
-                        switch (r.label) {
-                            case 0:
-                                return n = "/v5/channels/" + e.id + "/analytics/sessions_summary", s = a.stringify(Object(i.i)(t)), c = [n, s].join("?"), [4, Object(o.a)({
-                                    path: c
-                                })];
-                            case 1:
-                                return (l = r.sent()).isError() ? [2, {
-                                    isError: !0,
-                                    streamSummaries: []
-                                }] : [2, {
-                                    isError: !1,
-                                    streamSummaries: function(e, t) {
-                                        var n = [];
-                                        return e.sessions.forEach(function(e) {
-                                            var r = u.fromPayload(e, t);
-                                            r.isCompleted && n.push(r)
-                                        }), n
-                                    }(l.body, e)
-                                }]
-                        }
-                    })
-                })
-            }
-            n.d(t, "b", function() {
-                return m
-            }), n.d(t, "a", function() {
-                return u
-            })
         },
         N6NX: function(e, t) {
             var n = {
@@ -9817,53 +9725,6 @@
                 return l
             })
         },
-        WaVD: function(e, t, n) {
-            "use strict";
-            n.d(t, "b", function() {
-                return a
-            }), n.d(t, "a", function() {
-                return i
-            });
-            var r = function(e) {
-                return e
-            };
-
-            function a(e, t) {
-                void 0 === t && (t = r);
-                var n = {
-                    total: 0,
-                    items: []
-                };
-                return e ? (n.items = e.map(function(e) {
-                    return n.total += Number(e.value), {
-                        name: t(e.key),
-                        count: Number(e.value)
-                    }
-                }), n.items = n.items.sort(o), n) : n
-            }
-
-            function i(e) {
-                var t = {
-                        total: 0,
-                        items: []
-                    },
-                    n = new Map;
-                return e.forEach(function(e) {
-                    t.total += e.total, e.items.forEach(function(e) {
-                        n.set(e.name, (n.get(e.name) || 0) + e.count)
-                    })
-                }), n.forEach(function(e, n) {
-                    t.items.push({
-                        name: n,
-                        count: e
-                    })
-                }), t.items = t.items.sort(o), t
-            }
-
-            function o(e, t) {
-                return e.count === t.count ? e.name.localeCompare(t.name) : e.count > t.count ? -1 : 1
-            }
-        },
         WcC5: function(e, t) {
             var n = {
                 kind: "Document",
@@ -10819,7 +10680,7 @@
             function o(e, t) {
                 var n = r.b.get(e, []),
                     i = r.p.store.getState();
-                return n.includes(t) || n.includes(t + "-staff") && Object(a.g)(i) || !(!i.session || !i.session.user || i.session.user.login !== t)
+                return n.includes(t) || n.includes(t + "-staff") && Object(a.g)(i)
             }
         },
         bket: function(e, t, n) {
@@ -11028,8 +10889,8 @@
                 a = n("/7QA"),
                 i = n("Jgup"),
                 o = n("cSnd"),
-                s = n("g3ZN"),
-                c = n("WaVD"),
+                s = n("nlSm"),
+                c = n("g3ZN"),
                 l = n("Ue10"),
                 d = (n("ffsR"), function(e) {
                     return e
@@ -11037,19 +10898,19 @@
                 u = function(e) {
                     var t = e.streamSummaries,
                         n = e.isLoading,
-                        s = Object(c.a)(t.map(function(e) {
+                        c = Object(s.a)(t.map(function(e) {
                             return e.videoPlayPlatforms
                         })),
-                        u = Object(c.a)(t.map(function(e) {
+                        u = Object(s.a)(t.map(function(e) {
                             return e.videoPlayGeographics
                         })),
-                        p = Object(c.a)(t.map(function(e) {
+                        p = Object(s.a)(t.map(function(e) {
                             return e.videoPlayInternalChannelsReferrers
                         })),
-                        h = Object(c.a)(t.map(function(e) {
+                        h = Object(s.a)(t.map(function(e) {
                             return e.videoPlayInternalTwitchReferrers
                         })),
-                        f = Object(c.a)(t.map(function(e) {
+                        f = Object(s.a)(t.map(function(e) {
                             return e.videoPlayExternalReferrers
                         }));
                     return r.createElement(l.Ya, {
@@ -11076,13 +10937,13 @@
                     }, r.createElement(m, {
                         isLoading: n,
                         referrals: u.items.slice(0, 15),
-                        total: s.total,
+                        total: c.total,
                         translationFunc: i.b,
                         title: Object(a.d)("Views by Location", "ChannelAnalyticsReferralPage")
                     }), r.createElement(m, {
                         isLoading: n,
-                        referrals: s.items.slice(0, 15),
-                        total: s.total,
+                        referrals: c.items.slice(0, 15),
+                        total: c.total,
                         translationFunc: o.c,
                         title: Object(a.d)("Views by Platform", "ChannelAnalyticsReferralPage")
                     })), r.createElement(l.Ya, {
@@ -11136,7 +10997,7 @@
                     },
                     elevation: 1,
                     background: l.r.Base
-                }, r.createElement(s.a, {
+                }, r.createElement(c.a, {
                     referrals: n,
                     total: a,
                     translationFunc: i,
@@ -11783,7 +11644,7 @@
                 return r.createElement("span", null, t)
             }
 
-            function V(e) {
+            function z(e) {
                 var t;
                 if (e.length > 0) {
                     var n = e.join(", ");
@@ -11794,7 +11655,7 @@
                 return r.createElement("span", null, t)
             }
 
-            function z(e) {
+            function V(e) {
                 if (e.enabled) {
                     var t = 0 === e.length ? Object(a.d)("This room is in followers-only mode.", "ChatLine") : Object(a.d)("This room is now in {length} followers-only mode.", {
                         length: Object(o.b)(60 * e.length)
@@ -11870,9 +11731,9 @@
             }), n.d(t, "j", function() {
                 return B
             }), n.d(t, "i", function() {
-                return V
-            }), n.d(t, "d", function() {
                 return z
+            }), n.d(t, "d", function() {
+                return V
             }), n.d(t, "c", function() {
                 return G
             }), n.d(t, "k", function() {
@@ -12986,7 +12847,7 @@
                         value: "profile content location"
                     }
                 },
-                V = {
+                z = {
                     getTitle: function(e) {
                         return Object(l.d)("Report {username}'s Room", {
                             username: e
@@ -12997,18 +12858,18 @@
                     value: "room report user",
                     type: O.MultipleChoice
                 },
-                z = {
+                V = {
                     getTitle: A.tellUsMore,
                     items: [T.input_description],
                     type: O.Confirm,
                     value: "tell us more"
                 },
                 G = {
-                    banEvasion: i.__assign({}, z, {
+                    banEvasion: i.__assign({}, V, {
                         items: [T.input_usernames, T.input_description],
                         value: "ban evasion tell us more"
                     }),
-                    socialMedia: i.__assign({}, z, {
+                    socialMedia: i.__assign({}, V, {
                         items: [T.input_link, T.input_connection, T.input_description],
                         nextCard: U.socialMedia,
                         value: "social media tell us more"
@@ -13110,7 +12971,7 @@
                     value: "impersonation type"
                 },
                 Z = x,
-                $ = z,
+                $ = V,
                 J = F,
                 ee = {
                     video: P.content,
@@ -13122,7 +12983,7 @@
                     "other content": B.general,
                     profile: B.profile,
                     "profile more options": B.profileMoreOptions,
-                    room: V,
+                    room: z,
                     "somewhere else": Y.identifyLocation,
                     streamer: P.content,
                     "someone else in video": P.content,
@@ -13161,7 +13022,7 @@
                     EVENT_REPORT: B.general,
                     EXTENSION_REPORT: B.general,
                     LIVE_UP_REPORT: B.general,
-                    ROOM_REPORT: V,
+                    ROOM_REPORT: z,
                     WHISPER_REPORT: W.general,
                     VOD_COMMENT_REPORT: L.content
                 },
@@ -14651,6 +14512,130 @@
                 return m
             })
         },
+        l0Eh: function(e, t) {
+            var n = {
+                kind: "Document",
+                definitions: [{
+                    kind: "OperationDefinition",
+                    operation: "query",
+                    name: {
+                        kind: "Name",
+                        value: "DashboardStreamSummary_Channel"
+                    },
+                    variableDefinitions: [{
+                        kind: "VariableDefinition",
+                        variable: {
+                            kind: "Variable",
+                            name: {
+                                kind: "Name",
+                                value: "channelName"
+                            }
+                        },
+                        type: {
+                            kind: "NonNullType",
+                            type: {
+                                kind: "NamedType",
+                                name: {
+                                    kind: "Name",
+                                    value: "String"
+                                }
+                            }
+                        }
+                    }],
+                    directives: [],
+                    selectionSet: {
+                        kind: "SelectionSet",
+                        selections: [{
+                            kind: "Field",
+                            alias: {
+                                kind: "Name",
+                                value: "channel"
+                            },
+                            name: {
+                                kind: "Name",
+                                value: "user"
+                            },
+                            arguments: [{
+                                kind: "Argument",
+                                name: {
+                                    kind: "Name",
+                                    value: "login"
+                                },
+                                value: {
+                                    kind: "Variable",
+                                    name: {
+                                        kind: "Name",
+                                        value: "channelName"
+                                    }
+                                }
+                            }],
+                            directives: [],
+                            selectionSet: {
+                                kind: "SelectionSet",
+                                selections: [{
+                                    kind: "Field",
+                                    name: {
+                                        kind: "Name",
+                                        value: "id"
+                                    },
+                                    arguments: [],
+                                    directives: []
+                                }, {
+                                    kind: "Field",
+                                    name: {
+                                        kind: "Name",
+                                        value: "login"
+                                    },
+                                    arguments: [],
+                                    directives: []
+                                }, {
+                                    kind: "Field",
+                                    name: {
+                                        kind: "Name",
+                                        value: "roles"
+                                    },
+                                    arguments: [],
+                                    directives: [],
+                                    selectionSet: {
+                                        kind: "SelectionSet",
+                                        selections: [{
+                                            kind: "Field",
+                                            name: {
+                                                kind: "Name",
+                                                value: "isPartner"
+                                            },
+                                            arguments: [],
+                                            directives: []
+                                        }, {
+                                            kind: "Field",
+                                            name: {
+                                                kind: "Name",
+                                                value: "isAffiliate"
+                                            },
+                                            arguments: [],
+                                            directives: []
+                                        }]
+                                    }
+                                }]
+                            }
+                        }]
+                    }
+                }],
+                loc: {
+                    start: 0,
+                    end: 143
+                }
+            };
+            n.loc.source = {
+                body: "query DashboardStreamSummary_Channel($channelName: String!) {\nchannel: user(login: $channelName) {\nid\nlogin\nroles {\nisPartner\nisAffiliate\n}\n}\n}",
+                name: "GraphQL request",
+                locationOffset: {
+                    line: 1,
+                    column: 1
+                }
+            };
+            e.exports = n
+        },
         lBsv: function(e, t, n) {
             "use strict";
             n.d(t, "a", function() {
@@ -14918,8 +14903,8 @@
             var r = n("mrSG"),
                 a = n("q1tI"),
                 i = n("/MKj"),
-                o = n("mLw1"),
-                s = n("4p7I"),
+                o = n("4p7I"),
+                s = n("mLw1"),
                 c = n("jKe7"),
                 l = n("fvjX"),
                 d = n("/7QA"),
@@ -14937,18 +14922,17 @@
                 E = n("y5D0"),
                 _ = n("b+ID"),
                 C = n("w+70"),
-                O = n("ugx8"),
-                D = function(e) {
+                O = function(e) {
                     function t() {
                         return null !== e && e.apply(this, arguments) || this
                     }
                     return r.__extends(t, e), t.prototype.render = function() {
-                        return this.props.isLoggedIn ? a.createElement(C.b, null, a.createElement(O.a, null, a.createElement(_.a, null, this.props.children))) : (this.props.onAnonymousVisit(), a.createElement(p.a, {
+                        return this.props.isLoggedIn ? a.createElement(C.b, null, a.createElement(_.a, null, this.props.children)) : (this.props.onAnonymousVisit(), a.createElement(p.a, {
                             message: Object(d.d)("You must be logged in to view this page", "DashboardRoot")
                         }))
                     }, t
                 }(a.Component);
-            var T, N = Object(i.connect)(function(e) {
+            var D, T = Object(i.connect)(function(e) {
                     return {
                         isLoggedIn: Object(f.f)(e)
                     }
@@ -14958,7 +14942,8 @@
                             return Object(E.e)(S.a.DashboardPage)
                         }
                     }, e)
-                })(D),
+                })(O),
+                N = n("6D3P"),
                 w = n("idPT"),
                 I = n("n/0j"),
                 j = n("9C/b"),
@@ -15008,25 +14993,25 @@
                     }
                 }))(L),
                 B = n("22qk"),
-                V = n("3lt/"),
-                z = "extensions_dashboard_notification_dismissed",
+                z = n("3lt/"),
+                V = "extensions_dashboard_notification_dismissed",
                 G = function(e) {
                     var t = e.channelLogin,
                         n = {
                             pathname: Object(B.c)(t),
                             state: {
-                                medium: V.PageviewMedium.DashboardLeftNav
+                                medium: z.PageviewMedium.DashboardLeftNav
                             }
                         };
-                    return a.createElement(s.a, {
+                    return a.createElement(o.a, {
                         path: "/:channelLogin/dashboard/extensions"
                     }, function(e) {
                         var t = e.match;
                         return a.createElement(M.a, {
                             linkTo: n
                         }, Object(d.d)("Extensions", "DashboardNav"), function(e) {
-                            if (e) return d.m.set(z, !0), !1;
-                            return !d.m.get(z, !1)
+                            if (e) return d.m.set(V, !0), !1;
+                            return !d.m.get(V, !1)
                         }(t) && a.createElement(F.a, {
                             "data-test-selector": "extensions-nav-hotspot"
                         }))
@@ -15034,7 +15019,7 @@
                 };
             ! function(e) {
                 e.AchievementsLink = "achievements-link", e.ActivityLink = "activity-link", e.BroadcastLink = "broadcast-link", e.EventsLink = "events-link", e.LiveLink = "live-link", e.MultiviewLink = "multiview-link"
-            }(T || (T = {}));
+            }(D || (D = {}));
             var H, Y = function(e) {
                     function t() {
                         return null !== e && e.apply(this, arguments) || this
@@ -15045,26 +15030,26 @@
                             n = e.pageAccess,
                             r = [];
                         return n[C.a.DashboardLive].channelEnabled && n[C.a.DashboardLive].currentUserAuthorized && r.push(a.createElement(M.a, {
-                            "data-test-selector": T.LiveLink,
+                            "data-test-selector": D.LiveLink,
                             linkTo: "/" + t + "/dashboard/live"
                         }, Object(d.d)("Live", "DashboardNav"))), n[C.a.DashboardExtensions].channelEnabled && n[C.a.DashboardExtensions].currentUserAuthorized && r.push(a.createElement(G, {
                             channelLogin: t
                         })), n[C.a.DashboardAchievements].channelEnabled && n[C.a.DashboardAchievements].currentUserAuthorized && r.push(a.createElement(M.a, {
-                            "data-test-selector": T.AchievementsLink,
+                            "data-test-selector": D.AchievementsLink,
                             linkTo: "/" + t + "/dashboard/achievements"
                         }, Object(d.d)("Achievements", "DashboardNav"))), n[C.a.DashboardEvents].channelEnabled && n[C.a.DashboardEvents].currentUserAuthorized && r.push(a.createElement(M.a, {
-                            "data-test-selector": T.EventsLink,
+                            "data-test-selector": D.EventsLink,
                             linkTo: "/" + t + "/dashboard/events"
                         }, Object(d.d)("Events", "DashboardNav"))), n[C.a.DashboardActivity].channelEnabled && n[C.a.DashboardActivity].currentUserAuthorized && r.push(a.createElement(M.a, {
-                            "data-test-selector": T.ActivityLink,
+                            "data-test-selector": D.ActivityLink,
                             linkTo: "/" + t + "/dashboard/activity"
                         }, Object(d.d)("Activity", "DashboardNav"))), n[C.a.DashboardBroadcast].channelEnabled && n[C.a.DashboardBroadcast].currentUserAuthorized && r.push(a.createElement(M.a, {
-                            "data-test-selector": T.BroadcastLink,
+                            "data-test-selector": D.BroadcastLink,
                             linkTo: "/" + t + "/dashboard/broadcast"
                         }, Object(d.d)("Streaming Tools", "DashboardNav"))), n[C.a.DashboardBounties].channelEnabled && n[C.a.DashboardBounties].currentUserAuthorized && r.push(a.createElement(W, {
                             channelLogin: t
                         })), n[C.a.DashboardMultiview].channelEnabled && n[C.a.DashboardMultiview].currentUserAuthorized && r.push(a.createElement(M.a, {
-                            "data-test-selector": T.MultiviewLink,
+                            "data-test-selector": D.MultiviewLink,
                             linkTo: "/" + t + "/dashboard/multiview"
                         }, Object(d.e)("Multiview", "DashboardNav"))), r.length ? a.createElement(a.Fragment, null, a.createElement(R.a, null, Object(d.d)("Dashboard", "DashboardNav")), a.createElement("ul", null, r.map(function(e, t) {
                             return a.createElement("li", {
@@ -15122,7 +15107,9 @@
                             fullWidth: !0
                         }, a.createElement(J.Ya, {
                             margin: 1
-                        }, a.createElement(q, null), a.createElement(I.b, null), a.createElement($, null), a.createElement(X.b, null)), a.createElement(J.Fb, {
+                        }, a.createElement(q, null), a.createElement(I.b, {
+                            streamSummaryQuery: this.props.streamSummaryQuery
+                        }), a.createElement($, null), a.createElement(X.b, null)), a.createElement(J.Fb, {
                             borderTop: !0,
                             padding: 1
                         }, a.createElement(J.Va, {
@@ -15171,6 +15158,7 @@
                                 }
                             }
                         }), a.createElement(le.a, {
+                            query: this.props.streamSummaryQuery,
                             summaryID: this.props.streamSummaryID,
                             getURLForStreamSummary: de.e
                         }, function(e) {
@@ -15187,92 +15175,93 @@
                 }), Object(te.a)({
                     location: re.PageviewLocation.DashboardStreamSummaryReferrals
                 }))(ue),
-                pe = m.a.wrap(function() {
-                    return n.e(184).then(n.bind(null, "5aAj"))
-                }, "AchievementsPage"),
+                pe = n("CFgy"),
                 he = m.a.wrap(function() {
-                    return n.e(183).then(n.bind(null, "ffwK"))
-                }, "ActivityPage"),
+                    return n.e(182).then(n.bind(null, "5aAj"))
+                }, "AchievementsPage"),
                 fe = m.a.wrap(function() {
-                    return n.e(182).then(n.bind(null, "U5Uu"))
-                }, "AutoModPage"),
+                    return n.e(181).then(n.bind(null, "ffwK"))
+                }, "ActivityPage"),
                 ge = m.a.wrap(function() {
-                    return n.e(181).then(n.bind(null, "h4KP"))
-                }, "BountiesPage"),
+                    return n.e(180).then(n.bind(null, "U5Uu"))
+                }, "AutoModPage"),
                 be = m.a.wrap(function() {
-                    return Promise.all([n.e(31), n.e(33), n.e(0), n.e(180)]).then(n.bind(null, "HURE"))
-                }, "ChannelAnalyticsRoot"),
+                    return n.e(179).then(n.bind(null, "h4KP"))
+                }, "BountiesPage"),
                 ve = m.a.wrap(function() {
-                    return n.e(179).then(n.bind(null, "pC3c"))
-                }, "ChannelClipsManagerPage"),
+                    return Promise.all([n.e(31), n.e(33), n.e(0), n.e(178)]).then(n.bind(null, "HURE"))
+                }, "ChannelAnalyticsRoot"),
                 ke = m.a.wrap(function() {
-                    return Promise.all([n.e(0), n.e(178)]).then(n.bind(null, "RYh/"))
-                }, "CollectionEditorPage"),
+                    return n.e(177).then(n.bind(null, "pC3c"))
+                }, "ChannelClipsManagerPage"),
                 ye = m.a.wrap(function() {
-                    return n.e(177).then(n.bind(null, "/nn1"))
-                }, "CollectionManagerPage"),
+                    return Promise.all([n.e(0), n.e(176)]).then(n.bind(null, "RYh/"))
+                }, "CollectionEditorPage"),
                 Se = m.a.wrap(function() {
-                    return Promise.all([n.e(0), n.e(176)]).then(n.bind(null, "nLDR"))
-                }, "CommentModeratorPage"),
+                    return n.e(175).then(n.bind(null, "/nn1"))
+                }, "CollectionManagerPage"),
                 Ee = m.a.wrap(function() {
-                    return n.e(175).then(n.bind(null, "7yAc"))
-                }, "DashboardBroadcastPage"),
+                    return Promise.all([n.e(0), n.e(174)]).then(n.bind(null, "nLDR"))
+                }, "CommentModeratorPage"),
                 _e = m.a.wrap(function() {
-                    return Promise.all([n.e(31), n.e(0), n.e(174)]).then(n.bind(null, "ZvSv"))
-                }, "DashboardEventsRoot"),
+                    return n.e(173).then(n.bind(null, "7yAc"))
+                }, "DashboardBroadcastPage"),
                 Ce = m.a.wrap(function() {
-                    return n.e(173).then(n.bind(null, "66IC"))
-                }, "DashboardRevenueSettingsRoot"),
+                    return Promise.all([n.e(31), n.e(0), n.e(172)]).then(n.bind(null, "ZvSv"))
+                }, "DashboardEventsRoot"),
                 Oe = m.a.wrap(function() {
-                    return n.e(172).then(n.bind(null, "Le/2"))
-                }, "DashboardModerationSettingsPage"),
+                    return n.e(171).then(n.bind(null, "66IC"))
+                }, "DashboardRevenueSettingsRoot"),
                 De = m.a.wrap(function() {
-                    return n.e(171).then(n.bind(null, "hfrd"))
-                }, "AutomodPage"),
+                    return n.e(170).then(n.bind(null, "Le/2"))
+                }, "DashboardModerationSettingsPage"),
                 Te = m.a.wrap(function() {
-                    return n.e(170).then(n.bind(null, "DUGL"))
-                }, "BlockedTermsPage"),
+                    return n.e(169).then(n.bind(null, "hfrd"))
+                }, "AutomodPage"),
                 Ne = m.a.wrap(function() {
-                    return n.e(169).then(n.bind(null, "G695"))
-                }, "PermittedTermsPage"),
+                    return n.e(168).then(n.bind(null, "DUGL"))
+                }, "BlockedTermsPage"),
                 we = m.a.wrap(function() {
-                    return n.e(168).then(n.bind(null, "m/zG"))
-                }, "BannedChattersPage"),
+                    return n.e(167).then(n.bind(null, "G695"))
+                }, "PermittedTermsPage"),
                 Ie = m.a.wrap(function() {
-                    return Promise.all([n.e(0), n.e(167)]).then(n.bind(null, "qNlw"))
-                }, "DashboardSettingsRoot"),
+                    return n.e(166).then(n.bind(null, "m/zG"))
+                }, "BannedChattersPage"),
                 je = m.a.wrap(function() {
-                    return n.e(166).then(n.bind(null, "1Wpl"))
-                }, "ExtensionDashboardRoot"),
+                    return Promise.all([n.e(0), n.e(165)]).then(n.bind(null, "qNlw"))
+                }, "DashboardSettingsRoot"),
                 Re = m.a.wrap(function() {
-                    return n.e(165).then(n.bind(null, "mcoV"))
-                }, "MultiviewPage"),
+                    return n.e(164).then(n.bind(null, "1Wpl"))
+                }, "ExtensionDashboardRoot"),
                 Me = m.a.wrap(function() {
-                    return Promise.all([n.e(0), n.e(164)]).then(n.bind(null, "gt/l"))
-                }, "HighlighterPage"),
+                    return n.e(163).then(n.bind(null, "mcoV"))
+                }, "MultiviewPage"),
                 Ae = m.a.wrap(function() {
-                    return Promise.all([n.e(0), n.e(163)]).then(n.bind(null, "5MA6"))
+                    return Promise.all([n.e(0), n.e(162)]).then(n.bind(null, "gt/l"))
                 }, "HighlighterPage"),
                 Fe = m.a.wrap(function() {
-                    return Promise.all([n.e(31), n.e(33), n.e(0), n.e(162)]).then(n.bind(null, "QyLA"))
-                }, "LivePage"),
+                    return Promise.all([n.e(0), n.e(161)]).then(n.bind(null, "5MA6"))
+                }, "HighlighterPage"),
                 Ue = m.a.wrap(function() {
-                    return n.e(179).then(n.bind(null, "pC3c"))
-                }, "MyClipsManagerPage"),
+                    return Promise.all([n.e(31), n.e(33), n.e(0), n.e(160)]).then(n.bind(null, "QyLA"))
+                }, "LivePage"),
                 xe = m.a.wrap(function() {
-                    return n.e(161).then(n.bind(null, "Nly3"))
-                }, "PermissionsPage"),
+                    return n.e(177).then(n.bind(null, "pC3c"))
+                }, "MyClipsManagerPage"),
                 Pe = m.a.wrap(function() {
-                    return n.e(160).then(n.bind(null, "qcBk"))
-                }, "RolesPage"),
+                    return n.e(159).then(n.bind(null, "Nly3"))
+                }, "PermissionsPage"),
                 Le = m.a.wrap(function() {
-                    return n.e(159).then(n.bind(null, "djq7"))
-                }, "RedirectToLatestArchiveHighlighter"),
+                    return n.e(158).then(n.bind(null, "qcBk"))
+                }, "RolesPage"),
                 We = m.a.wrap(function() {
-                    return Promise.all([n.e(31), n.e(33), n.e(0), n.e(158)]).then(n.bind(null, "D5nk"))
-                }, "StreamSummaryPage"),
+                    return n.e(157).then(n.bind(null, "djq7"))
+                }, "RedirectToLatestArchiveHighlighter"),
                 Be = m.a.wrap(function() {
-                    return Promise.all([n.e(31), n.e(0), n.e(157)]).then(n.bind(null, "+AN2"))
+                    return Promise.all([n.e(31), n.e(33), n.e(0), n.e(156)]).then(n.bind(null, "D5nk"))
+                }, "StreamSummaryPage"),
+                ze = m.a.wrap(function() {
+                    return Promise.all([n.e(31), n.e(0), n.e(155)]).then(n.bind(null, "+AN2"))
                 }, "VideoManagerPage");
             ! function(e) {
                 e.TopNav = "top-nav", e.SideNav = "side-nav"
@@ -15299,196 +15288,213 @@
                         message: Object(d.d)("An error occurred on this page", "DashboardRoot")
                     });
                     var t = this.props.isExpandedView;
-                    return a.createElement(J.Ya, {
-                        display: J.X.Flex,
-                        flexDirection: J.Aa.Column,
-                        flexWrap: J.Ba.NoWrap,
-                        fullHeight: !0
-                    }, a.createElement(J.Ya, {
-                        "data-test-selector": K.TopNav,
-                        display: t ? J.X.Hide : void 0,
-                        fullWidth: !0
-                    }, a.createElement(g.a, null)), this.props.firstPageLoaded && a.createElement(b.a, null), a.createElement(J.Ya, {
-                        display: J.X.Flex,
-                        flexWrap: J.Ba.NoWrap,
-                        position: J.kb.Relative,
-                        overflow: J.db.Hidden,
-                        fullHeight: !0
-                    }, a.createElement(J.Ya, {
-                        "data-test-selector": K.SideNav,
-                        display: t ? J.X.Hide : void 0,
-                        fullHeight: !0
-                    }, a.createElement(ee, null)), a.createElement(J.Ya, {
-                        position: J.kb.Relative,
-                        flexGrow: 1,
-                        fullHeight: !0,
-                        overflow: J.db.Hidden
-                    }, a.createElement(c.a, null, a.createElement(s.a, {
-                        path: "/:channelLogin/dashboard/achievements",
-                        component: pe
-                    }), a.createElement(s.a, {
-                        exact: !0,
-                        path: "/:channelName/dashboard/activity",
-                        component: he
-                    }), a.createElement(s.a, {
-                        exact: !0,
-                        path: "/:channelName/dashboard/bounties/:selectedID",
-                        component: ge
-                    }), a.createElement(s.a, {
-                        exact: !0,
-                        path: "/:channelName/dashboard/bounties",
-                        component: ge
-                    }), a.createElement(s.a, {
-                        exact: !0,
-                        path: "/:channelName/dashboard/broadcast",
-                        component: Ee
-                    }), a.createElement(s.a, {
-                        path: "/:channelName/dashboard/channel-analytics",
-                        component: be
-                    }), a.createElement(s.a, {
-                        path: "/:channelName/dashboard/events",
-                        component: _e
-                    }), a.createElement(s.a, {
-                        path: "/:channelLogin/dashboard/extensions",
-                        component: je
-                    }), a.createElement(s.a, {
-                        exact: !0,
-                        path: "/:channelLogin/dashboard/live",
-                        component: Fe
-                    }), a.createElement(s.a, {
-                        exact: !0,
-                        path: "/:channelName/dashboard/moderation",
-                        component: Se
-                    }), a.createElement(s.a, {
-                        path: "/:channelLogin/dashboard/multiview",
-                        component: Re
-                    }), this.isVIPBadgeEnabled ? a.createElement(s.a, {
-                        exact: !0,
-                        path: "/:channelLogin/dashboard/roles",
-                        render: function(t) {
-                            return t.match.params.channelLogin === e.props.userLogin ? a.createElement(Pe, null) : a.createElement(y.a, null)
-                        }
-                    }) : a.createElement(s.a, {
-                        exact: !0,
-                        path: "/:channelName/dashboard/permissions",
-                        component: xe
-                    }), this.isVIPBadgeEnabled && a.createElement(o.a, {
-                        from: "/:channelLogin/dashboard/permissions",
-                        to: "/:channelLogin/dashboard/settings/managed-channels"
-                    }), !this.isVIPBadgeEnabled && a.createElement(s.a, {
-                        exact: !0,
-                        path: "/:channelName/dashboard/permissions",
-                        component: xe
-                    }), a.createElement(o.a, {
-                        exact: !0,
-                        from: "/:channelLogin/dashboard/revenue",
-                        to: "/:channelLogin/dashboard/channel-analytics"
-                    }), this.consolidatedModerationSettingsFlag && a.createElement(s.a, {
-                        exact: !0,
-                        path: "/:channelLogin/dashboard/settings/moderation",
-                        component: Oe
-                    }), this.consolidatedModerationSettingsFlag && a.createElement(s.a, {
-                        exact: !0,
-                        path: "/:channelLogin/dashboard/settings/moderation/automod",
-                        component: De
-                    }), this.consolidatedModerationSettingsFlag && a.createElement(s.a, {
-                        exact: !0,
-                        path: "/:channelLogin/dashboard/settings/moderation/banned-chatters",
-                        component: we
-                    }), this.consolidatedModerationSettingsFlag && a.createElement(s.a, {
-                        exact: !0,
-                        path: "/:channelLogin/dashboard/settings/moderation/blocked-terms",
-                        component: Te
-                    }), this.consolidatedModerationSettingsFlag && a.createElement(s.a, {
-                        exact: !0,
-                        path: "/:channelLogin/dashboard/settings/moderation/permitted-terms",
-                        component: Ne
-                    }), a.createElement(s.a, {
-                        exact: !0,
-                        path: "/:channelName/dashboard/settings/automod",
-                        component: fe
-                    }), a.createElement(s.a, {
-                        path: "/:channelName/dashboard/settings/revenue",
-                        component: Ce
-                    }), a.createElement(s.a, {
-                        path: "/:channelLogin/dashboard/settings",
-                        component: Ie
-                    }), a.createElement(o.a, {
-                        exact: !0,
-                        from: "/:channelLogin/dashboard/stats",
-                        to: "/:channelLogin/dashboard/channel-analytics"
-                    }), a.createElement(s.a, {
-                        exact: !0,
-                        path: "/:channelName/dashboard/stream-summary/:streamSummaryID/referrals",
-                        render: function(e) {
-                            var t = e.match;
-                            return a.createElement(me, {
-                                channelName: t.params.channelName,
-                                streamSummaryID: t.params.streamSummaryID
-                            })
-                        }
-                    }), a.createElement(s.a, {
-                        exact: !0,
-                        path: "/:channelName/dashboard/stream-summary/:streamSummaryID?",
-                        render: function(e) {
-                            var t = e.match;
-                            return a.createElement(We, {
-                                channelName: t.params.channelName,
-                                streamSummaryID: t.params.streamSummaryID || ""
-                            })
-                        }
-                    }), a.createElement(o.a, {
-                        exact: !0,
-                        from: "/:channelLogin/dashboard/streamkey",
-                        to: "/:channelLogin/dashboard/settings"
-                    }), a.createElement(o.a, {
-                        exact: !0,
-                        from: "/:channelLogin/dashboard",
-                        to: "/:channelLogin/dashboard/live"
-                    }), a.createElement(s.a, {
-                        path: "/:channelName/dashboard",
-                        component: v.a
-                    }), a.createElement(s.a, {
-                        path: "/:channelName/manager/clips/channel",
-                        component: ve
-                    }), a.createElement(s.a, {
-                        path: "/:channelName/manager/clips",
-                        component: Ue
-                    }), a.createElement(s.a, {
-                        path: "/:channelName/manager/highlighter/:videoID",
-                        render: function(e) {
-                            return a.createElement(u.a, {
-                                name: h.b.VODCharizard,
-                                channel: e.match.params.channelName,
-                                assignments: {
-                                    control: function() {
-                                        return a.createElement(Me, r.__assign({}, e))
-                                    },
-                                    variant1: function() {
-                                        return a.createElement(Ae, r.__assign({}, e))
-                                    },
-                                    fallback: function() {
-                                        return a.createElement(Me, r.__assign({}, e))
+                    return a.createElement(N.a, {
+                        interval: Object(pe.g)(30),
+                        channelName: this.props.match.params.channelLogin
+                    }, function(n) {
+                        return a.createElement(J.Ya, {
+                            display: J.X.Flex,
+                            flexDirection: J.Aa.Column,
+                            flexWrap: J.Ba.NoWrap,
+                            fullHeight: !0
+                        }, a.createElement(J.Ya, {
+                            "data-test-selector": K.TopNav,
+                            display: t ? J.X.Hide : void 0,
+                            fullWidth: !0
+                        }, a.createElement(g.a, null)), e.props.firstPageLoaded && a.createElement(b.a, null), a.createElement(J.Ya, {
+                            display: J.X.Flex,
+                            flexWrap: J.Ba.NoWrap,
+                            position: J.kb.Relative,
+                            overflow: J.db.Hidden,
+                            fullHeight: !0
+                        }, a.createElement(J.Ya, {
+                            "data-test-selector": K.SideNav,
+                            display: t ? J.X.Hide : void 0,
+                            fullHeight: !0
+                        }, a.createElement(ee, {
+                            streamSummaryQuery: n
+                        })), a.createElement(J.Ya, {
+                            position: J.kb.Relative,
+                            flexGrow: 1,
+                            fullHeight: !0,
+                            overflow: J.db.Hidden
+                        }, a.createElement(c.a, null, a.createElement(o.a, {
+                            path: "/:channelLogin/dashboard/achievements",
+                            component: he
+                        }), a.createElement(o.a, {
+                            exact: !0,
+                            path: "/:channelName/dashboard/activity",
+                            component: fe
+                        }), a.createElement(o.a, {
+                            exact: !0,
+                            path: "/:channelName/dashboard/bounties/:selectedID",
+                            component: be
+                        }), a.createElement(o.a, {
+                            exact: !0,
+                            path: "/:channelName/dashboard/bounties",
+                            component: be
+                        }), a.createElement(o.a, {
+                            exact: !0,
+                            path: "/:channelName/dashboard/broadcast",
+                            component: _e
+                        }), a.createElement(o.a, {
+                            path: "/:channelName/dashboard/channel-analytics",
+                            render: function(e) {
+                                return a.createElement(ve, r.__assign({
+                                    streamSummaryQuery: n
+                                }, e))
+                            }
+                        }), a.createElement(o.a, {
+                            path: "/:channelName/dashboard/events",
+                            component: Ce
+                        }), a.createElement(o.a, {
+                            path: "/:channelLogin/dashboard/extensions",
+                            component: Re
+                        }), a.createElement(o.a, {
+                            exact: !0,
+                            path: "/:channelLogin/dashboard/live",
+                            render: function() {
+                                return a.createElement(Ue, {
+                                    streamSummariesQuery: n
+                                })
+                            }
+                        }), a.createElement(o.a, {
+                            exact: !0,
+                            path: "/:channelName/dashboard/moderation",
+                            component: Ee
+                        }), a.createElement(o.a, {
+                            path: "/:channelLogin/dashboard/multiview",
+                            component: Me
+                        }), e.isVIPBadgeEnabled ? a.createElement(o.a, {
+                            exact: !0,
+                            path: "/:channelLogin/dashboard/roles",
+                            render: function(t) {
+                                return t.match.params.channelLogin === e.props.userLogin ? a.createElement(Le, null) : a.createElement(y.a, null)
+                            }
+                        }) : a.createElement(o.a, {
+                            exact: !0,
+                            path: "/:channelName/dashboard/permissions",
+                            component: Pe
+                        }), e.isVIPBadgeEnabled && a.createElement(s.a, {
+                            from: "/:channelLogin/dashboard/permissions",
+                            to: "/:channelLogin/dashboard/settings/managed-channels"
+                        }), !e.isVIPBadgeEnabled && a.createElement(o.a, {
+                            exact: !0,
+                            path: "/:channelName/dashboard/permissions",
+                            component: Pe
+                        }), a.createElement(s.a, {
+                            exact: !0,
+                            from: "/:channelLogin/dashboard/revenue",
+                            to: "/:channelLogin/dashboard/channel-analytics"
+                        }), e.consolidatedModerationSettingsFlag && a.createElement(o.a, {
+                            exact: !0,
+                            path: "/:channelLogin/dashboard/settings/moderation",
+                            component: De
+                        }), e.consolidatedModerationSettingsFlag && a.createElement(o.a, {
+                            exact: !0,
+                            path: "/:channelLogin/dashboard/settings/moderation/automod",
+                            component: Te
+                        }), e.consolidatedModerationSettingsFlag && a.createElement(o.a, {
+                            exact: !0,
+                            path: "/:channelLogin/dashboard/settings/moderation/banned-chatters",
+                            component: Ie
+                        }), e.consolidatedModerationSettingsFlag && a.createElement(o.a, {
+                            exact: !0,
+                            path: "/:channelLogin/dashboard/settings/moderation/blocked-terms",
+                            component: Ne
+                        }), e.consolidatedModerationSettingsFlag && a.createElement(o.a, {
+                            exact: !0,
+                            path: "/:channelLogin/dashboard/settings/moderation/permitted-terms",
+                            component: we
+                        }), a.createElement(o.a, {
+                            exact: !0,
+                            path: "/:channelName/dashboard/settings/automod",
+                            component: ge
+                        }), a.createElement(o.a, {
+                            path: "/:channelName/dashboard/settings/revenue",
+                            component: Oe
+                        }), a.createElement(o.a, {
+                            path: "/:channelLogin/dashboard/settings",
+                            component: je
+                        }), a.createElement(s.a, {
+                            exact: !0,
+                            from: "/:channelLogin/dashboard/stats",
+                            to: "/:channelLogin/dashboard/channel-analytics"
+                        }), a.createElement(o.a, {
+                            exact: !0,
+                            path: "/:channelName/dashboard/stream-summary/:streamSummaryID/referrals",
+                            render: function(e) {
+                                var t = e.match;
+                                return a.createElement(me, {
+                                    channelName: t.params.channelName,
+                                    streamSummaryID: t.params.streamSummaryID,
+                                    streamSummaryQuery: n
+                                })
+                            }
+                        }), a.createElement(o.a, {
+                            exact: !0,
+                            path: "/:channelName/dashboard/stream-summary/:streamSummaryID?",
+                            render: function(e) {
+                                var t = e.match;
+                                return a.createElement(Be, {
+                                    channelName: t.params.channelName,
+                                    streamSummaryID: t.params.streamSummaryID || "",
+                                    streamSummaryQuery: n
+                                })
+                            }
+                        }), a.createElement(s.a, {
+                            exact: !0,
+                            from: "/:channelLogin/dashboard/streamkey",
+                            to: "/:channelLogin/dashboard/settings"
+                        }), a.createElement(s.a, {
+                            exact: !0,
+                            from: "/:channelLogin/dashboard",
+                            to: "/:channelLogin/dashboard/live"
+                        }), a.createElement(o.a, {
+                            path: "/:channelName/dashboard",
+                            component: v.a
+                        }), a.createElement(o.a, {
+                            path: "/:channelName/manager/clips/channel",
+                            component: ke
+                        }), a.createElement(o.a, {
+                            path: "/:channelName/manager/clips",
+                            component: xe
+                        }), a.createElement(o.a, {
+                            path: "/:channelName/manager/highlighter/:videoID",
+                            render: function(e) {
+                                return a.createElement(u.a, {
+                                    name: h.b.VODCharizard,
+                                    channel: e.match.params.channelName,
+                                    assignments: {
+                                        control: function() {
+                                            return a.createElement(Ae, r.__assign({}, e))
+                                        },
+                                        variant1: function() {
+                                            return a.createElement(Fe, r.__assign({}, e))
+                                        },
+                                        fallback: function() {
+                                            return a.createElement(Ae, r.__assign({}, e))
+                                        }
                                     }
-                                }
-                            })
-                        }
-                    }), a.createElement(s.a, {
-                        path: "/:channelName/manager/highlighter",
-                        component: Le
-                    }), a.createElement(s.a, {
-                        path: "/:creatorLogin/manager/collections/:collectionID",
-                        component: ke
-                    }), a.createElement(s.a, {
-                        path: "/:creatorLogin/manager/collections",
-                        component: ye
-                    }), a.createElement(s.a, {
-                        path: "/:channelName/manager",
-                        component: Be
-                    })))))
+                                })
+                            }
+                        }), a.createElement(o.a, {
+                            path: "/:channelName/manager/highlighter",
+                            component: We
+                        }), a.createElement(o.a, {
+                            path: "/:creatorLogin/manager/collections/:collectionID",
+                            component: ye
+                        }), a.createElement(o.a, {
+                            path: "/:creatorLogin/manager/collections",
+                            component: Se
+                        }), a.createElement(o.a, {
+                            path: "/:channelName/manager",
+                            component: ze
+                        })))))
+                    })
                 }, t
             }(a.Component);
-            var ze = Object(l.compose)(Object(i.connect)(function(e) {
+            var Ge = Object(l.compose)(Object(i.connect)(function(e) {
                     var t = Object(f.e)(e);
                     return {
                         firstPageLoaded: e.session.firstPageLoaded,
@@ -15499,11 +15505,11 @@
                         isExpandedView: e.isExpandedView
                     }
                 }))(Ve),
-                Ge = function(e) {
-                    return a.createElement(N, null, a.createElement(ze, r.__assign({}, e)))
+                He = function(e) {
+                    return a.createElement(T, null, a.createElement(Ge, r.__assign({}, e)))
                 };
             n.d(t, "DashboardRoot", function() {
-                return Ge
+                return He
             })
         },
         mmRu: function(e, t, n) {
@@ -15621,8 +15627,8 @@
                         className: "emote-picker__tabs-container"
                     }, n, r)
                 }),
-                V = n("DnOo"),
-                z = function(e) {
+                z = n("DnOo"),
+                V = function(e) {
                     function t() {
                         return null !== e && e.apply(this, arguments) || this
                     }
@@ -15667,7 +15673,7 @@
                         }), i.createElement(c.Ya, {
                             margin: 1,
                             alignItems: c.f.Center
-                        }, e), i.createElement(V.a, {
+                        }, e), i.createElement(z.a, {
                             isSubbedToTier: !1,
                             tierPrice: a.purchase || "",
                             handleSubAction: this.props.handleSubAction,
@@ -15823,7 +15829,7 @@
                                     key: "planUpsell:" + t.level,
                                     padding: 1,
                                     position: c.kb.Relative
-                                }, i.createElement(z, {
+                                }, i.createElement(V, {
                                     plan: t,
                                     isEsportChannel: e.props.isEsportChannel,
                                     subscribeTexts: e.props.subscribeTexts,
@@ -16034,7 +16040,7 @@
                                 padding: {
                                     x: 2
                                 }
-                            }, i.createElement(V.a, {
+                            }, i.createElement(z.a, {
                                 customSubscribeNowMessage: o,
                                 isSubbedToTier: !1,
                                 fullWidth: !0,
@@ -16644,7 +16650,7 @@
                             return Object(k.d)(p.a, {
                                 component: "CheckoutModal",
                                 loader: function() {
-                                    return Promise.all([n.e(0), n.e(212)]).then(n.bind(null, "KJv/"))
+                                    return Promise.all([n.e(0), n.e(210)]).then(n.bind(null, "KJv/"))
                                 },
                                 componentProps: t
                             })
@@ -16784,13 +16790,12 @@
                 u = n("w+70"),
                 m = n("OTJN"),
                 p = n("4p7I"),
-                h = n("ugx8"),
-                f = n("Mp9w"),
-                g = n("NAv5"),
-                b = n("p46w"),
-                v = {
+                h = n("6D3P"),
+                f = n("NAv5"),
+                g = n("p46w"),
+                b = {
                     get: function(e) {
-                        var t = b.get("streamSummary" + e),
+                        var t = g.get("streamSummary" + e),
                             n = 0;
                         if (t) try {
                             n = JSON.parse(t).endTime
@@ -16798,51 +16803,49 @@
                         return n
                     },
                     set: function(e, t) {
-                        b.set("streamSummary" + e, {
+                        g.set("streamSummary" + e, {
                             wasSeen: !0,
                             endTime: t
                         }, {
-                            expires: Object(g.addDays)(new Date, 30),
+                            expires: Object(f.addDays)(new Date, 30),
                             domain: "." + location.hostname.split(".").reverse().slice(0, 2).reverse().join(".")
                         })
                     }
                 };
-            var k = Object(h.b)(function(e) {
-                    return a.createElement(p.a, {
-                        path: "/:channelName/dashboard/stream-summary/:sessionID?"
-                    }, function(t) {
-                        return function(e, t) {
-                            var n = t.recentStreamSummariesContext,
-                                r = n.channel,
-                                a = n.isLoading,
-                                i = n.recentStreamSummaries;
-                            if (a || !r) return !1;
-                            var o = t.lastSeenStore || v,
-                                s = r.id,
-                                c = i[i.length - 1],
-                                l = c && c.interval.end.getTime() || 0;
-                            if (e && !e.params.sessionID) return o.set(s, l), !1;
-                            var d = e && e.params.sessionID && f.a.intervalFromID(e.params.sessionID),
-                                u = d && d.end.getTime();
-                            if (u && u === l) return o.set(s, l), !1;
-                            var m = o.get(s);
-                            return !(l <= m)
-                        }(t.match, e) && e.children
-                    })
-                }),
-                y = {
+            var v = function(e) {
+                return a.createElement(p.a, {
+                    path: "/:channelName/dashboard/stream-summary/:sessionID?"
+                }, function(t) {
+                    return function(e, t) {
+                        var n = t.streamSummaryQuery;
+                        if (n.isLoading) return !1;
+                        var r = t.lastSeenStore || b,
+                            a = n.channel.id,
+                            i = n.streamSummaries[n.streamSummaries.length - 1],
+                            o = i && i.interval.end.getTime() || 0;
+                        if (e && !e.params.sessionID) return r.set(a, o), !1;
+                        var s = e && e.params.sessionID && h.b.intervalFromID(e.params.sessionID),
+                            c = s && s.end.getTime();
+                        if (c && c === o) return r.set(a, o), !1;
+                        var l = r.get(a);
+                        if (o <= l) return !1;
+                        return !0
+                    }(t.match, e) && e.children
+                })
+            };
+            var k = {
                     "data-test-selector": "stream-summary-hotspot-selector"
                 },
-                S = {
+                y = {
                     "data-test-selector": "stream-summary-link-selector"
                 },
-                E = {
+                S = {
                     "data-test-selector": "channel-analytics-hotspot-selector"
                 },
-                _ = {
+                E = {
                     "data-test-selector": "channel-analytics-link-selector"
                 },
-                C = function(e) {
+                _ = function(e) {
                     function t() {
                         return null !== e && e.apply(this, arguments) || this
                     }
@@ -16851,16 +16854,18 @@
                             t = e.match.params.channelLogin,
                             n = e.pageAccess,
                             i = [];
-                        return n[u.a.AnalyticsChannel].channelEnabled && n[u.a.AnalyticsChannel].currentUserAuthorized && i.push(a.createElement(d.a, r.__assign({}, _, {
+                        return n[u.a.AnalyticsChannel].channelEnabled && n[u.a.AnalyticsChannel].currentUserAuthorized && i.push(a.createElement(d.a, r.__assign({}, E, {
                             linkTo: {
                                 pathname: "/" + t + "/dashboard/channel-analytics",
                                 state: {
                                     medium: c.PageviewMedium.DashboardLeftNav
                                 }
                             }
-                        }), Object(s.d)("Channel", "DashboardNav"), this.isChannelAnalyticsNew && a.createElement(m.a, r.__assign({}, E)))), n[u.a.AnalyticsStreamSummary].channelEnabled && n[u.a.AnalyticsStreamSummary].currentUserAuthorized && i.push(a.createElement(d.a, r.__assign({}, S, {
+                        }), Object(s.d)("Channel", "DashboardNav"), this.isChannelAnalyticsNew && a.createElement(m.a, r.__assign({}, S)))), n[u.a.AnalyticsStreamSummary].channelEnabled && n[u.a.AnalyticsStreamSummary].currentUserAuthorized && i.push(a.createElement(d.a, r.__assign({}, y, {
                             linkTo: "/" + t + "/dashboard/stream-summary"
-                        }), Object(s.d)("Stream Summary", "DashboardNav"), a.createElement(k, null, a.createElement(m.a, r.__assign({}, y))))), i.length ? a.createElement(a.Fragment, null, a.createElement(l.a, null, Object(s.d)("Analytics", "DashboardNav")), a.createElement("ul", null, i.map(function(e, t) {
+                        }), Object(s.d)("Stream Summary", "DashboardNav"), a.createElement(v, {
+                            streamSummaryQuery: this.props.streamSummaryQuery
+                        }, a.createElement(m.a, r.__assign({}, k))))), i.length ? a.createElement(a.Fragment, null, a.createElement(l.a, null, Object(s.d)("Analytics", "DashboardNav")), a.createElement("ul", null, i.map(function(e, t) {
                             return a.createElement("li", {
                                 key: t
                             }, e)
@@ -16873,9 +16878,11 @@
                         configurable: !0
                     }), t
                 }(a.Component),
-                O = Object(o.compose)(i.a, u.c)(C);
+                C = Object(o.compose)(i.a, u.c)(_);
             n.d(t, "a", function() {
                 return "seenChannelAnalytics"
+            }), n.d(t, !1, function() {
+                return k
             }), n.d(t, !1, function() {
                 return y
             }), n.d(t, !1, function() {
@@ -16884,10 +16891,8 @@
                 return E
             }), n.d(t, !1, function() {
                 return _
-            }), n.d(t, !1, function() {
-                return C
             }), n.d(t, "b", function() {
-                return O
+                return C
             })
         },
         nEWQ: function(e, t, n) {
@@ -16971,6 +16976,53 @@
             }), n.d(t, "b", function() {
                 return S
             })
+        },
+        nlSm: function(e, t, n) {
+            "use strict";
+            n.d(t, "b", function() {
+                return a
+            }), n.d(t, "a", function() {
+                return i
+            });
+            var r = function(e) {
+                return e
+            };
+
+            function a(e, t) {
+                void 0 === t && (t = r);
+                var n = {
+                    total: 0,
+                    items: []
+                };
+                return e ? (n.items = e.map(function(e) {
+                    return n.total += Number(e.value), {
+                        name: t(e.key),
+                        count: Number(e.value)
+                    }
+                }), n.items = n.items.sort(o), n) : n
+            }
+
+            function i(e) {
+                var t = {
+                        total: 0,
+                        items: []
+                    },
+                    n = new Map;
+                return e.forEach(function(e) {
+                    t.total += e.total, e.items.forEach(function(e) {
+                        n.set(e.name, (n.get(e.name) || 0) + e.count)
+                    })
+                }), n.forEach(function(e, n) {
+                    t.items.push({
+                        name: n,
+                        count: e
+                    })
+                }), t.items = t.items.sort(o), t
+            }
+
+            function o(e, t) {
+                return e.count === t.count ? e.name.localeCompare(t.name) : e.count > t.count ? -1 : 1
+            }
         },
         o9uN: function(e, t, n) {},
         obKW: function(e, t, n) {},
@@ -18203,112 +18255,6 @@
             }), n.d(t, !1, function() {}), n.d(t, !1, function() {}), n.d(t, !1, function() {})
         },
         uRkz: function(e, t) {},
-        ugx8: function(e, t, n) {
-            "use strict";
-            var r, a = n("mrSG"),
-                i = n("q1tI"),
-                o = n("/MKj"),
-                s = n("9C/b"),
-                c = n("fvjX"),
-                l = n("yR8l"),
-                d = n("kRBY"),
-                u = n("1rIY"),
-                m = n("u2gS"),
-                p = n("CFgy"),
-                h = n("Mp9w"),
-                f = n("ILEO"),
-                g = 30,
-                b = (r = Object(u.a)("RecentStreamSummariesContext", {
-                    channel: null,
-                    interval: Object(p.g)(g),
-                    isLoading: !1,
-                    recentStreamSummaries: []
-                })).InnerProvider,
-                v = r.withContext;
-
-            function k(e) {
-                return {
-                    recentStreamSummariesContext: e
-                }
-            }
-
-            function y(e) {
-                return v(k)(e)
-            }
-            var S = function(e) {
-                function t() {
-                    var t = null !== e && e.apply(this, arguments) || this;
-                    return t.state = {
-                        channel: null,
-                        interval: Object(p.g)(g),
-                        isLoading: !0,
-                        recentStreamSummaries: []
-                    }, t
-                }
-                return a.__extends(t, e), t.prototype.componentDidMount = function() {
-                    this.props.data && !this.props.data.loading && this.queryStreamSummaries()
-                }, t.prototype.componentDidUpdate = function(e) {
-                    e.data && this.props.data && !this.props.data.loading && ((e.data.channel && e.data.channel.id) !== (this.props.data.channel && this.props.data.channel.id) && this.queryStreamSummaries())
-                }, t.prototype.render = function() {
-                    return i.createElement(b, {
-                        value: this.state
-                    }, this.props.children)
-                }, t.prototype.queryStreamSummaries = function() {
-                    return a.__awaiter(this, void 0, void 0, function() {
-                        var e, t, n;
-                        return a.__generator(this, function(r) {
-                            switch (r.label) {
-                                case 0:
-                                    return E(this.props) ? [2] : (e = m.c.fromChannelData(this.props.data)) ? (t = Object(p.g)(g), this.setState({
-                                        isLoading: !0
-                                    }), [4, Object(h.b)(e, t)]) : [2];
-                                case 1:
-                                    return n = r.sent(), this.setState({
-                                        channel: e,
-                                        interval: t,
-                                        isLoading: !1,
-                                        recentStreamSummaries: n.streamSummaries
-                                    }), [2]
-                            }
-                        })
-                    })
-                }, t
-            }(i.Component);
-
-            function E(e) {
-                var t = e.match.params.channelLogin,
-                    n = e.sessionUser;
-                if (!n) return !1;
-                var r = n.login.toLowerCase() === t.toLowerCase(),
-                    a = Boolean(n.roles && n.roles.isStaff);
-                return !r && !a
-            }
-            var _ = Object(c.compose)(s.a, Object(o.connect)(function(e) {
-                return {
-                    sessionUser: Object(d.e)(e)
-                }
-            }), Object(l.a)(f, {
-                options: function(e) {
-                    return {
-                        variables: {
-                            channelLogin: e.match.params.channelLogin
-                        }
-                    }
-                },
-                skip: E
-            }))(S);
-            n.d(t, !1, function() {
-                return b
-            }), n.d(t, !1, function() {
-                return v
-            }), n.d(t, "b", function() {
-                return y
-            }), n.d(t, !1, function() {
-                return S
-            }), n.d(t, "a", function() {
-                return _
-            })
-        },
         uu1w: function(e, t, n) {
             "use strict";
             var r;
@@ -18924,6 +18870,42 @@
             })
         },
         y4Ne: function(e, t, n) {},
+        yCxs: function(e, t, n) {
+            "use strict";
+            n.d(t, "b", function() {
+                return c
+            });
+            var r = n("mrSG"),
+                a = n("cr+I"),
+                i = n("CFgy"),
+                o = n("dG1e"),
+                s = n("ILsx");
+
+            function c(e, t) {
+                return r.__awaiter(this, void 0, void 0, function() {
+                    var n, c, l, d;
+                    return r.__generator(this, function(r) {
+                        switch (r.label) {
+                            case 0:
+                                return n = "/v5/channels/" + e.id + "/analytics/sessions_summary", c = a.stringify(Object(i.i)(t)), l = [n, c].join("?"), [4, Object(o.a)({
+                                    path: l
+                                })];
+                            case 1:
+                                return (d = r.sent()).isError() ? [2, {
+                                    isError: !0,
+                                    streamSummaries: []
+                                }] : [2, {
+                                    isError: !1,
+                                    streamSummaries: Object(s.b)(d.body, e)
+                                }]
+                        }
+                    })
+                })
+            }
+            n.d(t, "a", function() {
+                return s.a
+            })
+        },
         ybsN: function(e, t, n) {
             "use strict";
 

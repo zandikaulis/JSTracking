@@ -1,6 +1,5 @@
 (window.webpackJsonp = window.webpackJsonp || []).push([
-    [148], {
-        "+1F+": function(e, t, n) {},
+    [146], {
         GyBV: function(e, t, n) {
             "use strict";
             n.r(t);
@@ -9,7 +8,7 @@
                 r = n("/7QA"),
                 c = n("eJ65"),
                 i = n("Ue10"),
-                s = (n("+1F+"), function(e) {
+                s = function(e) {
                     function t() {
                         var t = null !== e && e.apply(this, arguments) || this;
                         return t.onClick = function(e) {
@@ -19,9 +18,7 @@
                         }, t
                     }
                     return o.__extends(t, e), t.prototype.render = function() {
-                        return a.createElement(i.Ya, {
-                            className: "feedback-card__black"
-                        }, a.createElement(c.a, {
+                        return a.createElement(c.a, {
                             preventDefault: !0,
                             stopPropagation: !0,
                             onToggle: this.onToggle
@@ -38,9 +35,9 @@
                                     icon: i.ub.VisibilityHidden
                                 }
                             }]
-                        })))
+                        }))
                     }, t
-                }(a.Component)),
+                }(a.Component),
                 d = function(e) {
                     function t() {
                         return null !== e && e.apply(this, arguments) || this
