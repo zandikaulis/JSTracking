@@ -33124,6 +33124,36 @@
                       "ofType": null
                     }
                   }
+                }, 
+                {
+                  "defaultValue": null, 
+                  "description": null, 
+                  "name": "after", 
+                  "type": {
+                    "kind": "SCALAR", 
+                    "name": "Cursor", 
+                    "ofType": null
+                  }
+                }, 
+                {
+                  "defaultValue": "100", 
+                  "description": null, 
+                  "name": "first", 
+                  "type": {
+                    "kind": "SCALAR", 
+                    "name": "Int", 
+                    "ofType": null
+                  }
+                }, 
+                {
+                  "defaultValue": "DESC", 
+                  "description": null, 
+                  "name": "order", 
+                  "type": {
+                    "kind": "ENUM", 
+                    "name": "SortOrder", 
+                    "ofType": null
+                  }
                 }
               ], 
               "deprecationReason": null, 
@@ -33155,7 +33185,7 @@
                 {
                   "defaultValue": "100", 
                   "description": null, 
-                  "name": "limit", 
+                  "name": "first", 
                   "type": {
                     "kind": "SCALAR", 
                     "name": "Int", 
@@ -33165,7 +33195,7 @@
                 {
                   "defaultValue": null, 
                   "description": null, 
-                  "name": "cursor", 
+                  "name": "after", 
                   "type": {
                     "kind": "SCALAR", 
                     "name": "Cursor", 
@@ -33173,7 +33203,7 @@
                   }
                 }, 
                 {
-                  "defaultValue": "ASC", 
+                  "defaultValue": "DESC", 
                   "description": null, 
                   "name": "order", 
                   "type": {
@@ -45113,7 +45143,7 @@
             {
               "args": [], 
               "deprecationReason": null, 
-              "description": "The visual status of the offer to the user, UNSEEN, SEEN, CLAIMED, DISMISSED.", 
+              "description": "The visual status of the offer to the user, UNSEEN, SEEN, CLAIMED, DISMISSED, OVERRIDDEN.", 
               "isDeprecated": false, 
               "name": "status", 
               "type": {
@@ -50603,6 +50633,68 @@
           "possibleTypes": null
         }, 
         {
+          "description": "Errors from rejectSquadStreamInvitation mutation.", 
+          "enumValues": null, 
+          "fields": [
+            {
+              "args": [], 
+              "deprecationReason": null, 
+              "description": "Error from request to reject invitation.", 
+              "isDeprecated": false, 
+              "name": "code", 
+              "type": {
+                "kind": "NON_NULL", 
+                "name": null, 
+                "ofType": {
+                  "kind": "ENUM", 
+                  "name": "RejectSquadStreamInvitationErrorCode", 
+                  "ofType": null
+                }
+              }
+            }
+          ], 
+          "inputFields": null, 
+          "interfaces": [], 
+          "kind": "OBJECT", 
+          "name": "RejectSquadStreamInvitationError", 
+          "possibleTypes": null
+        }, 
+        {
+          "description": "Possible errors from this mutation.", 
+          "enumValues": [
+            {
+              "deprecationReason": null, 
+              "description": "Invitation to be rejected does not exist.", 
+              "isDeprecated": false, 
+              "name": "INVITATION_NOT_FOUND"
+            }, 
+            {
+              "deprecationReason": null, 
+              "description": "Squad associated with the invitation does not exist.", 
+              "isDeprecated": false, 
+              "name": "SQUAD_NOT_FOUND"
+            }, 
+            {
+              "deprecationReason": null, 
+              "description": "User does not have permissions to reject invitation.", 
+              "isDeprecated": false, 
+              "name": "UNAUTHORIZED"
+            }, 
+            {
+              "deprecationReason": null, 
+              "description": "Invitation not in pending state cannot be rejected.", 
+              "isDeprecated": false, 
+              "name": "INVITATION_CANNOT_BE_REJECTED"
+            }
+          ], 
+          "fields": null, 
+          "inputFields": null, 
+          "interfaces": null, 
+          "kind": "ENUM", 
+          "name": "RejectSquadStreamInvitationErrorCode", 
+          "possibleTypes": null
+        }, 
+        {
           "description": "Inputs to the rejectSquadStreamInvitation mutation.", 
           "enumValues": null, 
           "fields": null, 
@@ -50631,6 +50723,18 @@
           "description": "Outputs from the rejectSquadStreamInvitation mutation.", 
           "enumValues": null, 
           "fields": [
+            {
+              "args": [], 
+              "deprecationReason": null, 
+              "description": "Error from mutation if exists.", 
+              "isDeprecated": false, 
+              "name": "error", 
+              "type": {
+                "kind": "OBJECT", 
+                "name": "RejectSquadStreamInvitationError", 
+                "ofType": null
+              }
+            }, 
             {
               "args": [], 
               "deprecationReason": null, 
