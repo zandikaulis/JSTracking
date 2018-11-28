@@ -336,14 +336,6 @@
                             kind: "Field",
                             name: {
                                 kind: "Name",
-                                value: "id"
-                            },
-                            arguments: [],
-                            directives: []
-                        }, {
-                            kind: "Field",
-                            name: {
-                                kind: "Name",
                                 value: "durationMilliseconds"
                             },
                             arguments: [],
@@ -738,11 +730,11 @@
                 }],
                 loc: {
                     start: 0,
-                    end: 946
+                    end: 943
                 }
             };
             n.loc.source = {
-                body: "query VideoPreviewCard__VideoMoments($videoId: ID!) {\nvideo(id: $videoId) {\nid\nmoments(momentRequestType: VIDEO_CHAPTER_MARKERS) {\nedges {\n...videoMomentEdge\n}\n}\n}\n}\nfragment videoMomentEdge on VideoMomentEdge {\ncursor\nnode {\n...videoChapter\n}\n}\nfragment videoChapter on VideoMoment {\nid\ndurationMilliseconds\npositionMilliseconds\ntype\ndescription\nthumbnailURL\n...momentDetails\nvideo {\nid\nlengthSeconds\n}\n}\nfragment momentDetails on VideoMoment {\ndetails {\n...gameChangeDetails\n...hearthstoneDetails\n...overwatchDetails\n...pubgDetails\n}\n}\nfragment gameChangeDetails on GameChangeMomentDetails {\ngame {\nid\ndisplayName\nboxArtURL(width: 40 height: 53)\n}\n}\nfragment hearthstoneDetails on HearthstoneMomentDetails {\nbroadcasterHero {\nid\nclass\nname\n}\nopponentHero {\nid\nclass\nname\n}\ngameMode {\ntype\nvalue\n}\n}\nfragment overwatchDetails on OverwatchMomentDetails {\nrole\nheroName\n}\nfragment pubgDetails on PUBGMomentDetails {\nmaxPlayerCount\nminPlayerCount\n}",
+                body: "query VideoPreviewCard__VideoMoments($videoId: ID!) {\nvideo(id: $videoId) {\nid\nmoments(momentRequestType: VIDEO_CHAPTER_MARKERS) {\nedges {\n...videoMomentEdge\n}\n}\n}\n}\nfragment videoMomentEdge on VideoMomentEdge {\ncursor\nnode {\n...videoChapter\n}\n}\nfragment videoChapter on VideoMoment {\ndurationMilliseconds\npositionMilliseconds\ntype\ndescription\nthumbnailURL\n...momentDetails\nvideo {\nid\nlengthSeconds\n}\n}\nfragment momentDetails on VideoMoment {\ndetails {\n...gameChangeDetails\n...hearthstoneDetails\n...overwatchDetails\n...pubgDetails\n}\n}\nfragment gameChangeDetails on GameChangeMomentDetails {\ngame {\nid\ndisplayName\nboxArtURL(width: 40 height: 53)\n}\n}\nfragment hearthstoneDetails on HearthstoneMomentDetails {\nbroadcasterHero {\nid\nclass\nname\n}\nopponentHero {\nid\nclass\nname\n}\ngameMode {\ntype\nvalue\n}\n}\nfragment overwatchDetails on OverwatchMomentDetails {\nrole\nheroName\n}\nfragment pubgDetails on PUBGMomentDetails {\nmaxPlayerCount\nminPlayerCount\n}",
                 name: "GraphQL request",
                 locationOffset: {
                     line: 1,
@@ -1909,15 +1901,8 @@
                 o = n("H1ft"),
                 r = n("yR8l"),
                 l = function(e) {
-                    return e.map(function(e, t, n) {
-                        var a, o = e.node;
-                        if ("GAME_CHANGE" !== o.type || 0 !== o.durationMilliseconds) return s(o);
-                        var r = n[t + 1] && n[t + 1].node;
-                        a = r ? r.positionMilliseconds - o.positionMilliseconds : o.video && o.video.lengthSeconds && 1e3 * o.video.lengthSeconds - o.positionMilliseconds || 0;
-                        var l = i.__assign({}, o, {
-                            durationMilliseconds: a
-                        });
-                        return s(l)
+                    return e.map(function(e) {
+                        return s(e.node)
                     })
                 },
                 s = function(e) {
@@ -2041,7 +2026,7 @@
                         return a.createElement(p.a, i.__assign({}, e))
                     }, t.prototype.generateSearchString = function() {
                         var e = {};
-                        this.props.collectionID && (e.collection = this.props.collectionID);
+                        this.props.collectionID && (e.collection = this.props.collectionID), this.props.videoBrowseOptions && (this.props.videoBrowseOptions.filter && (e.filter = this.props.videoBrowseOptions.filter), this.props.videoBrowseOptions.sort && (e.sort = this.props.videoBrowseOptions.sort), this.props.videoBrowseOptions.range && (e.range = this.props.videoBrowseOptions.range));
                         var t = m.stringify(e);
                         return t ? "?" + t : ""
                     }, t.prototype.getVideoPreviousWatchPercentage = function() {
@@ -2810,8 +2795,8 @@
                 x = n("ZbA5"),
                 I = n("QVaV"),
                 T = n("hyVY"),
-                A = n("MXoD"),
-                O = n("0LAi");
+                O = n("MXoD"),
+                A = n("0LAi");
             ! function(e) {
                 e.LockSelector = "video-lock", e.UpsellSelector = "upsell"
             }(b || (b = {}));
@@ -2919,7 +2904,7 @@
                             borderRadius: l.x.Medium,
                             overflow: l.db.Hidden
                         }, this.renderVODRestrictionOverlay(), a.createElement(l.U, {
-                            to: Object(A.a)(this.getTrackingContext(g.PageviewContent.VideoThumbnail), this.props.linkTo),
+                            to: Object(O.a)(this.getTrackingContext(g.PageviewContent.VideoThumbnail), this.props.linkTo),
                             onClick: this.props.onThumbnailClick || this.props.onClick,
                             "data-a-target": "preview-card-image-link"
                         }, this.props.thumbnailImageProps && a.createElement(E, {
@@ -3007,7 +2992,7 @@
                             }
                         }, a.createElement(f, {
                             imageProps: this.props.gameBoxArtImageProps,
-                            linkTo: Object(A.a)(this.getTrackingContext(g.PageviewContent.GameBoxart), this.props.gameTitleLinkTo),
+                            linkTo: Object(O.a)(this.getTrackingContext(g.PageviewContent.GameBoxart), this.props.gameTitleLinkTo),
                             onClick: this.props.onGameTitleClick,
                             aspect: l.p.BoxArt,
                             "data-test-selector": D.BoxArt,
@@ -3018,7 +3003,7 @@
                             }
                         }, a.createElement(f, {
                             imageProps: this.props.channelImageProps,
-                            linkTo: Object(A.a)(this.getTrackingContext(g.PageviewContent.UserThumbnail), this.props.channelLinkTo),
+                            linkTo: Object(O.a)(this.getTrackingContext(g.PageviewContent.UserThumbnail), this.props.channelLinkTo),
                             onClick: this.props.onChannelImageClick || this.props.onChannelLoginClick,
                             aspect: l.p.Aspect1x1,
                             "data-test-selector": D.Avatar
@@ -3028,7 +3013,7 @@
                             t = [];
                         return this.shouldShowGameBalloon(this.props) || t.push({
                             text: Object(I.a)(this.props.channelLogin, this.props.channelDisplayName, !0),
-                            linkTo: Object(A.a)(this.getTrackingContext(g.PageviewContent.ChannelMetadata), this.props.channelLinkTo),
+                            linkTo: Object(O.a)(this.getTrackingContext(g.PageviewContent.ChannelMetadata), this.props.channelLinkTo),
                             onClick: this.props.onChannelLoginClick,
                             automationSelector: "preview-card-channel-link"
                         }), V(this.props) && this.props.clipCreatedByChannelLoginLinkTo ? t.push({
@@ -3040,13 +3025,13 @@
                             automationSelector: "preview-card-clip-curator-link"
                         }) : U(this.props) && this.props.multipleVideoGameMarkersType && this.props.videoGameChanges && this.props.videoGameChanges.length > 0 ? e = this.renderPreviewCardGameInfo(this.props.multipleVideoGameMarkersType, this.props.videoGameChanges, this.props.onVideoGameBalloonClick, this.props.onVideoGameBalloonItemClick) : this.props.context !== P.SingleGameList && this.props.gameTitle && this.props.gameTitleLinkTo && t.push({
                             text: this.props.gameTitle,
-                            linkTo: Object(A.a)(this.getTrackingContext(g.PageviewContent.GameMetadata), this.props.gameTitleLinkTo),
+                            linkTo: Object(O.a)(this.getTrackingContext(g.PageviewContent.GameMetadata), this.props.gameTitleLinkTo),
                             onClick: this.props.onGameTitleClick,
                             automationSelector: "preview-card-game-link"
                         }), a.createElement(a.Fragment, null, a.createElement(L, {
                             title: this.props.title,
                             onClick: this.props.onVideoTitleClick || this.props.onClick,
-                            linkTo: Object(A.a)(this.getTrackingContext(g.PageviewContent.VideoTitle), this.props.linkTo),
+                            linkTo: Object(O.a)(this.getTrackingContext(g.PageviewContent.VideoTitle), this.props.linkTo),
                             subtitles: t,
                             "data-a-target": "preview-card-title-link"
                         }), e)
@@ -3055,7 +3040,7 @@
                             margin: {
                                 top: .5
                             }
-                        }, a.createElement(O.a, i.__assign({}, this.props.tagListProps, {
+                        }, a.createElement(A.a, i.__assign({}, this.props.tagListProps, {
                             tagNumberLimit: 3
                         }))) : null
                     }, t.prototype.renderVODRestrictionOverlay = function() {
@@ -4192,8 +4177,8 @@
                         }
                     }
                 })(I),
-                A = n("0JAG"),
-                O = n("kduP"),
+                O = n("0JAG"),
+                A = n("kduP"),
                 D = n("PfQt"),
                 P = n("oJov"),
                 G = n("AZIu"),
@@ -4254,7 +4239,7 @@
                             "data-a-target": "find-out-more-button"
                         }, Object(u.d)("Find Out More!", "LiveGames"))));
                         if (this.props.showSample && this.props.directoryWidth && this.props.directoryWidth > 0) {
-                            var i = Object(A.a)(this.props.directoryWidth, 180, 1);
+                            var i = Object(O.a)(this.props.directoryWidth, 180, 1);
                             i < n.length && (n = n.slice(0, i - 1), t = d.createElement(y.Ya, {
                                 margin: {
                                     bottom: 2
@@ -4278,7 +4263,7 @@
                                 }
                             }, d.createElement(P.a, {
                                 linkTo: {
-                                    pathname: Object(O.c)(e.name),
+                                    pathname: Object(A.c)(e.name),
                                     state: {
                                         content: "twitch_following",
                                         medium: "live_game",
@@ -4495,7 +4480,7 @@
                     onClickViewAll: e.onClickViewAll
                 }));
                 else if (e.showSample && e.directoryWidth && e.directoryWidth > 0) {
-                    var o = Object(A.a)(e.directoryWidth, 240, 2);
+                    var o = Object(O.a)(e.directoryWidth, 240, 2);
                     o < a.length && (a = a.slice(0, o - 1), i = d.createElement(X.a, {
                         subHeader: t,
                         linkTo: {
@@ -4515,7 +4500,7 @@
                                 hostDisplayName: i,
                                 hostedDisplayName: n
                             }, "LiveHosts"),
-                            o = e.hosting.stream && e.hosting.stream.game ? Object(O.c)(e.hosting.stream.game.name) : "",
+                            o = e.hosting.stream && e.hosting.stream.game ? Object(A.c)(e.hosting.stream.game.name) : "",
                             r = Object(V.a)({
                                 tags: e.hosting.stream.tags,
                                 section: G.a.LiveChannels
@@ -4692,7 +4677,7 @@
                     onClickViewAll: e.onClickViewAll
                 });
                 else if (e.showSample && e.directoryWidth && e.directoryWidth > 0) {
-                    var o = Object(A.a)(e.directoryWidth, 240, 2);
+                    var o = Object(O.a)(e.directoryWidth, 240, 2);
                     o < a.length && (a = a.slice(0, o - 1), i = d.createElement(D.a, {
                         subHeader: t,
                         linkTo: "/directory/following/live"
@@ -4705,7 +4690,7 @@
                             content: w.PageviewContent.Live,
                             content_index: t
                         },
-                        i = e.stream && e.stream.game ? Object(O.c)(e.stream.game.name) : "",
+                        i = e.stream && e.stream.game ? Object(A.c)(e.stream.game.name) : "",
                         a = Object(V.a)({
                             tags: e.stream.tags,
                             section: G.a.LiveChannels
@@ -4777,7 +4762,7 @@
                         if (this.props.data.currentUser.recommendations.videos && this.props.data.currentUser.recommendations.videos.edges && (t = this.props.data.currentUser.recommendations.videos.edges.map(function(e) {
                                 if (e && e.node) return e.node
                             })), this.props.directoryWidth > 0) {
-                            var n = Object(A.a)(this.props.directoryWidth, 240, 2);
+                            var n = Object(O.a)(this.props.directoryWidth, 240, 2);
                             t = t.slice(0, n)
                         }
                         return d.createElement("div", null, e, d.createElement(ae.b, {
@@ -4800,7 +4785,7 @@
                 se = n("ZS2+"),
                 de = n("D7An"),
                 ce = se.a.wrap(function() {
-                    return n.e(145).then(n.bind(null, "YBPT"))
+                    return n.e(147).then(n.bind(null, "YBPT"))
                 }, "LatestVideosFromFollowedCarousel"),
                 me = function(e) {
                     var t = {
@@ -5839,6 +5824,7 @@
                                     bottom: 2
                                 }
                             }, a.createElement(s.VideoPreviewCard, {
+                                videoBrowseOptions: e.videoBrowseOptions,
                                 hideGameArt: e.hideGameArt,
                                 context: e.listContext || o.b.MixedGameAndChannelList,
                                 tracking: {

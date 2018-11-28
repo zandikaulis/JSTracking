@@ -1,5 +1,5 @@
 (window.webpackJsonp = window.webpackJsonp || []).push([
-    [154], {
+    [156], {
         "0vXd": function(e, t, n) {},
         "B+LW": function(e, t, n) {
             "use strict";
@@ -222,7 +222,7 @@
                 c = n("GnwI"),
                 u = n("IFXb"),
                 d = n("B+LW"),
-                p = n("Ue10");
+                h = n("Ue10");
             n("zIYK");
             ! function(e) {
                 e[e.Active = 0] = "Active", e[e.Inactive = 1] = "Inactive"
@@ -230,44 +230,44 @@
             function(e) {
                 e.Image = "content-attribute__image", e.Value = "content-attribute__value", e.Remove = "content-attribute__remove"
             }(r || (r = {}));
-            var h, m = function(e) {
+            var p, m = function(e) {
                     function t() {
                         var t = null !== e && e.apply(this, arguments) || this;
                         return t.state = {}, t
                     }
                     return o.__extends(t, e), t.prototype.render = function() {
-                        return l.createElement(p.Fb, {
+                        return l.createElement(h.Fb, {
                             className: "content-attribute-chip",
-                            display: p.X.InlineFlex,
-                            flexDirection: p.Aa.Row,
-                            borderRadius: p.x.Medium,
-                            alignItems: p.f.Center,
+                            display: h.X.InlineFlex,
+                            flexDirection: h.Aa.Row,
+                            borderRadius: h.x.Medium,
+                            alignItems: h.f.Center,
                             margin: {
                                 right: 1
                             },
                             padding: .5,
-                            background: p.r.Alt2
+                            background: h.r.Alt2
                         }, this.props.imageURL && l.createElement("img", {
                             "data-test-selector": r.Image,
                             className: "content-attribute-chip__icon",
                             src: this.props.imageURL,
                             alt: this.props.value
-                        }), l.createElement(p.Ya, {
+                        }), l.createElement(h.Ya, {
                             "data-test-selector": r.Value,
                             padding: {
                                 x: 1
                             }
-                        }, l.createElement(p.W, {
+                        }, l.createElement(h.W, {
                             bold: !0
-                        }, this.props.value)), this.props.onClick && l.createElement(p.Fb, {
-                            borderRadius: p.x.Rounded,
-                            background: p.r.Alt2
-                        }, l.createElement(p.A, {
+                        }, this.props.value)), this.props.onClick && l.createElement(h.Fb, {
+                            borderRadius: h.x.Rounded,
+                            background: h.r.Alt2
+                        }, l.createElement(h.A, {
                             "data-test-selector": r.Remove,
                             onClick: this.props.onClick,
-                            icon: p.ub.RemoveTag,
-                            size: p.B.Small,
-                            type: p.C.Secondary
+                            icon: h.ub.RemoveTag,
+                            size: h.B.Small,
+                            type: h.C.Secondary
                         })))
                     }, t
                 }(l.Component),
@@ -276,8 +276,8 @@
                 b = n("il7S");
             ! function(e) {
                 e.Cancel = "edit-chanlet-group-modal__cancel", e.Create = "edit-chanlet-group-modal__create", e.Value = "edit-chanlet-group-modal__value", e.ValueForm = "edit-chanlet-group-modal__value-form"
-            }(h || (h = {}));
-            var g, y = function(e) {
+            }(p || (p = {}));
+            var g, E = function(e) {
                     function t() {
                         var t = null !== e && e.apply(this, arguments) || this;
                         return t.state = {
@@ -328,57 +328,57 @@
                         var e = this.state.chanletGroup;
                         return l.createElement(f.a, {
                             isOpen: !0
-                        }, l.createElement(p.Fb, {
-                            display: p.X.Flex,
+                        }, l.createElement(h.Fb, {
+                            display: h.X.Flex,
                             padding: {
                                 bottom: 2
                             },
                             margin: {
                                 bottom: 2
                             },
-                            justifyContent: p.Xa.Between
-                        }, l.createElement(p.Ya, {
+                            justifyContent: h.Xa.Between
+                        }, l.createElement(h.Ya, {
                             flexGrow: 0,
                             flexShrink: 1
-                        }, l.createElement(p.W, {
-                            type: p.Wb.H3
-                        }, Object(s.e)("Create Chanlet Metadata Group", "CreateChanletGroupModal"))), l.createElement(p.Ya, {
+                        }, l.createElement(h.W, {
+                            type: h.Wb.H3
+                        }, Object(s.e)("Create Chanlet Metadata Group", "CreateChanletGroupModal"))), l.createElement(h.Ya, {
                             flexGrow: 0,
                             flexShrink: 0
-                        }, l.createElement(p.z, {
+                        }, l.createElement(h.z, {
                             onClick: this.props.onClose,
-                            "data-test-selector": h.Cancel,
-                            type: p.F.Text
-                        }, Object(s.d)("Cancel", "CreateChanletGroupModal")), l.createElement(p.Ya, {
+                            "data-test-selector": p.Cancel,
+                            type: h.F.Text
+                        }, Object(s.d)("Cancel", "CreateChanletGroupModal")), l.createElement(h.Ya, {
                             margin: {
                                 left: 1
                             },
-                            display: p.X.InlineBlock
-                        }, l.createElement(p.z, {
+                            display: h.X.InlineBlock
+                        }, l.createElement(h.z, {
                             onClick: this.createChanletGroup,
-                            "data-test-selector": h.Create,
+                            "data-test-selector": p.Create,
                             disabled: !this.canSave()
-                        }, Object(s.d)("Create", "CreateChanletGroupModal"))))), l.createElement(p.Ya, {
+                        }, Object(s.d)("Create", "CreateChanletGroupModal"))))), l.createElement(h.Ya, {
                             margin: {
                                 y: 1
                             }
-                        }, this.state.errorMessage && l.createElement(p.Da, {
+                        }, this.state.errorMessage && l.createElement(h.Da, {
                             errorMessage: this.state.errorMessage
-                        })), l.createElement(C.b, null, l.createElement(p.Fb, {
-                            background: p.r.Alt,
+                        })), l.createElement(C.b, null, l.createElement(h.Fb, {
+                            background: h.r.Alt,
                             padding: 2,
                             margin: {
                                 bottom: 2
                             }
-                        }, l.createElement(p.Ea, {
+                        }, l.createElement(h.Ea, {
                             id: "group-name",
-                            "data-test-selector": h.ValueForm,
+                            "data-test-selector": p.ValueForm,
                             label: Object(s.e)("Group Name", "CreateChanletGroupModal"),
                             error: !this.validChanletGroupValue() && this.state.editMade,
                             errorMessage: Object(s.e)("Invalid Chanlet Group Name", "CreateChanletGroupModal")
-                        }, l.createElement(p.Sa, {
-                            type: p.Ua.Text,
-                            "data-test-selector": h.Value,
+                        }, l.createElement(h.Sa, {
+                            type: h.Ua.Text,
+                            "data-test-selector": p.Value,
                             onChange: this.onChanletGroupValueChange,
                             placeholder: Object(s.e)("Add Group Name", "CreateChanletGroupModal"),
                             value: e.value
@@ -393,7 +393,7 @@
             ! function(e) {
                 e.Cancel = "create-chanlet-modal__cancel", e.Confirm = "create-chanlet-modal__confirm"
             }(g || (g = {}));
-            var E, S = function(e) {
+            var y, S = function(e) {
                     function t() {
                         var t = null !== e && e.apply(this, arguments) || this;
                         return t.state = {
@@ -420,44 +420,44 @@
                         }, t
                     }
                     return o.__extends(t, e), t.prototype.render = function() {
-                        return l.createElement(p.Fb, {
-                            background: p.r.Base,
+                        return l.createElement(h.Fb, {
+                            background: h.r.Base,
                             className: "create-chanlet-modal",
                             elevation: 3
-                        }, l.createElement(p.Fb, {
+                        }, l.createElement(h.Fb, {
                             borderBottom: !0,
-                            display: p.X.Flex,
-                            justifyContent: p.Xa.Center,
+                            display: h.X.Flex,
+                            justifyContent: h.Xa.Center,
                             padding: 2,
-                            flexDirection: p.Aa.Column,
-                            alignItems: p.f.Center
-                        }, l.createElement(p.W, {
+                            flexDirection: h.Aa.Column,
+                            alignItems: h.f.Center
+                        }, l.createElement(h.W, {
                             bold: !0,
-                            fontSize: p.Ca.Size4
-                        }, Object(s.e)("Create a new multiview chanlet?", "CreateChanletModal")), l.createElement(p.Ya, {
+                            fontSize: h.Ca.Size4
+                        }, Object(s.e)("Create a new multiview chanlet?", "CreateChanletModal")), l.createElement(h.Ya, {
                             margin: {
                                 y: 1
                             }
-                        }, this.state.errorMessage && l.createElement(p.Da, {
+                        }, this.state.errorMessage && l.createElement(h.Da, {
                             errorMessage: this.state.errorMessage
-                        }))), l.createElement(p.Fb, {
-                            background: p.r.Alt,
-                            display: p.X.Flex,
-                            justifyContent: p.Xa.Center,
+                        }))), l.createElement(h.Fb, {
+                            background: h.r.Alt,
+                            display: h.X.Flex,
+                            justifyContent: h.Xa.Center,
                             padding: 2
-                        }, l.createElement(p.Ya, {
+                        }, l.createElement(h.Ya, {
                             margin: {
                                 right: .5
                             }
-                        }, l.createElement(p.z, {
+                        }, l.createElement(h.z, {
                             "data-test-selector": g.Cancel,
                             onClick: this.props.onClose,
-                            type: p.F.Hollow
-                        }, Object(s.d)("Cancel", "CreateChanletModal"))), l.createElement(p.Ya, {
+                            type: h.F.Hollow
+                        }, Object(s.d)("Cancel", "CreateChanletModal"))), l.createElement(h.Ya, {
                             margin: {
                                 left: 1
                             }
-                        }, l.createElement(p.z, {
+                        }, l.createElement(h.z, {
                             disabled: this.state.isSaving,
                             "data-test-selector": g.Confirm,
                             onClick: this.onConfirmClick
@@ -466,8 +466,8 @@
                         }))
                     }, t
                 }(l.Component),
-                _ = n("GIun"),
-                w = n("vV5t"),
+                w = n("GIun"),
+                _ = n("vV5t"),
                 M = n("Driw"),
                 G = function(e, t, n) {
                     void 0 === t && (t = 480), void 0 === n && (n = 272);
@@ -477,206 +477,185 @@
             n("0vXd");
             ! function(e) {
                 e.Cancel = "edit-chanlet-group-modal__cancel", e.Update = "edit-chanlet-group-modal__update", e.Value = "edit-chanlet-group-modal__value", e.ValueForm = "edit-chanlet-group-modal__value-form"
-            }(E || (E = {}));
+            }(y || (y = {}));
             var k, O = function(e) {
-                    function t() {
-                        var t = null !== e && e.apply(this, arguments) || this;
-                        return t.state = {
-                            isSaving: !1,
-                            errorMessage: "",
-                            teamSearchTerm: "",
-                            chanletSearchTerm: "",
-                            metadataSearchTerm: "",
-                            selectedChanlets: {},
-                            showChanletDropdown: !1,
-                            chanletGroup: {
-                                __typename: "MultiviewContentAttribute",
-                                id: "",
-                                key: b.a.Group,
-                                name: b.b.Group,
-                                parentID: null,
-                                parentKey: null,
-                                value: "",
-                                valueShortName: "",
-                                imageURL: "",
-                                createdAt: "",
-                                updatedAt: ""
-                            }
-                        }, t.metadataSearchDropdowns = {}, t.renderChanletItem = function(e) {
-                            return l.createElement(p.Fb, {
-                                background: p.r.Base,
+                    function t(t) {
+                        var n = e.call(this, t) || this;
+                        n.metadataSearchDropdowns = {}, n.renderChanletItem = function(e) {
+                            return l.createElement(h.Fb, {
+                                background: h.r.Base,
                                 elevation: 1,
                                 margin: {
                                     bottom: 1
                                 },
-                                alignItems: p.f.Center,
-                                justifyContent: p.Xa.Between,
-                                display: p.X.Flex,
-                                flexDirection: p.Aa.Row,
+                                alignItems: h.f.Center,
+                                justifyContent: h.Xa.Between,
+                                display: h.X.Flex,
+                                flexDirection: h.Aa.Row,
                                 key: e.id
                             }, l.createElement("img", {
                                 className: "edit-chanlet-group-modal__chanlet-row-img",
                                 src: G(e)
-                            }), l.createElement(p.Ya, {
+                            }), l.createElement(h.Ya, {
                                 margin: {
                                     x: 1
                                 }
-                            }, l.createElement(w.a, {
+                            }, l.createElement(_.a, {
                                 buttonText: Object(s.e)("Add Metadata", "EditChanletGroupModal"),
-                                onChange: t.onMetadataSearchChange,
-                                ref: t.setMetadataRef(e)
-                            }, t.renderMetadataDropdownItems(e))), l.createElement(p.Ya, {
+                                onChange: n.onMetadataSearchChange,
+                                ref: n.setMetadataRef(e)
+                            }, n.renderMetadataDropdownItems(e))), l.createElement(h.Ya, {
                                 flexGrow: 1,
                                 padding: {
                                     x: 2
                                 }
-                            }, t.renderChanletMetadata(e)), l.createElement(p.W, {
-                                color: p.O.Alt2
+                            }, n.renderChanletMetadata(e)), l.createElement(h.W, {
+                                color: h.O.Alt2
                             }, e.name), l.createElement(M.a, {
-                                onDelete: t.removeChanlet.bind(t, e)
+                                onDelete: n.removeChanlet.bind(n, e)
                             }))
-                        }, t.onMetadataSearchChange = function(e) {
-                            t.setState({
+                        }, n.onMetadataSearchChange = function(e) {
+                            n.setState({
                                 metadataSearchTerm: e
                             })
-                        }, t.setMetadataRef = function(e) {
-                            return function(n) {
-                                t.metadataSearchDropdowns[e.id || ""] = n
+                        }, n.setMetadataRef = function(e) {
+                            return function(t) {
+                                n.metadataSearchDropdowns[e.id || ""] = t
                             }
-                        }, t.onMetadataChange = function(e, n) {
+                        }, n.onMetadataChange = function(e, t) {
                             var a;
                             if ((e = o.__assign({}, e)).id) {
-                                e.contentAttributes = (e.contentAttributes || []).concat(n);
-                                var r = o.__assign({}, t.state.selectedChanlets, ((a = {})[e.id] = e, a));
-                                t.setState({
+                                e.contentAttributes = (e.contentAttributes || []).concat(t);
+                                var r = o.__assign({}, n.state.selectedChanlets, ((a = {})[e.id] = e, a));
+                                n.setState({
                                     selectedChanlets: r
                                 });
-                                var l = t.metadataSearchDropdowns[e.id || ""];
+                                var l = n.metadataSearchDropdowns[e.id || ""];
                                 l && l.toggle(!1)
                             }
-                        }, t.filterMetadataItems = function(e) {
-                            var n = e.contentAttributes || [];
-                            return t.props.availableContentAttributes.filter(function(e) {
+                        }, n.filterMetadataItems = function(e) {
+                            var t = e.contentAttributes || [];
+                            return n.props.availableContentAttributes.filter(function(e) {
                                 if (e.key !== b.a.Player && e.key !== b.a.Role) return !1;
-                                if (e.key === b.a.Player && t.state.chanletGroup.parentID && e.parentID !== t.state.chanletGroup.parentID) return !1;
-                                if (n.filter(function(t) {
+                                if (e.key === b.a.Player && n.state.chanletGroup.parentID && e.parentID !== n.state.chanletGroup.parentID) return !1;
+                                if (t.filter(function(t) {
                                         return t.id === e.id
                                     }).length > 0) return !1;
-                                var a = t.state.metadataSearchTerm.toLowerCase();
+                                var a = n.state.metadataSearchTerm.toLowerCase();
                                 return Object.keys(e).filter(function(t) {
                                     return "string" == typeof e[t] && (e[t] || "").toLowerCase().indexOf(a) > -1
                                 }).length > 0
                             })
-                        }, t.renderMetadataDropdownItems = function(e) {
-                            return t.filterMetadataItems(e).map(function(n, a) {
-                                return l.createElement(_.a, {
+                        }, n.renderMetadataDropdownItems = function(e) {
+                            return n.filterMetadataItems(e).map(function(t, a) {
+                                return l.createElement(w.a, {
                                     key: a
-                                }, l.createElement(p.Va, {
-                                    onClick: t.onMetadataChange.bind(t, e, n)
-                                }, l.createElement(p.Ya, {
+                                }, l.createElement(h.Va, {
+                                    onClick: n.onMetadataChange.bind(n, e, t)
+                                }, l.createElement(h.Ya, {
                                     padding: 1
-                                }, l.createElement(p.W, null, n.name + " - " + n.value))))
+                                }, l.createElement(h.W, null, t.name + " - " + t.value))))
                             })
-                        }, t.renderChanletMetadata = function(e) {
+                        }, n.renderChanletMetadata = function(e) {
                             if (e && e.contentAttributes) return e.contentAttributes.filter(function(e) {
                                 return e.key !== b.a.Group && e.key !== b.a.Team
-                            }).map(function(n, a) {
+                            }).map(function(t, a) {
                                 return l.createElement(m, {
                                     key: a,
-                                    value: n.value,
-                                    imageURL: n.imageURL,
-                                    onClick: t.removeChanletContentAttribute.bind(t, e, n)
+                                    value: t.value,
+                                    imageURL: t.imageURL,
+                                    onClick: n.removeChanletContentAttribute.bind(n, e, t)
                                 })
                             })
-                        }, t.removeChanlet = function(e) {
-                            var n = o.__assign({}, t.state.selectedChanlets);
-                            delete n[e.id || ""], t.setState({
-                                selectedChanlets: n
+                        }, n.removeChanlet = function(e) {
+                            var t = o.__assign({}, n.state.selectedChanlets);
+                            delete t[e.id || ""], n.setState({
+                                selectedChanlets: t
                             })
-                        }, t.removeChanletContentAttribute = function(e, n) {
+                        }, n.removeChanletContentAttribute = function(e, t) {
                             var a;
                             if ((e = o.__assign({}, e)).id) {
                                 e.contentAttributes = (e.contentAttributes || []).filter(function(e) {
-                                    return e.id !== n.id
+                                    return e.id !== t.id
                                 });
-                                var r = o.__assign({}, t.state.selectedChanlets, ((a = {})[e.id] = e, a));
-                                t.setState({
+                                var r = o.__assign({}, n.state.selectedChanlets, ((a = {})[e.id] = e, a));
+                                n.setState({
                                     selectedChanlets: r
                                 })
                             }
-                        }, t.setTeamSearchRef = function(e) {
-                            t.teamSearch = e
-                        }, t.onTeamInputChange = function(e) {
-                            t.setState({
+                        }, n.setTeamSearchRef = function(e) {
+                            n.teamSearch = e
+                        }, n.onTeamInputChange = function(e) {
+                            n.setState({
                                 teamSearchTerm: e
                             })
-                        }, t.teamDropdownDisabled = function() {
-                            return !t.props.availableContentAttributes.filter(t.filteredTeams).length
-                        }, t.onTeamDropdownChoose = function(e) {
-                            for (var n = o.__assign({}, t.state.chanletGroup, {
+                        }, n.teamDropdownDisabled = function() {
+                            return !n.props.availableContentAttributes.filter(n.filteredTeams).length
+                        }, n.onTeamDropdownChoose = function(e) {
+                            for (var t = o.__assign({}, n.state.chanletGroup, {
                                     parentKey: e.key,
                                     parentID: e.id
-                                }), a = o.__assign({}, t.state.selectedChanlets), r = 0, l = Object.keys(a); r < l.length; r++) {
+                                }), a = o.__assign({}, n.state.selectedChanlets), r = 0, l = Object.keys(a); r < l.length; r++) {
                                 var i = l[r],
                                     s = o.__assign({}, a[i]);
                                 s.contentAttributes = (s.contentAttributes || []).filter(function(e) {
                                     return e.key !== b.a.Player
                                 }), a[s.id || ""] = s
                             }
-                            t.setState({
-                                chanletGroup: n,
+                            n.setState({
+                                chanletGroup: t,
                                 selectedChanlets: a
-                            }), t.teamSearch.toggle(!1)
-                        }, t.renderChanletGroupTeam = function() {
-                            var e = t.state.chanletGroup,
-                                n = e.parentID,
+                            }), n.teamSearch.toggle(!1)
+                        }, n.renderChanletGroupTeam = function() {
+                            var e = n.state.chanletGroup,
+                                t = e.parentID,
                                 a = e.parentKey,
-                                r = t.props.availableContentAttributes.find(function(e) {
-                                    return e.id === n && e.key === a
+                                r = n.props.availableContentAttributes.find(function(e) {
+                                    return e.id === t && e.key === a
                                 });
                             if (r) return l.createElement(m, {
                                 key: r.key,
                                 value: r.value,
                                 imageURL: r.imageURL,
-                                onClick: t.removeChanletGroupTeam
+                                onClick: n.removeChanletGroupTeam
                             })
-                        }, t.removeChanletGroupTeam = function() {
-                            var e = o.__assign({}, t.state.chanletGroup, {
+                        }, n.removeChanletGroupTeam = function() {
+                            var e = o.__assign({}, n.state.chanletGroup, {
                                 parentKey: null,
                                 parentID: null
                             });
-                            t.setState({
+                            n.setState({
                                 chanletGroup: e
                             })
-                        }, t.filteredTeams = function(e) {
-                            return e.key === b.a.Team && e.value.toLowerCase().indexOf(t.state.teamSearchTerm.toLowerCase()) > -1
-                        }, t.renderTeamContentAttributes = function() {
-                            return t.props.availableContentAttributes.filter(t.filteredTeams).map(function(e, n) {
-                                return l.createElement(_.a, {
-                                    key: n
-                                }, l.createElement(p.Va, {
-                                    onClick: t.onTeamDropdownChoose.bind(t, e)
-                                }, l.createElement(p.Ya, {
+                        }, n.filteredTeams = function(e) {
+                            return e.key === b.a.Team && e.value.toLowerCase().indexOf(n.state.teamSearchTerm.toLowerCase()) > -1
+                        }, n.renderTeamContentAttributes = function() {
+                            return n.props.availableContentAttributes.filter(n.filteredTeams).map(function(e, t) {
+                                return l.createElement(w.a, {
+                                    key: t
+                                }, l.createElement(h.Va, {
+                                    onClick: n.onTeamDropdownChoose.bind(n, e)
+                                }, l.createElement(h.Ya, {
                                     padding: 1
-                                }, l.createElement(p.W, null, e.name + " - " + e.value))))
+                                }, l.createElement(h.W, null, e.name + " - " + e.value))))
                             })
-                        }, t.setChanletSearchRef = function(e) {
-                            t.chanletSearch = e
-                        }, t.onChanletInputChange = function(e) {
-                            t.setState({
+                        }, n.setChanletSearchRef = function(e) {
+                            n.chanletSearch = e
+                        }, n.onChanletInputChange = function(e) {
+                            n.setState({
                                 chanletSearchTerm: e
                             })
-                        }, t.onChanletDropdownChoose = function(e) {
-                            var n;
-                            (e = o.__assign({}, e)).contentAttributes = (e.contentAttributes || []).concat(t.state.chanletGroup), t.setState({
+                        }, n.onChanletDropdownChoose = function(e) {
+                            var t;
+                            (e = o.__assign({}, e)).contentAttributes = (e.contentAttributes || []).concat(n.state.chanletGroup), n.setState({
                                 showChanletDropdown: !1,
-                                selectedChanlets: o.__assign({}, t.state.selectedChanlets, (n = {}, n[e.id || ""] = e, n))
-                            }), t.chanletSearch.toggle(!1)
-                        }, t.filterDropdownChanlets = function(e) {
-                            var n = t.state,
-                                a = n.chanletSearchTerm,
-                                r = n.selectedChanlets,
-                                o = n.chanletGroup;
+                                selectedChanlets: o.__assign({}, n.state.selectedChanlets, (t = {}, t[e.id || ""] = e, t))
+                            }), n.chanletSearch.toggle(!1)
+                        }, n.filterDropdownChanlets = function(e) {
+                            var t = n.state,
+                                a = t.chanletSearchTerm,
+                                r = t.selectedChanlets,
+                                o = t.chanletGroup;
                             if (r[e.id || ""]) return !1;
                             var l = e.name || "",
                                 i = e.contentAttributes || [];
@@ -687,28 +666,28 @@
                                     return "string" == typeof e[t] && (e[t] || "").toLowerCase().indexOf(a) > -1
                                 }).length > 0
                             }).length > 0)
-                        }, t.chanletDropdownDisabled = function() {
-                            return !t.props.chanlets.filter(t.filterDropdownChanlets).length
-                        }, t.renderDropdownChanlets = function() {
-                            return t.props.chanlets.filter(t.filterDropdownChanlets).map(function(e, n) {
-                                return l.createElement(_.a, {
-                                    key: n
-                                }, l.createElement(p.Va, {
-                                    onClick: t.onChanletDropdownChoose.bind(t, e)
-                                }, l.createElement(p.Ya, {
+                        }, n.chanletDropdownDisabled = function() {
+                            return !n.props.chanlets.filter(n.filterDropdownChanlets).length
+                        }, n.renderDropdownChanlets = function() {
+                            return n.props.chanlets.filter(n.filterDropdownChanlets).map(function(e, t) {
+                                return l.createElement(w.a, {
+                                    key: t
+                                }, l.createElement(h.Va, {
+                                    onClick: n.onChanletDropdownChoose.bind(n, e)
+                                }, l.createElement(h.Ya, {
                                     padding: 1
-                                }, l.createElement(p.W, null, e.name))))
+                                }, l.createElement(h.W, null, e.name))))
                             })
-                        }, t.onChanletGroupValueChange = function(e) {
-                            var n = e.target.value,
-                                a = o.__assign({}, t.state.chanletGroup, {
-                                    value: n
+                        }, n.onChanletGroupValueChange = function(e) {
+                            var t = e.target.value,
+                                a = o.__assign({}, n.state.chanletGroup, {
+                                    value: t
                                 });
-                            t.setState({
+                            n.setState({
                                 chanletGroup: a
                             })
-                        }, t.updateChanletGroup = function() {
-                            return o.__awaiter(t, void 0, void 0, function() {
+                        }, n.updateChanletGroup = function() {
+                            return o.__awaiter(n, void 0, void 0, function() {
                                 var e, t;
                                 return o.__generator(this, function(n) {
                                     switch (n.label) {
@@ -731,20 +710,24 @@
                                     }
                                 })
                             })
-                        }, t
+                        };
+                        var a = {};
+                        return t.chanlets.forEach(function(e) {
+                            null !== e.id && e.contentAttributes && e.contentAttributes.filter(function(e) {
+                                return e.id === n.props.chanletGroup.id
+                            }).length > 0 && (a[e.id] = e)
+                        }), n.state = {
+                            isSaving: !1,
+                            errorMessage: "",
+                            teamSearchTerm: "",
+                            chanletSearchTerm: "",
+                            metadataSearchTerm: "",
+                            showChanletDropdown: !1,
+                            selectedChanlets: a,
+                            chanletGroup: t.chanletGroup
+                        }, n
                     }
-                    return o.__extends(t, e), t.prototype.componentDidMount = function() {
-                        var e = this,
-                            t = {};
-                        this.props.chanlets.forEach(function(n) {
-                            null !== n.id && n.contentAttributes && n.contentAttributes.filter(function(t) {
-                                return t.id === e.props.chanletGroup.id
-                            }).length > 0 && (t[n.id] = n)
-                        }), this.setState({
-                            chanletGroup: this.props.chanletGroup,
-                            selectedChanlets: t
-                        })
-                    }, t.prototype.render = function() {
+                    return o.__extends(t, e), t.prototype.render = function() {
                         var e = this.state,
                             t = e.chanletGroup,
                             n = e.selectedChanlets,
@@ -753,112 +736,112 @@
                             });
                         return l.createElement(f.a, {
                             isOpen: !0
-                        }, l.createElement(C.b, null, l.createElement(p.Ya, {
+                        }, l.createElement(C.b, null, l.createElement(h.Ya, {
                             padding: {
                                 right: 2
                             }
-                        }, l.createElement(p.Fb, {
-                            display: p.X.Flex,
+                        }, l.createElement(h.Fb, {
+                            display: h.X.Flex,
                             padding: {
                                 bottom: 2
                             },
                             margin: {
                                 bottom: 2
                             },
-                            justifyContent: p.Xa.Between
-                        }, l.createElement(p.Ya, {
+                            justifyContent: h.Xa.Between
+                        }, l.createElement(h.Ya, {
                             flexGrow: 0,
                             flexShrink: 1
-                        }, l.createElement(p.W, {
-                            type: p.Wb.H3
-                        }, Object(s.e)("Edit Metadata Group", "EditChanletGroupModal"))), l.createElement(p.Ya, {
+                        }, l.createElement(h.W, {
+                            type: h.Wb.H3
+                        }, Object(s.e)("Edit Metadata Group", "EditChanletGroupModal"))), l.createElement(h.Ya, {
                             flexGrow: 0,
                             flexShrink: 0
-                        }, l.createElement(p.z, {
+                        }, l.createElement(h.z, {
                             onClick: this.props.onClose,
-                            "data-test-selector": E.Cancel,
-                            type: p.F.Text
-                        }, Object(s.d)("Cancel", "EditChanletGroupModal")), l.createElement(p.Ya, {
+                            "data-test-selector": y.Cancel,
+                            type: h.F.Text
+                        }, Object(s.d)("Cancel", "EditChanletGroupModal")), l.createElement(h.Ya, {
                             margin: {
                                 left: 1
                             },
-                            display: p.X.InlineBlock
-                        }, l.createElement(p.z, {
+                            display: h.X.InlineBlock
+                        }, l.createElement(h.z, {
                             onClick: this.updateChanletGroup,
-                            "data-test-selector": E.Update,
+                            "data-test-selector": y.Update,
                             disabled: !this.canSave()
-                        }, Object(s.d)("Update", "EditChanletGroupModal"))))), l.createElement(p.Ya, {
+                        }, Object(s.d)("Update", "EditChanletGroupModal"))))), l.createElement(h.Ya, {
                             margin: {
                                 y: 1
                             }
-                        }, this.state.errorMessage && l.createElement(p.Da, {
+                        }, this.state.errorMessage && l.createElement(h.Da, {
                             errorMessage: this.state.errorMessage
-                        })), l.createElement(p.Ya, {
+                        })), l.createElement(h.Ya, {
                             margin: {
                                 bottom: 2
                             }
-                        }, l.createElement(p.Ea, {
+                        }, l.createElement(h.Ea, {
                             id: "chanlet-group-team",
                             label: Object(s.e)("Which Team is streaming on this group of Chanlets?", "EditChanletGroupModal")
-                        }, l.createElement(p.Fb, {
-                            background: p.r.Base,
+                        }, l.createElement(h.Fb, {
+                            background: h.r.Base,
                             elevation: 2,
                             padding: 1,
-                            display: p.X.Flex,
-                            flexDirection: p.Aa.Row,
-                            alignItems: p.f.Center
-                        }, l.createElement(w.a, {
+                            display: h.X.Flex,
+                            flexDirection: h.Aa.Row,
+                            alignItems: h.f.Center
+                        }, l.createElement(_.a, {
                             onChange: this.onTeamInputChange,
                             disabled: this.teamDropdownDisabled(),
                             buttonText: Object(s.e)("Assign Team", "EditChanletGroupModal"),
                             ref: this.setTeamSearchRef
-                        }, this.renderTeamContentAttributes()), l.createElement(p.Ya, {
+                        }, this.renderTeamContentAttributes()), l.createElement(h.Ya, {
                             margin: {
                                 x: 1
                             },
-                            display: p.X.Flex,
-                            flexDirection: p.Aa.Row,
-                            alignItems: p.f.Center
-                        }, this.renderChanletGroupTeam())))), l.createElement(p.Ya, {
+                            display: h.X.Flex,
+                            flexDirection: h.Aa.Row,
+                            alignItems: h.f.Center
+                        }, this.renderChanletGroupTeam())))), l.createElement(h.Ya, {
                             margin: {
                                 bottom: 2
                             }
-                        }, l.createElement(p.Fb, {
+                        }, l.createElement(h.Fb, {
                             margin: {
                                 bottom: 2
                             },
                             padding: {
                                 bottom: 2
                             },
-                            display: p.X.Flex,
-                            flexDirection: p.Aa.Row,
-                            justifyContent: p.Xa.Between,
+                            display: h.X.Flex,
+                            flexDirection: h.Aa.Row,
+                            justifyContent: h.Xa.Between,
                             borderBottom: !0
-                        }, l.createElement(p.Ya, null, l.createElement(p.W, {
+                        }, l.createElement(h.Ya, null, l.createElement(h.W, {
                             bold: !0
-                        }, Object(s.e)("Group Chanlets", "EditChanletGroupModal"))), l.createElement(w.a, {
+                        }, Object(s.e)("Group Chanlets", "EditChanletGroupModal"))), l.createElement(_.a, {
                             buttonText: Object(s.e)("Add Chanlet", "EditChanletGroupModal"),
-                            balloonDirection: p.v.BottomRight,
+                            balloonDirection: h.v.BottomRight,
                             disabled: this.chanletDropdownDisabled(),
                             onChange: this.onChanletInputChange,
                             ref: this.setChanletSearchRef
-                        }, this.renderDropdownChanlets())), !a.length && l.createElement(p.W, {
+                        }, this.renderDropdownChanlets())), !a.length && l.createElement(h.W, {
                             italic: !0
-                        }, Object(s.e)("No Chanlets", "EditChanletGroupModal")), a.map(this.renderChanletItem)), l.createElement(p.Fb, {
-                            background: p.r.Alt,
+                        }, Object(s.e)("No Chanlets", "EditChanletGroupModal")), a.map(this.renderChanletItem)), l.createElement(h.Fb, {
+                            background: h.r.Alt,
                             padding: 2,
                             margin: {
                                 bottom: 2
                             }
-                        }, l.createElement(p.Ea, {
+                        }, l.createElement(h.Ea, {
                             id: "group-name",
-                            "data-test-selector": E.ValueForm,
+                            "data-test-selector": y.ValueForm,
                             label: Object(s.e)("Group Name", "EditChanletGroupModal"),
                             error: !this.validChanletGroupValue(),
                             errorMessage: Object(s.e)("Invalid Chanlet Group Name", "EditChanletGroupModal")
-                        }, l.createElement(p.Sa, {
-                            type: p.Ua.Text,
-                            "data-test-selector": E.Value,
+                        }, l.createElement(h.Sa, {
+                            type: h.Ua.Text,
+                            "data-test-selector": y.Value,
                             onChange: this.onChanletGroupValueChange,
                             value: t.value
                         }))))))
@@ -874,121 +857,107 @@
                 e.Cancel = "edit-chanlet-modal__cancel", e.Update = "edit-chanlet-modal__update", e.Title = "edit-chanlet-modal__title", e.Copy = "edit-chanlet-modal__copy"
             }(k || (k = {}));
             var I, F = function(e) {
-                function t() {
-                    var t = null !== e && e.apply(this, arguments) || this;
-                    return t.state = {
-                        isSaving: !1,
-                        searchTerm: "",
-                        showStreamKey: !1,
-                        showStreamKeyModal: !1,
-                        streamKeyCopied: !1,
-                        chanlet: {
-                            __typename: "Channel",
-                            id: null,
-                            name: null,
-                            stream: null,
-                            chanletStreamKey: null,
-                            contentAttributes: []
-                        }
-                    }, t.setSearchRef = function(e) {
-                        t.contentAttributeSearch = e
-                    }, t.onInputChange = function(e) {
-                        t.setState({
+                function t(t) {
+                    var n = e.call(this, t) || this;
+                    return n.setSearchRef = function(e) {
+                        n.contentAttributeSearch = e
+                    }, n.onInputChange = function(e) {
+                        n.setState({
                             searchTerm: e
                         })
-                    }, t.onDropdownChoose = function(e) {
-                        var n = o.__assign({}, t.state.chanlet);
-                        n.contentAttributes || (n.contentAttributes = []), n.contentAttributes = n.contentAttributes.concat([e]), t.setState({
-                            chanlet: n
-                        }), t.contentAttributeSearch.toggle(!1)
-                    }, t.renderChanletContentAttributes = function() {
-                        if (t.state.chanlet && t.state.chanlet.contentAttributes) return t.state.chanlet.contentAttributes.filter(function(e) {
+                    }, n.onDropdownChoose = function(e) {
+                        var t = o.__assign({}, n.state.chanlet);
+                        t.contentAttributes || (t.contentAttributes = []), t.contentAttributes = t.contentAttributes.concat([e]), n.setState({
+                            chanlet: t
+                        }), n.contentAttributeSearch.toggle(!1)
+                    }, n.renderChanletContentAttributes = function() {
+                        if (n.state.chanlet && n.state.chanlet.contentAttributes) return n.state.chanlet.contentAttributes.filter(function(e) {
                             return e.key !== b.a.Group && e.key !== b.a.Team
-                        }).map(function(e, n) {
+                        }).map(function(e, t) {
                             return l.createElement(m, {
-                                key: n,
+                                key: t,
                                 value: e.value,
                                 imageURL: e.imageURL,
-                                onClick: t.removeChanletContentAttribute.bind(t, e)
+                                onClick: n.removeChanletContentAttribute.bind(n, e)
                             })
                         })
-                    }, t.removeChanletContentAttribute = function(e) {
-                        if (t.state.chanlet && t.state.chanlet.contentAttributes) {
-                            var n = t.state.chanlet.contentAttributes.slice(),
-                                a = t.state.chanlet.contentAttributes.findIndex(function(t) {
+                    }, n.removeChanletContentAttribute = function(e) {
+                        if (n.state.chanlet && n.state.chanlet.contentAttributes) {
+                            var t = n.state.chanlet.contentAttributes.slice(),
+                                a = n.state.chanlet.contentAttributes.findIndex(function(t) {
                                     return t.id === e.id
                                 });
                             if (!(a < 0)) {
-                                n.splice(a, 1);
-                                var r = o.__assign({}, t.state.chanlet, {
-                                    contentAttributes: n
+                                t.splice(a, 1);
+                                var r = o.__assign({}, n.state.chanlet, {
+                                    contentAttributes: t
                                 });
-                                t.setState({
+                                n.setState({
                                     chanlet: r
                                 })
                             }
                         }
-                    }, t.filteredContentAttributes = function(e) {
+                    }, n.filteredContentAttributes = function(e) {
                         if (e.key === b.a.Group || e.key === b.a.Team) return !1;
-                        var n = t.state.searchTerm.toLowerCase(),
-                            a = Object.keys(e).filter(function(t) {
-                                return "string" == typeof e[t] && (e[t] || "").toLowerCase().indexOf(n) > -1
+                        var t = n.state.searchTerm.toLowerCase(),
+                            a = Object.keys(e).filter(function(n) {
+                                return "string" == typeof e[n] && (e[n] || "").toLowerCase().indexOf(t) > -1
                             }).length > 0;
-                        return t.state.chanlet.contentAttributes ? a && !t.state.chanlet.contentAttributes.map(function(e) {
+                        return n.state.chanlet.contentAttributes ? a && !n.state.chanlet.contentAttributes.map(function(e) {
                             return e.id
                         }).includes(e.id) : a
-                    }, t.renderAvailableContentAttributes = function() {
-                        return t.props.availableContentAttributes.filter(t.filteredContentAttributes).map(function(e, n) {
-                            return l.createElement(_.a, {
-                                key: n
-                            }, l.createElement(p.Va, {
-                                onClick: t.onDropdownChoose.bind(t, e)
-                            }, l.createElement(p.Ya, {
+                    }, n.renderAvailableContentAttributes = function() {
+                        return n.props.availableContentAttributes.filter(n.filteredContentAttributes).map(function(e, t) {
+                            return l.createElement(w.a, {
+                                key: t
+                            }, l.createElement(h.Va, {
+                                onClick: n.onDropdownChoose.bind(n, e)
+                            }, l.createElement(h.Ya, {
                                 padding: 1
-                            }, l.createElement(p.W, null, e.name + " - " + e.value))))
+                            }, l.createElement(h.W, null, e.name + " - " + e.value))))
                         })
-                    }, t.setKeyInputRef = function(e) {
-                        return t.keyInput = e
-                    }, t.handleCopyToClipboard = function() {
-                        t.copyToClipboard(t.keyInput)
-                    }, t.copyToClipboard = function(e) {
-                        e && (Object(x.a)(e.value) && t.setState({
+                    }, n.setKeyInputRef = function(e) {
+                        return n.keyInput = e
+                    }, n.handleCopyToClipboard = function() {
+                        n.copyToClipboard(n.keyInput)
+                    }, n.copyToClipboard = function(e) {
+                        e && (Object(x.a)(e.value) && n.setState({
                             streamKeyCopied: !0
                         }))
-                    }, t.hideStreamKeyLink = function() {
-                        return l.createElement(p.U, {
-                            onClick: t.hideStreamKey
+                    }, n.hideStreamKeyLink = function() {
+                        return l.createElement(h.U, {
+                            onClick: n.hideStreamKey
                         }, Object(s.e)("Hide", "EditChanletModal"))
-                    }, t.showStreamKeyLink = function() {
-                        return t.state.showStreamKeyModal ? l.createElement(A.a, {
-                            onClose: t.hideStreamKey,
-                            showStreamKey: t.showStreamKey
-                        }) : l.createElement(p.U, {
-                            onClick: t.showStreamKeyModal
+                    }, n.showStreamKeyLink = function() {
+                        return n.state.showStreamKeyModal ? l.createElement(A.a, {
+                            onClose: n.hideStreamKey,
+                            showStreamKey: n.showStreamKey
+                        }) : l.createElement(h.U, {
+                            onClick: n.showStreamKeyModal
                         }, Object(s.e)("Show", "EditChanletModal"))
-                    }, t.showStreamKey = function() {
-                        t.setState({
+                    }, n.showStreamKey = function() {
+                        n.setState({
                             showStreamKey: !0
                         })
-                    }, t.showStreamKeyModal = function() {
-                        t.setState({
+                    }, n.showStreamKeyModal = function() {
+                        n.setState({
                             showStreamKeyModal: !0
                         })
-                    }, t.hideStreamKey = function() {
-                        t.setState({
+                    }, n.hideStreamKey = function() {
+                        n.setState({
                             showStreamKey: !1,
                             showStreamKeyModal: !1
                         })
-                    }, t.onChanletNameChange = function(e) {
-                        var n = e.target.value,
-                            a = o.__assign({}, t.state.chanlet, {
-                                name: n
+                    }, n.onChanletNameChange = function(e) {
+                        var t = e.target.value,
+                            a = o.__assign({}, n.state.chanlet, {
+                                name: t
                             });
-                        t.setState({
+                        n.setState({
                             chanlet: a
                         })
-                    }, t.updateChanlet = function() {
-                        return o.__awaiter(t, void 0, void 0, function() {
+                    }, n.updateChanlet = function() {
+                        return o.__awaiter(n, void 0, void 0, function() {
                             var e;
                             return o.__generator(this, function(t) {
                                 switch (t.label) {
@@ -1005,141 +974,144 @@
                                 }
                             })
                         })
-                    }, t
+                    }, n.state = {
+                        isSaving: !1,
+                        searchTerm: "",
+                        showStreamKey: !1,
+                        showStreamKeyModal: !1,
+                        streamKeyCopied: !1,
+                        chanlet: t.chanlet
+                    }, n
                 }
-                return o.__extends(t, e), t.prototype.componentDidMount = function() {
-                    this.setState({
-                        chanlet: this.props.chanlet
-                    })
-                }, t.prototype.render = function() {
+                return o.__extends(t, e), t.prototype.render = function() {
                     return l.createElement(f.a, {
                         isOpen: !0
-                    }, l.createElement(C.b, null, l.createElement(p.Ya, {
+                    }, l.createElement(C.b, null, l.createElement(h.Ya, {
                         padding: {
                             right: 2
                         }
-                    }, l.createElement(p.Fb, {
-                        display: p.X.Flex,
+                    }, l.createElement(h.Fb, {
+                        display: h.X.Flex,
                         padding: {
                             bottom: 2
                         },
                         margin: {
                             bottom: 2
                         },
-                        justifyContent: p.Xa.Between
-                    }, l.createElement(p.Ya, {
+                        justifyContent: h.Xa.Between
+                    }, l.createElement(h.Ya, {
                         flexGrow: 0,
                         flexShrink: 1
-                    }, l.createElement(p.W, {
-                        type: p.Wb.H3
-                    }, Object(s.e)("Edit Chanlet Properties", "EditChanletModal"))), l.createElement(p.Ya, {
+                    }, l.createElement(h.W, {
+                        type: h.Wb.H3
+                    }, Object(s.e)("Edit Chanlet Properties", "EditChanletModal"))), l.createElement(h.Ya, {
                         flexGrow: 0,
                         flexShrink: 0
-                    }, l.createElement(p.z, {
+                    }, l.createElement(h.z, {
                         "data-test-selector": k.Cancel,
                         onClick: this.props.onClose,
-                        type: p.F.Text
-                    }, Object(s.e)("Cancel", "EditChanletModal")), l.createElement(p.Ya, {
+                        type: h.F.Text
+                    }, Object(s.e)("Cancel", "EditChanletModal")), l.createElement(h.Ya, {
                         margin: {
                             left: 1
                         },
-                        display: p.X.InlineBlock
-                    }, l.createElement(p.z, {
+                        display: h.X.InlineBlock
+                    }, l.createElement(h.z, {
                         "data-test-selector": k.Update,
                         onClick: this.updateChanlet,
                         disabled: !this.canSave()
-                    }, Object(s.e)("Update", "EditChanletModal"))))), l.createElement(p.Ja, {
-                        gutterSize: p.Ka.Large
-                    }, l.createElement(p.P, {
+                    }, Object(s.e)("Update", "EditChanletModal"))))), l.createElement(h.Ja, {
+                        gutterSize: h.Ka.Large
+                    }, l.createElement(h.P, {
                         cols: {
                             default: 12,
                             md: 6,
                             lg: 5
                         }
-                    }, l.createElement(p.Ya, null, l.createElement(p.W, {
+                    }, l.createElement(h.Ya, null, l.createElement(h.W, {
                         bold: !0
-                    }, Object(s.e)("Chanlet Preview", "EditChanletPreview")), l.createElement(p.Fb, {
+                    }, Object(s.e)("Chanlet Preview", "EditChanletPreview")), l.createElement(h.Fb, {
                         padding: .5,
                         margin: {
                             y: 1
                         },
                         border: !0,
-                        borderRadius: p.x.Small
+                        borderRadius: h.x.Small
                     }, l.createElement("img", {
                         src: G(this.props.chanlet)
-                    })))), l.createElement(p.P, {
+                    })))), l.createElement(h.P, {
                         cols: {
                             default: 12,
                             md: 6,
                             lg: 7
                         }
-                    }, l.createElement(p.Ya, {
+                    }, l.createElement(h.Ya, {
                         margin: {
                             bottom: 2
                         }
-                    }, l.createElement(p.Ea, {
+                    }, l.createElement(h.Ea, {
                         id: "chanlet-metadata",
                         label: Object(s.e)("What’s streaming on this Chanlet?", "EditChanletModal")
-                    }, l.createElement(p.Fb, {
-                        background: p.r.Base,
+                    }, l.createElement(h.Fb, {
+                        background: h.r.Base,
                         elevation: 2,
                         padding: 1
-                    }, l.createElement(w.a, {
+                    }, l.createElement(_.a, {
                         buttonText: Object(s.e)("Add Metadata", "EditChanletModal"),
                         onChange: this.onInputChange,
                         ref: this.setSearchRef
-                    }, this.renderAvailableContentAttributes()), l.createElement(p.Fb, {
+                    }, this.renderAvailableContentAttributes()), l.createElement(h.Fb, {
                         padding: {
                             y: 1
                         },
-                        display: p.X.Flex,
-                        flexDirection: p.Aa.Row,
-                        alignItems: p.f.Center
-                    }, this.renderChanletContentAttributes())))), l.createElement(p.Ya, {
+                        display: h.X.Flex,
+                        flexDirection: h.Aa.Row,
+                        alignItems: h.f.Center
+                    }, this.renderChanletContentAttributes())))), l.createElement(h.Ya, {
                         margin: {
                             bottom: 2
                         }
-                    }, l.createElement(p.Ea, {
+                    }, l.createElement(h.Ea, {
                         id: "chanlet-title",
                         "data-test-selector": k.Title,
                         label: Object(s.e)("Chanlet Title", "EditChanletModal"),
                         error: !this.validChanletName(),
                         errorMessage: Object(s.e)("Invalid Chanlet Name", "EditChanletModal")
-                    }, l.createElement(p.Sa, {
-                        type: p.Ua.Text,
+                    }, l.createElement(h.Sa, {
+                        type: h.Ua.Text,
                         onChange: this.onChanletNameChange,
                         value: this.state.chanlet.name || ""
-                    }))), l.createElement(p.Ya, {
+                    }))), l.createElement(h.Ya, {
                         margin: {
                             bottom: 2
                         }
                     }, this.renderStreamKey()))))))
                 }, t.prototype.renderStreamKey = function() {
                     var e = this.state.streamKeyCopied;
-                    return l.createElement(p.Ea, {
+                    return l.createElement(h.Ea, {
                         label: Object(s.e)("Chanlet Stream key", "EditChanletModal")
-                    }, l.createElement(p.Ya, {
-                        display: p.X.Flex
-                    }, l.createElement(p.Ya, {
+                    }, l.createElement(h.Ya, {
+                        display: h.X.Flex
+                    }, l.createElement(h.Ya, {
                         flexGrow: 1,
                         padding: {
                             right: .5
                         }
-                    }, l.createElement(p.Sa, {
+                    }, l.createElement(h.Sa, {
                         readOnly: !0,
-                        type: this.state.showStreamKey ? p.Ua.Text : p.Ua.Password,
+                        type: this.state.showStreamKey ? h.Ua.Text : h.Ua.Password,
                         value: this.props.chanlet.chanletStreamKey || "",
                         refDelegate: this.setKeyInputRef
-                    })), l.createElement(p.Ya, {
+                    })), l.createElement(h.Ya, {
                         padding: {
                             left: 1
                         }
-                    }, l.createElement(p.z, {
+                    }, l.createElement(h.z, {
                         ariaLabel: Object(s.e)("Copy Stream Key", "EditChanletModal"),
                         "data-test-selector": k.Copy,
                         disabled: e,
                         onClick: this.handleCopyToClipboard
-                    }, e ? Object(s.e)("Copied", "EditChanletModal") : Object(s.e)("Copy", "EditChanletModal")))), l.createElement(p.Ya, {
+                    }, e ? Object(s.e)("Copied", "EditChanletModal") : Object(s.e)("Copy", "EditChanletModal")))), l.createElement(h.Ya, {
                         padding: {
                             top: .5
                         }
@@ -1154,7 +1126,7 @@
             ! function(e) {
                 e.ChanletItem = "chanlets-tab__chanlet-item", e.GroupItem = "chanlets-tab__group-item", e.EmptyList = "chanlets-tab__empty-list", e.AddGroup = "chanlets-tab__add-group"
             }(I || (I = {}));
-            var D = function(e) {
+            var j = function(e) {
                     function t() {
                         var t = null !== e && e.apply(this, arguments) || this;
                         return t.state = {
@@ -1172,31 +1144,39 @@
                                 }).filter(function(e) {
                                     return !!e
                                 }).length;
-                            return l.createElement(p.Fb, {
+                            return l.createElement(h.Fb, {
                                 "data-test-selector": I.GroupItem,
-                                background: p.r.Base,
+                                background: h.r.Base,
                                 elevation: 1,
-                                alignItems: p.f.Center,
-                                justifyContent: p.Xa.Between,
-                                display: p.X.Flex,
-                                flexDirection: p.Aa.Row,
+                                alignItems: h.f.Center,
+                                justifyContent: h.Xa.Between,
+                                display: h.X.Flex,
+                                flexDirection: h.Aa.Row,
                                 margin: {
                                     bottom: 1
                                 },
                                 key: n
-                            }, l.createElement(p.Ya, {
-                                flexDirection: p.Aa.Column,
-                                padding: 2,
+                            }, l.createElement(h.Ya, {
+                                padding: 2
+                            }, a && a.imageURL && l.createElement(h.q, {
+                                src: a.imageURL,
+                                alt: a.value,
+                                size: 30
+                            })), l.createElement(h.Ya, {
+                                flexDirection: h.Aa.Column,
+                                padding: {
+                                    y: 2
+                                },
                                 flexGrow: 1
-                            }, l.createElement(p.Ya, {
+                            }, l.createElement(h.Ya, {
                                 margin: {
                                     bottom: .5
                                 }
-                            }, l.createElement(p.W, {
+                            }, l.createElement(h.W, {
                                 bold: !0,
-                                fontSize: p.Ca.Size5
-                            }, a && a.value || Object(s.e)("No Team", "ChanletsTab"))), l.createElement(p.W, {
-                                color: p.O.Alt2
+                                fontSize: h.Ca.Size5
+                            }, a && a.value || Object(s.e)("No Team", "ChanletsTab"))), l.createElement(h.W, {
+                                color: h.O.Alt2
                             }, e.value, " ", "-", " ", Object(s.e)("{streamCount, plural, one {{streamCount} stream} other {{streamCount} streams}}", {
                                 streamCount: r
                             }, "ChanletsTab"))), l.createElement(M.a, {
@@ -1216,34 +1196,34 @@
                                     imageURL: e.imageURL
                                 })
                             });
-                            return l.createElement(p.Fb, {
+                            return l.createElement(h.Fb, {
                                 "data-test-selector": I.ChanletItem,
-                                background: p.r.Base,
+                                background: h.r.Base,
                                 elevation: 1,
                                 margin: {
                                     bottom: 1
                                 },
-                                alignItems: p.f.Center,
-                                justifyContent: p.Xa.Between,
-                                display: p.X.Flex,
-                                flexDirection: p.Aa.Row,
+                                alignItems: h.f.Center,
+                                justifyContent: h.Xa.Between,
+                                display: h.X.Flex,
+                                flexDirection: h.Aa.Row,
                                 key: e.id
                             }, l.createElement("img", {
                                 className: "chanlets-tab__chanlet-row-img",
                                 src: G(e)
-                            }), l.createElement(p.Ya, {
-                                flexDirection: p.Aa.Column,
+                            }), l.createElement(h.Ya, {
+                                flexDirection: h.Aa.Column,
                                 padding: 1,
                                 flexGrow: 1
-                            }, l.createElement(p.Ya, {
+                            }, l.createElement(h.Ya, {
                                 margin: {
                                     bottom: .5
                                 }
-                            }, n, !n.length && l.createElement(p.W, {
+                            }, n, !n.length && l.createElement(h.W, {
                                 bold: !0,
-                                fontSize: p.Ca.Size5
-                            }, Object(s.e)("No Metadata", "ChanletsTab"))), l.createElement(p.W, {
-                                color: p.O.Alt2
+                                fontSize: h.Ca.Size5
+                            }, Object(s.e)("No Metadata", "ChanletsTab"))), l.createElement(h.W, {
+                                color: h.O.Alt2
                             }, e.name)), l.createElement(M.a, {
                                 onEdit: t.editChanletModal.bind(t, e)
                             }))
@@ -1288,8 +1268,8 @@
                         }, t.updateChanletGroup = function(e, n) {
                             return o.__awaiter(t, void 0, void 0, function() {
                                 var t, a, r, l, i, s, c, u, d;
-                                return o.__generator(this, function(p) {
-                                    switch (p.label) {
+                                return o.__generator(this, function(h) {
+                                    switch (h.label) {
                                         case 0:
                                             for (t = [], a = [], r = o.__assign({
                                                     ownerChannelID: this.props.channelID
@@ -1302,9 +1282,9 @@
                                             })) > -1 && (c.splice(d, 1), u = !0), u && t.push(this.props.updateChanlet(s.id, c)));
                                             return [4, Promise.all(t)];
                                         case 1:
-                                            return p.sent(), [4, Promise.all(a)];
+                                            return h.sent(), [4, Promise.all(a)];
                                         case 2:
-                                            return p.sent(), this.closeChanletModals(), [2]
+                                            return h.sent(), this.closeChanletModals(), [2]
                                     }
                                 })
                             })
@@ -1349,42 +1329,42 @@
                         var e = this.props.availableContentAttributes.filter(function(e) {
                             return e.key === b.a.Group
                         });
-                        return l.createElement(p.Ya, {
+                        return l.createElement(h.Ya, {
                             margin: {
                                 bottom: 3
                             }
-                        }, l.createElement(p.Fb, {
-                            display: p.X.Flex,
-                            justifyContent: p.Xa.Between,
+                        }, l.createElement(h.Fb, {
+                            display: h.X.Flex,
+                            justifyContent: h.Xa.Between,
                             padding: {
                                 bottom: 2
                             }
-                        }, l.createElement(p.W, {
-                            type: p.Wb.H4,
+                        }, l.createElement(h.W, {
+                            type: h.Wb.H4,
                             bold: !0
-                        }, Object(s.e)("Chanlet Groups", "ChanletsTab")), l.createElement(p.Ya, null, l.createElement(p.z, {
+                        }, Object(s.e)("Chanlet Groups", "ChanletsTab")), l.createElement(h.Ya, null, l.createElement(h.z, {
                             "data-test-selector": I.AddGroup,
-                            icon: p.ub.Plus,
-                            type: p.F.Hollow,
+                            icon: h.ub.Plus,
+                            type: h.F.Hollow,
                             onClick: this.createChanletGroupModal
                         }, Object(s.e)("Add Group", "ChanletsTab")))), !e.length && this.renderEmptyList(Object(s.e)("No Chanlet Groups", "ChanletsGroup")), e.map(this.renderChanletGroupItem), this.renderCreateChanletGroupModal(), this.renderEditChanletGroupModal())
                     }, t.prototype.renderChanlets = function() {
                         var e = this.props.chanlets;
-                        return l.createElement(p.Ya, null, l.createElement(p.Fb, {
-                            display: p.X.Flex,
-                            justifyContent: p.Xa.Between,
+                        return l.createElement(h.Ya, null, l.createElement(h.Fb, {
+                            display: h.X.Flex,
+                            justifyContent: h.Xa.Between,
                             padding: {
                                 bottom: 2
                             }
-                        }, l.createElement(p.W, {
-                            type: p.Wb.H4,
+                        }, l.createElement(h.W, {
+                            type: h.Wb.H4,
                             bold: !0
-                        }, Object(s.e)("All Chanlets", "ChanletsTab")), l.createElement(p.Ya, null, l.createElement(d.a, {
+                        }, Object(s.e)("All Chanlets", "ChanletsTab")), l.createElement(h.Ya, null, l.createElement(d.a, {
                             triggerModal: this.renderAddChanletModal
                         }, function(e) {
-                            return l.createElement(p.z, {
-                                icon: p.ub.Plus,
-                                type: p.F.Hollow,
+                            return l.createElement(h.z, {
+                                icon: h.ub.Plus,
+                                type: h.F.Hollow,
                                 onClick: e
                             }, Object(s.e)("Add Chanlet", "ChanletsTab"))
                         }))), !e.length && this.renderEmptyList(Object(s.e)("No Chanlets", "ChanletsGroup")), e.map(this.renderChanletItem), this.renderChanletModal())
@@ -1397,7 +1377,7 @@
                             chanlet: e
                         })
                     }, t.prototype.renderCreateChanletGroupModal = function() {
-                        if (this.state.isCreateChanletGroupModalOpen) return l.createElement(y, {
+                        if (this.state.isCreateChanletGroupModalOpen) return l.createElement(E, {
                             onClose: this.closeChanletModals,
                             createChanletGroup: this.createChanletGroup
                         })
@@ -1411,25 +1391,25 @@
                             chanletGroup: e
                         })
                     }, t.prototype.renderEmptyList = function(e) {
-                        return l.createElement(p.Fb, {
+                        return l.createElement(h.Fb, {
                             "data-test-selector": I.EmptyList,
                             padding: {
                                 y: 2
                             },
                             borderTop: !0
-                        }, l.createElement(p.W, {
+                        }, l.createElement(h.W, {
                             italic: !0,
-                            color: p.O.Alt2
+                            color: h.O.Alt2
                         }, e))
                     }, t
                 }(l.Component),
-                j = Object(i.compose)(Object(c.b)("ChanletsTab"))(D);
+                D = Object(i.compose)(Object(c.b)("ChanletsTab"))(j);
             n.d(t, "TestSelectors", function() {
                 return I
             }), n.d(t, "ChanletsTabComponent", function() {
-                return D
-            }), n.d(t, "ChanletsTab", function() {
                 return j
+            }), n.d(t, "ChanletsTab", function() {
+                return D
             })
         },
         "Jxh/": function(e, t, n) {

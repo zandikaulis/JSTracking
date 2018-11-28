@@ -1,5 +1,5 @@
 (window.webpackJsonp = window.webpackJsonp || []).push([
-    [224], {
+    [227], {
         "0xbx": function(t, e, n) {
             "use strict";
             n.d(e, "a", function() {
@@ -49,121 +49,122 @@
                 c = n("Svt6"),
                 p = n("NvVO"),
                 u = n("2xye"),
-                l = n("GnwI"),
-                m = n("1mFg"),
-                d = n("dEJ+"),
-                _ = n("fy8Z"),
-                h = n("0xbx"),
-                f = n("/7QA"),
-                g = n("coZW"),
-                v = n("Ue10"),
-                y = function(t) {
+                m = n("GnwI"),
+                l = n("MxwF"),
+                d = n("1mFg"),
+                _ = n("dEJ+"),
+                h = n("fy8Z"),
+                f = n("0xbx"),
+                g = n("/7QA"),
+                v = n("coZW"),
+                y = n("Ue10"),
+                b = function(t) {
                     function e() {
                         return null !== t && t.apply(this, arguments) || this
                     }
                     return a.__extends(e, t), e.prototype.render = function() {
-                        return r.createElement(v.Fb, {
+                        return r.createElement(y.Fb, {
                             className: "tenant-panel",
-                            display: v.X.Flex,
-                            flexDirection: v.Aa.Column,
+                            display: y.X.Flex,
+                            flexDirection: y.Aa.Column,
                             border: !0
-                        }, r.createElement(v.Ya, {
+                        }, r.createElement(y.Ya, {
                             className: "tenant-panel__info",
-                            display: v.X.Block,
-                            textAlign: v.Sb.Center,
+                            display: y.X.Block,
+                            textAlign: y.Sb.Center,
                             margin: {
                                 y: 1
                             },
                             padding: {
                                 top: 2
                             }
-                        }, r.createElement(v.Qa, {
+                        }, r.createElement(y.Qa, {
                             margin: {
                                 bottom: 2
                             }
-                        }, r.createElement(v.W, {
-                            type: v.Wb.H2,
+                        }, r.createElement(y.W, {
+                            type: y.Wb.H2,
                             className: "tenant-panel__count",
-                            color: v.O.Alt2
-                        }, this.props.tenant.count)), r.createElement(v.W, {
-                            type: v.Wb.H3,
-                            transform: v.Vb.Uppercase,
+                            color: y.O.Alt2
+                        }, this.props.tenant.count)), r.createElement(y.W, {
+                            type: y.Wb.H3,
+                            transform: y.Vb.Uppercase,
                             className: "tenant-panel__name",
-                            color: v.O.Alt2
-                        }, this.props.tenant.name)), r.createElement(v.Fb, {
+                            color: y.O.Alt2
+                        }, this.props.tenant.name)), r.createElement(y.Fb, {
                             className: "tenant-panel__action",
-                            display: v.X.Flex,
+                            display: y.X.Flex,
                             padding: {
                                 y: 1
                             },
-                            background: v.r.Alt2,
-                            justifyContent: v.Xa.Center
-                        }, r.createElement(v.z, {
-                            type: v.F.Hollow,
-                            onClick: Object(g.c)(this.trackLabel()),
+                            background: y.r.Alt2,
+                            justifyContent: y.Xa.Center
+                        }, r.createElement(y.z, {
+                            type: y.F.Hollow,
+                            onClick: Object(v.c)(this.trackLabel()),
                             linkTo: this.props.tenant.entryUrl
-                        }, r.createElement(v.W, {
-                            transform: v.Vb.Uppercase
+                        }, r.createElement(y.W, {
+                            transform: y.Vb.Uppercase
                         }, this.buttonText()))))
                     }, e.prototype.trackLabel = function() {
                         var t = this.props.tenant.name.toLowerCase();
-                        if (this.props.company) return Object(g.b)(t);
+                        if (this.props.company) return Object(v.b)(t);
                         switch (t) {
                             case "games":
-                                return g.a.ConsoleRegisterCompanyGames;
+                                return v.a.ConsoleRegisterCompanyGames;
                             case "drops":
-                                return g.a.ConsoleRegisterCompanyDrops;
+                                return v.a.ConsoleRegisterCompanyDrops;
                             default:
-                                return Object(g.b)(t)
+                                return Object(v.b)(t)
                         }
                     }, e.prototype.buttonText = function() {
-                        var t = Object(f.d)("View {tenantName}", {
+                        var t = Object(g.d)("View {tenantName}", {
                             tenantName: this.props.tenant.name
                         }, "DevTenantPanel");
                         if (this.props.company) return t;
                         switch (this.props.tenant.name.toLowerCase()) {
                             case "games":
                             case "drops":
-                                return Object(f.d)("Register Company", "DevTenantPanel");
+                                return Object(g.d)("Register Company", "DevTenantPanel");
                             default:
                                 return t
                         }
-                    }, e = a.__decorate([Object(l.b)("DevTenantPanel", {
+                    }, e = a.__decorate([Object(m.b)("DevTenantPanel", {
                         autoReportInteractive: !0
                     })], e)
                 }(r.Component),
-                b = function(t) {
+                w = function(t) {
                     function e() {
                         return null !== t && t.apply(this, arguments) || this
                     }
                     return a.__extends(e, t), e.prototype.render = function() {
                         var t = this,
                             e = this.props.tenants.map(function(e, n) {
-                                return r.createElement(v.P, {
+                                return r.createElement(y.P, {
                                     cols: {
                                         default: 12,
                                         sm: 6,
                                         md: 3
                                     },
                                     key: n
-                                }, r.createElement(v.Ya, {
+                                }, r.createElement(y.Ya, {
                                     margin: {
                                         bottom: 1
                                     }
-                                }, r.createElement(y, {
+                                }, r.createElement(b, {
                                     tenant: e,
                                     company: t.props.company
                                 })))
                             });
-                        return r.createElement(v.Ja, {
-                            gutterSize: v.Ka.Small
+                        return r.createElement(y.Ja, {
+                            gutterSize: y.Ka.Small
                         }, e)
                     }, e
                 }(r.Component),
-                w = Object(o.compose)(Object(l.b)("DevOverviewPagePresentation", {
+                k = Object(o.compose)(Object(m.b)("DevOverviewPagePresentation", {
                     autoReportInteractive: !0
-                }))(b),
-                k = [{
+                }))(w),
+                C = [{
                     name: "Extensions",
                     entryUrl: "https://dev.twitch.tv/dashboard/extensions",
                     count: 0
@@ -180,18 +181,18 @@
                     entryUrl: "/console/drops",
                     count: 0
                 }];
-            var C = function(t) {
+            var j = function(t) {
                     function e() {
                         var e = null !== t && t.apply(this, arguments) || this;
                         return e.state = {
-                            tenants: k
+                            tenants: C
                         }, e.loadApps = function() {
                             return a.__awaiter(e, void 0, void 0, function() {
                                 var t, e, n;
                                 return a.__generator(this, function(a) {
                                     switch (a.label) {
                                         case 0:
-                                            return a.trys.push([0, 4, , 5]), [4, Object(m.a)(c.a + "/kraken/apps")];
+                                            return a.trys.push([0, 4, , 5]), [4, Object(d.a)(c.a + "/kraken/apps")];
                                         case 1:
                                             return 200 !== (t = a.sent()).status ? [3, 3] : [4, t.json()];
                                         case 2:
@@ -216,7 +217,7 @@
                                             if (!this.props.company) return [3, 6];
                                             a.label = 1;
                                         case 1:
-                                            return a.trys.push([1, 5, , 6]), [4, Object(m.a)(c.a + "/v5/rbac/current-games")];
+                                            return a.trys.push([1, 5, , 6]), [4, Object(d.a)(c.a + "/v5/rbac/current-games")];
                                         case 2:
                                             return 200 !== (t = a.sent()).status ? [3, 4] : [4, t.json()];
                                         case 3:
@@ -236,9 +237,9 @@
                                 return a.__generator(this, function(a) {
                                     switch (a.label) {
                                         case 0:
-                                            return this.props.company ? [4, Object(h.a)(_.a.GetCampaignsByCompany)] : [3, 4];
+                                            return this.props.company ? [4, Object(f.a)(h.a.GetCampaignsByCompany)] : [3, 4];
                                         case 1:
-                                            return (t = a.sent()) ? (e = this.props.company.legacy || !this.props.company.curseCompanyId ? this.props.company.id : this.props.company.curseCompanyId, n = c.a + "/kraken/accounts/" + e + "/campaigns", [4, Object(m.a)(n, {
+                                            return (t = a.sent()) ? (e = this.props.company.legacy || !this.props.company.curseCompanyId ? this.props.company.id : this.props.company.curseCompanyId, n = c.a + "/kraken/accounts/" + e + "/campaigns", [4, Object(d.a)(n, {
                                                 headers: {
                                                     "X-Twitch-VHSCF": t
                                                 }
@@ -270,7 +271,15 @@
                             return a.__generator(this, function(t) {
                                 switch (t.label) {
                                     case 0:
-                                        return [4, this.loadApps()];
+                                        return Object(l.a)() && this.setState({
+                                            tenants: this.state.tenants.map(function(t) {
+                                                return "Extensions" === t.name ? {
+                                                    name: "Extensions",
+                                                    entryUrl: "/console/extensions",
+                                                    count: 0
+                                                } : t
+                                            })
+                                        }), [4, this.loadApps()];
                                     case 1:
                                         return t.sent(), [4, this.loadGames()];
                                     case 2:
@@ -281,25 +290,25 @@
                             })
                         })
                     }, e.prototype.render = function() {
-                        return r.createElement(w, {
+                        return r.createElement(k, {
                             tenants: this.state.tenants,
                             company: this.props.company
                         })
                     }, e
                 }(r.Component),
-                j = Object(o.compose)(Object(l.b)("DevOverviewPage", {
+                O = Object(o.compose)(Object(m.b)("DevOverviewPage", {
                     destination: p.a.DevSiteOverview
                 }), Object(i.a)({
                     location: u.PageviewLocation.DevSiteOverview
                 }), Object(s.connect)(function(t) {
                     return {
-                        company: Object(d.c)(t)
+                        company: Object(_.c)(t)
                     }
-                }))(C);
+                }))(j);
             n.d(e, "DevOverviewPageContainer", function() {
-                return C
-            }), n.d(e, "DevOverviewPage", function() {
                 return j
+            }), n.d(e, "DevOverviewPage", function() {
+                return O
             })
         },
         "V+GM": function(t, e, n) {

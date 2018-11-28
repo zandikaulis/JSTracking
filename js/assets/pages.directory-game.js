@@ -7006,13 +7006,13 @@
                 Pe = n("mHR/"),
                 Re = n("kJyr"),
                 Ge = re.a.wrap(function() {
-                    return n.e(142).then(n.bind(null, "3f6U"))
+                    return n.e(144).then(n.bind(null, "3f6U"))
                 }, "DirectoryGameClipsPage"),
                 Be = re.a.wrap(function() {
-                    return n.e(141).then(n.bind(null, "N7a1"))
+                    return n.e(143).then(n.bind(null, "N7a1"))
                 }, "DirectoryGameDetailsPage"),
                 Ve = re.a.wrap(function() {
-                    return n.e(140).then(n.bind(null, "TH8Y"))
+                    return n.e(142).then(n.bind(null, "TH8Y"))
                 }, "DirectoryGameVideosPage"),
                 Ue = re.a.wrap(function() {
                     return Promise.resolve().then(n.bind(null, "mpcK"))

@@ -1,5 +1,5 @@
 (window.webpackJsonp = window.webpackJsonp || []).push([
-    [151], {
+    [153], {
         "/ZC1": function(e, t, a) {
             "use strict";
             a.d(t, "a", function() {
@@ -687,28 +687,23 @@
         },
         kcKo: function(e, t, a) {},
         khW5: function(e, t, a) {},
-        sL9O: function(e, t, a) {},
-        vD5X: function(e, t, a) {
+        qIvo: function(e, t, a) {
             "use strict";
-            a.r(t);
             var n, r = a("mrSG"),
                 o = a("q1tI"),
                 i = a("fvjX"),
                 s = a("/7QA"),
-                l = a("GnwI"),
-                c = a("IFXb"),
-                u = a("8/mp"),
-                d = a("/ZC1"),
-                p = a("yR8l"),
-                m = a("geRD"),
-                g = a("CDtL"),
-                f = a("Ue10"),
-                h = a("hoVs"),
-                b = (a("khW5"), ["image/*"]);
+                l = a("/ZC1"),
+                c = a("yR8l"),
+                u = a("geRD"),
+                d = a("CDtL"),
+                p = a("Ue10"),
+                m = a("hoVs"),
+                g = (a("khW5"), ["image/*"]);
             ! function(e) {
                 e.Container = "content-attribute-image-uploader__test__container", e.InfoText = "content-attribute-image-uploader__test__info-text", e.PreviewImage = "content-attribute-image-uploader__test__preview-image"
             }(n || (n = {}));
-            var E, y = function(e) {
+            var f = function(e) {
                     function t() {
                         var t = null !== e && e.apply(this, arguments) || this;
                         return t.state = {
@@ -716,19 +711,19 @@
                             imageURL: t.props.existingImageURL
                         }, t.getPreviewImage = function() {
                             var e = null;
-                            if (t.state.imageURL) e = o.createElement(f.Ya, null, o.createElement(f.S, {
+                            if (t.state.imageURL) e = o.createElement(p.Ya, null, o.createElement(p.S, {
                                 "data-test-selector": n.PreviewImage,
                                 src: t.state.imageURL,
                                 alt: t.state.imageURL
                             }));
                             else {
                                 var a = "";
-                                t.state.uploading && (a = "content-attribute-image-uploader__upload-svg--anim-fill"), e = o.createElement(f.Ya, {
+                                t.state.uploading && (a = "content-attribute-image-uploader__upload-svg--anim-fill"), e = o.createElement(p.Ya, {
                                     className: a
-                                }, o.createElement(f.tb, {
+                                }, o.createElement(p.tb, {
                                     "data-test-selector": n.PreviewImage,
-                                    asset: f.ub.Upload,
-                                    type: f.vb.Alt2,
+                                    asset: p.ub.Upload,
+                                    type: p.vb.Alt2,
                                     height: 80,
                                     width: 80
                                 }))
@@ -748,7 +743,7 @@
                                         case 1:
                                             return r.trys.push([1, 4, , 5]), [4, this.createImageUploadConfig()];
                                         case 2:
-                                            return a = r.sent(), [4, new g.a(this.getUploadServiceInputFn(a), this.getOnSuccessfulUploadFn(a.imageURL).bind(this)).uploadFile(t)];
+                                            return a = r.sent(), [4, new d.a(this.getUploadServiceInputFn(a), this.getOnSuccessfulUploadFn(a.imageURL).bind(this)).uploadFile(t)];
                                         case 3:
                                             return r.sent(), [3, 5];
                                         case 4:
@@ -764,7 +759,7 @@
                                 return r.__generator(this, function(a) {
                                     switch (a.label) {
                                         case 0:
-                                            return [4, this.props.createImageUploadConfig(Object(m.a)({
+                                            return [4, this.props.createImageUploadConfig(Object(u.a)({
                                                 channelID: this.props.channelID
                                             }))];
                                         case 1:
@@ -801,52 +796,73 @@
                         }, t
                     }
                     return r.__extends(t, e), t.prototype.render = function() {
-                        return o.createElement(f.Ya, {
+                        return o.createElement(p.Ya, {
                             className: "content-attribute-image-uploader",
-                            display: f.X.InlineBlock,
-                            position: f.kb.Relative,
-                            textAlign: f.Sb.Left
-                        }, o.createElement(f.Ya, {
+                            display: p.X.InlineBlock,
+                            position: p.kb.Relative,
+                            textAlign: p.Sb.Left
+                        }, o.createElement(p.Ya, {
                             className: "content-attribute-image-uploader__container",
                             "data-test-selector": n.Container,
-                            textAlign: f.Sb.Left
-                        }, o.createElement(d.a, {
-                            allowedFileTypes: b,
+                            textAlign: p.Sb.Left
+                        }, o.createElement(l.a, {
+                            allowedFileTypes: g,
                             onFilesSubmitted: this.onImageInputChange
-                        }, o.createElement(f.Fb, {
-                            display: f.X.Flex,
-                            alignItems: f.f.Start
-                        }, o.createElement(f.Qa, {
+                        }, o.createElement(p.Fb, {
+                            display: p.X.Flex,
+                            alignItems: p.f.Start
+                        }, o.createElement(p.Qa, {
                             className: "content-attribute-image-uploader__preview-image",
-                            display: f.X.Flex,
+                            display: p.X.Flex,
                             margin: 1
-                        }, this.getPreviewImage()), o.createElement(f.Ya, {
+                        }, this.getPreviewImage()), o.createElement(p.Ya, {
                             className: "content-attribute-image-uploader__info-text",
                             "data-test-selector": n.InfoText,
-                            display: f.X.Flex,
-                            flexDirection: f.Aa.Column,
+                            display: p.X.Flex,
+                            flexDirection: p.Aa.Column,
                             flexGrow: 1,
-                            textAlign: f.Sb.Left,
+                            textAlign: p.Sb.Left,
                             margin: 1,
                             padding: 2
-                        }, o.createElement(f.W, {
-                            fontSize: f.Ca.Size5
-                        }, Object(s.e)("Drag and drop or select file to upload", "MultiviewContentAttributeImageUploader")), o.createElement(f.W, {
-                            fontSize: f.Ca.Size6
+                        }, o.createElement(p.W, {
+                            fontSize: p.Ca.Size5
+                        }, Object(s.e)("Drag and drop or select file to upload", "MultiviewContentAttributeImageUploader")), o.createElement(p.W, {
+                            fontSize: p.Ca.Size6
                         }, this.props.hintMessage))))))
                     }, t
                 }(o.Component),
-                v = Object(i.compose)(Object(p.a)(h, {
+                h = Object(i.compose)(Object(c.a)(m, {
                     name: "createImageUploadConfig"
-                }))(y),
-                I = a("GIun"),
-                T = a("vV5t"),
-                _ = a("Driw");
+                }))(f);
+            a.d(t, !1, function() {
+                return n
+            }), a.d(t, !1, function() {
+                return f
+            }), a.d(t, "a", function() {
+                return h
+            })
+        },
+        sL9O: function(e, t, a) {},
+        vD5X: function(e, t, a) {
+            "use strict";
+            a.r(t);
+            var n, r = a("mrSG"),
+                o = a("q1tI"),
+                i = a("fvjX"),
+                s = a("/7QA"),
+                l = a("GnwI"),
+                c = a("IFXb"),
+                u = a("8/mp"),
+                d = a("qIvo"),
+                p = a("GIun"),
+                m = a("vV5t"),
+                g = a("Driw"),
+                f = a("Ue10");
             a("kcKo");
             ! function(e) {
                 e.Container = "player-association-list__container", e.AddPlayerButton = "player-association-list__add_player", e.SelectedPlayersRow = "player-association-list__selected_players_row", e.DropdownPlayersRow = "player-association-list__dropdown_players_row", e.NoPlayersMessage = "player-association-list__no_players_message"
-            }(E || (E = {}));
-            var S, C = function(e) {
+            }(n || (n = {}));
+            var h, b = function(e) {
                     function t(t) {
                         var a = e.call(this, t) || this;
                         return a.state = {
@@ -874,7 +890,7 @@
                                 alignItems: f.f.Center,
                                 textAlign: f.Sb.Center
                             }, o.createElement(f.W, {
-                                "data-test-selector": E.NoPlayersMessage,
+                                "data-test-selector": n.NoPlayersMessage,
                                 fontSize: f.Ca.Size4
                             }, Object(s.e)("No players on this team", "EditTeamPlayerAssociation")))) : Array.from(a.state.playersMap.values()).map(function(e, t) {
                                 return o.createElement(f.Fb, {
@@ -888,14 +904,14 @@
                                         bottom: 1
                                     },
                                     key: t,
-                                    "data-test-selector": E.SelectedPlayersRow
+                                    "data-test-selector": n.SelectedPlayersRow
                                 }, o.createElement(f.Ya, {
                                     flexDirection: f.Aa.Column,
                                     padding: 2,
                                     flexGrow: 1
                                 }, o.createElement(f.W, {
                                     fontSize: f.Ca.Size4
-                                }, e.value)), o.createElement(_.a, {
+                                }, e.value)), o.createElement(g.a, {
                                     onDelete: a.removePlayer.bind(a, e),
                                     last: 0 !== t && t === a.state.playersMap.size - 1
                                 }))
@@ -905,7 +921,7 @@
                             return 0 === e.length ? o.createElement(f.Ya, {
                                 padding: 1
                             }, o.createElement(f.W, null, Object(s.e)("No players available", "EditTeamPlayerAssociation"))) : e.map(function(e, t) {
-                                return o.createElement(I.a, {
+                                return o.createElement(p.a, {
                                     key: t
                                 }, o.createElement(f.Va, {
                                     onClick: a.onSelectPlayer.bind(a, e),
@@ -915,7 +931,7 @@
                                 }, o.createElement(f.Ya, {
                                     padding: 1
                                 }, o.createElement(f.W, {
-                                    "data-test-selector": E.DropdownPlayersRow
+                                    "data-test-selector": n.DropdownPlayersRow
                                 }, "" + e.value))))
                             })
                         }, a.onSelectPlayer = function(e) {
@@ -946,17 +962,17 @@
                         return o.createElement(f.Ya, {
                             fullHeight: !0,
                             className: "player-association-list",
-                            "data-test-selector": E.Container,
+                            "data-test-selector": n.Container,
                             "padding-bottom": 5
                         }, o.createElement(f.Ya, {
                             className: "player-association-list__players-dropdown",
-                            "data-test-selector": E.AddPlayerButton,
+                            "data-test-selector": n.AddPlayerButton,
                             display: f.X.Flex,
                             alignItems: f.f.Center,
                             justifyContent: f.Xa.Between
                         }, o.createElement(f.Ya, null, o.createElement(f.W, {
                             fontSize: f.Ca.Size6
-                        }, Object(s.e)("Players", "EditTeamPlayerAssociation"))), o.createElement(T.a, {
+                        }, Object(s.e)("Players", "EditTeamPlayerAssociation"))), o.createElement(m.a, {
                             onChange: this.onPlayerInputChange,
                             balloonDirection: f.v.BottomRight,
                             buttonText: Object(s.e)("Add Player", "EditTeamPlayerAssociation"),
@@ -969,48 +985,29 @@
                         }, this.renderPlayersRows()))
                     }, t
                 }(o.Component),
-                A = Object(i.compose)()(C),
-                D = a("CS6u"),
-                w = a("il7S");
+                E = Object(i.compose)()(b),
+                y = a("CS6u"),
+                v = a("il7S");
             ! function(e) {
                 e.Cancel = "edit-team-modal__cancel", e.Save = "edit-team-modal__save", e.Value = "edit-team-modal__value", e.ValueForm = "edit-team-modal__value-form", e.ImageUploader = "edit-team-modal__image-uploader"
-            }(S || (S = {}));
-            var O, F = function(e) {
-                function t() {
-                    var t = null !== e && e.apply(this, arguments) || this;
-                    return t.state = {
-                        isSaving: !1,
-                        isUploadingImage: !1,
-                        errorMessage: "",
-                        team: {
-                            __typename: "MultiviewContentAttribute",
-                            id: "",
-                            key: w.a.Team,
-                            name: w.b.Team,
-                            parentID: null,
-                            parentKey: null,
-                            value: "",
-                            valueShortName: "",
-                            imageURL: "",
-                            createdAt: "",
-                            updatedAt: ""
-                        },
-                        playersToAdd: [],
-                        playersToRemove: []
-                    }, t.playersToAssign = new Map, t.playersToUnAssign = new Map, t.onTeamNameChange = function(e) {
-                        var a = e.target.value,
-                            n = r.__assign({}, t.state.team, {
-                                value: a
+            }(h || (h = {}));
+            var I, T = function(e) {
+                function t(t) {
+                    var a = e.call(this, t) || this;
+                    return a.playersToAssign = new Map, a.playersToUnAssign = new Map, a.onTeamNameChange = function(e) {
+                        var t = e.target.value,
+                            n = r.__assign({}, a.state.team, {
+                                value: t
                             });
-                        t.setState({
+                        a.setState({
                             team: n
                         })
-                    }, t.validTeamName = function() {
-                        return !!t.state.team.value
-                    }, t.canSave = function() {
-                        return !t.state.isSaving && !t.state.isUploadingImage && t.validTeamName()
-                    }, t.onSave = function() {
-                        return r.__awaiter(t, void 0, void 0, function() {
+                    }, a.validTeamName = function() {
+                        return !!a.state.team.value
+                    }, a.canSave = function() {
+                        return !a.state.isSaving && !a.state.isUploadingImage && a.validTeamName()
+                    }, a.onSave = function() {
+                        return r.__awaiter(a, void 0, void 0, function() {
                             var e, t;
                             return r.__generator(this, function(a) {
                                 switch (a.label) {
@@ -1033,38 +1030,53 @@
                                 }
                             })
                         })
-                    }, t.uploadingImageURL = function() {
-                        t.setState({
+                    }, a.uploadingImageURL = function() {
+                        a.setState({
                             isUploadingImage: !0
                         })
-                    }, t.addImageURL = function(e) {
-                        var a = r.__assign({}, t.state.team, {
+                    }, a.addImageURL = function(e) {
+                        var t = r.__assign({}, a.state.team, {
                             imageURL: e
                         });
-                        t.setState({
-                            team: a,
+                        a.setState({
+                            team: t,
                             isUploadingImage: !1
                         })
-                    }, t.handleImageUploadFailure = function(e) {
+                    }, a.handleImageUploadFailure = function(e) {
                         s.k.error(e, "Failed to upload image via upload service");
-                        var a = Object(s.e)("There was a problem uploading the team icon", "EditTeamModal");
-                        t.setState({
+                        var t = Object(s.e)("There was a problem uploading the team icon", "EditTeamModal");
+                        a.setState({
                             isUploadingImage: !1,
-                            errorMessage: a
+                            errorMessage: t
                         })
-                    }, t.assignPlayer = function(e) {
-                        t.playersToUnAssign.has(e.id) ? t.playersToUnAssign.delete(e.id) : t.playersToAssign.set(e.id, e)
-                    }, t.unassignPlayer = function(e) {
-                        t.playersToAssign.has(e.id) ? t.playersToAssign.delete(e.id) : t.playersToUnAssign.set(e.id, e)
-                    }, t
+                    }, a.assignPlayer = function(e) {
+                        a.playersToUnAssign.has(e.id) ? a.playersToUnAssign.delete(e.id) : a.playersToAssign.set(e.id, e)
+                    }, a.unassignPlayer = function(e) {
+                        a.playersToAssign.has(e.id) ? a.playersToAssign.delete(e.id) : a.playersToUnAssign.set(e.id, e)
+                    }, a.state = {
+                        isSaving: !1,
+                        isUploadingImage: !1,
+                        errorMessage: "",
+                        team: t.team || {
+                            __typename: "MultiviewContentAttribute",
+                            id: "",
+                            key: v.a.Team,
+                            name: v.b.Team,
+                            parentID: null,
+                            parentKey: null,
+                            value: "",
+                            valueShortName: "",
+                            imageURL: "",
+                            createdAt: "",
+                            updatedAt: ""
+                        },
+                        playersToAdd: [],
+                        playersToRemove: []
+                    }, a
                 }
-                return r.__extends(t, e), t.prototype.componentDidMount = function() {
-                    this.props.team && this.setState({
-                        team: this.props.team
-                    })
-                }, t.prototype.render = function() {
+                return r.__extends(t, e), t.prototype.render = function() {
                     var e = this.state.team;
-                    return o.createElement(D.a, {
+                    return o.createElement(y.a, {
                         isOpen: !0
                     }, o.createElement(u.b, null, o.createElement(f.Ya, {
                         padding: {
@@ -1093,7 +1105,7 @@
                         flexShrink: 0
                     }, o.createElement(f.z, {
                         onClick: this.props.onClose,
-                        "data-test-selector": S.Cancel,
+                        "data-test-selector": h.Cancel,
                         type: f.F.Text
                     }, Object(s.e)("Cancel", "EditTeamModal")), o.createElement(f.Ya, {
                         margin: {
@@ -1102,7 +1114,7 @@
                         display: f.X.InlineBlock
                     }, o.createElement(f.z, {
                         onClick: this.onSave,
-                        "data-test-selector": S.Save,
+                        "data-test-selector": h.Save,
                         disabled: !this.canSave()
                     }, Object(s.e)("Save", "EditTeamModal"))))), o.createElement(f.Ya, {
                         margin: {
@@ -1110,7 +1122,7 @@
                         }
                     }, o.createElement(f.Ea, {
                         id: "team-name",
-                        "data-test-selector": S.ValueForm,
+                        "data-test-selector": h.ValueForm,
                         label: Object(s.e)("Team Name", "EditTeamModal"),
                         error: !this.validTeamName(),
                         errorMessage: Object(s.e)("Must provide a team name", "EditTeamModal")
@@ -1118,7 +1130,7 @@
                         className: "edit-team-modal__team-name-input"
                     }, o.createElement(f.Sa, {
                         type: f.Ua.Text,
-                        "data-test-selector": S.Value,
+                        "data-test-selector": h.Value,
                         onChange: this.onTeamNameChange,
                         value: e.value
                     })))), o.createElement(f.Ya, {
@@ -1129,8 +1141,8 @@
                         label: Object(s.e)("Team Icon", "EditTeamModal"),
                         error: "" !== this.state.errorMessage,
                         errorMessage: this.state.errorMessage
-                    }, o.createElement(v, {
-                        "data-test-selector": S.ImageUploader,
+                    }, o.createElement(d.a, {
+                        "data-test-selector": h.ImageUploader,
                         channelID: this.props.channelID,
                         onSuccess: this.addImageURL,
                         onLoading: this.uploadingImageURL,
@@ -1139,7 +1151,7 @@
                         hintMessage: Object(s.e)("Recommended size: 112 x 112, and less than 100kb", "EditTeamModal")
                     }))), o.createElement(f.Ya, {
                         flexGrow: 1
-                    }, o.createElement(A, {
+                    }, o.createElement(E, {
                         team: this.props.team,
                         availablePlayers: this.props.players || [],
                         addPlayerAssociation: this.assignPlayer,
@@ -1147,8 +1159,8 @@
                     })))))
                 }, t
             }(o.Component);
-            (O || (O = {})).EmptyList = "teams-tab__empty-list";
-            var M = function(e) {
+            (I || (I = {})).EmptyList = "teams-tab__empty-list";
+            var _ = function(e) {
                     function t() {
                         var t = null !== e && e.apply(this, arguments) || this;
                         return t.state = {
@@ -1157,18 +1169,18 @@
                             isSaving: !1
                         }, t.filteredTeamContentAttributes = function() {
                             return t.props.availableContentAttributes.filter(function(e) {
-                                return e.key === w.a.Team
+                                return e.key === v.a.Team
                             })
                         }, t.filterUnassignedPlayerContentAttributes = function() {
                             return t.props.availableContentAttributes.filter(function(e) {
-                                return e.key === w.a.Player && !e.parentID
+                                return e.key === v.a.Player && !e.parentID
                             })
                         }, t.filterPlayerContentAttributesByTeam = function(e) {
                             return t.props.availableContentAttributes.filter(function(t) {
-                                return t.key === w.a.Player && t.parentKey === w.a.Team && t.parentID === e
+                                return t.key === v.a.Player && t.parentKey === v.a.Team && t.parentID === e
                             })
                         }, t.renderCreateTeamModal = function() {
-                            if (t.state.isAddingTeam) return o.createElement(F, {
+                            if (t.state.isAddingTeam) return o.createElement(T, {
                                 channelID: t.props.channelID,
                                 team: null,
                                 players: t.filterUnassignedPlayerContentAttributes(),
@@ -1176,7 +1188,7 @@
                                 onSave: t.createTeam
                             })
                         }, t.renderEditTeamModal = function() {
-                            if (t.state.team) return o.createElement(F, {
+                            if (t.state.team) return o.createElement(T, {
                                 channelID: t.props.channelID,
                                 team: t.state.team,
                                 players: t.filterUnassignedPlayerContentAttributes().concat(t.filterPlayerContentAttributesByTeam(t.state.team.id)),
@@ -1287,7 +1299,7 @@
                             return 0 === a.length ? a : a.map(function(a) {
                                 return r.__assign({}, a, {
                                     ownerChannelID: t.props.channelID,
-                                    parentKey: w.a.Team,
+                                    parentKey: v.a.Team,
                                     parentID: e.id
                                 })
                             })
@@ -1350,7 +1362,7 @@
                             bold: !0,
                             fontSize: a
                         }, Object(s.e)("Last Modified", "TeamsTab"))))), !t.length && o.createElement(f.W, {
-                            "data-test-selector": O.EmptyList,
+                            "data-test-selector": I.EmptyList,
                             italic: !0
                         }, Object(s.e)("No Teams", "TeamsTab")), t.map(function(a, r) {
                             return o.createElement(f.Fb, {
@@ -1401,7 +1413,7 @@
                                 fontSize: n
                             }, Object(s.c)(new Date(a.updatedAt), "medium"))), o.createElement(f.Ya, {
                                 flexGrow: 0
-                            }, o.createElement(_.a, {
+                            }, o.createElement(g.a, {
                                 onEdit: e.editTeam.bind(e, a),
                                 onDelete: e.deleteTeam.bind(e, a),
                                 deleteModalMessage: Object(s.e)("Are you sure you want to delete team: {value}?", {
@@ -1412,13 +1424,13 @@
                         }), this.renderCreateTeamModal(), this.renderEditTeamModal())
                     }, t
                 }(o.Component),
-                P = Object(i.compose)(Object(l.b)("TeamsTab"))(M);
+                S = Object(i.compose)(Object(l.b)("TeamsTab"))(_);
             a.d(t, "TestSelectors", function() {
-                return O
+                return I
             }), a.d(t, "TeamsTabComponent", function() {
-                return M
+                return _
             }), a.d(t, "TeamsTab", function() {
-                return P
+                return S
             })
         },
         vV5t: function(e, t, a) {

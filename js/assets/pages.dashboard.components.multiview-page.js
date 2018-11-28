@@ -1,5 +1,5 @@
 (window.webpackJsonp = window.webpackJsonp || []).push([
-    [163], {
+    [165], {
         "7MYR": function(e, t, n) {
             var i = {
                 kind: "Document",
@@ -871,16 +871,16 @@
                 S = n("aw+h"),
                 y = n("9vM1"),
                 D = m.a.wrap(function() {
-                    return n.e(154).then(n.bind(null, "Jtig"))
+                    return n.e(156).then(n.bind(null, "Jtig"))
                 }, "ChanletsTab"),
                 F = m.a.wrap(function() {
-                    return n.e(153).then(n.bind(null, "iw5t"))
+                    return n.e(155).then(n.bind(null, "iw5t"))
                 }, "PlayersTab"),
                 T = m.a.wrap(function() {
-                    return n.e(152).then(n.bind(null, "tgcK"))
+                    return n.e(154).then(n.bind(null, "tgcK"))
                 }, "RolesTab"),
                 M = m.a.wrap(function() {
-                    return n.e(151).then(n.bind(null, "vD5X"))
+                    return n.e(153).then(n.bind(null, "vD5X"))
                 }, "TeamsTab");
             ! function(e) {
                 e.Tabs = "multiview-page__tabs", e.WrongUser = "multiview-page__wrong-user", e.ChanletsTab = "multiview-page__chanlets-tab", e.TeamsTab = "multiview-page__teams-tab", e.PlayersTab = "multiview-page__players-tab", e.RolesTab = "multiview-page__roles-tab"
