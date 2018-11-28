@@ -160,6 +160,7 @@ window.__twilightSettings = {
     "update_manager_enabled": true,
     "update_manager_interval": 300000,
     "viewer_card_mod_logs": false,
+    "viewer_card_mod_logs_user_whitelist": ["123041500", "158426293"],
     "viewer_milestones_enabled": true,
     "vip_badge_gate": "on",
     "vod_archives_vira_grand": "on",
