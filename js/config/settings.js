@@ -5,6 +5,8 @@ window.__twilightSettings = {
     "amazon_ads_url": "https://s.amazon-adsystem.com/iui3?d=3p-hbg&ex-src=twitch.tv&ex-hargs=v%3D1.0%3Bc%3D8858214122683%3Bp%3De75425fb-5407-7bd5-fd20-f462e98a8777",
     "amazon_ads_url_crown_uk": "https://aax-eu.amazon-adsystem.com/s/iui3?d=forester-did&ex-fargs=%3Fid%3Db8b26227-de81-5bfb-4046-b9158f6a8c08%26type%3D4%26m%3D3&ex-fch=416613&ex-src=https://www.twitch.tv&ex-hargs=v%3D1.0%3Bc%3D3815840130302%3Bp%3DB8B26227-DE81-5BFB-4046-B9158F6A8C08",
     "amazon_ads_url_crown_us": "https://s.amazon-adsystem.com/iui3?d=forester-did&ex-fargs=%3Fid%3D2d452222-ea0d-0b73-d0cc-472923e63141%26type%3D4%26m%3D1&ex-fch=416613&ex-src=https://www.twitch.tv&ex-hargs=v%3D1.0%3Bc%3D7416603020101%3Bp%3D2D452222-EA0D-0B73-D0CC-472923E63141",
+    "amazon_ads_url_prime_page_uk": "https://aax-eu.amazon-adsystem.com/s/iui3?d=forester-did&ex-fargs=%3Fid%3D5b59d365-e0b2-268d-00a0-aa0f59cce0c1%26type%3D4%26m%3D3&ex-fch=416613&ex-src=https://www.twitch.tv/&ex-hargs=v%3D1.0%3Bc%3D3815840130302%3Bp%3D5B59D365-E0B2-268D-00A0-AA0F59CCE0C1",
+    "amazon_ads_url_prime_page_us": "https://s.amazon-adsystem.com/iui3?d=forester-did&ex-fargs=%3Fid%3D573a4bd9-f106-f600-a392-699ceaddb160%26type%3D6%26m%3D1&ex-fch=416613&ex-src=https://www.twitch.tv/prime&ex-hargs=v%3D1.0%3Bc%3D7416603020101%3Bp%3D573A4BD9-F106-F600-A392-699CEADDB160",
     "announce_collaboration_widget": "off",
     "anonymous_gifting": "on",
     "benchmark_component_threshold": 0.1,
@@ -130,7 +132,7 @@ window.__twilightSettings = {
     "sizmek_versatag_events": ["YeUmkUI9R5GKR5WGtg046A", "f4aK8duASJKiAYAiETsUvw", "WN1Ly4NxRgOrSNWOSG40PQ", "YFCU_dppR6Oor32XLPrU2w", "2HsLVRMUTnqChbVy5YSsfg", "f4aK8duASJKiAYAiETsUvw"],
     "sizmek_versatag_games": ["496712", "Call of Duty: WWII", "497571", "Wrestling"],
     "sizmek_versatag_teams": ["wrestling"],
-    "spade_url": "https://video-edge-88e570.sjc02.hls.ttvnw.net/v1/segment/CllfuT5Xlgt0bJ6taIjp_3frdGyzwQIGGpIuqZJvLzdXJURSLmSWGuGZuVcEYTv08kfa_QbU4Uh5FFJxgTZl4Ti0T7z9af1Dy8pqs4lPvhmq_a36FhuqiiWF6ERP82bHbfN-wDMX6GoU9xlyOnyUCA5K_mId72q07tjDNyxDwH1GuPtIsKu_ZhlwevSFGMkbS4ozjqIPwbrnuF1iPhm5wgb1DPSisuBAeWn2dTFFaiov0IY2Twv9glzaWOxj0ZYg6obY1KnD5nfW6C9uZXbGIt0r8fcRpXeLPs3nfZT0CJ2p3YK9pU9_UNEs5RDyK6zbdKXnkfdA3FByipXPyuHN5kPBT2ReHrj1AxIpvYmjZf_NT9MoZLUgotEajPADDpdMnoiMHCnAXlrx3k__IkzFVDv2oVpA8Gy1JKQ6lgylFFwUrLnMLYHM5R5paxa8HTpzm5Lvaq812Vpi28Ts_6ascV4rNBee2OzehWNUpiIjtA43CJ3PLs3_LNSB4rrwcJ_lHZYTYGIecEs4hbPpeGkcnbrmhpIExjdc6LqBLxl_HaBcchCpvrqpxyV4OsP6xqoggnO-sLWxpDvADso4KB_v4CBqxKUhq5z75C0pyyCBXAFlsyc2XEf2pPImfe7BufKTT-A1SXILEDMYyvqD1D9dshEN09pTU1PI8Xmozw3CJAe1s0HhxJSF26jTiCRL_jb-pYUFWIWnOGb3yIbib3-iNLWFull63QShajqt6FvdphVgjBPxc1QU1kSQX-Gu7kSZ0xrJ.ts",
+    "spade_url": "https://video-edge-18b142.sjc02.hls.ttvnw.net/v1/segment/CoyZNcsa9CP9SCZ-ECZhfSXPz4jY2HM0LHNqlbsV62PErpHNLGlQdjbcBEz6uEHj2O9zHdQ12qXozywcZL2exkTKvNn-c-IWqyuaYfU4vK6uxonatlUff1zWk4aHgk0o1Luje5nhXQnt0rKXVwJI4VjlO38094W9PzLtki53PiWZqyWo4MUQBLNaslBnKCmMSnRA5NcwFMn3boUWh_jorNO-i0mJDI9FWCWwotWCaiNb8b8S7GCfgNmr3_pbPm_0vHqw05eKxrDATJcEq4U9cjPE4S3HUGgzV6rbn0yLgihL8tgkBDOZxVRu02_awyLhb_vItBf7didkqZBWIjIKRibsq0FRjpLbfQBg8m9YgwHf1sthuZ8Ea2GIsMW4IkYBnqE2SD21O14DCKyQ13bhx1UL6vXZJ5RLxQ9nswCe9fNmg8iMQ9q4x0gpZHurwPqTk20SQheLckRFzW1wE5yg3sGTka1YtcHCVV8buZ8_LJWvGqHanMvAtTZsoT5KoWXPKYQeYmBRVOPYTU83Qfbt6Hnezj-TTRAH8f1udD76-i_kPxMxi7FB7tGg4kEW66nzC-T6zO3XsnuyzrQNIu5txqfM5kHcPy4WKfPGSROhCk2qouuiQxj1imxoK2swfrT8_I2nVTsiM3VRmG1DSxNQg-zTitPfK1Z3TpI_kNVBx6SyryaxZl9UNU2xc2LVwneu8ndNP8iurNEL2p2hUemantlenlLkufxH8uWGwCYAZABG7Px8HWFW6GdQM.ts",
     "squad_stream_dashboard": "off",
     "squad_stream_feature": "on",
     "squad_stream_survey_url": "https://twitchtv.az1.qualtrics.com/jfe/form/SV_4HZtpVZBKOr6Yv3?PPT={SESSION_ID}",
@@ -1050,6 +1052,27 @@ window.__twilightSettings = {
             }, {
                 "weight": 100,
                 "value": "variation"
+            }]
+        },
+        "6a1cba54-d5d3-4117-ab42-06bd5514a134": {
+            "name": "ios_user_id_experiment",
+            "v": 5232,
+            "t": 2,
+            "groups": [{
+                "weight": 20,
+                "value": "b1"
+            }, {
+                "weight": 20,
+                "value": "b2"
+            }, {
+                "weight": 20,
+                "value": "b3"
+            }, {
+                "weight": 20,
+                "value": "b4"
+            }, {
+                "weight": 20,
+                "value": "b5"
             }]
         },
         "6a7c6d6c-09fa-444e-9192-badfaddde36b": {
