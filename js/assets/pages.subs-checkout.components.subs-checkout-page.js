@@ -1629,7 +1629,7 @@
                     e.CREATED_AT_ASC = "CREATED_AT_ASC", e.CREATED_AT_DESC = "CREATED_AT_DESC", e.TRENDING = "TRENDING", e.VIEWS_ASC = "VIEWS_ASC", e.VIEWS_DESC = "VIEWS_DESC"
                 }(Pe || (Pe = {})),
                 function(e) {
-                    e.GAME_CHANGE = "GAME_CHANGE", e.HEARTHSTONE_VCA = "HEARTHSTONE_VCA", e.OVERWATCH_VCA = "OVERWATCH_VCA", e.PUBG_VCA = "PUBG_VCA", e.STREAM_MARKER = "STREAM_MARKER", e.VCA = "VCA"
+                    e.HEARTHSTONE_VCA = "HEARTHSTONE_VCA", e.OVERWATCH_VCA = "OVERWATCH_VCA", e.PUBG_VCA = "PUBG_VCA", e.STREAM_MARKER = "STREAM_MARKER", e.VCA = "VCA"
                 }(ve || (ve = {})),
                 function(e) {
                     e.HIGH = "HIGH", e.LOW = "LOW", e.MEDIUM = "MEDIUM"
@@ -4251,7 +4251,7 @@
                 P = n("GnwI"),
                 v = n("9fjZ"),
                 D = u.a.wrap(function() {
-                    return n.e(211).then(n.bind(null, "skV9"))
+                    return n.e(209).then(n.bind(null, "skV9"))
                 }, "CampaignsTicketDescription"),
                 k = function(e) {
                     function t() {

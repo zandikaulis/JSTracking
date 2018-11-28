@@ -796,9 +796,9 @@
                 })(P),
                 U = n("TDc0"),
                 A = "twilight-onboarding",
-                V = "twilight-onboarding-prompt__dismissed";
+                W = "twilight-onboarding-prompt__dismissed";
 
-            function W() {
+            function V() {
                 return l.p.storage.get(A, !1)
             }
             var B = n("AO3T"),
@@ -806,7 +806,7 @@
 
             function G(e, t) {
                 var n = l.p.experiments.getAssignment(u.b.WebOnboarding);
-                return !l.p.storage.get(V, !1) && Object(U.a)(n) && e < z && Object(U.b)(new Date(t))
+                return !l.p.storage.get(W, !1) && Object(U.a)(n) && e < z && Object(U.b)(new Date(t))
             }
 
             function H(e) {
@@ -1143,7 +1143,7 @@
                 xe = n("A65o"),
                 Me = (n("ReKM"), Object(Oe.a)()),
                 Fe = ne.a.wrap(function() {
-                    return n.e(148).then(n.bind(null, "GyBV"))
+                    return n.e(146).then(n.bind(null, "GyBV"))
                 }, "RecFeedbackButton", {
                     placeholder: null
                 }),
@@ -1519,7 +1519,7 @@
                                 categoryName: n.game && n.game.displayName,
                                 channelID: n.owner && n.owner.id,
                                 channelName: n.owner && n.owner.displayName,
-                                feedbackReasons: Object(Ee.d)(null !== n.game),
+                                feedbackReasons: Object(Ee.d)(),
                                 hideContent: this.hideContent
                             })
                         }, i && {
@@ -1575,11 +1575,11 @@
                 })(Pe)),
                 Ue = Object(Oe.a)(),
                 Ae = ne.a.wrap(function() {
-                    return n.e(148).then(n.bind(null, "GyBV"))
+                    return n.e(146).then(n.bind(null, "GyBV"))
                 }, "RecFeedbackButton", {
                     placeholder: null
                 }),
-                Ve = function(e) {
+                We = function(e) {
                     function t() {
                         var t = null !== e && e.apply(this, arguments) || this;
                         return t.state = {
@@ -1806,14 +1806,14 @@
                         return i[e.key] ? i[e.key]() : null
                     }, t
                 }(o.Component),
-                We = Object(s.compose)(Object(ae.a)("ShelfComponent", {
+                Ve = Object(s.compose)(Object(ae.a)("ShelfComponent", {
                     percentage: 15
-                }), Object(T.b)("ShelfComponent"), Object(Ie.k)())(Ve);
+                }), Object(T.b)("ShelfComponent"), Object(Ie.k)())(We);
             var Be = Object(v.connect)(function(e) {
                     return {
                         firstPageLoaded: e.session.firstPageLoaded
                     }
-                })(We),
+                })(Ve),
                 ze = n("nsVP");
             var Ge;
             ! function(e) {
@@ -2004,11 +2004,11 @@
                         }, t
                     }
                     return r.__extends(t, e), t.prototype.componentDidMount = function() {
-                        l.p.setPageTitle(), f.g.addListener(f.e, this.onSlotAdded), this.shouldShowOnboarding() && !W() && H(B.a.NewSignup)
+                        l.p.setPageTitle(), f.g.addListener(f.e, this.onSlotAdded), this.shouldShowOnboarding() && !V() && H(B.a.NewSignup)
                     }, t.prototype.componentWillUnmount = function() {
                         f.g.removeListener(f.e, this.onSlotAdded)
                     }, t.prototype.componentDidUpdate = function(e) {
-                        e.data.loading && this.shouldShowOnboarding() && !W() && H(B.a.NewSignup)
+                        e.data.loading && this.shouldShowOnboarding() && !V() && H(B.a.NewSignup)
                     }, t.prototype.render = function() {
                         return o.createElement(_.Ya, {
                             fullHeight: !0
@@ -2391,6 +2391,14 @@
                     selectionSet: {
                         kind: "SelectionSet",
                         selections: [{
+                            kind: "Field",
+                            name: {
+                                kind: "Name",
+                                value: "id"
+                            },
+                            arguments: [],
+                            directives: []
+                        }, {
                             kind: "Field",
                             name: {
                                 kind: "Name",
@@ -2788,11 +2796,11 @@
                 }],
                 loc: {
                     start: 0,
-                    end: 943
+                    end: 946
                 }
             };
             n.loc.source = {
-                body: "query VideoPreviewCard__VideoMoments($videoId: ID!) {\nvideo(id: $videoId) {\nid\nmoments(momentRequestType: VIDEO_CHAPTER_MARKERS) {\nedges {\n...videoMomentEdge\n}\n}\n}\n}\nfragment videoMomentEdge on VideoMomentEdge {\ncursor\nnode {\n...videoChapter\n}\n}\nfragment videoChapter on VideoMoment {\ndurationMilliseconds\npositionMilliseconds\ntype\ndescription\nthumbnailURL\n...momentDetails\nvideo {\nid\nlengthSeconds\n}\n}\nfragment momentDetails on VideoMoment {\ndetails {\n...gameChangeDetails\n...hearthstoneDetails\n...overwatchDetails\n...pubgDetails\n}\n}\nfragment gameChangeDetails on GameChangeMomentDetails {\ngame {\nid\ndisplayName\nboxArtURL(width: 40 height: 53)\n}\n}\nfragment hearthstoneDetails on HearthstoneMomentDetails {\nbroadcasterHero {\nid\nclass\nname\n}\nopponentHero {\nid\nclass\nname\n}\ngameMode {\ntype\nvalue\n}\n}\nfragment overwatchDetails on OverwatchMomentDetails {\nrole\nheroName\n}\nfragment pubgDetails on PUBGMomentDetails {\nmaxPlayerCount\nminPlayerCount\n}",
+                body: "query VideoPreviewCard__VideoMoments($videoId: ID!) {\nvideo(id: $videoId) {\nid\nmoments(momentRequestType: VIDEO_CHAPTER_MARKERS) {\nedges {\n...videoMomentEdge\n}\n}\n}\n}\nfragment videoMomentEdge on VideoMomentEdge {\ncursor\nnode {\n...videoChapter\n}\n}\nfragment videoChapter on VideoMoment {\nid\ndurationMilliseconds\npositionMilliseconds\ntype\ndescription\nthumbnailURL\n...momentDetails\nvideo {\nid\nlengthSeconds\n}\n}\nfragment momentDetails on VideoMoment {\ndetails {\n...gameChangeDetails\n...hearthstoneDetails\n...overwatchDetails\n...pubgDetails\n}\n}\nfragment gameChangeDetails on GameChangeMomentDetails {\ngame {\nid\ndisplayName\nboxArtURL(width: 40 height: 53)\n}\n}\nfragment hearthstoneDetails on HearthstoneMomentDetails {\nbroadcasterHero {\nid\nclass\nname\n}\nopponentHero {\nid\nclass\nname\n}\ngameMode {\ntype\nvalue\n}\n}\nfragment overwatchDetails on OverwatchMomentDetails {\nrole\nheroName\n}\nfragment pubgDetails on PUBGMomentDetails {\nmaxPlayerCount\nminPlayerCount\n}",
                 name: "GraphQL request",
                 locationOffset: {
                     line: 1,
@@ -3382,8 +3390,15 @@
                 r = n("H1ft"),
                 o = n("yR8l"),
                 s = function(e) {
-                    return e.map(function(e) {
-                        return l(e.node)
+                    return e.map(function(e, t, n) {
+                        var a, r = e.node;
+                        if ("GAME_CHANGE" !== r.type || 0 !== r.durationMilliseconds) return l(r);
+                        var o = n[t + 1] && n[t + 1].node;
+                        a = o ? o.positionMilliseconds - r.positionMilliseconds : r.video && r.video.lengthSeconds && 1e3 * r.video.lengthSeconds - r.positionMilliseconds || 0;
+                        var s = i.__assign({}, r, {
+                            durationMilliseconds: a
+                        });
+                        return l(s)
                     })
                 },
                 l = function(e) {
@@ -3507,7 +3522,7 @@
                         return a.createElement(m.a, i.__assign({}, e))
                     }, t.prototype.generateSearchString = function() {
                         var e = {};
-                        this.props.collectionID && (e.collection = this.props.collectionID), this.props.videoBrowseOptions && (this.props.videoBrowseOptions.filter && (e.filter = this.props.videoBrowseOptions.filter), this.props.videoBrowseOptions.sort && (e.sort = this.props.videoBrowseOptions.sort), this.props.videoBrowseOptions.range && (e.range = this.props.videoBrowseOptions.range));
+                        this.props.collectionID && (e.collection = this.props.collectionID);
                         var t = u.stringify(e);
                         return t ? "?" + t : ""
                     }, t.prototype.getVideoPreviousWatchPercentage = function() {
@@ -3635,13 +3650,13 @@
             n.d(t, "e", function() {
                 return o
             }), n.d(t, "c", function() {
-                return p
+                return u
             }), n.d(t, "a", function() {
-                return h
+                return m
             }), n.d(t, "b", function() {
-                return f
+                return g
             }), n.d(t, "d", function() {
-                return b
+                return v
             });
             var i = n("/7QA"),
                 a = n("DMoW"),
@@ -3674,71 +3689,55 @@
             }
 
             function c() {
-                return {
+                return Object(i.d)("Other", "FeedbackReasonOther")
+            }
+            var d = null;
+
+            function u() {
+                return null === d && (d = [l()]), d
+            }
+            var p = null;
+
+            function m() {
+                return null === p && (p = [{
+                    text: function(e) {
+                        return s(e)
+                    },
+                    contentType: r.b.Live,
+                    feedbackType: a.M.NOT_INTERESTED
+                }, l(), {
+                    text: c(),
+                    contentType: r.b.Live,
+                    feedbackType: a.M.OTHER
+                }]), p
+            }
+            var h = null;
+
+            function g() {
+                return null === h && (h = [l(), {
+                    text: c(),
+                    contentType: r.b.Game,
+                    feedbackType: a.M.OTHER
+                }]), h
+            }
+            var f = null;
+
+            function v() {
+                return null === f && (f = [{
                     text: Object(i.d)("I am not interested in this video", "FeedbackReason"),
                     contentType: r.b.Vod,
                     feedbackType: a.M.NOT_INTERESTED
-                }
-            }
-
-            function d() {
-                return Object(i.d)("Other", "FeedbackReasonOther")
-            }
-            var u = null;
-
-            function p() {
-                return null === u && (u = [l()]), u
-            }
-            var m = null;
-
-            function h() {
-                return null === m && (m = [{
-                    text: function(e) {
-                        return s(e)
-                    },
-                    contentType: r.b.Live,
-                    feedbackType: a.M.NOT_INTERESTED
-                }, l(), {
-                    text: d(),
-                    contentType: r.b.Live,
-                    feedbackType: a.M.OTHER
-                }]), m
-            }
-            var g = null;
-
-            function f() {
-                return null === g && (g = [l(), {
-                    text: d(),
-                    contentType: r.b.Game,
-                    feedbackType: a.M.OTHER
-                }]), g
-            }
-            var v = null,
-                k = null;
-
-            function b(e) {
-                var t = [];
-                return e ? (null === v && (v = [c(), {
-                    text: function(e) {
-                        return s(e)
-                    },
-                    contentType: r.b.Live,
-                    feedbackType: a.M.NOT_INTERESTED
-                }, l(), {
-                    text: d(),
-                    contentType: r.b.Vod,
-                    feedbackType: a.M.OTHER
-                }]), t = v) : (null === k && (k = [c(), {
-                    text: function(e) {
-                        return s(e)
-                    },
-                    contentType: r.b.Live,
-                    feedbackType: a.M.NOT_INTERESTED
                 }, {
-                    text: d(),
+                    text: function(e) {
+                        return s(e)
+                    },
+                    contentType: r.b.Live,
+                    feedbackType: a.M.NOT_INTERESTED
+                }, l(), {
+                    text: c(),
                     contentType: r.b.Vod,
                     feedbackType: a.M.OTHER
-                }]), t = k), t
+                }]), f
             }
         },
         "9a8W": function(e, t, n) {},
@@ -4804,7 +4803,7 @@
                         }
                     }, t
                 }(a.Component),
-                V = Object(T.b)("PreviewCard", {
+                W = Object(T.b)("PreviewCard", {
                     autoReportInteractive: !0
                 })(A);
             n.d(t, !1, function() {
@@ -4814,7 +4813,7 @@
             }), n.d(t, !1, function() {
                 return A
             }), n.d(t, "a", function() {
-                return V
+                return W
             })
         },
         H1ft: function(e, t, n) {
@@ -5928,7 +5927,7 @@
                         closeModal: o.c
                     }, e)
                 })(U),
-                V = (n("ygyh"), function(e) {
+                W = (n("ygyh"), function(e) {
                     function t() {
                         var t = null !== e && e.apply(this, arguments) || this;
                         return t.state = {
@@ -6002,12 +6001,12 @@
                         }))
                     }, t
                 }(c.Component)),
-                W = Object(h.b)("ClipsViewModal")(V);
+                V = Object(h.b)("ClipsViewModal")(W);
             var B = Object(a.connect)(null, function(e) {
                 return Object(r.bindActionCreators)({
                     showModal: o.d
                 }, e)
-            })(W);
+            })(V);
             n.d(t, "a", function() {
                 return B
             }), n.d(t, !1, function() {})
@@ -8323,7 +8322,7 @@
                         value: "message general report reason"
                     }
                 },
-                V = {
+                W = {
                     general: {
                         getTitle: F.reportWhisper,
                         getLabel: M.contentGeneral,
@@ -8342,7 +8341,7 @@
                         value: "whisper general report reason"
                     }
                 },
-                W = {
+                V = {
                     profile: {
                         getTitle: F.reportProfile,
                         getLabel: M.contentGeneral,
@@ -8501,13 +8500,13 @@
                 ee = {
                     video: U.content,
                     "video more options": U.moreOptions,
-                    whisper: V.general,
-                    "whisper more options": V.moreOptions,
+                    whisper: W.general,
+                    "whisper more options": W.moreOptions,
                     chat: A.content,
                     "chat more options": A.moreOptions,
-                    "other content": W.general,
-                    profile: W.profile,
-                    "profile more options": W.profileMoreOptions,
+                    "other content": V.general,
+                    profile: V.profile,
+                    "profile more options": V.profileMoreOptions,
                     room: B,
                     "somewhere else": q.identifyLocation,
                     streamer: U.content,
@@ -8515,10 +8514,10 @@
                     "someone in chat": A.content,
                     general_video: U.moreOptions,
                     general_messaging: A.content,
-                    general_profile: W.profile,
-                    "channel owner": W.general,
+                    general_profile: V.profile,
+                    "channel owner": V.general,
                     "community member": A.content,
-                    "on twitch": W.general,
+                    "on twitch": V.general,
                     "another site": q.externalSite,
                     "twitch event": P.twitchEvent,
                     "brigading/raids": G.socialMedia,
@@ -8530,7 +8529,7 @@
                     impersonation: $,
                     abusive: H.content,
                     "inappropriate content": X,
-                    "inappropriate emotes": W.emotes,
+                    "inappropriate emotes": V.emotes,
                     "intellectual property": P.legal,
                     "violating developer agreement": P.legal
                 },
@@ -8540,15 +8539,15 @@
                     other: Z
                 },
                 ne = {
-                    CHANNEL_FEED_POST_REPORT: W.general,
-                    COMMUNITY_REPORT: W.general,
+                    CHANNEL_FEED_POST_REPORT: V.general,
+                    COMMUNITY_REPORT: V.general,
                     CHAT_REPORT: A.content,
                     CLIP_REPORT: U.content,
-                    EVENT_REPORT: W.general,
-                    EXTENSION_REPORT: W.general,
-                    LIVE_UP_REPORT: W.general,
+                    EVENT_REPORT: V.general,
+                    EXTENSION_REPORT: V.general,
+                    LIVE_UP_REPORT: V.general,
                     ROOM_REPORT: B,
-                    WHISPER_REPORT: V.general,
+                    WHISPER_REPORT: W.general,
                     VOD_COMMENT_REPORT: A.content
                 },
                 ie = "report-wizard-back",

@@ -1,5 +1,5 @@
 (window.webpackJsonp = window.webpackJsonp || []).push([
-    [210], {
+    [208], {
         "5zXJ": function(e, t, n) {
             "use strict";
             n.d(t, "v", function() {
@@ -553,7 +553,7 @@
                             linkTo: {
                                 pathname: "/"
                             }
-                        }],
+                        }, {}],
                         "data-test-selector": R.SuccessNotification
                     }), this.props.user && !this.props.success && c.createElement(E.Oa, {
                         closeButtonAriaLabel: t,

@@ -1,5 +1,5 @@
 (window.webpackJsonp = window.webpackJsonp || []).push([
-    [745], {
+    [741], {
         "+GjP": function(e, t, n) {
             "use strict";
             n.d(t, "a", function() {
@@ -852,9 +852,9 @@
             }), n.d(t, "c", function() {
                 return _
             }), n.d(t, "E", function() {
-                return S
-            }), n.d(t, "b", function() {
                 return C
+            }), n.d(t, "b", function() {
+                return S
             }), n.d(t, "a", function() {
                 return w
             }), n.d(t, "H", function() {
@@ -968,11 +968,11 @@
                 return r.PubsubTopic.BitsLeaderboardEvents + "." + e.id
             }
 
-            function S(e) {
+            function C(e) {
                 return r.PubsubTopic.UserBitsUpdates + "." + e
             }
 
-            function C() {
+            function S() {
                 return r.PubsubTopic.BitsCampaignEvents + ".updates"
             }
 
@@ -1671,13 +1671,13 @@
                         }) : null
                     }, t
                 }(r.Component),
-                S = Object(k.b)("AuthModal", {
+                C = Object(k.b)("AuthModal", {
                     autoReportInteractive: !0
                 })(_);
             n.d(t, !1, function() {
                 return _
             }), n.d(t, "a", function() {
-                return S
+                return C
             })
         },
         "0tEc": function(e, t, n) {
@@ -1720,7 +1720,7 @@
                 k = n("/rr3"),
                 E = n("Ue10"),
                 _ = n("heM0");
-            var S = Object(i.compose)(Object(r.connect)(null, function(e) {
+            var C = Object(i.compose)(Object(r.connect)(null, function(e) {
                     return Object(u.bindActionCreators)({
                         onLoginClick: function() {
                             return m.e(p.a.FriendAdd)
@@ -1754,9 +1754,9 @@
                             }, t)
                     }
                 }),
-                C = n("aECu"),
+                S = n("aECu"),
                 w = n("csdq"),
-                N = Object(i.compose)(Object(a.a)(C, {
+                N = Object(i.compose)(Object(a.a)(S, {
                     name: "onAcceptFriendRequest",
                     options: function(e) {
                         return l.__assign({}, Object(d.a)({
@@ -1856,7 +1856,7 @@
                         });
                         var t = this.props.friendData || this.props.data;
                         if (!t || !t.user || !t.user.self || this.props.targetID === this.props.currentUserID) return null;
-                        if (!this.props.isLoggedIn) return c.createElement(S, {
+                        if (!this.props.isLoggedIn) return c.createElement(C, {
                             friendButtonUIType: e,
                             isLoggedIn: this.props.isLoggedIn,
                             targetID: this.props.targetID
@@ -1879,7 +1879,7 @@
                                 });
                             case g:
                             default:
-                                return c.createElement(S, {
+                                return c.createElement(C, {
                                     friendButtonUIType: e,
                                     isLoggedIn: this.props.isLoggedIn,
                                     targetID: this.props.targetID
@@ -2122,7 +2122,7 @@
                 }, e
             }()
         },
-        168: function(e, t, n) {
+        167: function(e, t, n) {
             n("/cy1"), n("gg62"), n("LVaA"), e.exports = n("sNlA")
         },
         "1Ot3": function(e, t) {
@@ -3585,7 +3585,7 @@
                         }
                     }
                 }), Object(u.b)("PrimeClaimButton"))(E),
-                S = (n("KbPt"), function(e) {
+                C = (n("KbPt"), function(e) {
                     function t(t) {
                         var n = e.call(this, t) || this;
                         return n.toggleShowDescription = function() {
@@ -3673,9 +3673,9 @@
                         return this.state.showDescription && (t = n ? this.renderVerticalDescriptionBlock() : this.renderHorizontalDescriptionBlock()), t
                     }, t
                 }(a.Component)),
-                C = Object(u.b)("PrimeClaimDescription", {
+                S = Object(u.b)("PrimeClaimDescription", {
                     autoReportInteractive: !0
-                })(S),
+                })(C),
                 w = n("fvjX"),
                 N = n("aCAx"),
                 T = n("kRBY"),
@@ -3853,7 +3853,7 @@
                     }, t.prototype.getClaimDescriptionSection = function() {
                         if (this.props.offerType === y.e.EXTERNAL_OFFER || this.props.externalURL) return null;
                         var e = this.props.data;
-                        return a.createElement(C, {
+                        return a.createElement(S, {
                             description: this.props.offerDescription,
                             offerID: this.props.offerID,
                             externalURL: this.props.externalURL,
@@ -5187,8 +5187,8 @@
                         }
                     }, e
                 }(),
-                S = n("mrSG"),
-                C = n("cr+I"),
+                C = n("mrSG"),
+                S = n("cr+I"),
                 w = n("Two0"),
                 N = function() {
                     function e(e, t) {
@@ -5208,9 +5208,9 @@
                             authToken: t
                         })
                     }, e.prototype.connect = function() {
-                        return S.__awaiter(this, void 0, void 0, function() {
+                        return C.__awaiter(this, void 0, void 0, function() {
                             var e, t;
-                            return S.__generator(this, function(n) {
+                            return C.__generator(this, function(n) {
                                 switch (n.label) {
                                     case 0:
                                         if (this.disabled) return [2];
@@ -5235,9 +5235,9 @@
                             this.logger.warn("Failed to disconnect client!", e)
                         }
                     }, e.prototype.join = function(e) {
-                        return S.__awaiter(this, void 0, void 0, function() {
+                        return C.__awaiter(this, void 0, void 0, function() {
                             var t, n;
-                            return S.__generator(this, function(i) {
+                            return C.__generator(this, function(i) {
                                 switch (i.label) {
                                     case 0:
                                         if (this.disabled) return [2];
@@ -5256,9 +5256,9 @@
                             })
                         })
                     }, e.prototype.part = function(e) {
-                        return S.__awaiter(this, void 0, void 0, function() {
+                        return C.__awaiter(this, void 0, void 0, function() {
                             var t, n;
-                            return S.__generator(this, function(i) {
+                            return C.__generator(this, function(i) {
                                 switch (i.label) {
                                     case 0:
                                         (t = this.logger.withCategory("setChannel").withCategory("part")).info("begin", e), i.label = 1;
@@ -5276,8 +5276,8 @@
                             })
                         })
                     }, e.prototype.ensureConnected = function() {
-                        return S.__awaiter(this, void 0, void 0, function() {
-                            return S.__generator(this, function(e) {
+                        return C.__awaiter(this, void 0, void 0, function() {
+                            return C.__generator(this, function(e) {
                                 switch (e.label) {
                                     case 0:
                                         return this.client.isConnected() ? [3, 2] : (this.logger.debug("Connection not yet established. Waiting on connect to complete..."), [4, this.connect()]);
@@ -5297,7 +5297,7 @@
                                 server: e.tmiHost
                             },
                             n = this.getQueryStringOptions();
-                        return null === n ? (this.logger.debug("Using options from configuration"), t) : "false" === n.server ? S.__assign({}, t, {
+                        return null === n ? (this.logger.debug("Using options from configuration"), t) : "false" === n.server ? C.__assign({}, t, {
                             disabled: !0
                         }) : e.buildType !== s.a.Dev ? t : {
                             disabled: !1,
@@ -5307,7 +5307,7 @@
                         }
                     }, e.prototype.getQueryStringOptions = function() {
                         try {
-                            var e = C.parse(window.location.search),
+                            var e = S.parse(window.location.search),
                                 t = {
                                     server: void 0 !== e.tmi_host ? e.tmi_host : null,
                                     port: void 0 !== e.tmi_port ? +e.tmi_port : null,
@@ -5412,9 +5412,9 @@
                             queryDeduplication: !0
                         })
                     }, e.prototype.collectQueryStats = function(e, t) {
-                        return S.__awaiter(this, void 0, void 0, function() {
+                        return C.__awaiter(this, void 0, void 0, function() {
                             var n, i, r = this;
-                            return S.__generator(this, function(a) {
+                            return C.__generator(this, function(a) {
                                 switch (a.label) {
                                     case 0:
                                         return a.trys.push([0, 2, , 3]), [4, e.json()];
@@ -5468,8 +5468,8 @@
                                         requests: JSON.parse(n.body)
                                     };
                                 return fetch(t + "?nonce=" + a, n).then(function(t) {
-                                    return S.__awaiter(e, void 0, void 0, function() {
-                                        return S.__generator(this, function(e) {
+                                    return C.__awaiter(e, void 0, void 0, function() {
+                                        return C.__generator(this, function(e) {
                                             switch (e.label) {
                                                 case 0:
                                                     return t.status && (t.status >= 400 || t.status < 200) ? 401 !== t.status ? [3, 4] : this.config.embedded ? (this.logger.warn("Received 401 response from GraphQL."), [3, 3]) : [3, 1] : [3, 6];
@@ -5546,7 +5546,7 @@
                                     if (void 0 === (s = t.reducers[n.name](e[n.name], {
                                             type: "@@INIT"
                                         }))) throw new Error("Reducer for key " + n.name + " returned undefined!");
-                                    r = S.__assign({}, e, ((i = {})[n.name] = s, i)), a = !0;
+                                    r = C.__assign({}, e, ((i = {})[n.name] = s, i)), a = !0;
                                     break;
                                 default:
                                     for (var o in t.reducers)
@@ -6315,9 +6315,9 @@
             }), n.d(t, "f", function() {
                 return _
             }), n.d(t, "k", function() {
-                return S
-            }), n.d(t, "u", function() {
                 return C
+            }), n.d(t, "u", function() {
+                return S
             }), n.d(t, "s", function() {
                 return w
             }), n.d(t, "d", function() {
@@ -6346,8 +6346,8 @@
                 k = "SPONSORED",
                 E = "THIRD_PARTY",
                 _ = "DISPLAY_ONLY",
-                S = ((i = {})[r.a.Gray] = "#979797", i[r.a.Purple] = "#9c3ee8", i[r.a.Green] = "#1db2a5", i[r.a.Blue] = "#0099fe", i[r.a.Red] = "#f43021", i[r.a.Yellow] = "#f3a71a", i),
-                C = "bits_sponsored_cheermotes",
+                C = ((i = {})[r.a.Gray] = "#979797", i[r.a.Purple] = "#9c3ee8", i[r.a.Green] = "#1db2a5", i[r.a.Blue] = "#0099fe", i[r.a.Red] = "#f43021", i[r.a.Yellow] = "#f3a71a", i),
+                S = "bits_sponsored_cheermotes",
                 w = "bits_sponsored_cheermotes_announcement",
                 N = "bits_charity_event"
         },
@@ -6617,6 +6617,7 @@
                 }, e
             }()
         },
+        76: function(e, t) {},
         "76Lv": function(e, t, n) {
             "use strict";
             n.d(t, "a", function() {
@@ -6668,7 +6669,6 @@
         },
         77: function(e, t) {},
         78: function(e, t) {},
-        79: function(e, t) {},
         "7APm": function(e, t, n) {},
         "7CzK": function(e, t, n) {
             e.exports = n.p + "assets/bg_glitch_pattern-34ca2e369aad1ed33b57.png"
@@ -7762,8 +7762,8 @@
             ! function(e) {
                 e.OFFERS_FAILED_TO_UPDATE = "OFFERS_FAILED_TO_UPDATE", e.UNKNOWN = "UNKNOWN"
             }(i || (i = {}));
-            var S = n("QAxy"),
-                C = n("SXud"),
+            var C = n("QAxy"),
+                S = n("SXud"),
                 w = (n("l0e4"), n("yO+B")),
                 N = function(e) {
                     function t() {
@@ -7975,7 +7975,7 @@
                         configurable: !0
                     }), t
                 }(s.Component),
-                T = Object(l.compose)(Object(d.a)(C, {
+                T = Object(l.compose)(Object(d.a)(S, {
                     name: "offersData",
                     skip: function(e) {
                         return !e.firstPageLoaded && !e.openByDefault
@@ -7990,7 +7990,7 @@
                     }
                 }), Object(d.a)(w, {
                     name: "userData"
-                }), Object(d.a)(S, {
+                }), Object(d.a)(C, {
                     name: "updatePrimeOfferStatus"
                 }), Object(f.b)("PrimeOffers"))(N);
             var I = Object(r.connect)(function(e) {
@@ -9718,8 +9718,8 @@
                     }, t
                 }(a.Component),
                 _ = n("p46w"),
-                S = n("pCxu"),
-                C = function(e) {
+                C = n("pCxu"),
+                S = function(e) {
                     function t() {
                         var t = null !== e && e.apply(this, arguments) || this;
                         return t.onOverrideSelect = function(e) {
@@ -9789,7 +9789,7 @@
                                 onClick: n.enableExperiments
                             }, "Enable normal assignments and reload")))
                         }, n.enableExperiments = function() {
-                            l.p.storage.remove(S.b), window.location.reload()
+                            l.p.storage.remove(C.b), window.location.reload()
                         }, n.filteredExperiments = function() {
                             return "" === n.state.searchQuery ? Object.keys(n.experiments) : Object.keys(n.experiments).filter(function(e) {
                                 return y(n.experiments[e].name).includes(n.state.searchQuery)
@@ -9852,7 +9852,7 @@
                             }
                         }, this.filteredExperiments().map(function(t) {
                             var n = e.state.overrides[t];
-                            return a.createElement(C, {
+                            return a.createElement(S, {
                                 key: t,
                                 experimentData: e.experiments[t],
                                 override: n,
@@ -10120,7 +10120,7 @@
                     return c
                 }),
                 function(e) {
-                    e.AAXDisplay = "TWILIGHT_AAX_DISPLAY", e.AdDensityWidget = "TWILIGHT_AD_DENSITY_WIDGET", e.Archer = "TWILIGHT_ARCHER", e.AsyncCheckout = "twilight_subs_async_checkout", e.BitsNewUserCheerV1 = "bits_new_user_cheer_v1.1", e.BrowserNotificationsUpsell = "TWILIGHT_BROWSER_NOTIFICATIONS_UPSELL", e.CarouselHoldback = "TWILIGHT_CAROUSEL_HOLDBACK", e.ChannelAnalyticsContentOverlapPanels = "TWILIGHT_CHANNEL_ANALYTICS_CONTENT_OVERLAP_PANELS", e.ChannelPageRedesign = "CHANNEL_PAGE_REDESIGN", e.ClipsOnTheBrain = "TWILIGHT_CLIPS_ON_THE_BRAIN", e.ContextualAuthModals = "CONTEXTUAL_AUTH_MODALS_V2", e.CVPPlayerType = "CVP_PLAYER_TYPE", e.CVPPlayerVersion = "CVP_PLAYER_VERSION", e.CVPStaffVersion = "CVP_STAFF_VERSION", e.DashboardCollaboration = "TWILIGHT_DASHBOARD_COLLABORATION_2", e.DirectoryTTL = "DIRECTORY_TTL", e.DiscoGladiator = "DISCO_GLADIATOR", e.EditingImUpset = "TWILIGHT_EDITING_IM_UPSET", e.EmoteCard = "EMOTE_CARD", e.EmoteCardSubButton = "EMOTE_CARD_SUB_BUTTON", e.EmotePickerV2 = "TWILIGHT_EMOTE_PICKER_V2", e.ExtendedPresence = "TWILIGHT_EXTENDED_PRESENCE", e.FollowingIndexLatestVideosV2 = "TWILIGHT_FOLLOWING_INDEX_LATEST_VIDEOS_V2", e.FrenchVanilla = "FRENCH_VANILLA", e.GrowthEmailVerifyBar = "TWILIGHT_GROWTH_EMAIL_VERIFY_BAR", e.LocalizeOnboardingGamesQuery = "watch_onboarding_localized_game_query", e.MobileSubsTierNames = "TWILIGHT_MOBILE_SUBS_TIER_NAMES", e.NewReportingWizard = "TWILIGHT_NEW_REPORTING_WIZARD", e.NewSearchBackend = "NEW_SEARCH_BACKEND", e.NewUserSurvey = "NEW_USER_SURVEY", e.OWLRoomCheering = "TWILIGHT_OWL_ROOM_CHEERING", e.PrimeSubCreditAPIWexit = "TWILIGHT_PRIME_SUB_CREDIT_API_WEXIT", e.RaidUpsell = "TWILIGHT_RAID_UPSELL", e.SocialButtonsMove = "SOCIAL_BUTTONS_MOVE", e.SquadStreamRedirect = "TWILIGHT_SQUAD_STREAM_REDIRECT", e.SubsAffiliateBadges = "TWILIGHT_SUBS_AFFILIATE_BADGES", e.SubsReanimator = "SUB_REANIMATOR", e.TheatreFullscreen = "TWILIGHT_THEATRE_FULLSCREEN", e.VODCharizard = "VOD_CHARIZARD", e.VODEditingYoureWelcome = "TWILIGHT_VOD_EDITING_YOURE_WELCOME", e.VODKirk = "TWILIGHT_VOD_KIRK", e.VODMrPotatoHead = "VOD_MR_POTATO_HEAD", e.VODPike = "TWILIGHT_VOD_PIKE", e.VODTopShelf = "TWILIGHT_VOD_TOP_SHELF", e.WatchSombra = "TWILIGHT_WATCH_SOMBRA", e.WatchWinston = "TWILIGHT_WATCH_WINSTON", e.WebOnboarding = "TWILIGHT_WEB_ONBOARDING", e.WebSideNavUpsellCenterChannels = "TWILIGHT_WEB_SIDE_NAV_UPSELL_CENTER_CHANNELS"
+                    e.AAXDisplay = "TWILIGHT_AAX_DISPLAY", e.AdDensityWidget = "TWILIGHT_AD_DENSITY_WIDGET", e.Archer = "TWILIGHT_ARCHER", e.AsyncCheckout = "twilight_subs_async_checkout", e.BitsNewUserCheerV1 = "bits_new_user_cheer_v1.1", e.BrowserNotificationsUpsell = "TWILIGHT_BROWSER_NOTIFICATIONS_UPSELL", e.CarouselHoldback = "TWILIGHT_CAROUSEL_HOLDBACK", e.ChannelAnalyticsContentOverlapPanels = "TWILIGHT_CHANNEL_ANALYTICS_CONTENT_OVERLAP_PANELS", e.ChannelPageRedesign = "CHANNEL_PAGE_REDESIGN", e.ClipsOnTheBrain = "TWILIGHT_CLIPS_ON_THE_BRAIN", e.ContextualAuthModals = "CONTEXTUAL_AUTH_MODALS", e.CVPPlayerType = "CVP_PLAYER_TYPE", e.CVPPlayerVersion = "CVP_PLAYER_VERSION", e.CVPStaffVersion = "CVP_STAFF_VERSION", e.DashboardCollaboration = "TWILIGHT_DASHBOARD_COLLABORATION_2", e.DirectoryTTL = "DIRECTORY_TTL", e.DiscoGladiator = "DISCO_GLADIATOR", e.EditingImUpset = "TWILIGHT_EDITING_IM_UPSET", e.EmoteCard = "EMOTE_CARD", e.EmoteCardSubButton = "EMOTE_CARD_SUB_BUTTON", e.EmotePickerV2 = "TWILIGHT_EMOTE_PICKER_V2", e.ExtendedPresence = "TWILIGHT_EXTENDED_PRESENCE", e.FollowingIndexLatestVideosV2 = "TWILIGHT_FOLLOWING_INDEX_LATEST_VIDEOS_V2", e.FrenchVanilla = "FRENCH_VANILLA", e.GrowthEmailVerifyBar = "TWILIGHT_GROWTH_EMAIL_VERIFY_BAR", e.LocalizeOnboardingGamesQuery = "watch_onboarding_localized_game_query", e.MobileSubsTierNames = "TWILIGHT_MOBILE_SUBS_TIER_NAMES", e.NewReportingWizard = "TWILIGHT_NEW_REPORTING_WIZARD", e.NewSearchBackend = "NEW_SEARCH_BACKEND", e.NewUserSurvey = "NEW_USER_SURVEY", e.OWLRoomCheering = "TWILIGHT_OWL_ROOM_CHEERING", e.PrimeSubCreditAPIWexit = "TWILIGHT_PRIME_SUB_CREDIT_API_WEXIT", e.RaidUpsell = "TWILIGHT_RAID_UPSELL", e.SocialButtonsMove = "SOCIAL_BUTTONS_MOVE", e.SquadStreamRedirect = "TWILIGHT_SQUAD_STREAM_REDIRECT", e.SubsAffiliateBadges = "TWILIGHT_SUBS_AFFILIATE_BADGES", e.SubsReanimator = "SUB_REANIMATOR", e.TheatreFullscreen = "TWILIGHT_THEATRE_FULLSCREEN", e.VODCharizard = "VOD_CHARIZARD", e.VODEditingYoureWelcome = "TWILIGHT_VOD_EDITING_YOURE_WELCOME", e.VODKirk = "TWILIGHT_VOD_KIRK", e.VODMrPotatoHead = "VOD_MR_POTATO_HEAD", e.VODPike = "TWILIGHT_VOD_PIKE", e.VODTopShelf = "TWILIGHT_VOD_TOP_SHELF", e.WatchSombra = "TWILIGHT_WATCH_SOMBRA", e.WatchWinston = "TWILIGHT_WATCH_WINSTON", e.WebOnboarding = "TWILIGHT_WEB_ONBOARDING", e.WebSideNavUpsellCenterChannels = "TWILIGHT_WEB_SIDE_NAV_UPSELL_CENTER_CHANNELS"
                 }(r || (r = {}));
             var a = ((i = {})[r.AAXDisplay] = {
                     id: "5fd568be-2073-4f99-84d5-565e8b2a3343",
@@ -10266,7 +10266,7 @@
                     id: "0186f46f-a8d8-40b9-963a-168302603fe8",
                     default: "control"
                 }, i[r.ContextualAuthModals] = {
-                    id: "2d4a0ad4-1658-4cfb-a542-896b3a8524cc",
+                    id: "d725bd26-74e8-41a2-879b-4c08646aa454",
                     default: "control"
                 }, i[r.AsyncCheckout] = {
                     id: "aac9596e-8816-4261-b96c-617b27afe0fc",
@@ -10340,7 +10340,7 @@
         DBPb: function(e, t, n) {},
         DMoW: function(e, t, n) {
             "use strict";
-            var i, r, a, o, s, l, c, u, d, p, m, h, f, g, v, b, y, k, E, _, S, C, w, N, T, I, D, R, O, A, L, x, P, F, M, B, U, j, V, z, H, W, G, q, Y, X, Q, K, Z, J, $, ee, te, ne, ie, re, ae, oe, se, le, ce, ue, de, pe, me, he, fe, ge, ve, be, ye, ke, Ee, _e, Se, Ce, we, Ne, Te, Ie, De, Re, Oe, Ae, Le, xe, Pe, Fe, Me, Be, Ue, je, Ve, ze, He, We, Ge, qe, Ye, Xe, Qe, Ke, Ze, Je, $e, et, tt, nt, it, rt, at, ot, st, lt, ct, ut, dt, pt, mt, ht, ft, gt, vt, bt, yt, kt, Et;
+            var i, r, a, o, s, l, c, u, d, p, m, h, f, g, v, b, y, k, E, _, C, S, w, N, T, I, D, R, O, A, L, x, P, F, M, B, U, j, V, z, H, W, G, q, Y, X, Q, K, Z, J, $, ee, te, ne, ie, re, ae, oe, se, le, ce, ue, de, pe, me, he, fe, ge, ve, be, ye, ke, Ee, _e, Ce, Se, we, Ne, Te, Ie, De, Re, Oe, Ae, Le, xe, Pe, Fe, Me, Be, Ue, je, Ve, ze, He, We, Ge, qe, Ye, Xe, Qe, Ke, Ze, Je, $e, et, tt, nt, it, rt, at, ot, st, lt, ct, ut, dt, pt, mt, ht, ft, gt, vt, bt, yt, kt, Et;
             n.d(t, "O", function() {
                     return i
                 }), n.d(t, "e", function() {
@@ -10360,9 +10360,9 @@
                 }), n.d(t, "h", function() {
                     return E
                 }), n.d(t, "Aa", function() {
-                    return S
-                }), n.d(t, "n", function() {
                     return C
+                }), n.d(t, "n", function() {
+                    return S
                 }), n.d(t, "Ca", function() {
                     return w
                 }), n.d(t, "S", function() {
@@ -10518,10 +10518,10 @@
                 }(_ || (_ = {})),
                 function(e) {
                     e.CHEER = "CHEER"
-                }(S || (S = {})),
+                }(C || (C = {})),
                 function(e) {
                     e.CREATED = "CREATED", e.CREATING = "CREATING", e.FAILED = "FAILED"
-                }(C || (C = {})),
+                }(S || (S = {})),
                 function(e) {
                     e.PRIVATE = "PRIVATE", e.PUBLIC = "PUBLIC"
                 }(w || (w = {})),
@@ -10680,10 +10680,10 @@
                 }(_e || (_e = {})),
                 function(e) {
                     e.OFFERS_FAILED_TO_UPDATE = "OFFERS_FAILED_TO_UPDATE", e.UNKNOWN = "UNKNOWN"
-                }(Se || (Se = {})),
+                }(Ce || (Ce = {})),
                 function(e) {
                     e.TOO_MANY_RECENT_SPENDS = "TOO_MANY_RECENT_SPENDS", e.UNABLE_TO_SPEND = "UNABLE_TO_SPEND"
-                }(Ce || (Ce = {})),
+                }(Se || (Se = {})),
                 function(e) {
                     e.OFFER_ALREADY_CLAIMED = "OFFER_ALREADY_CLAIMED", e.UNKNOWN = "UNKNOWN"
                 }(we || (we = {})),
@@ -10700,7 +10700,7 @@
                     e.CREATED_AT_ASC = "CREATED_AT_ASC", e.CREATED_AT_DESC = "CREATED_AT_DESC", e.TRENDING = "TRENDING", e.VIEWS_ASC = "VIEWS_ASC", e.VIEWS_DESC = "VIEWS_DESC"
                 }(De || (De = {})),
                 function(e) {
-                    e.GAME_CHANGE = "GAME_CHANGE", e.HEARTHSTONE_VCA = "HEARTHSTONE_VCA", e.OVERWATCH_VCA = "OVERWATCH_VCA", e.PUBG_VCA = "PUBG_VCA", e.STREAM_MARKER = "STREAM_MARKER", e.VCA = "VCA"
+                    e.HEARTHSTONE_VCA = "HEARTHSTONE_VCA", e.OVERWATCH_VCA = "OVERWATCH_VCA", e.PUBG_VCA = "PUBG_VCA", e.STREAM_MARKER = "STREAM_MARKER", e.VCA = "VCA"
                 }(Re || (Re = {})),
                 function(e) {
                     e.HIGH = "HIGH", e.LOW = "LOW", e.MEDIUM = "MEDIUM"
@@ -13250,8 +13250,8 @@
                         l.o.eventEmitter.removeListener(E.SpadeEventType.Pageview, this.trackPageView)
                     }, t = r.__decorate([Object(p.b)("IVW")], t)
                 }(o.Component),
-                S = n("p46w"),
-                C = function(e) {
+                C = n("p46w"),
+                S = function(e) {
                     function t(t) {
                         var n = e.call(this, t) || this;
                         n.unlistener = null, n.hasLoadedScript = !1, n.appendKruxScript = function() {
@@ -13287,7 +13287,7 @@
                             var t = "kx" + e;
                             if (window.localStorage) return l.m.get(t, "");
                             if (navigator.cookieEnabled) {
-                                var n = S.get(t);
+                                var n = C.get(t);
                                 return n && decodeURI(n[1]) || ""
                             }
                             return ""
@@ -13323,7 +13323,7 @@
                 }(o.Component),
                 w = Object(s.compose)(g.a, Object(p.b)("Krux", {
                     autoReportInteractive: !0
-                }), Object(m.j)(m.c.SalesforceDMP))(C),
+                }), Object(m.j)(m.c.SalesforceDMP))(S),
                 N = n("AOPA");
             n.d(t, "a", function() {
                 return I
@@ -13397,8 +13397,8 @@
                 k = n("2xye"),
                 E = n("oJmH"),
                 _ = n("geRD"),
-                S = n("edgk"),
-                C = n("zrSb"),
+                C = n("edgk"),
+                S = n("zrSb"),
                 w = n("jv9u"),
                 N = n("4VQm"),
                 T = n("opIq"),
@@ -13731,9 +13731,9 @@
                             };
                             Object(L.h)(i)
                         }, t.onClose = function() {
-                            Object(H.d)(t.props.bitsUserState, t.props.bitsUserSettings) && t.trackBitsCardInteraction(L.a.NewUserCloseTutorial)
+                            Object(H.c)(t.props.bitsUserState, t.props.bitsUserSettings) && t.trackBitsCardInteraction(L.a.NewUserCloseTutorial)
                         }, t.onPromoBuyClose = function(e) {
-                            Object(S.a)(e, function() {
+                            Object(C.a)(e, function() {
                                 t.props.data && t.props.data.refetch()
                             })
                         }, t
@@ -13746,9 +13746,9 @@
                                 y: 5
                             },
                             "data-a-target": "get-bits-button-content-loading"
-                        }, d.createElement(w.a, null)) : Object(H.d)(this.props.bitsUserState, this.props.bitsUserSettings) ? d.createElement(x.Ya, {
+                        }, d.createElement(w.a, null)) : Object(H.c)(this.props.bitsUserState, this.props.bitsUserSettings) ? d.createElement(x.Ya, {
                             padding: 2
-                        }, d.createElement(C.a, {
+                        }, d.createElement(S.a, {
                             trackBitsCardInteraction: this.trackBitsCardInteraction,
                             onUserClickFirstTimePurchaseDiscount: this.onUserClickFirstTimePurchaseDiscount
                         })) : d.createElement(V, {
@@ -13763,7 +13763,7 @@
                             onClose: this.onClose,
                             trackBitsCardInteraction: this.trackBitsCardInteraction,
                             onPromoBuyClose: this.onPromoBuyClose,
-                            shouldShowNewUserCheerUX: Object(H.c)(this.props.bitsUserState, this.props.bitsUserSettings),
+                            shouldShowNewUserCheerUX: Object(H.b)(this.props.bitsUserState, this.props.bitsUserSettings),
                             email: this.props.email
                         })
                     }, t
@@ -13913,8 +13913,8 @@
                 ke = n("N0BP"),
                 Ee = n("JVUd"),
                 _e = n("25n4"),
-                Se = n("0LAi"),
-                Ce = n("4HIT"),
+                Ce = n("0LAi"),
+                Se = n("4HIT"),
                 we = (n("5IL7"), n("KRR4")),
                 Ne = function(e) {
                     function t() {
@@ -14010,9 +14010,9 @@
                             padding: {
                                 top: .5
                             }
-                        }, d.createElement(Se.a, {
+                        }, d.createElement(Ce.a, {
                             tags: this.props.tags,
-                            linkPath: Ce.a.PopularTag,
+                            linkPath: Se.a.PopularTag,
                             tagNumberLimit: 3
                         })))))))
                     }, t
@@ -14286,9 +14286,9 @@
                             padding: {
                                 top: .5
                             }
-                        }, d.createElement(Se.a, {
+                        }, d.createElement(Ce.a, {
                             tags: this.props.data.video.contentTags,
-                            linkPath: Ce.a.PopularTag,
+                            linkPath: Se.a.PopularTag,
                             tagNumberLimit: 3
                         })))))))
                     }, t
@@ -15510,7 +15510,7 @@
             })(yt);
             n("wG9U");
             (kt || (kt = {})).Toggle = "user-menu-placeholder__toggle";
-            var _t, St = function(e) {
+            var _t, Ct = function(e) {
                     return d.createElement(x.Ya, {
                         position: x.kb.Relative,
                         display: x.X.Flex,
@@ -15590,7 +15590,7 @@
                         asset: x.ub.GlyphArrDown
                     })))))))
                 },
-                Ct = n("p7E/"),
+                St = n("p7E/"),
                 wt = n("m98o");
             n("oOol");
             ! function(e) {
@@ -15743,7 +15743,7 @@
                     function t(t) {
                         var n = e.call(this, t) || this;
                         return n.isSettingNewSession = !1, n.onMenuCardClick = function() {
-                            n.props.user && (Object(Ct.b)(Ct.a.AvatarDropdown)(), n.setState({
+                            n.props.user && (Object(St.b)(St.a.AvatarDropdown)(), n.setState({
                                 dropdownOpen: !n.state.dropdownOpen
                             }))
                         }, n.onClickOut = function() {
@@ -15804,7 +15804,7 @@
                             data: this.props.data,
                             onMenuCardClick: this.onMenuCardClick,
                             theme: this.props.theme
-                        }) : d.createElement(St, {
+                        }) : d.createElement(Ct, {
                             onMenuCardClick: this.onMenuCardClick
                         }), d.createElement(x.Ya, {
                             position: x.kb.Relative,
@@ -15885,7 +15885,7 @@
                                     "data-a-target": "following-link",
                                     "data-test-selector": Rt.FollowingLink,
                                     title: e,
-                                    onClick: Object(Ct.b)(Ct.a.Following)
+                                    onClick: Object(St.b)(St.a.Following)
                                 }, e)
                             }
                             return null
@@ -15905,7 +15905,7 @@
                                         content: k.PageviewContent.Games
                                     }
                                 },
-                                onClick: Object(Ct.b)(Ct.a.Browse)
+                                onClick: Object(St.b)(St.a.Browse)
                             }, i)
                         }, n.renderStoreLink = function() {
                             if (f.p.integrations.app || n.props.data.loading || n.props.data.error) return null;
@@ -15913,7 +15913,7 @@
                             return !n.props.isLoggedIn || e ? d.createElement("a", {
                                 href: J.a,
                                 target: "_blank",
-                                onClick: Object(Ct.b)(Ct.a.Store),
+                                onClick: Object(St.b)(St.a.Store),
                                 className: "top-nav__nav-link",
                                 "data-a-target": "store-link",
                                 "data-test-selector": Rt.StoreLink
@@ -15927,7 +15927,7 @@
                                 return d.createElement("a", {
                                     href: i,
                                     target: "_blank",
-                                    onClick: Object(Ct.b)(Ct.a.TryPrime),
+                                    onClick: Object(St.b)(St.a.TryPrime),
                                     className: "top-nav__nav-link",
                                     "data-a-target": "try-prime-link",
                                     "data-test-selector": Rt.TryPrimeLink
@@ -15949,7 +15949,7 @@
                                 title: e
                             }, e)
                         }, n.onThreeDotToggled = function(e) {
-                            e || Object(Ct.b)(Ct.a.ThreeDot)()
+                            e || Object(St.b)(St.a.ThreeDot)()
                         }, n.renderEllipsisMenuStoreLink = function() {
                             var e = !1;
                             if (n.props.data) {
@@ -15962,7 +15962,7 @@
                                 "data-a-target": "store-link-dropdown",
                                 "data-test-selector": Rt.DropdownStoreLink,
                                 title: Object(f.d)("Store", "TopNav"),
-                                onClick: Object(Ct.b)(Ct.a.Store2)
+                                onClick: Object(St.b)(St.a.Store2)
                             }) : null
                         }, n.renderTwitchPrimeCrown = function(e) {
                             return d.createElement(x.Ya, {
@@ -16039,7 +16039,7 @@
                                     content: k.PageviewContent.Logo
                                 }
                             },
-                            onClick: Object(Ct.b)(Ct.a.HomeIcon),
+                            onClick: Object(St.b)(St.a.HomeIcon),
                             "data-a-target": "home-link"
                         }, d.createElement("div", {
                             className: "top-nav__home-link-logo"
@@ -16071,7 +16071,7 @@
                             href: "https://app.twitch.tv/download",
                             "data-a-target": "get-desktop-link",
                             className: "top-nav__nav-link",
-                            onClick: Object(Ct.b)(Ct.a.GetDesktop)
+                            onClick: Object(St.b)(St.a.GetDesktop)
                         }, Object(f.d)("Get Desktop", "TopNav"))), f.p.integrations.mods && this.renderModsLink(), d.createElement(x.Ya, {
                             display: x.X.Hide,
                             breakpointSmall: {
@@ -16100,58 +16100,58 @@
                             linkTo: "https://www.twitch.tv/p/about",
                             "data-a-target": "about-link",
                             title: Object(f.d)("About", "TopNav"),
-                            onClick: Object(Ct.b)(Ct.a.About)
+                            onClick: Object(St.b)(St.a.About)
                         }), d.createElement(ne, {
                             targetBlank: !0,
                             linkTo: "https://www.twitch.tv/p/legal/ad-choices",
                             "data-a-target": "ad-choices-link",
                             title: Object(f.d)("Ad Choices", "TopNav"),
-                            onClick: Object(Ct.b)(Ct.a.AdChoices)
+                            onClick: Object(St.b)(St.a.AdChoices)
                         }), d.createElement(ne, {
                             targetBlank: !0,
                             linkTo: "http://twitchadvertising.tv/",
                             "data-a-target": "advertisers-link",
                             title: Object(f.d)("Advertisers", "TopNav"),
-                            onClick: Object(Ct.b)(Ct.a.Advertisers)
+                            onClick: Object(St.b)(St.a.Advertisers)
                         }), d.createElement(ne, {
                             targetBlank: !0,
                             linkTo: "https://blog.twitch.tv/",
                             "data-a-target": "blog-link",
                             title: Object(f.d)("Blog", "TopNav"),
-                            onClick: Object(Ct.b)(Ct.a.Blog)
+                            onClick: Object(St.b)(St.a.Blog)
                         }), d.createElement(ne, {
                             targetBlank: !0,
                             linkTo: "https://www.twitch.tv/p/legal/community-guidelines",
                             "data-a-target": "community-guidelines-link",
                             title: Object(f.d)("Community Guidelines", "TopNav"),
-                            onClick: Object(Ct.b)(Ct.a.CommunityGuidelines)
+                            onClick: Object(St.b)(St.a.CommunityGuidelines)
                         }), d.createElement(re, null), d.createElement(ne, {
                             targetBlank: !0,
                             linkTo: "https://www.twitch.tv/p/cookie-policy",
                             "data-a-target": "cookie-policy-link",
                             title: Object(f.d)("Cookie Policy", "TopNav"),
-                            onClick: Object(Ct.b)(Ct.a.CookiePolicy)
+                            onClick: Object(St.b)(St.a.CookiePolicy)
                         }), d.createElement(ne, {
                             targetBlank: !0,
                             linkTo: "https://dev.twitch.tv/",
                             "data-a-target": "developers-link",
                             title: Object(f.d)("Developers", "TopNav"),
-                            onClick: Object(Ct.b)(Ct.a.Developers)
+                            onClick: Object(St.b)(St.a.Developers)
                         }), d.createElement(ne, {
                             targetBlank: !0,
                             linkTo: "https://help.twitch.tv/",
                             "data-a-target": "help-link",
                             title: Object(f.d)("Help", "TopNav"),
-                            onClick: Object(Ct.b)(Ct.a.Help)
+                            onClick: Object(St.b)(St.a.Help)
                         }), d.createElement(ne, {
                             targetBlank: !0,
                             linkTo: "https://www.twitch.tv/jobs",
                             "data-a-target": "jobs-link",
                             title: Object(f.d)("Jobs", "TopNav"),
-                            onClick: Object(Ct.b)(Ct.a.Jobs)
+                            onClick: Object(St.b)(St.a.Jobs)
                         }), d.createElement(v.a, {
                             display: x.X.Block,
-                            onToggle: Object(Ct.b)(Ct.a.Language),
+                            onToggle: Object(St.b)(St.a.Language),
                             "data-test-selector": Rt.LanguageBalloonWrapper
                         }, d.createElement(ne, {
                             "data-test-selector": Rt.LanguageMenuItem,
@@ -16169,43 +16169,43 @@
                             linkTo: "https://music.twitch.tv/",
                             "data-a-target": "music-link",
                             title: Object(f.d)("Music", "TopNav"),
-                            onClick: Object(Ct.b)(Ct.a.Music)
+                            onClick: Object(St.b)(St.a.Music)
                         }), this.renderEllipsisMenuStoreLink(), d.createElement(ne, {
                             targetBlank: !0,
                             linkTo: "https://www.twitch.tv/p/partners",
                             "data-a-target": "partners-link",
                             title: Object(f.d)("Partners", "TopNav"),
-                            onClick: Object(Ct.b)(Ct.a.Partners)
+                            onClick: Object(St.b)(St.a.Partners)
                         }), d.createElement(ne, {
                             targetBlank: !0,
                             linkTo: "https://www.twitch.tv/p/press",
                             "data-a-target": "press-link",
                             title: Object(f.d)("Press", "TopNav"),
-                            onClick: Object(Ct.b)(Ct.a.Press)
+                            onClick: Object(St.b)(St.a.Press)
                         }), d.createElement(ne, {
                             targetBlank: !0,
                             linkTo: "https://www.twitch.tv/p/legal/privacy-policy",
                             "data-a-target": "privacy-policy-link",
                             title: Object(f.d)("Privacy Policy", "TopNav"),
-                            onClick: Object(Ct.b)(Ct.a.PrivacyPolicy)
+                            onClick: Object(St.b)(St.a.PrivacyPolicy)
                         }), d.createElement(ne, {
                             targetBlank: !0,
                             linkTo: "https://www.twitch.tv/p/security",
                             "data-a-target": "security-link",
                             title: Object(f.d)("Security", "TopNav"),
-                            onClick: Object(Ct.b)(Ct.a.Security)
+                            onClick: Object(St.b)(St.a.Security)
                         }), d.createElement(ne, {
                             targetBlank: !0,
                             linkTo: "https://www.twitch.tv/p/terms-of-service",
                             "data-a-target": "terms-link",
                             title: Object(f.d)("Terms", "TopNav"),
-                            onClick: Object(Ct.b)(Ct.a.Terms)
+                            onClick: Object(St.b)(St.a.Terms)
                         }), d.createElement(ne, {
                             targetBlank: !0,
                             linkTo: "https://www.twitch.tv/turbo",
                             "data-a-target": "turbo-link",
                             title: Object(f.d)("Turbo", "TopNav"),
-                            onClick: Object(Ct.b)(Ct.a.Turbo)
+                            onClick: Object(St.b)(St.a.Turbo)
                         }))))), d.createElement(x.Ya, {
                             className: "top-nav__search",
                             display: x.X.Hide,
@@ -18437,7 +18437,7 @@
                 return h() || r.b.get("gdpr_consent_enabled", !1)
             }
             var _ = n("ClZk"),
-                S = n("Td8r");
+                C = n("Td8r");
             n.d(t, !1, function() {
                 return s
             }), n.d(t, !1, function() {
@@ -18463,7 +18463,7 @@
             }), n.d(t, "b", function() {
                 return o.a
             }), n.d(t, "c", function() {
-                return S.a
+                return C.a
             })
         },
         "L/sm": function(e, t, n) {},
@@ -18777,9 +18777,9 @@
             }), n.d(t, "n", function() {
                 return _
             }), n.d(t, "j", function() {
-                return S
-            }), n.d(t, "f", function() {
                 return C
+            }), n.d(t, "f", function() {
+                return S
             }), n.d(t, "e", function() {
                 return w
             }), n.d(t, "m", function() {
@@ -18868,7 +18868,7 @@
                     }(e.login, i)
             }
 
-            function S(e) {
+            function C(e) {
                 var t = e.config,
                     n = e.logger,
                     i = a.get(t.authSettings.cookieName);
@@ -18894,7 +18894,7 @@
                 }
             }
 
-            function C(e) {
+            function S(e) {
                 var t = e.logger;
                 if (Object(l.b)()) {
                     var n = a.get(h);
@@ -20180,7 +20180,7 @@
                     return i
                 }),
                 function(e) {
-                    e.ActivateDevice = "activate-device", e.AuthorizedStreamers = "channel.dashboard.settings.stream", e.AutohostSettings = "channel.dashboard.settings.autohost", e.BitsBuyCard = "bits-buy-card", e.BitsCheckoutSelect = "bits-checkout.select", e.BitsCheckoutSummary = "bits-checkout.summary", e.BroadcastPage = "broadcast", e.BrowseCommunities = "browse.communities", e.BrowseCreative = "browse.creative", e.BrowseGames = "browse.games", e.ChangeEmail = "user.change-email", e.ChannelClips = "channel.clips", e.ChannelClipsManager = "videoManager.clips.channel", e.ChannelCollections = "channel.collections", e.ChannelDashboardAchievements = "channel.dashboard.achievements", e.ChannelDashboardActivity = "dashboards.activity", e.ChannelDashboardBounties = "channel.dashboard.bounties", e.ChannelDashboardChannelAnalytics = "channel.dashboard.channel-analytics", e.ChannelDashboardChannelAnalyticsPayouts = "channel.dashboard.channel-analytics.payouts", e.ChannelDashboardChannelAnalyticsReferrals = "channel.dashboard.channel-analytics.referrals", e.ChannelDashboardExtensionsConfigure = "channel.dashboard.extensions.configure", e.ChannelDashboardExtensionsLegacy = "channel.dashboard.extensions", e.ChannelDashboardExtensionsManagement = "channel.dashboard.extensions.management", e.ChannelDashboardModeration = "channel.dashboard.moderation", e.ChannelDashboardStreamSummary = "channel.dashboard.stream-summary", e.ChannelDashboardStreamSummaryReferrals = "channel.dashboard.stream-summary.referrals", e.ChannelEsportsLoot = "channel.esports-loot", e.ChannelEsportsPass = "channel.esports-pass", e.ChannelEsportsProgress = "channel.esports-progress", e.ChannelEvents = "channel.events", e.ChannelFollowers = "channel.followers", e.ChannelFollows = "channel.follows", e.ChannelIndex = "channel.index.index", e.ChatEmbed = "chat.embed", e.ChatPopout = "chat", e.CheermoteCarousel = "cheermote-carousel", e.ClipsEditing = "clips.edit", e.ClipsError = "clips.error", e.ClipsViewing = "clips.view", e.ClipsWatchPage = "clips.watch", e.CodeRedemptionPage = "redeem", e.CommunityCreate = "community.create", e.CommunityModeration = "community.moderation", e.ContentUnavailable = "404", e.DashboardBroadcastPage = "channel.dashboard.broadcast", e.DashboardEventsAll = "channel.dashboard.events.index", e.DashboardEventsCollection = "channel.dashboard.events.collection", e.DashboardPermissions = "dashboards.permissions", e.DashboardSettingsAutoMod = "channel.dashboard.settings.automod", e.DashboardSettingsIndex = "channel.dashboard.settings.index", e.DashboardSettingsModeration = "channel.dashboard.settings.moderation", e.DashboardSettingsModerationAutomod = "channel.dashboard.settings.moderation.automod", e.DashboardSettingsModerationBannedChatters = "channel.dashboard.settings.moderation.banned-chatters", e.DashboardSettingsModerationBlockedTerms = "channel.dashboard.settings.moderation.blocked-terms", e.DashboardSettingsModerationPermittedTerms = "channel.dashboard.settings.moderation.permitted-terms", e.DashboardSettingsRevenue = "channel.dashboard.settings.revenue", e.DashboardSettingsRevenueChatEmoticons = "channel.dashboard.settings.revenue.subscription.chatperks", e.DashboardSettingsRevenueCheer = "channel.dashboard.settings.revenue.cheer", e.DashboardSettingsRevenueCheerBadges = "channel.dashboard.settings.revenue.cheerbadges", e.DashboardSettingsRevenueCheermotes = "channel.dashboard.settings.revenue.cheermotes", e.DashboardSettingsRevenueGameCommerce = "channel.dashboard.settings.revenue.game-commerce", e.DashboardSettingsRevenueIndex = "channel.dashboard.settings.revenue", e.DashboardSettingsRevenueLoyaltyBadges = "channel.dashboard.settings.revenue.subscription.badges", e.DashboardSettingsRevenueMerchByAmazon = "channel.dashboard.settings.revenue.merch-by-amazon", e.DashboardSettingsRevenuePayoutOnboarding = "channel.dashboard.settings.revenue.payout-onboarding", e.DashboardSettingsRevenuePayoutSettings = "channel.dashboard.settings.revenue.payouts", e.DashboardSettingsRevenueSubsNameSettings = "channel.dashboard.settings.revenue.subscription.ticket", e.DashboardSettingsRevenueUpgradeTerms = "channel.dashboard.settings.revenue.upgrade-terms", e.DashboardSettingsRevenueViewTerms = "channel.dashboard.settings.revenue.view-terms", e.DeleteAccount = "user.delete-account", e.DesklightModsAddonDetailsChangelog = "desklight.mods.addon.details.changelog", e.DesklightModsAddonDetailsDescription = "desklight.mods.addon.details.description", e.DesklightModsAddonDetailsScreenshots = "desklight.mods.addon.details.screenshots", e.DesklightModsAddonDetailsVersions = "desklight.mods.addon.details.versions", e.DesklightModsBrowsableAddons = "desklight.mods.browsable-addons", e.DesklightModsFeaturedAddons = "desklight.mods.featured-addons", e.DesklightModsGamesAvailable = "desklight.mods.games.available", e.DesklightModsInstalledAddons = "desklight.mods.installed-addons", e.DesktopLoginPage = "desktop.login", e.DevOnly = "dev", e.DevSiteAppCreate = "dev.apps.create", e.DevSiteAppEdit = "dev.apps.edit", e.DevSiteApplicationSubmitted = "dev.company.submitted", e.DevSiteApps = "dev.apps.list", e.DevSiteCompanyOverview = "dev.company.overview", e.DevSiteDropsCampaigns = "dev.drops.campaigns", e.DevSiteDropsCreateCampaign = "dev.drops.campaign.create", e.DevSiteDropsCreateItem = "dev.drops.item.create", e.DevSiteDropsEditCampaign = "dev.drops.campaign.edit", e.DevSiteDropsEditItem = "dev.drops.item.edit", e.DevSiteDropsItems = "dev.drops.items", e.DevSiteDropsSettings = "dev.drops.settings", e.DevSiteExtensionsEnableMonetization = "dev.extensions.enable-monetization", e.DevSiteExtensionsList = "dev.extensions.list", e.DevSiteExtensionsVersionsList = "dev.extensions.versions.list", e.DevSiteExtensionsVersionStatus = "dev.extensions.version.status", e.DevSiteGames = "dev.games", e.DevSiteGamesOnePager = "dev.games.onepager", e.DevSiteLogin = "dev.login", e.DevSiteOverview = "dev.overview", e.DevSiteRequestAccess = "dev.company.request", e.DirectoryCommunityByLanguage = "directory.community.language", e.DirectoryCommunityDetails = "directory.community.details", e.DirectoryCommunityIndex = "directory.community.index", e.DirectoryFollowingCommunities = "directory.following.communities", e.DirectoryFollowingGames = "directory.following.games", e.DirectoryFollowingHosts = "directory.following.hosts", e.DirectoryFollowingIndex = "directory.following.index", e.DirectoryFollowingLiveChannels = "directory.following.channels", e.DirectoryFollowingVideos = "directory.following.videos.video-type", e.DirectoryGameClips = "directory.game.clips", e.DirectoryGameDetails = "directory.game.details", e.DirectoryGameIndex = "directory.game.index", e.DirectoryGames = "directory.games", e.DirectoryGameVideos = "directory.game.videos", e.DirectoryPopular = "directory.popular", e.DirectoryPopularByLanguage = "directory.popular.language", e.DirectoryVideosHistory = "directory.videos.history", e.DisableAccount = "user.disable-account", e.DownloadKeyCodePage = "download-keys", e.EditableChannels = "channel.dashboard.settings.channel", e.EmailUnsubscribe = "emailUnsubscribe", e.EmailVerification = "emailVerification", e.EventDetails = "event.details", e.ExtensionDetails = "extensions.extension", e.ExtensionsCategory = "extensions.category", e.ExtensionsDiscovery = "extensions.discovery", e.ExtensionsPopout = "extensions.popout", e.ExtensionsSearch = "extensions.search", e.ForYou = "for-you", e.FriendRequests = "friends.requests", e.Friends = "friends.list", e.Index = "index", e.Inventory = "inventory", e.LivePage = "live.page", e.LoginRequired = "loginRequired", e.MultiviewStreamPage = "channel.multiview", e.MyClipsManager = "videoManager.clips", e.NotificationSettingsPage = "settings.notificationSettings", e.NotMe = "user.not-me", e.OnboardingIndex = "onboarding.index", e.OnboardingSurf = "onboarding.surf", e.PartnershipSignupPage = "partnership.signup", e.PaymentsLandingPage = "payments.landingPage", e.RecoverAccount = "user.recover-account", e.ReportUserPage = "reportUser.page", e.RolesPage = "roles.page", e.SettingsChannel = "private/embed-components", e.SettingsConnections = "private/embed-components", e.SettingsNotifications = "settings.notifications", e.SettingsPrime = "settings.prime", e.SettingsProfile = "settings.profile", e.SettingsRecommendatons = "settings.recommendations", e.SettingsSecurity = "private/embed-components", e.SettingsTurbo = "settings.turbo", e.SpotlightSiteStreamPreview = "spotlight.stream-preview", e.SquadStreamPage = "squadStream.page", e.StoreMerchPage = "store.merch", e.SubsBroadcasterPage = "subs.broadcaster", e.SubsCheckoutPage = "subs.checkout", e.SubsLandingPage = "subs.landing", e.SubsManagementPage = "backpack", e.TeamsDashboardFeaturedChannels = "teams.dashboard.featured-channels", e.TeamsDashboardMembers = "teams.dashboard.members", e.TeamsDashboardRevenue = "teams.dashboard.revenue", e.TeamsDashboardSettings = "teams.dashboard.settings", e.TeamsDashboardStats = "teams.dashboard.stats", e.TeamsLandingPage = "teams.landing", e.TurboLandingPage = "turbo.landing", e.TwitchPrimeFortniteLinkingPage = "prime.fortnite.linking", e.TwitchPrimeFortnitePage = "prime.fortnite.landing", e.TwitchPrimeFortniteSuccessPage = "prime.fortnite.success", e.TwitchPrimeOffersPage = "prime.landing", e.Unknown = "unknown", e.UnsubscribePage = "unsubscribe", e.VideoManagerCollectionsEditor = "videoManager.collections.editor", e.VideoManagerCollectionsManager = "videoManager.collections", e.VideoManagerEditPropertiesPage = "videoManager.edit", e.VideoManagerHighlighter = "videoManager.highlighter", e.VideoManagerPage = "videoManager.page", e.VideoManagerUploadListPage = "videoManager.upload-list", e.VideoManagerUploadPage = "videoManager.upload", e.VideosPage = "videos", e.VideoWatchPage = "video"
+                    e.ActivateDevice = "activate-device", e.AuthorizedStreamers = "channel.dashboard.settings.stream", e.AutohostSettings = "channel.dashboard.settings.autohost", e.BitsBuyCard = "bits-buy-card", e.BitsCheckoutSelect = "bits-checkout.select", e.BitsCheckoutSummary = "bits-checkout.summary", e.BroadcastPage = "broadcast", e.BrowseCommunities = "browse.communities", e.BrowseCreative = "browse.creative", e.BrowseGames = "browse.games", e.ChangeEmail = "user.change-email", e.ChannelClips = "channel.clips", e.ChannelClipsManager = "videoManager.clips.channel", e.ChannelCollections = "channel.collections", e.ChannelDashboardAchievements = "channel.dashboard.achievements", e.ChannelDashboardActivity = "dashboards.activity", e.ChannelDashboardBounties = "channel.dashboard.bounties", e.ChannelDashboardChannelAnalytics = "channel.dashboard.channel-analytics", e.ChannelDashboardChannelAnalyticsPayouts = "channel.dashboard.channel-analytics.payouts", e.ChannelDashboardChannelAnalyticsReferrals = "channel.dashboard.channel-analytics.referrals", e.ChannelDashboardExtensionsConfigure = "channel.dashboard.extensions.configure", e.ChannelDashboardExtensionsLegacy = "channel.dashboard.extensions", e.ChannelDashboardExtensionsManagement = "channel.dashboard.extensions.management", e.ChannelDashboardModeration = "channel.dashboard.moderation", e.ChannelDashboardStreamSummary = "channel.dashboard.stream-summary", e.ChannelDashboardStreamSummaryReferrals = "channel.dashboard.stream-summary.referrals", e.ChannelEsportsLoot = "channel.esports-loot", e.ChannelEsportsPass = "channel.esports-pass", e.ChannelEsportsProgress = "channel.esports-progress", e.ChannelEvents = "channel.events", e.ChannelFollowers = "channel.followers", e.ChannelFollows = "channel.follows", e.ChannelIndex = "channel.index.index", e.ChatEmbed = "chat.embed", e.ChatPopout = "chat", e.CheermoteCarousel = "cheermote-carousel", e.ClipsEditing = "clips.edit", e.ClipsError = "clips.error", e.ClipsViewing = "clips.view", e.ClipsWatchPage = "clips.watch", e.CodeRedemptionPage = "redeem", e.CommunityCreate = "community.create", e.CommunityModeration = "community.moderation", e.ContentUnavailable = "404", e.DashboardBroadcastPage = "channel.dashboard.broadcast", e.DashboardEventsAll = "channel.dashboard.events.index", e.DashboardEventsCollection = "channel.dashboard.events.collection", e.DashboardPermissions = "dashboards.permissions", e.DashboardSettingsAutoMod = "channel.dashboard.settings.automod", e.DashboardSettingsIndex = "channel.dashboard.settings.index", e.DashboardSettingsModeration = "channel.dashboard.settings.moderation", e.DashboardSettingsModerationAutomod = "channel.dashboard.settings.moderation.automod", e.DashboardSettingsModerationBannedChatters = "channel.dashboard.settings.moderation.banned-chatters", e.DashboardSettingsModerationBlockedTerms = "channel.dashboard.settings.moderation.blocked-terms", e.DashboardSettingsModerationPermittedTerms = "channel.dashboard.settings.moderation.permitted-terms", e.DashboardSettingsRevenue = "channel.dashboard.settings.revenue", e.DashboardSettingsRevenueChatEmoticons = "channel.dashboard.settings.revenue.subscription.chatperks", e.DashboardSettingsRevenueCheer = "channel.dashboard.settings.revenue.cheer", e.DashboardSettingsRevenueCheerBadges = "channel.dashboard.settings.revenue.cheerbadges", e.DashboardSettingsRevenueCheermotes = "channel.dashboard.settings.revenue.cheermotes", e.DashboardSettingsRevenueGameCommerce = "channel.dashboard.settings.revenue.game-commerce", e.DashboardSettingsRevenueIndex = "channel.dashboard.settings.revenue", e.DashboardSettingsRevenueLoyaltyBadges = "channel.dashboard.settings.revenue.subscription.badges", e.DashboardSettingsRevenueMerchByAmazon = "channel.dashboard.settings.revenue.merch-by-amazon", e.DashboardSettingsRevenuePayoutOnboarding = "channel.dashboard.settings.revenue.payout-onboarding", e.DashboardSettingsRevenuePayoutSettings = "channel.dashboard.settings.revenue.payouts", e.DashboardSettingsRevenueSubsNameSettings = "channel.dashboard.settings.revenue.subscription.ticket", e.DashboardSettingsRevenueUpgradeTerms = "channel.dashboard.settings.revenue.upgrade-terms", e.DashboardSettingsRevenueViewTerms = "channel.dashboard.settings.revenue.view-terms", e.DeleteAccount = "user.delete-account", e.DesklightModsAddonDetailsChangelog = "desklight.mods.addon.details.changelog", e.DesklightModsAddonDetailsDescription = "desklight.mods.addon.details.description", e.DesklightModsAddonDetailsScreenshots = "desklight.mods.addon.details.screenshots", e.DesklightModsAddonDetailsVersions = "desklight.mods.addon.details.versions", e.DesklightModsBrowsableAddons = "desklight.mods.browsable-addons", e.DesklightModsFeaturedAddons = "desklight.mods.featured-addons", e.DesklightModsGamesAvailable = "desklight.mods.games.available", e.DesklightModsInstalledAddons = "desklight.mods.installed-addons", e.DesktopLoginPage = "desktop.login", e.DevOnly = "dev", e.DevSiteAppCreate = "dev.apps.create", e.DevSiteAppEdit = "dev.apps.edit", e.DevSiteApplicationSubmitted = "dev.company.submitted", e.DevSiteApps = "dev.apps.list", e.DevSiteCompanyOverview = "dev.company.overview", e.DevSiteDropsCampaigns = "dev.drops.campaigns", e.DevSiteDropsCreateCampaign = "dev.drops.campaign.create", e.DevSiteDropsCreateItem = "dev.drops.item.create", e.DevSiteDropsEditCampaign = "dev.drops.campaign.edit", e.DevSiteDropsEditItem = "dev.drops.item.edit", e.DevSiteDropsItems = "dev.drops.items", e.DevSiteDropsSettings = "dev.drops.settings", e.DevSiteExtensionsEnableMonetization = "dev.extensions.enable-monetization", e.DevSiteGames = "dev.games", e.DevSiteGamesOnePager = "dev.games.onepager", e.DevSiteLogin = "dev.login", e.DevSiteOverview = "dev.overview", e.DevSiteRequestAccess = "dev.company.request", e.DirectoryCommunityByLanguage = "directory.community.language", e.DirectoryCommunityDetails = "directory.community.details", e.DirectoryCommunityIndex = "directory.community.index", e.DirectoryFollowingCommunities = "directory.following.communities", e.DirectoryFollowingGames = "directory.following.games", e.DirectoryFollowingHosts = "directory.following.hosts", e.DirectoryFollowingIndex = "directory.following.index", e.DirectoryFollowingLiveChannels = "directory.following.channels", e.DirectoryFollowingVideos = "directory.following.videos.video-type", e.DirectoryGameClips = "directory.game.clips", e.DirectoryGameDetails = "directory.game.details", e.DirectoryGameIndex = "directory.game.index", e.DirectoryGames = "directory.games", e.DirectoryGameVideos = "directory.game.videos", e.DirectoryPopular = "directory.popular", e.DirectoryPopularByLanguage = "directory.popular.language", e.DirectoryVideosHistory = "directory.videos.history", e.DisableAccount = "user.disable-account", e.DownloadKeyCodePage = "download-keys", e.EditableChannels = "channel.dashboard.settings.channel", e.EmailUnsubscribe = "emailUnsubscribe", e.EmailVerification = "emailVerification", e.EventDetails = "event.details", e.ExtensionDetails = "extensions.extension", e.ExtensionsCategory = "extensions.category", e.ExtensionsDiscovery = "extensions.discovery", e.ExtensionsPopout = "extensions.popout", e.ExtensionsSearch = "extensions.search", e.ForYou = "for-you", e.FriendRequests = "friends.requests", e.Friends = "friends.list", e.Index = "index", e.Inventory = "inventory", e.LivePage = "live.page", e.LoginRequired = "loginRequired", e.MultiviewStreamPage = "channel.multiview", e.MyClipsManager = "videoManager.clips", e.NotificationSettingsPage = "settings.notificationSettings", e.NotMe = "user.not-me", e.OnboardingIndex = "onboarding.index", e.OnboardingSurf = "onboarding.surf", e.PartnershipSignupPage = "partnership.signup", e.PaymentsLandingPage = "payments.landingPage", e.RecoverAccount = "user.recover-account", e.ReportUserPage = "reportUser.page", e.RolesPage = "roles.page", e.SettingsChannel = "private/embed-components", e.SettingsConnections = "private/embed-components", e.SettingsNotifications = "settings.notifications", e.SettingsPrime = "settings.prime", e.SettingsProfile = "settings.profile", e.SettingsRecommendatons = "settings.recommendations", e.SettingsSecurity = "private/embed-components", e.SettingsTurbo = "settings.turbo", e.SpotlightSiteStreamPreview = "spotlight.stream-preview", e.SquadStreamPage = "squadStream.page", e.StoreMerchPage = "store.merch", e.SubsBroadcasterPage = "subs.broadcaster", e.SubsCheckoutPage = "subs.checkout", e.SubsLandingPage = "subs.landing", e.SubsManagementPage = "backpack", e.TeamsDashboardFeaturedChannels = "teams.dashboard.featured-channels", e.TeamsDashboardMembers = "teams.dashboard.members", e.TeamsDashboardRevenue = "teams.dashboard.revenue", e.TeamsDashboardSettings = "teams.dashboard.settings", e.TeamsDashboardStats = "teams.dashboard.stats", e.TeamsLandingPage = "teams.landing", e.TurboLandingPage = "turbo.landing", e.TwitchPrimeFortniteLinkingPage = "prime.fortnite.linking", e.TwitchPrimeFortnitePage = "prime.fortnite.landing", e.TwitchPrimeFortniteSuccessPage = "prime.fortnite.success", e.TwitchPrimeOffersPage = "prime.landing", e.Unknown = "unknown", e.UnsubscribePage = "unsubscribe", e.VideoManagerCollectionsEditor = "videoManager.collections.editor", e.VideoManagerCollectionsManager = "videoManager.collections", e.VideoManagerEditPropertiesPage = "videoManager.edit", e.VideoManagerHighlighter = "videoManager.highlighter", e.VideoManagerPage = "videoManager.page", e.VideoManagerUploadListPage = "videoManager.upload-list", e.VideoManagerUploadPage = "videoManager.upload", e.VideosPage = "videos", e.VideoWatchPage = "video"
                 }(i || (i = {}))
         },
         NvZ5: function(e, t, n) {},
@@ -20213,9 +20213,9 @@
             }), n.d(t, "f", function() {
                 return f
             }), n.d(t, "i", function() {
-                return S
-            }), n.d(t, "n", function() {
                 return C
+            }), n.d(t, "n", function() {
+                return S
             }), n.d(t, "m", function() {
                 return w
             }), n.d(t, "k", function() {
@@ -20291,12 +20291,12 @@
             ! function(e) {
                 e.DateOverride = "dateOverride", e.CountryCode = "countryCode"
             }(f || (f = {}));
-            var S = function(e) {
+            var C = function(e) {
                     var t = location.search,
                         n = o.parse(t);
                     return n && n[e] || void 0
                 },
-                C = function(e) {
+                S = function(e) {
                     return e && !e.loading && !e.error && null !== e.currentUser && e.currentUser.hasPrime
                 },
                 w = function(e) {
@@ -21205,7 +21205,7 @@
                     return s
                 }),
                 function(e) {
-                    e.ActivateDevice = "activate_device", e.AuthorizedStreamers = "authorized_streamers", e.AutohostSettings = "autohost_settings", e.BitsCheckoutSelect = "bits-checkout.select", e.BitsCheckoutSummary = "bits-checkout.summary", e.BitsLandingPage = "bits_landing", e.Broadcast = "broadcast", e.Browse = "browse", e.BrowseCommunities = "browse_communities", e.BrowseCreative = "browse_creative", e.BrowseForYou = "browse_for_you", e.ChangeEmail = "change-email", e.Channel = "channel", e.ChannelClips = "channel_clips", e.ChannelClipsManager = "my_clips_channel", e.ChannelCollections = "channel_collections", e.ChannelEsportsLoot = "channel_esports_loot", e.ChannelEsportsPass = "channel_esports_pass", e.ChannelEsportsProgress = "channel_esports_progress", e.ChannelEvents = "channel_events", e.ChannelVideos = "channel_vods", e.Chat = "chat", e.ClipsEditing = "clips_edit", e.ClipsError = "clips_error", e.ClipsGame = "clips_game", e.ClipsViewing = "clips_viewing", e.ClipsWatchPage = "clips_watch", e.CodeRedemptionPage = "code_redemption", e.CommunityCreate = "community_create", e.CommunityModerationLog = "community_moderation_log", e.CommunityModerationSettings = "community_moderation_settings", e.ContentUnavailable = "404", e.Dashboard = "dashboard", e.DashboardAchievements = "dashboard/achievements", e.DashboardActivity = "dashboard/activity", e.DashboardBounties = "dashboard/bounties", e.DashboardBroadcast = "dashboard/broadcast", e.DashboardChannelAnalytics = "dashboard/channel-analytics", e.DashboardChannelAnalyticsPayouts = "dashboard/channel-analytics/payouts", e.DashboardChannelAnalyticsReferrals = "dashboard/channel-analytics-referrals", e.DashboardEventsAll = "dashboard/events", e.DashboardEventsCollection = "dashboard/events/collection", e.DashboardExtensionsConfigure = "dashboard/extensions/configure", e.DashboardExtensionsLegacy = "dashboard/extensions", e.DashboardExtensionsManagement = "dashboard/extensions/management", e.DashboardLivePage = "dashboard/live", e.DashboardPermissions = "dashboard/permissions", e.DashboardSettingsAutoMod = "dashboard/settings/automod", e.DashboardSettingsIndex = "dashboard/settings", e.DashboardSettingsModeration = "dashboard/settings/moderation", e.DashboardSettingsModerationAutomod = "dashboard/settings/moderation/automod", e.DashboardSettingsModerationBannedChatters = "dashboard/settings/moderation/banned-chatters", e.DashboardSettingsModerationBlockedTerms = "dashboard/settings/moderation/blocked-terms", e.DashboardSettingsModerationPermittedTerms = "dashboard/settings/moderation/permitted-terms", e.DashboardSettingsRevenueChatEmoticons = "dashboard/settings/revenue/subscription/chatperks", e.DashboardSettingsRevenueCheer = "dashboard/settings/revenue/cheer", e.DashboardSettingsRevenueCheerBadges = "dashboard/settings/revenue/cheerbadges", e.DashboardSettingsRevenueCheermotes = "dashboard/settings/revenue/cheermotes", e.DashboardSettingsRevenueGameCommerce = "dashboard/settings/revenue/game-commerce", e.DashboardSettingsRevenueIndex = "dashboard/settings/revenue", e.DashboardSettingsRevenueLoyaltyBadges = "dashboard/settings/revenue/subscription/badges", e.DashboardSettingsRevenueMerchByAmazon = "dashboard/settings/revenue/merch-by-amazon", e.DashboardSettingsRevenuePayoutOnboarding = "dashboard/settings/revenue/payout-onboarding", e.DashboardSettingsRevenuePayoutSettings = "dashboard/settings/revenue/payouts", e.DashboardSettingsRevenueSubsNameSettings = "dashboard/settings/revenue/subscription/ticket", e.DashboardSettingsRevenueUpgradeTerms = "dashboard/settings/revenue/upgrade-terms", e.DashboardSettingsRevenueViewTerms = "dashboard/settings/revenue/view-terms", e.DashboardSettingsRolesPage = "dashboard/settings/roles", e.DashboardStreamSummary = "dashboard/stream-summary", e.DashboardStreamSummaryReferrals = "dashboard/stream-summary-referrals", e.DeleteAccount = "delete_account", e.DesklightModsAddonDetailsChangelog = "desklight/mods/addon-details/changelog", e.DesklightModsAddonDetailsDescription = "desklight/mods/addon-details/description", e.DesklightModsAddonDetailsScreenshots = "desklight/mods/addon-details/screenshots", e.DesklightModsAddonDetailsVersions = "desklight/mods/addon-details/versions", e.DesklightModsBrowsableAddons = "desklight/mods/browsable-addons", e.DesklightModsFeaturedAddons = "desklight/mods/featured-addons", e.DesklightModsGamesAvailable = "desklight/mods/games-available", e.DesklightModsInstalledAddons = "desklight/mods/installed-addons", e.DesktopLoginPage = "desktop/login", e.DevSiteAppCreate = "dev/app-create", e.DevSiteAppEdit = "dev/app-edit", e.DevSiteApps = "dev/apps", e.DevSiteCompanyApplicationSubmitted = "dev/company-application-submitted", e.DevSiteCompanyOverview = "dev/company", e.DevSiteDropsCampaigns = "dev/drops-campaigns", e.DevSiteDropsCreateCampaign = "dev/drops-create-campaign", e.DevSiteDropsCreateItem = "dev/drops-create-item", e.DevSiteDropsEditCampaign = "dev/drops-edit-campaign", e.DevSiteDropsEditItems = "dev/drops-items", e.DevSiteDropsItems = "dev/drops-items", e.DevSiteDropsSettings = "dev/drops-settings", e.DevSiteExtensionsEnableMonetization = "dev/extensions-enable-monetization", e.DevSiteExtensionsList = "dev/extensions", e.DevSiteExtensionsVersionsList = "dev/extensions/versions/list", e.DevSiteExtensionsVersionStatus = "dev/extensions/versions/status", e.DevSiteGames = "dev/games", e.DevSiteLogin = "dev/login", e.DevSiteOverview = "dev/overview", e.DevSiteRequestCompanyAccess = "dev/request-company-access", e.DevSiteSandbox = "dev/sandbox", e.Directory = "directory", e.DirectoryPopular = "directory.popular", e.DisableAccount = "disable_account", e.DownloadKeyCodePage = "code_redemption_download_keys", e.EditableChannels = "editable_channels", e.EmailUnsubscribe = "email_unsubscribe", e.EmailVerification = "email_verification", e.EventDetails = "event_details", e.ExtensionDetails = "extension_details", e.ExtensionsCategory = "extensions_category", e.ExtensionsDiscovery = "extensions_discovery", e.ExtensionsPopout = "extensions_popout", e.ExtensionsSearch = "extensions_search", e.Followers = "followers", e.Follows = "follows", e.FriendRequests = "friends.requests", e.Friends = "friends.list", e.FrontPage = "home", e.GameDetail = "game_detail", e.Inventory = "inventory", e.LoginRequired = "loginRequired", e.MyClipsManager = "my_clips", e.None = "", e.NotMe = "not_me", e.OnboardingChannelSurfing = "onboarding/channel-surfing", e.OnboardingCommunitySelection = "onboarding/community-selection", e.PartnershipSignupPage = "partnership_signup_page", e.PaymentsLandingPage = "payments_landing_page", e.RecoverAccount = "recover_account", e.SettingsPage = "settings", e.SquadStreamPage = "squad-stream", e.SubsBroadcasterPage = "subs-broadcaster", e.SubsCheckoutPage = "subs_checkout", e.SubsLandingPage = "subs-landing", e.SubsManagementPage = "subs_management", e.TeamsDashboardFeaturedChannels = "teams/dashboard/featured-channels", e.TeamsDashboardMembers = "teams/dashboard/members", e.TeamsDashboardRevenue = "teams/dashboard/revenue", e.TeamsDashboardSettings = "teams/dashboard/settings", e.TeamsDashboardStats = "teams/dashboard/stats", e.TeamsLandingPage = "team", e.TurboLandingPage = "turbo", e.TwitchPrimeFortniteLinkingPage = "twitch_prime_fortnite_linking_page", e.TwitchPrimeFortnitePage = "twitch_prime_fortnite_page", e.TwitchPrimeFortniteSuccessPage = "twitch_prime_fortnite_success_page", e.TwitchPrimeOffersPage = "twitch_prime_offers_page", e.UnsubscribePage = "unsubscribe", e.VideoManager = "video_manager", e.VideoManagerCollectionEditor = "video_manager_collection_editor", e.VideoManagerCollectionManager = "video_manager_collections", e.VideoManagerHighlighter = "video_manager_highlighter", e.VideoWatchPage = "vod"
+                    e.ActivateDevice = "activate_device", e.AuthorizedStreamers = "authorized_streamers", e.AutohostSettings = "autohost_settings", e.BitsCheckoutSelect = "bits-checkout.select", e.BitsCheckoutSummary = "bits-checkout.summary", e.BitsLandingPage = "bits_landing", e.Broadcast = "broadcast", e.Browse = "browse", e.BrowseCommunities = "browse_communities", e.BrowseCreative = "browse_creative", e.BrowseForYou = "browse_for_you", e.ChangeEmail = "change-email", e.Channel = "channel", e.ChannelClips = "channel_clips", e.ChannelClipsManager = "my_clips_channel", e.ChannelCollections = "channel_collections", e.ChannelEsportsLoot = "channel_esports_loot", e.ChannelEsportsPass = "channel_esports_pass", e.ChannelEsportsProgress = "channel_esports_progress", e.ChannelEvents = "channel_events", e.ChannelVideos = "channel_vods", e.Chat = "chat", e.ClipsEditing = "clips_edit", e.ClipsError = "clips_error", e.ClipsGame = "clips_game", e.ClipsViewing = "clips_viewing", e.ClipsWatchPage = "clips_watch", e.CodeRedemptionPage = "code_redemption", e.CommunityCreate = "community_create", e.CommunityModerationLog = "community_moderation_log", e.CommunityModerationSettings = "community_moderation_settings", e.ContentUnavailable = "404", e.Dashboard = "dashboard", e.DashboardAchievements = "dashboard/achievements", e.DashboardActivity = "dashboard/activity", e.DashboardBounties = "dashboard/bounties", e.DashboardBroadcast = "dashboard/broadcast", e.DashboardChannelAnalytics = "dashboard/channel-analytics", e.DashboardChannelAnalyticsPayouts = "dashboard/channel-analytics/payouts", e.DashboardChannelAnalyticsReferrals = "dashboard/channel-analytics-referrals", e.DashboardEventsAll = "dashboard/events", e.DashboardEventsCollection = "dashboard/events/collection", e.DashboardExtensionsConfigure = "dashboard/extensions/configure", e.DashboardExtensionsLegacy = "dashboard/extensions", e.DashboardExtensionsManagement = "dashboard/extensions/management", e.DashboardLivePage = "dashboard/live", e.DashboardPermissions = "dashboard/permissions", e.DashboardSettingsAutoMod = "dashboard/settings/automod", e.DashboardSettingsIndex = "dashboard/settings", e.DashboardSettingsModeration = "dashboard/settings/moderation", e.DashboardSettingsModerationAutomod = "dashboard/settings/moderation/automod", e.DashboardSettingsModerationBannedChatters = "dashboard/settings/moderation/banned-chatters", e.DashboardSettingsModerationBlockedTerms = "dashboard/settings/moderation/blocked-terms", e.DashboardSettingsModerationPermittedTerms = "dashboard/settings/moderation/permitted-terms", e.DashboardSettingsRevenueChatEmoticons = "dashboard/settings/revenue/subscription/chatperks", e.DashboardSettingsRevenueCheer = "dashboard/settings/revenue/cheer", e.DashboardSettingsRevenueCheerBadges = "dashboard/settings/revenue/cheerbadges", e.DashboardSettingsRevenueCheermotes = "dashboard/settings/revenue/cheermotes", e.DashboardSettingsRevenueGameCommerce = "dashboard/settings/revenue/game-commerce", e.DashboardSettingsRevenueIndex = "dashboard/settings/revenue", e.DashboardSettingsRevenueLoyaltyBadges = "dashboard/settings/revenue/subscription/badges", e.DashboardSettingsRevenueMerchByAmazon = "dashboard/settings/revenue/merch-by-amazon", e.DashboardSettingsRevenuePayoutOnboarding = "dashboard/settings/revenue/payout-onboarding", e.DashboardSettingsRevenuePayoutSettings = "dashboard/settings/revenue/payouts", e.DashboardSettingsRevenueSubsNameSettings = "dashboard/settings/revenue/subscription/ticket", e.DashboardSettingsRevenueUpgradeTerms = "dashboard/settings/revenue/upgrade-terms", e.DashboardSettingsRevenueViewTerms = "dashboard/settings/revenue/view-terms", e.DashboardSettingsRolesPage = "dashboard/settings/roles", e.DashboardStreamSummary = "dashboard/stream-summary", e.DashboardStreamSummaryReferrals = "dashboard/stream-summary-referrals", e.DeleteAccount = "delete_account", e.DesklightModsAddonDetailsChangelog = "desklight/mods/addon-details/changelog", e.DesklightModsAddonDetailsDescription = "desklight/mods/addon-details/description", e.DesklightModsAddonDetailsScreenshots = "desklight/mods/addon-details/screenshots", e.DesklightModsAddonDetailsVersions = "desklight/mods/addon-details/versions", e.DesklightModsBrowsableAddons = "desklight/mods/browsable-addons", e.DesklightModsFeaturedAddons = "desklight/mods/featured-addons", e.DesklightModsGamesAvailable = "desklight/mods/games-available", e.DesklightModsInstalledAddons = "desklight/mods/installed-addons", e.DesktopLoginPage = "desktop/login", e.DevSiteAppCreate = "dev/app-create", e.DevSiteAppEdit = "dev/app-edit", e.DevSiteApps = "dev/apps", e.DevSiteCompanyApplicationSubmitted = "dev/company-application-submitted", e.DevSiteCompanyOverview = "dev/company", e.DevSiteDropsCampaigns = "dev/drops-campaigns", e.DevSiteDropsCreateCampaign = "dev/drops-create-campaign", e.DevSiteDropsCreateItem = "dev/drops-create-item", e.DevSiteDropsEditCampaign = "dev/drops-edit-campaign", e.DevSiteDropsEditItems = "dev/drops-items", e.DevSiteDropsItems = "dev/drops-items", e.DevSiteDropsSettings = "dev/drops-settings", e.DevSiteExtensionsEnableMonetization = "dev/extensions-enable-monetization", e.DevSiteGames = "dev/games", e.DevSiteLogin = "dev/login", e.DevSiteOverview = "dev/overview", e.DevSiteRequestCompanyAccess = "dev/request-company-access", e.DevSiteSandbox = "dev/sandbox", e.Directory = "directory", e.DirectoryPopular = "directory.popular", e.DisableAccount = "disable_account", e.DownloadKeyCodePage = "code_redemption_download_keys", e.EditableChannels = "editable_channels", e.EmailUnsubscribe = "email_unsubscribe", e.EmailVerification = "email_verification", e.EventDetails = "event_details", e.ExtensionDetails = "extension_details", e.ExtensionsCategory = "extensions_category", e.ExtensionsDiscovery = "extensions_discovery", e.ExtensionsPopout = "extensions_popout", e.ExtensionsSearch = "extensions_search", e.Followers = "followers", e.Follows = "follows", e.FriendRequests = "friends.requests", e.Friends = "friends.list", e.FrontPage = "home", e.GameDetail = "game_detail", e.Inventory = "inventory", e.LoginRequired = "loginRequired", e.MyClipsManager = "my_clips", e.None = "", e.NotMe = "not_me", e.OnboardingChannelSurfing = "onboarding/channel-surfing", e.OnboardingCommunitySelection = "onboarding/community-selection", e.PartnershipSignupPage = "partnership_signup_page", e.PaymentsLandingPage = "payments_landing_page", e.RecoverAccount = "recover_account", e.SettingsPage = "settings", e.SquadStreamPage = "squad-stream", e.SubsBroadcasterPage = "subs-broadcaster", e.SubsCheckoutPage = "subs_checkout", e.SubsLandingPage = "subs-landing", e.SubsManagementPage = "subs_management", e.TeamsDashboardFeaturedChannels = "teams/dashboard/featured-channels", e.TeamsDashboardMembers = "teams/dashboard/members", e.TeamsDashboardRevenue = "teams/dashboard/revenue", e.TeamsDashboardSettings = "teams/dashboard/settings", e.TeamsDashboardStats = "teams/dashboard/stats", e.TeamsLandingPage = "team", e.TurboLandingPage = "turbo", e.TwitchPrimeFortniteLinkingPage = "twitch_prime_fortnite_linking_page", e.TwitchPrimeFortnitePage = "twitch_prime_fortnite_page", e.TwitchPrimeFortniteSuccessPage = "twitch_prime_fortnite_success_page", e.TwitchPrimeOffersPage = "twitch_prime_offers_page", e.UnsubscribePage = "unsubscribe", e.VideoManager = "video_manager", e.VideoManagerCollectionEditor = "video_manager_collection_editor", e.VideoManagerCollectionManager = "video_manager_collections", e.VideoManagerHighlighter = "video_manager_highlighter", e.VideoWatchPage = "vod"
                 }(i || (i = {})),
                 function(e) {
                     e.Channels = "channels", e.Communities = "communities", e.Games = "games", e.Hosts = "hosts", e.Mixed = "mixed", e.Videos = "vods"
@@ -21352,7 +21352,6 @@
             };
             e.exports = n
         },
-        QBuy: function(e, t, n) {},
         QGrW: function(e, t, n) {},
         QK1T: function(e, t, n) {
             "use strict";
@@ -21812,38 +21811,38 @@
             }
 
             function f(e) {
-                C(e, r.Click, o.StartYourFreeTrial)
+                S(e, r.Click, o.StartYourFreeTrial)
             }
 
             function g(e) {
-                C(e, r.Hover, o.StartYourFreeTrial)
+                S(e, r.Hover, o.StartYourFreeTrial)
             }
 
             function v(e, t) {
-                C(t, r.Click, e ? o.MoreInfo : o.CloseInfo)
+                S(t, r.Click, e ? o.MoreInfo : o.CloseInfo)
             }
 
             function b(e, t) {
-                S(e, r.Click, t)
+                C(e, r.Click, t)
             }
 
             function y(e) {
-                C(e, r.Hover, o.MoreInfo)
+                S(e, r.Hover, o.MoreInfo)
             }
 
             function k(e) {
-                C(e, r.Hover, o.CloseInfo)
+                S(e, r.Hover, o.CloseInfo)
             }
 
             function E(e, t) {
-                S(e, r.Hover, t)
+                C(e, r.Hover, t)
             }
 
             function _(e) {
-                C(e, r.Impression, o.Offer)
+                S(e, r.Impression, o.Offer)
             }
 
-            function S(e, t, n) {
+            function C(e, t, n) {
                 var i;
                 switch (n) {
                     case d.e.CLAIM_CODE:
@@ -21855,10 +21854,10 @@
                     case d.e.DIRECT_ENTITLEMENT:
                         i = o.ClaimOffer
                 }
-                i && C(e, t, i)
+                i && S(e, t, i)
             }
 
-            function C(e, t, n) {
+            function S(e, t, n) {
                 c.o.track(u.SpadeEventType.PrimeOfferInteraction, {
                     offer_id: e.offerID,
                     external_url: e.externalURL,
@@ -23096,7 +23095,7 @@
                 }
                 return t
             }
-            var v, b, y, k, E, _, S, C, w, N, T, I, D, R;
+            var v, b, y, k, E, _, C, S, w, N, T, I, D, R;
             n("Nv1j");
             ! function(e) {
                 e.Start = "align-content-start", e.End = "align-content-end", e.Center = "align-content-center", e.Between = "align-content-between", e.Around = "align-content-around", e.Stretch = "align-content-stretch"
@@ -23118,10 +23117,10 @@
             }(_ || (_ = {})),
             function(e) {
                 e.Start = "justify-content-start", e.End = "justify-content-end", e.Center = "justify-content-center", e.Between = "justify-content-between", e.Around = "justify-content-around"
-            }(S || (S = {})),
+            }(C || (C = {})),
             function(e) {
                 e.Auto = "tw-overflow-auto", e.Scroll = "tw-overflow-scroll", e.Visible = "tw-overflow-visible", e.Hidden = "tw-overflow-hidden"
-            }(C || (C = {})),
+            }(S || (S = {})),
             function(e) {
                 e.Relative = "relative", e.Absolute = "absolute", e.Fixed = "fixed"
             }(w || (w = {})),
@@ -23222,7 +23221,7 @@
                         className: p(t)
                     }, m(this.props))), this.props.fillContent && (e = u.createElement(x, {
                         display: k.Flex,
-                        justifyContent: S.Center,
+                        justifyContent: C.Center,
                         alignItems: b.Center,
                         fullWidth: !0,
                         fullHeight: !0
@@ -25008,7 +25007,7 @@
                                     className: "tw-button__primary-icon",
                                     display: k.Flex,
                                     alignItems: b.Center,
-                                    justifyContent: S.Center
+                                    justifyContent: C.Center
                                 }, u.createElement(j, {
                                     width: e.width,
                                     height: e.height,
@@ -25018,7 +25017,7 @@
                                     className: "tw-button__alert-icon",
                                     display: k.Flex,
                                     alignItems: b.Center,
-                                    justifyContent: S.Center
+                                    justifyContent: C.Center
                                 }, u.createElement(j, {
                                     width: e.width,
                                     height: e.height,
@@ -25076,7 +25075,7 @@
                                 position: w.Absolute,
                                 display: k.Flex,
                                 alignItems: b.Center,
-                                justifyContent: S.Center,
+                                justifyContent: C.Center,
                                 key: "tw-button-success-icon"
                             }, u.createElement(j, {
                                 asset: M.Check,
@@ -25185,7 +25184,7 @@
                                     className: "tw-button-icon__primary-icon",
                                     display: k.Flex,
                                     alignItems: b.Center,
-                                    justifyContent: S.Center
+                                    justifyContent: C.Center
                                 }, u.createElement(j, {
                                     width: e.width,
                                     height: e.height,
@@ -25195,7 +25194,7 @@
                                     className: "tw-button-icon__alert-icon",
                                     display: k.Flex,
                                     alignItems: b.Center,
-                                    justifyContent: S.Center
+                                    justifyContent: C.Center
                                 }, u.createElement(j, {
                                     width: e.width,
                                     height: e.height,
@@ -25507,7 +25506,7 @@
                     }), u.createElement(ge, {
                         centered: !0
                     }, u.createElement(he, {
-                        justifyContent: S.Center
+                        justifyContent: C.Center
                     }, u.createElement(me, {
                         cols: {
                             default: 12,
@@ -25545,7 +25544,7 @@
                     }, e.message, n))), r && u.createElement(x, {
                         display: k.Flex,
                         flexDirection: E.RowReverse,
-                        justifyContent: S.End
+                        justifyContent: C.End
                     }, r), u.createElement(x, {
                         padding: {
                             x: 1
@@ -25575,7 +25574,7 @@
                     type: z.Text
                 }))), u.createElement(x, {
                     display: k.Flex,
-                    justifyContent: S.End,
+                    justifyContent: C.End,
                     margin: {
                         top: 2
                     }
@@ -25590,20 +25589,20 @@
                 }, n))
             };
             _e.displayName = "AccordionFooter";
-            var Se, Ce;
+            var Ce, Se;
             n("dPg0");
             ! function(e) {
                 e.Aspect21x9 = "tw-aspect--21x9", e.Aspect16x9 = "tw-aspect--16x9", e.Aspect4x3 = "tw-aspect--4x3", e.Aspect1x1 = "tw-aspect--1x1", e.Aspect3x4 = "tw-aspect--3x4", e.Aspect3x2 = "tw-aspect--3x2", e.BoxArt = "tw-aspect--3x4"
-            }(Se || (Se = {})),
+            }(Ce || (Ce = {})),
             function(e) {
                 e.Top = "tw-aspect--align-top", e.Center = "tw-aspect--align-center", e.Bottom = "tw-aspect--align-bottom"
-            }(Ce || (Ce = {}));
+            }(Se || (Se = {}));
             var we = function(e) {
                 var t = {
                     "tw-aspect": !0,
                     "tw-aspect--overflow": e.overflow
                 };
-                return e.ratio ? t[e.ratio] = !0 : t[Se.Aspect16x9] = !0, e.align ? t[e.align] = !0 : t[Ce.Top] = !0, u.createElement("div", c.__assign({
+                return e.ratio ? t[e.ratio] = !0 : t[Ce.Aspect16x9] = !0, e.align ? t[e.align] = !0 : t[Se.Top] = !0, u.createElement("figure", c.__assign({
                     className: p(t)
                 }, m(e)), e.children)
             };
@@ -25699,8 +25698,8 @@
                                 display: k.Flex,
                                 flexDirection: E.Column,
                                 alignItems: b.Start,
-                                justifyContent: S.Center,
-                                overflow: C.Hidden,
+                                justifyContent: C.Center,
+                                overflow: S.Hidden,
                                 padding: {
                                     y: t.getYPadding(),
                                     right: 2
@@ -25734,7 +25733,7 @@
                                 flexShrink: 0,
                                 display: k.Flex,
                                 alignItems: b.Center,
-                                justifyContent: S.End
+                                justifyContent: C.End
                             }, u.createElement(de, null, t.props.label))
                         }, t.renderImageAndLabel = function() {
                             if (t.props.imageProps || t.props.imageLabelOverlay) return u.createElement(fe, {
@@ -25749,7 +25748,7 @@
                                 zIndex: R.Above,
                                 display: k.Flex,
                                 alignItems: b.Center,
-                                justifyContent: S.Center,
+                                justifyContent: C.Center,
                                 padding: 1,
                                 color: t.props.imageProps ? te.Overlay : te.Inherit,
                                 background: t.props.imageProps ? $.Overlay : void 0
@@ -25763,8 +25762,8 @@
                                 attachTop: !0,
                                 attachLeft: !0
                             }, u.createElement(we, {
-                                ratio: Se.Aspect1x1,
-                                align: Ce.Center
+                                ratio: Ce.Aspect1x1,
+                                align: Se.Center
                             }, u.createElement(Te, c.__assign({}, t.props.imageProps)))))
                         }, t.onClick = function(e) {
                             void 0 !== t.props.onClick && t.props.onClick(e, t.props.index)
@@ -25776,7 +25775,7 @@
                             background: $.Base,
                             elevation: 1,
                             position: w.Relative,
-                            overflow: C.Hidden
+                            overflow: S.Hidden
                         }, this.renderBackgroundImage(), u.createElement(Re, {
                             onClick: this.onClick,
                             type: Ie.Base,
@@ -25793,7 +25792,7 @@
                     function t() {
                         var t = null !== e && e.apply(this, arguments) || this;
                         return t.state = {
-                            currentOpenIndex: t.props.initialOpenIndex || 0
+                            currentOpenIndex: 0
                         }, t.onHeaderClick = function(e, n) {
                             "number" == typeof n && t.setState({
                                 currentOpenIndex: n
@@ -25962,7 +25961,7 @@
                 return n = 300 === e.size ? "https://static-cdn.jtvnw.net/jtv_user_pictures/xarth/404_user_300x300.png" : 96 === e.size || 80 === e.size ? "https://static-cdn.jtvnw.net/jtv_user_pictures/xarth/404_user_150x150.png" : "https://static-cdn.jtvnw.net/jtv_user_pictures/xarth/404_user_70x70.png", e.presenceIndicator && (i = u.createElement(x, {
                     className: "tw-avatar__presence",
                     display: k.Flex,
-                    justifyContent: S.Center,
+                    justifyContent: C.Center,
                     alignItems: b.Center,
                     position: w.Absolute
                 }, u.createElement(Ve, {
@@ -25972,7 +25971,7 @@
                     className: p(r)
                 }, m(e)), u.createElement(fe, {
                     borderRadius: e.borderRadius || ee.Medium,
-                    overflow: C.Hidden
+                    overflow: S.Hidden
                 }, u.createElement(Te, {
                     className: "tw-avatar__img",
                     src: e.src || n,
@@ -26001,7 +26000,7 @@
                     },
                     i = u.createElement(ce, c.__assign({
                         display: k.InlineFlex,
-                        justifyContent: S.Center,
+                        justifyContent: C.Center,
                         alignItems: b.Center,
                         borderRadius: ee.Rounded,
                         className: p(t)
@@ -26010,7 +26009,7 @@
                     }, u.createElement(x, {
                         className: "tw-badge__icon",
                         display: k.Flex,
-                        justifyContent: S.Center,
+                        justifyContent: C.Center,
                         alignItems: b.Center
                     }, u.createElement(j, {
                         asset: e.icon,
@@ -26072,9 +26071,9 @@
                     className: p(t),
                     flexShrink: 0,
                     borderRadius: e.borderRadius,
-                    overflow: C.Hidden
+                    overflow: S.Hidden
                 }, m(e)), u.createElement(we, {
-                    ratio: e.aspect ? e.aspect : Se.Aspect16x9,
+                    ratio: e.aspect ? e.aspect : Ce.Aspect16x9,
                     overflow: e.overflow
                 }, u.createElement(Te, c.__assign({}, qe(e)))), e.children)
             };
@@ -26157,7 +26156,7 @@
                     "data-test-selector": "tw-card-image",
                     "data-a-target": "tw-card-image"
                 }, u.createElement(Ke, c.__assign({
-                    aspect: Se.BoxArt,
+                    aspect: Ce.BoxArt,
                     borderRadius: ee.Medium
                 }, qe(e)))), u.createElement(Xe, null, u.createElement(x, {
                     "data-test-selector": "tw-card-title",
@@ -26179,7 +26178,7 @@
                         bottom: .5
                     }
                 }, u.createElement(we, {
-                    ratio: Se.Aspect3x4
+                    ratio: Ce.Aspect3x4
                 }, u.createElement(Ze, null))), u.createElement(de, null, u.createElement(Ze, {
                     width: 150
                 })), u.createElement(de, {
@@ -26251,7 +26250,7 @@
                 return e.noTail || (h = u.createElement(L, {
                     className: "tw-balloon__tail",
                     position: w.Absolute,
-                    overflow: C.Hidden
+                    overflow: S.Hidden
                 }, u.createElement("div", {
                     style: f
                 }, u.createElement(fe, {
@@ -26363,7 +26362,7 @@
                     }(e) && (t = u.createElement(x, {
                         className: "tw-drop-down-menu-item-figure--image"
                     }, u.createElement(we, {
-                        ratio: e.aspectRatio || Se.Aspect1x1
+                        ratio: e.aspectRatio || Ce.Aspect1x1
                     }, u.createElement(Te, c.__assign({}, qe(e)))))),
                     function(e) {
                         return void 0 === e.src
@@ -26460,7 +26459,7 @@
                                 maxHeight: this.props.maxHeight
                             }
                         }, u.createElement(x, {
-                            overflow: C.Auto,
+                            overflow: S.Auto,
                             padding: 1
                         }, e))))
                 }, t
@@ -26480,7 +26479,7 @@
                     display: k.Flex,
                     fullHeight: !0,
                     fullWidth: !0,
-                    justifyContent: S.Center,
+                    justifyContent: C.Center,
                     position: w.Absolute,
                     attachTop: !0,
                     attachLeft: !0
@@ -26491,26 +26490,22 @@
             bt.displayName = "DropZone";
             n("OAqP");
             var yt = function(e) {
-                var t = {
-                    "tw-icon": !0,
-                    "tw-icon--fill": e.fill
-                };
-                return u.createElement(x, c.__assign({
-                    display: k.InlineFlex,
-                    alignItems: b.Center,
-                    fullWidth: !!e.fill,
-                    className: p(t)
-                }, m(e)), u.createElement(we, {
-                    ratio: Se.Aspect1x1
-                }, u.createElement("svg", {
-                    className: "tw-icon__svg",
-                    width: "100%",
-                    height: "100%",
+                var t = u.createElement("svg", {
+                    width: e.fill ? "100%" : "2rem",
+                    height: e.fill ? "100%" : "2rem",
                     version: "1.1",
                     viewBox: "0 0 20 20",
                     x: "0px",
                     y: "0px"
-                }, U[e.asset].path)))
+                }, U[e.asset].path);
+                return t = e.fill ? u.createElement(x, null, u.createElement(we, {
+                    ratio: Ce.Aspect1x1
+                }, t)) : u.createElement(x, null, t), u.createElement(L, c.__assign({
+                    display: k.InlineFlex,
+                    alignItems: b.Center,
+                    fullWidth: !!e.fill,
+                    className: "tw-icon"
+                }, m(e)), t)
             };
             yt.displayName = "Icon";
             var kt, Et;
@@ -26519,7 +26514,7 @@
                 e.Error = "tw-in-feature-notification--error", e.Info = "tw-in-feature-notification--info", e.Neutral = "tw-in-feature-notification--neutral", e.Success = "tw-in-feature-notification--success", e.Warning = "tw-in-feature-notification--warning"
             }(Et || (Et = {}));
             var _t = ((kt = {})[Et.Error] = M.NotificationError, kt[Et.Info] = M.NotificationInfo, kt[Et.Success] = M.NotificationSuccess, kt[Et.Warning] = M.NotificationWarning, kt),
-                St = function(e) {
+                Ct = function(e) {
                     var t, n = ((t = {
                             "tw-in-feature-notification": !0
                         })[e.type] = !0, t),
@@ -26591,7 +26586,6 @@
                         className: p(n),
                         background: e.background || $.Base,
                         borderRadius: ee.Medium,
-                        color: te.Base,
                         padding: 1,
                         position: w.Relative
                     }), o, u.createElement(x, {
@@ -26604,12 +26598,12 @@
                         }
                     }, s)), i)
                 };
-            St.displayName = "InFeatureNotification";
-            var Ct, wt;
+            Ct.displayName = "InFeatureNotification";
+            var St, wt;
             n("Z9Pd");
             ! function(e) {
                 e[e.Text = 0] = "Text", e[e.Number = 1] = "Number", e[e.Email = 2] = "Email", e[e.Password = 3] = "Password", e[e.Search = 4] = "Search"
-            }(Ct || (Ct = {})),
+            }(St || (St = {})),
             function(e) {
                 e.Default = "", e.Left = "tw-input--rounded-left", e.Right = "tw-input--rounded-right"
             }(wt || (wt = {}));
@@ -26621,7 +26615,6 @@
                 var r = {
                         "tw-input": !0,
                         "tw-input--small": e.size === ot.Small,
-                        "tw-input--large": e.size === ot.Large,
                         "tw-input--error": e.error
                     },
                     a = e.size ? ut[e.size] : ee.Medium,
@@ -26641,7 +26634,7 @@
                     color: te.Alt2,
                     display: k.Flex,
                     alignItems: b.Center,
-                    justifyContent: S.Center,
+                    justifyContent: C.Center,
                     fullHeight: !0
                 }, u.createElement(j, {
                     asset: e.icon,
@@ -26659,7 +26652,7 @@
                     fontSize: ct[i],
                     fullWidth: !0
                 }, u.createElement("input", {
-                    type: Ct[e.type].toLowerCase(),
+                    type: St[e.type].toLowerCase(),
                     className: p(r),
                     placeholder: e.placeholder,
                     "aria-label": e.ariaLabel,
@@ -26821,7 +26814,7 @@
                 }, e.label, u.createElement(fe, {
                     display: k.Flex,
                     alignItems: b.Center,
-                    justifyContent: S.Center,
+                    justifyContent: C.Center,
                     borderRadius: ee.Rounded,
                     padding: {
                         left: .5
@@ -26926,7 +26919,7 @@
                             padding: 1,
                             display: k.Flex,
                             alignItems: b.Center,
-                            justifyContent: S.End,
+                            justifyContent: C.End,
                             background: $.Alt,
                             borderRadius: {
                                 bottomLeft: ee.Medium,
@@ -27108,7 +27101,7 @@
                                 attachLeft: t.props.selectedIcon.position === en.Center || t.props.selectedIcon.position === en.TopLeft || t.props.selectedIcon.position === en.BottomLeft,
                                 display: t.props.selectedIcon.position === en.Center ? k.Flex : void 0,
                                 alignItems: t.props.selectedIcon.position === en.Center ? b.Center : void 0,
-                                justifyContent: t.props.selectedIcon.position === en.Center ? S.Center : void 0
+                                justifyContent: t.props.selectedIcon.position === en.Center ? C.Center : void 0
                             }), n) : u.createElement(fe, c.__assign({}, e, {
                                 display: k.Flex,
                                 attachTop: !0,
@@ -27158,7 +27151,7 @@
                             className: p(i),
                             borderRadius: this.props.borderRadius && this.props.borderRadius === ee.Rounded ? ee.Rounded : void 0,
                             position: w.Relative,
-                            overflow: C.Hidden
+                            overflow: S.Hidden
                         }, u.createElement(Te, c.__assign({
                             className: "tw-image-selector__image"
                         }, qe(this.props))), (this.props.selectedMask || this.props.selectedIcon) && this.renderMask()))))
@@ -27249,7 +27242,7 @@
                     spellCheck: e.spellCheck,
                     tabIndex: t,
                     size: e.size,
-                    type: Ct.Search,
+                    type: St.Search,
                     value: e.value
                 }))
             };
@@ -27303,7 +27296,6 @@
                 var t, n = {
                     "tw-select": !0,
                     "tw-select--small": e.size === ot.Small,
-                    "tw-select--large": e.size === ot.Large,
                     "tw-select--disabled": e.disabled,
                     "tw-select--error": e.error
                 };
@@ -27374,7 +27366,7 @@
                     return u.createElement(L, c.__assign({
                         fullWidth: !0,
                         display: k.Flex,
-                        justifyContent: e.alignRight ? S.End : void 0,
+                        justifyContent: e.alignRight ? C.End : void 0,
                         role: l.TabList
                     }, m(e)), u.createElement("ul", {
                         className: "tw-tab-wrapper"
@@ -27429,7 +27421,7 @@
                 return t = u.createElement(Ye, {
                     key: e.title
                 }, u.createElement(Ke, c.__assign({
-                    aspect: Se.Aspect16x9,
+                    aspect: Ce.Aspect16x9,
                     borderRadius: ee.Medium
                 }, qe(e))), u.createElement(Xe, null, u.createElement(x, {
                     margin: {
@@ -27449,7 +27441,7 @@
                         bottom: .5
                     }
                 }, u.createElement(we, {
-                    ratio: Se.Aspect16x9
+                    ratio: Ce.Aspect16x9
                 }, u.createElement(Ze, null))), u.createElement(de, null, u.createElement(Ze, {
                     width: 150
                 })), u.createElement(de, {
@@ -27496,7 +27488,7 @@
                     padding: 1,
                     display: k.Flex,
                     alignItems: b.Center,
-                    justifyContent: S.Center,
+                    justifyContent: C.Center,
                     className: "tw-toast__dismiss-target"
                 }, u.createElement(j, {
                     asset: M.Close
@@ -27600,14 +27592,14 @@
                 }, m(e)), e.children)
             };
             _n.displayName = "TableRow";
-            var Sn, Cn;
+            var Cn, Sn;
             n("Lf2s");
             ! function(e) {
                 e.Default = "", e.ExtraSmall = "tw-tower--gutter-xs", e.Small = "tw-tower--gutter-sm", e.Large = "tw-tower--gutter-lg", e.None = "tw-tower--gutter-none"
-            }(Sn || (Sn = {})),
+            }(Cn || (Cn = {})),
             function(e) {
                 e.ExtraSmall = "tw-tower--120", e.Small = "tw-tower--180", e.Medium = "tw-tower--240", e.Large = "tw-tower--300"
-            }(Cn || (Cn = {}));
+            }(Sn || (Sn = {}));
             var wn = function(e) {
                 var t = {
                     "tw-tower": !0,
@@ -27621,7 +27613,7 @@
                         key: i
                     }));
                 return u.createElement(x, c.__assign({
-                    justifyContent: e.center ? S.Center : void 0,
+                    justifyContent: e.center ? C.Center : void 0,
                     flexWrap: e.noWrap ? _.NoWrap : _.Wrap,
                     className: p(t)
                 }, m(e)), e.children, n)
@@ -27748,7 +27740,7 @@
                         return u.createElement(L, {
                             display: k.Flex,
                             alignItems: b.Center,
-                            justifyContent: S.Center,
+                            justifyContent: C.Center,
                             flexDirection: E.Column,
                             padding: {
                                 x: this.props.size === On.Large ? 2 : 1
@@ -27840,7 +27832,7 @@
                                 flexGrow: t,
                                 color: n.props.activeTabIndex === e.originalIndex ? te.Link : te.Alt2,
                                 alignItems: b.Center,
-                                justifyContent: S.Center,
+                                justifyContent: C.Center,
                                 fullHeight: !0
                             }, u.createElement("li", {
                                 className: "tw-tabs__tab",
@@ -27849,7 +27841,7 @@
                                 "data-index": e.originalIndex
                             }, u.createElement(xn, c.__assign({}, e, {
                                 size: n.props.size,
-                                textAlign: [S.Center, void 0].includes(n.props.justifyContent) ? T.Center : T.Left
+                                textAlign: [C.Center, void 0].includes(n.props.justifyContent) ? T.Center : T.Left
                             })), n.props.activeTabIndex === e.originalIndex && u.createElement("div", {
                                 ref: n.setIndicatorRef,
                                 className: "tw-tabs__active-indicator",
@@ -27981,7 +27973,7 @@
                             display: k.Flex,
                             fullHeight: !0,
                             alignItems: b.Center,
-                            justifyContent: this.props.justifyContent ? this.props.justifyContent : S.Start,
+                            justifyContent: this.props.justifyContent ? this.props.justifyContent : C.Start,
                             fontSize: ne.Size4,
                             flexWrap: _.Wrap
                         }, u.createElement("ul", c.__assign({
@@ -28109,9 +28101,9 @@
                             display: k.InlineFlex,
                             position: w.Relative,
                             alignItems: b.Center,
-                            justifyContent: S.Center,
+                            justifyContent: C.Center,
                             verticalAlign: I.Middle,
-                            overflow: C.Hidden
+                            overflow: S.Hidden
                         }, u.createElement(f, c.__assign({}, this.props, {
                             className: p(this.props.className, t)
                         }, m(this.props)), a))
@@ -28182,31 +28174,8 @@
                             asset: M.GlyphArrDown
                         })))))
                     }, t
-                }(u.Component),
-                Xn = (n("QBuy"), function(e) {
-                    var t, n, i = ((t = {})[ot.Small] = jn.Small, t[ot.Default] = jn.Default, t[ot.Large] = jn.Large, t);
-                    return e.buttonProps.icon && !e.buttonProps.children && (n = {
-                        "tw-combo-input__button-icon": !0,
-                        "tw-combo-input__button-icon--small": e.size === ot.Small,
-                        "tw-combo-input__button-icon--large": e.size === ot.Large
-                    }), u.createElement(x, c.__assign({
-                        className: "tw-combo-input",
-                        display: k.Flex,
-                        fullWidth: !0
-                    }, m(e)), u.createElement(x, {
-                        flexGrow: 1
-                    }, u.createElement(Nt, c.__assign({
-                        rounding: wt.Left,
-                        size: e.size ? e.size : void 0
-                    }, e))), u.createElement(Gn, c.__assign({}, e.buttonProps, {
-                        className: p(n),
-                        noPadding: e.buttonProps.icon && !e.buttonProps.children,
-                        rounding: zn.Right,
-                        size: e.size ? i[e.size] : void 0,
-                        type: e.buttonProps.type ? e.buttonProps.type : Vn.Primary
-                    })))
-                });
-            Xn.displayName = "ComboInput", n.d(t, "b", function() {
+                }(u.Component);
+            n.d(t, "b", function() {
                 return ke
             }), n.d(t, !1, function() {}), n.d(t, "c", function() {
                 return be
@@ -28247,9 +28216,9 @@
             }), n.d(t, !1, function() {}), n.d(t, "o", function() {
                 return we
             }), n.d(t, "p", function() {
-                return Se
-            }), n.d(t, "d", function() {
                 return Ce
+            }), n.d(t, "d", function() {
+                return Se
             }), n.d(t, !1, function() {}), n.d(t, "q", function() {
                 return ze
             }), n.d(t, !1, function() {}), n.d(t, !1, function() {}), n.d(t, "s", function() {
@@ -28319,13 +28288,13 @@
             }), n.d(t, !1, function() {}), n.d(t, !1, function() {}), n.d(t, !1, function() {}), n.d(t, "La", function() {
                 return yt
             }), n.d(t, "Oa", function() {
-                return St
+                return Ct
             }), n.d(t, !1, function() {}), n.d(t, "Pa", function() {
                 return Et
             }), n.d(t, "Sa", function() {
                 return Nt
             }), n.d(t, "Ua", function() {
-                return Ct
+                return St
             }), n.d(t, !1, function() {}), n.d(t, "Va", function() {
                 return Re
             }), n.d(t, !1, function() {}), n.d(t, "Wa", function() {
@@ -28362,7 +28331,7 @@
                 return $
             }), n.d(t, "x", function() {
                 return ee
-            }), n.d(t, !1, function() {}), n.d(t, !1, function() {}), n.d(t, "O", function() {
+            }), n.d(t, !1, function() {}), n.d(t, "O", function() {
                 return te
             }), n.d(t, "Ca", function() {
                 return ne
@@ -28381,11 +28350,11 @@
             }), n.d(t, !1, function() {}), n.d(t, "Ba", function() {
                 return _
             }), n.d(t, "Xa", function() {
-                return S
+                return C
             }), n.d(t, !1, function() {}), n.d(t, !1, function() {}), n.d(t, !1, function() {}), n.d(t, !1, function() {}), n.d(t, !1, function() {}), n.d(t, !1, function() {}), n.d(t, !1, function() {
                 return N
             }), n.d(t, "db", function() {
-                return C
+                return S
             }), n.d(t, "kb", function() {
                 return w
             }), n.d(t, "Sb", function() {
@@ -28511,9 +28480,9 @@
             }), n.d(t, !1, function() {}), n.d(t, "cc", function() {
                 return wn
             }), n.d(t, "ec", function() {
-                return Sn
-            }), n.d(t, "dc", function() {
                 return Cn
+            }), n.d(t, "dc", function() {
+                return Sn
             }), n.d(t, !1, function() {}), n.d(t, "fc", function() {
                 return In
             }), n.d(t, !1, function() {}), n.d(t, "R", function() {
@@ -28548,8 +28517,6 @@
                 return Un
             }), n.d(t, !1, function() {
                 return Yn
-            }), n.d(t, !1, function() {
-                return Xn
             })
         },
         UmYL: function(e, t, n) {},
@@ -29304,13 +29271,13 @@
                     }, e)
                 })(y),
                 _ = n("9UKx"),
-                S = n("p5Wp");
+                C = n("p5Wp");
             n.d(t, "b", function() {
                 return k
             }), n.d(t, "a", function() {
                 return w
             });
-            var C = function(e) {
+            var S = function(e) {
                     function t(t) {
                         var n = e.call(this, t) || this;
                         n.logger = s.k.withCategory("PersistentPlayerRoot"), n.trackMiniPlayerAction = function(e, t) {
@@ -29323,7 +29290,7 @@
                             n.state.options && (n.state.overrides && n.state.overrides.onMiniPlayerDismiss ? n.state.overrides.onMiniPlayerDismiss() : (n.destroyPlayer(), n.trackMiniPlayerAction(_.a.CloseMini, _.b.UserMinimize)))
                         }, n.onHistoryChange = function(e) {
                             var t = n.props.isLoggedIn,
-                                i = Object(S.a)({
+                                i = Object(C.a)({
                                     isLoggedIn: t,
                                     location: e
                                 });
@@ -29336,7 +29303,7 @@
                         return n.state = {
                             isError: !1,
                             mini: !1,
-                            hideSideNav: Object(S.a)({
+                            hideSideNav: Object(C.a)({
                                 isLoggedIn: i,
                                 location: r
                             })
@@ -29401,17 +29368,7 @@
                         })
                     }, t
                 }(a.Component),
-                w = Object(o.a)(C)
-        },
-        Wa8Q: function(e, t, n) {
-            "use strict";
-            var i;
-            n.d(t, "a", function() {
-                    return i
-                }),
-                function(e) {
-                    e.AdStart = "adstart", e.AdEnd = "adend", e.CompanionRendered = "adcompanionrendered", e.AdImpression = "adImpression", e.AdImpressionComplete = "adImpressionComplete", e.AdSkipped = "adSkipped", e.AdError = "adError", e.CompanionAdBuffered = "companionadbuffered"
-                }(i || (i = {}))
+                w = Object(o.a)(S)
         },
         WroD: function(e, t) {
             var n = {
@@ -30885,13 +30842,11 @@
         ao1a: function(e, t, n) {
             "use strict";
             n.d(t, "a", function() {
+                return l
+            }), n.d(t, "b", function() {
                 return c
             }), n.d(t, "c", function() {
                 return u
-            }), n.d(t, "d", function() {
-                return d
-            }), n.d(t, "b", function() {
-                return p
             });
             var i = n("wUQP"),
                 r = n("D7An"),
@@ -30900,23 +30855,14 @@
                 s = function() {
                     return o.q.experiments.getAssignment(r.b.BitsNewUserCheerV1) === i.a.On
                 },
-                l = function(e, t) {
-                    return t === a.d.ACQUIRED && function(e) {
-                        var t = o.q.dynamicSettings.get("ruby_is_the_cutest_dog_ever", i.a.Off);
-                        return (t === i.a.On || e && t === i.a.StaffOnly) && s()
-                    }(e)
-                },
-                c = function(e) {
+                l = function(e) {
                     return e === a.d.NEW_USER && s()
                 },
+                c = function(e, t) {
+                    return !(!t || !t.firstCheerTutorial || t.firstCheerTutorial.hasSkipped || !l(e))
+                },
                 u = function(e, t) {
-                    return !(!t || !t.firstCheerTutorial || t.firstCheerTutorial.hasSkipped || !c(e))
-                },
-                d = function(e, t) {
-                    return !(!t || !t.firstCheerTutorial || t.firstCheerTutorial.hasAbandoned || t.firstCheerTutorial.hasSkipped || !c(e))
-                },
-                p = function(e, t, n) {
-                    return !(!n || !n.firstCheerTutorial || n.firstCheerTutorial.hasSkipped || !l(e, t))
+                    return !(!t || !t.firstCheerTutorial || t.firstCheerTutorial.hasAbandoned || t.firstCheerTutorial.hasSkipped || !l(e))
                 }
         },
         "as+V": function(e, t, n) {
@@ -31922,9 +31868,9 @@
             }), n.d(t, "t", function() {
                 return _
             }), n.d(t, "w", function() {
-                return S
-            }), n.d(t, "H", function() {
                 return C
+            }), n.d(t, "H", function() {
+                return S
             }), n.d(t, "x", function() {
                 return w
             }), n.d(t, "I", function() {
@@ -31983,13 +31929,13 @@
                 E = "core.ui.SIDE_NAV_BREAKPOINT_EXPANDED",
                 _ = "core.ui.THEME_CHANGED";
 
-            function S() {
+            function C() {
                 return {
                     type: o
                 }
             }
 
-            function C() {
+            function S() {
                 return {
                     type: s
                 }
@@ -32140,7 +32086,7 @@
             ! function(e) {
                 e.Follow = "follow"
             }(y || (y = {}));
-            var _, S, C = n("tKDy"),
+            var _, C, S = n("tKDy"),
                 w = n("i4un"),
                 N = n("JcRA"),
                 T = n("GnwI"),
@@ -32155,7 +32101,7 @@
             }(_ || (_ = {})),
             function(e) {
                 e[e.IconOnly = 0] = "IconOnly", e[e.TextOnly = 1] = "TextOnly", e[e.IconAndText = 2] = "IconAndText"
-            }(S || (S = {}));
+            }(C || (C = {}));
             var x = function(e) {
                     function t() {
                         var t = null !== e && e.apply(this, arguments) || this;
@@ -32164,13 +32110,13 @@
                             showDropdown: !1,
                             disableNotifications: !0
                         }, t.handleContextBalloonToggle = function(e) {
-                            e ? Object(C.n)({
-                                page: C.e.Bubble,
+                            e ? Object(S.n)({
+                                page: S.e.Bubble,
                                 source: o.a.FollowButton,
-                                target: C.d.Outside,
-                                action: C.c.Click
-                            }) : Object(C.o)({
-                                page: C.e.Bubble,
+                                target: S.d.Outside,
+                                action: S.c.Click
+                            }) : Object(S.o)({
+                                page: S.e.Bubble,
                                 source: o.a.FollowButton
                             })
                         }, t.userDataLoaded = function() {
@@ -32364,7 +32310,7 @@
                                 data: {
                                     followData: i
                                 }
-                            }), t.props.useContextualModals && Object(w.b)() === w.a.TwoStep ? (e.modalType = C.e.TwoStep, e.targetChannel = t.props.channelName || t.props.channelLogin) : t.props.useContextualModals && Object(w.b)() === w.a.Split && (e.modalType = C.e.Combined, e.targetChannel = t.props.channelName || t.props.channelLogin), t.props.login(e)
+                            }), t.props.useContextualModals && Object(w.b)() === w.a.TwoStep ? (e.modalType = S.e.TwoStep, e.targetChannel = t.props.channelName || t.props.channelLogin) : t.props.useContextualModals && Object(w.b)() === w.a.Split && (e.modalType = S.e.Combined, e.targetChannel = t.props.channelName || t.props.channelLogin), t.props.login(e)
                         }, t
                     }
                     return c.__extends(t, e), t.prototype.componentDidMount = function() {
@@ -32444,7 +32390,7 @@
                             tabIndex: this.props.tabIndex,
                             type: this.props.followButtonType || R.F.Default,
                             fullWidth: this.props.fullWidthButton
-                        }, Object(R.kc)(this.props)), this.props.followUIType === S.IconOnly ? null : t), this.props.useContextualModals && !this.props.isLoggedIn && Object(w.b)() === w.a.Balloon ? d.createElement(m.a, {
+                        }, Object(R.kc)(this.props)), this.props.followUIType === C.IconOnly ? null : t), this.props.useContextualModals && !this.props.isLoggedIn && Object(w.b)() === w.a.Balloon ? d.createElement(m.a, {
                             onToggle: this.handleContextBalloonToggle,
                             "data-test-selector": _.FollowButtonWithContextualModal
                         }, r, d.createElement(R.u, {
@@ -32476,18 +32422,18 @@
                         }, d.createElement("span", {
                             className: "follow-btn__label",
                             "data-test-selector": _.UnfollowButtonLabel
-                        }, this.props.unfollowUIType !== S.TextOnly && d.createElement(R.tb, {
+                        }, this.props.unfollowUIType !== C.TextOnly && d.createElement(R.tb, {
                             asset: R.ub.Heart
-                        }), this.props.unfollowUIType !== S.IconOnly && d.createElement(R.Ya, {
+                        }), this.props.unfollowUIType !== C.IconOnly && d.createElement(R.Ya, {
                             padding: {
                                 x: .5
                             }
                         }, Object(p.d)("Following", "FollowButton"))), d.createElement("span", {
                             className: "follow-btn__label-hover",
                             "data-test-selector": _.UnfollowButtonLabelHover
-                        }, this.props.unfollowUIType !== S.TextOnly && d.createElement(R.tb, {
+                        }, this.props.unfollowUIType !== C.TextOnly && d.createElement(R.tb, {
                             asset: R.ub.Unheart
-                        }), this.props.unfollowUIType !== S.IconOnly && d.createElement(R.Ya, {
+                        }), this.props.unfollowUIType !== C.IconOnly && d.createElement(R.Ya, {
                             padding: {
                                 x: .5
                             }
@@ -32524,7 +32470,7 @@
                         })))))
                     }, t.prototype.getButtonIcon = function() {
                         var e = this.props.hollowIcons && !this.state.isFollowing ? R.ub.FollowHollow : R.ub.Heart;
-                        return this.props.followUIType === S.TextOnly ? void 0 : e
+                        return this.props.followUIType === C.TextOnly ? void 0 : e
                     }, t.prototype.reportInteractive = function() {
                         F(this.props) ? this.props.latencyTracking.reportInteractive() : this.props.data && !this.props.data.loading && this.props.latencyTracking.reportInteractive()
                     }, t.prototype.addEventListeners = function() {
@@ -32567,7 +32513,7 @@
                 }, e)
             })(P);
             n.d(t, "b", function() {
-                return S
+                return C
             }), n.d(t, !1, function() {}), n.d(t, "a", function() {
                 return M
             })
@@ -33007,43 +32953,42 @@
                     e()
                 })
             };
-            var u = n("1/iK"),
-                d = n("y5D0"),
-                p = n("d0ua"),
-                m = n("kRBY"),
-                h = n("XDQu"),
-                f = n("KxT4"),
-                g = n("S1Za"),
-                v = n("AKMF"),
-                b = n("TSYQ"),
-                y = n("1hWM"),
-                k = n("imBb"),
-                E = n("cr+I"),
-                _ = n("/7QA"),
+            var u, d = n("1/iK"),
+                p = n("y5D0"),
+                m = n("d0ua"),
+                h = n("kRBY"),
+                f = n("XDQu"),
+                g = n("KxT4"),
+                v = n("S1Za"),
+                b = n("AKMF"),
+                y = n("TSYQ"),
+                k = n("1hWM"),
+                E = n("imBb"),
+                _ = n("cr+I"),
+                C = n("/7QA"),
                 S = n("Fxe2"),
-                C = n("f00E"),
-                w = n("vRsq"),
-                N = n("2xye"),
-                T = n("kz7j"),
-                I = n("ndwU"),
-                D = n("GnwI");
-            var R, O = n("Wa8Q");
+                w = n("f00E"),
+                N = n("vRsq"),
+                T = n("2xye"),
+                I = n("kz7j"),
+                D = n("ndwU"),
+                R = n("GnwI");
             ! function(e) {
                 e.LoadStart = "loadstart", e.Error = "error", e.LoadedMetadata = "loadedmetadata", e.CanPlay = "canplay", e.Playing = "playing", e.Waiting = "waiting", e.Seeking = "seeking", e.Seeked = "seeked", e.Ended = "ended", e.DurationChange = "durationchange", e.TimeUpdate = "timeupdate", e.Play = "play", e.Pause = "pause", e.VolumeChange = "volumechange", e.RateChange = "ratechange"
-            }(R || (R = {}));
-            var A = n("kxrW"),
-                L = n("oKCn"),
-                x = n("lTz2"),
-                P = n("C94G"),
-                F = (n("Qqhu"), n("Addw")),
-                M = "debug",
-                B = {
+            }(u || (u = {}));
+            var O = n("kxrW"),
+                A = n("oKCn"),
+                L = n("lTz2"),
+                x = n("C94G"),
+                P = (n("Qqhu"), n("Addw")),
+                F = "debug",
+                M = {
                     amazon: !1,
                     comscore: !1,
                     google: !1,
                     nielsen: !1
                 },
-                U = {
+                B = {
                     allowfullscreen: !0,
                     externalfullscreen: !1,
                     autoplay: !0,
@@ -33053,59 +32998,59 @@
                     debug: !1,
                     height: "100%",
                     playsinline: !0,
-                    player: L.f.Site,
+                    player: A.f.Site,
                     showInfo: !1,
                     showtheatre: !1,
                     trackingProperties: {
-                        client_build_id: _.p.config.buildID,
-                        client_app: _.p.session.clientApp
+                        client_build_id: C.p.config.buildID,
+                        client_app: C.p.session.clientApp
                     },
                     width: "100%",
                     oauth_token: "",
-                    gdpr: B
+                    gdpr: M
                 },
-                j = function(e) {
+                U = function(e) {
                     function t(t) {
                         var n = e.call(this, t) || this;
-                        return n.lastGDPR = B, n.hasInitializedOffsets = !1, n.logger = _.k.withCategory("video-player"), n.initializePlayer = function(e) {
-                            var t = o.__assign({}, U, {
+                        return n.lastGDPR = M, n.hasInitializedOffsets = !1, n.logger = C.k.withCategory("video-player"), n.initializePlayer = function(e) {
+                            var t = o.__assign({}, B, {
                                 allowfullscreen: !n.props.disableFullscreen,
                                 autoplay: !n.props.paused,
                                 externalfullscreen: n.props.fullscreen.supported(),
                                 gdpr: n.createPlayerGDPROptions(n.props),
                                 muted: n.props.muted,
                                 showtheatre: !n.props.disableTheatreButton,
-                                trackingProperties: o.__assign({}, U.trackingProperties, {
-                                    platform: _.o.getPlatform()
+                                trackingProperties: o.__assign({}, B.trackingProperties, {
+                                    platform: C.o.getPlatform()
                                 })
                             });
                             n.playerBuffering = n.registerBufferingEvent(!!n.props.paused), n.playerPlayed = n.registerPlayedEvent(!!n.props.paused);
                             var i = n.props.playerTypeOverride;
-                            i && (t.player = i, n.playerType = i, i === L.f.ClipsEditing && (t.muted = !0)), n.props.channelLogin && (t.channel = n.props.channelLogin, n.lastSetChannel = n.props.channelLogin), n.props.collectionID && (t.collection = n.props.collectionID), n.props.clipSlug && (t.clip = n.props.clipSlug), n.props.vodID && (t.video = Object(w.p)(n.props.vodID), _.o.setVideoPlayerTrackingData({
+                            i && (t.player = i, n.playerType = i, i === A.f.ClipsEditing && (t.muted = !0)), n.props.channelLogin && (t.channel = n.props.channelLogin, n.lastSetChannel = n.props.channelLogin), n.props.collectionID && (t.collection = n.props.collectionID), n.props.clipSlug && (t.clip = n.props.clipSlug), n.props.vodID && (t.video = Object(N.p)(n.props.vodID), C.o.setVideoPlayerTrackingData({
                                 vodID: n.props.vodID
-                            })), n.props.showChannelInfoOnHover && (t.showInfo = n.props.showChannelInfoOnHover), void 0 !== n.props.persistUserPreferences && (t.persistUserPreferences = n.props.persistUserPreferences), void 0 !== n.props.nextVideoOffset && n.props.nextVideoOffset >= 0 && (t.time = Object(F.a)(n.props.nextVideoOffset)), t.oauth_token = n.props.authToken || "", t.debug = "true" === E.parse(window.location.search)[M], n.logger.debug("Initializing", t);
+                            })), n.props.showChannelInfoOnHover && (t.showInfo = n.props.showChannelInfoOnHover), void 0 !== n.props.persistUserPreferences && (t.persistUserPreferences = n.props.persistUserPreferences), void 0 !== n.props.nextVideoOffset && n.props.nextVideoOffset >= 0 && (t.time = Object(P.a)(n.props.nextVideoOffset)), t.oauth_token = n.props.authToken || "", t.debug = "true" === _.parse(window.location.search)[F], n.logger.debug("Initializing", t);
                             var r = new e(n.playerRef, t);
-                            n.player = r, r.addEventListener(A.a.PlayerReady, n.onPlayerReady), r.addEventListener(A.a.CompanionAdBuffered, n.companionAdBuffered), r.addEventListener(A.a.Online, n.onStreamStatusOnline), r.addEventListener(A.a.Offline, n.onStreamStatusOffline), r.addEventListener(R.Ended, n.onStreamStatusOffline), r.addEventListener(R.Play, n.onPlayerPlay), r.addEventListener(R.Playing, n.onPlayerPlaying), r.addEventListener(R.Seeking, n.onSeeking), r.addEventListener(R.Seeked, n.onSeek), r.addEventListener(R.TimeUpdate, n.onTimeUpdate), r.addEventListener(A.a.TheatreChange, n.onTheatreChange), r.addEventListener(A.a.FullscreenChange, n.onFullScreenChange), r.addEventListener(A.a.ExternalFullscreenChange, n.onExternalFullScreenChange), r.addEventListener(A.a.ClipsModerationOpen, n.onClipsModerationOpen), r.addEventListener(A.a.TransitionToCollectionVOD, n.onTransitionToCollectionVod), r.addEventListener(A.a.TransitionToRecommendedVOD, n.onTransitionToRecommendedVod), r.addEventListener(A.a.OpenStream, n.onOpenStream), r.addEventListener(R.Pause, n.onPause), r.addEventListener(A.a.PersistenPlayerToggle, n.onPersistentPlayerToggled), r.addEventListener(R.LoadedMetadata, n.onMetadataLoaded), r.addEventListener(R.VolumeChange, n.onVolumeChange), r.addEventListener(A.a.PromptLoginModal, n.props.promptLogin), r.addEventListener(A.a.FocusPlayer, n.onFocusPlayer), r.addEventListener(A.a.FollowChannel, n.followChannel), r.addEventListener(A.a.UnfollowChannel, n.unfollowChannel), r.addEventListener(A.a.SubscribeToChannel, n.subscribeToChannel), r.addEventListener(A.a.ContentRestricted, n.onContentRestricted), r.addEventListener(O.a.AdStart, n.onAdStart), r.addEventListener(O.a.AdEnd, n.onAdEnd), r.addEventListener(A.a.StitchedAdStart, n.onStitchedAdStart), r.addEventListener(A.a.StitchedAdEnd, n.onStitchedAdEnd), y.extensionService.registerPlayer(n.player), y.extensionService.setPlayerWindow(window), n.props.onInit && n.props.onInit(r), n.maybeAttachToWindow(n.props)
+                            n.player = r, r.addEventListener(O.a.PlayerReady, n.onPlayerReady), r.addEventListener(O.a.CompanionAdBuffered, n.companionAdBuffered), r.addEventListener(O.a.Online, n.onStreamStatusOnline), r.addEventListener(O.a.Offline, n.onStreamStatusOffline), r.addEventListener(u.Ended, n.onStreamStatusOffline), r.addEventListener(u.Play, n.onPlayerPlay), r.addEventListener(u.Playing, n.onPlayerPlaying), r.addEventListener(u.Seeking, n.onSeeking), r.addEventListener(u.Seeked, n.onSeek), r.addEventListener(u.TimeUpdate, n.onTimeUpdate), r.addEventListener(O.a.TheatreChange, n.onTheatreChange), r.addEventListener(O.a.FullscreenChange, n.onFullScreenChange), r.addEventListener(O.a.ExternalFullscreenChange, n.onExternalFullScreenChange), r.addEventListener(O.a.ClipsModerationOpen, n.onClipsModerationOpen), r.addEventListener(O.a.TransitionToCollectionVOD, n.onTransitionToCollectionVod), r.addEventListener(O.a.TransitionToRecommendedVOD, n.onTransitionToRecommendedVod), r.addEventListener(O.a.OpenStream, n.onOpenStream), r.addEventListener(u.Pause, n.onPause), r.addEventListener(O.a.PersistenPlayerToggle, n.onPersistentPlayerToggled), r.addEventListener(u.LoadedMetadata, n.onMetadataLoaded), r.addEventListener(u.VolumeChange, n.onVolumeChange), r.addEventListener(O.a.PromptLoginModal, n.props.promptLogin), r.addEventListener(O.a.FocusPlayer, n.onFocusPlayer), r.addEventListener(O.a.FollowChannel, n.followChannel), r.addEventListener(O.a.UnfollowChannel, n.unfollowChannel), r.addEventListener(O.a.SubscribeToChannel, n.subscribeToChannel), r.addEventListener(O.a.ContentRestricted, n.onContentRestricted), k.extensionService.registerPlayer(n.player), k.extensionService.setPlayerWindow(window), n.props.onInit && n.props.onInit(r), n.maybeAttachToWindow(n.props)
                         }, n.attachRef = function(e) {
                             return n.playerRef = e
                         }, n.onMetadataLoaded = function() {
                             var e = n.player && n.player.getSessionInfo();
-                            e && (n.logger.debug("Got player session info from player instance", e), _.o.setVideoPlayerTrackingData({
+                            e && (n.logger.debug("Got player session info from player instance", e), C.o.setVideoPlayerTrackingData({
                                 broadcastID: e.broadcastId,
                                 playSessionID: e.playSessionId
                             })), n.setState({
                                 metadataLoaded: !0
                             })
                         }, n.onOpenStream = function() {
-                            if (n.props.playerTypeOverride === L.f.Frontpage && n.player)
-                                if (n.props.channelLogin) _.p.history.push({
+                            if (n.props.playerTypeOverride === A.f.Frontpage && n.player)
+                                if (n.props.channelLogin) C.p.history.push({
                                     pathname: "/" + n.props.channelLogin,
                                     state: n.props.linkTrackingContext
                                 });
                                 else if (n.props.vodID) {
                                 var e = Math.floor(n.player.getCurrentTime());
-                                _.p.history.push("/videos/" + n.props.vodID + "?t=" + Object(F.a)(e))
-                            } else n.props.collectionID && _.p.history.push("/collections/" + n.props.collectionID)
+                                C.p.history.push("/videos/" + n.props.vodID + "?t=" + Object(P.a)(e))
+                            } else n.props.collectionID && C.p.history.push("/collections/" + n.props.collectionID)
                         }, n.onFocusPlayer = function() {
                             n.player && n.props.onFocusPlayer && n.props.channelLogin && n.props.onFocusPlayer()
                         }, n.followChannel = function() {
@@ -33140,17 +33085,9 @@
                                 playerMuted: e
                             }), n.props.onMuteToggled && n.props.onMuteToggled(e)
                         }, n.onStreamStatusOnline = function() {
-                            n.props.onStreamStatusChange && n.props.onStreamStatusChange(A.a.Online)
+                            n.props.onStreamStatusChange && n.props.onStreamStatusChange(O.a.Online)
                         }, n.onStreamStatusOffline = function() {
-                            n.props.onStreamStatusChange && n.props.onStreamStatusChange(A.a.Offline)
-                        }, n.onAdStart = function() {
-                            n.props.onAdChange && n.props.onAdChange(O.a.AdStart)
-                        }, n.onAdEnd = function() {
-                            n.props.onAdChange && n.props.onAdChange(O.a.AdEnd)
-                        }, n.onStitchedAdStart = function() {
-                            n.props.onStitchedAdChange && n.props.onStitchedAdChange(A.a.StitchedAdStart)
-                        }, n.onStitchedAdEnd = function() {
-                            n.props.onStitchedAdChange && n.props.onStitchedAdChange(A.a.StitchedAdEnd)
+                            n.props.onStreamStatusChange && n.props.onStreamStatusChange(O.a.Offline)
                         }, n.onTheatreChange = function(e) {
                             e ? (n.logger.debug("Theatre Entered"), n.props.enableTheatreMode && !n.props.theatreModeEnabled && n.props.enableTheatreMode()) : (n.logger.debug("Theatre Exited"), n.props.disableTheatreMode && n.props.theatreModeEnabled && n.props.disableTheatreMode())
                         }, n.onFullScreenChange = function() {
@@ -33189,7 +33126,7 @@
                             n.logger.debug("onContentRestricted - a restriction gate has prevented video playback."), n.hasRestrictedContent = !0
                         }, n.updatePlayerTrackingData = function(e) {
                             n.state.playerInitialized && n.player && n.player.setTrackingProperties(function(e, t) {
-                                var n = _.o.getLastPageview(),
+                                var n = C.o.getLastPageview(),
                                     i = {
                                         host_channel: e.hostChannel,
                                         collapse_right: !e.rightColumnExpanded,
@@ -33219,14 +33156,14 @@
                                     updates: i,
                                     locationStateTrackingProps: a
                                 })), o.__assign({}, a, n, i)
-                            }(e, _.k))
+                            }(e, C.k))
                         }, n.updatePlayerTrackingDataFromProps = function() {
                             n.updatePlayerTrackingData(n.props)
                         }, n.updatePlayerType = function(e) {
-                            var t = e || U.player;
+                            var t = e || B.player;
                             n.player && n.playerType !== t && (n.player.setPlayerType(t), n.playerType = t)
                         }, n.maybeRecordClip = function() {
-                            n.player && n.state.playerInitialized && !Object(I.a)() && n.player.recordClip()
+                            n.player && n.state.playerInitialized && !Object(D.a)() && n.player.recordClip()
                         }, n.createPlayerGDPROptions = function(e) {
                             return {
                                 amazon: !e.gdprBlockAmazonContent,
@@ -33253,12 +33190,12 @@
                             isFullScreen: !1,
                             playerPaused: !!t.paused,
                             playerMuted: t.muted,
-                            playerRefID: Object(C.a)(),
+                            playerRefID: Object(w.a)(),
                             metadataLoaded: !1
-                        }, n.playerType = t.playerTypeOverride || U.player, n.lastSetChannel = t.channelLogin, n.lastPausedProp = t.paused, n.lastMutedProp = t.muted, n.lastFollowingProp = t.viewerIsFollowing, n.lastSubscribedProp = t.viewerIsSubscribed, n.lastSubscribableProp = t.channelIsSubscribable, n.lastGDPR = n.createPlayerGDPROptions(t), t.fullscreen.addChangeListener(n.onTwilightFullscreenChange), t.instanceRef && t.instanceRef(n), n
+                        }, n.playerType = t.playerTypeOverride || B.player, n.lastSetChannel = t.channelLogin, n.lastPausedProp = t.paused, n.lastMutedProp = t.muted, n.lastFollowingProp = t.viewerIsFollowing, n.lastSubscribedProp = t.viewerIsSubscribed, n.lastSubscribableProp = t.channelIsSubscribable, n.lastGDPR = n.createPlayerGDPROptions(t), t.fullscreen.addChangeListener(n.onTwilightFullscreenChange), t.instanceRef && t.instanceRef(n), n
                     }
                     return o.__extends(t, e), t.prototype.componentDidMount = function() {
-                        this.playerCreated && this.props.latencyTracking.reportCustomEvent(this.playerCreated), this.bindHotKeys(), this.historyUnlistener = this.props.history.listen(this.onHistoryChange), Object(P.b)(), Object(P.a)(this.initializePlayer), _.o.eventEmitter.addListener(N.SpadeEventType.Pageview, this.updatePlayerTrackingDataFromProps)
+                        this.playerCreated && this.props.latencyTracking.reportCustomEvent(this.playerCreated), this.bindHotKeys(), this.historyUnlistener = this.props.history.listen(this.onHistoryChange), Object(x.b)(), Object(x.a)(this.initializePlayer), C.o.eventEmitter.addListener(T.SpadeEventType.Pageview, this.updatePlayerTrackingDataFromProps)
                     }, t.prototype.componentWillUpdate = function(e, t) {
                         if (t.playerInitialized) {
                             if (this.updatePlayerTrackingData(e), this.updatePlayerType(e.playerTypeOverride), this.player && t.isFullScreen !== this.player.fullscreen && this.player.setFullscreen(t.isFullScreen), this.player) {
@@ -33280,14 +33217,14 @@
                             }
                             this.player && e.clipSlug && this.props.clipSlug !== e.clipSlug && this.player.setClip(e.clipSlug), this.player && e.theatreModeEnabled !== this.player.getTheatre() && this.player.setTheatre(e.theatreModeEnabled), this.player && e.miniModeEnabled !== this.props.miniModeEnabled && this.player.setMiniPlayerMode(!!e.miniModeEnabled), this.player && t.playerPaused !== this.lastPausedProp && (t.playerPaused ? this.player.pause() : t.playerPaused || this.player.play(), this.lastPausedProp = t.playerPaused), this.player && t.playerMuted !== this.lastMutedProp && (this.player.setMuted(!!t.playerMuted), this.lastMutedProp = !!t.playerMuted), this.player && e.viewerIsFollowing !== this.lastFollowingProp && (this.player.setFollowing(!!e.viewerIsFollowing), this.lastFollowingProp = !!e.viewerIsFollowing), this.player && e.viewerIsSubscribed !== this.lastSubscribedProp && (this.player.setSubscribed(!!e.viewerIsSubscribed), this.lastSubscribedProp = !!e.viewerIsSubscribed), this.player && e.channelIsSubscribable !== this.lastSubscribableProp && (this.player.setSubscribable(!!e.channelIsSubscribable), this.lastSubscribableProp = !!e.channelIsSubscribable), this.updatePlayerGDPRConsent(e);
                             var l = e.channelLogin !== this.lastSetChannel;
-                            if (this.player && e.channelLogin && (l || Object(x.b)(this.props, e))) return this.player.pause(), this.resetLatencyTracking(!!e.paused), this.player.setChannel(e.channelLogin), this.lastSetChannel = e.channelLogin, void _.o.setVideoPlayerTrackingData({
+                            if (this.player && e.channelLogin && (l || Object(L.b)(this.props, e))) return this.player.pause(), this.resetLatencyTracking(!!e.paused), this.player.setChannel(e.channelLogin), this.lastSetChannel = e.channelLogin, void C.o.setVideoPlayerTrackingData({
                                 vodID: void 0
                             });
                             var c = e.collectionID && this.props.collectionID !== e.collectionID,
                                 u = e.vodID && this.props.vodID !== e.vodID;
                             if (c || u) {
-                                var d = e.vodID ? Object(w.p)(e.vodID) : "";
-                                if ("" !== d && _.o.setVideoPlayerTrackingData({
+                                var d = e.vodID ? Object(N.p)(e.vodID) : "";
+                                if ("" !== d && C.o.setVideoPlayerTrackingData({
                                         vodID: e.vodID
                                     }), !this.player) return;
                                 return this.player.pause(), this.resetLatencyTracking(!!e.paused), void(c || e.collectionID && u ? this.player.setCollection(e.collectionID, d, e.nextVideoOffset) : this.player.setVideo(d, e.nextVideoOffset))
@@ -33307,58 +33244,58 @@
                         }
                         void 0 !== e.muted && this.props.muted !== e.muted && this.toggleMute(e.muted)
                     }, t.prototype.render = function() {
-                        var e = b("video-player", {
+                        var e = y("video-player", {
                                 "video-player--theatre": this.props.theatreModeEnabled,
                                 "video-player--theatre-whispers": this.props.theatreModeEnabled && this.props.isWhispersBottomBarVisible && !this.state.isFullScreen,
                                 "video-player--logged-in": this.props.isLoggedIn,
                                 "video-player--fullscreen": this.state.isFullScreen
                             }),
-                            t = b("video-player__container", {
-                                "video-player__container--clips": L.a.includes(this.playerType)
+                            t = y("video-player__container", {
+                                "video-player__container--clips": A.a.includes(this.playerType)
                             });
                         return l.createElement("div", {
-                            className: b(e),
+                            className: y(e),
                             "data-test-selector": "video-player"
                         }, l.createElement("div", {
                             className: t,
                             ref: this.attachRef
                         }))
                     }, t.prototype.componentWillUnmount = function() {
-                        this.state.playerRefID === this.props.activeVideoPlayerRefID && this.props.reportPlayerInstanceStarted && this.props.reportPlayerInstanceStarted(void 0), this.unbindHotKeys(), this.historyUnlistener && this.historyUnlistener(), this.maybeDetachFromWindow(), this.state.isFullScreen && this.exitFullscreen(), this.props.fullscreen.removeChangeListener(this.onTwilightFullscreenChange), this.props.onDestroy && this.props.onDestroy(), _.o.eventEmitter.removeListener(N.SpadeEventType.Pageview, this.updatePlayerTrackingDataFromProps), this.player && (this.player.removeEventListener(A.a.PlayerReady, this.onPlayerReady), this.player.removeEventListener(A.a.CompanionAdBuffered, this.companionAdBuffered), this.player.removeEventListener(A.a.Online, this.onStreamStatusOnline), this.player.removeEventListener(A.a.Offline, this.onStreamStatusOffline), this.player.removeEventListener(R.Ended, this.onStreamStatusOffline), this.player.removeEventListener(R.Play, this.onPlayerPlay), this.player.removeEventListener(R.Playing, this.onPlayerPlaying), this.player.removeEventListener(A.a.TheatreChange, this.onTheatreChange), this.player.removeEventListener(A.a.TransitionToCollectionVOD, this.onTransitionToCollectionVod), this.player.removeEventListener(A.a.FullscreenChange, this.onFullScreenChange), this.player.removeEventListener(A.a.ExternalFullscreenChange, this.onExternalFullScreenChange), this.player.removeEventListener(R.Seeking, this.onSeeking), this.player.removeEventListener(R.Seeked, this.onSeek), this.player.removeEventListener(R.TimeUpdate, this.onTimeUpdate), this.player.removeEventListener(A.a.OpenStream, this.onOpenStream), this.player.removeEventListener(R.Pause, this.onPause), this.player.removeEventListener(A.a.PersistenPlayerToggle, this.onPersistentPlayerToggled), this.player.removeEventListener(R.LoadedMetadata, this.onMetadataLoaded), this.player.removeEventListener(R.VolumeChange, this.onVolumeChange), this.player.removeEventListener(A.a.PromptLoginModal, this.props.promptLogin), this.player.removeEventListener(A.a.FocusPlayer, this.onFocusPlayer), this.player.removeEventListener(A.a.FollowChannel, this.followChannel), this.player.removeEventListener(A.a.UnfollowChannel, this.unfollowChannel), this.player.removeEventListener(A.a.SubscribeToChannel, this.subscribeToChannel), this.player.removeEventListener(A.a.ContentRestricted, this.onContentRestricted), this.player.removeEventListener(O.a.AdStart, this.onAdStart), this.player.removeEventListener(O.a.AdEnd, this.onAdEnd), this.player.removeEventListener(A.a.StitchedAdStart, this.onStitchedAdStart), this.player.removeEventListener(A.a.StitchedAdEnd, this.onStitchedAdEnd), y.extensionService.unregisterPlayer(), this.player.destroy()), _.o.setVideoPlayerTrackingData({
+                        this.state.playerRefID === this.props.activeVideoPlayerRefID && this.props.reportPlayerInstanceStarted && this.props.reportPlayerInstanceStarted(void 0), this.unbindHotKeys(), this.historyUnlistener && this.historyUnlistener(), this.maybeDetachFromWindow(), this.state.isFullScreen && this.exitFullscreen(), this.props.fullscreen.removeChangeListener(this.onTwilightFullscreenChange), this.props.onDestroy && this.props.onDestroy(), C.o.eventEmitter.removeListener(T.SpadeEventType.Pageview, this.updatePlayerTrackingDataFromProps), this.player && (this.player.removeEventListener(O.a.PlayerReady, this.onPlayerReady), this.player.removeEventListener(O.a.CompanionAdBuffered, this.companionAdBuffered), this.player.removeEventListener(O.a.Online, this.onStreamStatusOnline), this.player.removeEventListener(O.a.Offline, this.onStreamStatusOffline), this.player.removeEventListener(u.Ended, this.onStreamStatusOffline), this.player.removeEventListener(u.Play, this.onPlayerPlay), this.player.removeEventListener(u.Playing, this.onPlayerPlaying), this.player.removeEventListener(O.a.TheatreChange, this.onTheatreChange), this.player.removeEventListener(O.a.TransitionToCollectionVOD, this.onTransitionToCollectionVod), this.player.removeEventListener(O.a.FullscreenChange, this.onFullScreenChange), this.player.removeEventListener(O.a.ExternalFullscreenChange, this.onExternalFullScreenChange), this.player.removeEventListener(u.Seeking, this.onSeeking), this.player.removeEventListener(u.Seeked, this.onSeek), this.player.removeEventListener(u.TimeUpdate, this.onTimeUpdate), this.player.removeEventListener(O.a.OpenStream, this.onOpenStream), this.player.removeEventListener(u.Pause, this.onPause), this.player.removeEventListener(O.a.PersistenPlayerToggle, this.onPersistentPlayerToggled), this.player.removeEventListener(u.LoadedMetadata, this.onMetadataLoaded), this.player.removeEventListener(u.VolumeChange, this.onVolumeChange), this.player.removeEventListener(O.a.PromptLoginModal, this.props.promptLogin), this.player.removeEventListener(O.a.FocusPlayer, this.onFocusPlayer), this.player.removeEventListener(O.a.FollowChannel, this.followChannel), this.player.removeEventListener(O.a.UnfollowChannel, this.unfollowChannel), this.player.removeEventListener(O.a.SubscribeToChannel, this.subscribeToChannel), this.player.removeEventListener(O.a.ContentRestricted, this.onContentRestricted), k.extensionService.unregisterPlayer(), this.player.destroy()), C.o.setVideoPlayerTrackingData({
                             vodID: void 0
                         })
                     }, t.prototype.trackMiniPlayerAction = function(e, t) {
                         this.player && this.state.playerInitialized && this.player.trackMiniPlayerAction(e, t)
                     }, t.prototype.resetLatencyTracking = function(e) {
-                        this.logger.debug("Resetting latency tracking."), this.hasBuffered = !1, this.hasPlayed = !1, this.hasPaused = !1, this.hasRestrictedContent = !1, this.props.latencyTracking.resetCustomEvents(T.a.Player), this.playerBuffering = this.registerBufferingEvent(e), this.playerPlayed = this.registerPlayedEvent(e), this.playerCreated = void 0, this.playerLoaded = void 0
+                        this.logger.debug("Resetting latency tracking."), this.hasBuffered = !1, this.hasPlayed = !1, this.hasPaused = !1, this.hasRestrictedContent = !1, this.props.latencyTracking.resetCustomEvents(I.a.Player), this.playerBuffering = this.registerBufferingEvent(e), this.playerPlayed = this.registerPlayedEvent(e), this.playerCreated = void 0, this.playerLoaded = void 0
                     }, t.prototype.registerBufferingEvent = function(e) {
                         return this.props.latencyTracking.registerCustomEvent({
                             benchmark: 1e3,
-                            group: T.a.Player,
-                            key: T.b.PlayerBuffering,
-                            label: T.c.Buffering,
+                            group: I.a.Player,
+                            key: I.b.PlayerBuffering,
+                            label: I.c.Buffering,
                             doNotTrack: e
                         })
                     }, t.prototype.registerCreatedEvent = function() {
                         return this.props.latencyTracking.registerCustomEvent({
                             benchmark: 1e3,
-                            group: T.a.Player,
-                            key: T.b.PlayerCreated,
-                            label: T.c.Created
+                            group: I.a.Player,
+                            key: I.b.PlayerCreated,
+                            label: I.c.Created
                         })
                     }, t.prototype.registerLoadedEvent = function() {
                         return this.props.latencyTracking.registerCustomEvent({
                             benchmark: 2500,
-                            group: T.a.Player,
-                            key: T.b.PlayerLoaded,
-                            label: T.c.Init
+                            group: I.a.Player,
+                            key: I.b.PlayerLoaded,
+                            label: I.c.Init
                         })
                     }, t.prototype.registerPlayedEvent = function(e) {
                         return this.props.latencyTracking.registerCustomEvent({
                             benchmark: 4e3,
-                            group: T.a.Player,
-                            key: T.b.PlayerPlayed,
-                            label: T.c.FirstFrame,
+                            group: I.a.Player,
+                            key: I.b.PlayerPlayed,
+                            label: I.c.FirstFrame,
                             doNotTrack: e
                         })
                     }, t.prototype.shouldSuppressPlaybackTracking = function() {
@@ -33382,40 +33319,40 @@
                             isFullScreen: !1
                         }), this.props.fullscreen.disable(), this.props.onFullscreenChange && this.props.onFullscreenChange(!1))
                     }, t.prototype.maybeAttachToWindow = function(e) {
-                        E.parse(window.location.search).attachPlayer && e.attachToWindow && this.player && (window.player = this.player)
+                        _.parse(window.location.search).attachPlayer && e.attachToWindow && this.player && (window.player = this.player)
                     }, t.prototype.maybeDetachFromWindow = function() {
                         window.player = void 0
                     }, t.prototype.bindHotKeys = function() {
-                        k.bind("alt+x", this.maybeRecordClip)
+                        E.bind("alt+x", this.maybeRecordClip)
                     }, t.prototype.unbindHotKeys = function() {
-                        k.unbind("alt+x")
+                        E.unbind("alt+x")
                     }, t.defaultProps = {
                         paused: !1
                     }, t
                 }(l.Component),
-                V = Object(D.b)("VideoPlayer")(j);
-            var z = Object(a.compose)(Object(i.connect)(function(e) {
+                j = Object(R.b)("VideoPlayer")(U);
+            var V = Object(a.compose)(Object(i.connect)(function(e) {
                 return {
-                    isWhispersBottomBarVisible: Object(h.b)(e),
+                    isWhispersBottomBarVisible: Object(f.b)(e),
                     theatreModeEnabled: e.ui.theatreModeEnabled,
                     rightColumnExpanded: e.ui.rightColumnExpanded,
                     sideNavExpanded: e.ui.sideNavExpanded,
-                    isLoggedIn: Object(m.f)(e),
-                    authToken: Object(m.a)(e),
-                    activeVideoPlayerRefID: Object(v.a)(e),
-                    gdprBlockAmazonContent: Object(f.g)(e, f.c.Amazon),
-                    gdprBlockComScoreContent: Object(f.g)(e, f.c.ComScore),
-                    gdprBlockGoogleContent: Object(f.g)(e, f.c.Google),
-                    gdprBlockNielsenContent: Object(f.g)(e, f.c.Nielsen)
+                    isLoggedIn: Object(h.f)(e),
+                    authToken: Object(h.a)(e),
+                    activeVideoPlayerRefID: Object(b.a)(e),
+                    gdprBlockAmazonContent: Object(g.g)(e, g.c.Amazon),
+                    gdprBlockComScoreContent: Object(g.g)(e, g.c.ComScore),
+                    gdprBlockGoogleContent: Object(g.g)(e, g.c.Google),
+                    gdprBlockNielsenContent: Object(g.g)(e, g.c.Nielsen)
                 }
             }, function(e) {
                 return Object(a.bindActionCreators)({
-                    enableTheatreMode: p.F,
-                    disableTheatreMode: p.C,
-                    togglePersistentPlayer: p.N,
-                    reportPlayerInstanceStarted: g.b,
+                    enableTheatreMode: m.F,
+                    disableTheatreMode: m.C,
+                    togglePersistentPlayer: m.N,
+                    reportPlayerInstanceStarted: v.b,
                     promptLogin: function() {
-                        return Object(d.e)(u.a.ReportHoster)
+                        return Object(p.e)(d.a.ReportHoster)
                     }
                 }, e)
             }), function(e) {
@@ -33452,22 +33389,22 @@
                         s.exit()
                     }, n
                 }(l.Component)
-            }, r.a)(V);
+            }, r.a)(j);
 
-            function H(e, t, n) {
+            function z(e, t, n) {
                 if (e.collectionID || !e.videoID)
                     if (e.collectionID && e.videoID) {
                         if (n && n.currentVideoID && n.currentCollectionID && n.currentVideoID === e.videoID && n.currentCollectionID === e.collectionID) return;
                         t.push("/videos/" + e.videoID + "?collection=" + e.collectionID)
-                    } else !e.collectionID || e.videoID ? _.k.withCategory("video-player").error(new Error("No collection or video specified from the emitted player transition event."), "No collection or video specified from the emitted player transition event.") : t.push("/collections/" + e.collectionID);
+                    } else !e.collectionID || e.videoID ? C.k.withCategory("video-player").error(new Error("No collection or video specified from the emitted player transition event."), "No collection or video specified from the emitted player transition event.") : t.push("/collections/" + e.collectionID);
                 else t.push("/videos/" + e.videoID)
             }
             n.d(t, !1, function() {}), n.d(t, !1, function() {}), n.d(t, !1, function() {}), n.d(t, !1, function() {}), n.d(t, "b", function() {
-                return z
+                return V
             }), n.d(t, "c", function() {
-                return H
+                return z
             }), n.d(t, "a", function() {
-                return L.f
+                return A.f
             })
         },
         eJ65: function(e, t, n) {
@@ -36594,7 +36531,7 @@
                     return i
                 }),
                 function(e) {
-                    e.PlayerInit = "init", e.ContentShowing = "contentShowing", e.CompanionAdBuffered = "companionadbuffered", e.PlaybackStatistics = "playbackStatistics", e.ChansubRequired = "chansubRequired", e.VideoFailure = "videoFailure", e.Formats = "videoFormats", e.ABSStreamFormatChange = "abs_stream_format_change", e.FormatChanged = "videoFormatChanged", e.TimeChange = "timeChange", e.BufferChange = "bufferChange", e.SegmentChange = "segmentchange", e.UsherFailError = "usherFail", e.CaptionUpdate = "captions", e.SeekFailed = "seekfailed", e.VariantSwitchRequest = "variantSwitchRequested", e.ViewersChange = "viewerschange", e.StreamLoaded = "streamLoaded", e.VideoLoaded = "videoLoaded", e.VideoPaused = "videoPaused", e.QualityChange = "qualitychange", e.Online = "online", e.Offline = "offline", e.Restricted = "restricted", e.CastingChange = "castingchange", e.TheatreChange = "theatrechange", e.MidrollRequested = "midrollrequested", e.ManifestExtraInfo = "manifestExtraInfo", e.TransitionToCollectionVOD = "transitionToCollectionVod", e.TransitionToRecommendedVOD = "transitionToRecommendedVod", e.StitchedAdStart = "stitchedadstart", e.StitchedAdEnd = "stitchedadend", e.PersistenPlayerToggle = "persistentPlayerEnableToggle", e.StatsUpdate = "statsupdate", e.PromptLoginModal = "prompt login modal", e.OpenStream = "openStream", e.PlayerReady = "ready", e.FullscreenChange = "fullscreenchange", e.ExternalFullscreenChange = "externalfullscreenchange", e.ClipsModerationOpen = "clips-moderation-open", e.FocusPlayer = "focusPlayer", e.FollowChannel = "followChannel", e.UnfollowChannel = "unfollowChannel", e.ContentRestricted = "contentRestricted", e.SubscribeToChannel = "subscribeChannel"
+                    e.PlayerInit = "init", e.ContentShowing = "contentShowing", e.CompanionAdBuffered = "companionadbuffered", e.PlaybackStatistics = "playbackStatistics", e.ChansubRequired = "chansubRequired", e.VideoFailure = "videoFailure", e.Formats = "videoFormats", e.ABSStreamFormatChange = "abs_stream_format_change", e.FormatChanged = "videoFormatChanged", e.TimeChange = "timeChange", e.BufferChange = "bufferChange", e.SegmentChange = "segmentchange", e.UsherFailError = "usherFail", e.CaptionUpdate = "captions", e.SeekFailed = "seekfailed", e.VariantSwitchRequest = "variantSwitchRequested", e.ViewersChange = "viewerschange", e.StreamLoaded = "streamLoaded", e.VideoLoaded = "videoLoaded", e.VideoPaused = "videoPaused", e.QualityChange = "qualitychange", e.Online = "online", e.Offline = "offline", e.Restricted = "restricted", e.CastingChange = "castingchange", e.TheatreChange = "theatrechange", e.MidrollRequested = "midrollrequested", e.ManifestExtraInfo = "manifestExtraInfo", e.TransitionToCollectionVOD = "transitionToCollectionVod", e.TransitionToRecommendedVOD = "transitionToRecommendedVod", e.StitchedAdStart = "stitchedadstart", e.StichedAdEnd = "stitchedadend", e.PersistenPlayerToggle = "persistentPlayerEnableToggle", e.StatsUpdate = "statsupdate", e.PromptLoginModal = "prompt login modal", e.OpenStream = "openStream", e.PlayerReady = "ready", e.FullscreenChange = "fullscreenchange", e.ExternalFullscreenChange = "externalfullscreenchange", e.ClipsModerationOpen = "clips-moderation-open", e.FocusPlayer = "focusPlayer", e.FollowChannel = "followChannel", e.UnfollowChannel = "unfollowChannel", e.ContentRestricted = "contentRestricted", e.SubscribeToChannel = "subscribeChannel"
                 }(i || (i = {}))
         },
         kz7j: function(e, t, n) {
@@ -37371,8 +37308,8 @@
                 k = n("UptD"),
                 E = n("17x9"),
                 _ = n("6x+I"),
-                S = n("2xye"),
-                C = new Set(["affiliateinvite", "chatroommention", "feedcomment", "partneragreementupdate", "partnerinvite", "owlaap2018promotion"]);
+                C = n("2xye"),
+                S = new Set(["affiliateinvite", "chatroommention", "feedcomment", "partneragreementupdate", "partnerinvite", "owlaap2018promotion"]);
 
             function w(e, t) {
                 var n, i = {},
@@ -37389,7 +37326,7 @@
                     return o.k.error(t.toString(), a + " was malformed from notification id:[" + e.id + "]"), i
                 }
                 return ! function(e, t) {
-                    if (C.has(e)) return !1;
+                    if (S.has(e)) return !1;
                     return "https://www.twitch.tv" === t.origin
                 }(e.type, n) ? (i.linkTo = function(e, t, n) {
                     var i = e.split("?");
@@ -37429,14 +37366,14 @@
                         notification_type: e.notification.type,
                         ui_context: e.uiContext
                     };
-                    o.o.track(S.SpadeEventType.NotificationImpression, t)
+                    o.o.track(C.SpadeEventType.NotificationImpression, t)
                 },
                 O = function(e) {
                     var t = {
                         unseen_view_count: e.unseenCount,
                         action: e.action
                     };
-                    o.o.track(S.SpadeEventType.NotificationCenterInteraction, t)
+                    o.o.track(C.SpadeEventType.NotificationCenterInteraction, t)
                 },
                 A = function(e) {
                     var t = {
@@ -37445,7 +37382,7 @@
                         ui_context: e.uiContext,
                         action: e.action
                     };
-                    o.o.track(S.SpadeEventType.NotificationInteraction, t)
+                    o.o.track(C.SpadeEventType.NotificationInteraction, t)
                 },
                 L = n("Ue10"),
                 x = (n("vfD6"), "persistent-notification__delete"),
@@ -37514,7 +37451,7 @@
                         }, a.createElement(L.Va, i.__assign({
                             "data-test-selector": "persistent-notification__click",
                             onClick: this.clickNotification
-                        }, w(this.props.data, S.PageviewMedium.NotificationCenter), {
+                        }, w(this.props.data, C.PageviewMedium.NotificationCenter), {
                             type: L.Wa.Alpha
                         }), a.createElement(L.Ya, {
                             className: "persistent-notification__area",
@@ -37865,7 +37802,7 @@
                         }, a.createElement(L.Va, i.__assign({
                             onClick: this.view,
                             type: L.Wa.Alpha
-                        }, w(this.props.item, S.PageviewMedium.NotificationToast)), a.createElement(L.Ya, {
+                        }, w(this.props.item, C.PageviewMedium.NotificationToast)), a.createElement(L.Ya, {
                             className: "onsite-notification-toast__container",
                             display: L.X.Flex,
                             flexWrap: L.Ba.NoWrap
@@ -37921,7 +37858,7 @@
                             onClick: this.view,
                             "data-test-selector": "onsite-notification-toast__view",
                             type: L.Wa.Alpha
-                        }, w(this.props.item, S.PageviewMedium.NotificationToast)), a.createElement(L.Fb, {
+                        }, w(this.props.item, C.PageviewMedium.NotificationToast)), a.createElement(L.Fb, {
                             display: L.X.Flex,
                             alignItems: L.f.Center,
                             justifyContent: L.Xa.Center,
@@ -38762,8 +38699,8 @@
                     }, e)
                 })(y),
                 _ = n("TSYQ"),
-                S = n("oJmH"),
-                C = n("8/mp"),
+                C = n("oJmH"),
+                S = n("8/mp"),
                 w = n("edgk"),
                 N = n("jv9u"),
                 T = n("bYOw"),
@@ -39310,7 +39247,7 @@
                                 hideWateb: !1,
                                 size: T.b.Smallnoscroll
                             });
-                        return c.createElement(C.b, {
+                        return c.createElement(S.b, {
                             "data-a-target": "bits-buy-card",
                             className: e
                         }, c.createElement(c.Fragment, null, a, o, s))
@@ -39389,7 +39326,7 @@
                         hideWateb: !1
                     }, t
                 }(c.Component),
-                X = Object(S.compose)(Object(m.a)(H, {
+                X = Object(C.compose)(Object(m.a)(H, {
                     name: "data",
                     options: function(e) {
                         return {
@@ -39793,9 +39730,9 @@
             }), n.d(t, "d", function() {
                 return _
             }), n.d(t, "c", function() {
-                return S
-            }), n.d(t, "i", function() {
                 return C
+            }), n.d(t, "i", function() {
+                return S
             }), n.d(t, "e", function() {
                 return w
             }), n.d(t, "h", function() {
@@ -39890,13 +39827,13 @@
                 }))
             }
 
-            function S(e, t) {
+            function C(e, t) {
                 k() && l.p.tracking.track(c.SpadeEventType.SearchBegin, s.__assign({}, b(e), {
                     location: t && t.medium
                 }))
             }
 
-            function C(e, t, n, i) {
+            function S(e, t, n, i) {
                 k() && l.p.tracking.track(c.SpadeEventType.SearchQuerySubmit, s.__assign({}, y(e, t, n), {
                     filter: i
                 }))
@@ -40180,8 +40117,8 @@
                 k = n("76Lv"),
                 E = n("MPw5"),
                 _ = n("fvjX"),
-                S = n("2F2A"),
-                C = n("cr+I"),
+                C = n("2F2A"),
+                S = n("cr+I"),
                 w = n("yR8l"),
                 N = n("zB42"),
                 T = n("cTNz"),
@@ -40223,7 +40160,7 @@
                             n.async = !0, n.src = O, t.containerRef && t.containerRef.appendChild(n), n.onerror = function() {
                                 return a.p.adBlockDetector.setBlockDetectedToTrue()
                             }, E.a.initialize(T.i);
-                            var i = C.parse(window.location.search).campaign || "";
+                            var i = S.parse(window.location.search).campaign || "";
                             return i && t.logger.debug("Setting campaign", i), E.a.setAppWideTracking("campaign", i), E.a.setAppWideTracking("server", a.a.buildType === N.a.Production ? "production" : "dev"), E.a.setAppWideTracking("salt", "true"), E.a.setAppWideTracking("kuid", window.Krux && window.Krux.user || ""), E.a.setAppWideTracking("loggedin", e.data.currentUser ? "true" : "false"), E.a.setRequestPersonalizedAds(!e.gdpr.blockConsentRequiredContent), e.trackingSet(), t.logger.debug("Tracking is set"), Promise.resolve()
                         }, t.setContainerRef = function(e) {
                             return t.containerRef = e
@@ -40288,7 +40225,7 @@
                 P = Object(_.compose)(Object(w.a)(R), Object(D.a)(I.c.Amazon))(x);
             var F = Object(u.connect)(null, function(e) {
                     return Object(_.bindActionCreators)({
-                        trackingSet: S.b
+                        trackingSet: C.b
                     }, e)
                 })(P),
                 M = n("gOYK"),
@@ -40831,8 +40768,8 @@
                 ke = n("XhOd"),
                 Ee = n("nxnD"),
                 _e = n("N0BP"),
-                Se = n("QVaV"),
-                Ce = n("dIU+"),
+                Ce = n("QVaV"),
+                Se = n("dIU+"),
                 we = (n("sZeT"), function(e) {
                     function t() {
                         var t = null !== e && e.apply(this, arguments) || this;
@@ -40997,15 +40934,15 @@
                                 flexGrow: 1
                             }, n.props.gameName))) : null
                         }, n.getSlideInContent = function() {
-                            if (n.props.firstPageLoaded && !n.props.hideFollowButton) return i.createElement(Ce.a, {
+                            if (n.props.firstPageLoaded && !n.props.hideFollowButton) return i.createElement(Se.a, {
                                 blurAfterClick: !0,
                                 channelLogin: n.props.channelLogin,
                                 "data-a-target": "featured-channel-follow-button",
-                                followUIType: Ce.b.TextOnly,
+                                followUIType: Se.b.TextOnly,
                                 hideDropdownWhenFollowing: !0,
                                 size: G.D.Small,
                                 tabIndex: -1,
-                                unfollowUIType: Ce.b.IconOnly
+                                unfollowUIType: Se.b.IconOnly
                             })
                         }, n.state = {
                             hovered: !1
@@ -41028,7 +40965,7 @@
                             metadataLeft: this.renderGame(),
                             slideInContent: this.getSlideInContent(),
                             title: this.props.displayName,
-                            titleElement: Object(Se.a)(this.props.channelLogin, this.props.displayName),
+                            titleElement: Object(Ce.a)(this.props.channelLogin, this.props.displayName),
                             tooltipLabel: this.props.title
                         }, Object(_e.a)(this.props)))
                     }, t = m.__decorate([Object(W.b)("Featured Channel")], t)
@@ -41372,7 +41309,7 @@
                         this.props.latencyTracking.reportInteractive()
                     }, t.prototype.render = function() {
                         var e = this.getMetadataLeft(),
-                            t = Object(Se.a)(this.props.user.login, this.props.user.displayName, !0);
+                            t = Object(Ce.a)(this.props.user.login, this.props.user.displayName, !0);
                         return i.createElement(we, m.__assign({
                             avatarAlt: t,
                             avatarSrc: this.props.user.profileImageURL,
@@ -41388,7 +41325,7 @@
                             onClick: this.props.onChannelClick,
                             offline: this.isChannelOffline(),
                             title: t,
-                            titleElement: Object(Se.a)(this.props.user.login, this.props.user.displayName),
+                            titleElement: Object(Ce.a)(this.props.user.login, this.props.user.displayName),
                             tooltipContent: this.getTooltipContent()
                         }, Object(G.kc)(this.props)))
                     }, t.prototype.getMetadataLeft = function() {
@@ -41851,8 +41788,8 @@
                 }
             }
             var _t = n("m98o"),
-                St = n("as+V"),
-                Ct = n("NMMG"),
+                Ct = n("as+V"),
+                St = n("NMMG"),
                 wt = function(e) {
                     function t() {
                         var t = null !== e && e.apply(this, arguments) || this;
@@ -41865,7 +41802,7 @@
                                     content: Me.PageviewContent.Presence,
                                     medium: Me.PageviewMedium.SideNav
                                 }
-                            }), i.createElement(St.a, {
+                            }), i.createElement(Ct.a, {
                                 availability: t.props.availability,
                                 link: e,
                                 onClick: t.handleJoinClick,
@@ -41873,7 +41810,7 @@
                             })
                         }, t.handleClick = function(e) {
                             e.preventDefault();
-                            var n = Object(Ct.a)(t.props.user.id, t.props.currentUserID);
+                            var n = Object(St.a)(t.props.user.id, t.props.currentUserID);
                             t.props.openThread(n), t.props.balloonLayer.hide(Et(!0))
                         }, t.handleJoinClick = function() {
                             Object(bt.b)({
@@ -41911,7 +41848,7 @@
                             onMouseLeave: this.onMouseLeave
                         }, i.createElement(we, m.__assign({
                             title: this.props.user.displayName,
-                            titleElement: Object(Se.a)(this.props.user.login, this.props.user.displayName),
+                            titleElement: Object(Ce.a)(this.props.user.login, this.props.user.displayName),
                             avatarAlt: this.props.user.displayName,
                             avatarSrc: this.props.user.profileImageURL,
                             avatarPresence: !0,
@@ -42052,13 +41989,13 @@
                     function t() {
                         var t = null !== e && e.apply(this, arguments) || this;
                         return t.getSlideInContent = function() {
-                            if (t.props.firstPageLoaded) return i.createElement(Ce.a, {
+                            if (t.props.firstPageLoaded) return i.createElement(Se.a, {
                                 tabIndex: -1,
                                 "data-a-target": "recommended-channel-follow-button",
                                 size: G.D.Small,
                                 channelLogin: t.props.login,
-                                followUIType: Ce.b.TextOnly,
-                                unfollowUIType: Ce.b.IconOnly,
+                                followUIType: Se.b.TextOnly,
+                                unfollowUIType: Se.b.IconOnly,
                                 hideDropdownWhenFollowing: !0
                             })
                         }, t.trackClick = function() {
@@ -42083,7 +42020,7 @@
                             })
                         })
                     }, t.prototype.render = function() {
-                        var e = Object(Se.a)(this.props.login, this.props.displayName, !0);
+                        var e = Object(Ce.a)(this.props.login, this.props.displayName, !0);
                         return i.createElement(we, m.__assign({
                             avatarAlt: e,
                             avatarSrc: this.props.profileImageURL,
@@ -42100,7 +42037,7 @@
                             onClick: this.trackClick,
                             slideInContent: this.getSlideInContent(),
                             title: e,
-                            titleElement: Object(Se.a)(this.props.login, this.props.displayName),
+                            titleElement: Object(Ce.a)(this.props.login, this.props.displayName),
                             tooltipLabel: this.props.title || void 0
                         }, Object(G.kc)(this.props)))
                     }, t
@@ -42235,7 +42172,7 @@
                             }
                         }, n.handleClick = function(e) {
                             e.preventDefault();
-                            var t = Object(Ct.a)(n.props.user.id, n.props.currentUserID);
+                            var t = Object(St.a)(n.props.user.id, n.props.currentUserID);
                             n.props.openThread(t), n.props.balloonLayer.hide(Et(!0))
                         }, n.onClickAddFriend = function() {
                             n.setState({
@@ -42270,7 +42207,7 @@
                             onMouseLeave: this.onMouseLeave
                         }, i.createElement(we, m.__assign({
                             title: this.props.user.displayName,
-                            titleElement: Object(Se.a)(this.props.user.login, this.props.user.displayName),
+                            titleElement: Object(Ce.a)(this.props.user.login, this.props.user.displayName),
                             avatarAlt: this.props.user.displayName,
                             avatarSrc: this.props.user.profileImageURL,
                             onClick: this.handleClick,
@@ -42346,7 +42283,7 @@
                         var n = e.call(this, t) || this;
                         return n.handleClick = function(e) {
                             if (e.preventDefault(), n.props.id !== n.props.currentUserID) {
-                                var t = Object(Ct.a)(n.props.id, n.props.currentUserID);
+                                var t = Object(St.a)(n.props.id, n.props.currentUserID);
                                 n.props.openThread(t)
                             }
                         }, n.getSlideInContent = function() {
@@ -42414,7 +42351,7 @@
                     return m.__extends(t, e), t.prototype.render = function() {
                         return i.createElement(we, m.__assign({
                             title: this.props.displayName,
-                            titleElement: Object(Se.a)(this.props.login, this.props.displayName),
+                            titleElement: Object(Ce.a)(this.props.login, this.props.displayName),
                             avatarAlt: this.props.displayName,
                             avatarSrc: this.props.profileImageURL,
                             linkTo: "#",
@@ -42870,8 +42807,8 @@
                         to: "/"
                     })
                 }),
-                Sn = n("Eo7B"),
-                Cn = n("EOHf"),
+                Cn = n("Eo7B"),
+                Sn = n("EOHf"),
                 wn = function(e) {
                     function t() {
                         var t = null !== e && e.apply(this, arguments) || this;
@@ -42889,7 +42826,7 @@
                             fillContent: !0
                         }) : this.props.data.loading ? i.createElement(G.ab, {
                             fillContent: !0
-                        }) : i.createElement(Cn.a, null)
+                        }) : i.createElement(Sn.a, null)
                     }, Object.defineProperty(t.prototype, "productName", {
                         get: function() {
                             if (this.props.data.user && this.props.data.user.subscriptionProducts) {
@@ -42902,7 +42839,7 @@
                         configurable: !0
                     }), t
                 }(i.Component),
-                Nn = Object(w.a)(Sn, {
+                Nn = Object(w.a)(Cn, {
                     options: function(e) {
                         return {
                             variables: {
@@ -42979,7 +42916,7 @@
                         n = e.match.params.contentType === bn.g.Collection ? e.match.params.contentID : void 0;
                     return t || n ? i.createElement(h.a, {
                         to: Object(bn.i)(null, t, n)
-                    }) : i.createElement(Cn.a, null)
+                    }) : i.createElement(Sn.a, null)
                 };
 
             function Yn(e) {
@@ -43161,7 +43098,7 @@
                             component: qn
                         }), i.createElement(g.a, {
                             path: "*",
-                            component: Cn.a
+                            component: Sn.a
                         }))
                     }, t
                 }(i.Component),
@@ -43262,13 +43199,13 @@
                 })
             }
 
-            function Si() {
+            function Ci() {
                 return i.createElement(h.a, {
                     to: "/manager/upload"
                 })
             }
 
-            function Ci(e) {
+            function Si(e) {
                 return i.createElement(h.a, {
                     to: {
                         search: e.location.search,
@@ -43479,7 +43416,7 @@
                             component: gi
                         }), i.createElement(g.a, {
                             path: "/upload",
-                            render: Si,
+                            render: Ci,
                             exact: !0
                         }), i.createElement(g.a, {
                             path: "/user/legal",
@@ -43487,7 +43424,7 @@
                             exact: !0
                         }), i.createElement(g.a, {
                             path: "/user/remove_me",
-                            render: Ci
+                            render: Si
                         }), i.createElement(g.a, {
                             path: "/user",
                             component: vi
@@ -44127,7 +44064,7 @@
 
             function g(e) {
                 var t = e.step === m.AuthFormStep.StartLogin ? p.SpadeEventType.LoginShow : p.SpadeEventType.SignupShow;
-                d.o.track(t, u.__assign({}, S(), {
+                d.o.track(t, u.__assign({}, C(), {
                     source: e.source,
                     style: e.style
                 }))
@@ -44151,7 +44088,7 @@
                     default:
                         return
                 }
-                d.o.track(t, S())
+                d.o.track(t, C())
             }
 
             function b(e) {
@@ -44182,11 +44119,11 @@
             }
 
             function y() {
-                d.o.track(p.SpadeEventType.LoginSuccess, S())
+                d.o.track(p.SpadeEventType.LoginSuccess, C())
             }
 
             function k() {
-                d.o.track(p.SpadeEventType.SignupSuccess, S())
+                d.o.track(p.SpadeEventType.SignupSuccess, C())
             }
 
             function E(e) {
@@ -44197,7 +44134,7 @@
                 d.o.track(p.SpadeEventType.ModalContextInteraction, e)
             }
 
-            function S() {
+            function C() {
                 var e = d.o.getLastPageview();
                 return e ? {
                     medium: e.medium,
@@ -44210,7 +44147,7 @@
                 e.Captcha = "captcha", e.Close = "close", e.Connect = "connect", e.CreateAccount = "create_account_button", e.DateOfBirthDay = "DOB_day", e.DateOfBirthMonth = "DOB_month", e.DateOfBirthYear = "DOB_year", e.Email = "email", e.FacebookFooter = "fb_footer_button", e.LinkAccount = "link_account_button", e.Login = "login_button", e.Password = "password", e.Signup = "signup_button", e.Sms = "sms_request", e.Submit = "submit_button", e.Token = "token", e.RememberMe = "remember_me", e.TroubleLoggingIn = "trouble_login", e.Username = "username"
             }(i || (i = {})),
             function(e) {
-                e.Captcha = "captcha", e.FacebookConnect = "fb_connect", e.FacebookSignup = "fb_signup", e.Login = "login_form", e.Signup = "signup_form", e.TwoFactor = "two_factor", e.AccountRecoveryUsername = "username_entry"
+                e.Captcha = "captcha", e.FacebookConnect = "fb_connect", e.FacebookSignup = "fb_signup", e.Login = "login_form", e.Signup = "signup_form", e.TwoFactor = "two_factor"
             }(r || (r = {})),
             function(e) {
                 e.Blur = "blur", e.Click = "click", e.Complete = "complete", e.Enter = "enter", e.Focus = "focus"
@@ -44568,9 +44505,9 @@
             }), n.d(t, "p", function() {
                 return _
             }), n.d(t, "o", function() {
-                return S
-            }), n.d(t, "B", function() {
                 return C
+            }), n.d(t, "B", function() {
+                return S
             }), n.d(t, "z", function() {
                 return w
             }), n.d(t, "A", function() {
@@ -44661,11 +44598,11 @@
                 return "" === e ? "" : e.startsWith("v") ? e : "v" + e
             }
 
-            function S() {
+            function C() {
                 return Object(m.b)() ? "videos" : "videos/all"
             }
 
-            function C(e) {
+            function S(e) {
                 switch (e) {
                     case u.a.Archive:
                         return a.PastBroadcasts;
@@ -44784,7 +44721,7 @@
             }
 
             function O(e, t) {
-                var n = "" + S();
+                var n = "" + C();
                 t && t.filter && (n = t.filter);
                 var i = "";
                 return t && t.sort && (i = "?" + f + "=" + t.sort), "/" + e + "/" + n + i
@@ -46127,7 +46064,7 @@
             }), n.d(t, "d", function() {
                 return A
             });
-            var S = function(e) {
+            var C = function(e) {
                 var t = e.action,
                     n = e.options;
                 return {
@@ -46139,10 +46076,10 @@
                 }
             };
 
-            function C(e, t) {
+            function S(e, t) {
                 var n = t.action,
                     r = t.options,
-                    o = S({
+                    o = C({
                         action: n,
                         options: r
                     });
@@ -46153,14 +46090,14 @@
             }
 
             function w(e, t) {
-                return C(p.AuthFormStep.StartLogin, {
+                return S(p.AuthFormStep.StartLogin, {
                     action: e,
                     options: t
                 })
             }
 
             function N(e, t) {
-                return C(p.AuthFormStep.StartSignup, {
+                return S(p.AuthFormStep.StartSignup, {
                     action: e,
                     options: t
                 })
@@ -47392,6 +47329,6 @@
         }
     },
     [
-        [168, 110, 0]
+        [167, 108, 0]
     ]
 ]);

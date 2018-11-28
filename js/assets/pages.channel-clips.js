@@ -1,30 +1,30 @@
 (window.webpackJsonp = window.webpackJsonp || []).push([
-    [49, 126], {
+    [49, 124], {
         "+LJB": function(e, t, n) {
             "use strict";
             n.d(t, "a", function() {
                 return o
             });
             var i = n("0Log"),
-                r = n("/aPz"),
-                a = n("0Lz3");
+                a = n("/aPz"),
+                r = n("0Lz3");
 
             function o(e, t, n, o) {
                 return {
-                    topic: n ? Object(r.c)(n) : "",
+                    topic: n ? Object(a.c)(n) : "",
                     type: i.PubsubMessageType.BitsLeaderboardEvent,
                     mutator: function(e, t) {
                         if (!t || !n) return t;
                         var i = e.top.map(function(e) {
-                            return Object(a.b)(e, n.id)
+                            return Object(r.b)(e, n.id)
                         });
                         if (t.user) {
                             if (t.user.tournament && t.user.tournament.teamLeaderboard && (t.user.tournament.teamLeaderboard.items.edges = i), t.user.tournament && t.user.tournament.globalLeaderboard && (t.user.tournament.globalLeaderboard.items.edges = i, o && e.entry_context && e.entry_context.entry.entry_key === o && t.user.tournament.self && t.user.tournament.self.globalLeaderboardItem)) {
-                                var r = Object(a.b)(e.entry_context.entry, n.id);
-                                t.user.tournament.self.globalLeaderboardItem = r.node
+                                var a = Object(r.b)(e.entry_context.entry, n.id);
+                                t.user.tournament.self.globalLeaderboardItem = a.node
                             }
                             if (t.user.cheer && t.user.cheer.leaderboard && (t.user.cheer.leaderboard.items.edges = i, o && e.entry_context && e.entry_context.entry.entry_key === o && t.user.self && t.user.self.bitsLeaderboardItem)) {
-                                var s = Object(a.b)(e.entry_context.entry, n.id);
+                                var s = Object(r.b)(e.entry_context.entry, n.id);
                                 t.user.self.bitsLeaderboardItem = s.node
                             }
                         }
@@ -43,11 +43,11 @@
             n.d(t, "a", function() {
                 return i
             }), n.d(t, "b", function() {
-                return r
+                return a
             });
             var i = "core.user-preferences.LANGUAGE_PREFERENCES_UPDATED";
 
-            function r(e) {
+            function a(e) {
                 return {
                     type: i,
                     languagePreferences: e
@@ -171,9 +171,9 @@
             n.d(t, "d", function() {
                 return i
             }), n.d(t, "e", function() {
-                return r
-            }), n.d(t, "i", function() {
                 return a
+            }), n.d(t, "i", function() {
+                return r
             }), n.d(t, "j", function() {
                 return o
             }), n.d(t, "q", function() {
@@ -213,9 +213,9 @@
             }), n.d(t, "p", function() {
                 return N
             }), n.d(t, "u", function() {
-                return w
-            }), n.d(t, "J", function() {
                 return _
+            }), n.d(t, "J", function() {
+                return w
             }), n.d(t, "E", function() {
                 return O
             }), n.d(t, "K", function() {
@@ -229,19 +229,19 @@
             }), n.d(t, "H", function() {
                 return R
             }), n.d(t, "C", function() {
-                return A
-            }), n.d(t, "I", function() {
                 return L
-            }), n.d(t, "D", function() {
+            }), n.d(t, "I", function() {
                 return j
+            }), n.d(t, "D", function() {
+                return A
             }), n.d(t, "G", function() {
-                return B
-            }), n.d(t, "B", function() {
                 return U
+            }), n.d(t, "B", function() {
+                return B
             }), n.d(t, "y", function() {
-                return x
-            }), n.d(t, "A", function() {
                 return F
+            }), n.d(t, "A", function() {
+                return x
             }), n.d(t, "M", function() {
                 return P
             }), n.d(t, "z", function() {
@@ -260,8 +260,8 @@
                 return q
             });
             var i = "chat.CHAT_HIDDEN",
-                r = "chat.CHAT_SHOWN",
-                a = "chat.EMOTE_SETS_UPDATED",
+                a = "chat.CHAT_SHOWN",
+                r = "chat.EMOTE_SETS_UPDATED",
                 o = "chat.FOLLOWER_MODE_DURATION_PREFERENCE_CHANGED",
                 s = "chat.ROOM_STATE_UPDATED",
                 l = "chat.AUTOMOD_ACTIONS_ENABLED",
@@ -281,9 +281,9 @@
                 S = "chat.ADD_COMMAND",
                 E = "chat.REMOVE_COMMAND",
                 N = "chat.RENDER_SENT_CHAT_MESSAGE",
-                w = "chat.UNHIDE_IGNORED_COMMAND";
+                _ = "chat.UNHIDE_IGNORED_COMMAND";
 
-            function _() {
+            function w() {
                 return {
                     type: v
                 }
@@ -309,7 +309,7 @@
 
             function I() {
                 return {
-                    type: r
+                    type: a
                 }
             }
 
@@ -325,37 +325,37 @@
                 }
             }
 
-            function A() {
+            function L() {
                 return {
                     type: c
                 }
             }
 
-            function L() {
+            function j() {
                 return {
                     type: m
                 }
             }
 
-            function j() {
+            function A() {
                 return {
                     type: h
                 }
             }
 
-            function B() {
+            function U() {
                 return {
                     type: g
                 }
             }
 
-            function U() {
+            function B() {
                 return {
                     type: f
                 }
             }
 
-            function x(e, t) {
+            function F(e, t) {
                 return {
                     type: o,
                     channelLogin: e,
@@ -363,7 +363,7 @@
                 }
             }
 
-            function F() {
+            function x() {
                 return {
                     type: d
                 }
@@ -419,7 +419,7 @@
 
             function q(e) {
                 return {
-                    type: w,
+                    type: _,
                     userID: e
                 }
             }
@@ -427,8 +427,8 @@
         "/HY+": function(e, t, n) {
             "use strict";
             var i = n("dAHa"),
-                r = n("mrSG"),
-                a = n("q1tI"),
+                a = n("mrSG"),
+                r = n("q1tI"),
                 o = n("/MKj"),
                 s = n("fvjX"),
                 l = n("cZKs"),
@@ -442,22 +442,22 @@
                             t.props.closeModal(), t.props.onClose && t.props.onClose(e, n)
                         }, t
                     }
-                    return r.__extends(t, e), t.prototype.render = function() {
-                        return a.createElement(u.Fb, {
+                    return a.__extends(t, e), t.prototype.render = function() {
+                        return r.createElement(u.Fb, {
                             className: "reporting-modal__container",
                             background: u.r.Base,
                             padding: {
                                 x: 2,
                                 y: 3
                             }
-                        }, a.createElement(i.b, {
+                        }, r.createElement(i.b, {
                             onClose: this.handleClose,
                             reportContext: this.props.reportContext,
                             title: this.props.title,
                             defaultDescription: this.props.defaultDescription
-                        }), a.createElement(l.a, null))
+                        }), r.createElement(l.a, null))
                     }, t
-                }(a.Component));
+                }(r.Component));
             var m = Object(s.compose)(Object(d.b)("ReportUserModal"), Object(o.connect)(null, function(e) {
                 return Object(s.bindActionCreators)({
                     closeModal: c.c
@@ -599,8 +599,8 @@
         "/i69": function(e, t, n) {
             "use strict";
             var i = n("mrSG"),
-                r = n("q1tI"),
-                a = n("oJmH"),
+                a = n("q1tI"),
+                r = n("oJmH"),
                 o = n("/7QA"),
                 s = n("gcd7"),
                 l = n("QVaV"),
@@ -619,11 +619,11 @@
                             var n = Object(p.k)("/ban " + e);
                             if (n) {
                                 var i = t.userLogin(n.banTarget),
-                                    r = n.reason || void 0;
+                                    a = n.reason || void 0;
                                 if (i) {
-                                    var a = Object(o.d)("Unable to ban user.", "BanCommandHandler");
+                                    var r = Object(o.d)("Unable to ban user.", "BanCommandHandler");
                                     return {
-                                        deferred: t.props.banUserMutation(i, void 0, r).then(function(e) {
+                                        deferred: t.props.banUserMutation(i, void 0, a).then(function(e) {
                                             var n = e.banUserFromChatRoom;
                                             return n ? n.error ? {
                                                 notice: Object(m.a)(i, n.error.code)
@@ -632,11 +632,11 @@
                                                     userLogin: i
                                                 }, "BanCommandHandler")
                                             } : {
-                                                notice: a
+                                                notice: r
                                             }
                                         }).catch(function() {
                                             return {
-                                                notice: a
+                                                notice: r
                                             }
                                         })
                                     }
@@ -658,9 +658,9 @@
                                     i = Object(o.d)("Unable to unban user.", "BanCommandHandler");
                                 return {
                                     deferred: t.props.unbanUserMutation(n).then(function(e) {
-                                        var r = e.unbanUserFromChatRoom;
-                                        return r ? r.error ? {
-                                            notice: Object(h.a)(n, r.error.code)
+                                        var a = e.unbanUserFromChatRoom;
+                                        return a ? a.error ? {
+                                            notice: Object(h.a)(n, a.error.code)
                                         } : t.props.suppressLocalSuccessMessage ? {} : {
                                             notice: Object(o.d)("{bannedUserLogin} is no longer banned from this channel.", {
                                                 bannedUserLogin: n
@@ -684,19 +684,19 @@
                             var n = Object(p.o)("/timeout " + e);
                             if (n) {
                                 var i = t.userLogin(n.banTarget),
-                                    r = n.duration || f,
-                                    a = n.reason || void 0;
+                                    a = n.duration || f,
+                                    r = n.reason || void 0;
                                 if (i) {
                                     var s = Object(o.d)("Unable to timeout user.", "BanCommandHandler");
                                     return {
-                                        deferred: t.props.banUserMutation(i, r, a).then(function(e) {
+                                        deferred: t.props.banUserMutation(i, a, r).then(function(e) {
                                             var n = e.banUserFromChatRoom;
                                             return n ? n.error ? {
                                                 notice: Object(m.a)(i, n.error.code, !0)
                                             } : t.props.suppressLocalSuccessMessage ? {} : {
                                                 notice: Object(o.d)("{userLogin} has been timed out for {duration} seconds.", {
                                                     userLogin: i,
-                                                    duration: r
+                                                    duration: a
                                                 }, "BanCommandHandler")
                                             } : {
                                                 notice: s
@@ -725,9 +725,9 @@
                                     i = Object(o.d)("Unable to untimeout user.", "BanCommandHandler");
                                 return {
                                     deferred: t.props.unbanUserMutation(n).then(function(e) {
-                                        var r = e.unbanUserFromChatRoom;
-                                        return r ? r.error ? {
-                                            notice: Object(h.a)(n, r.error.code, !0)
+                                        var a = e.unbanUserFromChatRoom;
+                                        return a ? a.error ? {
+                                            notice: Object(h.a)(n, a.error.code, !0)
                                         } : t.props.suppressLocalSuccessMessage ? {} : {
                                             notice: Object(o.d)("{login} is no longer timed out in this channel.", {
                                                 login: n
@@ -752,29 +752,29 @@
                         }, t
                     }
                     return i.__extends(t, e), t.prototype.render = function() {
-                        return r.createElement(g.Ya, {
+                        return a.createElement(g.Ya, {
                             display: g.X.Hide
-                        }, r.createElement(s.a, {
+                        }, a.createElement(s.a, {
                             command: "ban",
                             handler: this.banUser
-                        }), r.createElement(s.a, {
+                        }), a.createElement(s.a, {
                             command: "unban",
                             handler: this.unbanUser
-                        }), r.createElement(s.a, {
+                        }), a.createElement(s.a, {
                             command: "timeout",
                             handler: this.timeoutUser
-                        }), r.createElement(s.a, {
+                        }), a.createElement(s.a, {
                             command: "untimeout",
                             handler: this.untimeoutUser
                         }))
                     }, t
-                }(r.Component),
+                }(a.Component),
                 v = function(e) {
                     return {
                         channelID: e.channelID
                     }
                 },
-                k = Object(a.compose)(u.a, Object(d.a)(v), Object(c.a)(v))(b);
+                k = Object(r.compose)(u.a, Object(d.a)(v), Object(c.a)(v))(b);
             n.d(t, "a", function() {
                 return k
             })
@@ -929,8 +929,8 @@
             }), n.d(t, "b", function() {
                 return c
             });
-            var i, r = n("RcPG"),
-                a = n("a1OF");
+            var i, a = n("RcPG"),
+                r = n("a1OF");
             ! function(e) {
                 e[e.Position = 0] = "Position", e[e.Token = 1] = "Token"
             }(i || (i = {}));
@@ -944,9 +944,9 @@
                         return {
                             images: {
                                 sources: {
-                                    "1x": Object(a.d)(t, 1),
-                                    "2x": Object(a.d)(t, 2),
-                                    "4x": Object(a.d)(t, 4)
+                                    "1x": Object(r.d)(t, 1),
+                                    "2x": Object(r.d)(t, 2),
+                                    "4x": Object(r.d)(t, 4)
                                 },
                                 themed: !1
                             },
@@ -954,7 +954,7 @@
                         }
                     }(e, s.id);
                     return {
-                        type: r.a.Emote,
+                        type: a.a.Emote,
                         content: l
                     }
                 }
@@ -984,14 +984,14 @@
 
             function c(e) {
                 for (var t = {}, n = 0, i = e; n < i.length; n++) {
-                    var r = i[n];
-                    if (r && r.emotes)
-                        for (var a = 0, s = r.emotes; a < s.length; a++) {
-                            var c = s[a];
+                    var a = i[n];
+                    if (a && a.emotes)
+                        for (var r = 0, s = a.emotes; r < s.length; r++) {
+                            var c = s[r];
                             if (c && c.id && c.token)
                                 for (var d = 0, u = l[c.token] || [c.token]; d < u.length; d++) {
                                     var p = u[d];
-                                    t[p] && r.id === o || (t[p] = {
+                                    t[p] && a.id === o || (t[p] = {
                                         id: c.id,
                                         token: p
                                     })
@@ -1011,37 +1011,37 @@
                 return d
             });
             var i = n("mrSG"),
-                r = n("/7QA"),
-                a = n("2xye"),
+                a = n("/7QA"),
+                r = n("2xye"),
                 o = n("gAd6"),
                 s = function() {
-                    var e = r.o.getLastPageview();
-                    return e && e.location || a.PageviewLocation.None
+                    var e = a.o.getLastPageview();
+                    return e && e.location || r.PageviewLocation.None
                 },
                 l = function(e) {
-                    r.o.trackItemSectionClick({
-                        carousel_content: a.PageviewContent.Video,
+                    a.o.trackItemSectionClick({
+                        carousel_content: r.PageviewContent.Video,
                         channel_id: e.broadcasterID || "0",
                         channel: e.channelLogin || "unknown",
-                        content: a.PageviewContent.PreviewCardGameName,
+                        content: r.PageviewContent.PreviewCardGameName,
                         item_index: e.contentIndex,
                         medium: e.pageviewMedium,
                         item_id: e.videoID,
-                        item_type: a.TwitchDataType.Video,
+                        item_type: r.TwitchDataType.Video,
                         item_viewcount: null,
                         location: s()
                     })
                 },
                 c = function(e) {
-                    r.o.trackItemSectionClick({
-                        carousel_content: a.PageviewContent.PreviewCardGameBalloonGame,
+                    a.o.trackItemSectionClick({
+                        carousel_content: r.PageviewContent.PreviewCardGameBalloonGame,
                         channel_id: e.broadcasterID || "0",
                         channel: e.channelLogin || "unknown",
-                        content: a.PageviewContent.PreviewCardGameBalloonGame,
+                        content: r.PageviewContent.PreviewCardGameBalloonGame,
                         item_index: e.contentIndex,
                         medium: e.pageviewMedium,
                         item_id: e.videoID,
-                        item_type: a.TwitchDataType.Video,
+                        item_type: r.TwitchDataType.Video,
                         item_viewcount: null,
                         location: s()
                     })
@@ -1058,7 +1058,7 @@
                                             return i.__generator(this, function(n) {
                                                 switch (n.label) {
                                                     case 0:
-                                                        return [4, r.p.apollo.client.query({
+                                                        return [4, a.p.apollo.client.query({
                                                             query: o,
                                                             variables: {
                                                                 name: e
@@ -1074,11 +1074,11 @@
                                     return n = p.sent(), l = n.filter(function(e) {
                                         return !!e
                                     }), c = l.map(function() {
-                                        return a.TwitchDataType.Game
+                                        return r.TwitchDataType.Game
                                     }), d = l.map(function() {
                                         return null
-                                    }), r.o.trackItemSectionLoad({
-                                        carousel_content: a.PageviewContent.PreviewCardGameBalloonGame,
+                                    }), a.o.trackItemSectionLoad({
+                                        carousel_content: r.PageviewContent.PreviewCardGameBalloonGame,
                                         rendered_item_count: l.length,
                                         rendered_item_list: l,
                                         rendered_item_types: c,
@@ -1097,37 +1097,37 @@
         "0Rl0": function(e, t, n) {
             "use strict";
             n.d(t, "a", function() {
-                return a
+                return r
             });
             var i = n("q1tI"),
-                r = n("Ue10"),
-                a = function() {
-                    return i.createElement(r.G, null, i.createElement(r.o, {
-                        ratio: r.p.Aspect16x9
-                    }, i.createElement(r.jb, null)), i.createElement(r.H, null, i.createElement(r.Ya, {
-                        display: r.X.Flex,
+                a = n("Ue10"),
+                r = function() {
+                    return i.createElement(a.G, null, i.createElement(a.o, {
+                        ratio: a.p.Aspect16x9
+                    }, i.createElement(a.jb, null)), i.createElement(a.H, null, i.createElement(a.Ya, {
+                        display: a.X.Flex,
                         margin: {
                             bottom: 1
                         }
-                    }, i.createElement(r.Ya, {
-                        display: r.X.InlineBlock,
+                    }, i.createElement(a.Ya, {
+                        display: a.X.InlineBlock,
                         margin: {
                             top: 1,
                             right: 1
                         }
-                    }, i.createElement(r.jb, {
+                    }, i.createElement(a.jb, {
                         width: 40,
                         height: 56
-                    })), i.createElement(r.Ya, {
-                        display: r.X.InlineBlock,
+                    })), i.createElement(a.Ya, {
+                        display: a.X.InlineBlock,
                         margin: {
                             top: 1
                         }
-                    }, i.createElement(r.W, null, i.createElement(r.jb, {
+                    }, i.createElement(a.W, null, i.createElement(a.jb, {
                         width: 150
-                    })), i.createElement(r.W, {
-                        fontSize: r.Ca.Size7
-                    }, i.createElement(r.jb, {
+                    })), i.createElement(a.W, {
+                        fontSize: a.Ca.Size7
+                    }, i.createElement(a.jb, {
                         width: 100
                     }))))))
                 }
@@ -1135,18 +1135,18 @@
         "0WFu": function(e, t, n) {
             "use strict";
             n.d(t, "b", function() {
-                return r
-            }), n.d(t, "a", function() {
                 return a
+            }), n.d(t, "a", function() {
+                return r
             });
             n("/7QA");
             var i = n("3Bft");
 
-            function r(e) {
+            function a(e) {
                 return [i.a.Prime, i.a.Custom].includes(e) ? null : parseInt(e, 10) / 1e3
             }
 
-            function a(e) {
+            function r(e) {
                 var t = e instanceof Date ? e : new Date(e);
                 return Math.round((t.getTime() - Date.now()) / 864e5)
             }
@@ -1447,30 +1447,30 @@
                 return s
             });
             var i = n("mrSG"),
-                r = n("q1tI"),
-                a = n("/7QA"),
+                a = n("q1tI"),
+                r = n("/7QA"),
                 o = n("2Ygb");
 
             function s(e, t) {
-                var n = r.createContext(t),
+                var n = a.createContext(t),
                     s = n.Consumer,
                     l = n.Provider;
                 return {
                     withContext: function(t) {
                         return function(n) {
-                            var a;
-                            return (a = function(e) {
-                                function a() {
+                            var r;
+                            return (r = function(e) {
+                                function r() {
                                     return null !== e && e.apply(this, arguments) || this
                                 }
-                                return i.__extends(a, e), a.prototype.render = function() {
+                                return i.__extends(r, e), r.prototype.render = function() {
                                     var e = this;
-                                    return r.createElement(s, null, function(a) {
-                                        var o = t(a);
-                                        return r.createElement(n, i.__assign({}, e.props, o))
+                                    return a.createElement(s, null, function(r) {
+                                        var o = t(r);
+                                        return a.createElement(n, i.__assign({}, e.props, o))
                                     })
-                                }, a
-                            }(r.Component)).displayName = Object(o.a)("With" + e, n), a
+                                }, r
+                            }(a.Component)).displayName = Object(o.a)("With" + e, n), r
                         }
                     },
                     InnerProvider: function(t) {
@@ -1478,13 +1478,13 @@
                             return null !== t && t.apply(this, arguments) || this
                         }
                         return i.__extends(n, t), n.prototype.componentDidMount = function() {
-                            "object" === typeof this.props.value && this.props.value || a.k.error(new Error(n.displayName + " rendered without an appropriate initial value"), "Set an initial value in your provider component at mount time.")
+                            "object" === typeof this.props.value && this.props.value || r.k.error(new Error(n.displayName + " rendered without an appropriate initial value"), "Set an initial value in your provider component at mount time.")
                         }, n.prototype.render = function() {
-                            return r.createElement(l, {
+                            return a.createElement(l, {
                                 value: this.props.value
                             }, this.props.children)
                         }, n.displayName = "Inner" + e + "Provider", n
-                    }(r.Component)
+                    }(a.Component)
                 }
             }
         },
@@ -2007,14 +2007,14 @@
         "2EzP": function(e, t, n) {
             "use strict";
             n.d(t, "b", function() {
-                return a
+                return r
             }), n.d(t, "a", function() {
                 return o
             });
             var i = n("XIZb"),
-                r = Object(i.a)("MessageHandler"),
-                a = (r.InnerProvider, r.withChatServiceProvider),
-                o = (0, r.withContext)(function(e) {
+                a = Object(i.a)("MessageHandler"),
+                r = (a.InnerProvider, a.withChatServiceProvider),
+                o = (0, a.withContext)(function(e) {
                     return {
                         messageHandlerAPI: e.serviceAPI,
                         setMessageHandlerAPI: e.setServiceAPI
@@ -2038,19 +2038,19 @@
         "3GF+": function(e, t, n) {
             "use strict";
             var i = n("q1tI"),
-                r = n("Ue10");
+                a = n("Ue10");
             n("jPLR");
 
-            function a(e) {
+            function r(e) {
                 e.stopPropagation()
             }
             var o = function(e) {
-                return i.createElement(r.Qa, {
+                return i.createElement(a.Qa, {
                     fullWidth: e.fullWidth,
-                    display: r.X.InlineBlock
+                    display: a.X.InlineBlock
                 }, i.createElement("div", {
                     className: "viewer-card-drag-cancel",
-                    onMouseDown: a
+                    onMouseDown: r
                 }, e.children))
             };
             n.d(t, "a", function() {
@@ -2818,8 +2818,8 @@
         "4L7N": function(e, t, n) {
             "use strict";
             var i = n("/MKj"),
-                r = n("kRBY"),
-                a = n("mrSG"),
+                a = n("kRBY"),
+                r = n("mrSG"),
                 o = n("q1tI"),
                 s = n("VwyG"),
                 l = n("X7Ac"),
@@ -2830,7 +2830,7 @@
                     function t() {
                         return null !== e && e.apply(this, arguments) || this
                     }
-                    return a.__extends(t, e), t.prototype.render = function() {
+                    return r.__extends(t, e), t.prototype.render = function() {
                         var e = this,
                             t = this.props.data.clip,
                             n = "";
@@ -2838,10 +2838,10 @@
                             var i = t.videoQualities[0];
                             n = i.sourceURL
                         }
-                        var r = this.props,
-                            a = r.broadcasterId,
-                            c = r.broadcasterLogin,
-                            u = r.forceShow;
+                        var a = this.props,
+                            r = a.broadcasterId,
+                            c = a.broadcasterLogin,
+                            u = a.forceShow;
                         return o.createElement(s.a, {
                             ownerLogin: this.props.broadcasterLogin,
                             permittedRoles: {
@@ -2849,19 +2849,19 @@
                                 staff: !0
                             }
                         }, function(i) {
-                            var r = i.permitted;
-                            return n && (r || u) ? o.createElement(l.a, {
+                            var a = i.permitted;
+                            return n && (a || u) ? o.createElement(l.a, {
                                 type: l.b.Download,
                                 text: e.props.slug,
                                 url: n,
-                                onShareClick: t ? Object(d.c)(t.id, t.game && t.game.name, a, c, e.props.pageType) : void 0
+                                onShareClick: t ? Object(d.c)(t.id, t.game && t.game.name, r, c, e.props.pageType) : void 0
                             }) : null
                         })
                     }, t
                 }(o.Component),
                 m = Object(c.a)(u)(p);
             var h = Object(i.connect)(function(e) {
-                var t = Object(r.e)(e);
+                var t = Object(a.e)(e);
                 return {
                     userLogin: t ? t.login : ""
                 }
@@ -3097,26 +3097,26 @@
             n.d(t, "b", function() {
                     return i
                 }), n.d(t, "a", function() {
-                    return r
+                    return a
                 }),
                 function(e) {
                     e.PopoutChat = "popout_chat", e.Chat = "chat", e.LiveDashButton = "live_dashboard_button", e.LiveDashHotkey = "live_dashboard_hotkey", e.LiveDashChat = "live_dashboard_chat"
                 }(i || (i = {}));
-            var r = 140
+            var a = 140
         },
         "5g1g": function(e, t, n) {
             "use strict";
             var i = n("mrSG"),
-                r = n("q1tI"),
-                a = n("wUQP"),
+                a = n("q1tI"),
+                r = n("wUQP"),
                 o = function(e) {
                     function t() {
                         return null !== e && e.apply(this, arguments) || this
                     }
                     return i.__extends(t, e), t.prototype.render = function() {
-                        return this.props.incremental && Object(a.c)(this.props.name) || Object(a.b)(this.props.name) ? this.props.children : null
+                        return this.props.incremental && Object(r.c)(this.props.name) || Object(r.b)(this.props.name) ? this.props.children : null
                     }, t
-                }(r.Component),
+                }(a.Component),
                 s = o;
             n.d(t, "b", function() {
                 return o
@@ -3134,18 +3134,18 @@
                 return d
             });
             var i = n("mrSG"),
-                r = n("/7QA"),
-                a = n("HSqT"),
+                a = n("/7QA"),
+                r = n("HSqT"),
                 o = n("+U0Y"),
                 s = "languageDirectoryFilters";
 
             function l(e, t) {
                 var n = this;
-                return function(a) {
+                return function(r) {
                     return i.__awaiter(n, void 0, void 0, function() {
                         var n, l;
                         return i.__generator(this, function(i) {
-                            return n = new Set(d()), t ? n.add(e) : n.delete(e), l = Array.from(n), r.m.set(s, l), a(Object(o.b)(l)), [2]
+                            return n = new Set(d()), t ? n.add(e) : n.delete(e), l = Array.from(n), a.m.set(s, l), r(Object(o.b)(l)), [2]
                         })
                     })
                 }
@@ -3156,51 +3156,51 @@
                 return function(t) {
                     return i.__awaiter(e, void 0, void 0, function() {
                         return i.__generator(this, function(e) {
-                            return r.m.set(s, []), t(Object(o.b)([])), [2]
+                            return a.m.set(s, []), t(Object(o.b)([])), [2]
                         })
                     })
                 }
             }
 
             function d() {
-                return r.m.get(s, []).filter(function(e) {
-                    return a.a.has(e)
+                return a.m.get(s, []).filter(function(e) {
+                    return r.a.has(e)
                 })
             }
         },
         "5zf8": function(e, t, n) {
             "use strict";
             n.d(t, "a", function() {
-                return r
+                return a
             }), n.d(t, "b", function() {
                 return l
             });
-            var i, r, a = n("/7QA");
+            var i, a, r = n("/7QA");
 
             function o(e, t) {
                 switch (e) {
                     case i.Second:
-                        return Object(a.d)("{secondCount, plural, one {# second} other {# seconds}}", {
+                        return Object(r.d)("{secondCount, plural, one {# second} other {# seconds}}", {
                             secondCount: t
                         }, "formatDuration");
                     case i.Minute:
-                        return Object(a.d)("{minuteCount, plural, one {# minute} other {# minutes}}", {
+                        return Object(r.d)("{minuteCount, plural, one {# minute} other {# minutes}}", {
                             minuteCount: t
                         }, "formatDuration");
                     case i.Hour:
-                        return Object(a.d)("{hourCount, plural, one {# hour} other {# hours}}", {
+                        return Object(r.d)("{hourCount, plural, one {# hour} other {# hours}}", {
                             hourCount: t
                         }, "formatDuration");
                     case i.Day:
-                        return Object(a.d)("{dayCount, plural, one {# day} other {# days}}", {
+                        return Object(r.d)("{dayCount, plural, one {# day} other {# days}}", {
                             dayCount: t
                         }, "formatDuration");
                     case i.Week:
-                        return Object(a.d)("{weekCount, plural, one {# week} other {# weeks}}", {
+                        return Object(r.d)("{weekCount, plural, one {# week} other {# weeks}}", {
                             weekCount: t
                         }, "formatDuration");
                     case i.Month:
-                        return Object(a.d)("{monthCount, plural, one {# month} other {# months}}", {
+                        return Object(r.d)("{monthCount, plural, one {# month} other {# months}}", {
                             monthCount: t
                         }, "formatDuration");
                     default:
@@ -3211,27 +3211,27 @@
             function s(e, t) {
                 switch (e) {
                     case i.Second:
-                        return Object(a.d)("{secondCount}s", {
+                        return Object(r.d)("{secondCount}s", {
                             secondCount: t
                         }, "formatDuration");
                     case i.Minute:
-                        return Object(a.d)("{minuteCount}m", {
+                        return Object(r.d)("{minuteCount}m", {
                             minuteCount: t
                         }, "formatDuration");
                     case i.Hour:
-                        return Object(a.d)("{hourCount}h", {
+                        return Object(r.d)("{hourCount}h", {
                             hourCount: t
                         }, "formatDuration");
                     case i.Day:
-                        return Object(a.d)("{dayCount}d", {
+                        return Object(r.d)("{dayCount}d", {
                             dayCount: t
                         }, "formatDuration");
                     case i.Week:
-                        return Object(a.d)("{weekCount}w", {
+                        return Object(r.d)("{weekCount}w", {
                             weekCount: t
                         }, "formatDuration");
                     case i.Month:
-                        return Object(a.d)("{monthCount}mo", {
+                        return Object(r.d)("{monthCount}mo", {
                             monthCount: t
                         }, "formatDuration");
                     default:
@@ -3241,16 +3241,16 @@
 
             function l(e, t) {
                 var n;
-                switch (void 0 === t && (t = r.Humanized), t === r.ClockAuto && (t = e >= 3600 ? r.ClockHMS : r.ClockMS), t) {
-                    case r.ClockHM:
-                    case r.ClockHMS:
+                switch (void 0 === t && (t = a.Humanized), t === a.ClockAuto && (t = e >= 3600 ? a.ClockHMS : a.ClockMS), t) {
+                    case a.ClockHM:
+                    case a.ClockHMS:
                         n = i.Hour;
                         break;
-                    case r.ClockMS:
+                    case a.ClockMS:
                         n = i.Minute
                 }
                 var l = 2;
-                t === r.ClockHMS && (l = 3);
+                t === a.ClockHMS && (l = 3);
                 var d = function(e, t) {
                         void 0 === t && (t = i.Month);
                         var n = {};
@@ -3258,16 +3258,16 @@
                     }(e, n),
                     u = Object.keys(d);
                 if (u.forEach(function(e, n) {
-                        t !== r.Humanized && t !== r.HumanizedShort || d[e] || delete d[e], n < u.length - l && delete d[e]
-                    }), t === r.Humanized) return function(e) {
+                        t !== a.Humanized && t !== a.HumanizedShort || d[e] || delete d[e], n < u.length - l && delete d[e]
+                    }), t === a.Humanized) return function(e) {
                     return e.months ? o(i.Month, e.months) : e.weeks && e.days ? o(i.Week, e.weeks) + " " + o(i.Day, e.days) : e.weeks ? o(i.Week, e.weeks) : e.days && e.hours ? o(i.Day, e.days) + " " + o(i.Hour, e.hours) : e.days ? o(i.Day, e.days) : e.hours && e.minutes ? o(i.Hour, e.hours) + " " + o(i.Minute, e.minutes) : e.hours ? o(i.Hour, e.hours) : e.minutes && e.seconds ? o(i.Minute, e.minutes) + " " + o(i.Second, e.seconds) : e.minutes ? o(i.Minute, e.minutes) : o(i.Second, e.seconds || 0)
                 }(d);
-                if (t === r.HumanizedShort) return function(e) {
+                if (t === a.HumanizedShort) return function(e) {
                     return e.months ? s(i.Month, e.months) : e.weeks && e.days ? "" + s(i.Week, e.weeks) + s(i.Day, e.days) : e.weeks ? s(i.Week, e.weeks) : e.days && e.hours ? "" + s(i.Day, e.days) + s(i.Hour, e.hours) : e.days ? s(i.Day, e.days) : e.hours && e.minutes ? "" + s(i.Hour, e.hours) + s(i.Minute, e.minutes) : e.hours ? s(i.Hour, e.hours) : e.minutes && e.seconds ? "" + s(i.Minute, e.minutes) + s(i.Second, e.seconds) : e.minutes ? s(i.Minute, e.minutes) : s(i.Second, e.seconds || 0)
                 }(d);
                 var p = ":",
                     m = !1;
-                switch (a.p.intl.getLanguageCode()) {
+                switch (r.p.intl.getLanguageCode()) {
                     case "cy":
                     case "da":
                     case "fi":
@@ -3285,11 +3285,11 @@
                     g = d.minutes || 0,
                     f = d.hours || 0;
                 switch (t) {
-                    case r.ClockHM:
-                    case r.ClockHMS:
+                    case a.ClockHM:
+                    case a.ClockHMS:
                         var b = (m ? c(f, 2) : f) + p + c(g, 2);
-                        return t === r.ClockHMS && (b += p + c(h, 2)), b;
-                    case r.ClockMS:
+                        return t === a.ClockHMS && (b += p + c(h, 2)), b;
+                    case a.ClockMS:
                         return (m ? c(g, 2) : g) + p + c(h, 2)
                 }
             }
@@ -3302,7 +3302,7 @@
             }(i || (i = {})),
             function(e) {
                 e[e.Humanized = 0] = "Humanized", e[e.HumanizedShort = 1] = "HumanizedShort", e[e.ClockAuto = 2] = "ClockAuto", e[e.ClockHM = 3] = "ClockHM", e[e.ClockMS = 4] = "ClockMS", e[e.ClockHMS = 5] = "ClockHMS"
-            }(r || (r = {}))
+            }(a || (a = {}))
         },
         "60o1": function(e, t, n) {
             "use strict";
@@ -3468,11 +3468,11 @@
         "6j5V": function(e, t, n) {
             "use strict";
             n.d(t, "a", function() {
-                return r
+                return a
             });
             var i = n("RcPG");
 
-            function r(e) {
+            function a(e) {
                 return {
                     type: i.a.Text,
                     content: e
@@ -3483,8 +3483,8 @@
             "use strict";
             n.r(t);
             var i = n("mrSG"),
-                r = n("q1tI"),
-                a = n("9C/b"),
+                a = n("q1tI"),
+                r = n("9C/b"),
                 o = n("vRsq"),
                 s = n("fvjX"),
                 l = n("/7QA"),
@@ -3518,32 +3518,31 @@
                             t = e.channelName,
                             n = e.data,
                             i = n.user,
-                            a = [];
-                        !n.loading && !n.error && i && i.clips && (a = i.clips.edges.map(function(e) {
+                            r = [];
+                        !n.loading && !n.error && i && i.clips && (r = i.clips.edges.map(function(e) {
                             return e.node
                         }));
-                        var o = r.createElement(g.ab, {
+                        var o = a.createElement(g.ab, {
                             fillContent: !0
                         });
-                        return o = n.error ? r.createElement(c.a, {
+                        return o = n.error ? a.createElement(c.a, {
                             message: Object(l.d)("Error loading data.", "ChannelClipsContent")
-                        }) : n.loading || i && (!i || i.clips) ? r.createElement("div", null, r.createElement(h.a, {
-                            videoBrowseOptions: this.props.videoBrowseOptions,
+                        }) : n.loading || i && (!i || i.clips) ? a.createElement("div", null, a.createElement(h.a, {
                             channelLogin: t,
-                            clips: a,
+                            clips: r,
                             isLoading: n.loading,
                             loadMoreClips: this.loadMoreTopClips,
                             timeRange: this.props.timeRange
-                        }), r.createElement(d.a, {
+                        }), a.createElement(d.a, {
                             loadMore: this.props.loadMore,
                             enabled: this.canLoadMore()
-                        })) : r.createElement(c.a, {
+                        })) : a.createElement(c.a, {
                             message: Object(l.d)("User does not exist", "ChannelClipsContent")
-                        }), r.createElement(g.Ya, {
+                        }), a.createElement(g.Ya, {
                             fullHeight: !0
                         }, o)
                     }, t
-                }(r.Component),
+                }(a.Component),
                 v = Object(s.compose)(Object(m.b)("ChannelClipsContent", {
                     autoReportInteractive: !0
                 }), Object(u.a)(f, {
@@ -3568,11 +3567,11 @@
                                     }),
                                     updateQuery: function(e, t) {
                                         var n = t.fetchMoreResult,
-                                            r = e.user && e.user.clips && n.user && n.user.clips ? Object(p.c)(e.user.clips.edges, n.user.clips.edges) : [];
+                                            a = e.user && e.user.clips && n.user && n.user.clips ? Object(p.c)(e.user.clips.edges, n.user.clips.edges) : [];
                                         return {
                                             user: i.__assign({}, n.user, {
                                                 clips: i.__assign({}, n.user && n.user.clips ? n.user.clips : {}, {
-                                                    edges: r
+                                                    edges: a
                                                 })
                                             })
                                         }
@@ -3588,14 +3587,13 @@
                     }
                     return i.__extends(t, e), t.prototype.render = function() {
                         var e = Object(o.v)(this.props.location.search) || o.b.Week;
-                        return r.createElement(v, {
-                            videoBrowseOptions: this.props.videoBrowseOptions,
+                        return a.createElement(v, {
                             channelName: this.props.channelName,
                             timeRange: e
                         })
                     }, t
-                }(r.PureComponent),
-                C = Object(a.a)(k);
+                }(a.PureComponent),
+                C = Object(r.a)(k);
             n.d(t, "ChannelClipsContentComponent", function() {
                 return k
             }), n.d(t, "ChannelClipsContent", function() {
@@ -3609,12 +3607,12 @@
         "7SjK": function(e, t, n) {
             "use strict";
             var i = n("mrSG"),
-                r = n("q1tI"),
-                a = n("TSYQ"),
+                a = n("q1tI"),
+                r = n("TSYQ"),
                 o = n("/7QA"),
                 s = n("GnwI"),
                 l = n("Ue10"),
-                c = (n("GOKC"), r.createElement(l.Fb, {
+                c = (n("GOKC"), a.createElement(l.Fb, {
                     alignItems: l.f.Center,
                     background: l.r.Overlay,
                     borderRadius: l.x.Small,
@@ -3625,20 +3623,20 @@
                     justifyContent: l.Xa.Center,
                     position: l.kb.Absolute,
                     zIndex: l.jc.Above
-                }, r.createElement(l.tb, {
+                }, a.createElement(l.tb, {
                     asset: l.ub.Lock,
                     height: 10,
                     width: 10
                 }))),
                 d = function(e) {
-                    var t = a("emote-button__link", {
+                    var t = r("emote-button__link", {
                             "emote-button__link--locked": !e.onClick
                         }),
                         n = e.emote,
                         i = n.displayName,
                         d = n.srcSet;
                     if (!d) return null;
-                    var u = r.createElement("img", {
+                    var u = a.createElement("img", {
                         className: "emote-picker__image",
                         srcSet: d,
                         alt: i
@@ -3650,30 +3648,30 @@
                                 v = f[0];
                             m[b] = v
                         }
-                        u = r.createElement(s.a, {
+                        u = a.createElement(s.a, {
                             className: "emote-picker__emote-image",
                             src: p,
                             srcSet: m,
                             alt: i || ""
                         })
                     }
-                    return r.createElement("div", {
+                    return a.createElement("div", {
                         className: "emote-button"
-                    }, r.createElement(l.Zb, {
+                    }, a.createElement(l.Zb, {
                         label: i || Object(o.d)("Emote", "EmoteButton"),
                         direction: l.bc.Bottom
-                    }, r.createElement(l.Qa, {
+                    }, a.createElement(l.Qa, {
                         display: l.X.Flex,
                         alignItems: l.f.Center,
                         justifyContent: l.Xa.Center
-                    }, r.createElement("button", {
+                    }, a.createElement("button", {
                         "data-test-selector": "emote-button-clickable",
                         className: t,
                         "aria-label": i,
                         name: i,
                         onClick: e.onClick ? e.onClick.bind(null, e.emote) : void 0,
                         "data-a-target": i
-                    }, r.createElement("figure", null, e.locked ? c : null, u)))))
+                    }, a.createElement("figure", null, e.locked ? c : null, u)))))
                 },
                 u = (n("VrOd"), function(e) {
                     function t() {
@@ -3685,12 +3683,12 @@
                     return i.__extends(t, e), t.prototype.render = function() {
                         var e = this,
                             t = this.props.emotes.map(function(t, n) {
-                                return r.createElement(l.Ya, {
+                                return a.createElement(l.Ya, {
                                     key: "emote-button-padder-" + t.id + "--" + t.setID,
                                     padding: {
                                         left: e.props.spaced ? .5 : 0
                                     }
-                                }, r.createElement(d, {
+                                }, a.createElement(d, {
                                     key: "emote-button-" + t.id + "--" + t.setID,
                                     emote: t,
                                     isCriticalImage: 0 === n,
@@ -3698,13 +3696,13 @@
                                     onClick: e.props.locked ? void 0 : e.handleClickEmote
                                 }))
                             });
-                        return r.createElement(l.Ya, {
+                        return a.createElement(l.Ya, {
                             display: l.X.Flex,
                             flexWrap: l.Ba.Wrap,
                             justifyContent: l.Xa.Center
                         }, t)
                     }, t
-                }(r.Component));
+                }(a.Component));
             n.d(t, "a", function() {
                 return u
             })
@@ -3713,12 +3711,11 @@
             e.exports = n.p + "assets/gift-open-ba127d9c110a18648ca1.png"
         },
         "80G/": function(e, t, n) {},
-        "8BsE": function(e, t, n) {},
         "8SX2": function(e, t, n) {
             "use strict";
             var i = n("mrSG"),
-                r = n("q1tI"),
-                a = n("fezU"),
+                a = n("q1tI"),
+                r = n("fezU"),
                 o = n("Ue10"),
                 s = (n("rVcM"), function(e) {
                     function t() {
@@ -3728,17 +3725,17 @@
                         }, t
                     }
                     return i.__extends(t, e), t.prototype.render = function() {
-                        return r.createElement("button", {
+                        return a.createElement("button", {
                             className: "chatter-name",
                             onClick: this.usernameClickHandler
-                        }, r.createElement(o.W, {
+                        }, a.createElement(o.W, {
                             bold: !0,
                             color: o.O.Base,
                             type: o.Wb.Span
                         }, this.props.children))
                     }, t
-                }(r.Component));
-            var l = Object(a.b)(function(e) {
+                }(a.Component));
+            var l = Object(r.b)(function(e) {
                 return {
                     onUsernameClick: e.onShowViewerCard
                 }
@@ -3752,8 +3749,8 @@
         "8in3": function(e, t, n) {
             "use strict";
             var i = n("fezU"),
-                r = n("mrSG"),
-                a = n("TSYQ"),
+                a = n("mrSG"),
+                r = n("TSYQ"),
                 o = n("q1tI"),
                 s = n("ZS2+"),
                 l = n("uy8m"),
@@ -3768,7 +3765,7 @@
                             dragging: !1,
                             viewerCardComponentLoaded: !1
                         }, t.ViewerCard = s.a.wrap(function() {
-                            return Promise.all([n.e(0), n.e(205)]).then(n.bind(null, "q3Qz"))
+                            return Promise.all([n.e(0), n.e(203)]).then(n.bind(null, "q3Qz"))
                         }, "ViewerCard", {
                             placeholder: o.createElement(p.Fb, {
                                 background: p.r.Base,
@@ -3784,7 +3781,7 @@
                                 })
                             }
                         }), t.ExtensionMessageCard = s.a.wrap(function() {
-                            return n.e(204).then(n.bind(null, "n3tJ"))
+                            return n.e(202).then(n.bind(null, "n3tJ"))
                         }, "ExtensionMessageCard", {
                             placeholder: o.createElement(p.Fb, {
                                 background: p.r.Base,
@@ -3817,7 +3814,7 @@
                             e.preventDefault()
                         }, t
                     }
-                    return r.__extends(t, e), t.prototype.componentWillUnmount = function() {
+                    return a.__extends(t, e), t.prototype.componentWillUnmount = function() {
                         this.props.hideViewerCard(), this.rafHandle && cancelAnimationFrame(this.rafHandle), this.removeDragListeners()
                     }, t.prototype.componentWillReceiveProps = function(e) {
                         this.props.viewerCardOptions && e.viewerCardOptions && (e.viewerCardOptions.targetID === this.props.viewerCardOptions.targetID && e.viewerCardOptions.initialTopOffset === this.props.viewerCardOptions.initialTopOffset || this.cardContainerRef && (this.cardContainerRef.style.left = "0px"))
@@ -3832,11 +3829,11 @@
                                 "viewer-card-layer__draggable--dragging": this.state.dragging
                             },
                             i = null,
-                            r = {};
+                            a = {};
                         if (this.props.viewerCardOptions) {
                             if (this.layerRef) {
                                 var s = this.layerRef.getBoundingClientRect();
-                                r = {
+                                a = {
                                     top: Math.max(this.props.viewerCardOptions.initialTopOffset - s.top, 0) + "px"
                                 }
                             }
@@ -3869,14 +3866,14 @@
                         var l = null;
                         return i && (l = o.createElement(p.Ra, {
                             background: p.r.Base,
-                            className: a(n),
+                            className: r(n),
                             position: p.kb.Absolute
                         }, o.createElement("div", {
                             onMouseDown: this.onDragStart,
                             ref: function(t) {
                                 e.cardContainerRef = t
                             },
-                            style: r,
+                            style: a,
                             "data-a-target": "viewer-card-positioner"
                         }, i, o.createElement(p.Ya, {
                             position: p.kb.Absolute,
@@ -3894,7 +3891,7 @@
                             overlay: this.state.viewerCardComponentLoaded,
                             "data-test-selector": "close-viewer-card"
                         })))))), o.createElement(p.Qa, {
-                            className: a(t),
+                            className: r(t),
                             fullHeight: !0,
                             fullWidth: !0,
                             position: p.kb.Relative,
@@ -4204,19 +4201,19 @@
             }), n.d(t, "b", function() {
                 return s
             });
-            var i, r = n("mrSG"),
-                a = n("yR8l"),
+            var i, a = n("mrSG"),
+                r = n("yR8l"),
                 o = n("4HoE");
 
             function s(e) {
                 var t = this;
-                return Object(a.a)(o, {
+                return Object(r.a)(o, {
                     props: function(n) {
                         return {
                             modUserMutation: function(i) {
-                                return r.__awaiter(t, void 0, void 0, function() {
+                                return a.__awaiter(t, void 0, void 0, function() {
                                     var t;
-                                    return r.__generator(this, function(r) {
+                                    return a.__generator(this, function(a) {
                                         if (t = e(n.ownProps).channelID, n.mutate) return [2, n.mutate({
                                             variables: {
                                                 input: {
@@ -4241,79 +4238,79 @@
         AREq: function(e, t, n) {
             "use strict";
             n.d(t, "a", function() {
-                return a
+                return r
             });
             var i = n("/7QA"),
-                r = n("DMoW");
+                a = n("DMoW");
 
-            function a(e, t, n) {
+            function r(e, t, n) {
                 if (void 0 === n && (n = !1), n) switch (t) {
-                    case r.c.FORBIDDEN:
+                    case a.c.FORBIDDEN:
                         return Object(i.d)("You don't have permissions to timeout {login}.", {
                             login: e
                         }, "BanUserErrorCode");
-                    case r.c.TARGET_IS_ADMIN:
+                    case a.c.TARGET_IS_ADMIN:
                         return Object(i.d)("You cannot timeout admin {login}. Please email support@twitch.tv if an admin is being abusive.", {
                             login: e
                         }, "BanUserErrorCode");
-                    case r.c.TARGET_ALREADY_BANNED:
+                    case a.c.TARGET_ALREADY_BANNED:
                         return Object(i.d)("{login} is already banned in this channel.", {
                             login: e
                         }, "BanUserErrorCode");
-                    case r.c.TARGET_IS_ANONYMOUS:
+                    case a.c.TARGET_IS_ANONYMOUS:
                         return Object(i.d)("You cannot timeout anonymous users.", "BanUserErrorCode");
-                    case r.c.TARGET_IS_BROADCASTER:
+                    case a.c.TARGET_IS_BROADCASTER:
                         return Object(i.d)("You cannot timeout the broadcaster.", "BanUserErrorCode");
-                    case r.c.TARGET_IS_GLOBAL_MOD:
+                    case a.c.TARGET_IS_GLOBAL_MOD:
                         return Object(i.d)("You cannot timeout global moderator {login}. Please email support@twitch.tv if a global moderator is being abusive.", {
                             login: e
                         }, "BanUserErrorCode");
-                    case r.c.TARGET_IS_MOD:
+                    case a.c.TARGET_IS_MOD:
                         return Object(i.d)("You cannot timeout moderator {login} unless you are the owner of this channel.", {
                             login: e
                         }, "BanUserErrorCode");
-                    case r.c.TARGET_IS_SELF:
+                    case a.c.TARGET_IS_SELF:
                         return Object(i.d)("You cannot timeout yourself.", "BanUserErrorCode");
-                    case r.c.TARGET_IS_STAFF:
+                    case a.c.TARGET_IS_STAFF:
                         return Object(i.d)("You cannot timeout staff {login}. Please email support@twitch.tv if a staff member is being abusive.", {
                             login: e
                         }, "BanUserErrorCode");
-                    case r.c.TARGET_NOT_FOUND:
+                    case a.c.TARGET_NOT_FOUND:
                         return Object(i.d)("The user you are trying to timeout doesn't exist.", "BanUserErrorCode");
                     default:
                         throw new Error("Unrecognized operation result.")
                 } else switch (t) {
-                    case r.c.FORBIDDEN:
+                    case a.c.FORBIDDEN:
                         return Object(i.d)("You don't have permissions to ban {login}.", {
                             login: e
                         }, "BanUserErrorCode");
-                    case r.c.TARGET_IS_ADMIN:
+                    case a.c.TARGET_IS_ADMIN:
                         return Object(i.d)("You cannot ban admin {login}. Please email support@twitch.tv if an admin is being abusive.", {
                             login: e
                         }, "BanUserErrorCode");
-                    case r.c.TARGET_ALREADY_BANNED:
+                    case a.c.TARGET_ALREADY_BANNED:
                         return Object(i.d)("{login} is currently banned in this channel.", {
                             login: e
                         }, "BanUserErrorCode");
-                    case r.c.TARGET_IS_ANONYMOUS:
+                    case a.c.TARGET_IS_ANONYMOUS:
                         return Object(i.d)("You cannot ban anonymous users.", "BanUserErrorCode");
-                    case r.c.TARGET_IS_BROADCASTER:
+                    case a.c.TARGET_IS_BROADCASTER:
                         return Object(i.d)("You cannot ban the broadcaster.", "BanUserErrorCode");
-                    case r.c.TARGET_IS_GLOBAL_MOD:
+                    case a.c.TARGET_IS_GLOBAL_MOD:
                         return Object(i.d)("You cannot ban global moderator {login}. Please email support@twitch.tv if a global moderator is being abusive.", {
                             login: e
                         }, "BanUserErrorCode");
-                    case r.c.TARGET_IS_MOD:
+                    case a.c.TARGET_IS_MOD:
                         return Object(i.d)("You cannot ban moderator {login} unless you are the owner of this channel.", {
                             login: e
                         }, "BanUserErrorCode");
-                    case r.c.TARGET_IS_SELF:
+                    case a.c.TARGET_IS_SELF:
                         return Object(i.d)("You cannot ban yourself.", "BanUserErrorCode");
-                    case r.c.TARGET_IS_STAFF:
+                    case a.c.TARGET_IS_STAFF:
                         return Object(i.d)("You cannot ban staff {login}. Please email support@twitch.tv if a staff member is being abusive.", {
                             login: e
                         }, "BanUserErrorCode");
-                    case r.c.TARGET_NOT_FOUND:
+                    case a.c.TARGET_NOT_FOUND:
                         return Object(i.d)("The user you are trying to ban doesn't exist.", "BanUserErrorCode");
                     default:
                         throw new Error("Unrecognized operation result.")
@@ -4325,33 +4322,33 @@
         Av0x: function(e, t, n) {
             "use strict";
             n.d(t, "a", function() {
-                return a
+                return r
             });
             var i = n("/7QA"),
-                r = n("DMoW");
+                a = n("DMoW");
 
-            function a(e, t, n) {
+            function r(e, t, n) {
                 if (void 0 === n && (n = !1), n) switch (t) {
-                    case r.Ba.FORBIDDEN:
+                    case a.Ba.FORBIDDEN:
                         return Object(i.d)("You don't have permissions to untimeout {login}.", {
                             login: e
                         }, "UnbanUserErrorCode");
-                    case r.Ba.TARGET_NOT_FOUND:
+                    case a.Ba.TARGET_NOT_FOUND:
                         return Object(i.d)("The user you are trying to untimeout doesn't exist.", "UnbanUserErrorCode");
-                    case r.Ba.TARGET_NOT_BANNED:
+                    case a.Ba.TARGET_NOT_BANNED:
                         return Object(i.d)("{login} is not currently timed out from this channel.", {
                             login: e
                         }, "UnbanUserErrorCode");
                     default:
                         throw new Error("Unrecognized operation result")
                 } else switch (t) {
-                    case r.Ba.FORBIDDEN:
+                    case a.Ba.FORBIDDEN:
                         return Object(i.d)("You don't have permissions to unban {login}.", {
                             login: e
                         }, "UnbanUserErrorCode");
-                    case r.Ba.TARGET_NOT_FOUND:
+                    case a.Ba.TARGET_NOT_FOUND:
                         return Object(i.d)("The user you are trying to unban doesn't exist.", "UnbanUserErrorCode");
-                    case r.Ba.TARGET_NOT_BANNED:
+                    case a.Ba.TARGET_NOT_BANNED:
                         return Object(i.d)("{login} is not currently banned from this channel.", {
                             login: e
                         }, "UnbanUserErrorCode");
@@ -4364,8 +4361,8 @@
         BJwa: function(e, t, n) {
             "use strict";
             var i = n("mrSG"),
-                r = n("q1tI"),
-                a = n("9C/b"),
+                a = n("q1tI"),
+                r = n("9C/b"),
                 o = n("fvjX"),
                 s = n("/7QA"),
                 l = n("ZS2+"),
@@ -4380,7 +4377,7 @@
                 b = n("ZVTe"),
                 v = n("Ue10"),
                 k = (n("e7rh"), function(e) {
-                    return r.createElement(v.Fb, {
+                    return a.createElement(v.Fb, {
                         padding: {
                             top: 1,
                             bottom: .5
@@ -4391,16 +4388,16 @@
                         borderTop: !0,
                         display: v.X.Block,
                         flexDirection: v.Aa.Column
-                    }, r.createElement(v.Ya, {
+                    }, a.createElement(v.Ya, {
                         padding: {
                             bottom: .5
                         }
-                    }, r.createElement(g.b, {
+                    }, a.createElement(g.b, {
                         badgeSets: e.badgeSets,
                         badgesToRender: {
                             twitchbot: "1"
                         }
-                    }), r.createElement(b.a, {
+                    }), a.createElement(b.a, {
                         userData: {
                             color: "#6441A5",
                             isIntl: !1,
@@ -4409,26 +4406,26 @@
                             userLogin: "automod",
                             userType: "global_mod"
                         }
-                    }), r.createElement(v.W, {
+                    }), a.createElement(v.W, {
                         type: v.Wb.Span,
                         color: v.O.Alt2
-                    }, Object(f.d)(": Your text may be removed by moderation. Bits will still be sent to the streamer. Review the highlighted text or continue below.", "BitsAutoModOffenderPrompt"))), r.createElement(v.Ya, {
+                    }, Object(f.d)(": Your text may be removed by moderation. Bits will still be sent to the streamer. Review the highlighted text or continue below.", "BitsAutoModOffenderPrompt"))), a.createElement(v.Ya, {
                         display: v.X.Flex,
                         flexDirection: v.Aa.Row
-                    }, r.createElement(v.Ya, {
+                    }, a.createElement(v.Ya, {
                         padding: {
                             right: .5
                         }
-                    }, r.createElement(v.z, {
+                    }, a.createElement(v.z, {
                         onClick: e.onEditCheer
-                    }, r.createElement(v.Ya, {
+                    }, a.createElement(v.Ya, {
                         padding: {
                             x: 2
                         }
-                    }, Object(f.d)("Edit", "BitsAutoModOffender")))), r.createElement(v.z, {
+                    }, Object(f.d)("Edit", "BitsAutoModOffender")))), a.createElement(v.z, {
                         onClick: e.onCheerAnyway,
                         type: v.F.Hollow
-                    }, Object(f.d)("Cheer Anyway", "BitsAutoModOffender")), r.createElement(v.Ya, {
+                    }, Object(f.d)("Cheer Anyway", "BitsAutoModOffender")), a.createElement(v.Ya, {
                         className: "bits-auto-mod-offender-prompt__notification-icon",
                         display: v.X.Flex,
                         flexDirection: v.Aa.Column,
@@ -4438,7 +4435,7 @@
                             left: "auto",
                             right: .5
                         }
-                    }, r.createElement(v.tb, {
+                    }, a.createElement(v.tb, {
                         asset: v.ub.NotificationWarning
                     }))))
                 }),
@@ -4447,21 +4444,21 @@
                 S = n("oJmH"),
                 E = n("/MKj"),
                 N = n("u5aL"),
-                w = n("x7UT"),
-                _ = n("8Ad5"),
+                _ = n("x7UT"),
+                w = n("8Ad5"),
                 O = n("HGFl"),
                 M = n("wUQP"),
                 D = n("oe5X"),
                 I = n("1/iK"),
                 T = n("f00E"),
                 R = n("y5D0"),
-                A = n("kz7j"),
-                L = n("kRBY"),
-                j = n("9o5F"),
-                B = n("tKDy"),
-                U = n("okS7"),
-                x = n("ry0r"),
-                F = n("17x9"),
+                L = n("kz7j"),
+                j = n("kRBY"),
+                A = n("9o5F"),
+                U = n("tKDy"),
+                B = n("okS7"),
+                F = n("ry0r"),
+                x = n("17x9"),
                 P = n("uu1w"),
                 H = function(e) {
                     function t() {
@@ -4477,12 +4474,12 @@
                                 }
                             }) : null
                         }, t.genearateHashtagDisplay = function(e) {
-                            return r.createElement(v.Ya, {
+                            return a.createElement(v.Ya, {
                                 padding: {
                                     right: .5
                                 },
                                 key: "hashtag:" + e
-                            }, r.createElement(v.W, null, e))
+                            }, a.createElement(v.W, null, e))
                         }, t
                     }
                     return i.__extends(t, e), t.prototype.componentDidMount = function() {
@@ -4492,9 +4489,9 @@
                     }, t.prototype.render = function() {
                         return null
                     }, t.contextTypes = {
-                        registerAutocompleteProvider: F.func
+                        registerAutocompleteProvider: x.func
                     }, t
-                }(r.Component),
+                }(a.Component),
                 W = n("5zXJ"),
                 V = n("XmgI"),
                 G = n("ebRM"),
@@ -4521,7 +4518,7 @@
                                 }
                             })
                         }, t.renderMention = function(e) {
-                            return r.createElement("span", null, Object(Q.a)(e.login, e.displayName || null))
+                            return a.createElement("span", null, Object(Q.a)(e.login, e.displayName || null))
                         }, t
                     }
                     return i.__extends(t, e), t.prototype.componentDidMount = function() {
@@ -4531,9 +4528,9 @@
                     }, t.prototype.render = function() {
                         return null
                     }, t.contextTypes = {
-                        registerAutocompleteProvider: F.func
+                        registerAutocompleteProvider: x.func
                     }, t
-                }(r.Component),
+                }(a.Component),
                 J = Object(K.a)(Z),
                 ee = n("5zf8"),
                 te = n("NAv5");
@@ -4543,33 +4540,33 @@
                 return Math.max(0, Object(te.differenceInSeconds)(n, new Date))
             }
             var ie = n("2xye");
-            var re, ae = n("dIU+"),
+            var ae, re = n("dIU+"),
                 oe = n("GnwI"),
                 se = n("QjI3"),
                 le = n("nIRf");
             ! function(e) {
                 e.ChatRestrictedHeader = "chat-restricted-header"
-            }(re || (re = {}));
+            }(ae || (ae = {}));
             var ce, de = function(e) {
                     function t(t) {
                         var n = e.call(this, t) || this;
                         return n.renderBalloon = function(e, t) {
                             if (!n.props.showBalloon) return null;
                             var i = null;
-                            return t && (i = r.createElement(v.Ya, {
+                            return t && (i = a.createElement(v.Ya, {
                                 display: v.X.Flex,
                                 margin: {
                                     top: 1
                                 }
-                            }, t, r.createElement(v.Ya, null))), r.createElement(N.a, {
+                            }, t, a.createElement(v.Ya, null))), a.createElement(N.a, {
                                 onClickOut: n.handleBalloonClickOut
-                            }, r.createElement(v.u, {
+                            }, a.createElement(v.u, {
                                 direction: v.v.TopLeft,
                                 offsetY: "-0.5rem",
                                 size: v.w.Medium,
                                 show: n.props.showBalloon,
                                 tailOffset: 50
-                            }, r.createElement(v.Fb, {
+                            }, a.createElement(v.Fb, {
                                 color: v.O.Base,
                                 padding: 1
                             }, e, i)))
@@ -4652,15 +4649,15 @@
                             case h.l.SUBSCRIBERS_ONLY:
                                 e = Object(s.d)("Subscribers-Only Chat", "ChatModeHeader"), t = Object(s.d)("Only {streamer}'s subscribers can chat right now. Subscribe and join in!", {
                                     streamer: this.props.channelDisplayName
-                                }, "ChatModeHeader"), n = r.createElement("div", {
+                                }, "ChatModeHeader"), n = a.createElement("div", {
                                     onClick: this.handleActionClick
-                                }, r.createElement(se.a, {
+                                }, a.createElement(se.a, {
                                     balloonDirection: v.v.TopRight,
                                     channelLogin: this.props.channelLogin
                                 }));
                                 break;
                             case h.l.VERIFIED_ONLY:
-                                e = Object(s.d)("Verified Email Only Chat", "ChatModeHeader"), t = Object(s.d)("Verify your email in Settings to chat!", "ChatModeHeader"), n = r.createElement(v.z, {
+                                e = Object(s.d)("Verified Email Only Chat", "ChatModeHeader"), t = Object(s.d)("Verify your email in Settings to chat!", "ChatModeHeader"), n = a.createElement(v.z, {
                                     onClick: this.handleActionClick,
                                     linkTo: "/settings/profile",
                                     targetBlank: !0
@@ -4669,30 +4666,30 @@
                             case h.l.FOLLOWERS_ONLY:
                                 if (e = Object(s.d)("Followers-Only Chat", "ChatModeHeader"), 0 === this.props.requiredFollowDurationSeconds || null === this.props.followedTime) t = Object(s.d)("You need to be a follower of {streamer} to chat.", {
                                     streamer: this.props.channelDisplayName
-                                }, "ChatModeHeader"), n = r.createElement(ae.a, {
+                                }, "ChatModeHeader"), n = a.createElement(re.a, {
                                     channelLogin: this.props.channelLogin,
                                     onFollow: this.handleActionClick,
                                     onUnfollow: this.handleActionClick,
-                                    followUIType: ae.b.IconAndText,
-                                    unfollowUIType: ae.b.IconAndText,
+                                    followUIType: re.b.IconAndText,
+                                    unfollowUIType: re.b.IconAndText,
                                     balloonDirection: v.v.TopRight,
                                     hideDropdownWhenFollowing: !0
                                 });
                                 else {
                                     var i = Object(ee.b)(this.props.requiredFollowDurationSeconds),
-                                        a = Object(ee.b)(this.state.secondsRemaining);
+                                        r = Object(ee.b)(this.state.secondsRemaining);
                                     t = Object(s.d)("You need to be a follower for {timeRequired} to chat, and you have {timeRemaining} left.", {
                                         timeRequired: i,
-                                        timeRemaining: a
+                                        timeRemaining: r
                                     }, "ChatModeHeader")
                                 }
                                 break;
                             default:
                                 return null
                         }
-                        return r.createElement("div", {
+                        return a.createElement("div", {
                             ref: this.setRootRef
-                        }, r.createElement(v.Fb, {
+                        }, a.createElement(v.Fb, {
                             borderTop: !0,
                             color: v.O.Alt2,
                             display: v.X.Flex,
@@ -4701,19 +4698,19 @@
                                 y: .5
                             },
                             position: v.kb.Relative,
-                            "data-test-selector": re.ChatRestrictedHeader
-                        }, r.createElement(v.U, {
+                            "data-test-selector": ae.ChatRestrictedHeader
+                        }, a.createElement(v.U, {
                             hoverColorInherit: !0,
                             hoverUnderlineNone: !0,
                             onClick: this.props.openBalloon,
                             type: v.V.Inherit
-                        }, r.createElement(v.W, {
+                        }, a.createElement(v.W, {
                             bold: !0
-                        }, e)), r.createElement(v.Ya, {
+                        }, e)), a.createElement(v.Ya, {
                             margin: {
                                 left: .5
                             }
-                        }, r.createElement(v.A, {
+                        }, a.createElement(v.A, {
                             icon: v.ub.NotificationInfo,
                             onClick: this.props.openBalloon,
                             type: v.C.Secondary
@@ -4747,61 +4744,61 @@
                             requiredDuration: this.props.requiredFollowDurationSeconds
                         })
                     }, t
-                }(r.Component),
+                }(a.Component),
                 ue = Object(oe.b)("ChatRestrictedHeader")(de),
                 pe = function() {
-                    return r.createElement(v.u, {
+                    return a.createElement(v.u, {
                         direction: v.v.TopLeft,
                         offsetY: "11px",
                         show: !0
-                    }, r.createElement(v.Ya, {
+                    }, a.createElement(v.Ya, {
                         padding: 1,
                         "data-test-selector": "manage-moderation-settings-tooltip"
                     }, Object(s.d)("Mods can now update AutoMod levels as well as Blocked and Permitted Terms.", "ManageModerationSettingsChat")))
                 },
                 me = n("cys1"),
                 he = (n("ZuCe"), function(e) {
-                    return r.createElement(v.Fb, {
+                    return a.createElement(v.Fb, {
                         position: v.kb.Relative,
                         borderRadius: v.x.Medium,
                         className: "moderated-message-fake-input__container"
-                    }, r.createElement(v.Fb, {
+                    }, a.createElement(v.Fb, {
                         className: "moderated-message-fake-input__content",
                         display: v.X.Block,
                         overflow: v.db.Auto,
                         color: v.O.Alt,
                         background: v.r.Alt,
                         fullWidth: !0
-                    }, r.createElement(v.Ra, {
+                    }, a.createElement(v.Ra, {
                         padding: {
                             y: .5,
                             left: 1
                         },
                         fullHeight: !0
-                    }, r.createElement("div", {
+                    }, a.createElement("div", {
                         style: {
                             paddingRight: "6rem"
                         }
-                    }, Object(me.f)(e.moderatedMessageParts)))), r.createElement(v.Fb, {
+                    }, Object(me.f)(e.moderatedMessageParts)))), a.createElement(v.Fb, {
                         position: v.kb.Absolute,
                         display: v.X.Flex,
                         flexDirection: v.Aa.Row,
                         attachRight: !0,
                         attachTop: !0
-                    }, r.createElement(v.Ya, {
+                    }, a.createElement(v.Ya, {
                         display: v.X.InlineFlex,
                         alignItems: v.f.Center,
                         className: "moderated-message-fake-input__icon",
                         padding: .5
-                    }, r.createElement(v.tb, {
+                    }, a.createElement(v.tb, {
                         asset: v.ub.Bits,
                         type: v.vb.Inherit
-                    })), r.createElement(v.Ya, {
+                    })), a.createElement(v.Ya, {
                         display: v.X.InlineFlex,
                         alignItems: v.f.Center,
                         className: "moderated-message-fake-input__icon",
                         padding: .5
-                    }, r.createElement(v.tb, {
+                    }, a.createElement(v.tb, {
                         asset: v.ub.Emoticons,
                         type: v.vb.Inherit
                     }))))
@@ -4813,11 +4810,11 @@
                 var n = t.action ? {
                         action: t.action
                     } : {},
-                    r = i.__assign({
+                    a = i.__assign({
                         raid_upsell_source_id: Number(t.sourceChannelID),
                         raid_upsell_target_id: Number(t.targetChannelID)
                     }, n);
-                s.o.track(e, r)
+                s.o.track(e, a)
             }! function(e) {
                 e.Host = "host", e.Raid = "raid", e.Dismiss = "dismiss"
             }(ce || (ce = {}));
@@ -4875,44 +4872,44 @@
                     }, t.prototype.render = function() {
                         var e = this.props.data.loading,
                             t = this.channelDisplayName;
-                        return e || !t || !this.isViewersCountWithinRange || this.isAttemptingToHostSelf ? null : r.createElement(v.Ya, {
+                        return e || !t || !this.isViewersCountWithinRange || this.isAttemptingToHostSelf ? null : a.createElement(v.Ya, {
                             className: "raid-upsell-prompt",
                             padding: 1,
                             margin: {
                                 x: 2
                             }
-                        }, r.createElement(v.Ya, {
+                        }, a.createElement(v.Ya, {
                             display: v.X.Flex,
                             justifyContent: v.Xa.Between
-                        }, r.createElement(v.Ya, {
+                        }, a.createElement(v.Ya, {
                             display: v.X.Flex
-                        }, r.createElement(v.Ya, {
+                        }, a.createElement(v.Ya, {
                             className: "raid-upsell-prompt__notification",
                             margin: {
                                 top: .5
                             }
-                        }, r.createElement(v.tb, {
+                        }, a.createElement(v.tb, {
                             asset: v.ub.NotificationInfo
-                        })), r.createElement(v.Ya, {
+                        })), a.createElement(v.Ya, {
                             margin: {
                                 x: 1
                             }
-                        }, r.createElement(v.W, {
+                        }, a.createElement(v.W, {
                             type: v.Wb.H6,
                             bold: !0
                         }, Object(s.d)("How about raiding {channelDisplayName}?", {
                             channelDisplayName: t
-                        }, "RaidUpsellPrompt")), r.createElement(v.W, {
+                        }, "RaidUpsellPrompt")), a.createElement(v.W, {
                             type: v.Wb.P,
                             color: v.O.Alt2
-                        }, Object(s.d)("Now you can raid whenever you want instead of waiting 30 seconds.", "RaidUpsellPrompt")))), r.createElement(v.Fb, {
+                        }, Object(s.d)("Now you can raid whenever you want instead of waiting 30 seconds.", "RaidUpsellPrompt")))), a.createElement(v.Fb, {
                             color: v.O.OverlayAlt
-                        }, r.createElement(v.A, i.__assign({}, Ce, {
+                        }, a.createElement(v.A, i.__assign({}, Ce, {
                             icon: v.ub.Close,
                             size: v.B.Small,
                             ariaLabel: Object(s.d)("Dismiss", "RaidUpsellPrompt"),
                             onClick: this.handleDismissUpsell
-                        })))), r.createElement(Se, {
+                        })))), a.createElement(Se, {
                             onSendHostMsg: this.handleSendHostMsgFromUpsell,
                             onSendRaidMsg: this.handleSendRaidMsg
                         }))
@@ -4938,30 +4935,30 @@
                         enumerable: !0,
                         configurable: !0
                     }), t
-                }(r.Component),
+                }(a.Component),
                 Se = function(e) {
-                    return r.createElement(v.Ya, {
+                    return a.createElement(v.Ya, {
                         display: v.X.Flex,
                         justifyContent: v.Xa.End,
                         margin: {
                             top: 1
                         }
-                    }, r.createElement(v.Ya, {
+                    }, a.createElement(v.Ya, {
                         margin: {
                             right: 1
                         }
-                    }, r.createElement(v.z, {
+                    }, a.createElement(v.z, {
                         type: v.F.Hollow,
                         size: v.D.Small,
                         onClick: e.onSendHostMsg
-                    }, r.createElement(v.Ya, {
+                    }, a.createElement(v.Ya, {
                         padding: {
                             x: 2
                         }
-                    }, Object(s.d)("Host", "RaidUpsellPrompt")))), r.createElement(v.Ya, null, r.createElement(v.z, {
+                    }, Object(s.d)("Host", "RaidUpsellPrompt")))), a.createElement(v.Ya, null, a.createElement(v.z, {
                         size: v.D.Small,
                         onClick: e.onSendRaidMsg
-                    }, r.createElement(v.Ya, {
+                    }, a.createElement(v.Ya, {
                         padding: {
                             x: 2
                         }
@@ -4978,8 +4975,8 @@
                     }
                 })(ye),
                 Ne = n("gTu3"),
-                we = n("RcPG"),
-                _e = n("YXxK"),
+                _e = n("RcPG"),
+                we = n("YXxK"),
                 Oe = n("WytW");
             ! function(e) {
                 e.ON = "on", e.STAFF_ONLY = "staff"
@@ -4994,19 +4991,19 @@
                         n = !1;
                     return t === ke.ON ? n = !0 : t === ke.STAFF_ONLY && e && (n = !0), s.m.get("overrideRestrictedChatInputFeatureFlag", n)
                 };
-            var Ie, Te, Re, Ae, Le = n("lNGo"),
-                je = n("ySk3"),
-                Be = n("x0gr"),
-                Ue = n("mmRu"),
-                xe = n("cpJf"),
-                Fe = n("GzyO"),
+            var Ie, Te, Re, Le, je = n("lNGo"),
+                Ae = n("ySk3"),
+                Ue = n("x0gr"),
+                Be = n("mmRu"),
+                Fe = n("cpJf"),
+                xe = n("GzyO"),
                 Pe = n("EOIh"),
                 He = n("FS60"),
                 We = "bits_automod_cheering_enabled",
                 Ve = /\S/;
             ! function(e) {
                 e[e.Bits = 0] = "Bits", e[e.ChatRestriction = 1] = "ChatRestriction", e[e.Emotes = 2] = "Emotes", e[e.None = 3] = "None"
-            }(Ae || (Ae = {}));
+            }(Le || (Le = {}));
             var Ge = function(e) {
                 function t(t) {
                     var n = e.call(this, t) || this;
@@ -5020,7 +5017,7 @@
                     }, n.setAutocompleteInputRef = function(e) {
                         return n.autocompleteInputRef = e
                     }, n.onChatSettingsToggle = function(e) {
-                        n.handleModerationSettingsToggle(e), e || Object(Be.b)({
+                        n.handleModerationSettingsToggle(e), e || Object(Ue.b)({
                             channelLogin: n.props.channelLogin,
                             isHostMode: n.props.isHostMode
                         })
@@ -5033,12 +5030,12 @@
                         }
                     }, n.onKeyDown = function(e) {
                         var t = e.charCode || e.keyCode;
-                        switch (n.props.onKeyDown && t !== _.a.Enter && n.props.onKeyDown(e), n.props.bitsSendHasError && n.props.clearBitsSendError(), t) {
-                            case _.a.Enter:
+                        switch (n.props.onKeyDown && t !== w.a.Enter && n.props.onKeyDown(e), n.props.bitsSendHasError && n.props.clearBitsSendError(), t) {
+                            case w.a.Enter:
                                 return void(e.shiftKey || (e.preventDefault(), n.onMessageSend()));
-                            case _.a.Esc:
-                                return void(n.state.showCard === Ae.Bits && n.setState({
-                                    showCard: Ae.None
+                            case w.a.Esc:
+                                return void(n.state.showCard === Le.Bits && n.setState({
+                                    showCard: Le.None
                                 }));
                             default:
                                 return
@@ -5058,9 +5055,9 @@
                     }, n.onChatCommand = function(e) {
                         n.props.onChatCommand(e), n.trackChatEvent(n.props.emotePickerSessionID)
                     }, n.confirmEmbedAction = function(e, t, i) {
-                        var r = n,
-                            a = r.hasConfirmedInEmbed;
-                        if (r.hasSeenConfirmationPrompt) return a;
+                        var a = n,
+                            r = a.hasConfirmedInEmbed;
+                        if (a.hasSeenConfirmationPrompt) return r;
                         var o = window.confirm(n.confirmationMessage(e, t, i));
                         return n.hasSeenConfirmationPrompt = !0, n.hasConfirmedInEmbed = o, n.setState({
                             hasSeenAndRejectedEmbedPrompt: !o
@@ -5073,14 +5070,14 @@
                         }, "ChatInput")
                     }, n.onMessageSend = function() {
                         return i.__awaiter(n, void 0, void 0, function() {
-                            var e, t, n, r, a, o, l, c, d = this;
+                            var e, t, n, a, r, o, l, c, d = this;
                             return i.__generator(this, function(i) {
                                 switch (i.label) {
                                     case 0:
                                         return e = this.chatRestrictedReason(), this.isTypingCommand() || this.isTypingCheer() || null === e ? this.props.authToken ? this.props.channelID ? (t = Ve.test(this.state.value)) ? this.state.isSendingBits ? (s.k.debug("[ChatInput] Supressing chat message send. Bits spending is still in progress."), [2]) : this.props.isEmbedded && (this.props.isCurrentUserModerator || this.props.data && this.props.data.currentUser && this.props.data.currentUser.isPartner) && this.props.sessionUser && !this.confirmEmbedAction(this.props.sessionUser.displayName, this.state.value || "", this.props.channelLogin) ? (s.k.debug("[ChatInput] Embed Confirmation check failed. Not sending message"), [2]) : (this.resetAndUpdateRenderSentChatMessageEvent(), this.state.value.split(/\s+/).forEach(function(e) {
                                             var t = d.props.emoteMap && d.props.emoteMap[e];
-                                            t && Object(Fe.a)(t)
-                                        }), this.props.data && this.props.data.currentUser ? 0 === (n = Object(G.a)(this.state.messageCheers)).total ? (this.sendRegularMessage(), [2]) : this.props.data.channel ? this.props.data.channel.cheer ? this.props.data.channel.cheer.settings ? this.props.bitsConfig ? (r = Object(G.g)({
+                                            t && Object(xe.a)(t)
+                                        }), this.props.data && this.props.data.currentUser ? 0 === (n = Object(G.a)(this.state.messageCheers)).total ? (this.sendRegularMessage(), [2]) : this.props.data.channel ? this.props.data.channel.cheer ? this.props.data.channel.cheer.settings ? this.props.bitsConfig ? (a = Object(G.g)({
                                             messageBits: n,
                                             balance: this.props.data.currentUser.bitsBalance,
                                             cheerMinimumBits: this.props.data.channel.cheer.settings.cheerMinimumBits,
@@ -5099,11 +5096,11 @@
                                             }, d.confirmDelayedSend = function() {
                                                 return n(!1)
                                             }
-                                        })] : [3, 2]) : (s.k.warn("[Chat Input] No GraphQL mutation for sending cheers attached."), [2]) : (s.k.warn("[Chat Input] Spending bits forbidden.", r), [2]) : (s.k.warn("[Chat Input] Bits Config is undefined"), [2]) : (s.k.warn("[Chat Input] Cheer Settings are undefined."), [2]) : (s.k.warn("[Chat Input] Cheer is null."), [2]) : (s.k.warn("[Chat Input] User is null."), [2]) : (this.sendRegularMessage(), [2])) : (s.k.debug("[ChatInput] Supressing chat message send. Input failed to pass validation.", {
+                                        })] : [3, 2]) : (s.k.warn("[Chat Input] No GraphQL mutation for sending cheers attached."), [2]) : (s.k.warn("[Chat Input] Spending bits forbidden.", a), [2]) : (s.k.warn("[Chat Input] Bits Config is undefined"), [2]) : (s.k.warn("[Chat Input] Cheer Settings are undefined."), [2]) : (s.k.warn("[Chat Input] Cheer is null."), [2]) : (s.k.warn("[Chat Input] User is null."), [2]) : (this.sendRegularMessage(), [2])) : (s.k.debug("[ChatInput] Supressing chat message send. Input failed to pass validation.", {
                                             hasSendableInput: t,
                                             value: this.state.value
                                         }), [2]) : (s.k.warn("[ChatInput] Attempt to send a message before channel ID"), [2]) : (this.handleLogin(), [2]) : (this.setState({
-                                            showCard: Ae.ChatRestriction
+                                            showCard: Le.ChatRestriction
                                         }), [2]);
                                     case 1:
                                         if (i.sent()) return this.setState({
@@ -5111,10 +5108,10 @@
                                         }), this.chatInputRef.focus(), [2];
                                         i.label = 2;
                                     case 2:
-                                        a = Object(T.a)(), o = f.b.get(We, M.a.Off), i.label = 3;
+                                        r = Object(T.a)(), o = f.b.get(We, M.a.Off), i.label = 3;
                                     case 3:
                                         return i.trys.push([3, 5, , 6]), l = {
-                                            id: a,
+                                            id: r,
                                             targetID: this.props.channelID,
                                             bits: n.total,
                                             content: this.state.value,
@@ -5127,7 +5124,7 @@
                                     case 4:
                                         return (c = i.sent()).data.sendCheer && c.data.sendCheer.validationError ? (this.props.onSendCheerError && this.props.onSendCheerError(c.data.sendCheer.validationError), this.setState({
                                             isSendingBits: !1,
-                                            showCard: Ae.None
+                                            showCard: Le.None
                                         }), this.chatInputRef && this.chatInputRef.focus(), [2]) : [3, 6];
                                     case 5:
                                         return i.sent(), this.props.onSendCheerError && this.props.onSendCheerError({
@@ -5138,7 +5135,7 @@
                                     case 6:
                                         return this.props.onSendCheerSuccess(), this.setState({
                                             isSendingBits: !1,
-                                            showCard: Ae.None,
+                                            showCard: Le.None,
                                             value: ""
                                         }), this.chatInputRef && this.chatInputRef.focus(), this.autocompleteInputRef && this.autocompleteInputRef.setValue(""), [2]
                                 }
@@ -5147,43 +5144,43 @@
                     }, n.handleAuthContextBalloonClose = function() {
                         n.setState({
                             showAuthContextBalloon: !1
-                        }), Object(B.n)({
-                            page: B.e.Bubble,
+                        }), Object(U.n)({
+                            page: U.e.Bubble,
                             source: I.a.Chat,
-                            target: B.d.Exit,
-                            action: B.c.Click
+                            target: U.d.Exit,
+                            action: U.c.Click
                         })
                     }, n.onEmotePickerToggle = function() {
                         n.setState(function(e) {
                             return e.messageCheers.length ? e : {
-                                showCard: e.showCard === Ae.Emotes ? Ae.None : Ae.Emotes
+                                showCard: e.showCard === Le.Emotes ? Le.None : Le.Emotes
                             }
                         })
                     }, n.onClickOut = function() {
                         n.setState(function(e) {
-                            return e.showCard === Ae.Emotes ? {
-                                showCard: Ae.None
+                            return e.showCard === Le.Emotes ? {
+                                showCard: Le.None
                             } : e
                         })
                     }, n.onBitsIconClick = function() {
-                        n.state.showCard === Ae.Bits ? n.trackBitsCardInteraction(Y.a.CloseCard) : n.trackBitsCardInteraction(Y.a.OpenCard), n.setState({
-                            showCard: n.state.showCard === Ae.Bits ? Ae.None : Ae.Bits
+                        n.state.showCard === Le.Bits ? n.trackBitsCardInteraction(Y.a.CloseCard) : n.trackBitsCardInteraction(Y.a.OpenCard), n.setState({
+                            showCard: n.state.showCard === Le.Bits ? Le.None : Le.Bits
                         })
                     }, n.onShowViewersList = function() {
-                        n.state.showCard !== Ae.None && n.setState({
-                            showCard: Ae.None
+                        n.state.showCard !== Le.None && n.setState({
+                            showCard: Le.None
                         }), n.props.showViewersList()
                     }, n.onBitsClose = function() {
-                        n.state.showCard === Ae.Bits && n.setState({
-                            showCard: Ae.None
+                        n.state.showCard === Le.Bits && n.setState({
+                            showCard: Le.None
                         }), n.trackBitsCardInteraction(Y.a.CloseCard)
                     }, n.onChatRestrictionBalloonClose = function() {
-                        n.state.showCard === Ae.ChatRestriction && n.setState({
-                            showCard: Ae.None
+                        n.state.showCard === Le.ChatRestriction && n.setState({
+                            showCard: Le.None
                         })
                     }, n.onChatRestrictionBalloonOpen = function() {
                         n.setState({
-                            showCard: Ae.ChatRestriction
+                            showCard: Le.ChatRestriction
                         })
                     }, n.onClickEmote = function(e) {
                         var t = n.state.value;
@@ -5202,13 +5199,13 @@
                         };
                         Object(Y.h)(i)
                     }, n.resetAndUpdateRenderSentChatMessageEvent = function() {
-                        n.props.latencyTracking.resetCustomEvents(A.a.Chat);
+                        n.props.latencyTracking.resetCustomEvents(L.a.Chat);
                         var e = n.props.latencyTracking.registerCustomEvent({
                             benchmark: 400,
-                            group: A.a.Chat,
-                            key: A.b.ChatRenderSent,
-                            label: A.c.RenderSent,
-                            start: A.d.Registration
+                            group: L.a.Chat,
+                            key: L.b.ChatRenderSent,
+                            label: L.c.RenderSent,
+                            start: L.d.Registration
                         });
                         n.props.updateRenderSentChatMessageEvent(e)
                     }, n.refetchUserRestrictions = function() {
@@ -5226,8 +5223,8 @@
                         n.verifiedOnlyRestrictionsEnabled() || (t[h.l.VERIFIED_ONLY] = !1), n.followersOnlyRestrictionsEnabled() || (t[h.l.FOLLOWERS_ONLY] = !1);
                         var i = null;
                         if (n.props.data.channel.self && n.props.data.channel.self.chatRestrictedReasons)
-                            for (var r = 0, a = n.props.data.channel.self.chatRestrictedReasons; r < a.length; r++) {
-                                var o = a[r];
+                            for (var a = 0, r = n.props.data.channel.self.chatRestrictedReasons; a < r.length; a++) {
+                                var o = r[a];
                                 if (t[o]) {
                                     if (o === h.l.FOLLOWERS_ONLY)
                                         if (n.props.data.channel.self.follower && n.props.data.channel.self.follower.followedAt)
@@ -5252,7 +5249,7 @@
                         messageCheers: [],
                         showAuthContextBalloon: !1,
                         showBuyBits: !1,
-                        showCard: Ae.None,
+                        showCard: Le.None,
                         showEmotePickerButton: !!t.authToken,
                         showAutomodSettingsTooltip: !1,
                         value: ""
@@ -5264,9 +5261,9 @@
                     if (t.value !== this.state.value && this.props.bitsConfig) {
                         var n = [];
                         Object(V.f)(t.value, this.props.bitsConfig, !1).forEach(function(e) {
-                            e.type === we.a.Emote && n.push(e.content)
-                        }), n.length && t.showCard === Ae.Emotes && this.setState({
-                            showCard: Ae.None
+                            e.type === _e.a.Emote && n.push(e.content)
+                        }), n.length && t.showCard === Le.Emotes && this.setState({
+                            showCard: Le.None
                         }), this.setState({
                             messageCheers: Object(V.b)(n, this.props.bitsConfig)
                         })
@@ -5283,58 +5280,58 @@
                 }, t.prototype.componentDidUpdate = function() {
                     this.props.shouldSendAutoModdedCheer && this.onMessageSend()
                 }, t.prototype.render = function() {
-                    if (this.isCurrentUserBanned()) return r.createElement(v.Ya, {
+                    if (this.isCurrentUserBanned()) return a.createElement(v.Ya, {
                         padding: {
                             bottom: 2,
                             x: 2
                         }
-                    }, r.createElement(v.Fb, {
+                    }, a.createElement(v.Fb, {
                         padding: {
                             bottom: 1,
                             x: 2
                         },
                         borderTop: !0
-                    }), r.createElement(v.Ya, {
+                    }), a.createElement(v.Ya, {
                         textAlign: v.Sb.Center
-                    }, r.createElement(v.W, {
+                    }, a.createElement(v.W, {
                         color: v.O.Alt,
                         "data-test-selector": "current-user-banned-text",
                         bold: !0
                     }, Object(s.d)("You are currently banned from this channel.", "ChatInput"))), this.renderButtonContainer(!0));
-                    if (this.state.hasSeenAndRejectedEmbedPrompt) return r.createElement(v.Ya, {
+                    if (this.state.hasSeenAndRejectedEmbedPrompt) return a.createElement(v.Ya, {
                         className: "chat-input",
                         display: this.props.hidden ? v.X.Hide : v.X.Block,
                         padding: {
                             x: 2,
                             bottom: 2
                         }
-                    }, r.createElement(v.W, {
+                    }, a.createElement(v.W, {
                         "data-test-selector": "chat-embed-denied-text"
                     }, Object(s.d)("You rejected the prompt to send messages in this embedded version of Twitch Chat. If this was done in error, please refresh the page.", "ChatInput")), this.renderButtonContainer(!0));
                     var e = [];
-                    this.props.bitsConfig && e.push(r.createElement(v.A, {
+                    this.props.bitsConfig && e.push(a.createElement(v.A, {
                         key: "bits",
                         icon: v.ub.Bits,
                         ariaLabel: Object(s.d)("Bits", "ChatInput"),
                         type: v.C.Secondary,
                         onClick: this.onBitsIconClick,
                         "data-a-target": "bits-button"
-                    })), this.state.showEmotePickerButton && e.push(r.createElement(Ue.b, {
+                    })), this.state.showEmotePickerButton && e.push(a.createElement(Be.b, {
                         key: "emote-picker",
                         onClick: this.onEmotePickerToggle,
-                        isActive: this.state.showCard === Ae.Emotes
+                        isActive: this.state.showCard === Le.Emotes
                     }));
                     var t = null;
-                    this.state.hasInteractedOrPageload && (t = r.createElement(Ue.c, {
+                    this.state.hasInteractedOrPageload && (t = a.createElement(Be.c, {
                         channelOwnerID: this.props.channelID,
-                        emotePickerSource: xe.a.Chat,
+                        emotePickerSource: Fe.a.Chat,
                         onClickEmote: this.onClickEmote,
                         onLoad: this.onEmotePickerDataLoaded,
                         toggleVisibility: this.onEmotePickerToggle,
-                        visible: this.state.showCard === Ae.Emotes
+                        visible: this.state.showCard === Le.Emotes
                     }));
                     var n = null;
-                    this.state.hasInteractedOrPageload && this.props.bitsConfig && (n = r.createElement(x.a, {
+                    this.state.hasInteractedOrPageload && this.props.bitsConfig && (n = a.createElement(F.a, {
                         bitsConfig: this.props.bitsConfig,
                         channelID: this.props.channelID,
                         channelLogin: this.props.channelLogin,
@@ -5346,18 +5343,18 @@
                         onConfirmSend: this.confirmDelayedSend,
                         onUserClose: this.onBitsClose,
                         trackBitsCardInteraction: this.trackBitsCardInteraction,
-                        visible: this.state.showCard === Ae.Bits,
+                        visible: this.state.showCard === Le.Bits,
                         cheerMessageAutoModded: this.props.isTextInputDisabled,
                         bitsSendErrorCode: this.props.bitsSendErrorCode,
                         bitsSendHasError: this.props.bitsSendHasError,
                         chatMessage: this.state.value
                     }));
                     var i = null;
-                    this.props.data && this.props.data.channel && this.props.data.channel.cheer && this.props.data.channel.cheer.hashtags && this.state.messageCheers.length > 0 && (i = r.createElement(H, {
+                    this.props.data && this.props.data.channel && this.props.data.channel.cheer && this.props.data.channel.cheer.hashtags && this.state.messageCheers.length > 0 && (i = a.createElement(H, {
                         hashTags: this.props.data.channel.cheer.hashtags
                     }));
-                    var a = null;
-                    this.props.moderatedMessageParts && this.props.moderatedMessageParts.length > 0 && (a = r.createElement(he, {
+                    var r = null;
+                    this.props.moderatedMessageParts && this.props.moderatedMessageParts.length > 0 && (r = a.createElement(he, {
                         moderatedMessageParts: this.props.moderatedMessageParts
                     }));
                     var o = this.chatRestrictedReason(),
@@ -5365,48 +5362,48 @@
                         c = null;
                     if (this.props.data && !this.props.data.loading && null !== o) {
                         var d = null;
-                        o === h.l.FOLLOWERS_ONLY && this.props.data.channel && this.props.data.channel.self && this.props.data.channel.self.follower && this.props.data.channel.self.follower.followedAt && (d = Object(O.c)(this.props.data.channel.self.follower.followedAt)), c = r.createElement(ue, {
+                        o === h.l.FOLLOWERS_ONLY && this.props.data.channel && this.props.data.channel.self && this.props.data.channel.self.follower && this.props.data.channel.self.follower.followedAt && (d = Object(O.c)(this.props.data.channel.self.follower.followedAt)), c = a.createElement(ue, {
                             channelDisplayName: this.props.channelDisplayName,
                             channelID: this.props.channelID,
                             channelLogin: this.props.channelLogin,
                             closeBalloon: this.onChatRestrictionBalloonClose,
                             openBalloon: this.onChatRestrictionBalloonOpen,
                             reason: o,
-                            showBalloon: this.state.showCard === Ae.ChatRestriction,
+                            showBalloon: this.state.showCard === Le.ChatRestriction,
                             followedTime: d,
                             requiredFollowDurationSeconds: 60 * this.props.followerDuration,
                             recheckRestrictions: this.refetchUserRestrictions
                         })
                     }
                     var u = null;
-                    return this.state.showAuthContextBalloon && (u = r.createElement(v.u, {
+                    return this.state.showAuthContextBalloon && (u = a.createElement(v.u, {
                         show: this.state.showAuthContextBalloon,
                         direction: v.v.TopLeft,
                         size: v.w.Medium
-                    }, r.createElement(N.a, {
+                    }, a.createElement(N.a, {
                         onClickOut: this.handleAuthContextBalloonClose
-                    }, r.createElement(j.a, {
+                    }, a.createElement(A.a, {
                         source: I.a.Chat,
                         targetUserDisplayName: this.props.channelDisplayName,
                         onClose: this.handleAuthContextBalloonClose
-                    })))), r.createElement(v.Ya, {
+                    })))), a.createElement(v.Ya, {
                         className: "chat-input",
                         display: this.props.hidden ? v.X.Hide : v.X.Block,
                         padding: {
                             x: 2,
                             bottom: 2
                         }
-                    }, a, c, r.createElement(N.a, {
+                    }, r, c, a.createElement(N.a, {
                         onClickOut: this.onClickOut
-                    }, r.createElement(v.Ra, {
+                    }, a.createElement(v.Ra, {
                         display: this.props.moderatedMessageParts ? v.X.Hide : v.X.Block,
                         position: v.kb.Relative,
                         zIndex: v.jc.Default
-                    }, r.createElement("div", {
+                    }, a.createElement("div", {
                         onMouseEnter: this.onMouseEnterInput
-                    }, t, n, u, r.createElement(U.b, {
-                        componentType: U.a.TextArea,
-                        suggestionSource: U.c.Chat,
+                    }, t, n, u, a.createElement(B.b, {
+                        componentType: B.a.TextArea,
+                        suggestionSource: B.c.Chat,
                         onValueUpdate: this.onMessageValueUpdate,
                         onFocus: this.onInputFocus,
                         onKeyDown: this.onKeyDown,
@@ -5419,27 +5416,27 @@
                         "data-test-selector": "chat-input",
                         disabled: this.state.isSendingBits || this.props.isTextInputDisabled,
                         containerElement: this.props.containerElement
-                    }, r.createElement(U.d, {
+                    }, a.createElement(B.d, {
                         emotes: this.props.emotes
-                    }), r.createElement(J, null), i), r.createElement(v.Ya, {
+                    }), a.createElement(J, null), i), a.createElement(v.Ya, {
                         position: v.kb.Absolute,
                         attachRight: !0,
                         attachTop: !0
                     }, e))), this.renderButtonContainer(l)))
                 }, t.prototype.renderButtonContainer = function(e) {
-                    return void 0 === e && (e = !1), r.createElement(v.Ya, {
+                    return void 0 === e && (e = !1), a.createElement(v.Ya, {
                         className: "chat-input__buttons-container",
                         display: v.X.Flex,
                         justifyContent: v.Xa.Between,
                         margin: {
                             top: 1
                         }
-                    }, r.createElement(v.Ya, {
+                    }, a.createElement(v.Ya, {
                         display: v.X.Flex,
                         flexDirection: v.Aa.Row
-                    }, r.createElement(v.Ya, {
+                    }, a.createElement(v.Ya, {
                         position: v.kb.Relative
-                    }, r.createElement(q.a, {
+                    }, a.createElement(q.a, {
                         onToggle: this.onChatSettingsToggle,
                         onShowChatRules: this.props.onShowChatRules,
                         channelLogin: this.props.channelLogin,
@@ -5451,7 +5448,7 @@
                         isEmbedded: this.props.isEmbedded,
                         channelID: this.props.channelID,
                         containerElement: this.props.containerElement
-                    }), this.renderChatCogTooltips()), r.createElement(v.A, {
+                    }), this.renderChatCogTooltips()), a.createElement(v.A, {
                         ariaLabel: Object(s.d)("Users in Chat", "ChatInput"),
                         "data-a-target": "chat-viewer-list",
                         "data-test-selector": "chat-viewer-list",
@@ -5460,14 +5457,14 @@
                     })), this.renderSendButton(e))
                 }, t.prototype.renderSendButton = function(e) {
                     var t;
-                    return void 0 === e && (e = !1), t = this.state.value && null !== Object(Oe.p)(this.state.value) ? Object(s.d)("Whisper", "ChatInput") : Object(s.d)("Chat", "ChatInput"), r.createElement(v.z, {
+                    return void 0 === e && (e = !1), t = this.state.value && null !== Object(Oe.p)(this.state.value) ? Object(s.d)("Whisper", "ChatInput") : Object(s.d)("Chat", "ChatInput"), a.createElement(v.z, {
                         onClick: this.onMessageSend,
                         "data-a-target": "chat-send-button",
                         "data-test-selector": "chat-send-button",
                         disabled: this.state.isSendingBits || this.props.isTextInputDisabled || e
                     }, t)
                 }, t.prototype.renderChatCogTooltips = function() {
-                    return this.state.showAutomodSettingsTooltip ? r.createElement(pe, null) : null
+                    return this.state.showAutomodSettingsTooltip ? a.createElement(pe, null) : null
                 }, t.prototype.sendRegularMessage = function() {
                     var e = this;
                     if (this.props.onSendMessage) {
@@ -5477,12 +5474,12 @@
                                     t = s.m.get(ve, !1);
                                 return e && !t
                             }()) return this.setState({
-                            showCard: Ae.None
+                            showCard: Le.None
                         }, function() {
                             e.trackChatEvent(e.props.emotePickerSessionID), e.autocompleteInputRef && e.autocompleteInputRef.setValue(""), e.props.openRaidUpsellFromHost(t.recipientLogin)
                         });
                         this.props.onSendMessage(this.state.value) && (this.trackChatEvent(this.props.emotePickerSessionID), this.trackMentions(), this.autocompleteInputRef && this.autocompleteInputRef.setValue(""), this.setState({
-                            showCard: Ae.None
+                            showCard: Le.None
                         }))
                     }
                 }, t.prototype.handleLogin = function() {
@@ -5490,21 +5487,21 @@
                         t = {
                             onClose: this.clearPendingMessage
                         };
-                    e !== z.a.Balloon ? e === z.a.TwoStep ? (t.modalType = B.e.TwoStep, t.targetChannel = this.props.channelDisplayName, this.login(t)) : e === z.a.Split ? (t.modalType = B.e.Combined, t.targetChannel = this.props.channelDisplayName, this.login(t)) : this.login(t) : this.state.showAuthContextBalloon || (this.setState({
+                    e !== z.a.Balloon ? e === z.a.TwoStep ? (t.modalType = U.e.TwoStep, t.targetChannel = this.props.channelDisplayName, this.login(t)) : e === z.a.Split ? (t.modalType = U.e.Combined, t.targetChannel = this.props.channelDisplayName, this.login(t)) : this.login(t) : this.state.showAuthContextBalloon || (this.setState({
                         showAuthContextBalloon: !0
-                    }), Object(B.o)({
-                        page: B.e.Bubble,
+                    }), Object(U.o)({
+                        page: U.e.Bubble,
                         source: I.a.Chat
                     }))
                 }, t.prototype.login = function(e) {
                     this.storePendingMessage(this.state.value), this.props.login(e)
                 }, t.prototype.trackChatEvent = function(e) {
-                    Object(Le.a)({
+                    Object(je.a)({
                         channelID: this.props.channelID,
                         channelLogin: this.props.channelLogin,
                         emotePickerSessionID: e,
                         isHostMode: this.props.isHostMode,
-                        player: this.props.isPopout ? _e.a.Embed : _e.a.Web,
+                        player: this.props.isPopout ? we.a.Embed : we.a.Web,
                         subOnlyMode: this.props.subsOnlyMode
                     })
                 }, t.prototype.trackMentions = function() {
@@ -5516,7 +5513,7 @@
                                 }
                             }); e < t.length; e++) {
                             var n = t[e];
-                            n.type === we.a.Mention && n.content.currentUserMentionRelation !== Ne.a.Recipient && Object(je.a)({
+                            n.type === _e.a.Mention && n.content.currentUserMentionRelation !== Ne.a.Recipient && Object(Ae.a)({
                                 channelLogin: this.props.channelLogin,
                                 isHostMode: this.props.isHostMode,
                                 mentionedUserDisplayName: n.content.recipient,
@@ -5533,7 +5530,7 @@
                     var e = this.getPendingMessage();
                     e && this.autocompleteInputRef && (this.autocompleteInputRef.setValue(e), this.clearPendingMessage())
                 }, t
-            }(r.Component);
+            }(a.Component);
 
             function Ye(e) {
                 return !(e.data && !e.data.loading && !e.data.error && e.data.currentUser)
@@ -5544,7 +5541,7 @@
                     skip: function(e) {
                         return !e.firstPageLoaded
                     }
-                }), Object(w.a)([{
+                }), Object(_.a)([{
                     topic: function(e) {
                         return Object(m.I)(e.data.currentUser && e.data.currentUser.id || "")
                     },
@@ -5591,7 +5588,7 @@
                         slowModeDuration: e.chat.slowModeDuration,
                         subsOnlyMode: e.chat.subsOnlyMode,
                         emotePickerSessionID: e.chat.emotePickerSessionID,
-                        sessionUser: Object(L.e)(e)
+                        sessionUser: Object(j.e)(e)
                     }
                 }, function(e) {
                     return Object(o.bindActionCreators)({
@@ -5610,34 +5607,34 @@
                         }, t
                     }
                     return i.__extends(t, e), t.prototype.render = function() {
-                        return r.createElement(v.Ya, {
+                        return a.createElement(v.Ya, {
                             className: "chat-rules",
                             position: v.kb.Relative
-                        }, r.createElement(v.Fb, {
+                        }, a.createElement(v.Fb, {
                             border: !0,
                             background: v.r.Base,
                             margin: {
                                 bottom: 1
                             }
-                        }, r.createElement(v.Ya, {
+                        }, a.createElement(v.Ya, {
                             padding: 1
-                        }, r.createElement(v.Ya, {
+                        }, a.createElement(v.Ya, {
                             margin: {
                                 bottom: 1
                             }
-                        }, r.createElement(v.W, {
+                        }, a.createElement(v.W, {
                             type: v.Wb.H6
-                        }, Object(s.d)("Chat Rules:", "ChatRules"))), r.createElement(v.Ya, null, r.createElement("ul", null, this.props.chatRules.map(function(e, t) {
-                            return r.createElement("li", {
+                        }, Object(s.d)("Chat Rules:", "ChatRules"))), a.createElement(v.Ya, null, a.createElement("ul", null, this.props.chatRules.map(function(e, t) {
+                            return a.createElement("li", {
                                 key: t
                             }, e)
-                        }))), r.createElement(v.Ya, {
+                        }))), a.createElement(v.Ya, {
                             margin: {
                                 top: 1
                             },
                             display: v.X.Flex,
                             justifyContent: v.Xa.Center
-                        }, r.createElement(v.z, {
+                        }, a.createElement(v.z, {
                             size: v.D.Small,
                             onClick: this.onClickConfirm
                         }, Object(s.d)("Ok, got it!", "ChatRules"))))))
@@ -5645,7 +5642,7 @@
                         var e = s.m.get("chat_rules_shown", {});
                         e[this.props.channelLogin] = !0, s.m.set("chat_rules_shown", e)
                     }, t
-                }(r.Component)),
+                }(a.Component)),
                 Qe = n("8in3"),
                 Ke = n("Y3y8"),
                 $e = (n("7NxT"), n("VS9Q")),
@@ -5654,21 +5651,21 @@
             n.d(t, "a", function() {
                 return Je
             }), n.d(t, "b", function() {
-                return at
+                return rt
             });
             var Je = "chat-room-header-label",
                 et = "chat_rules_shown",
                 tt = s.k.withCategory("chat-room"),
                 nt = l.a.wrap(function() {
-                    return n.e(203).then(n.bind(null, "A39y"))
+                    return n.e(201).then(n.bind(null, "A39y"))
                 }, "ChatViewers"),
                 it = l.a.wrap(function() {
-                    return Promise.all([n.e(0), n.e(202)]).then(n.bind(null, "Y9qK"))
+                    return Promise.all([n.e(0), n.e(200)]).then(n.bind(null, "Y9qK"))
                 }, "NewChatterRitual", {
                     failSilently: !0,
                     placeholder: null
                 }),
-                rt = function(e) {
+                at = function(e) {
                     function t(t) {
                         var n = e.call(this, t) || this;
                         n.hasAcceptedModerationConfirmation = !1, n.closeViewersList = function() {
@@ -5748,7 +5745,7 @@
                         this.props.onCloseChatRules()
                     }, t.prototype.render = function() {
                         if (this.props.isBackground) return null;
-                        if (this.props.isHidden && !this.props.isPopout) return r.createElement(v.Fb, {
+                        if (this.props.isHidden && !this.props.isPopout) return a.createElement(v.Fb, {
                             alignItems: v.f.Center,
                             borderLeft: !0,
                             display: v.X.Flex,
@@ -5758,18 +5755,18 @@
                             justifyContent: v.Xa.Center,
                             color: v.O.Base,
                             position: v.kb.Relative
-                        }, r.createElement(v.Ya, {
+                        }, a.createElement(v.Ya, {
                             margin: {
                                 bottom: 1
                             }
-                        }, r.createElement(v.W, {
+                        }, a.createElement(v.W, {
                             fontSize: v.Ca.Size5
-                        }, Object(s.d)("Chat is hidden.", "ChatRoom"))), r.createElement(v.z, {
+                        }, Object(s.d)("Chat is hidden.", "ChatRoom"))), a.createElement(v.z, {
                             onClick: this.props.onChatUnhide,
                             "data-a-target": "show-chat-button",
                             "data-test-selector": "show-chat-button"
                         }, Object(s.d)("Show Chat", "ChatRoom")));
-                        var e = this.props.bitsConfig && this.props.firstPageLoaded && r.createElement(C.a, {
+                        var e = this.props.bitsConfig && this.props.firstPageLoaded && a.createElement(C.a, {
                                 bitsConfig: this.props.bitsConfig,
                                 blockLinks: this.props.blockLinks,
                                 channelID: this.props.channelID,
@@ -5777,7 +5774,7 @@
                                 currentUserLogin: this.props.currentUserLogin,
                                 userID: this.props.userID
                             }),
-                            t = this.state.showViewersList && r.createElement(v.Fb, {
+                            t = this.state.showViewersList && a.createElement(v.Fb, {
                                 attachBottom: !0,
                                 attachLeft: !0,
                                 attachRight: !0,
@@ -5785,22 +5782,22 @@
                                 background: v.r.Alt2,
                                 position: v.kb.Absolute,
                                 zIndex: v.jc.Default
-                            }, r.createElement(v.Ya, {
+                            }, a.createElement(v.Ya, {
                                 padding: {
                                     y: 1
                                 }
-                            }, r.createElement(v.Ya, {
+                            }, a.createElement(v.Ya, {
                                 position: v.kb.Absolute,
                                 attachLeft: !0,
                                 margin: {
                                     left: 1
                                 }
-                            }, r.createElement(v.A, {
+                            }, a.createElement(v.A, {
                                 icon: v.ub.Close,
                                 ariaLabel: Object(s.d)("Close", "ChatRoom"),
                                 onClick: this.closeViewersList,
                                 "data-test-selector": "close-viewer-list"
-                            }))), r.createElement(nt, {
+                            }))), a.createElement(nt, {
                                 channelLogin: this.props.channelLogin,
                                 closeViewersList: this.closeViewersList,
                                 isCurrentUserBanned: this.props.currentUserBannedStatusData && this.props.currentUserBannedStatusData.channel && this.props.currentUserBannedStatusData.channel.self && this.props.currentUserBannedStatusData.channel.self.banStatus && this.props.currentUserBannedStatusData.channel.self.banStatus.isPermanent || !1,
@@ -5808,15 +5805,15 @@
                             })),
                             n = !!this.props.authToken && !this.props.isEmbedded,
                             i = null;
-                        return this.props.isChatRulesOpen && this.props.chatRules && this.props.chatRules.length && (i = r.createElement(v.Ya, {
+                        return this.props.isChatRulesOpen && this.props.chatRules && this.props.chatRules.length && (i = a.createElement(v.Ya, {
                             padding: {
                                 x: 2
                             }
-                        }, r.createElement(Xe, {
+                        }, a.createElement(Xe, {
                             chatRules: this.props.chatRules,
                             channelLogin: this.props.channelLogin,
                             onCloseChatRules: this.props.onCloseChatRules
-                        }))), r.createElement(v.Qa, {
+                        }))), a.createElement(v.Qa, {
                             "data-test-selector": "chat-room-component-layout",
                             "data-a-target": this.props.theme === p.a.Dark ? "chat-theme-dark" : "chat-theme-light",
                             flexShrink: 1,
@@ -5824,11 +5821,11 @@
                             display: v.X.Flex,
                             flexDirection: v.Aa.Column,
                             fullWidth: !0
-                        }, r.createElement("section", {
+                        }, a.createElement("section", {
                             className: "chat-room",
                             role: "complementary",
                             "aria-labelledby": Je
-                        }, r.createElement(v.Fb, {
+                        }, a.createElement(v.Fb, {
                             borderLeft: !this.props.isEmbedded,
                             display: v.X.Flex,
                             flexDirection: v.Aa.Column,
@@ -5838,7 +5835,7 @@
                             fullHeight: !0,
                             color: v.O.Base,
                             className: "chat-room__content"
-                        }, this.props.chatRoomHeader, e, r.createElement(qe.a, {
+                        }, this.props.chatRoomHeader, e, a.createElement(qe.a, {
                             badgeSets: this.state.badgeSets,
                             channelID: this.props.channelID,
                             channelLogin: this.props.channelLogin,
@@ -5851,17 +5848,17 @@
                             containerRef: this.setChatListElement,
                             confirmModerationAction: this.confirmModerationAction,
                             theme: this.props.theme
-                        }), r.createElement(v.Ya, {
+                        }), a.createElement(v.Ya, {
                             className: "chat-room__notifications",
                             position: v.kb.Absolute,
                             zIndex: v.jc.Default,
                             fullWidth: !0
-                        }, this.props.children), i, t, this.state.raidUpsellTarget && r.createElement(Ee, {
+                        }, this.props.children), i, t, this.state.raidUpsellTarget && a.createElement(Ee, {
                             send: this.props.onSendMessage,
                             targetChannelLogin: this.state.raidUpsellTarget,
                             sourceChannelLogin: this.props.channelLogin,
                             closeRaidUpsell: this.closeRaidUpsell
-                        }), this.props.firstPageLoaded && r.createElement(it, {
+                        }), this.props.firstPageLoaded && a.createElement(it, {
                             channelID: this.props.channelID,
                             channelLogin: this.props.channelLogin,
                             isEmbedded: this.props.isEmbedded,
@@ -5869,11 +5866,11 @@
                             isPopout: this.props.isPopout,
                             onPushMessage: this.props.onPushMessage,
                             onSendMessage: this.props.onSendMessage
-                        }), this.state.showCheerAutoModPrompt && r.createElement(k, {
+                        }), this.state.showCheerAutoModPrompt && a.createElement(k, {
                             badgeSets: this.state.badgeSets,
                             onEditCheer: this.clearCheerAutoModPrompt,
                             onCheerAnyway: this.onCheerAnyway
-                        }), r.createElement(ze, {
+                        }), a.createElement(ze, {
                             authToken: this.props.authToken,
                             bitsConfig: n ? this.props.bitsConfig : void 0,
                             channelDisplayName: this.props.channelDisplayName,
@@ -5904,13 +5901,13 @@
                             bitsSendErrorCode: this.state.bitsSendErrorCode,
                             bitsSendHasError: this.state.bitsSendHasError,
                             clearBitsSendError: this.clearBitsSendError
-                        }), r.createElement(v.Ya, {
+                        }), a.createElement(v.Ya, {
                             className: "chat-room__viewer-card",
                             fullHeight: !0,
                             fullWidth: !0,
                             position: v.kb.Absolute,
                             "data-a-target": "chat-user-card"
-                        }, r.createElement(Qe.a, {
+                        }, a.createElement(Qe.a, {
                             isPopout: this.props.isPopout,
                             isEmbedded: this.props.isEmbedded,
                             confirmModerationAction: this.confirmModerationAction,
@@ -5927,8 +5924,8 @@
                             }), s.p.tmi.client.updateChannelBadges(e.channelLogin, t)
                         }
                     }, t
-                }(r.Component),
-                at = Object(o.compose)(Object(c.a)(Ze, {
+                }(a.Component),
+                rt = Object(o.compose)(Object(c.a)(Ze, {
                     skip: function(e) {
                         return !e.firstPageLoaded
                     },
@@ -5962,7 +5959,7 @@
                             }), (!n.user.self.selectedBadge || i.setID === y.a.Bits && n.user.self.selectedBadge.setID === y.a.Bits) && (n.user.self.selectedBadge = i), n.user.self.selectedBadge && (i.setID !== y.a.Leaderboard || n.user.self.selectedBadge.setID !== y.a.Bits && n.user.self.selectedBadge.setID !== y.a.Leaderboard) || (n.user.self.selectedBadge = i)), n
                         }
                     }
-                }), a.a)(rt)
+                }), r.a)(at)
         },
         BOil: function(e, t, n) {},
         "BQs+": function(e, t, n) {
@@ -5974,27 +5971,27 @@
             }), n.d(t, "b", function() {
                 return u
             });
-            var i, r = n("mrSG"),
-                a = n("/7QA"),
+            var i, a = n("mrSG"),
+                r = n("/7QA"),
                 o = n("2xye"),
                 s = n("I6K6"),
                 l = n("bTcf"),
                 c = n("L7EG");
 
             function d(e, t, n) {
-                return r.__awaiter(this, void 0, void 0, function() {
+                return a.__awaiter(this, void 0, void 0, function() {
                     var i, l, u, p;
-                    return r.__generator(this, function(r) {
-                        switch (r.label) {
+                    return a.__generator(this, function(a) {
+                        switch (a.label) {
                             case 0:
-                                return r.trys.push([0, 2, , 3]), [4, n.query({
+                                return a.trys.push([0, 2, , 3]), [4, n.query({
                                     query: c,
                                     variables: {
                                         videoID: e.id
                                     }
                                 })];
                             case 1:
-                                return i = r.sent().data, l = function(e, t) {
+                                return i = a.sent().data, l = function(e, t) {
                                     return {
                                         id: e.id,
                                         owner: t.owner,
@@ -6014,9 +6011,9 @@
                                     shared_item_url: t.shareURL,
                                     source_item_id: l.id,
                                     source_item_type: Object(s.a)(l.broadcastType)
-                                }, a.p.tracking.track(o.SpadeEventType.ShareItem, u), [3, 3];
+                                }, r.p.tracking.track(o.SpadeEventType.ShareItem, u), [3, 3];
                             case 2:
-                                return p = r.sent(), a.k.error(p.toString(), d.name), [3, 3];
+                                return p = a.sent(), r.k.error(p.toString(), d.name), [3, 3];
                             case 3:
                                 return [2]
                         }
@@ -6025,19 +6022,19 @@
             }
 
             function u(e, t, n) {
-                return r.__awaiter(this, void 0, void 0, function() {
+                return a.__awaiter(this, void 0, void 0, function() {
                     var i, s, c;
-                    return r.__generator(this, function(r) {
-                        switch (r.label) {
+                    return a.__generator(this, function(a) {
+                        switch (a.label) {
                             case 0:
-                                return r.trys.push([0, 2, , 3]), [4, n.query({
+                                return a.trys.push([0, 2, , 3]), [4, n.query({
                                     query: l,
                                     variables: {
                                         creatorID: e.owner.id
                                     }
                                 })];
                             case 1:
-                                return i = r.sent().data, s = {
+                                return i = a.sent().data, s = {
                                     channel: i.user ? i.user.login : null,
                                     channel_id: Number(e.owner.id),
                                     game: null,
@@ -6050,9 +6047,9 @@
                                     shared_item_url: t.shareURL,
                                     source_item_id: e.id,
                                     source_item_type: o.SourceItemType.Collection
-                                }, a.p.tracking.track(o.SpadeEventType.ShareItem, s), [3, 3];
+                                }, r.p.tracking.track(o.SpadeEventType.ShareItem, s), [3, 3];
                             case 2:
-                                return c = r.sent(), a.k.error(c.toString(), u.name), [3, 3];
+                                return c = a.sent(), r.k.error(c.toString(), u.name), [3, 3];
                             case 3:
                                 return [2]
                         }
@@ -6068,17 +6065,17 @@
                 return l
             });
             var i = n("mrSG"),
-                r = n("yR8l"),
-                a = n("8jSG"),
+                a = n("yR8l"),
+                r = n("8jSG"),
                 o = n("cMjZ"),
                 s = n("kSkr");
 
             function l() {
                 var e = this;
-                return Object(r.a)(s, {
+                return Object(a.a)(s, {
                     props: function(t) {
                         return {
-                            blockUserMutation: function(n, r, s, l) {
+                            blockUserMutation: function(n, a, s, l) {
                                 return i.__awaiter(e, void 0, void 0, function() {
                                     return i.__generator(this, function(e) {
                                         switch (e.label) {
@@ -6088,7 +6085,7 @@
                                                         input: {
                                                             targetUserID: n,
                                                             sourceContext: s,
-                                                            reason: r
+                                                            reason: a
                                                         }
                                                     },
                                                     optimisticResponse: {
@@ -6103,14 +6100,14 @@
                                                     update: function(e) {
                                                         var t = e.readFragment({
                                                             id: Object(o.a)(l),
-                                                            fragment: a
+                                                            fragment: r
                                                         });
                                                         t && (t.blockedUsers.push({
                                                             id: n,
                                                             __typename: "User"
                                                         }), e.writeFragment({
                                                             id: Object(o.a)(l),
-                                                            fragment: a,
+                                                            fragment: r,
                                                             data: t
                                                         }))
                                                     }
@@ -6286,12 +6283,12 @@
                 return o
             });
             var i = n("mrSG"),
-                r = n("yR8l"),
-                a = n("JiJH");
+                a = n("yR8l"),
+                r = n("JiJH");
 
             function o() {
                 var e = this;
-                return Object(r.a)(a, {
+                return Object(a.a)(r, {
                     props: function(t) {
                         return {
                             unVIPUserMutation: function(n) {
@@ -6321,8 +6318,8 @@
         D91L: function(e, t, n) {
             "use strict";
             var i = n("mrSG"),
-                r = n("q1tI"),
-                a = n("oJmH"),
+                a = n("q1tI"),
+                r = n("oJmH"),
                 o = n("/MKj"),
                 s = n("/7QA"),
                 l = n("gcd7"),
@@ -6392,20 +6389,20 @@
                         }, t
                     }
                     return i.__extends(t, e), t.prototype.render = function() {
-                        return r.createElement("span", {
+                        return a.createElement("span", {
                             style: {
                                 display: "none"
                             }
-                        }, r.createElement(l.a, {
+                        }, a.createElement(l.a, {
                             command: "ignore",
                             handler: this.blockUser
-                        }), r.createElement(l.a, {
+                        }), a.createElement(l.a, {
                             command: "unignore",
                             handler: this.unblockUser
                         }))
                     }, t
-                }(r.Component);
-            var f = Object(a.compose)(Object(o.connect)(function(e) {
+                }(a.Component);
+            var f = Object(r.compose)(Object(o.connect)(function(e) {
                 return {
                     user: Object(m.e)(e)
                 }
@@ -6852,8 +6849,8 @@
                 return u
             });
             var i = n("mrSG"),
-                r = n("G1cX"),
-                a = n("/7QA"),
+                a = n("G1cX"),
+                r = n("/7QA"),
                 o = n("f00E"),
                 s = n("+pBb"),
                 l = n("W/3w"),
@@ -6869,7 +6866,7 @@
                     for (var n in e.chat.commandHandlers) e.chat.commandHandlers[n] && t.push(n);
                 return t.sort()
             }
-            a.p.store.registerReducer("chat", function(e, t) {
+            r.p.store.registerReducer("chat", function(e, t) {
                 var n;
                 switch (void 0 === e && (e = function() {
                     var e = Object(c.a)();
@@ -6921,8 +6918,8 @@
                             isChatRulesOpen: !0
                         });
                     case s.q:
-                        var a = i.__assign({}, e);
-                        return void 0 !== t.roomState.followersOnly && (a.followerMode = t.roomState.followersOnly), void 0 !== t.roomState.followersOnlyRequirement && (a.followerDuration = t.roomState.followersOnlyRequirement), void 0 !== t.roomState.slowMode && (a.slowMode = t.roomState.slowMode), void 0 !== t.roomState.slowModeDuration && (a.slowModeDuration = t.roomState.slowModeDuration), void 0 !== t.roomState.subsOnly && (a.subsOnlyMode = t.roomState.subsOnly), a;
+                        var r = i.__assign({}, e);
+                        return void 0 !== t.roomState.followersOnly && (r.followerMode = t.roomState.followersOnly), void 0 !== t.roomState.followersOnlyRequirement && (r.followerDuration = t.roomState.followersOnlyRequirement), void 0 !== t.roomState.slowMode && (r.slowMode = t.roomState.slowMode), void 0 !== t.roomState.slowModeDuration && (r.slowModeDuration = t.roomState.slowModeDuration), void 0 !== t.roomState.subsOnly && (r.subsOnlyMode = t.roomState.subsOnly), r;
                     case s.b:
                         return i.__assign({}, e, {
                             showAutoModActions: !1
@@ -6964,13 +6961,13 @@
                             useHighContrastColors: !0
                         });
                     case s.a:
-                        return r(e, function(e) {
+                        return a(e, function(e) {
                             return e.commandHandlers
                         }, function(e) {
                             return t.command in e ? e[t.command].push(t.handler) : e[t.command] = [t.handler], e
                         });
                     case s.o:
-                        return r(e, function(e) {
+                        return a(e, function(e) {
                             return e.commandHandlers
                         }, function(e) {
                             if (!(t.command in e)) return e;
@@ -6993,8 +6990,8 @@
         DnOo: function(e, t, n) {
             "use strict";
             var i = n("mrSG"),
-                r = n("q1tI"),
-                a = n("oJmH"),
+                a = n("q1tI"),
+                r = n("oJmH"),
                 o = n("/7QA"),
                 s = n("UUve"),
                 l = n("GnwI"),
@@ -7016,7 +7013,7 @@
                     return i.__extends(t, e), t.prototype.render = function() {
                         if (this.props.isSubbedToTier) {
                             var e = Object(o.d)("Subscribed", "SubTierButton");
-                            return r.createElement(d.z, {
+                            return a.createElement(d.z, {
                                 ariaLabel: e,
                                 "data-test-selector": u,
                                 disabled: !0,
@@ -7024,7 +7021,7 @@
                             }, e)
                         }
                         var t;
-                        return t = this.props.isEsportChannel ? Object(o.d)("Get the All-Access Pass", "SubTierButton") : this.props.customSubscribeNowMessage ? this.props.customSubscribeNowMessage : Object(o.d)("Subscribe Now", "SubTierButton"), r.createElement(d.z, i.__assign({
+                        return t = this.props.isEsportChannel ? Object(o.d)("Get the All-Access Pass", "SubTierButton") : this.props.customSubscribeNowMessage ? this.props.customSubscribeNowMessage : Object(o.d)("Subscribe Now", "SubTierButton"), a.createElement(d.z, i.__assign({
                             ariaLabel: t + " " + this.props.tierPrice,
                             "data-test-selector": u,
                             linkTo: this.props.isMobileCheckout ? this.props.url : void 0,
@@ -7034,8 +7031,8 @@
                             fullWidth: this.props.fullWidth
                         }), t)
                     }, t
-                }(r.Component),
-                m = Object(a.compose)(Object(l.b)("SubTierButton", {
+                }(a.Component),
+                m = Object(r.compose)(Object(l.b)("SubTierButton", {
                     autoReportInteractive: !0
                 }))(p);
             n.d(t, !1, function() {
@@ -7052,8 +7049,8 @@
                 return k
             });
             var i = n("EN5X"),
-                r = n("G7cy"),
-                a = n("m7BI"),
+                a = n("G7cy"),
+                r = n("m7BI"),
                 o = n("E8D/"),
                 s = n("DtRd"),
                 l = n("R4sh"),
@@ -7070,7 +7067,7 @@
 
             function k(e, t) {
                 var n = s(e),
-                    k = C(r(n));
+                    k = C(a(n));
                 if (void 0 === t && (t = Object(d.d)()), k in v[t]) return v[t][k];
                 if (t === c.a.Dark && n.every(function(e) {
                         return e < b
@@ -7079,11 +7076,11 @@
                     S = Object(l.a)(n, y);
                 if (S > u) return k;
                 for (var E = [n[0], n[1], n[2]], N = g; N >= 0 && S < u; N--) {
-                    var w = a(E);
-                    t === c.a.Light ? w[0] -= w[0] * h : w[0] += w[0] * h, E = o(i(w)), S = Object(l.a)(E, y)
+                    var _ = r(E);
+                    t === c.a.Light ? _[0] -= _[0] * h : _[0] += _[0] * h, E = o(i(_)), S = Object(l.a)(E, y)
                 }
-                var _ = C(r(E));
-                return v[t][k] = _, _
+                var w = C(a(E));
+                return v[t][k] = w, w
             }
 
             function C(e) {
@@ -7466,8 +7463,8 @@
         F6GT: function(e, t, n) {
             "use strict";
             var i = n("mrSG"),
-                r = n("/7QA"),
-                a = "control";
+                a = n("/7QA"),
+                r = "control";
             n.d(t, "a", function() {
                 return s
             }), n.d(t, "b", function() {
@@ -7478,7 +7475,7 @@
             var o = "chatSettings";
 
             function s() {
-                var e = r.m.get(o, {});
+                var e = a.m.get(o, {});
                 return i.__assign({
                     lastUsedFollowerDurations: {},
                     showAutoModActions: !0,
@@ -7487,18 +7484,18 @@
                     showModIcons: !1,
                     showTimestamps: !1,
                     useHighContrastColors: !1,
-                    zachModeStatus: a
+                    zachModeStatus: r
                 }, e)
             }
 
             function l(e, t) {
                 var n = s();
-                n[e] = t, r.m.set(o, n)
+                n[e] = t, a.m.set(o, n)
             }
 
             function c(e, t) {
                 var n = s();
-                n.lastUsedFollowerDurations[e] = t, r.m.set(o, n)
+                n.lastUsedFollowerDurations[e] = t, a.m.set(o, n)
             }
         },
         FAYk: function(e, t) {
@@ -7991,8 +7988,8 @@
         },
         FUtE: function(e, t, n) {
             "use strict";
-            var i, r = n("mrSG"),
-                a = n("q1tI"),
+            var i, a = n("mrSG"),
+                r = n("q1tI"),
                 o = n("9C/b"),
                 s = n("GFmA"),
                 l = n("+GjP"),
@@ -8020,16 +8017,16 @@
                             })
                         }, t
                     }
-                    return r.__extends(t, e), t.prototype.render = function() {
+                    return a.__extends(t, e), t.prototype.render = function() {
                         var e = this;
-                        return 0 === this.props.clips.length ? a.createElement("div", null, this.renderEmpty()) : a.createElement(C.Ya, {
+                        return 0 === this.props.clips.length ? r.createElement("div", null, this.renderEmpty()) : r.createElement(C.Ya, {
                             fullWidth: !0
-                        }, a.createElement(C.cc, {
+                        }, r.createElement(C.cc, {
                             gutterSize: C.ec.Small,
                             childWidth: C.dc.Large,
                             placeholderItems: 20
                         }, this.props.clips.map(function(t, n) {
-                            return a.createElement(C.Ya, {
+                            return r.createElement(C.Ya, {
                                 "data-a-target": "clips-card-" + n,
                                 margin: {
                                     bottom: 2
@@ -8038,7 +8035,7 @@
                             }, Object(d.b)() || Object(d.a)() ? e.renderClipCardForPage(t, n) : e.renderClipCardForModal(t, n))
                         })))
                     }, t.prototype.renderClipCardForModal = function(e, t) {
-                        return a.createElement(s.a, {
+                        return r.createElement(s.a, {
                             context: this.props.context,
                             title: e.title,
                             linkTo: e.url,
@@ -8072,8 +8069,7 @@
                             trackImageLatency: 0 === t
                         })
                     }, t.prototype.renderClipCardForPage = function(e, t) {
-                        return a.createElement(k.a, {
-                            videoBrowseOptions: this.props.videoBrowseOptions,
+                        return r.createElement(k.a, {
                             context: this.props.context,
                             key: "video-" + t,
                             tracking: {
@@ -8084,61 +8080,61 @@
                             clip: e
                         })
                     }, t.prototype.renderEmpty = function() {
-                        var e = this.props.timeRange === c.b.All ? a.createElement(C.Ya, {
+                        var e = this.props.timeRange === c.b.All ? r.createElement(C.Ya, {
                             "data-test-selector": i.CreateAClipUpsell
-                        }, a.createElement(C.W, {
+                        }, r.createElement(C.W, {
                             fontSize: C.Ca.Size4
-                        }, Object(b.d)("No Clips Found", "ClipsCards")), a.createElement(C.Ya, {
+                        }, Object(b.d)("No Clips Found", "ClipsCards")), r.createElement(C.Ya, {
                             margin: 3
                         }, Object(b.d)("<x:link>Learn how</x:link> to make and share clips of this channel", {
                             "x:link": function(e) {
-                                return a.createElement("a", {
+                                return r.createElement("a", {
                                     href: "https://help.twitch.tv/customer/portal/articles/2442508-how-to-use-clips",
                                     target: "_blank"
                                 }, e)
                             }
-                        }, "ClipsCards"))) : a.createElement(C.Ya, {
+                        }, "ClipsCards"))) : r.createElement(C.Ya, {
                             "data-test-selector": i.AllClipsUpsell
-                        }, a.createElement(C.W, {
+                        }, r.createElement(C.W, {
                             fontSize: C.Ca.Size4
-                        }, Object(b.d)("No clips were created in this time period.", "ClipsCards"), a.createElement("br", null), Object(b.d)("Check out all popular clips from this channel instead.", "ClipsCards")), a.createElement(C.Ya, {
+                        }, Object(b.d)("No clips were created in this time period.", "ClipsCards"), r.createElement("br", null), Object(b.d)("Check out all popular clips from this channel instead.", "ClipsCards")), r.createElement(C.Ya, {
                             margin: 3
-                        }, a.createElement(C.z, {
+                        }, r.createElement(C.z, {
                             type: C.F.Hollow,
                             onClick: this.props.onShowAllClipsClick
                         }, Object(b.d)("See all popular clips", "ClipCards"))));
-                        return a.createElement(C.Ya, {
+                        return r.createElement(C.Ya, {
                             fullWidth: !0
-                        }, a.createElement(C.Ja, null, a.createElement(C.P, {
+                        }, r.createElement(C.Ja, null, r.createElement(C.P, {
                             cols: 3
-                        }), a.createElement(C.P, {
+                        }), r.createElement(C.P, {
                             cols: 6
-                        }, a.createElement(C.Ya, {
+                        }, r.createElement(C.Ya, {
                             textAlign: C.Sb.Center
-                        }, e)), a.createElement(C.P, {
+                        }, e)), r.createElement(C.P, {
                             cols: 3
                         })))
                     }, t
-                }(a.Component),
+                }(r.Component),
                 S = Object(v.b)("ClipCards", {
                     autoReportInteractive: !0
                 })(y);
             var E, N = Object(u.connect)(null, function(e, t) {
                     return Object.assign(Object(p.bindActionCreators)({
                         onCardClick: function(e, n, i) {
-                            var r = t.context === s.b.SingleChannelList ? g.b.Channel : g.b.Game;
+                            var a = t.context === s.b.SingleChannelList ? g.b.Channel : g.b.Game;
                             return Object(m.d)(h.a, {
                                 clip: e,
                                 clipIndex: n,
                                 getClips: i,
                                 loadMoreClips: t.loadMoreClips,
-                                pageType: r
+                                pageType: a
                             })
                         }
                     }, e), t)
                 })(S),
-                w = n("L4bB"),
-                _ = n("0Rl0"),
+                _ = n("L4bB"),
+                w = n("0Rl0"),
                 O = n("cERj"),
                 M = n("mHR/");
             ! function(e) {
@@ -8152,31 +8148,30 @@
                             t.props.history.push(Object(l.d)(t.props.location, n))
                         }, t
                     }
-                    return r.__extends(t, e), t.prototype.render = function() {
+                    return a.__extends(t, e), t.prototype.render = function() {
                         var e, t = this.props.channelLogin;
                         if (this.props.isLoading) {
-                            for (var n = [], i = 0; i < 20; i++) n.push(a.createElement(_.a, {
+                            for (var n = [], i = 0; i < 20; i++) n.push(r.createElement(w.a, {
                                 key: i
                             }));
-                            e = a.createElement(C.cc, {
+                            e = r.createElement(C.cc, {
                                 gutterSize: C.ec.Small,
                                 childWidth: C.dc.Large,
                                 placeholderItems: 20
                             }, n)
-                        } else e = a.createElement(N, {
-                            videoBrowseOptions: this.props.videoBrowseOptions,
+                        } else e = r.createElement(N, {
                             clips: this.props.clips || [],
                             context: t ? s.b.SingleChannelList : s.b.SingleGameList,
                             loadMoreClips: this.props.loadMoreClips,
                             onShowAllClipsClick: this.showAllClipsHandler,
                             timeRange: this.props.timeRange
                         });
-                        var r = null;
+                        var a = null;
                         if (!Object(M.a)(this.props.match.path)) {
                             var o = null;
-                            t && Object(d.b)() && (o = a.createElement(O.a, {
+                            t && Object(d.b)() && (o = r.createElement(O.a, {
                                 channelLogin: t
-                            })), Object(d.a)() || (r = a.createElement(C.Ya, {
+                            })), Object(d.a)() || (a = r.createElement(C.Ya, {
                                 "data-test-selector": E.Filters,
                                 display: C.X.Flex,
                                 flexDirection: C.Aa.Row,
@@ -8184,15 +8179,15 @@
                                 margin: {
                                     bottom: 2
                                 }
-                            }, o, a.createElement(w.a, {
+                            }, o, r.createElement(_.a, {
                                 hideLanguageFilter: !!t
                             })))
                         }
-                        return a.createElement(C.Ya, {
+                        return r.createElement(C.Ya, {
                             fullWidth: !0
-                        }, r, a.createElement("div", null, e))
+                        }, a, r.createElement("div", null, e))
                     }, t
-                }(a.Component),
+                }(r.Component),
                 I = Object(o.a)(D);
             n.d(t, !1, function() {
                 return E
@@ -8208,8 +8203,8 @@
         GFmA: function(e, t, n) {
             "use strict";
             var i = n("mrSG"),
-                r = n("q1tI"),
-                a = n("/7QA"),
+                a = n("q1tI"),
+                r = n("/7QA"),
                 o = n("5zf8"),
                 s = n("Ue10"),
                 l = (n("Fj9y"), function(e) {
@@ -8224,28 +8219,28 @@
                             src: this.props.gameChange.thumbnailUrl,
                             alt: this.props.gameChange.label
                         };
-                        return r.createElement(s.Ya, {
+                        return a.createElement(s.Ya, {
                             className: "preview-card-game-balloon-row",
                             display: s.X.Flex,
                             flexWrap: s.Ba.NoWrap
-                        }, r.createElement(s.Va, {
+                        }, a.createElement(s.Va, {
                             linkTo: this.props.gameChange.linkTo,
                             onClick: this.onBalloonItemClick
-                        }, r.createElement(s.Ya, {
+                        }, a.createElement(s.Ya, {
                             display: s.X.Flex,
                             flexDirection: s.Aa.Row,
                             padding: .5
-                        }, r.createElement(s.Fb, {
+                        }, a.createElement(s.Fb, {
                             className: "preview-card-game-balloon-row__image-wrapper",
                             flexGrow: 0,
                             flexShrink: 0,
                             borderRadius: s.x.Small,
                             overflow: s.db.Hidden,
                             position: s.kb.Relative
-                        }, r.createElement(s.o, {
+                        }, a.createElement(s.o, {
                             align: s.d.Center,
                             ratio: s.p.BoxArt
-                        }, r.createElement(s.S, i.__assign({}, e))), r.createElement(s.Fb, {
+                        }, a.createElement(s.S, i.__assign({}, e))), a.createElement(s.Fb, {
                             className: "preview-card-game-balloon-row__image-play-overlay",
                             alignItems: s.f.Center,
                             background: s.r.Overlay,
@@ -8257,10 +8252,10 @@
                             attachBottom: !0,
                             attachLeft: !0,
                             attachRight: !0
-                        }, r.createElement(s.tb, {
+                        }, a.createElement(s.tb, {
                             asset: s.ub.Play,
                             type: s.vb.Inherit
-                        }))), r.createElement(s.Ya, {
+                        }))), a.createElement(s.Ya, {
                             display: s.X.Flex,
                             flexDirection: s.Aa.Column,
                             flexGrow: 1,
@@ -8269,13 +8264,13 @@
                                 left: 1,
                                 top: 1
                             }
-                        }, r.createElement(s.Ya, {
+                        }, a.createElement(s.Ya, {
                             className: "preview-card-game-balloon-row__info-label"
-                        }, r.createElement(s.W, null, this.props.gameChange.label)), r.createElement(s.Ya, {
+                        }, a.createElement(s.W, null, this.props.gameChange.label)), a.createElement(s.Ya, {
                             className: "preview-card-game-balloon-row__info-duration"
-                        }, r.createElement(s.W, null, Object(o.b)(this.props.gameChange.duration)))))))
+                        }, a.createElement(s.W, null, Object(o.b)(this.props.gameChange.duration)))))))
                     }, t
-                }(r.Component)),
+                }(a.Component)),
                 c = n("0INk"),
                 d = n("8/mp"),
                 u = n("eJ65"),
@@ -8294,52 +8289,52 @@
                             Object(c.a)(e)
                         }
                     }, t.prototype.render = function() {
-                        return r.createElement(s.Ya, {
+                        return a.createElement(s.Ya, {
                             className: "preview-card-game-balloon",
                             display: s.X.InlineBlock,
                             position: s.kb.Relative,
                             margin: {
                                 top: .5
                             }
-                        }, r.createElement(u.a, {
+                        }, a.createElement(u.a, {
                             key: "game-balloon",
                             display: s.X.Inline,
                             onToggle: this.onBalloonToggle,
                             hideBalloonOnInsideClick: !0
-                        }, r.createElement(s.z, {
+                        }, a.createElement(s.z, {
                             type: s.F.Hollow,
                             icon: s.ub.ViewerList
-                        }, r.createElement(s.Ya, {
+                        }, a.createElement(s.Ya, {
                             display: s.X.Flex,
                             flexDirection: s.Aa.Row
-                        }, r.createElement(s.W, null, Object(a.d)("Chapters", "PreviewCardGameBalloon")), r.createElement(s.Ya, {
+                        }, a.createElement(s.W, null, Object(r.d)("Chapters", "PreviewCardGameBalloon")), a.createElement(s.Ya, {
                             margin: {
                                 left: 1
                             }
-                        }, r.createElement(s.hb, {
+                        }, a.createElement(s.hb, {
                             label: this.props.videoGameChanges.length.toString()
-                        })))), r.createElement(s.u, {
+                        })))), a.createElement(s.u, {
                             direction: s.v.TopLeft,
                             size: s.w.Medium
-                        }, r.createElement(s.Ya, {
+                        }, a.createElement(s.Ya, {
                             overflow: s.db.Hidden,
                             display: s.X.Flex,
                             flexDirection: s.Aa.Column,
                             flexWrap: s.Ba.NoWrap
-                        }, r.createElement(s.Ya, {
+                        }, a.createElement(s.Ya, {
                             padding: .5,
                             flexShrink: 0,
                             flexGrow: 0
-                        }, r.createElement(s.W, {
+                        }, a.createElement(s.W, {
                             color: s.O.Alt2
-                        }, Object(a.d)("Chapter Select", "PreviewCardGameBalloon"))), r.createElement(s.Ya, {
+                        }, Object(r.d)("Chapter Select", "PreviewCardGameBalloon"))), a.createElement(s.Ya, {
                             className: "preview-card-game-balloon__content",
                             display: s.X.Flex,
                             flexDirection: s.Aa.Column,
                             flexGrow: 1,
                             flexShrink: 1,
                             flexWrap: s.Ba.NoWrap
-                        }, r.createElement(d.b, null, r.createElement(s.Ya, {
+                        }, a.createElement(d.b, null, a.createElement(s.Ya, {
                             display: s.X.Flex,
                             flexDirection: s.Aa.Column,
                             flexWrap: s.Ba.NoWrap,
@@ -8348,7 +8343,7 @@
                     }, t.prototype.renderAdditionalGameList = function(e) {
                         var t = this;
                         return e.map(function(e, n) {
-                            return r.createElement(l, {
+                            return a.createElement(l, {
                                 index: n,
                                 gameChange: e,
                                 key: e.offset,
@@ -8356,17 +8351,17 @@
                             })
                         })
                     }, t
-                }(r.Component)),
+                }(a.Component)),
                 m = n("kduP"),
                 h = n("2xye"),
                 g = function(e) {
-                    return r.createElement(s.Ya, null, r.createElement(s.W, {
+                    return a.createElement(s.Ya, null, a.createElement(s.W, {
                         color: s.O.Alt,
                         ellipsis: !0
                     }, e.videoGameChanges.map(function(t, n, i) {
-                        return r.createElement(s.Qa, {
+                        return a.createElement(s.Qa, {
                             key: n
-                        }, r.createElement(s.U, {
+                        }, a.createElement(s.U, {
                             to: {
                                 pathname: Object(m.c)(t.label),
                                 state: {
@@ -8383,15 +8378,15 @@
                 },
                 b = n("N0BP"),
                 v = (n("XA5B"), function(e) {
-                    var t = r.createElement(s.Fb, {
+                    var t = a.createElement(s.Fb, {
                         className: "preview-card-iconic-image__wrapper",
                         borderRadius: s.x.Small,
                         overflow: s.db.Hidden
-                    }, r.createElement(s.o, {
+                    }, a.createElement(s.o, {
                         ratio: e.aspect || s.p.BoxArt,
                         align: s.d.Center
-                    }, r.createElement(s.S, i.__assign({}, e.imageProps))));
-                    return e.linkTo && (t = r.createElement(s.U, i.__assign({}, Object(b.a)(e), {
+                    }, a.createElement(s.S, i.__assign({}, e.imageProps))));
+                    return e.linkTo && (t = a.createElement(s.U, i.__assign({}, Object(b.a)(e), {
                         to: e.linkTo,
                         onClick: e.onClick
                     }), t)), t
@@ -8403,7 +8398,7 @@
                         "preview-card-top-bar--gray": !e.selected,
                         "preview-card-top-bar--green": e.selected
                     });
-                    return r.createElement(s.Ya, {
+                    return a.createElement(s.Ya, {
                         display: s.X.Flex,
                         padding: {
                             x: 1,
@@ -8412,16 +8407,16 @@
                         justifyContent: s.Xa.Between,
                         alignItems: s.f.Center,
                         className: t
-                    }, r.createElement(s.Ya, {
+                    }, a.createElement(s.Ya, {
                         display: s.X.InlineFlex
-                    }, r.createElement(s.W, {
+                    }, a.createElement(s.W, {
                         "data-test-selector": "top-bar-title-selector",
                         color: s.O.Overlay,
                         bold: !0,
                         transform: s.Vb.Uppercase
-                    }, e.title)), e.subTitle && r.createElement(s.Ya, {
+                    }, e.title)), e.subTitle && a.createElement(s.Ya, {
                         display: s.X.InlineFlex
-                    }, r.createElement(s.W, {
+                    }, a.createElement(s.W, {
                         "data-test-selector": "top-bar-sub-title-selector",
                         color: s.O.Overlay
                     }, e.subTitle)))
@@ -8429,48 +8424,48 @@
                 S = (n("m493"), function(e) {
                     var t = .5,
                         n = null;
-                    "number" == typeof e.progressBarPercent && e.progressBarPercent > 0 && (n = r.createElement(s.Ya, {
+                    "number" == typeof e.progressBarPercent && e.progressBarPercent > 0 && (n = a.createElement(s.Ya, {
                         position: s.kb.Absolute,
                         attachBottom: !0,
                         fullWidth: !0
-                    }, r.createElement(s.nb, {
+                    }, a.createElement(s.nb, {
                         borderRadius: s.x.None,
                         size: s.pb.Small,
                         value: e.progressBarPercent,
                         mask: !0
                     })), t = 1);
-                    var a = 1,
+                    var r = 1,
                         o = null;
-                    return e.topBar && (o = r.createElement(s.Ya, {
+                    return e.topBar && (o = a.createElement(s.Ya, {
                         position: s.kb.Absolute,
                         attachTop: !0,
                         fullWidth: !0
-                    }, r.createElement(y, i.__assign({}, e.topBar))), a = 3), r.createElement(s.Ya, {
+                    }, a.createElement(y, i.__assign({}, e.topBar))), r = 3), a.createElement(s.Ya, {
                         position: s.kb.Absolute,
                         attachTop: !0,
                         attachLeft: !0,
                         fullWidth: !0,
                         fullHeight: !0,
                         className: "preview-card-overlay"
-                    }, o, n, r.createElement(s.Ya, {
+                    }, o, n, a.createElement(s.Ya, {
                         position: s.kb.Absolute,
                         attachTop: !0,
                         attachLeft: !0,
                         margin: e.topBar ? {
                             x: 1,
-                            y: a
+                            y: r
                         } : 1,
                         "data-test-selector": "top-left-selector"
-                    }, e.topLeft), r.createElement(s.Ya, {
+                    }, e.topLeft), a.createElement(s.Ya, {
                         position: s.kb.Absolute,
                         attachTop: !0,
                         attachRight: !0,
                         margin: e.topBar ? {
                             x: 1,
-                            y: a
+                            y: r
                         } : 1,
                         "data-test-selector": "top-right-selector"
-                    }, e.topRight), r.createElement(s.Ya, {
+                    }, e.topRight), a.createElement(s.Ya, {
                         position: s.kb.Absolute,
                         attachBottom: !0,
                         attachLeft: !0,
@@ -8479,7 +8474,7 @@
                             y: t
                         },
                         "data-test-selector": "bottom-left-selector"
-                    }, e.bottomLeft), r.createElement(s.Ya, {
+                    }, e.bottomLeft), a.createElement(s.Ya, {
                         position: s.kb.Absolute,
                         attachBottom: !0,
                         attachRight: !0,
@@ -8491,17 +8486,17 @@
                     }, e.bottomRight))
                 }),
                 E = (n("kF1+"), function(e) {
-                    var t = e.icon && r.createElement(s.Ya, {
+                    var t = e.icon && a.createElement(s.Ya, {
                         display: s.X.Flex,
                         margin: {
                             right: .5
                         }
-                    }, r.createElement(s.tb, {
+                    }, a.createElement(s.tb, {
                         asset: e.icon,
                         width: 10,
                         height: 10
                     }));
-                    return e.withBackground ? r.createElement(s.Fb, {
+                    return e.withBackground ? a.createElement(s.Fb, {
                         alignItems: s.f.Center,
                         background: s.r.Overlay,
                         borderRadius: s.x.Small,
@@ -8510,17 +8505,17 @@
                         display: s.X.Flex,
                         fontSize: s.Ca.Size6,
                         justifyContent: s.Xa.Center
-                    }, t, r.createElement(s.W, null, e.value)) : r.createElement(s.Fb, {
+                    }, t, a.createElement(s.W, null, e.value)) : a.createElement(s.Fb, {
                         className: "preview-card-stat",
                         color: s.O.Overlay,
                         display: s.X.Flex,
                         padding: {
                             x: .5
                         }
-                    }, t, r.createElement(s.W, null, e.value))
+                    }, t, a.createElement(s.W, null, e.value))
                 }),
                 N = n("GnwI"),
-                w = (n("B3R5"), function(e) {
+                _ = (n("B3R5"), function(e) {
                     function t() {
                         var t = null !== e && e.apply(this, arguments) || this;
                         return t.state = {
@@ -8558,60 +8553,60 @@
                             onMouseLeave: this.handleBlur,
                             onFocus: this.handleFocus,
                             onBlur: this.handleBlur
-                        }), r.createElement("div", i.__assign({}, e, {
+                        }), a.createElement("div", i.__assign({}, e, {
                             onClick: this.props.onClick
-                        }), r.createElement(s.Fb, {
+                        }), a.createElement(s.Fb, {
                             background: s.r.Alt2,
                             overflow: s.db.Hidden
-                        }, r.createElement(s.o, {
+                        }, a.createElement(s.o, {
                             ratio: this.props.aspectRatio
                         }, this.renderImage())))
                     }, t.prototype.renderImage = function() {
                         var e, t = !(!this.props.animatedImageProps || !this.state.isHovered || this.state.didAnimatedPreviewFailToLoad),
                             n = C("preview-card-thumbnail__image", ((e = {})["preview-card-thumbnail__image--animated"] = this.state.isHovered && this.state.didAnimatedPreviewLoad, e));
-                        return t && void 0 !== this.props.animatedImageProps ? r.createElement("div", {
+                        return t && void 0 !== this.props.animatedImageProps ? a.createElement("div", {
                             className: n
-                        }, r.createElement(s.S, i.__assign({}, this.props.animatedImageProps, {
+                        }, a.createElement(s.S, i.__assign({}, this.props.animatedImageProps, {
                             onLoad: this.onAnimatedImageLoad,
                             onError: this.onAnimatedImageLoadError,
                             "data-test-selector": "preview-card-thumbnail__image-selector"
-                        }))) : r.createElement("div", {
+                        }))) : a.createElement("div", {
                             className: n
-                        }, r.createElement(s.S, i.__assign({}, this.props.staticImageProps, {
+                        }, a.createElement(s.S, i.__assign({}, this.props.staticImageProps, {
                             onLoad: this.onImageLoad,
                             onError: this.onImageError,
                             "data-test-selector": "preview-card-thumbnail__image-selector"
                         })))
                     }, t
-                }(r.Component)),
-                _ = Object(N.b)("PreviewCardThumbnail")(w),
+                }(a.Component)),
+                w = Object(N.b)("PreviewCardThumbnail")(_),
                 O = (n("80G/"), function(e) {
                     var t = null;
                     return e.subtitles && e.subtitles.length > 0 && (t = e.subtitles.map(function(e, t) {
-                        return r.createElement(s.Ya, {
+                        return a.createElement(s.Ya, {
                             key: t,
                             "data-test-selector": "preview-card-titles__subtitle"
-                        }, r.createElement(s.W, {
+                        }, a.createElement(s.W, {
                             color: s.O.Alt,
                             ellipsis: !0
-                        }, "string" == typeof e ? e : r.createElement(s.U, {
+                        }, "string" == typeof e ? e : a.createElement(s.U, {
                             "data-a-target": e.automationSelector,
                             to: e.linkTo,
                             onClick: e.onClick,
                             type: s.V.Inherit
                         }, e.text)))
-                    })), r.createElement("div", null, r.createElement(s.U, i.__assign({}, Object(b.a)(e), {
+                    })), a.createElement("div", null, a.createElement(s.U, i.__assign({}, Object(b.a)(e), {
                         to: e.linkTo,
                         onClick: e.onClick,
                         type: s.V.Inherit,
                         "data-test-selector": "preview-card-titles__primary-link"
-                    }), r.createElement(s.W, {
+                    }), a.createElement(s.W, {
                         type: s.Wb.H3,
                         fontSize: s.Ca.Size5,
                         lines: 1,
                         bold: !0,
                         ellipsis: !0
-                    }, e.title)), r.createElement(s.Ya, {
+                    }, e.title)), a.createElement(s.Ya, {
                         className: "preview-card-titles__subtitle-wrapper"
                     }, t))
                 }),
@@ -8620,21 +8615,21 @@
                 I = n("QVaV"),
                 T = n("hyVY"),
                 R = n("MXoD"),
-                A = n("0LAi");
+                L = n("0LAi");
             ! function(e) {
                 e.LockSelector = "video-lock", e.UpsellSelector = "upsell"
             }(k || (k = {}));
-            var L, j, B = function(e) {
+            var j, A, U = function(e) {
                 function t() {
                     return null !== e && e.apply(this, arguments) || this
                 }
                 return i.__extends(t, e), t.prototype.render = function() {
                     if (!this.props.restriction || !this.props.restriction.productName || !this.props.restriction.title) return null;
-                    var e = Object(a.d)("Get It Now", "VideoPreviewCardRestriction"),
+                    var e = Object(r.d)("Get It Now", "VideoPreviewCardRestriction"),
                         t = this.props.restriction.canViewRestricted,
-                        n = t ? Object(a.d)("unlocked", "VideoPreviewCardRestriction") : Object(a.d)("locked", "VideoPreviewCardRestriction"),
+                        n = t ? Object(r.d)("unlocked", "VideoPreviewCardRestriction") : Object(r.d)("locked", "VideoPreviewCardRestriction"),
                         i = t ? s.ub.Unlock : s.ub.Lock;
-                    return r.createElement(s.Ya, null, !t && r.createElement(s.Fb, {
+                    return a.createElement(s.Ya, null, !t && a.createElement(s.Fb, {
                         background: s.r.Overlay,
                         className: "video-preview-card-restriction",
                         color: s.O.Overlay,
@@ -8655,24 +8650,24 @@
                         flexWrap: s.Ba.Wrap,
                         justifyContent: s.Xa.Center,
                         "data-test-selector": k.LockSelector
-                    }, r.createElement(s.Qa, {
+                    }, a.createElement(s.Qa, {
                         margin: {
                             bottom: 1
                         }
-                    }, r.createElement(s.W, {
+                    }, a.createElement(s.W, {
                         color: s.O.Overlay,
                         fontSize: s.Ca.Size5,
                         "data-test-selector": k.UpsellSelector
-                    }, Object(a.d)("View with {title}", {
+                    }, Object(r.d)("View with {title}", {
                         title: this.props.restriction.title
-                    }, "VideoPreviewCardRestriction"))), r.createElement(s.Ya, null, r.createElement(s.z, {
+                    }, "VideoPreviewCardRestriction"))), a.createElement(s.Ya, null, a.createElement(s.z, {
                         type: s.F.Hollow,
                         ariaLabel: e,
                         targetBlank: !0,
                         disabled: "" === this.props.restriction.upsellLinkTo,
                         linkTo: this.props.restriction.upsellLinkTo,
                         overlay: !0
-                    }, e))), r.createElement(s.Fb, {
+                    }, e))), a.createElement(s.Fb, {
                         display: s.X.InlineFlex,
                         position: s.kb.Absolute,
                         attachTop: this.props.attachTop,
@@ -8684,32 +8679,32 @@
                         background: s.r.Overlay,
                         borderRadius: s.x.Medium,
                         color: s.O.Overlay
-                    }, r.createElement(s.Zb, {
+                    }, a.createElement(s.Zb, {
                         direction: this.props.attachTop ? s.bc.Bottom : s.bc.Top,
                         align: s.ac.Right,
                         label: n
-                    }, r.createElement(s.tb, {
+                    }, a.createElement(s.tb, {
                         asset: i,
                         height: 20,
                         width: 20
                     }))))
                 }, t
-            }(r.PureComponent);
+            }(a.PureComponent);
             n("5NSO");
 
-            function U(e) {
+            function B(e) {
                 return void 0 !== e.watchedProgressPercent
             }
 
-            function x(e) {
+            function F(e) {
                 return void 0 !== e.clipCreatedByChannelLogin
             }! function(e) {
                 e.Avatar = "preview-card-avatar", e.BoxArt = "preview-card-box-art"
-            }(L || (L = {})),
+            }(j || (j = {})),
             function(e) {
                 e[e.SingleGameList = 1] = "SingleGameList", e[e.SingleChannelList = 2] = "SingleChannelList", e[e.MixedGameAndChannelList = 3] = "MixedGameAndChannelList"
-            }(j || (j = {}));
-            var F = function(e) {
+            }(A || (A = {}));
+            var x = function(e) {
                     function t() {
                         var t = null !== e && e.apply(this, arguments) || this;
                         return t.getTrackingContext = function(e) {
@@ -8721,116 +8716,116 @@
                         }, t
                     }
                     return i.__extends(t, e), t.prototype.render = function() {
-                        return r.createElement("div", i.__assign({
+                        return a.createElement("div", i.__assign({
                             className: "preview-card"
-                        }, Object(b.a)(this.props)), r.createElement(s.Fb, {
+                        }, Object(b.a)(this.props)), a.createElement(s.Fb, {
                             position: s.kb.Relative,
                             borderRadius: s.x.Medium,
                             overflow: s.db.Hidden
-                        }, this.renderVODRestrictionOverlay(), r.createElement(s.U, {
+                        }, this.renderVODRestrictionOverlay(), a.createElement(s.U, {
                             to: Object(R.a)(this.getTrackingContext(h.PageviewContent.VideoThumbnail), this.props.linkTo),
                             onClick: this.props.onThumbnailClick || this.props.onClick,
                             "data-a-target": "preview-card-image-link"
-                        }, this.props.thumbnailImageProps && r.createElement(_, {
+                        }, this.props.thumbnailImageProps && a.createElement(w, {
                             staticImageProps: this.props.thumbnailImageProps,
-                            animatedImageProps: U(this.props) && this.props.animatedImageProps || void 0,
+                            animatedImageProps: B(this.props) && this.props.animatedImageProps || void 0,
                             trackImageLatency: this.props.trackImageLatency
-                        }), this.renderOverlay())), r.createElement(s.Ya, {
+                        }), this.renderOverlay())), a.createElement(s.Ya, {
                             display: s.X.Flex,
                             flexWrap: s.Ba.NoWrap,
                             margin: {
                                 top: 1
                             }
-                        }, r.createElement(s.Ya, {
+                        }, a.createElement(s.Ya, {
                             flexGrow: 0,
                             flexShrink: 0
-                        }, this.renderIconicImage()), r.createElement(s.Ya, {
+                        }, this.renderIconicImage()), a.createElement(s.Ya, {
                             className: "preview-card__titles-wrapper",
                             flexGrow: 1,
                             flexShrink: 1,
                             fullWidth: !0
-                        }, this.renderTitles(), this.renderTags()), this.props.contextualCardActionProps && r.createElement(s.Ya, {
+                        }, this.renderTitles(), this.renderTags()), this.props.contextualCardActionProps && a.createElement(s.Ya, {
                             flexGrow: 0,
                             flexShrink: 0
-                        }, r.createElement(this.props.contextualCardActionProps.component, i.__assign({}, this.props.contextualCardActionProps.props)))))
+                        }, a.createElement(this.props.contextualCardActionProps.component, i.__assign({}, this.props.contextualCardActionProps.props)))))
                     }, t.prototype.renderOverlay = function() {
                         return function(e) {
                             return void 0 !== e.streamType
-                        }(this.props) ? r.createElement(S, {
-                            topLeft: r.createElement(D.a, {
+                        }(this.props) ? a.createElement(S, {
+                            topLeft: a.createElement(D.a, {
                                 type: this.props.streamType,
                                 hosting: !!this.props.hostedByChannelLogin
                             }),
                             topRight: void 0,
-                            bottomLeft: r.createElement(E, {
-                                value: Object(a.d)("{viewerCount, plural, one {# viewer} other {# viewers}}", {
+                            bottomLeft: a.createElement(E, {
+                                value: Object(r.d)("{viewerCount, plural, one {# viewer} other {# viewers}}", {
                                     viewerCount: this.props.currentViewerCount
                                 }, "VideoPreviewCard")
                             }),
                             bottomRight: void 0
-                        }) : U(this.props) ? r.createElement(S, {
-                            topLeft: void 0 !== this.props.durationInSeconds && r.createElement(E, {
+                        }) : B(this.props) ? a.createElement(S, {
+                            topLeft: void 0 !== this.props.durationInSeconds && a.createElement(E, {
                                 value: Object(T.b)(this.props.durationInSeconds),
                                 icon: s.ub.Play,
                                 withBackground: !0
                             }),
-                            topRight: this.props.listPosition && r.createElement(E, {
+                            topRight: this.props.listPosition && a.createElement(E, {
                                 withBackground: !0,
                                 value: this.getListPositionLabel()
                             }),
-                            bottomLeft: r.createElement(E, {
+                            bottomLeft: a.createElement(E, {
                                 value: this.getViewCountLabel()
                             }),
-                            bottomRight: this.props.datePublished ? r.createElement(E, {
-                                value: Object(a.c)(new Date(this.props.datePublished), "medium")
+                            bottomRight: this.props.datePublished ? a.createElement(E, {
+                                value: Object(r.c)(new Date(this.props.datePublished), "medium")
                             }) : null,
                             progressBarPercent: this.props.watchedProgressPercent,
                             topBar: this.props.topBar
-                        }) : x(this.props) ? r.createElement(S, {
-                            topLeft: r.createElement(E, {
+                        }) : F(this.props) ? a.createElement(S, {
+                            topLeft: a.createElement(E, {
                                 value: Object(T.b)(this.props.durationInSeconds),
                                 icon: s.ub.Clip,
                                 withBackground: !0
                             }),
                             topRight: void 0,
-                            bottomLeft: r.createElement(E, {
+                            bottomLeft: a.createElement(E, {
                                 value: this.getViewCountLabel()
                             }),
-                            bottomRight: this.props.datePublished ? r.createElement(E, {
-                                value: Object(a.c)(new Date(this.props.datePublished), "medium")
+                            bottomRight: this.props.datePublished ? a.createElement(E, {
+                                value: Object(r.c)(new Date(this.props.datePublished), "medium")
                             }) : null
                         }) : void 0
                     }, t.prototype.getListPositionLabel = function() {
-                        return U(this.props) && this.props.listPosition ? Object(a.d)("{totalVideos, plural, one {{position} / # video} other {{position} / # videos}}", {
+                        return B(this.props) && this.props.listPosition ? Object(r.d)("{totalVideos, plural, one {{position} / # video} other {{position} / # videos}}", {
                             position: this.props.listPosition.position,
                             totalVideos: this.props.listPosition.totalVideos
                         }, "VideoPreviewCard") : ""
                     }, t.prototype.getViewCountLabel = function() {
-                        return U(this.props) || x(this.props) ? Object(a.d)("{viewerCount, plural, one {# view} other {# views}}", {
+                        return B(this.props) || F(this.props) ? Object(r.d)("{viewerCount, plural, one {# view} other {# views}}", {
                             viewerCount: this.props.viewCount
                         }, "VideoPreviewCard") : ""
                     }, t.prototype.renderIconicImage = function() {
-                        return this.props.context === j.SingleChannelList && this.props.gameBoxArtImageProps && this.props.gameBoxArtImageProps.src && this.props.gameTitleLinkTo ? r.createElement(s.Ya, {
+                        return this.props.context === A.SingleChannelList && this.props.gameBoxArtImageProps && this.props.gameBoxArtImageProps.src && this.props.gameTitleLinkTo ? a.createElement(s.Ya, {
                             margin: {
                                 right: 1
                             }
-                        }, r.createElement(v, {
+                        }, a.createElement(v, {
                             imageProps: this.props.gameBoxArtImageProps,
                             linkTo: Object(R.a)(this.getTrackingContext(h.PageviewContent.GameBoxart), this.props.gameTitleLinkTo),
                             onClick: this.props.onGameTitleClick,
                             aspect: s.p.BoxArt,
-                            "data-test-selector": L.BoxArt,
+                            "data-test-selector": j.BoxArt,
                             "data-a-target": "preview-card-boxart-link"
-                        })) : (this.props.context === j.SingleGameList || this.props.context === j.MixedGameAndChannelList) && this.props.channelImageProps && this.props.channelImageProps.src ? r.createElement(s.Ya, {
+                        })) : (this.props.context === A.SingleGameList || this.props.context === A.MixedGameAndChannelList) && this.props.channelImageProps && this.props.channelImageProps.src ? a.createElement(s.Ya, {
                             margin: {
                                 right: 1
                             }
-                        }, r.createElement(v, {
+                        }, a.createElement(v, {
                             imageProps: this.props.channelImageProps,
                             linkTo: Object(R.a)(this.getTrackingContext(h.PageviewContent.UserThumbnail), this.props.channelLinkTo),
                             onClick: this.props.onChannelImageClick || this.props.onChannelLoginClick,
                             aspect: s.p.Aspect1x1,
-                            "data-test-selector": L.Avatar
+                            "data-test-selector": j.Avatar
                         })) : void 0
                     }, t.prototype.renderTitles = function() {
                         var e = null,
@@ -8840,19 +8835,19 @@
                             linkTo: Object(R.a)(this.getTrackingContext(h.PageviewContent.ChannelMetadata), this.props.channelLinkTo),
                             onClick: this.props.onChannelLoginClick,
                             automationSelector: "preview-card-channel-link"
-                        }), x(this.props) && this.props.clipCreatedByChannelLoginLinkTo ? t.push({
-                            text: Object(a.d)("Clipped by {userName}", {
+                        }), F(this.props) && this.props.clipCreatedByChannelLoginLinkTo ? t.push({
+                            text: Object(r.d)("Clipped by {userName}", {
                                 userName: this.props.clipCreatedByChannelLogin || ""
                             }, "VideoPreviewCard"),
                             linkTo: this.props.clipCreatedByChannelLoginLinkTo,
                             onClick: this.props.onClipCreatedByChannelLoginClick,
                             automationSelector: "preview-card-clip-curator-link"
-                        }) : U(this.props) && this.props.multipleVideoGameMarkersType && this.props.videoGameChanges && this.props.videoGameChanges.length > 0 ? e = this.renderPreviewCardGameInfo(this.props.multipleVideoGameMarkersType, this.props.videoGameChanges, this.props.onVideoGameBalloonClick, this.props.onVideoGameBalloonItemClick) : this.props.context !== j.SingleGameList && this.props.gameTitle && this.props.gameTitleLinkTo && t.push({
+                        }) : B(this.props) && this.props.multipleVideoGameMarkersType && this.props.videoGameChanges && this.props.videoGameChanges.length > 0 ? e = this.renderPreviewCardGameInfo(this.props.multipleVideoGameMarkersType, this.props.videoGameChanges, this.props.onVideoGameBalloonClick, this.props.onVideoGameBalloonItemClick) : this.props.context !== A.SingleGameList && this.props.gameTitle && this.props.gameTitleLinkTo && t.push({
                             text: this.props.gameTitle,
                             linkTo: Object(R.a)(this.getTrackingContext(h.PageviewContent.GameMetadata), this.props.gameTitleLinkTo),
                             onClick: this.props.onGameTitleClick,
                             automationSelector: "preview-card-game-link"
-                        }), r.createElement(r.Fragment, null, r.createElement(O, {
+                        }), a.createElement(a.Fragment, null, a.createElement(O, {
                             title: this.props.title,
                             onClick: this.props.onVideoTitleClick || this.props.onClick,
                             linkTo: Object(R.a)(this.getTrackingContext(h.PageviewContent.VideoTitle), this.props.linkTo),
@@ -8860,30 +8855,30 @@
                             "data-a-target": "preview-card-title-link"
                         }), e)
                     }, t.prototype.renderTags = function() {
-                        return this.props.tagListProps && 0 !== this.props.tagListProps.tags.length ? r.createElement(s.Ya, {
+                        return this.props.tagListProps && 0 !== this.props.tagListProps.tags.length ? a.createElement(s.Ya, {
                             margin: {
                                 top: .5
                             }
-                        }, r.createElement(A.a, i.__assign({}, this.props.tagListProps, {
+                        }, a.createElement(L.a, i.__assign({}, this.props.tagListProps, {
                             tagNumberLimit: 3
                         }))) : null
                     }, t.prototype.renderVODRestrictionOverlay = function() {
-                        return U(this.props) && this.props.restriction && this.props.restriction.productName && this.props.restriction.title ? r.createElement(B, {
+                        return B(this.props) && this.props.restriction && this.props.restriction.productName && this.props.restriction.title ? a.createElement(U, {
                             restriction: this.props.restriction,
                             attachTop: !0
                         }) : null
                     }, t.prototype.shouldShowGameBalloon = function(e) {
-                        return !!U(e) && (!!(e.videoGameChanges && e.videoGameChanges.length > 0) && e.multipleVideoGameMarkersType === M.a.Balloon)
+                        return !!B(e) && (!!(e.videoGameChanges && e.videoGameChanges.length > 0) && e.multipleVideoGameMarkersType === M.a.Balloon)
                     }, t.prototype.renderPreviewCardGameInfo = function(e, t, n, i) {
                         switch (e) {
                             case M.a.Balloon:
-                                return r.createElement(p, {
+                                return a.createElement(p, {
                                     videoGameChanges: t,
                                     onBalloonClick: n,
                                     onBalloonItemClick: i
                                 });
                             case M.a.Inline:
-                                return r.createElement(g, {
+                                return a.createElement(g, {
                                     videoGameChanges: t,
                                     trackingContext: this.props.trackingContext
                                 });
@@ -8893,16 +8888,16 @@
                                 return e
                         }
                     }, t
-                }(r.Component),
+                }(a.Component),
                 P = Object(N.b)("PreviewCard", {
                     autoReportInteractive: !0
-                })(F);
+                })(x);
             n.d(t, !1, function() {
-                return L
-            }), n.d(t, "b", function() {
                 return j
+            }), n.d(t, "b", function() {
+                return A
             }), n.d(t, !1, function() {
-                return F
+                return x
             }), n.d(t, "a", function() {
                 return P
             })
@@ -9002,21 +8997,21 @@
                     column: 1
                 }
             };
-            var r = {};
+            var a = {};
             i.definitions = i.definitions.concat(function(e) {
                 return e.filter(function(e) {
                     if ("FragmentDefinition" !== e.kind) return !0;
                     var t = e.name.value;
-                    return !r[t] && (r[t] = !0, !0)
+                    return !a[t] && (a[t] = !0, !0)
                 })
             }(n("5Czc").definitions)), e.exports = i
         },
         GxR5: function(e, t, n) {
             "use strict";
             n.d(t, "b", function() {
-                return r
-            }), n.d(t, "a", function() {
                 return a
+            }), n.d(t, "a", function() {
+                return r
             }), n.d(t, "c", function() {
                 return o
             }), n.d(t, "d", function() {
@@ -9025,8 +9020,8 @@
                 return l
             });
             var i = n("/7QA"),
-                r = "https://passport.twitch.tv/forgot_username/new",
-                a = "https://help.twitch.tv/customer/portal/emails/new",
+                a = "https://passport.twitch.tv/forgot_username/new",
+                r = "https://help.twitch.tv/customer/portal/emails/new",
                 o = "https://help.twitch.tv/customer/portal/articles/1727973-about-site-suspensions-channel-bans-and-dmca",
                 s = "https://www.twitch.tv/p/legal/terms-of-service/";
 
@@ -9046,8 +9041,8 @@
                 return p
             });
             var i = n("mrSG"),
-                r = n("/7QA"),
-                a = n("OpME"),
+                a = n("/7QA"),
+                r = n("OpME"),
                 o = "twilight.emote_picker_history",
                 s = 24,
                 l = [{
@@ -9089,46 +9084,46 @@
                 }];
 
             function c(e) {
-                var t = r.m.get(o, {}),
+                var t = a.m.get(o, {}),
                     n = t[e.id];
                 n ? (n.uses++, n.lastUpdatedAt = Date.now()) : t[e.id] = {
                     emote: e,
                     lastUpdatedAt: Date.now(),
                     uses: 1
-                }, r.m.set(o, t)
+                }, a.m.set(o, t)
             }
 
             function d() {
-                var e = r.m.get(o, {});
+                var e = a.m.get(o, {});
                 if (!(Object.keys(e).length >= s)) {
                     for (var t = {}, n = 0; n < l.length; n++) {
-                        var a = l[n];
-                        e[a.id] || (t[a.id] = {
-                            emote: a,
+                        var r = l[n];
+                        e[r.id] || (t[r.id] = {
+                            emote: r,
                             lastUpdatedAt: n,
                             uses: 0
                         })
                     }
                     var c = i.__assign({}, t, e);
-                    r.m.set(o, c)
+                    a.m.set(o, c)
                 }
             }
 
             function u(e) {
-                var t = r.m.get(o, {}) || {},
+                var t = a.m.get(o, {}) || {},
                     n = [];
                 return Object.keys(t).forEach(function(i) {
-                    var r = t[i];
-                    void 0 !== r && void 0 !== e[r.emote.token] && n.push(r)
+                    var a = t[i];
+                    void 0 !== a && void 0 !== e[a.emote.token] && n.push(a)
                 }), n.sort(function(e, t) {
                     return e.uses > t.uses ? -1 : t.uses > e.uses ? 1 : e.lastUpdatedAt > t.lastUpdatedAt ? -1 : t.lastUpdatedAt > e.lastUpdatedAt ? 1 : 0
-                }), Object(a.b)(n.slice(0, 24).map(function(e) {
+                }), Object(r.b)(n.slice(0, 24).map(function(e) {
                     return e.emote
                 }))
             }
 
             function p() {
-                var e = r.m.get(o, {}) || {},
+                var e = a.m.get(o, {}) || {},
                     t = {};
                 return Object.keys(e).forEach(function(n) {
                     void 0 !== e[n] && (t[e[n].emote.token] = {
@@ -9145,13 +9140,13 @@
             }), n.d(t, "b", function() {
                 return o
             });
-            var i, r = n("/7QA"),
-                a = n("D7An");
+            var i, a = n("/7QA"),
+                r = n("D7An");
             ! function(e) {
                 e.None = "None", e.Inline = "Inline", e.Balloon = "moments_with_images"
             }(i || (i = {}));
             var o = function() {
-                switch (r.p.experiments.getAssignment(a.b.Archer)) {
+                switch (a.p.experiments.getAssignment(r.b.Archer)) {
                     case "moments_with_images":
                         return i.Balloon;
                     case "inline":
@@ -9164,37 +9159,37 @@
         },
         H31v: function(e, t, n) {
             "use strict";
-            var i, r;
+            var i, a;
             n.d(t, "a", function() {
                     return i
                 }), n.d(t, "b", function() {
-                    return r
+                    return a
                 }),
                 function(e) {
                     e.Bits = "bits", e.Leaderboard = "bits-leader"
                 }(i || (i = {})),
                 function(e) {
                     e.Badge = "badge_update", e.Balance = "balance_update", e.FirstPurchase = "first_bits_purchase"
-                }(r || (r = {}))
+                }(a || (a = {}))
         },
         HGFl: function(e, t, n) {
             "use strict";
             n.d(t, "a", function() {
-                return r
-            }), n.d(t, "b", function() {
                 return a
+            }), n.d(t, "b", function() {
+                return r
             }), n.d(t, "c", function() {
                 return o
             }), n.d(t, "d", function() {
                 return s
             });
             var i = n("NAv5"),
-                r = {
+                a = {
                     RFC3399: "YYYY-MM-DDTHH:mm:ssZ",
                     timeString: "h:mma"
                 };
 
-            function a(e, t) {
+            function r(e, t) {
                 return Object(i.format)(e, t)
             }
 
@@ -9206,11 +9201,11 @@
                 var n = e.split(":");
                 if (2 !== n.length) throw new Error("invalid time string: " + e);
                 var i = parseInt(n[0], 10),
-                    r = parseInt(n[1].substring(0, 2), 10),
-                    a = n[1].substring(n[1].length - 2);
-                if (12 === i && "am" === a && (i = 0), "pm" === a && i < 12 && (i += 12), isNaN(i) || i < 0 || i > 23 || isNaN(r) || r < 0 || r > 59) throw new Error("invalid time string: " + e);
+                    a = parseInt(n[1].substring(0, 2), 10),
+                    r = n[1].substring(n[1].length - 2);
+                if (12 === i && "am" === r && (i = 0), "pm" === r && i < 12 && (i += 12), isNaN(i) || i < 0 || i > 23 || isNaN(a) || a < 0 || a > 59) throw new Error("invalid time string: " + e);
                 var o = t || new Date;
-                return o.setHours(i, r), o
+                return o.setHours(i, a), o
             }
         },
         HSqT: function(e, t, n) {
@@ -9221,7 +9216,7 @@
                 return s
             });
             var i = n("/7QA"),
-                r = [{
+                a = [{
                     code: "ar",
                     label: "العربية"
                 }, {
@@ -9304,7 +9299,7 @@
                     label: "中文"
                 }];
 
-            function a(e) {
+            function r(e) {
                 return void 0 === e && (e = !1), [{
                     code: "asl",
                     label: "American Sign Language"
@@ -9313,7 +9308,7 @@
                     label: e ? Object(i.d)("Other", "broadcaster-languages") : "Other"
                 }]
             }
-            var o = new Set(r.concat(a()).map(function(e) {
+            var o = new Set(a.concat(r()).map(function(e) {
                 return e.code
             }));
 
@@ -9322,11 +9317,11 @@
                     t = function(t) {
                         return "en" === t.code ? 0 : e && e.startsWith(t.code) ? 1 : 2
                     };
-                return r.slice().sort(function(e, n) {
+                return a.slice().sort(function(e, n) {
                     var i = t(e),
-                        r = t(n);
-                    return i !== r ? i - r : i + ":" + e.label < r + ":" + n.label ? -1 : 1
-                }).concat(a(!0))
+                        a = t(n);
+                    return i !== a ? i - a : i + ":" + e.label < a + ":" + n.label ? -1 : 1
+                }).concat(r(!0))
             }
         },
         HXcb: function(e, t, n) {
@@ -9620,12 +9615,12 @@
                     column: 1
                 }
             };
-            var r = {};
+            var a = {};
             i.definitions = i.definitions.concat(function(e) {
                 return e.filter(function(e) {
                     if ("FragmentDefinition" !== e.kind) return !0;
                     var t = e.name.value;
-                    return !r[t] && (r[t] = !0, !0)
+                    return !a[t] && (a[t] = !0, !0)
                 })
             }(n("V94A").definitions)), e.exports = i
         },
@@ -9749,14 +9744,14 @@
         IIop: function(e, t, n) {
             "use strict";
             n.d(t, "b", function() {
-                return a
+                return r
             }), n.d(t, "a", function() {
                 return o
             });
             var i = n("XIZb"),
-                r = Object(i.a)("ChatConnection"),
-                a = r.withChatServiceProvider,
-                o = (0, r.withContext)(function(e) {
+                a = Object(i.a)("ChatConnection"),
+                r = a.withChatServiceProvider,
+                o = (0, a.withContext)(function(e) {
                     return {
                         chatConnectionAPI: e.serviceAPI,
                         setChatConnectionAPI: e.setServiceAPI
@@ -9917,8 +9912,8 @@
         IRJ5: function(e, t, n) {
             "use strict";
             var i = n("mrSG"),
-                r = n("q1tI"),
-                a = n("oJmH"),
+                a = n("q1tI"),
+                r = n("oJmH"),
                 o = n("/MKj"),
                 s = n("/7QA"),
                 l = n("gcd7"),
@@ -9946,19 +9941,19 @@
                             deferred: t.props.markersData.refetch().then(function() {
                                 var n = t.props.markersData,
                                     i = n.user && n.user.stream && n.user.stream.id,
-                                    r = n.user && n.user.stream && n.user.stream.createdAt;
-                                return i ? t.createBookmarkHelper(i, e, r) : Promise.resolve({
+                                    a = n.user && n.user.stream && n.user.stream.createdAt;
+                                return i ? t.createBookmarkHelper(i, e, a) : Promise.resolve({
                                     notice: v()
                                 })
                             })
                         }
                     }, t.createBookmarkHelper = function(e, n, i) {
-                        var r = n.substring(0, g.a).trim();
+                        var a = n.substring(0, g.a).trim();
                         return t.props.createVideoBookmark({
                             variables: {
                                 input: {
                                     broadcastID: e,
-                                    description: r,
+                                    description: a,
                                     medium: t.props.isPopout ? "popout_chat" : "chat",
                                     platform: p.SpadePlatform.Web
                                 }
@@ -9991,15 +9986,15 @@
                                     }
                             }
                             var n = null === i ? null : Object(d.b)(Object(f.a)(i), d.a.ClockHMS),
-                                a = "" !== r;
+                                r = "" !== a;
                             return {
-                                notice: n && a ? Object(s.d)('Successfully added a stream marker at {time}: "{description}"', {
-                                    description: r,
+                                notice: n && r ? Object(s.d)('Successfully added a stream marker at {time}: "{description}"', {
+                                    description: a,
                                     time: n
                                 }, "BookmarkCommandHandler") : n ? Object(s.d)("Successfully added a stream marker at {time}", {
                                     time: n
-                                }, "BookmarkCommandHandler") : a ? Object(s.d)('Successfully added a stream marker: "{description}"', {
-                                    description: r
+                                }, "BookmarkCommandHandler") : r ? Object(s.d)('Successfully added a stream marker: "{description}"', {
+                                    description: a
                                 }, "BookmarkCommandHandler") : Object(s.d)("Successfully added a stream marker", "BookmarkCommandHandler")
                             }
                         }).catch(function() {
@@ -10010,13 +10005,13 @@
                     }, t
                 }
                 return i.__extends(t, e), t.prototype.render = function() {
-                    return this.props.markersData ? r.createElement(l.a, {
+                    return this.props.markersData ? a.createElement(l.a, {
                         command: "marker",
                         handler: this.bookmark
                     }) : null
                 }, t
-            }(r.Component);
-            var C = Object(a.compose)(Object(o.connect)(function(e) {
+            }(a.Component);
+            var C = Object(r.compose)(Object(o.connect)(function(e) {
                 return {
                     firstPageLoaded: e.session.firstPageLoaded
                 }
@@ -10180,29 +10175,29 @@
         JoTo: function(e, t, n) {
             "use strict";
             var i = n("mrSG"),
-                r = n("q1tI"),
-                a = n("/7QA"),
+                a = n("q1tI"),
+                r = n("/7QA"),
                 o = n("f00E"),
                 s = n("/IfK"),
                 l = function(e) {
                     function t(t) {
                         var n = e.call(this, t) || this;
                         return n.renderPortal = function(e) {
-                            s.b ? s.b.provideContent(e, n.contentID) : a.k.warn("SideNavPageInfoSection must be defined on the SideNav component to manipulate its content.")
+                            s.b ? s.b.provideContent(e, n.contentID) : r.k.warn("SideNavPageInfoSection must be defined on the SideNav component to manipulate its content.")
                         }, n.removePortal = function() {
-                            s.b ? s.b.removeContent() : a.k.warn("SideNavPageInfoSection must be defined on the SideNav component to manipulate its content.")
+                            s.b ? s.b.removeContent() : r.k.warn("SideNavPageInfoSection must be defined on the SideNav component to manipulate its content.")
                         }, n.contentID = Object(o.a)(), n
                     }
                     return i.__extends(t, e), t.prototype.componentWillReceiveProps = function(e) {
                         e.children ? this.renderPortal(e.children) : this.removePortal()
                     }, t.prototype.componentDidMount = function() {
-                        s.b || a.k.warn("SideNavPageInfoSection must be defined on the SideNav component to manipulate its content."), this.props.children && this.renderPortal(this.props.children)
+                        s.b || r.k.warn("SideNavPageInfoSection must be defined on the SideNav component to manipulate its content."), this.props.children && this.renderPortal(this.props.children)
                     }, t.prototype.componentWillUnmount = function() {
                         this.removePortal()
                     }, t.prototype.render = function() {
                         return null
                     }, t
-                }(r.Component);
+                }(a.Component);
             n.d(t, "a", function() {
                 return l
             })
@@ -10253,8 +10248,8 @@
             }), n.d(t, "l", function() {
                 return y
             });
-            var i, r = n("mrSG"),
-                a = n("XmgI"),
+            var i, a = n("mrSG"),
+                r = n("XmgI"),
                 o = n("p52R"),
                 s = n("ZtEv"),
                 l = n("a1OF"),
@@ -10276,13 +10271,13 @@
                         userType: o.a.User,
                         emotes: {}
                     },
-                    u = Object(l.a)(t, c, a.a, !1);
+                    u = Object(l.a)(t, c, r.a, !1);
                 return {
                     type: s.b.AutoMod,
                     autoModType: s.a.MessageRejectedPrompt,
                     id: d(e),
                     category: i,
-                    rejectedMessage: r.__assign({}, u, {
+                    rejectedMessage: a.__assign({}, u, {
                         type: s.b.Message,
                         messageType: s.c.Post,
                         id: e
@@ -10302,7 +10297,7 @@
                         userType: o.a.User,
                         emotes: {}
                     },
-                    p = Object(l.a)(t, u, a.a, !1);
+                    p = Object(l.a)(t, u, r.a, !1);
                 return {
                     type: s.b.AutoMod,
                     autoModType: s.a.CheerMessageRejectedPrompt,
@@ -10311,7 +10306,7 @@
                     category: i,
                     targetUserID: c,
                     originalMessage: t,
-                    rejectedMessage: r.__assign({}, p, {
+                    rejectedMessage: a.__assign({}, p, {
                         type: s.b.Message,
                         messageType: s.c.Post,
                         id: e
@@ -10377,7 +10372,7 @@
                 }
             }
 
-            function C(e, t, n, r) {
+            function C(e, t, n, a) {
                 return {
                     id: Object(c.a)("channel-moderation-action"),
                     type: s.b.ModerationAction,
@@ -10385,11 +10380,11 @@
                     level: i.Channel,
                     createdByLogin: t,
                     createdByUserID: n,
-                    args: r
+                    args: a
                 }
             }
 
-            function y(e, t, n, r, a, o, l, d, u) {
+            function y(e, t, n, a, r, o, l, d, u) {
                 return {
                     id: Object(c.a)("channel-moderation-action"),
                     type: s.b.ModerationAction,
@@ -10397,8 +10392,8 @@
                     level: i.User,
                     createdByLogin: t,
                     createdByUserID: n,
-                    targetUserID: r,
-                    targetUserLogin: a,
+                    targetUserID: a,
+                    targetUserLogin: r,
                     duration: o,
                     reason: l,
                     messageBody: d,
@@ -10408,11 +10403,10 @@
                 e[e.Channel = 0] = "Channel", e[e.User = 1] = "User"
             }(i || (i = {}))
         },
-        KO0n: function(e, t, n) {},
         KriR: function(e, t, n) {
             "use strict";
             n.d(t, "g", function() {
-                return a
+                return r
             }), n.d(t, "d", function() {
                 return u
             }), n.d(t, "f", function() {
@@ -10427,9 +10421,9 @@
                 return d
             });
             var i = n("/7QA"),
-                r = n("2xye");
+                a = n("2xye");
 
-            function a(e) {
+            function r(e) {
                 var t = {
                     channel: e.channelLogin,
                     channel_id: e.channelId,
@@ -10445,7 +10439,7 @@
                     is_anonymous: e.isAnonymous,
                     checkout_source: e.trackingContext.source
                 };
-                e.trackingContext.detail && (t.checkout_source_detail = e.trackingContext.detail), i.o.track(r.SpadeEventType.PaymentFormInteraction, t)
+                e.trackingContext.detail && (t.checkout_source_detail = e.trackingContext.detail), i.o.track(a.SpadeEventType.PaymentFormInteraction, t)
             }
             var o, s, l, c, d, u = function() {
                 function e(e) {
@@ -10466,7 +10460,7 @@
                             saved_payment_available: e.savedPaymentAvailable,
                             saved_payment_displayed: e.savedPaymentDisplayed
                         };
-                        i.o.track(r.SpadeEventType.PaymentFormDisplay, t)
+                        i.o.track(a.SpadeEventType.PaymentFormDisplay, t)
                     }(this.store))
                 }, e
             }();
@@ -10490,8 +10484,8 @@
             "use strict";
             n("7NxT");
             var i = n("oJmH"),
-                r = n("/MKj"),
-                a = n("yR8l"),
+                a = n("/MKj"),
+                r = n("yR8l"),
                 o = n("kRBY"),
                 s = n("vSeP"),
                 l = n("IIop"),
@@ -10511,8 +10505,8 @@
                 S = n("IRJ5"),
                 E = n("bhOa"),
                 N = n("D91L"),
-                w = n("PtXu"),
-                _ = n("gcd7"),
+                _ = n("PtXu"),
+                w = n("gcd7"),
                 O = n("+pBb"),
                 M = function(e) {
                     function t() {
@@ -10522,13 +10516,13 @@
                         }, t
                     }
                     return m.__extends(t, e), t.prototype.render = function() {
-                        return h.createElement(_.a, {
+                        return h.createElement(w.a, {
                             command: "rules",
                             handler: this.showChatRules
                         })
                     }, t
                 }(h.Component);
-            var D, I, T = Object(r.connect)(null, function(e) {
+            var D, I, T = Object(a.connect)(null, function(e) {
                     return Object(g.bindActionCreators)({
                         showChatRules: function() {
                             return O.P()
@@ -10536,24 +10530,24 @@
                     }, e)
                 })(M),
                 R = n("/7QA"),
-                A = n("CpU+"),
-                L = n("fKMw"),
-                j = n("DMoW"),
-                B = n("Ue10"),
-                U = n("CA5B");
+                L = n("CpU+"),
+                j = n("fKMw"),
+                A = n("DMoW"),
+                U = n("Ue10"),
+                B = n("CA5B");
             ! function(e) {
                 e.QUERY_ERROR = "QUERY_ERROR"
             }(D || (D = {})),
             function(e) {
                 e.UnVIP = "vip-command-handler_unvip", e.VIP = "vip-command-handler_vip", e.VIPs = "vip-command-handler_vips"
             }(I || (I = {}));
-            var x = function(e) {
+            var F = function(e) {
                     function t() {
                         var t = null !== e && e.apply(this, arguments) || this;
                         return t.vips = function() {
                             return {
                                 deferred: R.p.apollo.client.query({
-                                    query: U,
+                                    query: B,
                                     fetchPolicy: "network-only",
                                     variables: {
                                         id: t.props.channelID
@@ -10590,10 +10584,10 @@
                                     if (!n || !n.revokee || !n.revokee.login) return {
                                         notice: t.getUnVIPErrorMessage(D.QUERY_ERROR)
                                     };
-                                    var r = n.error,
-                                        a = r && r.code;
-                                    return a ? {
-                                        notice: t.getUnVIPErrorMessage(a, i)
+                                    var a = n.error,
+                                        r = a && a.code;
+                                    return r ? {
+                                        notice: t.getUnVIPErrorMessage(r, i)
                                     } : {
                                         notice: Object(R.d)("You have removed {login} as a VIP of this channel.", {
                                             login: i
@@ -10617,10 +10611,10 @@
                                     if (!i || !i.grantee || !i.grantee.login) return {
                                         notice: t.getVIPErrorMessage(D.QUERY_ERROR)
                                     };
-                                    var r = i.error,
-                                        a = r && r.code;
-                                    return a ? {
-                                        notice: t.getVIPErrorMessage(a, n)
+                                    var a = i.error,
+                                        r = a && a.code;
+                                    return r ? {
+                                        notice: t.getVIPErrorMessage(r, n)
                                     } : {
                                         notice: Object(R.d)("You have added {login} as a VIP of this channel.", {
                                             login: n
@@ -10639,17 +10633,17 @@
                         }, t
                     }
                     return m.__extends(t, e), t.prototype.render = function() {
-                        return h.createElement(B.Ya, {
-                            display: B.X.Hide
-                        }, h.createElement(_.a, {
+                        return h.createElement(U.Ya, {
+                            display: U.X.Hide
+                        }, h.createElement(w.a, {
                             "data-test-selector": I.UnVIP,
                             command: "unvip",
                             handler: this.unVIPUser
-                        }), h.createElement(_.a, {
+                        }), h.createElement(w.a, {
                             "data-test-selector": I.VIP,
                             command: "vip",
                             handler: this.vipUser
-                        }), h.createElement(_.a, {
+                        }), h.createElement(w.a, {
                             "data-test-selector": I.VIPs,
                             command: "vips",
                             handler: this.vips
@@ -10660,48 +10654,48 @@
                     }, t.prototype.getCommonErrorMessage = function(e, t) {
                         switch (e) {
                             default: return "";
-                            case j.B.GRANTEE_NOT_FOUND:
-                                    case j.P.REVOKEE_NOT_FOUND:
+                            case A.B.GRANTEE_NOT_FOUND:
+                                    case A.P.REVOKEE_NOT_FOUND:
                                     return Object(R.d)("Invalid username: {login}.", {
                                     login: t
                                 }, "VIPCommandHandler");
-                            case j.B.FORBIDDEN:
-                                    case j.P.FORBIDDEN:
+                            case A.B.FORBIDDEN:
+                                    case A.P.FORBIDDEN:
                                     return Object(R.d)("You don't have permission to perform that action.", "VIPCommandHandler")
                         }
                     }, t.prototype.getVIPErrorMessage = function(e, t) {
                         switch (void 0 === t && (t = ""), e) {
-                            case j.B.FORBIDDEN:
-                            case j.B.GRANTEE_NOT_FOUND:
+                            case A.B.FORBIDDEN:
+                            case A.B.GRANTEE_NOT_FOUND:
                                 return this.getCommonErrorMessage(e, t);
-                            case j.B.GRANTEE_ALREADY_VIP:
+                            case A.B.GRANTEE_ALREADY_VIP:
                                 return Object(R.d)("{login} is already a VIP of this channel.", {
                                     login: t
                                 }, "VIPCommandHandler");
-                            case j.B.GRANTEE_CHAT_BANNED:
+                            case A.B.GRANTEE_CHAT_BANNED:
                                 return Object(R.d)("{login} is banned in this channel. You must unban this user before granting VIP status.", {
                                     login: t
                                 }, "VIPCommandHandler");
-                            case j.B.MAX_VIPS_REACHED:
+                            case A.B.MAX_VIPS_REACHED:
                                 return Object(R.d)("Unable to add VIP. Visit the Achievements page on your dashboard to learn how to unlock additional VIP slots.", "VIPCommandHandler");
-                            case j.B.VIP_ACHIEVEMENT_INCOMPLETE:
+                            case A.B.VIP_ACHIEVEMENT_INCOMPLETE:
                                 return Object(R.d)("Unable to add VIP. Visit the Achievements page on your dashboard to learn how to unlock this feature.", "VIPCommandHandler");
                             case D.QUERY_ERROR:
-                            case j.B.CHANNEL_NOT_FOUND:
+                            case A.B.CHANNEL_NOT_FOUND:
                             default:
                                 return Object(R.d)("Unable to add VIP.", "VIPCommandHandler")
                         }
                     }, t.prototype.getUnVIPErrorMessage = function(e, t) {
                         switch (void 0 === t && (t = ""), e) {
-                            case j.P.FORBIDDEN:
-                            case j.P.REVOKEE_NOT_FOUND:
+                            case A.P.FORBIDDEN:
+                            case A.P.REVOKEE_NOT_FOUND:
                                 return this.getCommonErrorMessage(e, t);
-                            case j.P.REVOKEE_NOT_VIP:
+                            case A.P.REVOKEE_NOT_VIP:
                                 return Object(R.d)("{login} is not a VIP of this channel.", {
                                     login: t
                                 }, "VIPCommandHandler");
                             case D.QUERY_ERROR:
-                            case j.P.CHANNEL_NOT_FOUND:
+                            case A.P.CHANNEL_NOT_FOUND:
                             default:
                                 return Object(R.d)("Unable to remove VIP.", "VIPCommandHandler")
                         }
@@ -10709,7 +10703,7 @@
                         return Object(R.d)("There was a problem fetching the list of VIPs. Please try again.", "VIPCommandHandler")
                     }, t
                 }(h.Component),
-                F = Object(g.compose)(Object(A.a)(), Object(L.a)(), s.a)(x),
+                x = Object(g.compose)(Object(L.a)(), Object(j.a)(), s.a)(F),
                 P = n("vKai"),
                 H = function(e) {
                     function t() {
@@ -10727,53 +10721,53 @@
                             show: !0
                         })
                     }, t.prototype.render = function() {
-                        return this.state.show ? h.createElement(B.Fb, {
+                        return this.state.show ? h.createElement(U.Fb, {
                             attachTop: !0,
                             attachLeft: !0,
                             attachRight: !0,
-                            background: B.r.AccentAlt2,
-                            color: B.O.Overlay,
-                            position: B.kb.Absolute,
+                            background: U.r.AccentAlt2,
+                            color: U.O.Overlay,
+                            position: U.kb.Absolute,
                             className: "hosting-notification",
                             padding: {
                                 y: .5,
                                 left: .5
                             },
                             "data-a-target": "hosting-notification-container"
-                        }, h.createElement(B.Ya, {
-                            display: B.X.Flex,
+                        }, h.createElement(U.Ya, {
+                            display: U.X.Flex,
                             padding: 1,
-                            justifyContent: B.Xa.Between,
-                            alignItems: B.f.Center,
-                            flexWrap: B.Ba.NoWrap
-                        }, h.createElement(B.Ya, {
-                            display: B.X.Flex,
-                            flexWrap: B.Ba.NoWrap
-                        }, h.createElement(B.Ya, {
+                            justifyContent: U.Xa.Between,
+                            alignItems: U.f.Center,
+                            flexWrap: U.Ba.NoWrap
+                        }, h.createElement(U.Ya, {
+                            display: U.X.Flex,
+                            flexWrap: U.Ba.NoWrap
+                        }, h.createElement(U.Ya, {
                             margin: {
                                 right: .5
                             },
                             flexShrink: 0
-                        }, h.createElement(B.W, null, Object(R.d)("Hosting", "ChatHostingNotification"))), h.createElement(B.Ya, {
+                        }, h.createElement(U.W, null, Object(R.d)("Hosting", "ChatHostingNotification"))), h.createElement(U.Ya, {
                             ellipsis: !0,
                             flexShrink: 1,
                             margin: {
                                 right: .5
                             }
-                        }, h.createElement(B.W, {
-                            type: B.Wb.Strong,
+                        }, h.createElement(U.W, {
+                            type: U.Wb.Strong,
                             "data-test-selector": "hosting-notification__text",
                             "data-a-target": "hosting-notification-channel-name"
-                        }, "" + this.props.hostedChannelDisplayName))), h.createElement(B.Ya, {
-                            display: B.X.Flex,
-                            flexWrap: B.Ba.NoWrap,
+                        }, "" + this.props.hostedChannelDisplayName))), h.createElement(U.Ya, {
+                            display: U.X.Flex,
+                            flexWrap: U.Ba.NoWrap,
                             flexShrink: 0
-                        }, h.createElement(B.Ya, {
-                            display: B.X.Inline,
+                        }, h.createElement(U.Ya, {
+                            display: U.X.Inline,
                             padding: {
                                 right: .5
                             }
-                        }, h.createElement(B.z, {
+                        }, h.createElement(U.z, {
                             linkTo: {
                                 pathname: "/" + this.props.hostedChannelLogin,
                                 state: {
@@ -10781,14 +10775,14 @@
                                     medium: "chat_bar_notification"
                                 }
                             },
-                            size: B.D.Small,
+                            size: U.D.Small,
                             "data-a-target": "hosting-notification-gotochannel-button"
-                        }, Object(R.d)("Go to Channel", "ChatHostingNotification"))), h.createElement(B.A, {
+                        }, Object(R.d)("Go to Channel", "ChatHostingNotification"))), h.createElement(U.A, {
                             onClick: this.dismiss,
                             ariaLabel: Object(R.d)("Close", "HostingNotification"),
-                            size: B.B.Small,
+                            size: U.B.Small,
                             overlay: !0,
-                            icon: B.ub.Close,
+                            icon: U.ub.Close,
                             "data-a-target": "hosting-notification-close-button"
                         })))) : null
                     }, t
@@ -10889,7 +10883,7 @@
                         }), this.sortedChatters = t.concat(n), this.isDirty = !1
                     }, t
                 }(h.Component);
-            var q = Object(g.compose)(Object(r.connect)(function(e) {
+            var q = Object(g.compose)(Object(a.connect)(function(e) {
                     var t = Object(o.e)(e);
                     return {
                         currentUserLogin: t && t.login
@@ -10901,8 +10895,8 @@
             var $ = n("TApp");
             var Z = n("a1OF");
 
-            function J(e, t, n, i, r, a, o) {
-                return void 0 === a && (a = !1), void 0 === o && (o = !1), m.__assign({}, Object(Z.a)(t, n, i, r, a, o), {
+            function J(e, t, n, i, a, r, o) {
+                return void 0 === r && (r = !1), void 0 === o && (o = !1), m.__assign({}, Object(Z.a)(t, n, i, a, r, o), {
                     type: V.b.Message,
                     messageType: e,
                     id: n.id || Object(G.a)(n.username)
@@ -10912,8 +10906,8 @@
             var te = n("oK83");
             var ne = n("WytW"),
                 ie = n("oi4T"),
-                re = n("OpME"),
-                ae = function(e) {
+                ae = n("OpME"),
+                re = function(e) {
                     function t(t) {
                         var n = e.call(this, t) || this;
                         return n.hasConnected = !1, n.sendMessage = function(e) {
@@ -11093,7 +11087,7 @@
                                 massGiftCount: e.massGiftCount
                             }))
                         }, n.onBitsCharityEvent = function(e) {
-                            n.postMessageToCurrentChannel(e, function(e, t, n, i, r, a) {
+                            n.postMessageToCurrentChannel(e, function(e, t, n, i, a, r) {
                                 return {
                                     type: V.b.BitsCharity,
                                     id: Object(G.a)("charity"),
@@ -11101,8 +11095,8 @@
                                     charityName: t,
                                     daysLeft: n,
                                     hoursLeft: i,
-                                    hashtag: r,
-                                    learnMore: a
+                                    hashtag: a,
+                                    learnMore: r
                                 }
                             }(e.total, e.charityName, e.daysLeft, e.hoursLeft, e.hashtag, e.learnMore))
                         }, n.onResubscriptionEvent = function(e) {
@@ -11276,7 +11270,7 @@
                                 }
                             }(n.convertMessage(e), e.selectedCount))
                         }, n.onRewardGiftEvent = function(e) {
-                            n.postMessageToCurrentChannel(e, function(e, t, n, i, r) {
+                            n.postMessageToCurrentChannel(e, function(e, t, n, i, a) {
                                 return {
                                     type: V.b.RewardGift,
                                     id: Object(G.a)("rewardGift"),
@@ -11287,7 +11281,7 @@
                                     userID: e ? e.userID : null,
                                     userLogin: e ? e.username : null,
                                     displayName: e ? e.displayName : null,
-                                    domain: r,
+                                    domain: a,
                                     sourceType: te.a.chat_message
                                 }
                             }(e.user, e.selectedCount, e.bitsAmount, e.minCheerAmount, e.domain))
@@ -11301,11 +11295,11 @@
                     }, t.prototype.componentDidMount = function() {
                         this.props.setChatConnectionAPI({
                             sendMessage: this.sendMessage
-                        }), this.shouldConnectOnMount() ? this.join(this.props.channelLogin) : this.props.latencyTracking.reportInteractive(), this.props.emoteSets && this.client.updateEmoteMap(Object(re.c)(this.props.emoteSets))
+                        }), this.shouldConnectOnMount() ? this.join(this.props.channelLogin) : this.props.latencyTracking.reportInteractive(), this.props.emoteSets && this.client.updateEmoteMap(Object(ae.c)(this.props.emoteSets))
                     }, t.prototype.componentWillUnmount = function() {
                         this.props.setChatConnectionAPI(), this.disconnect(this.props.channelLogin)
                     }, t.prototype.componentWillReceiveProps = function(e) {
-                        (e.emoteSets && e.emoteSets !== this.props.emoteSets && this.client.updateEmoteMap(Object(re.c)(e.emoteSets)), !e.shouldConnect && this.props.shouldConnect) ? this.disconnect(this.props.channelLogin): (e.authToken !== this.props.authToken || e.channelLogin !== this.props.channelLogin || e.currentUserLogin !== this.props.currentUserLogin || e.shouldConnect && !this.props.shouldConnect) && (this.logger.debug("Reconnecting..."), this.registerCustomLatencyEvents(), this.join(e.channelLogin))
+                        (e.emoteSets && e.emoteSets !== this.props.emoteSets && this.client.updateEmoteMap(Object(ae.c)(e.emoteSets)), !e.shouldConnect && this.props.shouldConnect) ? this.disconnect(this.props.channelLogin): (e.authToken !== this.props.authToken || e.channelLogin !== this.props.channelLogin || e.currentUserLogin !== this.props.currentUserLogin || e.shouldConnect && !this.props.shouldConnect) && (this.logger.debug("Reconnecting..."), this.registerCustomLatencyEvents(), this.join(e.channelLogin))
                     }, t.prototype.join = function(e) {
                         this.logger.debug("Joining channel and binding all event listeners", this.props.channelLogin), this.hasConnected = !1, this.joinedChannel && this.joinedChannel !== e && this.service.part(this.props.channelLogin), this.joinedChannel = e, this.connectHandlers(), this.service.join(e)
                     }, t.prototype.disconnect = function(e) {
@@ -11340,13 +11334,13 @@
                         })
                     }, t
                 }(h.Component);
-            var oe = Object(g.compose)(Object(r.connect)(function(e) {
+            var oe = Object(g.compose)(Object(a.connect)(function(e) {
                     var t = Object(o.e)(e);
                     return {
                         authToken: Object(o.a)(e),
                         currentUserLogin: t && t.login
                     }
-                }), Object(u.b)("ChatConnectionService"), l.a, d.a)(ae),
+                }), Object(u.b)("ChatConnectionService"), l.a, d.a)(re),
                 se = n("lw3P"),
                 le = n("nkgB"),
                 ce = n("RcPG"),
@@ -11372,13 +11366,13 @@
                                     t = !!e.message && !n.isOwnMessage(e.message);
                                     break;
                                 case V.b.Moderation:
-                                    var r = e.moderationType,
-                                        a = e.userLogin;
-                                    if (n.moderatedUsers.has(a)) return;
+                                    var a = e.moderationType,
+                                        r = e.userLogin;
+                                    if (n.moderatedUsers.has(r)) return;
                                     var o = [n.buffer, n.delayedMessageBuffer.map(function(e) {
                                         return e.event
                                     })];
-                                    if (r === V.e.Delete) {
+                                    if (a === V.e.Delete) {
                                         var s = e.targetMessageID;
                                         o.forEach(function(e) {
                                             e.some(function(e) {
@@ -11397,14 +11391,14 @@
                                         e.forEach(function(e) {
                                             switch (e.type) {
                                                 case V.b.Message:
-                                                    e.user && a === e.user.userLogin && e.messageParts && !e.deleted && (e.deleted = !0, e.banned = !0);
+                                                    e.user && r === e.user.userLogin && e.messageParts && !e.deleted && (e.deleted = !0, e.banned = !0);
                                                     break;
                                                 case V.b.Resubscription:
                                                 case V.b.Ritual:
-                                                    e.message && a === e.message.user.userLogin && !e.message.deleted && (e.message.deleted = !0, e.message.banned = !0)
+                                                    e.message && r === e.message.user.userLogin && !e.message.deleted && (e.message.deleted = !0, e.message.banned = !0)
                                             }
                                         })
-                                    }), n.moderatedUsers.add(a), setTimeout(n.unmoderateUser(a), de);
+                                    }), n.moderatedUsers.add(r), setTimeout(n.unmoderateUser(r), de);
                                     break;
                                 case V.b.Disconnected:
                                     return;
@@ -11479,12 +11473,12 @@
                             t = [],
                             n = Date.now(),
                             i = !1;
-                        this.delayedMessageBuffer.forEach(function(r) {
-                            var a = r.event,
-                                o = r.time,
-                                s = r.shouldDelay;
-                            o <= n - e.delayDuration || !s ? !e.props.shouldSeeBlockedAndDeletedMessages && e.isDeletable(a) && a.deleted || (e.buffer.push(a), i = !0) : t.push({
-                                event: a,
+                        this.delayedMessageBuffer.forEach(function(a) {
+                            var r = a.event,
+                                o = a.time,
+                                s = a.shouldDelay;
+                            o <= n - e.delayDuration || !s ? !e.props.shouldSeeBlockedAndDeletedMessages && e.isDeletable(r) && r.deleted || (e.buffer.push(r), i = !0) : t.push({
+                                event: r,
                                 time: o,
                                 shouldDelay: s
                             })
@@ -11511,14 +11505,14 @@
                         })
                     }, t
                 }(h.Component);
-            var he = Object(g.compose)(Object(r.connect)(function(e) {
+            var he = Object(g.compose)(Object(a.connect)(function(e) {
                     var t = Object(o.e)(e);
                     return {
                         authToken: Object(o.a)(e),
                         currentUserLogin: t && t.login,
                         isLoggedIn: Object(o.f)(e)
                     }
-                }), Object(a.a)(le, {
+                }), Object(r.a)(le, {
                     options: function(e) {
                         return {
                             variables: {
@@ -11651,7 +11645,7 @@
                         this.props.messageHandlerAPI ? this.props.messageHandlerAPI.handleMessage(e) : R.k.warn("ModerationActionService received an event before the MessageHandlerAPI was available.")
                     }, t
                 }(h.Component);
-            var ye = Object(g.compose)(Object(r.connect)(function(e) {
+            var ye = Object(g.compose)(Object(a.connect)(function(e) {
                     var t = Object(o.e)(e);
                     return {
                         currentUserID: t && t.id
@@ -11660,31 +11654,31 @@
                 Se = n("gq0V"),
                 Ee = n("BJwa"),
                 Ne = "(?:\\W|^)",
-                we = "(?:$|\\W)",
-                _e = "PowerUpL DarkMode PowerUpR",
+                _e = "(?:$|\\W)",
+                we = "PowerUpL DarkMode PowerUpR",
                 Oe = {
                     failSilently: !0,
                     placeholder: null
                 },
                 Me = f.a.wrap(function() {
-                    return n.e(199).then(n.bind(null, "Gnts"))
+                    return n.e(197).then(n.bind(null, "Gnts"))
                 }, "MysteryGiftChatBannerQueue", Oe),
                 De = f.a.wrap(function() {
-                    return n.e(198).then(n.bind(null, "KSjr"))
+                    return n.e(196).then(n.bind(null, "KSjr"))
                 }, "NativeBroadcastNotification", Oe),
                 Ie = f.a.wrap(function() {
-                    return n.e(197).then(n.bind(null, "T3fw"))
+                    return n.e(195).then(n.bind(null, "T3fw"))
                 }, "Orbis", Oe),
                 Te = f.a.wrap(function() {
-                    return n.e(196).then(n.bind(null, "7htX"))
+                    return n.e(194).then(n.bind(null, "7htX"))
                 }, "RaidNotification", Oe),
                 Re = f.a.wrap(function() {
-                    return n.e(195).then(n.bind(null, "rg60"))
+                    return n.e(193).then(n.bind(null, "rg60"))
                 }, "RitualsOnboardingSticky", Oe),
-                Ae = f.a.wrap(function() {
-                    return n.e(194).then(n.bind(null, "miqE"))
+                Le = f.a.wrap(function() {
+                    return n.e(192).then(n.bind(null, "miqE"))
                 }, "ShareToChat", Oe),
-                Le = function(e) {
+                je = function(e) {
                     function t(t) {
                         var n = e.call(this, t) || this;
                         return n.state = {
@@ -11720,7 +11714,7 @@
                             n.outgoingTokenMatchers = e.map(function(e) {
                                 return {
                                     token: e,
-                                    regex: new RegExp("" + Ne + e + we)
+                                    regex: new RegExp("" + Ne + e + _e)
                                 }
                             })
                         }, n.parseOutgoingMessage = function(e) {
@@ -11729,7 +11723,7 @@
                             })
                         }, n.onOutgoingTokenMatch = function(e, t) {
                             switch (e) {
-                                case _e:
+                                case we:
                                     var i = n.props.theme === b.a.Light ? b.a.Dark : b.a.Light;
                                     n.props.onThemeChange(i);
                                     break;
@@ -11744,7 +11738,7 @@
                             n.props.onRoomStateUpdate(e), n.setState({
                                 hasReceivedInitialRoomState: !0
                             })
-                        }, n.createOutgoingTokenMatchers([_e]), n
+                        }, n.createOutgoingTokenMatchers([we]), n
                     }
                     return m.__extends(t, e), t.prototype.componentDidMount = function() {
                         this.props.messageHandlerAPI && this.props.messageHandlerAPI.addMessageHandler(this.onChatEvent)
@@ -11808,7 +11802,7 @@
                             theme: this.props.theme,
                             userBadges: this.state.userBadges,
                             userID: this.props.userID
-                        }, this.props.firstPageLoaded && this.props.authToken && !this.props.isEmbedded && h.createElement(Ae, {
+                        }, this.props.firstPageLoaded && this.props.authToken && !this.props.isEmbedded && h.createElement(Le, {
                             authToken: this.props.authToken,
                             channelDisplayName: this.props.channelDisplayName,
                             channelLogin: this.props.channelLogin,
@@ -11852,11 +11846,11 @@
                             t = this.props,
                             n = t.channelID,
                             i = t.isPopout,
-                            r = t.userLogin;
+                            a = t.userLogin;
                         return h.createElement(h.Fragment, null, h.createElement(P.a, {
                             isEmbedded: this.props.isEmbedded,
                             isPopout: i,
-                            userLogin: r,
+                            userLogin: a,
                             userID: this.props.userID,
                             emoteMap: e
                         }), h.createElement(y.a, {
@@ -11865,12 +11859,12 @@
                         }), h.createElement(S.a, {
                             channelLogin: this.props.channelLogin,
                             isPopout: i
-                        }), h.createElement(E.a, null), h.createElement(w.a, {
+                        }), h.createElement(E.a, null), h.createElement(_.a, {
                             channelID: n
-                        }), h.createElement(Se.a, null, h.createElement(F, {
+                        }), h.createElement(Se.a, null, h.createElement(x, {
                             channelID: n
                         })), h.createElement(N.a, {
-                            currentUserLogin: r
+                            currentUserLogin: a
                         }), this.props.chatRules && !!this.props.chatRules.length && h.createElement(T, null))
                     }, Object.defineProperty(t.prototype, "isOwnChannel", {
                         get: function() {
@@ -11880,7 +11874,7 @@
                         configurable: !0
                     }), t
                 }(h.Component);
-            var je = Object(i.compose)(Object(r.connect)(function(e) {
+            var Ae = Object(i.compose)(Object(a.connect)(function(e) {
                     return {
                         firstPageLoaded: e.session.firstPageLoaded,
                         isChatRulesOpen: e.chat.isChatRulesOpen,
@@ -11916,9 +11910,9 @@
                 }), Object(u.b)("ChatRoom", {
                     autoReportInteractive: !0
                 }), Object(v.a)(), l.a, d.a)(function(e) {
-                    return h.createElement(W.a, null, h.createElement(Le, m.__assign({}, e)))
+                    return h.createElement(W.a, null, h.createElement(je, m.__assign({}, e)))
                 }),
-                Be = function(e) {
+                Ue = function(e) {
                     function t() {
                         return null !== e && e.apply(this, arguments) || this
                     }
@@ -11931,17 +11925,17 @@
                             t = this.props.userData && this.props.userData.user,
                             n = !1,
                             i = !1,
-                            r = !1;
+                            a = !1;
                         if (t && e && e.self) {
-                            var a = t.login === e.login;
-                            n = e.self.isModerator || a || t.roles.isGlobalMod || t.roles.isSiteAdmin, i = t.roles.isStaff, r = e.self.isModerator || a || t.roles.isGlobalMod
+                            var r = t.login === e.login;
+                            n = e.self.isModerator || r || t.roles.isGlobalMod || t.roles.isSiteAdmin, i = t.roles.isStaff, a = e.self.isModerator || r || t.roles.isGlobalMod
                         }
                         var o = void 0;
                         e && e.chatSettings && e.chatSettings.rules && e.chatSettings.rules.filter(function(e) {
                             return e.trim().length
                         }).length && (o = e.chatSettings.rules);
                         var s = !(!e || !e.chatSettings) && e.chatSettings.blockLinks;
-                        return h.createElement(je, {
+                        return h.createElement(Ae, {
                             key: this.props.channelLogin,
                             authToken: this.props.sessionUser && this.props.sessionUser.authToken,
                             bitsConfig: this.props.bitsConfig,
@@ -11962,18 +11956,18 @@
                             userID: this.props.sessionUser && this.props.sessionUser.id.toString(),
                             userLogin: this.props.sessionUser && this.props.sessionUser.login,
                             isStaff: i,
-                            shouldSeeBlockedAndDeletedMessages: r,
+                            shouldSeeBlockedAndDeletedMessages: a,
                             passThroughCommands: this.props.passThroughCommands,
                             shouldConnectChat: this.props.shouldConnectChat
                         })
                     }, t
                 }(h.Component),
-                Ue = n("9P+5");
-            var xe = Object(i.compose)(Object(r.connect)(function(e) {
+                Be = n("9P+5");
+            var Fe = Object(i.compose)(Object(a.connect)(function(e) {
                     return {
                         sessionUser: Object(o.e)(e)
                     }
-                }), Object(a.a)(p, {
+                }), Object(r.a)(p, {
                     name: "channelData",
                     options: function(e) {
                         return {
@@ -11982,25 +11976,25 @@
                             }
                         }
                     }
-                }), Object(a.a)(Ue, {
+                }), Object(r.a)(Be, {
                     name: "userData",
                     skip: function(e) {
                         return !e.sessionUser
                     }
-                }), Object(u.b)("Chat"))(Be),
-                Fe = Object(i.compose)(s.b, l.b, c.b, d.b)(xe);
+                }), Object(u.b)("Chat"))(Ue),
+                xe = Object(i.compose)(s.b, l.b, c.b, d.b)(Fe);
             n.d(t, !1, function() {
-                return Be
+                return Ue
             }), n.d(t, "b", function() {
-                return xe
-            }), n.d(t, "a", function() {
                 return Fe
+            }), n.d(t, "a", function() {
+                return xe
             })
         },
         L4bB: function(e, t, n) {
             "use strict";
-            var i, r = n("mrSG"),
-                a = n("q1tI"),
+            var i, a = n("mrSG"),
+                r = n("q1tI"),
                 o = n("/7QA"),
                 s = n("sLlB"),
                 l = n("9C/b"),
@@ -12032,39 +12026,39 @@
                             label: Object(o.d)("all", "TopClipsTimeFilter"),
                             filter: p.b.All
                         }], t.renderFilterText = function(e) {
-                            return e.filter === p.b.Trending ? a.createElement("span", {
+                            return e.filter === p.b.Trending ? r.createElement("span", {
                                 "data-test-selector": i.FilterText
-                            }, e.label) : a.createElement(m.Ya, {
+                            }, e.label) : r.createElement(m.Ya, {
                                 display: m.X.Flex
-                            }, Object(o.d)("Top", "TopClipsTimeFilter"), a.createElement(m.Ya, {
+                            }, Object(o.d)("Top", "TopClipsTimeFilter"), r.createElement(m.Ya, {
                                 margin: {
                                     left: .5
                                 }
-                            }, a.createElement(m.hb, {
+                            }, r.createElement(m.hb, {
                                 "data-test-selector": i.FilterText,
                                 type: m.ib.Brand,
                                 label: e.label
                             })))
                         }, t.renderBalloonOption = function(e) {
                             var n, i = ((n = {})[p.a] = e.filter, n),
-                                r = Object(u.d)(t.props.location, i),
-                                o = e.selected ? a.createElement(m.Ya, {
+                                a = Object(u.d)(t.props.location, i),
+                                o = e.selected ? r.createElement(m.Ya, {
                                     attachRight: !0,
                                     position: m.kb.Absolute,
                                     margin: {
                                         right: 1
                                     }
-                                }, a.createElement(m.tb, {
+                                }, r.createElement(m.tb, {
                                     asset: m.ub.Check,
                                     height: 18,
                                     width: 18
                                 })) : null;
-                            return a.createElement(m.Va, {
+                            return r.createElement(m.Va, {
                                 "data-a-target": "time-filter-option-" + e.filter,
                                 key: e.filter,
-                                linkTo: r,
+                                linkTo: a,
                                 selected: !t.props.showTagExperimentStyles && e.selected
-                            }, a.createElement(m.Ya, {
+                            }, r.createElement(m.Ya, {
                                 display: m.X.Flex,
                                 padding: {
                                     x: 1,
@@ -12073,7 +12067,7 @@
                             }, t.renderFilterText(e), t.props.showTagExperimentStyles && o))
                         }, t
                     }
-                    return r.__extends(t, e), t.prototype.componentWillMount = function() {
+                    return a.__extends(t, e), t.prototype.componentWillMount = function() {
                         this.ensureFilterPresent()
                     }, t.prototype.componentWillUpdate = function() {
                         this.ensureFilterPresent()
@@ -12086,18 +12080,18 @@
                         var n = e.find(function(e) {
                             return !!e.selected
                         }) || e[0];
-                        return this.props.showTagExperimentStyles ? a.createElement(c.a, {
+                        return this.props.showTagExperimentStyles ? r.createElement(c.a, {
                             buttonLabel: this.renderFilterText(n),
                             hideDropdownOnInsideClick: !0
-                        }, e.map(this.renderBalloonOption)) : a.createElement(m.Ya, {
+                        }, e.map(this.renderBalloonOption)) : r.createElement(m.Ya, {
                             className: "top-clips-time-filter"
-                        }, a.createElement(d.a, {
+                        }, r.createElement(d.a, {
                             hideBalloonOnInsideClick: !0
-                        }, a.createElement(m.z, {
+                        }, r.createElement(m.z, {
                             dropdown: !0,
                             type: m.F.Hollow,
                             "data-a-target": "time-filter-selection"
-                        }, this.renderFilterText(n)), a.createElement(m.u, {
+                        }, this.renderFilterText(n)), r.createElement(m.u, {
                             direction: m.v.BottomLeft,
                             noTail: !0
                         }, e.map(this.renderBalloonOption))))
@@ -12109,7 +12103,7 @@
                             this.props.history.replace(n)
                         }
                     }, t
-                }(a.Component),
+                }(r.Component),
                 f = Object(l.a)(g);
             n.d(t, "a", function() {
                 return b
@@ -12118,24 +12112,24 @@
                 function t() {
                     return null !== e && e.apply(this, arguments) || this
                 }
-                return r.__extends(t, e), t.prototype.render = function() {
-                    return a.createElement(m.Ya, {
+                return a.__extends(t, e), t.prototype.render = function() {
+                    return r.createElement(m.Ya, {
                         alignItems: m.f.End,
                         display: m.X.Flex,
                         flexDirection: m.Aa.Row,
                         fullWidth: !0,
                         justifyContent: m.Xa.Between
-                    }, a.createElement(m.Ya, {
+                    }, r.createElement(m.Ya, {
                         alignItems: m.f.End,
                         display: m.X.Flex,
                         flexDirection: m.Aa.Row
-                    }, this.renderLanguageFilter(), a.createElement(f, {
+                    }, this.renderLanguageFilter(), r.createElement(f, {
                         showTagExperimentStyles: this.props.showTagExperimentStyles
-                    })), a.createElement(m.Ya, {
+                    })), r.createElement(m.Ya, {
                         padding: {
                             y: this.props.showTagExperimentStyles ? .5 : 0
                         }
-                    }, a.createElement(m.z, {
+                    }, r.createElement(m.z, {
                         "data-a-target": "manage-clips-button",
                         linkTo: "/manager/clips",
                         size: this.props.showTagExperimentStyles ? m.D.Large : m.D.Default,
@@ -12143,13 +12137,13 @@
                         type: m.F.Hollow
                     }, Object(o.d)("Manage my clips", "TopClips"))))
                 }, t.prototype.renderLanguageFilter = function() {
-                    return this.props.hideLanguageFilter ? null : a.createElement(m.Ya, {
+                    return this.props.hideLanguageFilter ? null : r.createElement(m.Ya, {
                         margin: {
                             right: this.props.showTagExperimentStyles ? 0 : 1
                         }
-                    }, a.createElement(s.a, null))
+                    }, r.createElement(s.a, null))
                 }, t
-            }(a.Component)
+            }(r.Component)
         },
         L6L7: function(e, t, n) {},
         L7EG: function(e, t) {
@@ -12328,18 +12322,18 @@
         MJbm: function(e, t, n) {
             "use strict";
             var i = n("mrSG"),
-                r = n("q1tI"),
-                a = n("/7QA"),
+                a = n("q1tI"),
+                r = n("/7QA"),
                 o = (n("efEE"), function(e) {
                     function t() {
                         var t = null !== e && e.apply(this, arguments) || this;
-                        return t.logger = a.p.logger.withCategory("resize-detector"), t.onScroll = function() {
+                        return t.logger = r.p.logger.withCategory("resize-detector"), t.onScroll = function() {
                             var e = t.container,
                                 n = e.offsetWidth,
                                 i = e.offsetHeight,
-                                r = e.offsetLeft,
-                                a = e.offsetTop;
-                            t.logger.debug("Resize Detector -- onScroll"), n === t.width && i === t.height && a === t.top && r === t.left || (t.width = n, t.height = i, t.props.onResize(n, i, a, r)), t.reset()
+                                a = e.offsetLeft,
+                                r = e.offsetTop;
+                            t.logger.debug("Resize Detector -- onScroll"), n === t.width && i === t.height && r === t.top && a === t.left || (t.width = n, t.height = i, t.props.onResize(n, i, r, a)), t.reset()
                         }, t.setGrowDivRef = function(e) {
                             return t.growDiv = e
                         }, t.setGrowChildDivRef = function(e) {
@@ -12349,18 +12343,18 @@
                         }, t
                     }
                     return i.__extends(t, e), t.prototype.render = function() {
-                        return r.createElement("div", {
+                        return a.createElement("div", {
                             className: "resize-detector"
-                        }, r.createElement("div", {
+                        }, a.createElement("div", {
                             className: "resize-detector",
                             ref: this.setGrowDivRef
-                        }, r.createElement("div", {
+                        }, a.createElement("div", {
                             className: "resize-detector__grow",
                             ref: this.setGrowChildDivRef
-                        })), r.createElement("div", {
+                        })), a.createElement("div", {
                             className: "resize-detector",
                             ref: this.setShrinkDivRef
-                        }, r.createElement("div", {
+                        }, a.createElement("div", {
                             className: "resize-detector__shrink"
                         })))
                     }, t.prototype.componentDidMount = function() {
@@ -12381,7 +12375,7 @@
                             n = this.growChildDiv.style;
                         n.width = "100000px", n.height = "100000px", e.scrollLeft = 1e5, e.scrollTop = 1e5, t.scrollLeft = 1e5, t.scrollTop = 1e5
                     }, t
-                }(r.Component));
+                }(a.Component));
             n.d(t, "a", function() {
                 return o
             })
@@ -12397,7 +12391,7 @@
             }), n.d(t, "d", function() {
                 return h
             });
-            var i, r, a = n("/7QA"),
+            var i, a, r = n("/7QA"),
                 o = n("wbMx"),
                 s = n("2xye"),
                 l = n("BQs+"),
@@ -12410,19 +12404,19 @@
                     Game: "TopClipsGame",
                     Channel: "TopClipsChannel"
                 },
-                p = ((r = {
+                p = ((a = {
                     MyClips: s.PageviewLocation.MyClipsManager,
                     ClipsOfMyChannel: s.PageviewLocation.ChannelClipsManager,
                     TopClipsGame: s.PageviewLocation.ClipsGame,
                     TopClipsChannel: s.PageviewLocation.ChannelClips
-                })[s.PageviewLocation.ClipsEditing] = s.PageviewLocation.ClipsEditing, r[s.PageviewLocation.ClipsViewing] = s.PageviewLocation.ClipsViewing, r[s.PageviewLocation.ClipsWatchPage] = s.PageviewLocation.ClipsWatchPage, r),
-                m = function(e, t, n, i, r) {
+                })[s.PageviewLocation.ClipsEditing] = s.PageviewLocation.ClipsEditing, a[s.PageviewLocation.ClipsViewing] = s.PageviewLocation.ClipsViewing, a[s.PageviewLocation.ClipsWatchPage] = s.PageviewLocation.ClipsWatchPage, a),
+                m = function(e, t, n, i, a) {
                     return function(o) {
-                        a.p.tracking.track(s.SpadeEventType.VideoShare, {
+                        r.p.tracking.track(s.SpadeEventType.VideoShare, {
                             vod_id: e,
                             vod_type: s.SpadeVideoBroadcastType.Clip,
                             share_platform: c[o],
-                            location: p[r],
+                            location: p[a],
                             game: t,
                             channel_id: Number(n || 0),
                             channel: i,
@@ -12430,13 +12424,13 @@
                         })
                     }
                 },
-                h = function(e, t, n, i, r, o) {
+                h = function(e, t, n, i, a, o) {
                     return function() {
-                        a.p.tracking.track(s.SpadeEventType.VideoShare, {
+                        r.p.tracking.track(s.SpadeEventType.VideoShare, {
                             vod_id: e,
                             vod_type: s.SpadeVideoBroadcastType.Clip,
                             share_platform: l.a.Link,
-                            location: p[r],
+                            location: p[a],
                             game: t,
                             channel_id: Number(n || 0),
                             channel: i,
@@ -12460,8 +12454,8 @@
         },
         MdYN: function(e, t, n) {
             "use strict";
-            var i, r = n("/MKj"),
-                a = n("fvjX"),
+            var i, a = n("/MKj"),
+                r = n("fvjX"),
                 o = n("aCAx"),
                 s = n("mrSG"),
                 l = n("TSYQ"),
@@ -12481,8 +12475,8 @@
                 S = n("f00E"),
                 E = n("vhpE"),
                 N = n("bq0i"),
-                w = n("yR8l"),
-                _ = n("4rCz"),
+                _ = n("yR8l"),
+                w = n("4rCz"),
                 O = n("ndwU");
             ! function(e) {
                 e[e.View = 0] = "View", e[e.Report = 1] = "Report", e[e.Delete = 2] = "Delete", e[e.DeleteAll = 3] = "DeleteAll", e[e.Ban = 4] = "Ban", e[e.Timeout = 5] = "Timeout"
@@ -12508,31 +12502,31 @@
                             }, t.display)) : null
                         }, n.menuData = new Map([
                             [i.Report, {
-                                display: Object(_.d)("Report", "ModerationMenu"),
+                                display: Object(w.d)("Report", "ModerationMenu"),
                                 destinationHandler: function() {
                                     return n.props.updateModalViewState(i.Report)
                                 }
                             }],
                             [i.Delete, {
-                                display: Object(_.d)("Delete", "ModerationMenu"),
+                                display: Object(w.d)("Delete", "ModerationMenu"),
                                 destinationHandler: function() {
                                     return n.props.updateModalViewState(i.Delete)
                                 }
                             }],
                             [i.DeleteAll, {
-                                display: Object(_.d)("Delete All Clips from Video", "ModerationMenu"),
+                                display: Object(w.d)("Delete All Clips from Video", "ModerationMenu"),
                                 destinationHandler: function() {
                                     return n.props.updateModalViewState(i.DeleteAll)
                                 }
                             }],
                             [i.Ban, {
-                                display: Object(_.d)("Ban User", "ModerationMenu"),
+                                display: Object(w.d)("Ban User", "ModerationMenu"),
                                 destinationHandler: function() {
                                     return n.props.updateModalViewState(i.Ban)
                                 }
                             }],
                             [i.Timeout, {
-                                display: Object(_.d)("Timeout User (24 hr)", "ModerationMenu"),
+                                display: Object(w.d)("Timeout User (24 hr)", "ModerationMenu"),
                                 destinationHandler: function() {
                                     return n.props.updateModalViewState(i.Timeout)
                                 }
@@ -12546,17 +12540,17 @@
                             t = this.props.clip;
                         if (!e || !e.currentUser) return null;
                         var n = e.currentUser.isStaff || e.currentUser.isSiteAdmin,
-                            r = !!t.curator && e.currentUser.id === t.curator.id,
-                            a = !!t.broadcaster && e.currentUser.id === t.broadcaster.id,
-                            o = r || a || n,
-                            s = a || n,
+                            a = !!t.curator && e.currentUser.id === t.curator.id,
+                            r = !!t.broadcaster && e.currentUser.id === t.broadcaster.id,
+                            o = a || r || n,
+                            s = r || n,
                             l = [i.Report];
                         return o && l.push(i.Delete), s && (l.push(i.DeleteAll), t.curator && t.broadcaster && (l.push(i.Ban), l.push(i.Timeout))), c.createElement(M.Ya, {
                             className: "moderation-menu"
                         }, c.createElement(N.a, null, c.createElement(M.z, {
                             type: M.F.Hollow,
                             icon: M.ub.More,
-                            ariaLabel: Object(_.d)("More Options", "ModerationMenu"),
+                            ariaLabel: Object(w.d)("More Options", "ModerationMenu"),
                             "data-a-target": "moderation-menu-button"
                         }), c.createElement(M.u, {
                             direction: M.v.TopRight
@@ -12570,11 +12564,11 @@
                         return e.map(function(e) {
                             return t.renderMenuItem(e)
                         })
-                    }, t = s.__decorate([Object(w.a)(D), Object(h.b)("ModerationMenu")], t)
+                    }, t = s.__decorate([Object(_.a)(D), Object(h.b)("ModerationMenu")], t)
                 }(c.Component),
                 R = n("MLDe"),
-                A = (n("n/Dx"), 2e3),
-                L = function(e) {
+                L = (n("n/Dx"), 2e3),
+                j = function(e) {
                     function t() {
                         var t = null !== e && e.apply(this, arguments) || this;
                         return t.state = {
@@ -12593,7 +12587,7 @@
                                 t.setState({
                                     isShowingBalloon: !1
                                 })
-                            }, A), Object(R.c)(t.props.clip.id, t.props.clip.game && t.props.clip.game.name, t.props.clip.broadcaster && t.props.clip.broadcaster.id, t.props.clip.broadcaster && t.props.clip.broadcaster.login, t.props.pageType)(k.b.CopyInput))
+                            }, L), Object(R.c)(t.props.clip.id, t.props.clip.game && t.props.clip.game.name, t.props.clip.broadcaster && t.props.clip.broadcaster.id, t.props.clip.broadcaster && t.props.clip.broadcaster.login, t.props.pageType)(k.b.CopyInput))
                         }, t.dismissBalloon = function() {
                             t.setState({
                                 isShowingBalloon: !1
@@ -12724,13 +12718,13 @@
                         }, "ClipsViewModalContent"))))
                     }, t = s.__decorate([Object(h.b)("ClipsViewModalContent")], t)
                 }(c.Component),
-                j = n("S1Za");
-            var B = Object(r.connect)(null, function(e) {
-                    return Object(a.bindActionCreators)({
-                        reportPlayerInstanceStarted: j.b
+                A = n("S1Za");
+            var U = Object(a.connect)(null, function(e) {
+                    return Object(r.bindActionCreators)({
+                        reportPlayerInstanceStarted: A.b
                     }, e)
-                })(L),
-                U = (n("9a8W"), function(e) {
+                })(j),
+                B = (n("9a8W"), function(e) {
                     function t() {
                         var t = null !== e && e.apply(this, arguments) || this;
                         return t.onKeyDown = function(e) {
@@ -12773,7 +12767,7 @@
                             "data-test-selector": "clips-view-modal-navigation-forward"
                         }))), c.createElement(M.Ya, {
                             className: "clips-view-modal-navigation"
-                        }, e, c.createElement(B, {
+                        }, e, c.createElement(U, {
                             clip: this.props.clip,
                             updateModalViewState: this.props.updateModalViewState,
                             pageType: this.props.pageType,
@@ -12795,13 +12789,13 @@
                         })
                     }, t
                 }(c.Component)),
-                x = Object(h.b)("ClipsViewModalNavigation")(U);
-            var F = Object(r.connect)(null, function(e) {
-                    return Object(a.bindActionCreators)({
+                F = Object(h.b)("ClipsViewModalNavigation")(B);
+            var x = Object(a.connect)(null, function(e) {
+                    return Object(r.bindActionCreators)({
                         showModal: o.d,
                         closeModal: o.c
                     }, e)
-                })(x),
+                })(F),
                 P = (n("ygyh"), function(e) {
                     function t() {
                         var t = null !== e && e.apply(this, arguments) || this;
@@ -12859,7 +12853,7 @@
                                     break
                                 }
                             default:
-                                t = c.createElement(F, {
+                                t = c.createElement(x, {
                                     getClips: this.props.getClips,
                                     clip: this.props.clip,
                                     clipIndex: this.props.clipIndex,
@@ -12877,8 +12871,8 @@
                     }, t
                 }(c.Component)),
                 H = Object(h.b)("ClipsViewModal")(P);
-            var W = Object(r.connect)(null, function(e) {
-                return Object(a.bindActionCreators)({
+            var W = Object(a.connect)(null, function(e) {
+                return Object(r.bindActionCreators)({
                     showModal: o.d
                 }, e)
             })(H);
@@ -12892,18 +12886,18 @@
                 return c
             });
             var i = n("mrSG"),
-                r = n("/7QA"),
-                a = n("yR8l"),
+                a = n("/7QA"),
+                r = n("yR8l"),
                 o = n("0FG4"),
                 s = n("D7An"),
                 l = n("S4w9");
 
             function c() {
-                return Object(a.a)(l, {
+                return Object(r.a)(l, {
                     options: function(e) {
                         return {
                             variables: {
-                                withOwner: "on" === r.p.experiments.getAssignment(s.b.EmotePickerV2)
+                                withOwner: "on" === a.p.experiments.getAssignment(s.b.EmotePickerV2)
                             }
                         }
                     },
@@ -12933,8 +12927,8 @@
                 return o
             });
             var i = n("mrSG"),
-                r = n("/7QA"),
-                a = n("sAMt");
+                a = n("/7QA"),
+                r = n("sAMt");
 
             function o(e) {
                 return i.__awaiter(this, void 0, Promise, function() {
@@ -12944,8 +12938,8 @@
                             case 0:
                                 t = null, i.label = 1;
                             case 1:
-                                return i.trys.push([1, 3, , 4]), [4, r.p.apollo.client.query({
-                                    query: a,
+                                return i.trys.push([1, 3, , 4]), [4, a.p.apollo.client.query({
+                                    query: r,
                                     variables: {
                                         login: e
                                     }
@@ -12953,7 +12947,7 @@
                             case 2:
                                 return t = i.sent(), [3, 4];
                             case 3:
-                                return n = i.sent(), r.k.warn(n, "Failed to fetch user targeted by chat command.", {
+                                return n = i.sent(), a.k.warn(n, "Failed to fetch user targeted by chat command.", {
                                     userLogin: e
                                 }), [3, 4];
                             case 4:
@@ -12971,11 +12965,11 @@
             }), n.d(t, "b", function() {
                 return o
             });
-            var i, r = n("/7QA"),
-                a = n("2xye");
+            var i, a = n("/7QA"),
+                r = n("2xye");
 
             function o(e) {
-                r.p.tracking.track(a.SpadeEventType.WhisperIgnoreUser, {
+                a.p.tracking.track(r.SpadeEventType.WhisperIgnoreUser, {
                     ui_context: e.context,
                     from_login: e.currentUserLogin,
                     ignored_login: e.targetUserLogin
@@ -12992,18 +12986,18 @@
                 return s
             });
             var i = n("mrSG"),
-                r = n("/7QA"),
-                a = n("+U0Y"),
+                a = n("/7QA"),
+                r = n("+U0Y"),
                 o = n("5xw2");
 
             function s(e) {
                 return e.userPreferences.languagePreferences
             }
-            r.p.store.registerReducer("userPreferences", function(e, t) {
+            a.p.store.registerReducer("userPreferences", function(e, t) {
                 switch (void 0 === e && (e = {
                     languagePreferences: Object(o.b)()
                 }), t.type) {
-                    case a.a:
+                    case r.a:
                         return i.__assign({}, e, {
                             languagePreferences: t.languagePreferences
                         });
@@ -13028,8 +13022,8 @@
                 return g
             });
             var i = n("mrSG"),
-                r = n("lZdE"),
-                a = n("cpJf"),
+                a = n("lZdE"),
+                r = n("cpJf"),
                 o = {
                     "B-?\\)": "B)",
                     "\\:-?[z|Z|\\|]": ":|",
@@ -13062,16 +13056,16 @@
                 for (var t = [], n = function(e) {
                         if (!e || !e.id || !e.token) return "continue";
                         var n = o[e.token] || e.token,
-                            r = s.reduce(function(t, n) {
+                            a = s.reduce(function(t, n) {
                                 var i = t;
                                 return i && (i = i.concat(", ")), i.concat("https://static-cdn.jtvnw.net/emoticons/v1/" + e.id + "/" + n + " " + n + "x")
                             }, "");
                         t.push(i.__assign({
                             displayName: n,
-                            srcSet: r
+                            srcSet: a
                         }, e))
-                    }, r = 0, a = e; r < a.length; r++) {
-                    n(a[r])
+                    }, a = 0, r = e; a < r.length; a++) {
+                    n(r[a])
                 }
                 return t
             }
@@ -13097,40 +13091,40 @@
 
             function p(e) {
                 for (var t = [], n = 0, i = e; n < i.length; n++) {
-                    var r = i[n];
-                    if (r && r.id && r.emotes) {
-                        for (var a = {
-                                id: r.id,
+                    var a = i[n];
+                    if (a && a.id && a.emotes) {
+                        for (var r = {
+                                id: a.id,
                                 emotes: []
-                            }, o = 0, s = r.emotes; o < s.length; o++) {
+                            }, o = 0, s = a.emotes; o < s.length; o++) {
                             var l = s[o];
-                            l && l.id && l.token && a.emotes.push(l)
+                            l && l.id && l.token && r.emotes.push(l)
                         }
-                        t.push(a)
+                        t.push(r)
                     }
                 }
                 return t
             }
 
             function m(e) {
-                for (var t = [], n = [], i = 0, r = e; i < r.length; i++) {
-                    var a = r[i];
-                    if (a && a.id && a.emotes) {
+                for (var t = [], n = [], i = 0, a = e; i < a.length; i++) {
+                    var r = a[i];
+                    if (r && r.id && r.emotes) {
                         var o = {
-                            id: a.id,
-                            emotes: d(u(a.emotes), a.id)
+                            id: r.id,
+                            emotes: d(u(r.emotes), r.id)
                         };
-                        a.owner && (o.owner = a.owner), l.has(parseInt(a.id, 10)) ? t.push(o) : n.push(o)
+                        r.owner && (o.owner = r.owner), l.has(parseInt(r.id, 10)) ? t.push(o) : n.push(o)
                     }
                 }
                 return n.concat(t)
             }
             var h = function(e, t, n) {
-                    var i = n || a.d,
+                    var i = n || r.d,
                         o = [],
                         s = [],
                         l = [],
-                        c = new RegExp("^" + Object(r.a)(t), "i");
+                        c = new RegExp("^" + Object(a.a)(t), "i");
                     return e.forEach(function(e) {
                         i[e.token] ? l.push(e) : e.token.match(c) ? o.push(e) : s.push(e)
                     }), o.sort(function(e, t) {
@@ -13297,8 +13291,8 @@
         PtXu: function(e, t, n) {
             "use strict";
             var i = n("mrSG"),
-                r = n("q1tI"),
-                a = n("oJmH"),
+                a = n("q1tI"),
+                r = n("oJmH"),
                 o = n("/7QA"),
                 s = n("gcd7"),
                 l = n("AKV8"),
@@ -13430,20 +13424,20 @@
                         }, t
                     }
                     return i.__extends(t, e), t.prototype.render = function() {
-                        return r.createElement(m.Ya, {
+                        return a.createElement(m.Ya, {
                             display: m.X.Hide
-                        }, r.createElement(s.a, {
+                        }, a.createElement(s.a, {
                             command: "mod",
                             handler: this.modUser
-                        }), r.createElement(s.a, {
+                        }), a.createElement(s.a, {
                             command: "mods",
                             handler: this.mods
-                        }), r.createElement(s.a, {
+                        }), a.createElement(s.a, {
                             command: "unmod",
                             handler: this.unmodUser
                         }))
                     }, t
-                }(r.Component);
+                }(a.Component);
 
             function g(e) {
                 return Object(o.d)("Invalid username: {login}", {
@@ -13471,7 +13465,7 @@
                         channelID: e.channelID
                     }
                 },
-                y = Object(a.compose)(p.a, Object(c.b)(C), Object(l.b)(C))(h);
+                y = Object(r.compose)(p.a, Object(c.b)(C), Object(l.b)(C))(h);
             n.d(t, "a", function() {
                 return y
             })
@@ -13479,11 +13473,11 @@
         "Pub/": function(e, t, n) {
             "use strict";
             n.d(t, "a", function() {
-                return r
+                return a
             });
             var i = n("HzXE");
 
-            function r(e, t, n) {
+            function a(e, t, n) {
                 try {
                     return e.readQuery({
                         query: i,
@@ -13800,12 +13794,12 @@
                     column: 1
                 }
             };
-            var r = {};
+            var a = {};
             i.definitions = i.definitions.concat(function(e) {
                 return e.filter(function(e) {
                     if ("FragmentDefinition" !== e.kind) return !0;
                     var t = e.name.value;
-                    return !r[t] && (r[t] = !0, !0)
+                    return !a[t] && (a[t] = !0, !0)
                 })
             }(n("F9eG").definitions)), e.exports = i
         },
@@ -14052,20 +14046,20 @@
                     column: 1
                 }
             };
-            var r = {};
+            var a = {};
             i.definitions = i.definitions.concat(function(e) {
                 return e.filter(function(e) {
                     if ("FragmentDefinition" !== e.kind) return !0;
                     var t = e.name.value;
-                    return !r[t] && (r[t] = !0, !0)
+                    return !a[t] && (a[t] = !0, !0)
                 })
             }(n("fhkr").definitions)), e.exports = i
         },
         QjI3: function(e, t, n) {
             "use strict";
             var i = n("mrSG"),
-                r = n("q1tI"),
-                a = n("/MKj"),
+                a = n("q1tI"),
+                r = n("/MKj"),
                 o = n("fvjX"),
                 s = n("ZS2+"),
                 l = n("UUve"),
@@ -14085,8 +14079,8 @@
                 S = n("tIid"),
                 E = n("ht6z"),
                 N = n("/aPz"),
-                w = n("KriR"),
-                _ = n("D7An"),
+                _ = n("KriR"),
+                w = n("D7An"),
                 O = n("4rCz"),
                 M = n("0WFu");
             var D, I = n("br9A"),
@@ -14095,18 +14089,18 @@
             ! function(e) {
                 e.SubButton = "subscribe-button__dropdown", e.BalloonLayerButton = "subscribe-button__balloon-layer-btn", e.DefaultButton = "subscribe-button__default-btn", e.SubscribeBalloon = "subscribe-button__subscribe-balloon"
             }(D || (D = {}));
-            var A = s.a.wrap(function() {
-                    return Promise.all([n.e(0), n.e(201)]).then(n.bind(null, "f+qK"))
+            var L = s.a.wrap(function() {
+                    return Promise.all([n.e(0), n.e(199)]).then(n.bind(null, "f+qK"))
                 }, "SubscribeBalloon"),
-                L = function(e) {
+                j = function(e) {
                     function t() {
                         var t = null !== e && e.apply(this, arguments) || this;
                         return t.state = {
                             inPrimeRegion: !1
                         }, t.modalLevel = "top_page", t.renderBalloonContentForBalloonLayer = function() {
-                            return r.createElement(b.a, {
+                            return a.createElement(b.a, {
                                 onClickOut: t.handleBalloonClickOut
-                            }, r.createElement(T.Ya, {
+                            }, a.createElement(T.Ya, {
                                 "data-a-target": "sub-balloon",
                                 refDelegate: t.setBalloonContentRefDelegate
                             }, t.balloonWrapperContent))
@@ -14137,8 +14131,8 @@
                             new Set([I.a.ClickCheckout, I.a.BuyGiftSub, I.a.BuyMysteryGift, I.a.BuyCustomMysteryGift, I.a.BuyGiftToPaidUpgrade, I.a.BuyPaidUpgrade, I.a.BuyDNRToResub]).has(e.action) && t.checkAndDisplaySubscriptionCheckout();
                             var n = t.props.data,
                                 i = n.user,
-                                r = !!(i && i.self && i.self.subscriptionBenefit),
-                                a = n.requestInfo && Object(E.a)(n.requestInfo.countryCode);
+                                a = !!(i && i.self && i.self.subscriptionBenefit),
+                                r = n.requestInfo && Object(E.a)(n.requestInfo.countryCode);
                             Object(I.b)({
                                 action: e.action || "",
                                 channelLogin: t.props.channelLogin || "",
@@ -14151,9 +14145,9 @@
                                 isMenuOpen: e.action !== I.a.OpenSubMenu,
                                 mysteryGiftCount: e.mysteryGiftCount,
                                 sub_location: "channel_page",
-                                modal: !r,
-                                modalLevel: r ? "" : t.modalLevel.slice(),
-                                showPrimeContent: a,
+                                modal: !a,
+                                modalLevel: a ? "" : t.modalLevel.slice(),
+                                showPrimeContent: r,
                                 giftRecipient: e.giftRecipient || null
                             }), !e.modalLevel || e.action !== I.a.ClickMoreSubOptions && e.action !== I.a.ClickBack || (t.modalLevel = e.modalLevel)
                         }, t.handleMenuToggle = function(e) {
@@ -14185,22 +14179,22 @@
                         var n = t.self,
                             i = t.subscriptionProducts;
                         if (!i) return null;
-                        var a = i.filter(function(e) {
+                        var r = i.filter(function(e) {
                             return e
                         });
-                        if (0 === a.length) return null;
+                        if (0 === r.length) return null;
                         if (this.props.hideEsportsSubscription && Object(S.a)(t.id || "", this.props.sessionUser)) return null;
                         var o = e.requestInfo && Object(E.a)(e.requestInfo.countryCode),
                             s = !(!n || !n.subscriptionBenefit),
                             l = Object(S.a)(t.id || "", this.props.sessionUser),
-                            c = 1 === a.length;
-                        a.some(function(e) {
+                            c = 1 === r.length;
+                        r.some(function(e) {
                             return !e.emoteSetID
                         }) && (c = !0);
                         var d = null;
                         n && n.subscriptionBenefit && (d = n.subscriptionBenefit.purchasedWithPrime ? y.a.Prime : n.subscriptionBenefit.tier, this.modalLevel = "");
                         var u = function(e) {
-                            var t = O.q.experiments.getAssignment(_.b.SubsReanimator);
+                            var t = O.q.experiments.getAssignment(w.b.SubsReanimator);
                             if (e.isSubscribed) {
                                 if (e.hasInsiderPass) return Object(O.d)("All-Access Pass", "SubscribeButton");
                                 if (e.isNonStandardSub) return Object(O.d)("Subscribed", "SubscribeButton");
@@ -14229,12 +14223,12 @@
                             benefitEndsAt: n && n.subscriptionBenefit && n.subscriptionBenefit.endsAt,
                             hostedDisplayName: this.props.hostChannelID ? t.displayName || "" : void 0
                         });
-                        if (s && c && !l) return r.createElement(T.z, {
+                        if (s && c && !l) return a.createElement(T.z, {
                             disabled: !0,
                             ariaLabel: u,
                             icon: T.ub.Star
                         }, u);
-                        var p = r.createElement(T.z, {
+                        var p = a.createElement(T.z, {
                             ariaLabel: u,
                             "data-a-target": s ? "subscribed-button" : "subscribe-button",
                             "data-test-selector": D.SubButton,
@@ -14245,8 +14239,8 @@
                             type: this.getButtonType(s)
                         }, u);
                         if (this.props.useModal) return p;
-                        var m = a[0];
-                        return this.setBalloonWrapperContent(r.createElement(A, {
+                        var m = r[0];
+                        return this.setBalloonWrapperContent(a.createElement(L, {
                             authToken: this.props.authToken,
                             channelLogin: this.props.channelLogin || "",
                             "data-test-selector": D.SubscribeBalloon,
@@ -14259,13 +14253,13 @@
                             productId: m ? m.id : "",
                             subbedTier: d || y.a.Prime,
                             userHasPrime: !1
-                        })), this.props.renderBalloonInBalloonLayer ? r.createElement(T.Ya, {
+                        })), this.props.renderBalloonInBalloonLayer ? a.createElement(T.Ya, {
                             "data-test-selector": D.BalloonLayerButton,
                             refDelegate: this.setContainerRefDelegate
-                        }, p) : r.createElement(T.Ya, null, r.createElement(v.a, {
+                        }, p) : a.createElement(T.Ya, null, a.createElement(v.a, {
                             "data-test-selector": D.DefaultButton,
                             onToggle: this.handleMenuToggle
-                        }, p, r.createElement(T.u, {
+                        }, p, a.createElement(T.u, {
                             "data-a-target": "sub-balloon",
                             direction: this.getBalloonDirection(),
                             size: T.w.Large
@@ -14292,13 +14286,13 @@
                                 productName: e,
                                 recipientLogin: g.n.get(l.e, ""),
                                 trackingContext: {
-                                    source: w.c.ChannelSubscribeButton
+                                    source: _.c.ChannelSubscribeButton
                                 }
                             }) : this.props.showLoginModal() : Object(l.f)()
                         }
                     }, t
-                }(r.Component),
-                j = Object(h.compose)(Object(k.a)(R, {
+                }(a.Component),
+                A = Object(h.compose)(Object(k.a)(R, {
                     options: function(e) {
                         return {
                             variables: {
@@ -14319,8 +14313,8 @@
                     skip: function(e) {
                         return !(e.data && !e.data.loading && !e.data.error && e.data.currentUser)
                     }
-                }]), Object(f.e)())(L),
-                B = function(e) {
+                }]), Object(f.e)())(j),
+                U = function(e) {
                     function t() {
                         var t = null !== e && e.apply(this, arguments) || this;
                         return t.reportInteractive = function() {
@@ -14328,7 +14322,7 @@
                         }, t
                     }
                     return i.__extends(t, e), t.prototype.render = function() {
-                        return r.createElement(j, {
+                        return a.createElement(A, {
                             authToken: this.props.authToken,
                             balloonDirection: this.props.balloonDirection,
                             channelLogin: this.props.channelLogin,
@@ -14349,8 +14343,8 @@
                             useModal: this.props.useModal
                         })
                     }, t = i.__decorate([Object(p.b)("SubscribeButton")], t)
-                }(r.Component);
-            var U = Object(a.connect)(function(e) {
+                }(a.Component);
+            var B = Object(r.connect)(function(e) {
                 return {
                     authToken: Object(u.a)(e),
                     sessionUser: Object(u.e)(e)
@@ -14367,23 +14361,23 @@
                         return Object(d.d)(s.a, {
                             component: "CheckoutModal",
                             loader: function() {
-                                return Promise.all([n.e(0), n.e(212)]).then(n.bind(null, "KJv/"))
+                                return Promise.all([n.e(0), n.e(210)]).then(n.bind(null, "KJv/"))
                             },
                             componentProps: t
                         })
                     }
                 }, e)
-            })(B);
+            })(U);
             n.d(t, !1, function() {
-                return B
-            }), n.d(t, "a", function() {
                 return U
+            }), n.d(t, "a", function() {
+                return B
             }), n.d(t, !1, function() {
                 return D
             }), n.d(t, !1, function() {
-                return L
-            }), n.d(t, !1, function() {
                 return j
+            }), n.d(t, !1, function() {
+                return A
             })
         },
         R2Ti: function(e, t) {
@@ -14480,13 +14474,13 @@
                 return .2126 * t[0] + .7152 * t[1] + .0722 * t[2]
             }
 
-            function r(e, t) {
+            function a(e, t) {
                 var n = i(e) + .05,
-                    r = i(t) + .05;
-                return n > r ? n / r : r / n
+                    a = i(t) + .05;
+                return n > a ? n / a : a / n
             }
             n.d(t, "a", function() {
-                return r
+                return a
             })
         },
         RFZc: function(e, t) {
@@ -14973,8 +14967,8 @@
         RQ6e: function(e, t, n) {
             "use strict";
             var i = n("mrSG"),
-                r = n("TSYQ"),
-                a = n("q1tI"),
+                a = n("TSYQ"),
+                r = n("q1tI"),
                 o = n("/7QA"),
                 s = n("fvjX"),
                 l = n("yR8l"),
@@ -14993,36 +14987,36 @@
                     }, t.prototype.render = function() {
                         var e = null,
                             t = Object(o.d)("Select One...", "ReportUserModal");
-                        this.props.data.loading ? e = [a.createElement("option", {
+                        this.props.data.loading ? e = [r.createElement("option", {
                             key: "Loading"
                         }, Object(o.d)("Loading...", "ReportReasonsSelect"))] : e = (this.props.data.reportReasons || [{
                             id: "other",
                             text: Object(o.d)("Other Terms of Service Violation", "ReportUserModal")
                         }]).map(function(e) {
-                            return a.createElement("option", {
+                            return r.createElement("option", {
                                 key: e.id,
                                 value: e.id
                             }, e.text)
                         });
-                        return a.createElement(d.Ya, {
+                        return r.createElement(d.Ya, {
                             margin: {
                                 bottom: 2
                             }
-                        }, a.createElement(d.Ea, {
+                        }, r.createElement(d.Ea, {
                             id: "reporting-modal__select",
                             label: Object(o.d)("Select Reason (required)", "ReportUserModal")
-                        }, a.createElement(d.Ab, {
+                        }, r.createElement(d.Ab, {
                             id: "reporting-modal__select",
                             "data-test-selector": "reporting-modal.select",
                             disabled: this.props.data.loading || !!this.props.data.error,
                             onChange: this.handleChange,
                             defaultValue: t
-                        }, a.createElement("option", {
+                        }, r.createElement("option", {
                             disabled: !0,
                             key: "default"
                         }, t), e)))
                     }, t
-                }(a.Component),
+                }(r.Component),
                 m = Object(s.compose)(Object(l.a)(u, {
                     options: function(e) {
                         return {
@@ -15049,8 +15043,8 @@
                         description: "",
                         reason: null
                     }, t.headerMessage = Object(o.d)("Tell us your concern about this content so that we can review it to determine whether there has been a violation of the {tosLink}. {br} (Abuse of this feature is a violation of the terms of service)", {
-                        br: a.createElement("br", null),
-                        tosLink: a.createElement("a", {
+                        br: r.createElement("br", null),
+                        tosLink: r.createElement("a", {
                             href: "https://www.twitch.tv/p/terms-of-service",
                             target: "_blank"
                         }, Object(o.d)("terms of service", "ReportUser"))
@@ -15067,33 +15061,33 @@
                     }, t
                 }
                 return i.__extends(t, e), t.prototype.render = function() {
-                    return a.createElement(d.Ya, {
+                    return r.createElement(d.Ya, {
                         display: d.X.Flex,
                         flexDirection: d.Aa.Column,
                         alignItems: d.f.Center,
                         justifyContent: d.Xa.Center
                     }, this.renderStatusMessage(), this.renderBody())
                 }, t.prototype.renderBody = function() {
-                    return this.props.submitStatus === h.Success ? a.createElement("div", null, a.createElement(d.z, {
+                    return this.props.submitStatus === h.Success ? r.createElement("div", null, r.createElement(d.z, {
                         onClick: this.props.onClose
-                    }, a.createElement(d.Ya, {
+                    }, r.createElement(d.Ya, {
                         padding: {
                             x: 2
                         }
-                    }, Object(o.d)("Close", "ReportUser")))) : a.createElement("div", null, a.createElement(d.Ya, {
+                    }, Object(o.d)("Close", "ReportUser")))) : r.createElement("div", null, r.createElement(d.Ya, {
                         "data-test-selector": "reporting.title",
                         margin: {
                             bottom: 1
                         },
                         "data-a-target": "reporting-channel-name"
-                    }, a.createElement(d.W, {
+                    }, r.createElement(d.W, {
                         type: d.Wb.H4
-                    }, this.props.title), a.createElement(d.Fb, {
+                    }, this.props.title), r.createElement(d.Fb, {
                         color: d.O.Alt2,
                         margin: {
                             top: 1
                         }
-                    }, this.headerMessage)), a.createElement("form", null, a.createElement(d.Fb, {
+                    }, this.headerMessage)), r.createElement("form", null, r.createElement(d.Fb, {
                         borderTop: !0,
                         borderBottom: !0,
                         margin: {
@@ -15102,21 +15096,21 @@
                         padding: {
                             y: 2
                         }
-                    }, a.createElement(m, {
+                    }, r.createElement(m, {
                         reportContentType: this.props.reportContentType,
                         onChange: this.handleReasonChange
-                    }), a.createElement(d.Ea, {
+                    }), r.createElement(d.Ea, {
                         id: "reporting__text-area",
                         label: Object(o.d)("Description (required)", "ReportUser")
-                    }, a.createElement(d.Tb, {
+                    }, r.createElement(d.Tb, {
                         defaultValue: this.props.defaultDescription,
                         onChange: this.handleTextAreaChange
-                    }))), a.createElement(d.Fb, {
+                    }))), r.createElement(d.Fb, {
                         display: d.X.Flex,
                         justifyContent: d.Xa.Center
-                    }, a.createElement(d.z, {
+                    }, r.createElement(d.z, {
                         onClick: this.handleSubmit
-                    }, a.createElement(d.Ya, {
+                    }, r.createElement(d.Ya, {
                         padding: {
                             x: 2
                         }
@@ -15139,11 +15133,11 @@
                         default:
                             return null
                     }
-                    var t = r({
+                    var t = a({
                         "reporting__error-container": this.props.submitStatus !== h.Success,
                         "reporting__success-container": this.props.submitStatus === h.Success
                     });
-                    return a.createElement(d.Fb, {
+                    return r.createElement(d.Fb, {
                         className: t,
                         fullWidth: this.props.submitStatus !== h.Success,
                         "data-test-selector": "reporting.error",
@@ -15153,7 +15147,7 @@
                         padding: 1
                     }, e)
                 }, t
-            }(a.Component)
+            }(r.Component)
         },
         RuiO: function(e, t) {
             var n = {
@@ -15760,15 +15754,15 @@
         TApp: function(e, t, n) {
             "use strict";
             n.d(t, "a", function() {
-                return a
+                return r
             });
             var i = n("ZtEv"),
-                r = n("aF6k");
+                a = n("aF6k");
 
-            function a(e) {
+            function r(e) {
                 return {
                     type: i.b.Info,
-                    id: Object(r.a)("info"),
+                    id: Object(a.a)("info"),
                     message: e
                 }
             }
@@ -15776,8 +15770,8 @@
         TOso: function(e, t, n) {
             "use strict";
             var i = n("mrSG"),
-                r = n("/7QA"),
-                a = n("cMjZ"),
+                a = n("/7QA"),
+                r = n("cMjZ"),
                 o = n("geRD"),
                 s = n("f00E"),
                 l = n("DMoW"),
@@ -15803,22 +15797,22 @@
                         recipientUserID: f
                     })),
                     k = Object(h.a)(t, f),
-                    C = Object(c.a)(r.p.apollo.client.cache, k, !0);
+                    C = Object(c.a)(a.p.apollo.client.cache, k, !0);
                 if (C) {
                     var y = function(e, t) {
-                        for (var n = [], i = /\S+/g, r = i.exec(e); r;) {
-                            var a = r[0],
-                                o = t[a];
+                        for (var n = [], i = /\S+/g, a = i.exec(e); a;) {
+                            var r = a[0],
+                                o = t[r];
                             if (o) {
-                                var s = Object(u.c)(e.slice(0, r.index)),
-                                    l = s ? s.length : r.index;
+                                var s = Object(u.c)(e.slice(0, a.index)),
+                                    l = s ? s.length : a.index;
                                 n.push({
                                     id: o.id,
                                     start: l,
-                                    end: l + a.length - 1
+                                    end: l + r.length - 1
                                 })
                             }
-                            r = i.exec(e)
+                            a = i.exec(e)
                         }
                         return n
                     }(p, n).map(d.a);
@@ -15873,24 +15867,24 @@
                         if (t.data) {
                             var n = t.data;
                             if (n.sendWhisper.message && !n.sendWhisper.error) {
-                                var r = n.sendWhisper.message,
+                                var a = n.sendWhisper.message,
                                     o = Object(c.a)(e, k);
                                 if (o) {
                                     var s = o.messages.edges.findIndex(function(e) {
-                                        return e.node.id === b || e.node.nonce === b || e.node.id === r.id
+                                        return e.node.id === b || e.node.nonce === b || e.node.id === a.id
                                     });
                                     if (s < 0) {
                                         var l = {
                                             cursor: (1 + C.messages.edges.reduce(function(e, t) {
                                                 return Math.max(parseInt(t.cursor, 10), e)
                                             }, 0)).toString(),
-                                            node: r,
+                                            node: a,
                                             __typename: "WhisperMessageEdge"
                                         };
                                         o.messages.edges.unshift(l)
-                                    } else o.messages.edges[s].node = r;
-                                    o.userLastMessageRead && (o.userLastMessageRead.sentAt = r.sentAt), o.unreadMessagesCount = 0, e.writeFragment({
-                                        id: Object(a.a)(o),
+                                    } else o.messages.edges[s].node = a;
+                                    o.userLastMessageRead && (o.userLastMessageRead.sentAt = a.sentAt), o.unreadMessagesCount = 0, e.writeFragment({
+                                        id: Object(r.a)(o),
                                         fragment: g,
                                         data: i.__assign({}, o)
                                     })
@@ -15899,7 +15893,7 @@
                         }
                     }
                 }
-                return r.p.apollo.client.mutate(v)
+                return a.p.apollo.client.mutate(v)
             }
             n.d(t, "a", function() {
                     return p
@@ -15914,35 +15908,35 @@
         TVuH: function(e, t, n) {},
         TvOw: function(e, t, n) {
             "use strict";
-            var i, r;
+            var i, a;
             n.d(t, "b", function() {
                     return i
                 }), n.d(t, "a", function() {
-                    return r
+                    return a
                 }),
                 function(e) {
                     e.Spam = "Spam", e.Harassment = "Harassment"
                 }(i || (i = {})),
                 function(e) {
                     e.Spam = "spam", e.Harassment = "harassment", e.Other = "other"
-                }(r || (r = {}))
+                }(a || (a = {}))
         },
         U1yz: function(e, t, n) {
             "use strict";
             n.d(t, "a", function() {
-                return r
+                return a
             });
             var i = n("2Dht");
 
-            function r(e, t, n) {
+            function a(e, t, n) {
                 try {
-                    var r = e.readQuery({
+                    var a = e.readQuery({
                         query: i,
                         variables: {
                             id: t
                         }
                     }, n);
-                    return r ? r.whisperThread : null
+                    return a ? a.whisperThread : null
                 } catch (e) {
                     return null
                 }
@@ -15951,21 +15945,21 @@
         U80U: function(e, t, n) {},
         UJc8: function(e, t, n) {
             "use strict";
-            var i, r;
+            var i, a;
             n.d(t, "b", function() {
-                    return r
-                }), n.d(t, "a", function() {
                     return a
+                }), n.d(t, "a", function() {
+                    return r
                 }),
                 function(e) {
                     e.Everyone = "EVERYONE", e.Moderator = "MODERATOR", e.Subscriber = "SUBSCRIBER"
-                }(r || (r = {}));
-            var a = ((i = {})[r.Everyone] = "Everyone", i[r.Moderator] = "Mods", i[r.Subscriber] = "Subs", i)
+                }(a || (a = {}));
+            var r = ((i = {})[a.Everyone] = "Everyone", i[a.Moderator] = "Mods", i[a.Subscriber] = "Subs", i)
         },
         UUve: function(e, t, n) {
             "use strict";
             n.d(t, "d", function() {
-                return a
+                return r
             }), n.d(t, "e", function() {
                 return o
             }), n.d(t, "c", function() {
@@ -15980,13 +15974,13 @@
                 return p
             });
             var i = n("/7QA"),
-                r = n("y5D0"),
-                a = "SUB_CHECKOUT__PRODUCT",
+                a = n("y5D0"),
+                r = "SUB_CHECKOUT__PRODUCT",
                 o = "SUB_CHECKOUT__RECIPIENT",
                 s = "SUB_CHECKOUT__MYSTERY_GIFT_COUNT",
                 l = "SUB_CHECKOUT__GIFTING_ANONYMOUSLY",
                 c = "SUB_CHECKOUT__IS_ONE_TIME",
-                d = [a, o, s, l, c];
+                d = [r, o, s, l, c];
 
             function u() {
                 d.forEach(function(e) {
@@ -15996,7 +15990,7 @@
 
             function p(e) {
                 return function() {
-                    return Object(r.e)(e, {
+                    return Object(a.e)(e, {
                         onClose: u
                     })
                 }
@@ -16400,22 +16394,22 @@
                     column: 1
                 }
             };
-            var r = {};
+            var a = {};
 
-            function a(e) {
+            function r(e) {
                 return e.filter(function(e) {
                     if ("FragmentDefinition" !== e.kind) return !0;
                     var t = e.name.value;
-                    return !r[t] && (r[t] = !0, !0)
+                    return !a[t] && (a[t] = !0, !0)
                 })
             }
-            i.definitions = i.definitions.concat(a(n("IKE4").definitions)), i.definitions = i.definitions.concat(a(n("hWzS").definitions)), e.exports = i
+            i.definitions = i.definitions.concat(r(n("IKE4").definitions)), i.definitions = i.definitions.concat(r(n("hWzS").definitions)), e.exports = i
         },
         VAW9: function(e, t, n) {
             "use strict";
             var i = n("oJmH"),
-                r = n("/MKj"),
-                a = n("fvjX"),
+                a = n("/MKj"),
+                r = n("fvjX"),
                 o = n("yR8l"),
                 s = n("eDVu"),
                 l = n("0Log"),
@@ -16452,11 +16446,11 @@
                         var t = [];
                         return m(e.images).forEach(function(e, n) {
                             m(e).forEach(function(e, i) {
-                                m(e).forEach(function(e, r) {
+                                m(e).forEach(function(e, a) {
                                     t.push({
                                         url: e,
                                         theme: n.toUpperCase(),
-                                        dpiScale: parseFloat(r),
+                                        dpiScale: parseFloat(a),
                                         isAnimated: "animated" === i
                                     })
                                 })
@@ -16506,23 +16500,23 @@
                 S = n("ZS2+"),
                 E = n("KwB3"),
                 N = n("BJwa"),
-                w = n("Ue10"),
-                _ = (n("zWFo"), "Stream Chat"),
+                _ = n("Ue10"),
+                w = (n("zWFo"), "Stream Chat"),
                 O = S.a.wrap(function() {
-                    return n.e(208).then(n.bind(null, "+k6+"))
+                    return n.e(206).then(n.bind(null, "+k6+"))
                 }, "ActiveRoomButton"),
                 M = S.a.wrap(function() {
-                    return n.e(207).then(n.bind(null, "Xf1I"))
+                    return n.e(205).then(n.bind(null, "Xf1I"))
                 }, "Room"),
                 D = S.a.wrap(function() {
-                    return n.e(206).then(n.bind(null, "cs/o"))
+                    return n.e(204).then(n.bind(null, "cs/o"))
                 }, "RoomPicker"),
                 I = function(e) {
                     function t() {
                         var t = null !== e && e.apply(this, arguments) || this;
                         return t.state = {
-                            activeRoomID: _,
-                            activeRoomName: _,
+                            activeRoomID: w,
+                            activeRoomName: w,
                             isActiveRoomDeleted: !1,
                             shouldAutoOpenRoomPicker: !0,
                             showRoomPicker: !1
@@ -16532,10 +16526,10 @@
                             if (t.state.shouldAutoOpenRoomPicker && e.firstPageLoaded && e.data && e.data.channel && e.data.channel.channelRooms) {
                                 var n = t.isChannelLive(e.data),
                                     i = 0 !== e.data.channel.channelRooms.length,
-                                    r = !n && i && !e.isEmbedded;
+                                    a = !n && i && !e.isEmbedded;
                                 t.setState({
                                     shouldAutoOpenRoomPicker: !1,
-                                    showRoomPicker: r
+                                    showRoomPicker: a
                                 })
                             }
                         }, t.headerClick = function() {
@@ -16553,11 +16547,11 @@
                                 showRoomPicker: !1
                             })
                         }, t.onActiveRoomDelete = function() {
-                            t.state.activeRoomID !== _ && t.setState({
+                            t.state.activeRoomID !== w && t.setState({
                                 isActiveRoomDeleted: !0
                             })
                         }, t.goToStreamChat = function() {
-                            t.handleRoomSelect(_, _)
+                            t.handleRoomSelect(w, w)
                         }, t.closeRoomPicker = function() {
                             t.setState({
                                 showRoomPicker: !1
@@ -16572,7 +16566,7 @@
                                 shouldAutoOpenRoomPicker: !0
                             }), this.checkRoomPickerAutoOpen(e), this.props.data && e.data && this.props.data.channel && e.data.channel && this.props.data.channel.self && e.data.channel.self && !e.data.channel.self.isChannelMember && this.props.data.channel.self.isChannelMember !== e.data.channel.self.isChannelMember && this.goToStreamChat(), e.data && e.data.channel && e.data.channel.self) {
                             var n = e.data.channel.self;
-                            (!n.isChannelMember || n.banStatus && n.banStatus.isPermanent) && this.state.activeRoomID !== _ && this.goToStreamChat()
+                            (!n.isChannelMember || n.banStatus && n.banStatus.isPermanent) && this.state.activeRoomID !== w && this.goToStreamChat()
                         }
                         if (this.props.sessionUser && this.props.routedRoomName && this.props.data && this.props.data.loading && !this.props.data.channel && e.data && !e.data.loading && e.data.channel && e.data.channel.channelRooms && e.data.channel.self.isChannelMember) {
                             var i = e.data.channel.channelRooms.find(function(e) {
@@ -16582,20 +16576,20 @@
                                 activeRoomID: i.id,
                                 activeRoomName: i.name
                             })
-                        } else this.props.channelLogin !== e.channelLogin && this.state.activeRoomID !== _ && this.goToStreamChat()
+                        } else this.props.channelLogin !== e.channelLogin && this.state.activeRoomID !== w && this.goToStreamChat()
                     }, t.prototype.render = function() {
-                        return k.createElement(w.Ya, {
+                        return k.createElement(_.Ya, {
                             fullWidth: !0,
                             fullHeight: !0,
-                            display: w.X.Flex,
-                            flexDirection: w.Aa.Column,
+                            display: _.X.Flex,
+                            flexDirection: _.Aa.Column,
                             flexGrow: 1,
-                            flexWrap: w.Ba.NoWrap,
-                            position: w.kb.Relative
+                            flexWrap: _.Ba.NoWrap,
+                            position: _.kb.Relative
                         }, this.renderHeader(), this.renderRoomPicker(), this.renderHiddenState(), this.renderChat(), this.renderCurrentRoom())
                     }, t.prototype.renderChat = function() {
                         if (this.props.isHidden && !this.props.isPopout) return null;
-                        var e = this.props.isBackground || this.state.activeRoomID !== _,
+                        var e = this.props.isBackground || this.state.activeRoomID !== w,
                             t = this.props.bitsConfig && this.props.bitsConfig.orderedActions.length > 0;
                         return k.createElement(E.a, {
                             bitsConfig: t ? this.props.bitsConfig : void 0,
@@ -16611,7 +16605,7 @@
                             shouldConnectChat: this.props.shouldConnectChat
                         })
                     }, t.prototype.renderCurrentRoom = function() {
-                        return this.props.isHidden && !this.props.isPopout || !this.props.data || !this.props.data.channel || this.state.activeRoomID === _ ? null : k.createElement(M, {
+                        return this.props.isHidden && !this.props.isPopout || !this.props.data || !this.props.data.channel || this.state.activeRoomID === w ? null : k.createElement(M, {
                             bitsConfig: this.props.bitsConfig,
                             isDeleted: this.state.isActiveRoomDeleted,
                             isPopout: this.props.isPopout,
@@ -16625,44 +16619,44 @@
                             passThroughCommands: this.props.passThroughCommands
                         })
                     }, t.prototype.renderHeader = function() {
-                        var e = k.createElement(w.Ya, {
-                            display: w.X.Flex,
-                            alignItems: w.f.Center
-                        }, !this.state.showRoomPicker && Object(C.d)("Rooms", "RoomSelector"), k.createElement(w.Ya, {
-                            display: w.X.Flex,
-                            alignItems: w.f.Center
-                        }, this.renderTotalUnreadMentionCount(), !this.state.showRoomPicker && k.createElement(w.Ya, {
+                        var e = k.createElement(_.Ya, {
+                            display: _.X.Flex,
+                            alignItems: _.f.Center
+                        }, !this.state.showRoomPicker && Object(C.d)("Rooms", "RoomSelector"), k.createElement(_.Ya, {
+                            display: _.X.Flex,
+                            alignItems: _.f.Center
+                        }, this.renderTotalUnreadMentionCount(), !this.state.showRoomPicker && k.createElement(_.Ya, {
                             padding: {
                                 left: .5
                             },
-                            display: w.X.Flex
-                        }, k.createElement(w.tb, {
-                            asset: w.ub.RoomList
-                        })), this.state.showRoomPicker && k.createElement(w.A, {
+                            display: _.X.Flex
+                        }, k.createElement(_.tb, {
+                            asset: _.ub.RoomList
+                        })), this.state.showRoomPicker && k.createElement(_.A, {
                             ariaLabel: "RoomListOpen",
-                            icon: w.ub.RoomListOpen,
+                            icon: _.ub.RoomListOpen,
                             "data-test-selector": "close-room-picker-button",
                             onClick: this.headerClick,
                             blurAfterClick: !0
                         })));
-                        this.state.showRoomPicker || (e = k.createElement(w.Ya, {
-                            position: w.kb.Relative
-                        }, k.createElement(w.z, {
+                        this.state.showRoomPicker || (e = k.createElement(_.Ya, {
+                            position: _.kb.Relative
+                        }, k.createElement(_.z, {
                             "data-a-target": "room-selector-button",
                             "data-test-selector": "open-room-picker-button",
                             onClick: this.headerClick,
-                            type: w.F.Text
-                        }, e))), this.props.isEmbedded && (e = k.createElement(w.Ya, null));
-                        var t = k.createElement(w.Fb, {
+                            type: _.F.Text
+                        }, e))), this.props.isEmbedded && (e = k.createElement(_.Ya, null));
+                        var t = k.createElement(_.Fb, {
                             className: "room-selector__header",
-                            background: w.r.Alt,
+                            background: _.r.Alt,
                             borderLeft: !this.props.isEmbedded,
                             borderRight: !this.props.isEmbedded,
                             borderBottom: !0,
-                            display: w.X.Flex,
+                            display: _.X.Flex,
                             fullWidth: !0,
-                            justifyContent: w.Xa.Between,
-                            alignItems: w.f.Center,
+                            justifyContent: _.Xa.Between,
+                            alignItems: _.f.Center,
                             flexShrink: 0,
                             padding: {
                                 left: 2,
@@ -16671,22 +16665,22 @@
                         }, k.createElement("div", {
                             id: N.a
                         }, this.renderActiveRoomName()), e);
-                        return this.state.showRoomPicker && (t = k.createElement(w.Ya, {
+                        return this.state.showRoomPicker && (t = k.createElement(_.Ya, {
                             className: "room-selector__open-header-wrapper"
                         }, t)), t
                     }, t.prototype.renderRoomPicker = function() {
                         if (this.state.showRoomPicker && this.props.data && this.props.data.channel) return k.createElement(y.a, {
                             onClickOut: this.closeRoomPicker
-                        }, k.createElement(w.Fb, {
+                        }, k.createElement(_.Fb, {
                             attachLeft: !0,
                             attachRight: !0,
-                            background: w.r.Alt,
+                            background: _.r.Alt,
                             borderBottom: !0,
                             borderLeft: !0,
                             borderRight: !0,
                             elevation: 2,
-                            position: w.kb.Absolute,
-                            zIndex: w.jc.Above
+                            position: _.kb.Absolute,
+                            zIndex: _.jc.Above
                         }, k.createElement(D, {
                             channelID: this.props.data.channel.id,
                             handleRoomSelect: this.handleRoomSelect,
@@ -16696,25 +16690,25 @@
                             "data-test-selector": "room-picker"
                         })))
                     }, t.prototype.renderActiveRoomName = function() {
-                        return this.state.showRoomPicker ? k.createElement(w.W, {
-                            color: w.O.Alt,
+                        return this.state.showRoomPicker ? k.createElement(_.W, {
+                            color: _.O.Alt,
                             "data-test-selector": N.a
-                        }, Object(C.d)("Rooms", "RoomSelectorOpened")) : this.state.activeRoomName === _ ? this.props.renderChannelName && this.props.data && this.props.data.channel ? k.createElement(w.W, {
-                            color: w.O.Alt,
+                        }, Object(C.d)("Rooms", "RoomSelectorOpened")) : this.state.activeRoomName === w ? this.props.renderChannelName && this.props.data && this.props.data.channel ? k.createElement(_.W, {
+                            color: _.O.Alt,
                             "data-test-selector": N.a
                         }, Object(C.d)("<x:bold>{displayName}</x:bold>'s Chat", {
                             displayName: this.props.data.channel.displayName,
                             "x:bold": function(e) {
-                                return k.createElement(w.W, {
-                                    type: w.Wb.Span,
+                                return k.createElement(_.W, {
+                                    type: _.Wb.Span,
                                     bold: !0
                                 }, e)
                             }
-                        }, "RoomSelectorOpened")) : k.createElement(w.W, {
-                            color: w.O.Alt,
+                        }, "RoomSelectorOpened")) : k.createElement(_.W, {
+                            color: _.O.Alt,
                             "data-test-selector": N.a
-                        }, Object(C.d)("Stream Chat", "RoomSelectorOpened")) : this.state.isActiveRoomDeleted ? k.createElement(w.W, {
-                            color: w.O.Alt,
+                        }, Object(C.d)("Stream Chat", "RoomSelectorOpened")) : this.state.isActiveRoomDeleted ? k.createElement(_.W, {
+                            color: _.O.Alt,
                             "data-test-selector": N.a
                         }, this.state.activeRoomName) : k.createElement(O, {
                             roomID: this.state.activeRoomID,
@@ -16727,49 +16721,49 @@
                         var n = t.channel.channelRooms.reduce(function(t, n) {
                             return n.self.isMuted || n.id === e.state.activeRoomID ? t : t + n.self.unreadMentionCount
                         }, 0);
-                        return n > 0 ? k.createElement(w.Ya, {
-                            display: w.X.InlineBlock,
+                        return n > 0 ? k.createElement(_.Ya, {
+                            display: _.X.InlineBlock,
                             padding: {
                                 left: .5
                             },
-                            position: w.kb.Relative
-                        }, k.createElement(w.hb, {
+                            position: _.kb.Relative
+                        }, k.createElement(_.hb, {
                             label: n.toString(),
-                            type: w.ib.Alert
+                            type: _.ib.Alert
                         })) : void 0
                     }, t.prototype.renderHiddenState = function() {
-                        return !this.props.isHidden || this.props.isPopout ? null : k.createElement(w.Fb, {
-                            alignItems: w.f.Center,
+                        return !this.props.isHidden || this.props.isPopout ? null : k.createElement(_.Fb, {
+                            alignItems: _.f.Center,
                             borderLeft: !0,
                             "data-test-selector": "room-selector-hidden-state",
-                            display: w.X.Flex,
-                            flexDirection: w.Aa.Column,
+                            display: _.X.Flex,
+                            flexDirection: _.Aa.Column,
                             fullHeight: !0,
                             fullWidth: !0,
-                            justifyContent: w.Xa.Center,
-                            color: w.O.Base,
-                            position: w.kb.Relative
-                        }, k.createElement(w.Ya, {
+                            justifyContent: _.Xa.Center,
+                            color: _.O.Base,
+                            position: _.kb.Relative
+                        }, k.createElement(_.Ya, {
                             margin: {
                                 bottom: 1
                             }
-                        }, k.createElement(w.W, {
-                            fontSize: w.Ca.Size5
-                        }, Object(C.d)("Chat is hidden.", "RoomSelector"))), k.createElement(w.z, {
+                        }, k.createElement(_.W, {
+                            fontSize: _.Ca.Size5
+                        }, Object(C.d)("Chat is hidden.", "RoomSelector"))), k.createElement(_.z, {
                             onClick: this.props.onChatUnhide,
                             "data-a-target": "show-chat-button"
                         }, Object(C.d)("Show Chat", "RoomSelector")))
                     }, t
                 }(k.Component),
                 T = n("Qdho");
-            var R = Object(i.compose)(Object(r.connect)(function(e) {
+            var R = Object(i.compose)(Object(a.connect)(function(e) {
                 return {
                     firstPageLoaded: e.session.firstPageLoaded,
                     isHidden: e.chat.isHidden,
                     sessionUser: Object(d.e)(e)
                 }
             }, function(e) {
-                return Object(a.bindActionCreators)({
+                return Object(r.bindActionCreators)({
                     onChatUnhide: function() {
                         return g.O()
                     }
@@ -16911,9 +16905,9 @@
         VJHF: function(e, t, n) {
             "use strict";
             n.d(t, "b", function() {
-                return r
-            }), n.d(t, "c", function() {
                 return a
+            }), n.d(t, "c", function() {
+                return r
             }), n.d(t, "f", function() {
                 return o
             }), n.d(t, "d", function() {
@@ -16923,8 +16917,8 @@
             }), n.d(t, "a", function() {
                 return i
             });
-            var i, r = "esports-campaign-ftue-displayed",
-                a = "hgc2018",
+            var i, a = "esports-campaign-ftue-displayed",
+                r = "hgc2018",
                 o = "owl2018",
                 s = "hearthstone2018",
                 l = "hearthstone2018-test";
@@ -16936,8 +16930,8 @@
         VS9Q: function(e, t, n) {
             "use strict";
             var i = n("i6WW"),
-                r = n("6j5V"),
-                a = n("XmgI"),
+                a = n("6j5V"),
+                r = n("XmgI"),
                 o = n("gTu3"),
                 s = n("RcPG"),
                 l = n("a1OF"),
@@ -16980,7 +16974,7 @@
                     return n && n.__typename === c.AUTOMOD ? e.concat({
                         type: s.a.ModeratedText,
                         content: i
-                    }) : e.concat(Object(r.a)(i))
+                    }) : e.concat(Object(a.a)(i))
                 }, [])
             }
 
@@ -17016,11 +17010,11 @@
                             type: s.a.Emote,
                             content: {
                                 alt: v,
-                                images: Object(a.d)(S),
+                                images: Object(r.d)(S),
                                 cheerAmount: k,
                                 cheerColor: S.color
                             }
-                        }) : m.push(Object(r.a)(e.text))
+                        }) : m.push(Object(a.a)(e.text))
                     } else if (g && g.__typename === c.MENTION) {
                         var E = g,
                             N = o.a.Default;
@@ -17032,15 +17026,15 @@
                             }
                         })
                     } else {
-                        var w = Object(i.a)(e.text, {
+                        var _ = Object(i.a)(e.text, {
                             blockLinks: !1,
                             parseClips: !0,
                             parseVods: !0
                         });
-                        if (w) m.push(w);
+                        if (_) m.push(_);
                         else {
-                            var _ = e.text;
-                            t && 0 === h && _.startsWith(d) && (_ = _.substr(3)), m.push(Object(r.a)(_))
+                            var w = e.text;
+                            t && 0 === h && w.startsWith(d) && (w = w.substr(3)), m.push(Object(a.a)(w))
                         }
                     }
                 }), m
@@ -17050,8 +17044,8 @@
                 var t = e.data,
                     n = t.message,
                     i = t.cursor,
-                    r = f(n.content.fragments),
-                    a = b(n.sender.badges);
+                    a = f(n.content.fragments),
+                    r = b(n.sender.badges);
                 return {
                     cursor: "" + i,
                     node: {
@@ -17060,7 +17054,7 @@
                         sentAt: n.sent_at,
                         content: {
                             text: n.content.text,
-                            fragments: r,
+                            fragments: a,
                             __typename: "RoomMessageContent"
                         },
                         sender: {
@@ -17068,7 +17062,7 @@
                             login: n.sender.login,
                             chatColor: n.sender.chat_color,
                             displayName: n.sender.display_name,
-                            displayBadges: a,
+                            displayBadges: r,
                             __typename: "User"
                         },
                         __typename: "RoomMessage"
@@ -17086,8 +17080,8 @@
                         },
                         n = e.cheermote,
                         i = e.emoticon,
-                        r = e.mention,
-                        a = e.text;
+                        a = e.mention,
+                        r = e.text;
                     return n ? t.content = {
                         bitsAmount: n.bits_amount,
                         prefix: n.prefix,
@@ -17096,12 +17090,12 @@
                     } : i ? t.content = {
                         emoteID: i.id,
                         setID: i.set_id,
-                        token: a,
+                        token: r,
                         __typename: "Emote"
-                    } : r && (t.content = {
-                        id: r.user_id,
-                        login: r.login,
-                        displayName: r.display_name,
+                    } : a && (t.content = {
+                        id: a.user_id,
+                        login: a.login,
+                        displayName: a.display_name,
                         __typename: "User"
                     }), t
                 })
@@ -17654,8 +17648,8 @@
         VwyG: function(e, t, n) {
             "use strict";
             var i = n("/MKj"),
-                r = n("kRBY"),
-                a = n("mrSG"),
+                a = n("kRBY"),
+                r = n("mrSG"),
                 o = n("q1tI"),
                 s = n("oJmH"),
                 l = n("/7QA"),
@@ -17676,7 +17670,7 @@
                             error: null
                         }, n
                     }
-                    return a.__extends(t, e), t.prototype.componentDidUpdate = function(e) {
+                    return r.__extends(t, e), t.prototype.componentDidUpdate = function(e) {
                         var t = e.data && e.data.loading,
                             n = this.props.data && this.props.data.loading;
                         (!this.props.isLoggedIn || t && !n) && this.props.latencyTracking.reportInteractive()
@@ -17731,7 +17725,7 @@
             }), Object(d.b)("RoleRestricted"))(p);
             var h = Object(i.connect)(function(e) {
                 return {
-                    isLoggedIn: Object(r.f)(e)
+                    isLoggedIn: Object(a.f)(e)
                 }
             })(m);
             n.d(t, "a", function() {
@@ -17741,17 +17735,17 @@
         "W/3w": function(e, t, n) {
             "use strict";
             n.d(t, "a", function() {
-                return r
-            }), n.d(t, "b", function() {
                 return a
+            }), n.d(t, "b", function() {
+                return r
             }), n.d(t, "c", function() {
                 return o
             }), n.d(t, "d", function() {
                 return s
             });
             var i = n("/7QA"),
-                r = 30,
-                a = [0, 10, 30, 60, 1440, 10080, 43200, 129600];
+                a = 30,
+                r = [0, 10, 30, 60, 1440, 10080, 43200, 129600];
 
             function o(e) {
                 switch (e) {
@@ -17808,13 +17802,13 @@
                 })
             }
 
-            function r(e) {
+            function a(e) {
                 return e.some(function(e) {
                     return !!e.giftPromotion
                 })
             }
 
-            function a(e) {
+            function r(e) {
                 return e.some(function(e) {
                     return !!e.self && !!e.self.paidUpgradePromotion
                 })
@@ -17842,9 +17836,9 @@
             n.d(t, "g", function() {
                 return i
             }), n.d(t, "e", function() {
-                return r
-            }), n.d(t, "f", function() {
                 return a
+            }), n.d(t, "f", function() {
+                return r
             }), n.d(t, "c", function() {
                 return o
             }), n.d(t, "d", function() {
@@ -17926,7 +17920,7 @@
         WytW: function(e, t, n) {
             "use strict";
             n.d(t, "g", function() {
-                return a
+                return r
             }), n.d(t, "h", function() {
                 return o
             }), n.d(t, "j", function() {
@@ -17954,16 +17948,16 @@
             }), n.d(t, "o", function() {
                 return E
             }), n.d(t, "n", function() {
-                return w
+                return _
             }), n.d(t, "l", function() {
                 return M
             }), n.d(t, "i", function() {
                 return I
             });
             var i = n("/7QA"),
-                r = i.p.logger.withCategory("chat-commands");
+                a = i.p.logger.withCategory("chat-commands");
 
-            function a(e) {
+            function r(e) {
                 return "/mod " + e
             }
 
@@ -18048,20 +18042,20 @@
             }
             var N = /^\/slow(?:\s+(\d+)?)?$/;
 
-            function w(e) {
+            function _(e) {
                 var t = e.trim().match(N);
                 return t ? {
                     duration: t[1] && Number(t[1]) || null
                 } : null
             }
-            var _ = ["blue", "blueviolet", "cadetblue", "chocolate", "coral", "dodgerblue", "firebrick", "goldenrod", "green", "hotpink", "orangered", "red", "seagreen", "springgreen", "yellowgreen"],
+            var w = ["blue", "blueviolet", "cadetblue", "chocolate", "coral", "dodgerblue", "firebrick", "goldenrod", "green", "hotpink", "orangered", "red", "seagreen", "springgreen", "yellowgreen"],
                 O = /^\/color\s+(#[A-Fa-f0-9]{6}|[A-Za-z]+)$/;
 
             function M(e) {
                 var t = e.trim().match(O);
                 if (!t) return null;
                 var n = t[1];
-                return n.startsWith("#") || -1 !== _.indexOf(n.toLowerCase()) ? {
+                return n.startsWith("#") || -1 !== w.indexOf(n.toLowerCase()) ? {
                     color: n
                 } : null
             }
@@ -18072,16 +18066,16 @@
                 if (!n) return {
                     handled: !1
                 };
-                var a = n[1],
-                    o = i.p.store.getState().chat.commandHandlers[a.toLowerCase()];
+                var r = n[1],
+                    o = i.p.store.getState().chat.commandHandlers[r.toLowerCase()];
                 if (!o) return {
-                    command: a,
+                    command: r,
                     handled: !1
                 };
-                if (1 !== o.length) return r.error(new Error("Failed to run comand " + a), "Multiple command handlers defined for '" + a + "'", {
-                    command: a
+                if (1 !== o.length) return a.error(new Error("Failed to run comand " + r), "Multiple command handlers defined for '" + r + "'", {
+                    command: r
                 }), {
-                    command: a,
+                    command: r,
                     handled: !1
                 };
                 var s = (n[2] || "").trim(),
@@ -18091,13 +18085,13 @@
                     c = o[0];
                 try {
                     return {
-                        command: a,
+                        command: r,
                         handled: !0,
                         result: c(s, l)
                     }
                 } catch (e) {
-                    return r.warn("Exception thrown from chat command handler", {
-                        command: a,
+                    return a.warn("Exception thrown from chat command handler", {
+                        command: r,
                         err: e
                     }), {
                         handled: !1
@@ -18119,8 +18113,8 @@
             "use strict";
             n.r(t);
             var i = n("mrSG"),
-                r = n("q1tI"),
-                a = n("fvjX"),
+                a = n("q1tI"),
+                r = n("fvjX"),
                 o = n("/7QA"),
                 s = n("yR8l"),
                 l = n("V+GM"),
@@ -18159,12 +18153,12 @@
                         this.props.latencyTracking.reportInteractive(), o.p.setPageTitle(this.props.match.params.channelName)
                     }, t.prototype.render = function() {
                         var e = this.props.match.params.channelName;
-                        return r.createElement(b.a, {
+                        return a.createElement(b.a, {
                             ownerLogin: this.props.match.params.channelName,
                             currentPage: Object(p.b)() ? u.b.Videos : u.b.Clips
-                        }, r.createElement(f.ChannelClipsContent, {
+                        }, a.createElement(f.ChannelClipsContent, {
                             channelName: this.props.match.params.channelName
-                        }), r.createElement(h.b, null, r.createElement(v.Fb, {
+                        }), a.createElement(h.b, null, a.createElement(v.Fb, {
                             background: v.r.Alt2,
                             className: "channel-clips__sidebar",
                             display: v.X.Flex,
@@ -18173,14 +18167,14 @@
                             flexShrink: 0,
                             flexWrap: v.Ba.NoWrap,
                             fullHeight: !0
-                        }, r.createElement(g.a, {
+                        }, a.createElement(g.a, {
                             channelLogin: e,
                             onHostingChange: this.handleHostingChange,
                             hostedChannelDisplayName: this.state.hostedChannelDisplayName || void 0
                         }))))
                     }, t
-                }(r.Component),
-                y = Object(a.compose)(Object(m.b)("ClipsChannelPage", {
+                }(a.Component),
+                y = Object(r.compose)(Object(m.b)("ClipsChannelPage", {
                     destination: c.a.ChannelClips
                 }), Object(l.a)({
                     location: d.PageviewLocation.ChannelClips
@@ -18203,14 +18197,14 @@
                 return s
             });
             var i = n("mrSG"),
-                r = n("q1tI"),
-                a = n("4rCz"),
+                a = n("q1tI"),
+                r = n("4rCz"),
                 o = n("1rIY");
 
             function s(e) {
                 var t = Object(o.a)(e, {
                         setServiceAPI: function() {
-                            a.l.warn("The " + e + " chat service attempted to register its API without a provider.")
+                            r.l.warn("The " + e + " chat service attempted to register its API without a provider.")
                         }
                     }),
                     n = t.InnerProvider,
@@ -18219,7 +18213,7 @@
                     InnerProvider: n,
                     withChatServiceProvider: function(e) {
                         return function(t) {
-                            function a() {
+                            function r() {
                                 var e = null !== t && t.apply(this, arguments) || this;
                                 return e.state = {}, e.setServiceAPI = function(t) {
                                     e.setState({
@@ -18227,15 +18221,15 @@
                                     })
                                 }, e
                             }
-                            return i.__extends(a, t), a.prototype.render = function() {
-                                return r.createElement(n, {
+                            return i.__extends(r, t), r.prototype.render = function() {
+                                return a.createElement(n, {
                                     value: {
                                         serviceAPI: this.state.serviceAPI,
                                         setServiceAPI: this.setServiceAPI
                                     }
-                                }, r.createElement(e, i.__assign({}, this.props)))
-                            }, a
-                        }(r.Component)
+                                }, a.createElement(e, i.__assign({}, this.props)))
+                            }, r
+                        }(a.Component)
                     },
                     withContext: s
                 }
@@ -18605,8 +18599,8 @@
                 return c
             });
             var i = n("yR8l"),
-                r = n("eDVu"),
-                a = n("0Log"),
+                a = n("eDVu"),
+                r = n("0Log"),
                 o = n("/aPz"),
                 s = n("/gva");
 
@@ -18627,7 +18621,7 @@
             }
 
             function c() {
-                return Object(r.a)(function(e) {
+                return Object(a.a)(function(e) {
                     return {
                         variables: {
                             channelLogin: e.channelLogin
@@ -18635,7 +18629,7 @@
                         query: s,
                         skip: !e.sessionUser || !e.channelID || !e.firstPageLoaded,
                         topic: e.sessionUser && e.channelID ? Object(o.j)("" + (e.sessionUser && e.sessionUser.id)) : "",
-                        type: a.PubsubMessageType.ChatRoomsUserModAction,
+                        type: r.PubsubMessageType.ChatRoomsUserModAction,
                         mutator: function(t, n) {
                             return e.sessionUser && e.channelID && n.channel && n.channel.self && t.data.target_id === e.sessionUser.id && t.data.channel_id === e.channelID && ("ban" === t.data.action ? n.channel.self.banStatus = {
                                 isPermanent: !0,
@@ -18675,29 +18669,29 @@
             n.d(t, "c", function() {
                 return i
             }), n.d(t, "d", function() {
-                return r
-            }), n.d(t, "e", function() {
                 return a
+            }), n.d(t, "e", function() {
+                return r
             }), n.d(t, "b", function() {
                 return o
             }), n.d(t, "a", function() {
                 return s
             });
             var i = "subscribe_to_channel",
-                r = "turbo",
-                a = "visit_url",
+                a = "turbo",
+                r = "visit_url",
                 o = "none",
                 s = "broadcaster"
         },
         ZVTe: function(e, t, n) {
             "use strict";
             var i = n("TSYQ"),
-                r = n("q1tI"),
-                a = n("EE1E"),
+                a = n("q1tI"),
+                r = n("EE1E"),
                 o = (n("2e6W"), function(e) {
                     var t, n = e.userData.color;
-                    e.highContrastUsernameColor && n && (n = "#" + Object(a.a)(n, e.theme));
-                    var o = [r.createElement("span", {
+                    e.highContrastUsernameColor && n && (n = "#" + Object(r.a)(n, e.theme));
+                    var o = [a.createElement("span", {
                         key: "username-display",
                         className: "chat-author__display-name",
                         "data-a-target": "chat-message-username",
@@ -18709,7 +18703,7 @@
                     }, e.userData.userDisplayName)];
                     if (e.userData.isIntl) {
                         var s = i(((t = {})["chat-author__intl-login"] = !e.highlighted, t["chat-author__intl-login--highlighted"] = e.highlighted, t));
-                        o.push(r.createElement("span", {
+                        o.push(a.createElement("span", {
                             key: "username-login",
                             style: {
                                 color: n
@@ -18718,7 +18712,7 @@
                             "data-test-selector": "message-username-canonical"
                         }, " (" + e.userData.userLogin + ")"))
                     }
-                    return r.createElement("span", {
+                    return a.createElement("span", {
                         key: e.userData.userID + "-authorlabel"
                     }, o)
                 });
@@ -18738,7 +18732,7 @@
         },
         ZbA5: function(e, t, n) {
             "use strict";
-            var i, r, a, o, s = n("mrSG"),
+            var i, a, r, o, s = n("mrSG"),
                 l = n("TSYQ"),
                 c = n("q1tI"),
                 d = n("/7QA"),
@@ -18749,8 +18743,8 @@
                 e.HostingDot = "stream-type-indicator__hosting-dot"
             }(o || (o = {}));
             var m = ((i = {})[u.a.Live] = "stream-type-indicator--live", i[u.a.Premiere] = "stream-type-indicator--premiere", i[u.a.Rerun] = "stream-type-indicator--rerun", i[u.a.WatchParty] = "stream-type-indicator--rerun", i),
-                h = ((r = {})[u.a.Premiere] = p.ub.VideoPremiere, r[u.a.Rerun] = p.ub.VideoRerun, r[u.a.WatchParty] = p.ub.VideoRerun, r),
-                g = ((a = {})[u.a.Premiere] = p.vb.Live, a[u.a.Rerun] = p.vb.Inherit, a[u.a.WatchParty] = p.vb.Inherit, a),
+                h = ((a = {})[u.a.Premiere] = p.ub.VideoPremiere, a[u.a.Rerun] = p.ub.VideoRerun, a[u.a.WatchParty] = p.ub.VideoRerun, a),
+                g = ((r = {})[u.a.Premiere] = p.vb.Live, r[u.a.Rerun] = p.vb.Inherit, r[u.a.WatchParty] = p.vb.Inherit, r),
                 f = function(e) {
                     function t() {
                         return null !== e && e.apply(this, arguments) || this
@@ -18818,19 +18812,18 @@
                 return f
             })
         },
-        ZfCj: function(e, t, n) {},
         ZtEv: function(e, t, n) {
             "use strict";
             n.d(t, "b", function() {
                 return i
             }), n.d(t, "c", function() {
-                return r
-            }), n.d(t, "e", function() {
                 return a
+            }), n.d(t, "e", function() {
+                return r
             }), n.d(t, "a", function() {
                 return o
             });
-            var i, r, a, o, s = n("0Log");
+            var i, a, r, o, s = n("0Log");
             n.d(t, "d", function() {
                     return s.ModerationActions
                 }),
@@ -18839,10 +18832,10 @@
                 }(i || (i = {})),
                 function(e) {
                     e[e.Post = 0] = "Post", e[e.Action = 1] = "Action", e[e.PostWithMention = 2] = "PostWithMention"
-                }(r || (r = {})),
+                }(a || (a = {})),
                 function(e) {
                     e[e.Ban = 0] = "Ban", e[e.Timeout = 1] = "Timeout", e[e.Delete = 2] = "Delete"
-                }(a || (a = {})),
+                }(r || (r = {})),
                 function(e) {
                     e[e.MessageRejectedPrompt = 0] = "MessageRejectedPrompt", e[e.CheerMessageRejectedPrompt = 1] = "CheerMessageRejectedPrompt", e[e.MessageRejected = 2] = "MessageRejected", e[e.MessageAllowed = 3] = "MessageAllowed", e[e.MessageDenied = 4] = "MessageDenied", e[e.CheerMessageDenied = 5] = "CheerMessageDenied", e[e.CheerMessageTimeout = 6] = "CheerMessageTimeout", e[e.MessageModApproved = 7] = "MessageModApproved", e[e.MessageModDenied = 8] = "MessageModDenied"
                 }(o || (o = {}))
@@ -18862,16 +18855,16 @@
                 return g
             });
             var i = n("mrSG"),
-                r = n("/7QA"),
-                a = n("oe5X"),
+                a = n("/7QA"),
+                r = n("oe5X"),
                 o = n("0FG4"),
                 s = n("kRBY"),
                 l = n("60o1"),
                 c = ["#FF0000", "#0000FF", "#008000", "#B22222", "#FF7F50", "#9ACD32", "#FF4500", "#2E8B57", "#DAA520", "#D2691E", "#5F9EA0", "#1E90FF", "#FF69B4", "#8A2BE2", "#00FF7F"],
                 d = {};
 
-            function u(e, t, n, r, a, o, s) {
-                void 0 === a && (a = !1), void 0 === o && (o = !1), void 0 === s && (s = !1);
+            function u(e, t, n, a, r, o, s) {
+                void 0 === r && (r = !1), void 0 === o && (o = !1), void 0 === s && (s = !1);
                 var c = Object(l.a)(t.displayName, t.username);
                 return {
                     badges: t.badges || {},
@@ -18882,8 +18875,8 @@
                         userType: t.userType,
                         color: t.color || p(t.userID)
                     }),
-                    messageParts: m(e, t.emotes || {}, t.bits, n, r, t.username),
-                    deleted: a,
+                    messageParts: m(e, t.emotes || {}, t.bits, n, a, t.username),
+                    deleted: r,
                     banned: s,
                     hidden: o,
                     timestamp: Date.now()
@@ -18895,7 +18888,7 @@
             }
 
             function m(e, t, n, i, l, c) {
-                var d = Object(s.e)(r.p.store.getState()),
+                var d = Object(s.e)(a.p.store.getState()),
                     u = {
                         cheers: n ? i : void 0,
                         emotes: {
@@ -18912,7 +18905,7 @@
                             sessionUser: d
                         }
                     };
-                return Object(a.a)(e, u)
+                return Object(r.a)(e, u)
             }
 
             function h(e) {
@@ -18929,17 +18922,17 @@
                 return l
             });
             var i = n("mrSG"),
-                r = n("yR8l"),
-                a = n("Pub/"),
+                a = n("yR8l"),
+                r = n("Pub/"),
                 o = n("HzXE"),
                 s = n("1Rv/");
 
             function l(e) {
                 var t = this;
-                return Object(r.a)(s, {
+                return Object(a.a)(s, {
                     props: function(n) {
                         return {
-                            unbanUserMutation: function(r) {
+                            unbanUserMutation: function(a) {
                                 return i.__awaiter(t, void 0, void 0, function() {
                                     var t;
                                     return i.__generator(this, function(s) {
@@ -18952,21 +18945,21 @@
                                                     variables: {
                                                         input: {
                                                             channelID: t,
-                                                            bannedUserLogin: r
+                                                            bannedUserLogin: a
                                                         }
                                                     },
                                                     update: function(e, n) {
                                                         return function(e, t, n) {
                                                             if (t && t.data && t.data.unbanUserFromChatRoom && t.data.unbanUserFromChatRoom.ban && t.data.unbanUserFromChatRoom.ban.bannedUser && t.data.unbanUserFromChatRoom.ban.bannedUser.id) {
-                                                                var r = Object(a.a)(e, n, t.data.unbanUserFromChatRoom.ban.bannedUser.id);
-                                                                if (!r) return;
+                                                                var a = Object(r.a)(e, n, t.data.unbanUserFromChatRoom.ban.bannedUser.id);
+                                                                if (!a) return;
                                                                 e.writeQuery({
                                                                     query: o,
                                                                     variables: {
                                                                         targetUserID: t.data.unbanUserFromChatRoom.ban.bannedUser.id,
                                                                         channelID: n
                                                                     },
-                                                                    data: i.__assign({}, r, {
+                                                                    data: i.__assign({}, a, {
                                                                         chatRoomBanStatus: null
                                                                     })
                                                                 })
@@ -18996,17 +18989,17 @@
         a5fV: function(e, t, n) {
             "use strict";
             n.d(t, "b", function() {
-                return r
-            }), n.d(t, "a", function() {
                 return a
+            }), n.d(t, "a", function() {
+                return r
             });
             var i = n("/7QA");
 
-            function r(e, t) {
+            function a(e, t) {
                 return e / Math.pow(10, t)
             }
 
-            function a(e, t) {
+            function r(e, t) {
                 return Object(i.f)(e, {
                     style: "currency",
                     currency: t
@@ -19028,39 +19021,39 @@
         b5C3: function(e, t, n) {
             "use strict";
             n.d(t, "a", function() {
-                return a
+                return r
             });
             var i = n("q1tI"),
-                r = n("vHGB"),
-                a = function(e) {
+                a = n("vHGB"),
+                r = function(e) {
                     var t = e.badgesToRender,
                         n = e.badgeSets;
                     if (!t) return null;
-                    var a = [];
+                    var r = [];
                     ! function(e) {
                         return Array.isArray(e)
                     }(t) ? function(e) {
                         return !Array.isArray(e)
-                    }(t) && (a = Object.keys(t).map(function(e) {
-                        var a = t[e],
-                            o = n.getBadge(e, a);
-                        return null === o ? null : i.createElement(r.a, {
+                    }(t) && (r = Object.keys(t).map(function(e) {
+                        var r = t[e],
+                            o = n.getBadge(e, r);
+                        return null === o ? null : i.createElement(a.a, {
                             key: o.setID + "/" + o.version,
                             badge: o
                         })
-                    })) : a = t.map(function(e) {
+                    })) : r = t.map(function(e) {
                         var t = n.getBadge(e.setID, e.version);
-                        return null === t ? null : i.createElement(r.a, {
+                        return null === t ? null : i.createElement(a.a, {
                             key: t.setID + "/" + t.version,
                             badge: t
                         })
                     });
-                    var o = a.filter(function(e) {
+                    var o = r.filter(function(e) {
                         return null !== e
                     });
                     return i.createElement("span", null, o)
                 };
-            a.displayName = "BadgeList"
+            r.displayName = "BadgeList"
         },
         b7X6: function(e, t, n) {},
         bTcf: function(e, t) {
@@ -19178,14 +19171,13 @@
         bdIb: function(e, t, n) {
             "use strict";
             n.d(t, "a", function() {
-                return l
+                return s
             });
             var i = n("mrSG"),
-                r = n("cr+I"),
                 a = n("q1tI"),
-                o = n("/7QA"),
-                s = n("GFmA"),
-                l = function(e) {
+                r = n("/7QA"),
+                o = n("GFmA"),
+                s = function(e) {
                     function t() {
                         var t = null !== e && e.apply(this, arguments) || this;
                         return t.onClickHandler = function() {
@@ -19193,17 +19185,16 @@
                         }, t
                     }
                     return i.__extends(t, e), t.prototype.render = function() {
-                        return a.createElement(s.a, {
+                        return a.createElement(o.a, {
                             context: this.props.context,
                             title: this.props.clip.title,
                             linkTo: {
                                 pathname: this.props.clip.broadcaster ? "/" + this.props.clip.broadcaster.login + "/clip/" + this.props.clip.slug : "",
-                                state: this.getLinkState(),
-                                search: this.generateSearchString()
+                                state: this.getLinkState()
                             },
                             onClick: this.onClickHandler,
                             thumbnailImageProps: {
-                                src: this.props.clip.thumbnailURL || o.p.config.defaultStreamPreviewURL,
+                                src: this.props.clip.thumbnailURL || r.p.config.defaultStreamPreviewURL,
                                 alt: this.props.clip.title
                             },
                             channelDisplayName: this.props.clip.broadcaster && this.props.clip.broadcaster.displayName || "",
@@ -19222,7 +19213,7 @@
                                 state: this.getLinkState()
                             } : void 0,
                             gameBoxArtImageProps: this.props.clip.game ? {
-                                src: this.props.clip.game.boxArtURL || o.a.defaultBoxArtURL,
+                                src: this.props.clip.game.boxArtURL || r.a.defaultBoxArtURL,
                                 alt: this.props.clip.game.name
                             } : void 0,
                             datePublished: this.props.clip.createdAt,
@@ -19231,11 +19222,6 @@
                             clipCreatedByChannelLogin: this.props.clip.curator && this.props.clip.curator.login || "",
                             clipCreatedByChannelLoginLinkTo: this.props.clip.curator ? "/" + this.props.clip.curator.login : ""
                         })
-                    }, t.prototype.generateSearchString = function() {
-                        var e = {};
-                        this.props.videoBrowseOptions && (this.props.videoBrowseOptions.filter && (e.filter = this.props.videoBrowseOptions.filter), this.props.videoBrowseOptions.sort && (e.sort = this.props.videoBrowseOptions.sort), this.props.videoBrowseOptions.range && (e.range = this.props.videoBrowseOptions.range));
-                        var t = r.stringify(e);
-                        return t ? "?" + t : ""
                     }, t.prototype.getLinkState = function() {
                         return {
                             content: this.props.tracking.content,
@@ -19248,8 +19234,8 @@
         bhOa: function(e, t, n) {
             "use strict";
             var i = n("mrSG"),
-                r = n("q1tI"),
-                a = n("/7QA"),
+                a = n("q1tI"),
+                r = n("/7QA"),
                 o = n("gcd7"),
                 s = n("ygQa"),
                 l = n("WytW"),
@@ -19264,31 +19250,31 @@
                                 return {
                                     deferred: t.props.updateChatColorMutation(i).then(function() {
                                         return {
-                                            notice: Object(a.d)("Your color has been changed.", "ColorCommandHandler")
+                                            notice: Object(r.d)("Your color has been changed.", "ColorCommandHandler")
                                         }
                                     }).catch(function() {
                                         return {
-                                            notice: Object(a.d)("Unable to change your color.", "ColorCommandHandler")
+                                            notice: Object(r.d)("Unable to change your color.", "ColorCommandHandler")
                                         }
                                     })
                                 }
                             }
                             return {
                                 deferred: Promise.resolve({
-                                    notice: Object(a.d)('Usage: "/color [color]" - Change your username color. Color must be in hex (#000000) or one of the following: Blue, BlueViolet, CadetBlue, Chocolate, Coral, DodgerBlue, Firebrick, GoldenRod, Green, HotPink, OrangeRed, Red, SeaGreen, SpringGreen, YellowGreen.', "ColorCommandHandler")
+                                    notice: Object(r.d)('Usage: "/color [color]" - Change your username color. Color must be in hex (#000000) or one of the following: Blue, BlueViolet, CadetBlue, Chocolate, Coral, DodgerBlue, Firebrick, GoldenRod, Green, HotPink, OrangeRed, Red, SeaGreen, SpringGreen, YellowGreen.', "ColorCommandHandler")
                                 })
                             }
                         }, t
                     }
                     return i.__extends(t, e), t.prototype.render = function() {
-                        return r.createElement(c.Ya, {
+                        return a.createElement(c.Ya, {
                             display: c.X.Hide
-                        }, r.createElement(o.a, {
+                        }, a.createElement(o.a, {
                             command: "color",
                             handler: this.updateChatColor
                         }))
                     }, t
-                }(r.Component),
+                }(a.Component),
                 u = Object(s.a)()(d);
             n.d(t, "a", function() {
                 return u
@@ -19302,8 +19288,8 @@
                 return c
             });
             var i = n("mrSG"),
-                r = n("/7QA"),
-                a = n("2xye"),
+                a = n("/7QA"),
+                r = n("2xye"),
                 o = n("I6K6"),
                 s = n("RuiO"),
                 l = {
@@ -19333,25 +19319,25 @@
                     return i.__generator(this, function(i) {
                         switch (i.label) {
                             case 0:
-                                t = r.o.getVideoPlayerTrackingData().vodID, n = !!t, l = {
+                                t = a.o.getVideoPlayerTrackingData().vodID, n = !!t, l = {
                                     channelID: e.channelID,
                                     withVideo: !1
                                 }, n && (l.withVideo = !0, l.videoID = t), c = null, i.label = 1;
                             case 1:
-                                return i.trys.push([1, 3, , 4]), [4, r.p.apollo.client.query({
+                                return i.trys.push([1, 3, , 4]), [4, a.p.apollo.client.query({
                                     query: s,
                                     variables: l
                                 })];
                             case 2:
                                 return c = i.sent(), [3, 4];
                             case 3:
-                                return d = i.sent(), r.k.error(d, "Failed to make query for channel info in FollowEvent reporting.", {
+                                return d = i.sent(), a.k.error(d, "Failed to make query for channel info in FollowEvent reporting.", {
                                     channelID: e.channelID
                                 }), [3, 4];
                             case 4:
-                                return u = c && c.data && c.data.user || null, c && !u && r.k.error(new Error("GraphQL empty response"), "Query for channel info in SubEvent reporting returned no data.", {
+                                return u = c && c.data && c.data.user || null, c && !u && a.k.error(new Error("GraphQL empty response"), "Query for channel info in SubEvent reporting returned no data.", {
                                     channelID: e.channelID
-                                }), p = null, c && n && ((m = c && c.data && c.data.video) ? p = Object(o.a)(m.broadcastType) : r.k.error(new Error("GraphQL empty response"), "Query for video info in SubEvent reporting returned no data.", {
+                                }), p = null, c && n && ((m = c && c.data && c.data.video) ? p = Object(o.a)(m.broadcastType) : a.k.error(new Error("GraphQL empty response"), "Query for video info in SubEvent reporting returned no data.", {
                                     currentVideoID: t
                                 })), h = u && u.self, g = h ? !!h.subscriptionBenefit : null, f = h && h.subscriptionBenefit && h.subscriptionBenefit.purchasedWithPrime || !1, b = h ? h.canPrimeSubscribe : null, v = {
                                     action: e.action,
@@ -19377,7 +19363,7 @@
                                     vod_type: p,
                                     viewport_height: window.innerHeight,
                                     viewport_width: window.innerWidth
-                                }, r.o.track(a.SpadeEventType.Subscription, v), [2]
+                                }, a.o.track(r.SpadeEventType.Subscription, v), [2]
                         }
                     })
                 })
@@ -19535,8 +19521,8 @@
             n.d(t, "a", function() {
                 return h
             });
-            var i, r = n("mrSG"),
-                a = n("q1tI"),
+            var i, a = n("mrSG"),
+                r = n("q1tI"),
                 o = n("9C/b"),
                 s = n("/7QA"),
                 l = n("eJ65"),
@@ -19551,28 +19537,28 @@
                     function t() {
                         return null !== e && e.apply(this, arguments) || this
                     }
-                    return r.__extends(t, e), t.prototype.render = function() {
+                    return a.__extends(t, e), t.prototype.render = function() {
                         var e = this.getFilters(),
                             t = e.find(function(e) {
                                 return !!e.selected
                             });
-                        return a.createElement(p.Ya, {
+                        return r.createElement(p.Ya, {
                             padding: {
                                 right: 1
                             }
-                        }, a.createElement(p.Ya, {
+                        }, r.createElement(p.Ya, {
                             padding: {
                                 bottom: .5
                             }
-                        }, a.createElement(p.W, {
+                        }, r.createElement(p.W, {
                             bold: !0
-                        }, Object(s.d)("Showing", "VideoFilter"))), a.createElement(l.a, {
+                        }, Object(s.d)("Showing", "VideoFilter"))), r.createElement(l.a, {
                             hideBalloonOnInsideClick: !0
-                        }, a.createElement(p.z, {
+                        }, r.createElement(p.z, {
                             dropdown: !0,
                             type: p.F.Hollow,
                             "data-test-selector": i.ButtonText
-                        }, t ? t.label : e[0].label), a.createElement(p.u, {
+                        }, t ? t.label : e[0].label), r.createElement(p.u, {
                             noTail: !0,
                             direction: p.v.Bottom
                         }, this.renderFilterList())))
@@ -19580,11 +19566,11 @@
                         return this.getFilters().map(this.renderFilter.bind(this))
                     }, t.prototype.renderFilter = function(e) {
                         var t = !!e.selected;
-                        return a.createElement(p.Va, {
+                        return r.createElement(p.Va, {
                             key: e.label,
                             linkTo: t ? this.props.location : this.filterLink(e.filter),
                             selected: t
-                        }, a.createElement(p.Ya, {
+                        }, r.createElement(p.Ya, {
                             padding: {
                                 x: 1,
                                 y: .5
@@ -19621,25 +19607,25 @@
                         var t;
                         return Object(u.a)() ? e ? Object(c.d)(this.props.location, ((t = {})[d.c] = e, t)) : Object(c.b)(this.props.location, d.c) : e ? Object(c.c)(this.props.location, "/" + this.props.channelLogin + "/" + Object(d.z)(e)) : Object(c.c)(this.props.location, "/" + this.props.channelLogin + "/" + Object(d.o)())
                     }, t
-                }(a.Component),
+                }(r.Component),
                 h = Object(o.a)(m)
         },
         cMjZ: function(e, t, n) {
             "use strict";
             n.d(t, "a", function() {
-                return r
+                return a
             });
             var i = n("o4DC");
 
-            function r(e) {
+            function a(e) {
                 return e && Object(i.c)(e) || ""
             }
         },
         cRsL: function(e, t, n) {},
         cnlr: function(e, t, n) {
             "use strict";
-            var i, r = n("mrSG"),
-                a = n("q1tI"),
+            var i, a = n("mrSG"),
+                r = n("q1tI"),
                 o = n("/MKj"),
                 s = n("fvjX"),
                 l = n("/7QA"),
@@ -19664,8 +19650,8 @@
                             }()
                         }, t
                     }
-                    return r.__extends(t, e), t.prototype.render = function() {
-                        return a.createElement(v.Ya, {
+                    return a.__extends(t, e), t.prototype.render = function() {
+                        return r.createElement(v.Ya, {
                             margin: {
                                 y: 1
                             }
@@ -19704,43 +19690,43 @@
                     }, t.prototype.renderDefault = function() {
                         return this.renderTextContent(Object(l.d)("Join the Twitch community!", "UpsellCenterText"), Object(l.d)("Discover the best live streams anywhere.", "UpsellCenterText"))
                     }, t.prototype.renderTextContent = function(e, t) {
-                        return a.createElement(a.Fragment, null, a.createElement(v.W, {
+                        return r.createElement(r.Fragment, null, r.createElement(v.W, {
                             color: v.O.Base,
                             fontSize: v.Ca.Size4
-                        }, e), a.createElement(v.W, {
+                        }, e), r.createElement(v.W, {
                             color: v.O.Alt2,
                             fontSize: v.Ca.Size5
                         }, t))
                     }, t.prototype.renderBulletPoints = function(e, t) {
                         var n = t.map(function(e, t) {
-                            return a.createElement(v.Ya, {
+                            return r.createElement(v.Ya, {
                                 key: "upsell-center-text-" + t,
                                 display: v.X.Flex,
                                 flexDirection: v.Aa.Row,
                                 alignItems: v.f.Start
-                            }, a.createElement(v.tb, {
+                            }, r.createElement(v.tb, {
                                 type: v.vb.Alt2,
                                 asset: v.ub.Check
-                            }), a.createElement(v.Ya, {
+                            }), r.createElement(v.Ya, {
                                 margin: {
                                     left: 1
                                 },
                                 textAlign: v.Sb.Left
-                            }, a.createElement(v.W, {
+                            }, r.createElement(v.W, {
                                 color: v.O.Alt2,
                                 fontSize: v.Ca.Size6
                             }, e)))
                         });
-                        return a.createElement(a.Fragment, null, a.createElement(v.W, {
+                        return r.createElement(r.Fragment, null, r.createElement(v.W, {
                             color: v.O.Base,
                             fontSize: v.Ca.Size4
-                        }, e), a.createElement(v.Ya, {
+                        }, e), r.createElement(v.Ya, {
                             margin: {
                                 top: 1
                             }
                         }, n))
                     }, t
-                }(a.Component),
+                }(r.Component),
                 C = n("2xye");
             ! function(e) {
                 e.SideNav = "sidenav"
@@ -19754,7 +19740,7 @@
                         var t = null !== e && e.apply(this, arguments) || this;
                         return t.impressionEventFired = !1, t.signup = function() {
                             ! function(e) {
-                                var t = r.__assign({
+                                var t = a.__assign({
                                     section: f.SideNav,
                                     click_subsection: b.Upsell
                                 }, e);
@@ -19762,12 +19748,12 @@
                             }(), t.props.signup()
                         }, t
                     }
-                    return r.__extends(t, e), t.prototype.componentDidMount = function() {
+                    return a.__extends(t, e), t.prototype.componentDidMount = function() {
                         this.trackImpression()
                     }, t.prototype.componentDidUpdate = function() {
                         this.trackImpression()
                     }, t.prototype.render = function() {
-                        return a.createElement(v.Fb, {
+                        return r.createElement(v.Fb, {
                             background: v.r.AccentAlt2,
                             display: v.X.Flex,
                             flexDirection: v.Aa.Column,
@@ -19777,20 +19763,20 @@
                             },
                             margin: 1,
                             borderRadius: v.x.Large
-                        }, this.renderImage(), a.createElement(v.Ya, {
+                        }, this.renderImage(), r.createElement(v.Ya, {
                             textAlign: v.Sb.Center
-                        }, this.renderText(), a.createElement(v.z, {
+                        }, this.renderText(), r.createElement(v.z, {
                             onClick: this.signup,
                             size: v.D.Large
-                        }, a.createElement(v.Ya, {
+                        }, r.createElement(v.Ya, {
                             padding: {
                                 x: 1
                             }
-                        }, a.createElement(v.W, {
+                        }, r.createElement(v.W, {
                             color: v.O.Base
                         }, Object(l.d)("Sign up", "UpsellCenter"))))))
                     }, t.prototype.renderText = function() {
-                        if (!this.props.channelLogin) return a.createElement(k, {
+                        if (!this.props.channelLogin) return r.createElement(k, {
                             showDefault: !0
                         });
                         if (this.props.data && this.props.data.user) {
@@ -19798,22 +19784,22 @@
                                 game: this.props.data.user.broadcastSettings && this.props.data.user.broadcastSettings.game && this.props.data.user.broadcastSettings.game.displayName || "",
                                 channelDisplayName: this.props.data.user.displayName || ""
                             };
-                            return a.createElement(k, {
+                            return r.createElement(k, {
                                 data: e
                             })
                         }
                     }, t.prototype.renderImage = function() {
-                        var e = a.createElement(v.S, {
+                        var e = r.createElement(v.S, {
                             alt: Object(l.d)("Upsell Center", "UpsellCenter"),
                             src: d.a
                         });
-                        return this.props.channelLogin && this.props.data && this.props.data.user && this.props.data.user.profileImageURL ? a.createElement(v.Ya, {
+                        return this.props.channelLogin && this.props.data && this.props.data.user && this.props.data.user.profileImageURL ? r.createElement(v.Ya, {
                             position: v.kb.Relative
-                        }, a.createElement(v.Ya, {
+                        }, r.createElement(v.Ya, {
                             className: "upsell-center__avatar",
                             position: v.kb.Absolute,
                             zIndex: v.jc.Above
-                        }, a.createElement(v.q, {
+                        }, r.createElement(v.q, {
                             src: this.props.data.user.profileImageURL,
                             alt: Object(l.d)("{displayName}'s Profile Image", {
                                 displayName: this.props.data.user.displayName || ""
@@ -19823,13 +19809,13 @@
                         })), e) : e
                     }, t.prototype.trackImpression = function() {
                         this.impressionEventFired || (! function(e) {
-                            var t = r.__assign({
+                            var t = a.__assign({
                                 section: f.SideNav
                             }, e);
                             l.o.track(C.SpadeEventType.ItemDisplay, t)
                         }(), this.impressionEventFired = !0)
                     }, t
-                }(a.PureComponent));
+                }(r.PureComponent));
             var E = Object(s.compose)(Object(u.a)(y, {
                     options: function(e) {
                         return {
@@ -19849,26 +19835,26 @@
                     }, e)
                 }))(S),
                 N = n("kRBY"),
-                w = function(e) {
+                _ = function(e) {
                     function t() {
                         return null !== e && e.apply(this, arguments) || this
                     }
-                    return r.__extends(t, e), t.prototype.render = function() {
-                        return this.props.isLoggedIn || this.props.collapsed ? null : a.createElement(E, r.__assign({}, this.props))
+                    return a.__extends(t, e), t.prototype.render = function() {
+                        return this.props.isLoggedIn || this.props.collapsed ? null : r.createElement(E, a.__assign({}, this.props))
                     }, t
-                }(a.PureComponent);
-            var _ = Object(o.connect)(function(e) {
+                }(r.PureComponent);
+            var w = Object(o.connect)(function(e) {
                 return {
                     collapsed: !e.ui.sideNavExpanded,
                     isLoggedIn: Object(N.f)(e)
                 }
-            })(w);
+            })(_);
             n.d(t, !1, function() {}), n.d(t, !1, function() {}), n.d(t, !1, function() {
                 return S
             }), n.d(t, !1, function() {
-                return w
-            }), n.d(t, "a", function() {
                 return _
+            }), n.d(t, "a", function() {
+                return w
             })
         },
         cpJf: function(e, t, n) {
@@ -19877,16 +19863,16 @@
             n.d(t, "a", function() {
                     return i
                 }), n.d(t, "d", function() {
-                    return a
+                    return r
                 }), n.d(t, "c", function() {
                     return o
                 }), n.d(t, "b", function() {
-                    return r
+                    return a
                 }),
                 function(e) {
                     e.Chat = "stream_chat", e.Feeds = "feeds", e.Room = "chatroom", e.Whisper = "whisper", e.VodChat = "vod-chat"
                 }(i || (i = {}));
-            var r, a = {
+            var a, r = {
                     TriHard: {
                         count: 196568036
                     },
@@ -19969,28 +19955,28 @@
                 o = ["354", "49106", "4339", "48", "25", "55338", "70433", "1902", "68856", "81103", "76171", "27509"];
             ! function(e) {
                 e.Web = "WEB", e.IOS = "IOS", e.Android = "ANDROID"
-            }(r || (r = {}))
+            }(a || (a = {}))
         },
         cr2a: function(e, t, n) {},
         cys1: function(e, t, n) {
             "use strict";
             var i = n("q1tI"),
-                r = n("/7QA"),
-                a = n("gvGA"),
+                a = n("/7QA"),
+                r = n("gvGA"),
                 o = n("5zf8"),
                 s = n("4rCz"),
                 l = n("x0+1"),
                 c = n("j0ar"),
                 d = function(e) {
                     var t, n = e.emote,
-                        r = n.alt || "";
-                    return n.cheerAmount && (r += " " + n.cheerAmount.toString(), t = i.createElement("strong", {
+                        a = n.alt || "";
+                    return n.cheerAmount && (a += " " + n.cheerAmount.toString(), t = i.createElement("strong", {
                         className: "chat-line__message--cheer-amount",
                         style: {
                             color: n.cheerColor
                         }
                     }, n.cheerAmount)), i.createElement(c.a, {
-                        alt: r,
+                        alt: a,
                         cheerText: t,
                         className: "chat-line__message--emote",
                         srcKey: "1x",
@@ -20012,10 +19998,10 @@
                 h = n("RcPG"),
                 g = (n("VN3V"), function(e) {
                     var t, n = e.content,
-                        r = e.highlightType,
-                        a = m("text-fragment", ((t = {})["text-fragment--moderated-highlight"] = r === h.a.ModeratedText, t));
+                        a = e.highlightType,
+                        r = m("text-fragment", ((t = {})["text-fragment--moderated-highlight"] = a === h.a.ModeratedText, t));
                     return i.createElement("span", {
-                        className: a,
+                        className: r,
                         "data-a-target": "chat-message-text"
                     }, n)
                 }),
@@ -20040,7 +20026,7 @@
                             hasImageLoadingError: !1
                         })
                     }, t.prototype.render = function() {
-                        var e = r.a.defaultStreamPreviewURL;
+                        var e = a.a.defaultStreamPreviewURL;
                         return !this.state.hasImageLoadingError && this.props.imageURL && (e = this.props.imageURL), i.createElement(C.I, {
                             aspect: C.p.Aspect16x9,
                             alt: this.props.altText,
@@ -20066,13 +20052,13 @@
                             });
                             return t.renderCardContent(e, t.props.error)
                         }, t.renderCardContent = function(e, t) {
-                            var n, r;
+                            var n, a;
                             return t ? (n = i.createElement(C.W, {
                                 type: C.Wb.Span,
                                 fontSize: C.Ca.Size5,
                                 "data-test-selector": E.TITLE,
                                 title: t.title
-                            }, t.title), r = i.createElement(C.W, {
+                            }, t.title), a = i.createElement(C.W, {
                                 type: C.Wb.Span,
                                 fontSize: C.Ca.Size6,
                                 color: C.O.Alt2,
@@ -20081,7 +20067,7 @@
                                 overlay: !0
                             }), n = i.createElement(C.jb, {
                                 width: 180
-                            }), r = i.createElement(C.jb, {
+                            }), a = i.createElement(C.jb, {
                                 width: 120
                             })), i.createElement(C.Fb, {
                                 background: C.r.Base,
@@ -20109,7 +20095,7 @@
                                 ellipsis: !0
                             }, n), i.createElement(C.Ya, {
                                 ellipsis: !0
-                            }, r))))
+                            }, a))))
                         }, t
                     }
                     return f.__extends(t, e), t.prototype.render = function() {
@@ -20141,14 +20127,14 @@
                         }, e)
                     }, t
                 }(i.Component),
-                w = n("SceP"),
-                _ = {
+                _ = n("SceP"),
+                w = {
                     isTimedOut: !1
                 },
                 O = function(e) {
                     function t() {
                         var t = null !== e && e.apply(this, arguments) || this;
-                        return t.state = _, t.timeoutID = null, t
+                        return t.state = w, t.timeoutID = null, t
                     }
                     return f.__extends(t, e), t.prototype.componentDidMount = function() {
                         var e = this;
@@ -20165,18 +20151,18 @@
                         var e = this.props.data,
                             t = e.clip,
                             n = e.error,
-                            a = e.loading;
+                            r = e.loading;
                         return n || this.state.isTimedOut ? i.createElement(N, {
                             error: {
-                                title: Object(r.d)("Something went wrong", "ClipsChatCard"),
-                                description: Object(r.d)("We couldn't find that Clip", "ClipsChatCard")
+                                title: Object(a.d)("Something went wrong", "ClipsChatCard"),
+                                description: Object(a.d)("We couldn't find that Clip", "ClipsChatCard")
                             }
-                        }) : a || !t ? i.createElement(N, null) : i.createElement(N, {
+                        }) : r || !t ? i.createElement(N, null) : i.createElement(N, {
                             data: {
-                                title: t.title || (t.broadcaster && t.broadcaster.displayName ? Object(r.d)("Clip of {broadcaster}", {
+                                title: t.title || (t.broadcaster && t.broadcaster.displayName ? Object(a.d)("Clip of {broadcaster}", {
                                     broadcaster: t.broadcaster.displayName
                                 }, "ClipsChatCard") : ""),
-                                description: t.curator && t.curator.displayName ? Object(r.d)("Clipped by {curator}", {
+                                description: t.curator && t.curator.displayName ? Object(a.d)("Clipped by {curator}", {
                                     curator: t.curator.displayName
                                 }, "ClipsChatCard") : "",
                                 previewImageURL: t.thumbnailURL,
@@ -20185,7 +20171,7 @@
                         })
                     }, t
                 }(i.Component),
-                M = Object(b.a)(w, {
+                M = Object(b.a)(_, {
                     options: function(e) {
                         return {
                             variables: {
@@ -20208,8 +20194,8 @@
                 };
             T.displayName = "MentionFragment";
             var R = n("QVaV"),
-                A = n("sU0Q"),
-                L = function(e) {
+                L = n("sU0Q"),
+                j = function(e) {
                     function t() {
                         return null !== e && e.apply(this, arguments) || this
                     }
@@ -20217,15 +20203,15 @@
                         var e = this.props.data,
                             t = e.video,
                             n = e.error,
-                            a = e.loading;
+                            r = e.loading;
                         if (n || t && !t.owner) return i.createElement(N, {
                             error: {
-                                title: Object(r.d)("Something went wrong", "VideoChatCard"),
-                                description: Object(r.d)("We couldn't find that video", "VideoChatCard")
+                                title: Object(a.d)("Something went wrong", "VideoChatCard"),
+                                description: Object(a.d)("We couldn't find that video", "VideoChatCard")
                             }
                         });
-                        if (a || !t) return i.createElement(N, null);
-                        var o = i.createElement(C.W, null, Object(r.c)(new Date(t.publishedAt), "medium"), i.createElement("span", null, " · "), Object(R.a)(t.owner.login, t.owner.displayName));
+                        if (r || !t) return i.createElement(N, null);
+                        var o = i.createElement(C.W, null, Object(a.c)(new Date(t.publishedAt), "medium"), i.createElement("span", null, " · "), Object(R.a)(t.owner.login, t.owner.displayName));
                         return i.createElement(N, {
                             data: {
                                 title: t.title,
@@ -20236,7 +20222,7 @@
                         })
                     }, t
                 }(i.Component),
-                j = Object(b.a)(A, {
+                A = Object(b.a)(L, {
                     options: function(e) {
                         return {
                             variables: {
@@ -20246,28 +20232,28 @@
                             fetchPolicy: "cache-first"
                         }
                     }
-                })(L),
-                B = n("ZtEv");
+                })(j),
+                U = n("ZtEv");
 
-            function U(e, t, n) {
+            function B(e, t, n) {
                 void 0 === n && (n = !1);
-                var r = t.content,
-                    a = r.displayText,
-                    o = r.url;
+                var a = t.content,
+                    r = a.displayText,
+                    o = a.url;
                 return n ? i.createElement(g, {
                     key: "message-span-" + e,
-                    content: a
+                    content: r
                 }) : i.createElement(p, {
                     key: e,
-                    displayText: a,
+                    displayText: r,
                     url: o
                 })
             }
 
-            function x(e, t) {
+            function F(e, t) {
                 void 0 === t && (t = {});
                 var n = null,
-                    r = e.reduce(function(r, o, s) {
+                    a = e.reduce(function(a, o, s) {
                         var l = [];
                         switch (s > 0 && e[s - 1].type !== h.a.Text && o.type !== h.a.Text && l.push(" "), o.type) {
                             case h.a.Text:
@@ -20303,50 +20289,50 @@
                                 }));
                                 break;
                             case h.a.Link:
-                                l.push(U(s, o, t.disableLinks));
+                                l.push(B(s, o, t.disableLinks));
                                 break;
                             case h.a.ClipLink:
-                                n || (n = i.createElement(a.a, {
+                                n || (n = i.createElement(r.a, {
                                     key: s
                                 }, i.createElement(M, {
                                     slug: o.content.slug,
                                     forceNetworkRequest: t.forceClipsNetworkRequest
-                                }))), l.push(U(s, o, t.disableLinks));
+                                }))), l.push(B(s, o, t.disableLinks));
                                 break;
                             case h.a.VideoLink:
-                                n || (n = i.createElement(j, {
+                                n || (n = i.createElement(A, {
                                     key: s,
                                     id: o.content.id,
                                     url: o.content.url
-                                })), l.push(U(s, o, t.disableLinks))
+                                })), l.push(B(s, o, t.disableLinks))
                         }
-                        return r.concat(l)
+                        return a.concat(l)
                     }, []);
-                return n && (r = r.concat(n)), r
+                return n && (a = a.concat(n)), a
             }
 
-            function F(e) {
-                if (e.moderationType === B.e.Delete) {
+            function x(e) {
+                if (e.moderationType === U.e.Delete) {
                     var t = e,
                         n = t.userLogin,
-                        a = t.body;
+                        r = t.body;
                     return i.createElement(l.a, {
                         targetLogin: n,
-                        messageBody: a
+                        messageBody: r
                     })
                 }
-                if ((e = e).moderationType === B.e.Ban) return e.reason ? i.createElement("span", {
+                if ((e = e).moderationType === U.e.Ban) return e.reason ? i.createElement("span", {
                     className: "chat-line__moderation--ban-with-reason"
-                }, Object(r.d)("{userLogin} has been banned. Reason: {reason}", {
+                }, Object(a.d)("{userLogin} has been banned. Reason: {reason}", {
                     userLogin: e.userLogin,
                     reason: e.reason
                 }, "ChatLine")) : i.createElement("span", {
                     className: "chat-line__moderation--ban"
-                }, Object(r.d)("{userLogin} is now banned from this channel.", {
+                }, Object(a.d)("{userLogin} is now banned from this channel.", {
                     userLogin: e.userLogin
                 }, "ChatLine"));
                 if (e.reason && e.duration) {
-                    var o = Object(r.d)("{userLogin} has been timed out for {duration} seconds. Reason: {reason}", {
+                    var o = Object(a.d)("{userLogin} has been timed out for {duration} seconds. Reason: {reason}", {
                         duration: e.duration,
                         reason: e.reason,
                         userLogin: e.userLogin
@@ -20357,7 +20343,7 @@
                 }
                 return e.duration ? i.createElement("span", {
                     className: "chat-line__moderation--timeout"
-                }, Object(r.d)("{userLogin} has been timed out for {duration} seconds.", {
+                }, Object(a.d)("{userLogin} has been timed out for {duration} seconds.", {
                     userLogin: e.userLogin,
                     duration: e.duration
                 }, "ChatLine")) : void 0
@@ -20380,7 +20366,7 @@
                     timeRemaining: Object(s.f)(t)
                 };
                 return i.createElement("span", null, 0 === e.daysLeft ? function(e) {
-                    return Object(r.d)("{bitsTotal} total raised so far for {charityName}! {timeRemaining} more hours to show support. Cheer and include {hashtag}. Learn More at {learnMoreURL}", {
+                    return Object(a.d)("{bitsTotal} total raised so far for {charityName}! {timeRemaining} more hours to show support. Cheer and include {hashtag}. Learn More at {learnMoreURL}", {
                         bitsTotal: e.bitsTotal,
                         charityName: e.charityName,
                         timeRemaining: e.timeRemaining,
@@ -20388,7 +20374,7 @@
                         learnMoreURL: e.learnMoreURL
                     }, "ChatLine")
                 }(n) : function(e) {
-                    return Object(r.d)("{bitsTotal} total raised so far for {charityName}! {timeRemaining} more days to show support. Cheer and include {hashtag}. Learn More at {learnMoreURL}", {
+                    return Object(a.d)("{bitsTotal} total raised so far for {charityName}! {timeRemaining} more days to show support. Cheer and include {hashtag}. Learn More at {learnMoreURL}", {
                         bitsTotal: e.bitsTotal,
                         charityName: e.charityName,
                         timeRemaining: e.timeRemaining,
@@ -20399,9 +20385,9 @@
             }
 
             function H(e) {
-                var t = e.enabled ? Object(r.d)("This room is now in slow mode. You may send messages every {length} seconds.", {
+                var t = e.enabled ? Object(a.d)("This room is now in slow mode. You may send messages every {length} seconds.", {
                     length: e.length
-                }, "ChatLine") : Object(r.d)("This room is no longer in slow mode.", "ChatLine");
+                }, "ChatLine") : Object(a.d)("This room is no longer in slow mode.", "ChatLine");
                 return i.createElement("span", null, t)
             }
 
@@ -20409,43 +20395,43 @@
                 var t;
                 if (e.length > 0) {
                     var n = e.join(", ");
-                    t = Object(r.d)("The moderators of this channel are: {moderatorList}", {
+                    t = Object(a.d)("The moderators of this channel are: {moderatorList}", {
                         moderatorList: n
                     }, "ChatLine")
-                } else t = Object(r.d)("There are no moderators of this channel.", "ChatLine");
+                } else t = Object(a.d)("There are no moderators of this channel.", "ChatLine");
                 return i.createElement("span", null, t)
             }
 
             function V(e) {
                 if (e.enabled) {
-                    var t = 0 === e.length ? Object(r.d)("This room is in followers-only mode.", "ChatLine") : Object(r.d)("This room is now in {length} followers-only mode.", {
+                    var t = 0 === e.length ? Object(a.d)("This room is in followers-only mode.", "ChatLine") : Object(a.d)("This room is now in {length} followers-only mode.", {
                         length: Object(o.b)(60 * e.length)
                     }, "ChatLine");
                     return i.createElement("span", null, t)
                 }
-                return i.createElement("span", null, Object(r.d)("This room is no longer in followers-only mode.", "ChatLine"))
+                return i.createElement("span", null, Object(a.d)("This room is no longer in followers-only mode.", "ChatLine"))
             }
 
             function G(e) {
-                return e.enabled ? i.createElement("span", null, Object(r.d)("This room is now in emote-only mode.", "ChatLine")) : i.createElement("span", null, Object(r.d)("This room is no longer in emote-only mode.", "ChatLine"))
+                return e.enabled ? i.createElement("span", null, Object(a.d)("This room is now in emote-only mode.", "ChatLine")) : i.createElement("span", null, Object(a.d)("This room is no longer in emote-only mode.", "ChatLine"))
             }
 
             function Y(e) {
-                var t = e.enabled ? Object(r.d)("This room is now in subscriber-only mode.", "ChatLine") : Object(r.d)("This room is no longer in subscriber-only mode.", "ChatLine");
+                var t = e.enabled ? Object(a.d)("This room is now in subscriber-only mode.", "ChatLine") : Object(a.d)("This room is no longer in subscriber-only mode.", "ChatLine");
                 return i.createElement("span", null, t)
             }
 
             function z(e) {
-                return e.enabled ? i.createElement("span", null, Object(r.d)("r9k mode has been enabled for this room.", "ChatLine")) : i.createElement("span", null, Object(r.d)("r9k mode has been disabled for this room.", "ChatLine"))
+                return e.enabled ? i.createElement("span", null, Object(a.d)("r9k mode has been enabled for this room.", "ChatLine")) : i.createElement("span", null, Object(a.d)("r9k mode has been disabled for this room.", "ChatLine"))
             }
 
             function q(e) {
-                return e.isAutohost ? Object(r.d)("{host} is now auto hosting you for up to {viewerCount, number} viewers.", {
+                return e.isAutohost ? Object(a.d)("{host} is now auto hosting you for up to {viewerCount, number} viewers.", {
                     host: e.hostingChannel,
                     viewerCount: e.viewerCount
-                }, "ChatLine") : e.viewerCount <= 2 ? Object(r.d)("{host} is now hosting you.", {
+                }, "ChatLine") : e.viewerCount <= 2 ? Object(a.d)("{host} is now hosting you.", {
                     host: e.hostingChannel
-                }, "ChatLine") : Object(r.d)("{host} is now hosting you for up to {viewerCount, number} viewers.", {
+                }, "ChatLine") : Object(a.d)("{host} is now hosting you for up to {viewerCount, number} viewers.", {
                     host: e.hostingChannel,
                     viewerCount: e.viewerCount
                 }, "ChatLine")
@@ -20476,7 +20462,7 @@
                     "data-test-selector": "chat-timestamp"
                 }, function(e, t) {
                     void 0 === t && (t = {});
-                    var n = r.p.intl.getLanguageCode() || "en";
+                    var n = a.p.intl.getLanguageCode() || "en";
                     return Intl.DateTimeFormat(n, t).format(e)
                 }(new Date(e), {
                     hour: "numeric",
@@ -20484,9 +20470,9 @@
                 }))
             }
             n.d(t, "f", function() {
-                return x
-            }), n.d(t, "g", function() {
                 return F
+            }), n.d(t, "g", function() {
+                return x
             }), n.d(t, "b", function() {
                 return P
             }), n.d(t, "j", function() {
@@ -20513,8 +20499,8 @@
         },
         d0xR: function(e, t, n) {
             "use strict";
-            var i, r = n("mrSG"),
-                a = n("q1tI"),
+            var i, a = n("mrSG"),
+                r = n("q1tI"),
                 o = n("/MKj"),
                 s = n("fvjX"),
                 l = n("ZS2+"),
@@ -20537,18 +20523,18 @@
             ! function(e) {
                 e.SubButton = "subscribe-button__dropdown", e.BalloonLayerButton = "subscribe-button__balloon-layer-btn", e.DefaultButton = "subscribe-button__default-btn", e.SubscribeBalloon = "subscribe-button__subscribe-balloon"
             }(i || (i = {}));
-            var w = l.a.wrap(function() {
-                    return Promise.all([n.e(0), n.e(201)]).then(n.bind(null, "f+qK"))
+            var _ = l.a.wrap(function() {
+                    return Promise.all([n.e(0), n.e(199)]).then(n.bind(null, "f+qK"))
                 }, "SubscribeBalloon"),
-                _ = function(e) {
+                w = function(e) {
                     function t() {
                         var t = null !== e && e.apply(this, arguments) || this;
                         return t.modalLevel = "top_page", t.handleSubMenuAction = function(e) {
                             new Set([E.a.ClickCheckout, E.a.BuyGiftSub, E.a.BuyMysteryGift, E.a.BuyCustomMysteryGift, E.a.BuyGiftToPaidUpgrade, E.a.BuyPaidUpgrade]).has(e.action) && t.checkAndDisplaySubscriptionCheckout();
                             var n = t.props.data,
                                 i = n.user,
-                                r = !!(i && i.self && i.self.subscriptionBenefit),
-                                a = n.requestInfo && Object(C.a)(n.requestInfo.countryCode);
+                                a = !!(i && i.self && i.self.subscriptionBenefit),
+                                r = n.requestInfo && Object(C.a)(n.requestInfo.countryCode);
                             Object(E.b)({
                                 action: e.action || "",
                                 channelLogin: t.props.channelLogin || "",
@@ -20560,14 +20546,14 @@
                                 isMenuOpen: e.action !== E.a.OpenSubMenu,
                                 mysteryGiftCount: e.mysteryGiftCount,
                                 sub_location: "squad_page",
-                                modal: !r,
-                                modalLevel: r ? "" : t.modalLevel.slice(),
-                                showPrimeContent: a,
+                                modal: !a,
+                                modalLevel: a ? "" : t.modalLevel.slice(),
+                                showPrimeContent: r,
                                 giftRecipient: e.giftRecipient || null
                             }), !e.modalLevel || e.action !== E.a.ClickMoreSubOptions && e.action !== E.a.ClickBack || (t.modalLevel = e.modalLevel)
                         }, t
                     }
-                    return r.__extends(t, e), t.prototype.componentDidMount = function() {
+                    return a.__extends(t, e), t.prototype.componentDidMount = function() {
                         this.checkAndDisplaySubscriptionCheckout()
                     }, t.prototype.componentDidUpdate = function(e) {
                         !this.isUserDataReady(e) && this.isUserDataReady(this.props) && this.checkAndDisplaySubscriptionCheckout()
@@ -20581,7 +20567,7 @@
                         if (0 === n.length) return null;
                         if (this.props.hideEsportsSubscription && Object(k.a)(this.props.data.user.id || "", this.props.sessionUser)) return null;
                         var i = Object(C.a)(this.props.data.requestInfo.countryCode),
-                            r = !(!t || !t.subscriptionBenefit),
+                            a = !(!t || !t.subscriptionBenefit),
                             o = Object(k.a)(this.props.data.user.id || "", this.props.sessionUser),
                             s = 1 === n.length;
                         n.some(function(e) {
@@ -20591,48 +20577,48 @@
                         t && t.subscriptionBenefit && (l = t.subscriptionBenefit.purchasedWithPrime ? b.a.Prime : t.subscriptionBenefit.tier, this.modalLevel = "");
                         var c = this.props.data.user.displayName || this.props.channelLogin,
                             d = n[0];
-                        return a.createElement(h.Fb, {
+                        return r.createElement(h.Fb, {
                             className: Object(y.b)(v.a.Light)
-                        }, a.createElement(h.Fb, {
+                        }, r.createElement(h.Fb, {
                             overflow: h.db.Hidden,
                             fullWidth: !0,
                             className: "subscribe-modal__banner"
-                        }, this.props.data.user.bannerImageURL && a.createElement(h.S, {
+                        }, this.props.data.user.bannerImageURL && r.createElement(h.S, {
                             src: this.props.data.user.bannerImageURL,
                             alt: Object(g.d)("{channelName}'s banner image", {
                                 channelName: c
                             }, "SubscribeModal")
-                        })), this.props.data.user.profileImageURL && a.createElement(h.Fb, {
+                        })), this.props.data.user.profileImageURL && r.createElement(h.Fb, {
                             className: "subscribe-modal__avatar",
                             background: h.r.Alt,
                             position: h.kb.Absolute,
                             borderRadius: h.x.Small,
                             overflow: h.db.Hidden
-                        }, a.createElement(h.q, {
+                        }, r.createElement(h.q, {
                             size: 80,
                             src: this.props.data.user.profileImageURL,
                             alt: Object(g.d)("{channelName}'s profile image", {
                                 channelName: c
                             }, "SubscribeModal")
-                        })), a.createElement(h.Ya, {
+                        })), r.createElement(h.Ya, {
                             padding: {
                                 x: 2
                             },
                             margin: {
                                 top: 3
                             }
-                        }, a.createElement(h.W, {
+                        }, r.createElement(h.W, {
                             fontSize: h.Ca.Size3
                         }, Object(g.d)("Subscribe to {channelName}", {
                             channelName: c
-                        }, "SubscribeModal"))), a.createElement(w, {
+                        }, "SubscribeModal"))), r.createElement(_, {
                             authToken: this.props.authToken,
                             channelLogin: this.props.channelLogin,
                             inPrimeRegion: i,
                             isEsportChannel: o,
                             isNonStandardSub: s,
                             isStaff: !(!this.props.sessionUser || !this.props.sessionUser.roles) && this.props.sessionUser.roles.isStaff,
-                            isSubscribed: r,
+                            isSubscribed: a,
                             userHasPrime: !1,
                             productId: d ? d.id : "",
                             subbedTier: l || b.a.Prime,
@@ -20660,7 +20646,7 @@
                                 }) : (g.n.set("subscription-target-login", this.props.channelLogin), this.props.showLoginModal()) : Object(d.f)()
                         }
                     }, t
-                }(a.Component),
+                }(r.Component),
                 O = Object(f.a)(N, {
                     options: function(e) {
                         return {
@@ -20669,7 +20655,7 @@
                             }
                         }
                     }
-                })(_);
+                })(w);
             var M = function(e) {
                 function t() {
                     var t = null !== e && e.apply(this, arguments) || this;
@@ -20677,25 +20663,25 @@
                         t.props.closeModal()
                     }, t
                 }
-                return r.__extends(t, e), t.prototype.componentWillUnmount = function() {
+                return a.__extends(t, e), t.prototype.componentWillUnmount = function() {
                     this.props.onClose && this.props.onClose()
                 }, t.prototype.render = function() {
-                    return a.createElement(h.Fb, {
+                    return r.createElement(h.Fb, {
                         className: "subscribe-modal",
                         background: h.r.Base
-                    }, a.createElement(O, {
+                    }, r.createElement(O, {
                         authToken: this.props.authToken,
                         sessionUser: this.props.sessionUser,
                         onClose: this.handleClose,
                         channelLogin: this.props.channelLogin,
                         showLoginModal: this.props.showLoginModal,
                         showSubscriptionCheckoutModal: this.props.showSubscriptionCheckoutModal
-                    }), a.createElement(c.a, {
+                    }), r.createElement(c.a, {
                         closeOnBackdropClick: !0,
                         closeOnPageNavigation: !0
                     }))
                 }, t
-            }(a.Component);
+            }(r.Component);
             var D = Object(o.connect)(function(e) {
                 return {
                     authToken: Object(m.a)(e),
@@ -20706,11 +20692,11 @@
                     closeModal: p.c,
                     showLoginModal: Object(d.g)(u.a.ChannelSubscriptionButton),
                     showSubscriptionCheckoutModal: function(e) {
-                        var t = r.__rest(e, []);
+                        var t = a.__rest(e, []);
                         return Object(p.d)(l.a, {
                             component: "CheckoutModal",
                             loader: function() {
-                                return Promise.all([n.e(0), n.e(212)]).then(n.bind(null, "KJv/"))
+                                return Promise.all([n.e(0), n.e(210)]).then(n.bind(null, "KJv/"))
                             },
                             componentProps: t
                         })
@@ -20726,14 +20712,14 @@
             }), n.d(t, !1, function() {
                 return i
             }), n.d(t, !1, function() {
-                return _
+                return w
             }), n.d(t, !1, function() {
                 return O
             })
         },
         dAHa: function(e, t, n) {
             "use strict";
-            var i, r, a = n("mrSG"),
+            var i, a, r = n("mrSG"),
                 o = n("q1tI"),
                 s = n("/MKj"),
                 l = n("fvjX"),
@@ -20802,8 +20788,8 @@
                                 }
                             }, Object(c.d)("Unblock", "ReportWizardBlockActions"))))
                         }, t.handleBlock = function() {
-                            return a.__awaiter(t, void 0, void 0, function() {
-                                return a.__generator(this, function(e) {
+                            return r.__awaiter(t, void 0, void 0, function() {
+                                return r.__generator(this, function(e) {
                                     return this.props.onBlock(), this.setState({
                                         userBlocked: !0
                                     }), [2]
@@ -20819,7 +20805,7 @@
                             return e || (n || "")
                         }, t
                     }
-                    return a.__extends(t, e), t.prototype.render = function() {
+                    return r.__extends(t, e), t.prototype.render = function() {
                         var e = this.state.userBlocked ? this.renderUnblock() : this.renderBlock(),
                             t = Object(C.a)(this.props.targetUser.login, this.props.targetUser.displayName, !0);
                         return o.createElement(y.Fb, {
@@ -20853,8 +20839,8 @@
             }(i || (i = {})),
             function(e) {
                 e.Link = "link", e.MultipleChoice = "multiple choice", e.Text = "text", e.Textarea = "textarea"
-            }(r || (r = {}));
-            var w, _ = {
+            }(a || (a = {}));
+            var _, w = {
                     generalFilter: function() {
                         return Object(c.d)("I don't think their content or behavior is allowed on Twitch", "ReportModalWizard")
                     },
@@ -20892,7 +20878,7 @@
                             return Object(c.d)("Could you provide more detail about this issue? You may include links to videos, clips, and content outside Twitch.", "ReportModalWizard")
                         },
                         value: "description",
-                        type: r.Textarea,
+                        type: a.Textarea,
                         required: !0
                     },
                     input_link: {
@@ -20901,7 +20887,7 @@
                         },
                         rows: 2,
                         value: "external links",
-                        type: r.Textarea
+                        type: a.Textarea
                     },
                     input_usernames: {
                         getTitle: function() {
@@ -20909,21 +20895,21 @@
                         },
                         value: "other usernames",
                         rows: 2,
-                        type: r.Textarea
+                        type: a.Textarea
                     },
                     input_connection: {
                         getTitle: function() {
                             return Object(c.d)("Please describe how you connected the offsite content to this Twitch account.", "ReportModalWizard")
                         },
                         value: "offsite content connection",
-                        type: r.Textarea
+                        type: a.Textarea
                     },
                     input_comments: {
                         getTitle: function() {
                             return Object(c.d)("If you have any other comments you would like to add, please do so here.", "ReportModalWizard")
                         },
                         value: "comments",
-                        type: r.Textarea
+                        type: a.Textarea
                     },
                     input_identifyOwner: {
                         getTitle: function() {
@@ -20931,62 +20917,62 @@
                         },
                         rows: 2,
                         value: "connect account owner",
-                        type: r.Textarea
+                        type: a.Textarea
                     },
                     endBlurb_socialmedia: {
                         getTitle: function() {
                             return Object(c.d)("Please submit a report on the site or service where the incident occurred as well if you have not already done so.", "ReportModalWizard")
                         },
-                        type: r.Text
+                        type: a.Text
                     },
                     endBlurb_threat: {
                         getTitle: function() {
                             return Object(c.d)("If you feel you are in immediate danger, please contact your local law enforcement. To protect yourself on Twitch, you may also block the user.", "ReportModalWizard")
                         },
-                        type: r.Text
+                        type: a.Text
                     },
                     endLink_selfharm: {
                         getTitle: function() {
                             return Object(c.d)("Learn more about mental health support", "ReportModalWizard")
                         },
                         value: "https://help.twitch.tv/customer/en/portal/articles/2904486-twitch-cares-mental-health-support-information",
-                        type: r.Link
+                        type: a.Link
                     },
                     endLink_DMCA: {
                         getTitle: function() {
                             return Object(c.d)("View our DMCA Notification Guidelines", "ReportModalWizard")
                         },
                         value: "https://www.twitch.tv/p/legal/dmca-guidelines/",
-                        type: r.Link
+                        type: a.Link
                     },
                     endLink_trademark: {
                         getTitle: function() {
                             return Object(c.d)("View our Trademark Policy", "ReportModalWizard")
                         },
                         value: "https://www.twitch.tv/p/legal/trademark-policy/",
-                        type: r.Link
+                        type: a.Link
                     },
                     endLink_devAgreement: {
                         getTitle: function() {
                             return Object(c.d)("View our Developer Agreement", "ReportModalWizard")
                         },
                         value: "https://www.twitch.tv/p/legal/developer-agreement/",
-                        type: r.Link
+                        type: a.Link
                     },
                     endLink_eventCoC: {
                         getTitle: function() {
                             return Object(c.d)("View our Events Code of Conduct", "ReportModalWizard")
                         },
                         value: "https://www.twitch.tv/p/legal/events-code-of-conduct",
-                        type: r.Link
+                        type: a.Link
                     },
                     messaging_general: {
-                        getTitle: _.generalFilter,
+                        getTitle: w.generalFilter,
                         value: "general_messaging",
                         omitFromDescription: !0
                     },
                     profile_general: {
-                        getTitle: _.generalFilter,
+                        getTitle: w.generalFilter,
                         value: "general_profile",
                         omitFromDescription: !0
                     },
@@ -21033,11 +21019,11 @@
                         reportReason: i.Other
                     },
                     abusive: {
-                        getTitle: _.harassment,
+                        getTitle: w.harassment,
                         value: "abusive"
                     },
                     scam: {
-                        getTitle: _.scam,
+                        getTitle: w.scam,
                         value: "scam",
                         reportReason: i.Spam
                     },
@@ -21156,7 +21142,7 @@
                         reportReason: i.Miscategorized
                     },
                     video_general: {
-                        getTitle: _.generalFilter,
+                        getTitle: w.generalFilter,
                         value: "general_video",
                         omitFromDescription: !0
                     },
@@ -21189,12 +21175,12 @@
                         reportReason: i.Harassment
                     },
                     abusiveViolence: {
-                        getTitle: _.abusiveViolence,
+                        getTitle: w.abusiveViolence,
                         value: "threatening violence",
                         reportReason: i.Harm
                     },
                     commitingViolence: {
-                        getTitle: _.commitingViolence,
+                        getTitle: w.commitingViolence,
                         value: "committing violence",
                         reportReason: i.Harm
                     },
@@ -21316,7 +21302,7 @@
                         reportReason: i.ChatBanEvasion
                     },
                     impersonation_me: {
-                        getTitle: _.me,
+                        getTitle: w.me,
                         value: "impersonating me",
                         reportReason: i.Impersonation
                     },
@@ -21328,7 +21314,7 @@
                         reportReason: i.Impersonation
                     },
                     impersonation_other: {
-                        getTitle: _.someoneElse,
+                        getTitle: w.someoneElse,
                         value: "Impersonating someone else",
                         reportReason: i.Impersonation
                     },
@@ -21346,7 +21332,7 @@
                         value: "video"
                     },
                     video_more_options: {
-                        getTitle: _.moreOptions,
+                        getTitle: w.moreOptions,
                         value: "video more options"
                     },
                     whisper: {
@@ -21357,7 +21343,7 @@
                         reportContext: b.O.WHISPER_REPORT
                     },
                     whisper_more_options: {
-                        getTitle: _.moreOptions,
+                        getTitle: w.moreOptions,
                         value: "whisper more options"
                     },
                     chat: {
@@ -21367,7 +21353,7 @@
                         value: "chat"
                     },
                     chat_more_options: {
-                        getTitle: _.moreOptions,
+                        getTitle: w.moreOptions,
                         value: "chat more options"
                     },
                     moderating: {
@@ -21394,7 +21380,7 @@
                         value: "profile"
                     },
                     profile_more_options: {
-                        getTitle: _.moreOptions,
+                        getTitle: w.moreOptions,
                         value: "profile more options"
                     },
                     report_other: {
@@ -21462,20 +21448,20 @@
                         value: "brigading/raids"
                     },
                     external_threatening: {
-                        getTitle: _.threatening,
+                        getTitle: w.threatening,
                         value: "threatening"
                     },
                     external_harassment: {
-                        getTitle: _.harassment,
+                        getTitle: w.harassment,
                         value: "hateful/harassing"
                     },
                     external_abusiveViolence: {
-                        getTitle: _.abusiveViolence,
+                        getTitle: w.abusiveViolence,
                         value: "external site; threatening violence",
                         reportReason: i.Harm
                     },
                     external_commitingViolence: {
-                        getTitle: _.commitingViolence,
+                        getTitle: w.commitingViolence,
                         value: "external site; committing violence",
                         reportReason: i.Harm
                     },
@@ -21506,7 +21492,7 @@
                         value: "malicious links"
                     },
                     spam_scam: {
-                        getTitle: _.scam,
+                        getTitle: w.scam,
                         value: "scam"
                     },
                     spam_repeated: {
@@ -21522,8 +21508,8 @@
                         return t.onChange = function(e) {
                             var n = e.target,
                                 i = n.name,
-                                r = n.value;
-                            t.props.onChangeText(i, r)
+                                a = n.value;
+                            t.props.onChangeText(i, a)
                         }, t.onSelect = function(e) {
                             if (t.props.currentCard.items && e.currentTarget.parentElement) {
                                 var n = Number(e.currentTarget.parentElement.getAttribute("data-a-index")),
@@ -21532,7 +21518,7 @@
                             }
                         }, t
                     }
-                    return a.__extends(t, e), t.prototype.render = function() {
+                    return r.__extends(t, e), t.prototype.render = function() {
                         var e = this.props.currentCard.getDescription ? o.createElement(y.Ya, {
                             padding: {
                                 bottom: 1
@@ -21551,14 +21537,14 @@
                             return !!e
                         }).map(function(t, n) {
                             switch (t.type) {
-                                case r.Text:
+                                case a.Text:
                                     return o.createElement(y.Ya, {
                                         key: n,
                                         padding: {
                                             bottom: 1
                                         }
                                     }, t.getTitle());
-                                case r.Link:
+                                case a.Link:
                                     return o.createElement(y.Ya, {
                                         key: n,
                                         padding: {
@@ -21577,9 +21563,9 @@
                                     }, o.createElement(y.tb, {
                                         asset: y.ub.Document
                                     })), t.getTitle())));
-                                case r.Textarea:
+                                case a.Textarea:
                                     var i = t.value ? e.props.userTextInputs[t.value] : void 0,
-                                        a = t.required && (!i || !!i && 0 === i.trim().length);
+                                        r = t.required && (!i || !!i && 0 === i.trim().length);
                                     return o.createElement(y.Ya, {
                                         key: n,
                                         padding: {
@@ -21592,11 +21578,11 @@
                                         onChange: e.onChange,
                                         rows: t.rows || 3,
                                         name: t.value,
-                                        error: e.props.error && a,
+                                        error: e.props.error && r,
                                         value: i,
                                         "data-test-selector": "report-wizard-textarea"
                                     })));
-                                case r.MultipleChoice:
+                                case a.MultipleChoice:
                                 default:
                                     return o.createElement(y.Ya, {
                                         key: n,
@@ -21618,8 +21604,8 @@
                 D = n("RQ6e");
             ! function(e) {
                 e.Confirm = "Confirm", e.MultipleChoice = "MultipleChoice", e.Info = "End Card"
-            }(w || (w = {}));
-            var I, T, R, A = {
+            }(_ || (_ = {}));
+            var I, T, R, L = {
                     contentGeneral: function() {
                         return Object(c.d)("What would you like to report?", "ReportModalWizard")
                     },
@@ -21636,7 +21622,7 @@
                         return Object(c.d)("What would you like to report? (Please choose the most relevant statement that applies.)", "ReportModalWizard")
                     }
                 },
-                L = {
+                j = {
                     report: function(e) {
                         return Object(c.d)("Report {username}", {
                             username: e
@@ -21687,144 +21673,144 @@
                         return Object(c.d)("Thank you for your concern", "ReportModalWizard")
                     }
                 },
-                j = {
+                A = {
                     getDescription: function() {
                         return Object(c.d)("Reports are reviewed by Twitch Staff 24 hours a day. We will issue penalties, such as account suspension and/or content removal, once we verify that a violation of our policies has occurred.", "ReportModalWizard")
                     },
                     blockPrompt: !0,
-                    getTitle: L.thanks,
-                    type: w.Info,
+                    getTitle: j.thanks,
+                    type: _.Info,
                     value: "end card"
                 },
-                B = {
-                    socialMedia: a.__assign({}, j, {
+                U = {
+                    socialMedia: r.__assign({}, A, {
                         items: [O.endBlurb_socialmedia]
                     }),
-                    violence: a.__assign({}, j, {
+                    violence: r.__assign({}, A, {
                         items: [O.endBlurb_threat]
                     }),
                     legal: {
-                        getTitle: L.thanksConcern,
+                        getTitle: j.thanksConcern,
                         getDescription: function() {
                             return Object(c.d)("To submit a claim or report a violation of this type, you will need to follow the steps listed on the relevant page below.", "ReportModalWizard")
                         },
                         items: [O.endLink_DMCA, O.endLink_trademark, O.endLink_devAgreement],
-                        type: w.Info,
+                        type: _.Info,
                         value: "ip end"
                     },
                     selfharm: {
-                        getTitle: L.thanksConcern,
+                        getTitle: j.thanksConcern,
                         getDescription: function() {
                             return Object(c.d)("If you know the user personally, and you believe them to be in danger, please contact their local authorities immediately. The link below contains some general information that may be of use.", "ReportModalWizard")
                         },
                         items: [O.endLink_selfharm],
-                        type: w.Info,
+                        type: _.Info,
                         value: "selfharm end"
                     },
                     twitchEvent: {
-                        getTitle: L.thanksConcern,
+                        getTitle: j.thanksConcern,
                         getDescription: function() {
                             return Object(c.d)("Please bring this concern to the attention of staff or security at the event if you have not already done so. More information is available at the link below.", "ReportModalWizard")
                         },
                         items: [O.endLink_eventCoC],
                         value: "twitch event end",
-                        type: w.Info
+                        type: _.Info
                     }
                 },
-                U = {
-                    getTitle: L.report,
+                B = {
+                    getTitle: j.report,
                     getLabel: function() {
                         return Object(c.d)("Where is the problem?", "ReportModalWizard")
                     },
                     items: [O.video, O.whisper, O.chat, O.moderating, O.otherContent, O.report_username, O.report_other],
-                    type: w.MultipleChoice,
+                    type: _.MultipleChoice,
                     value: "content type"
                 },
-                x = {
+                F = {
                     identifyUser: {
-                        getTitle: L.reportVideo,
-                        getLabel: A.identifyUser,
+                        getTitle: j.reportVideo,
+                        getLabel: L.identifyUser,
                         items: [O.video_streamer, O.video_someoneElse, O.video_chatSomeone],
-                        type: w.MultipleChoice,
+                        type: _.MultipleChoice,
                         value: "video identify user"
                     },
                     content: {
-                        getTitle: L.reportVideo,
-                        getLabel: A.contentGeneral,
+                        getTitle: j.reportVideo,
+                        getLabel: L.contentGeneral,
                         items: [O.violence, O.abusive, O.video_inactive, O.video_labeling, O.inappropriateContent, O.selfharm, O.video_more_options],
-                        type: w.MultipleChoice,
+                        type: _.MultipleChoice,
                         value: "video report reason"
                     },
                     moreOptions: {
-                        getTitle: L.reportVideo,
-                        getLabel: A.contentGeneral,
+                        getTitle: j.reportVideo,
+                        getLabel: L.contentGeneral,
                         items: [O.revealPersonalInfo, O.cheating, O.impersonating, O.underage, O.bitsViolation, O.report_ip, O.other],
-                        type: w.MultipleChoice,
+                        type: _.MultipleChoice,
                         value: "video general report reason"
                     }
                 },
-                F = {
+                x = {
                     content: {
-                        getTitle: L.reportMessage,
-                        getLabel: A.contentGeneral,
+                        getTitle: j.reportMessage,
+                        getLabel: L.contentGeneral,
                         items: [O.report_username, O.violence, O.abusive, O.evasion, O.spam, O.selfharm, O.chat_more_options],
-                        type: w.MultipleChoice,
+                        type: _.MultipleChoice,
                         value: "message report reason"
                     },
                     moreOptions: {
-                        getTitle: L.reportMessage,
-                        getLabel: A.contentGeneral,
+                        getTitle: j.reportMessage,
+                        getLabel: L.contentGeneral,
                         items: [O.emotes_break_guidelines, O.inappropriateContent, O.revealPersonalInfo, O.maliciousRaid, O.underage, O.bitsViolation, O.other],
-                        type: w.MultipleChoice,
+                        type: _.MultipleChoice,
                         value: "message general report reason"
                     }
                 },
                 P = {
                     general: {
-                        getTitle: L.reportWhisper,
-                        getLabel: A.contentGeneral,
+                        getTitle: j.reportWhisper,
+                        getLabel: L.contentGeneral,
                         items: [O.report_username, O.violence, O.abusive, O.spam, O.selfharm, O.whisper_more_options],
-                        type: w.MultipleChoice,
+                        type: _.MultipleChoice,
                         value: "whisper report reason",
                         getDescription: function() {
                             return Object(c.d)("Please note that we may review additional messages in this conversation to determine the context of your report.", "ReportModalWizard")
                         }
                     },
                     moreOptions: {
-                        getTitle: L.reportWhisper,
-                        getLabel: A.contentGeneral,
+                        getTitle: j.reportWhisper,
+                        getLabel: L.contentGeneral,
                         items: [O.emotes_break_guidelines, O.evasion, O.inappropriateContent, O.revealPersonalInfo, O.underage, O.other],
-                        type: w.MultipleChoice,
+                        type: _.MultipleChoice,
                         value: "whisper general report reason"
                     }
                 },
                 H = {
                     profile: {
-                        getTitle: L.reportProfile,
-                        getLabel: A.contentGeneral,
+                        getTitle: j.reportProfile,
+                        getLabel: L.contentGeneral,
                         items: [O.revealPersonalInfo, O.violence, O.abusive, O.inappropriateContent, O.selfharm, O.profile_more_options],
-                        type: w.MultipleChoice,
+                        type: _.MultipleChoice,
                         value: "profile report reason"
                     },
                     profileMoreOptions: {
-                        getTitle: L.reportProfile,
-                        getLabel: A.contentGeneral,
+                        getTitle: j.reportProfile,
+                        getLabel: L.contentGeneral,
                         items: [O.scam, O.evasion, O.impersonation, O.underage, O.report_ip, O.other],
-                        type: w.MultipleChoice,
+                        type: _.MultipleChoice,
                         value: "profile general report reason"
                     },
                     emotes: {
-                        getTitle: L.reportEmotesBadges,
-                        getLabel: A.content,
+                        getTitle: j.reportEmotesBadges,
+                        getLabel: L.content,
                         items: [O.hateSpeechSymbols, O.harassing, O.itsInappropriateContent, O.automod, O.report_ip, O.other],
-                        type: w.MultipleChoice,
+                        type: _.MultipleChoice,
                         value: "emote report reason"
                     },
                     general: {
-                        getTitle: L.reportProfileOrOtherContent,
-                        getLabel: A.content,
+                        getTitle: j.reportProfileOrOtherContent,
+                        getLabel: L.content,
                         items: [O.report_username, O.profile, O.report_emotes, O.inappropriateExtension, O.compromisedAccount, O.violateDevAgreement],
-                        type: w.MultipleChoice,
+                        type: _.MultipleChoice,
                         value: "profile content location"
                     }
                 },
@@ -21834,34 +21820,34 @@
                             username: e
                         }, "ReportModalWizard")
                     },
-                    getLabel: A.identifyUser,
+                    getLabel: L.identifyUser,
                     items: [O.report_channelOwner, O.report_member],
                     value: "room report user",
-                    type: w.MultipleChoice
+                    type: _.MultipleChoice
                 },
                 V = {
-                    getTitle: L.tellUsMore,
+                    getTitle: j.tellUsMore,
                     items: [O.input_description],
-                    type: w.Confirm,
+                    type: _.Confirm,
                     value: "tell us more"
                 },
                 G = {
-                    banEvasion: a.__assign({}, V, {
+                    banEvasion: r.__assign({}, V, {
                         items: [O.input_usernames, O.input_description],
                         value: "ban evasion tell us more"
                     }),
-                    socialMedia: a.__assign({}, V, {
+                    socialMedia: r.__assign({}, V, {
                         items: [O.input_link, O.input_connection, O.input_description],
-                        nextCard: B.socialMedia,
+                        nextCard: U.socialMedia,
                         value: "social media tell us more"
                     })
                 },
                 Y = {
                     content: {
-                        getTitle: L.reportAbusive,
-                        getLabel: A.relevantStatements,
+                        getTitle: j.reportAbusive,
+                        getLabel: L.relevantStatements,
                         items: [O.hateSpeech, O.harassment, O.abusiveViolence, O.commitingViolence, O.swatting, O.personalInfo],
-                        type: w.MultipleChoice,
+                        type: _.MultipleChoice,
                         value: "abuse type"
                     }
                 },
@@ -21876,7 +21862,7 @@
                             return Object(c.d)("Where did the problem happen?", "ReportModalWizard")
                         },
                         items: [O.location_onTwitch, O.location_anotherSite, O.location_TwitchEvent],
-                        type: w.MultipleChoice,
+                        type: _.MultipleChoice,
                         value: "off-site conduct location"
                     },
                     externalSite: {
@@ -21885,16 +21871,16 @@
                                 username: e
                             }, "ReportModalWizard")
                         },
-                        getLabel: A.contentGeneral,
+                        getLabel: L.contentGeneral,
                         getDescription: function() {
                             return Object(c.d)("Please note that incidents reported through this form must involve Twitch community members. If possible, please submit a report to the site or service where the incident occurred as well.", "ReportModalWizard")
                         },
                         items: [O.external_incitingRaids, O.external_threatening, O.external_harassment],
-                        type: w.MultipleChoice,
+                        type: _.MultipleChoice,
                         nextCard: G.socialMedia,
                         value: "external site conduct"
                     },
-                    external_abusive: a.__assign({}, Y.content, {
+                    external_abusive: r.__assign({}, Y.content, {
                         items: [O.hateSpeech, O.harassment, O.external_abusiveViolence, O.external_commitingViolence, O.swatting, O.personalInfo],
                         nextCard: G.socialMedia
                     })
@@ -21905,9 +21891,9 @@
                             username: e
                         }, "ReportModalWizard")
                     },
-                    getLabel: A.contentGeneral,
+                    getLabel: L.contentGeneral,
                     items: [O.spam_bot, O.spam_scam, O.spam_links, O.spam_repeated],
-                    type: w.MultipleChoice,
+                    type: _.MultipleChoice,
                     value: "spam type"
                 },
                 X = {
@@ -21916,9 +21902,9 @@
                             username: e
                         }, "ReportModalWizard")
                     },
-                    getLabel: A.relevantStatements,
+                    getLabel: L.relevantStatements,
                     items: [O.inappropriate_game, O.gory, O.sexuallyViolentChildAnimal, O.pornographic, O.suggestive, O.nudity, O.other],
-                    type: w.MultipleChoice,
+                    type: _.MultipleChoice,
                     value: "inappropriate content type"
                 },
                 Q = {
@@ -21932,7 +21918,7 @@
                     },
                     value: "ban type",
                     items: [O.evasion_chat, O.evasion_sitewide, O.evasion_messaging],
-                    type: w.MultipleChoice,
+                    type: _.MultipleChoice,
                     nextCard: G.banEvasion
                 },
                 K = {
@@ -21948,35 +21934,35 @@
                         return Object(c.d)("Please note that parody, cosplay, and other portrayals without the intent to deceive or defraud are allowed under Twitch's Community Guidelines. If you would still like to submit a report, please continue.", "ReportModalWizard")
                     },
                     items: [O.impersonation_me, O.impersonation_brand, O.impersonation_other],
-                    type: w.MultipleChoice,
+                    type: _.MultipleChoice,
                     value: "impersonation type"
                 },
-                $ = U,
+                $ = B,
                 Z = V,
-                J = j,
+                J = A,
                 ee = {
-                    video: x.content,
-                    "video more options": x.moreOptions,
+                    video: F.content,
+                    "video more options": F.moreOptions,
                     whisper: P.general,
                     "whisper more options": P.moreOptions,
-                    chat: F.content,
-                    "chat more options": F.moreOptions,
+                    chat: x.content,
+                    "chat more options": x.moreOptions,
                     "other content": H.general,
                     profile: H.profile,
                     "profile more options": H.profileMoreOptions,
                     room: W,
                     "somewhere else": z.identifyLocation,
-                    streamer: x.content,
-                    "someone else in video": x.content,
-                    "someone in chat": F.content,
-                    general_video: x.moreOptions,
-                    general_messaging: F.content,
+                    streamer: F.content,
+                    "someone else in video": F.content,
+                    "someone in chat": x.content,
+                    general_video: F.moreOptions,
+                    general_messaging: x.content,
                     general_profile: H.profile,
                     "channel owner": H.general,
-                    "community member": F.content,
+                    "community member": x.content,
                     "on twitch": H.general,
                     "another site": z.externalSite,
-                    "twitch event": B.twitchEvent,
+                    "twitch event": U.twitchEvent,
                     "brigading/raids": G.socialMedia,
                     "hateful/harassing": z.external_abusive,
                     "external site; scam": G.socialMedia,
@@ -21987,29 +21973,29 @@
                     abusive: Y.content,
                     "inappropriate content": X,
                     "inappropriate emotes": H.emotes,
-                    "intellectual property": B.legal,
-                    "violating developer agreement": B.legal
+                    "intellectual property": U.legal,
+                    "violating developer agreement": U.legal
                 },
                 te = {
-                    selfharm: B.selfharm,
-                    harm: B.violence,
+                    selfharm: U.selfharm,
+                    harm: U.violence,
                     other: J
                 },
                 ne = {
                     CHANNEL_FEED_POST_REPORT: H.general,
                     COMMUNITY_REPORT: H.general,
-                    CHAT_REPORT: F.content,
-                    CLIP_REPORT: x.content,
+                    CHAT_REPORT: x.content,
+                    CLIP_REPORT: F.content,
                     EVENT_REPORT: H.general,
                     EXTENSION_REPORT: H.general,
                     LIVE_UP_REPORT: H.general,
                     ROOM_REPORT: W,
                     WHISPER_REPORT: P.general,
-                    VOD_COMMENT_REPORT: F.content
+                    VOD_COMMENT_REPORT: x.content
                 },
                 ie = "report-wizard-back",
-                re = "report-wizard-close",
-                ae = "report-wizard-next",
+                ae = "report-wizard-close",
+                re = "report-wizard-next",
                 oe = "report-wizard-submit",
                 se = function(e) {
                     function t() {
@@ -22035,19 +22021,19 @@
                         }, t.renderButtons = function() {
                             var e = Object(c.d)("Close", "ReportModalWizard"),
                                 n = t.handleClose,
-                                i = re,
-                                r = !1,
-                                a = t.state.prevCards.length ? t.renderBack() : null;
+                                i = ae,
+                                a = !1,
+                                r = t.state.prevCards.length ? t.renderBack() : null;
                             switch (t.state.currentCard.type) {
-                                case w.MultipleChoice:
-                                    e = Object(c.d)("Next", "ReportModalWizard"), n = t.handleNext, i = ae, r = !t.state.currentSelection;
+                                case _.MultipleChoice:
+                                    e = Object(c.d)("Next", "ReportModalWizard"), n = t.handleNext, i = re, a = !t.state.currentSelection;
                                     break;
-                                case w.Confirm:
-                                    e = Object(c.d)("Submit Report", "ReportModalWizard"), n = t.handleSubmit, r = !t.state.userTextInput, i = oe
+                                case _.Confirm:
+                                    e = Object(c.d)("Submit Report", "ReportModalWizard"), n = t.handleSubmit, a = !t.state.userTextInput, i = oe
                             }
-                            return o.createElement(y.Ya, null, a, o.createElement(y.z, {
+                            return o.createElement(y.Ya, null, r, o.createElement(y.z, {
                                 onClick: n,
-                                disabled: r,
+                                disabled: a,
                                 "data-test-selector": i
                             }, o.createElement(y.Ya, {
                                 padding: {
@@ -22087,21 +22073,21 @@
                                 var e = t.state.currentCard,
                                     n = t.state.prevCards.concat(e),
                                     i = t.state.prevSelections.concat(t.state.currentSelection),
-                                    r = t.state.displacedSelections[t.state.displacedSelections.length - 1],
-                                    a = t.state.currentSelection.differentTarget || t.state.targetUnknown,
+                                    a = t.state.displacedSelections[t.state.displacedSelections.length - 1],
+                                    r = t.state.currentSelection.differentTarget || t.state.targetUnknown,
                                     o = t.state.currentSelection.reportContext || t.state.reportContext,
                                     s = t.getChoiceIndex(),
                                     l = e.nextCard || Z;
                                 ee[t.state.currentSelection.value] && (l = ee[t.state.currentSelection.value]);
                                 var c = t.state.currentSelection.reportReason || t.state.reportReason,
-                                    d = l.type === w.Info;
+                                    d = l.type === _.Info;
                                 t.setState({
                                     currentCard: l,
                                     reportReason: c,
                                     prevCards: d ? [] : n,
                                     prevSelections: i,
-                                    targetUnknown: a,
-                                    currentSelection: r || null,
+                                    targetUnknown: r,
+                                    currentSelection: a || null,
                                     displacedSelections: t.state.displacedSelections.slice(0, -1),
                                     reportContext: o
                                 }, function() {
@@ -22118,27 +22104,27 @@
                             }).join("\n")
                         }, t.requiredInputsNonEmpty = function() {
                             if (t.state.currentCard.items) return 0 === t.state.currentCard.items.filter(function(e) {
-                                if (e.type !== r.Textarea || !e.required) return !1;
+                                if (e.type !== a.Textarea || !e.required) return !1;
                                 var n = t.state.userTextInput[e.value],
                                     i = n && 0 === n.trim().length;
                                 return !n || i
                             }).length
                         }, t.handleSubmit = function() {
-                            return a.__awaiter(t, void 0, void 0, function() {
-                                var e, t, n, i, r, o = this;
-                                return a.__generator(this, function(a) {
-                                    switch (a.label) {
+                            return r.__awaiter(t, void 0, void 0, function() {
+                                var e, t, n, i, a, o = this;
+                                return r.__generator(this, function(r) {
+                                    switch (r.label) {
                                         case 0:
                                             return e = Object(c.d)("Additional information is required.", "ReportModalWizard"), this.requiredInputsNonEmpty() ? (t = this.state.reportReason || "other", n = this.createReportDescription(), [4, this.props.onSubmit(t, n, this.state.reportContext)]) : [3, 2];
                                         case 1:
-                                            switch (a.sent(), this.props.submitStatus) {
+                                            switch (r.sent(), this.props.submitStatus) {
                                                 case D.a.FormError:
                                                     this.setState({
                                                         error: e
                                                     });
                                                     break;
                                                 case D.a.Success:
-                                                    i = J, te[t] && (i = te[t]), this.state.currentCard.nextCard && (i = this.state.currentCard.nextCard), r = this.getChoiceIndex(), this.setState({
+                                                    i = J, te[t] && (i = te[t]), this.state.currentCard.nextCard && (i = this.state.currentCard.nextCard), a = this.getChoiceIndex(), this.setState({
                                                         currentCard: i,
                                                         prevCards: [],
                                                         prevSelections: [],
@@ -22147,7 +22133,7 @@
                                                         userTextInput: {},
                                                         error: ""
                                                     }, function() {
-                                                        return o.trackNavigation(T.Submit, void 0, r)
+                                                        return o.trackNavigation(T.Submit, void 0, a)
                                                     });
                                                     break;
                                                 case D.a.UserError:
@@ -22165,17 +22151,17 @@
                                         case 2:
                                             this.props.onError(D.a.FormError), this.setState({
                                                 error: e
-                                            }), a.label = 3;
+                                            }), r.label = 3;
                                         case 3:
                                             return [2]
                                     }
                                 })
                             })
                         }, t.handleBack = function() {
-                            return a.__awaiter(t, void 0, void 0, function() {
-                                var e, t, n, i, r, o, s = this;
-                                return a.__generator(this, function(a) {
-                                    return e = this.state.currentCard, t = this.state.prevCards[this.state.prevCards.length - 1], n = this.state.prevSelections[this.state.prevSelections.length - 1], i = !n.differentTarget && this.state.targetUnknown, r = this.getChoiceIndex(), o = this.state.displacedSelections, this.state.currentSelection && (o = o.concat(this.state.currentSelection)), t && n && this.setState({
+                            return r.__awaiter(t, void 0, void 0, function() {
+                                var e, t, n, i, a, o, s = this;
+                                return r.__generator(this, function(r) {
+                                    return e = this.state.currentCard, t = this.state.prevCards[this.state.prevCards.length - 1], n = this.state.prevSelections[this.state.prevSelections.length - 1], i = !n.differentTarget && this.state.targetUnknown, a = this.getChoiceIndex(), o = this.state.displacedSelections, this.state.currentSelection && (o = o.concat(this.state.currentSelection)), t && n && this.setState({
                                         currentCard: t,
                                         currentSelection: n,
                                         displacedSelections: o,
@@ -22184,7 +22170,7 @@
                                         error: "",
                                         targetUnknown: i
                                     }, function() {
-                                        return s.trackNavigation(T.Back, e.value, r)
+                                        return s.trackNavigation(T.Back, e.value, a)
                                     }), [2]
                                 })
                             })
@@ -22214,10 +22200,10 @@
                             t.props.trackAction(e, n, t.state.currentCard.value, i)
                         }, t
                     }
-                    return a.__extends(t, e), t.prototype.componentWillUnmount = function() {
+                    return r.__extends(t, e), t.prototype.componentWillUnmount = function() {
                         this.state.modalCloseTracked || this.props.trackClose(R.Close, this.state.currentCard.value, this.getChoiceIndex())
                     }, t.prototype.render = function() {
-                        var e = this.state.currentCard.type === w.Info && this.state.currentCard.blockPrompt ? o.createElement(N, {
+                        var e = this.state.currentCard.type === _.Info && this.state.currentCard.blockPrompt ? o.createElement(N, {
                                 targetUser: this.props.targetUser,
                                 onBlock: this.props.onBlock,
                                 onUnblock: this.props.onUnblock,
@@ -22231,7 +22217,7 @@
                                 padding: 1,
                                 className: "reporting__error-container"
                             }, this.state.error) : null,
-                            n = this.state.prevCards.length || this.state.currentCard.type === w.Info ? null : this.renderPrimer();
+                            n = this.state.prevCards.length || this.state.currentCard.type === _.Info ? null : this.renderPrimer();
                         return o.createElement(y.Fb, {
                             className: "reporting-wizard",
                             display: y.X.Flex,
@@ -22282,32 +22268,32 @@
                 function t(t) {
                     var n = e.call(this, t) || this;
                     n.handleSubmit = function(e, t, i) {
-                        return a.__awaiter(n, void 0, void 0, function() {
-                            var n, r, o, s, l = this;
-                            return a.__generator(this, function(a) {
-                                switch (a.label) {
+                        return r.__awaiter(n, void 0, void 0, function() {
+                            var n, a, o, s, l = this;
+                            return r.__generator(this, function(r) {
+                                switch (r.label) {
                                     case 0:
-                                        if (n = i === b.O.WHISPER_REPORT ? i : this.props.reportContext.contentType, r = b.O[n], null === (o = {
+                                        if (n = i === b.O.WHISPER_REPORT ? i : this.props.reportContext.contentType, a = b.O[n], null === (o = {
                                                 description: t,
                                                 reason: e,
-                                                content: r,
+                                                content: a,
                                                 contentID: this.props.reportContext.contentID,
                                                 extra: this.props.reportContext.extra,
                                                 targetID: this.props.data.targetUser.id
                                             }).targetID) return this.setState({
                                             submitStatus: D.a.UserError
                                         }), [2];
-                                        a.label = 1;
+                                        r.label = 1;
                                     case 1:
-                                        return a.trys.push([1, 3, , 4]), [4, this.props.reportUser(Object(m.a)(o))];
+                                        return r.trys.push([1, 3, , 4]), [4, this.props.reportUser(Object(m.a)(o))];
                                     case 2:
-                                        return a.sent(), this.setState({
+                                        return r.sent(), this.setState({
                                             submitStatus: D.a.Success
                                         }, function() {
                                             l.state.showWizard || l.trackAction(I.Submit)
                                         }), [3, 4];
                                     case 3:
-                                        return s = a.sent(), c.k.error(s, "ReportUser Mutation failed."), this.setState({
+                                        return s = r.sent(), c.k.error(s, "ReportUser Mutation failed."), this.setState({
                                             submitStatus: D.a.MutationError
                                         }), [3, 4];
                                     case 4:
@@ -22322,7 +22308,7 @@
                     }, n.handleClose = function() {
                         n.props.onClose && n.props.onClose(n.state.submitStatus, n.state.userBlocked)
                     }, n.onBlock = function() {
-                        n.props.blockUserMutation(n.props.data.targetUser.id, void 0, void 0, a.__assign({}, n.props.sessionUser, {
+                        n.props.blockUserMutation(n.props.data.targetUser.id, void 0, void 0, r.__assign({}, n.props.sessionUser, {
                             __typename: "User"
                         })), n.setState({
                             userBlocked: !0
@@ -22332,7 +22318,7 @@
                             currentUserLogin: n.props.sessionUser.login
                         })
                     }, n.onUnblock = function() {
-                        n.props.unblockUserMutation(n.props.data.targetUser.id, a.__assign({}, n.props.sessionUser, {
+                        n.props.unblockUserMutation(n.props.data.targetUser.id, r.__assign({}, n.props.sessionUser, {
                             __typename: "User"
                         })), n.setState({
                             userBlocked: !1
@@ -22345,7 +22331,7 @@
                         n.state.closeEventSent || (n.state.showWizard ? n.trackWizardAction(T.Close, t, void 0, i, e) : n.trackAction(I.Close), n.setState({
                             closeEventSent: !0
                         }))
-                    }, n.trackWizardAction = function(e, t, i, r, a) {
+                    }, n.trackWizardAction = function(e, t, i, a, r) {
                         c.p.tracking.track(v.SpadeEventType.ReportWizardFlowAction, {
                             ui_context: n.props.reportContext.contentType,
                             target_user_id: n.props.reportContext.targetUserID,
@@ -22353,11 +22339,11 @@
                             modal_type: "wizard_v2",
                             extra_user_id: n.props.reportContext.additionalTrackingID,
                             action: e,
-                            close_type: a,
+                            close_type: r,
                             report_session_id: n.reportID,
                             current_step: t,
                             navigated_to: i,
-                            choice_index: r
+                            choice_index: a
                         })
                     }, n.trackAction = function(e) {
                         c.p.tracking.track(v.SpadeEventType.ReportFlowAction, {
@@ -22378,7 +22364,7 @@
                         userBlocked: !1
                     }, n
                 }
-                return a.__extends(t, e), t.prototype.componentDidMount = function() {
+                return r.__extends(t, e), t.prototype.componentDidMount = function() {
                     this.trackOpen()
                 }, t.prototype.componentWillUnmount = function() {
                     this.handleClose(), this.state.showWizard || this.trackClose()
@@ -22403,7 +22389,7 @@
                             title: this.props.title,
                             defaultDescription: this.props.defaultDescription
                         };
-                        return this.state.showWizard ? this.props.data.loading ? o.createElement(y.ab, null) : o.createElement(se, a.__assign({}, e, {
+                        return this.state.showWizard ? this.props.data.loading ? o.createElement(y.ab, null) : o.createElement(se, r.__assign({}, e, {
                             user: this.props.sessionUser,
                             onBlock: this.onBlock,
                             onUnblock: this.onUnblock,
@@ -22411,7 +22397,7 @@
                             trackAction: this.trackWizardAction,
                             trackClose: this.trackClose,
                             userBlocked: this.userBlocked
-                        })) : o.createElement(D.b, a.__assign({}, e, {
+                        })) : o.createElement(D.b, r.__assign({}, e, {
                             targetUser: this.props.data.targetUser
                         }))
                     }
@@ -22920,8 +22906,8 @@
                 return b
             });
             var i = n("mrSG"),
-                r = n("TSYQ"),
-                a = n("17x9"),
+                a = n("TSYQ"),
+                r = n("17x9"),
                 o = n("q1tI"),
                 s = n("wIs1"),
                 l = n("N0BP"),
@@ -22937,7 +22923,7 @@
                         return null !== e && e.apply(this, arguments) || this
                     }
                     return i.__extends(t, e), t.prototype.render = function() {
-                        var e, t = r(((e = {})[g] = !!this.props.theatreMode, e));
+                        var e, t = a(((e = {})[g] = !!this.props.theatreMode, e));
                         return o.createElement(h.Ya, i.__assign({
                             className: "channel-page-layout",
                             display: h.X.Flex,
@@ -22961,7 +22947,7 @@
                             }
                         }, this.props.children))
                     }, t.contextTypes = {
-                        scrollToTop: a.func
+                        scrollToTop: r.func
                     }, t
                 }(o.Component),
                 b = Object(s.a)(f)
@@ -22972,12 +22958,12 @@
                 return o
             });
             var i = n("mrSG"),
-                r = n("yR8l"),
-                a = n("sMoq");
+                a = n("yR8l"),
+                r = n("sMoq");
 
             function o() {
                 var e = this;
-                return Object(r.a)(a, {
+                return Object(a.a)(r, {
                     props: function(t) {
                         return {
                             vipUserMutation: function(n) {
@@ -23013,8 +22999,8 @@
         },
         fezU: function(e, t, n) {
             "use strict";
-            var i, r = n("mrSG"),
-                a = n("q1tI"),
+            var i, a = n("mrSG"),
+                r = n("q1tI"),
                 o = n("1rIY"),
                 s = n("oK83"),
                 l = (i = Object(o.a)("ViewerCardContext", {
@@ -23033,21 +23019,21 @@
                 d = function(e) {
                     function t(t) {
                         var n = e.call(this, t) || this;
-                        return n.onShowViewerCard = function(e, t, i, r) {
+                        return n.onShowViewerCard = function(e, t, i, a) {
                             n.setState({
                                 viewerCardOptions: {
                                     viewerCardType: s.b.Viewer,
-                                    initialTopOffset: r,
+                                    initialTopOffset: a,
                                     sourceID: i,
                                     sourceType: t,
                                     targetID: e
                                 }
                             })
-                        }, n.onShowExtensionMessageCard = function(e, t, i, r) {
+                        }, n.onShowExtensionMessageCard = function(e, t, i, a) {
                             n.setState({
                                 viewerCardOptions: {
                                     viewerCardType: s.b.Extension,
-                                    initialTopOffset: r,
+                                    initialTopOffset: a,
                                     sourceID: i,
                                     targetID: e,
                                     extensionVersion: t
@@ -23064,12 +23050,12 @@
                             hideViewerCard: n.hideViewerCard
                         }, n
                     }
-                    return r.__extends(t, e), t.prototype.render = function() {
-                        return a.createElement(l, {
+                    return a.__extends(t, e), t.prototype.render = function() {
+                        return r.createElement(l, {
                             value: this.state
                         }, this.props.children)
                     }, t
-                }(a.Component);
+                }(r.Component);
             n.d(t, !1, function() {
                 return l
             }), n.d(t, "b", function() {
@@ -23982,8 +23968,8 @@
         gcd7: function(e, t, n) {
             "use strict";
             var i = n("/MKj"),
-                r = n("fvjX"),
-                a = n("+pBb"),
+                a = n("fvjX"),
+                r = n("+pBb"),
                 o = n("mrSG"),
                 s = function(e) {
                     function t() {
@@ -24000,9 +23986,9 @@
                     }, t
                 }(n("q1tI").PureComponent);
             var l = Object(i.connect)(null, function(e) {
-                return Object(r.bindActionCreators)({
-                    addCommand: a.x,
-                    removeCommand: a.N
+                return Object(a.bindActionCreators)({
+                    addCommand: r.x,
+                    removeCommand: r.N
                 }, e)
             })(s);
             n.d(t, "a", function() {
@@ -24017,24 +24003,24 @@
                 return l
             });
             var i = n("q1tI"),
-                r = n("/7QA"),
-                a = n("5g1g"),
+                a = n("/7QA"),
+                r = n("5g1g"),
                 o = n("wUQP"),
                 s = function(e) {
                     var t = e.children;
-                    return i.createElement(a.a, {
+                    return i.createElement(r.a, {
                         name: "vip_badge_gate"
                     }, t)
                 },
                 l = function() {
-                    return o.a.On === r.b.get("vip_badge_gate", o.a.Off)
+                    return o.a.On === a.b.get("vip_badge_gate", o.a.Off)
                 }
         },
         i6WW: function(e, t, n) {
             "use strict";
             var i = n("/7QA"),
-                r = n("RcPG"),
-                a = new RegExp("(?:^|\\s)(?:https?://)?clips.twitch.tv/(\\w+)(?:/)?(\\w+)?(?:/edit)?(?:$|\\s)?"),
+                a = n("RcPG"),
+                r = new RegExp("(?:^|\\s)(?:https?://)?clips.twitch.tv/(\\w+)(?:/)?(\\w+)?(?:/edit)?(?:$|\\s)?"),
                 o = new RegExp("(?:^|\\s)(?:https?:\\/\\/)?(?:www\\.)?twitch\\.tv\\/(\\w+)\\/clip\\/(\\w+)(?:$|\\s)?");
             var s = new RegExp("(?:^|\\s)(?:https?://)?(?:(?:www|go).)?twitch.tv/videos/(\\d+)(?:$|\\s)?");
             n.d(t, "a", function() {
@@ -24046,7 +24032,7 @@
                 var n = e.match(l);
                 if (!n) return null;
                 if (t.blockLinks) return {
-                    type: r.a.Text,
+                    type: a.a.Text,
                     content: " <" + Object(i.d)("deleted link", "CreateMessageData") + "> "
                 };
                 var c = n[1],
@@ -24054,19 +24040,19 @@
                     u = "" + (c || "https://") + d;
                 if (t.parseClips && function(e) {
                         void 0 === e && (e = "");
-                        var t = a.test(e) && !e.includes("clips.twitch.tv/2017/"),
+                        var t = r.test(e) && !e.includes("clips.twitch.tv/2017/"),
                             n = o.test(e);
                         return t || n
                     }(u)) {
                     var p = function(e) {
                         void 0 === e && (e = "");
-                        var t = e.match(a);
+                        var t = e.match(r);
                         if (t && t.length > 0 && void 0 !== t.index) return t[1];
                         var n = e.match(o);
                         return n && n.length > 0 && void 0 !== n.index ? n[2] : ""
                     }(u);
                     return {
-                        type: r.a.ClipLink,
+                        type: a.a.ClipLink,
                         content: {
                             slug: p,
                             url: u,
@@ -24083,7 +24069,7 @@
                         return null === t ? "" : t && t.length > 0 && void 0 !== t.index ? t[1] : ""
                     }(u);
                     return {
-                        type: r.a.VideoLink,
+                        type: a.a.VideoLink,
                         content: {
                             id: m,
                             url: u,
@@ -24092,7 +24078,7 @@
                     }
                 }
                 return {
-                    type: r.a.Link,
+                    type: a.a.Link,
                     content: {
                         displayText: e,
                         url: u
@@ -24106,17 +24092,17 @@
                 return l
             });
             var i = n("mrSG"),
-                r = n("yR8l"),
-                a = n("8jSG"),
+                a = n("yR8l"),
+                r = n("8jSG"),
                 o = n("cMjZ"),
                 s = n("zixI");
 
             function l() {
                 var e = this;
-                return Object(r.a)(s, {
+                return Object(a.a)(s, {
                     props: function(t) {
                         return {
-                            unblockUserMutation: function(n, r) {
+                            unblockUserMutation: function(n, a) {
                                 return i.__awaiter(e, void 0, void 0, function() {
                                     return i.__generator(this, function(e) {
                                         switch (e.label) {
@@ -24138,14 +24124,14 @@
                                                     },
                                                     update: function(e) {
                                                         var t = e.readFragment({
-                                                            id: Object(o.a)(r),
-                                                            fragment: a
+                                                            id: Object(o.a)(a),
+                                                            fragment: r
                                                         });
                                                         t && (t.blockedUsers = t.blockedUsers.filter(function(e) {
                                                             return null !== e && e.id !== n
                                                         }), e.writeFragment({
-                                                            id: Object(o.a)(r),
-                                                            fragment: a,
+                                                            id: Object(o.a)(a),
+                                                            fragment: r,
                                                             data: t
                                                         }))
                                                     }
@@ -24351,8 +24337,8 @@
         iyGE: function(e, t, n) {
             "use strict";
             var i = n("mrSG"),
-                r = n("yR8l"),
-                a = n("Pub/"),
+                a = n("yR8l"),
+                r = n("Pub/"),
                 o = n("HzXE"),
                 s = 60,
                 l = 60 * s,
@@ -24363,10 +24349,10 @@
 
             function m(e) {
                 var t = this;
-                return Object(r.a)(p, {
+                return Object(a.a)(p, {
                     props: function(n) {
                         return {
-                            banUserMutation: function(r, p, m) {
+                            banUserMutation: function(a, p, m) {
                                 return void 0 === p && (p = null), void 0 === m && (m = null), i.__awaiter(t, void 0, void 0, function() {
                                     var t;
                                     return i.__generator(this, function(h) {
@@ -24379,7 +24365,7 @@
                                                     variables: {
                                                         input: {
                                                             channelID: t,
-                                                            bannedUserLogin: r,
+                                                            bannedUserLogin: a,
                                                             expiresIn: p && function(e) {
                                                                 if (!e) return "0s";
                                                                 var t = e,
@@ -24389,12 +24375,12 @@
                                                                     t -= i * u, n += i + "mo"
                                                                 }
                                                                 if (t > d) {
-                                                                    var r = Math.floor(t / d);
-                                                                    t -= r * d, n += r + "w"
+                                                                    var a = Math.floor(t / d);
+                                                                    t -= a * d, n += a + "w"
                                                                 }
                                                                 if (t > c) {
-                                                                    var a = Math.floor(t / c);
-                                                                    t -= a * c, n += a + "d"
+                                                                    var r = Math.floor(t / c);
+                                                                    t -= r * c, n += r + "d"
                                                                 }
                                                                 if (t > l) {
                                                                     var o = Math.floor(t / l);
@@ -24412,15 +24398,15 @@
                                                     update: function(e, n) {
                                                         return function(e, t, n) {
                                                             if (t && t.data && t.data.banUserFromChatRoom && t.data.banUserFromChatRoom.ban && t.data.banUserFromChatRoom.ban.bannedUser && t.data.banUserFromChatRoom.ban.bannedUser.id) {
-                                                                var r = Object(a.a)(e, n, t.data.banUserFromChatRoom.ban.bannedUser.id);
-                                                                if (!r) return;
+                                                                var a = Object(r.a)(e, n, t.data.banUserFromChatRoom.ban.bannedUser.id);
+                                                                if (!a) return;
                                                                 e.writeQuery({
                                                                     query: o,
                                                                     variables: {
                                                                         targetUserID: t.data.banUserFromChatRoom.ban.bannedUser.id,
                                                                         channelID: n
                                                                     },
-                                                                    data: i.__assign({}, r, {
+                                                                    data: i.__assign({}, a, {
                                                                         chatRoomBanStatus: {
                                                                             isPermanent: t.data.banUserFromChatRoom.ban.isPermanent,
                                                                             __typename: "ChatRoomBanStatus"
@@ -24623,20 +24609,20 @@
                     column: 1
                 }
             };
-            var r = {};
+            var a = {};
             i.definitions = i.definitions.concat(function(e) {
                 return e.filter(function(e) {
                     if ("FragmentDefinition" !== e.kind) return !0;
                     var t = e.name.value;
-                    return !r[t] && (r[t] = !0, !0)
+                    return !a[t] && (a[t] = !0, !0)
                 })
             }(n("IKE4").definitions)), e.exports = i
         },
         j0ar: function(e, t, n) {
             "use strict";
             var i = n("mrSG"),
-                r = n("TSYQ"),
-                a = n("q1tI"),
+                a = n("TSYQ"),
+                r = n("q1tI"),
                 o = n("x1M1"),
                 s = n("Ue10"),
                 l = (n("9KaG"), function(e) {
@@ -24656,12 +24642,12 @@
                             })
                         }, n.renderImage = function() {
                             var e = null,
-                                t = r("chat-image", {
+                                t = a("chat-image", {
                                     "chat-image__animated": !!n.props.cheerText && n.state.imageLoaded
                                 }, n.props.className);
-                            if (n.props.srcSet.themed) e = a.createElement(s.Qa, {
+                            if (n.props.srcSet.themed) e = r.createElement(s.Qa, {
                                 display: n.state.imageLoaded ? s.X.InlineBlock : s.X.Hide
-                            }, a.createElement(o.a, {
+                            }, r.createElement(o.a, {
                                 alt: n.props.alt,
                                 className: t,
                                 defaultRes: n.props.srcKey,
@@ -24675,9 +24661,9 @@
                                     var d = c[l];
                                     i.push(n.props.srcSet.sources[d] + " " + d)
                                 }
-                                e = a.createElement(s.Qa, {
+                                e = r.createElement(s.Qa, {
                                     display: n.state.imageLoaded ? s.X.InlineBlock : s.X.Hide
-                                }, a.createElement("img", {
+                                }, r.createElement("img", {
                                     className: t,
                                     onLoad: n.onImageLoad,
                                     onMouseOver: n.onMouseOver,
@@ -24689,13 +24675,13 @@
                             }
                             return e
                         }, n.renderPlaceholder = function() {
-                            return n.state.imageLoaded ? null : a.createElement(s.Qa, {
+                            return n.state.imageLoaded ? null : r.createElement(s.Qa, {
                                 display: s.X.InlineBlock
-                            }, a.createElement(s.W, {
+                            }, r.createElement(s.W, {
                                 type: s.Wb.Span,
                                 className: "chat-image__placeholder",
                                 align: s.gc.Top
-                            }, a.createElement(s.jb, {
+                            }, r.createElement(s.jb, {
                                 height: 28,
                                 width: 28
                             })))
@@ -24706,20 +24692,20 @@
                     }
                     return i.__extends(t, e), t.prototype.render = function() {
                         var e;
-                        return e = this.state.isHovering && this.state.imageLoaded ? a.createElement(s.Zb, {
+                        return e = this.state.isHovering && this.state.imageLoaded ? r.createElement(s.Zb, {
                             direction: this.props.tooltipDirection || s.bc.Top,
                             label: this.props.alt,
                             display: s.X.Inline,
                             offsetY: "0.9rem",
                             "data-a-target": "emote-name"
-                        }, this.renderPlaceholder(), this.renderImage(), this.props.cheerText) : a.createElement("span", {
+                        }, this.renderPlaceholder(), this.renderImage(), this.props.cheerText) : r.createElement("span", {
                             "data-a-target": "emote-name"
-                        }, this.renderPlaceholder(), this.renderImage(), this.props.cheerText), this.props.cheerText ? a.createElement(s.W, {
+                        }, this.renderPlaceholder(), this.renderImage(), this.props.cheerText), this.props.cheerText ? r.createElement(s.W, {
                             type: s.Wb.Span,
                             noWrap: !0
                         }, e) : e
                     }, t
-                }(a.Component));
+                }(r.Component));
             n.d(t, "a", function() {
                 return l
             })
@@ -24729,8 +24715,8 @@
         jsEL: function(e, t, n) {
             "use strict";
             var i = n("mrSG"),
-                r = n("q1tI"),
-                a = n("/7QA"),
+                a = n("q1tI"),
+                r = n("/7QA"),
                 o = n("u5aL"),
                 s = n("Ue10"),
                 l = (n("wC0O"), {
@@ -24745,7 +24731,7 @@
                     function t() {
                         var t = null !== e && e.apply(this, arguments) || this;
                         return t.renderSuccess = function() {
-                            return t.props.successContent ? r.createElement(s.Fb, {
+                            return t.props.successContent ? a.createElement(s.Fb, {
                                 "data-test-selector": l.SUCCESS_BODY,
                                 padding: {
                                     x: 2,
@@ -24757,11 +24743,11 @@
                                 borderMarked: !0,
                                 background: s.r.Alt,
                                 fullWidth: !0
-                            }, r.createElement(s.W, {
+                            }, a.createElement(s.W, {
                                 type: s.Wb.Strong
                             }, t.props.successContent)) : null
                         }, t.renderError = function() {
-                            return t.props.errorContent ? r.createElement(s.Fb, {
+                            return t.props.errorContent ? a.createElement(s.Fb, {
                                 "data-test-selector": l.ERROR_BODY,
                                 padding: {
                                     x: 1,
@@ -24773,7 +24759,7 @@
                                 borderMarked: !0,
                                 background: s.r.Alt,
                                 fullWidth: !0
-                            }, r.createElement(s.W, {
+                            }, a.createElement(s.W, {
                                 type: s.Wb.Strong,
                                 color: s.O.Error
                             }, t.props.errorContent)) : null
@@ -24782,29 +24768,29 @@
                         }, t
                     }
                     return i.__extends(t, e), t.prototype.render = function() {
-                        return this.props.successContent ? r.createElement(o.a, {
+                        return this.props.successContent ? a.createElement(o.a, {
                             onClickOut: this.props.onClose
-                        }, r.createElement(s.Fb, {
+                        }, a.createElement(s.Fb, {
                             padding: 2,
                             background: s.r.Base,
                             className: "clip-modal"
-                        }, this.renderSuccess(), r.createElement(s.Ya, {
+                        }, this.renderSuccess(), a.createElement(s.Ya, {
                             display: s.X.Flex,
                             justifyContent: s.Xa.Center
-                        }, r.createElement(s.Ya, {
+                        }, a.createElement(s.Ya, {
                             margin: {
                                 x: 1
                             }
-                        }, r.createElement(s.z, {
+                        }, a.createElement(s.z, {
                             "data-test-selector": l.CANCEL_BUTTON,
                             onClick: this.props.onClose
-                        }, Object(a.d)("Close", "ClipsModal")))))) : r.createElement(o.a, {
+                        }, Object(r.d)("Close", "ClipsModal")))))) : a.createElement(o.a, {
                             onClickOut: this.props.onClose
-                        }, r.createElement(s.Fb, {
+                        }, a.createElement(s.Fb, {
                             padding: 2,
                             background: s.r.Base,
                             className: "clip-modal"
-                        }, r.createElement(s.Fb, {
+                        }, a.createElement(s.Fb, {
                             "data-test-selector": l.TITLE,
                             borderBottom: !0,
                             margin: {
@@ -24813,7 +24799,7 @@
                             padding: {
                                 bottom: 1
                             }
-                        }, this.props.title), r.createElement(s.Fb, {
+                        }, this.props.title), a.createElement(s.Fb, {
                             "data-test-selector": l.MAIN_BODY,
                             borderBottom: !0,
                             margin: {
@@ -24822,31 +24808,31 @@
                             padding: {
                                 bottom: 2
                             }
-                        }, this.renderError(), this.props.body), r.createElement(s.Ya, {
+                        }, this.renderError(), this.props.body), a.createElement(s.Ya, {
                             display: s.X.Flex,
                             justifyContent: s.Xa.Center
-                        }, r.createElement(s.Ya, {
+                        }, a.createElement(s.Ya, {
                             margin: {
                                 x: 1
                             }
-                        }, r.createElement(s.z, {
+                        }, a.createElement(s.z, {
                             "data-test-selector": l.CANCEL_BUTTON,
                             type: s.F.Text,
                             onClick: this.props.onClose
-                        }, Object(a.d)("Cancel", "ClipsModal"))), r.createElement(s.Ya, {
+                        }, Object(r.d)("Cancel", "ClipsModal"))), a.createElement(s.Ya, {
                             margin: {
                                 x: 1
                             }
-                        }, r.createElement(s.z, {
+                        }, a.createElement(s.z, {
                             "data-test-selector": l.SUBMIT_BUTTON,
                             type: this.props.buttonType ? this.props.buttonType : s.F.Default,
                             onClick: this.onSubmit,
                             disabled: this.props.submitDisabled
-                        }, this.props.buttonContent), this.props.isLoading && r.createElement(s.ab, {
+                        }, this.props.buttonContent), this.props.isLoading && a.createElement(s.ab, {
                             delay: 0
                         })))))
                     }, t
-                }(r.Component),
+                }(a.Component),
                 d = n("iyGE"),
                 u = n("GnwI"),
                 p = 86400,
@@ -24858,25 +24844,25 @@
                             hasErrored: !1,
                             hasSucceeded: !1
                         }, t.renderTitle = function() {
-                            return t.props.isTemporary ? r.createElement(s.W, {
+                            return t.props.isTemporary ? a.createElement(s.W, {
                                 type: s.Wb.H5,
                                 ellipsis: !0
-                            }, Object(a.d)("Timeout this Clip Creator for 24 hours from Your Channel", "ClipsModalBanUser")) : r.createElement(s.W, {
+                            }, Object(r.d)("Timeout this Clip Creator for 24 hours from Your Channel", "ClipsModalBanUser")) : a.createElement(s.W, {
                                 type: s.Wb.H5,
                                 ellipsis: !0
-                            }, Object(a.d)("Ban this Clip Creator from Your Channel", "ClipsModalBanUser"))
+                            }, Object(r.d)("Ban this Clip Creator from Your Channel", "ClipsModalBanUser"))
                         }, t.renderBodyText = function() {
-                            return t.props.isTemporary ? r.createElement(s.W, null, Object(a.d)("{clipCreator} will temporarily be timed out from creating clips and chatting in your channel for 24 hours.", {
+                            return t.props.isTemporary ? a.createElement(s.W, null, Object(r.d)("{clipCreator} will temporarily be timed out from creating clips and chatting in your channel for 24 hours.", {
                                 clipCreator: t.props.targetUser.displayName
-                            }, "ClipsModalBanUser")) : r.createElement(s.W, null, Object(a.d)("{clipCreator} will be permanently banned from creating clips and chatting in your channel.", {
+                            }, "ClipsModalBanUser")) : a.createElement(s.W, null, Object(r.d)("{clipCreator} will be permanently banned from creating clips and chatting in your channel.", {
                                 clipCreator: t.props.targetUser.displayName
                             }, "ClipsModalBanUser"))
                         }, t.renderButtonText = function() {
-                            return t.props.isTemporary ? Object(a.d)("Timeout User", "ClipsModalBanUser") : Object(a.d)("Ban User", "ClipsModalBanUser")
+                            return t.props.isTemporary ? Object(r.d)("Timeout User", "ClipsModalBanUser") : Object(r.d)("Ban User", "ClipsModalBanUser")
                         }, t.renderSuccess = function() {
-                            return t.state.hasSucceeded ? Object(a.d)("Success!", "ClipsModalBanUser") : null
+                            return t.state.hasSucceeded ? Object(r.d)("Success!", "ClipsModalBanUser") : null
                         }, t.renderFailure = function() {
-                            return t.state.hasErrored ? t.props.isTemporary ? Object(a.d)("There was a problem timing out this clip creator", "ClipsModalBanUser") : Object(a.d)("There was a problem banning this clip creator", "ClipsModalBanUser") : null
+                            return t.state.hasErrored ? t.props.isTemporary ? Object(r.d)("There was a problem timing out this clip creator", "ClipsModalBanUser") : Object(r.d)("There was a problem banning this clip creator", "ClipsModalBanUser") : null
                         }, t.banUser = function() {
                             return i.__awaiter(t, void 0, void 0, function() {
                                 var e, t, n;
@@ -24913,7 +24899,7 @@
                     return i.__extends(t, e), t.prototype.componentDidMount = function() {
                         this.props.latencyTracking.reportInteractive()
                     }, t.prototype.render = function() {
-                        return r.createElement(c, {
+                        return a.createElement(c, {
                             onSubmit: this.banUser,
                             onClose: this.props.onClose,
                             title: this.renderTitle(),
@@ -24926,7 +24912,7 @@
                             isLoading: this.state.isLoading
                         })
                     }, t
-                }(r.Component),
+                }(a.Component),
                 h = Object(u.b)("ClipsModalBanUser")(Object(d.a)(function(e) {
                     return {
                         channelID: e.broadcasterID
@@ -24977,60 +24963,60 @@
                         }, n.state = k, n
                     }
                     return i.__extends(t, e), t.prototype.render = function() {
-                        var e = [r.createElement(s.W, {
+                        var e = [a.createElement(s.W, {
                             key: "title",
                             type: s.Wb.H4
-                        }, Object(a.d)("Delete This Clip", "ClipsModalDelete")), r.createElement(s.Ya, {
+                        }, Object(r.d)("Delete This Clip", "ClipsModalDelete")), a.createElement(s.Ya, {
                             key: "message",
                             margin: {
                                 top: 1
                             }
-                        }, r.createElement(s.W, {
+                        }, a.createElement(s.W, {
                             type: s.Wb.P,
                             color: s.O.Alt2
-                        }, Object(a.d)("This clip will be permanently deleted.", "ClipsModalDelete")))];
+                        }, Object(r.d)("This clip will be permanently deleted.", "ClipsModalDelete")))];
                         if (!this.props.data.clip) return null;
                         var t = null;
-                        this.props.data.clip.curator && this.props.data.clip.curator.login && (t = r.createElement("span", null, " • ", Object(a.d)("Clipped by {curator}", {
+                        this.props.data.clip.curator && this.props.data.clip.curator.login && (t = a.createElement("span", null, " • ", Object(r.d)("Clipped by {curator}", {
                             curator: this.props.data.clip.curator.login
                         }, "ClipsModalDelete")));
-                        var n = r.createElement(s.Fb, {
+                        var n = a.createElement(s.Fb, {
                             display: s.X.Flex,
                             flexWrap: s.Ba.NoWrap
-                        }, r.createElement(s.Ya, {
+                        }, a.createElement(s.Ya, {
                             className: "clips-modal-delete__thumb",
                             margin: {
                                 right: 1
                             }
-                        }, r.createElement(s.o, {
+                        }, a.createElement(s.o, {
                             ratio: s.p.Aspect16x9
-                        }, r.createElement("img", {
+                        }, a.createElement("img", {
                             src: this.props.data.clip.thumbnailURL
-                        }))), r.createElement(s.Ya, null, r.createElement(s.W, {
+                        }))), a.createElement(s.Ya, null, a.createElement(s.W, {
                             type: s.Wb.H5
-                        }, this.props.data.clip.title), r.createElement(s.W, {
+                        }, this.props.data.clip.title), a.createElement(s.W, {
                             color: s.O.Alt2
-                        }, Object(a.d)("{created, date, medium}", {
+                        }, Object(r.d)("{created, date, medium}", {
                             created: new Date(this.props.data.clip.createdAt)
-                        }, "ClipsModalDelete"), t), r.createElement(s.W, {
+                        }, "ClipsModalDelete"), t), a.createElement(s.W, {
                             color: s.O.Alt2
-                        }, Object(a.d)("{viewCount, number} views", {
+                        }, Object(r.d)("{viewCount, number} views", {
                             viewCount: this.props.data.clip.viewCount
                         }, "ClipsModalDelete"))));
-                        return r.createElement(c, {
+                        return a.createElement(c, {
                             onSubmit: this.onDeleteClick,
                             onClose: this.props.onClose,
                             title: e,
                             body: n,
-                            buttonContent: Object(a.d)("Delete", "ClipsModalDelete"),
+                            buttonContent: Object(r.d)("Delete", "ClipsModalDelete"),
                             buttonType: s.F.Alert,
                             submitDisabled: this.state.hasSucceeded || this.state.isLoading,
-                            successContent: this.state.hasSucceeded ? Object(a.d)("Success!", "ClipsModalDelete") : null,
-                            errorContent: this.state.hasErrored ? Object(a.d)("There was a problem deleting this clip.", "ClipsModalDelete") : null,
+                            successContent: this.state.hasSucceeded ? Object(r.d)("Success!", "ClipsModalDelete") : null,
+                            errorContent: this.state.hasErrored ? Object(r.d)("There was a problem deleting this clip.", "ClipsModalDelete") : null,
                             isLoading: this.state.isLoading
                         })
                     }, t
-                }(r.Component),
+                }(a.Component),
                 y = Object(g.a)(v)(b({
                     props: function(e) {
                         return {
@@ -25050,7 +25036,7 @@
                                             case 1:
                                                 return i.sent(), e.ownProps.onDelete && e.ownProps.onDelete(t), [3, 3];
                                             case 2:
-                                                throw n = i.sent(), a.k.error(n, "Failed to delete clip"), n;
+                                                throw n = i.sent(), r.k.error(n, "Failed to delete clip"), n;
                                             case 3:
                                                 return [2]
                                         }
@@ -25067,7 +25053,7 @@
                     hasErrored: !1,
                     hasSucceeded: !1
                 },
-                w = function(e) {
+                _ = function(e) {
                     function t(t) {
                         var n = e.call(this, t) || this;
                         return n.deleteAll = function() {
@@ -25098,25 +25084,25 @@
                                 })
                             })
                         }, n.renderSuccess = function() {
-                            return n.state.hasSucceeded ? Object(a.d)("A request has been made to delete the clip. Please wait a few minutes for this to take effect.", "ClipsModalDeleteAll") : null
+                            return n.state.hasSucceeded ? Object(r.d)("A request has been made to delete the clip. Please wait a few minutes for this to take effect.", "ClipsModalDeleteAll") : null
                         }, n.renderFailure = function() {
-                            return n.state.hasErrored ? Object(a.d)("There was a problem deleting this clip.", "ClipsModalDeleteAll") : null
+                            return n.state.hasErrored ? Object(r.d)("There was a problem deleting this clip.", "ClipsModalDeleteAll") : null
                         }, n.state = N, n
                     }
                     return i.__extends(t, e), t.prototype.componentDidMount = function() {
                         this.props.latencyTracking.reportInteractive()
                     }, t.prototype.render = function() {
-                        var e = r.createElement(s.W, {
+                        var e = a.createElement(s.W, {
                             type: s.Wb.P
-                        }, Object(a.d)("This clip and all other clips created from the same video will be permanently deleted.", "ClipsModalDeleteAll"));
-                        return r.createElement(c, {
+                        }, Object(r.d)("This clip and all other clips created from the same video will be permanently deleted.", "ClipsModalDeleteAll"));
+                        return a.createElement(c, {
                             onSubmit: this.deleteAll,
                             onClose: this.props.onClose,
-                            title: r.createElement(s.W, {
+                            title: a.createElement(s.W, {
                                 type: s.Wb.H4
-                            }, Object(a.d)("Delete All Clips from Related Video", "ClipsModalDeleteAll")),
+                            }, Object(r.d)("Delete All Clips from Related Video", "ClipsModalDeleteAll")),
                             body: e,
-                            buttonContent: Object(a.d)("Delete", "ClipsModalDeleteAll"),
+                            buttonContent: Object(r.d)("Delete", "ClipsModalDeleteAll"),
                             buttonType: s.F.Alert,
                             submitDisabled: this.state.isLoading || this.state.hasSucceeded || "" === this.props.broadcastID,
                             isLoading: this.state.isLoading,
@@ -25124,17 +25110,17 @@
                             errorContent: this.renderFailure()
                         })
                     }, t
-                }(r.Component),
-                _ = Object(S.compose)(Object(u.b)("ClipsModalDeleteAll"), b({
+                }(a.Component),
+                w = Object(S.compose)(Object(u.b)("ClipsModalDeleteAll"), b({
                     props: function(e) {
                         return {
                             deleteAllClips: function(t, n) {
                                 return i.__awaiter(void 0, void 0, void 0, function() {
-                                    var r, o, s;
+                                    var a, o, s;
                                     return i.__generator(this, function(i) {
                                         switch (i.label) {
                                             case 0:
-                                                return i.trys.push([0, 6, , 7]), r = void 0, n ? [4, e.mutate({
+                                                return i.trys.push([0, 6, , 7]), a = void 0, n ? [4, e.mutate({
                                                     variables: {
                                                         input: {
                                                             videoID: n
@@ -25142,7 +25128,7 @@
                                                     }
                                                 })] : [3, 2];
                                             case 1:
-                                                return o = i.sent(), r = o.data, [3, 5];
+                                                return o = i.sent(), a = o.data, [3, 5];
                                             case 2:
                                                 return t ? [4, e.mutate({
                                                     variables: {
@@ -25152,13 +25138,13 @@
                                                     }
                                                 })] : [3, 4];
                                             case 3:
-                                                return o = i.sent(), r = o.data, [3, 5];
+                                                return o = i.sent(), a = o.data, [3, 5];
                                             case 4:
                                                 throw new Error("Invalid broadcastID specified for deleteAllClips");
                                             case 5:
-                                                return e.ownProps.onDeleteAll && r.deleteClips && r.deleteClips.clips && e.ownProps.onDeleteAll(r.deleteClips.clips), [3, 7];
+                                                return e.ownProps.onDeleteAll && a.deleteClips && a.deleteClips.clips && e.ownProps.onDeleteAll(a.deleteClips.clips), [3, 7];
                                             case 6:
-                                                throw s = i.sent(), a.k.error(s, "Failed to delete clips from VOD"), s;
+                                                throw s = i.sent(), r.k.error(s, "Failed to delete clips from VOD"), s;
                                             case 7:
                                                 return [2]
                                         }
@@ -25185,7 +25171,7 @@
                             }
                         }
                     }
-                }))(w),
+                }))(_),
                 O = {
                     isLoading: !1,
                     hasErrored: !1,
@@ -25195,9 +25181,9 @@
                     function t(t) {
                         var n = e.call(this, t) || this;
                         return n.renderSuccess = function() {
-                            return n.state.hasSucceeded ? Object(a.d)("Clips successfully deleted.", "ClipsModalBatchDelete") : null
+                            return n.state.hasSucceeded ? Object(r.d)("Clips successfully deleted.", "ClipsModalBatchDelete") : null
                         }, n.renderError = function() {
-                            return n.state.hasErrored ? Object(a.d)("There was a problem deleting this clip.", "ClipsModalBatchDelete") : null
+                            return n.state.hasErrored ? Object(r.d)("There was a problem deleting this clip.", "ClipsModalBatchDelete") : null
                         }, n.onDeleteClick = function() {
                             return i.__awaiter(n, void 0, void 0, function() {
                                 return i.__generator(this, function(e) {
@@ -25228,18 +25214,18 @@
                         }, n.state = O, n
                     }
                     return i.__extends(t, e), t.prototype.render = function() {
-                        var e = r.createElement(s.W, {
+                        var e = a.createElement(s.W, {
                                 type: s.Wb.H4
-                            }, Object(a.d)("Delete these clips?", "ClipsModalBatchDelete")),
-                            t = r.createElement(s.W, {
+                            }, Object(r.d)("Delete these clips?", "ClipsModalBatchDelete")),
+                            t = a.createElement(s.W, {
                                 type: s.Wb.P
-                            }, Object(a.d)("These clips will be permanently deleted. Are you sure?", "ClipsModalBatchDelete"));
-                        return r.createElement(c, {
+                            }, Object(r.d)("These clips will be permanently deleted. Are you sure?", "ClipsModalBatchDelete"));
+                        return a.createElement(c, {
                             onSubmit: this.onDeleteClick,
                             onClose: this.props.onClose,
                             title: e,
                             body: t,
-                            buttonContent: Object(a.d)("Delete", "ClipsModalBatchDelete"),
+                            buttonContent: Object(r.d)("Delete", "ClipsModalBatchDelete"),
                             buttonType: s.F.Alert,
                             submitDisabled: this.state.hasSucceeded || this.state.isLoading,
                             isLoading: this.state.isLoading,
@@ -25247,7 +25233,7 @@
                             errorContent: this.renderError()
                         })
                     }, t
-                }(r.Component),
+                }(a.Component),
                 D = b({
                     props: function(e) {
                         return {
@@ -25267,7 +25253,7 @@
                                             case 1:
                                                 return n.sent(), e.ownProps.onBatchDelete && e.ownProps.onBatchDelete(), [3, 3];
                                             case 2:
-                                                throw t = n.sent(), a.k.error(t, "Failed to delete clips"), t;
+                                                throw t = n.sent(), r.k.error(t, "Failed to delete clips"), t;
                                             case 3:
                                                 return [2]
                                         }
@@ -25284,7 +25270,7 @@
             }), n.d(t, "d", function() {
                 return y
             }), n.d(t, "e", function() {
-                return _
+                return w
             }), n.d(t, "c", function() {
                 return D
             })
@@ -25392,8 +25378,8 @@
         km1c: function(e, t, n) {
             "use strict";
             var i = n("mrSG"),
-                r = n("TSYQ"),
-                a = n("q1tI"),
+                a = n("TSYQ"),
+                r = n("q1tI"),
                 o = n("oJmH"),
                 s = n("/7QA"),
                 l = n("ZS2+"),
@@ -25413,10 +25399,10 @@
                 S = n("aCAx"),
                 E = n("7CzK"),
                 N = n("94Uw"),
-                w = n("Ue10"),
-                _ = (n("/nm5"), n("41XU")),
+                _ = n("Ue10"),
+                w = (n("/nm5"), n("41XU")),
                 O = l.a.wrap(function() {
-                    return n.e(145).then(n.bind(null, "7lJP"))
+                    return n.e(143).then(n.bind(null, "7lJP"))
                 }, "UserImageUploader"),
                 M = function(e) {
                     function t() {
@@ -25456,53 +25442,53 @@
                         }), this.props.isSideNavBanner && (i = "channel-banner__side-nav-type");
                         var u = null;
                         if (this.props.canEdit) {
-                            var p = this.props.isSideNavBanner ? a.createElement(w.Ya, {
-                                display: w.X.Flex,
+                            var p = this.props.isSideNavBanner ? r.createElement(_.Ya, {
+                                display: _.X.Flex,
                                 padding: {
                                     x: 3
                                 },
-                                justifyContent: w.Xa.Between,
+                                justifyContent: _.Xa.Between,
                                 fullWidth: !0
-                            }, a.createElement(w.tb, {
-                                asset: w.ub.Edit
-                            }), a.createElement(w.W, null, Object(s.d)("Edit", "ChannelBanner"))) : a.createElement(w.Ya, null, a.createElement(w.Ya, null, a.createElement(w.tb, {
-                                asset: w.ub.Edit
+                            }, r.createElement(_.tb, {
+                                asset: _.ub.Edit
+                            }), r.createElement(_.W, null, Object(s.d)("Edit", "ChannelBanner"))) : r.createElement(_.Ya, null, r.createElement(_.Ya, null, r.createElement(_.tb, {
+                                asset: _.ub.Edit
                             })), Object(s.d)("Update Profile Banner", "ChannelBanner"));
-                            u = a.createElement(w.Fb, {
-                                className: r("channel-banner__edit-overlay", c),
-                                background: w.r.Overlay,
-                                position: w.kb.Absolute,
+                            u = r.createElement(_.Fb, {
+                                className: a("channel-banner__edit-overlay", c),
+                                background: _.r.Overlay,
+                                position: _.kb.Absolute,
                                 attachTop: !0,
                                 attachLeft: !0,
                                 fullWidth: !0
-                            }, a.createElement("button", {
+                            }, r.createElement("button", {
                                 className: "channel-banner__edit-overlay-button",
                                 "data-test-selector": "channel-banner__edit-overlay-interactable",
                                 onClick: this.openModal
-                            }, a.createElement(w.Ya, {
-                                display: w.X.Flex,
-                                alignItems: w.f.Center,
-                                flexDirection: w.Aa.Column,
-                                justifyContent: w.Xa.Center
+                            }, r.createElement(_.Ya, {
+                                display: _.X.Flex,
+                                alignItems: _.f.Center,
+                                flexDirection: _.Aa.Column,
+                                justifyContent: _.Xa.Center
                             }, p)))
                         }
-                        return e = a.createElement("div", {
-                            className: r("channel-banner__image", l),
+                        return e = r.createElement("div", {
+                            className: a("channel-banner__image", l),
                             "data-test-selector": n,
                             style: t
-                        }, u), a.createElement("div", {
-                            className: r("channel-banner", o),
+                        }, u), r.createElement("div", {
+                            className: a("channel-banner", o),
                             "data-test-selector": i,
                             onTransitionEnd: this.props.onTransitionEnd
-                        }, a.createElement(w.Qa, {
+                        }, r.createElement(_.Qa, {
                             fullWidth: !0,
                             fullHeight: !0
                         }, e))
                     }, t.prototype.componentWillUnmount = function() {
                         this.props.closeModal()
                     }, t
-                }(a.Component),
-                D = Object(u.a)(_, {
+                }(r.Component),
+                D = Object(u.a)(w, {
                     options: function(e) {
                         return {
                             variables: {
@@ -25525,12 +25511,12 @@
                     }, e)
                 })(D),
                 R = n("tuvy"),
-                A = n("i4un"),
-                L = n("dIU+"),
-                j = n("GnwI"),
-                B = n("Ba7Q"),
-                U = n("QjI3"),
-                x = (n("BOil"), n("HXcb"));
+                L = n("i4un"),
+                j = n("dIU+"),
+                A = n("GnwI"),
+                U = n("Ba7Q"),
+                B = n("QjI3"),
+                F = (n("BOil"), n("HXcb"));
             n.d(t, "a", function() {
                 return Y
             }), n.d(t, "b", function() {
@@ -25540,12 +25526,12 @@
             }), n.d(t, "c", function() {
                 return X
             });
-            var F, P = l.a.wrap(function() {
-                return n.e(146).then(n.bind(null, "g9Rq"))
+            var x, P = l.a.wrap(function() {
+                return n.e(144).then(n.bind(null, "g9Rq"))
             }, "EditProfileOverlay");
             ! function(e) {
                 e.SocialButtonsDefault = "channel-header__social-buttons-default", e.SocialButtonsVariantB = "channel-header__social-buttons-variant-b"
-            }(F || (F = {}));
+            }(x || (x = {}));
             var H, W = "channel-header__edit-profile-overlay",
                 V = "channel-header__verified-badge",
                 G = "channel-header__live-indicator",
@@ -25557,47 +25543,47 @@
             var q = function(e) {
                     function t(t) {
                         var n = e.call(this, t) || this;
-                        return n.verifiedBadgeElement = a.createElement(w.Zb, {
+                        return n.verifiedBadgeElement = r.createElement(_.Zb, {
                             label: Object(s.d)("Verified", "ChannelHeader"),
-                            direction: w.bc.Right
-                        }, a.createElement(w.Ya, {
+                            direction: _.bc.Right
+                        }, r.createElement(_.Ya, {
                             className: "channel-header__verified",
                             "data-target": V,
-                            display: w.X.Flex,
-                            alignItems: w.f.Center,
+                            display: _.X.Flex,
+                            alignItems: _.f.Center,
                             margin: {
                                 left: 1
                             }
-                        }, a.createElement(w.tb, {
-                            asset: w.ub.Verified
-                        }))), n.ChannelStatusIndicatorElement = a.createElement(w.Ya, {
+                        }, r.createElement(_.tb, {
+                            asset: _.ub.Verified
+                        }))), n.ChannelStatusIndicatorElement = r.createElement(_.Ya, {
                             margin: {
                                 left: 1
                             },
                             "data-target": G
-                        }, a.createElement(w.Zb, {
+                        }, r.createElement(_.Zb, {
                             label: Object(s.d)("Live Now", "ChannelHeader"),
-                            direction: w.bc.Right
-                        }, a.createElement(w.K, {
-                            status: w.M.Live,
+                            direction: _.bc.Right
+                        }, r.createElement(_.K, {
+                            status: _.M.Live,
                             pulse: !0
                         }))), n.onResetOffline = function() {
                             n.resetOfflineTimer = void 0, n.setState({
                                 live: !1
                             })
                         }, n.renderAvatarEditButton = function() {
-                            return n.props.data && n.props.data.user && n.props.data.user.id && n.props.data.user.login && n.isChannelEditor() ? a.createElement(w.Fb, {
+                            return n.props.data && n.props.data.user && n.props.data.user.id && n.props.data.user.login && n.isChannelEditor() ? r.createElement(_.Fb, {
                                 className: W,
-                                background: w.r.Overlay,
-                                position: w.kb.Absolute,
+                                background: _.r.Overlay,
+                                position: _.kb.Absolute,
                                 attachTop: !0,
                                 attachLeft: !0,
                                 fullHeight: !0,
                                 fullWidth: !0,
-                                display: w.X.InlineFlex,
-                                alignItems: w.f.Center,
-                                justifyContent: w.Xa.Center
-                            }, a.createElement(P, {
+                                display: _.X.InlineFlex,
+                                alignItems: _.f.Center,
+                                justifyContent: _.Xa.Center
+                            }, r.createElement(P, {
                                 userID: n.props.data.user.id,
                                 login: n.props.data.user.login,
                                 displayName: n.props.data.user.displayName || n.props.data.user.login
@@ -25691,103 +25677,103 @@
                                 "channel-header__user": !0,
                                 "channel-header__user--selected": this.isActiveTab(H.Channel)
                             },
-                            g = a.createElement(w.Ya, {
-                                display: w.X.Flex,
-                                flexWrap: w.Ba.NoWrap,
-                                alignItems: w.f.Center,
+                            g = r.createElement(_.Ya, {
+                                display: _.X.Flex,
+                                flexWrap: _.Ba.NoWrap,
+                                alignItems: _.f.Center,
                                 flexShrink: 0
-                            }, a.createElement(w.Ya, {
+                            }, r.createElement(_.Ya, {
                                 className: "channel-header__user-avatar channel-header__user-avatar--active",
                                 margin: {
                                     right: 1
                                 },
-                                display: w.X.Flex,
+                                display: _.X.Flex,
                                 flexShrink: 0,
-                                alignItems: w.f.Stretch
-                            }, a.createElement(w.Ya, {
-                                position: w.kb.Relative
-                            }, a.createElement(w.q, {
+                                alignItems: _.f.Stretch
+                            }, r.createElement(_.Ya, {
+                                position: _.kb.Relative
+                            }, r.createElement(_.q, {
                                 size: 36,
                                 src: l,
                                 alt: e || ""
-                            }), this.renderAvatarEditButton())), e ? a.createElement(w.W, {
-                                type: w.Wb.H5
-                            }, e) : a.createElement(w.Ya, {
-                                alignItems: w.f.Center
-                            }, a.createElement(w.jb, {
+                            }), this.renderAvatarEditButton())), e ? r.createElement(_.W, {
+                                type: _.Wb.H5
+                            }, e) : r.createElement(_.Ya, {
+                                alignItems: _.f.Center
+                            }, r.createElement(_.jb, {
                                 lineCount: 1,
                                 width: 120
                             })), p && this.ChannelStatusIndicatorElement, t && this.verifiedBadgeElement);
-                        u = this.isActiveTab(H.Channel) ? a.createElement("div", {
+                        u = this.isActiveTab(H.Channel) ? r.createElement("div", {
                             className: "channel-header__banner-toggle",
                             onClick: this.toggleChannelBanner,
                             "data-target": "channel-header__channel-link",
                             "data-a-target": "user-channel-header-item"
-                        }, g) : this.props.channelLogin ? a.createElement(w.U, {
+                        }, g) : this.props.channelLogin ? r.createElement(_.U, {
                             to: "/" + this.props.channelLogin || "#",
                             "data-target": "channel-header__channel-link",
                             "data-a-target": "user-channel-header-item",
                             hoverUnderlineNone: !0
                         }, g) : g;
-                        var f = this.state.bannerHidden ? w.X.HideAccessible : w.X.Block,
+                        var f = this.state.bannerHidden ? _.X.HideAccessible : _.X.Block,
                             b = null,
                             v = this.renderSocialButtons();
-                        return this.isActiveTab(H.Channel) && (b = a.createElement(w.Ya, {
+                        return this.isActiveTab(H.Channel) && (b = r.createElement(_.Ya, {
                             display: f
-                        }, a.createElement(T, {
+                        }, r.createElement(T, {
                             channelLogin: this.props.channelLogin,
                             canEdit: this.isChannelEditor(),
                             collapsed: !this.state.bannerSlideIn,
                             onTransitionEnd: this.completedBannerAnimation
-                        }))), a.createElement(w.Ya, {
+                        }))), r.createElement(_.Ya, {
                             className: "channel-header",
                             flexShrink: 0
-                        }, b, a.createElement(w.Ya, {
-                            display: w.X.Flex,
-                            justifyContent: w.Xa.Between,
-                            flexWrap: w.Ba.NoWrap,
+                        }, b, r.createElement(_.Ya, {
+                            display: _.X.Flex,
+                            justifyContent: _.Xa.Between,
+                            flexWrap: _.Ba.NoWrap,
                             fullHeight: !0,
                             refDelegate: this.saveChannelHeaderRef,
                             margin: {
                                 x: 3
                             }
-                        }, a.createElement(w.Ya, {
-                            display: w.X.Flex,
-                            alignItems: w.f.Stretch,
+                        }, r.createElement(_.Ya, {
+                            display: _.X.Flex,
+                            alignItems: _.f.Stretch,
                             flexShrink: 0,
-                            flexWrap: w.Ba.NoWrap,
+                            flexWrap: _.Ba.NoWrap,
                             "data-target": "channel-header-left"
-                        }, a.createElement(w.Qa, {
-                            className: r(h),
+                        }, r.createElement(_.Qa, {
+                            className: a(h),
                             padding: {
                                 y: .5,
                                 right: 2
                             },
-                            display: w.X.Flex,
-                            flexWrap: w.Ba.NoWrap,
-                            alignItems: w.f.Center,
+                            display: _.X.Flex,
+                            flexWrap: _.Ba.NoWrap,
+                            alignItems: _.f.Center,
                             flexShrink: 0
-                        }, u), this.renderTabs(m), a.createElement(w.Ya, {
+                        }, u), this.renderTabs(m), r.createElement(_.Ya, {
                             className: "channel-header__item channel-header__item--no-underline",
                             padding: {
                                 x: 1
                             },
                             flexShrink: 0,
-                            alignSelf: w.g.Center,
+                            alignSelf: _.g.Center,
                             "data-target": "channel-header-button"
-                        }, a.createElement(d.a, {
+                        }, r.createElement(d.a, {
                             alwaysMountBalloonContent: !0
-                        }, a.createElement(w.A, {
-                            icon: w.ub.NavMore,
+                        }, r.createElement(_.A, {
+                            icon: _.ub.NavMore,
                             ariaLabel: Object(s.d)("More", "ChannelHeader")
-                        }), a.createElement(w.u, {
-                            direction: w.v.Bottom,
+                        }), r.createElement(_.u, {
+                            direction: _.v.Bottom,
                             noTail: !0
-                        }, a.createElement(w.Ya, {
+                        }, r.createElement(_.Ya, {
                             padding: {
                                 y: 1
                             }
-                        }, this.renderDropdown(m)))))), v), a.createElement(c.a, {
+                        }, this.renderDropdown(m)))))), v), r.createElement(c.a, {
                             onResize: this.onUpdateDebounce
                         }))
                     }, t.prototype.isLiveGraphQL = function(e) {
@@ -25801,68 +25787,68 @@
                     }, t.prototype.renderTabs = function(e) {
                         var t = this;
                         return e.map(function(e) {
-                            var n = e.count ? a.createElement(w.Ya, {
+                            var n = e.count ? r.createElement(_.Ya, {
                                     className: "channel-header__item-count",
-                                    display: w.X.Flex,
+                                    display: _.X.Flex,
                                     margin: {
                                         left: .5
                                     }
-                                }, a.createElement(w.W, {
-                                    type: w.Wb.Span,
-                                    fontSize: w.Ca.Size5
+                                }, r.createElement(_.W, {
+                                    type: _.Wb.Span,
+                                    fontSize: _.Ca.Size5
                                 }, e.count)) : null,
                                 i = t.generateUserLink(e.pathSuffix),
-                                r = e.label.toLowerCase() + "-channel-header-item";
-                            return a.createElement(w.Qa, {
+                                a = e.label.toLowerCase() + "-channel-header-item";
+                            return r.createElement(_.Qa, {
                                 key: "channel-header__item--" + e.label,
-                                alignItems: w.f.Center,
+                                alignItems: _.f.Center,
                                 flexShrink: 0
-                            }, a.createElement(w.U, {
+                            }, r.createElement(_.U, {
                                 className: "channel-header__item channel-header__item--hide " + (e.isSelected ? "channel-header__item--selected" : ""),
                                 to: i,
                                 "data-target": "channel-header-item",
-                                "data-a-target": r,
-                                "data-test-selector": r,
+                                "data-a-target": a,
+                                "data-test-selector": a,
                                 hoverUnderlineNone: !0
-                            }, a.createElement(w.Ya, {
+                            }, r.createElement(_.Ya, {
                                 padding: {
                                     x: 2,
                                     y: .5
                                 },
-                                display: w.X.Flex
-                            }, a.createElement(w.W, {
-                                type: w.Wb.Span,
-                                fontSize: w.Ca.Size5
+                                display: _.X.Flex
+                            }, r.createElement(_.W, {
+                                type: _.Wb.Span,
+                                fontSize: _.Ca.Size5
                             }, e.label), n)))
                         })
                     }, t.prototype.renderDropdown = function(e) {
                         var t = this;
                         return e.map(function(e) {
-                            var n = e.count ? a.createElement(w.Ya, {
+                            var n = e.count ? r.createElement(_.Ya, {
                                     className: "channel-header__item-count",
-                                    display: w.X.Flex,
+                                    display: _.X.Flex,
                                     margin: {
                                         left: .5
                                     }
-                                }, a.createElement(w.W, {
-                                    type: w.Wb.Span
+                                }, r.createElement(_.W, {
+                                    type: _.Wb.Span
                                 }, e.count)) : null,
                                 i = t.generateUserLink(e.pathSuffix);
-                            return a.createElement(w.Ya, {
+                            return r.createElement(_.Ya, {
                                 key: "channel-header__dropdown-item--" + e.label,
                                 "data-target": "channel-header-dropdown-item"
-                            }, a.createElement(w.Va, {
+                            }, r.createElement(_.Va, {
                                 linkTo: i,
                                 disabled: "#" === i
-                            }, a.createElement(w.Ya, {
+                            }, r.createElement(_.Ya, {
                                 className: "channel-header__dropdown-hover-target",
                                 padding: {
                                     y: .5,
                                     x: 1
                                 },
-                                display: w.X.Flex
-                            }, a.createElement(w.W, {
-                                type: w.Wb.Span
+                                display: _.X.Flex
+                            }, r.createElement(_.W, {
+                                type: _.Wb.Span
                             }, e.label), n)))
                         })
                     }, t.prototype.createChannelLinks = function(e, t, n) {
@@ -25871,12 +25857,12 @@
                             count: Object(s.f)(e),
                             pathSuffix: Object(R.b)() ? "videos" : "videos/all",
                             isSelected: this.isActiveTab(H.Videos)
-                        }, {
+                        }];
+                        return Object(R.b)() || Object(R.a)() || (i = i.concat([{
                             label: Object(s.d)("Clips", "ChannelHeader"),
                             pathSuffix: "clips",
                             isSelected: this.isActiveTab(H.Clips)
-                        }];
-                        return Object(R.b)() || Object(R.a)() || (i = i.concat([{
+                        }, {
                             label: Object(s.d)("Collections", "ChannelHeader"),
                             pathSuffix: "collections",
                             isSelected: this.isActiveTab(H.Collections)
@@ -25906,9 +25892,9 @@
                                 n = this.channelHeader.querySelectorAll('[data-target="channel-header-item"]'),
                                 i = this.channelHeader.querySelectorAll('[data-target="channel-header-dropdown-item"]');
                             if (n.length) {
-                                for (var r = 0; r < n.length; r++) {
-                                    var a = n[r];
-                                    a.classList.contains("channel-header__item--hide") && (a.classList.remove("channel-header__item--hide"), i[r].classList.add("channel-header__item--hide"))
+                                for (var a = 0; a < n.length; a++) {
+                                    var r = n[a];
+                                    r.classList.contains("channel-header__item--hide") && (r.classList.remove("channel-header__item--hide"), i[a].classList.add("channel-header__item--hide"))
                                 }
                                 var o = this.getWidth(this.channelHeader).width,
                                     s = this.getWidth(e).width + this.getWidth(t).width + 20 - o,
@@ -25917,15 +25903,15 @@
                                     var c = function(e) {
                                             var t = n[e];
                                             if (!t.classList.contains("channel-header__item--hide")) {
-                                                var r = d.getWidth(t);
+                                                var a = d.getWidth(t);
                                                 if (l.push(function() {
                                                         t.classList.add("channel-header__item--hide"), i[e].classList.remove("channel-header__item--hide")
-                                                    }), (s -= r.width) <= 0) return "break"
+                                                    }), (s -= a.width) <= 0) return "break"
                                             }
                                         },
                                         d = this;
-                                    for (r = n.length - 1; r >= 0; r--) {
-                                        if ("break" === c(r)) break
+                                    for (a = n.length - 1; a >= 0; a--) {
+                                        if ("break" === c(a)) break
                                     }
                                 }
                                 l.forEach(function(e) {
@@ -25950,41 +25936,41 @@
                         var e = this.getFollowingState(),
                             t = this.props.data && this.props.data.user && this.props.data.user.displayName || void 0,
                             n = null,
-                            i = F.SocialButtonsDefault;
-                        if (Object(A.c)()) {
-                            var o = r("channel-header__follow-btn", {
+                            i = x.SocialButtonsDefault;
+                        if (Object(L.c)()) {
+                            var o = a("channel-header__follow-btn", {
                                     "channel-header__follow-btn--following": !!this.state.showLiveNotificationsButton
                                 }),
-                                s = r("channel-header__notification-toggle-container", {
+                                s = a("channel-header__notification-toggle-container", {
                                     "channel-header__notification-toggle-container--visible": !!this.state.showLiveNotificationsButton
                                 });
-                            i = F.SocialButtonsVariantB, n = a.createElement(a.Fragment, null, a.createElement(w.Ya, {
+                            i = x.SocialButtonsVariantB, n = r.createElement(r.Fragment, null, r.createElement(_.Ya, {
                                 className: "channel-header__follow-btn-container",
-                                display: w.X.Flex,
-                                overflow: w.db.Hidden,
-                                alignItems: w.f.Center,
+                                display: _.X.Flex,
+                                overflow: _.db.Hidden,
+                                alignItems: _.f.Center,
                                 padding: {
                                     x: 1
                                 },
                                 fullHeight: !0
-                            }, a.createElement(w.Ya, {
-                                display: w.X.Flex,
-                                justifyContent: w.Xa.Center,
-                                flexDirection: w.Aa.Column,
+                            }, r.createElement(_.Ya, {
+                                display: _.X.Flex,
+                                justifyContent: _.Xa.Center,
+                                flexDirection: _.Aa.Column,
                                 margin: {
                                     right: 1
                                 }
-                            }, a.createElement(w.Ya, {
-                                display: w.X.InlineFlex,
-                                justifyContent: w.Xa.Center
-                            }, a.createElement("div", {
+                            }, r.createElement(_.Ya, {
+                                display: _.X.InlineFlex,
+                                justifyContent: _.Xa.Center
+                            }, r.createElement("div", {
                                 className: o
-                            }, a.createElement(L.a, {
+                            }, r.createElement(j.a, {
                                 updateContainerWidth: this.onUpdateDebounce,
                                 channelLogin: this.props.channelLogin,
                                 onFollow: this.maybeShowBrowserNotificationsUpsell,
-                                followUIType: L.b.IconAndText,
-                                unfollowUIType: L.b.IconOnly,
+                                followUIType: j.b.IconAndText,
+                                unfollowUIType: j.b.IconOnly,
                                 onToggleAnimationComplete: this.toggleLiveNotificationsBtnShown,
                                 channelName: t,
                                 hideDropdownWhenFollowing: !0,
@@ -25992,50 +25978,50 @@
                                 hollowIcons: !0,
                                 animatedButton: !0,
                                 useContextualModals: !0
-                            })))), a.createElement("div", {
+                            })))), r.createElement("div", {
                                 className: s
-                            }, a.createElement(B.a, {
+                            }, r.createElement(U.a, {
                                 channelLogin: this.props.channelLogin,
-                                toggleType: B.b.Button,
+                                toggleType: U.b.Button,
                                 tabIndex: this.state.showLiveNotificationsButton ? 0 : -1,
                                 followData: this.getFollowData(),
                                 showTooltips: !0
-                            }))), a.createElement(w.Ya, null, a.createElement(U.a, {
+                            }))), r.createElement(_.Ya, null, r.createElement(B.a, {
                                 updateContainerWidth: this.onUpdateDebounce,
                                 channelLogin: this.props.channelLogin,
                                 hideEsportsSubscription: this.props.hideEsportsSubscription,
-                                subscribedButtonType: w.F.Default,
-                                unsubscribedButtonType: e ? w.F.Default : w.F.Hollow,
+                                subscribedButtonType: _.F.Default,
+                                unsubscribedButtonType: e ? _.F.Default : _.F.Hollow,
                                 forceIcon: !0
                             })))
-                        } else(this.props.channelIsHosting || Object(A.e)()) && (i = F.SocialButtonsDefault, n = a.createElement(a.Fragment, null, a.createElement(w.Ya, {
-                            display: w.X.Flex,
-                            alignItems: w.f.Stretch,
+                        } else(this.props.channelIsHosting || Object(L.e)()) && (i = x.SocialButtonsDefault, n = r.createElement(r.Fragment, null, r.createElement(_.Ya, {
+                            display: _.X.Flex,
+                            alignItems: _.f.Stretch,
                             margin: {
                                 left: 1
                             }
-                        }, a.createElement(L.a, {
+                        }, r.createElement(j.a, {
                             updateContainerWidth: this.onUpdateDebounce,
                             channelLogin: this.props.channelLogin,
                             onFollow: this.maybeShowBrowserNotificationsUpsell,
-                            followUIType: L.b.IconAndText,
-                            unfollowUIType: L.b.IconOnly,
+                            followUIType: j.b.IconAndText,
+                            unfollowUIType: j.b.IconOnly,
                             channelName: t,
                             useContextualModals: !0
-                        })), a.createElement(w.Ya, {
+                        })), r.createElement(_.Ya, {
                             margin: {
                                 left: 1
                             }
-                        }, a.createElement(U.a, {
+                        }, r.createElement(B.a, {
                             updateContainerWidth: this.onUpdateDebounce,
                             channelLogin: this.props.channelLogin,
                             hideEsportsSubscription: this.props.hideEsportsSubscription
                         }))));
-                        return a.createElement(w.Ya, {
-                            display: w.X.Flex,
-                            flexWrap: w.Ba.NoWrap,
+                        return r.createElement(_.Ya, {
+                            display: _.X.Flex,
+                            flexWrap: _.Ba.NoWrap,
                             flexShrink: 0,
-                            alignItems: w.f.Center,
+                            alignItems: _.f.Center,
                             className: "channel-header__right",
                             "data-test-selector": i,
                             "data-target": "channel-header-right"
@@ -26045,8 +26031,8 @@
                     }, t.prototype.getFollowData = function() {
                         if (this.props.data && this.props.data.user && this.props.data.user.id) return this.props.data.user
                     }, t
-                }(a.Component),
-                X = Object(o.compose)(Object(u.a)(x, {
+                }(r.Component),
+                X = Object(o.compose)(Object(u.a)(F, {
                     options: function(e) {
                         return {
                             variables: {
@@ -26065,7 +26051,7 @@
                         return !e.channelLogin || !e.firstPageLoaded
                     },
                     mapMessageTypesToProps: (I = {}, I[m.PubsubMessageType.ViewCount] = "viewCount", I)
-                }]), Object(j.b)("ChannelHeader"))(q)
+                }]), Object(A.b)("ChannelHeader"))(q)
         },
         "ky+Y": function(e, t, n) {},
         lNGo: function(e, t, n) {
@@ -26074,8 +26060,8 @@
                 return l
             });
             var i = n("mrSG"),
-                r = n("/7QA"),
-                a = n("2xye"),
+                a = n("/7QA"),
+                r = n("2xye"),
                 o = n("04j6"),
                 s = n("oi4T"),
                 l = function(e) {
@@ -26086,7 +26072,7 @@
                                 case 0:
                                     t = null, d.label = 1;
                                 case 1:
-                                    return d.trys.push([1, 3, , 4]), [4, r.p.apollo.client.query({
+                                    return d.trys.push([1, 3, , 4]), [4, a.p.apollo.client.query({
                                         query: o,
                                         variables: {
                                             id: e.channelID
@@ -26095,20 +26081,20 @@
                                 case 2:
                                     return t = d.sent(), [3, 4];
                                 case 3:
-                                    return n = d.sent(), r.k.error(n, "ChatEvent query failed."), [3, 4];
+                                    return n = d.sent(), a.k.error(n, "ChatEvent query failed."), [3, 4];
                                 case 4:
-                                    return t && t.data || r.k.warn("ChatEvent query failed; Chat tracking data sent may be incomplete."), l = t && t.data && t.data.user || null, c = i.__assign({}, Object(s.a)(e), {
-                                        broadcast_id: r.o.getVideoPlayerTrackingData().broadcastID,
+                                    return t && t.data || a.k.warn("ChatEvent query failed; Chat tracking data sent may be incomplete."), l = t && t.data && t.data.user || null, c = i.__assign({}, Object(s.a)(e), {
+                                        broadcast_id: a.o.getVideoPlayerTrackingData().broadcastID,
                                         channel_id: e.channelID,
                                         emote_picker_sid: e.emotePickerSessionID,
                                         game: l && l.stream && l.stream.game && l.stream.game.name,
                                         live: !!(l && l.stream && l.stream.id.length > 0),
                                         partner: l && l.isPartner || !1,
-                                        play_session_id: r.o.getVideoPlayerTrackingData().playSessionID,
+                                        play_session_id: a.o.getVideoPlayerTrackingData().playSessionID,
                                         player: e.player,
                                         ritual_nca: e.fromNewChatterRitual || !1,
                                         sub_only_mode: e.subOnlyMode
-                                    }), r.o.track(a.SpadeEventType.Chat, c), [2]
+                                    }), a.o.track(r.SpadeEventType.Chat, c), [2]
                             }
                         })
                     })
@@ -26135,13 +26121,13 @@
         lw3P: function(e, t, n) {
             "use strict";
             n.d(t, "a", function() {
-                return a
+                return r
             });
             var i = n("yR8l"),
-                r = n("ru7j");
+                a = n("ru7j");
 
-            function a() {
-                return Object(i.a)(r, {
+            function r() {
+                return Object(i.a)(a, {
                     props: function(e) {
                         return e.data && !e.data.loading && !e.data.error && e.data.currentUser && e.data.currentUser.blockedUsers ? {
                             blockedUsers: e.data.currentUser.blockedUsers.reduce(function(e, t) {
@@ -26239,19 +26225,19 @@
             n.d(t, "c", function() {
                 return i
             }), n.d(t, "a", function() {
-                return r
-            }), n.d(t, "b", function() {
                 return a
+            }), n.d(t, "b", function() {
+                return r
             }), n.d(t, "d", function() {
                 return o
             });
             var i = function(e) {
                     return "/communities/:encodedCommunityName" === e || "/directory/game/:encodedCommunityName" === e || "/directory/game/:encodedCommunityName/:encodedLanguage" === e
                 },
-                r = function(e) {
+                a = function(e) {
                     return "/directory/game/:encodedCommunityName/clips" === e
                 },
-                a = function(e) {
+                r = function(e) {
                     return "/communities/:encodedCommunityName/details" === e || "/directory/game/:encodedCommunityName/details" === e
                 },
                 o = function(e) {
@@ -26261,16 +26247,16 @@
         mSxK: function(e, t, n) {
             "use strict";
             var i = n("km1c"),
-                r = n("/MKj"),
-                a = n("fvjX"),
+                a = n("/MKj"),
+                r = n("fvjX"),
                 o = n("aCAx"),
                 s = n("wxwP");
-            var l = Object(r.connect)(function(e) {
+            var l = Object(a.connect)(function(e) {
                 return {
                     firstPageLoaded: e.session.firstPageLoaded
                 }
             }, function(e) {
-                return Object(a.bindActionCreators)({
+                return Object(r.bindActionCreators)({
                     showBrowserNotificationsUpsellModal: function() {
                         return Object(o.d)(s.a, {})
                     },
@@ -26290,13 +26276,13 @@
         mmRu: function(e, t, n) {
             "use strict";
             var i = n("/MKj"),
-                r = n("mrSG"),
-                a = n("q1tI"),
+                a = n("mrSG"),
+                r = n("q1tI"),
                 o = n("u5aL"),
                 s = n("/7QA"),
                 l = n("Ue10"),
                 c = function(e) {
-                    return a.createElement(l.A, {
+                    return r.createElement(l.A, {
                         icon: l.ub.Emoticons,
                         ariaLabel: Object(s.d)("Emote picker", "EmotePickerButton"),
                         type: e.isActive ? l.C.Default : l.C.Secondary,
@@ -26319,22 +26305,22 @@
                 S = n("+pBb"),
                 E = n("KriR"),
                 N = n("GzyO"),
-                w = n("OpME"),
-                _ = n("cpJf"),
+                _ = n("OpME"),
+                w = n("cpJf"),
                 O = n("W8Fi"),
                 M = n("0WFu"),
                 D = function(e, t) {
                     return t.map(function(t) {
-                        return t.emotes && t.emoteSetID && !e.has(parseInt(t.emoteSetID, 10)) ? r.__assign({}, t, {
+                        return t.emotes && t.emoteSetID && !e.has(parseInt(t.emoteSetID, 10)) ? a.__assign({}, t, {
                             emotes: t.emotes.map(function(e) {
-                                return r.__assign({}, e, {
+                                return a.__assign({}, e, {
                                     isLocked: !0
                                 })
                             })
                         }) : t
                     }).map(function(e) {
-                        return r.__assign({}, e, {
-                            emotes: Object(w.e)(e.emotes, e.emoteSetID)
+                        return a.__assign({}, e, {
+                            emotes: Object(_.e)(e.emotes, e.emoteSetID)
                         })
                     })
                 },
@@ -26343,15 +26329,15 @@
                 },
                 T = n("GnwI"),
                 R = n("br9A"),
-                A = n("TSYQ"),
-                L = n("8/mp"),
-                j = n("8Ad5");
+                L = n("TSYQ"),
+                j = n("8/mp"),
+                A = n("8Ad5");
 
-            function B(e) {
-                return e.charCode === j.a.Enter || e.charCode === j.a.Space
+            function U(e) {
+                return e.charCode === A.a.Enter || e.charCode === A.a.Space
             }
-            var U, x = n("2xye"),
-                F = n("7SjK"),
+            var B, F = n("2xye"),
+                x = n("7SjK"),
                 P = n("4rCz"),
                 H = (n("/Kya"), function(e) {
                     var t = {
@@ -26360,15 +26346,15 @@
                         n = null,
                         i = null;
                     if (e.channelTabVisible) {
-                        var o = A(r.__assign({}, t, {
+                        var o = L(a.__assign({}, t, {
                             "emote-picker__tab--active": e.channelTabEnabled && e.channelTabSelected,
                             "emote-picker__tab--disabled": !e.channelTabEnabled
                         }));
-                        n = a.createElement(l.Qa, {
+                        n = r.createElement(l.Qa, {
                             padding: {
                                 x: 1
                             }
-                        }, a.createElement("div", {
+                        }, r.createElement("div", {
                             key: "ChannelTabLink",
                             id: "emote-picker__channel",
                             className: o,
@@ -26376,17 +26362,17 @@
                             onKeyPress: e.channelTabEnabled ? e.selectChannelTabKeypress : void 0,
                             "data-a-target": "emote-channel-tab",
                             tabIndex: 0
-                        }, a.createElement("span", null, Object(P.d)("Channel", "EmotePicker"))))
+                        }, r.createElement("span", null, Object(P.d)("Channel", "EmotePicker"))))
                     }
                     if (e.allTabVisible) {
-                        var s = A(r.__assign({}, t, {
+                        var s = L(a.__assign({}, t, {
                             "emote-picker__tab--active": !(e.channelTabSelected && e.channelTabEnabled)
                         }));
-                        i = a.createElement(l.Qa, {
+                        i = r.createElement(l.Qa, {
                             padding: {
                                 x: 1
                             }
-                        }, a.createElement("div", {
+                        }, r.createElement("div", {
                             key: "allTabLink",
                             id: "emote-picker__all",
                             className: s,
@@ -26394,9 +26380,9 @@
                             onKeyPress: e.selectAllTabKeypress,
                             "data-a-target": "emote-all-tab",
                             tabIndex: 0
-                        }, a.createElement("span", null, Object(P.d)("All", "EmotePicker"))))
+                        }, r.createElement("span", null, Object(P.d)("All", "EmotePicker"))))
                     }
-                    return a.createElement(l.Fb, {
+                    return r.createElement(l.Fb, {
                         background: l.r.Base,
                         borderTop: !0,
                         className: "emote-picker__tabs-container"
@@ -26407,18 +26393,18 @@
                     function t() {
                         return null !== e && e.apply(this, arguments) || this
                     }
-                    return r.__extends(t, e), t.prototype.render = function() {
+                    return a.__extends(t, e), t.prototype.render = function() {
                         var e = [];
                         if (this.props.subscribeTexts)
                             for (var t = 0; t <= this.props.plan.level; t++) {
                                 var n = this.props.subscribeTexts[t];
-                                n && (t < this.props.plan.level ? (e.push(a.createElement("span", {
+                                n && (t < this.props.plan.level ? (e.push(r.createElement("span", {
                                     key: "upsell-predicate:" + t
-                                }, n)), e.push(a.createElement("span", {
+                                }, n)), e.push(r.createElement("span", {
                                     key: "upsell-plus:" + t
-                                }, " + "))) : this.props.plan.level > 0 ? e.push(a.createElement("strong", {
+                                }, " + "))) : this.props.plan.level > 0 ? e.push(r.createElement("strong", {
                                     key: "upsell-strong-end:" + this.props.plan.level
-                                }, n)) : e.push(a.createElement("span", {
+                                }, n)) : e.push(r.createElement("span", {
                                     key: "upsell-end:" + t
                                 }, n)))
                             }
@@ -26427,14 +26413,14 @@
                                 id: this.props.plan.emoteSetID,
                                 emotes: this.props.plan.emotes || []
                             },
-                            r = {};
+                            a = {};
                         if (this.props.plan.tier) {
                             var o = Object(M.b)(this.props.plan.tier);
-                            null === o && (o = 1), r.purchase = Object(s.d)("Tier { tierNum }", {
+                            null === o && (o = 1), a.purchase = Object(s.d)("Tier { tierNum }", {
                                 tierNum: o
                             }, "assembleSubscribeTexts")
                         }
-                        return a.createElement(l.Ya, {
+                        return r.createElement(l.Ya, {
                             className: "emote-picker-plan-upsell",
                             display: l.X.Flex,
                             flexDirection: l.Aa.Column,
@@ -26442,29 +26428,29 @@
                             margin: {
                                 bottom: 1
                             }
-                        }, a.createElement(F.a, {
+                        }, r.createElement(x.a, {
                             emotes: i.emotes,
                             locked: !0
-                        }), a.createElement(l.Ya, {
+                        }), r.createElement(l.Ya, {
                             margin: 1,
                             alignItems: l.f.Center
-                        }, e), a.createElement(W.a, {
+                        }, e), r.createElement(W.a, {
                             isSubbedToTier: !1,
-                            tierPrice: r.purchase || "",
+                            tierPrice: a.purchase || "",
                             handleSubAction: this.props.handleSubAction,
                             productName: this.props.plan.name,
                             url: this.props.plan.url,
                             isEsportChannel: this.props.isEsportChannel
                         }))
                     }, t
-                }(a.Component),
+                }(r.Component),
                 G = (n("JGCS"), function(e) {
                     function t(t) {
                         var n = e.call(this, t) || this;
                         return n.channelTabSelectionKeypress = function(e) {
-                            B(e) && n.selectChannelTab(e)
+                            U(e) && n.selectChannelTab(e)
                         }, n.allTabSelectionKeypress = function(e) {
-                            B(e) && n.selectAllTab(e)
+                            U(e) && n.selectAllTab(e)
                         }, n.onClickEmote = function(e) {
                             if (n.props.onClickEmote) {
                                 n.props.onClickEmote(e.displayName || e.token, e.id);
@@ -26476,22 +26462,22 @@
                                     emoticon_set_id: e.setID,
                                     generated_by: n.props.emotePickerSource
                                 };
-                                s.o.track(x.SpadeEventType.EmotePickerClickthrough, t)
+                                s.o.track(F.SpadeEventType.EmotePickerClickthrough, t)
                             }
                         }, n.closeOnEsc = function(e) {
-                            e.keyCode === j.a.Esc && n.props.toggleVisibility()
+                            e.keyCode === A.a.Esc && n.props.toggleVisibility()
                         }, n.handleFilterChange = function(e) {
                             var t = e.target.value,
                                 i = t.toLowerCase(),
-                                r = n.filterAvailableUpsells(n.props.availableUpsells, i),
-                                a = n.filterEmoteSets(n.props.ownedChannelEmoteSets, i);
+                                a = n.filterAvailableUpsells(n.props.availableUpsells, i),
+                                r = n.filterEmoteSets(n.props.ownedChannelEmoteSets, i);
                             n.setState({
                                 filter: i,
                                 filteredAllEmoteSets: n.filterEmoteSets(n.props.allEmoteSets, i),
-                                filteredAvailableUpsells: r,
-                                filteredOwnedChannelEmoteSets: a,
+                                filteredAvailableUpsells: a,
+                                filteredOwnedChannelEmoteSets: r,
                                 inputValue: t,
-                                channelTabEnabled: a.length > 0 || r.length > 0
+                                channelTabEnabled: r.length > 0 || a.length > 0
                             })
                         }, n.state = {
                             filter: "",
@@ -26507,7 +26493,7 @@
                             return n.setChannelTabSelected(!0)
                         }, n
                     }
-                    return r.__extends(t, e), t.prototype.componentWillReceiveProps = function(e) {
+                    return a.__extends(t, e), t.prototype.componentWillReceiveProps = function(e) {
                         if (e.channelID && e.emotePickerSessionID && !this.props.emotePickerSessionID) {
                             var t = {
                                 channel_id: e.channelID,
@@ -26515,7 +26501,7 @@
                                 generated_by: e.emotePickerSource,
                                 chatroom_id: e.roomID
                             };
-                            s.o.track(x.SpadeEventType.ViewedEmotePicker, t)
+                            s.o.track(F.SpadeEventType.ViewedEmotePicker, t)
                         }
                         if (!e.gqlError)
                             if (this.state.filter.length > 0) {
@@ -26534,28 +26520,28 @@
                                 channelTabEnabled: e.ownedChannelEmoteSets.length > 0 || e.availableUpsells.length > 0
                             })
                     }, t.prototype.render = function() {
-                        return a.createElement(l.u, {
+                        return r.createElement(l.u, {
                             "data-a-target": "emote-picker",
                             direction: this.props.direction ? this.props.direction : l.v.TopRight,
                             size: this.props.size ? this.props.size : l.w.Medium,
                             noTail: !0,
                             show: !0
-                        }, a.createElement(l.Ya, {
-                            className: A("emote-picker")
-                        }, this.renderTabContent(), a.createElement(l.Ya, {
+                        }, r.createElement(l.Ya, {
+                            className: L("emote-picker")
+                        }, this.renderTabContent(), r.createElement(l.Ya, {
                             className: "emote-picker__controls-container",
                             position: l.kb.Relative
-                        }, a.createElement(l.Fb, {
+                        }, r.createElement(l.Fb, {
                             padding: 1,
                             borderTop: !0
-                        }, a.createElement(l.Sa, {
+                        }, r.createElement(l.Sa, {
                             autoFocus: !0,
                             onChange: this.handleFilterChange,
                             onKeyDown: this.closeOnEsc,
                             placeholder: Object(s.d)("Search for Emotes", "EmotePicker"),
                             type: l.Ua.Text,
                             value: this.state.inputValue
-                        })), a.createElement(H, {
+                        })), r.createElement(H, {
                             allTabVisible: this.props.allEmoteSets.length > 0,
                             channelTabEnabled: this.state.channelTabEnabled,
                             channelTabSelected: this.state.channelTabSelected,
@@ -26568,19 +26554,19 @@
                     }, t.prototype.renderTabContent = function() {
                         var e = this,
                             t = [];
-                        if (this.props.gqlError) t.push(a.createElement(l.Ya, {
+                        if (this.props.gqlError) t.push(r.createElement(l.Ya, {
                             key: "emotePicker-error"
-                        }, a.createElement(l.W, {
+                        }, r.createElement(l.W, {
                             color: l.O.Error
                         }, Object(s.d)("Unable to load available emotes.", "EmotePicker"))));
-                        else if (this.props.loading) t.push(a.createElement(l.Ya, {
+                        else if (this.props.loading) t.push(r.createElement(l.Ya, {
                             alignItems: l.f.Center,
                             display: l.X.Flex,
                             key: "loading",
                             fullHeight: !0,
                             fullWidth: !0,
                             justifyContent: l.Xa.Center
-                        }, a.createElement(l.ab, {
+                        }, r.createElement(l.ab, {
                             key: "LoadingSpinner"
                         })));
                         else if (this.state.channelTabEnabled && this.state.channelTabSelected) {
@@ -26588,23 +26574,23 @@
                                 var n = this.state.filteredOwnedChannelEmoteSets[0].emotes.map(function(t) {
                                     return t.setID = e.state.filteredOwnedChannelEmoteSets[0].id, t
                                 });
-                                t.push(a.createElement(l.Ya, {
+                                t.push(r.createElement(l.Ya, {
                                     className: "emote-picker__content-block",
                                     key: "ownedChannelEmoteSets",
                                     padding: 1,
                                     position: l.kb.Relative
-                                }, a.createElement(F.a, {
+                                }, r.createElement(x.a, {
                                     emotes: n,
                                     onClickEmote: this.onClickEmote
                                 })))
                             }
                             t = t.concat(this.state.filteredAvailableUpsells.map(function(t) {
-                                return a.createElement(l.Ya, {
+                                return r.createElement(l.Ya, {
                                     className: "emote-picker__content-block",
                                     key: "planUpsell:" + t.level,
                                     padding: 1,
                                     position: l.kb.Relative
-                                }, a.createElement(V, {
+                                }, r.createElement(V, {
                                     plan: t,
                                     isEsportChannel: e.props.isEsportChannel,
                                     subscribeTexts: e.props.subscribeTexts,
@@ -26615,7 +26601,7 @@
                             var n = [];
                             return t.emotes.forEach(function(e) {
                                 e.setID = t.id, n.push(e)
-                            }), a.createElement(l.Ya, {
+                            }), r.createElement(l.Ya, {
                                 key: "emoteGrid" + t.id,
                                 position: l.kb.Relative,
                                 padding: {
@@ -26623,14 +26609,14 @@
                                     bottom: 2
                                 },
                                 className: "emote-picker__content-block"
-                            }, a.createElement(F.a, {
+                            }, r.createElement(x.a, {
                                 emotes: n,
                                 onClickEmote: e.onClickEmote
                             }))
                         });
-                        return t.length > 0 ? a.createElement(L.b, {
+                        return t.length > 0 ? r.createElement(j.b, {
                             className: "emote-picker__tab-content"
-                        }, a.createElement(l.Ya, {
+                        }, r.createElement(l.Ya, {
                             padding: 1
                         }, t)) : null
                     }, t.prototype.filterEmoteSet = function(e, t) {
@@ -26642,56 +26628,56 @@
                             channelTabSelected: e
                         })
                     }, t.prototype.filterEmoteSets = function(e, t) {
-                        for (var n = [], i = 0, r = e; i < r.length; i++) {
-                            var a = r[i],
-                                o = this.filterEmoteSet(a.emotes, t);
+                        for (var n = [], i = 0, a = e; i < a.length; i++) {
+                            var r = a[i],
+                                o = this.filterEmoteSet(r.emotes, t);
                             o.length > 0 && n.push({
-                                id: a.id,
+                                id: r.id,
                                 emotes: o
                             })
                         }
                         return n
                     }, t.prototype.filterAvailableUpsells = function(e, t) {
-                        for (var n = [], i = 0, a = e; i < a.length; i++) {
-                            var o = a[i];
+                        for (var n = [], i = 0, r = e; i < r.length; i++) {
+                            var o = r[i];
                             if (o.emotes) {
                                 var s = this.filterEmoteSet(o.emotes, t);
-                                s.length > 0 && n.push(r.__assign({}, o, {
+                                s.length > 0 && n.push(a.__assign({}, o, {
                                     emotes: s
                                 }))
                             }
                         }
                         return n
-                    }, t = r.__decorate([Object(T.b)("EmotePickerMenu", {
+                    }, t = a.__decorate([Object(T.b)("EmotePickerMenu", {
                         autoReportInteractive: !0
                     })], t)
-                }(a.Component)),
+                }(r.Component)),
                 Y = (n("zyUW"), function(e) {
                     var t = null;
-                    return e.imgSrc && (t = a.createElement(a.Fragment, null, a.createElement(l.S, {
+                    return e.imgSrc && (t = r.createElement(r.Fragment, null, r.createElement(l.S, {
                         className: "emote-grid-section__header-image",
                         src: e.imgSrc,
                         alt: e.label
-                    }), a.createElement(l.Ya, {
+                    }), r.createElement(l.Ya, {
                         padding: {
                             right: .5
                         }
-                    }))), a.createElement(l.Ya, {
+                    }))), r.createElement(l.Ya, {
                         position: l.kb.Relative,
                         padding: 1,
                         className: "emote-grid-section"
-                    }, a.createElement(l.Fb, {
+                    }, r.createElement(l.Fb, {
                         alignItems: l.f.Center,
                         display: l.X.Flex,
                         padding: {
                             x: 1,
                             bottom: .5
                         }
-                    }, t, a.createElement(l.W, {
+                    }, t, r.createElement(l.W, {
                         align: l.gc.Middle,
                         bold: !0,
                         color: l.O.Alt
-                    }, e.label)), a.createElement(F.a, {
+                    }, e.label)), r.createElement(x.a, {
                         context: e.context,
                         emotes: e.emotes,
                         onClickEmote: e.onClickEmote,
@@ -26706,28 +26692,28 @@
                             t.props.checkVisible(e, n)
                         }, t
                     }
-                    return r.__extends(t, e), t.prototype.componentDidMount = function() {
+                    return a.__extends(t, e), t.prototype.componentDidMount = function() {
                         this.unregister = this.context.registerReceiver(this)
                     }, t.prototype.componentWillUnmount = function() {
                         this.unregister && this.unregister()
                     }, t.prototype.render = function() {
-                        return a.createElement(a.Fragment, null, this.props.children)
+                        return r.createElement(r.Fragment, null, this.props.children)
                     }, t.contextTypes = {
                         registerReceiver: z.func
                     }, t
-                }(a.Component),
+                }(r.Component),
                 X = (n("cr2a"), function(e) {
-                    return a.createElement(l.Ya, {
+                    return r.createElement(l.Ya, {
                         className: "emote-picker-tab-item " + (e.isActive ? "emote-picker-tab-item--active" : ""),
                         position: l.kb.Relative
-                    }, a.createElement(l.Va, {
+                    }, r.createElement(l.Va, {
                         "data-a-target": e.label,
                         onClick: e.onClick,
                         blurAfterClick: !0
-                    }, a.createElement(l.Ya, {
+                    }, r.createElement(l.Ya, {
                         padding: 1,
                         display: l.X.InlineFlex
-                    }, a.createElement(l.tb, {
+                    }, r.createElement(l.tb, {
                         asset: e.icon
                     }))))
                 }),
@@ -26736,7 +26722,7 @@
                     function t() {
                         return null !== e && e.apply(this, arguments) || this
                     }
-                    return r.__extends(t, e), t.prototype.render = function() {
+                    return a.__extends(t, e), t.prototype.render = function() {
                         var e = this,
                             t = this.props.channelSubscriptionProducts.find(function(t) {
                                 return !!t.emotes.find(function(t) {
@@ -26761,7 +26747,7 @@
                             n.forEach(function(e) {
                                 if (I(e) <= i) {
                                     var t = e.emotes.map(function(e) {
-                                        return r.__assign({}, e, {
+                                        return a.__assign({}, e, {
                                             isLocked: !1
                                         })
                                     });
@@ -26774,48 +26760,48 @@
                                 var m = t.priceInfo;
                                 p = Object(Q.a)(Object(Q.b)(m.total, m.exponent), m.currency)
                             }
-                            return a.createElement(l.Ya, {
+                            return r.createElement(l.Ya, {
                                 className: "emote-sub-upsell"
-                            }, a.createElement(l.Fb, {
+                            }, r.createElement(l.Fb, {
                                 padding: {
                                     top: .5
                                 }
-                            }, a.createElement(l.z, {
+                            }, r.createElement(l.z, {
                                 type: l.F.Text,
                                 icon: l.ub.AngleLeft,
                                 onClick: this.props.onBackClick,
                                 size: l.D.Small
-                            }, Object(s.d)("Back", "EmotePickerCard"))), a.createElement(l.Fb, {
+                            }, Object(s.d)("Back", "EmotePickerCard"))), r.createElement(l.Fb, {
                                 display: l.X.Flex,
                                 padding: {
                                     x: 2,
                                     bottom: 1
                                 }
-                            }, a.createElement(l.Ya, {
+                            }, r.createElement(l.Ya, {
                                 flexGrow: 0,
                                 flexShrink: 0,
                                 padding: {
                                     top: .5
                                 }
-                            }, a.createElement(l.S, {
+                            }, r.createElement(l.S, {
                                 src: this.getBigImageSrc(this.props.subUpsellClickedEmote.srcSet),
                                 alt: this.props.subUpsellClickedEmote.displayName || ""
-                            })), a.createElement(l.Ya, {
+                            })), r.createElement(l.Ya, {
                                 flexGrow: 1,
                                 flexShrink: 1,
                                 padding: {
                                     left: 1
                                 }
-                            }, a.createElement(l.W, {
+                            }, r.createElement(l.W, {
                                 bold: !0
-                            }, this.renderCopyHeader(i.toString())), a.createElement(l.W, null, this.renderCopyBody(i.toString(), d.length)))), a.createElement(l.Ya, {
+                            }, this.renderCopyHeader(i.toString())), r.createElement(l.W, null, this.renderCopyBody(i.toString(), d.length)))), r.createElement(l.Ya, {
                                 display: l.X.Flex,
                                 alignItems: l.f.Center,
                                 justifyContent: l.Xa.Center,
                                 padding: {
                                     x: 2
                                 }
-                            }, a.createElement(W.a, {
+                            }, r.createElement(W.a, {
                                 customSubscribeNowMessage: o,
                                 isSubbedToTier: !1,
                                 fullWidth: !0,
@@ -26824,25 +26810,25 @@
                                 productName: t.name,
                                 url: t.url,
                                 isEsportChannel: this.props.isEsportChannel
-                            })), a.createElement(l.fc, null, a.createElement("hr", {
+                            })), r.createElement(l.fc, null, r.createElement("hr", {
                                 className: "emote-sub-upsell__divider"
-                            })), a.createElement(L.b, {
+                            })), r.createElement(j.b, {
                                 className: "emote-sub-upsell__content"
-                            }, a.createElement(l.Ya, null, a.createElement(l.Ya, {
+                            }, r.createElement(l.Ya, null, r.createElement(l.Ya, {
                                 padding: {
                                     x: 2
                                 }
-                            }, a.createElement(l.W, {
+                            }, r.createElement(l.W, {
                                 bold: !0
                             }, Object(s.d)("{numUnlocked} Emotes Included", {
                                 numUnlocked: d.length
-                            }, "EmotePickerCard"))), a.createElement(l.Ya, {
+                            }, "EmotePickerCard"))), r.createElement(l.Ya, {
                                 padding: {
                                     x: 1,
                                     top: .5,
                                     bottom: 3
                                 }
-                            }, a.createElement(F.a, {
+                            }, r.createElement(x.a, {
                                 emotes: u,
                                 spaced: !0,
                                 onClickEmote: this.props.onClickEmote
@@ -26865,16 +26851,16 @@
                         var t = e.split(" ");
                         return 6 === t.length ? t[2] : t[0]
                     }, t
-                }(a.Component)),
+                }(r.Component)),
                 $ = n("XQnt"),
                 Z = function(e) {
                     function t() {
                         return null !== e && e.apply(this, arguments) || this
                     }
-                    return r.__extends(t, e), t.prototype.componentDidMount = function() {
+                    return a.__extends(t, e), t.prototype.componentDidMount = function() {
                         (!this.props.channelID || this.props.data && !this.props.data.loading) && this.props.latencyTracking.reportInteractive()
                     }, t.prototype.render = function() {
-                        return null === this.props.subUpsellClickedEmote ? null : a.createElement(K, {
+                        return null === this.props.subUpsellClickedEmote ? null : r.createElement(K, {
                             channelDisplayName: this.props.channelDisplayName,
                             channelSubscriptionProducts: this.subscriptionProducts,
                             handleSubAction: this.props.handleSubAction,
@@ -26896,7 +26882,7 @@
                         enumerable: !0,
                         configurable: !0
                     }), t
-                }(a.Component),
+                }(r.Component),
                 J = Object(d.compose)(Object(h.a)($, {
                     options: function(e) {
                         return {
@@ -26911,7 +26897,7 @@
                 }), Object(T.b)("EmoteSubUpsell"))(Z);
             ! function(e) {
                 e.FrequentlyUsed = "frequently_used", e.CurrentChannel = "current_channel", e.OtherChannel = "other_subbed_channel", e.Unlocked = "unlocked", e.Global = "global"
-            }(U || (U = {}));
+            }(B || (B = {}));
             var ee;
             ! function(e) {
                 e.FrequentlyUsedEmotes = "FREQUENTLY_USED_EMOTES", e.ChannelEmotes = "CHANNEL_EMOTES", e.AllEmotes = "ALL_EMOTES"
@@ -26949,7 +26935,7 @@
                                     emoticon_set_id: e.setID,
                                     generated_by: n.props.emotePickerSource
                                 };
-                                s.o.track(x.SpadeEventType.EmotePickerClickthrough, i)
+                                s.o.track(F.SpadeEventType.EmotePickerClickthrough, i)
                             } else e.isLocked && n.onClickLockedEmote(e)
                         }, n.saveScrollRef = function(e) {
                             return n.scroll = e
@@ -26994,22 +26980,22 @@
                                 })
                             });
                             var i = Object(N.d)(),
-                                r = 0 === Object.keys(i).length ? void 0 : i,
-                                a = Object(w.f)(n, t, r);
-                            return Object(w.d)(a)
+                                a = 0 === Object.keys(i).length ? void 0 : i,
+                                r = Object(_.f)(n, t, a);
+                            return Object(_.d)(r)
                         }, n.updateChannelEmotes = function(e) {
                             var t = e.channelSubscriptionProducts.reduce(function(e, t) {
                                 return e.concat(t.emotes)
                             }, []);
                             if (0 === t.length || !e.channelDisplayName) return null;
                             var i = [],
-                                r = [];
+                                a = [];
                             t.forEach(function(e) {
-                                e.isLocked ? i.push(e) : r.push(e)
+                                e.isLocked ? i.push(e) : a.push(e)
                             });
-                            var a = r.concat(i);
+                            var r = a.concat(i);
                             n.setState({
-                                sortedChannelEmotes: a
+                                sortedChannelEmotes: r
                             })
                         }, n.state = {
                             filter: "",
@@ -27020,7 +27006,7 @@
                             subUpsellClickedEmote: null
                         }, n
                     }
-                    return r.__extends(t, e), t.prototype.shouldComponentUpdate = function(e) {
+                    return a.__extends(t, e), t.prototype.shouldComponentUpdate = function(e) {
                         return this.props.emotePickerSessionID === e.emotePickerSessionID || this.props.channelSubscriptionProducts !== e.channelSubscriptionProducts || this.props.globalEmotes !== e.globalEmotes || this.props.frequentlyUsedEmotes !== e.frequentlyUsedEmotes || this.props.otherChannelEmoteSets !== e.otherChannelEmoteSets || this.props.unlockedEmotes !== e.unlockedEmotes
                     }, t.prototype.componentDidMount = function() {
                         if (this.props.channelID && this.updateChannelEmotes(this.props), this.props.emotePickerSessionID && this.props.channelID) {
@@ -27030,7 +27016,7 @@
                                 generated_by: this.props.emotePickerSource,
                                 chatroom_id: this.props.roomID
                             };
-                            s.o.track(x.SpadeEventType.ViewedEmotePicker, e)
+                            s.o.track(F.SpadeEventType.ViewedEmotePicker, e)
                         }
                     }, t.prototype.componentWillReceiveProps = function(e) {
                         if (this.props.channelID === e.channelID && this.props.channelSubscriptionProducts === e.channelSubscriptionProducts || this.updateChannelEmotes(e), e.channelID && e.emotePickerSessionID && !this.props.emotePickerSessionID) {
@@ -27040,31 +27026,31 @@
                                 generated_by: e.emotePickerSource,
                                 chatroom_id: e.roomID
                             };
-                            s.o.track(x.SpadeEventType.ViewedEmotePicker, t)
+                            s.o.track(F.SpadeEventType.ViewedEmotePicker, t)
                         }
                     }, t.prototype.render = function() {
-                        return a.createElement(l.u, {
+                        return r.createElement(l.u, {
                             "data-a-target": "emote-picker",
                             direction: this.props.direction ? this.props.direction : l.v.TopRight,
                             size: this.props.size ? this.props.size : l.w.Medium,
                             noTail: !0,
                             show: !0
-                        }, a.createElement(l.Ya, {
+                        }, r.createElement(l.Ya, {
                             className: "emote-picker"
                         }, this.renderView()))
                     }, t.prototype.renderView = function() {
                         var e = null;
-                        return null === this.state.subUpsellClickedEmote && (e = a.createElement(a.Fragment, null, a.createElement(l.Fb, {
+                        return null === this.state.subUpsellClickedEmote && (e = r.createElement(r.Fragment, null, r.createElement(l.Fb, {
                             padding: {
                                 top: 2,
                                 x: 2
                             }
-                        }, a.createElement(l.wb, {
+                        }, r.createElement(l.wb, {
                             autoFocus: !0,
                             onChange: this.handleFilterChange,
                             placeholder: Object(s.d)("Search for Emotes", "EmotePickerCard"),
                             value: this.state.inputValue
-                        })), this.renderTabContent())), a.createElement(a.Fragment, null, a.createElement(J, {
+                        })), this.renderTabContent())), r.createElement(r.Fragment, null, r.createElement(J, {
                             channelDisplayName: this.props.channelDisplayName,
                             channelID: this.props.channelID,
                             channelSubscriptionProducts: this.props.channelSubscriptionProducts,
@@ -27076,42 +27062,42 @@
                             subUpsellClickedEmote: this.state.subUpsellClickedEmote
                         }), e)
                     }, t.prototype.renderTabContent = function() {
-                        return this.props.gqlError ? a.createElement(l.Ya, null, a.createElement(l.W, {
+                        return this.props.gqlError ? r.createElement(l.Ya, null, r.createElement(l.W, {
                             "data-test-selector": "emote-picker-menu-error-text",
                             color: l.O.Error
-                        }, Object(s.d)("Unable to load available emotes.", "EmotePickerCard"))) : this.props.loading ? a.createElement(l.Ya, {
+                        }, Object(s.d)("Unable to load available emotes.", "EmotePickerCard"))) : this.props.loading ? r.createElement(l.Ya, {
                             alignItems: l.f.Center,
                             display: l.X.Flex,
                             fullHeight: !0,
                             fullWidth: !0,
                             justifyContent: l.Xa.Center,
                             padding: 1
-                        }, a.createElement(l.ab, null)) : "" !== this.state.filter ? this.renderSearchContent() : a.createElement(a.Fragment, null, a.createElement(L.b, {
+                        }, r.createElement(l.ab, null)) : "" !== this.state.filter ? this.renderSearchContent() : r.createElement(r.Fragment, null, r.createElement(j.b, {
                             scrollRef: this.saveScrollRef,
                             className: "emote-picker__tab-content"
-                        }, a.createElement(l.Ya, {
+                        }, r.createElement(l.Ya, {
                             padding: {
                                 bottom: 2
                             }
-                        }, a.createElement(q, {
+                        }, r.createElement(q, {
                             checkVisible: this.checkVisible
                         }, this.getFrequentlyUsedEmoteGrid(), this.getCurrentChannelEmoteGrid(), this.getOtherSubEmoteGrids(), this.getResidualEmoteGrids()))), this.renderTabNav())
                     }, t.prototype.getFrequentlyUsedEmoteGrid = function() {
-                        return 0 === this.props.frequentlyUsedEmotes.length ? null : a.createElement(l.Ya, {
+                        return 0 === this.props.frequentlyUsedEmotes.length ? null : r.createElement(l.Ya, {
                             className: "emote-picker__content-block",
                             refDelegate: this.saveFrequentlyUsedEmotesRef
-                        }, a.createElement(Y, {
-                            context: U.FrequentlyUsed,
+                        }, r.createElement(Y, {
+                            context: B.FrequentlyUsed,
                             emotes: this.props.frequentlyUsedEmotes,
                             label: Object(s.d)("Frequently Used", "EmotePickerCard"),
                             onClickEmote: this.onClickEmote
                         }))
                     }, t.prototype.getCurrentChannelEmoteGrid = function() {
-                        return 0 !== this.state.sortedChannelEmotes.length && this.props.channelDisplayName ? a.createElement(l.Ya, {
+                        return 0 !== this.state.sortedChannelEmotes.length && this.props.channelDisplayName ? r.createElement(l.Ya, {
                             className: "emote-picker__content-block",
                             refDelegate: this.saveChannelEmotesRef
-                        }, a.createElement(Y, {
-                            context: U.CurrentChannel,
+                        }, r.createElement(Y, {
+                            context: B.CurrentChannel,
                             emotes: this.state.sortedChannelEmotes,
                             imgSrc: this.props.channelProfileImageURL || void 0,
                             label: this.props.channelDisplayName,
@@ -27121,35 +27107,35 @@
                         var e = this,
                             t = [];
                         return this.props.otherChannelEmoteSets.forEach(function(n) {
-                            n.owner && n.owner.displayName && t.push(a.createElement(l.Ya, {
+                            n.owner && n.owner.displayName && t.push(r.createElement(l.Ya, {
                                 key: "emote-grid--" + n.id + "-emotes",
                                 className: "emote-picker__content-block"
-                            }, a.createElement(Y, {
-                                context: U.OtherChannel,
+                            }, r.createElement(Y, {
+                                context: B.OtherChannel,
                                 emotes: n.emotes,
                                 imgSrc: n.owner.profileImageURL || void 0,
                                 label: n.owner.displayName,
                                 onClickEmote: e.onClickEmote
                             })))
-                        }), a.createElement(a.Fragment, null, t)
+                        }), r.createElement(r.Fragment, null, t)
                     }, t.prototype.getResidualEmoteGrids = function() {
                         var e = [];
-                        return this.props.unlockedEmotes.length > 0 && e.push(a.createElement(l.Ya, {
+                        return this.props.unlockedEmotes.length > 0 && e.push(r.createElement(l.Ya, {
                             key: "emote-grid--unlocked-emotes",
                             className: "emote-picker__content-block"
-                        }, a.createElement(Y, {
-                            context: U.Unlocked,
+                        }, r.createElement(Y, {
+                            context: B.Unlocked,
                             emotes: this.props.unlockedEmotes,
                             label: Object(s.d)("Unlocked", "EmotePickerCard"),
                             onClickEmote: this.onClickEmote
-                        }))), this.props.globalEmotes.length > 0 && e.push(a.createElement(l.Ya, {
+                        }))), this.props.globalEmotes.length > 0 && e.push(r.createElement(l.Ya, {
                             key: "emote-grid--global-emotes"
-                        }, a.createElement(Y, {
-                            context: U.Global,
+                        }, r.createElement(Y, {
+                            context: B.Global,
                             emotes: this.props.globalEmotes,
                             label: Object(s.d)("Global", "EmotePickerCard"),
                             onClickEmote: this.onClickEmote
-                        }))), a.createElement(l.Ya, {
+                        }))), r.createElement(l.Ya, {
                             refDelegate: this.saveAllEmotesRef
                         }, e)
                     }, t.prototype.renderSearchContent = function() {
@@ -27158,9 +27144,9 @@
                         }, "EmotePickerCard");
                         return this.state.filteredEmotes.length > 0 && (e = Object(s.d)('Search Results for "{inputValue}"', {
                             inputValue: this.state.inputValue
-                        }, "EmotePickerCard")), a.createElement(L.b, {
+                        }, "EmotePickerCard")), r.createElement(j.b, {
                             className: "emote-picker__tab-content"
-                        }, a.createElement(l.Ya, {
+                        }, r.createElement(l.Ya, {
                             position: l.kb.Relative,
                             padding: {
                                 x: 1,
@@ -27168,47 +27154,47 @@
                                 bottom: 3
                             },
                             className: "emote-picker__content-block"
-                        }, a.createElement(l.Fb, {
+                        }, r.createElement(l.Fb, {
                             padding: {
                                 x: 1
                             }
-                        }, a.createElement(l.W, {
+                        }, r.createElement(l.W, {
                             bold: !0
-                        }, e)), a.createElement(F.a, {
+                        }, e)), r.createElement(x.a, {
                             emotes: this.state.filteredEmotes,
                             onClickEmote: this.onClickEmote,
                             spaced: !0
                         })))
                     }, t.prototype.renderTabNav = function() {
                         var e = null;
-                        return this.state.sortedChannelEmotes.length > 0 && (e = a.createElement(X, {
+                        return this.state.sortedChannelEmotes.length > 0 && (e = r.createElement(X, {
                             isActive: this.state.selectedNavTab === ee.ChannelEmotes,
                             label: ee.ChannelEmotes,
                             icon: l.ub.NavChannels,
                             onClick: this.onTabNavClick
-                        })), a.createElement(l.Fb, {
+                        })), r.createElement(l.Fb, {
                             background: l.r.Alt,
                             display: l.X.Flex,
                             className: "emote-picker__tab-nav-container"
-                        }, a.createElement(X, {
+                        }, r.createElement(X, {
                             isActive: this.state.selectedNavTab === ee.FrequentlyUsedEmotes,
                             label: ee.FrequentlyUsedEmotes,
                             icon: l.ub.GlyphLength,
                             onClick: this.onTabNavClick
-                        }), e, a.createElement(X, {
+                        }), e, r.createElement(X, {
                             isActive: this.state.selectedNavTab === ee.AllEmotes,
                             label: ee.AllEmotes,
                             icon: l.ub.EmoticonsAll,
                             onClick: this.onTabNavClick
                         }))
                     }, t
-                }(a.Component),
+                }(r.Component),
                 ne = n("DB+C"),
                 ie = function(e) {
                     function t(t) {
                         var n = e.call(this, t) || this;
                         n.handleSubEvent = function(e) {
-                            e.action === R.a.ClickCheckout && n.checkAndDisplaySubscriptionCheckout(), Object(R.b)(r.__assign({}, e, {
+                            e.action === R.a.ClickCheckout && n.checkAndDisplaySubscriptionCheckout(), Object(R.b)(a.__assign({}, e, {
                                 action: R.a.ClickCheckout,
                                 channelID: n.props.channelData && n.props.channelData.user && n.props.channelData.user.id || "",
                                 channelLogin: n.props.channelData && n.props.channelData.user && n.props.channelData.user.displayName || "",
@@ -27236,9 +27222,9 @@
                             subscribeTexts: [],
                             unlockedEmotes: []
                         };
-                        return i = n.applyDataPropsToState(t, i), n.state = r.__assign({}, i), n
+                        return i = n.applyDataPropsToState(t, i), n.state = a.__assign({}, i), n
                     }
-                    return r.__extends(t, e), t.prototype.componentDidMount = function() {
+                    return a.__extends(t, e), t.prototype.componentDidMount = function() {
                         Object(N.b)(), this.checkDataLoaded(this.props) && (this.props.onLoad && this.props.onLoad(this.checkForContent(this.props)), this.props.latencyTracking.reportInteractive())
                     }, t.prototype.componentWillReceiveProps = function(e) {
                         if (e.emoteSetsData && e.emoteSetsData.error || e.channelData && e.channelData.error) this.setState({
@@ -27246,7 +27232,7 @@
                         });
                         else {
                             var t = this.applyDataPropsToState(e, this.state);
-                            this.props.pubsub.messages.subscriptionInfo !== e.pubsub.messages.subscriptionInfo && (this.props.channelData && this.props.channelData.refetch(), this.props.emoteSetsData && this.props.emoteSetsData.refetch()), this.checkDataLoaded(e) && (e.latencyTracking.reportInteractive(), e.onLoad && e.onLoad(this.checkForContent(e)), t.gqlLoading = !1), this.setState(r.__assign({}, t, {
+                            this.props.pubsub.messages.subscriptionInfo !== e.pubsub.messages.subscriptionInfo && (this.props.channelData && this.props.channelData.refetch(), this.props.emoteSetsData && this.props.emoteSetsData.refetch()), this.checkDataLoaded(e) && (e.latencyTracking.reportInteractive(), e.onLoad && e.onLoad(this.checkForContent(e)), t.gqlLoading = !1), this.setState(a.__assign({}, t, {
                                 gqlError: !1
                             }))
                         }
@@ -27261,7 +27247,7 @@
                     }, t.prototype.render = function() {
                         if (!this.props.visible) return null;
                         var e = this.props.channelData && this.props.channelData.user && this.props.channelData.user.campaignProperties && this.props.channelData.user.campaignProperties.domains && this.props.channelData.user.campaignProperties.domains.length > 0 || !1,
-                            t = a.createElement(G, {
+                            t = r.createElement(G, {
                                 allEmoteSets: this.state.allEmoteSets,
                                 availableUpsells: this.state.availableUpsells,
                                 channelTabVisible: this.state.channelTabVisible,
@@ -27280,7 +27266,7 @@
                                 subscribeTexts: this.state.subscribeTexts,
                                 toggleVisibility: this.props.toggleVisibility
                             }),
-                            n = a.createElement(te, {
+                            n = r.createElement(te, {
                                 allEmoteSets: this.state.allEmoteSets,
                                 channelID: this.props.channelOwnerID,
                                 channelDisplayName: this.state.channelDisplayName,
@@ -27303,7 +27289,7 @@
                                 toggleVisibility: this.props.toggleVisibility,
                                 unlockedEmotes: this.state.unlockedEmotes
                             });
-                        return a.createElement(p.a, {
+                        return r.createElement(p.a, {
                             assignments: {
                                 fallback: function() {
                                     return t
@@ -27326,14 +27312,14 @@
                             n = e.channelData && e.channelData.user && e.channelData.user.subscriptionProducts.filter(this.subscriptionProductHasEmotes).length > 0 || !1;
                         return t || n
                     }, t.prototype.applyDataPropsToState = function(e, t) {
-                        var n = r.__assign({}, t);
+                        var n = a.__assign({}, t);
                         if (e.emoteSetsData && e.emoteSetsData.emoteSets && e.emoteSetsData.emoteSets.length > 0) {
                             n.ownedSetIDs = new Set;
-                            for (var i = 0, a = e.emoteSetsData.emoteSets; i < a.length; i++) {
-                                var o = a[i];
+                            for (var i = 0, r = e.emoteSetsData.emoteSets; i < r.length; i++) {
+                                var o = r[i];
                                 o && o.id && n.ownedSetIDs.add(parseInt(o.id, 10))
                             }
-                            n.allEmoteSets = Object(w.a)(e.emoteSetsData.emoteSets);
+                            n.allEmoteSets = Object(_.a)(e.emoteSetsData.emoteSets);
                             var l = [],
                                 c = [],
                                 d = [];
@@ -27343,7 +27329,7 @@
                                 var t = {};
                                 e.forEach(function(e) {
                                     var n;
-                                    e.owner && e.owner.id && (t[e.owner.id] ? (n = t[e.owner.id].emotes).push.apply(n, e.emotes) : t[e.owner.id] = r.__assign({}, e))
+                                    e.owner && e.owner.id && (t[e.owner.id] ? (n = t[e.owner.id].emotes).push.apply(n, e.emotes) : t[e.owner.id] = a.__assign({}, e))
                                 });
                                 var n = [];
                                 return Object.keys(t).forEach(function(e) {
@@ -27355,11 +27341,11 @@
                             var u = void 0;
                             e.channelData.user.self && e.channelData.user.self.subscriptionBenefit && (u = e.channelData.user.self.subscriptionBenefit.platform), n.availableUpsells = function(e, t, n) {
                                 var i = [];
-                                return !n || n !== _.b.IOS && n !== _.b.Android ? (t.forEach(function(n, a) {
+                                return !n || n !== w.b.IOS && n !== w.b.Android ? (t.forEach(function(n, r) {
                                     var o = n.price;
-                                    0 === a && Object(O.g)(t) && (o = Object(O.c)(t[0])), n.emotes && n.emotes.length && n.emoteSetID && !e.has(parseInt(n.emoteSetID, 10)) && i.push(r.__assign({}, n, {
-                                        emotes: Object(w.e)(n.emotes, n.emoteSetID),
-                                        level: a,
+                                    0 === r && Object(O.g)(t) && (o = Object(O.c)(t[0])), n.emotes && n.emotes.length && n.emoteSetID && !e.has(parseInt(n.emoteSetID, 10)) && i.push(a.__assign({}, n, {
+                                        emotes: Object(_.e)(n.emotes, n.emoteSetID),
+                                        level: r,
                                         price: o
                                     }))
                                 }), i) : i
@@ -27367,22 +27353,22 @@
                                 for (var n = [{
                                         id: "0",
                                         emotes: []
-                                    }], i = 0, r = t; i < r.length; i++) {
-                                    var a = r[i];
-                                    a.emotes && a.emoteSetID && e.has(parseInt(a.emoteSetID, 10)) && (n[0].emotes = n[0].emotes.concat(Object(w.e)(a.emotes, a.emoteSetID)))
+                                    }], i = 0, a = t; i < a.length; i++) {
+                                    var r = a[i];
+                                    r.emotes && r.emoteSetID && e.has(parseInt(r.emoteSetID, 10)) && (n[0].emotes = n[0].emotes.concat(Object(_.e)(r.emotes, r.emoteSetID)))
                                 }
                                 return n[0].emotes.length ? n : []
                             }(n.ownedSetIDs, e.channelData.user.subscriptionProducts), n.subscribeTexts = function(e) {
                                 for (var t = [], n = 0; n < e.length; n++) {
                                     var i = e[n],
-                                        r = Object(M.b)(i.tier);
-                                    null === r && (r = 1), 0 === n && i.emotes && i.emotes.length > 1 ? t[n] = Object(s.d)("Unlock {numEmotes, number} Sub Emotes", {
+                                        a = Object(M.b)(i.tier);
+                                    null === a && (a = 1), 0 === n && i.emotes && i.emotes.length > 1 ? t[n] = Object(s.d)("Unlock {numEmotes, number} Sub Emotes", {
                                         numEmotes: i.emotes.length
                                     }, "assembleSubscribeTexts") : 0 === n ? t[n] = Object(s.d)("Unlock 1 Sub Emote", "assembleSubscribeTexts") : i.emotes && i.emotes.length > 1 ? t[n] = Object(s.d)("{numEmotes, number} Extra Tier {tier} Sub Emotes", {
                                         numEmotes: i.emotes.length,
-                                        tier: r
+                                        tier: a
                                     }, "assembleSubscribeTexts") : i.emotes && i.emotes.length && (t[n] = Object(s.d)("1 Extra Tier {tier} Sub Emote", {
-                                        tier: r
+                                        tier: a
                                     }, "assembleSubscribeTexts"))
                                 }
                                 return t
@@ -27407,8 +27393,8 @@
                             }
                         }) : this.props.showLoginModal() : Object(b.f)())
                     }, t
-                }(a.Component);
-            var re = Object(d.compose)(Object(i.connect)(function(e) {
+                }(r.Component);
+            var ae = Object(d.compose)(Object(i.connect)(function(e) {
                     return {
                         currentUserID: e.session.user && e.session.user.id,
                         emotePickerSessionID: e.chat && e.chat.emotePickerSessionID || null,
@@ -27421,11 +27407,11 @@
                         openEmotePicker: S.M,
                         showLoginModal: Object(b.g)(v.a.EmotePickerSubscriptionButton),
                         showSubscriptionCheckoutModal: function(e) {
-                            var t = r.__rest(e, []);
+                            var t = a.__rest(e, []);
                             return Object(k.d)(m.a, {
                                 component: "CheckoutModal",
                                 loader: function() {
-                                    return Promise.all([n.e(0), n.e(212)]).then(n.bind(null, "KJv/"))
+                                    return Promise.all([n.e(0), n.e(210)]).then(n.bind(null, "KJv/"))
                                 },
                                 componentProps: t
                             })
@@ -27454,7 +27440,7 @@
                         return !e.currentUserID
                     }
                 }]), Object(T.b)("EmotePicker"), Object(f.a)())(ie),
-                ae = function(e) {
+                re = function(e) {
                     function t() {
                         var t = null !== e && e.apply(this, arguments) || this;
                         return t.state = {
@@ -27483,18 +27469,18 @@
                             })
                         }, t
                     }
-                    return r.__extends(t, e), t.prototype.componentDidMount = function() {
+                    return a.__extends(t, e), t.prototype.componentDidMount = function() {
                         this.props.latencyTracking.reportInteractive(), this.props.inputRef && (this.props.inputRef.addEventListener("mouseenter", this.onInteraction), this.props.inputRef.addEventListener("focus", this.onInteraction))
                     }, t.prototype.componentWillUnmount = function() {
                         this.props.inputRef && (this.props.inputRef.removeEventListener("mouseenter", this.onInteraction), this.props.inputRef.removeEventListener("focus", this.onInteraction))
                     }, t.prototype.render = function() {
                         var e = null;
-                        this.state.isEmotePickerButtonVisible && (e = a.createElement(c, {
+                        this.state.isEmotePickerButtonVisible && (e = r.createElement(c, {
                             onClick: this.toggleEmotePicker,
                             isActive: this.state.isEmotePickerMenuVisible
                         }));
                         var t = null;
-                        this.hasInteractedOrPageload && (t = a.createElement(re, {
+                        this.hasInteractedOrPageload && (t = r.createElement(ae, {
                             channelOwnerID: this.props.channelOwnerID,
                             emotePickerSource: this.props.emotePickerSource,
                             onClickEmote: this.onClickEmote,
@@ -27503,10 +27489,10 @@
                             visible: this.state.isEmotePickerMenuVisible,
                             direction: this.props.direction
                         }));
-                        var n = a.createElement(l.Ya, r.__assign({
+                        var n = r.createElement(l.Ya, a.__assign({
                             className: "emote-picker-and-button"
                         }, this.layoutProps), e, t);
-                        return this.props.shouldCloseOnClickOut ? a.createElement(o.a, {
+                        return this.props.shouldCloseOnClickOut ? r.createElement(o.a, {
                             onClickOut: this.onClickOut
                         }, n) : n
                     }, Object.defineProperty(t.prototype, "hasInteractedOrPageload", {
@@ -27529,8 +27515,8 @@
                         enumerable: !0,
                         configurable: !0
                     }), t
-                }(a.Component),
-                oe = Object(T.b)("EmotePicker")(ae);
+                }(r.Component),
+                oe = Object(T.b)("EmotePicker")(re);
             var se = Object(i.connect)(function(e) {
                 return {
                     firstPageLoaded: e.session.firstPageLoaded
@@ -27539,15 +27525,15 @@
             n.d(t, "a", function() {
                 return se
             }), n.d(t, "c", function() {
-                return re
+                return ae
             }), n.d(t, !1, function() {
-                return _.a
+                return w.a
             }), n.d(t, !1, function() {
-                return _.d
+                return w.d
             }), n.d(t, !1, function() {
-                return _.c
+                return w.c
             }), n.d(t, !1, function() {
-                return _.b
+                return w.b
             }), n.d(t, "b", function() {
                 return c
             })
@@ -27577,14 +27563,14 @@
         nInp: function(e, t, n) {
             "use strict";
             n.d(t, "b", function() {
-                return a
+                return r
             }), n.d(t, "a", function() {
                 return o
             });
             var i = n("XIZb"),
-                r = Object(i.a)("MessageBuffer"),
-                a = r.withChatServiceProvider,
-                o = (0, r.withContext)(function(e) {
+                a = Object(i.a)("MessageBuffer"),
+                r = a.withChatServiceProvider,
+                o = (0, a.withContext)(function(e) {
                     return {
                         messageBufferAPI: e.serviceAPI,
                         setMessageBufferAPI: e.setServiceAPI
@@ -27842,24 +27828,24 @@
         },
         oK83: function(e, t, n) {
             "use strict";
-            var i, r;
+            var i, a;
             n.d(t, "a", function() {
                     return i
                 }), n.d(t, "b", function() {
-                    return r
+                    return a
                 }),
                 function(e) {
                     e[e.recent_raids = 0] = "recent_raids", e[e.chat_message = 1] = "chat_message", e[e.room_message = 2] = "room_message", e[e.extension_message = 3] = "extension_message", e[e.viewer_list = 4] = "viewer_list", e[e.viewer_list_mod_section = 5] = "viewer_list_mod_section", e[e.member_list = 6] = "member_list", e[e.test = 7] = "test"
                 }(i || (i = {})),
                 function(e) {
                     e[e.Viewer = 0] = "Viewer", e[e.Extension = 1] = "Extension"
-                }(r || (r = {}))
+                }(a || (a = {}))
         },
         oe5X: function(e, t, n) {
             "use strict";
             var i = n("XmgI"),
-                r = n("RcPG"),
-                a = n("0FG4"),
+                a = n("RcPG"),
+                r = n("0FG4"),
                 o = n("i6WW"),
                 s = n("gTu3"),
                 l = n("6j5V"),
@@ -27884,7 +27870,7 @@
                 return p(b.reduce(function(e, t, p) {
                     if (h(t)) return v = "", e;
                     if (0 === v.length && (k = p), v += t, p !== b.length - 1 && !h(b[p + 1])) return e;
-                    var m = u && Object(a.c)(v, k, u);
+                    var m = u && Object(r.c)(v, k, u);
                     if (m) return e.concat(m);
                     var C = n && Object(i.e)(v, n);
                     if (C) return e.concat(C);
@@ -27893,17 +27879,17 @@
                     var S = f && function(e, t) {
                         var n = e.match(c);
                         if (!n) return d(e, t.sessionUser) ? [{
-                            type: r.a.CurrentUserHighlight,
+                            type: a.a.CurrentUserHighlight,
                             content: e
                         }] : null;
                         var i = [],
-                            a = n[1],
+                            r = n[1],
                             o = n[2],
                             u = e.slice(n[0].length);
-                        a.length && i.push(Object(l.a)(a));
+                        r.length && i.push(Object(l.a)(r));
                         var p = s.a.Default;
                         return d(o, t.sessionUser) ? p = s.a.Recipient : t.sessionUser && t.sessionUser.login === t.senderLogin && (p = s.a.Sender), i.push({
-                            type: r.a.Mention,
+                            type: a.a.Mention,
                             content: {
                                 recipient: o,
                                 currentUserMentionRelation: p
@@ -27920,7 +27906,7 @@
                 }, []).reduce(function(e, t, n) {
                     if (0 === n) return e.concat(t);
                     var i = e[e.length - 1];
-                    return t.type === r.a.Text && i.type === r.a.Text ? (i.content = "" + i.content + t.content, e) : e.concat(t)
+                    return t.type === a.a.Text && i.type === a.a.Text ? (i.content = "" + i.content + t.content, e) : e.concat(t)
                 }, [])
             }
 
@@ -27941,8 +27927,8 @@
         },
         oi4T: function(e, t, n) {
             "use strict";
-            var i, r = n("mrSG"),
-                a = n("/7QA"),
+            var i, a = n("mrSG"),
+                r = n("/7QA"),
                 o = n("2xye");
             ! function(e) {
                 e.Everyone = "everyone", e.ModsOnly = "mod", e.StreamChat = "twitch_chat", e.SubsOnly = "sub"
@@ -27979,10 +27965,10 @@
                     return e.roomID && (n.chatroom_id = e.roomID), n
                 },
                 c = function(e) {
-                    a.o.track(o.SpadeEventType.ChatRoomJoined, l(e))
+                    r.o.track(o.SpadeEventType.ChatRoomJoined, l(e))
                 },
                 d = function(e) {
-                    a.o.track(o.SpadeEventType.ChatRoomWatched, r.__assign({}, l(e), {
+                    r.o.track(o.SpadeEventType.ChatRoomWatched, a.__assign({}, l(e), {
                         channel_id: e.channelID
                     }))
                 }
@@ -27990,8 +27976,8 @@
         okS7: function(e, t, n) {
             "use strict";
             n("kPBf");
-            var i, r = n("mrSG"),
-                a = n("17x9"),
+            var i, a = n("mrSG"),
+                r = n("17x9"),
                 o = n("q1tI"),
                 s = n("8Ad5"),
                 l = n("TSYQ"),
@@ -28008,20 +27994,20 @@
                         }, t.logger = c.k.withCategory("AutocompleteBalloon"), t.renderMatches = function() {
                             return t.props.matches.map(function(e, n) {
                                 var i = t.state.selectedMatch,
-                                    r = i && i.replacement === e.replacement,
-                                    a = l("autocomplete-balloon__item", {
-                                        "autocomplete-balloon__item--selected": r
+                                    a = i && i.replacement === e.replacement,
+                                    r = l("autocomplete-balloon__item", {
+                                        "autocomplete-balloon__item--selected": a
                                     });
                                 return o.createElement(p.Ya, {
                                     key: "autocomplete-match-" + n,
-                                    refDelegate: r ? t.focusOnOption : void 0,
+                                    refDelegate: a ? t.focusOnOption : void 0,
                                     "data-test-selector": m
                                 }, o.createElement(p.Qa, {
                                     display: p.X.Block,
                                     fullWidth: !0
                                 }, o.createElement("button", {
                                     onMouseEnter: t.handleMatchMouseEnter,
-                                    className: a,
+                                    className: r,
                                     "data-a-target": e.replacement,
                                     "data-click-index": n,
                                     onClick: t.onMatchClick
@@ -28058,11 +28044,11 @@
                                 case s.a.Up:
                                 case s.a.Down:
                                     if (!t.state.selectedMatch || !t.props.matches.length) return;
-                                    var r = t.props.matches.indexOf(t.state.selectedMatch);
-                                    if (-1 === r) return void t.logger.error(new Error, "The selected match was not found in props.matches.");
+                                    var a = t.props.matches.indexOf(t.state.selectedMatch);
+                                    if (-1 === a) return void t.logger.error(new Error, "The selected match was not found in props.matches.");
                                     i();
-                                    var a = n === s.a.Up ? -1 : 1,
-                                        o = t.getIndexWithinLength(r + a, t.props.matches.length),
+                                    var r = n === s.a.Up ? -1 : 1,
+                                        o = t.getIndexWithinLength(a + r, t.props.matches.length),
                                         l = t.props.matches[o];
                                     t.setState({
                                         selectedMatch: l
@@ -28088,7 +28074,7 @@
                             t.autocompleteBalloonElement = e
                         }, t
                     }
-                    return r.__extends(t, e), t.prototype.componentDidMount = function() {
+                    return a.__extends(t, e), t.prototype.componentDidMount = function() {
                         window.addEventListener("keydown", this.handleKeydown, !0), window.addEventListener("resize", this.onResize, !0), this.setContainerHeight(), this.props.matches.length > 0 && this.setState({
                             selectedMatch: this.props.matches[0]
                         })
@@ -28197,9 +28183,9 @@
                                 i = function() {
                                     e.preventDefault(), e.stopPropagation()
                                 },
-                                r = e.charCode || e.keyCode;
-                            if (r !== s.a.Enter) {
-                                switch (r) {
+                                a = e.charCode || e.keyCode;
+                            if (a !== s.a.Enter) {
+                                switch (a) {
                                     case s.a.Tab:
                                         if (!t.state.matches) t.getMatches(!0) && i();
                                         break;
@@ -28217,9 +28203,9 @@
                             if (i > n.length);
                             else
                                 for (; i < n.length && !/\s/.test(n.charAt(i));) i++;
-                            var r = n.substring(0, i);
-                            if (0 === r.length || /\s/.test(r.substring(r.length - 1))) return t.resetDisplayState(), !1;
-                            for (var a = r.split(/\s/), o = a[a.length - 1], s = 0, l = t.providers; s < l.length; s++) {
+                            var a = n.substring(0, i);
+                            if (0 === a.length || /\s/.test(a.substring(a.length - 1))) return t.resetDisplayState(), !1;
+                            for (var r = a.split(/\s/), o = r[r.length - 1], s = 0, l = t.providers; s < l.length; s++) {
                                 var c = l[s];
                                 if (!e || c.canBeTriggeredByTab) {
                                     var d = c.getMatches(o, e);
@@ -28232,7 +28218,7 @@
                             }
                             return t.resetDisplayState(), !1
                         }, t.resetDisplayState = function(e, n) {
-                            var i = r.__assign({}, t.state, {
+                            var i = a.__assign({}, t.state, {
                                 autocompleteType: g.a.None,
                                 matches: null
                             }, e || {});
@@ -28240,21 +28226,21 @@
                         }, t.insertReplacement = function(e) {
                             var n = t.state.value,
                                 i = t.state.matchedCursorPosition,
-                                a = n.substring(0, i),
-                                o = a.lastIndexOf(e.current);
-                            if (-1 === o) a = a.concat(e.replacement + " "), i = a.length;
+                                r = n.substring(0, i),
+                                o = r.lastIndexOf(e.current);
+                            if (-1 === o) r = r.concat(e.replacement + " "), i = r.length;
                             else {
-                                var s = a.substring(0, o),
+                                var s = r.substring(0, o),
                                     l = n.length > o + e.current.length ? n.substring(o + e.current.length) : "",
                                     c = l.startsWith(" ") ? e.replacement : e.replacement + " ";
-                                a = "" + s + c + l, i = s.length + c.length
+                                r = "" + s + c + l, i = s.length + c.length
                             }
-                            S(r.__assign({}, t.props.trackingParams || {}, {
+                            S(a.__assign({}, t.props.trackingParams || {}, {
                                 autocompleteType: t.state.autocompleteType,
                                 completedText: e.replacement,
                                 source: t.props.suggestionSource
                             })), t.resetDisplayState({
-                                value: a
+                                value: r
                             }, function() {
                                 t.setCursorPosition(i)
                             })
@@ -28270,7 +28256,7 @@
                                 }
                         }, t
                     }
-                    return r.__extends(t, e), t.prototype.componentDidMount = function() {
+                    return a.__extends(t, e), t.prototype.componentDidMount = function() {
                         this.props.refDelegate && this.props.refDelegate(this)
                     }, t.prototype.getChildContext = function() {
                         return {
@@ -28293,7 +28279,7 @@
                     }, t.prototype.componentDidUpdate = function(e, t) {
                         t.value !== this.state.value && this.props.onValueUpdate && this.props.onValueUpdate(this.state.value)
                     }, t.prototype.render = function() {
-                        var e = r.__assign({}, this.props, {
+                        var e = a.__assign({}, this.props, {
                             onChange: this.onChange,
                             onKeyDown: this.onKeyDown,
                             refDelegate: this.setComponentRefDelegate,
@@ -28304,9 +28290,9 @@
                             onMatchSelect: this.insertReplacement,
                             onDismiss: this.resetDisplayState,
                             containerElement: this.props.containerElement
-                        }), this.props.componentType === i.Input ? o.createElement(p.Sa, r.__assign({}, e, {
+                        }), this.props.componentType === i.Input ? o.createElement(p.Sa, a.__assign({}, e, {
                             type: e.type || p.Ua.Text
-                        })) : o.createElement(p.Tb, r.__assign({}, e)), this.props.children)
+                        })) : o.createElement(p.Tb, a.__assign({}, e)), this.props.children)
                     }, t.prototype.getValue = function() {
                         return this.state.value
                     }, t.prototype.setValue = function(e) {
@@ -28314,12 +28300,12 @@
                             value: e
                         })
                     }, t.childContextTypes = {
-                        registerAutocompleteProvider: a.func
+                        registerAutocompleteProvider: r.func
                     }, t
                 }(o.Component),
                 N = n("lZdE"),
-                w = n("OpME"),
-                _ = (n("gDzh"), function(e) {
+                _ = n("OpME"),
+                w = (n("gDzh"), function(e) {
                     function t() {
                         var t = null !== e && e.apply(this, arguments) || this;
                         return t.autocompleteType = g.a.Emote, t.canBeTriggeredByTab = !1, t.getMatches = function(e) {
@@ -28328,17 +28314,17 @@
                             var n = t.state.hydratedEmotes;
                             if (!n || 0 === n.length) return null;
                             var i = e.substring(1),
-                                r = n.reduce(function(e, n) {
-                                    var r = n.emotes.filter(function(e) {
+                                a = n.reduce(function(e, n) {
+                                    var a = n.emotes.filter(function(e) {
                                         if (e.token) return t.doesEmoteMatchTerm(e, i)
                                     });
-                                    return e.concat([r])
+                                    return e.concat([a])
                                 }, []).filter(function(e) {
                                     return e.length > 0
                                 }).reduce(function(e, t) {
                                     return e.concat(t)
                                 }, []);
-                            return r = Object(w.d)(r), (r = Object(w.f)(r, i)).map(function(e) {
+                            return a = Object(_.d)(a), (a = Object(_.f)(a, i)).map(function(e) {
                                 return {
                                     current: ":" + i,
                                     replacement: e.token,
@@ -28349,9 +28335,9 @@
                             var n = new RegExp("^" + Object(N.a)(t), "i");
                             if (e.token.match(n)) return !0;
                             var i = new RegExp("" + Object(N.a)(t.charAt(0)).toUpperCase()),
-                                r = new RegExp("^" + Object(N.a)(t.slice(1)), "i"),
-                                a = e.token.match(i);
-                            return !!(a && a.index && e.token.slice(a.index + 1).match(r))
+                                a = new RegExp("^" + Object(N.a)(t.slice(1)), "i"),
+                                r = e.token.match(i);
+                            return !!(r && r.index && e.token.slice(r.index + 1).match(a))
                         }, t.renderEmoteSuggestion = function(e) {
                             return [o.createElement(p.Ya, {
                                 padding: {
@@ -28368,11 +28354,11 @@
                                 ellipsis: !0
                             }, e.token)]
                         }, t.hydrateEmotes = function(e) {
-                            for (var n = [], i = 0, r = e; i < r.length; i++) {
-                                var a = r[i];
-                                a && a.id && a.emotes && n.push({
-                                    id: a.id,
-                                    emotes: Object(w.b)(a.emotes)
+                            for (var n = [], i = 0, a = e; i < a.length; i++) {
+                                var r = a[i];
+                                r && r.id && r.emotes && n.push({
+                                    id: r.id,
+                                    emotes: Object(_.b)(r.emotes)
                                 })
                             }
                             t.setState({
@@ -28380,7 +28366,7 @@
                             })
                         }, t
                     }
-                    return r.__extends(t, e), t.prototype.componentWillReceiveProps = function(e) {
+                    return a.__extends(t, e), t.prototype.componentWillReceiveProps = function(e) {
                         e.emotes && this.props.emotes !== e.emotes && this.hydrateEmotes(e.emotes)
                     }, t.prototype.componentWillMount = function() {
                         this.hydrateEmotes(this.props.emotes)
@@ -28391,7 +28377,7 @@
                     }, t.prototype.render = function() {
                         return null
                     }, t.contextTypes = {
-                        registerAutocompleteProvider: a.func
+                        registerAutocompleteProvider: r.func
                     }, t
                 }(o.Component));
             n.d(t, !1, function() {}), n.d(t, !1, function() {}), n.d(t, "b", function() {
@@ -28399,7 +28385,7 @@
             }), n.d(t, "a", function() {
                 return i
             }), n.d(t, !1, function() {}), n.d(t, "d", function() {
-                return _
+                return w
             }), n.d(t, "c", function() {
                 return b
             })
@@ -28417,7 +28403,7 @@
         qKeE: function(e, t, n) {},
         qnat: function(e, t, n) {
             "use strict";
-            var i, r, a = n("mrSG"),
+            var i, a, r = n("mrSG"),
                 o = n("q1tI"),
                 s = n("fvjX"),
                 l = n("yR8l"),
@@ -28434,17 +28420,17 @@
             }(i || (i = {})),
             function(e) {
                 e[e.Big = 0] = "Big", e[e.Small = 1] = "Small"
-            }(r || (r = {}));
+            }(a || (a = {}));
             var f, b = function(e) {
                     function t() {
                         return null !== e && e.apply(this, arguments) || this
                     }
-                    return a.__extends(t, e), t.prototype.render = function() {
+                    return r.__extends(t, e), t.prototype.render = function() {
                         var e = this.renderMedalSVG(this.props.medal, this.props.size),
                             t = p("bits-leaderboard-medal__profile-image", {
-                                "bits-leaderboard-medal__profile-image--big": this.props.size === r.Big
+                                "bits-leaderboard-medal__profile-image--big": this.props.size === a.Big
                             }, {
-                                "bits-leaderboard-medal__profile-image--small": this.props.size === r.Small
+                                "bits-leaderboard-medal__profile-image--small": this.props.size === a.Small
                             }),
                             n = null;
                         return this.props.profileImageUrl && (n = o.createElement(g.Qa, {
@@ -28458,24 +28444,24 @@
                             position: g.kb.Relative
                         }, e, n)
                     }, t.prototype.renderMedalSVG = function(e, t) {
-                        var n = t === r.Big ? "bits-leaderboard-medal__big" : "bits-leaderboard-medal__small",
-                            a = null;
+                        var n = t === a.Big ? "bits-leaderboard-medal__big" : "bits-leaderboard-medal__small",
+                            r = null;
                         switch (e) {
                             case i.Gold:
-                                a = o.createElement(C, null);
+                                r = o.createElement(C, null);
                                 break;
                             case i.Silver:
-                                a = o.createElement(y, null);
+                                r = o.createElement(y, null);
                                 break;
                             case i.Bronze:
-                                a = o.createElement(v, null);
+                                r = o.createElement(v, null);
                                 break;
                             default:
-                                a = o.createElement(k, null)
+                                r = o.createElement(k, null)
                         }
                         return o.createElement(g.Qa, {
                             className: n
-                        }, a)
+                        }, r)
                     }, t
                 }(o.Component),
                 v = function(e) {
@@ -28855,11 +28841,11 @@
                 S = n("3CMh"),
                 E = n("6MRn"),
                 N = n("4h+t"),
-                w = (n("ky+Y"), function(e) {
+                _ = (n("ky+Y"), function(e) {
                     function t() {
                         return null !== e && e.apply(this, arguments) || this
                     }
-                    return a.__extends(t, e), t.prototype.render = function() {
+                    return r.__extends(t, e), t.prototype.render = function() {
                         if (this.props.data && (this.props.data.loading || this.props.data.error)) return o.createElement(g.Ya, {
                             display: g.X.InlineFlex,
                             alignItems: g.f.Center,
@@ -28886,8 +28872,8 @@
                                 display: g.X.InlineBlock
                             }, i)
                         }
-                        var r, a = null;
-                        a = this.props.selfId && this.props.selfId === this.props.value ? o.createElement(g.hb, {
+                        var a, r = null;
+                        r = this.props.selfId && this.props.selfId === this.props.value ? o.createElement(g.hb, {
                             label: this.props.rank.toString(),
                             type: g.ib.Brand
                         }) : o.createElement(g.W, {
@@ -28895,7 +28881,7 @@
                             bold: !0
                         }, this.props.rank);
                         var s = this.props.data && this.props.data.user && this.props.data.user.profileImageURL || m.a.defaultAvatarURL;
-                        return r = o.createElement(g.Ya, {
+                        return a = o.createElement(g.Ya, {
                             overflow: g.db.Hidden,
                             display: g.X.InlineFlex,
                             flexGrow: 1,
@@ -28906,7 +28892,7 @@
                             padding: {
                                 right: .5
                             }
-                        }, a), o.createElement("img", {
+                        }, r), o.createElement("img", {
                             src: s,
                             className: "bits-leaderboard-expanded-leaderboard-entry__avatar"
                         }), t, o.createElement(g.Ya, {
@@ -28931,10 +28917,10 @@
                             className: "bits-leaderboard-expanded-leaderboard-entry",
                             display: g.X.Block,
                             alignItems: g.f.Center
-                        }, r)
+                        }, a)
                     }, t
                 }(o.Component)),
-                _ = Object(s.compose)(Object(l.a)(E, {
+                w = Object(s.compose)(Object(l.a)(E, {
                     name: "data",
                     skip: function(e) {
                         return !e.id
@@ -28947,12 +28933,12 @@
                             }
                         }
                     }
-                }))(w),
+                }))(_),
                 O = (n("U80U"), function(e) {
                     function t() {
                         return null !== e && e.apply(this, arguments) || this
                     }
-                    return a.__extends(t, e), t.prototype.render = function() {
+                    return r.__extends(t, e), t.prototype.render = function() {
                         if (this.props.data && (this.props.data.loading || this.props.data.error)) return o.createElement(g.Ya, {
                             display: g.X.InlineFlex,
                             alignItems: g.f.Center,
@@ -28980,7 +28966,7 @@
                                 display: g.X.InlineBlock
                             }, i)
                         }
-                        var a, s = null;
+                        var r, s = null;
                         s = this.props.selfId && this.props.selfId === this.props.value ? o.createElement(g.hb, {
                             label: this.props.rank.toString(),
                             type: g.ib.Brand
@@ -28989,7 +28975,7 @@
                             bold: !0
                         }, this.props.rank);
                         var l = this.props.data && this.props.data.user && this.props.data.user.profileImageURL || m.a.defaultAvatarURL;
-                        return a = o.createElement(g.Ya, {
+                        return r = o.createElement(g.Ya, {
                             overflow: g.db.Hidden,
                             display: g.X.InlineFlex,
                             flexGrow: 1,
@@ -28998,7 +28984,7 @@
                         }, o.createElement(g.Ya, {
                             className: "bits-leaderboard-expanded-top-three-entry__rank"
                         }, s), o.createElement(b, {
-                            size: r.Big,
+                            size: a.Big,
                             medal: this.props.medal,
                             profileImageUrl: l
                         }), t, o.createElement(g.Ya, {
@@ -29022,7 +29008,7 @@
                         }))), o.createElement(g.Ya, {
                             className: "bits-leaderboard-expanded-top-three-entry",
                             display: g.X.Block
-                        }, a)
+                        }, r)
                     }, t
                 }(o.Component)),
                 M = Object(s.compose)(Object(l.a)(E, {
@@ -29070,15 +29056,15 @@
                         })))
                     }, t
                 }
-                return a.__extends(t, e), t.prototype.render = function() {
+                return r.__extends(t, e), t.prototype.render = function() {
                     var e = this.shouldRenderBottomContent(),
                         t = this.renderTopThreeEntries(),
                         n = this.renderTopTenEntries(),
                         i = this.renderExpandArrow(),
-                        r = this.renderTopSection(),
-                        a = null,
+                        a = this.renderTopSection(),
+                        r = null,
                         s = null;
-                    e && ((a = this.renderUserPlaceEntry()) || (s = this.renderBottomSection()));
+                    e && ((r = this.renderUserPlaceEntry()) || (s = this.renderBottomSection()));
                     var l = {
                             "bits-leaderboard-expanded__top-three-break": !!this.props.topEdges && this.props.topEdges.length > 3
                         },
@@ -29091,14 +29077,14 @@
                             top: 1
                         },
                         position: g.kb.Relative
-                    }, r, o.createElement(h.b, {
+                    }, a, o.createElement(h.b, {
                         className: "bits-leaderboard-expanded__scrollable",
                         suppressScrollX: !0
                     }, o.createElement(g.Ya, null, o.createElement("ul", null, t, o.createElement(g.Ya, {
                         className: p(l)
                     }), n, o.createElement(g.Ya, {
                         className: p(c)
-                    }), a), s)), i)
+                    }), r), s)), i)
                 }, t.prototype.renderTopThreeEntries = function() {
                     if (!this.props.topEdges) return null;
                     var e = [];
@@ -29189,7 +29175,7 @@
                             x: 1,
                             top: .5
                         }
-                    }, o.createElement(_, {
+                    }, o.createElement(w, {
                         id: e.id,
                         value: e.entryKey,
                         score: e.score,
@@ -29239,7 +29225,7 @@
                     function t() {
                         return null !== e && e.apply(this, arguments) || this
                     }
-                    return a.__extends(t, e), t.prototype.render = function() {
+                    return r.__extends(t, e), t.prototype.render = function() {
                         if (this.props.data && (this.props.data.loading || this.props.data.error)) return o.createElement(g.Ya, {
                             display: g.X.InlineBlock,
                             alignItems: g.f.Center,
@@ -29247,15 +29233,15 @@
                         });
                         var e, t = this.props.bitsConfig ? this.props.bitsConfig : Object(N.a)(),
                             n = null,
-                            a = "";
+                            r = "";
                         if (this.props.data && this.props.data.user) {
-                            a = this.props.data.user.displayName || this.props.data.user.login;
+                            r = this.props.data.user.displayName || this.props.data.user.login;
                             var s = o.createElement(g.W, {
                                 ellipsis: !0,
                                 bold: !0
-                            }, a);
+                            }, r);
                             this.props.selfId && this.props.selfId === this.props.entryKey && (s = o.createElement(g.hb, {
-                                label: a,
+                                label: r,
                                 type: g.ib.Brand
                             })), n = o.createElement(g.Ya, {
                                 ellipsis: !0,
@@ -29273,7 +29259,7 @@
                             }, o.createElement(g.Ya, {
                                 flexShrink: 0
                             }, o.createElement(b, {
-                                size: r.Big,
+                                size: a.Big,
                                 medal: i.Default
                             })), o.createElement(g.Ya, {
                                 className: "bits-leaderboard-header-first-entry__text",
@@ -29295,7 +29281,7 @@
                             }, o.createElement(g.Ya, {
                                 flexShrink: 0
                             }, o.createElement(b, {
-                                size: r.Big,
+                                size: a.Big,
                                 medal: i.Gold,
                                 profileImageUrl: c
                             })), o.createElement(g.Ya, {
@@ -29319,7 +29305,7 @@
                             }))))
                         }
                         this.props.isEmpty || (e = o.createElement(g.Zb, {
-                            label: a,
+                            label: r,
                             direction: g.bc.Bottom
                         }, e));
                         var d = {
@@ -29332,7 +29318,7 @@
                         }, e)
                     }, t
                 }(o.Component),
-                A = Object(s.compose)(Object(l.a)(E, {
+                L = Object(s.compose)(Object(l.a)(E, {
                     name: "data",
                     skip: function(e) {
                         return !e.id || !e.entryKey
@@ -29346,11 +29332,11 @@
                         }
                     }
                 }))(R),
-                L = (n("ifPV"), function(e) {
+                j = (n("ifPV"), function(e) {
                     function t() {
                         return null !== e && e.apply(this, arguments) || this
                     }
-                    return a.__extends(t, e), t.prototype.render = function() {
+                    return r.__extends(t, e), t.prototype.render = function() {
                         if (this.props.data && (this.props.data.loading || this.props.data.error)) return o.createElement(g.Ya, {
                             display: g.X.InlineFlex,
                             alignItems: g.f.Center,
@@ -29358,15 +29344,15 @@
                         });
                         var e, t = this.props.bitsConfig ? this.props.bitsConfig : Object(N.a)(),
                             n = null,
-                            a = "";
+                            r = "";
                         if (this.props.data && this.props.data.user) {
-                            a = this.props.data.user.displayName || this.props.data.user.login;
+                            r = this.props.data.user.displayName || this.props.data.user.login;
                             var s = o.createElement(g.W, {
                                 ellipsis: !0,
                                 bold: !0
-                            }, a);
+                            }, r);
                             this.props.selfId && this.props.selfId === this.props.entryKey && (s = o.createElement(g.hb, {
-                                label: a,
+                                label: r,
                                 type: g.ib.Brand
                             })), n = o.createElement(g.Ya, {
                                 ellipsis: !0,
@@ -29388,7 +29374,7 @@
                             }, o.createElement(g.Ya, {
                                 flexShrink: 0
                             }, o.createElement(b, {
-                                size: r.Small,
+                                size: a.Small,
                                 medal: i.Default
                             })), o.createElement(g.Ya, {
                                 ellipsis: !0,
@@ -29412,7 +29398,7 @@
                             }, o.createElement(g.Ya, {
                                 flexShrink: 0
                             }, o.createElement(b, {
-                                size: r.Small,
+                                size: a.Small,
                                 medal: this.props.medal,
                                 profileImageUrl: c
                             })), n, o.createElement(g.Ya, {
@@ -29435,7 +29421,7 @@
                             })))
                         }
                         return this.props.isEmpty || (e = o.createElement(g.Zb, {
-                            label: a,
+                            label: r,
                             direction: g.bc.Bottom
                         }, e)), o.createElement(g.Ya, {
                             className: "bits-leaderboard-header-runner-up-entry",
@@ -29444,7 +29430,7 @@
                         }, e)
                     }, t
                 }(o.Component)),
-                j = Object(s.compose)(Object(l.a)(E, {
+                A = Object(s.compose)(Object(l.a)(E, {
                     name: "data",
                     skip: function(e) {
                         return !e.id || !e.entryKey
@@ -29457,19 +29443,19 @@
                             }
                         }
                     }
-                }))(L),
-                B = (n("MBj5"), function(e) {
+                }))(j),
+                U = (n("MBj5"), function(e) {
                     function t() {
                         var t = null !== e && e.apply(this, arguments) || this;
                         return t.renderFirstPlaceEntry = function() {
                             var e, n = null;
-                            return t.props.topEdges && t.props.topEdges[0] && (n = t.props.topEdges[0]), e = n ? o.createElement(A, {
+                            return t.props.topEdges && t.props.topEdges[0] && (n = t.props.topEdges[0]), e = n ? o.createElement(L, {
                                 selfId: t.props.selfId,
                                 id: n.node.id,
                                 entryKey: n.node.entryKey,
                                 score: n.node.score,
                                 bitsConfig: t.props.bitsConfig
-                            }) : o.createElement(A, {
+                            }) : o.createElement(L, {
                                 isEmpty: !0
                             }), o.createElement(g.Qa, {
                                 key: 1
@@ -29494,15 +29480,15 @@
                             })))
                         }, t
                     }
-                    return a.__extends(t, e), t.prototype.render = function() {
+                    return r.__extends(t, e), t.prototype.render = function() {
                         var e = this.renderFirstPlaceEntry(),
                             t = null,
                             n = null,
-                            r = this.renderExpandArrow();
+                            a = this.renderExpandArrow();
                         if (this.props.topEdges && this.props.topEdges[0]) {
                             t = this.renderRunnerUpEntry(2, i.Silver);
-                            var a = this.props.topEdges[1] ? 3 : 0;
-                            n = this.renderRunnerUpEntry(a, i.Bronze)
+                            var r = this.props.topEdges[1] ? 3 : 0;
+                            n = this.renderRunnerUpEntry(r, i.Bronze)
                         }
                         return o.createElement(g.Fb, {
                             className: "pinned-cheer-v2-header",
@@ -29521,17 +29507,17 @@
                             flexWrap: g.Ba.NoWrap,
                             justifyContent: g.Xa.Between,
                             flexDirection: g.Aa.Column
-                        }, t, n)), r)
+                        }, t, n)), a)
                     }, t.prototype.renderRunnerUpEntry = function(e, t) {
-                        var n, r = null;
-                        return e > 0 && this.props.topEdges && this.props.topEdges[e - 1] && (r = this.props.topEdges[e - 1]), n = r ? o.createElement(j, {
+                        var n, a = null;
+                        return e > 0 && this.props.topEdges && this.props.topEdges[e - 1] && (a = this.props.topEdges[e - 1]), n = a ? o.createElement(A, {
                             selfId: this.props.selfId,
-                            id: r.node.id,
-                            entryKey: r.node.entryKey,
-                            score: r.node.score,
+                            id: a.node.id,
+                            entryKey: a.node.entryKey,
+                            score: a.node.score,
                             medal: t,
                             bitsConfig: this.props.bitsConfig
-                        }) : o.createElement(j, {
+                        }) : o.createElement(A, {
                             isEmpty: !0,
                             medal: i.Default,
                             rank: e
@@ -29540,9 +29526,9 @@
                         }, n)
                     }, t
                 }(o.Component)),
-                U = n("+LJB"),
-                x = n("RiD7"),
-                F = n("Qime"),
+                B = n("+LJB"),
+                F = n("RiD7"),
+                x = n("Qime"),
                 P = (n("MIhh"), function(e) {
                     function t() {
                         var t = null !== e && e.apply(this, arguments) || this;
@@ -29560,16 +29546,16 @@
                             var e = t.props,
                                 n = e.channelID,
                                 i = e.userID,
-                                r = e.data.user;
-                            if (r && r.cheer && r.cheer.leaderboard && r.cheer.settings && r.cheer.settings.leaderboard && r.cheer.settings.leaderboard.isEnabled) {
-                                var a = r.cheer.settings.leaderboard.timePeriodType,
-                                    o = r.cheer.leaderboard.items.edges.slice(0, 10),
+                                a = e.data.user;
+                            if (a && a.cheer && a.cheer.leaderboard && a.cheer.settings && a.cheer.settings.leaderboard && a.cheer.settings.leaderboard.isEnabled) {
+                                var r = a.cheer.settings.leaderboard.timePeriodType,
+                                    o = a.cheer.leaderboard.items.edges.slice(0, 10),
                                     s = !1;
                                 i && (s = o.findIndex(function(e) {
                                     return e.node.entryKey === i
-                                }) >= 0), Object(x.i)({
+                                }) >= 0), Object(F.i)({
                                     leaderboardSize: o.length,
-                                    leaderboardMode: a || f.AllTime,
+                                    leaderboardMode: r || f.AllTime,
                                     userPresentInLeaderboard: s,
                                     userID: i,
                                     channelID: n
@@ -29577,7 +29563,7 @@
                             }
                         }, t
                     }
-                    return a.__extends(t, e), t.prototype.render = function() {
+                    return r.__extends(t, e), t.prototype.render = function() {
                         var e;
                         return e = this.renderLeaderboard(), o.createElement(g.Ya, {
                             zIndex: g.jc.Default
@@ -29599,8 +29585,8 @@
                             leaderboardMode: n,
                             secondsRemaining: this.props.data.user.cheer.leaderboard.secondsRemaining
                         }));
-                        var r = null;
-                        return this.state.isExpanded || (r = o.createElement(B, {
+                        var a = null;
+                        return this.state.isExpanded || (a = o.createElement(U, {
                             topEdges: e,
                             toggleExpand: this.toggleIsExpanded,
                             selfId: this.props.userID,
@@ -29610,10 +29596,10 @@
                             zIndex: g.jc.Default
                         }, o.createElement(g.Fb, {
                             borderBottom: !0
-                        }, r, i))
+                        }, a, i))
                     }, t
                 }(o.Component)),
-                H = Object(s.compose)(Object(l.a)(F, {
+                H = Object(s.compose)(Object(l.a)(x, {
                     name: "data",
                     options: function(e) {
                         return {
@@ -29624,7 +29610,7 @@
                     }
                 }), Object(c.a)(function(e) {
                     return {
-                        query: F,
+                        query: x,
                         variables: {
                             channelID: e.channelID
                         },
@@ -29635,7 +29621,7 @@
                         }
                     }
                 }), Object(c.a)(function(e) {
-                    return Object(U.a)(F, e.channelID, e.data.user && e.data.user.cheer && e.data.user.cheer.leaderboard, e.userID)
+                    return Object(B.a)(x, e.channelID, e.data.user && e.data.user.cheer && e.data.user.cheer.leaderboard, e.userID)
                 }))(P),
                 W = function(e) {
                     function t() {
@@ -29647,7 +29633,7 @@
                             pcheersV2Enabled: !1
                         }, t
                     }
-                    return a.__extends(t, e), t.prototype.render = function() {
+                    return r.__extends(t, e), t.prototype.render = function() {
                         return o.createElement(H, {
                             channelID: this.props.channelID,
                             userID: this.props.userID,
@@ -29672,143 +29658,11 @@
                 return Y
             })
         },
-        "r/lI": function(e, t) {
-            var n = {
-                kind: "Document",
-                definitions: [{
-                    kind: "OperationDefinition",
-                    operation: "query",
-                    name: {
-                        kind: "Name",
-                        value: "FirstCheerBuilder"
-                    },
-                    variableDefinitions: [{
-                        kind: "VariableDefinition",
-                        variable: {
-                            kind: "Variable",
-                            name: {
-                                kind: "Name",
-                                value: "channelID"
-                            }
-                        },
-                        type: {
-                            kind: "NonNullType",
-                            type: {
-                                kind: "NamedType",
-                                name: {
-                                    kind: "Name",
-                                    value: "ID"
-                                }
-                            }
-                        }
-                    }],
-                    directives: [],
-                    selectionSet: {
-                        kind: "SelectionSet",
-                        selections: [{
-                            kind: "Field",
-                            name: {
-                                kind: "Name",
-                                value: "user"
-                            },
-                            arguments: [{
-                                kind: "Argument",
-                                name: {
-                                    kind: "Name",
-                                    value: "id"
-                                },
-                                value: {
-                                    kind: "Variable",
-                                    name: {
-                                        kind: "Name",
-                                        value: "channelID"
-                                    }
-                                }
-                            }],
-                            directives: [],
-                            selectionSet: {
-                                kind: "SelectionSet",
-                                selections: [{
-                                    kind: "Field",
-                                    name: {
-                                        kind: "Name",
-                                        value: "id"
-                                    },
-                                    arguments: [],
-                                    directives: []
-                                }, {
-                                    kind: "Field",
-                                    name: {
-                                        kind: "Name",
-                                        value: "cheer"
-                                    },
-                                    arguments: [],
-                                    directives: [],
-                                    selectionSet: {
-                                        kind: "SelectionSet",
-                                        selections: [{
-                                            kind: "Field",
-                                            name: {
-                                                kind: "Name",
-                                                value: "id"
-                                            },
-                                            arguments: [],
-                                            directives: []
-                                        }, {
-                                            kind: "Field",
-                                            name: {
-                                                kind: "Name",
-                                                value: "settings"
-                                            },
-                                            arguments: [],
-                                            directives: [],
-                                            selectionSet: {
-                                                kind: "SelectionSet",
-                                                selections: [{
-                                                    kind: "Field",
-                                                    name: {
-                                                        kind: "Name",
-                                                        value: "emoteMinimumBits"
-                                                    },
-                                                    arguments: [],
-                                                    directives: []
-                                                }, {
-                                                    kind: "Field",
-                                                    name: {
-                                                        kind: "Name",
-                                                        value: "cheerMinimumBits"
-                                                    },
-                                                    arguments: [],
-                                                    directives: []
-                                                }]
-                                            }
-                                        }]
-                                    }
-                                }]
-                            }
-                        }]
-                    }
-                }],
-                loc: {
-                    start: 0,
-                    end: 132
-                }
-            };
-            n.loc.source = {
-                body: "query FirstCheerBuilder($channelID: ID!) {\nuser(id: $channelID) {\nid\ncheer {\nid\nsettings {\nemoteMinimumBits\ncheerMinimumBits\n}\n}\n}\n}",
-                name: "GraphQL request",
-                locationOffset: {
-                    line: 1,
-                    column: 1
-                }
-            };
-            e.exports = n
-        },
         r2XO: function(e, t, n) {
             "use strict";
             var i = n("mrSG"),
-                r = n("q1tI"),
-                a = n("/MKj"),
+                a = n("q1tI"),
+                r = n("/MKj"),
                 o = n("fvjX"),
                 s = n("/7QA"),
                 l = n("x7UT"),
@@ -29828,86 +29682,86 @@
                 S = n("b5C3"),
                 E = n("XmgI"),
                 N = n("0Lz3"),
-                w = n("uIkQ"),
-                _ = n("+pBb"),
+                _ = n("uIkQ"),
+                w = n("+pBb"),
                 O = n("ZVTe"),
                 M = n("DMoW"),
                 D = n("kRBY"),
                 I = n("TApp"),
                 T = n("KGti"),
                 R = n("sblI"),
-                A = n("iyGE"),
-                L = n("gO1k");
-            var j = n("a2UF"),
-                B = n("AREq");
-            var U = n("Av0x"),
-                x = n("5g1g"),
-                F = n("Ue10"),
+                L = n("iyGE"),
+                j = n("gO1k");
+            var A = n("a2UF"),
+                U = n("AREq");
+            var B = n("Av0x"),
+                F = n("5g1g"),
+                x = n("Ue10"),
                 P = (n("L6L7"), function(e) {
                     var t = e.onBanUser,
-                        n = F.ub.Ban,
+                        n = x.ub.Ban,
                         i = Object(s.d)("Ban {login}", {
                             login: e.senderLogin
                         }, "ModerationIcons"),
-                        a = "chat-ban-button",
+                        r = "chat-ban-button",
                         o = null;
-                    return e.isMessageBanned && (t = e.onUnbanUser, n = F.ub.FollowCheck, i = Object(s.d)("Unban {login}", {
+                    return e.isMessageBanned && (t = e.onUnbanUser, n = x.ub.FollowCheck, i = Object(s.d)("Unban {login}", {
                         login: e.senderLogin
-                    }, "ModerationIcons"), a = "chat-unban-button"), !e.isMessageDeleted && e.canDelete && (o = r.createElement(x.a, {
+                    }, "ModerationIcons"), r = "chat-unban-button"), !e.isMessageDeleted && e.canDelete && (o = a.createElement(F.a, {
                         name: "single_message_delete"
-                    }, r.createElement(F.Fb, {
-                        display: F.X.InlineFlex,
-                        verticalAlign: F.gc.Bottom
-                    }, r.createElement(F.Zb, {
-                        align: F.ac.Left,
+                    }, a.createElement(x.Fb, {
+                        display: x.X.InlineFlex,
+                        verticalAlign: x.gc.Bottom
+                    }, a.createElement(x.Zb, {
+                        align: x.ac.Left,
                         label: Object(s.d)("Delete message", "ModerationIcons")
-                    }, r.createElement("button", {
+                    }, a.createElement("button", {
                         className: "mod-icon",
                         onClick: e.onDelete,
                         "data-test-selector": "chat-delete-button"
-                    }, r.createElement(F.tb, {
+                    }, a.createElement(x.tb, {
                         width: 16,
                         height: 16,
-                        type: F.vb.Inherit,
-                        asset: F.ub.Trash
-                    })))))), r.createElement(F.Fb, {
-                        color: F.O.Alt2,
-                        display: F.X.Inline,
+                        type: x.vb.Inherit,
+                        asset: x.ub.Trash
+                    })))))), a.createElement(x.Fb, {
+                        color: x.O.Alt2,
+                        display: x.X.Inline,
                         margin: {
                             right: .5
                         }
-                    }, r.createElement(F.Fb, {
-                        display: F.X.InlineFlex,
-                        verticalAlign: F.gc.Bottom
-                    }, r.createElement(F.Zb, {
-                        align: F.ac.Left,
+                    }, a.createElement(x.Fb, {
+                        display: x.X.InlineFlex,
+                        verticalAlign: x.gc.Bottom
+                    }, a.createElement(x.Zb, {
+                        align: x.ac.Left,
                         label: i
-                    }, r.createElement("button", {
+                    }, a.createElement("button", {
                         className: "mod-icon",
                         onClick: t,
-                        "data-test-selector": a
-                    }, r.createElement(F.tb, {
+                        "data-test-selector": r
+                    }, a.createElement(x.tb, {
                         width: 16,
                         height: 16,
-                        type: F.vb.Inherit,
+                        type: x.vb.Inherit,
                         asset: n
-                    })))), r.createElement(F.Fb, {
-                        display: F.X.InlineFlex,
-                        verticalAlign: F.gc.Bottom
-                    }, r.createElement(F.Zb, {
-                        align: F.ac.Left,
+                    })))), a.createElement(x.Fb, {
+                        display: x.X.InlineFlex,
+                        verticalAlign: x.gc.Bottom
+                    }, a.createElement(x.Zb, {
+                        align: x.ac.Left,
                         label: Object(s.d)("Timeout {login}", {
                             login: e.senderLogin
                         }, "ModerationIcons")
-                    }, r.createElement("button", {
+                    }, a.createElement("button", {
                         className: "mod-icon",
                         onClick: e.onTimeoutUser,
                         "data-test-selector": "chat-timeout-button"
-                    }, r.createElement(F.tb, {
+                    }, a.createElement(x.tb, {
                         width: 16,
                         height: 16,
-                        type: F.vb.Inherit,
-                        asset: F.ub.Timeout
+                        type: x.vb.Inherit,
+                        asset: x.ub.Timeout
                     })))), o)
                 }),
                 H = 600,
@@ -29925,7 +29779,7 @@
                                         case 1:
                                             return n.trys.push([1, 3, , 4]), [4, this.props.banUserMutation(this.props.senderLogin)];
                                         case 2:
-                                            return (t = n.sent().banUserFromChatRoom) ? t.error ? this.pushMessage(Object(I.a)(Object(B.a)(this.props.senderLogin, t.error.code))) : this.pushMessage(Object(R.a)(p.e.Ban, this.props.senderLogin, null, null)) : this.pushMessage(e), [3, 4];
+                                            return (t = n.sent().banUserFromChatRoom) ? t.error ? this.pushMessage(Object(I.a)(Object(U.a)(this.props.senderLogin, t.error.code))) : this.pushMessage(Object(R.a)(p.e.Ban, this.props.senderLogin, null, null)) : this.pushMessage(e), [3, 4];
                                         case 3:
                                             return n.sent(), this.pushMessage(e), [3, 4];
                                         case 4:
@@ -29944,7 +29798,7 @@
                                         case 1:
                                             return n.trys.push([1, 3, , 4]), [4, this.props.banUserMutation(this.props.senderLogin, H)];
                                         case 2:
-                                            return (t = n.sent().banUserFromChatRoom) ? t.error ? this.pushMessage(Object(I.a)(Object(B.a)(this.props.senderLogin, t.error.code, !0))) : this.pushMessage(Object(R.a)(p.e.Timeout, this.props.senderLogin, null, H)) : this.pushMessage(e), [3, 4];
+                                            return (t = n.sent().banUserFromChatRoom) ? t.error ? this.pushMessage(Object(I.a)(Object(U.a)(this.props.senderLogin, t.error.code, !0))) : this.pushMessage(Object(R.a)(p.e.Timeout, this.props.senderLogin, null, H)) : this.pushMessage(e), [3, 4];
                                         case 3:
                                             return n.sent(), this.pushMessage(e), [3, 4];
                                         case 4:
@@ -29963,7 +29817,7 @@
                                         case 1:
                                             return i.trys.push([1, 3, , 4]), [4, this.props.unbanUserMutation(this.props.senderLogin)];
                                         case 2:
-                                            return (t = i.sent().unbanUserFromChatRoom) ? t.error ? this.pushMessage(Object(I.a)(Object(U.a)(this.props.senderLogin, t.error.code))) : this.props.sessionUser && (n = Object(T.l)(c.ModerationActions.Unban, this.props.sessionUser.login, this.props.sessionUser.id, this.props.targetUserID, this.props.senderLogin, void 0, void 0), this.pushMessage(n)) : this.pushMessage(e), [3, 4];
+                                            return (t = i.sent().unbanUserFromChatRoom) ? t.error ? this.pushMessage(Object(I.a)(Object(B.a)(this.props.senderLogin, t.error.code))) : this.props.sessionUser && (n = Object(T.l)(c.ModerationActions.Unban, this.props.sessionUser.login, this.props.sessionUser.id, this.props.targetUserID, this.props.senderLogin, void 0, void 0), this.pushMessage(n)) : this.pushMessage(e), [3, 4];
                                         case 3:
                                             return i.sent(), this.pushMessage(e), [3, 4];
                                         case 4:
@@ -29973,7 +29827,7 @@
                             })
                         }, t.onDelete = function() {
                             return i.__awaiter(t, void 0, void 0, function() {
-                                var e, t, n, r;
+                                var e, t, n, a;
                                 return i.__generator(this, function(i) {
                                     switch (i.label) {
                                         case 0:
@@ -29985,7 +29839,7 @@
                                                 messageID: this.props.messageID
                                             }, [4, this.props.deleteChatMessageMutation(Object(y.a)(e))];
                                         case 2:
-                                            return (t = i.sent().data.deleteChatMessage) && t.responseCode !== M.u.SUCCESS && (n = t.message && t.message.sender && t.message.sender.displayName || this.props.senderLogin, r = Object(I.a)(function(e, t) {
+                                            return (t = i.sent().data.deleteChatMessage) && t.responseCode !== M.u.SUCCESS && (n = t.message && t.message.sender && t.message.sender.displayName || this.props.senderLogin, a = Object(I.a)(function(e, t) {
                                                 switch (e) {
                                                     case M.u.FORBIDDEN:
                                                         return Object(s.d)("You don't have permission to delete messages.", "DeleteChatMessageErrorCode");
@@ -29998,9 +29852,9 @@
                                                     default:
                                                         throw new Error("Unrecognized operation result")
                                                 }
-                                            }(t.responseCode, n)), this.pushMessage(r)), [3, 4];
+                                            }(t.responseCode, n)), this.pushMessage(a)), [3, 4];
                                         case 3:
-                                            return i.sent(), r = Object(I.a)(Object(s.d)("Unable to delete message.", "ModerationIcons")), this.pushMessage(r), [3, 4];
+                                            return i.sent(), a = Object(I.a)(Object(s.d)("Unable to delete message.", "ModerationIcons")), this.pushMessage(a), [3, 4];
                                         case 4:
                                             return [2]
                                     }
@@ -30011,7 +29865,7 @@
                         }, t
                     }
                     return i.__extends(t, e), t.prototype.render = function() {
-                        return this.props.sessionUser && this.props.sessionUser.id === this.props.targetUserID ? null : r.createElement(P, {
+                        return this.props.sessionUser && this.props.sessionUser.id === this.props.targetUserID ? null : a.createElement(P, {
                             isMessageDeleted: this.props.isMessageDeleted,
                             isMessageBanned: this.props.isMessageBanned,
                             canDelete: !!this.props.messageID,
@@ -30022,15 +29876,15 @@
                             senderLogin: this.props.senderLogin
                         })
                     }, t
-                }(r.Component),
+                }(a.Component),
                 V = function(e) {
                     return {
                         channelID: e.channelID
                     }
                 };
-            var G = Object(k.compose)(Object(A.a)(V), Object(j.a)(V), function() {
+            var G = Object(k.compose)(Object(L.a)(V), Object(A.a)(V), function() {
                     var e = this;
-                    return Object(C.a)(L, {
+                    return Object(C.a)(j, {
                         props: function(t) {
                             return {
                                 deleteChatMessageMutation: function(n) {
@@ -30061,7 +29915,7 @@
                             }
                         }
                     })
-                }(), Object(a.connect)(function(e) {
+                }(), Object(r.connect)(function(e) {
                     return {
                         sessionUser: Object(D.e)(e)
                     }
@@ -30079,7 +29933,7 @@
                         return t.state = {
                             alwaysShowMessage: !1
                         }, t.renderModerationIcons = function() {
-                            return t.props.isCurrentUserModerator && t.props.showModerationIcons ? r.createElement(G, {
+                            return t.props.isCurrentUserModerator && t.props.showModerationIcons ? a.createElement(G, {
                                 targetUserID: t.props.message.user.userID,
                                 confirmModerationAction: t.props.confirmModerationAction,
                                 channelID: t.props.channelID,
@@ -30092,25 +29946,25 @@
                         }, t.renderMessageBody = function() {
                             if (t.props.isHidden && !t.state.alwaysShowMessage && t.props.isCurrentUserModerator) {
                                 var e = Object(s.d)("message hidden from blocked user", "ChatLine");
-                                return r.createElement("span", {
+                                return a.createElement("span", {
                                     key: "hidden_message",
                                     className: "chat-line__message--hidden",
                                     "data-a-target": K
-                                }, r.createElement("a", {
+                                }, a.createElement("a", {
                                     href: "",
                                     onClick: t.hiddenMessageClickHandler
                                 }, "<" + e + ">"))
                             }
                             if (t.props.isDeleted && !t.state.alwaysShowMessage) {
                                 var n = Object(s.d)("message deleted", "ChatLine");
-                                return t.props.isCurrentUserModerator || t.props.isCurrentUserStaff ? r.createElement("span", {
+                                return t.props.isCurrentUserModerator || t.props.isCurrentUserStaff ? a.createElement("span", {
                                     key: "deleted",
                                     className: "chat-line__message--deleted",
                                     "data-a-target": Q
-                                }, r.createElement("a", {
+                                }, a.createElement("a", {
                                     href: "",
                                     onClick: t.alwaysShowMessage
-                                }, "<" + n + ">")) : r.createElement("span", {
+                                }, "<" + n + ">")) : a.createElement("span", {
                                     key: "deleted",
                                     className: "chat-line__message--deleted",
                                     "data-a-target": Q
@@ -30121,25 +29975,25 @@
                             var e = t.props,
                                 n = e.badgeSets,
                                 i = e.message,
-                                a = e.theme,
+                                r = e.theme,
                                 o = e.useHighContrastColors;
-                            return t.props.isHidden && !t.state.alwaysShowMessage && t.props.isCurrentUserModerator ? r.createElement("span", {
+                            return t.props.isHidden && !t.state.alwaysShowMessage && t.props.isCurrentUserModerator ? a.createElement("span", {
                                 key: "hidden_username",
                                 className: "chat-line__username--hidden",
                                 "data-a-target": $
-                            }, r.createElement("a", {
+                            }, a.createElement("a", {
                                 href: "",
                                 onClick: t.hiddenMessageClickHandler
-                            }, Object(s.d)("User Hidden", "ChatLine"))) : r.createElement(r.Fragment, null, t.renderModerationIcons(), r.createElement(w.b, {
+                            }, Object(s.d)("User Hidden", "ChatLine"))) : a.createElement(a.Fragment, null, t.renderModerationIcons(), a.createElement(_.b, {
                                 badgeSets: n,
                                 badgesToRender: i.badges
-                            }), r.createElement("button", {
+                            }), a.createElement("button", {
                                 onClick: t.usernameClickHandler,
                                 className: "chat-line__username"
-                            }, r.createElement(O.a, {
+                            }, a.createElement(O.a, {
                                 userData: i.user,
                                 highContrastUsernameColor: o,
-                                theme: a
+                                theme: r
                             })))
                         }, t.alwaysShowMessage = function(e) {
                             e && e.preventDefault(), t.setState({
@@ -30156,30 +30010,30 @@
                             t = e.className,
                             n = e.message,
                             i = e.showTimestamps,
-                            a = e.theme,
+                            r = e.theme,
                             o = e.useHighContrastColors,
                             s = {},
                             l = ": ";
                         if (n.messageType === p.c.Action) {
                             var c = n.user.color;
-                            o && c && (c = "#" + Object(z.a)(c, a)), s = {
+                            o && c && (c = "#" + Object(z.a)(c, r)), s = {
                                 color: c
                             }, l = " "
                         }
                         var d = null;
-                        return i && (d = Object(Y.l)(n.timestamp)), r.createElement("div", {
+                        return i && (d = Object(Y.l)(n.timestamp)), a.createElement("div", {
                             className: v(t, "chat-line__message"),
                             style: s,
                             "data-a-target": "chat-line-message"
-                        }, d, this.renderMessageAuthor(), r.createElement("span", {
+                        }, d, this.renderMessageAuthor(), a.createElement("span", {
                             key: "separator",
                             "aria-hidden": "true"
                         }, l), this.renderMessageBody())
                     }, t
-                }(r.Component);
-            var J = Object(k.compose)(Object(a.connect)(void 0, function(e) {
+                }(a.Component);
+            var J = Object(k.compose)(Object(r.connect)(void 0, function(e) {
                     return Object(o.bindActionCreators)({
-                        onHiddenMessageClick: _.Q
+                        onHiddenMessageClick: w.Q
                     }, e)
                 }), Object(q.b)(function(e) {
                     return {
@@ -30190,8 +30044,8 @@
                 te = n("a1OF"),
                 ne = n("9yes"),
                 ie = n("R2Ti"),
-                re = n("g17B"),
-                ae = n("frkH"),
+                ae = n("g17B"),
+                re = n("frkH"),
                 oe = n("4zGI"),
                 se = {
                     badges: {
@@ -30262,11 +30116,11 @@
                                 n = e.message,
                                 i = e.allowRejectedCheer;
                             if (n.autoModType === p.a.CheerMessageRejectedPrompt && i) {
-                                var r = {
+                                var a = {
                                     id: n.rejectedMessage.id,
                                     targetUserID: n.targetUserID
                                 };
-                                i(Object(y.a)(r))
+                                i(Object(y.a)(a))
                             }
                         }, t.denyAutoModRejectedCheerMessage = function() {
                             t.setState({
@@ -30276,11 +30130,11 @@
                                 n = e.message,
                                 i = e.denyRejectedCheer;
                             if (n.autoModType === p.a.CheerMessageRejectedPrompt && i) {
-                                var r = {
+                                var a = {
                                     id: n.rejectedMessage.id,
                                     targetUserID: n.targetUserID
                                 };
-                                i(Object(y.a)(r))
+                                i(Object(y.a)(a))
                             }
                         }, t
                     }
@@ -30293,11 +30147,11 @@
                                 break;
                             case p.a.CheerMessageRejectedPrompt:
                                 e = le(t.category);
-                                var a = {
+                                var r = {
                                     emotes: []
                                 };
-                                this.props.data && this.props.data.user && this.props.data.user.cheer && (a = this.props.data.user.cheer);
-                                var o = Object(E.f)(t.originalMessage, Object(N.a)(a.emotes || []));
+                                this.props.data && this.props.data.user && this.props.data.user.cheer && (r = this.props.data.user.cheer);
+                                var o = Object(E.f)(t.originalMessage, Object(N.a)(r.emotes || []));
                                 t.rejectedMessage = i.__assign({}, t.rejectedMessage, {
                                     messageParts: o
                                 });
@@ -30334,32 +30188,32 @@
                             case p.a.CheerMessageRejectedPrompt:
                                 if (!(t.autoModType !== p.a.CheerMessageRejectedPrompt || this.props.data && this.props.data.user && this.props.data.user.cheer)) return null;
                                 if (t.rejectedMessage.deleted) return null;
-                                if (this.state.isResolved) return r.createElement(F.Ya, {
+                                if (this.state.isResolved) return a.createElement(x.Ya, {
                                     className: "chat-line__status"
                                 }, Object(s.d)("Thank you for your feedback!", "ChatLine"));
-                                return r.createElement(F.Ya, {
+                                return a.createElement(x.Ya, {
                                     className: "chat-line__message"
-                                }, r.createElement(S.a, {
+                                }, a.createElement(S.a, {
                                     badgeSets: this.props.badgeSets,
                                     badgesToRender: c.badges
-                                }), r.createElement(O.a, {
+                                }), a.createElement(O.a, {
                                     userData: c.user
-                                }), r.createElement("span", {
+                                }), a.createElement("span", {
                                     key: "separator"
-                                }, ": "), Object(Y.f)(c.messageParts), r.createElement(F.Ya, {
+                                }, ": "), Object(Y.f)(c.messageParts), a.createElement(x.Ya, {
                                     key: "automod-prompt",
                                     className: "chat-line__nested-component--float-right"
-                                }, r.createElement(F.z, {
-                                    size: F.D.Small,
+                                }, a.createElement(x.z, {
+                                    size: x.D.Small,
                                     onClick: this.getAllowMessageCallback(t.autoModType),
-                                    type: F.F.Text
-                                }, Object(s.d)("Allow", "AutoModLine")), r.createElement(F.W, {
-                                    type: F.Wb.Span
-                                }, "•"), r.createElement(F.z, {
-                                    size: F.D.Small,
+                                    type: x.F.Text
+                                }, Object(s.d)("Allow", "AutoModLine")), a.createElement(x.W, {
+                                    type: x.Wb.Span
+                                }, "•"), a.createElement(x.z, {
+                                    size: x.D.Small,
                                     onClick: this.getDenyMessageCallback(t.autoModType),
-                                    type: F.F.Text
-                                }, Object(s.d)("Deny", "AutoModLine"))), r.createElement(J, i.__assign({}, this.props, {
+                                    type: x.F.Text
+                                }, Object(s.d)("Deny", "AutoModLine"))), a.createElement(J, i.__assign({}, this.props, {
                                     isCurrentUserStaff: !1,
                                     isDeleted: !1,
                                     isHidden: !1,
@@ -30372,32 +30226,32 @@
                             case p.a.MessageDenied:
                             case p.a.CheerMessageDenied:
                             case p.a.CheerMessageTimeout:
-                                return r.createElement(F.Ya, {
+                                return a.createElement(x.Ya, {
                                     className: v(["chat-line__message", "chat-line__message--special", "chat-line__message--alert"])
-                                }, r.createElement(S.a, {
+                                }, a.createElement(S.a, {
                                     badgeSets: this.props.badgeSets,
                                     badgesToRender: c.badges
-                                }), r.createElement(O.a, {
+                                }), a.createElement(O.a, {
                                     userData: c.user
-                                }), r.createElement("span", {
+                                }), a.createElement("span", {
                                     key: "separator"
                                 }, ": "), Object(Y.f)(c.messageParts));
                             default:
                                 throw new Error("Invalid message type")
                         }
                     }, t
-                }(r.Component),
+                }(a.Component),
                 de = Object(k.compose)(Object(C.a)(ne, {
                     name: "allowRejectedChatMessage",
                     options: {}
-                }), Object(C.a)(ae, {
+                }), Object(C.a)(re, {
                     name: "denyRejectedChatMessage",
                     options: {}
                 }), Object(C.a)(ie, {
                     name: "allowRejectedCheer"
                 }), Object(C.a)(oe, {
                     name: "denyRejectedCheer"
-                }), Object(C.a)(re, {
+                }), Object(C.a)(ae, {
                     name: "data",
                     options: function(e) {
                         return {
@@ -30413,12 +30267,12 @@
                     var t = e.event,
                         n = t.promoGiftTotal,
                         i = t.promoName,
-                        a = t.user,
-                        o = r.createElement(pe.a, {
-                            contentID: a.id,
-                            login: a.username,
+                        r = t.user,
+                        o = a.createElement(pe.a, {
+                            contentID: r.id,
+                            login: r.username,
                             sourceType: X.a.chat_message
-                        }, Object(ue.a)(a.username, a.displayName)),
+                        }, Object(ue.a)(r.username, r.displayName)),
                         l = i && n ? Object(s.d)("{recipientButton} is continuing the Gift Sub they got from an anonymous gifter!        They're one of {promoGiftTotal} gift subs to continue this {promoName}.", {
                             promoGiftTotal: n,
                             promoName: i,
@@ -30426,22 +30280,22 @@
                         }, "AnonGiftPaidUpgradeNoticeLine") : Object(s.d)("{recipientButton} is continuing the Gift Sub they got from an anonymous gifter!", {
                             recipientButton: o
                         }, "AnonGiftPaidUpgradeNoticeLine");
-                    return r.createElement(F.Ya, {
-                        alignItems: F.f.Start,
-                        display: F.X.Flex
-                    }, r.createElement(F.Fb, {
-                        color: F.O.Alt2,
-                        display: F.X.Flex,
-                        flexDirection: F.Aa.Column,
+                    return a.createElement(x.Ya, {
+                        alignItems: x.f.Start,
+                        display: x.X.Flex
+                    }, a.createElement(x.Fb, {
+                        color: x.O.Alt2,
+                        display: x.X.Flex,
+                        flexDirection: x.Aa.Column,
                         flexShrink: 0,
                         margin: {
                             right: .5
                         }
-                    }, r.createElement(F.tb, {
-                        asset: F.ub.Ghost
-                    })), r.createElement(F.W, {
-                        color: F.O.Alt2,
-                        type: F.Wb.Span
+                    }, a.createElement(x.tb, {
+                        asset: x.ub.Ghost
+                    })), a.createElement(x.W, {
+                        color: x.O.Alt2,
+                        type: x.Wb.Span
                     }, l))
                 };
             me.displayName = "AnonGiftPaidUpgradeNoticeLine";
@@ -30449,27 +30303,27 @@
                 ge = "All-Access Pass",
                 fe = function(e) {
                     var t = e.event,
-                        n = r.createElement(pe.a, {
+                        n = a.createElement(pe.a, {
                             contentID: t.recipientID,
                             login: t.recipientLogin,
                             sourceType: X.a.chat_message
                         }, Object(ue.a)(t.recipientLogin, t.recipientDisplayName));
-                    return r.createElement(F.Ya, {
-                        alignItems: F.f.Start,
-                        display: F.X.Flex
-                    }, r.createElement(F.Fb, {
-                        color: F.O.Alt2,
-                        display: F.X.Flex,
-                        flexDirection: F.Aa.Column,
+                    return a.createElement(x.Ya, {
+                        alignItems: x.f.Start,
+                        display: x.X.Flex
+                    }, a.createElement(x.Fb, {
+                        color: x.O.Alt2,
+                        display: x.X.Flex,
+                        flexDirection: x.Aa.Column,
                         flexShrink: 0,
                         margin: {
                             right: .5
                         }
-                    }, r.createElement(F.tb, {
-                        asset: F.ub.Ghost
-                    })), r.createElement(F.W, {
-                        color: F.O.Alt2,
-                        type: F.Wb.Span
+                    }, a.createElement(x.tb, {
+                        asset: x.ub.Ghost
+                    })), a.createElement(x.W, {
+                        color: x.O.Alt2,
+                        type: x.Wb.Span
                     }, function(e, t) {
                         return e.planName === ge ? Object(s.d)("An anonymous gifter gave {recipientButton} an All-Access Pass!", {
                             recipientButton: t
@@ -30486,40 +30340,40 @@
                 var t = e.event,
                     n = t.channel,
                     i = t.massGiftCount,
-                    a = t.plan,
-                    o = "custom" === a ? Object(s.d)("{massGiftCount, plural,        one {An anonymous gifter is gifting {massGiftCount} Sub to {channel}'s community!}        other {An anonymous gifter is gifting {massGiftCount} Subs to {channel}'s community!}}", {
+                    r = t.plan,
+                    o = "custom" === r ? Object(s.d)("{massGiftCount, plural,        one {An anonymous gifter is gifting {massGiftCount} Sub to {channel}'s community!}        other {An anonymous gifter is gifting {massGiftCount} Subs to {channel}'s community!}}", {
                         channel: n,
                         massGiftCount: i
                     }, "AnonSubMysteryGiftNoticeLine") : Object(s.d)("{massGiftCount, plural,        one {An anonymous gifter is gifting {massGiftCount} Tier {tierNumber} Sub to {channel}'s community!}        other {An anonymous gifter is gifting {massGiftCount} Tier {tierNumber} Subs to {channel}'s community!}}", {
                         channel: n,
                         massGiftCount: i,
-                        tierNumber: Object(he.b)(a) || 1
+                        tierNumber: Object(he.b)(r) || 1
                     }, "AnonSubMysteryGiftNoticeLine");
-                return r.createElement(F.Ya, {
-                    alignItems: F.f.Start,
-                    display: F.X.Flex
-                }, r.createElement(F.Fb, {
-                    color: F.O.Alt2,
-                    display: F.X.Flex,
-                    flexDirection: F.Aa.Column,
+                return a.createElement(x.Ya, {
+                    alignItems: x.f.Start,
+                    display: x.X.Flex
+                }, a.createElement(x.Fb, {
+                    color: x.O.Alt2,
+                    display: x.X.Flex,
+                    flexDirection: x.Aa.Column,
                     flexShrink: 0,
                     margin: {
                         right: .5
                     }
-                }, r.createElement(F.tb, {
-                    asset: F.ub.Ghost
-                })), r.createElement(F.W, {
-                    color: F.O.Alt2,
-                    type: F.Wb.Span
+                }, a.createElement(x.tb, {
+                    asset: x.ub.Ghost
+                })), a.createElement(x.W, {
+                    color: x.O.Alt2,
+                    type: x.Wb.Span
                 }, o))
             };
             be.displayName = "AnonSubMysteryGiftNoticeLine";
             var ve = function(e) {
-                return r.createElement(F.Fb, {
-                    color: F.O.Alt2,
-                    display: F.X.Inline
+                return a.createElement(x.Fb, {
+                    color: x.O.Alt2,
+                    display: x.X.Inline
                 }, Object(s.d)("{userLogin} just made their first cheer!", {
-                    userLogin: r.createElement(pe.a, {
+                    userLogin: a.createElement(pe.a, {
                         contentID: e.event.message.id,
                         login: e.event.message.user.userLogin,
                         sourceType: X.a.chat_message
@@ -30529,19 +30383,19 @@
             ve.displayName = "FirstCheerNoticeLine";
             var ke = function(e) {
                 var t = e.event,
-                    n = r.createElement(pe.a, {
+                    n = a.createElement(pe.a, {
                         contentID: t.user.id,
                         login: t.user.username,
                         sourceType: X.a.chat_message
                     }, Object(ue.a)(t.user.username, t.user.displayName)),
-                    i = r.createElement(pe.a, {
+                    i = a.createElement(pe.a, {
                         contentID: t.user.id,
                         login: t.senderLogin,
                         sourceType: X.a.chat_message
                     }, Object(ue.a)(t.senderLogin, t.senderName));
-                return r.createElement(F.W, {
-                    color: F.O.Alt2,
-                    type: F.Wb.Span
+                return a.createElement(x.W, {
+                    color: x.O.Alt2,
+                    type: x.Wb.Span
                 }, t.promoName && t.promoGiftTotal ? Object(s.d)("{recipientButton} is continuing the Gift Sub they got from {gifterButton}!            They're one of {promoGiftTotal} gift subs to continue this {promoName}.", {
                     gifterButton: i,
                     promoGiftTotal: t.promoGiftTotal,
@@ -30555,7 +30409,7 @@
             ke.displayName = "GiftPaidUpgradeNoticeLine";
             n("xDdc");
             var Ce = function(e) {
-                return r.createElement(F.Ya, {
+                return a.createElement(x.Ya, {
                     className: "user-notice-line",
                     margin: {
                         y: .5
@@ -30577,29 +30431,29 @@
                             t = this.props.data,
                             n = t.channel,
                             i = t.loading,
-                            a = t.error;
-                        if (i || a) return null;
+                            r = t.error;
+                        if (i || r) return null;
                         var o = Object(s.d)("{displayName} is raiding with a party of {viewerCount}.", {
-                            displayName: r.createElement("strong", null, n.displayName),
-                            viewerCount: r.createElement("strong", null, e.viewerCount)
+                            displayName: a.createElement("strong", null, n.displayName),
+                            viewerCount: a.createElement("strong", null, e.viewerCount)
                         }, "RaidIncomingMessage");
-                        return r.createElement(Ce, {
+                        return a.createElement(Ce, {
                             "data-test-selector": "incoming-raid"
-                        }, r.createElement(F.Ya, {
-                            display: F.X.Flex,
-                            alignItems: F.f.Center
-                        }, r.createElement(F.q, {
+                        }, a.createElement(x.Ya, {
+                            display: x.X.Flex,
+                            alignItems: x.f.Center
+                        }, a.createElement(x.q, {
                             alt: n.displayName,
                             src: n.profileImageURL,
                             size: 30
-                        }), r.createElement(F.Fb, {
-                            color: F.O.Base,
+                        }), a.createElement(x.Fb, {
+                            color: x.O.Base,
                             margin: {
                                 left: 1
                             }
                         }, o)))
                     }, t
-                }(r.Component),
+                }(a.Component),
                 Ee = Object(C.a)(ye, {
                     options: function(e) {
                         return {
@@ -30610,8 +30464,8 @@
                     }
                 })(Se),
                 Ne = n("5zf8"),
-                we = n("x0+1"),
-                _e = function(e) {
+                _e = n("x0+1"),
+                we = function(e) {
                     function t() {
                         return null !== e && e.apply(this, arguments) || this
                     }
@@ -30638,10 +30492,10 @@
                                 break;
                             case p.d.FollowersOnly:
                                 var i = (e.args || [""]).join(" ").trim(),
-                                    a = parseInt(i, 10);
-                                n = a ? Object(s.d)("{user} enabled {length} followers-only mode for this room.", {
+                                    r = parseInt(i, 10);
+                                n = r ? Object(s.d)("{user} enabled {length} followers-only mode for this room.", {
                                     user: t,
-                                    length: Object(Ne.b)(60 * a)
+                                    length: Object(Ne.b)(60 * r)
                                 }, "ModerationActionLine") : Object(s.d)("{user} enabled followers-only mode for this room.", {
                                     user: t
                                 }, "ModerationActionLine");
@@ -30748,7 +30602,7 @@
                                     break;
                                 case p.d.Delete:
                                     var f = g || "";
-                                    n = r.createElement(we.a, {
+                                    n = a.createElement(_e.a, {
                                         targetLogin: u,
                                         moderatorLogin: t,
                                         messageBody: f
@@ -30758,13 +30612,13 @@
                                     return null
                             }
                         }
-                        return n ? r.createElement(F.Ya, {
+                        return n ? a.createElement(x.Ya, {
                             className: "chat-line__status"
-                        }, r.createElement(F.W, {
-                            type: F.Wb.Span
+                        }, a.createElement(x.W, {
+                            type: x.Wb.Span
                         }, n)) : null
                     }, t
-                }(r.Component);
+                }(a.Component);
 
             function Oe() {
                 return {
@@ -30783,12 +30637,12 @@
                 }
             }
             var Me = function(e) {
-                return r.createElement("span", null, Oe()[e.message.msgid])
+                return a.createElement("span", null, Oe()[e.message.msgid])
             };
             Me.displayName = "RaidNoticeLine";
             var De = n("+GjP"),
                 Ie = function(e) {
-                    var t = r.createElement(pe.a, {
+                    var t = a.createElement(pe.a, {
                             contentID: e.event.user.id,
                             login: e.event.user.username,
                             sourceType: X.a.chat_message
@@ -30801,7 +30655,7 @@
                                 ref: "subscriptionMessage",
                                 channel: e
                             });
-                            return r.createElement("a", {
+                            return a.createElement("a", {
                                 className: "chat-line__message--link",
                                 href: t,
                                 target: "_blank",
@@ -30811,20 +30665,20 @@
                     }, "SubNoticeLine") : Object(s.d)("{userLogin} just subscribed with a Tier {tierNumber} sub!", {
                         userLogin: t,
                         tierNumber: Object(he.b)(e.event.methods.plan) || 1
-                    }, "SubNoticeLine"), r.createElement(F.W, {
-                        color: F.O.Alt2,
-                        type: F.Wb.Span
+                    }, "SubNoticeLine"), a.createElement(x.W, {
+                        color: x.O.Alt2,
+                        type: x.Wb.Span
                     }, n)
                 };
             Ie.displayName = "SubNoticeLine";
             var Te = function(e) {
-                return r.createElement(F.Fb, {
-                    color: F.O.Alt2,
-                    display: F.X.Inline
-                }, r.createElement(Ie, {
+                return a.createElement(x.Fb, {
+                    color: x.O.Alt2,
+                    display: x.X.Inline
+                }, a.createElement(Ie, {
                     event: e.event
-                }), r.createElement("span", null, " "), Object(s.d)("{userLogin} subscribed for {months} months in a row!", {
-                    userLogin: r.createElement(pe.a, {
+                }), a.createElement("span", null, " "), Object(s.d)("{userLogin} subscribed for {months} months in a row!", {
+                    userLogin: a.createElement(pe.a, {
                         contentID: e.event.user.id,
                         login: e.event.user.username,
                         sourceType: X.a.chat_message
@@ -30834,35 +30688,35 @@
             };
             Te.displayName = "ResubNoticeLine";
             var Re = n("yZCp"),
-                Ae = function(e) {
+                Le = function(e) {
                     var t = e.event.message,
                         n = t.user.isIntl ? t.user.userDisplayName + " (" + t.user.userLogin + ")" : t.user.userDisplayName,
                         i = Object(s.d)("{user} is new here. Say hello!", {
-                            user: r.createElement(pe.a, {
+                            user: a.createElement(pe.a, {
                                 contentID: t.id,
                                 login: t.user.userLogin,
                                 sourceType: X.a.chat_message
                             }, "@", n)
                         }, "NewChatterRitual");
-                    return r.createElement(F.Fb, {
-                        color: F.O.Alt2
+                    return a.createElement(x.Fb, {
+                        color: x.O.Alt2
                     }, i)
                 };
-            Ae.displayName = "RitualNoticeLine";
-            var Le = function(e) {
+            Le.displayName = "RitualNoticeLine";
+            var je = function(e) {
                 var t = e.event,
-                    n = r.createElement(pe.a, {
+                    n = a.createElement(pe.a, {
                         contentID: t.user.id,
                         login: t.user.username,
                         sourceType: X.a.chat_message
                     }, Object(ue.a)(t.user.username, t.user.displayName)),
-                    i = r.createElement(pe.a, {
+                    i = a.createElement(pe.a, {
                         contentID: t.user.id,
                         login: t.recipientLogin,
                         sourceType: X.a.chat_message
                     }, Object(ue.a)(t.recipientLogin, t.recipientDisplayName)),
-                    a = null;
-                return a = "All-Access Pass" === t.methods.planName ? function(e, t) {
+                    r = null;
+                return r = "All-Access Pass" === t.methods.planName ? function(e, t) {
                     return Object(s.d)("{gifterButton} just gifted an All-Access Pass to {recipientButton}!", {
                         gifterButton: e,
                         recipientButton: t
@@ -30894,15 +30748,15 @@
                         recipientButton: t,
                         tierNumber: i
                     }, "SubGiftNoticeLine")
-                }(n, i, t.senderCount, Object(he.b)(t.methods.plan) || 1), r.createElement(F.W, {
-                    color: F.O.Alt2,
-                    type: F.Wb.Span
-                }, a)
+                }(n, i, t.senderCount, Object(he.b)(t.methods.plan) || 1), a.createElement(x.W, {
+                    color: x.O.Alt2,
+                    type: x.Wb.Span
+                }, r)
             };
-            Le.displayName = "SubGiftNoticeLine";
-            var je = function(e) {
+            je.displayName = "SubGiftNoticeLine";
+            var Ae = function(e) {
                 var t = e.event,
-                    n = r.createElement(pe.a, {
+                    n = a.createElement(pe.a, {
                         contentID: t.user.id,
                         login: t.user.username,
                         sourceType: X.a.chat_message
@@ -30923,33 +30777,33 @@
                         gifterButton: e,
                         massGiftCount: n
                     }, "SubMysteryGiftNoticeLine")
-                }(n, t.channel, t.massGiftCount, t.senderCount) : function(e, t, n, i, r) {
+                }(n, t.channel, t.massGiftCount, t.senderCount) : function(e, t, n, i, a) {
                     return 1 === i ? Object(s.d)("{massGiftCount, plural, one {{gifterButton} is gifting {massGiftCount} Tier {tierNumber} Sub to {channel}'s community. It's their first Gift Sub in the channel!} other {{gifterButton} is gifting {massGiftCount} Tier {tierNumber} Subs to {channel}'s community. It's their first Gift Sub in the channel!}}", {
                         channel: t,
                         gifterButton: e,
                         massGiftCount: n,
-                        tierNumber: r
+                        tierNumber: a
                     }, "SubMysteryGiftNoticeLine") : i > 1 ? Object(s.d)("{massGiftCount, plural, one {{gifterButton} is gifting {massGiftCount} Tier {tierNumber} Sub to {channel}'s community. They've gifted a total of {senderCount} in the channel!} other {{gifterButton} is gifting {massGiftCount} Tier {tierNumber} Subs to {channel}'s community. They've gifted a total of {senderCount} in the channel!}}", {
                         channel: t,
                         gifterButton: e,
                         massGiftCount: n,
                         senderCount: i,
-                        tierNumber: r
+                        tierNumber: a
                     }, "SubMysteryGiftNoticeLine") : Object(s.d)("{massGiftCount, plural, one {{gifterButton} is gifting {massGiftCount} Tier {tierNumber} Sub to {channel}'s community!} other {{gifterButton} is gifting {massGiftCount} Tier {tierNumber} Subs to {channel}'s community!}}", {
                         channel: t,
                         gifterButton: e,
                         massGiftCount: n,
-                        tierNumber: r
+                        tierNumber: a
                     }, "SubMysteryGiftNoticeLine")
-                }(n, t.channel, t.massGiftCount, t.senderCount, Object(he.b)(t.plan) || 1), r.createElement(F.W, {
-                    color: F.O.Alt2,
-                    type: F.Wb.Span
+                }(n, t.channel, t.massGiftCount, t.senderCount, Object(he.b)(t.plan) || 1), a.createElement(x.W, {
+                    color: x.O.Alt2,
+                    type: x.Wb.Span
                 }, i)
             };
-            je.displayName = "SubMysteryGiftNoticeLine";
-            var Be, Ue = n("+kC+"),
-                xe = n("cr+I"),
-                Fe = Object(k.compose)(Object(C.a)(Ue, {
+            Ae.displayName = "SubMysteryGiftNoticeLine";
+            var Ue, Be = n("+kC+"),
+                Fe = n("cr+I"),
+                xe = Object(k.compose)(Object(C.a)(Be, {
                     options: function(e) {
                         return {
                             variables: {
@@ -30967,21 +30821,21 @@
                         });
                         i && (n = i.url)
                     }
-                    if (!n) return r.createElement(F.Ya, null, Object(s.d)("This room is in subscribers only mode.", "SubsOnlyUpsellLine"));
-                    var a = r.createElement(F.U, {
+                    if (!n) return a.createElement(x.Ya, null, Object(s.d)("This room is in subscribers only mode.", "SubsOnlyUpsellLine"));
+                    var r = a.createElement(x.U, {
                         targetBlank: !0,
-                        to: n + "?" + xe.stringify({
+                        to: n + "?" + Fe.stringify({
                             ref: "subscriber_only_mode_chat"
                         })
                     }, n);
-                    return r.createElement(F.Ya, null, Object(s.d)("This room is in subscribers only mode. To talk, purchase a channel subscription at {productLink}", {
-                        productLink: a
+                    return a.createElement(x.Ya, null, Object(s.d)("This room is in subscribers only mode. To talk, purchase a channel subscription at {productLink}", {
+                        productLink: r
                     }, "SubsOnlyUpsellLine"))
                 }),
                 Pe = n("k8pZ");
             ! function(e) {
                 e.Timestamp = "extension-message-timestamp", e.ExtensionName = "extension-message-name"
-            }(Be || (Be = {}));
+            }(Ue || (Ue = {}));
             var He = function(e) {
                 function t() {
                     var t = null !== e && e.apply(this, arguments) || this;
@@ -30998,23 +30852,23 @@
                             return n.clientId === e.extension.clientID && n.version === e.extension.version
                         })) return null;
                     var t = this.props.message.extension.displayBadges;
-                    return r.createElement(F.Ya, {
+                    return a.createElement(x.Ya, {
                         padding: {
                             x: 2,
                             y: .5
                         }
-                    }, r.createElement("div", {
+                    }, a.createElement("div", {
                         id: this.props.message.id,
                         className: "room-message"
-                    }, this.renderTimestamp(), r.createElement(w.b, {
+                    }, this.renderTimestamp(), a.createElement(_.b, {
                         badgeSets: this.props.badgeSets,
                         badgesToRender: t
-                    }), this.renderMessageAuthor(this.props.message.extension), r.createElement("span", null, ": "), this.renderMessageBody()))
+                    }), this.renderMessageAuthor(this.props.message.extension), a.createElement("span", null, ": "), this.renderMessageBody()))
                 }, t.prototype.renderTimestamp = function() {
-                    return this.props.showTimestamps ? r.createElement("span", {
+                    return this.props.showTimestamps ? a.createElement("span", {
                         key: "timestamp",
                         className: "room-message__timestamp",
-                        "data-test-selector": Be.Timestamp
+                        "data-test-selector": Ue.Timestamp
                     }, Object(Y.a)(new Date(this.props.message.sentAt))) : null
                 }, t.prototype.renderMessageBody = function() {
                     var e = Object(m.g)(this.props.message);
@@ -31022,22 +30876,22 @@
                         forceClipsNetworkRequest: !0
                     })
                 }, t.prototype.renderMessageAuthor = function(e) {
-                    return r.createElement("button", {
+                    return a.createElement("button", {
                         onClick: this.onExtensionNameClick,
-                        "data-test-selector": Be.ExtensionName
-                    }, r.createElement("span", {
+                        "data-test-selector": Ue.ExtensionName
+                    }, a.createElement("span", {
                         key: e.clientID + "-" + e.version + "-messageauthor"
-                    }, r.createElement("span", {
+                    }, a.createElement("span", {
                         key: "username-display",
                         style: {
                             color: e.chatColor
                         }
-                    }, r.createElement(F.W, {
+                    }, a.createElement(x.W, {
                         bold: !0
                     }, e.displayName))))
                 }, t
-            }(r.Component);
-            var We, Ve = Object(k.compose)(Object(a.connect)(function(e, t) {
+            }(a.Component);
+            var We, Ve = Object(k.compose)(Object(r.connect)(function(e, t) {
                     return {
                         installedExtensions: Object(Pe.a)(e, t.channelID)
                     }
@@ -31054,7 +30908,7 @@
                 var t = null;
                 switch (e.type) {
                     case We.Kickback:
-                        var n = r.createElement(F.U, {
+                        var n = a.createElement(x.U, {
                             targetBlank: !0,
                             to: Ge
                         }, Ge);
@@ -31077,7 +30931,7 @@
                     default:
                         return null
                 }
-                return r.createElement(F.Ya, null, t)
+                return a.createElement(x.Ya, null, t)
             };
             Ye.displayName = "BlizzardConnectNoticeLine";
             n("NWfm");
@@ -31146,7 +31000,7 @@
                                 case p.b.Resubscription:
                                 case p.b.GiftPaidUpgrade:
                                 case p.b.AnonGiftPaidUpgrade:
-                                    t = r.createElement(G, {
+                                    t = a.createElement(G, {
                                         channelID: this.props.channelID,
                                         onPushMessage: this.props.onPushMessage,
                                         senderLogin: e.user.username,
@@ -31156,7 +31010,7 @@
                         }
                         switch (e.type) {
                             case p.b.AutoMod:
-                                return e.autoModType !== p.a.MessageRejectedPrompt || this.props.isCurrentUserModerator && this.props.showAutoModActions ? r.createElement(de, {
+                                return e.autoModType !== p.a.MessageRejectedPrompt || this.props.isCurrentUserModerator && this.props.showAutoModActions ? a.createElement(de, {
                                     channelID: this.props.channelID,
                                     message: e,
                                     badgeSets: this.props.badgeSets,
@@ -31167,50 +31021,50 @@
                                     confirmModerationAction: this.props.confirmModerationAction
                                 }) : null;
                             case p.b.ModerationAction:
-                                return this.props.isCurrentUserModerator && this.props.showModerationActions ? r.createElement(_e, {
+                                return this.props.isCurrentUserModerator && this.props.showModerationActions ? a.createElement(we, {
                                     moderationActionEvent: e
                                 }) : null;
                             case p.b.Connected:
-                                return r.createElement(F.Ya, {
+                                return a.createElement(x.Ya, {
                                     className: "chat-line__status",
                                     "data-a-target": "chat-welcome-message"
-                                }, r.createElement(F.W, {
-                                    type: F.Wb.Span
+                                }, a.createElement(x.W, {
+                                    type: x.Wb.Span
                                 }, Object(s.d)("Welcome to the chat room!", "ChatLine")));
                             case p.b.Disconnected:
-                                return e.reason ? r.createElement(F.Ya, {
+                                return e.reason ? a.createElement(x.Ya, {
                                     className: "chat-line__status"
-                                }, r.createElement(F.W, {
-                                    type: F.Wb.Span
+                                }, a.createElement(x.W, {
+                                    type: x.Wb.Span
                                 }, Object(s.d)("You have been disconnected from chat for the following reason: {reason}", {
                                     reason: e.reason
-                                }, "ChatLine"))) : r.createElement(F.Ya, {
+                                }, "ChatLine"))) : a.createElement(x.Ya, {
                                     className: "chat-line__status"
-                                }, r.createElement(F.W, {
-                                    type: F.Wb.Span
+                                }, a.createElement(x.W, {
+                                    type: x.Wb.Span
                                 }, Object(s.d)("Sorry, we were unable to connect to chat. Attempting to reconnect...", "ChatLine")));
                             case p.b.Hosted:
-                                return r.createElement(F.Ya, {
+                                return a.createElement(x.Ya, {
                                     className: "chat-line__status"
-                                }, r.createElement(F.W, {
-                                    type: F.Wb.Span
+                                }, a.createElement(x.W, {
+                                    type: x.Wb.Span
                                 }, Object(Y.e)(e)));
                             case p.b.Hosting:
-                                return r.createElement(F.Ya, {
+                                return a.createElement(x.Ya, {
                                     className: "chat-line__status"
-                                }, r.createElement(F.W, {
-                                    type: F.Wb.Span
+                                }, a.createElement(x.W, {
+                                    type: x.Wb.Span
                                 }, Object(s.d)("Now hosting {channel}", {
                                     channel: e.hostedChannel
                                 }, "ChatLine")));
                             case p.b.Unhost:
-                                return r.createElement(F.Ya, {
+                                return a.createElement(x.Ya, {
                                     className: "chat-line__status"
-                                }, r.createElement(F.W, {
-                                    type: F.Wb.Span
+                                }, a.createElement(x.W, {
+                                    type: x.Wb.Span
                                 }, Object(s.d)("No longer hosting.", "ChatLine")));
                             case p.b.Message:
-                                return this.props.onRenderReportChatSent && e.user.userLogin === this.props.currentUserLogin && this.props.onRenderReportChatSent(), r.createElement(J, {
+                                return this.props.onRenderReportChatSent && e.user.userLogin === this.props.currentUserLogin && this.props.onRenderReportChatSent(), a.createElement(J, {
                                     channelID: this.props.channelID,
                                     badgeSets: this.props.badgeSets,
                                     message: e,
@@ -31228,9 +31082,9 @@
                                     theme: this.props.theme
                                 });
                             case p.b.FirstCheerMessage:
-                                return r.createElement(Ce, null, r.createElement(ve, {
+                                return a.createElement(Ce, null, a.createElement(ve, {
                                     event: e
-                                }), r.createElement(F.Ya, null, r.createElement(J, {
+                                }), a.createElement(x.Ya, null, a.createElement(J, {
                                     badgeSets: this.props.badgeSets,
                                     confirmModerationAction: this.props.confirmModerationAction,
                                     channelID: this.props.channelID,
@@ -31248,11 +31102,11 @@
                                     useHighContrastColors: !!this.props.useHighContrastColors
                                 })));
                             case p.b.Moderation:
-                                return this.props.isCurrentUserModerator && !this.props.showModerationActions ? r.createElement(F.Ya, {
+                                return this.props.isCurrentUserModerator && !this.props.showModerationActions ? a.createElement(x.Ya, {
                                     className: "chat-line__moderation"
                                 }, Object(Y.g)(e)) : null;
                             case p.b.Subscription:
-                                return r.createElement(Ce, null, t, r.createElement(Ie, {
+                                return a.createElement(Ce, null, t, a.createElement(Ie, {
                                     event: e
                                 }));
                             case p.b.SubGift:
@@ -31266,15 +31120,15 @@
                                         recipientID: e.recipientID,
                                         recipientLogin: e.recipientLogin
                                     };
-                                    return r.createElement(Ce, null, r.createElement(fe, {
+                                    return a.createElement(Ce, null, a.createElement(fe, {
                                         event: n
                                     }))
                                 }
-                                return r.createElement(Ce, null, t, r.createElement(Le, {
+                                return a.createElement(Ce, null, t, a.createElement(je, {
                                     event: e
                                 }));
                             case p.b.AnonSubGift:
-                                return r.createElement(Ce, null, r.createElement(fe, {
+                                return a.createElement(Ce, null, a.createElement(fe, {
                                     event: e
                                 }));
                             case p.b.SubMysteryGift:
@@ -31286,24 +31140,24 @@
                                         plan: e.plan,
                                         massGiftCount: e.massGiftCount
                                     };
-                                    return r.createElement(Ce, null, r.createElement(be, {
+                                    return a.createElement(Ce, null, a.createElement(be, {
                                         event: n
                                     }))
                                 }
-                                return r.createElement(Ce, null, t, r.createElement(je, {
+                                return a.createElement(Ce, null, t, a.createElement(Ae, {
                                     event: e
                                 }));
                             case p.b.AnonSubMysteryGift:
-                                return r.createElement(Ce, null, r.createElement(be, {
+                                return a.createElement(Ce, null, a.createElement(be, {
                                     event: e
                                 }));
                             case p.b.RewardGift:
-                                return r.createElement(Re.a, {
+                                return a.createElement(Re.a, {
                                     event: e,
                                     channelID: this.props.channelID
                                 });
                             case p.b.BitsCharity:
-                                return r.createElement(F.Ya, {
+                                return a.createElement(x.Ya, {
                                     className: "chat-line__bits-charity",
                                     padding: {
                                         right: 2,
@@ -31312,7 +31166,7 @@
                                 }, Object(Y.b)(e));
                             case p.b.Resubscription:
                                 var i = null;
-                                return e.message && (i = r.createElement(J, {
+                                return e.message && (i = a.createElement(J, {
                                     badgeSets: this.props.badgeSets,
                                     confirmModerationAction: this.props.confirmModerationAction,
                                     channelID: this.props.channelID,
@@ -31328,58 +31182,58 @@
                                     showModerationIcons: this.props.showModerationIcons,
                                     showTimestamps: this.props.showTimestamps,
                                     useHighContrastColors: !!this.props.useHighContrastColors
-                                })), r.createElement(Ce, null, !i && t, r.createElement(Te, {
+                                })), a.createElement(Ce, null, !i && t, a.createElement(Te, {
                                     event: e
-                                }), r.createElement(F.Ya, null, i));
+                                }), a.createElement(x.Ya, null, i));
                             case p.b.GiftPaidUpgrade:
-                                return r.createElement(Ce, null, t, r.createElement(ke, {
+                                return a.createElement(Ce, null, t, a.createElement(ke, {
                                     event: e
                                 }));
                             case p.b.AnonGiftPaidUpgrade:
-                                return r.createElement(Ce, null, t, r.createElement(me, {
+                                return a.createElement(Ce, null, t, a.createElement(me, {
                                     event: e
                                 }));
                             case p.b.RoomMods:
-                                return r.createElement(F.Ya, {
+                                return a.createElement(x.Ya, {
                                     className: "chat-line__status"
                                 }, Object(Y.i)(e.moderatorLogins));
                             case p.b.SlowMode:
-                                return r.createElement(F.Ya, {
+                                return a.createElement(x.Ya, {
                                     className: "chat-line__status"
                                 }, Object(Y.j)(e));
                             case p.b.SubscriberOnlyMode:
-                                return r.createElement(F.Ya, {
+                                return a.createElement(x.Ya, {
                                     className: "chat-line__status"
                                 }, Object(Y.k)(e));
                             case p.b.FollowerOnlyMode:
-                                return r.createElement(F.Ya, {
+                                return a.createElement(x.Ya, {
                                     className: "chat-line__status"
                                 }, Object(Y.d)(e));
                             case p.b.EmoteOnlyMode:
-                                return r.createElement(F.Ya, {
+                                return a.createElement(x.Ya, {
                                     className: "chat-line__status"
                                 }, Object(Y.c)(e));
                             case p.b.R9KMode:
-                                return r.createElement(F.Ya, {
+                                return a.createElement(x.Ya, {
                                     className: "chat-line__status"
                                 }, Object(Y.h)(e));
                             case p.b.Clear:
-                                return r.createElement(F.Ya, {
+                                return a.createElement(x.Ya, {
                                     className: "chat-line__status"
                                 }, Object(s.d)("Chat was cleared by a moderator", "ChatLine"));
                             case p.b.Notice:
                                 if (function(e) {
                                         return e.msgid in Oe()
-                                    }(e)) return r.createElement(F.Ya, {
+                                    }(e)) return a.createElement(x.Ya, {
                                     className: "chat-line__status"
-                                }, r.createElement(Me, {
+                                }, a.createElement(Me, {
                                     message: e
                                 }));
                                 switch (e.msgid) {
                                     case "msg_subsonly":
-                                        return r.createElement(F.Ya, {
+                                        return a.createElement(x.Ya, {
                                             className: "chat-line__status"
-                                        }, r.createElement(Fe, {
+                                        }, a.createElement(xe, {
                                             channelID: this.props.channelID
                                         }));
                                     case We.Kickback:
@@ -31387,9 +31241,9 @@
                                     case We.Disabled:
                                     case We.AlreadyEnabled:
                                     case We.AlreadyDisabled:
-                                        return r.createElement(F.Ya, {
+                                        return a.createElement(x.Ya, {
                                             className: "chat-line__status"
-                                        }, r.createElement(Ye, {
+                                        }, a.createElement(Ye, {
                                             type: e.msgid
                                         }))
                                 }
@@ -31402,25 +31256,25 @@
                                     case Ke:
                                         if (this.props.showModerationActions) return null
                                 }
-                                return r.createElement(F.Ya, {
+                                return a.createElement(x.Ya, {
                                     className: "chat-line__status"
                                 }, e.message);
                             case p.b.Info:
-                                return r.createElement(F.Ya, {
+                                return a.createElement(x.Ya, {
                                     className: "chat-line__status"
                                 }, e.message);
                             case p.b.Raid:
-                                return r.createElement(Ee, {
+                                return a.createElement(Ee, {
                                     message: e
                                 });
                             case p.b.Unraid:
-                                return r.createElement(Ce, null, r.createElement(F.W, {
-                                    color: F.O.Alt2
+                                return a.createElement(Ce, null, a.createElement(x.W, {
+                                    color: x.O.Alt2
                                 }, Object(s.d)("The raid has been cancelled.", "RaidCancelMessage")));
                             case p.b.Ritual:
-                                return r.createElement(Ce, null, r.createElement(Ae, {
+                                return a.createElement(Ce, null, a.createElement(Le, {
                                     event: e
-                                }), r.createElement(J, {
+                                }), a.createElement(J, {
                                     badgeSets: this.props.badgeSets,
                                     confirmModerationAction: this.props.confirmModerationAction,
                                     channelID: this.props.channelID,
@@ -31438,7 +31292,7 @@
                                     useHighContrastColors: !!this.props.useHighContrastColors
                                 }));
                             case p.b.ExtensionMessage:
-                                return r.createElement(Ve, {
+                                return a.createElement(Ve, {
                                     badgeSets: this.props.badgeSets,
                                     channelID: this.props.channelID,
                                     currentUserLogin: this.props.currentUserLogin,
@@ -31449,7 +31303,7 @@
                                 return null
                         }
                     }, t
-                }(r.Component),
+                }(a.Component),
                 Je = n("GnwI"),
                 et = (n("HjUq"), ["scroll", "wheel", "mousewheel", "DOMMouseScroll", "keyup", "mousedown"]),
                 tt = 10,
@@ -31495,7 +31349,7 @@
                     }, t.prototype.render = function() {
                         var e = this,
                             t = this.props.messages.map(function(t) {
-                                return r.createElement(Ze, {
+                                return a.createElement(Ze, {
                                     badgeSets: e.props.badgeSets,
                                     channelID: e.props.channelID,
                                     isCurrentUserModerator: e.props.isCurrentUserModerator,
@@ -31516,58 +31370,58 @@
                                     onRenderReportChatSent: e.reportChatRenderSent
                                 })
                             });
-                        return r.createElement(F.Ya, {
+                        return a.createElement(x.Ya, {
                             refDelegate: this.props.containerRef,
                             className: "chat-list",
-                            display: F.X.Flex,
-                            flexDirection: F.Aa.Column,
-                            flexWrap: F.Ba.NoWrap,
-                            overflow: F.db.Hidden,
+                            display: x.X.Flex,
+                            flexDirection: x.Aa.Column,
+                            flexWrap: x.Ba.NoWrap,
+                            overflow: x.db.Hidden,
                             flexGrow: 1
-                        }, r.createElement(f.a, {
+                        }, a.createElement(f.a, {
                             onResize: this.handleResize
-                        }), r.createElement(F.Qa, {
+                        }), a.createElement(x.Qa, {
                             flexGrow: 1
-                        }, r.createElement(b.b, {
+                        }, a.createElement(b.b, {
                             className: "chat-list__lines",
                             scrollRef: this.saveScrollRef,
                             "data-a-target": "chat-scroller"
-                        }, r.createElement(F.Qa, {
+                        }, a.createElement(x.Qa, {
                             flexGrow: 1,
                             fullHeight: !0,
                             padding: {
                                 bottom: 1
                             }
-                        }, r.createElement("div", {
+                        }, a.createElement("div", {
                             role: "log"
-                        }, t)))), r.createElement(F.Ya, {
+                        }, t)))), a.createElement(x.Ya, {
                             className: "chat-list__more-messages-placeholder",
-                            position: F.kb.Relative,
+                            position: x.kb.Relative,
                             margin: {
                                 x: 2
                             }
                         }, this.moreMessages()))
                     }, t.prototype.moreMessages = function() {
-                        return this.state.isAutoScrolling ? null : r.createElement(F.Qa, {
-                            display: F.X.Flex,
-                            justifyContent: F.Xa.Center,
-                            alignItems: F.f.Center,
-                            position: F.kb.Absolute,
+                        return this.state.isAutoScrolling ? null : a.createElement(x.Qa, {
+                            display: x.X.Flex,
+                            justifyContent: x.Xa.Center,
+                            alignItems: x.f.Center,
+                            position: x.kb.Absolute,
                             padding: .5,
                             attachBottom: !0,
                             fullWidth: !0
-                        }, r.createElement(F.Fb, {
+                        }, a.createElement(x.Fb, {
                             className: "chat-list__more-messages",
-                            borderRadius: F.x.Medium
-                        }, r.createElement("div", {
+                            borderRadius: x.x.Medium
+                        }, a.createElement("div", {
                             onClick: this.handleClickMoreMessages
                         }, Object(s.d)("More messages below.", "ChatList"))))
                     }, t
-                }(r.Component),
+                }(a.Component),
                 it = Object(Je.b)("ChatListPresentation", {
                     autoReportInteractive: !0
                 })(nt),
-                rt = function(e) {
+                at = function(e) {
                     function t() {
                         var t = null !== e && e.apply(this, arguments) || this;
                         return t.state = {
@@ -31641,7 +31495,7 @@
                     }, t.prototype.componentWillUnmount = function() {
                         this.props.messageBufferAPI && this.props.messageBufferAPI.removeUpdateHandler(this.onBufferUpdate), this.clearBufferHandle()
                     }, t.prototype.render = function() {
-                        return r.createElement(it, {
+                        return a.createElement(it, {
                             channelID: this.props.channelID,
                             badgeSets: this.props.badgeSets,
                             currentUserDisplayName: this.props.currentUserDisplayName,
@@ -31663,8 +31517,8 @@
                             confirmModerationAction: this.props.confirmModerationAction
                         })
                     }, t
-                }(r.Component);
-            var at = Object(o.compose)(Object(a.connect)(function(e) {
+                }(a.Component);
+            var rt = Object(o.compose)(Object(r.connect)(function(e) {
                 return {
                     chatRenderSentEvent: Object(g.b)(e),
                     showAutoModActions: e.chat.showAutoModActions,
@@ -31681,11 +31535,11 @@
                     return e.channelID ? Object(d.z)(e.channelID) : ""
                 },
                 mapMessageTypesToProps: (ze = {}, ze[c.PubsubMessageType.StreamChatRoomChatRichEmbed] = "chatRichEmbedInfo", ze[c.PubsubMessageType.StreamChatRoomExtensionMessage] = "extensionMessage", ze)
-            }]), h.a)(rt);
+            }]), h.a)(at);
             n.d(t, !1, function() {
-                return rt
-            }), n.d(t, "a", function() {
                 return at
+            }), n.d(t, "a", function() {
+                return rt
             })
         },
         r2Xj: function(e, t, n) {
@@ -31719,19 +31573,19 @@
                 return u
             });
             var i = n("+GjP"),
-                r = "https://www.facebook.com/sharer/sharer.php",
-                a = "https://www.twitter.com/share",
+                a = "https://www.facebook.com/sharer/sharer.php",
+                r = "https://www.twitter.com/share",
                 o = "https://www.reddit.com/submit",
                 s = "https://vk.com/share.php";
 
             function l(e) {
-                return Object(i.e)(r, {
+                return Object(i.e)(a, {
                     u: e
                 })
             }
 
             function c(e, t) {
-                return Object(i.e)(a, {
+                return Object(i.e)(r, {
                     url: e,
                     text: t
                 })
@@ -31825,8 +31679,8 @@
         },
         ry0r: function(e, t, n) {
             "use strict";
-            var i, r = n("/MKj"),
-                a = n("kRBY"),
+            var i, a = n("/MKj"),
+                r = n("kRBY"),
                 o = n("mrSG"),
                 s = n("q1tI"),
                 l = n("oJmH"),
@@ -31852,8 +31706,8 @@
                         var e = this.props,
                             t = e.onUserClose,
                             n = e.children,
-                            r = e.className,
-                            a = e.dataATarget,
+                            a = e.className,
+                            r = e.dataATarget,
                             o = e.closeDataATarget,
                             l = t ? s.createElement(v.Ya, {
                                 position: v.kb.Absolute,
@@ -31875,8 +31729,8 @@
                             })) : null;
                         return s.createElement(v.Fb, {
                             "data-test-selector": i.OuterWrapper,
-                            className: f("bits-card-wrapper", r),
-                            "data-a-target": a,
+                            className: f("bits-card-wrapper", a),
+                            "data-a-target": r,
                             display: v.X.Flex,
                             flexDirection: v.Aa.Column,
                             position: v.kb.Absolute,
@@ -31908,429 +31762,9 @@
                         italic: !0
                     }, Object(c.d)("Have no fear, your Bits inventory is safe! The ability to Cheer will return shortly.", "BitsCard")))
                 },
-                E = n("VeT4"),
+                E = n("jv9u"),
                 N = n("/0dD"),
-                w = n("XDQu");
-            n("ZfCj");
-            (k || (k = {})).Placeholder = "placeholder";
-            var _ = function(e) {
-                function t() {
-                    var t = null !== e && e.apply(this, arguments) || this;
-                    return t.handleCheermoteHover = function(e) {
-                        var n = e.currentTarget.getAttribute("data-key");
-                        n && t.props.onHover && t.props.onHover(n)
-                    }, t.handleCheermoteUnhover = function() {
-                        t.props.onHoverLeave && t.props.onHoverLeave()
-                    }, t.handleCheermoteClick = function(e) {
-                        var n = e.currentTarget.getAttribute("data-key");
-                        n && t.props.onClick && t.props.onClick(n)
-                    }, t
-                }
-                return o.__extends(t, e), t.prototype.render = function() {
-                    return this.props.cheermote && this.props.cheermote.key ? s.createElement("li", {
-                        className: f("cheermote-button", this.props.className)
-                    }, s.createElement("button", {
-                        className: "cheermote-button__button",
-                        "data-key": this.props.cheermote.key,
-                        onMouseEnter: this.handleCheermoteHover,
-                        onMouseLeave: this.handleCheermoteUnhover,
-                        onClick: this.handleCheermoteClick,
-                        "data-a-target": "cheermote-" + this.props.cheermote.key.replace(":", "")
-                    }, s.createElement("img", {
-                        alt: this.props.cheermote.key,
-                        src: this.props.darkModeEnabled ? this.props.cheermote.imgSrcDark : this.props.cheermote.imgSrc
-                    })), this.props.children) : s.createElement("li", {
-                        "data-test-selector": k.Placeholder
-                    }, s.createElement("button", {
-                        className: "cheermote-button__button",
-                        disabled: !0
-                    }, s.createElement("div", {
-                        className: "cheermote-button__placeholder"
-                    })))
-                }, t
-            }(s.PureComponent);
-            var O, M = Object(r.connect)(function(e) {
-                    return {
-                        darkModeEnabled: Object(w.a)(e) === N.a.Dark
-                    }
-                })(_),
-                D = n("5zXJ");
-            (O || (O = {})).MinBitsAmountDisclaimer = "min-bits-amount-disclaimer";
-            var I = ["cheer", "shamrock", "frankerz", "party"],
-                T = function(e) {
-                    function t() {
-                        var t = null !== e && e.apply(this, arguments) || this;
-                        return t.makeCheermoteButtons = function(e) {
-                            var n = t.props.bitsConfig.indexedActions[e];
-                            return t.makeCheermoteButton(n)
-                        }, t.makeCheermoteButton = function(e) {
-                            if (e) {
-                                var n = e.indexedTiers.get(D.m);
-                                if (n) {
-                                    var i = {
-                                        key: e.prefix,
-                                        imgSrc: n.indexedImages.LIGHT.static.get(2),
-                                        imgSrcDark: n.indexedImages.DARK.static.get(2)
-                                    };
-                                    return s.createElement(M, {
-                                        key: i.key,
-                                        cheermote: i,
-                                        onClick: t.props.onCheermoteClick
-                                    })
-                                }
-                            }
-                        }, t
-                    }
-                    return o.__extends(t, e), t.prototype.render = function() {
-                        var e = this,
-                            t = I.map(this.makeCheermoteButtons),
-                            n = this.props.bitsConfig.orderedActions.find(function(e) {
-                                return e.type === D.e
-                            });
-                        return n && (t[1] = this.makeCheermoteButton(n)), s.createElement(v.Ya, {
-                            className: "first-cheer-builder",
-                            display: v.X.Flex,
-                            flexDirection: v.Aa.Column,
-                            padding: {
-                                top: 3
-                            },
-                            justifyContent: v.Xa.Between
-                        }, s.createElement(v.Ya, {
-                            display: v.X.Flex,
-                            flexDirection: v.Aa.Column,
-                            textAlign: v.Sb.Center
-                        }, s.createElement(v.W, {
-                            bold: !0,
-                            type: v.Wb.H4
-                        }, Object(c.d)("Support your streamer with Bits", "FirstCheerPrefixSelector")), s.createElement(v.Ya, {
-                            padding: {
-                                x: 4,
-                                top: .5
-                            },
-                            textAlign: v.Sb.Left
-                        }, s.createElement(v.W, {
-                            type: v.Wb.Span
-                        }, Object(c.d)("Twitch rewards streamers when you use Bits. Send {channelName} some love! First select a cheermote.", {
-                            channelName: this.props.channelName
-                        }, "FirstCheerPrefixSelector"))), !this.props.canCheerInChannel && s.createElement(v.Ya, {
-                            padding: {
-                                top: 1
-                            }
-                        }, s.createElement(v.W, {
-                            "data-test-selector": O.MinBitsAmountDisclaimer,
-                            type: v.Wb.Span,
-                            italic: !0
-                        }, Object(c.d)("{channelName} requires <x:bitsAmount></x:bitsAmount> to cheer in this channel", {
-                            channelName: this.props.channelName,
-                            "x:bitsAmount": function() {
-                                return s.createElement(E.a, {
-                                    count: e.props.minCheerAmount,
-                                    bitsConfig: e.props.bitsConfig,
-                                    withImage: !1,
-                                    withText: !0
-                                })
-                            }
-                        }, "FirstCheerPrefixSelector")))), s.createElement(v.Qa, {
-                            display: v.X.Flex,
-                            flexDirection: v.Aa.Row,
-                            justifyContent: v.Xa.Center
-                        }, s.createElement("ol", null, t)), s.createElement(v.Ya, {
-                            padding: {
-                                x: 2,
-                                bottom: .5
-                            },
-                            fullWidth: !0
-                        }, s.createElement(v.z, {
-                            "data-a-target": "bits-card-back-button",
-                            type: v.F.Text,
-                            fullWidth: !0,
-                            onClick: this.props.onShowAllCheermotes
-                        }, Object(c.d)("Show All Cheermotes", "FirstCheerPrefixSelector"))))
-                    }, t
-                }(s.PureComponent),
-                R = n("8/mp"),
-                A = n("3CMh"),
-                L = function(e) {
-                    var t = e.headline || e.prefix + (e.tier || "");
-                    if (e.tournament && e.tier <= 0) {
-                        var n = e.tournament.teams.find(function(t) {
-                            return t.id === e.prefix
-                        });
-                        n && (t = n.name + " - " + e.prefix)
-                    }
-                    return s.createElement(v.Ya, {
-                        display: v.X.Flex,
-                        flexDirection: v.Aa.Column,
-                        alignItems: v.f.Center,
-                        padding: 1
-                    }, !e.hideHeadline && s.createElement(v.W, {
-                        type: v.Wb.H4,
-                        bold: !0
-                    }, t), s.createElement(A.a, {
-                        prefix: e.prefix,
-                        amount: e.tier,
-                        bitsConfig: e.bitsConfig,
-                        showImage: !0,
-                        showAmount: e.tier > 0
-                    }))
-                },
-                j = (n("ecb7"), function(e) {
-                    var t = e.prefixes.map(function(t, n) {
-                        if (t.alt && t.cheerAmount) return s.createElement(v.Qa, {
-                            className: "pending-cheer-list__list-item",
-                            key: n,
-                            padding: {
-                                x: 1
-                            }
-                        }, s.createElement("li", null, s.createElement(A.a, {
-                            prefix: t.alt,
-                            amount: t.cheerAmount > D.p ? D.p : t.cheerAmount,
-                            bitsConfig: e.bitsConfig,
-                            size: A.b.Small,
-                            showAmount: !0,
-                            showImage: !0
-                        })))
-                    });
-                    return s.createElement(v.Ya, {
-                        display: v.X.Flex,
-                        flexDirection: v.Aa.Row,
-                        alignItems: v.f.End,
-                        justifyContent: v.Xa.Center,
-                        flexWrap: v.Ba.Wrap,
-                        margin: {
-                            top: 1
-                        },
-                        className: "pending-cheer-list"
-                    }, t)
-                }),
-                B = (n("ECxT"), function(e) {
-                    function t() {
-                        var t = null !== e && e.apply(this, arguments) || this;
-                        return t.handleCheermoteHover = function(e) {
-                            var n = e.currentTarget.getAttribute("data-key");
-                            n && t.props.onHover(n)
-                        }, t.handleCheermoteUnhover = function() {
-                            t.props.onHoverLeave()
-                        }, t.handleCheermoteClick = function(e) {
-                            var n = e.currentTarget.getAttribute("data-key");
-                            n && t.props.onClick(n)
-                        }, t
-                    }
-                    return o.__extends(t, e), t.prototype.render = function() {
-                        var e = this,
-                            t = this.props.bitsConfig.indexedActions[this.props.chosenCheermote.toLowerCase()],
-                            n = t.orderedTiers.filter(function(e) {
-                                return e.canCheer && e.canShowInBitsCard
-                            }).map(function(e) {
-                                return {
-                                    imgSrc: e.indexedImages.LIGHT.static.get(2),
-                                    imgSrcDark: e.indexedImages.DARK.static.get(2),
-                                    key: t.prefix + ":" + e.bits
-                                }
-                            }).reverse().map(function(t, n) {
-                                return t && t.key ? s.createElement("li", {
-                                    key: t.key,
-                                    className: "cheermote-tier-selector__cheermote"
-                                }, s.createElement("button", {
-                                    className: "cheermote-tier-selector__item-button",
-                                    "data-key": t.key,
-                                    onMouseEnter: e.handleCheermoteHover,
-                                    onMouseLeave: e.handleCheermoteUnhover,
-                                    onClick: e.handleCheermoteClick,
-                                    "data-a-target": "cheermote-" + t.key.replace(":", "")
-                                }, s.createElement("img", {
-                                    alt: t.key,
-                                    src: e.props.darkModeEnabled ? t.imgSrcDark : t.imgSrc
-                                })), s.createElement(A.a, {
-                                    bitsConfig: e.props.bitsConfig,
-                                    prefix: "",
-                                    amount: +t.key.split(":")[1],
-                                    showImage: !1,
-                                    showAmount: !0,
-                                    size: A.b.Small
-                                })) : s.createElement("li", {
-                                    key: "null-cheermote-" + n
-                                }, s.createElement("button", {
-                                    className: "cheermote-tier-selector__item-button",
-                                    disabled: !0
-                                }, s.createElement("div", {
-                                    className: "cheermote-tier-selector__placeholder"
-                                })))
-                            }),
-                            i = s.createElement(v.Ya, {
-                                padding: {
-                                    right: 2
-                                },
-                                fullWidth: !0,
-                                className: "cheermote-tier-selector__back-button"
-                            }, s.createElement(v.z, {
-                                "data-a-target": "bits-card-back-button",
-                                type: v.F.Text,
-                                fullWidth: !0,
-                                onClick: this.props.onClose
-                            }, Object(c.d)("Show All Cheermotes", "CheermoteCarousel"))),
-                            r = s.createElement(v.Qa, {
-                                className: "cheermote-tier-selector__cheermotes",
-                                display: v.X.Flex,
-                                flexWrap: v.Ba.Wrap,
-                                flexDirection: v.Aa.Row,
-                                justifyContent: v.Xa.Between,
-                                alignItems: v.f.End,
-                                padding: {
-                                    bottom: 1
-                                }
-                            }, s.createElement("ul", null, n, i));
-                        return s.createElement(v.Ya, {
-                            flexGrow: 1,
-                            overflow: v.db.Hidden,
-                            className: "cheermote-tier-selector"
-                        }, r)
-                    }, t
-                }(s.PureComponent));
-            var U, x = Object(r.connect)(function(e) {
-                    return {
-                        darkModeEnabled: Object(w.a)(e) === N.a.Dark
-                    }
-                })(B),
-                F = n("ebRM");
-            n("8BsE");
-            ! function(e) {
-                e.MinBitsChannelDisclaimer = "min-bits-channel-disclaimer", e.BitsAmountCheering = "bits-amount-cheering"
-            }(U || (U = {}));
-            var P, H = function(e) {
-                    function t() {
-                        var t = null !== e && e.apply(this, arguments) || this;
-                        return t.state = {}, t.unhoverTimeout = 0, t.onClickTier = function(e) {
-                            t.props.onClickCheermote(e.split(":").join(""))
-                        }, t.onHover = function(e) {
-                            clearTimeout(t.unhoverTimeout);
-                            var n = e.split(":");
-                            n.length < 2 || t.setState({
-                                hoveredTier: parseInt(n[1], 10),
-                                hoveredCheermote: n[0]
-                            })
-                        }, t.onHoverLeave = function() {
-                            t.unhoverTimeout = setTimeout(t.clearHovered, 500)
-                        }, t.clearHovered = function() {
-                            t.setState({
-                                hoveredTier: void 0,
-                                hoveredCheermote: void 0
-                            })
-                        }, t
-                    }
-                    return o.__extends(t, e), t.prototype.render = function() {
-                        var e = this,
-                            t = Object(F.a)(this.props.currentCheers).total,
-                            n = null;
-                        if (this.props.currentCheers && 1 === this.props.currentCheers.length) {
-                            var i = this.props.currentCheers[0].alt;
-                            i && (n = s.createElement(v.Ya, {
-                                padding: {
-                                    top: 1
-                                }
-                            }, s.createElement(A.a, {
-                                prefix: i,
-                                amount: t > D.p ? D.p : t,
-                                bitsConfig: this.props.bitsConfig,
-                                showImage: !0,
-                                showAmount: !0
-                            })))
-                        } else this.props.currentCheers && (n = s.createElement(v.Ya, {
-                            margin: {
-                                y: 1
-                            }
-                        }, s.createElement(R.b, {
-                            className: "first-cheer-tier-selector__scroll-container"
-                        }, s.createElement(j, {
-                            prefixes: this.props.currentCheers,
-                            bitsConfig: this.props.bitsConfig
-                        }))));
-                        var r = Object(c.d)("Back", "FirstCheerTierSelector"),
-                            a = !(!this.state.hoveredCheermote || !this.state.hoveredTier),
-                            o = this.props.canCheerInChannel && this.props.currentCheers.length > 0;
-                        return s.createElement(v.Ya, {
-                            display: v.X.Flex,
-                            flexDirection: v.Aa.Column,
-                            justifyContent: v.Xa.Between
-                        }, s.createElement(v.Fb, {
-                            padding: {
-                                top: 3
-                            },
-                            display: v.X.Flex,
-                            flexDirection: v.Aa.Column,
-                            textAlign: v.Sb.Center,
-                            borderBottom: !0
-                        }, s.createElement(v.Ya, {
-                            position: v.kb.Absolute,
-                            attachLeft: !0,
-                            attachTop: !0,
-                            padding: {
-                                top: .5
-                            }
-                        }, s.createElement(v.z, {
-                            ariaLabel: r,
-                            onClick: this.props.onBack,
-                            type: v.F.Text,
-                            icon: v.ub.AngleLeft
-                        }, r)), s.createElement(v.W, {
-                            type: v.Wb.H4,
-                            bold: !0
-                        }, Object(c.d)("Pick cheermote tier", "FirstCheerTierSelector")), s.createElement(v.Ya, {
-                            padding: {
-                                x: 4,
-                                top: .5
-                            },
-                            textAlign: v.Sb.Left
-                        }, s.createElement(v.W, null, Object(c.d)("Now, select how many Bits to use and send your message in chat.", "FirstCheerTierSelector"))), a && s.createElement(L, {
-                            hideHeadline: !0,
-                            bitsConfig: this.props.bitsConfig,
-                            prefix: this.state.hoveredCheermote,
-                            tier: this.state.hoveredTier,
-                            event: null
-                        }), !a && s.createElement(s.Fragment, null, o && s.createElement(s.Fragment, null, n, s.createElement(v.Ya, {
-                            padding: {
-                                bottom: .5
-                            }
-                        }, s.createElement(v.W, {
-                            "data-test-selector": U.BitsAmountCheering
-                        }, Object(c.d)("You're cheering <x:bitsAmount></x:bitsAmount>", {
-                            "x:bitsAmount": function() {
-                                return s.createElement(E.a, {
-                                    count: t,
-                                    bitsConfig: e.props.bitsConfig,
-                                    withImage: !1,
-                                    withText: !0
-                                })
-                            }
-                        }, "FirstCheerTierSelector")))), !o && s.createElement(v.Ya, {
-                            padding: {
-                                y: 3
-                            }
-                        }, s.createElement(v.W, {
-                            "data-test-selector": U.MinBitsChannelDisclaimer,
-                            type: v.Wb.Span,
-                            italic: !0
-                        }, Object(c.d)("{channelName} requires <x:bitsAmount></x:bitsAmount> to cheer in this channel", {
-                            channelName: this.props.channelName,
-                            "x:bitsAmount": function() {
-                                return s.createElement(E.a, {
-                                    count: e.props.minCheerAmount,
-                                    bitsConfig: e.props.bitsConfig,
-                                    withImage: !1,
-                                    withText: !0
-                                })
-                            }
-                        }, "FirstCheerTierSelector"))))), s.createElement(x, {
-                            bitsConfig: this.props.bitsConfig,
-                            chosenCheermote: this.props.chosenCheermote,
-                            onClose: this.props.onClose,
-                            onClick: this.onClickTier,
-                            onHover: this.onHover,
-                            onHoverLeave: this.onHoverLeave
-                        }))
-                    }, t
-                }(s.PureComponent),
-                W = (n("wtKP"), function(e) {
+                _ = (n("wtKP"), function(e) {
                     var t = void 0 !== e.progress,
                         n = s.createElement("img", {
                             className: "cheer-badge__image",
@@ -32350,7 +31784,9 @@
                         "data-test-selector": "cheer-progress"
                     }))
                 }),
-                V = function(e) {
+                w = n("VeT4"),
+                O = n("5zXJ"),
+                M = function(e) {
                     var t;
                     e.selfBitsBadge && (e.selfBitsBadge.current || e.selfBitsBadge.next) && (t = s.createElement(v.Ya, {
                         padding: {
@@ -32361,16 +31797,16 @@
                         margin: {
                             right: .5
                         }
-                    }, s.createElement(W, {
+                    }, s.createElement(_, {
                         badge: e.selfBitsBadge.current
-                    })), e.selfBitsBadge.next && s.createElement(W, {
+                    })), e.selfBitsBadge.next && s.createElement(_, {
                         badge: e.selfBitsBadge.next,
                         progress: e.selfBitsBadge.progress
                     }), e.selfBitsBadge.nextBits && Object(c.d)("Next badge unlocks in {bitsToNextBadge} Bits!", {
                         bitsToNextBadge: e.selfBitsBadge.nextBits - e.selfBitsBadge.totalBits
                     }, "Bits--BalanceFooter")));
                     var n = Object(c.d)("{bitsGem} Log in to see your Bits balance", {
-                        bitsGem: s.createElement(E.a, {
+                        bitsGem: s.createElement(w.a, {
                             count: 100,
                             withImage: !0,
                             bitsConfig: e.bitsConfig,
@@ -32378,7 +31814,7 @@
                         })
                     }, "Bits--BalanceFooter");
                     return void 0 !== e.balance && null !== e.balance && (n = Object(c.d)("You have {currentBits}", {
-                        currentBits: s.createElement(E.a, {
+                        currentBits: s.createElement(w.a, {
                             count: e.balance,
                             withImage: !0,
                             withText: !0,
@@ -32394,73 +31830,14 @@
                         flexGrow: 1,
                         alignItems: v.f.Center,
                         justifyContent: v.Xa.Between
-                    }, s.createElement("div", null, n), (void 0 === e.showBuyButton || void 0 !== e.showBuyButton && e.showBuyButton) && s.createElement(v.z, {
-                        disabled: void 0 === e.balance || void 0 !== e.balance && e.balance > D.n,
+                    }, s.createElement("div", null, n), s.createElement(v.z, {
+                        disabled: void 0 === e.balance || void 0 !== e.balance && e.balance > O.n,
                         onClick: e.onClickGetBits,
                         "data-test-selector": "get-bits-button",
                         "data-a-target": "get-bits-button"
                     }, Object(c.d)("Get Bits", "Bits--BalanceFooter"))))
                 },
-                G = n("jv9u"),
-                Y = n("r/lI"),
-                z = (n("KO0n"), function(e) {
-                    function t() {
-                        var t = null !== e && e.apply(this, arguments) || this;
-                        return t.state = {}, t.onTierSelectionExit = function() {
-                            t.setState({
-                                selectedCheermote: void 0
-                            })
-                        }, t.onCheermoteClick = function(e) {
-                            t.setState({
-                                selectedCheermote: e
-                            })
-                        }, t
-                    }
-                    return o.__extends(t, e), t.prototype.render = function() {
-                        if (this.props.data.loading && !this.props.data.error) return s.createElement(G.a, null);
-                        if (this.props.data.error) return s.createElement(S, null);
-                        var e = this.props.data.user && this.props.data.user.cheer && this.props.data.user.cheer.settings.cheerMinimumBits,
-                            t = !!(this.props.bitsBalance && null !== e && this.props.bitsBalance >= e);
-                        return s.createElement(C, {
-                            onUserClose: this.props.handleExit
-                        }, this.state.selectedCheermote && s.createElement(H, {
-                            chosenCheermote: this.state.selectedCheermote,
-                            bitsConfig: this.props.bitsConfig,
-                            canCheerInChannel: t,
-                            minCheerAmount: e || 1,
-                            channelName: this.props.channelName,
-                            onClose: this.props.handleExit,
-                            currentCheers: this.props.currentCheers,
-                            onClickCheermote: this.props.onClickCheermote,
-                            onBack: this.onTierSelectionExit
-                        }), !this.state.selectedCheermote && s.createElement(T, {
-                            bitsConfig: this.props.bitsConfig,
-                            canCheerInChannel: t,
-                            minCheerAmount: e || 1,
-                            channelName: this.props.channelName,
-                            onCheermoteClick: this.onCheermoteClick,
-                            onShowAllCheermotes: this.props.handleExit
-                        }), s.createElement(v.Ya, {
-                            fullWidth: !0,
-                            className: "first-cheer-builder__footer"
-                        }, s.createElement(V, {
-                            bitsConfig: this.props.bitsConfig,
-                            balance: this.props.bitsBalance,
-                            showBuyButton: !t,
-                            onClickGetBits: this.props.handleClickBuy
-                        })))
-                    }, t
-                }(s.PureComponent)),
-                q = Object(l.compose)(Object(d.a)(Y, {
-                    options: function(e) {
-                        return {
-                            variables: {
-                                channelID: e.channelID
-                            }
-                        }
-                    }
-                }))(z),
-                X = function(e) {
+                D = function(e) {
                     return s.createElement(v.Ya, {
                         flexGrow: 1
                     }, s.createElement(v.Ya, {
@@ -32479,32 +31856,32 @@
                     }, Object(c.d)("Send", "Bits--UndoPrompt"))), s.createElement(v.nb, {
                         animationDirection: v.ob.Down,
                         size: v.pb.ExtraSmall,
-                        animationDuration: D.v.UNDO_PROMPT_DURATION / 1e3
+                        animationDuration: O.v.UNDO_PROMPT_DURATION / 1e3
                     }))
                 },
-                Q = function(e) {
-                    return e.event, s.createElement(V, {
+                I = function(e) {
+                    return e.event, s.createElement(M, {
                         bitsConfig: e.bitsConfig,
                         onClickGetBits: e.onClickGetBits,
                         balance: e.balance,
                         selfBitsBadge: e.selfBitsBadge
                     })
                 },
-                K = function(e) {
+                T = function(e) {
                     function t() {
                         return null !== e && e.apply(this, arguments) || this
                     }
                     return o.__extends(t, e), t.prototype.render = function() {
-                        return this.props.isSending ? this.props.totalBits >= D.r ? s.createElement(X, {
+                        return this.props.isSending ? this.props.totalBits >= O.r ? s.createElement(D, {
                             onCancel: this.props.onCancelSend,
                             onConfirm: this.props.onConfirmSend
-                        }) : null : this.props.event ? s.createElement(Q, {
+                        }) : null : this.props.event ? s.createElement(I, {
                             event: this.props.event,
                             selfBitsBadge: this.props.userSelfBitsBadge,
                             bitsConfig: this.props.bitsConfig,
                             onClickGetBits: this.props.handleClickBuy,
                             balance: this.props.bitsBalance
-                        }) : s.createElement(V, {
+                        }) : s.createElement(M, {
                             selfBitsBadge: this.props.userSelfBitsBadge,
                             bitsConfig: this.props.bitsConfig,
                             onClickGetBits: this.props.handleClickBuy,
@@ -32512,8 +31889,8 @@
                         })
                     }, t
                 }(s.PureComponent),
-                $ = n("wUQP"),
-                Z = function(e) {
+                R = n("wUQP"),
+                L = function(e) {
                     return s.createElement(v.Ya, {
                         display: v.X.Flex,
                         flexGrow: 1,
@@ -32549,8 +31926,8 @@
                         "data-test-selector": "help-link"
                     }, Object(c.d)("How do I cheer?", "Bits--CharityCheerIntro"))))
                 },
-                J = n("dx/T"),
-                ee = function(e) {
+                j = n("dx/T"),
+                A = function(e) {
                     return s.createElement(v.Ya, {
                         display: v.X.Flex,
                         flexGrow: 1,
@@ -32578,7 +31955,32 @@
                         "data-test-selector": "help-link"
                     }, Object(c.d)("How do I cheer?", "Bits--CheermoteIntro"))))
                 },
-                te = (n("Aa/l"), function(e) {
+                U = n("3CMh"),
+                B = function(e) {
+                    var t = e.headline || e.prefix + (e.tier || "");
+                    if (e.tournament && e.tier <= 0) {
+                        var n = e.tournament.teams.find(function(t) {
+                            return t.id === e.prefix
+                        });
+                        n && (t = n.name + " - " + e.prefix)
+                    }
+                    return s.createElement(v.Ya, {
+                        display: v.X.Flex,
+                        flexDirection: v.Aa.Column,
+                        alignItems: v.f.Center,
+                        padding: 1
+                    }, s.createElement(v.W, {
+                        type: v.Wb.H4,
+                        bold: !0
+                    }, t), s.createElement(U.a, {
+                        prefix: e.prefix,
+                        amount: e.tier,
+                        bitsConfig: e.bitsConfig,
+                        showImage: !0,
+                        showAmount: e.tier > 0
+                    }))
+                },
+                F = (n("Aa/l"), function(e) {
                     var t = null;
                     return e.minToCheer > 1 && (t = s.createElement(v.W, {
                         "data-test-selector": "min-to-cheer-selector",
@@ -32605,11 +32007,40 @@
                         color: v.O.Alt2
                     }, Object(c.d)("Cheermotes have multiple tiers, rollover below to see each one!", "Bits--CheermoteTierIntro"))), t)
                 }),
-                ne = n("4VQm");
+                x = n("4VQm"),
+                P = (n("ecb7"), function(e) {
+                    var t = e.prefixes.map(function(t, n) {
+                        if (t.alt && t.cheerAmount) return s.createElement(v.Qa, {
+                            className: "pending-cheer-list__list-item",
+                            key: n,
+                            padding: {
+                                x: 1
+                            }
+                        }, s.createElement("li", null, s.createElement(U.a, {
+                            prefix: t.alt,
+                            amount: t.cheerAmount > O.p ? O.p : t.cheerAmount,
+                            bitsConfig: e.bitsConfig,
+                            size: U.b.Small,
+                            showAmount: !0,
+                            showImage: !0
+                        })))
+                    });
+                    return s.createElement(v.Ya, {
+                        display: v.X.Flex,
+                        flexDirection: v.Aa.Row,
+                        alignItems: v.f.End,
+                        justifyContent: v.Xa.Center,
+                        flexWrap: v.Ba.Wrap,
+                        margin: {
+                            top: 1
+                        },
+                        className: "pending-cheer-list"
+                    }, t)
+                });
             ! function(e) {
                 e.MinCheer = "sponsored-campaign-minimum-cheer", e.OverBitsTotal = "sponsored-campaign-over-total", e.CannotBeSponsored = "sponsored-campaign-cannot-be-sponsored", e.OverUserLimit = "sponsored-campaign-over-user-limit"
-            }(P || (P = {}));
-            var ie, re = function(e) {
+            }(k || (k = {}));
+            var H, W = function(e) {
                     var t = 0;
                     if (e.prefixes.forEach(function(n) {
                             n.alt === e.sponsoredCampaignPrefix && n.cheerAmount && (t += n.cheerAmount)
@@ -32620,7 +32051,7 @@
                             brand: e.sponsoredCampaign.brandName
                         }, "Bits--PendingCheer");
                         return s.createElement(v.W, {
-                            "data-test-selector": P.MinCheer,
+                            "data-test-selector": k.MinCheer,
                             color: v.O.Error
                         }, n)
                     }
@@ -32629,7 +32060,7 @@
                             brand: e.sponsoredCampaign.brandName
                         }, "Bits--PendingCheer");
                         return s.createElement(v.W, {
-                            "data-test-selector": P.OverBitsTotal,
+                            "data-test-selector": k.OverBitsTotal,
                             color: v.O.Error
                         }, n)
                     }
@@ -32639,7 +32070,7 @@
                                 brand: e.sponsoredCampaign.brandName
                             }, "Bits--PendingCheer");
                             return s.createElement(v.W, {
-                                "data-test-selector": P.CannotBeSponsored,
+                                "data-test-selector": k.CannotBeSponsored,
                                 color: v.O.Error
                             }, n)
                         }
@@ -32648,14 +32079,14 @@
                                 brand: e.sponsoredCampaign.brandName
                             }, "Bits--PendingCheer");
                             return s.createElement(v.W, {
-                                "data-test-selector": P.OverUserLimit,
+                                "data-test-selector": k.OverUserLimit,
                                 color: v.O.Error
                             }, n)
                         }
                     }
                     return null
                 },
-                ae = function(e) {
+                V = function(e) {
                     function t() {
                         return null !== e && e.apply(this, arguments) || this
                     }
@@ -32663,9 +32094,9 @@
                         return this.props.event, null
                     }, t
                 }(s.Component),
-                oe = n("XmgI"),
-                se = (n("H0r1"), (ie = {})[g.Q.USER_BANNED] = "user-banned-selector", ie[g.Q.USER_INELIGIBLE] = "user-ineligible-selector", ie[g.Q.USER_SUSPENDED] = "user-suspended-selector", ie[g.Q.CHANNEL_INELIGIBLE] = "channel-ineligible-selector", ie[g.Q.ZALGO_MESSAGE] = "zalgo-message-selector", ie[g.Q.CHANNEL_BLOCKED_TERMS] = "channel-blocked-terms-selector", ie[g.Q.INVALID_EVENT_ID] = "invalid-event-id-selector", ie[g.Q.REQUEST_THROTTLED] = "request-throttled-selector", ie[g.Q.UNKNOWN] = "unknown-selector", ie),
-                le = function(e) {
+                G = n("XmgI"),
+                Y = (n("H0r1"), (H = {})[g.Q.USER_BANNED] = "user-banned-selector", H[g.Q.USER_INELIGIBLE] = "user-ineligible-selector", H[g.Q.USER_SUSPENDED] = "user-suspended-selector", H[g.Q.CHANNEL_INELIGIBLE] = "channel-ineligible-selector", H[g.Q.ZALGO_MESSAGE] = "zalgo-message-selector", H[g.Q.CHANNEL_BLOCKED_TERMS] = "channel-blocked-terms-selector", H[g.Q.INVALID_EVENT_ID] = "invalid-event-id-selector", H[g.Q.REQUEST_THROTTLED] = "request-throttled-selector", H[g.Q.UNKNOWN] = "unknown-selector", H),
+                z = function(e) {
                     var t;
                     if (e.prefixes && 1 === e.prefixes.length) {
                         var n = e.prefixes[0].alt;
@@ -32673,9 +32104,9 @@
                             padding: {
                                 top: 2
                             }
-                        }, s.createElement(A.a, {
+                        }, s.createElement(U.a, {
                             prefix: n,
-                            amount: e.amount > D.p ? D.p : e.amount,
+                            amount: e.amount > O.p ? O.p : e.amount,
                             bitsConfig: e.bitsConfig,
                             showImage: !0,
                             showAmount: !0
@@ -32684,9 +32115,9 @@
                         margin: {
                             top: 1
                         }
-                    }, s.createElement(ne.b, {
+                    }, s.createElement(x.b, {
                         className: "pending-cheer__scroll-container"
-                    }, s.createElement(j, {
+                    }, s.createElement(P, {
                         prefixes: e.prefixes,
                         bitsConfig: e.bitsConfig
                     })));
@@ -32706,14 +32137,14 @@
                             "data-a-target": "total-bits-message"
                         }, i))
                     }
-                    var r = null;
-                    e.prefixes && e.sponsoredCampaign && e.sponsoredCampaignPrefix && (r = s.createElement(re, {
+                    var a = null;
+                    e.prefixes && e.sponsoredCampaign && e.sponsoredCampaignPrefix && (a = s.createElement(W, {
                         prefixes: e.prefixes,
                         sponsoredCampaign: e.sponsoredCampaign,
                         sponsoredCampaignPrefix: e.sponsoredCampaignPrefix,
                         sponsoredBitsBonus: e.sponsoredBitsBonus
                     }));
-                    var a = function(e) {
+                    var r = function(e) {
                             if (e.smallestCheermote < e.minPerEmote || e.bitsSendHasError && e.bitsSendErrorCode === g.Q.EMOTE_AMOUNT_BELOW_MIN_BITS) {
                                 var t = Object(c.d)("This channel has set a minimum of {minPerEmote} Bits to use a Cheer emote in chat.", {
                                     minPerEmote: e.minPerEmote
@@ -32725,7 +32156,7 @@
                                     "data-a-target": "min-emote-bits-error"
                                 }, t)
                             }
-                            if (e.chatMessage && e.chatMessage.length > D.o || e.bitsSendHasError && e.bitsSendErrorCode === g.Q.MESSAGE_LENGTH_EXCEEDED) {
+                            if (e.chatMessage && e.chatMessage.length > O.o || e.bitsSendHasError && e.bitsSendErrorCode === g.Q.MESSAGE_LENGTH_EXCEEDED) {
                                 var n = Object(c.d)("You have exceeded the maximum number of characters you can use in your cheer.", "Bits--PendingCheer");
                                 return s.createElement(v.W, {
                                     "data-test-selector": "message-length-exceeded-selector",
@@ -32734,39 +32165,39 @@
                                 }, n)
                             }
                             if (e.bitsSendHasError) {
-                                var i = se[e.bitsSendErrorCode] || se[g.Q.UNKNOWN],
-                                    r = void 0;
+                                var i = Y[e.bitsSendErrorCode] || Y[g.Q.UNKNOWN],
+                                    a = void 0;
                                 switch (e.bitsSendErrorCode) {
                                     case g.Q.ZALGO_MESSAGE:
-                                        r = Object(c.d)("You have unsupported characters in your message, please remove them and try again.", "Bits--PendingCheer");
+                                        a = Object(c.d)("You have unsupported characters in your message, please remove them and try again.", "Bits--PendingCheer");
                                         break;
                                     case g.Q.USER_BANNED:
                                     case g.Q.USER_INELIGIBLE:
                                     case g.Q.USER_SUSPENDED:
                                     case g.Q.CHANNEL_INELIGIBLE:
-                                        r = Object(c.d)("Sorry, you are unable to send bits in this channel at this time.", "Bits--PendingCheer");
+                                        a = Object(c.d)("Sorry, you are unable to send bits in this channel at this time.", "Bits--PendingCheer");
                                         break;
                                     case g.Q.CHANNEL_BLOCKED_TERMS:
-                                        r = Object(c.d)("You have blocked words in your message, please remove them and try again.", "Bits--PendingCheer");
+                                        a = Object(c.d)("You have blocked words in your message, please remove them and try again.", "Bits--PendingCheer");
                                         break;
                                     case g.Q.INVALID_EVENT_ID:
                                     case g.Q.REQUEST_THROTTLED:
                                     case g.Q.UNKNOWN:
                                     default:
-                                        r = Object(c.d)("Something went wrong when processing your cheer, please try again later.", "Bits--PendingCheer")
+                                        a = Object(c.d)("Something went wrong when processing your cheer, please try again later.", "Bits--PendingCheer")
                                 }
                                 return s.createElement(v.W, {
                                     "data-test-selector": i,
                                     color: v.O.Error,
                                     italic: !0
-                                }, r)
+                                }, a)
                             }
                             return null
                         }(e),
                         o = function(e) {
-                            if (e.largestCheermote > D.p || e.bitsSendHasError && e.bitsSendErrorCode === g.Q.TOO_LARGE_BITS_EMOTE) {
+                            if (e.largestCheermote > O.p || e.bitsSendHasError && e.bitsSendErrorCode === g.Q.TOO_LARGE_BITS_EMOTE) {
                                 var t = Object(c.d)("{maximumCheerSize} is the largest Cheer emote, add another emote to Cheer louder!", {
-                                    maximumCheerSize: D.p
+                                    maximumCheerSize: O.p
                                 }, "Bits--PendingCheer");
                                 return s.createElement(v.W, {
                                     "data-test-selector": "largest-cheermote-selector",
@@ -32792,32 +32223,32 @@
                                     "data-a-target": "min-cheer-bits-error"
                                 }, n)
                             }
-                            if (e.amount > D.q || e.bitsSendHasError && e.bitsSendErrorCode === g.Q.TOO_LARGE_CHEER) {
+                            if (e.amount > O.q || e.bitsSendHasError && e.bitsSendErrorCode === g.Q.TOO_LARGE_CHEER) {
                                 var i = Object(c.d)("{maximumCheerSize} is the maximum amount of Bits you can send in one message, send multiple messages if you want to Cheer more!", {
-                                    maximumCheerSize: D.q
+                                    maximumCheerSize: O.q
                                 }, "Bits--PendingCheer");
                                 return s.createElement(v.W, {
                                     "data-test-selector": "minimum-cheer-selector",
                                     "data-a-target": "max-message-bits-error"
                                 }, i)
                             }
-                            if (e.chatMessage && Object(oe.c)(e.chatMessage, e.bitsConfig)) {
-                                var r = Object(c.d)("message contains at least one display only Cheermote.", "Bits--PendingCheer");
+                            if (e.chatMessage && Object(G.c)(e.chatMessage, e.bitsConfig)) {
+                                var a = Object(c.d)("message contains at least one display only Cheermote.", "Bits--PendingCheer");
                                 return s.createElement(v.W, {
                                     "data-test-selector": "display-only-cheermote-selector",
                                     "data-a-target": "display-only-bits-error"
-                                }, r)
+                                }, a)
                             }
                             return null
                         }(e),
-                        l = s.createElement(A.a, {
+                        l = s.createElement(U.a, {
                             amount: e.amount + e.bonusBits,
-                            prefix: D.l,
+                            prefix: O.l,
                             bitsConfig: e.bitsConfig,
                             display: v.X.Inline,
                             showImage: !1,
                             showAmount: !0,
-                            size: A.b.Medium
+                            size: U.b.Medium
                         });
                     return s.createElement(v.Ya, null, s.createElement(v.Ya, {
                         display: v.X.Flex,
@@ -32830,37 +32261,37 @@
                         bold: !0
                     }, Object(c.d)("Cheering {totalBits} Bits", {
                         totalBits: l
-                    }, "Bits--PendingCheer")), !a && t, !a && !o && r && s.createElement(v.Ya, {
+                    }, "Bits--PendingCheer")), !r && t, !r && !o && a && s.createElement(v.Ya, {
                         padding: {
                             top: 1
                         }
-                    }, r), !a && o && s.createElement(v.Fb, {
+                    }, a), !r && o && s.createElement(v.Fb, {
                         padding: {
                             top: 1
                         },
                         color: v.O.Error
-                    }, o), a && s.createElement(v.Ya, {
+                    }, o), r && s.createElement(v.Ya, {
                         padding: {
                             top: 3,
                             x: 3
                         }
-                    }, a)), !a && !o && s.createElement(ae, {
+                    }, r)), !r && !o && s.createElement(V, {
                         event: e.event,
                         amount: e.amount,
                         "data-test-selector": "event-reminder-selector"
                     }))
                 },
-                ce = n("x1M1"),
-                de = (n("zmH+"), {
+                q = n("x1M1"),
+                X = (n("zmH+"), {
                     themed: !0,
                     dark: {
-                        "1x": D.b + "/dark/animated/promo/intro.gif"
+                        "1x": O.b + "/dark/animated/promo/intro.gif"
                     },
                     light: {
-                        "1x": D.b + "/light/animated/promo/intro.gif"
+                        "1x": O.b + "/light/animated/promo/intro.gif"
                     }
                 }),
-                ue = function() {
+                Q = function() {
                     return s.createElement(v.Ya, {
                         display: v.X.Flex,
                         flexDirection: v.Aa.Column,
@@ -32872,23 +32303,23 @@
                         padding: {
                             bottom: 1
                         }
-                    }, s.createElement(ce.a, {
-                        sources: de
+                    }, s.createElement(q.a, {
+                        sources: X
                     })), s.createElement(v.W, {
                         italic: !0
                     }, Object(c.d)("Your Cheer is currently processing.", "Bits--SendingBits")))
                 };
 
-            function pe(e) {
+            function K(e) {
                 var t = {
                     maximumFractionDigits: 1
                 };
                 return e < 1e4 ? Object(c.f)(e, t) : e < 1e5 ? Object(c.g)(100 * Math.floor(e / 100), t) : e < 1e6 ? Object(c.g)(1e3 * Math.floor(e / 1e3), t) : Object(c.g)(1e5 * Math.floor(e / 1e5), t)
             }
             n("Yr1V");
-            var me, he = function(e) {
-                    var t = pe(e.sponsorCampaign.bitsTotal - e.sponsorCampaign.bitsUsed),
-                        n = pe(e.sponsorCampaign.bitsTotal);
+            var $, Z = function(e) {
+                    var t = K(e.sponsorCampaign.bitsTotal - e.sponsorCampaign.bitsUsed),
+                        n = K(e.sponsorCampaign.bitsTotal);
                     return s.createElement(v.Fb, {
                         background: v.r.AccentAlt2,
                         color: v.O.Overlay,
@@ -32959,19 +32390,19 @@
                         className: "sponsored-cheermote__tail"
                     }))
                 },
-                ge = (n("u0cu"), function(e) {
+                J = (n("u0cu"), function(e) {
                     var t = Object(c.d)("You are using {totalBits} Bits to cheer in {channelName}'s chat.", {
                             totalBits: e.totalBits,
                             channelName: e.channelDisplayName
                         }, "Bits--UndoPrompt"),
                         n = null;
-                    if (e.prefixes && e.prefixes.length > 1) n = s.createElement(ne.b, {
+                    if (e.prefixes && e.prefixes.length > 1) n = s.createElement(x.b, {
                         className: "bits-undo-prompt__scroll-container"
                     }, s.createElement(v.Ya, {
                         margin: {
                             top: 1
                         }
-                    }, s.createElement(j, {
+                    }, s.createElement(P, {
                         prefixes: e.prefixes,
                         bitsConfig: e.bitsConfig
                     })));
@@ -32981,7 +32412,7 @@
                             padding: {
                                 bottom: 1
                             }
-                        }, s.createElement(A.a, {
+                        }, s.createElement(U.a, {
                             prefix: i,
                             amount: e.totalBits,
                             bitsConfig: e.bitsConfig,
@@ -32999,21 +32430,23 @@
                         className: "bits-undo-prompt"
                     }, n, s.createElement(v.W, null, t))
                 }),
-                fe = n("RiD7");
+                ee = n("XDQu"),
+                te = n("ebRM"),
+                ne = n("RiD7");
             n("VFOQ");
             ! function(e) {
                 e.IntroSection = "black-friday-2018-intro", e.PromoDetails = "promo-details", e.PromoFinePrint = "promo-fine-print"
-            }(me || (me = {}));
-            var be = function(e) {
+            }($ || ($ = {}));
+            var ie = function(e) {
                 function t() {
                     var t = null !== e && e.apply(this, arguments) || this;
                     return t.handlePromoBuy = function() {
-                        var e = Object(F.b)({
+                        var e = Object(te.b)({
                             trackBitsCardInteraction: t.props.trackBitsCardInteraction,
                             channelID: t.props.channelID,
                             purchaseUrl: t.props.offer.url,
                             bitsAmount: String(t.props.offer.bits),
-                            location: fe.b.ChatTooltip
+                            location: ne.b.ChatTooltip
                         });
                         e && t.props.onPromoBuyClose(e)
                     }, t
@@ -33021,7 +32454,7 @@
                 return o.__extends(t, e), t.prototype.render = function() {
                     var e = "";
                     return this.props.theme === N.a.Light && (e = "black-friday-2018-introduction-light"), s.createElement(v.Ya, {
-                        "data-test-selector": me.IntroSection,
+                        "data-test-selector": $.IntroSection,
                         className: e
                     }, s.createElement(v.Ya, {
                         padding: {
@@ -33037,7 +32470,7 @@
                             right: 2
                         }
                     }, s.createElement(v.W, {
-                        "data-test-selector": me.PromoDetails
+                        "data-test-selector": $.PromoDetails
                     }, " ", Object(c.d)("From now through Monday, purchase 2500 bits for only {price} AND earn 200 extra Bits.", {
                         price: this.props.offer.price
                     }, "BlackFriday2018Bits"))), s.createElement(v.U, {
@@ -33056,19 +32489,19 @@
                             right: 2
                         }
                     }, s.createElement(v.W, {
-                        "data-test-selector": me.PromoFinePrint,
+                        "data-test-selector": $.PromoFinePrint,
                         fontSize: v.Ca.Size6
                     }, " ", Object(c.d)("Limit one offer per customer. Bits redemption code will be emailed to {email} on 11/29/18.", {
                         email: void 0 !== this.props.email ? this.props.email : ""
                     }, "BlackFriday2018Bits"))))
                 }, t
             }(s.Component);
-            var ve, ke = Object(r.connect)(function(e) {
+            var ae, re = Object(a.connect)(function(e) {
                     return {
-                        theme: Object(w.a)(e)
+                        theme: Object(ee.a)(e)
                     }
-                })(be),
-                Ce = function() {
+                })(ie),
+                oe = function() {
                     return s.createElement(v.Ya, {
                         className: "hgg-2018-introduction"
                     }, s.createElement(v.Ya, {
@@ -33085,9 +32518,9 @@
                         alignContent: v.e.Stretch
                     }, s.createElement(v.S, {
                         className: "hgg-2018-introduction__banner-image",
-                        src: D.c + "/hearthstone2018/marketing/bitscardbanner.png",
+                        src: O.c + "/hearthstone2018/marketing/bitscardbanner.png",
                         srcSet: {
-                            "2x": D.c + "/hearthstone2018/marketing/bitscardbanner.png"
+                            "2x": O.c + "/hearthstone2018/marketing/bitscardbanner.png"
                         },
                         alt: Object(c.d)("Hearthstone Global Games", "HGG2018Introduction")
                     })), s.createElement(v.Ya, {
@@ -33106,7 +32539,7 @@
                         hoverUnderlineNone: !1
                     }, Object(c.d)("Details", "HGG2018Introduction"))))
                 },
-                ye = (n("qKeE"), function() {
+                se = (n("qKeE"), function() {
                     return s.createElement(v.Ya, {
                         className: "hgc-2018-introduction"
                     }, s.createElement(v.Ya, {
@@ -33129,9 +32562,9 @@
                         margin: "auto"
                     }, s.createElement(v.S, {
                         className: "hgc-2018-introduction__banner-image",
-                        src: D.c + "/hgc2018/hgc-logo/1x.png",
+                        src: O.c + "/hgc2018/hgc-logo/1x.png",
                         srcSet: {
-                            "2x": D.c + "/hgc2018/hgc-logo/2x.png"
+                            "2x": O.c + "/hgc2018/hgc-logo/2x.png"
                         },
                         alt: Object(c.d)("Heroes of the Storm Global Championship", "HGC2018Introduction")
                     }))), s.createElement(v.Ya, {
@@ -33150,7 +32583,7 @@
                         hoverUnderlineNone: !1
                     }, Object(c.d)("Details", "HGC2018Introduction"))))
                 }),
-                Se = (n("TTKc"), function() {
+                le = (n("TTKc"), function() {
                     return s.createElement(v.Ya, {
                         className: "owl-2018-introduction"
                     }, s.createElement(v.Ya, {
@@ -33168,7 +32601,7 @@
                         }
                     }, s.createElement("img", {
                         className: "owl-2018-introduction__banner-image",
-                        src: D.c + "/owl-2017/overwatch-wide.png"
+                        src: O.c + "/owl-2017/overwatch-wide.png"
                     })), s.createElement(v.Ya, {
                         padding: {
                             x: 2,
@@ -33187,30 +32620,30 @@
                 });
             ! function(e) {
                 e.CratesChristmas = "CratesChristmas", e.OWL2018 = "owl2018", e.HGC2018 = "hgc2018", e.WORLDCUP2018 = "worldcup2018", e.HGG2018 = "hearthstone2018", e.HGG2018TEST = "hearthstone2018-test"
-            }(ve || (ve = {}));
-            var Ee = function(e) {
+            }(ae || (ae = {}));
+            var ce = function(e) {
                     switch (e.event) {
-                        case ve.HGC2018:
-                            return s.createElement(ye, null);
-                        case ve.OWL2018:
-                            return s.createElement(Se, null);
-                        case ve.HGG2018:
-                        case ve.HGG2018TEST:
-                            return s.createElement(Ce, null);
+                        case ae.HGC2018:
+                            return s.createElement(se, null);
+                        case ae.OWL2018:
+                            return s.createElement(le, null);
+                        case ae.HGG2018:
+                        case ae.HGG2018TEST:
+                            return s.createElement(oe, null);
                         default:
-                            return s.createElement(ee, {
+                            return s.createElement(A, {
                                 onClickHelp: e.onClickHelp
                             })
                     }
                 },
-                Ne = function(e) {
-                    if (e.isSending) return e.totalBits < D.r ? s.createElement(ue, null) : s.createElement(ge, {
+                de = function(e) {
+                    if (e.isSending) return e.totalBits < O.r ? s.createElement(Q, null) : s.createElement(J, {
                         bitsConfig: e.bitsConfig,
                         channelDisplayName: e.displayName,
                         prefixes: e.currentCheers,
                         totalBits: e.totalBits
                     });
-                    if (e.hoveredCheermote) return s.createElement(L, {
+                    if (e.hoveredCheermote) return s.createElement(B, {
                         event: e.event,
                         tournament: e.tournament,
                         bitsConfig: e.bitsConfig,
@@ -33229,8 +32662,8 @@
                                 e.campaign && (t = e.prefix)
                             }), t
                         }(e.bitsConfig),
-                        i = c.b.get(D.u, $.a.Off);
-                    if (e.totalBits) return s.createElement(le, {
+                        i = c.b.get(O.u, R.a.Off);
+                    if (e.totalBits) return s.createElement(z, {
                         bitsConfig: e.bitsConfig,
                         prefixes: e.currentCheers,
                         amount: e.totalBits,
@@ -33249,123 +32682,212 @@
                         bitsSendHasError: e.bitsSendHasError,
                         chatMessage: e.chatMessage
                     });
-                    if (e.helpRequested) return s.createElement(J.a, null);
-                    var r = c.b.get(D.d, $.a.Off),
-                        a = null;
-                    if (e.bitsOffers && (a = e.bitsOffers.find(function(e) {
-                            return Object(F.c)(e)
+                    if (e.helpRequested) return s.createElement(j.a, null);
+                    var a = c.b.get(O.d, R.a.Off),
+                        r = null;
+                    if (e.bitsOffers && (r = e.bitsOffers.find(function(e) {
+                            return Object(te.c)(e)
                         })), e.chosenCheermote) {
                         var o = e.cheerMinimumBits;
-                        return s.createElement(te, {
+                        return s.createElement(F, {
                             minToCheer: o
                         })
                     }
-                    return a ? s.createElement(ke, {
+                    return r ? s.createElement(re, {
                         email: e.email,
-                        offer: a,
+                        offer: r,
                         channelID: e.channelID,
                         trackBitsCardInteraction: e.trackBitsCardInteraction,
                         onPromoBuyClose: e.onPromoBuyClose
-                    }) : e.event ? s.createElement(Ee, {
+                    }) : e.event ? s.createElement(ce, {
                         event: e.event,
                         onClickHelp: e.showHelp,
                         channelID: e.channelID
-                    }) : t && (i === $.a.On || i === $.a.StaffOnly && e.isStaff) ? s.createElement(he, {
+                    }) : t && (i === R.a.On || i === R.a.StaffOnly && e.isStaff) ? s.createElement(Z, {
                         sponsorCampaign: t
-                    }) : r === $.a.On ? s.createElement(Z, {
+                    }) : a === R.a.On ? s.createElement(L, {
                         onClickHelp: e.showHelp
-                    }) : s.createElement(ee, {
+                    }) : s.createElement(A, {
                         onClickHelp: e.showHelp
                     })
                 };
-            n("AcdH");
-            var we = function(e) {
-                function t() {
-                    var t = null !== e && e.apply(this, arguments) || this;
-                    return t.handleCheermoteHover = function(e) {
-                        var n = e.currentTarget.getAttribute("data-key");
-                        n && t.props.onHover(n)
-                    }, t.handleCheermoteUnhover = function() {
-                        t.props.onHoverLeave()
-                    }, t.handleCheermoteClick = function(e) {
-                        var n = e.currentTarget.getAttribute("data-key");
-                        n && t.props.onClick(n)
-                    }, t
-                }
-                return o.__extends(t, e), t.prototype.render = function() {
-                    var e = this,
-                        t = this.props.bitsConfig.orderedActions.filter(function(e) {
-                            return e.type !== D.h && e.type !== D.f
-                        }).map(function(e) {
-                            var t = e.indexedTiers.get(D.m);
-                            return t ? {
-                                imgSrc: t.indexedImages.LIGHT.static.get(2),
-                                imgSrcDark: t.indexedImages.DARK.static.get(2),
-                                key: e.prefix
-                            } : null
-                        }).map(function(t, n) {
-                            return t && t.key ? s.createElement(v.Qa, {
-                                key: t.key,
-                                margin: {
+            var ue = n("8/mp"),
+                pe = (n("AcdH"), function(e) {
+                    function t() {
+                        var t = null !== e && e.apply(this, arguments) || this;
+                        return t.handleCheermoteHover = function(e) {
+                            var n = e.currentTarget.getAttribute("data-key");
+                            n && t.props.onHover(n)
+                        }, t.handleCheermoteUnhover = function() {
+                            t.props.onHoverLeave()
+                        }, t.handleCheermoteClick = function(e) {
+                            var n = e.currentTarget.getAttribute("data-key");
+                            n && t.props.onClick(n)
+                        }, t
+                    }
+                    return o.__extends(t, e), t.prototype.render = function() {
+                        var e = this,
+                            t = this.props.bitsConfig.orderedActions.filter(function(e) {
+                                return e.type !== O.h && e.type !== O.f
+                            }).map(function(e) {
+                                var t = e.indexedTiers.get(O.m);
+                                return t ? {
+                                    imgSrc: t.indexedImages.LIGHT.static.get(2),
+                                    imgSrcDark: t.indexedImages.DARK.static.get(2),
+                                    key: e.prefix
+                                } : null
+                            }).map(function(t, n) {
+                                return t && t.key ? s.createElement(v.Qa, {
+                                    key: t.key,
+                                    margin: {
+                                        bottom: 1
+                                    }
+                                }, s.createElement("li", {
+                                    className: "cheermote-prefix-selector__cheermote"
+                                }, s.createElement("button", {
+                                    className: "cheermote-prefix-selector__item-button",
+                                    "data-key": t.key,
+                                    onMouseEnter: e.handleCheermoteHover,
+                                    onMouseLeave: e.handleCheermoteUnhover,
+                                    onClick: e.handleCheermoteClick,
+                                    "data-a-target": "cheermote-" + t.key.replace(":", "")
+                                }, s.createElement("img", {
+                                    alt: t.key,
+                                    src: e.props.darkModeEnabled ? t.imgSrcDark : t.imgSrc
+                                })))) : s.createElement("li", {
+                                    key: "null-cheermote-" + n
+                                }, s.createElement("button", {
+                                    className: "cheermote-prefix-selector__item-button",
+                                    disabled: !0
+                                }, s.createElement("div", {
+                                    className: "cheermote-prefix-selector__placeholder"
+                                })))
+                            }),
+                            n = s.createElement(v.Qa, {
+                                className: "cheermote-prefix-selector__cheermotes",
+                                display: v.X.Flex,
+                                flexWrap: v.Ba.Wrap,
+                                flexDirection: v.Aa.Row,
+                                justifyContent: v.Xa.Start,
+                                alignItems: v.f.End,
+                                padding: {
                                     bottom: 1
                                 }
-                            }, s.createElement("li", {
-                                className: "cheermote-prefix-selector__cheermote"
-                            }, s.createElement("button", {
-                                className: "cheermote-prefix-selector__item-button",
-                                "data-key": t.key,
-                                onMouseEnter: e.handleCheermoteHover,
-                                onMouseLeave: e.handleCheermoteUnhover,
-                                onClick: e.handleCheermoteClick,
-                                "data-a-target": "cheermote-" + t.key.replace(":", "")
-                            }, s.createElement("img", {
-                                alt: t.key,
-                                src: e.props.darkModeEnabled ? t.imgSrcDark : t.imgSrc
-                            })))) : s.createElement("li", {
-                                key: "null-cheermote-" + n
-                            }, s.createElement("button", {
-                                className: "cheermote-prefix-selector__item-button",
-                                disabled: !0
-                            }, s.createElement("div", {
-                                className: "cheermote-prefix-selector__placeholder"
-                            })))
-                        }),
-                        n = s.createElement(v.Qa, {
-                            className: "cheermote-prefix-selector__cheermotes",
-                            display: v.X.Flex,
-                            flexWrap: v.Ba.Wrap,
-                            flexDirection: v.Aa.Row,
-                            justifyContent: v.Xa.Start,
-                            alignItems: v.f.End,
-                            padding: {
-                                bottom: 1
-                            }
-                        }, s.createElement("ul", null, t));
-                    return s.createElement(v.Ya, {
-                        flexGrow: 1,
-                        overflow: v.db.Hidden,
-                        className: "cheermote-prefix-selector"
-                    }, s.createElement(R.b, null, n))
-                }, t
-            }(s.PureComponent);
-            var _e = Object(r.connect)(function(e) {
+                            }, s.createElement("ul", null, t));
+                        return s.createElement(v.Ya, {
+                            flexGrow: 1,
+                            overflow: v.db.Hidden,
+                            className: "cheermote-prefix-selector"
+                        }, s.createElement(ue.b, null, n))
+                    }, t
+                }(s.PureComponent));
+            var me = Object(a.connect)(function(e) {
                     return {
-                        darkModeEnabled: Object(w.a)(e) === N.a.Dark
+                        darkModeEnabled: Object(ee.a)(e) === N.a.Dark
                     }
-                })(we),
-                Oe = function(e) {
+                })(pe),
+                he = (n("ECxT"), function(e) {
+                    function t() {
+                        var t = null !== e && e.apply(this, arguments) || this;
+                        return t.handleCheermoteHover = function(e) {
+                            var n = e.currentTarget.getAttribute("data-key");
+                            n && t.props.onHover(n)
+                        }, t.handleCheermoteUnhover = function() {
+                            t.props.onHoverLeave()
+                        }, t.handleCheermoteClick = function(e) {
+                            var n = e.currentTarget.getAttribute("data-key");
+                            n && t.props.onClick(n)
+                        }, t
+                    }
+                    return o.__extends(t, e), t.prototype.render = function() {
+                        var e = this,
+                            t = this.props.bitsConfig.indexedActions[this.props.chosenCheermote.toLowerCase()],
+                            n = t.orderedTiers.filter(function(e) {
+                                return e.canCheer && e.canShowInBitsCard
+                            }).map(function(e) {
+                                return {
+                                    imgSrc: e.indexedImages.LIGHT.static.get(2),
+                                    imgSrcDark: e.indexedImages.DARK.static.get(2),
+                                    key: t.prefix + ":" + e.bits
+                                }
+                            }).reverse().map(function(t, n) {
+                                return t && t.key ? s.createElement("li", {
+                                    key: t.key,
+                                    className: "cheermote-tier-selector__cheermote"
+                                }, s.createElement("button", {
+                                    className: "cheermote-tier-selector__item-button",
+                                    "data-key": t.key,
+                                    onMouseEnter: e.handleCheermoteHover,
+                                    onMouseLeave: e.handleCheermoteUnhover,
+                                    onClick: e.handleCheermoteClick,
+                                    "data-a-target": "cheermote-" + t.key.replace(":", "")
+                                }, s.createElement("img", {
+                                    alt: t.key,
+                                    src: e.props.darkModeEnabled ? t.imgSrcDark : t.imgSrc
+                                })), s.createElement(U.a, {
+                                    bitsConfig: e.props.bitsConfig,
+                                    prefix: "",
+                                    amount: +t.key.split(":")[1],
+                                    showImage: !1,
+                                    showAmount: !0,
+                                    size: U.b.Small
+                                })) : s.createElement("li", {
+                                    key: "null-cheermote-" + n
+                                }, s.createElement("button", {
+                                    className: "cheermote-tier-selector__item-button",
+                                    disabled: !0
+                                }, s.createElement("div", {
+                                    className: "cheermote-tier-selector__placeholder"
+                                })))
+                            }),
+                            i = s.createElement(v.Ya, {
+                                padding: {
+                                    right: 2
+                                },
+                                fullWidth: !0,
+                                className: "cheermote-tier-selector__back-button"
+                            }, s.createElement(v.z, {
+                                "data-a-target": "bits-card-back-button",
+                                type: v.F.Text,
+                                fullWidth: !0,
+                                onClick: this.props.onClose
+                            }, Object(c.d)("Show All Cheermotes", "CheermoteCarousel"))),
+                            a = s.createElement(v.Qa, {
+                                className: "cheermote-tier-selector__cheermotes",
+                                display: v.X.Flex,
+                                flexWrap: v.Ba.Wrap,
+                                flexDirection: v.Aa.Row,
+                                justifyContent: v.Xa.Between,
+                                alignItems: v.f.End,
+                                padding: {
+                                    bottom: 1
+                                }
+                            }, s.createElement("ul", null, n, i));
+                        return s.createElement(v.Ya, {
+                            flexGrow: 1,
+                            overflow: v.db.Hidden,
+                            className: "cheermote-tier-selector"
+                        }, a)
+                    }, t
+                }(s.PureComponent));
+            var ge = Object(a.connect)(function(e) {
+                    return {
+                        darkModeEnabled: Object(ee.a)(e) === N.a.Dark
+                    }
+                })(he),
+                fe = function(e) {
                     function t() {
                         return null !== e && e.apply(this, arguments) || this
                     }
                     return o.__extends(t, e), t.prototype.render = function() {
-                        return this.props.helpRequested && !this.props.currentCheers.length ? null : this.props.chosenCheermote ? s.createElement(x, {
+                        return this.props.helpRequested && !this.props.currentCheers.length ? null : this.props.chosenCheermote ? s.createElement(ge, {
                             bitsConfig: this.props.bitsConfig,
                             chosenCheermote: this.props.chosenCheermote,
                             onHover: this.props.handleTierHover,
                             onHoverLeave: this.props.handleUnhover,
                             onClick: this.props.handleTierClick,
                             onClose: this.props.clearChosenCheermote
-                        }) : s.createElement(_e, {
+                        }) : s.createElement(me, {
                             bitsConfig: this.props.bitsConfig,
                             onHover: this.props.handleCheermoteHover,
                             onHoverLeave: this.props.handleUnhover,
@@ -33373,9 +32895,9 @@
                         })
                     }, t
                 }(s.PureComponent),
-                Me = n("edgk"),
-                De = n("UajW"),
-                Ie = (n("c+1r"), function(e) {
+                be = n("edgk"),
+                ve = n("UajW"),
+                ke = (n("c+1r"), function(e) {
                     function t() {
                         var t = null !== e && e.apply(this, arguments) || this;
                         return t.state = {
@@ -33392,7 +32914,7 @@
                             n.length < 2 || (t.setState({
                                 hoveredTier: +n[1],
                                 hoveredCheermote: n[0]
-                            }), t.props.trackBitsCardInteraction(fe.a.PreviewEmote, {
+                            }), t.props.trackBitsCardInteraction(ne.a.PreviewEmote, {
                                 emoteType: n[0],
                                 emoteLevel: +n[1]
                             }))
@@ -33409,7 +32931,7 @@
                             clearTimeout(t.unhoverTimeout), t.setState({
                                 hoveredCheermote: e,
                                 hoveredTier: 0
-                            }), t.props.trackBitsCardInteraction(fe.a.PreviewEmote, {
+                            }), t.props.trackBitsCardInteraction(ne.a.PreviewEmote, {
                                 emoteType: e,
                                 emoteLevel: 100
                             })
@@ -33426,7 +32948,7 @@
                                 hoveredTier: 0
                             })
                         }, t.onPromoBuyClose = function(e) {
-                            Object(Me.a)(e, function() {
+                            Object(be.a)(e, function() {
                                 t.props.data && t.props.data.refetch()
                             })
                         }, t
@@ -33439,37 +32961,37 @@
                                 hoveredCheermote: null,
                                 hoveredTier: 0
                             }), this.props.currentCheers !== e.currentCheers) {
-                            var i = Object(F.a)(e.currentCheers),
-                                r = i.total,
-                                a = i.bonus,
+                            var i = Object(te.a)(e.currentCheers),
+                                a = i.total,
+                                r = i.bonus,
                                 o = i.largestCheermote,
                                 s = i.smallestCheermote;
                             this.setState({
-                                totalBits: r,
-                                bonusBits: a,
+                                totalBits: a,
+                                bonusBits: r,
                                 largestCheermote: o,
                                 smallestCheermote: s
                             })
                         }
                     }, t.prototype.componentDidMount = function() {
-                        var e = Object(F.a)(this.props.currentCheers),
+                        var e = Object(te.a)(this.props.currentCheers),
                             t = e.total,
                             n = e.bonus,
                             i = e.largestCheermote,
-                            r = e.smallestCheermote;
+                            a = e.smallestCheermote;
                         this.setState({
                             totalBits: t,
                             bonusBits: n,
                             largestCheermote: i,
-                            smallestCheermote: r
+                            smallestCheermote: a
                         }), this.props.onMount && this.props.onMount()
                     }, t.prototype.render = function() {
                         var e = this.props,
                             t = e.cheerMessageAutoModded,
                             n = e.visible,
                             i = e.currentCheers,
-                            r = e.data,
-                            a = e.bitsConfig,
+                            a = e.data,
+                            r = e.bitsConfig,
                             o = e.isSending,
                             l = e.helpRequested,
                             d = e.channelID,
@@ -33482,11 +33004,11 @@
                             b = e.onConfirmSend,
                             k = e.chatMessage;
                         if (t || !n && !i.length) return null;
-                        if (!r || r.loading) return s.createElement(G.a, null);
-                        if (r.error || !a) return s.createElement(S, null);
+                        if (!a || a.loading) return s.createElement(E.a, null);
+                        if (a.error || !r) return s.createElement(S, null);
                         var C, y = this.props.helpRequested && !this.props.currentCheers.length,
-                            E = null;
-                        return r.user.cheer.settings.event && (E = r.user.cheer.settings.event.toLowerCase().replace("_", "-")), y && (C = s.createElement(v.Ya, {
+                            N = null;
+                        return a.user.cheer.settings.event && (N = a.user.cheer.settings.event.toLowerCase().replace("_", "-")), y && (C = s.createElement(v.Ya, {
                             position: v.kb.Absolute,
                             padding: {
                                 left: .5,
@@ -33509,15 +33031,15 @@
                             textAlign: v.Sb.Center,
                             borderBottom: !o,
                             fullWidth: !0
-                        }, s.createElement(Ne, {
-                            bitsBalance: r.currentUser && r.currentUser.bitsBalance,
-                            bitsConfig: a,
-                            cheerMinimumBits: r.user.cheer.settings.cheerMinimumBits,
+                        }, s.createElement(de, {
+                            bitsBalance: a.currentUser && a.currentUser.bitsBalance,
+                            bitsConfig: r,
+                            cheerMinimumBits: a.user.cheer.settings.cheerMinimumBits,
                             chosenCheermote: this.state.chosenCheermote,
                             currentCheers: i,
-                            displayName: r.user.displayName,
-                            emoteMinimumBits: r.user.cheer.settings.emoteMinimumBits,
-                            event: E,
+                            displayName: a.user.displayName,
+                            emoteMinimumBits: a.user.cheer.settings.emoteMinimumBits,
+                            event: N,
                             helpRequested: l,
                             hoveredCheermote: this.state.hoveredCheermote,
                             hoveredTier: this.state.hoveredTier,
@@ -33526,22 +33048,22 @@
                             smallestCheermote: this.state.smallestCheermote,
                             totalBits: this.state.totalBits,
                             bonusBits: this.state.bonusBits,
-                            tournament: r.user.tournament,
+                            tournament: a.user.tournament,
                             channelID: d,
                             showHelp: u,
                             isStaff: p,
                             bitsSendErrorCode: m,
                             bitsSendHasError: h,
                             chatMessage: k,
-                            bitsOffers: r.currentUser && r.currentUser.bitsOffers,
-                            email: r.currentUser && r.currentUser.email,
+                            bitsOffers: a.currentUser && a.currentUser.bitsOffers,
+                            email: a.currentUser && a.currentUser.email,
                             trackBitsCardInteraction: this.props.trackBitsCardInteraction,
                             onPromoBuyClose: this.onPromoBuyClose
-                        })), !o && s.createElement(Oe, {
-                            bitsConfig: a,
+                        })), !o && s.createElement(fe, {
+                            bitsConfig: r,
                             chosenCheermote: this.state.chosenCheermote,
                             currentCheers: i,
-                            eventString: E,
+                            eventString: N,
                             helpRequested: l,
                             handleCheermoteClick: this.handleCheermoteClick,
                             handleCheermoteHover: this.handleCheermoteHover,
@@ -33553,22 +33075,22 @@
                             className: "t-bits-card__footer",
                             fullWidth: !0,
                             display: v.X.Flex
-                        }, s.createElement(K, {
-                            bitsBalance: r.currentUser && r.currentUser.bitsBalance,
-                            bitsConfig: a,
-                            event: E,
+                        }, s.createElement(T, {
+                            bitsBalance: a.currentUser && a.currentUser.bitsBalance,
+                            bitsConfig: r,
+                            event: N,
                             isSending: o,
                             totalBits: this.state.totalBits,
-                            userSelfBitsBadge: r.user.self && r.user.self.bitsBadge,
+                            userSelfBitsBadge: a.user.self && a.user.self.bitsBadge,
                             handleClickBuy: g,
                             onCancelSend: f,
                             onConfirmSend: b
                         })))
                     }, t
                 }(s.Component)),
-                Te = Object(l.compose)(Object(u.a)(function(e) {
+                Ce = Object(l.compose)(Object(u.a)(function(e) {
                     return {
-                        query: De,
+                        query: ve,
                         variables: {
                             name: e.channelID
                         },
@@ -33578,7 +33100,7 @@
                             if (t) return void 0 !== e.updates.minimum_bits && (t.user.cheer.settings.cheerMinimumBits = e.updates.minimum_bits), void 0 !== e.updates.minimum_bits_emote && (t.user.cheer.settings.emoteMinimumBits = e.updates.minimum_bits_emote), t
                         }
                     }
-                }), Object(d.a)(De, {
+                }), Object(d.a)(ve, {
                     name: "data",
                     skip: function(e) {
                         return !e.channelID
@@ -33592,8 +33114,8 @@
                             fetchPolicy: "cache-and-network"
                         }
                     }
-                }))(Ie),
-                Re = function(e) {
+                }))(ke),
+                ye = function(e) {
                     function t() {
                         return null !== e && e.apply(this, arguments) || this
                     }
@@ -33607,13 +33129,13 @@
                         }, Object(c.d)("You cannot Cheer in your own channel.", "BitsCard")))
                     }, t
                 }(s.PureComponent),
-                Ae = n("opIq"),
-                Le = n("bYOw"),
-                je = n("H31v"),
-                Be = n("8nkl"),
-                Ue = n("ao1a"),
-                xe = n("Gcqi"),
-                Fe = function(e) {
+                Se = n("opIq"),
+                Ee = n("bYOw"),
+                Ne = n("H31v"),
+                _e = n("8nkl"),
+                we = n("ao1a"),
+                Oe = n("Gcqi"),
+                Me = function(e) {
                     function t() {
                         var t = null !== e && e.apply(this, arguments) || this;
                         return t.state = {
@@ -33623,7 +33145,7 @@
                         }, t.lastRefetchTime = 0, t.showHelp = function(e) {
                             e.preventDefault(), t.setState({
                                 helpRequested: !0
-                            }), t.props.trackBitsCardInteraction(fe.a.NewUserHelpRequested)
+                            }), t.props.trackBitsCardInteraction(ne.a.NewUserHelpRequested)
                         }, t.closeHelp = function() {
                             return t.setState({
                                 helpRequested: !1
@@ -33631,7 +33153,7 @@
                         }, t.handleClickBuy = function() {
                             t.setState({
                                 buyingBits: !0
-                            }), t.props.trackBitsCardInteraction(fe.a.BuyMain)
+                            }), t.props.trackBitsCardInteraction(ne.a.BuyMain)
                         }, t.handleCloseBuy = function() {
                             return t.setState({
                                 buyingBits: !1
@@ -33640,12 +33162,12 @@
                             t.closeHelp(), t.mutateFirstCheerTutorialState({
                                 hasAbandoned: !1,
                                 hasSkipped: !0
-                            }), t.props.trackBitsCardInteraction(fe.a.NewUserSkipTutorial)
+                            }), t.props.trackBitsCardInteraction(ne.a.NewUserSkipTutorial)
                         }, t.handleCloseIntro = function() {
                             t.closeHelp(), t.props.currentCheers.length ? t.mutateFirstCheerTutorialState({
                                 hasAbandoned: !1,
                                 hasSkipped: !0
-                            }) : t.props.onUserClose(), t.props.trackBitsCardInteraction(fe.a.NewUserCloseTutorial)
+                            }) : t.props.onUserClose(), t.props.trackBitsCardInteraction(ne.a.NewUserCloseTutorial)
                         }, t.handleClickFirstTimePurchaseDiscount = function() {
                             t.setState({
                                 buyingBits: !0,
@@ -33654,7 +33176,7 @@
                             }), t.mutateFirstCheerTutorialState({
                                 hasAbandoned: !0,
                                 hasSkipped: !1
-                            }), t.props.trackBitsCardInteraction(fe.a.NewUserFirstTimePurchaseDiscountClick)
+                            }), t.props.trackBitsCardInteraction(ne.a.NewUserFirstTimePurchaseDiscountClick)
                         }, t.handleBackFromBuy = function() {
                             t.setState({
                                 helpRequested: t.state.backTargetsIntro,
@@ -33666,15 +33188,15 @@
                             })
                         }, t.mutateFirstCheerTutorialState = function(e) {
                             return o.__awaiter(t, void 0, void 0, function() {
-                                var t, n, i, r, a, s, l;
+                                var t, n, i, a, r, s, l;
                                 return o.__generator(this, function(d) {
                                     switch (d.label) {
                                         case 0:
                                             if (!(t = this.props.data && this.props.data.currentUser)) return [3, 4];
-                                            n = t.bitsUserSettings, i = t.id, r = n && n.firstCheerTutorial || {
+                                            n = t.bitsUserSettings, i = t.id, a = n && n.firstCheerTutorial || {
                                                 hasAbandoned: !1,
                                                 hasSkipped: !1
-                                            }, a = {
+                                            }, r = {
                                                 hasAbandoned: e.hasAbandoned,
                                                 hasSkipped: e.hasSkipped
                                             }, s = {
@@ -33687,7 +33209,7 @@
                                                             __typename: "BitsUserSettings",
                                                             firstCheerTutorial: o.__assign({
                                                                 __typename: "FirstCheerTutorial"
-                                                            }, r, a)
+                                                            }, a, r)
                                                         }
                                                     }
                                                 }
@@ -33722,31 +33244,31 @@
                         if (this.props.cheerMessageAutoModded || !this.props.visible && !this.props.currentCheers.length) return null;
                         if (!this.props.data || this.props.data.loading) return s.createElement(C, {
                             onUserClose: this.props.onUserClose
-                        }, s.createElement(G.a, null));
+                        }, s.createElement(E.a, null));
                         if (this.props.data.error || !this.props.bitsConfig) return s.createElement(C, {
                             onUserClose: this.props.onUserClose
                         }, s.createElement(S, null));
                         if (this.props.data.currentUser && this.props.data.currentUser.login === this.props.channelLogin) return s.createElement(C, {
                             onUserClose: this.props.onUserClose
-                        }, s.createElement(Re, null));
+                        }, s.createElement(ye, null));
                         var e = this.props.data && this.props.data.currentUser,
                             t = e && e.bitsUserState,
                             n = e && e.bitsUserSettings;
-                        if (Object(Ue.a)(t)) {
+                        if (Object(we.a)(t)) {
                             if (this.state.buyingBits) return s.createElement(C, {
                                 onUserClose: this.handleCloseBuy,
                                 closeDataATarget: "bits-buy-card-close-button"
-                            }, s.createElement(Ae.a, {
+                            }, s.createElement(Se.a, {
                                 bitsConfig: this.props.bitsConfig,
                                 channelLogin: this.props.channelLogin,
                                 closeAllBits: this.props.onUserClose,
                                 onClose: this.handleCloseBuy,
                                 onBack: this.handleBackFromBuy,
                                 trackBitsCardInteraction: this.props.trackBitsCardInteraction,
-                                location: fe.b.ChatTooltip,
+                                location: ne.b.ChatTooltip,
                                 shouldShowNewUserCheerUX: !0
                             }));
-                            if (Object(Ue.d)(t, n) || Object(Ue.a)(t) && this.state.helpRequested) return s.createElement(C, {
+                            if (Object(we.c)(t, n) || Object(we.a)(t) && this.state.helpRequested) return s.createElement(C, {
                                 onUserClose: this.handleCloseIntro,
                                 closeDataATarget: "bits-intro-close-button"
                             }, s.createElement(v.Ya, {
@@ -33760,26 +33282,17 @@
                         return this.state.buyingBits ? s.createElement(C, {
                             onUserClose: this.handleCloseBuy,
                             closeDataATarget: "bits-buy-card-close-button"
-                        }, s.createElement(Ae.a, {
+                        }, s.createElement(Se.a, {
                             bitsConfig: this.props.bitsConfig,
                             channelLogin: this.props.channelLogin,
                             closeAllBits: this.props.onUserClose,
                             onClose: this.handleCloseBuy,
                             trackBitsCardInteraction: this.props.trackBitsCardInteraction,
-                            location: fe.b.ChatTooltip,
-                            size: Le.b.Scrollview
-                        })) : Object(Ue.b)(this.props.isStaff, t, n) ? s.createElement(q, {
-                            bitsConfig: this.props.bitsConfig,
-                            channelID: this.props.channelID,
-                            channelName: this.props.channelLogin,
-                            currentCheers: this.props.currentCheers,
-                            onClickCheermote: this.props.onClickCheermote,
-                            bitsBalance: e && e.bitsBalance,
-                            handleClickBuy: this.handleClickBuy,
-                            handleExit: this.handleSkip
-                        }) : s.createElement(C, {
+                            location: ne.b.ChatTooltip,
+                            size: Ee.b.Scrollview
+                        })) : s.createElement(C, {
                             onUserClose: this.props.currentCheers.length ? void 0 : this.props.onUserClose
-                        }, s.createElement(Te, {
+                        }, s.createElement(Ce, {
                             onMount: this.onMountBitsCardMain,
                             bitsConfig: this.props.bitsConfig,
                             channelID: this.props.channelID,
@@ -33803,32 +33316,32 @@
                         }))
                     }, t
                 }(s.Component),
-                Pe = Object(l.compose)(Object(d.a)(xe, {
+                De = Object(l.compose)(Object(d.a)(Oe, {
                     name: "data",
                     skip: function(e) {
                         return !e.channelID
                     }
-                }), Object(d.a)(Be, {
+                }), Object(d.a)(_e, {
                     name: "setBitsUserSettings"
                 }), Object(u.a)(function(e) {
                     return {
-                        query: xe,
+                        query: Oe,
                         topic: e.user ? Object(h.E)(e.user.id) : "",
                         type: p.PubsubMessageType.UserBitsFirstPurchase,
                         skip: !e.user,
                         mutator: function(t, n) {
-                            return !n.currentUser || t.message_type !== je.b.FirstPurchase || e.user && t.data.user_id !== e.user.id ? n : (n.currentUser.bitsUserState === g.d.NEW_USER && (n.currentUser.bitsUserState = g.d.ACQUIRED), n)
+                            return !n.currentUser || t.message_type !== Ne.b.FirstPurchase || e.user && t.data.user_id !== e.user.id ? n : (n.currentUser.bitsUserState === g.d.NEW_USER && (n.currentUser.bitsUserState = g.d.ACQUIRED), n)
                         }
                     }
-                }))(Fe);
-            var He = Object(r.connect)(function(e) {
+                }))(Me);
+            var Ie = Object(a.connect)(function(e) {
                 return {
-                    user: Object(a.e)(e),
-                    isStaff: Object(a.g)(e)
+                    user: Object(r.e)(e),
+                    isStaff: Object(r.g)(e)
                 }
-            })(Pe);
+            })(De);
             n.d(t, "a", function() {
-                return He
+                return Ie
             })
         },
         s8Ou: function(e, t) {
@@ -34001,8 +33514,8 @@
         },
         sLlB: function(e, t, n) {
             "use strict";
-            var i, r = n("/MKj"),
-                a = n("fvjX"),
+            var i, a = n("/MKj"),
+                r = n("fvjX"),
                 o = n("5xw2"),
                 s = n("OhOW"),
                 l = n("mrSG"),
@@ -34090,13 +33603,13 @@
                         }, this.renderDropdownContent()))
                     }, t
                 }(c.Component),
-                k = Object(a.compose)(d.a, Object(f.b)("LanguageSelectMenu"))(v);
-            var C = Object(r.connect)(function(e) {
+                k = Object(r.compose)(d.a, Object(f.b)("LanguageSelectMenu"))(v);
+            var C = Object(a.connect)(function(e) {
                 return {
                     languagePreferences: Object(s.a)(e)
                 }
             }, function(e) {
-                return Object(a.bindActionCreators)({
+                return Object(r.bindActionCreators)({
                     updateLanguagePreferences: o.c,
                     clearLanguagePreferences: o.a
                 }, e)
@@ -34419,15 +33932,15 @@
                 return o
             });
             var i = n("0Log"),
-                r = n("ZtEv"),
-                a = n("aF6k");
+                a = n("ZtEv"),
+                r = n("aF6k");
             i.ModerationActions.Ban, i.ModerationActions.Timeout, i.ModerationActions.Unban, i.ModerationActions.Untimeout;
 
             function o(e, t, n, i) {
                 return {
-                    type: r.b.Moderation,
+                    type: a.b.Moderation,
                     moderationType: e,
-                    id: Object(a.a)(t + "-mod"),
+                    id: Object(r.a)(t + "-mod"),
                     userLogin: t,
                     reason: n,
                     duration: i
@@ -34437,8 +33950,8 @@
         tFCv: function(e, t, n) {
             "use strict";
             var i = n("mrSG"),
-                r = n("q1tI"),
-                a = n("oJmH"),
+                a = n("q1tI"),
+                r = n("oJmH"),
                 o = n("/MKj"),
                 s = n("9C/b"),
                 l = n("fvjX"),
@@ -34458,9 +33971,9 @@
                 S = n("F6GT"),
                 E = n("x0gr"),
                 N = c.a.wrap(function() {
-                    return Promise.all([n.e(0), n.e(200)]).then(n.bind(null, "8MX0"))
+                    return Promise.all([n.e(0), n.e(198)]).then(n.bind(null, "8MX0"))
                 }, "ChatSettingsComponent"),
-                w = function(e) {
+                _ = function(e) {
                     function t() {
                         var t = null !== e && e.apply(this, arguments) || this;
                         return t.state = {
@@ -34520,9 +34033,9 @@
                         }, t
                     }
                     return i.__extends(t, e), t.prototype.render = function() {
-                        return r.createElement(r.Fragment, null, r.createElement(N.Preload, null), r.createElement(R, {
+                        return a.createElement(a.Fragment, null, a.createElement(N.Preload, null), a.createElement(R, {
                             onToggle: this.handleSettingsToggle
-                        }, this.state.shouldMountChild && r.createElement(N, {
+                        }, this.state.shouldMountChild && a.createElement(N, {
                             authToken: this.props.authToken,
                             darkModeEnabled: this.props.darkModeEnabled,
                             editAppearance: this.state.editAppearance,
@@ -34551,8 +34064,8 @@
                             "data-test-selector": "chat-settings-component"
                         })))
                     }, t
-                }(r.Component);
-            var _ = Object(o.connect)(function(e) {
+                }(a.Component);
+            var w = Object(o.connect)(function(e) {
                     return {
                         isLoggedIn: Object(f.f)(e),
                         darkModeEnabled: Object(b.a)(e) === d.a.Dark,
@@ -34587,12 +34100,12 @@
                             return v.K()
                         }
                     }, e)
-                })(w),
-                O = Object(a.compose)(s.a, Object(k.b)(function(e) {
+                })(_),
+                O = Object(r.compose)(s.a, Object(k.b)(function(e) {
                     return {
                         onShowViewerCard: e.onShowViewerCard
                     }
-                }))(_),
+                }))(w),
                 M = n("/7QA"),
                 D = n("eJ65"),
                 I = n("Ue10"),
@@ -34606,22 +34119,22 @@
                     return i.__extends(t, e), t.prototype.componentDidUpdate = function(e) {
                         this.props.onToggle && this.props.isChatRulesOpen && !e.isChatRulesOpen && this.toggleBalloonRef.toggleBalloon(!1)
                     }, t.prototype.render = function() {
-                        return r.createElement(D.a, {
+                        return a.createElement(D.a, {
                             onToggle: this.props.onToggle,
                             ref: this.setToggleBalloonRef
-                        }, r.createElement(I.A, {
+                        }, a.createElement(I.A, {
                             icon: I.ub.Gear,
                             ariaLabel: Object(M.d)("Chat settings", "ChatInput"),
                             "data-a-target": "chat-settings",
                             disabled: !!this.props.disabled
-                        }), r.createElement(I.u, {
+                        }), a.createElement(I.u, {
                             direction: I.v.Top,
                             noTail: !0,
                             offsetY: "11px",
                             "data-a-target": "chat-settings-balloon"
                         }, this.props.children))
                     }, t
-                }(r.Component);
+                }(a.Component);
             var R = Object(o.connect)(function(e) {
                 return {
                     isChatRulesOpen: e.chat.isChatRulesOpen
@@ -34641,30 +34154,30 @@
                 return s
             });
             var i = n("/7QA"),
-                r = "esport_insider_pass_whitelist",
-                a = "esports_room_cheering_whitelist";
+                a = "esport_insider_pass_whitelist",
+                r = "esports_room_cheering_whitelist";
 
             function o(e, t, n) {
-                return void 0 === n && (n = !1), l(r, e, t, n)
+                return void 0 === n && (n = !1), l(a, e, t, n)
             }
 
             function s(e, t) {
-                return l(a, e, t)
+                return l(r, e, t)
             }
 
-            function l(e, t, n, r) {
-                void 0 === r && (r = !1);
-                var a = i.b.get(e, []),
-                    o = n && n.roles && n.roles.isStaff || r;
-                return a.includes(t) || a.includes(t + "-staff") && o
+            function l(e, t, n, a) {
+                void 0 === a && (a = !1);
+                var r = i.b.get(e, []),
+                    o = n && n.roles && n.roles.isStaff || a;
+                return r.includes(t) || r.includes(t + "-staff") && o
             }
         },
         u0cu: function(e, t, n) {},
         uIkQ: function(e, t, n) {
             "use strict";
             var i = n("b5C3"),
-                r = n("fQWD"),
-                a = n("ZEQw"),
+                a = n("fQWD"),
+                r = n("ZEQw"),
                 o = (n("yzyL"), n("mrSG")),
                 s = function() {
                     function e(e, t, n) {
@@ -34675,7 +34188,7 @@
                         return n && n.has(t) ? n.get(t) || null : void 0 !== (n = this.globalsBySet.get(e)) && n.get(t) || null
                     }, e.prototype.indexBadges = function(e, t, n) {
                         e.forEach(function(e) {
-                            n && e.clickAction === a.c && (e = o.__assign({}, e, {
+                            n && e.clickAction === r.c && (e = o.__assign({}, e, {
                                 channelName: n
                             }));
                             var i = t.get(e.setID);
@@ -34687,7 +34200,7 @@
             n.d(t, "b", function() {
                 return i.a
             }), n.d(t, "a", function() {
-                return r.a
+                return a.a
             }), n.d(t, !1, function() {}), n.d(t, !1, function() {}), n.d(t, "c", function() {
                 return s
             })
@@ -34698,8 +34211,8 @@
                 return c
             });
             var i = n("mrSG"),
-                r = n("q1tI"),
-                a = n("fvjX"),
+                a = n("q1tI"),
+                r = n("fvjX"),
                 o = n("GnwI"),
                 s = n("Ue10"),
                 l = (n("TVuH"), function(e) {
@@ -34712,10 +34225,10 @@
                     return i.__extends(t, e), t.prototype.componentDidMount = function() {
                         this.props.latencyTracking.reportInteractive()
                     }, t.prototype.render = function() {
-                        return r.createElement(s.Ya, i.__assign({
+                        return a.createElement(s.Ya, i.__assign({
                             position: s.kb.Relative,
                             className: "selectable-input-wrapper"
-                        }, Object(s.kc)(this.props)), r.createElement(s.Sa, {
+                        }, Object(s.kc)(this.props)), a.createElement(s.Sa, {
                             type: s.Ua.Text,
                             value: this.props.text,
                             readOnly: !0,
@@ -34724,8 +34237,8 @@
                             id: this.props.id
                         }), this.props.children)
                     }, t
-                }(r.Component)),
-                c = Object(a.compose)(Object(o.b)("SelectableInput"))(l)
+                }(a.Component)),
+                c = Object(r.compose)(Object(o.b)("SelectableInput"))(l)
         },
         uYvD: function(e, t, n) {},
         ugtu: function(e, t, n) {
@@ -34756,8 +34269,8 @@
                 return v
             });
             var i = n("q1tI"),
-                r = n("/7QA"),
-                a = n("GxR5"),
+                a = n("/7QA"),
+                r = n("GxR5"),
                 o = n("Ue10");
 
             function s(e) {
@@ -34780,47 +34293,47 @@
             }
 
             function d() {
-                return Object(r.d)("<x:link>Forgot your username</x:link>?", {
+                return Object(a.d)("<x:link>Forgot your username</x:link>?", {
                     "x:link": function(e) {
-                        return l(e, a.b)
+                        return l(e, r.b)
                     }
                 }, "ServerMessage")
             }
 
             function u() {
-                return Object(r.d)("<x:link>Forgot your password</x:link>?", {
+                return Object(a.d)("<x:link>Forgot your password</x:link>?", {
                     "x:link": function(e) {
-                        return l(e, Object(a.e)())
+                        return l(e, Object(r.e)())
                     }
                 }, "ServerMessage")
             }
 
             function p() {
-                return Object(r.d)("Please <x:link>reset your password</x:link>.", {
+                return Object(a.d)("Please <x:link>reset your password</x:link>.", {
                     "x:link": function(e) {
-                        return l(e, Object(a.e)())
+                        return l(e, Object(r.e)())
                     }
                 }, "ServerMessage")
             }
 
             function m() {
-                return Object(r.d)("Please <x:link>contact support</x:link> for assistance.", {
+                return Object(a.d)("Please <x:link>contact support</x:link> for assistance.", {
                     "x:link": function(e) {
-                        return l(e, a.a)
+                        return l(e, r.a)
                     }
                 }, "ServerMessage")
             }
 
             function h() {
-                return Object(r.d)("To learn more, please read <x:link>this article</x:link>.", {
+                return Object(a.d)("To learn more, please read <x:link>this article</x:link>.", {
                     "x:link": function(e) {
-                        return l(e, a.c)
+                        return l(e, r.c)
                     }
                 }, "ServerMessage")
             }
 
             function g(e) {
-                return Object(r.d)("Want to <x:click>create a new account</x:click>?", {
+                return Object(a.d)("Want to <x:click>create a new account</x:click>?", {
                     "x:click": function(t) {
                         return c(t, e)
                     }
@@ -34828,7 +34341,7 @@
             }
 
             function f(e) {
-                return Object(r.d)("Want to <x:click>log in</x:click> instead?", {
+                return Object(a.d)("Want to <x:click>log in</x:click> instead?", {
                     "x:click": function(t) {
                         return c(t, e)
                     }
@@ -34836,7 +34349,7 @@
             }
 
             function b(e) {
-                return Object(r.d)("If you need a Twitch account, you can <x:click>create one here</x:click>.", {
+                return Object(a.d)("If you need a Twitch account, you can <x:click>create one here</x:click>.", {
                     "x:click": function(t) {
                         return c(t, e)
                     }
@@ -34844,7 +34357,7 @@
             }
 
             function v(e) {
-                return Object(r.d)("If you want to use an existing Twitch ID, you can <x:click>connect it here</x:click>.", {
+                return Object(a.d)("If you want to use an existing Twitch ID, you can <x:click>connect it here</x:click>.", {
                     "x:click": function(t) {
                         return c(t, e)
                     }
@@ -35045,9 +34558,9 @@
             }), n.d(t, "m", function() {
                 return N
             }), n.d(t, "i", function() {
-                return w
-            }), n.d(t, "e", function() {
                 return _
+            }), n.d(t, "e", function() {
+                return w
             }), n.d(t, "d", function() {
                 return O
             }), n.d(t, "b", function() {
@@ -35059,9 +34572,9 @@
             }), n.d(t, "q", function() {
                 return R
             }), n.d(t, "p", function() {
-                return A
+                return L
             });
-            var i, r, a, o, s, l, c = n("mrSG"),
+            var i, a, r, o, s, l, c = n("mrSG"),
                 d = n("/7QA"),
                 u = n("2xye"),
                 p = n("mBWp");
@@ -35118,15 +34631,15 @@
             }
 
             function b() {
-                f(r.MarkAllRead)
+                f(a.MarkAllRead)
             }
 
             function v() {
-                f(r.EnableDoNotDisturb)
+                f(a.EnableDoNotDisturb)
             }
 
             function k() {
-                f(r.DisableDoNotDisturb)
+                f(a.DisableDoNotDisturb)
             }
 
             function C(e, t) {
@@ -35149,42 +34662,42 @@
             function E(e) {
                 m({
                     threadID: e,
-                    action: a.Mute
+                    action: r.Mute
                 })
             }
 
             function N(e) {
                 m({
                     threadID: e,
-                    action: a.Unmute
-                })
-            }
-
-            function w(e) {
-                m({
-                    threadID: e,
-                    action: a.Expand
+                    action: r.Unmute
                 })
             }
 
             function _(e) {
                 m({
                     threadID: e,
-                    action: a.Collapse
+                    action: r.Expand
+                })
+            }
+
+            function w(e) {
+                m({
+                    threadID: e,
+                    action: r.Collapse
                 })
             }
 
             function O(e) {
                 m({
                     threadID: e,
-                    action: a.Close
+                    action: r.Close
                 })
             }
 
             function M(e) {
                 m({
                     threadID: e,
-                    action: a.Archive
+                    action: r.Archive
                 })
             }
 
@@ -35212,18 +34725,18 @@
                     setTimeout(function() {
                         return c.__awaiter(e, void 0, void 0, function() {
                             var e, n, i;
-                            return c.__generator(this, function(r) {
-                                switch (r.label) {
+                            return c.__generator(this, function(a) {
+                                switch (a.label) {
                                     case 0:
-                                        e = null, r.label = 1;
+                                        e = null, a.label = 1;
                                     case 1:
-                                        return r.trys.push([1, 3, , 4]), [4, d.p.apollo.client.query({
+                                        return a.trys.push([1, 3, , 4]), [4, d.p.apollo.client.query({
                                             query: p
                                         })];
                                     case 2:
-                                        return e = r.sent(), [3, 4];
+                                        return e = a.sent(), [3, 4];
                                     case 3:
-                                        return n = r.sent(), d.k.error(n, "Failed to make query for current user info in WhisperSent reporting"), [3, 4];
+                                        return n = a.sent(), d.k.error(n, "Failed to make query for current user info in WhisperSent reporting"), [3, 4];
                                     case 4:
                                         return i = e && e.data && e.data.currentUser, t(i), [2]
                                 }
@@ -35255,7 +34768,7 @@
                 })
             }
 
-            function A(e) {
+            function L(e) {
                 return c.__awaiter(this, void 0, void 0, function() {
                     var t;
                     return c.__generator(this, function(n) {
@@ -35278,10 +34791,10 @@
             }(i || (i = {})),
             function(e) {
                 e.MarkAllRead = "mark_all_read", e.EnableDoNotDisturb = "do_not_disturb_on", e.DisableDoNotDisturb = "do_not_disturb_off"
-            }(r || (r = {})),
+            }(a || (a = {})),
             function(e) {
                 e.Mute = "mute", e.Unmute = "unmute", e.Expand = "maximize", e.Collapse = "minimize", e.Close = "close", e.Archive = "archive", e.Open = "open"
-            }(a || (a = {})),
+            }(r || (r = {})),
             function(e) {
                 e.Dock = "dock", e.SpamPropmt = "dock_spam_cta"
             }(o || (o = {})),
@@ -35295,8 +34808,8 @@
         vHGB: function(e, t, n) {
             "use strict";
             var i = n("mrSG"),
-                r = n("q1tI"),
-                a = n("ZEQw"),
+                a = n("q1tI"),
+                r = n("ZEQw"),
                 o = n("Ue10"),
                 s = (n("E78O"), n("/7QA")),
                 l = n("2xye"),
@@ -35331,24 +34844,24 @@
                         t = e.title,
                         n = e.image1x,
                         i = e.image2x,
-                        a = e.image4x,
-                        l = r.createElement("img", {
+                        r = e.image4x,
+                        l = a.createElement("img", {
                             alt: t,
                             "aria-label": Object(s.d)("{badgeTitle} badge", {
                                 badgeTitle: t
                             }, "Badge"),
                             className: "chat-badge",
                             src: n,
-                            srcSet: n + " 1x, " + i + " 2x, " + a + " 4x",
+                            srcSet: n + " 1x, " + i + " 2x, " + r + " 4x",
                             onMouseOver: this.onMouseOver,
                             onMouseOut: this.onMouseOut
                         });
-                    return this.targetURL = this.getTargetURL(), "" !== this.targetURL && (l = r.createElement("a", {
+                    return this.targetURL = this.getTargetURL(), "" !== this.targetURL && (l = a.createElement("a", {
                         href: this.targetURL,
                         onClick: this.onBadgeClickHandler,
                         target: "_blank",
                         "data-a-target": "chat-badge"
-                    }, l)), this.state.isHovering ? r.createElement(o.Zb, {
+                    }, l)), this.state.isHovering ? a.createElement(o.Zb, {
                         align: o.ac.Left,
                         "data-a-target": "chat-badge",
                         display: o.X.Inline,
@@ -35359,11 +34872,11 @@
                 }, t.prototype.getTargetURL = function() {
                     var e = this.props.badge;
                     switch (e.clickAction) {
-                        case a.e:
+                        case r.e:
                             return e.clickURL;
-                        case a.c:
+                        case r.c:
                             return e.channelName ? this.getSubscriberLink() : "";
-                        case a.d:
+                        case r.d:
                             return "https://www.twitch.tv/products/turbo?ref=chat_badge";
                         default:
                             return ""
@@ -35371,13 +34884,13 @@
                 }, t.prototype.getSubscriberLink = function() {
                     return "https://www.twitch.tv/" + this.props.badge.channelName + "/subscribe?ref=in_chat_subscriber_link"
                 }, t
-            }(r.Component)
+            }(a.Component)
         },
         vKai: function(e, t, n) {
             "use strict";
             var i = n("mrSG"),
-                r = n("q1tI"),
-                a = n("/MKj"),
+                a = n("q1tI"),
+                r = n("/MKj"),
                 o = n("fvjX"),
                 s = n("/7QA"),
                 l = n("gcd7"),
@@ -35394,8 +34907,8 @@
                         return t.handleWhisperCommand = function(e) {
                             var n = Object(c.q)(e),
                                 i = n.recipientLogin,
-                                r = n.body;
-                            return i && r ? t.props.isEmbedded || t.props.isPopout ? {
+                                a = n.body;
+                            return i && a ? t.props.isEmbedded || t.props.isPopout ? {
                                 deferred: Promise.resolve({
                                     notice: Object(s.d)("Please use the whisper window for whispers.", "WhisperCommandHandler")
                                 })
@@ -35403,7 +34916,7 @@
                                 deferred: Promise.resolve({
                                     notice: Object(s.d)("You cannot whisper to yourself.", "WhisperCommandHandler")
                                 })
-                            } : t.props.userID ? t.initiateWhisper(i, r) : void 0 : {
+                            } : t.props.userID ? t.initiateWhisper(i, a) : void 0 : {
                                 preserveInput: !0,
                                 deferred: Promise.resolve({
                                     notice: Object(s.d)('Usage: "/w [login] [message]"', "WhisperCommandHandler")
@@ -35412,14 +34925,14 @@
                         }, t
                     }
                     return i.__extends(t, e), t.prototype.render = function() {
-                        return r.createElement(l.a, {
+                        return a.createElement(l.a, {
                             command: "w",
                             handler: this.handleWhisperCommand
                         })
                     }, t.prototype.initiateWhisper = function(e, t) {
                         var n = this;
                         return {
-                            deferred: new Promise(function(r, a) {
+                            deferred: new Promise(function(a, r) {
                                 return i.__awaiter(n, void 0, void 0, function() {
                                     var n, o, l, c;
                                     return i.__generator(this, function(i) {
@@ -35431,9 +34944,9 @@
                                             case 2:
                                                 return o = i.sent(), s.k.warn(o, "Failed to fetch user targeted by whisper command.", {
                                                     recipientLogin: e
-                                                }), [2, a(o)];
+                                                }), [2, r(o)];
                                             case 3:
-                                                return n ? [3, 4] : [2, r({
+                                                return n ? [3, 4] : [2, a({
                                                     notice: Object(s.d)("No user matching that login.", "WhisperCommandHandler")
                                                 })];
                                             case 4:
@@ -35455,19 +34968,19 @@
                                                 return c = i.sent(), s.k.error(c, "Failed to send whisper using whisper command.", {
                                                     currentUserID: this.props.userID,
                                                     recipientUserID: n
-                                                }), [2, r({
+                                                }), [2, a({
                                                     notice: Object(s.d)("Unable to send Whisper at this moment.", "WhisperCommandHandler")
                                                 })];
                                             case 8:
-                                                return this.props.openThread(l), [2, r({})]
+                                                return this.props.openThread(l), [2, a({})]
                                         }
                                     })
                                 })
                             })
                         }
                     }, t
-                }(r.Component);
-            var b = Object(a.connect)(null, function(e) {
+                }(a.Component);
+            var b = Object(r.connect)(null, function(e) {
                 return Object(o.bindActionCreators)({
                     openThread: function(e) {
                         return Object(u.l)({
@@ -35483,8 +34996,8 @@
         },
         vSJR: function(e, t, n) {
             "use strict";
-            var i, r = n("mrSG"),
-                a = n("q1tI"),
+            var i, a = n("mrSG"),
+                r = n("q1tI"),
                 o = n("u5aL"),
                 s = n("N0BP"),
                 l = n("Ue10");
@@ -35517,29 +35030,29 @@
                         t.hideDropdown()
                     }, t
                 }
-                return r.__extends(t, e), t.prototype.render = function() {
+                return a.__extends(t, e), t.prototype.render = function() {
                     var e = this.props.children;
-                    return this.props.hideDropdownOnInsideClick && (e = a.createElement("div", {
+                    return this.props.hideDropdownOnInsideClick && (e = r.createElement("div", {
                         "data-test-selector": i.DropdownInsideClickDetector,
                         onClick: this.handleInsideDropdownClick
-                    }, e)), a.createElement(o.a, {
+                    }, e)), r.createElement(o.a, {
                         onClickOut: this.handleOnClickOut
-                    }, a.createElement(l.Fb, r.__assign({
+                    }, r.createElement(l.Fb, a.__assign({
                         background: this.state.isOpen ? l.r.Base : void 0,
                         borderRadius: l.x.Large,
                         className: "inline-dropdown",
                         elevation: this.state.isOpen ? 3 : void 0,
                         padding: .5,
                         position: l.kb.Relative
-                    }, Object(s.a)(this.props)), a.createElement("div", {
+                    }, Object(s.a)(this.props)), r.createElement("div", {
                         className: "inline-dropdown__button-wrapper"
-                    }, a.createElement(l.z, {
+                    }, r.createElement(l.z, {
                         blurAfterClick: !0,
                         dropdown: !0,
                         onClick: this.handleButtonClick,
                         size: l.D.Large,
                         type: l.F.Hollow
-                    }, this.props.buttonLabel)), a.createElement(l.Fb, {
+                    }, this.props.buttonLabel)), r.createElement(l.Fb, {
                         attachLeft: !0,
                         background: l.r.Base,
                         borderRadius: l.x.Large,
@@ -35558,7 +35071,7 @@
                         isOpen: e
                     })
                 }, t
-            }(a.Component);
+            }(r.Component);
             n.d(t, "a", function() {
                 return c
             })
@@ -35566,14 +35079,14 @@
         vSeP: function(e, t, n) {
             "use strict";
             n.d(t, "b", function() {
-                return a
+                return r
             }), n.d(t, "a", function() {
                 return o
             });
             var i = n("XIZb"),
-                r = Object(i.a)("ActiveChatters"),
-                a = r.withChatServiceProvider,
-                o = (0, r.withContext)(function(e) {
+                a = Object(i.a)("ActiveChatters"),
+                r = a.withChatServiceProvider,
+                o = (0, a.withContext)(function(e) {
                     return {
                         activeChattersAPI: e.serviceAPI,
                         setActiveChattersAPI: e.setServiceAPI
@@ -35691,8 +35204,8 @@
             }), n.d(t, "a", function() {
                 return h
             });
-            var i, r = n("mrSG"),
-                a = n("q1tI"),
+            var i, a = n("mrSG"),
+                r = n("q1tI"),
                 o = n("wbMx"),
                 s = n("+GjP"),
                 l = n("2xye"),
@@ -35725,7 +35238,7 @@
                 function t() {
                     return null !== e && e.apply(this, arguments) || this
                 }
-                return r.__extends(t, e), t.prototype.render = function() {
+                return a.__extends(t, e), t.prototype.render = function() {
                     var e = {
                             margin: {
                                 right: 1
@@ -35734,17 +35247,17 @@
                         t = {};
                     return this.props.asBalloon && (t = {
                         justifyContent: p.Xa.Between
-                    }, e = {}), a.createElement(p.Ya, r.__assign({
+                    }, e = {}), r.createElement(p.Ya, a.__assign({
                         className: "clips-social-share",
                         display: p.X.Flex,
                         flexWrap: p.Ba.NoWrap
                     }, t, {
                         "data-test-selector": i.MainContainer
-                    }), a.createElement(p.Ya, r.__assign({
+                    }), r.createElement(p.Ya, a.__assign({
                         display: p.X.InlineBlock
                     }, e, {
                         "data-test-selector": i.DownloadButtonContainer
-                    }), a.createElement(u.a, {
+                    }), r.createElement(u.a, {
                         broadcasterLogin: this.props.clip.broadcaster && this.props.clip.broadcaster.login || "",
                         broadcasterId: this.props.clip.broadcaster && this.props.clip.broadcaster.id || "",
                         slug: this.props.clip.slug,
@@ -35758,11 +35271,11 @@
                     }), this.renderSocialButton(e, i.ShareButtonCopy, o.b.Copy))
                 }, t.prototype.renderSocialButton = function(e, t, n, i) {
                     var u = Object(s.e)(this.props.clip.url, i);
-                    return this.props.pageType === l.PageviewLocation.ClipsWatchPage && this.props.clip.broadcaster && this.props.clip.broadcaster.login && (u = Object(s.e)(Object(d.a)(this.props.clip.slug, this.props.clip.broadcaster.login), i)), a.createElement(p.Ya, r.__assign({
+                    return this.props.pageType === l.PageviewLocation.ClipsWatchPage && this.props.clip.broadcaster && this.props.clip.broadcaster.login && (u = Object(s.e)(Object(d.a)(this.props.clip.slug, this.props.clip.broadcaster.login), i)), r.createElement(p.Ya, a.__assign({
                         key: n
                     }, e, {
                         "data-test-selector": t
-                    }), a.createElement(o.a, {
+                    }), r.createElement(o.a, {
                         key: n,
                         type: n,
                         text: this.props.clip.title,
@@ -35770,7 +35283,7 @@
                         onShareClick: Object(c.c)(this.props.clip.id, this.props.clip.game && this.props.clip.game.name, this.props.clip.broadcaster && this.props.clip.broadcaster.id, this.props.clip.broadcaster && this.props.clip.broadcaster.login, this.props.pageType)
                     }))
                 }, t
-            }(a.Component)
+            }(r.Component)
         },
         wC0O: function(e, t, n) {},
         wbMx: function(e, t, n) {
@@ -35780,8 +35293,8 @@
             }), n.d(t, "a", function() {
                 return d
             });
-            var i, r = n("mrSG"),
-                a = n("q1tI"),
+            var i, a = n("mrSG"),
+                r = n("q1tI"),
                 o = n("/7QA"),
                 s = n("Jxh/"),
                 l = n("r62z"),
@@ -35795,19 +35308,19 @@
                     var n = e.call(this, t) || this;
                     return n.renderLink = function() {
                         var e = "social-button__link " + n.addSocialClassModifier("social-button__link");
-                        return n.props.type === i.Download ? a.createElement("a", r.__assign({
+                        return n.props.type === i.Download ? r.createElement("a", a.__assign({
                             href: n.props.url,
                             target: "_blank",
                             className: e,
                             onClick: n.onShareClickHandler
                         }, Object(c.kc)(n.props), {
                             download: n.props.text
-                        }), n.renderIcon()) : n.isLink() ? a.createElement("a", r.__assign({
+                        }), n.renderIcon()) : n.isLink() ? r.createElement("a", a.__assign({
                             href: n.getLinkTarget(),
                             target: "_blank",
                             className: e,
                             onClick: n.onShareClickHandler
-                        }, Object(c.kc)(n.props)), n.renderIcon()) : a.createElement("button", r.__assign({
+                        }, Object(c.kc)(n.props)), n.renderIcon()) : r.createElement("button", a.__assign({
                             onClick: n.copyPageUrl,
                             onMouseLeave: n.clearIsCopiedStatus,
                             className: e
@@ -35826,12 +35339,12 @@
                         })
                     }, n.renderIcon = function() {
                         var e = n.getAssetFromType();
-                        return a.createElement(c.Ya, {
+                        return r.createElement(c.Ya, {
                             className: "social-button__icon " + n.addSocialClassModifier("social-button__icon"),
                             display: c.X.Flex,
                             alignItems: c.f.Center,
                             justifyContent: c.Xa.Center
-                        }, a.createElement(c.tb, {
+                        }, r.createElement(c.tb, {
                             asset: e
                         }))
                     }, n.isLink = function() {
@@ -35889,18 +35402,18 @@
                     }, n.getLinkTarget = function() {
                         var e = n.props,
                             t = e.text,
-                            r = e.type,
-                            a = n.getUrl(),
+                            a = e.type,
+                            r = n.getUrl(),
                             o = t || "";
-                        switch (r) {
+                        switch (a) {
                             case i.Reddit:
-                                return Object(l.b)(a, o);
+                                return Object(l.b)(r, o);
                             case i.VKontakte:
-                                return Object(l.d)(a);
+                                return Object(l.d)(r);
                             case i.Facebook:
-                                return Object(l.a)(a);
+                                return Object(l.a)(r);
                             case i.Twitter:
-                                return Object(l.c)(a, o);
+                                return Object(l.c)(r, o);
                             default:
                                 return ""
                         }
@@ -35908,23 +35421,23 @@
                         isCopied: !1
                     }, n
                 }
-                return r.__extends(t, e), t.prototype.render = function() {
-                    return a.createElement(c.Ya, {
+                return a.__extends(t, e), t.prototype.render = function() {
+                    return r.createElement(c.Ya, {
                         className: "social-button"
-                    }, a.createElement(c.Zb, {
+                    }, r.createElement(c.Zb, {
                         label: this.getTooltipFromType(),
                         direction: c.bc.Bottom
                     }, this.renderLink()))
                 }, t
-            }(a.Component)
+            }(r.Component)
         },
         wqI2: function(e, t, n) {},
         wtKP: function(e, t, n) {},
         wxwP: function(e, t, n) {
             "use strict";
             var i = n("mrSG"),
-                r = n("q1tI"),
-                a = n("/MKj"),
+                a = n("q1tI"),
+                r = n("/MKj"),
                 o = n("fvjX"),
                 s = n("/7QA"),
                 l = n("CFw/"),
@@ -35936,14 +35449,14 @@
                         return null !== e && e.apply(this, arguments) || this
                     }
                     return i.__extends(t, e), t.prototype.render = function() {
-                        return r.createElement("div", {
+                        return a.createElement("div", {
                             onClick: this.props.closeModal
-                        }, r.createElement(u.i, {
+                        }, a.createElement(u.i, {
                             type: u.n.FadeIn,
                             duration: u.k.Long,
                             timing: u.m.EaseInOut,
                             enabled: !0
-                        }, r.createElement(u.Fb, {
+                        }, a.createElement(u.Fb, {
                             className: "browser-push-notifications-upsell",
                             alignItems: u.f.Center,
                             justifyContent: u.Xa.Center,
@@ -35954,7 +35467,7 @@
                             fullWidth: !0,
                             attachTop: !0,
                             attachLeft: !0
-                        }, r.createElement(u.Ya, {
+                        }, a.createElement(u.Ya, {
                             className: "browser-push-notifications-upsell__container",
                             display: u.X.Flex,
                             textAlign: u.Sb.Center,
@@ -35962,41 +35475,41 @@
                                 x: 1
                             },
                             position: u.kb.Relative
-                        }, r.createElement(u.i, {
+                        }, a.createElement(u.i, {
                             type: u.n.SlideInBottom,
                             duration: u.k.Long,
                             timing: u.m.EaseInOut,
                             enabled: !0
-                        }, r.createElement(u.W, {
+                        }, a.createElement(u.W, {
                             type: u.Wb.H3,
                             fontSize: u.Ca.Size3,
                             lineHeight: u.Za.Body
-                        }, Object(s.d)("Don't miss out when your favorite streamers go live!", "BrowserNotificationsUpsellModal")), r.createElement(u.Ya, {
+                        }, Object(s.d)("Don't miss out when your favorite streamers go live!", "BrowserNotificationsUpsellModal")), a.createElement(u.Ya, {
                             margin: {
                                 top: 1
                             }
-                        }, r.createElement(u.W, {
+                        }, a.createElement(u.W, {
                             type: u.Wb.H4,
                             fontSize: u.Ca.Size4,
                             color: u.O.OverlayAlt,
                             lineHeight: u.Za.Body
-                        }, Object(s.d)("Turn on Browser Notifications to get updates even when your browser window is minimized", "BrowserNotificationsUpsellModal")))), r.createElement(u.Ya, {
+                        }, Object(s.d)("Turn on Browser Notifications to get updates even when your browser window is minimized", "BrowserNotificationsUpsellModal")))), a.createElement(u.Ya, {
                             className: "browser-push-notifications-upsell__arrow",
                             position: u.kb.Absolute,
                             attachTop: !0,
                             attachLeft: !0
-                        }, r.createElement(u.i, {
+                        }, a.createElement(u.i, {
                             type: u.n.SlideInBottom,
                             delay: u.j.Short,
                             duration: u.k.Long,
                             timing: u.m.EaseInOut,
                             enabled: !0
-                        }, r.createElement("img", {
+                        }, a.createElement("img", {
                             src: c.a
                         })))))))
                     }, t
-                }(r.Component));
-            var m = Object(a.connect)(null, function(e) {
+                }(a.Component));
+            var m = Object(r.connect)(null, function(e) {
                 return Object(o.bindActionCreators)({
                     closeModal: d.c
                 }, e)
@@ -36010,21 +35523,21 @@
         "x0+1": function(e, t, n) {
             "use strict";
             var i = n("mrSG"),
-                r = n("q1tI"),
-                a = n("/7QA"),
+                a = n("q1tI"),
+                r = n("/7QA"),
                 o = function(e) {
                     function t() {
                         var t = null !== e && e.apply(this, arguments) || this;
                         return t.state = {
                             alwaysShowMessage: !1
                         }, t.renderBody = function() {
-                            return t.state.alwaysShowMessage ? t.props.messageBody : r.createElement("span", {
+                            return t.state.alwaysShowMessage ? t.props.messageBody : a.createElement("span", {
                                 key: "deleted",
                                 className: "chat-line__message--deleted"
-                            }, r.createElement("a", {
+                            }, a.createElement("a", {
                                 href: "",
                                 onClick: t.alwaysShowMessage
-                            }, "<" + Object(a.d)("click to show", "MessageDeletedLine") + ">"))
+                            }, "<" + Object(r.d)("click to show", "MessageDeletedLine") + ">"))
                         }, t.alwaysShowMessage = function(e) {
                             e && e.preventDefault(), t.setState({
                                 alwaysShowMessage: !0
@@ -36035,16 +35548,16 @@
                         var e = this.props,
                             t = e.targetLogin,
                             n = e.moderatorLogin;
-                        return n ? Object(a.d)("{moderatorLogin} deleted {targetLogin}'s message: {body}", {
+                        return n ? Object(r.d)("{moderatorLogin} deleted {targetLogin}'s message: {body}", {
                             moderatorLogin: n,
                             targetLogin: t,
                             body: this.renderBody()
-                        }, "MessageDeletedLine") : Object(a.d)("A moderator deleted {targetLogin}'s message: {body}", {
+                        }, "MessageDeletedLine") : Object(r.d)("A moderator deleted {targetLogin}'s message: {body}", {
                             targetLogin: t,
                             body: this.renderBody()
                         }, "MessageDeletedLine")
                     }, t
-                }(r.Component);
+                }(a.Component);
             n.d(t, "a", function() {
                 return o
             })
@@ -36059,19 +35572,19 @@
                 return d
             });
             var i = n("mrSG"),
-                r = n("/7QA"),
-                a = n("2xye"),
+                a = n("/7QA"),
+                r = n("2xye"),
                 o = n("r2Xj"),
                 s = n("oi4T"),
                 l = function(e) {
-                    r.o.track(a.SpadeEventType.ChatSettingsOpened, Object(s.a)(e))
+                    a.o.track(r.SpadeEventType.ChatSettingsOpened, Object(s.a)(e))
                 },
                 c = function(e) {
                     var t = i.__assign({}, Object(s.a)(e), {
                         setting_name: e.settingName,
                         new_value: e.newValue.toString()
                     });
-                    r.o.track(a.SpadeEventType.ChatSettingsChanged, t)
+                    a.o.track(r.SpadeEventType.ChatSettingsChanged, t)
                 },
                 d = function(e) {
                     var t = i.__assign({}, Object(s.a)(e), {
@@ -36079,7 +35592,7 @@
                         new_value: e.newValue.toString(),
                         follower_mode_on: e.followerModeOn
                     });
-                    r.o.track(a.SpadeEventType.ChatSettingsChanged, t)
+                    a.o.track(r.SpadeEventType.ChatSettingsChanged, t)
                 }
         },
         xDdc: function(e, t, n) {},
@@ -36094,7 +35607,7 @@
                 }
             }
 
-            function r(e) {
+            function a(e) {
                 return {
                     __typename: "WhisperMessageEdge",
                     cursor: "" + e.data_object.id,
@@ -36120,7 +35633,7 @@
                 }
             }
 
-            function a(e) {
+            function r(e) {
                 return e.map(function(e) {
                     return o(i(e))
                 })
@@ -36137,9 +35650,9 @@
                 }
             }
             n.d(t, "c", function() {
-                return r
-            }), n.d(t, "b", function() {
                 return a
+            }), n.d(t, "b", function() {
+                return r
             }), n.d(t, "a", function() {
                 return o
             })
@@ -36152,15 +35665,15 @@
                 return s
             });
             var i = n("mrSG"),
-                r = n("/7QA"),
-                a = n("2xye"),
+                a = n("/7QA"),
+                r = n("2xye"),
                 o = n("oi4T"),
                 s = function(e) {
                     var t = i.__assign({}, Object(o.a)(e), {
                         mentioned_user_display_name: e.mentionedUserDisplayName,
                         user: e.userLogin
                     });
-                    r.o.track(a.SpadeEventType.ChatMentionUsed, t)
+                    a.o.track(r.SpadeEventType.ChatMentionUsed, t)
                 }
         },
         yXtP: function(e, t) {
@@ -36273,9 +35786,9 @@
                 return p
             });
             var i = n("q1tI"),
-                r = n("/7QA"),
-                a = n("7TkE"),
-                o = n.n(a),
+                a = n("/7QA"),
+                r = n("7TkE"),
+                o = n.n(r),
                 s = n("5zXJ"),
                 l = n("VJHF"),
                 c = n("8SX2"),
@@ -36288,11 +35801,11 @@
                             login: e.event.userLogin,
                             sourceType: e.event.sourceType
                         }, e.event.displayName),
-                        n = Object(r.d)("{gifterButton}'s Cheer shared rewards to {selectedCount} others in chat.", {
+                        n = Object(a.d)("{gifterButton}'s Cheer shared rewards to {selectedCount} others in chat.", {
                             gifterButton: t,
                             selectedCount: e.event.selectedCount
                         }, "RewardGiftNoticeLine"),
-                        a = Object(r.d)("<x:link>Cheer at least {minCheerAmount} Bits to share rewards with chat!</x:link>", {
+                        r = Object(a.d)("<x:link>Cheer at least {minCheerAmount} Bits to share rewards with chat!</x:link>", {
                             minCheerAmount: e.event.minCheerAmount,
                             "x:link": function(e) {
                                 return i.createElement(d.U, {
@@ -36302,10 +35815,10 @@
                             }
                         }, "RewardGiftNoticeLine"),
                         s = o.a;
-                    return e.event.domain === l.c && (n = Object(r.d)("{gifterButton}'s Cheer shared Heroes Loot Chests with {selectedCount} other viewers in Chat!", {
+                    return e.event.domain === l.c && (n = Object(a.d)("{gifterButton}'s Cheer shared Heroes Loot Chests with {selectedCount} other viewers in Chat!", {
                         gifterButton: t,
                         selectedCount: e.event.selectedCount
-                    }, "RewardGiftNoticeLine"), a = Object(r.d)("<x:link>Cheer at least {minCheerAmount} Bits at once and share with Chat!</x:link>", {
+                    }, "RewardGiftNoticeLine"), r = Object(a.d)("<x:link>Cheer at least {minCheerAmount} Bits at once and share with Chat!</x:link>", {
                         minCheerAmount: e.event.minCheerAmount,
                         "x:link": function(e) {
                             return i.createElement(d.U, {
@@ -36343,7 +35856,7 @@
                     }, i.createElement(d.W, {
                         bold: !0,
                         color: d.O.Link
-                    }, a)))
+                    }, r)))
                 }
         },
         ygQa: function(e, t, n) {
@@ -36352,12 +35865,12 @@
                 return o
             });
             var i = n("mrSG"),
-                r = n("yR8l"),
-                a = n("yXtP");
+                a = n("yR8l"),
+                r = n("yXtP");
 
             function o() {
                 var e = this;
-                return Object(r.a)(a, {
+                return Object(a.a)(r, {
                     props: function(t) {
                         return {
                             updateChatColorMutation: function(n) {
@@ -36393,19 +35906,19 @@
             }), n.d(t, "b", function() {
                 return s
             });
-            var i, r = n("mrSG"),
-                a = n("yR8l"),
+            var i, a = n("mrSG"),
+                r = n("yR8l"),
                 o = n("FAYk");
 
             function s(e) {
                 var t = this;
-                return Object(a.a)(o, {
+                return Object(r.a)(o, {
                     props: function(n) {
                         return {
                             unmodUserMutation: function(i) {
-                                return r.__awaiter(t, void 0, void 0, function() {
+                                return a.__awaiter(t, void 0, void 0, function() {
                                     var t;
-                                    return r.__generator(this, function(r) {
+                                    return a.__generator(this, function(a) {
                                         if (t = e(n.ownProps).channelID, n.mutate) return [2, n.mutate({
                                             variables: {
                                                 input: {

@@ -1,5 +1,5 @@
 (window.webpackJsonp = window.webpackJsonp || []).push([
-    [140], {
+    [138], {
         "3ir2": function(e, t, n) {
             "use strict";
             n.d(t, "b", function() {
@@ -859,16 +859,16 @@
                 })(T),
                 U = n("sSlw"),
                 R = l.a.wrap(function() {
-                    return n.e(139).then(n.bind(null, "Pjs9"))
+                    return n.e(137).then(n.bind(null, "Pjs9"))
                 }, "InstalledAddonsPage"),
                 x = l.a.wrap(function() {
-                    return n.e(138).then(n.bind(null, "E7BC"))
+                    return n.e(136).then(n.bind(null, "E7BC"))
                 }, "BrowsableaddonsPage"),
                 Y = l.a.wrap(function() {
-                    return n.e(137).then(n.bind(null, "BBBA"))
+                    return n.e(135).then(n.bind(null, "BBBA"))
                 }, "FeaturedAddonsPage"),
                 N = l.a.wrap(function() {
-                    return n.e(136).then(n.bind(null, "f1MR"))
+                    return n.e(134).then(n.bind(null, "f1MR"))
                 }, "AddonDetailsPage"),
                 B = function(e) {
                     function t() {
