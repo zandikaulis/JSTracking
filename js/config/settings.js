@@ -100,6 +100,7 @@ window.__twilightSettings = {
     "nfl_channels": ["cctester33", "stevemz"],
     "nfl_game_id": "14017",
     "notification_app_server_public_key": "BGzteaQYOqrTAPN8EuuowBVG67pHwyZo879XZkC7cUV2QP4qQf-92Pmm9tyOuriJdiKnMDDRi28F5HQK6uSk0vM",
+    "owl2019_breakdown": "{}",
     "owl_campaign_layout_v2": false,
     "partner_signup_app_v2": true,
     "passport_hosts": ["https://api.twitch.tv", "https://passport.twitch.tv", "https://passport-staging.internal.twitch.tv", "https://passport-dev1.internal.twitch.tv", "https://passport-dev2.internal.twitch.tv", "https://passport-dev3.internal.twitch.tv", "https://id.twitch.tv", "https://id-dev.twitch.tv"],
